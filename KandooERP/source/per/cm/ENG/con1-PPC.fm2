@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form xmlns="http://namespaces.querix.com/2015/fglForms">
+	<form.rootContainer>
+		<CoordPanel preferredSize="35qch,5qch" fieldTable="" identifier="coord1">
+			<Label text="Last/O" location="0qch,0qch" preferredSize="6qch,1qch" fieldTable="" identifier="label1"/>
+			<TextField required="true" reverse="true" dataType="Char,,,,50" location="6qch,0qch" preferredSize="24qch,1qch" toolTip="Person = last name        Organisation = organisation name" fieldTable="contact" comment="Person = last name        Organisation = organisation name" identifier="last_org_name"/>
+			<TextField dataType="Char,,,,30" location="32qch,0qch" preferredSize="2qch,1qch" toolTip="Person only: Middle name" fieldTable="contact" comment="Person only: Middle name" identifier="mid_name"/>
+			<Label text="First" location="0qch,1qch" preferredSize="5qch,1qch" fieldTable="" identifier="label2"/>
+			<TextField dataType="Char,,,,30" location="6qch,1qch" preferredSize="24qch,1qch" toolTip="Person only: First name" fieldTable="contact" comment="Person only: First name" identifier="first_name"/>
+			<TextField toCase="Up" dataType="Char,,,,12" location="32qch,1qch" preferredSize="2qch,1qch" toolTip="Person only: Initials" fieldTable="contact" comment="Person only: Initials" identifier="initials"/>
+			<Label text="Salute" location="0qch,2qch" preferredSize="6qch,1qch" fieldTable="" identifier="label3"/>
+			<TextField dataType="Char,,,,20" location="6qch,2qch" preferredSize="16qch,1qch" toolTip="Person only: Salutation" fieldTable="contact" comment="Person only: Salutation" identifier="salutation"/>
+			<Label text="Sex" location="24qch,2qch" preferredSize="3qch,1qch" fieldTable="" identifier="label4"/>
+			<TextField toCase="Up" autonext="true" dataType="Char,,,,1" location="28qch,2qch" preferredSize="2qch,1qch" toolTip="Person only: (M)ale or (F)emale" fieldTable="contact" comment="Person only: (M)ale or (F)emale" identifier="sex_ind"/>
+			<TextField dataType="Char,,,,30" location="32qch,2qch" preferredSize="2qch,1qch" toolTip="User defined field 1" fieldTable="contact" comment="User defined field 1" identifier="user_defined1"/>
+			<Label text="Title" location="0qch,3qch" preferredSize="5qch,1qch" fieldTable="" identifier="label5"/>
+			<TextField dataType="Char,,,,20" location="6qch,3qch" preferredSize="24qch,1qch" toolTip="Person only: Title" fieldTable="contact" comment="Person only: Title" identifier="title"/>
+			<Label text="Age" location="0qch,4qch" preferredSize="3qch,1qch" fieldTable="" identifier="label6"/>
+			<TextField dataType="Char,,,," location="4qch,4qch" preferredSize="16qch,1qch" toolTip="Person only: age (F10 for L&amp;P)" fieldTable="formonly" comment="Person only: age (F10 for L&amp;P)" identifier="age"/>
+			<Label text="Org" location="24qch,4qch" preferredSize="3qch,1qch" fieldTable="" identifier="label7"/>
+			<TextField toCase="Up" autonext="true" required="true" dataType="Char,,,,1" location="28qch,4qch" preferredSize="2qch,1qch" toolTip="(O)rganisation or (P)erson" fieldTable="contact" comment="(O)rganisation or (P)erson" identifier="org_ind">
+				<TextField.includes>
+					<ValueInclude>
+						<ValueInclude.value>
+							<StringLiteral stringValue="O"/>
+						</ValueInclude.value>
+					</ValueInclude>
+					<ValueInclude>
+						<ValueInclude.value>
+							<StringLiteral stringValue="P"/>
+						</ValueInclude.value>
+					</ValueInclude>
+				</TextField.includes>
+			</TextField>
+			<TextField dataType="Char,,,,30" location="32qch,4qch" preferredSize="2qch,1qch" toolTip="User defined field 2" fieldTable="contact" comment="User defined field 2" identifier="user_defined2"/>
+		</CoordPanel>
+	</form.rootContainer>
+	<form.screenRecords>
+		<ScreenRecord identifier="s_contact" fields="org_ind,first_name,mid_name,last_org_name,salutation,initials,user_defined1,user_defined2,title,sex_ind,age"/>
+		<ScreenRecord identifier="contact" fields="org_ind,first_name,mid_name,last_org_name,salutation,initials,user_defined1,user_defined2,title,sex_ind"/>
+		<ScreenRecord identifier="formonly" fields="age"/>
+	</form.screenRecords>
+</form>
+

@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form xmlns="http://namespaces.querix.com/2015/fglForms">
+	<form.rootContainer>
+		<GridPanel classNames="fcls_rootContainer" verticalAlignment="Stretch" horizontalAlignment="Stretch" fieldTable="" identifier="rootContainer">
+			<GridPanel.gridRowDefinitions>
+				<GridRowDefinition gridLengthValue=""/>
+				<GridRowDefinition gridLengthValue="100%"/>
+				<GridRowDefinition gridLengthValue=""/>
+			</GridPanel.gridRowDefinitions>
+			<GridPanel.gridColumnDefinitions>
+				<GridColumnDefinition gridLengthValue="100%"/>
+			</GridPanel.gridColumnDefinitions>
+			<GridPanel classNames="fcls_title_cnt" visible="true" verticalAlignment="Top" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="cntTitle">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="100%"/>
+					<GridColumnDefinition gridLengthValue=""/>
+				</GridPanel.gridColumnDefinitions>
+				<Label isDynamic="true" text="Quadrant Maintenance" classNames="fcls_title_lb" visible="true" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="header_text"/>
+				<Label isDynamic="true" text="U211" classNames="fcls_title_lb" visible="true" gridItemLocation="1,0,1,1" fieldTable="" identifier="lbFormName"/>
+			</GridPanel>
+			<Table rowCount="10" preferredSize="47qch,10qch" gridItemLocation="0,1,1,1" fieldTable="" identifier="sr_quadrant">
+				<TableColumn fieldTable="" identifier="tc_scroll_flag">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="2rem" gridMaxLength="2rem" gridMinLength="2rem"/>
+					</TableColumn.columnLength>
+					<CheckBox dataType="Char,,,," fieldTable="formonly" identifier="scroll_flag">
+						<CheckBox.checkedValue>
+							<StringLiteral stringValue="*"/>
+						</CheckBox.checkedValue>
+						<CheckBox.uncheckedValue>
+							<NullLiteral/>
+						</CheckBox.uncheckedValue>
+					</CheckBox>
+				</TableColumn>
+				<TableColumn text="Ware Code" fieldTable="" identifier="tc_ware_code">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="10rem" gridMaxLength="10rem" gridMinLength="10rem"/>
+					</TableColumn.columnLength>
+					<TextField toCase="Up" noEntry="true" dataType="Char,,,,3" fieldTable="quadrant" identifier="ware_code"/>
+				</TableColumn>
+				<TableColumn text="Page Number" fieldTable="" identifier="tc_map_num">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="20rem" gridMaxLength="20rem" gridMinLength="20rem"/>
+					</TableColumn.columnLength>
+					<TextField toCase="Up" noEntry="true" dataType="Char,,,,4" fieldTable="quadrant" identifier="map_num"/>
+				</TableColumn>
+				<TableColumn text="Quadrants A" fieldTable="" identifier="tc_quada_qty">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="10rem" gridMaxLength="10rem" gridMinLength="10rem"/>
+					</TableColumn.columnLength>
+					<TextField dataType="Float,,,," toolTip=" Distance(km) from warehouse to quadrant A" fieldTable="quadrant" comment=" Distance(km) from warehouse to quadrant A" identifier="quada_qty"/>
+				</TableColumn>
+				<TableColumn text="Quadrants B" fieldTable="" identifier="tc_quadb_qty">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="10rem" gridMaxLength="10rem" gridMinLength="10rem"/>
+					</TableColumn.columnLength>
+					<TextField dataType="Float,,,," toolTip=" Distance(km) from warehouse to quadrant B" fieldTable="quadrant" comment=" Distance(km) from warehouse to quadrant B" identifier="quadb_qty"/>
+				</TableColumn>
+				<TableColumn text="Quadrants C" fieldTable="" identifier="tc_quadc_qty">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="10rem" gridMaxLength="10rem" gridMinLength="10rem"/>
+					</TableColumn.columnLength>
+					<TextField dataType="Float,,,," toolTip=" Distance(km) from warehouse to quadrant C" fieldTable="quadrant" comment=" Distance(km) from warehouse to quadrant C" identifier="quadc_qty"/>
+				</TableColumn>
+				<TableColumn text="Quadrants D" fieldTable="" identifier="tc_quadd_qty">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="10rem" gridMaxLength="10rem" gridMinLength="10rem"/>
+					</TableColumn.columnLength>
+					<TextField dataType="Float,,,," toolTip=" Distance(km) from warehouse to quadrant D" fieldTable="quadrant" comment=" Distance(km) from warehouse to quadrant D" identifier="quadd_qty"/>
+				</TableColumn>
+				<TableColumn resizable="true" visible="true" identifier="tc_lbEOL">
+					<Label isDynamic="true" visible="true" identifier="lbEOL"/>
+					<TableColumn.columnLength>
+						<GridLength/>
+					</TableColumn.columnLength>
+				</TableColumn>
+			</Table>
+			<GridPanel classNames="fcls_statusbar_cnt" visible="true" verticalAlignment="Top" gridItemLocation="0,2,1,1" fieldTable="formonly" identifier="cntStatusBar">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="100%"/>
+				</GridPanel.gridColumnDefinitions>
+				<Label isDynamic="true" text="" classNames="fcls_sblabel" visible="true" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="lbInfo1"/>
+				<Label isDynamic="true" text="" classNames="fcls_sblabel" visible="true" gridItemLocation="0,1,1,1" fieldTable="formonly" identifier="lbInfo2"/>
+			</GridPanel>
+		</GridPanel>
+	</form.rootContainer>
+	<form.screenRecords>
+		<ScreenRecord identifier="sr_quadrant" fields="formonly.scroll_flag,quadrant.ware_code,quadrant.map_num,quadrant.quada_qty,quadrant.quadb_qty,quadrant.quadc_qty,quadrant.quadd_qty" elements="10"/>
+		<ScreenRecord identifier="formonly" fields="scroll_flag"/>
+		<ScreenRecord identifier="quadrant" fields="ware_code,map_num,quada_qty,quadb_qty,quadc_qty,quadd_qty"/>
+	</form.screenRecords>
+</form>
+

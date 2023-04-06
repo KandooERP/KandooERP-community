@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form xmlns="http://namespaces.querix.com/2015/fglForms">
+	<form.rootContainer>
+		<GridPanel classNames="fcls_rootContainer" verticalAlignment="Stretch" horizontalAlignment="Stretch" fieldTable="" identifier="rootContainer">
+			<GridPanel.gridRowDefinitions>
+				<GridRowDefinition>
+					<GridRowDefinition.gridLength>
+						<GridLength gridLengthValue=""/>
+					</GridRowDefinition.gridLength>
+				</GridRowDefinition>
+				<GridRowDefinition>
+					<GridRowDefinition.gridLength>
+						<GridLength gridLengthValue=""/>
+					</GridRowDefinition.gridLength>
+				</GridRowDefinition>
+				<GridRowDefinition>
+					<GridRowDefinition.gridLength>
+						<GridLength gridLengthValue="100%"/>
+					</GridRowDefinition.gridLength>
+				</GridRowDefinition>
+				<GridRowDefinition>
+					<GridRowDefinition.gridLength>
+						<GridLength gridLengthValue=""/>
+					</GridRowDefinition.gridLength>
+				</GridRowDefinition>
+			</GridPanel.gridRowDefinitions>
+			<GridPanel.gridColumnDefinitions>
+				<GridColumnDefinition>
+					<GridColumnDefinition.gridLength>
+						<GridLength gridLengthValue="100%"/>
+					</GridColumnDefinition.gridLength>
+				</GridColumnDefinition>
+			</GridPanel.gridColumnDefinitions>
+			<GridPanel classNames="fcls_title_cnt" visible="true" verticalAlignment="Top" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="cntTitle">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition>
+						<GridRowDefinition.gridLength>
+							<GridLength gridLengthValue=""/>
+						</GridRowDefinition.gridLength>
+					</GridRowDefinition>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition>
+						<GridColumnDefinition.gridLength>
+							<GridLength gridLengthValue="100%"/>
+						</GridColumnDefinition.gridLength>
+					</GridColumnDefinition>
+					<GridColumnDefinition>
+						<GridColumnDefinition.gridLength>
+							<GridLength gridLengthValue=""/>
+						</GridColumnDefinition.gridLength>
+					</GridColumnDefinition>
+				</GridPanel.gridColumnDefinitions>
+				<Label isDynamic="true" text="Financial Report Instructions" classNames="fcls_title_lb" visible="true" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="header_text"/>
+				<Label isDynamic="true" text="G120" classNames="fcls_title_lb" visible="true" gridItemLocation="1,0,1,1" fieldTable="" identifier="lbFormName"/>
+			</GridPanel>
+			<GridPanel classNames="fcls_detail_cnt,,fcls_align_left" visible="true" verticalAlignment="Top" horizontalAlignment="Left" gridItemLocation="0,1,1,1" fieldTable="formonly" identifier="cntDetail1">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition>
+						<GridRowDefinition.gridLength>
+							<GridLength gridLengthValue=""/>
+						</GridRowDefinition.gridLength>
+					</GridRowDefinition>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition>
+						<GridColumnDefinition.gridLength>
+							<GridLength gridLengthValue="" gridMinLength="10rem"/>
+						</GridColumnDefinition.gridLength>
+					</GridColumnDefinition>
+					<GridColumnDefinition>
+						<GridColumnDefinition.gridLength>
+							<GridLength gridLengthValue=""/>
+						</GridColumnDefinition.gridLength>
+					</GridColumnDefinition>
+					<GridColumnDefinition>
+						<GridColumnDefinition.gridLength>
+							<GridLength gridLengthValue=""/>
+						</GridColumnDefinition.gridLength>
+					</GridColumnDefinition>
+				</GridPanel.gridColumnDefinitions>
+				<ComboBox editable="true" dataType="Char,,,,3" classNames="fcls_data_widget,fcls_align_left,fcls_length_30qch" preferredSize="4qch,1qch" toolTip="Unique ten character ID identifying the Financial Report" horizontalAlignment="Left" gridItemLocation="1,0,1,1" fieldTable="reportdetl" comment="Unique ten character ID identifying the Financial Report" identifier="report_code"/>
+				<TextField noEntry="true" dataType="Char,,,,40" classNames="fcls_data_widget,fcls_align_left,fcls_length_30qch" preferredSize="41qch,1qch" horizontalAlignment="Left" gridItemLocation="2,0,1,1" fieldTable="reporthead" identifier="desc_text"/>
+				<Label isDynamic="true" text="Report Code" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,0,1,1" fieldTable="" identifier="lb51"/>
+			</GridPanel>
+			<Table rowCount="6" preferredSize="114qch,9qch" gridItemLocation="0,2,1,1" fieldTable="" identifier="sr_reportdetl">
+				<TableColumn text="Line" fieldTable="" identifier="f">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="10rem"/>
+					</TableColumn.columnLength>
+					<TextField dataType="Decimal,,,2,5" toolTip="Line Number representing the instruction processing order" fieldTable="reportdetl" comment="Line Number representing the instruction processing order" identifier="line_num"/>
+				</TableColumn>
+				<TableColumn text="Column" fieldTable="" identifier="f02">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="10rem"/>
+					</TableColumn.columnLength>
+					<TextField dataType="SmallInt,,,," toolTip="The Column in which this label or amount should be printed" fieldTable="reportdetl" comment="The Column in which this label or amount should be printed" identifier="col_num"/>
+				</TableColumn>
+				<TableColumn text="Command" fieldTable="" identifier="a2">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="10rem"/>
+					</TableColumn.columnLength>
+					<ComboBox toCase="Up" dataType="Char,,,,2" toolTip="CB-Current Balance, PA-Period Actuals, etc. " fieldTable="reportdetl" comment="CB-Current Balance, PA-Period Actuals, etc. " identifier="command_code"/>
+				</TableColumn>
+				<TableColumn text="Sign" fieldTable="" identifier="b">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="10rem"/>
+					</TableColumn.columnLength>
+					<TextField toCase="Up" dataType="Char,,,,1" toolTip="Credits are held as negative, so use - to make positive" fieldTable="reportdetl" comment="Credits are held as negative, so use - to make positive" identifier="sign_change_ind"/>
+				</TableColumn>
+				<TableColumn text="Label" fieldTable="" identifier="f003">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="20rem"/>
+					</TableColumn.columnLength>
+					<TextField dataType="Char,,,,20" toolTip="Label which will print in column 1 of this line" fieldTable="reportdetl" comment="Label which will print in column 1 of this line" identifier="label_text"/>
+				</TableColumn>
+				<TableColumn text="Flex Code Begin" fieldTable="" identifier="f007">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="15rem"/>
+					</TableColumn.columnLength>
+					<TextField dataType="Char,,,,18" toolTip="Segment value for columnar reporting. Optional" fieldTable="validflex" comment="Segment value for columnar reporting. Optional" identifier="flex_code"/>
+				</TableColumn>
+				<TableColumn text="Start Acc. Code" fieldTable="" identifier="f004">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="15rem"/>
+					</TableColumn.columnLength>
+					<TextField text="" dataType="Char,,,,18" toolTip="Beginning Account in the range of accounts to display on this line" fieldTable="reportdetl" comment="Beginning Account in the range of accounts to display on this line" identifier="start_acct_code"/>
+				</TableColumn>
+				<TableColumn text="End Acc. Code" fieldTable="" identifier="f005">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="15rem"/>
+					</TableColumn.columnLength>
+					<TextField dataType="Char,,,,18" toolTip="Ending Account in the range of accounts to display on this line" fieldTable="reportdetl" comment="Ending Account in the range of accounts to display on this line" identifier="end_acct_code"/>
+				</TableColumn>
+				<TableColumn text="Skip Num" fieldTable="" identifier="f6">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="10rem"/>
+					</TableColumn.columnLength>
+					<TextField dataType="SmallInt,,,," toolTip="Number of lines to drop after printing this line" fieldTable="reportdetl" comment="Number of lines to drop after printing this line" identifier="skip_num"/>
+				</TableColumn>
+				<TableColumn text="Ref Num" fieldTable="" identifier="f001">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="10rem"/>
+					</TableColumn.columnLength>
+					<TextField dataType="SmallInt,,,," toolTip="Save the result from this line if it is to be used elsewhere " fieldTable="reportdetl" comment="Save the result from this line if it is to be used elsewhere " identifier="ref_num"/>
+				</TableColumn>
+				<TableColumn resizable="true" visible="true" identifier="tc_lb52">
+					<Label isDynamic="true" visible="true" identifier="lb52"/>
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="100%"/>
+					</TableColumn.columnLength>
+				</TableColumn>
+			</Table>
+			<GridPanel classNames="fcls_statusbar_cnt" visible="true" verticalAlignment="Top" gridItemLocation="0,3,1,1" fieldTable="formonly" identifier="cntStatusBar">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition>
+						<GridRowDefinition.gridLength>
+							<GridLength gridLengthValue=""/>
+						</GridRowDefinition.gridLength>
+					</GridRowDefinition>
+					<GridRowDefinition>
+						<GridRowDefinition.gridLength>
+							<GridLength gridLengthValue=""/>
+						</GridRowDefinition.gridLength>
+					</GridRowDefinition>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition>
+						<GridColumnDefinition.gridLength>
+							<GridLength gridLengthValue="100%"/>
+						</GridColumnDefinition.gridLength>
+					</GridColumnDefinition>
+				</GridPanel.gridColumnDefinitions>
+				<Label isDynamic="true" text="" classNames="fcls_sblabel" visible="true" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="lbInfo1"/>
+				<Label isDynamic="true" text="" classNames="fcls_sblabel" visible="true" gridItemLocation="0,1,1,1" fieldTable="formonly" identifier="lbInfo2"/>
+			</GridPanel>
+		</GridPanel>
+	</form.rootContainer>
+	<form.screenRecords>
+		<ScreenRecord identifier="sr_reportdetl" fields="line_num,col_num,command_code,sign_change_ind,label_text,flex_code,start_acct_code,end_acct_code,skip_num,ref_num" elements="6"/>
+		<ScreenRecord identifier="reportdetl" fields="report_code,line_num,ref_num,command_code,sign_change_ind,col_num,label_text,start_acct_code,end_acct_code,skip_num"/>
+		<ScreenRecord identifier="reporthead" fields="desc_text"/>
+		<ScreenRecord identifier="validflex" fields="flex_code"/>
+	</form.screenRecords>
+</form>
+

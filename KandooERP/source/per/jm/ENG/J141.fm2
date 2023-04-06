@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form xmlns="http://namespaces.querix.com/2015/fglForms">
+	<form.rootContainer>
+		<GridPanel classNames="fcls_rootContainer" verticalAlignment="Stretch" horizontalAlignment="Left" fieldTable="" identifier="rootContainer">
+			<GridPanel.gridRowDefinitions>
+				<GridRowDefinition gridLengthValue=""/>
+				<GridRowDefinition gridLengthValue="100%"/>
+				<GridRowDefinition gridLengthValue=""/>
+			</GridPanel.gridRowDefinitions>
+			<GridPanel.gridColumnDefinitions>
+				<GridColumnDefinition gridLengthValue="100%"/>
+			</GridPanel.gridColumnDefinitions>
+
+			<GridPanel classNames="fcls_title_cnt" visible="true" verticalAlignment="Top" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="cntTitle">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="100%"/>
+					<GridColumnDefinition gridLengthValue=""/>
+				</GridPanel.gridColumnDefinitions>
+				<Label isDynamic="true" text="Timesheet Activity Summary" classNames="fcls_title_lb" visible="true" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="header_text"/>
+				<Label isDynamic="true" text="J141" classNames="fcls_title_lb" visible="true" gridItemLocation="1,0,1,1" fieldTable="" identifier="lbFormName"/>
+			</GridPanel>
+			<Table rowCount="10" preferredSize="70rem,10qch" fieldTable="" identifier="sr_summary" gridItemLocation="0,1,1,1" horizontalAlignment="Left">
+				<TableColumn fieldTable="" identifier="tc_scroll_flag">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="2rem" gridMaxLength="2rem" gridMinLength="2rem"/>
+					</TableColumn.columnLength>
+					<CheckBox dataType="Char,,,," fieldTable="formonly" identifier="scroll_flag">
+						<CheckBox.checkedValue>
+							<StringLiteral stringValue="*"/>
+						</CheckBox.checkedValue>
+						<CheckBox.uncheckedValue>
+							<NullLiteral/>
+						</CheckBox.uncheckedValue>
+					</CheckBox>
+				</TableColumn>
+				<TableColumn fieldTable="" identifier="tc_job_code" text="Job">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="10rem" gridMaxLength="10rem" gridMinLength="10rem"/>
+					</TableColumn.columnLength>
+					<TextField dataType="Char,,,,8" fieldTable="ts_detail" identifier="job_code"/>
+				</TableColumn>
+				<TableColumn fieldTable="" identifier="tc_var_code" text="Variation">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="10rem" gridMaxLength="10rem" gridMinLength="10rem"/>
+					</TableColumn.columnLength>
+					<TextField dataType="SmallInt,,,," fieldTable="ts_detail" identifier="var_code"/>
+				</TableColumn>
+				<TableColumn fieldTable="" identifier="tc_activity_code" text="Activity">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="10rem" gridMaxLength="10rem" gridMinLength="10rem"/>
+					</TableColumn.columnLength>
+					<TextField dataType="Char,,,,8" fieldTable="ts_detail" identifier="activity_code"/>
+				</TableColumn>
+				<TableColumn fieldTable="" identifier="tc_task_date" text="Date">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="10rem" gridMaxLength="10rem" gridMinLength="10rem"/>
+					</TableColumn.columnLength>
+					<TextField dataType="Char,,,," fieldTable="formonly" identifier="task_date"/>
+				</TableColumn>
+				<TableColumn fieldTable="" identifier="tc_total_ind" text="Total">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="5rem" gridMaxLength="5rem" gridMinLength="5rem"/>
+					</TableColumn.columnLength>
+					<TextField dataType="Char,,,," fieldTable="formonly" identifier="total_ind"/>
+				</TableColumn>
+				<TableColumn fieldTable="" identifier="tc_dur_qty" text="Units">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="14.9%"/>
+					</TableColumn.columnLength>
+					<TextField dataType="Float,,,," fieldTable="ts_detail" identifier="dur_qty"/>
+				</TableColumn>
+			</Table>
+			<GridPanel classNames="fcls_statusbar_cnt" visible="true" verticalAlignment="Bottom" gridItemLocation="0,2,1,1" fieldTable="formonly" identifier="cntStatusBar">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="100%"/>
+				</GridPanel.gridColumnDefinitions>
+				<Label isDynamic="true" text="" classNames="fcls_sblabel" visible="true" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="lbInfo1"/>
+				<Label isDynamic="true" text="" classNames="fcls_sblabel" visible="true" gridItemLocation="0,1,1,1" fieldTable="formonly" identifier="lbInfo2"/>
+			</GridPanel>
+		</GridPanel>
+	</form.rootContainer>
+	<form.screenRecords>
+		<ScreenRecord identifier="sr_summary" fields="formonly.scroll_flag,ts_detail.job_code,ts_detail.var_code,ts_detail.activity_code,formonly.task_date,formonly.total_ind,ts_detail.dur_qty"/>
+		<ScreenRecord identifier="formonly" fields="formonly.scroll_flag,formonly.task_date,formonly.total_ind"/>
+		<ScreenRecord identifier="ts_detail" fields="ts_detail.job_code,ts_detail.var_code,ts_detail.activity_code,ts_detail.dur_qty"/>
+	</form.screenRecords>
+</form>
+

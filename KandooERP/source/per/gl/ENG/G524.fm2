@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form xmlns="http://namespaces.querix.com/2015/fglForms">
+	<form.rootContainer>
+		<GridPanel classNames="fcls_rootContainer" verticalAlignment="Stretch" horizontalAlignment="Stretch" fieldTable="" identifier="rootContainer">
+			<GridPanel.gridRowDefinitions>
+				<GridRowDefinition>
+					<GridRowDefinition.gridLength>
+						<GridLength gridLengthValue=""/>
+					</GridRowDefinition.gridLength>
+				</GridRowDefinition>
+				<GridRowDefinition>
+					<GridRowDefinition.gridLength>
+						<GridLength gridLengthValue=""/>
+					</GridRowDefinition.gridLength>
+				</GridRowDefinition>
+				<GridRowDefinition>
+					<GridRowDefinition.gridLength>
+						<GridLength gridLengthValue="100%"/>
+					</GridRowDefinition.gridLength>
+				</GridRowDefinition>
+				<GridRowDefinition>
+					<GridRowDefinition.gridLength>
+						<GridLength gridLengthValue=""/>
+					</GridRowDefinition.gridLength>
+				</GridRowDefinition>
+			</GridPanel.gridRowDefinitions>
+			<GridPanel.gridColumnDefinitions>
+				<GridColumnDefinition>
+					<GridColumnDefinition.gridLength>
+						<GridLength gridLengthValue="100%"/>
+					</GridColumnDefinition.gridLength>
+				</GridColumnDefinition>
+			</GridPanel.gridColumnDefinitions>
+			<GridPanel classNames="fcls_title_cnt" visible="true" verticalAlignment="Top" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="cntTitle">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition>
+						<GridRowDefinition.gridLength>
+							<GridLength gridLengthValue=""/>
+						</GridRowDefinition.gridLength>
+					</GridRowDefinition>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition>
+						<GridColumnDefinition.gridLength>
+							<GridLength gridLengthValue="100%"/>
+						</GridColumnDefinition.gridLength>
+					</GridColumnDefinition>
+					<GridColumnDefinition>
+						<GridColumnDefinition.gridLength>
+							<GridLength gridLengthValue=""/>
+						</GridColumnDefinition.gridLength>
+					</GridColumnDefinition>
+				</GridPanel.gridColumnDefinitions>
+				<Label isDynamic="true" text="General Ledger Line Maintenance" classNames="fcls_title_lb" visible="true" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="header_text"/>
+				<Label isDynamic="true" text="G524" classNames="fcls_title_lb" visible="true" gridItemLocation="1,0,1,1" fieldTable="" identifier="lbFormName"/>
+			</GridPanel>
+			<GridPanel classNames="fcls_detail_cnt,fcls_data_cnt,fcls_align_left" visible="true" verticalAlignment="Top" horizontalAlignment="Left" gridItemLocation="0,1,1,1" fieldTable="formonly" identifier="cntDetail1">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition>
+						<GridRowDefinition.gridLength>
+							<GridLength gridLengthValue=""/>
+						</GridRowDefinition.gridLength>
+					</GridRowDefinition>
+					<GridRowDefinition>
+						<GridRowDefinition.gridLength>
+							<GridLength gridLengthValue=""/>
+						</GridRowDefinition.gridLength>
+					</GridRowDefinition>
+					<GridRowDefinition>
+						<GridRowDefinition.gridLength>
+							<GridLength gridLengthValue=""/>
+						</GridRowDefinition.gridLength>
+					</GridRowDefinition>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition>
+						<GridColumnDefinition.gridLength>
+							<GridLength gridLengthValue="" gridMinLength="10rem"/>
+						</GridColumnDefinition.gridLength>
+					</GridColumnDefinition>
+					<GridColumnDefinition>
+						<GridColumnDefinition.gridLength>
+							<GridLength gridLengthValue=""/>
+						</GridColumnDefinition.gridLength>
+					</GridColumnDefinition>
+				</GridPanel.gridColumnDefinitions>
+				<ComboBox dataType="Char,,,,1" classNames="fcls_data_widget,fcls_align_left,fcls_length_10qch" preferredSize="2qch,1qch" toolTip="Y=Print all Zeros, N=Never Print, O=Only print Non-zeros" gridItemLocation="1,0,1,1" fieldTable="glline" comment="Y=Print all Zeros, N=Never Print, O=Only print Non-zeros" identifier="always_print"/>
+				<ComboBox dataType="Char,,,,1" classNames="fcls_data_widget,fcls_align_left,fcls_length_10qch" preferredSize="2qch,1qch" toolTip="Y=Print in Offset column, N=Print in own column." gridItemLocation="1,1,1,1" fieldTable="glline" comment="Y=Print in Offset column, N=Print in own column." identifier="print_in_offset">
+					<ComboBox.defaultValue>
+						<StringLiteral stringValue="N"/>
+					</ComboBox.defaultValue>
+				</ComboBox>
+				<ComboBox editable="false" dataType="Char,,,,1" classNames="fcls_data_widget,fcls_align_left,fcls_length_10qch" preferredSize="2qch,1qch" toolTip="The expected sign of the line. Valid signs are (+,-)." gridItemLocation="1,2,1,1" fieldTable="glline" comment="The expected sign of the line. Valid signs are (+,-)." identifier="expected_sign"/>
+				<Label isDynamic="true" text="Always Print" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,0,1,1" fieldTable="" identifier="lb51"/>
+				<Label isDynamic="true" text="Print in Offset" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,1,1,1" fieldTable="" identifier="lb52"/>
+				<Label isDynamic="true" text="Expected Sign" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,2,1,1" fieldTable="" identifier="lb66"/>
+			</GridPanel>
+			<Table rowCount="6" preferredSize="68qch,6qch" gridItemLocation="0,2,1,1" fieldTable="" identifier="sa_gllinedetl">
+				<TableColumn text="Operator" fieldTable="" identifier="d">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="15rem"/>
+					</TableColumn.columnLength>
+					<ComboBox editable="true" autonext="true" dataType="Char,,,,1" toolTip="Mathematical Operator." fieldTable="gllinedetl" comment="Mathematical Operator." identifier="operator"/>
+				</TableColumn>
+				<TableColumn text="Chart Clause" fieldTable="" identifier="f00">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="100%"/>
+					</TableColumn.columnLength>
+					<TextField dataType="Char,,,,60" toolTip="QBE clause on account charts codes." fieldTable="gllinedetl" comment="QBE clause on account charts codes." identifier="chart_clause"/>
+				</TableColumn>
+			</Table>
+			<GridPanel classNames="fcls_statusbar_cnt" visible="true" verticalAlignment="Top" gridItemLocation="0,3,1,1" fieldTable="formonly" identifier="cntStatusBar">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition>
+						<GridRowDefinition.gridLength>
+							<GridLength gridLengthValue=""/>
+						</GridRowDefinition.gridLength>
+					</GridRowDefinition>
+					<GridRowDefinition>
+						<GridRowDefinition.gridLength>
+							<GridLength gridLengthValue=""/>
+						</GridRowDefinition.gridLength>
+					</GridRowDefinition>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition>
+						<GridColumnDefinition.gridLength>
+							<GridLength gridLengthValue="100%"/>
+						</GridColumnDefinition.gridLength>
+					</GridColumnDefinition>
+				</GridPanel.gridColumnDefinitions>
+				<Label isDynamic="true" text="" classNames="fcls_sblabel" visible="true" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="lbInfo1"/>
+				<Label isDynamic="true" text="" classNames="fcls_sblabel" visible="true" gridItemLocation="0,1,1,1" fieldTable="formonly" identifier="lbInfo2"/>
+			</GridPanel>
+		</GridPanel>
+	</form.rootContainer>
+	<form.screenRecords>
+		<ScreenRecord identifier="sa_gllinedetl" fields="operator,chart_clause" elements="6"/>
+		<ScreenRecord identifier="glline" fields="always_print,print_in_offset,expected_sign"/>
+		<ScreenRecord identifier="gllinedetl" fields="chart_clause,operator"/>
+	</form.screenRecords>
+</form>
+

@@ -1,0 +1,77 @@
+########################################
+# Environment
+########################################
+# You can specify the master environment here. 
+# NOTE: This will override any settings in the process environment
+#
+# system.environment.dbdate = "mdy4/"
+# system.environment.dbformat = "$:,:.:"
+# system.environment.dbmoney = "$,"
+# system.environment.dbcentury =
+# system.environment.dbtemp = "/tmp"
+# system.environment.dbdelimiter = "|"
+
+########################################
+# GUI Layout options
+########################################
+# When sending a form to the client, the runtime will split strings based 
+# on the amount of whitespace encountered, or key characters. 
+# 
+# This is to allow rational positioning of form objects when working with
+# proportional fonts. 
+
+# These characters will force the creation of a new string
+# gui.layout.break.start = "*=+-"
+
+# These characters will terminate the current string
+# gui.layout.break.end = ":"
+
+# This is the maximum length of whitespace allowed in a string
+# gui.layout.break.max_spaces = 1
+
+
+#########################################
+# Database Interfaces (Postgres)
+#########################################
+# Rowid emulation:
+# dbi.postgresql.rowid = oid | emulate | none
+# 
+
+dbi.postgresql.rowid = oid
+
+#########################################
+# Database Interfaces (Oracle)
+#########################################
+# Rowid emulation:
+# dbi.oracle.rowid = emulate | none
+#
+# Temporary tables:
+# dbi.oracle.temp = native | emulate
+# 
+# Default Escape clauses for like
+# dbi.oracle.like.default_escape = true | false
+# 
+# Bind BYTE fields as Oracle long or blob types
+# dbi.oracle.byte_binding_type = long | blob
+# Bind TEXT fields as Oracle long or clob or nclob types
+# dbi.oracle.long_binding = long | clob | nclob
+
+dbi.oracle.rowid = none
+dbi.oracle.temp = native
+dbi.oracle.like.default_escape = false
+
+dbi.oracle.byte_binding_type = blob
+dbi.oracle.text_binding_type = clob
+
+#########################################
+# GUI
+#########################################
+# Enables an additional top menu item named Window and showing
+# all the child applications running at the moment
+#gui.menu.window = false
+#gui.menu.window.newchild = false
+#gui.size.dimension = "qch"
+#gui.doubleclick.action = accept
+#gui.label.static.clear = false
+#gui.label.dynamic.clear = true
+ 

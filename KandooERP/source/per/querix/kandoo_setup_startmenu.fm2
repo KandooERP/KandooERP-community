@@ -1,0 +1,920 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form xmlns="http://namespaces.querix.com/2015/fglForms">
+
+	  <MenuBar title="Menu bar" visible="true" identifier="c1">
+	
+	    <MenuCommand text="Exit" visible="true" identifier="mc_exit">
+	      <MenuCommand.onInvoke>
+	        <ActionEventHandler type="actioneventhandler" actionName="actCmdInvoke" />
+	      </MenuCommand.onInvoke>
+	    </MenuCommand>
+	
+	      <MenuGroup text="General" visible="true" identifier="General" toolTip="General">
+	      <MenuGroup text="Lookup-Global" visible="true" identifier="mgUtilities" toolTip="Lookup">
+	        <MenuCommand text="U1L - Languages" visible="true" identifier="U1L" toolTip="Setup -&gt; U - Utilities -&gt; U1L - Languages">
+	          <MenuCommand.onInvoke>
+	            <ActionEventHandler type="actioneventhandler" actionName="actCmdInvoke" />
+	          </MenuCommand.onInvoke>
+	        </MenuCommand>
+	        <MenuCommand text="U1M - Country" visible="true" identifier="U1M" toolTip="Setup -&gt; U - Utilities -&gt; U1M - Country">
+	          <MenuCommand.onInvoke>
+	            <ActionEventHandler type="actioneventhandler" actionName="actCmdInvoke" />
+	          </MenuCommand.onInvoke>
+	        </MenuCommand>      
+	          <MenuCommand text="GZ8 - Currency" visible="true" identifier="GZ8" toolTip="Setup -&gt; Currency">
+	            <MenuCommand.onInvoke>
+	              <ActionEventHandler type="actioneventhandler" actionName="actCmdInvoke" />
+	            </MenuCommand.onInvoke>
+	          </MenuCommand>
+	      </MenuGroup>
+	      </MenuGroup>
+	
+	      <MenuGroup text="Company" visible="true" identifier="General" toolTip="Company">
+	
+	        
+	        <MenuCommand text="GZC - Company" visible="true" identifier="GZC" toolTip="Setup -&gt; G - General Ledger -&gt; GZC -  Company">
+	          <MenuCommand.onInvoke>
+	            <ActionEventHandler type="actioneventhandler" actionName="actCmdInvoke" />
+	          </MenuCommand.onInvoke>
+	        </MenuCommand>
+	
+	        <MenuCommand text="WZ5 - Company Part2" visible="true" identifier="WZ5" toolTip="Setup -&gt; W - ??????????? -&gt; WZ5 - Company Part2">
+	          <MenuCommand.onInvoke>
+	            <ActionEventHandler type="actioneventhandler" actionName="actCmdInvoke" />
+	          </MenuCommand.onInvoke>
+	        </MenuCommand>
+	
+	
+	        <MenuCommand text="U12 - User" visible="true" identifier="U12" toolTip="Setup -&gt; U - Utilities -&gt; U12 - User">
+	          <MenuCommand.onInvoke>
+	            <ActionEventHandler type="actioneventhandler" actionName="actCmdInvoke" />
+	          </MenuCommand.onInvoke>
+	        </MenuCommand>
+	
+	
+	
+	      <MenuGroup text="FK - Lookup Data" visible="true" identifier="mgUtilities" toolTip="Lookup Data">
+	        <MenuCommand text="GZ7 - Group Codes" visible="true" identifier="GZ7" toolTip="Setup -&gt; G - General Ledger -&gt; GZ7 -  Group Codes">
+	          <MenuCommand.onInvoke>
+	            <ActionEventHandler type="actioneventhandler" actionName="actCmdInvoke" />
+	          </MenuCommand.onInvoke>
+	        </MenuCommand>
+	        <MenuCommand text="GZA - Fiscal Year a. Period" visible="true" identifier="GZA" toolTip="Setup -&gt; G - General Ledger -&gt; GZA -  Fiscal Year a. Period">
+	          <MenuCommand.onInvoke>
+	            <ActionEventHandler type="actioneventhandler" actionName="actCmdInvoke" />
+	          </MenuCommand.onInvoke>
+	        </MenuCommand>
+	
+	        <MenuCommand text="GZJ - Consolidated Report Codes" visible="true" identifier="GZJ" toolTip="Setup -&gt; G - General Ledger -&gt; GZJ -  Consolidated Report Codes">
+	          <MenuCommand.onInvoke>
+	            <ActionEventHandler type="actioneventhandler" actionName="actCmdInvoke" />
+	          </MenuCommand.onInvoke>
+	        </MenuCommand>
+	
+	
+	        <MenuCommand text="GZ5 - Report Instructions" visible="true" identifier="GZ5" toolTip="Setup -&gt; G - General Ledger -&gt; GZ5 - Report Instructions">
+	          <MenuCommand.onInvoke>
+	            <ActionEventHandler type="actioneventhandler" actionName="actCmdInvoke" />
+	          </MenuCommand.onInvoke>
+	        </MenuCommand>
+	
+	
+	        <MenuCommand text="U51 - Suburb Maintenance" visible="true" identifier="U51" toolTip="Setup -&gt; U - Utilities -&gt; U51 - Suburb Maintenance">
+	          <MenuCommand.onInvoke>
+	            <ActionEventHandler type="actioneventhandler" actionName="actCmdInvoke" />
+	          </MenuCommand.onInvoke>
+	        </MenuCommand>
+	        <MenuCommand text="U52 - Street Maintenance" visible="true" identifier="U52" toolTip="Setup -&gt; U - Utilities -&gt; U52 - Street Maintenance">
+	          <MenuCommand.onInvoke>
+	            <ActionEventHandler type="actioneventhandler" actionName="actCmdInvoke" />
+	          </MenuCommand.onInvoke>
+	        </MenuCommand>
+	        <MenuCommand text="U56 - Quadrant Data Transfer" visible="true" identifier="U56" toolTip="Setup -&gt; U - Utilities -&gt; U56 - Quadrant Data Transfer">
+	          <MenuCommand.onInvoke>
+	            <ActionEventHandler type="actioneventhandler" actionName="actCmdInvoke" />
+	          </MenuCommand.onInvoke>
+	        </MenuCommand>
+	
+	        <MenuCommand text="U1T - System Tailoring (NW)" visible="true" identifier="U1T" toolTip="Setup -&gt; U - Utilities -&gt; U1T - System Tailoring (NW)">
+	          <MenuCommand.onInvoke>
+	            <ActionEventHandler type="actioneventhandler" actionName="actCmdInvoke" />
+	          </MenuCommand.onInvoke>
+	        </MenuCommand>
+	
+	      <MenuGroup text="U6 - Statistic Interval" visible="true" identifier="General" toolTip="U6 - Statistic Interval">					<!--U6 - Statistic Interval -->
+	
+	        <MenuCommand text="U61 - Interval Type Information" visible="true" identifier="U61" toolTip="Setup -&gt; U - Utilities -&gt; U61 - Interval Type Information">
+	          <MenuCommand.onInvoke>
+	            <ActionEventHandler type="actioneventhandler" actionName="actCmdInvoke" />
+	          </MenuCommand.onInvoke>
+	        </MenuCommand>
+	        <MenuCommand text="U63 - Management Information Statistics Parameters" visible="true" identifier="U63" toolTip="Setup -&gt; U - Utilities -&gt; U63 - Management Information Statistics Parameters">
+	          <MenuCommand.onInvoke>
+	            <ActionEventHandler type="actioneventhandler" actionName="actCmdInvoke" />
+	          </MenuCommand.onInvoke>
+	        </MenuCommand>
+	        <MenuCommand text="U62 - Interval Maintenance" visible="true" identifier="U62" toolTip="Setup -&gt; U - Utilities -&gt; U62 - Interval Maintenance">
+	          <MenuCommand.onInvoke>
+	            <ActionEventHandler type="actioneventhandler" actionName="actCmdInvoke" />
+	          </MenuCommand.onInvoke>
+	        </MenuCommand>
+			</MenuGroup>
+	
+	     <MenuGroup text="UR - Report Management System" visible="true" identifier="General" toolTip="U6 - Statistic Interval">					<!--UR REPORT -->
+	        <MenuCommand text="UR1 - Report Parameter Maintenance" visible="true" identifier="UR1" toolTip="Setup -&gt; U - Utilities -&gt; UR1 - Report Parameter Maintenance">
+	          <MenuCommand.onInvoke>
+	            <ActionEventHandler type="actioneventhandler" actionName="actCmdInvoke" />
+	          </MenuCommand.onInvoke>
+	        </MenuCommand>     
+	        <MenuCommand text="URP - Device Configuration" visible="true" identifier="URP" toolTip="Setup -&gt; U - Utilities -&gt; URP - Device Configuration">
+	          <MenuCommand.onInvoke>
+	            <ActionEventHandler type="actioneventhandler" actionName="actCmdInvoke" />
+	          </MenuCommand.onInvoke>
+	        </MenuCommand>
+	 
+			</MenuGroup>
+	
+	
+	
+	
+	      <MenuGroup text="Load External Data" visible="true" identifier="General" toolTip="Company">					<!-- Load Company related UNL data -->
+	        <MenuCommand text="U55 - Street/Suburb File Load" visible="true" identifier="U55" toolTip="Setup -&gt; U - Utilities -&gt; U55 - Street/Suburb File Load">
+	          <MenuCommand.onInvoke>
+	            <ActionEventHandler type="actioneventhandler" actionName="actCmdInvoke" />
+	          </MenuCommand.onInvoke>
+	        </MenuCommand>
+	
+	        <MenuCommand text="U57 - Suburb Distances Load" visible="true" identifier="U57" toolTip="Setup -&gt; U - Utilities -&gt; U57 - Suburb Distances Load">
+	          <MenuCommand.onInvoke>
+	            <ActionEventHandler type="actioneventhandler" actionName="actCmdInvoke" />
+	          </MenuCommand.onInvoke>
+	        </MenuCommand>
+	
+					<!-- has cmpy_code -->
+	        <MenuCommand text="U58 - Data Setup Suburb" visible="true" identifier="U58" toolTip="Setup -&gt; U - Utilities -&gt; U58 - Data Setup Suburb">
+	          <MenuCommand.onInvoke>
+	            <ActionEventHandler type="actioneventhandler" actionName="actCmdInvoke" />
+	          </MenuCommand.onInvoke>
+	        </MenuCommand>        
+	
+	      </MenuGroup> <!-- END Load Company related UNL data -->
+	
+	
+	
+	      </MenuGroup>  
+	
+	
+	
+	      </MenuGroup>
+	
+	
+	
+	
+	      <MenuGroup text="General Ledger" visible="true" identifier="mgUtilities" toolTip="General Ledger">
+	      <MenuGroup text="General" visible="true" identifier="mgUtilities" toolTip="General">
+	        <MenuCommand text="GZ3 - GL Flexible Structure" visible="true" identifier="GZ3" toolTip="Setup -&gt; G - General Ledger -&gt; GZ3 - GL Flexible Structure">
+	          <MenuCommand.onInvoke>
+	            <ActionEventHandler type="actioneventhandler" actionName="actCmdInvoke" />
+	          </MenuCommand.onInvoke>
+	        </MenuCommand>
+	        <MenuCommand text="GZ4 - Account Segment Maintenance" visible="true" identifier="GZ4" toolTip="Setup -&gt; G - General Ledger -&gt; GZ4 - Account Segment Maintenance">
+	          <MenuCommand.onInvoke>
+	            <ActionEventHandler type="actioneventhandler" actionName="actCmdInvoke" />
+	          </MenuCommand.onInvoke>
+	        </MenuCommand>
+	        <MenuCommand text="GZ2 - Journal Types" visible="true" identifier="GZ2" toolTip="Setup -&gt; G - General Ledger -&gt; GZ2 - Journal Types">
+	          <MenuCommand.onInvoke>
+	            <ActionEventHandler type="actioneventhandler" actionName="actCmdInvoke" />
+	          </MenuCommand.onInvoke>
+	        </MenuCommand>        
+				</MenuGroup>
+	
+	      <MenuGroup text="Chart of Accounts" visible="true" identifier="mgUtilities" toolTip="Chart of Accounts">
+	        <MenuCommand text="GZ1 - Chart of Accounts" visible="true" identifier="GZ1" toolTip="Setup -&gt; G - General Ledger -&gt; GZ1 - Chart of Accounts">
+	          <MenuCommand.onInvoke>
+	            <ActionEventHandler type="actioneventhandler" actionName="actCmdInvoke" />
+	          </MenuCommand.onInvoke>
+	        </MenuCommand>
+	
+	
+	
+	      <MenuGroup text="Unknown and Not tested" visible="true" identifier="mgUtilities" toolTip="Unknown and Not tested">
+	        <MenuCommand text="Chart Translation ???" visible="true" identifier="GZO" toolTip="Setup -&gt; G - General Ledger -&gt; GZO -  Chart Translation">
+	          <MenuCommand.onInvoke>
+	            <ActionEventHandler type="actioneventhandler" actionName="actCmdInvoke" />
+	          </MenuCommand.onInvoke>
+	        </MenuCommand>
+				</MenuGroup>
+	
+				</MenuGroup>
+	
+	      <MenuGroup text="GL - Configuration" visible="true" identifier="mgUtilities" toolTip="GL - Configuration">
+	        <MenuCommand text="GZP - General Ledger Parameters" visible="true" identifier="GZP" toolTip="Setup -&gt; G - General Ledger -&gt; GZP -  General Ledger Parameters">
+	          <MenuCommand.onInvoke>
+	            <ActionEventHandler type="actioneventhandler" actionName="actCmdInvoke" />
+	          </MenuCommand.onInvoke>
+	        </MenuCommand>
+				</MenuGroup>
+	
+	
+	        <MenuCommand text="Account Group Maintenance" visible="true" identifier="GZF" toolTip="Setup -&gt; G - General Ledger -&gt; GZF -  Account Group Maintenance">
+	          <MenuCommand.onInvoke>
+	            <ActionEventHandler type="actioneventhandler" actionName="actCmdInvoke" />
+	          </MenuCommand.onInvoke>
+	        </MenuCommand>
+	        <MenuCommand text="Multi-Ledger Relationships" visible="true" identifier="GZI" toolTip="Setup -&gt; G - General Ledger -&gt; GZI -  Multi-Ledger Relationships">
+	          <MenuCommand.onInvoke>
+	            <ActionEventHandler type="actioneventhandler" actionName="actCmdInvoke" />
+	          </MenuCommand.onInvoke>
+	        </MenuCommand>
+	
+	        <MenuCommand text="Payroll Load Parameters" visible="true" identifier="GZK" toolTip="Setup -&gt; G - General Ledger -&gt; GZK -  Payroll Load Parameters">
+	          <MenuCommand.onInvoke>
+	            <ActionEventHandler type="actioneventhandler" actionName="actCmdInvoke" />
+	          </MenuCommand.onInvoke>
+	        </MenuCommand>
+	        <MenuCommand text="Ledger/Segment Translation" visible="true" identifier="GZM" toolTip="Setup -&gt; G - General Ledger -&gt; GZM -  Ledger/Segment Translation">
+	          <MenuCommand.onInvoke>
+	            <ActionEventHandler type="actioneventhandler" actionName="actCmdInvoke" />
+	          </MenuCommand.onInvoke>
+	        </MenuCommand>
+	        <MenuCommand text="Cash Book Installation" visible="true" identifier="GZB" toolTip="Setup -&gt; Cash Book Installation (ONLY Run ONCE !)">
+	          <MenuCommand.onInvoke>
+	            <ActionEventHandler type="actioneventhandler" actionName="actCmdInvoke" />
+	          </MenuCommand.onInvoke>
+	        </MenuCommand>
+	
+	      <MenuGroup text="System Configuration" visible="true" identifier="mgUtilities" toolTip="System Configuration">
+	        <MenuCommand text="GZD - Transaction Numbering (NW - requires GZP)" visible="true" identifier="GZD" toolTip="Setup -&gt; G - General Ledger -&gt; GZD -  Transaction Numbering (NW - requires GZP)">
+	          <MenuCommand.onInvoke>
+	            <ActionEventHandler type="actioneventhandler" actionName="actCmdInvoke" />
+	          </MenuCommand.onInvoke>
+	        </MenuCommand>
+					</MenuGroup>
+	
+	      <MenuGroup text="GL-Special Processes" visible="true" identifier="mgUtilities" toolTip="GL-Special Processes">
+	        <MenuCommand text="GS2 - Rollup Account History - Account Setup 3" visible="true" identifier="GS2" toolTip="General Ledger -&gt; Rollup Account History - GS2 Account Setup 3">
+	          <MenuCommand.onInvoke>
+	            <ActionEventHandler type="actioneventhandler" actionName="actCmdInvoke" />
+	          </MenuCommand.onInvoke>
+	        </MenuCommand>
+	        <MenuCommand text="GS3 - Copy Chart of Account - Account Setup 8" visible="true" identifier="GS3" toolTip="General Ledger -&gt; Copy Chart of Account - GS3">
+	          <MenuCommand.onInvoke>
+	            <ActionEventHandler type="actioneventhandler" actionName="actCmdInvoke" />
+	          </MenuCommand.onInvoke>
+	        </MenuCommand>        
+	        <MenuCommand text="GSA - GL Year Closing - Account Setup 4" visible="true" identifier="GSA" toolTip="General Ledger -&gt; GL Year Closing - GSA Account Setup 4">
+	          <MenuCommand.onInvoke>
+	            <ActionEventHandler type="actioneventhandler" actionName="actCmdInvoke" />
+	          </MenuCommand.onInvoke>
+	        </MenuCommand>
+	        <MenuCommand text="GSD - Update Account History - Account Setup 5" visible="true" identifier="GSD" toolTip="General Ledger -&gt; Update Account History - GSD Account Setup 5">
+	          <MenuCommand.onInvoke>
+	            <ActionEventHandler type="actioneventhandler" actionName="actCmdInvoke" />
+	          </MenuCommand.onInvoke>
+	        </MenuCommand>
+	        <MenuCommand text="GSJ - External Budget Interface - Account Setup 6" visible="true" identifier="GSJ" toolTip="General Ledger -&gt; External Budget Interface - GSJ Account Setup 6">
+	          <MenuCommand.onInvoke>
+	            <ActionEventHandler type="actioneventhandler" actionName="actCmdInvoke" />
+	          </MenuCommand.onInvoke>
+	        </MenuCommand>
+	        <MenuCommand text="GS6 - MAX COA Company Copier - Account Setup 9" visible="true" identifier="GS6" toolTip="General Ledger -&gt; MAX COA Company Copier - GS6 Account Setup 9">
+	          <MenuCommand.onInvoke>
+	            <ActionEventHandler type="actioneventhandler" actionName="actCmdInvoke" />
+	          </MenuCommand.onInvoke>
+	        </MenuCommand>
+					</MenuGroup>
+	
+	
+	      <MenuGroup text="Bank" visible="true" identifier="mgUtilities" toolTip="Bank">
+	          <MenuCommand text="GZT - Bank Type" visible="true" identifier="GZT" toolTip="Setup -&gt; Bank Type">
+	            <MenuCommand.onInvoke>
+	              <ActionEventHandler type="actioneventhandler" actionName="actCmdInvoke" />
+	            </MenuCommand.onInvoke>
+	          </MenuCommand>
+	
+	        <MenuCommand text="AZP-Accounts Receivable Parameters" visible="true" identifier="AZP" toolTip="Setup -&gt; General Ledger -&gt; AZP - Accounts Receivable Parameters">
+	          <MenuCommand.onInvoke>
+	            <ActionEventHandler type="actioneventhandler" actionName="actCmdInvoke" />
+	          </MenuCommand.onInvoke>
+	        </MenuCommand>
+	
+	          <MenuCommand text="GZ6 - Bank" visible="true" identifier="GZ6" toolTip="Setup -&gt; Bank">
+	            <MenuCommand.onInvoke>
+	              <ActionEventHandler type="actioneventhandler" actionName="actCmdInvoke" />
+	            </MenuCommand.onInvoke>
+	          </MenuCommand>
+	        <MenuCommand text="GZU - Bank/State/Branch Codes" visible="true" identifier="GZU" toolTip="Setup -&gt; G - General Ledger -&gt; GZU -  Bank/State/Branch Codes">
+	          <MenuCommand.onInvoke>
+	            <ActionEventHandler type="actioneventhandler" actionName="actCmdInvoke" />
+	          </MenuCommand.onInvoke>
+	        </MenuCommand>
+	
+	        
+	        
+				</MenuGroup>
+				</MenuGroup> <!-- END OF General Ledger Section -->
+	
+	
+	      <MenuGroup text="NOT setup tools ????" visible="true" identifier="mgUtilities" toolTip="NOT setup tools - need moving to categories">
+	
+	        <MenuCommand text="U17 - Memo Facility" visible="true" identifier="U17" toolTip="Setup -&gt; U - Utilities -&gt; U17 - Memo Facility">
+	          <MenuCommand.onInvoke>
+	            <ActionEventHandler type="actioneventhandler" actionName="actCmdInvoke" />
+	          </MenuCommand.onInvoke>
+	        </MenuCommand>
+	
+	        <MenuCommand text="UN1 - Notes Maintenance (NW)" visible="true" identifier="UN1" toolTip="Setup -&gt; U - Utilities -&gt; UN1 - Notes Maintenance (NW)">
+	          <MenuCommand.onInvoke>
+	            <ActionEventHandler type="actioneventhandler" actionName="actCmdInvoke" />
+	          </MenuCommand.onInvoke>
+	        </MenuCommand>
+	        <MenuCommand text="UN2 - Notes" visible="true" identifier="UN2" toolTip="Setup -&gt; U - Utilities -&gt; UN2 - Notes">
+	          <MenuCommand.onInvoke>
+	            <ActionEventHandler type="actioneventhandler" actionName="actCmdInvoke" />
+	          </MenuCommand.onInvoke>
+	        </MenuCommand>
+	        <MenuCommand text="UN3 - Transfer Notes" visible="true" identifier="UN3" toolTip="Setup -&gt; U - Utilities -&gt; UN3 - Transfer Notes">
+	          <MenuCommand.onInvoke>
+	            <ActionEventHandler type="actioneventhandler" actionName="actCmdInvoke" />
+	          </MenuCommand.onInvoke>
+	        </MenuCommand>
+	
+	        <MenuCommand text="U1A - System Locking" visible="true" identifier="U1A" toolTip="Setup -&gt; U - Utilities -&gt; U1A - System Locking">
+	          <MenuCommand.onInvoke>
+	            <ActionEventHandler type="actioneventhandler" actionName="actCmdInvoke" />
+	          </MenuCommand.onInvoke>
+	        </MenuCommand>
+	
+	      
+				</MenuGroup>
+	
+	      <MenuGroup text="Monitoring/SysInfo" visible="true" identifier="monitor" toolTip="Monitoring and System Information">
+	        <MenuCommand text="U2B - Report on User Settings" visible="true" identifier="U2B" toolTip="Setup -&gt; U - Utilities -&gt; U2B - User Parameters data/reports/QU.">
+	          <MenuCommand.onInvoke>
+	            <ActionEventHandler type="actioneventhandler" actionName="actCmdInvoke" />
+	          </MenuCommand.onInvoke>
+	        </MenuCommand>
+	        <MenuCommand text="U14 - Error Log Print Facility" visible="true" identifier="U14" toolTip="Setup -&gt; U - Utilities -&gt; U14 - Error Log Print Facility">
+	          <MenuCommand.onInvoke>
+	            <ActionEventHandler type="actioneventhandler" actionName="actCmdInvoke" />
+	          </MenuCommand.onInvoke>
+	        </MenuCommand>
+	
+				</MenuGroup>
+	
+	      <MenuGroup text="Developer Tools" visible="true" identifier="developer" toolTip="Developer Tools">
+	        <MenuCommand text="U1D - User Defined Reference Maintenance" visible="true" identifier="U1D" toolTip="Setup -&gt; U - Utilities -&gt; U1D - User Defined Reference Maintenance">
+	          <MenuCommand.onInvoke>
+	            <ActionEventHandler type="actioneventhandler" actionName="actCmdInvoke" />
+	          </MenuCommand.onInvoke>
+	        </MenuCommand>
+	
+	        <MenuCommand text="U1W - Messages &amp; Menu Options (NW)" visible="true" identifier="U1W" toolTip="Setup -&gt; U - Utilities -&gt; U1W - Messages &amp; Menu Options (NW)">
+	          <MenuCommand.onInvoke>
+	            <ActionEventHandler type="actioneventhandler" actionName="actCmdInvoke" />
+	          </MenuCommand.onInvoke>
+	        </MenuCommand>
+	
+	        <MenuCommand text="U31 - Message Library Maintenance" visible="true" identifier="U31" toolTip="Setup -&gt; U - Utilities -&gt; U31 - Message Library Maintenance">
+	          <MenuCommand.onInvoke>
+	            <ActionEventHandler type="actioneventhandler" actionName="actCmdInvoke" />
+	          </MenuCommand.onInvoke>
+	        </MenuCommand>
+	        <MenuCommand text="U32 - Message Library Config" visible="true" identifier="U32" toolTip="Setup -&gt; U - Utilities -&gt; U32 - Message Library Listing">
+	          <MenuCommand.onInvoke>
+	            <ActionEventHandler type="actioneventhandler" actionName="actCmdInvoke" />
+	          </MenuCommand.onInvoke>
+	        </MenuCommand>
+	
+	
+	
+	          <MenuCommand text="U18 - SQL Interface" visible="true" identifier="U18" toolTip="Setup -&gt; U - Utilities -&gt; SQL Interface - User">
+	          <MenuCommand.onInvoke>
+	            <ActionEventHandler type="actioneventhandler" actionName="actCmdInvoke" />
+	          </MenuCommand.onInvoke>
+	        </MenuCommand>
+	
+	        <MenuCommand text="U19 - DATABASE SCHEMA COMPARISON" visible="true" identifier="U19" toolTip="Setup -&gt; U - Utilities -&gt; U19 - DATABASE SCHEMA COMPARISON">
+	          <MenuCommand.onInvoke>
+	            <ActionEventHandler type="actioneventhandler" actionName="actCmdInvoke" />
+	          </MenuCommand.onInvoke>
+	        </MenuCommand>
+	
+	
+				</MenuGroup>
+	
+	      <MenuGroup text="Up for Removal" visible="true" identifier="Remove_Proposal" toolTip="Up for Removal">
+	
+	        <MenuCommand text="U21 - Menu" visible="true" identifier="U21" toolTip="Setup -&gt; U - Utilities -&gt; U21 - Menu">
+	          <MenuCommand.onInvoke>
+	            <ActionEventHandler type="actioneventhandler" actionName="actCmdInvoke" />
+	          </MenuCommand.onInvoke>
+	        </MenuCommand>
+	        <MenuCommand text="U2A - Max Menu Reporting" visible="true" identifier="U2A" toolTip="Setup -&gt; U - Utilities -&gt; U2A - Max Menu Reporting">
+	          <MenuCommand.onInvoke>
+	            <ActionEventHandler type="actioneventhandler" actionName="actCmdInvoke" />
+	          </MenuCommand.onInvoke>
+	        </MenuCommand>
+				</MenuGroup>
+	
+	
+	
+	
+	
+	      <MenuGroup text="TEST" visible="true" identifier="mgUtilities" toolTip="TEST">
+	
+	
+	
+	
+	
+	
+				</MenuGroup>
+	
+	
+	      <MenuGroup text="Kandoo Application Setup" visible="true" identifier="mgModules" toolTip="Kandoo Modules">
+	
+	          <MenuCommand text="Cash Book Installation" visible="true" identifier="GZB" toolTip="Setup -&gt; Cash Book Installation (ONLY Run ONCE !)">
+	            <MenuCommand.onInvoke>
+	              <ActionEventHandler type="actioneventhandler" actionName="actCmdInvoke" />
+	            </MenuCommand.onInvoke>
+	          </MenuCommand>
+	          
+	
+	
+	
+	<!-- ######################## EOF ####################################################################### -->
+	 
+	 
+	      <MenuGroup text="A - Accounts Receivable (General Ledger)" visible="true" identifier="mgContainer" toolTip="General Ledger....">
+	        <MenuCommand text="AZ1-Tax Codes" visible="true" identifier="AZ1" toolTip="Setup -&gt; General Ledger -&gt; Tax Codes">
+	          <MenuCommand.onInvoke>
+	            <ActionEventHandler type="actioneventhandler" actionName="actCmdInvoke" />
+	          </MenuCommand.onInvoke>
+	        </MenuCommand>
+	        <MenuCommand text="AZ2-Payment Term Codes" visible="true" identifier="AZ2" toolTip="Setup -&gt; General Ledger -&gt; Payment Term Codes">
+	          <MenuCommand.onInvoke>
+	            <ActionEventHandler type="actioneventhandler" actionName="actCmdInvoke" />
+	          </MenuCommand.onInvoke>
+	        </MenuCommand>
+	        <MenuCommand text="AZ3-Salespersons Maintenance" visible="true" identifier="AZ3" toolTip="Setup -&gt; General Ledger -&gt; Salespersons Maintenance">
+	          <MenuCommand.onInvoke>
+	            <ActionEventHandler type="actioneventhandler" actionName="actCmdInvoke" />
+	          </MenuCommand.onInvoke>
+	        </MenuCommand>
+	        <MenuCommand text="AZ4-Customer Types" visible="true" identifier="AZ4" toolTip="Setup -&gt; General Ledger -&gt; Customer Types">
+	          <MenuCommand.onInvoke>
+	            <ActionEventHandler type="actioneventhandler" actionName="actCmdInvoke" />
+	          </MenuCommand.onInvoke>
+	        </MenuCommand>
+	        <MenuCommand text="AZ5-Statement Messages" visible="true" identifier="AZ5" toolTip="Setup -&gt; General Ledger -&gt; Statement Messages">
+	          <MenuCommand.onInvoke>
+	            <ActionEventHandler type="actioneventhandler" actionName="actCmdInvoke" />
+	          </MenuCommand.onInvoke>
+	        </MenuCommand>
+	        <MenuCommand text="AZ6_J-Department Types" visible="true" identifier="AZ6_J" toolTip="Setup -&gt; General Ledger -&gt; Department Types">
+	          <MenuCommand.onInvoke>
+	            <ActionEventHandler type="actioneventhandler" actionName="actCmdInvoke" />
+	          </MenuCommand.onInvoke>
+	        </MenuCommand>
+	        <MenuCommand text="AZ7 - Not Working - No Idea" visible="true" identifier="AZ7" toolTip="Setup -&gt; General Ledger -&gt; AZ7 - Not Working - No Idea">
+	          <MenuCommand.onInvoke>
+	            <ActionEventHandler type="actioneventhandler" actionName="actCmdInvoke" />
+	          </MenuCommand.onInvoke>
+	        </MenuCommand>
+	        <MenuCommand text="AZ7_J - Transaction Type" visible="true" identifier="AZ7_J" toolTip="Setup -&gt; General Ledger -&gt; AZ7_J Transation Type">
+	          <MenuCommand.onInvoke>
+	            <ActionEventHandler type="actioneventhandler" actionName="actCmdInvoke" />
+	          </MenuCommand.onInvoke>
+	        </MenuCommand>
+	        <MenuCommand text="AZ8 - Not Working - No Idea" visible="true" identifier="AZ8" toolTip="Setup -&gt; General Ledger -&gt; AZ8 - Not Working - No Idea">
+	          <MenuCommand.onInvoke>
+	            <ActionEventHandler type="actioneventhandler" actionName="actCmdInvoke" />
+	          </MenuCommand.onInvoke>
+	        </MenuCommand>
+	        <MenuCommand text="AZA-Sales Area" visible="true" identifier="AZA" toolTip="Setup -&gt; General Ledger -&gt; AZA - Sales Area">
+	          <MenuCommand.onInvoke>
+	            <ActionEventHandler type="actioneventhandler" actionName="actCmdInvoke" />
+	          </MenuCommand.onInvoke>
+	        </MenuCommand>
+	        <MenuCommand text="AZH-Hold Sales Reasons" visible="true" identifier="AZH" toolTip="Setup -&gt; General Ledger -&gt; AZH - Hold Sales Reasons">
+	          <MenuCommand.onInvoke>
+	            <ActionEventHandler type="actioneventhandler" actionName="actCmdInvoke" />
+	          </MenuCommand.onInvoke>
+	        </MenuCommand>
+	        <MenuCommand text="AZI-Invoice Load Parameters " visible="true" identifier="AZI" toolTip="Setup -&gt; General Ledger -&gt; AZI - Invoice Load Parameters ">
+	          <MenuCommand.onInvoke>
+	            <ActionEventHandler type="actioneventhandler" actionName="actCmdInvoke" />
+	          </MenuCommand.onInvoke>
+	        </MenuCommand>
+	        <MenuCommand text="AZM-Sales Managers" visible="true" identifier="AZM" toolTip="Setup -&gt; General Ledger -&gt; AZM - Sales Managers   ">
+	          <MenuCommand.onInvoke>
+	            <ActionEventHandler type="actioneventhandler" actionName="actCmdInvoke" />
+	          </MenuCommand.onInvoke>
+	        </MenuCommand>
+	        <MenuCommand text="AZR-Credit Memo Reasons" visible="true" identifier="AZR" toolTip="Setup -&gt; General Ledger -&gt; AZR - Credit Memo Reasons">
+	          <MenuCommand.onInvoke>
+	            <ActionEventHandler type="actioneventhandler" actionName="actCmdInvoke" />
+	          </MenuCommand.onInvoke>
+	        </MenuCommand>
+	        <MenuCommand text="AZS-Invoice User Message" visible="true" identifier="AZS" toolTip="Setup -&gt; General Ledger -&gt; AZS - Invoice User Message">
+	          <MenuCommand.onInvoke>
+	            <ActionEventHandler type="actioneventhandler" actionName="actCmdInvoke" />
+	          </MenuCommand.onInvoke>
+	        </MenuCommand>
+	        <MenuCommand text="AZT-Sales Territory Maintenance" visible="true" identifier="AZT" toolTip="Setup -&gt; General Ledger -&gt; AZT - Sales Territory Maintenance ">
+	          <MenuCommand.onInvoke>
+	            <ActionEventHandler type="actioneventhandler" actionName="actCmdInvoke" />
+	          </MenuCommand.onInvoke>
+	        </MenuCommand>
+	        <MenuCommand text="AZU-Amendment Log Maintenance" visible="true" identifier="AZU" toolTip="Setup -&gt; General Ledger -&gt; AZU - Amendment Log Maintenance ">
+	          <MenuCommand.onInvoke>
+	            <ActionEventHandler type="actioneventhandler" actionName="actCmdInvoke" />
+	          </MenuCommand.onInvoke>
+	        </MenuCommand>
+	      </MenuGroup>
+	      <MenuGroup text="E - Sales Order / Distribution" visible="true" identifier="mgContainerE" toolTip="E - Sales Order / Distribution....">
+	        <MenuCommand text="Sales Targets Maintenance (NW)" visible="true" identifier="EZ3" toolTip="Setup -&gt; E - Sales Order - Distribution -&gt; EZ3 - Sales Targets Maintenance (NW)">
+	          <MenuCommand.onInvoke>
+	            <ActionEventHandler type="actioneventhandler" actionName="actCmdInvoke" />
+	          </MenuCommand.onInvoke>
+	        </MenuCommand>
+	        <MenuCommand text="Carrier Maintenance" visible="true" identifier="EZ4" toolTip="Setup -&gt; E - Sales Order - Distribution -&gt; EZ4 - Carrier Maintenance">
+	          <MenuCommand.onInvoke>
+	            <ActionEventHandler type="actioneventhandler" actionName="actCmdInvoke" />
+	          </MenuCommand.onInvoke>
+	        </MenuCommand>
+	        <MenuCommand text="Warehouse-Scan" visible="true" identifier="EZA" toolTip="Setup -&gt; E - Sales Order - Distribution -&gt; EZA - Warehouse-Scan">
+	          <MenuCommand.onInvoke>
+	            <ActionEventHandler type="actioneventhandler" actionName="actCmdInvoke" />
+	          </MenuCommand.onInvoke>
+	        </MenuCommand>
+	        <MenuCommand text="Order Load Parameters" visible="true" identifier="EZI" toolTip="Setup -&gt; E - Sales Order - Distribution -&gt; EZI - Order Load Parameters">
+	          <MenuCommand.onInvoke>
+	            <ActionEventHandler type="actioneventhandler" actionName="actCmdInvoke" />
+	          </MenuCommand.onInvoke>
+	        </MenuCommand>
+	        <MenuCommand text="Enhanced Order Processing Parameters" visible="true" identifier="EZP" toolTip="Setup -&gt; E - Sales Order - Distribution -&gt; EZP - Enhanced Order Processing Parameters">
+	          <MenuCommand.onInvoke>
+	            <ActionEventHandler type="actioneventhandler" actionName="actCmdInvoke" />
+	          </MenuCommand.onInvoke>
+	        </MenuCommand>
+	      </MenuGroup>
+	      <MenuGroup text="F - Fixed Assets" visible="true" identifier="mgContainer" toolTip="F - Fixed Assets....">
+	        <MenuCommand text="General Ledger Integration (NW)" visible="true" identifier="FZ1" toolTip="Setup -&gt; F - 'Fixed Assets -&gt; FZ1 - General Ledger Integration">
+	          <MenuCommand.onInvoke>
+	            <ActionEventHandler type="actioneventhandler" actionName="actCmdInvoke" />
+	          </MenuCommand.onInvoke>
+	        </MenuCommand>
+	        <MenuCommand text="Fixed Asset Parameters (NW)" visible="true" identifier="FZP" toolTip="Setup -&gt; F - 'Fixed Assets -&gt; FZP - Fixed Asset Parameters">
+	          <MenuCommand.onInvoke>
+	            <ActionEventHandler type="actioneventhandler" actionName="actCmdInvoke" />
+	          </MenuCommand.onInvoke>
+	        </MenuCommand>
+	        <MenuCommand text="Asset Categories (NW)" visible="true" identifier="F34" toolTip="Setup -&gt; F - 'Fixed Assets -&gt; F34  - Asset Categories">
+	          <MenuCommand.onInvoke>
+	            <ActionEventHandler type="actioneventhandler" actionName="actCmdInvoke" />
+	          </MenuCommand.onInvoke>
+	        </MenuCommand>
+	      </MenuGroup>
+	      
+	      
+	      <MenuGroup text="I - Inventory" visible="true" identifier="mgContainer" toolTip="I - Inventory....">
+	        <MenuCommand text="Product Category Information" visible="true" identifier="IZ1" toolTip="Setup -&gt; I-Inventory -&gt; IZ1 - Product Category Information">
+	          <MenuCommand.onInvoke>
+	            <ActionEventHandler type="actioneventhandler" actionName="actCmdInvoke" />
+	          </MenuCommand.onInvoke>
+	        </MenuCommand>
+	        <MenuCommand text="IZ2 - Not working" visible="true" identifier="IZ2" toolTip="Setup -&gt; I-Inventory -&gt; IZ2 - Not working">
+	          <MenuCommand.onInvoke>
+	            <ActionEventHandler type="actioneventhandler" actionName="actCmdInvoke" />
+	          </MenuCommand.onInvoke>
+	        </MenuCommand>
+	        <MenuCommand text="Warehouse Scan" visible="true" identifier="IZ3" toolTip="Setup -&gt; I-Inventory -&gt; IZ3 - Warehouse Scan">
+	          <MenuCommand.onInvoke>
+	            <ActionEventHandler type="actioneventhandler" actionName="actCmdInvoke" />
+	          </MenuCommand.onInvoke>
+	        </MenuCommand>
+	        <MenuCommand text="IZ4 !!! Not Working" visible="true" identifier="IZ4" toolTip="Setup -&gt; I-Inventory -&gt; IZ4 -&gt; IZ4 !!! Not Working RTType errors">
+	          <MenuCommand.onInvoke>
+	            <ActionEventHandler type="actioneventhandler" actionName="actCmdInvoke" />
+	          </MenuCommand.onInvoke>
+	        </MenuCommand>
+	        <MenuCommand text="IZ6 !!! Not Working" visible="true" identifier="IZ6" toolTip="Setup -&gt; I-Inventory -&gt; IZ6 - IZ6 !!! Not Working">
+	          <MenuCommand.onInvoke>
+	            <ActionEventHandler type="actioneventhandler" actionName="actCmdInvoke" />
+	          </MenuCommand.onInvoke>
+	        </MenuCommand>
+	        <MenuCommand text="IZ7 !!! Not Working" visible="true" identifier="IZ7" toolTip="Setup -&gt; I-Inventory -&gt; IZ7 - IZ7 !!! Not Working">
+	          <MenuCommand.onInvoke>
+	            <ActionEventHandler type="actioneventhandler" actionName="actCmdInvoke" />
+	          </MenuCommand.onInvoke>
+	        </MenuCommand>
+	        <MenuCommand text="Units of Measure Codes" visible="true" identifier="IZ8" toolTip="Setup -&gt; I-Inventory -&gt; IZ8 - Units of Measure Codes">
+	          <MenuCommand.onInvoke>
+	            <ActionEventHandler type="actioneventhandler" actionName="actCmdInvoke" />
+	          </MenuCommand.onInvoke>
+	        </MenuCommand>
+	        <MenuCommand text="Warehouse Scan - IZ9" visible="true" identifier="IZ9" toolTip="Setup -&gt; I-Inventory -&gt; IZ9 - Warehouse Scan">
+	          <MenuCommand.onInvoke>
+	            <ActionEventHandler type="actioneventhandler" actionName="actCmdInvoke" />
+	          </MenuCommand.onInvoke>
+	        </MenuCommand>
+	        <MenuCommand text="Product Adjustment Types" visible="true" identifier="IZA" toolTip="Setup -&gt; I-Inventory -&gt; IZA - Product Adjustment Types">
+	          <MenuCommand.onInvoke>
+	            <ActionEventHandler type="actioneventhandler" actionName="actCmdInvoke" />
+	          </MenuCommand.onInvoke>
+	        </MenuCommand>
+	        <MenuCommand text="Product Adjustment Types" visible="true" identifier="IZA" toolTip="Setup -&gt; I-Inventory -&gt; IZA - Product Adjustment Types">
+	          <MenuCommand.onInvoke>
+	            <ActionEventHandler type="actioneventhandler" actionName="actCmdInvoke" />
+	          </MenuCommand.onInvoke>
+	        </MenuCommand>
+	        <MenuCommand text="Product Schedule Parameters " visible="true" identifier="IZB" toolTip="Setup -&gt; I-Inventory -&gt; IZB - Product Schedule Parameters">
+	          <MenuCommand.onInvoke>
+	            <ActionEventHandler type="actioneventhandler" actionName="actCmdInvoke" />
+	          </MenuCommand.onInvoke>
+	        </MenuCommand>
+	        <MenuCommand text="Inventory Production Schedule" visible="true" identifier="IZC" toolTip="Setup -&gt; I-Inventory -&gt; IZC - Inventory Production Schedule">
+	          <MenuCommand.onInvoke>
+	            <ActionEventHandler type="actioneventhandler" actionName="actCmdInvoke" />
+	          </MenuCommand.onInvoke>
+	        </MenuCommand>
+	        <MenuCommand text="Department Maintenance" visible="true" identifier="IZD" toolTip="Setup -&gt; I-Inventory -&gt; IZD - Department Maintenance">
+	          <MenuCommand.onInvoke>
+	            <ActionEventHandler type="actioneventhandler" actionName="actCmdInvoke" />
+	          </MenuCommand.onInvoke>
+	        </MenuCommand>
+	        <MenuCommand text="Product Surcharge" visible="true" identifier="IZE" toolTip="Setup -&gt; I-Inventory -&gt; IZE - Product Surcharge">
+	          <MenuCommand.onInvoke>
+	            <ActionEventHandler type="actioneventhandler" actionName="actCmdInvoke" />
+	          </MenuCommand.onInvoke>
+	        </MenuCommand>
+	        <MenuCommand text="IZF (does nothing yet)" visible="true" identifier="IZF" toolTip="Setup -&gt; I-Inventory -&gt; IZF - (does nothing yet)">
+	          <MenuCommand.onInvoke>
+	            <ActionEventHandler type="actioneventhandler" actionName="actCmdInvoke" />
+	          </MenuCommand.onInvoke>
+	        </MenuCommand>
+	        <MenuCommand text="Product Group Maintenance" visible="true" identifier="IZG" toolTip="Setup -&gt; I-Inventory -&gt; IZG - Product Group Maintenance">
+	          <MenuCommand.onInvoke>
+	            <ActionEventHandler type="actioneventhandler" actionName="actCmdInvoke" />
+	          </MenuCommand.onInvoke>
+	        </MenuCommand>
+	        <MenuCommand text="IZH (does nothing yet)" visible="true" identifier="IZH" toolTip="Setup -&gt; I-Inventory -&gt; IZH - (does nothing yet)">
+	          <MenuCommand.onInvoke>
+	            <ActionEventHandler type="actioneventhandler" actionName="actCmdInvoke" />
+	          </MenuCommand.onInvoke>
+	        </MenuCommand>
+	        <MenuCommand text="IZI IN Load Parameters" visible="true" identifier="IZI" toolTip="Setup -&gt; I-Inventory -&gt; IZI - IN Load Parameters">
+	          <MenuCommand.onInvoke>
+	            <ActionEventHandler type="actioneventhandler" actionName="actCmdInvoke" />
+	          </MenuCommand.onInvoke>
+	        </MenuCommand>
+	        <MenuCommand text="IZL !!!RRtype!! Not Working" visible="true" identifier="IZL" toolTip="Setup -&gt; I-Inventory -&gt; IZL - IZL !!!RRtype!! Not Working">
+	          <MenuCommand.onInvoke>
+	            <ActionEventHandler type="actioneventhandler" actionName="actCmdInvoke" />
+	          </MenuCommand.onInvoke>
+	        </MenuCommand>
+	        <MenuCommand text="Main Product Group Maintenance" visible="true" identifier="IZM" toolTip="Setup -&gt; I-Inventory -&gt; IZM - Main Product Group Maintenance">
+	          <MenuCommand.onInvoke>
+	            <ActionEventHandler type="actioneventhandler" actionName="actCmdInvoke" />
+	          </MenuCommand.onInvoke>
+	        </MenuCommand>
+	        <MenuCommand text="IZP-Inventory Parameters" visible="true" identifier="IZP" toolTip="Setup -&gt; I-Inventory -&gt; IZP - Inventory Parameters">
+	          <MenuCommand.onInvoke>
+	            <ActionEventHandler type="actioneventhandler" actionName="actCmdInvoke" />
+	          </MenuCommand.onInvoke>
+	        </MenuCommand>
+	        <MenuCommand text="IZQ-Data Setup" visible="true" identifier="IZQ" toolTip="Setup -&gt; I-Inventory -&gt; IZQ - Data Setup">
+	          <MenuCommand.onInvoke>
+	            <ActionEventHandler type="actioneventhandler" actionName="actCmdInvoke" />
+	          </MenuCommand.onInvoke>
+	        </MenuCommand>
+	        <MenuCommand text="IZR !!!RRtype!! Not Working" visible="true" identifier="IZR" toolTip="Setup -&gt; I-Inventory -&gt; IZR - IZR !!!RRtype!! Not Working">
+	          <MenuCommand.onInvoke>
+	            <ActionEventHandler type="actioneventhandler" actionName="actCmdInvoke" />
+	          </MenuCommand.onInvoke>
+	        </MenuCommand>
+	        <MenuCommand text="Product Flex Codes" visible="true" identifier="IZS" toolTip="Setup -&gt; I-Inventory -&gt; IZS - Product Flex Codes">
+	          <MenuCommand.onInvoke>
+	            <ActionEventHandler type="actioneventhandler" actionName="actCmdInvoke" />
+	          </MenuCommand.onInvoke>
+	        </MenuCommand>
+	        <MenuCommand text="Amendment Log Maintenance" visible="true" identifier="IZU" toolTip="Setup -&gt; I-Inventory -&gt; IZU - Amendment Log Maintenance">
+	          <MenuCommand.onInvoke>
+	            <ActionEventHandler type="actioneventhandler" actionName="actCmdInvoke" />
+	          </MenuCommand.onInvoke>
+	        </MenuCommand>
+	      </MenuGroup>
+	      <MenuGroup text="J - Job Management" visible="true" identifier="mgContainer" toolTip="J - Job Management....">
+	        <MenuCommand text="Resource Groups" visible="true" identifier="JZ1" toolTip="Setup -&gt; I-Inventory -&gt; JZ1 - Resource Groups">
+	          <MenuCommand.onInvoke>
+	            <ActionEventHandler type="actioneventhandler" actionName="actCmdInvoke" />
+	          </MenuCommand.onInvoke>
+	        </MenuCommand>
+	        <MenuCommand text="Job Type (NW)" visible="true" identifier="JZ4" toolTip="Setup -&gt; I-Inventory -&gt; JZ4 - Job Type">
+	          <MenuCommand.onInvoke>
+	            <ActionEventHandler type="actioneventhandler" actionName="actCmdInvoke" />
+	          </MenuCommand.onInvoke>
+	        </MenuCommand>
+	        <MenuCommand text="Responsibility Codes" visible="true" identifier="JZ5" toolTip="Setup -&gt; I-Inventory -&gt; JZ5 - Responsibility Codes">
+	          <MenuCommand.onInvoke>
+	            <ActionEventHandler type="actioneventhandler" actionName="actCmdInvoke" />
+	          </MenuCommand.onInvoke>
+	        </MenuCommand>
+	        <MenuCommand text="Job Units" visible="true" identifier="JZ6" toolTip="Setup -&gt; I-Inventory -&gt; JZ6 - Job Units">
+	          <MenuCommand.onInvoke>
+	            <ActionEventHandler type="actioneventhandler" actionName="actCmdInvoke" />
+	          </MenuCommand.onInvoke>
+	        </MenuCommand>
+	        <MenuCommand text="Departments" visible="true" identifier="JZ7" toolTip="Setup -&gt; I-Inventory -&gt; JZ7 - Departments">
+	          <MenuCommand.onInvoke>
+	            <ActionEventHandler type="actioneventhandler" actionName="actCmdInvoke" />
+	          </MenuCommand.onInvoke>
+	        </MenuCommand>
+	        <MenuCommand text="Task Period Maintenance" visible="true" identifier="JZ8" toolTip="Setup -&gt; I-Inventory -&gt; JZ8 - Task Period Maintenance">
+	          <MenuCommand.onInvoke>
+	            <ActionEventHandler type="actioneventhandler" actionName="actCmdInvoke" />
+	          </MenuCommand.onInvoke>
+	        </MenuCommand>
+	        <MenuCommand text="Job Management Parameters" visible="true" identifier="JZP" toolTip="Setup -&gt; I-Inventory -&gt; JZP - Job Management Parameters">
+	          <MenuCommand.onInvoke>
+	            <ActionEventHandler type="actioneventhandler" actionName="actCmdInvoke" />
+	          </MenuCommand.onInvoke>
+	        </MenuCommand>
+	      </MenuGroup>
+	      <MenuGroup text="K - Subscriptions" visible="true" identifier="mgContainer" toolTip="K - Subscriptions....">
+	        <MenuCommand text="KZ1 (NW)" visible="true" identifier="KZ1" toolTip="Setup -&gt; K - Subscriptions -&gt; KZ1 - (NW)">
+	          <MenuCommand.onInvoke>
+	            <ActionEventHandler type="actioneventhandler" actionName="actCmdInvoke" />
+	          </MenuCommand.onInvoke>
+	        </MenuCommand>
+	        <MenuCommand text="Subscription Product Maintenance (NW)" visible="true" identifier="KZ2" toolTip="Setup -&gt; K - Subscriptions -&gt; KZ2 - Subscription Product Maintenance (NW)">
+	          <MenuCommand.onInvoke>
+	            <ActionEventHandler type="actioneventhandler" actionName="actCmdInvoke" />
+	          </MenuCommand.onInvoke>
+	        </MenuCommand>
+	        <MenuCommand text="Subscriptions System Parameters (NW)" visible="true" identifier="KZP" toolTip="Setup -&gt; K - Subscriptions -&gt; KZP - Subscriptions System Parameters (NW)">
+	          <MenuCommand.onInvoke>
+	            <ActionEventHandler type="actioneventhandler" actionName="actCmdInvoke" />
+	          </MenuCommand.onInvoke>
+	        </MenuCommand>
+	      </MenuGroup>
+	      <MenuGroup text="L - Landed Costing" visible="true" identifier="mgContainer" toolTip="L - Landed Costing....">
+	        <MenuCommand text="Tariff Codes" visible="true" identifier="LZ1" toolTip="Setup -&gt; K - Subscriptions -&gt; LZ1 - Tariff Codes">
+	          <MenuCommand.onInvoke>
+	            <ActionEventHandler type="actioneventhandler" actionName="actCmdInvoke" />
+	          </MenuCommand.onInvoke>
+	        </MenuCommand>
+	        <MenuCommand text="Shipment Status (NW)" visible="true" identifier="LZ2" toolTip="Setup -&gt; K - Subscriptions -&gt; LZ2 - Shipment Status (NW)">
+	          <MenuCommand.onInvoke>
+	            <ActionEventHandler type="actioneventhandler" actionName="actCmdInvoke" />
+	          </MenuCommand.onInvoke>
+	        </MenuCommand>
+	        <MenuCommand text="Shipment Type Codes" visible="true" identifier="LZ3" toolTip="Setup -&gt; K - Subscriptions -&gt; LZ3 - Shipment Type Codes">
+	          <MenuCommand.onInvoke>
+	            <ActionEventHandler type="actioneventhandler" actionName="actCmdInvoke" />
+	          </MenuCommand.onInvoke>
+	        </MenuCommand>
+	        <MenuCommand text="Shipment Cost Type (NW)" visible="true" identifier="LZ4" toolTip="Setup -&gt; K - Subscriptions -&gt; LZ4 - Shipment Cost Type (NW)">
+	          <MenuCommand.onInvoke>
+	            <ActionEventHandler type="actioneventhandler" actionName="actCmdInvoke" />
+	          </MenuCommand.onInvoke>
+	        </MenuCommand>
+	        <MenuCommand text="Landed Costing Parameters (NW)" visible="true" identifier="LZP" toolTip="Setup -&gt; K - Subscriptions -&gt; LZP- Landed Costing Parameters (NW)">
+	          <MenuCommand.onInvoke>
+	            <ActionEventHandler type="actioneventhandler" actionName="actCmdInvoke" />
+	          </MenuCommand.onInvoke>
+	        </MenuCommand>
+	      </MenuGroup>
+	      <MenuGroup text="M - ??????" visible="true" identifier="mgM" toolTip="M - ???????????....">
+	        <MenuCommand text="MZ1 (NW)" visible="true" identifier="MZ1" toolTip="Setup -&gt; M - ??????? -&gt; MZ1 - ????????????? (NW)">
+	          <MenuCommand.onInvoke>
+	            <ActionEventHandler type="actioneventhandler" actionName="actCmdInvoke" />
+	          </MenuCommand.onInvoke>
+	        </MenuCommand>
+	        <MenuCommand text="MZ2 - Work Centre (NW)" visible="true" identifier="MZ2" toolTip="Setup -&gt; M - ??????? -&gt; MZ2 - Work Centre (NW)">
+	          <MenuCommand.onInvoke>
+	            <ActionEventHandler type="actioneventhandler" actionName="actCmdInvoke" />
+	          </MenuCommand.onInvoke>
+	        </MenuCommand>
+	        <MenuCommand text="MZ3 - Work Centre (NW)" visible="true" identifier="MZ3" toolTip="Setup -&gt; M - ??????? -&gt; MZ3 - Work Centre (NW)">
+	          <MenuCommand.onInvoke>
+	            <ActionEventHandler type="actioneventhandler" actionName="actCmdInvoke" />
+	          </MenuCommand.onInvoke>
+	        </MenuCommand>
+	        <MenuCommand text="MZ4 - Work Centre (NW)" visible="true" identifier="MZ4" toolTip="Setup -&gt; M - ??????? -&gt; MZ4 - Work Centre (NW)">
+	          <MenuCommand.onInvoke>
+	            <ActionEventHandler type="actioneventhandler" actionName="actCmdInvoke" />
+	          </MenuCommand.onInvoke>
+	        </MenuCommand>
+	        <MenuCommand text="MZ5 - Default Dates (NW)" visible="true" identifier="MZ5" toolTip="Setup -&gt; M - ??????? -&gt; MZ5 - Default Dates (NW)">
+	          <MenuCommand.onInvoke>
+	            <ActionEventHandler type="actioneventhandler" actionName="actCmdInvoke" />
+	          </MenuCommand.onInvoke>
+	        </MenuCommand>
+	        <MenuCommand text="MZ6 - Calendar Maintenance (NW)" visible="true" identifier="MZ6" toolTip="Setup -&gt; M - ??????? -&gt; MZ6 - Calendar Maintenance (NW)">
+	          <MenuCommand.onInvoke>
+	            <ActionEventHandler type="actioneventhandler" actionName="actCmdInvoke" />
+	          </MenuCommand.onInvoke>
+	        </MenuCommand>
+	        <MenuCommand text="MZ8 - Unit Of Measure Conversion Maintenance (NW)" visible="true" identifier="MZ8" toolTip="Setup -&gt; M - ??????? -&gt; MZ8 - Unit Of Measure Conversion Maintenance (NW)">
+	          <MenuCommand.onInvoke>
+	            <ActionEventHandler type="actioneventhandler" actionName="actCmdInvoke" />
+	          </MenuCommand.onInvoke>
+	        </MenuCommand>
+	        <MenuCommand text="MZP - Manufacturing Parameters (NW)" visible="true" identifier="MZP" toolTip="Setup -&gt; M - ??????? -&gt; MZP - Manufacturing Parameters (NW - mnparms is empty for cmpy 01)">
+	          <MenuCommand.onInvoke>
+	            <ActionEventHandler type="actioneventhandler" actionName="actCmdInvoke" />
+	          </MenuCommand.onInvoke>
+	        </MenuCommand>
+	      </MenuGroup>
+	      <MenuGroup text="N - Internal Requisitions" visible="true" identifier="mgContainer" toolTip="N - Internal Requisitions....">
+	        <MenuCommand text="NZP - Parameter Maintenance" visible="true" identifier="NZP" toolTip="Setup -&gt; N - Internal Requisitions -&gt; NZP - Parameter Maintenance (NW-Requires Printer Setup)">
+	          <MenuCommand.onInvoke>
+	            <ActionEventHandler type="actioneventhandler" actionName="actCmdInvoke" />
+	          </MenuCommand.onInvoke>
+	        </MenuCommand>
+	      </MenuGroup>
+	      <MenuGroup text="P - Accounts Payable" visible="true" identifier="mgContainer" toolTip="P - Accounts Payable....">
+	        <MenuCommand text="PZ3 - Hold Voucher Codes" visible="true" identifier="PZ3" toolTip="Setup -&gt; P - Accounts Payable -&gt; PZ3 - Hold Voucher Codes">
+	          <MenuCommand.onInvoke>
+	            <ActionEventHandler type="actioneventhandler" actionName="actCmdInvoke" />
+	          </MenuCommand.onInvoke>
+	        </MenuCommand>
+	        <MenuCommand text="PZ5 - Vendor Type" visible="true" identifier="PZ5" toolTip="Setup -&gt; P - Accounts Payable -&gt; PZ5 - Vendor Type">
+	          <MenuCommand.onInvoke>
+	            <ActionEventHandler type="actioneventhandler" actionName="actCmdInvoke" />
+	          </MenuCommand.onInvoke>
+	        </MenuCommand>
+	        <MenuCommand text="PZI - AP Load Parameters" visible="true" identifier="PZI" toolTip="Setup -&gt; P - Accounts Payable -&gt; PZI - AP Load Parameters">
+	          <MenuCommand.onInvoke>
+	            <ActionEventHandler type="actioneventhandler" actionName="actCmdInvoke" />
+	          </MenuCommand.onInvoke>
+	        </MenuCommand>
+	        <MenuCommand text="PZP - Accounts Payable Parameters" visible="true" identifier="PZP" toolTip="Setup -&gt; P - Accounts Payable -&gt; PZP - Accounts Payable Parameters">
+	          <MenuCommand.onInvoke>
+	            <ActionEventHandler type="actioneventhandler" actionName="actCmdInvoke" />
+	          </MenuCommand.onInvoke>
+	        </MenuCommand>
+	        <MenuCommand text="PZU - Amendment Log Maintenance" visible="true" identifier="PZU" toolTip="Setup -&gt; P - Accounts Payable -&gt; PZU - Amendment Log Maintenance">
+	          <MenuCommand.onInvoke>
+	            <ActionEventHandler type="actioneventhandler" actionName="actCmdInvoke" />
+	          </MenuCommand.onInvoke>
+	        </MenuCommand>
+	      </MenuGroup>
+	      <MenuGroup text="Q - Quotation" visible="true" identifier="mgQuotation" toolTip="Q - Quotation....">
+	        <MenuCommand text="QZP - Quotation Parameters" visible="true" identifier="QZP" toolTip="Setup -&gt; P - Accounts Payable -&gt; QZP - Quotation Parameters">
+	          <MenuCommand.onInvoke>
+	            <ActionEventHandler type="actioneventhandler" actionName="actCmdInvoke" />
+	          </MenuCommand.onInvoke>
+	        </MenuCommand>
+	      </MenuGroup>
+	      <MenuGroup text="R - Purchase Order" visible="true" identifier="mgPO" toolTip="R - Purchase Order....">
+	        <MenuCommand text="RZ3 - Purchase Order Format Types" visible="true" identifier="RZ3" toolTip="Setup -&gt; R - Purchase Order -&gt; RZ3 - Purchase Order Format Types">
+	          <MenuCommand.onInvoke>
+	            <ActionEventHandler type="actioneventhandler" actionName="actCmdInvoke" />
+	          </MenuCommand.onInvoke>
+	        </MenuCommand>
+	        <MenuCommand text="RZ4 - Purchase Group Details" visible="true" identifier="RZ4" toolTip="Setup -&gt; R - Purchase Order -&gt; RZ4 - Purchase Group Details">
+	          <MenuCommand.onInvoke>
+	            <ActionEventHandler type="actioneventhandler" actionName="actCmdInvoke" />
+	          </MenuCommand.onInvoke>
+	        </MenuCommand>
+	        <MenuCommand text="RZ5 - Product Descriptions" visible="true" identifier="RZ5" toolTip="Setup -&gt; R - Purchase Order -&gt; RZ5 - Product Descriptions">
+	          <MenuCommand.onInvoke>
+	            <ActionEventHandler type="actioneventhandler" actionName="actCmdInvoke" />
+	          </MenuCommand.onInvoke>
+	        </MenuCommand>
+	        <MenuCommand text="RZP - Purchasing Parameters" visible="true" identifier="RZP" toolTip="Setup -&gt; R - Purchase Order -&gt; RZP - Purchasing Parameters">
+	          <MenuCommand.onInvoke>
+	            <ActionEventHandler type="actioneventhandler" actionName="actCmdInvoke" />
+	          </MenuCommand.onInvoke>
+	        </MenuCommand>
+	      </MenuGroup>
+	      <MenuGroup text="T - ?????????" visible="true" identifier="mgTG" toolTip="T - ???????????....">
+	        <MenuCommand text="TGZF - Maintain account groups (NW)" visible="true" identifier="TGZF" toolTip="Setup -&gt; T - ?????????? -&gt; TGZF - aintain account groups  (NW)">
+	          <MenuCommand.onInvoke>
+	            <ActionEventHandler type="actioneventhandler" actionName="actCmdInvoke" />
+	          </MenuCommand.onInvoke>
+	        </MenuCommand>
+	      </MenuGroup>
+	
+				</MenuGroup>
+	
+	      <MenuGroup text="Settings for current User" visible="true" identifier="General" toolTip="Setup options for the current user">
+	        <MenuCommand text="U11 - Change Company" visible="true" identifier="U11" toolTip="Setup -&gt; U - Utilities -&gt; U11 - Company Note: Needs to have access">
+	          <MenuCommand.onInvoke>
+	            <ActionEventHandler type="actioneventhandler" actionName="actCmdInvoke" />
+	          </MenuCommand.onInvoke>
+	        </MenuCommand>
+	
+	      </MenuGroup>
+	  
+	  
+	  </MenuBar>
+	  
+	  <form.screenRecords>
+	    <ScreenRecord identifier="FormOnly" />
+	  </form.screenRecords>
+	</form>

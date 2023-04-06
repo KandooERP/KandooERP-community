@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form xmlns="http://namespaces.querix.com/2015/fglForms">
+	<form.rootContainer>
+		<GridPanel classNames="fcls_rootContainer" verticalAlignment="Stretch" horizontalAlignment="Stretch" fieldTable="" identifier="rootContainer">
+			<GridPanel.gridRowDefinitions>
+				<GridRowDefinition gridLengthValue=""/>
+				<GridRowDefinition gridLengthValue="100%"/>
+				<GridRowDefinition gridLengthValue=""/>
+				<GridRowDefinition gridLengthValue=""/>
+			</GridPanel.gridRowDefinitions>
+			<GridPanel.gridColumnDefinitions>
+				<GridColumnDefinition gridLengthValue="100%"/>
+			</GridPanel.gridColumnDefinitions>
+			<GridPanel classNames="fcls_title_cnt" visible="true" verticalAlignment="Top" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="cntTitle">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="100%"/>
+					<GridColumnDefinition gridLengthValue=""/>
+				</GridPanel.gridColumnDefinitions>
+				<Label isDynamic="true" text="POS Payment Scan" classNames="fcls_title_lb" visible="true" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="header_text"/>
+				<Label isDynamic="true" text="A695" classNames="fcls_title_lb" visible="true" gridItemLocation="1,0,1,1" fieldTable="" identifier="lbFormName"/>
+			</GridPanel>
+			<Table rowCount="10" preferredSize="85qch,10qch" gridItemLocation="0,1,1,1" fieldTable="" identifier="sr_pospmnts">
+				<TableColumn fieldTable="" identifier="tc_scroll_flag">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="2rem" gridMaxLength="2rem" gridMinLength="2rem"/>
+					</TableColumn.columnLength>
+					<CheckBox dataType="Char,,,," fieldTable="formonly" identifier="scroll_flag">
+						<CheckBox.checkedValue>
+							<StringLiteral stringValue="*"/>
+						</CheckBox.checkedValue>
+						<CheckBox.uncheckedValue>
+							<NullLiteral/>
+						</CheckBox.uncheckedValue>
+					</CheckBox>
+				</TableColumn>
+				<TableColumn text="Date" fieldTable="" identifier="tc_tran_date">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="10rem" gridMaxLength="10rem" gridMinLength="10rem"/>
+					</TableColumn.columnLength>
+					<TextField dataType="Date,,,," toolTip=" The date of the receipt" fieldTable="pospmnts" comment=" The date of the receipt" identifier="tran_date"/>
+				</TableColumn>
+				<TableColumn text="Amount" fieldTable="" identifier="tc_pay_amount">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="10rem" gridMaxLength="10rem" gridMinLength="10rem"/>
+					</TableColumn.columnLength>
+					<TextField dataType="Decimal,,,2,16" toolTip=" The amount of the receipt" fieldTable="pospmnts" comment=" The amount of the receipt" identifier="pay_amount"/>
+				</TableColumn>
+				<TableColumn text="Location" fieldTable="" identifier="tc_locn_code">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="10rem" gridMaxLength="10rem" gridMinLength="10rem"/>
+					</TableColumn.columnLength>
+					<TextField dataType="Char,,,,8" toolTip=" The POS location code" fieldTable="pospmnts" comment=" The POS location code" identifier="locn_code"/>
+				</TableColumn>
+				<TableColumn text="Station" fieldTable="" identifier="tc_station_code">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="10rem" gridMaxLength="10rem" gridMinLength="10rem"/>
+					</TableColumn.columnLength>
+					<TextField dataType="Char,,,,8" toolTip=" The POS station code" fieldTable="pospmnts" comment=" The POS station code" identifier="station_code"/>
+				</TableColumn>
+				<TableColumn text="Pay Type" fieldTable="" identifier="tc_pay_type">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="10rem" gridMaxLength="10rem" gridMinLength="10rem"/>
+					</TableColumn.columnLength>
+					<TextField dataType="Char,,,,2" toolTip=" The POS payment type code" fieldTable="pospmnts" comment=" The POS payment type code" identifier="pay_type"/>
+				</TableColumn>
+				<TableColumn text="Bank Code" fieldTable="" identifier="tc_bank_code">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="10rem" gridMaxLength="10rem" gridMinLength="10rem"/>
+					</TableColumn.columnLength>
+					<TextField dataType="Char,,,,9" toolTip=" The POS bank code" fieldTable="pospmnts" comment=" The POS bank code" identifier="bank_code"/>
+				</TableColumn>
+				<TableColumn resizable="true" visible="true" identifier="tc_EOL">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="100%"/>
+					</TableColumn.columnLength>
+				</TableColumn>
+			</Table>
+			<GridPanel classNames="fcls_detail_cnt,fcls_data_cnt,fcls_align_left" visible="true" verticalAlignment="Top" horizontalAlignment="Left" gridItemLocation="0,2,1,1" fieldTable="formonly" identifier="cntDetail1">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="" gridMinLength="10rem"/>
+					<GridColumnDefinition gridLengthValue=""/>
+					<GridColumnDefinition gridLengthValue="" gridMinLength="10rem"/>
+					<GridColumnDefinition gridLengthValue=""/>
+				</GridPanel.gridColumnDefinitions>
+				<TextField dataType="Char,,,,10" preferredSize="11qch,1qch" toolTip=" The cheque number of the payment" gridItemLocation="1,0,1,1" fieldTable="pospmntdet" comment=" The cheque number of the payment" identifier="cheque_no"/>
+				<TextField dataType="Char,,,,20" preferredSize="21qch,1qch" toolTip=" The credit card number of the payment" gridItemLocation="3,0,1,1" fieldTable="pospmntdet" comment=" The credit card number of the payment" identifier="ccard_no"/>
+				<TextField dataType="Char,,,,20" preferredSize="21qch,1qch" toolTip=" The drawer of the cheque payment" gridItemLocation="1,1,1,1" fieldTable="pospmntdet" comment=" The drawer of the cheque payment" identifier="drawer"/>
+				<TextField dataType="Char,,,,20" preferredSize="21qch,1qch" toolTip=" The name of the credit card holder" gridItemLocation="3,1,1,1" fieldTable="pospmntdet" comment=" The name of the credit card holder" identifier="card_holder"/>
+				<TextField dataType="Char,,,,15" preferredSize="21qch,1qch" toolTip=" The bank of the cheque payment" gridItemLocation="1,2,1,1" fieldTable="pospmntdet" comment=" The bank of the cheque payment" identifier="bank_name"/>
+				<Label isDynamic="true" text="Cheque Ref" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,0,1,1" fieldTable="" identifier="lb51"/>
+				<Label isDynamic="true" text="Card No." classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="2,0,1,1" fieldTable="" identifier="lb53"/>
+				<Label isDynamic="true" text="Drawer" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,1,1,1" fieldTable="" identifier="lb52"/>
+				<Label isDynamic="true" text="Card Holder" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="2,1,1,1" fieldTable="" identifier="lb54"/>
+				<Label isDynamic="true" text="Bank Name" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,2,1,1" fieldTable="" identifier="lb66"/>
+			</GridPanel>
+			<GridPanel classNames="fcls_statusbar_cnt" visible="true" verticalAlignment="Bottom" gridItemLocation="0,3,1,1" fieldTable="formonly" identifier="cntStatusBar">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="100%"/>
+				</GridPanel.gridColumnDefinitions>
+				<Label isDynamic="true" text="" classNames="fcls_sblabel" visible="true" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="lbInfo1"/>
+				<Label isDynamic="true" text="" classNames="fcls_sblabel" visible="true" gridItemLocation="0,1,1,1" fieldTable="formonly" identifier="lbInfo2"/>
+			</GridPanel>
+		</GridPanel>
+	</form.rootContainer>
+	<form.screenRecords>
+		<ScreenRecord identifier="sr_pospmnts" fields="formonly.scroll_flag,pospmnts.tran_date,pospmnts.pay_amount,pospmnts.locn_code,pospmnts.station_code,pospmnts.pay_type,pospmnts.bank_code" elements="10"/>
+		<ScreenRecord identifier="formonly" fields="scroll_flag"/>
+		<ScreenRecord identifier="pospmntdet" fields="cheque_no,drawer,bank_name,ccard_no,card_holder"/>
+		<ScreenRecord identifier="pospmnts" fields="tran_date,pay_amount,locn_code,station_code,pay_type,bank_code"/>
+	</form.screenRecords>
+</form>
+

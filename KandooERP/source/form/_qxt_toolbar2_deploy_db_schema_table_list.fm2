@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form xmlns="http://namespaces.querix.com/2015/fglForms">
+	<form.rootContainer>
+		<GridPanel fieldTable="" identifier="grid1">
+			<GridPanel.gridRowDefinitions>
+				<GridRowDefinition>
+					<GridRowDefinition.gridLength>
+						<GridLength gridLengthValue="15.0"/>
+					</GridRowDefinition.gridLength>
+				</GridRowDefinition>
+				<GridRowDefinition>
+					<GridRowDefinition.gridLength>
+						<GridLength gridLengthValue="15.0"/>
+					</GridRowDefinition.gridLength>
+				</GridRowDefinition>
+			</GridPanel.gridRowDefinitions>
+			<GridPanel.gridColumnDefinitions>
+				<GridColumnDefinition>
+					<GridColumnDefinition.gridLength>
+						<GridLength gridLengthType="Percent" gridLengthValue="100"/>
+					</GridColumnDefinition.gridLength>
+				</GridColumnDefinition>
+			</GridPanel.gridColumnDefinitions>
+			<Label isDynamic="true" text="Table List" dataType="Char,,,,"   visible="true" fieldTable="formonly" identifier="dl_header" gridItemLocation="0,0,1,1">
+					<Label.displayModes>
+						<DisplayMode appearance="bold,Blue"/>
+					</Label.displayModes>
+				</Label>
+			<Table fieldTable="" identifier="table_name_list" minSize="220,330" gridItemLocation="0,1,1,1">
+					<TableColumn visible="true" fieldTable="" identifier="tc_table_name">
+						<TableColumn.columnLength>
+							<GridLength gridLengthValue="100" gridLengthType="Percent"/>
+						</TableColumn.columnLength>
+						<TextField maxLength="20" dataType="Char,,,," visible="true" textAlignment="," fieldTable="formonly" identifier="table_name"/>
+					</TableColumn>
+				</Table>
+		</GridPanel>
+	</form.rootContainer>
+	<form.screenRecords>
+		<ScreenRecord identifier="table_name_list" fields="table_name"/>
+		<ScreenRecord identifier="formonly" fields="table_name,dl_header"/>
+	</form.screenRecords>
+</form>
+

@@ -1,0 +1,78 @@
+{
+###########################################################################
+# This program is free software; you can redistribute it and/or modify it
+# under the terms of the GNU General Public License as published by the
+# Free Software Foundation; either version 2 of the License, or (at your
+# option) any later version.
+#
+# This program is distributed in the hope that it will be useful, but
+# WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+# General Public License for more details.
+#
+# You should have received a copy of the GNU General Public License along
+# with this program; if not, write to the Free Software Foundation, Inc.,
+# 59 Temple Place, Suite 330, Boston, MA 02111-1307 USA
+#
+###########################################################################
+
+	 $Id: M132.per,v 1.2 2003/11/19 22:22:59 afalout Exp $
+}
+
+
+database kandoodb
+
+screen
+{
+                             Shop Order Details                        M132
+\g----------------------------------------------------------------------------\g
+ Product          [f001           ]   [f002                          ]
+ Order Quantity   [f003      ]         Unit of Measure  [f004]
+ Unit Cost        [f005             ]  Extended Cost    [f006             ]
+\g----------------------------------------------------------------------------\g
+ Type     Item       Description               Quantity         Unit Cost
+\g----------------------------------------------------------------------------\g
+[a|b|f007           |f008                   |f009      |f010             |c]
+[a|b|f007           |f008                   |f009      |f010             |c]
+[a|b|f007           |f008                   |f009      |f010             |c]
+[a|b|f007           |f008                   |f009      |f010             |c]
+[a|b|f007           |f008                   |f009      |f010             |c]
+[a|b|f007           |f008                   |f009      |f010             |c]
+[a|b|f007           |f008                   |f009      |f010             |c]
+[a|b|f007           |f008                   |f009      |f010             |c]
+[a|b|f007           |f008                   |f009      |f010             |c]
+[a|b|f007           |f008                   |f009      |f010             |c]
+
+}
+
+tables
+shopordhead
+shoporddetl
+product
+
+attributes
+f001 = shopordhead.part_code;
+f002 = product.desc_text;
+f003 = shopordhead.order_qty;
+f004 = shopordhead.uom_code;
+f005 = formonly.unit_cost_amt type decimal;
+f006 = formonly.ext_cost_amt type decimal;
+a    = shoporddetl.type_ind, upshift, comments =
+" C=Component, I=Instruction, S=Cost, W=Work Centre, U=Set Up, B=By Product";
+b    = formonly.component_type_ind type char, noentry;
+f007 = shoporddetl.part_code, noentry;
+f008 = shoporddetl.desc_text, noentry;
+f009 = shoporddetl.required_qty, noentry;
+f010 = shoporddetl.std_est_cost_amt, noentry;
+c    = shoporddetl.sequence_num, noentry, invisible;
+
+instructions
+delimiters "  "
+
+screen record sr_shoporddetl[10] (type_ind,
+                                  component_type_ind,
+                                  shoporddetl.part_code,
+                                  shoporddetl.desc_text,
+                                  required_qty,
+                                  std_est_cost_amt,
+                                  sequence_num)

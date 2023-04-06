@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form xmlns="http://namespaces.querix.com/2015/fglForms">
+	<form.rootContainer>
+		<GridPanel classNames="fcls_rootContainer" verticalAlignment="Top" horizontalAlignment="Left" fieldTable="" identifier="rootContainer">
+			<GridPanel.gridRowDefinitions>
+				<GridRowDefinition gridLengthValue=""/>
+				<GridRowDefinition gridLengthValue=""/>
+				<GridRowDefinition gridLengthValue=""/>
+				<GridRowDefinition gridLengthValue=""/>
+			</GridPanel.gridRowDefinitions>
+			<GridPanel.gridColumnDefinitions>
+				<GridColumnDefinition gridLengthValue="100%"/>
+			</GridPanel.gridColumnDefinitions>
+			<GridPanel classNames="fcls_title_cnt" visible="true" verticalAlignment="Top" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="cntTitle">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="100%"/>
+					<GridColumnDefinition gridLengthValue=""/>
+				</GridPanel.gridColumnDefinitions>
+				<Label isDynamic="true" text="Job Profitability" classNames="fcls_title_lb" visible="true" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="header_text"/>
+				<Label isDynamic="true" text="J306" classNames="fcls_title_lb" visible="true" gridItemLocation="1,0,1,1" fieldTable="" identifier="lbFormName"/>
+			</GridPanel>
+			<GridPanel classNames="fcls_detail_cnt,fcls_data_cnt" visible="true" verticalAlignment="Top" horizontalAlignment="Left" gridItemLocation="0,1,1,1" fieldTable="formonly" identifier="cntDetail1">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="" gridMinLength="10rem"/>
+					<GridColumnDefinition gridLengthValue=""/>
+				</GridPanel.gridColumnDefinitions>
+				<TextField noEntry="true" dataType="Char,,,,8" preferredSize="13qch,1qch" fieldTable="job" identifier="job_code" gridItemLocation="1,0,1,1" classNames="fcls_data_widget,fcls_length_15qch"/>
+				<TextField noEntry="true" dataType="Char,,,,30" preferredSize="31qch,1qch" fieldTable="job" identifier="title_text" gridItemLocation="1,1,1,1" classNames="fcls_data_widget,fcls_length_30qch"/>
+				<Label isDynamic="true" text="Job Code" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,0,1,1" fieldTable="" identifier="lb51"/>
+				<Label isDynamic="true" text="Desc" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,1,1,1" fieldTable="" identifier="lb52"/>
+			</GridPanel>
+			<GridPanel classNames="fcls_detail_cnt,fcls_data_cnt" visible="true" verticalAlignment="Top" horizontalAlignment="Left" gridItemLocation="0,2,1,1" fieldTable="formonly" identifier="cntDetail2">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="" gridMinLength="10rem"/>
+					<GridColumnDefinition gridLengthValue=""/>
+					<GridColumnDefinition gridLengthValue=""/>
+					<GridColumnDefinition gridLengthValue=""/>
+				</GridPanel.gridColumnDefinitions>
+				<Label isDynamic="true" text="Estimated" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="1,0,1,1" fieldTable="" identifier="lb57"/>
+				<TextField noEntry="true" dataType="Char,,,," preferredSize="15qch,1qch" fieldTable="formonly" identifier="est_bill_amt" gridItemLocation="1,1,1,1" classNames="fcls_data_widget,fcls_length_15qch"/>
+				<TextField noEntry="true" dataType="Char,,,," preferredSize="15qch,1qch" fieldTable="formonly" identifier="bdgt_bill_amt" gridItemLocation="2,1,1,1" classNames="fcls_data_widget,fcls_length_15qch"/>
+				<TextField noEntry="true" dataType="Char,,,," preferredSize="15qch,1qch" fieldTable="formonly" identifier="act_bill_amt" gridItemLocation="3,1,1,1" classNames="fcls_data_widget,fcls_length_15qch"/>
+				<TextField noEntry="true" dataType="Char,,,," preferredSize="15qch,1qch" fieldTable="formonly" identifier="est_cost_amt" gridItemLocation="1,2,1,1" classNames="fcls_data_widget,fcls_length_15qch"/>
+				<TextField noEntry="true" dataType="Char,,,," preferredSize="15qch,1qch" fieldTable="formonly" identifier="bdgt_cost_amt" gridItemLocation="2,2,1,1" classNames="fcls_data_widget,fcls_length_15qch"/>
+				<TextField noEntry="true" dataType="Char,,,," preferredSize="15qch,1qch" fieldTable="formonly" identifier="act_cost_amt" gridItemLocation="3,2,1,1" classNames="fcls_data_widget,fcls_length_15qch"/>
+				<TextField noEntry="true" dataType="Char,,,," preferredSize="15qch,1qch" fieldTable="formonly" identifier="est_profit" gridItemLocation="1,3,1,1" classNames="fcls_data_widget,fcls_length_15qch"/>
+				<TextField noEntry="true" dataType="Char,,,," preferredSize="15qch,1qch" fieldTable="formonly" identifier="bdgt_profit" gridItemLocation="2,3,1,1" classNames="fcls_data_widget,fcls_length_15qch"/>
+				<TextField noEntry="true" dataType="Char,,,," preferredSize="15qch,1qch" fieldTable="formonly" identifier="act_profit" gridItemLocation="3,3,1,1" classNames="fcls_data_widget,fcls_length_15qch"/>
+				<Label isDynamic="true" text="Budget" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="2,0,1,1" fieldTable="" identifier="lb58"/>
+				<Label isDynamic="true" text="Actual" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="3,0,1,1" fieldTable="" identifier="lb59"/>
+				<Label isDynamic="true" text="Revenue" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,1,1,1" fieldTable="formonly" identifier="lb36"/>
+				<Label isDynamic="true" text="Cost" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,2,1,1" fieldTable="formonly" identifier="lb37"/>
+				<Label isDynamic="true" text="Profit" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,3,1,1" fieldTable="formonly" identifier="lb38"/>
+			</GridPanel>
+			<GridPanel classNames="fcls_statusbar_cnt" visible="true" verticalAlignment="Top" gridItemLocation="0,3,1,1" fieldTable="formonly" identifier="cntStatusBar">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="100%"/>
+				</GridPanel.gridColumnDefinitions>
+				<Label isDynamic="true" text="" classNames="fcls_sblabel" visible="true" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="lbInfo1"/>
+				<Label isDynamic="true" text="" classNames="fcls_sblabel" visible="true" gridItemLocation="0,1,1,1" fieldTable="formonly" identifier="lbInfo2"/>
+			</GridPanel>
+		</GridPanel>
+	</form.rootContainer>
+	<form.screenRecords>
+		<ScreenRecord identifier="formonly" fields="formonly.est_bill_amt,formonly.bdgt_bill_amt,formonly.act_bill_amt,formonly.est_cost_amt,formonly.bdgt_cost_amt,formonly.act_cost_amt,formonly.est_profit,formonly.bdgt_profit,formonly.act_profit"/>
+		<ScreenRecord identifier="job" fields="job.job_code,job.title_text"/>
+	</form.screenRecords>
+</form>
+

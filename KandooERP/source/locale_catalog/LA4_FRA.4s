@@ -1,0 +1,56 @@
+LA4_FRA {
+Amount Taken { "Montant prélevé" }
+Currency { "Devise" }
+Date { "Date" }
+Date Paid { "Date de paiement" }
+Discount Info { "Infos remise" }
+Discount available by taking advantage of terms { "Remise disponible en profitant des conditions" }
+Distributed { "Distribué" }
+Due Date { "Date d'échéance" }
+Entry Date { "Date d'entrée" }
+Entry Info { "Informations sur l'entrée" }
+Entry Person { "Personne ayant saisi l'info" }
+Exchange Rate { "Taux de Change" }
+GL Integration { "Intégration Grand Livre" }
+ID { "ID" }
+Invoice Date { "Date de facturation" }
+Invoice Number { "Numéro de facture" }
+Language Code { "Code langue" }
+Name { "Nom" }
+Other Info { "Autres informations" }
+Paid { "Payé" }
+Period { "Période" }
+Possible Discount { "Remise possible" }
+Posted { "Publié" }
+Shipment Code { "Code d'expédition" }
+Tax Code { "Code T.V.A." }
+Term Code { "Code Conditions" }
+The Amount Distributed to expense accounts { "Montant distribué aux comptes de dépenses" }
+The Amount of this voucher already Paid { "Montant déjà payé de ce bon" }
+The Date after which Discount is no longer applicable { "La date après laquelle la réduction n'est plus applicable" }
+The Date the voucher was Paid { "La date à laquelle le bon a été payé" }
+The accounting period to which this voucher is to be posted { "La période comptable à laquelle ce bon doit être enregistré" }
+The accounting year to which this voucher is to be posted { "L'année comptable à laquelle ce bon doit être publié" }
+The actual Date of the Invoice { "Date réelle de la facture" }
+The amount of Discount Taken on this voucher { "Le montant de la réduction prise sur ce bon" }
+The currency conversion rate for this voucher { "Le taux de conversion de la devise pour ce bon" }
+The currency used for this vendor { "Devise utilisée pour ce fournisseur" }
+The date payment is actually due { "La date à laquelle le paiement est effectivement dû" }
+The date this voucher was entered into the system { "La date d'entrée de ce bon dans le système" }
+The name/initials of the person who entered voucher { "Nom/initiales de la personne qui a saisi le bon" }
+The system assigned Number for this Voucher { "Numéro de bon attribué par le système" }
+The total amount supplied on this voucher { "Le montant total fourni sur ce bon" }
+The vendor Name { "Nom du Fournisseur" }
+The vouchers tax code { "Code de taxe des bons d'achat" }
+The vouchers terms { "Conditions des bons" }
+Title { "Titre" }
+Total { "Total" }
+Unique ID for this Vendor { "Identifiant unique pour ce fournisseur" }
+Vendor Code { "Code Fournisseur" }
+Vendor Invoice Info { "Informations facture fournisseur" }
+Vendor Invoice Number that originated voucher { "Numéro de la facture fournisseur ayant généré le bon" }
+Voucher Amounts { "Montants de la facture" }
+Voucher Number { "Numéro de Facture" }
+Whether or not this voucher has been Posted { "Si ce bon a été émis ou non" }
+Year { "Année" }
+}

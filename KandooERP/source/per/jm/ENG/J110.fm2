@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form xmlns="http://namespaces.querix.com/2015/fglForms">
+	<form.rootContainer>
+		<GridPanel classNames="fcls_rootContainer" verticalAlignment="Stretch" horizontalAlignment="Stretch" fieldTable="" identifier="rootContainer">
+			<GridPanel.gridRowDefinitions>
+				<GridRowDefinition gridLengthValue=""/>
+				<GridRowDefinition gridLengthValue="100%"/>
+				<GridRowDefinition gridLengthValue=""/>
+			</GridPanel.gridRowDefinitions>
+			<GridPanel.gridColumnDefinitions>
+				<GridColumnDefinition gridLengthValue="100%"/>
+			</GridPanel.gridColumnDefinitions>
+			
+			
+			<GridPanel classNames="fcls_title_cnt" visible="true" verticalAlignment="Top" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="cntTitle">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="100%"/>
+					<GridColumnDefinition gridLengthValue=""/>
+				</GridPanel.gridColumnDefinitions>
+				<Label isDynamic="true" text="Responsibility Codes" classNames="fcls_title_lb" visible="true" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="header_text"/>
+				<Label isDynamic="true" text="J110" classNames="fcls_title_lb" visible="true" gridItemLocation="1,0,1,1" fieldTable="" identifier="lbFormName"/>
+			</GridPanel>
+			<Table rowCount="5" preferredSize="42qch,5qch" fieldTable="" identifier="sr_responsible" gridItemLocation="0,1,1,1">
+				<TableColumn fieldTable="" identifier="tc_resp_code" text="Responsibility Code">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="22.5%" gridMaxLength="15rem" gridMinLength="5rem"/>
+					</TableColumn.columnLength>
+					<TextField toCase="Up" dataType="Char,,,,8" toolTip="Unique code to identify each responsible person" comment="Unique code to identify each responsible person" fieldTable="responsible" identifier="resp_code"/>
+				</TableColumn>
+				<TableColumn fieldTable="" identifier="tc_name_text" text="Name">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="77.5%" gridMaxLength="40rem" gridMinLength="10rem"/>
+					</TableColumn.columnLength>
+					<TextField dataType="Char,,,,30" toolTip="Full name or title of the responsible person" comment="Full name or title of the responsible person" fieldTable="responsible" identifier="name_text"/>
+				</TableColumn>
+			</Table>
+			<GridPanel classNames="fcls_statusbar_cnt" visible="true" verticalAlignment="Top" gridItemLocation="0,2,1,1" fieldTable="formonly" identifier="cntStatusBar">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="100%"/>
+				</GridPanel.gridColumnDefinitions>
+				<Label isDynamic="true" text="" classNames="fcls_sblabel" visible="true" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="lbInfo1"/>
+				<Label isDynamic="true" text="" classNames="fcls_sblabel" visible="true" gridItemLocation="0,1,1,1" fieldTable="formonly" identifier="lbInfo2"/>
+			</GridPanel>
+		</GridPanel>
+	</form.rootContainer>
+	<form.screenRecords>
+		<ScreenRecord identifier="sr_responsible" fields="responsible.resp_code,responsible.name_text"/>
+		<ScreenRecord identifier="responsible" fields="responsible.resp_code,responsible.name_text"/>
+	</form.screenRecords>
+</form>
+

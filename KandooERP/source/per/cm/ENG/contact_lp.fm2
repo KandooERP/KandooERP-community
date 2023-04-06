@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form xmlns="http://namespaces.querix.com/2015/fglForms">
+	<form.rootContainer>
+		<CoordPanel preferredSize="75qch,6qch" fieldTable="" identifier="coord1">
+			<Label text="Last/Org" location="3qch,0qch" preferredSize="8qch,1qch" fieldTable="" identifier="label1"/>
+			<Label text="First" location="19qch,0qch" preferredSize="5qch,1qch" fieldTable="" identifier="label2"/>
+			<Label text="Midle" location="33qch,0qch" preferredSize="5qch,1qch" fieldTable="" identifier="label3"/>
+			<Label text="Initials" location="45qch,0qch" preferredSize="8qch,1qch" fieldTable="" identifier="label4"/>
+			<Label text="Title" location="60qch,0qch" preferredSize="5qch,1qch" fieldTable="" identifier="label5"/>
+			<TextField required="true" reverse="true" dataType="Char,,,,50" location="0qch,1qch" preferredSize="18qch,1qch" toolTip="Person = last name        Organisation = organisation name" fieldTable="contact" comment="Person = last name        Organisation = organisation name" identifier="last_org_name"/>
+			<TextField dataType="Char,,,,30" location="18qch,1qch" preferredSize="17qch,1qch" toolTip="Person only: First name" fieldTable="contact" comment="Person only: First name" identifier="first_name"/>
+			<TextField dataType="Char,,,,30" location="35qch,1qch" preferredSize="13qch,1qch" toolTip="Person only: Middle name" fieldTable="contact" comment="Person only: Middle name" identifier="mid_name"/>
+			<TextField dataType="Char,,,,12" location="48qch,1qch" preferredSize="10qch,1qch" toolTip="Person only: Initials" fieldTable="contact" comment="Person only: Initials" identifier="initials"/>
+			<TextField dataType="Char,,,,20" location="58qch,1qch" preferredSize="16qch,1qch" toolTip="Person only: Title" fieldTable="contact" comment="Person only: Title" identifier="title"/>
+			<ScrollBar orientation="Vertical" location="74qch,1qch" preferredSize="1.5qch,5qch" fieldTable="" identifier="s_display"/>
+			<TextField required="true" reverse="true" dataType="Char,,,,50" location="0qch,2qch" preferredSize="18qch,1qch" toolTip="Person = last name        Organisation = organisation name" fieldTable="contact" comment="Person = last name        Organisation = organisation name" identifier="last_org_name"/>
+			<TextField dataType="Char,,,,30" location="18qch,2qch" preferredSize="17qch,1qch" toolTip="Person only: First name" fieldTable="contact" comment="Person only: First name" identifier="first_name"/>
+			<TextField dataType="Char,,,,30" location="35qch,2qch" preferredSize="13qch,1qch" toolTip="Person only: Middle name" fieldTable="contact" comment="Person only: Middle name" identifier="mid_name"/>
+			<TextField dataType="Char,,,,12" location="48qch,2qch" preferredSize="10qch,1qch" toolTip="Person only: Initials" fieldTable="contact" comment="Person only: Initials" identifier="initials"/>
+			<TextField dataType="Char,,,,20" location="58qch,2qch" preferredSize="16qch,1qch" toolTip="Person only: Title" fieldTable="contact" comment="Person only: Title" identifier="title"/>
+			<TextField required="true" reverse="true" dataType="Char,,,,50" location="0qch,3qch" preferredSize="18qch,1qch" toolTip="Person = last name        Organisation = organisation name" fieldTable="contact" comment="Person = last name        Organisation = organisation name" identifier="last_org_name"/>
+			<TextField dataType="Char,,,,30" location="18qch,3qch" preferredSize="17qch,1qch" toolTip="Person only: First name" fieldTable="contact" comment="Person only: First name" identifier="first_name"/>
+			<TextField dataType="Char,,,,30" location="35qch,3qch" preferredSize="13qch,1qch" toolTip="Person only: Middle name" fieldTable="contact" comment="Person only: Middle name" identifier="mid_name"/>
+			<TextField dataType="Char,,,,12" location="48qch,3qch" preferredSize="10qch,1qch" toolTip="Person only: Initials" fieldTable="contact" comment="Person only: Initials" identifier="initials"/>
+			<TextField dataType="Char,,,,20" location="58qch,3qch" preferredSize="16qch,1qch" toolTip="Person only: Title" fieldTable="contact" comment="Person only: Title" identifier="title"/>
+			<TextField required="true" reverse="true" dataType="Char,,,,50" location="0qch,4qch" preferredSize="18qch,1qch" toolTip="Person = last name        Organisation = organisation name" fieldTable="contact" comment="Person = last name        Organisation = organisation name" identifier="last_org_name"/>
+			<TextField dataType="Char,,,,30" location="18qch,4qch" preferredSize="17qch,1qch" toolTip="Person only: First name" fieldTable="contact" comment="Person only: First name" identifier="first_name"/>
+			<TextField dataType="Char,,,,30" location="35qch,4qch" preferredSize="13qch,1qch" toolTip="Person only: Middle name" fieldTable="contact" comment="Person only: Middle name" identifier="mid_name"/>
+			<TextField dataType="Char,,,,12" location="48qch,4qch" preferredSize="10qch,1qch" toolTip="Person only: Initials" fieldTable="contact" comment="Person only: Initials" identifier="initials"/>
+			<TextField dataType="Char,,,,20" location="58qch,4qch" preferredSize="16qch,1qch" toolTip="Person only: Title" fieldTable="contact" comment="Person only: Title" identifier="title"/>
+			<TextField required="true" reverse="true" dataType="Char,,,,50" location="0qch,5qch" preferredSize="18qch,1qch" toolTip="Person = last name        Organisation = organisation name" fieldTable="contact" comment="Person = last name        Organisation = organisation name" identifier="last_org_name"/>
+			<TextField dataType="Char,,,,30" location="18qch,5qch" preferredSize="17qch,1qch" toolTip="Person only: First name" fieldTable="contact" comment="Person only: First name" identifier="first_name"/>
+			<TextField dataType="Char,,,,30" location="35qch,5qch" preferredSize="13qch,1qch" toolTip="Person only: Middle name" fieldTable="contact" comment="Person only: Middle name" identifier="mid_name"/>
+			<TextField dataType="Char,,,,12" location="48qch,5qch" preferredSize="10qch,1qch" toolTip="Person only: Initials" fieldTable="contact" comment="Person only: Initials" identifier="initials"/>
+			<TextField dataType="Char,,,,20" location="58qch,5qch" preferredSize="16qch,1qch" toolTip="Person only: Title" fieldTable="contact" comment="Person only: Title" identifier="title"/>
+		</CoordPanel>
+	</form.rootContainer>
+	<form.screenRecords>
+		<ScreenRecord identifier="s_display" fields="last_org_name,first_name,mid_name,initials,title" elements="5"/>
+		<ScreenRecord identifier="contact" fields="last_org_name,first_name,mid_name,initials,title"/>
+	</form.screenRecords>
+</form>
+

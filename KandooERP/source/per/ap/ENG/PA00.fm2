@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form xmlns="http://namespaces.querix.com/2015/fglForms">
+	<form.rootContainer>
+		<GridPanel classNames="fcls_rootContainer" verticalAlignment="Top" horizontalAlignment="Left" fieldTable="" identifier="rootContainer">
+			<GridPanel.gridRowDefinitions>
+				<GridRowDefinition gridLengthValue=""/>
+				<GridRowDefinition gridLengthValue=""/>
+				<GridRowDefinition gridLengthValue=""/>
+			</GridPanel.gridRowDefinitions>
+			<GridPanel.gridColumnDefinitions>
+				<GridColumnDefinition gridLengthValue="100%"/>
+			</GridPanel.gridColumnDefinitions>
+			<GridPanel classNames="fcls_title_cnt" visible="true" verticalAlignment="Top" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="cntTitle">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="100%"/>
+					<GridColumnDefinition gridLengthValue=""/>
+				</GridPanel.gridColumnDefinitions>
+				<Label isDynamic="true" text="PA - Vendor Reports Sub-system" classNames="fcls_title_lb" visible="true" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="header_text"/>
+				<Label isDynamic="true" text="PA00" classNames="fcls_title_lb" visible="true" gridItemLocation="1,0,1,1" fieldTable="" identifier="lbFormName"/>
+			</GridPanel>
+			
+			<GridPanel classNames="fcls_detail_cnt,fcls_data_cnt,fcls_align_left" visible="true" verticalAlignment="Top" horizontalAlignment="Left" gridItemLocation="0,1,1,1" fieldTable="formonly" identifier="cntDetail1">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue="100%"/>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue=""/>
+				</GridPanel.gridColumnDefinitions>
+				<ListBox minSize="400,400" visible="true" verticalAlignment="Stretch" horizontalAlignment="Stretch" gridItemLocation="0,0,1,1" fieldTable="" identifier="list_menuchoice">
+
+
+					<ListBoxItem text="Vendor Report (PA1)" identifier="menuChoice_PA1">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="PA1"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+
+					<ListBoxItem identifier="menuChoice_PA2" text="Vendor Phone Number Report (PA2)">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="PA2"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+
+					<ListBoxItem text="Vendor Notes Report (PA3)" identifier="menuChoice_PA3">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="PA3"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+
+					<ListBoxItem text="Credit Status Report (PA5)" identifier="menuChoice_PA5">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="PA5"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+
+					<ListBoxItem text="Credit Aging Report (PA6)" identifier="menuChoice_PA6">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="PA6"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+
+					<ListBoxItem text="Vendor Histories (PA7)" identifier="menuChoice_PA7">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="PA7"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+
+					<ListBoxItem text="Vendor Ledger Report (PA8)" identifier="menuChoice_PA8">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="PA8"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+
+					<ListBoxItem text="Vendor Types Report (PA9)" identifier="menuChoice_PA9">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="PA9"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+
+					<ListBoxItem text="Audit Report (PAA)" identifier="menuChoice_PAA">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="PAA"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+
+					<ListBoxItem text="Vendor Open Item Report (PAB)" identifier="menuChoice_PAB">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="PAB"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+
+					<ListBox.onMouseDoubleClick>
+						<ActionEventHandler actionName="DoubleClickItem"/>
+					</ListBox.onMouseDoubleClick>
+
+				</ListBox>
+
+				<StackPanel visible="true" horizontalAlignment="Right" gridItemLocation="0,1,1,1" fieldTable="" identifier="c2">
+					<TextField classNames="fcls_data_widget,fcls_align_left,fcls_length_05qch" visible="true" fieldTable="" identifier="tf_menuChoice"/>
+					<Button text="Cancel" classNames="fcls_button_2" visible="true" fieldTable="" identifier="btCancel">
+						<Button.onInvoke>
+							<ActionEventHandler actionName="CANCEL"/>
+						</Button.onInvoke>
+					</Button>
+					<Button text="OK" classNames="fcls_button_2" visible="true" fieldTable="" identifier="btAccept">
+						<Button.onInvoke>
+							<ActionEventHandler actionName="ACCEPT"/>
+						</Button.onInvoke>
+					</Button>
+					<Button text="Help" classNames="fcls_button_2" visible="true" fieldTable="" identifier="btHelp">
+						<Button.onInvoke>
+							<ActionEventHandler actionName="WEB-HELP"/>
+						</Button.onInvoke>
+					</Button>
+				</StackPanel>
+			</GridPanel>
+
+			<GridPanel classNames="fcls_statusbar_cnt" visible="true" verticalAlignment="Bottom" gridItemLocation="0,2,1,1" fieldTable="formonly" identifier="cntStatusBar">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="100%"/>
+				</GridPanel.gridColumnDefinitions>
+				<Label isDynamic="true" text="" classNames="fcls_sblabel" visible="true" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="lbInfo1"/>
+				<Label isDynamic="true" text="" classNames="fcls_sblabel" visible="true" gridItemLocation="0,1,1,1" fieldTable="formonly" identifier="lbInfo2"/>
+			</GridPanel>
+		</GridPanel>
+	</form.rootContainer>
+	<form.screenRecords>
+		<ScreenRecord identifier="FORMONLY" fields="menuChoice,inpMenuChoice"/>
+	</form.screenRecords>
+</form>

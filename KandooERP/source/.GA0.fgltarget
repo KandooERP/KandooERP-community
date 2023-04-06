@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<fglBuildTarget xmlns="http://namespaces.querix.com/lyciaide/target" name="GA0" type="fgl-program">
+
+  <libraries>
+    <library name="lib_report" dynamic="false" location=""/>
+    <library name= "lib_tool_common" dynamic="false" location=""/>
+    <library name= "lib_tool_G_GL_new" dynamic="false" location=""/>
+    <library name="lib_tool_G_GL_db" dynamic="false" location=""/>
+    <library name= "lib_tool_db_common" dynamic="false" location=""/>
+   </libraries>
+
+  <sources type="fgl">
+    <file location="4gl/common/ac_form.4gl"/>
+    <file location="4gl/gl/GA0.4gl"/>
+    <file location="4gl/gl/GA4.4gl"/>
+    <file location="4gl/gl/GAJ.4gl"/>
+    <file location="4gl/common/seg_con.4gl"/>
+    <file location="4gl/gl/GA8.4gl"/>
+    <file location="4gl/gl/GAC.4gl"/>
+    <file location="4gl/common/conv_curr.4gl"/>
+    <file location="4gl/gl/GA_GLOBALS.4gl"/>
+    <file location="4gl/common/vperfunc.4gl"/>
+    <file location="4gl/gl/GA3.4gl"/>
+    <file location="4gl/gl/GAI.4gl"/>
+    <file location="4gl/gl/GA6_GLOBALS.4gl"/>
+    <file location="4gl/gl/GA7.4gl"/>
+     <file location="4gl/gl/GA2.4gl"/>
+    <file location="4gl/gl/GAH.4gl"/>
+    <file location="4gl/common/glob_GLOBALS_constant.4gl"/>
+    <file location="4gl/gl/G_GL_GLOBALS.4gl"/>
+    <file location="4gl/gl/GA0_main.4gl"/>
+    <file location="4gl/gl/GAA.4gl"/>
+    <file location="4gl/gl/GA6.4gl"/>
+    <file location="4gl/common/glob_GLOBALS.4gl"/>
+    <file location="4gl/common/glob_GLOBALS_userDataTypes.4gl"/>
+    <file location="4gl/gl/GA1.4gl"/>
+    <file location="4gl/gl/GAG.4gl"/>
+    <file location="4gl/gl/GA5.4gl"/>
+    <file location="4gl/gl/GA9.4gl"/>
+    <file location="4gl/common/postwind.4gl"/>
+  </sources>
+
+  <sources type="form">
+    <file location="per/utility/ENG/U156.fm2"/>
+    <file location="per/gl/ENG/G103.fm2"/>
+    <file location="per/gl/ENG/G551.fm2"/>
+    <file location="per/utility/ENG/U102.fm2"/>
+    <file location="per/utility/ENG/U505.fm2"/>
+    <file location="per/gl/ENG/G105.fm2"/>
+    <file location="per/gl/ENG/G107.fm2"/>
+    <file location="per/gl/ENG/GA00.fm2"/>
+    <file location="per/gl/ENG/G158.fm2"/>
+    <file location="per/gl/ENG/G173.fm2"/>
+    <file location="per/gl/ENG/G187.fm2"/>
+    <file location="per/utility/ENG/U526.fm2"/>
+    <file location="per/utility/ENG/U162.fm2"/>
+    <file location="per/utility/ENG/U103.fm2"/>
+    <file location="per/utility/ENG/U115.fm2"/>
+    <file location="per/gl/ENG/G180.fm2"/>
+    <file location="per/utility/ENG/U129.fm2"/>
+  </sources>
+
+  <mediaFiles>
+    <file client="true" location="GA0.css" type="other"/>
+    <file client="true" location="GA0.qxtheme" type="gui-theme-file"/>
+  </mediaFiles>
+
+</fglBuildTarget>

@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="UTF-8"?><form xmlns="http://namespaces.querix.com/2015/fglForms">
+	<form.rootContainer>
+		<GridPanel classNames="fcls_rootContainer" fieldTable="" horizontalAlignment="Center" identifier="rootContainer" verticalAlignment="Center">
+			<GridPanel.gridRowDefinitions>
+				<GridRowDefinition gridLengthValue=""/>
+				<GridRowDefinition gridLengthValue=""/>
+				<GridRowDefinition gridLengthValue=""/>
+			</GridPanel.gridRowDefinitions>
+			<GridPanel.gridColumnDefinitions>
+				<GridColumnDefinition gridLengthValue="100%"/>
+			</GridPanel.gridColumnDefinitions>
+			<GridPanel classNames="fcls_title_cnt" fieldTable="formonly" gridItemLocation="0,0,1,1" identifier="cntTitle" verticalAlignment="Top" visible="true">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="100%"/>
+					<GridColumnDefinition gridLengthValue=""/>
+				</GridPanel.gridColumnDefinitions>
+				<Label classNames="fcls_title_lb" fieldTable="formonly" gridItemLocation="0,0,1,1" identifier="header_text" isDynamic="true" text="AR - Accounts Receivable Reports" visible="true"/>
+				<Label classNames="fcls_title_lb" fieldTable="" gridItemLocation="1,0,1,1" identifier="lbFormName" isDynamic="true" text="AR" visible="true"/>
+			</GridPanel>
+			<GridPanel classNames="fcls_detail_cnt,fcls_data_cnt,fcls_align_left" fieldTable="formonly" gridItemLocation="0,1,1,1" horizontalAlignment="Left" identifier="cntDetail1" verticalAlignment="Top" visible="true">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue="100%"/>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue=""/>
+				</GridPanel.gridColumnDefinitions>
+				<ListBox fieldTable="" gridItemLocation="0,0,1,1" horizontalAlignment="Stretch" identifier="list_menuchoice" minSize="400,400" verticalAlignment="Stretch" visible="true">
+					<ListBoxItem identifier="menuChoice_AR1" text="AR1 - Detailed Aging Report">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="AR1"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					<ListBoxItem identifier="menuChoice_AR2" text="AR2 - Summary Aging Report">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="AR2"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					<ListBoxItem identifier="menuChoice_AR3" text="AR3 - Activity Summary Report">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="AR3"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					<ListBoxItem identifier="menuChoice_AR5" text="AR5 - Cash Forecast Report">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="AR5"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					
+					<ListBoxItem identifier="menuChoice_AR6" text="AR6 - Sales Commission Report">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="AR6"/>
+						</ListBoxItem.value>
+					</ListBoxItem>					
+
+					
+					<ListBoxItem identifier="menuChoice_AR7" text="AR7 - Sales Tax Billed Report">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="AR7"/>
+						</ListBoxItem.value>
+					</ListBoxItem>					
+					
+					<ListBoxItem identifier="menuChoice_AR8" text="AR8 - Accounts Receivable Snapshot Report">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="AR8"/>
+						</ListBoxItem.value>
+					</ListBoxItem>					
+					
+					
+					
+					<ListBoxItem identifier="menuChoice_ARA" text="ARA - Audit Trail Report">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="ARA"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					<ListBoxItem identifier="menuChoice_ARB" text="ARB - Salesperson Commission Report">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="ARB"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					<ListBoxItem identifier="menuChoice_ARC" text="ARC - Period Post Report">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="ARC"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					<ListBoxItem identifier="menuChoice_ARD" text="ARD - Customer Summary Aging Report">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="ARD"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+
+					<ListBoxItem identifier="menuChoice_ARR" text="ARR - Detailed Aging by Reference Report">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="ARR"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+										
+<!-- 
+					<ListBoxItem text="Sales Analysis Reports" identifier="menuChoice_GAC">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="ARC"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+ -->
+ 					
+
+					<ListBoxItem identifier="menuChoice_ART_J" text="ART_J - Aging Report">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="ART_J"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					
+					<ListBoxItem identifier="menuChoice_ARW" text="ARW - Customer Write-off">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="ARW"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					<ListBox.onMouseDoubleClick>
+						<ActionEventHandler actionName="DoubleClickItem"/>
+					</ListBox.onMouseDoubleClick>
+				</ListBox>
+				<StackPanel fieldTable="" gridItemLocation="0,1,1,1" horizontalAlignment="Right" identifier="c2" visible="true">
+					<TextField classNames="fcls_data_widget,fcls_align_left,fcls_length_05qch" fieldTable="" identifier="tf_menuchoice" visible="true"/>
+					<Button classNames="fcls_button_2" fieldTable="" identifier="btCancel" text="Cancel" visible="true">
+						<Button.onInvoke>
+							<ActionEventHandler actionName="CANCEL"/>
+						</Button.onInvoke>
+					</Button>
+					<Button classNames="fcls_button_2" fieldTable="" identifier="btAccept" text="OK" visible="true">
+						<Button.onInvoke>
+							<ActionEventHandler actionName="ACCEPT"/>
+						</Button.onInvoke>
+					</Button>
+					<Button classNames="fcls_button_2" fieldTable="" identifier="btHelp" text="Help" visible="true">
+						<Button.onInvoke>
+							<ActionEventHandler actionName="WEB-HELP"/>
+						</Button.onInvoke>
+					</Button>
+				</StackPanel>
+			</GridPanel>
+			<GridPanel classNames="fcls_statusbar_cnt" fieldTable="formonly" gridItemLocation="0,2,1,1" identifier="cntStatusBar" verticalAlignment="Bottom" visible="true">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="100%"/>
+				</GridPanel.gridColumnDefinitions>
+				<Label classNames="fcls_sblabel" fieldTable="formonly" gridItemLocation="0,0,1,1" identifier="lbInfo1" isDynamic="true" text="" visible="true"/>
+				<Label classNames="fcls_sblabel" fieldTable="formonly" gridItemLocation="0,1,1,1" identifier="lbInfo2" isDynamic="true" text="" visible="true"/>
+			</GridPanel>
+		</GridPanel>
+	</form.rootContainer>
+	<form.screenRecords>
+		<ScreenRecord fields="menuChoice,inpMenuChoice" identifier="FORMONLY"/>
+	</form.screenRecords>
+</form>

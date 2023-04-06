@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form xmlns="http://namespaces.querix.com/2015/fglForms">
+	<form.rootContainer>
+		<GridPanel classNames="fcls_rootContainer" verticalAlignment="Top" horizontalAlignment="Left" fieldTable="" identifier="rootContainer">
+			<GridPanel.gridRowDefinitions>
+				<GridRowDefinition>
+					<GridRowDefinition.gridLength>
+						<GridLength gridLengthValue=""/>
+					</GridRowDefinition.gridLength>
+				</GridRowDefinition>
+				<GridRowDefinition>
+					<GridRowDefinition.gridLength>
+						<GridLength gridLengthValue=""/>
+					</GridRowDefinition.gridLength>
+				</GridRowDefinition>
+				<GridRowDefinition>
+					<GridRowDefinition.gridLength>
+						<GridLength gridLengthValue=""/>
+					</GridRowDefinition.gridLength>
+				</GridRowDefinition>
+			</GridPanel.gridRowDefinitions>
+			<GridPanel.gridColumnDefinitions>
+				<GridColumnDefinition>
+					<GridColumnDefinition.gridLength>
+						<GridLength gridLengthValue="100%"/>
+					</GridColumnDefinition.gridLength>
+				</GridColumnDefinition>
+			</GridPanel.gridColumnDefinitions>
+			<GridPanel classNames="fcls_title_cnt" visible="true" verticalAlignment="Top" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="cntTitle">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition>
+						<GridRowDefinition.gridLength>
+							<GridLength gridLengthValue=""/>
+						</GridRowDefinition.gridLength>
+					</GridRowDefinition>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition>
+						<GridColumnDefinition.gridLength>
+							<GridLength gridLengthValue="100%"/>
+						</GridColumnDefinition.gridLength>
+					</GridColumnDefinition>
+					<GridColumnDefinition>
+						<GridColumnDefinition.gridLength>
+							<GridLength gridLengthValue=""/>
+						</GridColumnDefinition.gridLength>
+					</GridColumnDefinition>
+				</GridPanel.gridColumnDefinitions>
+				<Label isDynamic="true" text="AP Inter Segment Payments" classNames="fcls_title_lb" visible="true" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="header_text"/>
+				<Label isDynamic="true" text="P179" classNames="fcls_title_lb" visible="true" gridItemLocation="1,0,1,1" fieldTable="" identifier="lbFormName"/>
+			</GridPanel>
+			<GridPanel classNames="fcls_detail_cnt,fcls_data_cnt,fcls_align_hstretch" visible="true" verticalAlignment="Top" horizontalAlignment="Stretch" gridItemLocation="0,1,1,1" fieldTable="formonly" identifier="cntDetail1">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition>
+						<GridRowDefinition.gridLength>
+							<GridLength gridLengthValue=""/>
+						</GridRowDefinition.gridLength>
+					</GridRowDefinition>
+					<GridRowDefinition>
+						<GridRowDefinition.gridLength>
+							<GridLength gridLengthValue=""/>
+						</GridRowDefinition.gridLength>
+					</GridRowDefinition>
+					<GridRowDefinition>
+						<GridRowDefinition.gridLength>
+							<GridLength gridLengthValue="" gridMinLength="10"/>
+						</GridRowDefinition.gridLength>
+					</GridRowDefinition>
+					<GridRowDefinition>
+						<GridRowDefinition.gridLength>
+							<GridLength gridLengthValue=""/>
+						</GridRowDefinition.gridLength>
+					</GridRowDefinition>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition>
+						<GridColumnDefinition.gridLength>
+							<GridLength gridLengthValue="" gridMinLength="60"/>
+						</GridColumnDefinition.gridLength>
+					</GridColumnDefinition>
+					<GridColumnDefinition>
+						<GridColumnDefinition.gridLength>
+							<GridLength gridLengthValue=""/>
+						</GridColumnDefinition.gridLength>
+					</GridColumnDefinition>
+					<GridColumnDefinition>
+						<GridColumnDefinition.gridLength>
+							<GridLength gridLengthValue="100%"/>
+						</GridColumnDefinition.gridLength>
+					</GridColumnDefinition>
+				</GridPanel.gridColumnDefinitions>
+				<ComboBox dataType="SmallInt,,,," preferredSize="5qch,1qch" toolTip="Year for selection  " gridItemLocation="1,0,1,1" fieldTable="formonly" comment="Year for selection  " identifier="year_num"/>
+				<ComboBox dataType="SmallInt,,,," preferredSize="3qch,1qch" toolTip="Period for selection  " gridItemLocation="1,1,1,1" fieldTable="formonly" comment="Period for selection  " identifier="period_num"/>
+				<Label isDynamic="true" text="Please make sure all cheques have been applied" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,3,3,1" fieldTable="" identifier="lb67"/>
+				<Label isDynamic="true" text="Year" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,0,1,1" fieldTable="" identifier="lb51"/>
+				<Label isDynamic="true" text="Period" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,1,1,1" fieldTable="" identifier="lb52"/>
+			</GridPanel>
+			<GridPanel classNames="fcls_statusbar_cnt" visible="true" verticalAlignment="Bottom" gridItemLocation="0,2,1,1" fieldTable="formonly" identifier="cntStatusBar">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition>
+						<GridRowDefinition.gridLength>
+							<GridLength gridLengthValue=""/>
+						</GridRowDefinition.gridLength>
+					</GridRowDefinition>
+					<GridRowDefinition>
+						<GridRowDefinition.gridLength>
+							<GridLength gridLengthValue=""/>
+						</GridRowDefinition.gridLength>
+					</GridRowDefinition>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition>
+						<GridColumnDefinition.gridLength>
+							<GridLength gridLengthValue="100%"/>
+						</GridColumnDefinition.gridLength>
+					</GridColumnDefinition>
+				</GridPanel.gridColumnDefinitions>
+				<Label isDynamic="true" text="" classNames="fcls_sblabel" visible="true" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="lbInfo1"/>
+				<Label isDynamic="true" text="" classNames="fcls_sblabel" visible="true" gridItemLocation="0,1,1,1" fieldTable="formonly" identifier="lbInfo2"/>
+			</GridPanel>
+		</GridPanel>
+	</form.rootContainer>
+	<form.screenRecords>
+		<ScreenRecord identifier="formonly" fields="formonly.year_num,formonly.period_num"/>
+	</form.screenRecords>
+</form>
+

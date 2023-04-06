@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form xmlns="http://namespaces.querix.com/2015/fglForms">
+	<form.rootContainer>
+		<GridPanel classNames="fcls_rootContainer" verticalAlignment="Stretch" horizontalAlignment="Stretch" fieldTable="" identifier="rootContainer">
+			<GridPanel.gridRowDefinitions>
+				<GridRowDefinition gridLengthValue=""/>
+				<GridRowDefinition gridLengthValue=""/>
+				<GridRowDefinition gridLengthValue="100%"/>
+				<GridRowDefinition gridLengthValue=""/>
+			</GridPanel.gridRowDefinitions>
+			<GridPanel.gridColumnDefinitions>
+				<GridColumnDefinition gridLengthValue="100%"/>
+			</GridPanel.gridColumnDefinitions>
+			<GridPanel classNames="fcls_title_cnt" visible="true" verticalAlignment="Top" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="cntTitle">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="100%"/>
+					<GridColumnDefinition gridLengthValue=""/>
+				</GridPanel.gridColumnDefinitions>
+				<Label isDynamic="true" text="Order Scan" classNames="fcls_title_lb" visible="true" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="header_text"/>
+				<Label isDynamic="true" text="E403" classNames="fcls_title_lb" visible="true" gridItemLocation="1,0,1,1" fieldTable="" identifier="lbFormName"/>
+			</GridPanel>
+			<GridPanel classNames="fcls_detail_cnt,fcls_data_cnt" visible="true" verticalAlignment="Top" horizontalAlignment="Left" gridItemLocation="0,1,1,1" fieldTable="formonly" identifier="cntDetail1">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="" gridMinLength="10rem"/>
+					<GridColumnDefinition gridLengthValue=""/>
+				</GridPanel.gridColumnDefinitions>
+				<TextField noEntry="true" dataType="VarChar,,,0,8" preferredSize="9qch,1qch" fieldTable="arparms" identifier="inv_ref2a_text" classNames="fcls_data_widget,fcls_length_10qch" gridItemLocation="0,0,1,1"/>
+				<TextField noEntry="true" dataType="VarChar,,,0,8" preferredSize="9qch,1qch" fieldTable="arparms" identifier="inv_ref2b_text" classNames="fcls_data_widget,fcls_length_10qch" gridItemLocation="1,0,1,1"/>
+			</GridPanel>
+			<Table rowCount="10" preferredSize="75qch,10qch" fieldTable="" identifier="sr_orderhead" gridItemLocation="0,2,1,1">
+				<TableColumn fieldTable="" identifier="tc_order_date" text="Order Date">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="14%" gridMaxLength="10rem" gridMinLength="6rem"/>
+					</TableColumn.columnLength>
+					<Calendar format="dd/mm/yyyy" dataType="Date,,,," toolTip="The date from which the outstanding order scan is to begin " comment="The date from which the outstanding order scan is to begin " fieldTable="orderhead" identifier="order_date"/>
+				</TableColumn>
+				<TableColumn fieldTable="" identifier="tc_ord_text" text="PO Code">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="21%" gridMaxLength="14rem" gridMinLength="7rem"/>
+					</TableColumn.columnLength>
+					<TextField dataType="Char,,,,20" toolTip="The reference number " comment="The reference number " fieldTable="orderhead" identifier="ord_text"/>
+				</TableColumn>
+				<TableColumn fieldTable="" identifier="tc_last_inv_num" text="Last Inv. No">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="14%" gridMaxLength="10rem" gridMinLength="6rem"/>
+					</TableColumn.columnLength>
+					<TextField dataType="Integer,,,," toolTip="Last invoice number generated from this sales order" comment="Last invoice number generated from this sales order" fieldTable="orderhead" identifier="last_inv_num"/>
+				</TableColumn>
+				<TableColumn fieldTable="" identifier="tc_order_num" text="Order No">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="14%" gridMaxLength="10rem" gridMinLength="6rem"/>
+					</TableColumn.columnLength>
+					<TextField dataType="Integer,,,," toolTip="The Order Number assigned by the system " comment="The Order Number assigned by the system " fieldTable="orderhead" identifier="order_num" text="Order No"/>
+				</TableColumn>
+				<TableColumn fieldTable="" identifier="tc_cust_code" text="Cust Code">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="14%" gridMaxLength="10rem" gridMinLength="6rem"/>
+					</TableColumn.columnLength>
+					<TextField dataType="Char,,,,8" toolTip=" Customer Code for this order " comment=" Customer Code for this order " fieldTable="orderhead" identifier="cust_code"/>
+				</TableColumn>
+				<TableColumn fieldTable="" identifier="tc_total_amt" text="Total Amt">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="14%" gridMaxLength="10rem" gridMinLength="6rem"/>
+					</TableColumn.columnLength>
+					<TextField dataType="Decimal,,,2,16" toolTip="The total amount of this sales order" comment="The total amount of this sales order" fieldTable="orderhead" identifier="total_amt"/>
+				</TableColumn>
+				<TableColumn fieldTable="" identifier="tc_status_ind" text="Stat">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="9%" gridMinLength="4rem" gridMaxLength="6rem"/>
+					</TableColumn.columnLength>
+					<TextField dataType="Char,,,,1" toolTip="Status of the order U=Unfinished, P=Partially shipped, C=Complete " comment="Status of the order U=Unfinished, P=Partially shipped, C=Complete " fieldTable="orderhead" identifier="status_ind"/>
+				</TableColumn>
+			</Table>
+			<GridPanel classNames="fcls_statusbar_cnt" visible="true" verticalAlignment="Bottom" gridItemLocation="0,3,1,1" fieldTable="formonly" identifier="cntStatusBar">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="100%"/>
+				</GridPanel.gridColumnDefinitions>
+				<Label isDynamic="true" text="" classNames="fcls_sblabel" visible="true" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="lbInfo1"/>
+				<Label isDynamic="true" text="" classNames="fcls_sblabel" visible="true" gridItemLocation="0,1,1,1" fieldTable="formonly" identifier="lbInfo2"/>
+			</GridPanel>
+		</GridPanel>
+	</form.rootContainer>
+	<form.screenRecords>
+		<ScreenRecord identifier="sr_orderhead" fields="orderhead.order_date,orderhead.ord_text,orderhead.last_inv_num,orderhead.order_num,orderhead.cust_code,orderhead.total_amt,orderhead.status_ind"/>
+		<ScreenRecord identifier="arparms" fields="arparms.inv_ref2a_text,arparms.inv_ref2b_text"/>
+		<ScreenRecord identifier="orderhead" fields="orderhead.order_date,orderhead.order_num,orderhead.ord_text,orderhead.last_inv_num,orderhead.cust_code,orderhead.total_amt,orderhead.status_ind"/>
+	</form.screenRecords>
+</form>
+

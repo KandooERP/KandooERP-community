@@ -1,0 +1,84 @@
+
+database maxdev
+
+{ Enhance Order Entry Line Items Screen }
+
+screen
+{
+\g------------------------\gOrder Line Item Information\g---------------------\gE114
+  Customer [f00     |h00                           ] Credit [f01         ]
+\g----------------------------------------------------------------------------\g
+   No. Offer Product       Quantity   Bonus  Disc%  Sell Price     Total  *
+\g----------------------------------------------------------------\g[f18]\g-------\g
+[a|f02|f03|f04            |f05     |f06     |f07  |f08       |f09        |b]
+[a|f02|f03|f04            |f05     |f06     |f07  |f08       |f09        |b]
+[a|f02|f03|f04            |f05     |f06     |f07  |f08       |f09        |b]
+[a|f02|f03|f04            |f05     |f06     |f07  |f08       |f09        |b]
+[a|f02|f03|f04            |f05     |f06     |f07  |f08       |f09        |b]
+[a|f02|f03|f04            |f05     |f06     |f07  |f08       |f09        |b]
+[a|f02|f03|f04            |f05     |f06     |f07  |f08       |f09        |b]
+[a|f02|f03|f04            |f05     |f06     |f07  |f08       |f09        |b]
+\g-----------------------------------------------------w----------------------\g
+  Desc  [f10                          ] Status   [c] \g|\g Goods [f15         ]
+  Offer [f11                          ] Level    [d] \g|\g Tax   [f16         ]
+  Tax   [f12|h12                      ] Discount [e] \g|\g Total [f17         ]
+  Warehouse [f13]      Stock Available [f14        ] \gb----------------------\g
+\g----------------------------------------------------------------------------\g
+}
+end
+tables
+orderhead
+orderdetl
+customer
+product
+tax
+offersale
+attributes
+f00 = orderhead.cust_code,upshift,noentry;
+h00 = customer.name_text,noentry;
+f01 = customer.cred_bal_amt,noentry;
+a   = formonly.scroll_flag,upshift;
+f02 = orderdetl.line_num;
+f03 = orderdetl.offer_code,upshift,comments=
+" Special offer code for this line item (W) ";
+f04 = orderdetl.part_code,upshift,comments=
+" Product code for this line item (W) ";
+f05 = orderdetl.sold_qty,comments=
+" Order quantity (sold quantity) of this product ";
+f06 = orderdetl.bonus_qty,comments=
+" Bonus (given free) quantity of this product ";
+f07 = orderdetl.disc_per, include = ( null, 0.00 to 100.00 ), comments =
+" Discount applicable to this line item (0 - 100)";
+f08 = orderdetl.unit_price_amt,comments =
+" Unit price of this product ";
+f09 = orderdetl.line_tot_amt,noentry;
+b = orderdetl.autoinsert_flag,noentry;
+f10 = orderdetl.desc_text,noentry;
+f12 = orderhead.tax_code,noentry;
+f11 = offersale.desc_text,noentry;
+h12 = tax.desc_text,noentry;
+c = orderdetl.status_ind,noentry;
+d = orderdetl.level_ind,noentry;
+e = orderdetl.disc_allow_flag,noentry;
+f13 = orderdetl.ware_code,noentry;
+f14 = orderdetl.required_qty,noentry;
+f15 = orderhead.goods_amt,noentry;
+f16 = orderhead.tax_amt,noentry;
+f17 = orderhead.total_amt,noentry;
+f18 = orderhead.currency_code,noentry;
+end
+instructions
+delimiters " "
+screen record sr_orderdetl[8](scroll_flag,
+                              line_num,
+                              offer_code,
+                              part_code ,
+                              sold_qty,
+                              bonus_qty,
+                              disc_per,
+                              unit_price_amt,
+                              line_tot_amt,
+                              autoinsert_flag)
+--#KEYS
+--#F12 = "Parent Summary"
+--#"Control-e" = "Serial Codes"

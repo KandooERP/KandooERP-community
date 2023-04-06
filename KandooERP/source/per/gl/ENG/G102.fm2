@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form xmlns="http://namespaces.querix.com/2015/fglForms">
+	<form.rootContainer>
+		<GridPanel classNames="fcls_rootContainer" verticalAlignment="Stretch" horizontalAlignment="Stretch" fieldTable="" identifier="rootContainer">
+			<GridPanel.gridRowDefinitions>
+				<GridRowDefinition gridLengthValue=""/>
+				<GridRowDefinition gridLengthValue=""/>
+				<GridRowDefinition gridLengthValue=""/>
+				<GridRowDefinition gridLengthValue=""/>
+				<GridRowDefinition gridLengthValue="100%"/>
+				<GridRowDefinition gridLengthValue=""/>
+			</GridPanel.gridRowDefinitions>
+			<GridPanel.gridColumnDefinitions>
+				<GridColumnDefinition gridLengthValue="100%"/>
+			</GridPanel.gridColumnDefinitions>
+			<GridPanel classNames="fcls_title_cnt" visible="true" verticalAlignment="Top" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="cntTitle">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="100%"/>
+					<GridColumnDefinition gridLengthValue=""/>
+				</GridPanel.gridColumnDefinitions>
+				<Label isDynamic="true" text="Account Budget Scan" classNames="fcls_title_lb" visible="true" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="header_text"/>
+				<Label isDynamic="true" text="G102" classNames="fcls_title_lb" visible="true" gridItemLocation="1,0,1,1" fieldTable="" identifier="lbFormName"/>
+			</GridPanel>
+			<GridPanel classNames="fcls_detail_cnt,fcls_data_cnt,fcls_align_left" visible="true" verticalAlignment="Top" horizontalAlignment="Left" gridItemLocation="0,1,1,1" fieldTable="formonly" identifier="cntDetail1">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="" gridMinLength="10rem"/>
+					<GridColumnDefinition gridLengthValue=""/>
+					<GridColumnDefinition gridLengthValue=""/>
+				</GridPanel.gridColumnDefinitions>
+				<ComboBox toCase="Up" dataType="Char,,,,2" classNames="list-show-value-text,field-show-value,fcls_data_widget,fcls_align_left,fcls_length_10qch" location="15qch,1qch" preferredSize="20qch,1qch" toolTip="Enter the two digit company code to begin this scan process" gridItemLocation="1,0,1,1" comment="Enter the two digit company code to begin this scan process" fieldTable="accounthist" identifier="cmpy_code"/>
+				<TextField noEntry="true" dataType="Char,,,,30" classNames="fcls_data_widget,fcls_align_left,fcls_length_40qch" location="38qch,1qch" preferredSize="37qch,1qch" gridItemLocation="2,0,1,1" fieldTable="company" identifier="name_text"/>
+				<!-- <ComboBox toCase="Up" dataType="Char,,,,18" classNames="list-show-value-text,field-show-value,fcls_data_widget,fcls_align_left,fcls_length_10qch" location="15qch,2qch" preferredSize="19qch,1qch" toolTip="Enter the G/L Account to begin budgeting (W)" gridItemLocation="1,1,1,1" comment="Enter the G/L Account to begin budgeting (W)" fieldTable="accounthist" identifier="acct_code"/>  -->
+				<ComboBox classNames="list-show-value-text,field-show-value,fcls_data_widget,fcls_align_left,fcls_length_10qch" preferredSize="19qch,1qch" toolTip="Enter the G/L Account to begin budgeting (W)" gridItemLocation="1,1,1,1" comment="Enter the G/L Account to begin budgeting (W)" fieldTable="accounthist" identifier="acct_code"/>
+				<TextField noEntry="true" dataType="Char,,,,40" classNames="fcls_data_widget,fcls_align_left,fcls_length_40qch" location="38qch,2qch" preferredSize="37qch,1qch" gridItemLocation="2,1,1,1" fieldTable="coa" identifier="desc_text"/>
+				<Label isDynamic="true" text="Company Code" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,0,1,1" fieldTable="" identifier="lb51"/>
+				<Label isDynamic="true" text="G/L Account" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,1,1,1" fieldTable="" identifier="lb52"/>
+			</GridPanel>
+			<GridPanel classNames="fcls_detail_cnt,fcls_data_cnt,fcls_align_left" visible="true" verticalAlignment="Top" gridItemLocation="0,2,1,1" fieldTable="formonly" identifier="cntDetail2">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="" gridMinLength="10rem"/>
+					<GridColumnDefinition gridLengthValue=""/>
+					<GridColumnDefinition gridLengthValue=""/>
+				</GridPanel.gridColumnDefinitions>
+				<Spinner minValue="1980" maxValue="2100" dataType="SmallInt,,,," classNames="fcls_data_widget,fcls_align_left,fcls_length_10qch" location="8qch,3qch" preferredSize="5qch,1qch" toolTip="The year of this account ledger&apos;s budget information" gridItemLocation="1,0,1,1" comment="The year of this account ledger&apos;s budget information" fieldTable="accounthist" identifier="year_num"/>
+				<ComboBox dataType="Char,,,," classNames="list-show-value-text,field-show-text,fcls_data_widget,fcls_align_left,fcls_length_10qch" location="28qch,3qch" preferredSize="10qch,1qch" toolTip=" The budget number (1-6)" gridItemLocation="1,1,1,1" comment=" The budget number (1-6)" fieldTable="formonly" identifier="budget_num"/>
+				<TextField classNames="fcls_data_widget,fcls_align_left,fcls_length_10qch" toolTip="The total budget for the year for this account" gridItemLocation="1,2,1,1" comment="The total budget for the year for this account" fieldTable="account" identifier="budg1_amt"/>
+				<Label isDynamic="true" text="Year" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="lb36"/>
+				<Label isDynamic="true" text="Budget Number" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,1,1,1" fieldTable="formonly" identifier="lb37"/>
+				<Label isDynamic="true" text="Annual Budget" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,2,1,1" fieldTable="formonly" identifier="lb38"/>
+			</GridPanel>
+			<GridPanel classNames="fcls_detail_cnt,fcls_data_cnt,fcls_align_hstretch" visible="true" gridItemLocation="0,3,1,1" fieldTable="" identifier="cntDetail3">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="100%"/>
+					<GridColumnDefinition gridLengthValue=""/>
+				</GridPanel.gridColumnDefinitions>
+				<TextField dataType="Char,,,," classNames="fcls_data_widget,fcls_align_hstretch" location="24qch,4qch" preferredSize="29qch,1qch" toolTip=" The budget name" gridItemLocation="0,0,1,1" comment=" The budget name" fieldTable="formonly" identifier="budget_text"/>
+			</GridPanel>
+			<Table rowCount="12" preferredSize="73qch,12qch" verticalAlignment="Stretch" horizontalAlignment="Stretch" gridItemLocation="0,4,1,1" fieldTable="" identifier="sr_accounthist">
+				<TableColumn text="Period" fieldTable="" identifier="f2">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="10rem"/>
+					</TableColumn.columnLength>
+					<TextField noEntry="true" dataType="SmallInt,,,," fieldTable="accounthist" identifier="period_num"/>
+				</TableColumn>
+				<TableColumn text="Period Budget" fieldTable="" identifier="f008">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="15rem"/>
+					</TableColumn.columnLength>
+					<TextField dataType="Decimal,,,2,16" toolTip="The forecasted budget amount for this account for the given period" comment="The forecasted budget amount for this account for the given period" fieldTable="accounthist" identifier="budg1_amt"/>
+				</TableColumn>
+				<TableColumn text="YTO Budget" fieldTable="" identifier="f011">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="15rem"/>
+					</TableColumn.columnLength>
+					<TextField dataType="Char,,,," toolTip="The year to date budget amount for this account " comment="The year to date budget amount for this account " fieldTable="formonly" identifier="ybudg_amt"/>
+				</TableColumn>
+				<TableColumn text="YTD Variance" fieldTable="" identifier="f012">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="15rem"/>
+					</TableColumn.columnLength>
+					<TextField dataType="Char,,,," toolTip="The year to date variance on this account/budget combination" comment="The year to date variance on this account/budget combination" fieldTable="formonly" identifier="yvar_amt"/>
+				</TableColumn>
+				<TableColumn resizable="true" visible="true" fieldTable="" identifier="tc_lb53">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="100%"/>
+					</TableColumn.columnLength>
+					<Label isDynamic="true" visible="true" fieldTable="" identifier="lb53"/>
+				</TableColumn>
+			</Table>
+			<GridPanel classNames="fcls_statusbar_cnt" visible="true" verticalAlignment="Top" gridItemLocation="0,5,1,1" fieldTable="formonly" identifier="cntStatusBar">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="100%"/>
+				</GridPanel.gridColumnDefinitions>
+				<Label isDynamic="true" text="" classNames="fcls_sblabel" visible="true" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="lbInfo1"/>
+				<Label isDynamic="true" text="" classNames="fcls_sblabel" visible="true" gridItemLocation="0,1,1,1" fieldTable="formonly" identifier="lbInfo2"/>
+			</GridPanel>
+		</GridPanel>
+	</form.rootContainer>
+	<form.screenRecords>
+		<ScreenRecord identifier="sr_accounthist" fields="period_num,budg1_amt,ybudg_amt,yvar_amt"/>
+		<ScreenRecord identifier="account" fields="budg1_amt"/>
+		<ScreenRecord identifier="accounthist" fields="cmpy_code,acct_code,year_num,period_num,budg1_amt"/>
+		<ScreenRecord identifier="coa" fields="desc_text"/>
+		<ScreenRecord identifier="company" fields="name_text"/>
+		<ScreenRecord identifier="formonly" fields="budget_text,budget_num,ybudg_amt,yvar_amt"/>
+	</form.screenRecords>
+</form>
+

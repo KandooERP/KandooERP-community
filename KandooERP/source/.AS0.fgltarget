@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<fglBuildTarget xmlns="http://namespaces.querix.com/lyciaide/target" name="AS0" type="fgl-program">
+
+  <libraries>
+    <library name="lib_common_invwind" dynamic="false" location=""/>
+    <library name="lib_common_pinq_wind" dynamic="false" location=""/>
+    <library name="lib_common_wind" dynamic="false" location=""/>
+    <library name="lib_report" dynamic="false" location=""/>
+    <library name="lib_report_ar" dynamic="false" location=""/>
+    <library name="lib_security" dynamic="false" location=""/>
+    <library name="lib_tool_A_AR_db" dynamic="false" location=""/>
+    <library name="lib_tool_A_AR_new" dynamic="false" location=""/>
+    <library name="lib_tool_E_EO_db" dynamic="false" location=""/>
+    <library name="lib_tool_E_EO_new" dynamic="false" location=""/>
+    <library name="lib_tool_G_GL_new" dynamic="false" location=""/>
+    <library name="lib_tool_I_IN_db" dynamic="false" location=""/>
+    <library name="lib_tool_I_IN_new" dynamic="false" location=""/>
+    <library name="lib_tool_L_LC_new" dynamic="false" location=""/>
+    <library name="lib_tool_W_WO_new" dynamic="false" location=""/>
+    <library name="lib_tool_common" dynamic="false" location=""/>
+    <library name="lib_tool_db_common" dynamic="false" location=""/>
+    <library name="wcustwind" dynamic="false" location=""/>
+  </libraries>
+
+  <sources type="fgl">
+    <file location="4gl/common/discfunc.4gl"/>
+    <file location="4gl/ar/AS6.4gl"/>
+    <file location="4gl/ar/ASA.4gl"/>
+    <file location="4gl/ar/ASW.4gl"/>
+    <file location="4gl/ar/ASL.4gl"/>
+    <file location="4gl/common/postfunc.4gl"/>
+    <file location="4gl/ar/ASLd_5_kao_report.4gl"/>
+    <file location="4gl/common/conv_rate.4gl"/>
+    <file location="4gl/common/acctwind.4gl"/>
+    <file location="4gl/common/acc_patch.4gl"/>
+    <file location="4gl/common/invbox.4gl"/>
+    <file location="4gl/common/orstfunc.4gl"/>
+    <file location="4gl/ar/AS5_GLOBALS.4gl"/>
+    <file location="4gl/ar/AST.4gl"/>
+    <file location="4gl/common/duedate.4gl"/>
+    <file location="4gl/common/conv_curr.4gl"/>
+    <file location="4gl/ar/AS1_GLOBALS.4gl"/>
+    <file location="4gl/ar/AS8_GLOBALS.4gl"/>
+    <file location="4gl/ar/AR_common.4gl"/>
+    <file location="4gl/ar/ASA_GLOBALS.4gl"/>
+    <file location="4gl/ar/ASL_GLOBALS.4gl"/>
+    <file location="4gl/ar/AS0.4gl"/>
+    <file location="4gl/ar/ASD_J.4gl"/>
+    <file location="4gl/ar/ASI_J.4gl"/>
+    <file location="4gl/ar/AST_GLOBALS.4gl"/>
+    <file location="4gl/ar/ASU_GLOBALS.4gl"/>
+    <file location="4gl/common/agingfunc.4gl"/>
+    <file location="4gl/common/cashbox.4gl"/>
+    <file location="4gl/ar/ASU.4gl"/>
+    <file location="4gl/common/glob_GLOBALS.4gl"/>
+    <file location="4gl/common/glob_GLOBALS_userDataTypes.4gl"/>
+    <file location="4gl/ar/ASI_J_GLOBALS.4gl"/>
+    <file location="4gl/common/psepwind.4gl"/>
+    <file location="4gl/ar/AS1.4gl"/>
+    <file location="4gl/ar/AS0_GLOBALS.4gl"/>
+    <file location="4gl/common/invextfunc.4gl"/>
+    <file location="4gl/common/note_disp.4gl"/>
+    <file location="4gl/ar/ASY_J_GLOBALS.4gl"/>
+    <file location="4gl/ar/ASV.4gl"/>
+    <file location="4gl/ar/ASAa_GLOBALS.4gl"/>
+    <file location="4gl/ar/ASV_J.4gl"/>
+    <file location="4gl/ar/ASLd_4_prof_report.4gl"/>
+    <file location="4gl/common/postfunc_GLOBALS.4gl"/>
+    <file location="4gl/ar/A_AR_GLOBALS.4gl"/>
+    <file location="4gl/ar/ASA_C.4gl"/>
+    <file location="4gl/ar/AS_GROUP_GLOBALS.4gl"/>
+    <file location="4gl/ar/AS0_main.4gl"/>
+    <file location="4gl/common/vperfunc.4gl"/>
+    <file location="4gl/ar/AS5.4gl"/>
+    <file location="4gl/ar/ASA_C_GLOBALS.4gl"/>
+    <file location="4gl/ar/AS6_GLOBALS.4gl"/>
+    <file location="4gl/ar/AS7_GLOBALS.4gl"/>
+    <file location="4gl/common/glordfunc.4gl"/>
+    <file location="4gl/ar/ASB_GLOBALS.4gl"/>
+    <file location="4gl/common/dirwind.4gl"/>
+    <file location="4gl/ar/ASB.4gl"/>
+    <file location="4gl/ar/ASY_J.4gl"/>
+    <file location="4gl/ar/ASAa.4gl"/>
+    <file location="4gl/ar/ASW_GLOBALS.4gl"/>
+    <file location="4gl/ar/ASV_GLOBALS.4gl"/>
+    <file location="4gl/ar/ASV_J_GLOBALS.4gl"/>
+    <file location="4gl/common/glob_GLOBALS_constant.4gl"/>
+    <file location="4gl/ar/ASS_J.4gl"/>
+    <file location="4gl/common/holdwind.4gl"/>
+    <file location="4gl/common/ctrywind.4gl"/>
+    <file location="4gl/ar/AS8.4gl"/>
+    <file location="4gl/ar/ASD_J_GLOBALS.4gl"/>
+    <file location="4gl/ar/ASLa_2_saw_report.4gl"/>
+    <file location="4gl/ar/ASZ_J.4gl"/>
+    <file location="4gl/ar/ASLc_3_voyg_report.4gl"/>
+    <file location="4gl/ar/ASS_J_GLOBALS.4gl"/>
+    <file location="4gl/common/jourintf.4gl"/>
+    <file location="4gl/common/tablefunc.4gl"/>
+    <file location="4gl/ar/AS6a.4gl"/>
+    <file location="4gl/common/trans_num.4gl"/>
+    <file location="4gl/ar/AS7.4gl"/>
+    <file location="4gl/common/orddfunc.4gl"/>
+    <file location="4gl/ar/AS1_B.4gl"/>
+    <file location="4gl/ar/ASZ_J_GLOBALS.4gl"/>
+  </sources>
+
+  <sources type="form">
+    <file location="per/utility/ENG/U156.fm2"/>
+    <file location="per/ar/ENG/A644.fm2"/>
+    <file location="per/utility/ENG/U136.fm2"/>
+    <file location="per/gl/ENG/G129.fm2"/>
+    <file location="per/ar/ENG/A636.fm2"/>
+    <file location="per/utility/ENG/C101_status_report_lbl_val.fm2"/>
+    <file location="per/ar/ENG/A655.fm2"/>
+    <file location="per/utility/ENG/U998_old.fm2"/>
+    <file location="per/ar/ENG/AS0.fm2"/>
+    <file location="per/ar/ENG/A680.fm2"/>
+    <file location="per/ar/ENG/A679.fm2"/>
+    <file location="per/ar/ENG/A635.fm2"/>
+    <file location="per/utility/ENG/U526.fm2"/>
+    <file location="per/utility/ENG/U115.fm2"/>
+    <file location="per/ar/ENG/A952.fm2"/>
+    <file location="per/ar/ENG/A105.fm2"/>
+    <file location="per/ar/ENG/A649.fm2"/>
+    <file location="per/ar/ENG/A700.fm2"/>
+    <file location="per/utility/ENG/U129.fm2"/>
+    <file location="per/ar/ENG/A629.fm2"/>
+    <file location="per/gl/ENG/G147.fm2"/>
+    <file location="per/gl/ENG/G123.fm2"/>
+    <file location="per/ar/ENG/A112.fm2"/>
+    <file location="per/ar/ENG/A951.fm2"/>
+    <file location="per/utility/ENG/U102.fm2"/>
+    <file location="per/utility/ENG/U505.fm2"/>
+    <file location="per/ar/ENG/A651.fm2"/>
+    <file location="per/ar/ENG/A638.fm2"/>
+    <file location="per/ar/ENG/A203.fm2"/>
+    <file location="per/ar/ENG/A675.fm2"/>
+    <file location="per/ar/ENG/A663.fm2"/>
+    <file location="per/ar/ENG/A192.fm2"/>
+    <file location="per/ar/ENG/A633.fm2"/>
+    <file location="per/utility/ENG/U500.fm2"/>
+    <file location="per/utility/ENG/U998.fm2"/>
+    <file location="per/ar/ENG/A637.fm2"/>
+    <file location="per/utility/ENG/U103.fm2"/>
+    <file location="per/utility/ENG/U162.fm2"/>
+    <file location="per/ar/ENG/A176.fm2"/>
+    <file location="per/ar/ENG/A202.fm2"/>
+  </sources>
+
+  <mediaFiles>
+    <file client="true" location="AS0.qxtheme" type="gui-theme-file"/>
+    <file client="true" location="AS0.css" type="other"/>
+  </mediaFiles>
+
+</fglBuildTarget>

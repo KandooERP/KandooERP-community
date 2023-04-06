@@ -1,0 +1,62 @@
+{
+###########################################################################
+# This program is free software; you can redistribute it and/or modify it
+# under the terms of the GNU General Public License as published by the
+# Free Software Foundation; either version 2 of the License, or (at your
+# option) any later version.
+#
+# This program is distributed in the hope that it will be useful, but
+# WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+# General Public License for more details.
+#
+# You should have received a copy of the GNU General Public License along
+# with this program; if not, write to the Free Software Foundation, Inc.,
+# 59 Temple Place, Suite 330, Boston, MA 02111-1307 USA
+#
+###########################################################################
+
+	 $Id: M186.per,v 1.2 2003/11/19 22:23:01 afalout Exp $
+}
+
+
+database kandoodb
+
+screen
+{
+                Work In Progress Report            M186
+\g--------------------------------------------------------\g
+ Work Centre    [f000    ]
+ Shop Order     [f001    ]
+ Suffix Number  [f009    ]
+ Customer       [f002    ]
+ Product        [f003           ]
+ Order Status   [c]
+   
+ Start Date     [f005       ]
+ End Date       [f006       ]
+
+ Actual Start   [f007       ]
+ Actual End     [f008       ]
+
+}
+
+tables
+shoporddetl
+prodstatus
+
+attributes
+f000 = formonly.work_centre_code, upshift, comments = " Work centre code";
+f001 = formonly.shop_order_num, comments = " Shop order number"; 
+f009 = formonly.suffix_num, comments = " Shop order suffix number";   
+f002 = formonly.cust_code, upshift, comments = " Customer code";
+f003 = formonly.product, upshift, comments = " Product code";
+c    = formonly.status_ind type char, upshift,
+comments = " H = Held, R = Released";
+f005 = formonly.start_date type date, comments = " Estimated start date";
+f006 = formonly.end_date type date, comments = " Estimated end date";
+f007 = formonly.actual_start type date, comments = " Actual start date";
+f008 = formonly.actual_end type date, comments = " Actual end date";
+
+instructions
+delimiters "  "

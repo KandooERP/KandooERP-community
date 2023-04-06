@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<fglBuildTarget xmlns="http://namespaces.querix.com/lyciaide/target" name="lib_report" type="fgl-library">
+
+  <sources type="fgl">
+    <file location="4gl/lib_report/lib_report_authentication.4gl"/>
+    <file location="4gl/lib_report/lib_report_template_defaults_P_AP.4gl"/>
+    <file location="4gl/lib_report/lib_report_template_defaults_U_UT.4gl"/>
+    <file location="4gl/lib_tool_db/lib_tool_db_rptpos.4gl"/>
+    <file location="4gl/lib_report/lib_report_template_defaults_J_JM.4gl"/>
+    <file location="4gl/lib_report/lib_report_string_tools.4gl"/>
+    <file location="4gl/lib_report/lib_report_rpt_rmsreps.4gl"/>
+    <file location="4gl/common/lib_report_reptfunc.4gl"/>
+    <file location="4gl/lib_report/lib_report_template_defaults_C_COMMON.4gl"/>
+    <file location="4gl/lib_report/lib_report_template_defaults_G_GL.4gl"/>
+    <file location="4gl/lib_tool_db/lib_tool_db_rmsreps.4gl"/>
+    <file location="4gl/lib_report/lib_report_print.4gl"/>
+    <file location="4gl/lib_report/lib_report_template_defaults_L_LC.4gl"/>
+    <file location="4gl/lib_report/lib_report_template_defaults_T_GW.4gl"/>
+    <file location="4gl/lib_report/lib_report_template_defaults_R_PU.4gl"/>
+    <file location="4gl/lib_tool_db/lib_tool_db_rpttype.4gl"/>
+     <file location="4gl/lib_report/lib_report_template_defaults_K_SS.4gl"/>
+    <file location="4gl/lib_report/lib_report_rpt_kandooreport.4gl"/>
+    <file location="4gl/common/glob_GLOBALS_constant.4gl"/>
+    <file location="4gl/common/lib_report_rmsfunc.4gl"/>
+    <file location="4gl/lib_tool_db/lib_tool_db_rpthead.4gl"/>
+    <file location="4gl/common/glob_GLOBALS.4gl"/>
+    <file location="4gl/common/glob_GLOBALS_userDataTypes.4gl"/>
+    <file location="4gl/lib_report/lib_report_template_defaults_E_EO.4gl"/>
+    <file location="4gl/lib_report/lib_report_template_defaults_W_WO.4gl"/>
+    <file location="4gl/lib_report/lib_report_init.4gl"/>
+    <file location="4gl/lib_tool_db/lib_tool_db_printcodes.4gl"/>
+    <file location="4gl/lib_report/lib_report_template_defaults.4gl"/>
+    <file location="4gl/lib_report/lib_report_template_defaults_N_RE.4gl"/>
+    <file location="4gl/lib_report/lib_report_accessor.4gl"/>
+    <file location="4gl/lib_report/lib_report_template_defaults_F_FA.4gl"/>
+    <file location="4gl/lib_tool/lib_winDecoration_U.4gl"/>
+    <file location="4gl/common/glob_GLOBALS_report.4gl"/>
+    <file location="4gl/lib_report/lib_report_template_defaults_M_MN.4gl"/>
+    <file location="4gl/lib_report/lib_report_template_defaults_I_IN.4gl"/>
+    <file location="4gl/lib_report/lib_report_template_defaults_A_AR.4gl"/>
+    <file location="4gl/lib_tool_db/lib_tool_db_kandooreport.4gl"/>
+    <file location="4gl/lib_report/lib_report_template_defaults_Q_QE.4gl"/>
+  </sources>
+
+  <sources type="form">
+    <file location="per/utility/ENG/U510.fm2"/>
+    <file location="per/utility/ENG/U701-rmsreps_record.fm2"/>
+    <file location="per/utility/ENG/U102.fm2"/>
+    <file location="per/utility/ENG/U505.fm2"/>
+    <file location="per/utility/ENG/U115.fm2"/>
+    <file location="per/utility/ENG/U103.fm2"/>
+    <file location="per/utility/ENG/U129.fm2"/>
+    <file location="per/utility/ENG/U960-rpt-language-dialog.fm2"/>
+  </sources>
+
+</fglBuildTarget>

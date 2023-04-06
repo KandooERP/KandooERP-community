@@ -1,0 +1,88 @@
+{
+###########################################################################
+# This program is free software; you can redistribute it and/or modify it
+# under the terms of the GNU General Public License as published by the
+# Free Software Foundation; either version 2 of the License, or (at your
+# option) any later version.
+#
+# This program is distributed in the hope that it will be useful, but
+# WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+# General Public License for more details.
+#
+# You should have received a copy of the GNU General Public License along
+# with this program; if not, write to the Free Software Foundation, Inc.,
+# 59 Temple Place, Suite 330, Boston, MA 02111-1307 USA
+#
+###########################################################################
+
+	 $Id: M117.per,v 1.2 2003/11/19 22:22:59 afalout Exp $
+}
+
+
+database kandoodb
+
+screen
+{
+                     Manufacturing Product Details                 M117 
+\g------------------------------------------------------------------------\g
+ Product             [f001           ]  [f002                          ]
+
+ Type                [a   ]             [f003        ]
+ Default Warehouse   [b   ]             [f004                          ]
+ Manufacturing UOM   [f005]
+ Manu to Stock Conv  [f006          ]
+ Customer            [f007    ]         [f008                          ]
+ Backflush Product   [c   ]
+ M.P.S. Product      [d   ]
+ Configuration only  [e   ]
+ Demand Time Fence   [f009 ]
+ Planning Time Fence [f010 ]
+ Yield Percent       [f011   ]
+ Scrap Percent       [f012   ]
+ Drawing Revision    [f013      ]        Date Of Revision   [f014      ]
+
+}
+
+tables
+prodmfg
+product
+
+attributes
+f001 = prodmfg.part_code, upshift,
+comments = " Product code of the manufacturing detail (W)";
+f002 = formonly.part_description type char, noentry;
+a    = prodmfg.part_type_ind, upshift, include = ("G","M","P","R"),
+comments = " G = Generic, M = Manufactured, P = Phantom, R = Raw Material";
+f003 = formonly.type_description type char, noentry;
+b    = prodmfg.def_ware_code, upshift,
+comments = " Code for the default manufacturing warehouse (W)";
+f004 = formonly.warehouse_name type char, noentry;
+f005 = prodmfg.man_uom_code, upshift,
+comments = " Code for the manufacturing unit of measure of this product (W)";
+f006 = prodmfg.man_stk_con_qty, upshift,
+comments = " The conversion factor from manufacturing to stocking UOM";
+f007 = prodmfg.cust_code, upshift,
+comments = " Code of the customer for the product (W)";
+f008 = formonly.cust_name type char, noentry;
+c    = prodmfg.backflush_ind, upshift, include = ("Y","N",null),
+comments = " Can this product be backflushed during W.I.P. (Y/N)?";
+d    = prodmfg.mps_ind, upshift, include = ("Y","N",null),
+comments = " Can this product be master scheduled (Y/N)?";
+e    = prodmfg.config_ind, upshift, include = ("Y","N",null),
+comments = " Is this product configurable only (Y/N)?";
+f009 = prodmfg.demand_fence_num, upshift,
+comments = " Number of days for demand time fence";
+f010 = prodmfg.plan_fence_num, upshift,
+comments = " Number of days for planning time fence";
+f011 = prodmfg.yield_per,
+comments = " Yield percentage for the product produced";
+f012 = prodmfg.scrap_per,
+comments = " Scrap percentage of the product produced";
+f013 = prodmfg.draw_revsn_text,
+comments = " Drawing number of the revised drawing";
+f014 = prodmfg.revsn_date,
+comments = " Date that the last drawing revision was made";
+
+instructions
+delimiters "  "

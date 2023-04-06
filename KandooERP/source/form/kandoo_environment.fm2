@@ -1,0 +1,1674 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form xmlns="http://namespaces.querix.com/2015/fglForms">
+	<form.rootContainer>
+		<GridPanel classNames="fcls_rootContainer" verticalAlignment="Top" horizontalAlignment="Left" fieldTable="" identifier="rootContainer">
+			<GridPanel.gridRowDefinitions>
+				<GridRowDefinition gridLengthValue=""/>
+				<GridRowDefinition gridLengthValue=""/>
+				<GridRowDefinition gridLengthValue="100%"/>
+				<GridRowDefinition gridLengthValue=""/>
+			</GridPanel.gridRowDefinitions>
+			<GridPanel.gridColumnDefinitions>
+				<GridColumnDefinition gridLengthValue="100%"/>
+			</GridPanel.gridColumnDefinitions>
+			<GridPanel classNames="fcls_title_cnt" visible="true" verticalAlignment="Top" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="cntTitle">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="100%"/>
+					<GridColumnDefinition gridLengthValue=""/>
+				</GridPanel.gridColumnDefinitions>
+				<Label isDynamic="true" text="About" classNames="fcls_title_lb" visible="true" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="header_text"/>
+				<Label isDynamic="true" text="4gl_environment" classNames="fcls_title_lb" visible="true" gridItemLocation="1,0,1,1" fieldTable="" identifier="lbFormName"/>
+			</GridPanel>
+			<GridPanel classNames="fcls_detail_cnt" visible="true" gridItemLocation="0,1,1,1" fieldTable="" identifier="cntDetail1" horizontalAlignment="Stretch">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue="100%"/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="100%"/>
+				</GridPanel.gridColumnDefinitions>
+				<GridPanel classNames="fcls_detail_cnt_sub" visible="true" verticalAlignment="Top" horizontalAlignment="Stretch" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="cntDetail1Sub">
+					<GridPanel.gridRowDefinitions>
+						<GridRowDefinition gridLengthValue=""/>
+						<GridRowDefinition gridLengthValue=""/>
+						<GridRowDefinition gridLengthValue=""/>
+						<GridRowDefinition gridLengthValue=""/>
+						<GridRowDefinition gridLengthValue=""/>
+						<GridRowDefinition gridLengthValue=""/>
+					</GridPanel.gridRowDefinitions>
+					<GridPanel.gridColumnDefinitions>
+						<GridColumnDefinition gridLengthValue="15rem" gridMinLength="15rem"/>
+						<GridColumnDefinition gridLengthValue="20rem" gridMinLength="20rem"/>
+						<GridColumnDefinition gridLengthValue="30rem" gridMinLength="30rem"/>
+						<GridColumnDefinition gridLengthValue="100%"/>
+					</GridPanel.gridColumnDefinitions>
+					<StackPanel visible="true" identifier="c3" gridItemLocation="0,0,4,1">
+						<Button text="Done" visible="true" identifier="btAccept" classNames="fcls_button,fcls_length_15qch">
+							<Button.onInvoke>
+								<ActionEventHandler type="actioneventhandler" actionName="ACCEPT"/>
+							</Button.onInvoke>
+						</Button>
+						<Button text="Report" visible="true" identifier="btReport" classNames="fcls_button,fcls_length_15qch">
+							<Button.onInvoke>
+								<ActionEventHandler type="actioneventhandler" actionName="REPORT"/>
+							</Button.onInvoke>
+						</Button>
+						<CheckBox title="Debug Details On/Off" visible="true" notNull="true" identifier="checkBox_debug" enable="true">
+							<CheckBox.checkedValue>
+								<BooleanLiteral booleanValue="true"/>
+							</CheckBox.checkedValue>
+							<CheckBox.uncheckedValue>
+								<BooleanLiteral/>
+							</CheckBox.uncheckedValue>
+						</CheckBox>
+					</StackPanel>
+					<Label isDynamic="true" text="Lycia Version:" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,1,1,1" fieldTable="formonly" identifier="lbLyciaVersion1"/>
+					<Label isDynamic="true" text="fgl_getversion()" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="1,1,1,1" fieldTable="" identifier="lbLyciaVersion2"/>
+					<Label isDynamic="true" dataType="Char,,,," classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="2,1,1,1" fieldTable="formonly" identifier="main_lycia_version"/>
+					<Label isDynamic="true" dataType="Char,,,," visible="true" verticalAlignment="Top" horizontalAlignment="Right" gridItemLocation="3,1,1,5" fieldTable="formonly" identifier="f0">
+						<Label.image>
+							<Image imageUrl="{context}/public/querix/icon/png/image/Querixsmalllogo.png" imagePosition="Right"/>
+						</Label.image>
+					</Label>
+					<Label isDynamic="true" text="Client Type" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,2,1,1" fieldTable="" identifier="lb142"/>
+					<Label isDynamic="true" dataType="Char,,,," classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="2,2,1,1" fieldTable="formonly" identifier="main_frontEndName"/>
+					<Label isDynamic="true" text="Client Version" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,3,1,1" fieldTable="" identifier="lb143"/>
+					<Label isDynamic="true" dataType="Char,,,," classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="2,3,1,1" fieldTable="formonly" identifier="main_frontEndVersion"/>
+					<Label isDynamic="true" text="ui.Interface.getFrontEndName()" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="1,2,1,1" fieldTable="formonly" identifier="lb36"/>
+					<Label isDynamic="true" text="ui.Interface.getFrontEndVersion()" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="1,3,1,1" fieldTable="formonly" identifier="lb37"/>
+					<Label isDynamic="true" text="GUI Misc. Version:" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,4,1,1" fieldTable="" identifier="lb55"/>
+					<Label isDynamic="true" text='fgl_getproperty(&quot;gui&quot;, &quot;gui.misc.version&quot;, &quot;&quot;)' classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="1,4,1,1" fieldTable="" identifier="lb145"/>
+					<Label isDynamic="true" dataType="Char,,,," classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="2,4,1,1" fieldTable="formonly" identifier="main_gui_misc_version"/>
+					<Label isDynamic="true" text="App Server OS" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,5,1,1" fieldTable="" identifier="lb56"/>
+					<Label isDynamic="true" text="fgl_arch()" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="1,5,1,1" fieldTable="" identifier="lb146"/>
+					<Label isDynamic="true" dataType="Char,,,," classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="2,5,1,1" fieldTable="formonly" identifier="main_server_os_name"/>
+				</GridPanel>
+			</GridPanel>
+			
+			
+			<Tab visible="true" verticalAlignment="Stretch" gridItemLocation="0,2,1,1" fieldTable="" identifier="cntTabDetails" horizontalAlignment="Stretch">
+
+
+
+
+			
+				<!-- Glob KandooUser ######################################################################################################################################### -->
+				<TabPage title="KandooUser" classNames="fcls_detail_tp_cnt" visible="true" fieldTable="" identifier="cntTpKandoouser" horizontalAlignment="Stretch">
+					<GridPanel classNames="fcls_detail_tp_cnt_sub,fcls_data_cnt" visible="true" verticalAlignment="Top" horizontalAlignment="Stretch" fieldTable="" identifier="cntTpChildGpGeneral">
+						<GridPanel.gridRowDefinitions>
+							<GridRowDefinition gridLengthValue=""/>
+							<GridRowDefinition gridLengthValue=""/>
+							<GridRowDefinition gridLengthValue=""/>
+							<GridRowDefinition gridLengthValue=""/>
+							<GridRowDefinition gridLengthValue=""/>
+							<GridRowDefinition gridLengthValue=""/>
+							<GridRowDefinition gridLengthValue=""/>
+							<GridRowDefinition gridLengthValue=""/>
+							<GridRowDefinition gridLengthValue=""/>
+							<GridRowDefinition gridLengthValue=""/>
+							<GridRowDefinition gridLengthValue=""/>
+							<GridRowDefinition gridLengthValue=""/>
+							<GridRowDefinition gridLengthValue=""/>
+							<GridRowDefinition gridLengthValue=""/>
+							<GridRowDefinition gridLengthValue=""/>
+							<GridRowDefinition gridLengthValue=""/>
+							<GridRowDefinition gridLengthValue=""/>
+							<GridRowDefinition gridLengthValue=""/>
+							<GridRowDefinition gridLengthValue=""/>
+							
+						</GridPanel.gridRowDefinitions>
+						<GridPanel.gridColumnDefinitions>
+							<GridColumnDefinition gridMinLength="10rem"/>
+							<GridColumnDefinition gridMinLength="30rem"/>
+							<GridColumnDefinition gridLengthValue="100%"/>
+						</GridPanel.gridColumnDefinitions>
+
+						<Label identifier="lbuser_code1" text="user_code" fieldTable=""  isDynamic="true" classNames="fcls_fieldlabel" visible="true" gridItemLocation="0,0,1,1" />
+						<Label identifier="lbuser_code2" text="glob_kandoouser.user_code" fieldTable=""  isDynamic="true"  classNames="fcls_fieldlabel" visible="true" gridItemLocation="1,0,1,1" />
+						<TextField identifier="ku_user_code" fieldTable="kandoouser" classNames="fcls_data_widget,fcls_align_stretch" visible="true" gridItemLocation="2,0,1,1"  />
+						
+						<Label identifier="lbsign_on_code1" text="sign_on_code"  fieldTable="" isDynamic="true" classNames="fcls_fieldlabel" visible="true" gridItemLocation="0,1,1,1"  />
+						<Label identifier="lbsign_on_code2" text="glob_kandoouser.sign_on_code" fieldTable="" isDynamic="true" classNames="fcls_fieldlabel" visible="true" gridItemLocation="1,1,1,1"  />
+						<TextField identifier="ku_sign_on_code" fieldTable="kandoouser" classNames="fcls_data_widget,fcls_align_stretch" visible="true" gridItemLocation="2,1,1,1"  />
+						
+						<Label identifier="lb_name_text1" text="name_text" fieldTable="" isDynamic="true"  classNames="fcls_fieldlabel" visible="true" gridItemLocation="0,2,1,1"  />
+						<Label identifier="lb_name_text2" text="glob_kandoouser.name_text" fieldTable="" isDynamic="true"  classNames="fcls_fieldlabel" visible="true" gridItemLocation="1,2,1,1"  />
+						<TextField identifier="ku_name_text" fieldTable="kandoouser" classNames="fcls_data_widget,fcls_align_stretch" visible="true" gridItemLocation="2,2,1,1" />
+						
+						<Label identifier="lb_security_ind1" text="security_ind" fieldTable="" isDynamic="true"  classNames="fcls_fieldlabel" visible="true" gridItemLocation="0,3,1,1"  />
+						<Label identifier="lb_security_ind2" text="glob_kandoouser.security_ind" fieldTable="" isDynamic="true"  classNames="fcls_fieldlabel" visible="true" gridItemLocation="1,3,1,1"  />
+						<TextField identifier="ku_security_ind" fieldTable="kandoouser" classNames="fcls_data_widget,fcls_align_stretch" visible="true" gridItemLocation="2,3,1,1" />
+						
+						<Label identifier="lb_password_text1" text="password_text" fieldTable="" isDynamic="true"  classNames="fcls_fieldlabel" visible="true" gridItemLocation="0,4,1,1"  />
+						<Label identifier="lb_password_text2" text="glob_kandoouser.password_text" fieldTable="" isDynamic="true"  classNames="fcls_fieldlabel" visible="true" gridItemLocation="1,4,1,1"  />
+						<TextField identifier="ku_password_text" fieldTable="kandoouser" classNames="fcls_data_widget,fcls_align_stretch" visible="true" gridItemLocation="2,4,1,1" />
+						
+						<Label identifier="lb_language_code1" text="language_code" fieldTable="" isDynamic="true"  classNames="fcls_fieldlabel" visible="true" gridItemLocation="0,5,1,1"  />
+						<Label identifier="lb_language_code2" text="glob_kandoouser.language_code" fieldTable="" isDynamic="true"  classNames="fcls_fieldlabel" visible="true" gridItemLocation="1,5,1,1"  />
+						<TextField identifier="ku_language_code" fieldTable="kandoouser" classNames="fcls_data_widget,fcls_align_stretch" visible="true" gridItemLocation="2,5,1,1" />
+						
+						<Label identifier="lb_cmpy_code1" text="cmpy_code" fieldTable="" isDynamic="true"  classNames="fcls_fieldlabel" visible="true" gridItemLocation="0,6,1,1"  />
+						<Label identifier="lb_cmpy_code2" text="glob_kandoouser.cmpy_code" fieldTable="" isDynamic="true"  classNames="fcls_fieldlabel" visible="true" gridItemLocation="1,6,1,1"  />
+						<TextField identifier="ku_cmpy_code" fieldTable="kandoouser" classNames="fcls_data_widget,fcls_align_stretch" visible="true" gridItemLocation="2,6,1,1" />
+
+						<Label identifier="lb_acct_mask_code1" text="acct_mask_code" fieldTable="" isDynamic="true"  classNames="fcls_fieldlabel" visible="true" gridItemLocation="0,7,1,1"  />
+						<Label identifier="lb_acct_mask_code2" text="glob_kandoouser.acct_mask_code" fieldTable="" isDynamic="true"  classNames="fcls_fieldlabel" visible="true" gridItemLocation="1,7,1,1"  />
+						<TextField identifier="ku_acct_mask_code" fieldTable="kandoouser" classNames="fcls_data_widget,fcls_align_stretch" visible="true" gridItemLocation="2,7,1,1" />
+
+						<Label identifier="lb_profile_code1" text="profile_code" fieldTable="" isDynamic="true"  classNames="fcls_fieldlabel" visible="true" gridItemLocation="0,8,1,1"  />
+						<Label identifier="lb_cprofile_code2" text="glob_kandoouser.profile_code" fieldTable="" isDynamic="true"  classNames="fcls_fieldlabel" visible="true" gridItemLocation="1,8,1,1"  />
+						<TextField identifier="ku_profile_code" fieldTable="kandoouser" classNames="fcls_data_widget,fcls_align_stretch" visible="true" gridItemLocation="2,8,1,1" />
+
+						<Label identifier="lb_access_ind1" text="access_ind" fieldTable="" isDynamic="true"  classNames="fcls_fieldlabel" visible="true" gridItemLocation="0,9,1,1"  />
+						<Label identifier="lb_access_ind2" text="glob_kandoouser.access_ind" fieldTable="" isDynamic="true"  classNames="fcls_fieldlabel" visible="true" gridItemLocation="1,9,1,1"  />
+						<TextField identifier="ku_access_ind" fieldTable="kandoouser" classNames="fcls_data_widget,fcls_align_stretch" visible="true" gridItemLocation="2,9,1,1" />
+
+						<Label identifier="lb_sign_on_date1" text="sign_on_date" fieldTable="" isDynamic="true"  classNames="fcls_fieldlabel" visible="true" gridItemLocation="0,10,1,1"  />
+						<Label identifier="lb_sign_on_date2" text="glob_kandoouser.sign_on_date" fieldTable="" isDynamic="true"  classNames="fcls_fieldlabel" visible="true" gridItemLocation="1,10,1,1"  />
+						<TextField identifier="ku_sign_on_date" fieldTable="kandoouser" classNames="fcls_data_widget,fcls_align_stretch" visible="true" gridItemLocation="2,10,1,1" />
+
+						<Label identifier="lb_print_text1" text="print_text" fieldTable="" isDynamic="true"  classNames="fcls_fieldlabel" visible="true" gridItemLocation="0,11,1,1"  />
+						<Label identifier="lb_print_text2" text="glob_kandoouser.print_text" fieldTable="" isDynamic="true"  classNames="fcls_fieldlabel" visible="true" gridItemLocation="1,11,1,1"  />
+						<TextField identifier="ku_print_text" fieldTable="kandoouser" classNames="fcls_data_widget,fcls_align_stretch" visible="true" gridItemLocation="2,11,1,1" />
+
+						<Label identifier="lb_act_spawn_num1" text="act_spawn_num" fieldTable="" isDynamic="true"  classNames="fcls_fieldlabel" visible="true" gridItemLocation="0,12,1,1"  />
+						<Label identifier="lb_act_spawn_num2" text="glob_kandoouser.act_spawn_num" fieldTable="" isDynamic="true"  classNames="fcls_fieldlabel" visible="true" gridItemLocation="1,12,1,1"  />
+						<TextField identifier="ku_act_spawn_num" fieldTable="kandoouser" classNames="fcls_data_widget,fcls_align_stretch" visible="true" gridItemLocation="2,12,1,1" />
+
+						<Label identifier="lb_max_spawn_num1" text="max_spawn_num" fieldTable="" isDynamic="true"  classNames="fcls_fieldlabel" visible="true" gridItemLocation="0,13,1,1"  />
+						<Label identifier="lb_max_spawn_num2" text="glob_kandoouser.max_spawn_num" fieldTable="" isDynamic="true"  classNames="fcls_fieldlabel" visible="true" gridItemLocation="1,13,1,1"  />
+						<TextField identifier="ku_max_spawn_num" fieldTable="kandoouser" classNames="fcls_data_widget,fcls_align_stretch" visible="true" gridItemLocation="2,13,1,1" />
+
+						<Label identifier="lb_group_code1" text="group_code" fieldTable="" isDynamic="true"  classNames="fcls_fieldlabel" visible="true" gridItemLocation="0,14,1,1"  />
+						<Label identifier="lb_group_code2" text="glob_kandoouser.group_code" fieldTable="" isDynamic="true"  classNames="fcls_fieldlabel" visible="true" gridItemLocation="1,14,1,1"  />
+						<TextField identifier="ku_group_code" fieldTable="kandoouser" classNames="fcls_data_widget,fcls_align_stretch" visible="true" gridItemLocation="2,14,1,1" />
+
+						<Label identifier="lb_signature_text1" text="signature_text" fieldTable="" isDynamic="true"  classNames="fcls_fieldlabel" visible="true" gridItemLocation="0,15,1,1"  />
+						<Label identifier="lb_signature_text2" text="glob_kandoouser.signature_text" fieldTable="" isDynamic="true"  classNames="fcls_fieldlabel" visible="true" gridItemLocation="1,15,1,1"  />
+						<TextField identifier="ku_signature_text" fieldTable="kandoouser" classNames="fcls_data_widget,fcls_align_stretch" visible="true" gridItemLocation="2,15,1,1" />
+
+						<Label identifier="lb_passwd_ind1" text="passwd_ind" fieldTable="" isDynamic="true"  classNames="fcls_fieldlabel" visible="true" gridItemLocation="0,16,1,1"  />
+						<Label identifier="lb_passwd_ind2" text="glob_kandoouser.passwd_ind" fieldTable="" isDynamic="true"  classNames="fcls_fieldlabel" visible="true" gridItemLocation="1,16,1,1"  />
+						<TextField identifier="ku_passwd_ind" fieldTable="kandoouser" classNames="fcls_data_widget,fcls_align_stretch" visible="true" gridItemLocation="2,16,1,1" />
+
+						<Label identifier="lb_memo_pri_ind1" text="memo_pri_ind" fieldTable="" isDynamic="true"  classNames="fcls_fieldlabel" visible="true" gridItemLocation="0,17,1,1"  />
+						<Label identifier="lb_memo_pri_ind2" text="glob_kandoouser.memo_pri_ind" fieldTable="" isDynamic="true"  classNames="fcls_fieldlabel" visible="true" gridItemLocation="1,17,1,1"  />
+						<TextField identifier="ku_memo_pri_ind" fieldTable="kandoouser" classNames="fcls_data_widget,fcls_align_stretch" visible="true" gridItemLocation="2,17,1,1" />
+
+						<Label identifier="lb_email1" text="email" fieldTable="" isDynamic="true"  classNames="fcls_fieldlabel" visible="true" gridItemLocation="0,18,1,1"  />
+						<Label identifier="lb_email2" text="glob_kandoouser.email" fieldTable="" isDynamic="true"  classNames="fcls_fieldlabel" visible="true" gridItemLocation="1,18,1,1"  />
+						<TextField identifier="ku_email" fieldTable="kandoouser" classNames="fcls_data_widget,fcls_align_stretch" visible="true" gridItemLocation="2,18,1,1" />
+
+
+
+					</GridPanel>
+				</TabPage>
+
+
+			
+				<!-- Glob Argumnents passed to the current program via RUN arguments and ZERO MQ  ######################################################################################################################################### -->
+				<TabPage title="Module Args" classNames="fcls_detail_tp_cnt" visible="true" fieldTable="" identifier="cntTpProgArgs" horizontalAlignment="Stretch">
+					<GridPanel classNames="fcls_detail_tp_cnt_sub,fcls_data_cnt" visible="true" verticalAlignment="Top" horizontalAlignment="Stretch" fieldTable="" identifier="cntTpChildGpProgArs">
+						<GridPanel.gridRowDefinitions>
+							<GridRowDefinition gridLengthValue=""/>
+							<GridRowDefinition gridLengthValue=""/>
+							<GridRowDefinition gridLengthValue=""/>
+							<GridRowDefinition gridLengthValue=""/>
+							<GridRowDefinition gridLengthValue=""/>
+							<GridRowDefinition gridLengthValue=""/>
+							<GridRowDefinition gridLengthValue=""/>
+							<GridRowDefinition gridLengthValue=""/>
+							<GridRowDefinition gridLengthValue=""/>
+							<GridRowDefinition gridLengthValue=""/>
+							<GridRowDefinition gridLengthValue=""/>
+							<GridRowDefinition gridLengthValue=""/>
+							<GridRowDefinition gridLengthValue=""/>
+							<GridRowDefinition gridLengthValue=""/>
+							<GridRowDefinition gridLengthValue=""/>
+							<GridRowDefinition gridLengthValue=""/>
+							<GridRowDefinition gridLengthValue=""/>
+							<GridRowDefinition gridLengthValue=""/>
+							<GridRowDefinition gridLengthValue=""/>
+							<GridRowDefinition gridLengthValue=""/>
+							<GridRowDefinition gridLengthValue=""/>
+							<GridRowDefinition gridLengthValue=""/>
+							<GridRowDefinition gridLengthValue=""/>
+							<GridRowDefinition gridLengthValue=""/>
+							<GridRowDefinition gridLengthValue=""/>
+							<GridRowDefinition gridLengthValue=""/>
+							<GridRowDefinition gridLengthValue=""/>
+							<GridRowDefinition gridLengthValue=""/>
+							<GridRowDefinition gridLengthValue=""/>
+							<GridRowDefinition gridLengthValue=""/>
+							<GridRowDefinition gridLengthValue=""/>
+							<GridRowDefinition gridLengthValue=""/>
+							<GridRowDefinition gridLengthValue=""/>
+							<GridRowDefinition gridLengthValue=""/>
+							<GridRowDefinition gridLengthValue=""/>
+							<GridRowDefinition gridLengthValue=""/>
+							<GridRowDefinition gridLengthValue=""/>
+							
+						</GridPanel.gridRowDefinitions>
+						<GridPanel.gridColumnDefinitions>
+							<GridColumnDefinition gridMinLength="10rem"/>
+							<GridColumnDefinition gridMinLength="30rem"/>
+							<GridColumnDefinition gridLengthValue="100%"/>
+						</GridPanel.gridColumnDefinitions>
+
+						<Label identifier="lbuser_code1" text="MODE" fieldTable=""  isDynamic="true" classNames="fcls_fieldlabel" visible="true" gridItemLocation="0,0,1,1" />
+						<Label identifier="lbuser_code2" text="get_url_mode()" fieldTable=""  isDynamic="true"  classNames="fcls_fieldlabel" visible="true" gridItemLocation="1,0,1,1" />
+						<TextField identifier="url_mode" fieldTable="kandoouser" classNames="fcls_data_widget,fcls_align_stretch" visible="true" gridItemLocation="2,0,1,1"  />
+						
+						<Label identifier="lbsign_on_code1" text="KANDOODB"  fieldTable="" isDynamic="true" classNames="fcls_fieldlabel" visible="true" gridItemLocation="0,1,1,1"  />
+						<Label identifier="lbsign_on_code2" text="set/get_db()" fieldTable="" isDynamic="true" classNames="fcls_fieldlabel" visible="true" gridItemLocation="1,1,1,1"  />
+						<TextField identifier="url_kandoodb" fieldTable="kandoouser" classNames="fcls_data_widget,fcls_align_stretch" visible="true" gridItemLocation="2,1,1,1"  />
+						
+						<Label identifier="lb_name_text1" text="DB" fieldTable="" isDynamic="true"  classNames="fcls_fieldlabel" visible="true" gridItemLocation="0,2,1,1"  />
+						<Label identifier="lb_name_text2" text="set/get_db() #synonym" fieldTable="" isDynamic="true"  classNames="fcls_fieldlabel" visible="true" gridItemLocation="1,2,1,1"  />
+						<TextField identifier="url_db" fieldTable="kandoouser" classNames="fcls_data_widget,fcls_align_stretch" visible="true" gridItemLocation="2,2,1,1" />
+						
+						<Label identifier="lb_security_ind1" text="SIGN_ON_CODE" fieldTable="" isDynamic="true"  classNames="fcls_fieldlabel" visible="true" gridItemLocation="0,3,1,1"  />
+						<Label identifier="lb_security_ind2" text="set/get_ku_sign_on_code" fieldTable="" isDynamic="true"  classNames="fcls_fieldlabel" visible="true" gridItemLocation="1,3,1,1"  />
+						<TextField identifier="url_sign_on_code" fieldTable="kandoouser" classNames="fcls_data_widget,fcls_align_stretch" visible="true" gridItemLocation="2,3,1,1" />
+						
+						<Label identifier="lb_password_text1" text="MAX_CHILD" fieldTable="" isDynamic="true"  classNames="fcls_fieldlabel" visible="true" gridItemLocation="0,4,1,1"  />
+						<Label identifier="lb_password_text2" text="set/get_settings_maxChildLaunch()" fieldTable="" isDynamic="true"  classNames="fcls_fieldlabel" visible="true" gridItemLocation="1,4,1,1"  />
+						<TextField identifier="url_max_child" fieldTable="kandoouser" classNames="fcls_data_widget,fcls_align_stretch" visible="true" gridItemLocation="2,4,1,1" />
+						
+						<Label identifier="lb_language_code1" text="PASSWORD_TEXT" fieldTable="" isDynamic="true"  classNames="fcls_fieldlabel" visible="true" gridItemLocation="0,5,1,1"  />
+						<Label identifier="lb_language_code2" text="set/ku_password_text()" fieldTable="" isDynamic="true"  classNames="fcls_fieldlabel" visible="true" gridItemLocation="1,5,1,1"  />
+						<TextField identifier="url_password_text" fieldTable="kandoouser" classNames="fcls_data_widget,fcls_align_stretch" visible="true" gridItemLocation="2,5,1,1" />
+						
+						<Label identifier="lb_cmpy_code1" text="LOGIN_NAME" fieldTable="" isDynamic="true"  classNames="fcls_fieldlabel" visible="true" gridItemLocation="0,6,1,1"  />
+						<Label identifier="lb_cmpy_code2" text="set/get_ku_login_name" fieldTable="" isDynamic="true"  classNames="fcls_fieldlabel" visible="true" gridItemLocation="1,6,1,1"  />
+						<TextField identifier="url_login_name" fieldTable="kandoouser" classNames="fcls_data_widget,fcls_align_stretch" visible="true" gridItemLocation="2,6,1,1" />
+
+						<Label identifier="lb_acct_mask_code1" text="EMAIL" fieldTable="" isDynamic="true"  classNames="fcls_fieldlabel" visible="true" gridItemLocation="0,7,1,1"  />
+						<Label identifier="lb_acct_mask_code2" text="set/get_ku_email()" fieldTable="" isDynamic="true"  classNames="fcls_fieldlabel" visible="true" gridItemLocation="1,7,1,1"  />
+						<TextField identifier="url_email" fieldTable="kandoouser" classNames="fcls_data_widget,fcls_align_stretch" visible="true" gridItemLocation="2,7,1,1" />
+
+						<Label identifier="lb_profile_code1" text="VENDOR_CODE" fieldTable="" isDynamic="true"  classNames="fcls_fieldlabel" visible="true" gridItemLocation="0,8,1,1"  />
+						<Label identifier="lb_cprofile_code2" text="set/get_url_vendor_code()" fieldTable="" isDynamic="true"  classNames="fcls_fieldlabel" visible="true" gridItemLocation="1,8,1,1"  />
+						<TextField identifier="url_vendor_code" fieldTable="kandoouser" classNames="fcls_data_widget,fcls_align_stretch" visible="true" gridItemLocation="2,8,1,1" />
+
+						<Label identifier="lb_access_ind1" text="COMPANY_CODE" fieldTable="" isDynamic="true"  classNames="fcls_fieldlabel" visible="true" gridItemLocation="0,9,1,1"  />
+						<Label identifier="lb_access_ind2" text="set/get_url_company_code()" fieldTable="" isDynamic="true"  classNames="fcls_fieldlabel" visible="true" gridItemLocation="1,9,1,1"  />
+						<TextField identifier="url_company_code" fieldTable="kandoouser" classNames="fcls_data_widget,fcls_align_stretch" visible="true" gridItemLocation="2,9,1,1" />
+
+						<Label identifier="lb_sign_on_date1" text="CUSTOMER_CODE" fieldTable="" isDynamic="true"  classNames="fcls_fieldlabel" visible="true" gridItemLocation="0,10,1,1"  />
+						<Label identifier="lb_sign_on_date2" text="set/get_url_customer_code()" fieldTable="" isDynamic="true"  classNames="fcls_fieldlabel" visible="true" gridItemLocation="1,10,1,1"  />
+						<TextField identifier="url_customer_code" fieldTable="kandoouser" classNames="fcls_data_widget,fcls_align_stretch" visible="true" gridItemLocation="2,10,1,1" />
+
+						<Label identifier="lb_print_text1" text="INVOICE_NUMBER" fieldTable="" isDynamic="true"  classNames="fcls_fieldlabel" visible="true" gridItemLocation="0,11,1,1"  />
+						<Label identifier="lb_print_text2" text="set/get_url_invoice_number()" fieldTable="" isDynamic="true"  classNames="fcls_fieldlabel" visible="true" gridItemLocation="1,11,1,1"  />
+						<TextField identifier="url_invoice_number" fieldTable="kandoouser" classNames="fcls_data_widget,fcls_align_stretch" visible="true" gridItemLocation="2,11,1,1" />
+
+						<Label identifier="lb_act_spawn_num1" text="CASHRECEIPT_NUMBER" fieldTable="" isDynamic="true"  classNames="fcls_fieldlabel" visible="true" gridItemLocation="0,12,1,1"  />
+						<Label identifier="lb_act_spawn_num2" text="set/get_url_cashreceipt_number()" fieldTable="" isDynamic="true"  classNames="fcls_fieldlabel" visible="true" gridItemLocation="1,12,1,1"  />
+						<TextField identifier="url_cashreceipt_number" fieldTable="kandoouser" classNames="fcls_data_widget,fcls_align_stretch" visible="true" gridItemLocation="2,12,1,1" />
+
+						<Label identifier="lb_max_spawn_num1" text="CREDIT_NUMBER" fieldTable="" isDynamic="true"  classNames="fcls_fieldlabel" visible="true" gridItemLocation="0,13,1,1"  />
+						<Label identifier="lb_max_spawn_num2" text="set/get_url_credit_number()" fieldTable="" isDynamic="true"  classNames="fcls_fieldlabel" visible="true" gridItemLocation="1,13,1,1"  />
+						<TextField identifier="url_credit_number" fieldTable="kandoouser" classNames="fcls_data_widget,fcls_align_stretch" visible="true" gridItemLocation="2,13,1,1" />
+
+						<Label identifier="lb_group_code1" text="BANKDEPARTMENT_NUMBER" fieldTable="" isDynamic="true"  classNames="fcls_fieldlabel" visible="true" gridItemLocation="0,14,1,1"  />
+						<Label identifier="lb_group_code2" text="set/get_url_bankdepartment_number()" fieldTable="" isDynamic="true"  classNames="fcls_fieldlabel" visible="true" gridItemLocation="1,14,1,1"  />
+						<TextField identifier="url_bankdepartment_number" fieldTable="kandoouser" classNames="fcls_data_widget,fcls_align_stretch" visible="true" gridItemLocation="2,14,1,1" />
+
+						<Label identifier="lb_signature_text1" text="BATCH_NUMBER" fieldTable="" isDynamic="true"  classNames="fcls_fieldlabel" visible="true" gridItemLocation="0,15,1,1"  />
+						<Label identifier="lb_signature_text2" text="set/get_url_batch_number()" fieldTable="" isDynamic="true"  classNames="fcls_fieldlabel" visible="true" gridItemLocation="1,15,1,1"  />
+						<TextField identifier="url_batch_number" fieldTable="kandoouser" classNames="fcls_data_widget,fcls_align_stretch" visible="true" gridItemLocation="2,15,1,1" />
+
+						<Label identifier="lb_passwd_ind1" text="INVOICE_TEXT" fieldTable="" isDynamic="true"  classNames="fcls_fieldlabel" visible="true" gridItemLocation="0,16,1,1"  />
+						<Label identifier="lb_passwd_ind2" text="set/get_url_invoice_text()" fieldTable="" isDynamic="true"  classNames="fcls_fieldlabel" visible="true" gridItemLocation="1,16,1,1"  />
+						<TextField identifier="url_invoice_text" fieldTable="kandoouser" classNames="fcls_data_widget,fcls_align_stretch" visible="true" gridItemLocation="2,16,1,1" />
+
+						<Label identifier="lb_memo_pri_ind1" text="CREDIT_TEXT" fieldTable="" isDynamic="true"  classNames="fcls_fieldlabel" visible="true" gridItemLocation="0,17,1,1"  />
+						<Label identifier="lb_memo_pri_ind2" text="set/get_url_credit_text()" fieldTable="" isDynamic="true"  classNames="fcls_fieldlabel" visible="true" gridItemLocation="1,17,1,1"  />
+						<TextField identifier="url_credit_text" fieldTable="kandoouser" classNames="fcls_data_widget,fcls_align_stretch" visible="true" gridItemLocation="2,17,1,1" />
+
+						<Label identifier="lb_email1" text="LOAD_FILE" fieldTable="" isDynamic="true"  classNames="fcls_fieldlabel" visible="true" gridItemLocation="0,18,1,1"  />
+						<Label identifier="lb_email2" text="set/get_url_load_file()" fieldTable="" isDynamic="true"  classNames="fcls_fieldlabel" visible="true" gridItemLocation="1,18,1,1"  />
+						<TextField identifier="url_load_file" fieldTable="kandoouser" classNames="fcls_data_widget,fcls_align_stretch" visible="true" gridItemLocation="2,18,1,1" />
+						<Label visible="true" identifier="lb266" gridItemLocation="0,19,1,1" isDynamic="true" classNames="fcls_fieldlabel" fieldTable="" text="FILE_LIST"/>
+						<Label text="set/get_url_file_list()" isDynamic="true" visible="true" identifier="lb303" gridItemLocation="1,19,1,1"/>
+						<TextField visible="true" identifier="url_file_list" gridItemLocation="2,19,1,1"/>
+						<Label visible="true" identifier="lb267" gridItemLocation="0,20,1,1" isDynamic="true" classNames="fcls_fieldlabel" fieldTable="" text="QUERY_TEXT"/>
+						<Label text="set/get_url_query_text()" isDynamic="true" visible="true" identifier="lb298" gridItemLocation="1,20,1,1"/>
+						<TextField visible="true" identifier="url_query_text" gridItemLocation="2,20,1,1"/>
+						<Label visible="true" identifier="lb268" gridItemLocation="0,21,1,1" isDynamic="true" classNames="fcls_fieldlabel" fieldTable="" text="FILE_PATH"/>
+						<Label text="set/get_url_file_path()" isDynamic="true" visible="true" identifier="lb299" gridItemLocation="1,21,1,1"/>
+						<TextField visible="true" identifier="url_file_path" gridItemLocation="2,21,1,1"/>
+						<Label visible="true" identifier="lb272" gridItemLocation="0,22,1,1" isDynamic="true" classNames="fcls_fieldlabel" fieldTable="" text="FILE_NAME"/>
+						<Label text="set/get_url_name()" isDynamic="true" visible="true" identifier="lb300" gridItemLocation="1,22,1,1"/>
+						<TextField visible="true" identifier="url_file_name" gridItemLocation="2,22,1,1"/>
+						<Label visible="true" identifier="lb271" gridItemLocation="0,23,1,1" isDynamic="true" classNames="fcls_fieldlabel" fieldTable="" text="ARGINT1"/>
+						<Label text="set/get_argInt1()" isDynamic="true" visible="true" identifier="lb301" gridItemLocation="1,23,1,1"/>
+						<TextField visible="true" identifier="url_int1" gridItemLocation="2,23,1,1"/>
+						<Label visible="true" identifier="lb269" gridItemLocation="0,24,1,1" isDynamic="true" classNames="fcls_fieldlabel" fieldTable="" text="ARGINT2"/>
+						<Label text="set/get_argInt2()" isDynamic="true" visible="true" identifier="lb304" gridItemLocation="1,24,1,1"/>
+						<TextField visible="true" identifier="url_int2" gridItemLocation="2,24,1,1"/>
+						<Label visible="true" identifier="lb270" gridItemLocation="0,25,1,1" isDynamic="true" classNames="fcls_fieldlabel" fieldTable="" text="ARGSTR1"/>
+						<Label text="set/get_argStr1()" isDynamic="true" visible="true" identifier="lb305" gridItemLocation="1,25,1,1"/>
+						<TextField visible="true" identifier="url_str1" gridItemLocation="2,25,1,1"/>
+						<Label visible="true" identifier="lb262" gridItemLocation="0,26,1,1" isDynamic="true" classNames="fcls_fieldlabel" fieldTable="" text="ARGSTR2"/>
+						<Label text="set/get_argStr2()" isDynamic="true" visible="true" identifier="lb306" gridItemLocation="1,26,1,1"/>
+						<TextField visible="true" identifier="url_str2" gridItemLocation="2,26,1,1"/>
+						<Label visible="true" identifier="lb265" gridItemLocation="0,27,1,1" isDynamic="true" classNames="fcls_fieldlabel" fieldTable="" text="ID_INT"/>
+						<Label text="set/get_url_id_int()" isDynamic="true" visible="true" identifier="lb307" gridItemLocation="1,27,1,1"/>
+						<TextField visible="true" identifier="url_id_int" gridItemLocation="2,27,1,1"/>
+						<Label visible="true" identifier="lb264" gridItemLocation="0,28,1,1" isDynamic="true" classNames="fcls_fieldlabel" fieldTable="" text="ID_CHAR"/>
+						<Label text="set/get_url_id_char()" isDynamic="true" visible="true" identifier="lb308" gridItemLocation="1,28,1,1"/>
+						<TextField visible="true" identifier="url_id_char" gridItemLocation="2,28,1,1"/>
+						<Label visible="true" identifier="lb263" gridItemLocation="0,29,1,1" isDynamic="true" classNames="fcls_fieldlabel" fieldTable="" text="CHAR"/>
+						<Label text="set/get_url_char()" isDynamic="true" visible="true" identifier="lb309" gridItemLocation="1,29,1,1"/>
+						<TextField visible="true" identifier="url_char" gridItemLocation="2,29,1,1"/>
+						<Label visible="true" identifier="lb261" gridItemLocation="0,30,1,1" isDynamic="true" classNames="fcls_fieldlabel" fieldTable="" text="DEBUG"/>
+						<Label text="set/get_debug()" isDynamic="true" visible="true" identifier="lb311" gridItemLocation="1,30,1,1"/>
+						<TextField visible="true" identifier="url_debug" gridItemLocation="2,30,1,1"/>
+						<Label visible="true" identifier="lb275" gridItemLocation="0,31,1,1" isDynamic="true" classNames="fcls_fieldlabel" fieldTable="" text="ORDER"/>
+						<Label text="set/get_url_order()" isDynamic="true" visible="true" identifier="lb312" gridItemLocation="1,31,1,1"/>
+						<TextField visible="true" identifier="url_order" gridItemLocation="2,31,1,1"/>
+						<Label visible="true" identifier="lb277" gridItemLocation="0,32,1,1" isDynamic="true" classNames="fcls_fieldlabel" fieldTable="" text="TB_PROJECT_NAME"/>
+						<Label text="set/get_url_tb_project_name()" isDynamic="true" visible="true" identifier="lb313" gridItemLocation="1,32,1,1"/>
+						<TextField visible="true" identifier="url_tb_project_name" gridItemLocation="2,32,1,1"/>
+						<Label visible="true" identifier="lb276" gridItemLocation="0,33,1,1" isDynamic="true" classNames="fcls_fieldlabel" fieldTable="" text="TB_MODULE_NAME"/>
+						<Label text="set/get_url_tb_module_name()" isDynamic="true" visible="true" identifier="lb314" gridItemLocation="1,33,1,1"/>
+						<TextField visible="true" identifier="url_tb_module_name" gridItemLocation="2,33,1,1"/>
+						<Label visible="true" identifier="lb273" gridItemLocation="0,34,1,1" isDynamic="true" classNames="fcls_fieldlabel" fieldTable="" text="TB_MENU_NAME"/>
+						<Label text="set/get_url_tb_menu_name(" isDynamic="true" visible="true" identifier="lb315" gridItemLocation="1,34,1,1"/>
+						<TextField visible="true" identifier="url_tb_menu_name" gridItemLocation="2,34,1,1"/>
+						<Label visible="true" identifier="lb279" gridItemLocation="0,35,1,1" isDynamic="true" classNames="fcls_fieldlabel" fieldTable="" text="TB_USER_NAME"/>
+						<Label text="set/get_url_demo()" isDynamic="true" visible="true" identifier="lb316" gridItemLocation="1,35,1,1"/>
+						<TextField visible="true" identifier="url_tb_user_name" gridItemLocation="2,35,1,1"/>
+						<Label visible="true" identifier="lb278" gridItemLocation="0,36,1,1" isDynamic="true" classNames="fcls_fieldlabel" fieldTable="" text="VDOM"/>
+						<Label text="set/get_url_vdom()" isDynamic="true" visible="true" identifier="lb317" gridItemLocation="1,36,1,1"/>
+						<TextField visible="true" identifier="url_vdom" gridItemLocation="2,36,1,1"/>
+
+
+
+					</GridPanel>
+				</TabPage>
+
+
+
+			
+				<!-- Glob Language ######################################################################################################################################### -->
+				<TabPage title="Localization" classNames="fcls_detail_tp_cnt" visible="true" fieldTable="" identifier="cntTpLanguage" horizontalAlignment="Stretch">
+					<GridPanel classNames="fcls_detail_tp_cnt_sub,fcls_data_cnt" visible="true" verticalAlignment="Top" horizontalAlignment="Stretch" fieldTable="" identifier="cntTpChildGpGeneral">
+						<GridPanel.gridRowDefinitions>
+							<GridRowDefinition gridLengthValue=""/>
+							<GridRowDefinition gridLengthValue=""/>
+							<GridRowDefinition gridLengthValue=""/>
+							<GridRowDefinition gridLengthValue=""/>
+							<GridRowDefinition gridLengthValue=""/>
+							<GridRowDefinition gridLengthValue=""/>
+							<GridRowDefinition gridLengthValue=""/>
+							
+						</GridPanel.gridRowDefinitions>
+						<GridPanel.gridColumnDefinitions>
+							<GridColumnDefinition gridMinLength="10rem"/>
+							<GridColumnDefinition gridMinLength="30rem"/>
+							<GridColumnDefinition gridLengthValue="100%"/>
+						</GridPanel.gridColumnDefinitions>
+
+						<Label identifier="lblanguage_code1" text="language_code" fieldTable=""  isDynamic="true" classNames="fcls_fieldlabel" visible="true" gridItemLocation="0,0,1,1" />
+						<Label identifier="lblanguage_code2" text="glob_kandoouser.language_code" fieldTable=""  isDynamic="true"  classNames="fcls_fieldlabel" visible="true" gridItemLocation="1,0,1,1" />
+						<TextField identifier="lang_language_code" fieldTable="kandoouser" classNames="fcls_data_widget,fcls_align_stretch" visible="true" gridItemLocation="2,0,1,1"  />
+						
+						<Label identifier="lblanguage_text1" text="language_text"  fieldTable="" isDynamic="true" classNames="fcls_fieldlabel" visible="true" gridItemLocation="0,1,1,1"  />
+						<Label identifier="lblanguage_text2" text="glob_kandoouser.language_text" fieldTable="" isDynamic="true" classNames="fcls_fieldlabel" visible="true" gridItemLocation="1,1,1,1"  />
+						<TextField identifier="lang_language_text" fieldTable="kandoouser" classNames="fcls_data_widget,fcls_align_stretch" visible="true" gridItemLocation="2,1,1,1"  />
+						
+						<Label identifier="lb_yes_flag1" text="yes_flag" fieldTable="" isDynamic="true"  classNames="fcls_fieldlabel" visible="true" gridItemLocation="0,2,1,1"  />
+						<Label identifier="lb_yes_flag2" text="glob_kandoouser.yes_flag" fieldTable="" isDynamic="true"  classNames="fcls_fieldlabel" visible="true" gridItemLocation="1,2,1,1"  />
+						<TextField identifier="lang_yes_flag" fieldTable="kandoouser" classNames="fcls_data_widget,fcls_align_stretch" visible="true" gridItemLocation="2,2,1,1" />
+						
+						<Label identifier="lb_no_flag1" text="no_flag" fieldTable="" isDynamic="true"  classNames="fcls_fieldlabel" visible="true" gridItemLocation="0,3,1,1"  />
+						<Label identifier="lb_no_flag2" text="glob_kandoouser.no_flag" fieldTable="" isDynamic="true"  classNames="fcls_fieldlabel" visible="true" gridItemLocation="1,3,1,1"  />
+						<TextField identifier="lang_no_flag" fieldTable="kandoouser" classNames="fcls_data_widget,fcls_align_stretch" visible="true" gridItemLocation="2,3,1,1" />
+						
+						<Label identifier="lb_national_text1" text="national_text" fieldTable="" isDynamic="true"  classNames="fcls_fieldlabel" visible="true" gridItemLocation="0,4,1,1"  />
+						<Label identifier="lb_national_text2" text="glob_kandoouser.national_text" fieldTable="" isDynamic="true"  classNames="fcls_fieldlabel" visible="true" gridItemLocation="1,4,1,1"  />
+						<TextField identifier="lang_national_text" fieldTable="kandoouser" classNames="fcls_data_widget,fcls_align_stretch" visible="true" gridItemLocation="2,4,1,1" />
+						<Label text="DBMONEY" isDynamic="true" visible="true" identifier="lb_dbmoney" gridItemLocation="0,5,1,1"/>
+						<Label text="fgl_getenv(&quot;DBMONEY&quot;)" isDynamic="true" visible="true" identifier="lb256" gridItemLocation="1,5,1,1"/>
+						<TextField visible="true" identifier="locale_dbmoney" gridItemLocation="2,5,1,1" classNames="fcls_data_widget,fcls_align_stretch"/>
+						<Label text="Currency Symbol" isDynamic="true" visible="true" identifier="lb_currency_symbol" gridItemLocation="0,6,1,1"/>
+						<Label text="currency_get_symbol_text() / currency.symbol_text" isDynamic="true" visible="true" identifier="lb260" gridItemLocation="1,6,1,1"/>
+						<TextField visible="true" identifier="locale_currency_symbol_text" gridItemLocation="2,6,1,1"/>
+
+
+
+					</GridPanel>
+				</TabPage>
+
+
+
+
+
+			
+				<!-- Misc Globals ######################################################################################################################################### -->
+				<TabPage title="Misc Globals" classNames="fcls_detail_tp_cnt" visible="true" fieldTable="" identifier="cntTpMiscGlobals" horizontalAlignment="Stretch">
+					<GridPanel classNames="fcls_detail_tp_cnt_sub,fcls_data_cnt" visible="true" verticalAlignment="Top" horizontalAlignment="Stretch" fieldTable="" identifier="cntTpChildGpGeneral">
+						<GridPanel.gridRowDefinitions>
+							<GridRowDefinition gridLengthValue=""/>
+							<GridRowDefinition gridLengthValue=""/>
+							<GridRowDefinition gridLengthValue=""/>
+							<GridRowDefinition gridLengthValue=""/>
+							<GridRowDefinition gridLengthValue=""/>
+							<GridRowDefinition gridLengthValue=""/>
+							<GridRowDefinition gridLengthValue=""/>
+							<GridRowDefinition gridLengthValue=""/>
+							<GridRowDefinition gridLengthValue=""/>
+							
+						</GridPanel.gridRowDefinitions>
+						<GridPanel.gridColumnDefinitions>
+							<GridColumnDefinition gridMinLength="10rem"/>
+							<GridColumnDefinition gridMinLength="30rem"/>
+							<GridColumnDefinition gridLengthValue="100%"/>
+						</GridPanel.gridColumnDefinitions>
+
+						<Label identifier="lbglob_callingprog1" text="glob_callingprog" fieldTable=""  isDynamic="true" classNames="fcls_fieldlabel" visible="true" gridItemLocation="0,0,1,1" />
+						<Label identifier="lbglob_callingprog2" text="glob_kandoouser.glob_callingprog" fieldTable=""  isDynamic="true"  classNames="fcls_fieldlabel" visible="true" gridItemLocation="1,0,1,1" />
+						<TextField identifier="glob_callingprog" fieldTable="" classNames="fcls_data_widget,fcls_align_stretch" visible="true" gridItemLocation="2,0,1,1"  />
+						
+						<Label identifier="lbglob_callingprog_ext1" text="glob_callingprog_ext"  fieldTable="" isDynamic="true" classNames="fcls_fieldlabel" visible="true" gridItemLocation="0,1,1,1"  />
+						<Label identifier="lbglob_callingprog_ext2" text="glob_kandoouser.glob_callingprog_ext" fieldTable="" isDynamic="true" classNames="fcls_fieldlabel" visible="true" gridItemLocation="1,1,1,1"  />
+						<TextField identifier="glob_callingprog_ext" fieldTable="" classNames="fcls_data_widget,fcls_align_stretch" visible="true" gridItemLocation="2,1,1,1"  />
+						
+						<Label identifier="lb_glob_msg1_text1" text="glob_msg1_text" fieldTable="" isDynamic="true"  classNames="fcls_fieldlabel" visible="true" gridItemLocation="0,2,1,1"  />
+						<Label identifier="lb_glob_msg1_text2" text="glob_kandoouser.glob_msg1_text" fieldTable="" isDynamic="true"  classNames="fcls_fieldlabel" visible="true" gridItemLocation="1,2,1,1"  />
+						<TextField identifier="glob_msg1_text" fieldTable="kandoouser" classNames="fcls_data_widget,fcls_align_stretch" visible="true" gridItemLocation="2,2,1,1" />
+						
+						<Label identifier="lb_glob_msg2_text1" text="glob_msg2_text" fieldTable="" isDynamic="true"  classNames="fcls_fieldlabel" visible="true" gridItemLocation="0,3,1,1"  />
+						<Label identifier="lb_glob_msg2_text2" text="glob_kandoouser.glob_msg2_text" fieldTable="" isDynamic="true"  classNames="fcls_fieldlabel" visible="true" gridItemLocation="1,3,1,1"  />
+						<TextField identifier="glob_msg2_text" fieldTable="kandoouser" classNames="fcls_data_widget,fcls_align_stretch" visible="true" gridItemLocation="2,3,1,1" />
+						
+						<Label identifier="lb_glob_admin_code" text="glob_admin_code" fieldTable="" isDynamic="true"  classNames="fcls_fieldlabel" visible="true" gridItemLocation="0,4,1,1"  />
+						<Label identifier="lb_glob_admin_code" text="glob_kandoouser.glob_admin_code" fieldTable="" isDynamic="true"  classNames="fcls_fieldlabel" visible="true" gridItemLocation="1,4,1,1"  />
+						<TextField identifier="glob_admin_code" fieldTable="kandoouser" classNames="fcls_data_widget,fcls_align_stretch" visible="true" gridItemLocation="2,4,1,1" />
+						
+						<Label identifier="lb_GL_LANG1" text="GL_LANG" fieldTable="" isDynamic="true"  classNames="fcls_fieldlabel" visible="true" gridItemLocation="0,5,1,1"  />
+						<Label identifier="lb_GL_LANG2" text="glob_kandoouser.GL_LANG" fieldTable="" isDynamic="true"  classNames="fcls_fieldlabel" visible="true" gridItemLocation="1,5,1,1"  />
+						<TextField identifier="GL_LANG" fieldTable="kandoouser" classNames="fcls_data_widget,fcls_align_stretch" visible="true" gridItemLocation="2,5,1,1" />
+						
+						<Label identifier="lb_GL_LOGIN_USER_ID1" text="GL_LOGIN_USER_ID" fieldTable="" isDynamic="true"  classNames="fcls_fieldlabel" visible="true" gridItemLocation="0,6,1,1"  />
+						<Label identifier="lb_GL_LOGIN_USER_ID2" text="glob_kandoouser.GL_LOGIN_USER_ID" fieldTable="" isDynamic="true"  classNames="fcls_fieldlabel" visible="true" gridItemLocation="1,6,1,1"  />
+						<TextField identifier="GL_LOGIN_USER_ID" fieldTable="kandoouser" classNames="fcls_data_widget,fcls_align_stretch" visible="true" gridItemLocation="2,6,1,1" />
+
+						<Label identifier="lb_GL_LOGIN_NAME1" text="GL_LOGIN_NAME" fieldTable="" isDynamic="true"  classNames="fcls_fieldlabel" visible="true" gridItemLocation="0,7,1,1"  />
+						<Label identifier="lb_GL_LOGIN_NAME2" text="glob_kandoouser.GL_LOGIN_NAME" fieldTable="" isDynamic="true"  classNames="fcls_fieldlabel" visible="true" gridItemLocation="1,7,1,1"  />
+						<TextField identifier="GL_LOGIN_NAME" fieldTable="kandoouser" classNames="fcls_data_widget,fcls_align_stretch" visible="true" gridItemLocation="2,7,1,1" />
+
+						<Label identifier="lb_GL_LOGIN_PASSWORD1" text="GL_LOGIN_PASSWORD" fieldTable="" isDynamic="true"  classNames="fcls_fieldlabel" visible="true" gridItemLocation="0,8,1,1"  />
+						<Label identifier="lb_GL_LOGIN_PASSWORD2" text="glob_kandoouser.GL_LOGIN_PASSWORD" fieldTable="" isDynamic="true"  classNames="fcls_fieldlabel" visible="true" gridItemLocation="1,8,1,1"  />
+						<TextField identifier="GL_LOGIN_PASSWORD" fieldTable="kandoouser" classNames="fcls_data_widget,fcls_align_stretch" visible="true" gridItemLocation="2,8,1,1" />
+
+
+					</GridPanel>
+				</TabPage>
+
+
+
+
+
+
+			
+				<!-- General######################################################################################################################################### -->
+				<TabPage title="General" classNames="fcls_detail_tp_cnt" visible="true" fieldTable="" identifier="cntTpGeneral" horizontalAlignment="Stretch">
+					<GridPanel classNames="fcls_detail_tp_cnt_sub,fcls_data_cnt" visible="true" verticalAlignment="Top" horizontalAlignment="Stretch" fieldTable="" identifier="cntTpChildGpGeneral">
+						<GridPanel.gridRowDefinitions>
+							<GridRowDefinition gridLengthValue=""/>
+							<GridRowDefinition gridLengthValue=""/>
+							<GridRowDefinition gridLengthValue=""/>
+							<GridRowDefinition gridLengthValue=""/>
+							<GridRowDefinition gridLengthValue=""/>
+							<GridRowDefinition gridLengthValue=""/>
+							<GridRowDefinition gridLengthValue=""/>
+							<GridRowDefinition gridLengthValue=""/>
+							<GridRowDefinition gridLengthValue=""/>
+							<GridRowDefinition gridLengthValue=""/>
+							<GridRowDefinition gridLengthValue=""/>
+							<GridRowDefinition gridLengthValue=""/>
+							<GridRowDefinition gridLengthValue=""/>
+							<GridRowDefinition gridLengthValue=""/>
+							<GridRowDefinition gridLengthValue=""/>
+							<GridRowDefinition gridLengthValue=""/>
+						</GridPanel.gridRowDefinitions>
+						<GridPanel.gridColumnDefinitions>
+							<GridColumnDefinition gridMinLength="10rem"/>
+							<GridColumnDefinition gridMinLength="30rem"/>
+							<GridColumnDefinition gridLengthValue="100%"/>
+						</GridPanel.gridColumnDefinitions>
+
+						<Label isDynamic="true" text="Lycia Version:" classNames="fcls_fieldlabel" visible="true" gridItemLocation="0,1,1,1" fieldTable="" identifier="lb181"/>
+						<Label isDynamic="true" text="Fgl_GetVersion()" classNames="fcls_fieldlabel" visible="true" gridItemLocation="1,1,1,1" fieldTable="" identifier="lbMiscFgl_GetVersion"/>
+						<TextField classNames="fcls_data_widget,fcls_align_stretch" visible="true" gridItemLocation="2,1,1,1" fieldTable="" identifier="gen_lycia_version"/>
+
+						<Label text="Client Type" isDynamic="true" visible="true" identifier="lb230" gridItemLocation="0,2,1,1" classNames="fcls_fieldlabel"/>
+						<Label text="ui.Interface.getFrontEndName()" isDynamic="true" visible="true" identifier="lb231" gridItemLocation="1,2,1,1" classNames="fcls_fieldlabel"/>
+						<TextField visible="true" identifier="gen_frontEndName" gridItemLocation="2,2,1,1" classNames="fcls_data_widget,fcls_align_stretch"/>
+						
+						<Label text="Client Version" isDynamic="true" visible="true" identifier="lb233" gridItemLocation="0,3,1,1" classNames="fcls_fieldlabel"/>
+						<Label text="ui.Interface.getFrontEndVersion()" isDynamic="true" visible="true" identifier="lb234" gridItemLocation="1,3,1,1" classNames="fcls_fieldlabel"/>
+						<TextField visible="true" identifier="gen_frontEndVersion" gridItemLocation="2,3,1,1" classNames="fcls_data_widget,fcls_align_stretch"/>
+						
+						<Label text="GUI Misc. Version" isDynamic="true" visible="true" identifier="lb237" gridItemLocation="0,4,1,1" classNames="fcls_fieldlabel"/>
+						<Label text="fgl_getproperty(&quot;gui&quot;, &quot;gui.misc.version&quot;, &quot;&quot;)" isDynamic="true" visible="true" identifier="lb236" gridItemLocation="1,4,1,1" classNames="fcls_fieldlabel"/>
+						<TextField visible="true" identifier="gen_gui_misc_version" gridItemLocation="2,4,1,1" classNames="fcls_data_widget,fcls_align_stretch"/>
+						
+						<Label isDynamic="true" text="App-Server OS short:" classNames="fcls_fieldlabel" visible="true" gridItemLocation="0,5,1,1" fieldTable="" identifier="lb182"/>
+						<Label isDynamic="true" text="fgl_arch()" classNames="fcls_fieldlabel" visible="true" gridItemLocation="1,5,1,1" fieldTable="" identifier="lbMiscFgl_Arch"/>
+						<TextField classNames="fcls_data_widget,fcls_align_stretch" visible="true" gridItemLocation="2,5,1,1" fieldTable="" identifier="gen_server_os"/>
+						
+						<Label isDynamic="true" text="App-Server OS Long:" classNames="fcls_fieldlabel" visible="true" gridItemLocation="0,6,1,1" fieldTable="" identifier="lb183"/>
+						<Label isDynamic="true" text="fgl_arch()/Fgl_ArchName() translated" classNames="fcls_fieldlabel" visible="true" gridItemLocation="1,6,1,1" fieldTable="" identifier="lbMiscFgl_ArchName"/>
+						<TextField classNames="fcls_data_widget,fcls_align_stretch" visible="true" gridItemLocation="2,6,1,1" fieldTable="" identifier="gen_server_os_name"/>
+						
+						<Label isDynamic="true" text="UI Type:" classNames="fcls_fieldlabel" visible="true" fieldTable="" identifier="lb180" gridItemLocation="0,7,1,1"/>
+						<Label isDynamic="true" text="Fgl_GetUiType()" classNames="fcls_fieldlabel" visible="true" textAlignment=",Center" fieldTable="" identifier="lbMiscFgl_GetUiType" gridItemLocation="1,7,1,1"/>
+						<TextField classNames="fcls_data_widget,fcls_align_stretch" visible="true" fieldTable="" identifier="gen_uiType" gridItemLocation="2,7,1,1"/>
+						
+						<Label isDynamic="true" text="Child process:" classNames="fcls_fieldlabel" visible="true" gridItemLocation="0,8,1,1" fieldTable="" identifier="lb184"/>
+						<Label isDynamic="true" text='fgl_getenv(&quot;qx_child&quot;)' classNames="fcls_fieldlabel" visible="true" gridItemLocation="1,8,1,1" fieldTable="" identifier="lb139"/>
+						<TextField classNames="fcls_data_widget,fcls_align_stretch" visible="true" gridItemLocation="2,8,1,1" fieldTable="" identifier="gen_child_process"/>
+						
+						<Label text="DBPATH" isDynamic="true" visible="true" identifier="lb240" gridItemLocation="0,9,1,1" classNames="fcls_fieldlabel"/>
+						<Label text="fgl_getenv(&quot;DBPATH&quot;)" isDynamic="true" visible="true" identifier="lb239" gridItemLocation="1,9,1,1" classNames="fcls_fieldlabel"/>
+						<TextField visible="true" identifier="gen_DBPATH" gridItemLocation="2,9,1,1" classNames="fcls_data_widget,fcls_align_stretch"/>
+
+						<Label isDynamic="true" text="DBDATE" classNames="fcls_fieldlabel" visible="true" gridItemLocation="0,10,1,1" fieldTable="" identifier="lbDBDATE1"/>
+						<Label isDynamic="true" text='fgl_getenv(&quot;DBDATE&quot;)' classNames="fcls_fieldlabel" visible="true" gridItemLocation="1,10,1,1" fieldTable="" identifier="lbDBDATE"/>
+						<TextField classNames="fcls_data_widget,fcls_align_stretch" visible="true" gridItemLocation="2,10,1,1" fieldTable="" identifier="gen_DBDATE"/>
+
+						<Label isDynamic="true" text="DBTIME" classNames="fcls_fieldlabel" visible="true" gridItemLocation="0,11,1,1" fieldTable="" identifier="lbDBTIME1"/>
+						<Label isDynamic="true" text='fgl_getenv(&quot;DBTIME&quot;)' classNames="fcls_fieldlabel" visible="true" gridItemLocation="1,11,1,1" fieldTable="" identifier="lbDBTIME"/>
+						<TextField classNames="fcls_data_widget,fcls_align_stretch" visible="true" gridItemLocation="2,11,1,1" fieldTable="" identifier="gen_DBTIME"/>
+
+
+						<Label isDynamic="true" text="DBMONEY" classNames="fcls_fieldlabel" visible="true" gridItemLocation="0,12,1,1" fieldTable="" identifier="lb204"/>
+						<Label isDynamic="true" text='fgl_getenv(&quot;DBMONEY&quot;)' classNames="fcls_fieldlabel" visible="true" gridItemLocation="1,12,1,1" fieldTable="" identifier="lb205"/>
+						<TextField classNames="fcls_data_widget,fcls_align_stretch" visible="true" gridItemLocation="2,12,1,1" fieldTable="" identifier="gen_DBMONEY"/>
+						<Label isDynamic="true" text="DB_LOCALE" classNames="fcls_fieldlabel" visible="true" gridItemLocation="0,13,1,1" fieldTable="" identifier="lbDB_LOCALE1"/>
+						<Label isDynamic="true" text='fgl_getenv(&quot;DB_LOCALE&quot;)' classNames="fcls_fieldlabel" visible="true" gridItemLocation="1,13,1,1" fieldTable="" identifier="lbDB_LOCALE"/>
+						<TextField classNames="fcls_data_widget,fcls_align_stretch" visible="true" gridItemLocation="2,13,1,1" fieldTable="" identifier="gen_DB_LOCALE"/>
+						<Label isDynamic="true" text="CLIENT_LOCALE" classNames="fcls_fieldlabel" visible="true" gridItemLocation="0,14,1,1" fieldTable="" identifier="lbClient_Locale1"/>
+						<Label isDynamic="true" text='fgl_getenv(&quot;CLIENT_LOCALE&quot;)' classNames="fcls_fieldlabel" visible="true" gridItemLocation="1,14,1,1" fieldTable="" identifier="lbClient_Locale"/>
+						<TextField classNames="fcls_data_widget,fcls_align_stretch" visible="true" gridItemLocation="2,14,1,1" fieldTable="" identifier="gen_CLIENT_LOCALE"/>
+						<Label text="LYCIA_CONFIG_PATH" isDynamic="true" visible="true" identifier="lb250" gridItemLocation="0,15,1,1" classNames="fcls_fieldlabel"/>
+						<Label text="fgl_getenv(&quot;LYCIA_CONFIG_PATH&quot;)" isDynamic="true" visible="true" identifier="lb251" gridItemLocation="1,15,1,1" classNames="fcls_fieldlabel"/>
+						<TextField visible="true" identifier="gen_LYCIA_CONFIG_PATH" gridItemLocation="2,15,1,1"/>
+					</GridPanel>
+				</TabPage>
+				
+				<!-- Server -->
+				<TabPage title="Server" classNames="fcls_detail_tp_cnt"  visible="true" fieldTable="" identifier="cntTpServer">
+					<GridPanel classNames="fcls_detail_tp_cnt_sub" visible="true" verticalAlignment="Top" fieldTable="" identifier="cntTpChildGpServer">
+						<GridPanel.gridRowDefinitions>
+							<GridRowDefinition/>
+							<GridRowDefinition gridLengthValue=""/>
+							<GridRowDefinition gridLengthValue=""/>
+							<GridRowDefinition gridLengthValue=""/>
+							<GridRowDefinition gridLengthValue=""/>
+							<GridRowDefinition gridLengthValue=""/>
+							<GridRowDefinition gridLengthValue=""/>
+							<GridRowDefinition gridLengthValue=""/>
+						</GridPanel.gridRowDefinitions>
+						<GridPanel.gridColumnDefinitions>
+							<GridColumnDefinition gridMinLength="10rem"/>
+							<GridColumnDefinition gridMinLength="30rem"/>
+							<GridColumnDefinition gridLengthValue="100%"/>
+						</GridPanel.gridColumnDefinitions>
+						<Label isDynamic="true" text="Host Name" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,0,1,1" fieldTable="" identifier="lbServerEnvQX_SERVER_HOST"/>
+						<Label isDynamic="true" text='fgl_getenv(&quot;QX_SERVER_HOST&quot;)' classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="1,0,1,1" fieldTable="" identifier="lb185"/>
+						<TextField classNames="fcls_data_widget,fcls_align_stretch" visible="true" gridItemLocation="2,0,1,1" fieldTable="" identifier="server_QX_SERVER_HOST"/>
+						<Label isDynamic="true" text="IP-Address" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,1,1,1" fieldTable="" identifier="lbServerEnvQX_SERVER_IP"/>
+						<Label isDynamic="true" text='fgl_getenv(&quot;QX_SERVER_IP&quot;)' classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="1,1,1,1" fieldTable="" identifier="lb186"/>
+						<TextField classNames="fcls_data_widget,fcls_align_stretch" visible="true" gridItemLocation="2,1,1,1" fieldTable="" identifier="server_QX_SERVER_IP"/>
+						<Label isDynamic="true" text="Session ID" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,2,1,1" fieldTable="" identifier="lbServerEnvQX_SESSION_ID"/>
+						<Label isDynamic="true" text='fgl_getenv(&quot;QX_SESSION_ID&quot;)' classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="1,2,1,1" fieldTable="" identifier="lb187"/>
+						<TextField classNames="fcls_data_widget,fcls_align_stretch" visible="true" gridItemLocation="2,2,1,1" fieldTable="" identifier="server_QX_SESSION_ID"/>
+						<Label isDynamic="true" text="Command ID" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,3,1,1" fieldTable="" identifier="lbServerEnvQX_COMMAND_ID"/>
+						<Label isDynamic="true" text='fgl_getenv(&quot;QX_COMMAND_ID&quot;)' classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="1,3,1,1" fieldTable="" identifier="lb188"/>
+						<TextField classNames="fcls_data_widget,fcls_align_stretch" visible="true" gridItemLocation="2,3,1,1" fieldTable="" identifier="server_QX_COMMAND_ID"/>
+						<Label isDynamic="true" text="Process ID" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,4,1,1" fieldTable="" identifier="lbServerEnvQX_PROCESS_ID"/>
+						<Label isDynamic="true" text='fgl_getenv(&quot;QX_PROCESS_ID&quot;)' classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="1,4,1,1" fieldTable="" identifier="lb189"/>
+						<TextField classNames="fcls_data_widget,fcls_align_stretch" visible="true" gridItemLocation="2,4,1,1" fieldTable="" identifier="server_QX_PROCESS_ID"/>
+						<Label isDynamic="true" text="QX_CHILD" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,5,1,1" fieldTable="" identifier="lb200"/>
+						<Label isDynamic="true" text='fgl_getenv(&quot;QX_CHILD&quot;) ' classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="1,5,1,1" fieldTable="" identifier="lb203"/>
+						<TextField classNames="fcls_data_widget,fcls_align_stretch" visible="true" gridItemLocation="2,5,1,1" fieldTable="" identifier="server_QX_CHILD"/>
+						<Label isDynamic="true" text="Host Name" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,6,1,1" fieldTable="" identifier="lb190"/>
+						<Label isDynamic="true" text='fgl_getproperty(&quot;server&quot;, &quot;system.network&quot;, &quot;hostname&quot;)' classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="1,6,1,1" fieldTable="" identifier="lbServerSystemNetworkHostname"/>
+						<TextField classNames="fcls_data_widget,fcls_align_stretch" visible="true" gridItemLocation="2,6,1,1" fieldTable="" identifier="server_SystemNetworkHostname"/>
+						<Label isDynamic="true" text="IP-Address" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,7,1,1" fieldTable="" identifier="lb191"/>
+						<Label isDynamic="true" text='fgl_getproperty(&quot;server&quot;, &quot;system.network&quot;, &quot;ipaddress&quot;)' classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="1,7,1,1" fieldTable="" identifier="lbServerSystemNetworkIpaddress"/>
+						<TextField classNames="fcls_data_widget,fcls_align_stretch" visible="true" gridItemLocation="2,7,1,1" fieldTable="" identifier="server_SystemNetworkIpaddress"/>
+					</GridPanel>
+				</TabPage>
+				
+				<!-- CLIENT ##########################################################################################  -->				
+				<TabPage title="Client" classNames="fcls_detail_tp_cnt"  visible="true" fieldTable="" identifier="cntTpClient">
+					<GridPanel classNames="fcls_detail_tp_cnt_sub,fcls_align_h_stretch,fcls_align_top" visible="true" fieldTable="" identifier="cntTpChildGpClient">
+						<GridPanel.gridRowDefinitions>
+							<GridRowDefinition gridLengthValue=""/>
+							<GridRowDefinition/>
+							<GridRowDefinition gridLengthValue=""/>
+							<GridRowDefinition gridLengthValue=""/>
+							<GridRowDefinition gridLengthValue=""/>
+							<GridRowDefinition gridLengthValue=""/>
+							<GridRowDefinition gridLengthValue=""/>
+							<GridRowDefinition gridLengthValue=""/>
+							<GridRowDefinition gridLengthValue=""/>
+							
+							<GridRowDefinition/>
+						</GridPanel.gridRowDefinitions>
+						<GridPanel.gridColumnDefinitions>
+							<GridColumnDefinition gridMinLength="10rem"/>
+							<GridColumnDefinition gridMinLength="30rem"/>
+							<GridColumnDefinition gridLengthValue="100%"/>
+						</GridPanel.gridColumnDefinitions>
+						<Label isDynamic="true" text="Client Type:" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,0,1,1" fieldTable="" identifier="lb172"/>
+						<Label isDynamic="true" text="ui.Interface.getFrontEndName()" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="1,0,1,1" fieldTable="" identifier="lb170"/>
+						<TextField visible="true" gridItemLocation="2,0,1,1" fieldTable="" identifier="client_frontEndName"/>
+						<Label isDynamic="true" text="Host Name:" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,1,1,1" fieldTable="" identifier="lb173"/>
+						<Label isDynamic="true" text='fgl_getenv(&quot;QX_CLIENT_HOST&quot;)' classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="1,1,1,1" fieldTable="" identifier="lbClientEnvQX_CLIENT_HOST"/>
+						<TextField classNames="fcls_data_widget,fcls_align_stretch" visible="true" gridItemLocation="2,1,1,1" fieldTable="" identifier="client_QX_CLIENT_HOST"/>
+						<Label isDynamic="true" text="IP-Address:" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,2,1,1" fieldTable="" identifier="lb174"/>
+						<Label isDynamic="true" text='fgl_getenv(&quot;QX_CLIENT_IP&quot;)' classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="1,2,1,1" fieldTable="" identifier="lbClientEnvQX_CLIENT_IP"/>
+						<TextField classNames="fcls_data_widget,fcls_align_stretch" visible="true" gridItemLocation="2,2,1,1" fieldTable="" identifier="client_QX_CLIENT_IP"/>
+						<Label isDynamic="true" text="Host Name:" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,3,1,1" fieldTable="" identifier="lb175"/>
+						<Label isDynamic="true" text='fgl_getproperty(&quot;gui&quot;, &quot;system.network&quot;, &quot;hostname&quot;)' classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="1,3,1,1" fieldTable="" identifier="lbClientGuiSystemNetworkHostname"/>
+						<TextField classNames="fcls_data_widget,fcls_align_stretch" visible="true" gridItemLocation="2,3,1,1" fieldTable="" identifier="client_gui_systemNetwork_hostname"/>
+						<Label isDynamic="true" text="IP-Address:" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,4,1,1" fieldTable="" identifier="lb176"/>
+						<Label isDynamic="true" text='fgl_getproperty(&quot;gui&quot;, &quot;system.network&quot;, &quot;ipaddress&quot;)' classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="1,4,1,1" fieldTable="" identifier="lbClientGuiSystemNetworkIpaddress"/>
+						<TextField classNames="fcls_data_widget,fcls_align_stretch" visible="true" gridItemLocation="2,4,1,1" fieldTable="" identifier="client_gui_systemNetwork_iPpaddress"/>
+						<Label isDynamic="true" text="Session ID:" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,5,1,1" fieldTable="" identifier="lb177"/>
+						<Label isDynamic="true" text='fgl_getproperty(&quot;gui&quot;, &quot;system.network&quot;, &quot;sessionid&quot;)' classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="1,5,1,1" fieldTable="" identifier="lbClientGuiSystemNetworkSessionid"/>
+						<TextField classNames="fcls_data_widget,fcls_align_stretch" visible="true" gridItemLocation="2,5,1,1" fieldTable="" identifier="client_gui_systemNetwork_sessionid"/>
+						<Label isDynamic="true" text="Command ID:" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,6,1,1" fieldTable="" identifier="lb178"/>
+						<Label isDynamic="true" text='fgl_getproperty(&quot;gui&quot;, &quot;system.network&quot;, &quot;commandid&quot;)' classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="1,6,1,1" fieldTable="" identifier="lbClientGuiSystemNetworkCommandid"/>
+						<TextField classNames="fcls_data_widget,fcls_align_stretch" visible="true" gridItemLocation="2,6,1,1" fieldTable="" identifier="client_gui_systemNetwork_commandid"/>
+						<Label isDynamic="true" text="Process Id:" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,7,1,1" fieldTable="" identifier="lb179"/>
+						<Label isDynamic="true" text='fgl_getproperty(&quot;gui&quot;, &quot;system.network&quot;, &quot;processid&quot;)' classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="1,7,1,1" fieldTable="" identifier="lbClientGuiSystemNetworkProcessid"/>
+						<TextField classNames="fcls_data_widget,fcls_align_stretch" visible="true" gridItemLocation="2,7,1,1" fieldTable="" identifier="client_gui_systemNetwork_processID"/>
+						
+						<Label isDynamic="true" text="LD_LIBRARY_PATH" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,8,1,1" fieldTable="" identifier="lbEnvLD_LIBRARY_PATH"/>
+						<Label isDynamic="true" text='fgl_getenv(&quot;LD_LIBRARY_PATH&quot;) Linux only' classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="1,8,1,1" fieldTable="" identifier="lbEnvDescLD_LIBRARY_PATH"/>
+						<TextField classNames="fcls_data_widget,fcls_align_stretch" visible="true" gridItemLocation="2,8,1,1" fieldTable="" identifier="client_LD_LIBRARY_PATH"/>
+						
+						<Label isDynamic="true" text="LD_STARTUP_URL" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,9,1,1" fieldTable="" identifier="lbEnvLD_STARTUP_URL"/>
+						<Label isDynamic="true" text='fgl_getenv(&quot;LD_STARTUP_URL&quot;) Linux only' classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="1,9,1,1" fieldTable="" identifier="lbEnvDescLD_STARTUP_URL"/>
+						<TextField classNames="fcls_data_widget,fcls_align_stretch" visible="true" gridItemLocation="2,9,1,1" fieldTable="" identifier="client_LD_LIBRARY_PATH"/>
+						
+					</GridPanel>
+				</TabPage>
+				
+
+
+				
+				<!-- Lycia Environment ################################################################### -->
+				<TabPage title="Lycia Env" classNames="fcls_detail_tp_cnt" visible="true" fieldTable="" identifier="cntTpEnvironment" horizontalAlignment="Stretch" verticalAlignment="Stretch">
+					<GridPanel classNames="fcls_detail_tp_cnt_sub" visible="true" verticalAlignment="Stretch" fieldTable="" identifier="cntTpChildLyciaEnvironmentSubGp" horizontalAlignment="Stretch">
+						<GridPanel.gridRowDefinitions>
+							<GridRowDefinition gridLengthValue=""/>
+							<GridRowDefinition gridLengthValue=""/>
+							<GridRowDefinition gridLengthValue=""/>
+							<GridRowDefinition gridLengthValue=""/>
+							<GridRowDefinition gridLengthValue=""/>
+							<GridRowDefinition gridLengthValue=""/>
+							<GridRowDefinition gridLengthValue=""/>
+							<GridRowDefinition gridLengthValue=""/>
+							<GridRowDefinition gridLengthValue=""/>
+							<GridRowDefinition gridLengthValue=""/>
+							<GridRowDefinition gridLengthValue=""/>
+							<GridRowDefinition gridLengthValue=""/>
+							<GridRowDefinition gridLengthValue=""/>
+							<GridRowDefinition gridLengthValue=""/>
+							<GridRowDefinition gridLengthValue=""/>
+							<GridRowDefinition gridLengthValue=""/>
+							<GridRowDefinition gridLengthValue=""/>
+							<GridRowDefinition gridLengthValue=""/>
+							<GridRowDefinition gridLengthValue=""/>
+						
+						</GridPanel.gridRowDefinitions>
+						<GridPanel.gridColumnDefinitions>
+							<GridColumnDefinition gridMinLength="10rem"/>
+							<GridColumnDefinition gridMinLength="30rem"/>
+							<GridColumnDefinition gridLengthValue="100%"/>
+						</GridPanel.gridColumnDefinitions>
+
+						<Label isDynamic="true" text="Lycia Version:" classNames="fcls_fieldlabel" visible="true" gridItemLocation="0,0,1,1" fieldTable="" identifier="lb181"/>
+						<Label isDynamic="true" text="Fgl_GetVersion()" classNames="fcls_fieldlabel" visible="true" gridItemLocation="1,0,1,1" fieldTable="" identifier="lbMiscFgl_GetVersion"/>
+						<TextField classNames="fcls_data_widget,fcls_align_stretch" visible="true" gridItemLocation="2,0,1,1" fieldTable="" identifier="lyc_lycia_version"/>
+
+
+						<Label isDynamic="true" text="LYCIA_DIR" classNames="fcls_fieldlabel" visible="true" gridItemLocation="0,1,1,1" fieldTable="" identifier="lbLycLYCIA_DIR"/>
+						<Label text="fgl_getenv(&quot;LYCIA_DIR&quot;)" isDynamic="true" visible="true"  gridItemLocation="1,1,1,1" identifier="lbLycDescLYCIA_DIR" classNames="fcls_fieldlabel"/>
+						<TextField classNames="fcls_data_widget,fcls_align_stretch" visible="true" gridItemLocation="2,1,1,1" fieldTable="" identifier="lyc_LYCIA_DIR"/>
+
+						<Label isDynamic="true" text="LYCIA_DRIVER_PATH" classNames="fcls_fieldlabel" visible="true" gridItemLocation="0,2,1,1" fieldTable="" identifier="lbLycLYCIA_DRIVER_PATH"/>
+						<Label text="fgl_getenv(&quot;LYCIA_DRIVER_PATH&quot;)" isDynamic="true" visible="true"  gridItemLocation="1,2,1,1" identifier="lbLycDescLYCIA_DRIVER_PATH" classNames="fcls_fieldlabel"/>
+						<TextField classNames="fcls_data_widget,fcls_align_stretch" visible="true" gridItemLocation="2,2,1,1" fieldTable="" identifier="lyc_LYCIA_DRIVER_PATH"/>
+
+						<Label isDynamic="true" text="LYCIA_DB_DRIVER" classNames="fcls_fieldlabel" visible="true" gridItemLocation="0,3,1,1" fieldTable="" identifier="lbLycLYCIA_DB_DRIVER"/>
+						<Label text="fgl_getenv(&quot;LYCIA_DB_DRIVER&quot;)" isDynamic="true" visible="true"  gridItemLocation="1,3,1,1" identifier="lbLycDescLYCIA_DB_DRIVER" classNames="fcls_fieldlabel"/>
+						<TextField classNames="fcls_data_widget,fcls_align_stretch" visible="true" gridItemLocation="2,3,1,1" fieldTable="" identifier="lyc_LYCIA_DB_DRIVER"/>
+
+						<Label isDynamic="true" text="LYCIA_CONFIG" classNames="fcls_fieldlabel" visible="true" gridItemLocation="0,4,1,1" fieldTable="" identifier="lbLycLYCIA_CONFIG"/>
+						<Label text="fgl_getenv(&quot;LYCIA_CONFIG&quot;)" isDynamic="true" visible="true"  gridItemLocation="1,4,1,1" identifier="lbLycDescLYCIA_CONFIG" classNames="fcls_fieldlabel"/>
+						<TextField classNames="fcls_data_widget,fcls_align_stretch" visible="true" gridItemLocation="2,4,1,1" fieldTable="" identifier="lyc_LYCIA_CONFIG"/>
+
+						<Label isDynamic="true" text="LYCIA_CONV_FORM_MAX_HEIGHT" classNames="fcls_fieldlabel" visible="true" gridItemLocation="0,5,1,1" fieldTable="" identifier="lbLycLYCIA_CONV_FORM_MAX_HEIGHT"/>
+						<Label text="fgl_getenv(&quot;LYCIA_CONV_FORM_MAX_HEIGHT&quot;)" isDynamic="true" visible="true"  gridItemLocation="1,5,1,1" identifier="lbLycDescLYCIA_CONV_FORM_MAX_HEIGHT" classNames="fcls_fieldlabel"/>
+						<TextField classNames="fcls_data_widget,fcls_align_stretch" visible="true" gridItemLocation="2,5,1,1" fieldTable="" identifier="lyc_LYCIA_CONV_FORM_MAX_HEIGHT"/>
+
+						<Label isDynamic="true" text="LYCIA_CONV_FORM_MAX_WIDTH" classNames="fcls_fieldlabel" visible="true" gridItemLocation="0,6,1,1" fieldTable="" identifier="lbLycLYCIA_CONV_FORM_MAX_WIDTH"/>
+						<Label text="fgl_getenv(&quot;LYCIA_CONV_FORM_MAX_WIDTH&quot;)" isDynamic="true" visible="true"  gridItemLocation="1,6,1,1" identifier="lbLycDescLYCIA_CONV_FORM_MAX_WIDTH" classNames="fcls_fieldlabel"/>
+						<TextField classNames="fcls_data_widget,fcls_align_stretch" visible="true" gridItemLocation="2,6,1,1" fieldTable="" identifier="lyc_LYCIA_CONV_FORM_MAX_WIDTH"/>
+
+						<Label isDynamic="true" text="LYCIA_DB_NAMEMAP" classNames="fcls_fieldlabel" visible="true" gridItemLocation="0,7,1,1" fieldTable="" identifier="lbLycLYCIA_DB_NAMEMAP"/>
+						<Label text="fgl_getenv(&quot;LYCIA_DB_NAMEMAP&quot;)" isDynamic="true" visible="true"  gridItemLocation="1,7,1,1" identifier="lbLycDescLYCIA_DB_NAMEMAP" classNames="fcls_fieldlabel"/>
+						<TextField classNames="fcls_data_widget,fcls_align_stretch" visible="true" gridItemLocation="2,7,1,1" fieldTable="" identifier="lyc_LYCIA_DB_NAMEMAP"/>
+
+						<Label isDynamic="true" text="LYCIA_LIC_KEY" classNames="fcls_fieldlabel" visible="true" gridItemLocation="0,8,1,1" fieldTable="" identifier="lbLycLYCIA_LIC_KEY"/>
+						<Label text="fgl_getenv(&quot;LYCIA_LIC_KEY&quot;)" isDynamic="true" visible="true"  gridItemLocation="1,8,1,1" identifier="lbLycDescLYCIA_LIC_KEY" classNames="fcls_fieldlabel"/>
+						<TextField classNames="fcls_data_widget,fcls_align_stretch" visible="true" gridItemLocation="2,8,1,1" fieldTable="" identifier="lyc_LYCIA_LIC_KEY"/>
+
+						<Label isDynamic="true" text="LYCIA_MSGPATH" classNames="fcls_fieldlabel" visible="true" gridItemLocation="0,9,1,1" fieldTable="" identifier="lbLycLYCIA_MSGPATH"/>
+						<Label text="fgl_getenv(&quot;LYCIA_MSGPATH&quot;)" isDynamic="true" visible="true"  gridItemLocation="1,9,1,1" identifier="lbLycDescLYCIA_MSGPATH" classNames="fcls_fieldlabel"/>
+						<TextField classNames="fcls_data_widget,fcls_align_stretch" visible="true" gridItemLocation="2,9,1,1" fieldTable="" identifier="lyc_LYCIA_MSGPATH"/>
+
+						<Label isDynamic="true" text="LYCIA_PATH" classNames="fcls_fieldlabel" visible="true" gridItemLocation="0,10,1,1" fieldTable="" identifier="lbLycLYCIA_PATH"/>
+						<Label text="fgl_getenv(&quot;LYCIA_PATH&quot;)" isDynamic="true" visible="true"  gridItemLocation="1,10,1,1" identifier="lbLycDescLYCIA_PATH" classNames="fcls_fieldlabel"/>
+						<TextField classNames="fcls_data_widget,fcls_align_stretch" visible="true" gridItemLocation="2,10,1,1" fieldTable="" identifier="lyc_LYCIA_PATH"/>
+
+						<Label isDynamic="true" text="LYCIA_PER_CONVERT_CHECKBOX" classNames="fcls_fieldlabel" visible="true" gridItemLocation="0,11,1,1" fieldTable="" identifier="lbLycLYCIA_PER_CONVERT_CHECKBOX"/>
+						<Label text="fgl_getenv(&quot;LYCIA_PER_CONVERT_CHECKBOX&quot;)" isDynamic="true" visible="true"  gridItemLocation="1,11,1,1" identifier="lbLycDescLYCIA_PER_CONVERT_CHECKBOX" classNames="fcls_fieldlabel"/>
+						<TextField classNames="fcls_data_widget,fcls_align_stretch" visible="true" gridItemLocation="2,11,1,1" fieldTable="" identifier="lyc_LYCIA_PER_CONVERT_CHECKBOX"/>
+
+						<Label isDynamic="true" text="LYCIA_POST_MORTEM_LENGTH" classNames="fcls_fieldlabel" visible="true" gridItemLocation="0,12,1,1" fieldTable="" identifier="lbLycLYCIA_POST_MORTEM_LENGTH"/>
+						<Label text="fgl_getenv(&quot;LYCIA_POST_MORTEM_LENGTH&quot;)" isDynamic="true" visible="true"  gridItemLocation="1,12,1,1" identifier="lbLycDescLYCIA_POST_MORTEM_LENGTH" classNames="fcls_fieldlabel"/>
+						<TextField classNames="fcls_data_widget,fcls_align_stretch" visible="true" gridItemLocation="2,12,1,1" fieldTable="" identifier="lyc_LYCIA_POST_MORTEM_LENGTH"/>
+
+						<Label isDynamic="true" text="LYCIA_SEVERITY" classNames="fcls_fieldlabel" visible="true" gridItemLocation="0,13,1,1" fieldTable="" identifier="lbLycLYCIA_SEVERITY"/>
+						<Label text="fgl_getenv(&quot;LYCIA_SEVERITY&quot;)" isDynamic="true" visible="true"  gridItemLocation="1,13,1,1" identifier="lbLycDescLYCIA_SEVERITY" classNames="fcls_fieldlabel"/>
+						<TextField classNames="fcls_data_widget,fcls_align_stretch" visible="true" gridItemLocation="2,13,1,1" fieldTable="" identifier="lyc_LYCIA_SEVERITY"/>
+						<Label text="LYCIA_CONFIG_PATH" isDynamic="true" visible="true" identifier="lb253" gridItemLocation="0,14,1,1" classNames="fcls_fieldlabel"/>
+						<Label text="fgl_getenv(&quot;LYCIA_CONFIG_PATH&quot;)" isDynamic="true" visible="true" identifier="lb254" gridItemLocation="1,14,1,1" classNames="fcls_fieldlabel"/>
+						<TextField visible="true" identifier="lyc_LYCIA_CONFIG_PATH" gridItemLocation="2,14,1,1"/>
+
+						<Label isDynamic="true" text="LYCIA_SYSTEM_ACTION_DEFAULTS" classNames="fcls_fieldlabel" visible="true" gridItemLocation="0,15,1,1" fieldTable="" identifier="lbLycLYCIA_SYSTEM_ACTION_DEFAULTS"/>
+						<Label text="fgl_getenv(&quot;LYCIA_SYSTEM_ACTION_DEFAULTS&quot;)" isDynamic="true" visible="true"  gridItemLocation="1,15,1,1" identifier="lbLycDescLYCIA_SYSTEM_ACTION_DEFAULTS" classNames="fcls_fieldlabel"/>
+						<TextField classNames="fcls_data_widget,fcls_align_stretch" visible="true" gridItemLocation="2,15,1,1" fieldTable="" identifier="lyc_LYCIA_SYSTEM_ACTION_DEFAULTS"/>
+
+						<Label isDynamic="true" text="LYCIA_SYSTEM_RESOURCES" classNames="fcls_fieldlabel" visible="true" gridItemLocation="0,16,1,1" fieldTable="" identifier="lbLycLYCIA_SYSTEM_RESOURCES"/>
+						<Label text="fgl_getenv(&quot;LYCIA_SYSTEM_RESOURCES&quot;)" isDynamic="true" visible="true"  gridItemLocation="1,16,1,1" identifier="lbLycDescLYCIA_SYSTEM_RESOURCES" classNames="fcls_fieldlabel"/>
+						<TextField classNames="fcls_data_widget,fcls_align_stretch" visible="true" gridItemLocation="2,16,1,1" fieldTable="" identifier="lyc_LYCIA_SYSTEM_RESOURCES"/>
+
+						<Label isDynamic="true" text="LYCIA_SYSTEM_THEME_CSS" classNames="fcls_fieldlabel" visible="true" gridItemLocation="0,17,1,1" fieldTable="" identifier="lbLycLYCIA_SYSTEM_THEME_CSS"/>
+						<Label text="fgl_getenv(&quot;LYCIA_SYSTEM_THEME_CSS&quot;)" isDynamic="true" visible="true"  gridItemLocation="1,17,1,1" identifier="lbLycDescLYCIA_SYSTEM_THEME_CSS" classNames="fcls_fieldlabel"/>
+						<TextField classNames="fcls_data_widget,fcls_align_stretch" visible="true" gridItemLocation="2,17,1,1" fieldTable="" identifier="lyc_LYCIA_SYSTEM_THEME_CSS"/>
+
+						<Label isDynamic="true" text="LYCIA_SYSTEM_THEME_QX" classNames="fcls_fieldlabel" visible="true" gridItemLocation="0,18,1,1" fieldTable="" identifier="lbLycLYCIA_SYSTEM_THEME_QX"/>
+						<Label text="fgl_getenv(&quot;LYCIA_SYSTEM_THEME_QX&quot;)" isDynamic="true" visible="true"  gridItemLocation="1,18,1,1" identifier="lbLycDescLYCIA_SYSTEM_THEME_QX" classNames="fcls_fieldlabel"/>
+						<TextField classNames="fcls_data_widget,fcls_align_stretch" visible="true" gridItemLocation="2,18,1,1" fieldTable="" identifier="lyc_LYCIA_SYSTEM_THEME_QX"/>
+
+												
+					</GridPanel>
+				</TabPage>
+
+				
+				
+				<!-- Environment ################################################################### -->
+				<TabPage title="Environment" classNames="fcls_detail_tp_cnt" visible="true" fieldTable="" identifier="cntTpEnvironment" horizontalAlignment="Stretch" verticalAlignment="Stretch">
+					<GridPanel classNames="fcls_detail_tp_cnt_sub" visible="true" verticalAlignment="Stretch" fieldTable="" identifier="cntTpChildSvEnvironmentSubGp" horizontalAlignment="Stretch">
+						<GridPanel.gridRowDefinitions>
+							<GridRowDefinition gridLengthValue=""/>
+							<GridRowDefinition gridLengthValue=""/>
+							<GridRowDefinition gridLengthValue=""/>
+							<GridRowDefinition gridLengthValue=""/>
+							<GridRowDefinition gridLengthValue=""/>
+							<GridRowDefinition gridLengthValue=""/>
+							<GridRowDefinition gridLengthValue=""/>
+							<GridRowDefinition gridLengthValue=""/>
+							<GridRowDefinition gridLengthValue=""/>
+							<GridRowDefinition gridLengthValue="" gridMinLength="5rem"/>
+							<GridRowDefinition gridLengthValue=""/>
+							<GridRowDefinition gridLengthValue=""/>
+							<GridRowDefinition gridLengthValue="" gridMinLength="5rem"/>
+							<GridRowDefinition gridLengthValue=""/>
+							<GridRowDefinition gridLengthValue=""/>
+							<GridRowDefinition gridLengthValue=""/>
+							<GridRowDefinition gridLengthValue=""/>
+							<GridRowDefinition gridLengthValue=""/>
+							<GridRowDefinition gridLengthValue=""/>
+							<GridRowDefinition gridLengthValue=""/>							
+						</GridPanel.gridRowDefinitions>
+						<GridPanel.gridColumnDefinitions>
+							<GridColumnDefinition gridMinLength="10rem"/>
+							<GridColumnDefinition gridMinLength="30rem"/>
+							<GridColumnDefinition gridLengthValue="100%"/>
+						</GridPanel.gridColumnDefinitions>
+						<Label isDynamic="true" text="LYCIA_DIR" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,0,1,1" fieldTable="" identifier="lb63"/>
+						<Label text="fgl_getenv(&quot;LYCIA_DIR&quot;)" isDynamic="true" visible="true" identifier="lb211" gridItemLocation="1,0,1,1"/>
+						<TextField classNames="fcls_data_widget,fcls_align_stretch" visible="true" gridItemLocation="2,0,1,1" fieldTable="" identifier="env_LYCIA_DIR"/>
+						<Label isDynamic="true" text="MSGPATH" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,1,1,1" fieldTable="" identifier="lb64"/>
+						<Label text="fgl_getenv(&quot;MSGPATH&quot;)" isDynamic="true" visible="true" identifier="lb212" gridItemLocation="1,1,1,1"/>
+						<TextField classNames="fcls_data_widget,fcls_align_stretch" visible="true" gridItemLocation="2,1,1,1" fieldTable="" identifier="env_MSGPATH"/>
+						<Label isDynamic="true" text="LINES" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,2,1,1" fieldTable="" identifier="lb65"/>
+						<Label text="fgl_getenv(&quot;LINES&quot;)" isDynamic="true" visible="true" identifier="lb213" gridItemLocation="1,2,1,1"/>
+						<TextField classNames="fcls_data_widget,fcls_align_stretch" visible="true" gridItemLocation="2,2,1,1" fieldTable="" identifier="env_lines"/>
+						<Label isDynamic="true" text="COLUMNS" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,3,1,1" fieldTable="" identifier="lb66"/>
+						<Label text="fgl_getenv(&quot;COLUMNS&quot;)" isDynamic="true" visible="true" identifier="lb214" gridItemLocation="1,3,1,1"/>
+						<TextField classNames="fcls_data_widget,fcls_align_stretch" visible="true" gridItemLocation="2,3,1,1" fieldTable="" identifier="env_columns"/>
+						<Label isDynamic="true" text="LYCIA_DRIVER_PATH" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,4,1,1" fieldTable="" identifier="lb67"/>
+						<Label text="fgl_getenv(&quot;LYCIA_DRIVER_PATH&quot;)" isDynamic="true" visible="true" identifier="lb215" gridItemLocation="1,4,1,1"/>
+						<TextField classNames="fcls_data_widget,fcls_align_stretch" visible="true" gridItemLocation="2,4,1,1" fieldTable="" identifier="env_LYCIA_DRIVER_PATH"/>
+						<Label isDynamic="true" text="FGLPROFILE" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,5,1,1" fieldTable="" identifier="lb68"/>
+						<Label text="fgl_getenv(&quot;FGLPROFILE&quot;)" isDynamic="true" visible="true" identifier="lb216" gridItemLocation="1,5,1,1"/>
+						<TextField classNames="fcls_data_widget,fcls_align_stretch" visible="true" gridItemLocation="2,5,1,1" fieldTable="" identifier="env_FGLPROFILE"/>
+						<Label isDynamic="true" text="QXDEBUG" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,6,1,1" fieldTable="" identifier="lb69"/>
+						<Label text="fgl_getenv(&quot;QXDEBUG&quot;)" isDynamic="true" visible="true" identifier="lb217" gridItemLocation="1,6,1,1"/>
+						<TextField classNames="fcls_data_widget,fcls_align_stretch" visible="true" gridItemLocation="2,6,1,1" fieldTable="" identifier="env_QXDEBUG"/>
+						<Label isDynamic="true" text="QXBREAKCH_START" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,7,1,1" fieldTable="" identifier="lb70"/>
+						<Label text="fgl_getenv(&quot;QXBREAKCH_START&quot;)" isDynamic="true" visible="true" identifier="lb218" gridItemLocation="1,7,1,1"/>
+						<TextField classNames="fcls_data_widget,fcls_align_stretch" visible="true" gridItemLocation="2,7,1,1" fieldTable="" identifier="env_QXBREAKCH_START"/>
+						<Label isDynamic="true" text="QXBREAKCH_END" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,8,1,1" fieldTable="" identifier="lb71"/>
+						<Label text="fgl_getenv(&quot;QXBREAKCH_END&quot;)" isDynamic="true" visible="true" identifier="lb219" gridItemLocation="1,8,1,1"/>
+						<TextField classNames="fcls_data_widget,fcls_align_stretch" visible="true" gridItemLocation="2,8,1,1" fieldTable="" identifier="env_QXBREAKCH_END"/>
+						<Label isDynamic="true" text="PATH" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,9,1,1" fieldTable="" identifier="lb72"/>
+						<Label text="fgl_getenv(&quot;PATH&quot;)" isDynamic="true" visible="true" identifier="lb220" gridItemLocation="1,9,1,1"/>
+						<TextArea classNames="fcls_data_widget,fcls_align_stretch" visible="true" gridItemLocation="2,9,1,1" fieldTable="" identifier="env_PATH" horizontalAlignment="Stretch"/>
+						<Label isDynamic="true" text="FGLIMAGEPATH" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,10,1,1" fieldTable="" identifier="lb73"/>
+						<Label text="fgl_getenv(&quot;FGLIMAGEPATH&quot;)" isDynamic="true" visible="true" identifier="lb221" gridItemLocation="1,10,1,1"/>
+						<TextField classNames="fcls_data_widget,fcls_align_stretch" visible="true" gridItemLocation="2,10,1,1" fieldTable="" identifier="env_FGLIMAGEPATH"/>
+						<Label isDynamic="true" text="QX_MENU_WINDOW" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,11,1,1" fieldTable="" identifier="lb74"/>
+						<Label text="fgl_getenv(&quot;QX_MENU_WINDOW&quot;)" isDynamic="true" visible="true" identifier="lb222" gridItemLocation="1,11,1,1"/>
+						<TextField classNames="fcls_data_widget,fcls_align_stretch" visible="true" gridItemLocation="2,11,1,1" fieldTable="" identifier="env_QX_MENU_WINDOW"/>
+						<Label isDynamic="true" text="CLASSPATH" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,12,1,1" fieldTable="" identifier="lb82"/>
+						<Label text="fgl_getenv(&quot;CLASSPATH&quot;)" isDynamic="true" visible="true" identifier="lb224" gridItemLocation="1,12,1,1"/>
+						<TextArea classNames="fcls_data_widget,fcls_align_stretch" visible="true" gridItemLocation="2,12,1,1" fieldTable="" identifier="env_CLASSPATH" verticalAlignment="Stretch"/>
+
+						<Label isDynamic="true" text="TEMP" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,13,1,1" fieldTable="" identifier="lbTEMP"/>
+						<Label text="fgl_getenv(&quot;TEMP&quot;)" isDynamic="true" visible="true" identifier="lb225" gridItemLocation="1,13,1,1"/>
+						<TextField classNames="fcls_data_widget,fcls_align_stretch" visible="true" gridItemLocation="2,13,1,1" fieldTable="" identifier="env_TEMP"/>
+
+						<Label text="TMP" isDynamic="true" visible="true" identifier="lb242" gridItemLocation="0,14,1,1"/>
+						<Label text="fgl_getenv(&quot;TMP&quot;)" isDynamic="true" visible="true" identifier="lb241" gridItemLocation="1,14,1,1"/>
+						<TextField visible="true" identifier="env_TMP" gridItemLocation="2,14,1,1"/>
+
+
+						<Label isDynamic="true" text="QXSS_DB_IS_DSN" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,15,1,1" fieldTable="" identifier="lbenvQxss_db_is_dsn"/>
+						<Label text="fgl_getenv(&quot;QXSS_DB_IS_DSN&quot;)" isDynamic="true" visible="true" identifier="lb226" gridItemLocation="1,15,1,1"/>
+						<TextField classNames="fcls_data_widget,fcls_align_stretch" visible="true" gridItemLocation="2,15,1,1" fieldTable="" identifier="env_QXSS_DB_IS_DSN"/>
+						
+						<Label isDynamic="true" text="ALLUSERSPROFILE" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,16,1,1" fieldTable="" identifier="lbenvALLUSERSPROFILE"/>
+						<Label text="fgl_getenv(&quot;ALLUSERSPROFILE&quot;)" isDynamic="true" visible="true" identifier="lb226" gridItemLocation="1,16,1,1"/>
+						<TextField classNames="fcls_data_widget,fcls_align_stretch" visible="true" gridItemLocation="2,16,1,1" fieldTable="" identifier="env_ALLUSERSPROFILE"/>
+
+						<Label isDynamic="true" text="AXIS2C_HOME" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,17,1,1" fieldTable="" identifier="lbenvAXIS2C_HOME"/>
+						<Label text="fgl_getenv(&quot;AXIS2C_HOME&quot;)" isDynamic="true" visible="true" identifier="lb226" gridItemLocation="1,17,1,1"/>
+						<TextField classNames="fcls_data_widget,fcls_align_stretch" visible="true" gridItemLocation="2,17,1,1" fieldTable="" identifier="env_AXIS2C_HOME"/>
+
+						<Label isDynamic="true" text="FGLLDPATH" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,18,1,1" fieldTable="" identifier="lbenvFGLLDPATH"/>
+						<Label text="fgl_getenv(&quot;FGLLDPATH&quot;)" isDynamic="true" visible="true" identifier="lb226" gridItemLocation="1,18,1,1"/>
+						<TextField classNames="fcls_data_widget,fcls_align_stretch" visible="true" gridItemLocation="2,18,1,1" fieldTable="" identifier="env_FGLLDPATH"/>
+
+						<Label isDynamic="true" text="FGLSWAGGERPATH" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,19,1,1" fieldTable="" identifier="lbEnvFGLSWAGGERPATH"/>
+						<Label text="fgl_getenv(&quot;FGLSWAGGERPATH&quot;)" isDynamic="true" visible="true" identifier="lbEnvDescFGLSWAGGERPATH" gridItemLocation="1,19,1,1"/>
+						<TextField classNames="fcls_data_widget,fcls_align_stretch" visible="true" gridItemLocation="2,19,1,1" fieldTable="" identifier="env_FGLSWAGGERPATH"/>
+
+
+												
+					</GridPanel>
+				</TabPage>
+
+
+				<!-- Environment QX<name> ################################################################### -->
+				<TabPage title="Env QXname" classNames="fcls_detail_tp_cnt" visible="true" fieldTable="" identifier="cntTpEnvironment" horizontalAlignment="Stretch" verticalAlignment="Stretch">
+					<GridPanel classNames="fcls_detail_tp_cnt_sub" visible="true" verticalAlignment="Top" fieldTable="" identifier="cntTpChildQxSvEnvironmentSubGp" horizontalAlignment="Stretch">
+						<GridPanel.gridRowDefinitions>
+							<GridRowDefinition gridLengthValue=""/>
+							<GridRowDefinition gridLengthValue=""/>
+							<GridRowDefinition gridLengthValue=""/>
+							<GridRowDefinition gridLengthValue=""/>
+							<GridRowDefinition gridLengthValue=""/>
+							<GridRowDefinition gridLengthValue=""/>
+							<GridRowDefinition gridLengthValue=""/>
+							<GridRowDefinition gridLengthValue=""/>
+							<GridRowDefinition gridLengthValue=""/>
+							<GridRowDefinition gridLengthValue=""/>
+							<GridRowDefinition gridLengthValue=""/>
+							<GridRowDefinition gridLengthValue=""/>
+							<GridRowDefinition gridLengthValue=""/>
+							<GridRowDefinition gridLengthValue=""/>
+							<GridRowDefinition gridLengthValue=""/>
+							<GridRowDefinition gridLengthValue=""/>
+							<GridRowDefinition gridLengthValue=""/>
+							<GridRowDefinition gridLengthValue=""/>
+							<GridRowDefinition gridLengthValue=""/>
+							<GridRowDefinition gridLengthValue=""/>							
+						</GridPanel.gridRowDefinitions>
+						<GridPanel.gridColumnDefinitions>
+							<GridColumnDefinition gridMinLength="10rem"/>
+							<GridColumnDefinition gridMinLength="30rem"/>
+							<GridColumnDefinition gridLengthValue="100%"/>
+						</GridPanel.gridColumnDefinitions>
+
+						<Label isDynamic="true" text="QXCLIENTADDRESS" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,0,1,1" fieldTable="" identifier="lbEnvQxQXCLIENTADDRESS"/>
+						<Label text="fgl_getenv(&quot;QXCLIENTADDRESS&quot;)" isDynamic="true" visible="true" identifier="lbEnvQxDescQXCLIENTADDRESS" gridItemLocation="1,0,1,1"/>
+						<TextField classNames="fcls_data_widget,fcls_align_stretch" visible="true" gridItemLocation="2,0,1,1" fieldTable="" identifier="envqxQXCLIENTADDRESS"/>
+
+						<Label isDynamic="true" text="QXGUIIFD" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,1,1,1" fieldTable="" identifier="lbEnvQxQXGUIIFD"/>
+						<Label text="fgl_getenv(&quot;QXGUIIFD&quot;)" isDynamic="true" visible="true" identifier="lbEnvQxDescQXGUIIFD" gridItemLocation="1,1,1,1"/>
+						<TextField classNames="fcls_data_widget,fcls_align_stretch" visible="true" gridItemLocation="2,1,1,1" fieldTable="" identifier="envqxQXGUIIFD"/>
+
+						<Label isDynamic="true" text="QXGUIOFD" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,2,1,1" fieldTable="" identifier="lbEnvQxQXGUIOFD"/>
+						<Label text="fgl_getenv(&quot;QXGUIOFD&quot;)" isDynamic="true" visible="true" identifier="lbEnvQxDescQXGUIOFD" gridItemLocation="1,2,1,1"/>
+						<TextField classNames="fcls_data_widget,fcls_align_stretch" visible="true" gridItemLocation="2,2,1,1" fieldTable="" identifier="envqxQXGUIOFD"/>
+
+						<Label isDynamic="true" text="QXGUISOCKETFD" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,3,1,1" fieldTable="" identifier="lbEnvQxQXGUISOCKETFD"/>
+						<Label text="fgl_getenv(&quot;QXGUISOCKETFD&quot;)" isDynamic="true" visible="true" identifier="lbEnvQxDescQXGUISOCKETFD" gridItemLocation="1,3,1,1"/>
+						<TextField classNames="fcls_data_widget,fcls_align_stretch" visible="true" gridItemLocation="2,3,1,1" fieldTable="" identifier="envqxQXGUISOCKETFD"/>
+
+						<Label isDynamic="true" text="QXHOST" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,4,1,1" fieldTable="" identifier="lbEnvQxQXHOST"/>
+						<Label text="fgl_getenv(&quot;QXHOST&quot;)" isDynamic="true" visible="true" identifier="lbEnvQxDescQXHOST" gridItemLocation="1,4,1,1"/>
+						<TextField classNames="fcls_data_widget,fcls_align_stretch" visible="true" gridItemLocation="2,4,1,1" fieldTable="" identifier="envqxQXHOST"/>
+
+						<Label isDynamic="true" text="QXINDEXTABLESPACE" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,5,1,1" fieldTable="" identifier="lbEnvQxQXINDEXTABLESPACE"/>
+						<Label text="fgl_getenv(&quot;QXINDEXTABLESPACE&quot;)" isDynamic="true" visible="true" identifier="lbEnvQxDescQXINDEXTABLESPACE" gridItemLocation="1,5,1,1"/>
+						<TextField classNames="fcls_data_widget,fcls_align_stretch" visible="true" gridItemLocation="2,5,1,1" fieldTable="" identifier="envqxQXINDEXTABLESPACE"/>
+
+						<Label isDynamic="true" text="QXORA_NOOUTER_NULLOP" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,6,1,1" fieldTable="" identifier="lbEnvQxQXORA_NOOUTER_NULLOP"/>
+						<Label text="fgl_getenv(&quot;QXORA_NOOUTER_NULLOP&quot;)" isDynamic="true" visible="true" identifier="lbEnvQxDescQXORA_NOOUTER_NULLOP" gridItemLocation="1,6,1,1"/>
+						<TextField classNames="fcls_data_widget,fcls_align_stretch" visible="true" gridItemLocation="2,6,1,1" fieldTable="" identifier="envqxQXORA_NOOUTER_NULLOP"/>
+
+						<Label isDynamic="true" text="QXPORT" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,7,1,1" fieldTable="" identifier="lbEnvQxQXPORT"/>
+						<Label text="fgl_getenv(&quot;QXPORT&quot;)" isDynamic="true" visible="true" identifier="lbEnvQxDescQXPORT" gridItemLocation="1,7,1,1"/>
+						<TextField classNames="fcls_data_widget,fcls_align_stretch" visible="true" gridItemLocation="2,7,1,1" fieldTable="" identifier="envqxQXPORT"/>
+
+						<Label isDynamic="true" text="QXREP_SPACES" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,8,1,1" fieldTable="" identifier="lbEnvQxQXREP_SPACES"/>
+						<Label text="fgl_getenv(&quot;QXREP_SPACES&quot;)" isDynamic="true" visible="true" identifier="lbEnvQxDescQXREP_SPACES" gridItemLocation="1,8,1,1"/>
+						<TextField classNames="fcls_data_widget,fcls_align_stretch" visible="true" gridItemLocation="2,8,1,1" fieldTable="" identifier="envqxQXREP_SPACES"/>
+
+						<Label isDynamic="true" text="QXSSLCERTNAME" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,9,1,1" fieldTable="" identifier="lbEnvQxQXSSLCERTNAME"/>
+						<Label text="fgl_getenv(&quot;QXSSLCERTNAME&quot;)" isDynamic="true" visible="true" identifier="lbEnvQxDescQXSSLCERTNAME" gridItemLocation="1,9,1,1"/>
+						<TextField classNames="fcls_data_widget,fcls_align_stretch" visible="true" gridItemLocation="2,9,1,1" fieldTable="" identifier="envqxQXSSLCERTNAME"/>
+
+						<Label isDynamic="true" text="QXSSLPASS" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,10,1,1" fieldTable="" identifier="lbEnvQxQXSSLPASS"/>
+						<Label text="fgl_getenv(&quot;QXSSLPASS&quot;)" isDynamic="true" visible="true" identifier="lbEnvQxDescQXSSLPASS" gridItemLocation="1,10,1,1"/>
+						<TextField classNames="fcls_data_widget,fcls_align_stretch" visible="true" gridItemLocation="2,10,1,1" fieldTable="" identifier="envqxQXSSLPASS"/>
+
+						<Label isDynamic="true" text="QXSSLPRIVATEKEYNAME" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,11,1,1" fieldTable="" identifier="lbEnvQxQXSSLPRIVATEKEYNAME"/>
+						<Label text="fgl_getenv(&quot;QXSSLPRIVATEKEYNAME&quot;)" isDynamic="true" visible="true" identifier="lbEnvQxDescQXSSLPRIVATEKEYNAME" gridItemLocation="1,11,1,1"/>
+						<TextField classNames="fcls_data_widget,fcls_align_stretch" visible="true" gridItemLocation="2,11,1,1" fieldTable="" identifier="envqxQXSSLPRIVATEKEYNAME"/>
+
+						<Label isDynamic="true" text="QXSSL_TIMEOUT" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,12,1,1" fieldTable="" identifier="lbEnvQxQXSSL_TIMEOUT"/>
+						<Label text="fgl_getenv(&quot;QXSSL_TIMEOUT&quot;)" isDynamic="true" visible="true" identifier="lbEnvQxDescQXSSL_TIMEOUT" gridItemLocation="1,12,1,1"/>
+						<TextField classNames="fcls_data_widget,fcls_align_stretch" visible="true" gridItemLocation="2,12,1,1" fieldTable="" identifier="envqxQXSSL_TIMEOUT"/>
+
+						<Label isDynamic="true" text="QXSTDTABLESPACE" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,13,1,1" fieldTable="" identifier="lbEnvQxQXSTDTABLESPACE"/>
+						<Label text="fgl_getenv(&quot;QXSTDTABLESPACE&quot;)" isDynamic="true" visible="true" identifier="lbEnvQxDescQXSTDTABLESPACE" gridItemLocation="1,13,1,1"/>
+						<TextField classNames="fcls_data_widget,fcls_align_stretch" visible="true" gridItemLocation="2,13,1,1" fieldTable="" identifier="envqxQXSTDTABLESPACE"/>
+
+						<Label isDynamic="true" text="QXTMPTABLESPACE" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,14,1,1" fieldTable="" identifier="lbEnvQxQXTMPTABLESPACE"/>
+						<Label text="fgl_getenv(&quot;QXTMPTABLESPACE&quot;)" isDynamic="true" visible="true" identifier="lbEnvQxDescQXTMPTABLESPACE" gridItemLocation="1,14,1,1"/>
+						<TextField classNames="fcls_data_widget,fcls_align_stretch" visible="true" gridItemLocation="2,14,1,1" fieldTable="" identifier="envqxQXTMPTABLESPACE"/>
+
+
+
+												
+					</GridPanel>
+				</TabPage>
+
+
+
+
+				<!-- Environment QX<name> ################################################################### -->
+				<TabPage title="Env QX_name" classNames="fcls_detail_tp_cnt" visible="true" fieldTable="" identifier="cntTpQx_Environment" horizontalAlignment="Stretch" verticalAlignment="Stretch">
+					<GridPanel classNames="fcls_detail_tp_cnt_sub" visible="true" verticalAlignment="Stretch" fieldTable="" identifier="cntTpChildQx_EnvironmentSubGp" horizontalAlignment="Stretch">
+						<GridPanel.gridRowDefinitions>
+							<GridRowDefinition gridLengthValue=""/>
+							<GridRowDefinition gridLengthValue=""/>
+							<GridRowDefinition gridLengthValue=""/>
+							<GridRowDefinition gridLengthValue=""/>
+							<GridRowDefinition gridLengthValue=""/>
+							<GridRowDefinition gridLengthValue=""/>
+							<GridRowDefinition gridLengthValue=""/>
+							<GridRowDefinition gridLengthValue=""/>
+							<GridRowDefinition gridLengthValue=""/>
+							<GridRowDefinition gridLengthValue=""/>
+							<GridRowDefinition gridLengthValue=""/>
+							<GridRowDefinition gridLengthValue=""/>
+							<GridRowDefinition gridLengthValue=""/>
+							<GridRowDefinition gridLengthValue=""/>
+							<GridRowDefinition gridLengthValue=""/>
+							<GridRowDefinition gridLengthValue=""/>
+							<GridRowDefinition gridLengthValue=""/>
+							<GridRowDefinition gridLengthValue=""/>
+							<GridRowDefinition gridLengthValue=""/>
+							<GridRowDefinition gridLengthValue=""/>
+							<GridRowDefinition gridLengthValue=""/>
+							<GridRowDefinition gridLengthValue=""/>
+							<GridRowDefinition gridLengthValue=""/>
+							<GridRowDefinition gridLengthValue=""/>
+							<GridRowDefinition gridLengthValue=""/>
+							<GridRowDefinition gridLengthValue=""/>
+							<GridRowDefinition gridLengthValue=""/>
+							<GridRowDefinition gridLengthValue=""/>
+							<GridRowDefinition gridLengthValue=""/>
+							<GridRowDefinition gridLengthValue=""/>
+							<GridRowDefinition gridLengthValue=""/>
+							<GridRowDefinition gridLengthValue=""/>
+							<GridRowDefinition gridLengthValue=""/>
+							<GridRowDefinition gridLengthValue=""/>
+							<GridRowDefinition gridLengthValue=""/>
+							<GridRowDefinition gridLengthValue=""/>
+							<GridRowDefinition gridLengthValue=""/>
+							
+						</GridPanel.gridRowDefinitions>
+						<GridPanel.gridColumnDefinitions>
+							<GridColumnDefinition gridMinLength="10rem"/>
+							<GridColumnDefinition gridMinLength="30rem"/>
+							<GridColumnDefinition gridLengthValue="100%"/>
+						</GridPanel.gridColumnDefinitions>
+
+						<Label isDynamic="true" text="QX_AOT" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,0,1,1" fieldTable="" identifier="lbEnvQx_QX_AOT"/>
+						<Label text="fgl_getenv(&quot;QX_AOT&quot;)" isDynamic="true" visible="true" identifier="lbEnvQx_DescQX_AOT" gridItemLocation="1,0,1,1"/>
+						<TextField classNames="fcls_data_widget,fcls_align_stretch" visible="true" gridItemLocation="2,0,1,1" fieldTable="" identifier="envQx_QX_AOT"/>
+
+						<Label isDynamic="true" text="QX_CHILD" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,1,1,1" fieldTable="" identifier="lbEnvQx_QX_CHILD"/>
+						<Label text="fgl_getenv(&quot;QX_CHILD&quot;)" isDynamic="true" visible="true" identifier="lbEnvQx_DescQX_CHILD" gridItemLocation="1,1,1,1"/>
+						<TextField classNames="fcls_data_widget,fcls_align_stretch" visible="true" gridItemLocation="2,1,1,1" fieldTable="" identifier="envQx_QX_CHILD"/>
+
+						<Label isDynamic="true" text="QX_CID" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,2,1,1" fieldTable="" identifier="lbEnvQx_QX_CID"/>
+						<Label text="fgl_getenv(&quot;QX_CID&quot;)" isDynamic="true" visible="true" identifier="lbEnvQx_DescQX_CID" gridItemLocation="1,2,1,1"/>
+						<TextField classNames="fcls_data_widget,fcls_align_stretch" visible="true" gridItemLocation="2,2,1,1" fieldTable="" identifier="envQx_QX_CID"/>
+
+						<Label isDynamic="true" text="QX_CLEAR_DYNAMIC_LABEL" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,3,1,1" fieldTable="" identifier="lbEnvQx_QX_CLEAR_DYNAMIC_LABEL"/>
+						<Label text="fgl_getenv(&quot;QX_CLEAR_DYNAMIC_LABEL&quot;)" isDynamic="true" visible="true" identifier="lbEnvQx_DescQX_CLEAR_DYNAMIC_LABEL" gridItemLocation="1,3,1,1"/>
+						<TextField classNames="fcls_data_widget,fcls_align_stretch" visible="true" gridItemLocation="2,3,1,1" fieldTable="" identifier="envQx_QX_CLEAR_DYNAMIC_LABEL"/>
+
+						<Label isDynamic="true" text="QX_CLEAR_STATIC_LABEL" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,4,1,1" fieldTable="" identifier="lbEnvQx_QX_CLEAR_STATIC_LABEL"/>
+						<Label text="fgl_getenv(&quot;QX_CLEAR_STATIC_LABEL&quot;)" isDynamic="true" visible="true" identifier="lbEnvQx_DescQX_CLEAR_STATIC_LABEL" gridItemLocation="1,4,1,1"/>
+						<TextField classNames="fcls_data_widget,fcls_align_stretch" visible="true" gridItemLocation="2,4,1,1" fieldTable="" identifier="envQx_QX_CLEAR_STATIC_LABEL"/>
+
+						<Label isDynamic="true" text="QX_CLIENT_HOST" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,5,1,1" fieldTable="" identifier="lbEnvQx_QX_CLIENT_HOST"/>
+						<Label text="fgl_getenv(&quot;QX_CLIENT_HOST&quot;)" isDynamic="true" visible="true" identifier="lbEnvQx_DescQX_CLIENT_HOST" gridItemLocation="1,5,1,1"/>
+						<TextField classNames="fcls_data_widget,fcls_align_stretch" visible="true" gridItemLocation="2,5,1,1" fieldTable="" identifier="envQx_QX_CLIENT_HOST"/>
+
+						<Label isDynamic="true" text="QX_CLIENT_IP" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,6,1,1" fieldTable="" identifier="lbEnvQx_QX_CLIENT_IP"/>
+						<Label text="fgl_getenv(&quot;QX_CLIENT_IP&quot;)" isDynamic="true" visible="true" identifier="lbEnvQx_DescQX_CLIENT_IP" gridItemLocation="1,6,1,1"/>
+						<TextField classNames="fcls_data_widget,fcls_align_stretch" visible="true" gridItemLocation="2,6,1,1" fieldTable="" identifier="envQx_QX_CLIENT_IP"/>
+
+						<Label isDynamic="true" text="QX_COMPAT" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,7,1,1" fieldTable="" identifier="lbEnvQx_QX_COMPAT"/>
+						<Label text="fgl_getenv(&quot;QX_COMPAT&quot;)" isDynamic="true" visible="true" identifier="lbEnvQx_DescQX_COMPAT" gridItemLocation="1,7,1,1"/>
+						<TextField classNames="fcls_data_widget,fcls_align_stretch" visible="true" gridItemLocation="2,7,1,1" fieldTable="" identifier="envQx_QX_COMPAT"/>
+
+						<Label isDynamic="true" text="QX_DEBUG_HOSTS" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,8,1,1" fieldTable="" identifier="lbEnvQx_QX_DEBUG_HOSTS"/>
+						<Label text="fgl_getenv(&quot;QX_DEBUG_HOSTS&quot;)" isDynamic="true" visible="true" identifier="lbEnvQx_DescQX_DEBUG_HOSTS" gridItemLocation="1,8,1,1"/>
+						<TextField classNames="fcls_data_widget,fcls_align_stretch" visible="true" gridItemLocation="2,8,1,1" fieldTable="" identifier="envQx_QX_DEBUG_HOSTS"/>
+
+						<Label isDynamic="true" text="QX_DUMP_PASSES" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,9,1,1" fieldTable="" identifier="lbEnvQx_QX_DUMP_PASSES"/>
+						<Label text="fgl_getenv(&quot;QX_DUMP_PASSES&quot;)" isDynamic="true" visible="true" identifier="lbEnvQx_DescQX_DUMP_PASSES" gridItemLocation="1,9,1,1"/>
+						<TextField classNames="fcls_data_widget,fcls_align_stretch" visible="true" gridItemLocation="2,9,1,1" fieldTable="" identifier="envQx_QX_DUMP_PASSES"/>
+
+						<Label isDynamic="true" text="QX_HEADLESS_CONSOLE" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,10,1,1" fieldTable="" identifier="lbEnvQx_QX_HEADLESS_CONSOLE"/>
+						<Label text="fgl_getenv(&quot;QX_HEADLESS_CONSOLE&quot;)" isDynamic="true" visible="true" identifier="lbEnvQx_DescQX_HEADLESS_CONSOLE" gridItemLocation="1,10,1,1"/>
+						<TextField classNames="fcls_data_widget,fcls_align_stretch" visible="true" gridItemLocation="2,10,1,1" fieldTable="" identifier="envQx_QX_HEADLESS_CONSOLE"/>
+
+						<Label isDynamic="true" text="QX_HEADLESS_MODE" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,11,1,1" fieldTable="" identifier="lbEnvQx_QX_HEADLESS_MODE"/>
+						<Label text="fgl_getenv(&quot;QX_HEADLESS_MODE&quot;)" isDynamic="true" visible="true" identifier="lbEnvQx_DescQX_HEADLESS_MODE" gridItemLocation="1,11,1,1"/>
+						<TextField classNames="fcls_data_widget,fcls_align_stretch" visible="true" gridItemLocation="2,11,1,1" fieldTable="" identifier="envQx_QX_HEADLESS_MODE"/>
+
+						<Label isDynamic="true" text="QX_LOGNATIVESQLERRORS" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,12,1,1" fieldTable="" identifier="lbEnvQx_QX_LOGNATIVESQLERRORS"/>
+						<Label text="fgl_getenv(&quot;QX_LOGNATIVESQLERRORS&quot;)" isDynamic="true" visible="true" identifier="lbEnvQx_DescQX_LOGNATIVESQLERRORS" gridItemLocation="1,12,1,1"/>
+						<TextField classNames="fcls_data_widget,fcls_align_stretch" visible="true" gridItemLocation="2,12,1,1" fieldTable="" identifier="envQx_QX_LOGNATIVESQLERRORS"/>
+
+						<Label isDynamic="true" text="QX_LOG_DIR" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,13,1,1" fieldTable="" identifier="lbEnvQx_QX_LOG_DIR"/>
+						<Label text="fgl_getenv(&quot;QX_LOG_DIR&quot;)" isDynamic="true" visible="true" identifier="lbEnvQx_DescQX_LOG_DIR" gridItemLocation="1,13,1,1"/>
+						<TextField classNames="fcls_data_widget,fcls_align_stretch" visible="true" gridItemLocation="2,13,1,1" fieldTable="" identifier="envQx_QX_LOG_DIR"/>
+
+						<Label isDynamic="true" text="QX_MDI" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,14,1,1" fieldTable="" identifier="lbEnvQx_QX_MDI"/>
+						<Label text="fgl_getenv(&quot;QX_MDI&quot;)" isDynamic="true" visible="true" identifier="lbEnvQx_DescQX_MDI" gridItemLocation="1,14,1,1"/>
+						<TextField classNames="fcls_data_widget,fcls_align_stretch" visible="true" gridItemLocation="2,14,1,1" fieldTable="" identifier="envQx_QX_MDI"/>
+
+						<Label isDynamic="true" text="QX_MENU_WINDOW" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,15,1,1" fieldTable="" identifier="lbEnvQx_QX_MENU_WINDOW"/>
+						<Label text="fgl_getenv(&quot;QX_MENU_WINDOW&quot;)" isDynamic="true" visible="true" identifier="lbEnvQx_DescQX_MENU_WINDOW" gridItemLocation="1,15,1,1"/>
+						<TextField classNames="fcls_data_widget,fcls_align_stretch" visible="true" gridItemLocation="2,15,1,1" fieldTable="" identifier="envQx_QX_MENU_WINDOW"/>
+
+						<Label isDynamic="true" text="QX_MENU_WINDOW_NEW_CHILD" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,16,1,1" fieldTable="" identifier="lbEnvQx_QX_MENU_WINDOW_NEW_CHILD"/>
+						<Label text="fgl_getenv(&quot;QX_MENU_WINDOW_NEW_CHILD&quot;)" isDynamic="true" visible="true" identifier="lbEnvQx_DescQX_MENU_WINDOW_NEW_CHILD" gridItemLocation="1,16,1,1"/>
+						<TextField classNames="fcls_data_widget,fcls_align_stretch" visible="true" gridItemLocation="2,16,1,1" fieldTable="" identifier="envQx_QX_MENU_WINDOW_NEW_CHILD"/>
+
+						<Label isDynamic="true" text="QX_NATIVE_LINKER" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,17,1,1" fieldTable="" identifier="lbEnvQx_QX_NATIVE_LINKER"/>
+						<Label text="fgl_getenv(&quot;QX_NATIVE_LINKER&quot;)" isDynamic="true" visible="true" identifier="lbEnvQx_DescQX_NATIVE_LINKER" gridItemLocation="1,17,1,1"/>
+						<TextField classNames="fcls_data_widget,fcls_align_stretch" visible="true" gridItemLocation="2,17,1,1" fieldTable="" identifier="envQx_QX_NATIVE_LINKER"/>
+
+						<Label isDynamic="true" text="QX_NO_CLEAN_LINKER_FILES" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,18,1,1" fieldTable="" identifier="lbEnvQx_QX_NO_CLEAN_LINKER_FILES"/>
+						<Label text="fgl_getenv(&quot;QX_NO_CLEAN_LINKER_FILES&quot;)" isDynamic="true" visible="true" identifier="lbEnvQx_DescQX_NO_CLEAN_LINKER_FILES" gridItemLocation="1,18,1,1"/>
+						<TextField classNames="fcls_data_widget,fcls_align_stretch" visible="true" gridItemLocation="2,18,1,1" fieldTable="" identifier="envQx_QX_NO_CLEAN_LINKER_FILES"/>
+
+						<Label isDynamic="true" text="QX_OPT_LEVEL" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,19,1,1" fieldTable="" identifier="lbEnvQx_QX_OPT_LEVEL"/>
+						<Label text="fgl_getenv(&quot;QX_OPT_LEVEL&quot;)" isDynamic="true" visible="true" identifier="lbEnvQx_DescQX_OPT_LEVEL" gridItemLocation="1,19,1,1"/>
+						<TextField classNames="fcls_data_widget,fcls_align_stretch" visible="true" gridItemLocation="2,19,1,1" fieldTable="" identifier="envQx_QX_OPT_LEVEL"/>
+
+						<Label isDynamic="true" text="QX_OPT_LEVEL" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,20,1,1" fieldTable="" identifier="lbEnvQx_QX_OPT_LEVEL"/>
+						<Label text="fgl_getenv(&quot;QX_OPT_LEVEL&quot;)" isDynamic="true" visible="true" identifier="lbEnvQx_DescQX_OPT_LEVEL" gridItemLocation="1,20,1,1"/>
+						<TextField classNames="fcls_data_widget,fcls_align_stretch" visible="true" gridItemLocation="2,20,1,1" fieldTable="" identifier="envQx_QX_OPT_LEVEL"/>
+
+						<Label isDynamic="true" text="QX_PROCESS_ID" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,21,1,1" fieldTable="" identifier="lbEnvQx_QX_PROCESS_ID"/>
+						<Label text="fgl_getenv(&quot;QX_PROCESS_ID&quot;)" isDynamic="true" visible="true" identifier="lbEnvQx_DescQX_PROCESS_ID" gridItemLocation="1,21,1,1"/>
+						<TextField classNames="fcls_data_widget,fcls_align_stretch" visible="true" gridItemLocation="2,21,1,1" fieldTable="" identifier="envQx_QX_PROCESS_ID"/>
+
+						<Label isDynamic="true" text="QX_QRUN_DUMP" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,22,1,1" fieldTable="" identifier="lbEnvQx_QX_QRUN_DUMP"/>
+						<Label text="fgl_getenv(&quot;QX_QRUN_DUMP&quot;)" isDynamic="true" visible="true" identifier="lbEnvQx_DescQX_QRUN_DUMP" gridItemLocation="1,22,1,1"/>
+						<TextField classNames="fcls_data_widget,fcls_align_stretch" visible="true" gridItemLocation="2,22,1,1" fieldTable="" identifier="envQx_QX_QRUN_DUMP"/>
+
+						<Label isDynamic="true" text="QX_QRUN_PORT" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,23,1,1" fieldTable="" identifier="lbEnvQx_QX_QRUN_PORT"/>
+						<Label text="fgl_getenv(&quot;QX_QRUN_PORT&quot;)" isDynamic="true" visible="true" identifier="lbEnvQx_DescQX_QRUN_PORT" gridItemLocation="1,23,1,1"/>
+						<TextField classNames="fcls_data_widget,fcls_align_stretch" visible="true" gridItemLocation="2,23,1,1" fieldTable="" identifier="envQx_QX_QRUN_PORT"/>
+
+						<Label isDynamic="true" text="QX_RESOURCE_UNLOCK" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,24,1,1" fieldTable="" identifier="lbEnvQx_QX_RESOURCE_UNLOCK"/>
+						<Label text="fgl_getenv(&quot;QX_RESOURCE_UNLOCK&quot;)" isDynamic="true" visible="true" identifier="lbEnvQx_DescQX_RESOURCE_UNLOCK" gridItemLocation="1,24,1,1"/>
+						<TextField classNames="fcls_data_widget,fcls_align_stretch" visible="true" gridItemLocation="2,24,1,1" fieldTable="" identifier="envQx_QX_RESOURCE_UNLOCK"/>
+
+						<Label isDynamic="true" text="QX_REST_VALUE_XML" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,25,1,1" fieldTable="" identifier="lbEnvQx_QX_REST_VALUE_XML"/>
+						<Label text="fgl_getenv(&quot;QX_REST_VALUE_XML&quot;)" isDynamic="true" visible="true" identifier="lbEnvQx_DescQX_REST_VALUE_XML" gridItemLocation="1,25,1,1"/>
+						<TextField classNames="fcls_data_widget,fcls_align_stretch" visible="true" gridItemLocation="2,25,1,1" fieldTable="" identifier="envQx_QX_REST_VALUE_XML"/>
+
+						<Label isDynamic="true" text="QX_RUN_ARG_PREF" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,26,1,1" fieldTable="" identifier="lbEnvQx_QX_RUN_ARG_PREF"/>
+						<Label text="fgl_getenv(&quot;QX_RUN_ARG_PREF&quot;)" isDynamic="true" visible="true" identifier="lbEnvQx_DescQX_RUN_ARG_PREF" gridItemLocation="1,26,1,1"/>
+						<TextField classNames="fcls_data_widget,fcls_align_stretch" visible="true" gridItemLocation="2,26,1,1" fieldTable="" identifier="envQx_QX_RUN_ARG_PREF"/>
+
+						<Label isDynamic="true" text="QX_SESSION_ID" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,27,1,1" fieldTable="" identifier="lbEnvQx_QX_SESSION_ID"/>
+						<Label text="fgl_getenv(&quot;QX_SESSION_ID&quot;)" isDynamic="true" visible="true" identifier="lbEnvQx_DescQX_SESSION_ID" gridItemLocation="1,27,1,1"/>
+						<TextField classNames="fcls_data_widget,fcls_align_stretch" visible="true" gridItemLocation="2,27,1,1" fieldTable="" identifier="envQx_QX_SESSION_ID"/>
+
+						<Label isDynamic="true" text="QX_SHOW_WINDOW" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,28,1,1" fieldTable="" identifier="lbEnvQx_QX_SHOW_WINDOW"/>
+						<Label text="fgl_getenv(&quot;QX_SHOW_WINDOW&quot;)" isDynamic="true" visible="true" identifier="lbEnvQx_DescQX_SHOW_WINDOW" gridItemLocation="1,28,1,1"/>
+						<TextField classNames="fcls_data_widget,fcls_align_stretch" visible="true" gridItemLocation="2,28,1,1" fieldTable="" identifier="envQx_QX_SHOW_WINDOW"/>
+
+						<Label isDynamic="true" text="QX_SIZE_DIMENSION" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,29,1,1" fieldTable="" identifier="lbEnvQx_QX_SIZE_DIMENSION"/>
+						<Label text="fgl_getenv(&quot;QX_SIZE_DIMENSION&quot;)" isDynamic="true" visible="true" identifier="lbEnvQx_DescQX_SIZE_DIMENSION" gridItemLocation="1,29,1,1"/>
+						<TextField classNames="fcls_data_widget,fcls_align_stretch" visible="true" gridItemLocation="2,29,1,1" fieldTable="" identifier="envQx_QX_SIZE_DIMENSION"/>
+
+						<Label isDynamic="true" text="QX_SQLSCOPE_ON" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,30,1,1" fieldTable="" identifier="lbEnvQx_QX_SQLSCOPE_ON"/>
+						<Label text="fgl_getenv(&quot;QX_SQLSCOPE_ON&quot;)" isDynamic="true" visible="true" identifier="lbEnvQx_DescQX_SQLSCOPE_ON" gridItemLocation="1,30,1,1"/>
+						<TextField classNames="fcls_data_widget,fcls_align_stretch" visible="true" gridItemLocation="2,30,1,1" fieldTable="" identifier="envQx_QX_SQLSCOPE_ON"/>
+
+						<Label isDynamic="true" text="QX_STARTER_DEBUG_LOGGING" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,31,1,1" fieldTable="" identifier="lbEnvQx_QX_STARTER_DEBUG_LOGGING"/>
+						<Label text="fgl_getenv(&quot;QX_STARTER_DEBUG_LOGGING&quot;)" isDynamic="true" visible="true" identifier="lbEnvQx_DescQX_STARTER_DEBUG_LOGGING" gridItemLocation="1,31,1,1"/>
+						<TextField classNames="fcls_data_widget,fcls_align_stretch" visible="true" gridItemLocation="2,31,1,1" fieldTable="" identifier="envQx_QX_STARTER_DEBUG_LOGGING"/>
+
+						<Label isDynamic="true" text="QX_STARTER_REDIRECT_STD_OUT" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,32,1,1" fieldTable="" identifier="lbEnvQx_QX_STARTER_REDIRECT_STD_OUT"/>
+						<Label text="fgl_getenv(&quot;QX_STARTER_REDIRECT_STD_OUT&quot;)" isDynamic="true" visible="true" identifier="lbEnvQx_DescQX_STARTER_REDIRECT_STD_OUT" gridItemLocation="1,32,1,1"/>
+						<TextField classNames="fcls_data_widget,fcls_align_stretch" visible="true" gridItemLocation="2,32,1,1" fieldTable="" identifier="envQx_QX_STARTER_REDIRECT_STD_OUT"/>
+
+						<Label isDynamic="true" text="QX_UI_MODE_OVERRIDE" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,33,1,1" fieldTable="" identifier="lbEnvQx_QX_UI_MODE_OVERRIDE"/>
+						<Label text="fgl_getenv(&quot;QX_UI_MODE_OVERRIDE&quot;)" isDynamic="true" visible="true" identifier="lbEnvQx_DescQX_UI_MODE_OVERRIDE" gridItemLocation="1,33,1,1"/>
+						<TextField classNames="fcls_data_widget,fcls_align_stretch" visible="true" gridItemLocation="2,33,1,1" fieldTable="" identifier="envQx_QX_UI_MODE_OVERRIDE"/>
+
+						<Label isDynamic="true" text="QX_USE_SIMPLE_CACHE_PATH" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,34,1,1" fieldTable="" identifier="lbEnvQx_QX_USE_SIMPLE_CACHE_PATH"/>
+						<Label text="fgl_getenv(&quot;QX_USE_SIMPLE_CACHE_PATH&quot;)" isDynamic="true" visible="true" identifier="lbEnvQx_DescQX_USE_SIMPLE_CACHE_PATH" gridItemLocation="1,34,1,1"/>
+						<TextField classNames="fcls_data_widget,fcls_align_stretch" visible="true" gridItemLocation="2,34,1,1" fieldTable="" identifier="envQx_QX_USE_SIMPLE_CACHE_PATH"/>
+
+						<Label isDynamic="true" text="QX_VERBOSE_CACHE" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,35,1,1" fieldTable="" identifier="lbEnvQx_QX_VERBOSE_CACHE"/>
+						<Label text="fgl_getenv(&quot;QX_VERBOSE_CACHE&quot;)" isDynamic="true" visible="true" identifier="lbEnvQx_DescQX_VERBOSE_CACHE" gridItemLocation="1,35,1,1"/>
+						<TextField classNames="fcls_data_widget,fcls_align_stretch" visible="true" gridItemLocation="2,35,1,1" fieldTable="" identifier="envQx_QX_VERBOSE_CACHE"/>
+
+						<Label isDynamic="true" text="QX_VERIFY_AFTER" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,36,1,1" fieldTable="" identifier="lbEnvQx_QX_VERIFY_AFTER"/>
+						<Label text="fgl_getenv(&quot;QX_VERIFY_AFTER&quot;)" isDynamic="true" visible="true" identifier="lbEnvQx_DescQX_VERIFY_AFTER" gridItemLocation="1,36,1,1"/>
+						<TextField classNames="fcls_data_widget,fcls_align_stretch" visible="true" gridItemLocation="2,36,1,1" fieldTable="" identifier="envQx_QX_VERIFY_AFTER"/>									
+					</GridPanel>
+				</TabPage>
+
+
+				<!-- C-Compiler #######################################################################  -->
+				<TabPage title="C-Compiler" classNames="fcls_detail_tp_cnt"  visible="true" fieldTable="" identifier="cntTpOS">
+					<GridPanel classNames="fcls_detail_tp_cnt_sub,fcls_align_h_stretch,fcls_align_top" visible="true" verticalAlignment="Top" fieldTable="" identifier="cntTpChildGpOS">
+						<GridPanel.gridRowDefinitions>
+							<GridRowDefinition gridLengthValue=""/>
+							<GridRowDefinition gridLengthValue=""/>
+							<GridRowDefinition gridLengthValue=""/>
+							<GridRowDefinition gridLengthValue=""/>
+							<GridRowDefinition gridLengthValue=""/>
+							<GridRowDefinition gridLengthValue=""/>
+							<GridRowDefinition gridLengthValue=""/>
+							<GridRowDefinition gridLengthValue=""/>
+							<GridRowDefinition gridLengthValue=""/>
+							<GridRowDefinition gridLengthValue=""/>
+							<GridRowDefinition gridLengthValue=""/>
+							
+						</GridPanel.gridRowDefinitions>
+						<GridPanel.gridColumnDefinitions>
+							<GridColumnDefinition gridMinLength="10rem"/>
+							<GridColumnDefinition gridMinLength="30rem"/>
+							<GridColumnDefinition gridLengthValue="100%"/>
+						</GridPanel.gridColumnDefinitions>
+
+						<Label isDynamic="true" text="C_INTERFACE_LOCALE" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,0,1,1" fieldTable="" identifier="lbOsFgl_Username"/>
+						<Label isDynamic="true" text='fgl_getenv(&quot;C_INTERFACE_LOCALE&quot;)' classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="1,0,1,1" fieldTable="" identifier="lb192"/>
+						<TextField classNames="fcls_data_widget,fcls_align_stretch" visible="true" gridItemLocation="2,0,1,1" fieldTable="" identifier="c_C_INTERFACE_LOCALE"/>
+
+						<Label isDynamic="true" text="FGLC_TRACEGEN" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,1,1,1" fieldTable="" identifier="lbCFGLC_TRACEGEN"/>
+						<Label isDynamic="true" text='fgl_getenv(&quot;FGLC_TRACEGEN&quot;)' classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="1,1,1,1" fieldTable="" identifier="lb192"/>
+						<TextField classNames="fcls_data_widget,fcls_align_stretch" visible="true" gridItemLocation="2,1,1,1" fieldTable="" identifier="c_FGLC_TRACEGEN"/>
+
+						<Label isDynamic="true" text="FGLC_TRACEPROC" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,2,1,1" fieldTable="" identifier="lbCFGLC_TRACEPROC"/>
+						<Label isDynamic="true" text='fgl_getenv(&quot;FGLC_TRACEPROC&quot;)' classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="1,2,1,1" fieldTable="" identifier="lb192"/>
+						<TextField classNames="fcls_data_widget,fcls_align_stretch" visible="true" gridItemLocation="2,2,1,1" fieldTable="" identifier="c_FGLC_TRACEPROC"/>
+
+						<Label isDynamic="true" text="FGLC_TRACEPROCERRS" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,3,1,1" fieldTable="" identifier="lbFGLC_TRACEPROCERRS"/>
+						<Label isDynamic="true" text='fgl_getenv(&quot;FGLC_TRACEPROCERRS&quot;)' classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="1,3,1,1" fieldTable="" identifier="lb192"/>
+						<TextField classNames="fcls_data_widget,fcls_align_stretch" visible="true" gridItemLocation="2,3,1,1" fieldTable="" identifier="c_FGLC_TRACEPROCERRS"/>
+
+						<Label isDynamic="true" text="FGLC_YYDEBUG" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,4,1,1" fieldTable="" identifier="lbFGLC_YYDEBUG"/>
+						<Label isDynamic="true" text='fgl_getenv(&quot;FGLC_YYDEBUG&quot;)' classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="1,4,1,1" fieldTable="" identifier="lb192"/>
+						<TextField classNames="fcls_data_widget,fcls_align_stretch" visible="true" gridItemLocation="2,4,1,1" fieldTable="" identifier="c_FGLC_YYDEBUG"/>
+
+
+						<Label isDynamic="true" text="DevEnvDir" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,5,1,1" fieldTable="" identifier="lbVc_DevEnvDir"/>
+						<Label isDynamic="true" text='fgl_getenv(&quot;DevEnvDir&quot;)' classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="1,5,1,1" fieldTable="" identifier="lbVcDesc_DevEnvDir"/>
+						<TextField classNames="fcls_data_widget,fcls_align_stretch" visible="true" gridItemLocation="2,5,1,1" fieldTable="" identifier="c_VC_DevEnvDir"/>
+
+						<Label isDynamic="true" text="INCLUDE" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,6,1,1" fieldTable="" identifier="lbVc_INCLUDE"/>
+						<Label isDynamic="true" text='fgl_getenv(&quot;INCLUDE&quot;)' classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="1,6,1,1" fieldTable="" identifier="lbVcDesc_INCLUDE"/>
+						<TextField classNames="fcls_data_widget,fcls_align_stretch" visible="true" gridItemLocation="2,6,1,1" fieldTable="" identifier="c_VC_INCLUDE"/>
+
+						<Label isDynamic="true" text="LIB" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,7,1,1" fieldTable="" identifier="lbVc_LIB"/>
+						<Label isDynamic="true" text='fgl_getenv(&quot;LIB&quot;)' classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="1,7,1,1" fieldTable="" identifier="lbVcDesc_LIB"/>
+						<TextField classNames="fcls_data_widget,fcls_align_stretch" visible="true" gridItemLocation="2,7,1,1" fieldTable="" identifier="c_VC_LIB"/>
+
+						<Label isDynamic="true" text="LIBPATH" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,8,1,1" fieldTable="" identifier="lbVc_LIBPATH"/>
+						<Label isDynamic="true" text='fgl_getenv(&quot;LIBPATH&quot;)' classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="1,8,1,1" fieldTable="" identifier="lbVcDesc_LIBPATH"/>
+						<TextField classNames="fcls_data_widget,fcls_align_stretch" visible="true" gridItemLocation="2,8,1,1" fieldTable="" identifier="c_VC_LIBPATH"/>
+
+						<Label isDynamic="true" text="VCINSTALLDIR" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,9,1,1" fieldTable="" identifier="lbVc_VCINSTALLDIR"/>
+						<Label isDynamic="true" text='fgl_getenv(&quot;VCINSTALLDIR&quot;)' classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="1,9,1,1" fieldTable="" identifier="lbVcDesc_VCINSTALLDIR"/>
+						<TextField classNames="fcls_data_widget,fcls_align_stretch" visible="true" gridItemLocation="2,9,1,1" fieldTable="" identifier="c_VC_VCINSTALLDIR"/>
+
+						<Label isDynamic="true" text="VisualStudioVersion" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,10,1,1" fieldTable="" identifier="lbVc_VisualStudioVersion"/>
+						<Label isDynamic="true" text='fgl_getenv(&quot;VisualStudioVersion&quot;)' classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="1,10,1,1" fieldTable="" identifier="lbVcDesc_VisualStudioVersion"/>
+						<TextField classNames="fcls_data_widget,fcls_align_stretch" visible="true" gridItemLocation="2,10,1,1" fieldTable="" identifier="c_VC_VisualStudioVersion"/>
+
+
+
+
+					</GridPanel>
+				</TabPage>
+
+				
+				<!-- OS #######################################################################  -->
+				<TabPage title="OS" classNames="fcls_detail_tp_cnt"  visible="true" fieldTable="" identifier="cntTpOS">
+					<GridPanel classNames="fcls_detail_tp_cnt_sub,fcls_align_h_stretch,fcls_align_top" visible="true" verticalAlignment="Top" fieldTable="" identifier="cntTpChildGpOS">
+						<GridPanel.gridRowDefinitions>
+							<GridRowDefinition gridLengthValue=""/>
+							<GridRowDefinition gridLengthValue=""/>
+							<GridRowDefinition gridLengthValue=""/>
+							<GridRowDefinition gridLengthValue=""/>
+							<GridRowDefinition gridLengthValue=""/>
+							<GridRowDefinition gridLengthValue=""/>
+														
+						</GridPanel.gridRowDefinitions>
+						<GridPanel.gridColumnDefinitions>
+							<GridColumnDefinition gridMinLength="10rem"/>
+							<GridColumnDefinition gridMinLength="30rem"/>
+							<GridColumnDefinition gridLengthValue="100%"/>
+						</GridPanel.gridColumnDefinitions>
+
+						<Label isDynamic="true" text="User Name: " classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,0,1,1" fieldTable="" identifier="lbOsOs_username"/>
+						<Label isDynamic="true" text="fgl_username()" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="1,0,1,1" fieldTable="" identifier="lbOsDescOs_username"/>
+						<TextField classNames="fcls_data_widget,fcls_align_stretch" visible="true" gridItemLocation="2,0,1,1" fieldTable="" identifier="os_username"/>
+
+						<Label isDynamic="true" text="User Name: " classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,1,1,1" fieldTable="" identifier="lbOsSystemUsername"/>
+						<Label isDynamic="true" text='fgl_getproperty(&quot;system&quot;,&quot;username&quot;)' classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="1,1,1,1" fieldTable="" identifier="lbOsDescSystemUsername"/>
+						<TextField classNames="fcls_data_widget,fcls_align_stretch" visible="true" gridItemLocation="2,1,1,1" fieldTable="" identifier="os_system_username"/>
+
+						<Label text="App-Server OS short" isDynamic="true" visible="true" identifier="lbOsServer_os" gridItemLocation="0,2,1,1"/>
+						<Label text="fgl_arch()" isDynamic="true" visible="true" identifier="lbOsDescServer_os" gridItemLocation="1,2,1,1"/>
+						<TextField visible="true" identifier="os_server_os" gridItemLocation="2,2,1,1"/>
+
+						<Label text="App-Server OS Detailed" isDynamic="true" visible="true" identifier="lbOsServer_os_name" gridItemLocation="0,3,1,1"/>
+						<Label text="fgl_arch() -> CASE" isDynamic="true" visible="true" identifier="lbOsDescServer_os_name" gridItemLocation="1,3,1,1"/>
+						<TextField visible="true" identifier="os_server_os_name" gridItemLocation="2,3,1,1"/>
+
+						<Label text="JAVA_HOME" isDynamic="true" visible="true" identifier="lbOsServer_os_name" gridItemLocation="0,4,1,1"/>
+						<Label text="fgl_arch() -> CASE" isDynamic="true" visible="true" identifier="lbOsDescServer_os_name" gridItemLocation="1,4,1,1"/>
+						<TextField visible="true" identifier="os_server_os_name" gridItemLocation="2,4,1,1"/>
+
+						<Label text="JAVA_HOME" isDynamic="true" visible="true" identifier="lbOsJAVA_HOME" gridItemLocation="0,5,1,1"/>
+						<Label text="fgl_getenv(&quot;JAVA_HOME&quot;)" isDynamic="true" visible="true" identifier="lbOsDescJAVA_HOME" gridItemLocation="1,5,1,1"/>
+						<TextField visible="true" identifier="os_JAVA_HOME" gridItemLocation="2,5,1,1" classNames="fcls_data_widget,fcls_align_stretch"/>
+
+
+					</GridPanel>
+				</TabPage>
+
+				
+				<!-- System #######################################################################  -->
+				<TabPage title="System" visible="true" verticalAlignment="Stretch" fieldTable="" identifier="cntTpSystemInfo" classNames="fcls_detail_tp_cnt" >
+					<GridPanel classNames="fcls_detail_tp_cnt_sub,fcls_align_h_stretch,fcls_align_hstretch" visible="true" verticalAlignment="Stretch" horizontalAlignment="Stretch" fieldTable="" identifier="cntTpChildGpSystemInfo">
+						<GridPanel.gridRowDefinitions>
+							<GridRowDefinition gridLengthValue=""/>
+							<GridRowDefinition gridLengthValue=""/>
+
+							<GridRowDefinition gridLengthValue="100%"/>
+
+						</GridPanel.gridRowDefinitions>
+						<GridPanel.gridColumnDefinitions>
+							<GridColumnDefinition gridLengthValue="100%"/>
+						</GridPanel.gridColumnDefinitions>
+						<Button text="Click here to get the server OS SystemInfo (will take about 30 seconds depending on your system)" preferredSize=",2qch" visible="true" verticalAlignment="Center" gridItemLocation="0,0,1,1" fieldTable="" identifier="btOSgetSystemInfo" horizontalAlignment="Center" textAlignment="Center,Default" classNames="fcls_button,fcls_length_60qch">
+							<Button.onInvoke>
+								<ActionEventHandler actionName="getSystemInfo"/>
+							</Button.onInvoke>
+						</Button>
+						<Button text="Click here to query the registry (Windows only)" preferredSize=",2qch" visible="true" verticalAlignment="Center" gridItemLocation="0,1,1,1" fieldTable="" identifier="btOSgetregistryInfo" horizontalAlignment="Center" textAlignment="Center,Default" classNames="fcls_button,fcls_length_60qch">
+							<Button.onInvoke>
+								<ActionEventHandler actionName="getRegistryInfo"/>
+							</Button.onInvoke>
+						</Button>
+
+						
+						
+						
+						<BlobViewer minSize="400,350" visible="true" verticalAlignment="Stretch" gridItemLocation="0,2,1,1" fieldTable="" identifier="SystemInfo" horizontalAlignment="Stretch" classNames="fcls_data_widget"/>
+					</GridPanel>
+				</TabPage>
+				
+				<TabPage title="DB General" classNames="fcls_detail_tp_cnt"  visible="true" fieldTable="" identifier="cntTpDbGeneral">
+					<GridPanel classNames="fcls_detail_tp_cnt_sub,fcls_align_h_stretch,fcls_align_top" visible="true" verticalAlignment="Top" fieldTable="" identifier="cntTpChildGpDBGeneral" horizontalAlignment="Stretch">
+						<GridPanel.gridRowDefinitions>
+							<GridRowDefinition gridLengthValue=""/>
+							<GridRowDefinition gridLengthValue=""/>
+						</GridPanel.gridRowDefinitions>
+						<GridPanel.gridColumnDefinitions>
+							<GridColumnDefinition gridMinLength="10rem"/>
+							<GridColumnDefinition gridMinLength="30rem"/>
+							<GridColumnDefinition gridLengthValue="100%"/>
+						</GridPanel.gridColumnDefinitions>
+
+						<Label isDynamic="true" text="LYCIA_DB_DRIVER" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,0,1,1" fieldTable="" identifier="lbEnvdbLYCIA_DB_DRIVER"/>
+						<Label isDynamic="true" text='fgl_getenv(&quot;LYCIA_DB_DRIVER&quot;)' classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="1,0,1,1" fieldTable="" identifier="lb195"/>
+						<TextField classNames="fcls_data_widget,fcls_align_stretch" visible="true" gridItemLocation="2,0,1,1" fieldTable="" identifier="envdb_LYCIA_DB_DRIVER"/>
+
+						<Label isDynamic="true" text="DBPATH" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,1,1,1" fieldTable="" identifier="lbEnvdbDBPATH"/>
+						<Label isDynamic="true" text='fgl_getenv(&quot;DBPATH&quot;)' classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="1,1,1,1" fieldTable="" identifier="lb196"/>
+						<TextArea classNames="fcls_data_widget,fcls_align_stretch" visible="true" gridItemLocation="2,1,1,1" fieldTable="" identifier="envdb_DBPATH" minSize=",4rem"/>
+
+					</GridPanel>
+				</TabPage>
+				
+				<!-- DB:INFORMIX-->
+				<TabPage title="DB-Informix" classNames="fcls_detail_tp_cnt"  visible="true" fieldTable="" identifier="cntTpDBInformix">
+					<GridPanel classNames="fcls_detail_tp_cnt_sub,fcls_align_h_stretch,fcls_align_top" visible="true" verticalAlignment="Top" fieldTable="" identifier="cntTpChildGpDBInformix" horizontalAlignment="Stretch">
+						<GridPanel.gridRowDefinitions>
+							<GridRowDefinition gridLengthValue=""/>
+							<GridRowDefinition gridLengthValue=""/>
+							<GridRowDefinition gridLengthValue=""/>
+							<GridRowDefinition gridLengthValue=""/>
+							<GridRowDefinition gridLengthValue=""/>
+							<GridRowDefinition gridLengthValue=""/>
+							<GridRowDefinition gridLengthValue=""/>
+							<GridRowDefinition gridLengthValue=""/>
+							<GridRowDefinition gridLengthValue=""/>
+							<GridRowDefinition gridLengthValue=""/>
+							<GridRowDefinition gridLengthValue=""/>
+							<GridRowDefinition gridLengthValue=""/>
+							<GridRowDefinition gridLengthValue=""/>
+							<GridRowDefinition gridLengthValue=""/>
+							<GridRowDefinition gridLengthValue=""/>
+							<GridRowDefinition gridLengthValue=""/>
+							<GridRowDefinition gridLengthValue=""/>
+							<GridRowDefinition gridLengthValue=""/>
+							<GridRowDefinition gridLengthValue=""/>
+							<GridRowDefinition gridLengthValue=""/>							
+							<GridRowDefinition gridLengthValue=""/>	
+							<GridRowDefinition gridLengthValue=""/>	
+							<GridRowDefinition gridLengthValue=""/>								
+						</GridPanel.gridRowDefinitions>
+						<GridPanel.gridColumnDefinitions>
+							<GridColumnDefinition gridMinLength="10rem"/>
+							<GridColumnDefinition gridMinLength="30rem"/>
+							<GridColumnDefinition gridLengthValue="100%"/>
+						</GridPanel.gridColumnDefinitions>
+						<Label text="LOGNAME" isDynamic="true" visible="true" identifier="lbEnvInfLogName" gridItemLocation="0,0,1,1"/>
+						<Label text="fgl_getenv(&quot;LOGNAME&quot;)" isDynamic="true" visible="true" identifier="lbEnvInfLogNameC" gridItemLocation="1,0,1,1"/>
+						<TextField visible="true" identifier="inf_LogName" gridItemLocation="2,0,1,1" classNames="fcls_data_widget,fcls_align_stretch"/>
+						<Label text="INFORMIXPASS" isDynamic="true" visible="true" identifier="lbEnvInfInformixPass" gridItemLocation="0,1,1,1"/>
+						<Label text="fgl_getenv(&quot;INFORMIXPASS&quot;)" isDynamic="true" visible="true" identifier="lbEnvInfInformixPassC" gridItemLocation="1,1,1,1"/>
+						<TextField visible="true" identifier="inf_InformixPass" gridItemLocation="2,1,1,1" classNames="fcls_data_widget,fcls_align_stretch"/>
+						<Label isDynamic="true" text="DBPATH" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,2,1,1" fieldTable="" identifier="lbEnvInfDBPATH"/>
+						<Label isDynamic="true" text='fgl_getenv(&quot;DBPATH&quot;)' classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="1,2,1,1" fieldTable="" identifier="lbEnvInfDbPathC"/>
+						<TextField classNames="fcls_data_widget,fcls_align_stretch" visible="true" gridItemLocation="2,2,1,1" fieldTable="" identifier="inf_DBPATH"/>
+						<Label isDynamic="true" text="DB_LOCALE" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,3,1,1" fieldTable="" identifier="lbEnvInfDB_LOCALE"/>
+						<Label isDynamic="true" text='fgl_getenv(&quot;DB_LOCALE&quot;)' classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="1,3,1,1" fieldTable="" identifier="lb159"/>
+						<TextField classNames="fcls_data_widget,fcls_align_stretch" visible="true" gridItemLocation="2,3,1,1" fieldTable="" identifier="inf_DB_LOCALE"/>
+						<Label isDynamic="true" text="INFORMIXSERVER" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,4,1,1" fieldTable="" identifier="lbEnvInfINFORMIXSERVER"/>
+						<Label isDynamic="true" text='fgl_getenv(&quot;INFORMIXSERVER&quot;)' classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="1,4,1,1" fieldTable="" identifier="lb160"/>
+						<TextField classNames="fcls_data_widget,fcls_align_stretch" visible="true" gridItemLocation="2,4,1,1" fieldTable="" identifier="inf_INFORMIXSERVER"/>
+						<Label isDynamic="true" text="INFORMIXDIR" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,5,1,1" fieldTable="" identifier="lbInfINFORMIXDIR"/>
+						<Label isDynamic="true" text='fgl_getenv(&quot;INFORMIXDIR&quot;)' classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="1,5,1,1" fieldTable="" identifier="lb165"/>
+						<TextField classNames="fcls_data_widget,fcls_align_stretch" visible="true" gridItemLocation="2,5,1,1" fieldTable="" identifier="inf_INFORMIXDIR"/>
+						<Label isDynamic="true" text="INFORMIXSQLHOSTS" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,6,1,1" fieldTable="" identifier="lbEnvInfINFORMIXSQLHOSTS"/>
+						<Label isDynamic="true" text='fgl_getenv(&quot;INFORMIXSQLHOSTS&quot;)' classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="1,6,1,1" fieldTable="" identifier="lb161"/>
+						<TextField classNames="fcls_data_widget,fcls_align_stretch" visible="true" gridItemLocation="2,6,1,1" fieldTable="" identifier="inf_INFORMIXSQLHOSTS"/>
+						<Label isDynamic="true" text="CLIENT_LOCALE" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,7,1,1" fieldTable="" identifier="lbEnvInfCLIENT_LOCALE"/>
+						<Label isDynamic="true" text='fgl_getenv(&quot;CLIENT_LOCALE&quot;)' classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="1,7,1,1" fieldTable="" identifier="lb162"/>
+						<TextField classNames="fcls_data_widget,fcls_align_stretch" visible="true" gridItemLocation="2,7,1,1" fieldTable="" identifier="inf_CLIENT_LOCALE"/>
+
+						<Label isDynamic="true" text="QXSS_DB_IS_DSN" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,8,1,1" fieldTable="" identifier="lbEnvInfqxss_db_is_dsn"/>
+						<Label isDynamic="true" text='fgl_getenv(&quot;qxss_db_is_dsn&quot;)' classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="1,8,1,1" fieldTable="" identifier="lb163"/>
+						<TextField classNames="fcls_data_widget,fcls_align_stretch" visible="true" gridItemLocation="2,8,1,1" fieldTable="" identifier="inf_qxss_db_is_dsn"/>
+
+						<Label isDynamic="true" text="DELIMIDENT" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,9,1,1" fieldTable="" identifier="lb148"/>
+						<Label isDynamic="true" text='fgl_getenv(&quot;DELIMIDENT&quot;)' classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="1,9,1,1" fieldTable="" identifier="lb164"/>
+						<TextField classNames="fcls_data_widget,fcls_align_stretch" visible="true" gridItemLocation="2,9,1,1" fieldTable="" identifier="inf_DELIMIDENT"/>
+
+						<Label isDynamic="true" text="DBDELIMITER" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,10,1,1" fieldTable="" identifier="lbDBDELIMITER"/>
+						<Label isDynamic="true" text='fgl_getenv(&quot;DBDELIMITER&quot;)' classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="1,10,1,1" fieldTable="" identifier="lbDescDBDELIMITER"/>
+						<TextField classNames="fcls_data_widget,fcls_align_stretch" visible="true" gridItemLocation="2,10,1,1" fieldTable="" identifier="inf_DBDELIMITER"/>
+
+						<Label isDynamic="true" text="DBFORMAT" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,11,1,1" fieldTable="" identifier="lbDBFORMAT"/>
+						<Label isDynamic="true" text='fgl_getenv(&quot;DBFORMAT&quot;)' classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="1,11,1,1" fieldTable="" identifier="lbDescDBFORMAT"/>
+						<TextField classNames="fcls_data_widget,fcls_align_stretch" visible="true" gridItemLocation="2,11,1,1" fieldTable="" identifier="inf_DBFORMAT"/>
+
+
+
+						<Label text="DBCENTURY" isDynamic="true" visible="true" identifier="lb248" gridItemLocation="0,12,1,1"/>
+						<Label text="fgl_getenv(&quot;DBCENTURY&quot;)" isDynamic="true" visible="true" identifier="lb249" gridItemLocation="1,12,1,1"/>
+						<TextField visible="true" identifier="inf_DBCENTURY" gridItemLocation="2,12,1,1"/>
+						
+						<Label isDynamic="true" text="DB-Name" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,13,1,1" fieldTable="" identifier="lb166"/>
+						<Label isDynamic="true" text='SELECT FIRST 1 DBINFO(&quot;version&quot;, &quot;server-type&quot;)' classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="1,13,1,1" fieldTable="" identifier="lb149"/>
+						<TextField classNames="fcls_data_widget,fcls_align_stretch" visible="true" gridItemLocation="2,13,1,1" fieldTable="" identifier="inf_VersionServerType"/>
+						
+						<Label isDynamic="true" text="DB-Name FULL" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,14,1,1" fieldTable="" identifier="lb150"/>
+						<Label isDynamic="true" text='SELECT FIRST 1 DBINFO(&quot;version&quot;, &quot;full&quot;)' classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="1,14,1,1" fieldTable="" identifier="lb167"/>
+						<TextField classNames="fcls_data_widget,fcls_align_stretch" visible="true" gridItemLocation="2,14,1,1" fieldTable="" identifier="inf_VersionFull"/>
+
+						<Label isDynamic="true" text="DB Major Version" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,15,1,1" fieldTable="" identifier="lb156"/>
+						<Label isDynamic="true" text='SELECT FIRST 1 DBINFO(&quot;version&quot;, &quot;major&quot;)' classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="1,15,1,1" fieldTable="" identifier="lb168"/>
+						<TextField classNames="fcls_data_widget,fcls_align_stretch" visible="true" gridItemLocation="2,15,1,1" fieldTable="" identifier="inf_VersionMajor"/>
+
+						<Label isDynamic="true" text="Version OS" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,16,1,1" fieldTable="" identifier="lbVersionOs"/>
+						<Label isDynamic="true" text='SELECT FIRST 1 DBINFO(&quot;version&quot;, &quot;os&quot;)' classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="1,16,1,1" fieldTable="" identifier="lbVersionOsC"/>
+						<ComboBox classNames="fcls_data_widget,fcls_align_stretch" visible="true" gridItemLocation="2,16,1,1" fieldTable="" identifier="inf_VersionOS" editable="true">
+
+							<ComboBoxItem text="T-32-bit Windows platform">
+								<ComboBoxItem.value>
+									<StringLiteral stringValue="T"/>
+								</ComboBoxItem.value>
+							</ComboBoxItem>
+							<ComboBoxItem text="U-Unix 32-bit running on a 32-bit operating system">
+								<ComboBoxItem.value>
+									<StringLiteral stringValue="U"/>
+								</ComboBoxItem.value>
+							</ComboBoxItem>
+							<ComboBoxItem text="H-Unix 32-bit running on a 64-bit operating system">
+								<ComboBoxItem.value>
+									<StringLiteral stringValue="H"/>
+								</ComboBoxItem.value>
+							</ComboBoxItem>
+							<ComboBoxItem text="F-All 64-bit platforms (Windows and Linux)">
+								<ComboBoxItem.value>
+									<StringLiteral stringValue="F"/>
+								</ComboBoxItem.value>
+							</ComboBoxItem>
+
+						</ComboBox>
+
+						<Label isDynamic="true" text="DB-OS" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,17,1,1" fieldTable="" identifier="lbDbOs"/>
+						<Label text="SELECT DBINFO(&apos;dbhostname&apos;) FROM systables" isDynamic="true" visible="true" identifier="lbDbOsC" gridItemLocation="1,17,1,1"/>
+						<TextField visible="true" identifier="inf_DbOS" gridItemLocation="2,17,1,1" classNames="fcls_data_widget,fcls_align_stretch"/>
+
+						<Label isDynamic="true" text="DbHostName" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,18,1,1" fieldTable="" identifier="lbDbOs"/>
+						<Label text="SELECT DBINFO(&apos;dbhostname&apos;) FROM systables" isDynamic="true" visible="true" identifier="lbDbOsC" gridItemLocation="1,18,1,1"/>
+						<TextField visible="true" identifier="inf_DbHostName" gridItemLocation="2,18,1,1" classNames="fcls_data_widget,fcls_align_stretch"/>
+
+						<Label isDynamic="true" text="dbname" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,19,1,1" fieldTable="" identifier="lbDbName"/>
+						<Label text="SELECT DBINFO(&apos;dbname&apos;) FROM systable" isDynamic="true" visible="true" identifier="lbDbNameC" gridItemLocation="1,19,1,1"/>
+						<TextField visible="true" identifier="inf_DbName" gridItemLocation="2,19,1,1" classNames="fcls_data_widget,fcls_align_stretch"/>
+
+						<Label isDynamic="true" text="sessionid" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,20,1,1" fieldTable="" identifier="lbSessionId"/>
+						<Label text="SELECT DBINFO(&apos;sessionid&apos;) AS my_sessionid" isDynamic="true" visible="true" identifier="lbSessionIdC" gridItemLocation="1,20,1,1"/>
+						<TextField visible="true" identifier="inf_SessionId" gridItemLocation="2,20,1,1" classNames="fcls_data_widget,fcls_align_stretch"/>
+
+						<Label isDynamic="true" text="ONCONFIG" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,21,1,1" fieldTable="" identifier="lbInfONCONFIG"/>
+						<Label text='fgl_getenv(&quot;ONCONFIG&quot;)' isDynamic="true" visible="true" identifier="lbInfDescONCONFIG" gridItemLocation="1,21,1,1"/>
+						<TextField visible="true" identifier="inf_ONCONFIG" gridItemLocation="2,21,1,1" classNames="fcls_data_widget,fcls_align_stretch"/>
+
+
+
+
+
+					</GridPanel>
+				</TabPage>
+				
+				
+				<TabPage title="DB-Oracle" classNames="fcls_detail_tp_cnt"  visible="true" fieldTable="" identifier="cntTabPageDBOracle">
+					<GridPanel classNames="fcls_detail_tp_cnt_sub,fcls_align_h_stretch,fcls_align_top" visible="true" verticalAlignment="Top" fieldTable="" identifier="cntTpChildGpDBOracle">
+						<GridPanel.gridRowDefinitions>
+							<GridRowDefinition/>
+							<GridRowDefinition/>
+						</GridPanel.gridRowDefinitions>
+						<GridPanel.gridColumnDefinitions>
+							<GridColumnDefinition gridMinLength="10rem"/>
+							<GridColumnDefinition gridMinLength="30rem"/>
+							<GridColumnDefinition gridLengthValue="100%"/>
+						</GridPanel.gridColumnDefinitions>
+						<Label isDynamic="true" text="ORACLE_SID" classNames="fcls_fieldlabel" visible="true" gridItemLocation="0,0,1,1" fieldTable="" identifier="lbEnvOraORACLE_SID"/>
+						<Label isDynamic="true" text='fgl_getenv(&quot;ORACLE_SID&quot;)' visible="true" gridItemLocation="1,0,1,1" fieldTable="" identifier="lb197" classNames="fcls_fieldlabel"/>
+						<TextField classNames="fcls_data_widget,fcls_align_stretch" visible="true" gridItemLocation="2,0,1,1" fieldTable="" identifier="oracle_ORACLE_SID"/>
+						<Label isDynamic="true" text="ORACLE_HOME" classNames="fcls_fieldlabel" visible="true" gridItemLocation="0,1,1,1" fieldTable="" identifier="lbEnvOraORACLE_HOME"/>
+						<Label isDynamic="true" text='fgl_getenv(&quot;ORACLE_HOME&quot;)' classNames="fcls_fieldlabel" visible="true" gridItemLocation="1,1,1,1" fieldTable="" identifier="lb198"/>
+						<TextField classNames="fcls_data_widget,fcls_align_stretch" visible="true" gridItemLocation="2,1,1,1" fieldTable="" identifier="oracle_ORACLE_HOME"/>
+					</GridPanel>
+				</TabPage>
+				
+				
+				<TabPage title="MS-SQL-Server" classNames="fcls_detail_tp_cnt"  visible="true" fieldTable="" identifier="cntTabPageSQLServer">
+					<GridPanel classNames="fcls_detail_tp_cnt_sub,fcls_align_h_stretch,fcls_align_top" visible="true" verticalAlignment="Top" fieldTable="" identifier="cntTpChildGpInformix">
+						<GridPanel.gridRowDefinitions>
+							<GridRowDefinition gridLengthValue=""/>
+							<GridRowDefinition gridLengthValue=""/>
+						</GridPanel.gridRowDefinitions>
+						<GridPanel.gridColumnDefinitions>
+							<GridColumnDefinition gridMinLength="10rem"/>
+							<GridColumnDefinition gridMinLength="30rem"/>
+							<GridColumnDefinition gridLengthValue="100%"/>
+						</GridPanel.gridColumnDefinitions>
+						<Label isDynamic="true" text="ODBC_DSN" classNames="fcls_fieldlabel" visible="true" gridItemLocation="0,0,1,1" fieldTable="" identifier="lbEnvSqlODBC_DSN"/>
+						<Label text="fgl_getenv(&quot;ODBC_DSN&quot;)" isDynamic="true" visible="true" identifier="lb209" gridItemLocation="1,0,1,1" classNames="fcls_fieldlabel"/>
+						<TextField classNames="fcls_data_widget,fcls_align_stretch" visible="true" gridItemLocation="2,0,1,1" fieldTable="" identifier="sqlServer_ODBC_DSN"/>
+						<Label isDynamic="true" text="SQLSERVER" classNames="fcls_fieldlabel" visible="true" gridItemLocation="0,1,1,1" fieldTable="" identifier="lbEnvSqlSQLSERVER"/>
+						<Label text="fgl_getenv(&quot;SQLSERVER&quot;)" isDynamic="true" visible="true" identifier="lb210" gridItemLocation="1,1,1,1" classNames="fcls_fieldlabel"/>
+						<TextField classNames="fcls_data_widget,fcls_align_stretch" visible="true" gridItemLocation="2,1,1,1" fieldTable="" identifier="sqlServer_SQLSERVER"/>
+					</GridPanel>
+				</TabPage>
+				
+				
+				<TabPage title="DB2" classNames="fcls_detail_tp_cnt"  visible="true" fieldTable="" identifier="cntTpDb2">
+					<GridPanel classNames="fcls_detail_tp_cnt_sub,fcls_align_h_stretch,fcls_align_top" visible="true" verticalAlignment="Top" fieldTable="" identifier="cntTpChildGpDb2">
+						<GridPanel.gridRowDefinitions>
+							<GridRowDefinition gridLengthValue="30.0"/>
+							<GridRowDefinition gridLengthValue="30.0"/>
+						</GridPanel.gridRowDefinitions>
+						<GridPanel.gridColumnDefinitions>
+							<GridColumnDefinition gridMinLength="10rem"/>
+							<GridColumnDefinition gridMinLength="30rem"/>
+							<GridColumnDefinition gridLengthValue="100%"/>
+						</GridPanel.gridColumnDefinitions>
+						<Label isDynamic="true" text="DB2DIR" classNames="fcls_fieldlabel" visible="true" gridItemLocation="0,0,1,1" fieldTable="" identifier="lbEnvDb2DB2DIR"/>
+						<Label text="fgl_getenv(&quot;DB2DIR&quot;)" isDynamic="true" visible="true" identifier="lb207" gridItemLocation="1,0,1,1" classNames="fcls_fieldlabel"/>
+						<TextField classNames="fcls_data_widget,fcls_align_stretch" visible="true" gridItemLocation="2,0,1,1" fieldTable="" identifier="db2_DB2DIR"/>
+						<Label isDynamic="true" text="DB2INSTANCE" classNames="fcls_fieldlabel" visible="true" gridItemLocation="0,1,1,1" fieldTable="" identifier="lbEnvDb2DB2INSTANCE"/>
+						<Label text="fgl_getnev(&quot;DB2INSTANCE&quot;)" isDynamic="true" visible="true" identifier="lb208" gridItemLocation="1,1,1,1" classNames="fcls_fieldlabel"/>
+						<TextField classNames="fcls_data_widget,fcls_align_stretch" visible="true" gridItemLocation="2,1,1,1" fieldTable="" identifier="db2_DB2INSTANCE"/>
+					</GridPanel>
+				</TabPage>
+				
+				
+				<TabPage title="BIRT" visible="true" fieldTable="" identifier="cntTpBirt">
+					<GridPanel classNames="fcls_detail_tp_cnt"  visible="true" verticalAlignment="Top" fieldTable="" identifier="cntTpChildGpBIRT" horizontalAlignment="Stretch">
+						<GridPanel.gridRowDefinitions>
+							<GridRowDefinition/>
+						</GridPanel.gridRowDefinitions>
+						<GridPanel.gridColumnDefinitions>
+							<GridColumnDefinition gridMinLength="10rem"/>
+							<GridColumnDefinition gridMinLength="30rem"/>
+							<GridColumnDefinition gridLengthValue="100%"/>
+						</GridPanel.gridColumnDefinitions>
+						<Label isDynamic="true" text="BIRT_LIBDIR" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,0,1,1" fieldTable="" identifier="lbBirtEnvBIRT_LIBDIR"/>
+						<Label text="fgl_getenv(&quot;BIRT_LIBDIR&quot;)" isDynamic="true" visible="true" identifier="lb206" gridItemLocation="1,0,1,1"/>
+						<TextField classNames="fcls_data_widget,fcls_align_stretch" visible="true" gridItemLocation="2,0,1,1" fieldTable="" identifier="birt_BIRT_LIBDIR"/>
+					</GridPanel>
+				</TabPage>
+			</Tab>
+			<GridPanel classNames="fcls_statusbar_cnt" visible="true" verticalAlignment="Top" gridItemLocation="0,3,1,1" fieldTable="formonly" identifier="cntStatusBar">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue="100%"/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="100%"/>
+				</GridPanel.gridColumnDefinitions>
+				<GridPanel classNames="fcls_statusbar_cnt_sub" visible="true" verticalAlignment="Top" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="cntStatusBarSub">
+					<GridPanel.gridRowDefinitions>
+						<GridRowDefinition gridLengthValue=""/>
+						<GridRowDefinition gridLengthValue=""/>
+					</GridPanel.gridRowDefinitions>
+					<GridPanel.gridColumnDefinitions>
+						<GridColumnDefinition gridLengthValue="100%"/>
+<!-- 
+						<GridColumnDefinition gridLengthValue="50%"/>
+-->
+					</GridPanel.gridColumnDefinitions>
+					<Label isDynamic="true" text="" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="lbInfo1"/>
+					<Label isDynamic="true" text="" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,1,1,1" fieldTable="formonly" identifier="lbInfo2"/>
+<!-- 
+					<StackPanel classNames="fcls_stackPanel_cnt_for_button,fcls_align_right" visible="true" gridItemLocation="1,1,1,1" fieldTable="" identifier="cntStackPanelButtonRight">
+						<Button classNames="fcls_button_help" visible="true" fieldTable="" identifier="btHelp">
+							<Button.onInvoke>
+								<ActionEventHandler actionName="HELP"/>
+							</Button.onInvoke>
+						</Button>
+						<Button classNames="fcls_button_done" visible="true" gridItemLocation="2,7,1,1" fieldTable="" identifier="btDone">
+							<Button.onInvoke>
+								<ActionEventHandler actionName="ACCEPT"/>
+							</Button.onInvoke>
+						</Button>
+					</StackPanel>
+ -->					
+				</GridPanel>
+			</GridPanel>
+		</GridPanel>
+	</form.rootContainer>
+	<form.screenRecords>
+		<ScreenRecord identifier="formonly" fields="f0,hversion,ui_interface_getFrontEndName,ui_interface_getFrontEndVersion,bt_done,farchitecture,commsversion,qxcommandlayerversion,miscversion,envLYCIA_DIR,envMSGPATH,envLINES,envCOLUMNS,envLYCIA_DRIVER_PATH,envFGLPROFILE,envQXDEBUG,envQXBREAKCH_START,envQXBREAKCH_END,envPATH,envFGLIMAGEPATH,envQX_MENU_WINDOW,envBIRT_LIBDIR,envCLASSPATH,envTEMP,envSqlSQLSERVER,envSqlODBC_DSN,miscChildprocess,miscFgl_ArchName,miscFgl_Arch,miscFgl_GetVersion,miscFgl_GetUiType,envQxss_db_is_dsn,envdbDBPATH,envdbLYCIA_DB_DRIVER,osFgl_Username,serverEnvQX_SESSION_ID,infqxss_db_is_dsn,f147,infDBPATH,infDB_LOCALE,infINFORMIXSERVER,infINFORMIXSQLHOSTS,infCLIENT_LOCALE,infINFORMIXDIR,envOraORACLE_HOME,envOraORACLE_SID,envDb2DB2INSTANCE,envDb2DB2DIR,osLD_LIBRARY_PATH,osSystemUsername,serverSystemNetworkIpaddress,serverEnvQX_SERVER_HOST,serverEnvQX_SERVER_IP,serverEnvQX_COMMAND_ID,serverEnvQX_PROCESS_ID,serverSystemNetworkHostname,clientGuiSystemNetworkProcessid,clientEnvQX_CLIENT_HOST,clientEnvQX_CLIENT_IP,clientGuiSystemNetworkHostname,clientGuiSystemNetworkIpaddress,clientGuiSystemNetworkSessionid,clientGuiSystemNetworkCommandid,birtEnvBIRT_LIBDIR,infDELIMIDENT,infVersionServerType,infVersionFull,infVersionMajor,infOS,clientUi_interface_getFrontEndName,serverEnvQX_CHILD,miscDBDATE,miscDB_LOCALE,miscCLIENT_LOCALE,miscDBMONEY,infLogName,infInformixPass,infDbHostName,gen_frontEndName,gen_frontEndVersion,gen_gui_misc_version,gen_DBPATH,env_TMP,os_server_os,os_server_os_name,inf_DBCENTURY,gen_LYCIA_CONFIG_PATH,lyc_LYCIA_CONFIG_PATH,lb_dbmoney,lb256,locale_dbmoney,locale_currency_symbol_text,lb_currency_symbol,lb260,checkBox_debug,lb261,lb262,lb263,lb264,lb265,lb266,lb267,lb268,lb269,lb270,lb271,lb272,lb273,lb275,lb276,lb277,lb278,lb279,url_file_list,url_query_text,url_file_path,url_file_name,url_int1,url_int2,url_str1,url_id_int,url_id_char,url_char,url_debug,url_order,url_tb_project_name,url_tb_module_name,url_tb_menu_name,url_tb_user_name,url_vdom,lb298,lb299,lb300,lb301,lb303,lb304,lb305,lb306,lb307,lb308,lb309,url_str2,lb311,lb312,lb313,lb314,lb315,lb316,lb317"/>
+	</form.screenRecords>
+</form>
+

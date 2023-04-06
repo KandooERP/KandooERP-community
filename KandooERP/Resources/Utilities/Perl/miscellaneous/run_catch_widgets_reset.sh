@@ -1,0 +1,1 @@
+perl catch_widgets_for_translation.pl -projectname KandooERP -database kandoodb -indir /home/informix/Projects/KandooERP/KandooERP/source/per -out /tmp -loadda kandoodb -reset -exclude Processing-Forms

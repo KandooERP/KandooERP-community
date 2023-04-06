@@ -1,0 +1,83 @@
+{
+###########################################################################
+# This program is free software; you can redistribute it and/or modify it
+# under the terms of the GNU General Public License as published by the
+# Free Software Foundation; either version 2 of the License, or (at your
+# option) any later version.
+#
+# This program is distributed in the hope that it will be useful, but
+# WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+# General Public License for more details.
+#
+# You should have received a copy of the GNU General Public License along
+# with this program; if not, write to the Free Software Foundation, Inc.,
+# 59 Temple Place, Suite 330, Boston, MA 02111-1307 USA
+#
+###########################################################################
+
+	 $Id: M176.per,v 1.2 2003/11/19 22:23:01 afalout Exp $
+}
+
+
+database kandoodb
+
+screen
+{
+                      Shop Order Configuration Receipt                 M176
+\g----------------------------------------------------------------------------\g
+ Shop Order Number     [f001      ]       Suffix Number   [f002 ]
+ Product             [f003           ]   [f004                          ]
+ Unit of Measure     [f005]               Order Qty           [f006        ]
+ Receipted to date   [f007        ]       Rejected to date    [f008        ]
+ To be receipted     [f009        ]       Quantity to Reject  [f010        ]
+ Date                [f011      ]         Year   [f012]       Period   [a  ]
+\g----------------------------------------------------------------------------\g
+  Product         Description                    Qty to Receipt  Warehouse
+\g----------------------------------------------------------------------------\g
+ [f013          ][f014                          ] [f015        ]   [b  ]
+ [f013          ][f014                          ] [f015        ]   [b  ]
+ [f013          ][f014                          ] [f015        ]   [b  ]
+ [f013          ][f014                          ] [f015        ]   [b  ]
+ [f013          ][f014                          ] [f015        ]   [b  ]
+ [f013          ][f014                          ] [f015        ]   [b  ]
+ [f013          ][f014                          ] [f015        ]   [b  ]
+
+}
+
+tables
+shopordhead
+product
+prodledg
+shoporddetl
+prodstatus
+
+attributes
+f001 = shopordhead.shop_order_num;
+f002 = shopordhead.suffix_num;
+f003 = shopordhead.part_code;
+f004 = formonly.desc_text type char;
+f005 = shopordhead.uom_code;
+f006 = shopordhead.order_qty;
+f007 = shopordhead.receipted_qty;
+f008 = shopordhead.rejected_qty;
+f009 = formonly.remain_qty type float;
+f010 = formonly.reject_qty type float,
+comments = " Quantity of the product to be rejected";
+f011 = prodledg.tran_date;
+f012 = prodledg.year_num;
+a    = prodledg.period_num;
+f013 = prodstatus.part_code, noentry;
+f014 = product.desc_text, noentry;
+f015 = formonly.receipt_qty type float,
+comments = " Quantity of the product to be receipted";
+b    = prodstatus.ware_code, upshift,
+comments = " Warehouse at which the product is to be receipted into";
+
+instructions
+delimiters "  "
+
+screen record sr_config[7] (prodstatus.part_code,
+                            product.desc_text,
+                            receipt_qty,
+                            ware_code)

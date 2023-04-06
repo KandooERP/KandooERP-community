@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form xmlns="http://namespaces.querix.com/2015/fglForms">
+	<form.rootContainer>
+		<GridPanel classNames="fcls_rootContainer" verticalAlignment="Stretch" horizontalAlignment="Stretch" fieldTable="" identifier="rootContainer">
+			<GridPanel.gridRowDefinitions>
+				<GridRowDefinition gridLengthValue=""/>
+				<GridRowDefinition gridLengthValue=""/>
+				<GridRowDefinition gridLengthValue="100%"/>
+				<GridRowDefinition gridLengthValue=""/>
+			</GridPanel.gridRowDefinitions>
+			<GridPanel.gridColumnDefinitions>
+				<GridColumnDefinition gridLengthValue="100%"/>
+			</GridPanel.gridColumnDefinitions>
+			<GridPanel classNames="fcls_title_cnt" visible="true" verticalAlignment="Top" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="cntTitle">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="100%"/>
+					<GridColumnDefinition gridLengthValue=""/>
+				</GridPanel.gridColumnDefinitions>
+				<Label isDynamic="true" text="Customer History" classNames="fcls_title_lb" visible="true" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="header_text"/>
+				<Label isDynamic="true" text="A114" classNames="fcls_title_lb" visible="true" gridItemLocation="1,0,1,1" fieldTable="" identifier="lbFormName"/>
+			</GridPanel>
+			<GridPanel classNames="fcls_detail_cnt,fcls_data_cnt,fcls_align_left" visible="true" verticalAlignment="Top" horizontalAlignment="Left" gridItemLocation="0,1,1,1" fieldTable="formonly" identifier="cntDetail1">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="" gridMinLength="10rem"/>
+					<GridColumnDefinition gridLengthValue=""/>
+					<GridColumnDefinition gridLengthValue=""/>
+				</GridPanel.gridColumnDefinitions>
+				<ComboBox dataType="Char,,,,8" classNames="list-show-text-value,field-show-value,fcls_data_widget,fcls_align_left,fcls_length_30qch" location="13qch,2qch" preferredSize="19qch,1qch" toolTip="The Customer Code (W)" gridItemLocation="1,0,1,1" fieldTable="customerhist" comment="The Customer Code (W)" identifier="cust_code" editable="false"/>
+				<TextField dataType="Char,,,,30" classNames="fcls_data_widget,fcls_align_left,fcls_length_30qch" preferredSize="33qch,1qch" toolTip="Customer name or description" fieldTable="customer" comment="Customer name or description" identifier="name_text" gridItemLocation="1,1,1,1"/>
+				<ComboBox toCase="Up" dataType="Char,,,,3" classNames="fcls_data_widget,fcls_align_left,fcls_length_30qch" location="30qch,3qch" preferredSize="4qch,1qch" toolTip="Currency in which this customer deals " gridItemLocation="1,2,1,1" fieldTable="customer" comment="Currency in which this customer deals " identifier="currency_code"/>
+				<Label isDynamic="true" text="Customer Code" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,0,1,1" fieldTable="" identifier="lb51"/>
+				<Label isDynamic="true" text="Currency" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,2,1,1" fieldTable="" identifier="lb52"/>
+			</GridPanel>
+			<Table rowCount="10" location="0qch,7qch" preferredSize="69qch,10qch" gridItemLocation="0,2,1,1" fieldTable="" identifier="sr_customerhist">
+				<TableColumn text="Year" fieldTable="" identifier="f1">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="10rem" gridMaxLength="10rem" gridMinLength="10rem"/>
+					</TableColumn.columnLength>
+					<ComboBox dataType="SmallInt,,,," toolTip="Enter the requested Year to review this customer history record" fieldTable="customerhist" comment="Enter the requested Year to review this customer history record" identifier="year_num"/>
+				</TableColumn>
+				<TableColumn text="Period" fieldTable="" identifier="f2">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="10rem" gridMaxLength="10rem" gridMinLength="10rem"/>
+					</TableColumn.columnLength>
+					<ComboBox dataType="SmallInt,,,," toolTip="Enter the requested accounting Period to review this customer history record" fieldTable="customerhist" comment="Enter the requested accounting Period to review this customer history record" identifier="period_num"/>
+				</TableColumn>
+				<TableColumn text="Sales" fieldTable="" identifier="f004">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="10rem" gridMaxLength="10rem" gridMinLength="10rem"/>
+					</TableColumn.columnLength>
+					<TextField dataType="Float,,,," toolTip="Indicates the total Sales for this period" fieldTable="customerhist" comment="Indicates the total Sales for this period" identifier="sales_qty"/>
+				</TableColumn>
+				<TableColumn text="Receipts" fieldTable="" identifier="f010">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="10rem" gridMaxLength="10rem" gridMinLength="10rem"/>
+					</TableColumn.columnLength>
+					<TextField dataType="Decimal,,,2,16" toolTip="Indicates the total Cash Receipts for this period" fieldTable="customerhist" comment="Indicates the total Cash Receipts for this period" identifier="cash_amt"/>
+				</TableColumn>
+				<TableColumn text="Credit" fieldTable="" identifier="f007">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="10rem" gridMaxLength="10rem" gridMinLength="10rem"/>
+					</TableColumn.columnLength>
+					<TextField dataType="Decimal,,,2,16" toolTip="Indicates the total Credits for this period" fieldTable="customerhist" comment="Indicates the total Credits for this period" identifier="cred_amt"/>
+				</TableColumn>
+				<TableColumn text="Gross %" fieldTable="" identifier="f012">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="10rem" gridMaxLength="10rem" gridMinLength="10rem"/>
+					</TableColumn.columnLength>
+					<TextField dataType="Decimal,,,3,6" toolTip="Indicates the Gross Profit Percentage generated by customer sales" fieldTable="customerhist" comment="Indicates the Gross Profit Percentage generated by customer sales" identifier="gross_per"/>
+				</TableColumn>
+				<TableColumn resizable="true" visible="true" identifier="tc_lbEOL">
+					<Label isDynamic="true" visible="true" identifier="lbEOL"/>
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="100%"/>
+					</TableColumn.columnLength>
+				</TableColumn>
+			</Table>
+			<GridPanel classNames="fcls_statusbar_cnt" visible="true" verticalAlignment="Top" gridItemLocation="0,3,1,1" fieldTable="formonly" identifier="cntStatusBar">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="100%"/>
+				</GridPanel.gridColumnDefinitions>
+				<Label isDynamic="true" text="" classNames="fcls_sblabel" visible="true" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="lbInfo1"/>
+				<Label isDynamic="true" text="" classNames="fcls_sblabel" visible="true" gridItemLocation="0,1,1,1" fieldTable="formonly" identifier="lbInfo2"/>
+			</GridPanel>
+		</GridPanel>
+	</form.rootContainer>
+	<form.screenRecords>
+		<ScreenRecord identifier="sr_customerhist" fields="year_num,period_num,sales_qty,cash_amt,cred_amt,gross_per" elements="10"/>
+		<ScreenRecord identifier="customer" fields="currency_code,name_text"/>
+		<ScreenRecord identifier="customerhist" fields="cust_code,year_num,period_num,sales_qty,cash_amt,cred_amt,gross_per"/>
+	</form.screenRecords>
+</form>
+

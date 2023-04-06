@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form xmlns="http://namespaces.querix.com/2015/fglForms">
+	<form.rootContainer>
+		<GridPanel classNames="fcls_rootContainer" verticalAlignment="Stretch" horizontalAlignment="Stretch" fieldTable="" identifier="rootContainer">
+			<GridPanel.gridRowDefinitions>
+				<GridRowDefinition gridLengthValue=""/>
+				<GridRowDefinition gridLengthValue=""/>
+				<GridRowDefinition gridLengthValue="100%"/>
+				<GridRowDefinition gridLengthValue=""/>
+			</GridPanel.gridRowDefinitions>
+			<GridPanel.gridColumnDefinitions>
+				<GridColumnDefinition gridLengthValue="100%"/>
+			</GridPanel.gridColumnDefinitions>
+			<GridPanel classNames="fcls_title_cnt" visible="true" verticalAlignment="Top" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="cnttitle">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="100%"/>
+					<GridColumnDefinition gridLengthValue=""/>
+				</GridPanel.gridColumnDefinitions>
+				<Label isDynamic="true" text="Customer Selection" classNames="fcls_title_lb" visible="true" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="header_text"/>
+				<Label isDynamic="true" text="G405" classNames="fcls_title_lb" visible="true" gridItemLocation="1,0,1,1" fieldTable="" identifier="lbformname"/>
+			</GridPanel>
+			<GridPanel classNames="fcls_detail_cnt,,fcls_align_left" visible="true" verticalAlignment="Top" horizontalAlignment="Left" gridItemLocation="0,1,1,1" fieldTable="formonly" identifier="cntdetail1">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="10rem"/>
+					<GridColumnDefinition gridLengthValue=""/>
+					<GridColumnDefinition gridLengthValue="10rem"/>
+					<GridColumnDefinition gridLengthValue=""/>
+				</GridPanel.gridColumnDefinitions>
+				<Label isDynamic="true" text="Customer Code" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,0,1,1" fieldTable="" identifier="lb51"/>
+				<Label isDynamic="true" text="Customer Name" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,1,1,1" fieldTable="" identifier="lb52"/>
+				<Label isDynamic="true" text="City/Town" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,2,1,1" fieldTable="" identifier="lb66"/>
+				<ComboBox toCase="Up" dataType="Char,,,,8" classNames="fcls_data_widget,fcls_align_left,fcls_length_25qch" location="15qch,2qch" preferredSize="20qch,1qch" toolTip=" Enter Customer Code " gridItemLocation="1,0,1,1" comment=" Enter Customer Code " fieldTable="customer" identifier="cust_code"/>
+				<ComboBox dataType="Char,,,," classNames="fcls_data_widget,fcls_align_left,fcls_length_25qch" location="15qch,3qch" preferredSize="29qch,1qch" toolTip=" Enter Customer's Name " gridItemLocation="1,1,1,1" comment=" Enter Customer's Name " fieldTable="customer" identifier="name_text"/>
+				<TextField dataType="Char,,,,20" classNames="fcls_data_widget,fcls_align_left,fcls_length_25qch" location="15qch,4qch" preferredSize="21qch,1qch" toolTip=" Enter City/Town for Customer Selection " gridItemLocation="1,2,1,1" comment=" Enter City/Town for Customer Selection " fieldTable="customer" identifier="city_text"/>
+				<Label isDynamic="true" text="Invoice Number" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="2,0,1,1" fieldTable="" identifier="lb53"/>
+				<Label isDynamic="true" text="Invoice Amount" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="2,1,1,1" fieldTable="" identifier="lb54"/>
+				<Label isDynamic="true" text="Postcode" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="2,2,1,1" fieldTable="" identifier="lb_postCode"/>
+				<ComboBox editable="true" dataType="Integer,,,," classNames="fcls_data_widget,fcls_align_left,fcls_length_25qch" location="62qch,2qch" preferredSize="9qch,1qch" toolTip=" Enter Invoice Number " gridItemLocation="3,0,1,1" comment=" Enter Invoice Number " fieldTable="invoicehead" identifier="inv_num"/>
+				<TextField dataType="Decimal,,,2,16" classNames="fcls_data_widget,fcls_align_left,fcls_length_25qch" location="60qch,3qch" preferredSize="11qch,1qch" toolTip=" Enter Invoice Amount " gridItemLocation="3,1,1,1" comment=" Enter Invoice Amount " fieldTable="invoicehead" identifier="total_amt"/>
+				<TextField dataType="Char,,,,10" classNames="fcls_data_widget,fcls_align_left,fcls_length_25qch" location="48qch,4qch" preferredSize="7qch,1qch" toolTip=" Enter Postal Code for Customer Selection " gridItemLocation="3,2,1,1" comment=" Enter Postal Code for Customer Selection " fieldTable="customer" identifier="post_code"/>
+			</GridPanel>
+			<Table rowCount="5" preferredSize="74qch,7qch" verticalAlignment="Stretch" horizontalAlignment="Stretch" gridItemLocation="0,2,1,1" fieldTable="" identifier="sr_invoice">
+				<TableColumn text="Invoice" fieldTable="" identifier="f07">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="15rem"/>
+					</TableColumn.columnLength>
+					<TextField dataType="Integer,,,," fieldTable="formonly" identifier="invoice_num"/>
+				</TableColumn>
+				<TableColumn text="Date" fieldTable="" identifier="f08">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="15rem"/>
+					</TableColumn.columnLength>
+					<Calendar dataType="Date,,,," fieldTable="invoicehead" identifier="inv_date"/>
+				</TableColumn>
+				<TableColumn text="Customer" fieldTable="" identifier="f09">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="15rem"/>
+					</TableColumn.columnLength>
+					<TextField noEntry="true" dataType="Char,,,,8" fieldTable="invoicehead" identifier="cust_code"/>
+				</TableColumn>
+				<TableColumn text="Name" fieldTable="" identifier="f10">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="15rem"/>
+					</TableColumn.columnLength>
+					<TextField noEntry="true" dataType="Char,,,,30" fieldTable="customer" identifier="name_text"/>
+				</TableColumn>
+				<TableColumn text="Amount" fieldTable="" identifier="f11">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="15rem"/>
+					</TableColumn.columnLength>
+					<TextField noEntry="true" dataType="Decimal,,,2,16" fieldTable="invoicehead" identifier="paid_amt"/>
+				</TableColumn>
+				<TableColumn text="Pt." fieldTable="" identifier="f12">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="15rem"/>
+					</TableColumn.columnLength>
+					<TextField noEntry="true" dataType="Char,,,,3" fieldTable="invoicehead" identifier="currency_code"/>
+				</TableColumn>
+				<TableColumn text="Paid" fieldTable="" identifier="a">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="15rem"/>
+					</TableColumn.columnLength>
+					<TextField noEntry="true" dataType="Char,,,," fieldTable="formonly" identifier="paid_ind"/>
+				</TableColumn>
+			</Table>
+			<GridPanel classNames="fcls_statusbar_cnt" visible="true" verticalAlignment="Top" gridItemLocation="0,3,1,1" fieldTable="formonly" identifier="cntstatusbar">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="100%"/>
+				</GridPanel.gridColumnDefinitions>
+				<Label isDynamic="true" text="" classNames="fcls_sblabel" visible="true" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="lbinfo1"/>
+				<Label isDynamic="true" text="" classNames="fcls_sblabel" visible="true" gridItemLocation="0,1,1,1" fieldTable="formonly" identifier="lbinfo2"/>
+			</GridPanel>
+		</GridPanel>
+	</form.rootContainer>
+	<form.screenRecords>
+		<ScreenRecord identifier="sr_invoice" fields="invoice_num,inv_date,cust_code,name_text,paid_amt,currency_code,paid_ind"/>
+		<ScreenRecord identifier="customer" fields="cust_code,city_text,post_code,name_text"/>
+		<ScreenRecord identifier="formonly" fields="name_text,invoice_num,paid_ind"/>
+		<ScreenRecord identifier="invoicehead" fields="inv_num,total_amt,inv_date,cust_code,paid_amt,currency_code"/>
+	</form.screenRecords>
+</form>
+

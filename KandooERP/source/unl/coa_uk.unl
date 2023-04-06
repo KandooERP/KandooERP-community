@@ -1,0 +1,175 @@
+MA|0010|Freehold Property|2016|1|2022|4|FAPR|Y|OK|N||A|N/D|
+MA|0011|Leasehold Property|2016|1|2022|4|FAPR|Y|OK|N||A||
+MA|0020|Plant and Machinery|2016|1|2022|4|FAPM|Y|OK|N||A||
+MA|0021|Plant/Machinery Depreciation|2016|1|2022|4|FAPM|Y|OK|N||L||
+MA|0030|Office Equipment|2016|1|2022|4|FAOE|Y|OK|N||A||
+MA|0031|Office Equipment Depreciation|2016|1|2022|4|FAOE|Y|OK|N||L||
+MA|0040|Furniture and Fixtures|2016|1|2022|4|FAFF|Y|OK|N||A||
+MA|0041|Furniture/Fixture Depreciation|2016|1|2022|4|FAFF|Y|OK|N||L||
+MA|0050|Motor Vehicles|2016|1|2022|4|FAMV|Y|OK|N||A||
+MA|0051|Motor Vehicles Depreciation|2016|1|2022|4|FAMV|Y|OK|N||L||
+MA|1001|Stock|2016|1|2022|4|CAST|Y|OK|N||A||
+MA|1002|Work in Progress|2016|1|2022|4|CAST|Y|OK|N||A||
+MA|1003|Finished Goods|2016|1|2022|4|CAST|Y|OK|N||A||
+MA|1004|Raw Materials|2016|1|2022|4|CAST|Y|OK|N||A||
+MA|1100|Debtors Control Account|2016|1|2022|4|CADE|Y|OK|N||A||
+MA|1101|Sundry Debtors|2016|1|2022|4|CADE|Y|OK|N||A||
+MA|1102|Other Debtors|2016|1|2022|4|CADE|Y|OK|N||A||
+MA|1103|Prepayments|2016|1|2022|4|CADE|Y|OK|N||A||
+MA|1104|Inter-company Debtors|2016|1|2022|4|CADE|Y|OK|N||A||
+MA|1105|Provision for credit notes|2016|1|2022|4|CADE|Y|OK|N||A||
+MA|1106|Provision for doubtful debts|2016|1|2022|4|CADE|Y|OK|N||A||
+MA|1200|Bank Current Account|2016|1|2022|4|CABA|Y|OK|N||A||
+MA|1210|Bank Deposit Account|2016|1|2022|4|CADC|Y|OK|N||A||
+MA|1220|Building Society Account|2016|1|2022|4|CADC|Y|OK|N||A||
+MA|1230|Petty Cash|2016|1|2022|4|CADC|Y|OK|N||A||
+MA|1235|Cash Register|2016|1|2022|4|CADC|Y|OK|N||A||
+MA|1240|Company Credit Card|2016|1|2022|4|CADC|Y|OK|N||A||
+MA|1250|Credit Card Receipts|2016|1|2022|4|CADC|Y|OK|N||A||
+MA|1260|Clearing Account|2016|1|2022|4|CADC|Y|OK|N||A||
+MA|2100|Creditors Control Account|2016|1|2022|4|CLCR|Y|OK|N||L||
+MA|2101|Sundry Creditors|2016|1|2022|4|CLCR|Y|OK|N||L||
+MA|2102|Other Creditors|2016|1|2022|4|CLCR|Y|OK|N||L||
+MA|2109|Accruals|2016|1|2022|4|CLCR|Y|OK|N||L||
+MA|2200|Sales Tax Control Account|2016|1|2022|4|CLVL|Y|OK|N||L||
+MA|2201|Purchase Tax Control Account|2016|1|2022|4|CLVL|Y|OK|N||A||
+MA|2202|VAT Liability|2016|1|2022|4|CLVL|Y|OK|N||L||
+MA|2204|Manual Adjustments|2016|1|2022|4|CLVL|Y|OK|N||L||
+MA|2210|P.A.Y.E.|2016|1|2022|4|CLTA|Y|OK|N||L||
+MA|2211|National Insurance|2016|1|2022|4|CLTA|Y|OK|N||L||
+MA|2220|Net Wages|2016|1|2022|4|CLWA|Y|OK|N||L||
+MA|2230|Pension Fund|2016|1|2022|4|CLWA|Y|OK|N||L||
+MA|2300|Loans|2016|1|2022|4|CLOC|Y|OK|N||L||
+MA|2301|Directors Loan Accounts (Director 1)|2016|1|2022|4|CLOC|Y|OK|N||L||
+MA|2302|Directors Loan Accounts (Director 2)|2016|1|2022|4|CLOC|Y|OK|N||L||
+MA|2310|Hire Purchase|2016|1|2022|4|CLOC|Y|OK|N||L||
+MA|2320|Corporation Tax|2016|1|2022|4|CLOC|Y|OK|N||L||
+MA|2330|Mortgages|2016|1|2022|4|CLOC|Y|OK|N||L||
+MA|3000|Ordinary Shares|2016|1|2022|4|MISC1|Y|OK|N||A||
+MA|3010|Preference Shares|2016|1|2022|4|MISC1|Y|OK|N||A||
+MA|3100|Reserves|2016|1|2022|4|MISC1|Y|OK|N||A||
+MA|3101|Undistributed Reserves|2016|1|2022|4|MISC1|Y|OK|N||A||
+MA|3200|Profit and Loss Account|2016|1|2022|4|PANDL|Y|OK|N||N||
+MA|4000|Sales Type A|2016|1|2022|4|SALES|Y|OK|N||I||
+MA|4001|Sales Type B|2016|1|2022|4|SALES|Y|OK|N||I||
+MA|4002|Sales Type C|2016|1|2022|4|SALES|Y|OK|N||I||
+MA|4009|Discounts Allowed|2016|1|2022|4|SALES|Y|OK|N||I||
+MA|4010|Management Charges Receivable|2016|1|2022|4|SALES|Y|OK|N||I||
+MA|4099|Flat Rate - Benefit/Cost|2016|1|2022|4|SALES|Y|OK|N||I||
+MA|4100|Sales Type D|2016|1|2022|4|SALESES|Y|OK|N||I||
+MA|4101|Sales Type E|2016|1|2022|4|SALESES|Y|OK|N||I||
+MA|4200|Sales of Assets|2016|1|2022|4|SALESAS|Y|OK|N||I||
+MA|4400|Credit Charges (Late Payments)|2016|1|2022|4|SALESAS|Y|OK|N||I||
+MA|4900|Miscellaneous Income|2016|1|2022|4|SALESMI|Y|OK|N||I||
+MA|4901|Royalties Received|2016|1|2022|4|SALESMI|Y|OK|N||I||
+MA|4902|Commissions Received|2016|1|2022|4|SALESMI|Y|OK|N||I||
+MA|4903|Insurance Claims|2016|1|2022|4|SALESMI|Y|OK|N||I||
+MA|4904|Rent Income|2016|1|2022|4|SALESMI|Y|OK|N||I||
+MA|4905|Distribution and Carriage|2016|1|2022|4|SALESMI|Y|OK|N||I||
+MA|5000|Materials Purchased|2016|1|2022|4|PURCH|Y|OK|N||E||
+MA|5001|Materials Imported|2016|1|2022|4|PURCH|Y|OK|N||E||
+MA|5002|Miscellaneous Purchases|2016|1|2022|4|PURCH|Y|OK|N||E||
+MA|5003|Packaging|2016|1|2022|4|PURCH|Y|OK|N||E||
+MA|5009|Discounts Taken|2016|1|2022|4|PURCH|Y|OK|N||E||
+MA|5100|Carriage|2016|1|2022|4|PURCHCH|Y|OK|N||E||
+MA|5101|Import Duty|2016|1|2022|4|PURCHCH|Y|OK|N||E||
+MA|5102|Transport Insurance|2016|1|2022|4|PURCHCH|Y|OK|N||E||
+MA|5200|Opening Stock|2016|1|2022|4|PURCHST|Y|OK|N||E||
+MA|5201|Closing Stock|2016|1|2022|4|PURCHST|Y|OK|N||E||
+MA|5901|Royalties Cost|2016|1|2022|4|PURCHRO|Y|OK|N||E||
+MA|6000|Productive Labour|2016|1|2022|4|DIREXLA|Y|OK|N||E||
+MA|6001|Cost of Sales Labour|2016|1|2022|4|DIREXLA|Y|OK|N||E||
+MA|6002|Sub-Contractors|2016|1|2022|4|DIREXLA|Y|OK|N||E||
+MA|6100|Sales Commissions|2016|1|2022|4|DIREXSC|Y|OK|N||E||
+MA|6200|Sales Promotions|2016|1|2022|4|DIREXSP|Y|OK|N||E||
+MA|6201|Advertising|2016|1|2022|4|DIREXSP|Y|OK|N||E||
+MA|6202|Gifts and Samples|2016|1|2022|4|DIREXSP|Y|OK|N||E||
+MA|6203|P.R. (Literature & Brochures)|2016|1|2022|4|DIREXSP|Y|OK|N||E||
+MA|6900|Miscellaneous Expenses|2016|1|2022|4|DIREXMS|Y|OK|N||E||
+MA|7000|Gross Wages|2016|1|2022|4|OVHSW|Y|OK|N||E||
+MA|7001|Directors Salaries|2016|1|2022|4|OVHSW|Y|OK|N||E||
+MA|7002|Directors Remuneration|2016|1|2022|4|OVHSW|Y|OK|N||E||
+MA|7003|Staff Salaries|2016|1|2022|4|OVHSW|Y|OK|N||E||
+MA|7004|Wages - Regular|2016|1|2022|4|OVHSW|Y|OK|N||E||
+MA|7005|Wages - Casual|2016|1|2022|4|OVHSW|Y|OK|N||E||
+MA|7006|Employers N.I. (Non-Directors)|2016|1|2022|4|OVHSW|Y|OK|N||E||
+MA|7007|Employers Pensions|2016|1|2022|4|OVHSW|Y|OK|N||E||
+MA|7008|Recruitment Expenses|2016|1|2022|4|OVHSW|Y|OK|N||E||
+MA|7009|Adjustments|2016|1|2022|4|OVHSW|Y|OK|N||E||
+MA|7010|SSP Reclaimed|2016|1|2022|4|OVHSW|Y|OK|N||E||
+MA|7011|SMP Reclaimed|2016|1|2022|4|OVHSW|Y|OK|N||E||
+MA|7012|Employers N.I. (Directors)|2016|1|2022|4|OVHSW|Y|OK|N||E||
+MA|7100|Rent|2016|1|2022|4|OVHRR|Y|OK|N||E||
+MA|7102|Water Rates|2016|1|2022|4|OVHRR|Y|OK|N||E||
+MA|7103|General Rates|2016|1|2022|4|OVHRR|Y|OK|N||E||
+MA|7104|Premises Insurance|2016|1|2022|4|OVHRR|Y|OK|N||E||
+MA|7200|Electricity|2016|1|2022|4|Ovhead|Y|OK|N||E||
+MA|7201|Gas|2016|1|2022|4|OVHHLP|Y|OK|N||E||
+MA|7202|Oil|2016|1|2022|4|OVHHLP|Y|OK|N||E||
+MA|7203|Other Heating Costs|2016|1|2022|4|OVHHLP|Y|OK|N||E||
+MA|7300|Vehicle Fuel|2016|1|2022|4|OVHME|Y|OK|N||E||
+MA|7301|Vehicle Repairs and Servicing|2016|1|2022|4|OVHME|Y|OK|N||E||
+MA|7302|Vehicle Licences|2016|1|2022|4|OVHME|Y|OK|N||E||
+MA|7303|Vehicle Insurance|2016|1|2022|4|OVHME|Y|OK|N||E||
+MA|7304|Miscellaneous Motor Expenses|2016|1|2022|4|OVHME|Y|OK|N||E||
+MA|7305|Congestion Charges|2016|1|2022|4|OVHME|Y|OK|N||E||
+MA|7306|Mileage Claims|2016|1|2022|4|OVHME|Y|OK|N||E||
+MA|7350|Scale Charges|2016|1|2022|4|OVHME|Y|OK|N||E||
+MA|7400|Travelling|2016|1|2022|4|OVHTE|Y|OK|N||E||
+MA|7401|Car Hire|2016|1|2022|4|OVHTE|Y|OK|N||E||
+MA|7402|Hotels|2016|1|2022|4|OVHTE|Y|OK|N||E||
+MA|7403|U.K. Entertainment|2016|1|2022|4|OVHTE|Y|OK|N||E||
+MA|7404|Overseas Entertainment|2016|1|2022|4|OVHTE|Y|OK|N||E||
+MA|7405|Overseas Travelling|2016|1|2022|4|OVHTE|Y|OK|N||E||
+MA|7406|Subsistence|2016|1|2022|4|OVHTE|Y|OK|N||E||
+MA|7500|Printing|2016|1|2022|4|OVHPS|Y|OK|N||E||
+MA|7501|Postage and Carriage|2016|1|2022|4|OVHPS|Y|OK|N||E||
+MA|7502|Office Stationery|2016|1|2022|4|OVHPS|Y|OK|N||E||
+MA|7503|Books etc.|2016|1|2022|4|OVHPS|Y|OK|N||E||
+MA|7550|Telephone and Fax|2016|1|2022|4|OVHPS|Y|OK|N||E||
+MA|7551|Internet Charges|2016|1|2022|4|OVHPS|Y|OK|N||E||
+MA|7552|Computers & Software|2016|1|2022|4|OVHPS|Y|OK|N||E||
+MA|7553|Mobile Charges|2016|1|2022|4|OVHPS|Y|OK|N||E||
+MA|7600|Legal Fees|2016|1|2022|4|OVHPF|Y|OK|N||E||
+MA|7601|Audit Fees|2016|1|2022|4|OVHPF|Y|OK|N||E||
+MA|7602|Accountancy Fees|2016|1|2022|4|OVHPF|Y|OK|N||E||
+MA|7603|Consultancy Fees|2016|1|2022|4|OVHPF|Y|OK|N||E||
+MA|7604|Professional Fees|2016|1|2022|4|OVHPF|Y|OK|N||E||
+MA|7605|Management Charges Payable|2016|1|2022|4|OVHPF|Y|OK|N||E||
+MA|7606|Software Subscriptions|2016|1|2022|4|OVHPF|Y|OK|N||E||
+MA|7700|Equipment Hire|2016|1|2022|4|OVHEHR|Y|OK|N||E||
+MA|7701|Office Machine Maintenance|2016|1|2022|4|OVHEHR|Y|OK|N||E||
+MA|7702|Equipment Leasing|2016|1|2022|4|OVHEHR|Y|OK|N||E||
+MA|7703|Leasing Costs|2016|1|2022|4|OVHEHR|Y|OK|N||E||
+MA|7800|Repairs and Renewals|2016|1|2022|4|OVHM|Y|OK|N||E||
+MA|7801|Cleaning|2016|1|2022|4|OVHM|Y|OK|N||E||
+MA|7802|Laundry|2016|1|2022|4|OVHM|Y|OK|N||E||
+MA|7803|Premises Expenses|2016|1|2022|4|OVHM|Y|OK|N||E||
+MA|7900|Bank Interest Paid|2016|1|2022|4|OVHBCI|Y|OK|N||E||
+MA|7901|Bank Charges|2016|1|2022|4|OVHBCI|Y|OK|N||E||
+MA|7902|Currency Charges|2016|1|2022|4|OVHBCI|Y|OK|N||E||
+MA|7903|Loan Interest Paid|2016|1|2022|4|OVHBCI|Y|OK|N||E||
+MA|7904|H.P. Interest|2016|1|2022|4|OVHBCI|Y|OK|N||E||
+MA|7905|Credit Charges|2016|1|2022|4|OVHBCI|Y|OK|N||E||
+MA|7906|Exchange Rate Variance|2016|1|2022|4|OVHBCI|Y|OK|N||E||
+MA|7907|Other Interest Charges|2016|1|2022|4|OVHBCI|Y|OK|N||E||
+MA|7908|Factoring Charges|2016|1|2022|4|OVHBCI|Y|OK|N||E||
+MA|8000|Depreciation|2016|1|2022|4|OVHD|Y|OK|N||E||
+MA|8001|Plant/Machinery Depreciation|2016|1|2022|4|OVHD|Y|OK|N||E||
+MA|8002|Furniture/Fitting Depreciation|2016|1|2022|4|OVHD|Y|OK|N||E||
+MA|8003|Vehicle Depreciation|2016|1|2022|4|OVHD|Y|OK|N||E||
+MA|8004|Office Equipment Depreciation|2016|1|2022|4|OVHD|Y|OK|N||E||
+MA|8100|Bad Debt Write Off|2016|1|2022|4|OVHBD|Y|OK|N||E||
+MA|8102|Bad Debt Provision|2016|1|2022|4|OVHBD|Y|OK|N||E||
+MA|8200|Donations|2016|1|2022|4|Ovhead|Y|OK|N||E||
+MA|8201|Subscriptions|2016|1|2022|4|OVHGE|Y|OK|N||E||
+MA|8202|Clothing Costs|2016|1|2022|4|OVHGE|Y|OK|N||E||
+MA|8203|Training Costs|2016|1|2022|4|OVHGE|Y|OK|N||E||
+MA|8204|Insurance|2016|1|2022|4|OVHGE|Y|OK|N||E||
+MA|8205|Refreshments|2016|1|2022|4|OVHGE|Y|OK|N||E||
+MA|8206|Cash Register Discrepancies|2016|1|2022|4|OVHGE|Y|OK|N||E||
+MA|8250|Sundry Expenses|2016|1|2022|4|OVHGE|Y|OK|N||E||
+MA|9001|Taxation|2016|1|2022|4|OVHTAX|Y|OK|N||E||
+MA|9998|Suspense Account|2016|1|2022|4|OVHMPS|Y|OK|N||E||
+MA|9999|Mispostings Account|2016|1|2022|4|OVHMPS|Y|OK|N||E||
+MA|SSS|sssss|2023|2|2024|2|CLOC|N||N||L||

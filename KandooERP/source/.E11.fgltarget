@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<fglBuildTarget xmlns="http://namespaces.querix.com/lyciaide/target" name="E11" type="fgl-program">
+
+  <libraries>
+    <library name="lib_common_invwind" dynamic="false" location=""/>
+    <library name="lib_common_pinq_wind" dynamic="false" location=""/>
+    <library name="lib_common_wind" dynamic="false" location=""/>
+    <library name="lib_security" dynamic="false" location=""/>
+    <library name="lib_tool_A_AR_db" dynamic="false" location=""/>
+    <library name="lib_tool_A_AR_new" dynamic="false" location=""/>
+    <library name="lib_tool_E_EO_db" dynamic="false" location=""/>
+    <library name="lib_tool_E_EO_new" dynamic="false" location=""/>
+    <library name="lib_tool_G_GL_new" dynamic="false" location=""/>
+    <library name="lib_tool_I_IN_db" dynamic="false" location=""/>
+    <library name="lib_tool_I_IN_new" dynamic="false" location=""/>
+    <library name="lib_tool_L_LC_new" dynamic="false" location=""/>
+    <library name="lib_tool_N_RE_new" dynamic="false" location=""/>
+    <library name="lib_tool_U_UT_new" dynamic="false" location=""/>
+    <library name="lib_tool_W_WO_new" dynamic="false" location=""/>
+    <library name="lib_tool_common" dynamic="false" location=""/>
+    <library name="lib_tool_db_common" dynamic="false" location=""/>
+  </libraries>
+
+  <sources type="fgl">
+    <file location="4gl/eo/E11.4gl"/>
+    <file location="4gl/common/terrwind.4gl"/>
+    <file location="4gl/eo/E_EO_GLOBALS.4gl"/>
+    <file location="4gl/eo/E11c.4gl"/>
+    <file location="4gl/common/carrwind.4gl"/>
+    <file location="4gl/eo/E1_GROUP_GLOBALS.4gl"/>
+    <file location="4gl/common/conv_rate.4gl"/>
+    <file location="4gl/common/offerfunc.4gl"/>
+    <file location="4gl/eo/E11g.4gl"/>
+    <file location="4gl/common/acctwind.4gl"/>
+    <file location="4gl/common/orstfunc.4gl"/>
+    <file location="4gl/common/vperfunc.4gl"/>
+    <file location="4gl/common/serifunc.4gl"/>
+    <file location="4gl/eo/E11d.4gl"/>
+    <file location="4gl/common/salewind.4gl"/>
+    <file location="4gl/eo/E11h.4gl"/>
+    <file location="4gl/common/taxwind.4gl"/>
+    <file location="4gl/common/contfunc.4gl"/>
+    <file location="4gl/common/mgrpwind.4gl"/>
+    <file location="4gl/common/pgrpwind.4gl"/>
+    <file location="4gl/common/condwind.4gl"/>
+    <file location="4gl/common/glob_GLOBALS_constant.4gl"/>
+    <file location="4gl/common/notefunc.4gl"/>
+    <file location="4gl/eo/E11e.4gl"/>
+    <file location="4gl/common/orhdwind.4gl"/>
+    <file location="4gl/common/holdwind.4gl"/>
+    <file location="4gl/common/glob_GLOBALS.4gl"/>
+    <file location="4gl/common/glob_GLOBALS_userDataTypes.4gl"/>
+    <file location="4gl/eo/E11_GLOBALS.4gl"/>
+    <file location="4gl/common/termwind.4gl"/>
+    <file location="4gl/eo/E11b.4gl"/>
+    <file location="4gl/common/tablefunc.4gl"/>
+    <file location="4gl/common/cashfunc.4gl"/>
+    <file location="4gl/common/offrwind.4gl"/>
+    <file location="4gl/common/note_disp.4gl"/>
+    <file location="4gl/common/trans_num.4gl"/>
+    <file location="4gl/eo/E11_main.4gl"/>
+    <file location="4gl/eo/E11f.4gl"/>
+    <file location="4gl/common/orddfunc.4gl"/>
+    <file location="4gl/eo/E14a.4gl"/>
+    <file location="4gl/common/shipwind.4gl"/>
+    <file location="4gl/common/bankwind.4gl"/>
+    <file location="4gl/eo/E52b.4gl"/>
+    <file location="4gl/eo/E11j.4gl"/>
+    <file location="4gl/eo/E11a.4gl"/>
+  </sources>
+
+  <sources type="form">
+    <file location="per/utility/ENG/U156.fm2"/>
+    <file location="per/in/ENG/I601.fm2"/>
+    <file location="per/eo/ENG/E501_prodstatus_availability.fm2"/>
+    <file location="per/eo/ENG/E400.fm2"/>
+    <file location="per/eo/ENG/E461.fm2"/>
+    <file location="per/ar/ENG/A151.fm2"/>
+    <file location="per/eo/ENG/E112.fm2"/>
+    <file location="per/eo/ENG/E408.fm2"/>
+    <file location="per/eo/ENG/E457.fm2"/>
+    <file location="per/ar/ENG/A160.fm2"/>
+    <file location="per/eo/ENG/E169.fm2"/>
+    <file location="per/ar/ENG/A105.fm2"/>
+    <file location="per/eo/ENG/E115.fm2"/>
+    <file location="per/eo/ENG/E105.fm2"/>
+    <file location="per/ar/ENG/A630.fm2"/>
+    <file location="per/in/ENG/I186.fm2"/>
+    <file location="per/gl/ENG/G123.fm2"/>
+    <file location="per/eo/ENG/E109.fm2"/>
+    <file location="per/eo/ENG/E426.fm2"/>
+    <file location="per/eo/ENG/E114.fm2"/>
+    <file location="per/in/ENG/I146.fm2"/>
+    <file location="per/ar/ENG/A203.fm2"/>
+    <file location="per/in/ENG/I602.fm2"/>
+    <file location="per/eo/ENG/E445.fm2"/>
+    <file location="per/ar/ENG/A182.fm2"/>
+    <file location="per/eo/ENG/E459.fm2"/>
+    <file location="per/eo/ENG/E113.fm2"/>
+    <file location="per/ar/ENG/A672.fm2"/>
+    <file location="per/eo/ENG/E419.fm2"/>
+    <file location="per/ar/ENG/A158.fm2"/>
+    <file location="per/eo/ENG/E107.fm2"/>
+    <file location="per/ar/ENG/A632.fm2"/>
+    <file location="per/eo/ENG/E120.fm2"/>
+    <file location="per/ar/ENG/A134.fm2"/>
+    <file location="per/utility/ENG/U136.fm2"/>
+    <file location="per/gl/ENG/G129.fm2"/>
+    <file location="per/eo/ENG/E104.fm2"/>
+    <file location="per/ar/ENG/A118.fm2"/>
+    <file location="per/eo/ENG/E116.fm2"/>
+    <file location="per/utility/ENG/U526.fm2"/>
+    <file location="per/eo/ENG/E111.fm2"/>
+    <file location="per/gl/ENG/G135.fm2"/>
+    <file location="per/gl/ENG/G147.fm2"/>
+    <file location="per/eo/ENG/E110.fm2"/>
+    <file location="per/eo/ENG/E102.fm2"/>
+    <file location="per/ar/ENG/A165.fm2"/>
+    <file location="per/eo/ENG/E455.fm2"/>
+    <file location="per/eo/ENG/E118.fm2"/>
+    <file location="per/ar/ENG/A643.fm2"/>
+    <file location="per/re/ENG/N132.fm2"/>
+    <file location="per/eo/ENG/E460.fm2"/>
+    <file location="per/utility/ENG/U162.fm2"/>
+    <file location="per/eo/ENG/E103.fm2"/>
+    <file location="per/eo/ENG/E117.fm2"/>
+    <file location="per/re/ENG/N131.fm2"/>
+  </sources>
+
+  <mediaFiles>
+    <file client="true" location="E11.css" type="other"/>
+    <file client="true" location="E11.qxtheme" type="gui-theme-file"/>
+  </mediaFiles>
+
+</fglBuildTarget>

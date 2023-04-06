@@ -1,0 +1,4 @@
+comm11_prog.4gl
+-------------------------------------------------------------------------------------------
+appbug: L 75:If env variable SYSLOG_UNIX not defined, call msgcr ("VARIABLE 'SYSLOG_UNIX' NON DEFINIE !") and the form is not open yet
+	fix: set SYSLOG_UNIX

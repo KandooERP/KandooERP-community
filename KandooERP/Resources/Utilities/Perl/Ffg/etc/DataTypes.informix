@@ -1,0 +1,36 @@
+#IFMX type	Form length	Lycia form type
+SMALLINT	3	SmallInt
+INTEGER	6	Integer
+SERIAL	6	Integer
+FLOAT	10	Float
+SMALLFLOAT	5	SmallFloat
+REAL	5	SmallFloat
+BIGINT	10	BigInt
+BIGSERIAL	10	BigInt
+DATE	10	Date
+DATETIME	10	DateTime
+INTERVAL	4	Interval
+BOOLEAN	4	Boolean
+DECIMAL	$1	Decimal
+TEXT	10	String
+MONEY	$1	Money
+NUMERIC	$1	Decimal
+CHAR	$ 1	Char
+VARCHAR	$1	VarChar 
+#Lycia form type	Form length	IFMX type
+SmallInt	3	SMALLINT
+Integer	6	INTEGER
+Serial	6	SERIAL
+Float	10	FLOAT
+SmallFloat	5	SMALLFLOAT
+BigInt	10	BIGINT
+BigSerial	10	BIGSERIAL
+Date	10	DATE
+DateTime	10	DATETIME
+Interval	5	INTERVAL
+Boolean	5	BOOLEAN
+Decimal	5	DECIMAL
+String	20	TEXT
+Money	10	MONEY
+Char	$5	CHAR
+VarChar	20	VARCHAR

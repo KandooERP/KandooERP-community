@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<fglBuildTarget xmlns="http://namespaces.querix.com/lyciaide/target" name="L000_All_L_LC-Shipment-Landed-Costing-Forms" type="fgl-program">
+
+  <libraries>
+    <library name="lib_tool_common" dynamic="false" location=""/>
+    <library name= "lib_tool_L_LC_new" dynamic="false" location=""/>
+    <library name="lib_tool_L_LC_db" dynamic="false" location=""/>
+   </libraries>
+
+  <sources type="fgl">
+    <file location="4gl/lc/L000_All_L_LC-Shipment-Landed-Costing-Forms.4gl"/>
+  </sources>
+
+  <sources type="form">
+    <file location="per/lc/ENG/L105.fm2"/>
+    <file location="per/lc/ENG/L142.fm2"/>
+    <file location="per/lc/ENG/L154.fm2"/>
+    <file location="per/lc/ENG/L166.fm2"/>
+    <file location="per/lc/ENG/L148.fm2"/>
+    <file location="per/lc/ENG/L100.fm2"/>
+    <file location="per/lc/ENG/L124.fm2"/>
+    <file location="per/lc/ENG/L114.fm2"/>
+    <file location="per/lc/ENG/L163.fm2"/>
+    <file location="per/lc/ENG/L138.fm2"/>
+    <file location="per/lc/ENG/L108.fm2"/>
+    <file location="per/lc/ENG/L000_All_L_LC-Shipment-Landed-Costing-Forms.fm2"/>
+    <file location="per/lc/ENG/L133.fm2"/>
+    <file location="per/lc/ENG/L123.fm2"/>
+    <file location="per/lc/ENG/L157.fm2"/>
+    <file location="per/lc/ENG/L160.fm2"/>
+    <file location="per/lc/ENG/L109a.fm2"/>
+    <file location="per/lc/ENG/L103.fm2"/>
+    <file location="per/lc/ENG/L115.fm2"/>
+    <file location="per/lc/ENG/L140.fm2"/>
+    <file location="per/lc/ENG/L168.fm2"/>
+    <file location="per/lc/ENG/L156.fm2"/>
+    <file location="per/lc/ENG/L136.fm2"/>
+    <file location="per/lc/ENG/L161.fm2"/>
+    <file location="per/lc/ENG/L102.fm2"/>
+    <file location="per/lc/ENG/L141.fm2"/>
+    <file location="per/lc/ENG/L116.fm2"/>
+    <file location="per/lc/ENG/L155.fm2"/>
+    <file location="per/lc/ENG/L121.fm2"/>
+    <file location="per/lc/ENG/L135.fm2"/>
+    <file location="per/lc/ENG/L169.fm2"/>
+    <file location="per/lc/ENG/L101.fm2"/>
+    <file location="per/lc/ENG/L149.fm2"/>
+    <file location="per/lc/ENG/L150.fm2"/>
+    <file location="per/lc/ENG/L125.fm2"/>
+    <file location="per/lc/ENG/L137.fm2"/>
+    <file location="per/lc/ENG/L162.fm2"/>
+    <file location="per/lc/ENG/L109.fm2"/>
+    <file location="per/lc/ENG/L110.fm2"/>
+    <file location="per/lc/ENG/L158.fm2"/>
+    <file location="per/lc/ENG/L134.fm2"/>
+    <file location="per/lc/ENG/L146.fm2"/>
+    <file location="per/lc/ENG/L104.fm2"/>
+    <file location="per/lc/ENG/L128.fm2"/>
+    <file location="per/lc/ENG/L153.fm2"/>
+    <file location="per/lc/ENG/L167.fm2"/>
+    <file location="per/lc/ENG/L143.fm2"/>
+    <file location="per/lc/ENG/L147.fm2"/>
+    <file location="per/lc/ENG/L159.fm2"/>
+    <file location="per/lc/ENG/L127.fm2"/>
+    <file location="per/lc/ENG/L164.fm2"/>
+    <file location="per/lc/ENG/L132.fm2"/>
+    <file location="per/lc/ENG/L107.fm2"/>
+    <file location="per/lc/ENG/L144.fm2"/>
+    <file location="per/lc/ENG/L126.fm2"/>
+    <file location="per/lc/ENG/L151.fm2"/>
+    <file location="per/lc/ENG/L106.fm2"/>
+    <file location="per/lc/ENG/L165.fm2"/>
+    <file location="per/lc/ENG/L145.fm2"/>
+  </sources>
+
+  <mediaFiles>
+    <file client="true" location="L000_All_L_LC-Shipment-Landed-Costing-Forms.qxtheme" type="gui-theme-file"/>
+    <file client="true" location="L000_All_L_LC-Shipment-Landed-Costing-Forms.css" type="other"/>
+  </mediaFiles>
+
+  <buildConfiguration name="development">
+    <additions>
+    </additions>
+    <exclusions>
+    </exclusions>
+  </buildConfiguration>
+
+</fglBuildTarget>

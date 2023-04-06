@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form xmlns="http://namespaces.querix.com/2015/fglForms"title="${FormTitle}">
+	<form.rootContainer>
+		<CoordPanel preferredSize="${FormWidth}qch,${FormHeight}qch" fieldTable="" identifier="Grid${GenerateFormName}">
+			<Script: bld_form_textfields($FORMHANDLE,${FormTableName},${ArrayElements}) :Script>
+		</CoordPanel>
+	</form.rootContainer>
+	<form.screenRecords>
+		<Script: bld_form_screenrecords($FORMHANDLE) :Script>
+    </form.screenRecords>
+</form>

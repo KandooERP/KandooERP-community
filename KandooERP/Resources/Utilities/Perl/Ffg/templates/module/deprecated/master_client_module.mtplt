@@ -1,0 +1,466 @@
+MAIN
+
+   DEFER INTERRUPT
+   OPTIONS prompt line last,
+			  message line 3,
+           #insert key F30,
+           #delete key F31,
+           #next key F32,
+           #previous key F33,
+           help file "$module_name.iem",
+           help key $helpkey
+   
+   WHENEVER ERROR CALL gest_error
+   # Le program est positionne en gestion d'erreurs automatique,
+   # cette fonction retourne un valorise 2 globals. La 1ere, nommee "sql_ok", 
+   # prend en compte la gravite de l'erreur, la 2eme ,"nbtent", correpond 
+   # au xnumber de tentatives d'execution de la COMMANDe 4GL.
+   # Au bout de 5 tentatives non gerees, le program se termine.
+   # "sql_ok" doit etre geree par le program
+
+	LET program="p_$module_name","$MasterTable"
+   CALL init_base($Database,program)
+   # opens the database and opens program log file
+
+	CALL main_$module_name_$MasterTable()
+
+END MAIN
+
+#######################################################
+# definition variable sccs
+#######################################################
+FUNCTION mc_$module_name_sccs()
+DEFINE sccs_var CHAR(70)
+LET sccs_var="%W% %D%"
+END FUNCTION
+
+
+FUNCTION main_$module_name_$MasterTable ()
+
+   CALL open_form_$module_name_$MasterTable ()   
+   # opens the main form and displays it
+
+   CALL init_cursor_$module_name_$MasterTable ()
+   # initialize all cursors on master table
+
+@if ( $detail_table ne "" ) { printf MSTRSRCFILE "CALL init_cursor_$module_name_$detail_table\(\)\n# initialize allcursors on detail table \n" }
+
+   CALL menu_$module_name_$MasterTable()      
+   # Corps  du module
+
+   CALL close_form_$MasterTable()
+   # Ferme la forme, procedures de fin de program 
+              
+END FUNCTION
+
+#____________________________________________________________________#
+#
+#    OPEN_FORM_$MasterTable : OUVERTURE DE LA FORME PRINCIPALE
+#____________________________________________________________________#
+FUNCTION open_form_$MasterTable()
+
+DEFINE nblig,nbcol,xpos,yposition SMALLINT
+
+LET nblig=$heigth
+LET nbcol=$length
+LET xpos=$xposition
+LET yposition=$yposition
+
+OPEN WINDOW $form at xpos,yposition
+WITH FORM "$form" attributes(bypositioner)
+
+# $scrp$module_name is the record for this main form
+INITIALIZE $scrp$module_name.* TO NULL
+
+INITIALIZE sv_$module_name.* TO NULL
+# this record will save main form values before edition
+
+DISPLAY BY NAME $scrp$module_name.*
+
+@if ( $x_fly > 0 ) { printf MSTRSRCFILE "INITIALIZE $forp$module_name.* TO NULL\nDISPLAY BY NAME $forp$module_name.*" }
+END FUNCTION
+
+######################################################################
+#    menu_$module_name_$MasterTable
+#    function containing the top level menu
+#    input arguments: none
+#    output arguments: none
+######################################################################
+
+FUNCTION menu_$module_name_$MasterTable
+
+   DEFINE nbsel_$MasterTable INTEGER
+   DEFINE action smallint
+   DEFINE xnumber smallint
+   DEFINE arr_elem_num smallint
+
+   LET nbsel_$MasterTable = 0
+   MENU "$MasterTable"
+   COMMAND "$query" "$query_com $MasterTable"
+      HELP 1000
+		message ""
+      INITIALIZE ${scrp}${nom_module}.* TO NULL
+      DISPLAY BY NAME ${scrp}${nom_module}.*
+
+@if ( $x_fly > 0 ) { printf MSTRSRCFILE "      INITIALIZE ${forp}${nom_module}.* TO NULL\n       DISPLAY BY NAME ${forp}${nom_module}.*" }
+
+      CALL $query_$MasterTable() RETURNING nbsel_$MasterTable
+      IF nbsel_$MasterTable <>0 THEN 
+			DISPLAY BY NAME $scrp$module_name.*
+@if ( $x_fly > 0 ) { printf MSTRSRCFILE "DISPLAY BY NAME $forp$module_name.*"
+
+@if ( defined($detail_table) ) { printf MSTRSRCFILE "     LET arr_elem_num = disp_arr_$det_clnt_module (pky.*)" }
+         NEXT OPTION "$next"
+      ELSE 
+			ERROR "$norows_selected"
+         NEXT OPTION "$query"
+      END IF
+
+   COMMAND "$next" "$next_com $MasterTable"
+      HELP 2000
+		message ""
+      INITIALIZE ${scrp}${nom_module}.* TO NULL
+      DISPLAY BY NAME ${scrp}${nom_module}.*
+@if ( $x_fly > 0 ) { printf MSTRSRCFILE "      INITIALIZE ${forp}${nom_module}.* TO NULL\n       DISPLAY BY NAME ${forp}${nom_module}.*" }
+
+      IF nbsel_$MasterTable THEN
+         CALL Sql_nxtprev_$MasterTable(1)
+			RETURNING sql_ok
+			CASE 
+			WHEN sql_ok = 0 
+				error "$lastrow $MasterTable"
+			WHEN sql_ok = -1 
+				error "$unreachable ",sqlca.sqlcode
+			WHEN sql_ok = 1
+!
+
+@if ( defined($detail_table) ) { printf MSTRSRCFILE "     CALL disp_arr_$det_clnt_module (pky.*)" }
+
+@if ( $x_fly > 0 ) { printf MSTRSRCFILE "      "DISPLAY BY NAME $forp$module_name.*"
+			END CASE
+
+      ELSE
+         error " $select_first  $MasterTable "
+         NEXT OPTION "$query"
+      END IF
+
+   COMMAND "$previous" "$previous_com $MasterTable"
+      HELP 2000
+		message ""
+@if ( $x_fly > 0 ) { printf MSTRSRCFILE "      INITIALIZE ${forp}${nom_module}.* TO NULL\n       DISPLAY BY NAME ${forp}${nom_module}.*" }
+
+      IF nbsel_$MasterTable THEN
+         CALL Sql_nxtprev_$MasterTable(-1)
+			RETURNING sql_ok
+			CASE 
+			WHEN sql_ok = 0
+				error "$firstrow $MasterTable"
+			WHEN sql_ok < -1
+				error "$unreachable ",sqlca.sqlcode
+			WHEN sql_ok = 1
+@if ( defined($detail_table) ) { printf MSTRSRCFILE "     CALL disp_arr_$det_clnt_module (pky.*)" }
+				CALL val_$scrp${RecordPrefix}$module_name()
+				DISPLAY BY NAME $scrp$module_name.*
+@if ( $x_fly > 0 ) { printf MSTRSRCFILE "      "DISPLAY BY NAME $forp$module_name.*"
+			END CASE
+      ELSE
+         error " $select_first $MasterTable "
+         NEXT OPTION "$query"
+      END IF
+
+@if ( defined($detail_table) ) { printf MSTRSRCFILE "     COMMAND KEY ("tab") "Array $detail_table" "$presstab"\n     CALL edit_arr_$detail_table (pky.*)" }
+
+   COMMAND "$update" "$update_com $MasterTable"
+      HELP 4000
+		message ""
+      IF nbsel_$MasterTable THEN
+         ## la fonction islocked_$MasterTable verifie que la rangee n'est pas
+         ## verouillee, et dans le cas favorable effectue le
+         ## BEGIN WORK, on peut ensuite proceder a la modification
+
+         IF islocked_$MasterTable(pky.*) THEN
+				error "$islock "
+            NEXT OPTION "$next"
+         ELSE
+            CALL $update_$MasterTable()
+                 RETURNING sql_ok
+         END IF
+      ELSE
+         error " $select_first $MasterTable "
+         NEXT OPTION "$query"
+      END IF
+
+   COMMAND "$delete" "$delete_com $MasterTable"
+      HELP 5000
+      ## la fonction islocked_$MasterTable verifie que la rangee n'est pas
+      ## verouillee, et dans le cas favorable effectue le
+      ## BEGIN WORK, on peut ensuite proceder a l'annulation   
+		message ""
+      IF nbsel_$MasterTable THEN
+         IF islocked_$MasterTable(pky.*) THEN
+				error "$islock "
+            NEXT OPTION "$next"
+         END IF
+         WHILE TRUE
+            CALL confirm_maj(5,10,"$delete") RETURNING action
+            CASE 
+            WHEN action = 0 OR action = 1 
+               EXIT WHILE  # degage abandon
+            WHEN action = 2   
+               CALL $delete_$MasterTable()
+                    RETURNING sql_ok
+					EXIT WHILE
+            END CASE
+         END WHILE
+      ELSE
+         error "$select_first $MasterTable "
+         NEXT OPTION "$query"
+      END IF
+
+   COMMAND "$insert" "$insert_com $MasterTable"
+      HELP 3000
+		message ""
+      call $insert_$MasterTable()
+      message ""
+
+   COMMAND "$quit" "$quit_com"
+      HELP 9000
+		message ""
+      exit menu
+   END MENU
+
+END FUNCTION
+
+#_____________________________________________________________________#
+#
+#    CLOSe_FORM_$MasterTable : FERMETURE DE LA FORME
+#_____________________________________________________________________#
+
+FUNCTION close_form_$MasterTable()
+
+CLOSE WINDOW $form
+
+END FUNCTION
+
+#_____________________________________________________________________#
+#
+#    $query_$MasterTable : SELECTION D'UN $MasterTable
+#_____________________________________________________________________#
+
+FUNCTION $query_$MasterTable()
+DEFINE ${RecordPrefix}$MasterTable,where_text,prep_2,prep_3 CHAR(1000)
+DEFINE xnumber SMALLINT
+LET xnumber = 0
+MESSAGE "$input_criteria"
+
+!
+# initialisation et affichage a blanc
+g_initrc >> $mstr_clnt_module.4gl 
+INITIALIZE ${scrp}${nom_module}.* TO NULL
+DISPLAY BY NAME ${scrp}${nom_module}.*
+@if ( $x_fly > 0 ) { printf MSTRSRCFILE "     INITIALIZE ${forp}${nom_module}.* TO NULL\n    DISPLAY BY NAME ${forp}${nom_module}.*\n" }
+
+
+CONSTRUCT BY NAME where_text ON
+@build_construct_by_name ($form,"M") 
+
+ON KEY ($helpkey)  # appel de l'aide en ligne
+   CALL help_$MasterTable()
+   
+## Permet de tester que l'on a saisi des criteres 
+AFTER CONSTRUCT 
+   IF NOT field_touched($scrp_$MasterTable.*) AND NOT int_flag THEN
+      PROMPT "$globselect "
+      FOR CHAR reponse
+      CASE 
+      WHEN reponse MATCHES "[Oo]"
+         EXIT CONSTRUCT 
+      OTHERWISE                  # Saisie d'un critere de selection
+         error "$oneatleast"
+         CONTINUE CONSTRUCT
+      END CASE
+      END IF
+END CONSTRUCT
+
+IF int_flag = TRUE THEN
+   message "$abandon_com"
+   LET int_flag=0
+ELSE
+	LET xnumber = prepare_cnstr_$MasterTable(where_text)
+END IF
+RETURN xnumber
+END FUNCTION
+
+#######################################################################
+#    $update_$MasterTable : MODIFICATION D'UN $MasterTable
+#######################################################################
+FUNCTION $update_$MasterTable()
+DEFINE action SMALLINT  
+
+## Afin de pouvoir lire dans les tables meme si elles sont lockees
+## Eventuellement a modifier si necessaire
+WHILE true
+   LET int_flag = false
+
+BEGIN WORK
+INPUT BY NAME 
+@build_input_fields_list($scrp$module_name,$form,M)		
+## sh=input
+WITHOUT DEFAULTS
+@build_input_events_list($database,$MasterTable, $module_name,$form,"M")		
+## sh=g_event
+
+@if (defined($bld_lookup) ) { build_lookup_calls($database,$MasterTable,$form,$module_name,inp ) }
+
+@if (defined($bld_help) ) {  printf MSTRSRCFILE "ON KEY ($helpkey)  # appel de l'aide en ligne\n     CALL help_$MasterTable()\n" }
+END INPUT
+   IF int_flag = TRUE THEN
+      LET int_flag=false
+      LET $scrp$module_name.* = sv_$module_name.*
+      display BY NAME $scrp$module_name.*
+      MESSAGE "$abandon_com $interruptkey"
+      CALL rollback_work()         # Transaction interrompue
+      EXIT WHILE
+   END IF 
+
+   CALL confirm_maj(4,10,"$update") RETURNING action
+
+   CASE action 
+      WHEN 0 
+         LET $scrp$module_name.* = sv_$module_name.*
+         display BY NAME $scrp$module_name.*
+         EXIT WHILE   # degage abandon
+
+      WHEN 1 
+         CONTINUE WHILE
+
+      WHEN 2   
+			CALL val_$tbrp${RecordPrefix}$MasterTable("U")
+         CALL Sql_$update_$MasterTable(pky.*) returning sql_ok
+			CASE 
+			WHEN sql_ok = 0
+				message "$update $correct"
+				COMMIT WORK
+			WHEN sql_ok < 0
+				error "$update $failed",sqlca.sqlcode
+				ROLLBACK WORK
+			END CASE
+			EXIT WHILE
+		 END CASE
+END WHILE
+RETURN sql_ok
+END FUNCTION
+
+####################################################################
+## $insert_$MasterTable: ajouter un enregistrement
+####################################################################
+FUNCTION $insert_$MasterTable()
+DEFINE nbre_$MasterTable ,action SMALLINT
+
+## Afin de pouvoir lire dans les tables meme si elles sont lockees
+## Eventuellement a modifier si necessaire
+WHILE true
+   LET int_flag = false
+
+BEGIN WORK
+INPUT BY NAME 
+@build_input_fields_list($scrp$module_name,$form,M)		
+## sh=input
+
+@build_input_events_list($database,$MasterTable, $module_name,$form,"M")		
+## sh=g_event
+
+@if (defined($bld_lookup) ) { build_lookup_calls($database,$MasterTable,$form,$module_name,inp ) }
+
+@if (defined($bld_help) ) {  printf MSTRSRCFILE "ON KEY ($helpkey)  # appel de l'aide en ligne\n     CALL help_$MasterTable()\n" }
+END INPUT
+   IF int_flag = TRUE THEN
+      LET int_flag=false
+      LET $scrp$module_name.* = sv_$module_name.*
+      display BY NAME $scrp$module_name.*
+      MESSAGE "$abandon_com $interruptkey"
+      CALL rollback_work()         # Transaction interrompue
+      EXIT WHILE
+   END IF 
+
+   CALL confirm_maj(3,10,"$update") RETURNING action
+	CASE action
+	WHEN 1            # On desire corriger ce qui vient d'etre saisi 
+		CONTINUE WHILE   # On laisse tout affiche comme tel
+		
+	WHEN 2            # On valide la transaction
+		CALL val_$tbrp${RecordPrefix}$MasterTable("I")
+		CALL Sql_$insert_$MasterTable() returning sql_ok
+		CASE 
+		WHEN sql_ok = 0
+			message "$insert $correct"
+			COMMIT WORK
+		WHEN sql_ok < 0
+			error "$insert $failed",sqlca.sqlcode
+			ROLLBACK WORK
+		END CASE
+		EXIT WHILE
+
+	WHEN 0
+		EXIT WHILE
+	END CASE
+
+END WHILE
+RETURN sql_ok
+END FUNCTION
+
+##############################################################
+FUNCTION $delete_$MasterTable()
+##############################################################
+DEFINE action SMALLINT
+DEFINE sql_ok SMALLINT
+
+WHILE TRUE
+   CALL confirm_maj(5,10,"$delete") RETURNING action
+	BEGIN WORK
+   CASE 
+   WHEN action = 0 OR action = 1 
+      EXIT WHILE  # degage abandon
+   WHEN action = 2   
+      CALL Sql_$delete_$MasterTable(pky.*) RETURNING sql_ok
+		CASE 
+		WHEN sql_ok = 0
+			message "$delete $correct"
+			COMMIT WORK
+			INITIALIZE ${scrp}${nom_module}.* TO NULL
+			DISPLAY BY NAME ${scrp}${nom_module}.*
+@if ( $x_fly > 0 ) { printf MSTRSRCFILE "     INITIALIZE ${forp}${nom_module}.* TO NULL\n    DISPLAY BY NAME ${forp}${nom_module}.*\n" }
+		WHEN sql_ok < 0
+			error "$delete $failed",sqlca.sqlcode
+			ROLLBACK WORK
+		END CASE
+		EXIT WHILE
+
+	END CASE
+END WHILE
+RETURN sql_ok
+END FUNCTION
+
+@build_fct_CpyScrValuesTblRecord($form,$MasterTable,S) 
+## sh=g_valtab $module_name $form $MasterTable S >> $mstr_clnt_module.4gl
+
+@build_fct_CpyTblRecordScrValues($form,$MasterTable,S) 
+## sh=g_valscr $module_name $form $MasterTable S >> $mstr_clnt_module.4gl
+
+@if ( $x_fly > 0 ) { build_mdl_Lookup($database,$module_name) }
+
+	#for zoomtbl in `sort +0 $listes/$form.scr | \
+	#awk ' BEGIN { anc="yyyxxx" } \
+	#$5 == "F" { if ($1 != anc) { print $1;anc=$1 } } '`
+	#do
+		#g_zoomfct $database $zoomtbl z_$zoomtbl 100 zm_$module_name
+	#done
+#fi
+
+@build_fct_Help($form,$MasterTable)
+## sh=g_hlpfct $form $MasterTable >> $mstr_clnt_module.4gl
+
+@build_doc_Help($form,$mstr_clnt_module)
+
+# fabrication du header
+g_headr $mstr_clnt_module

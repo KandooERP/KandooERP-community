@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form xmlns="http://namespaces.querix.com/2015/fglForms">
+	<form.rootContainer>
+		<GridPanel classNames="fcls_rootContainer" verticalAlignment="Stretch" horizontalAlignment="Stretch" fieldTable="" identifier="rootContainer">
+			<GridPanel.gridRowDefinitions>
+				<GridRowDefinition gridLengthValue=""/>
+				<GridRowDefinition gridLengthValue=""/>
+				<GridRowDefinition gridLengthValue=""/>
+				<GridRowDefinition gridLengthValue="100%"/>
+				<GridRowDefinition gridLengthValue=""/>
+			</GridPanel.gridRowDefinitions>
+			<GridPanel.gridColumnDefinitions>
+				<GridColumnDefinition gridLengthValue="100%"/>
+			</GridPanel.gridColumnDefinitions>
+			<GridPanel classNames="fcls_title_cnt" visible="true" verticalAlignment="Top" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="cntTitle">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="100%"/>
+					<GridColumnDefinition gridLengthValue=""/>
+				</GridPanel.gridColumnDefinitions>
+				<Label isDynamic="true" text="Credit Applications" classNames="fcls_title_lb" visible="true" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="header_text"/>
+				<Label isDynamic="true" text="A681" classNames="fcls_title_lb" visible="true" gridItemLocation="1,0,1,1" fieldTable="" identifier="lbFormName"/>
+			</GridPanel>
+			<GridPanel classNames="fcls_detail_cnt,fcls_data_cnt,fcls_align_left" visible="true" verticalAlignment="Top" horizontalAlignment="Left" gridItemLocation="0,1,1,1" fieldTable="formonly" identifier="cntDetail1">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="" gridMinLength="10rem"/>
+					<GridColumnDefinition gridLengthValue=""/>
+					<GridColumnDefinition gridLengthValue=""/>
+				</GridPanel.gridColumnDefinitions>
+				<Label isDynamic="true" text="Customer" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="lb57"/>
+				<ComboBox classNames="fcls_data_widget,fcls_align_left,fcls_length_10qch" visible="true" gridItemLocation="1,0,1,1" fieldTable="credithead" identifier="cust_code"/>
+				<TextField classNames="fcls_data_widget,fcls_align_left,fcls_length_30qch" visible="true" gridItemLocation="2,0,1,1" fieldTable="" identifier="name_text"/>
+				<Label isDynamic="true" text="Credit Number" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,1,1,1" fieldTable="" identifier="lb76"/>
+				<TextField classNames="fcls_data_widget,fcls_align_left,fcls_length_10qch" visible="true" gridItemLocation="1,1,1,1" fieldTable="" identifier="cred_num"/>
+			</GridPanel>
+			<GroupBox title="Amount" classNames="fcls_detail_gb_cnt" visible="true" verticalAlignment="Top" gridItemLocation="0,2,1,1" fieldTable="formonly" identifier="cntDetail2GroupBox">
+				<GridPanel classNames="fcls_detail_gb_cnt_sub,fcls_detail_cnt_sub,fcls_data_cnt,fcls_align_left" visible="true" verticalAlignment="Top" horizontalAlignment="Left" fieldTable="formonly" identifier="cntDetail2Sub">
+					<GridPanel.gridRowDefinitions>
+						<GridRowDefinition gridLengthValue=""/>
+						<GridRowDefinition gridLengthValue=""/>
+						<GridRowDefinition gridLengthValue=""/>
+						<GridRowDefinition gridLengthValue=""/>
+					</GridPanel.gridRowDefinitions>
+					<GridPanel.gridColumnDefinitions>
+						<GridColumnDefinition gridLengthValue="" gridMinLength="10rem"/>
+						<GridColumnDefinition gridLengthValue=""/>
+					</GridPanel.gridColumnDefinitions>
+					<Label isDynamic="true" text="Total Amount" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="lb47"/>
+					<TextField visible="true" gridItemLocation="1,0,1,1" fieldTable="" identifier="total_amt" classNames="fcls_data_widget,fcls_align_left,fcls_length_10qch"/>
+					<Label isDynamic="true" text="Applied Amount" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,1,1,1" fieldTable="formonly" identifier="lb46"/>
+					<TextField visible="true" gridItemLocation="1,1,1,1" fieldTable="" identifier="appl_amt" classNames="fcls_data_widget,fcls_align_left,fcls_length_10qch"/>
+					<Label isDynamic="true" text="Credit Date" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,2,1,1" fieldTable="formonly" identifier="lb44"/>
+					<TextField visible="true" gridItemLocation="1,2,1,1" fieldTable="" identifier="cred_date" classNames="fcls_data_widget,fcls_align_left,fcls_length_10qch"/>
+					<Label text="Currency" isDynamic="true" visible="true" identifier="lb77" gridItemLocation="0,3,1,1"/>
+					<TextField visible="true" identifier="currency_code" gridItemLocation="1,3,1,1" fieldTable="currency" classNames="fcls_data_widget,fcls_align_left,fcls_length_10qch"/>
+				</GridPanel>
+			</GroupBox>
+			<Table classNames="fcls_table_cnt" preferredSize="80qch,15qch" minSize="20qch,5qch" visible="true" verticalAlignment="Stretch" horizontalAlignment="Stretch" gridItemLocation="0,3,1,1" fieldTable="" identifier="sr_invoicepay">
+				<TableColumn text="appl_num" resizable="true" visible="true" fieldTable="" identifier="tc_appl_num">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="16.66%" gridMinLength="5rem" gridMaxLength="10rem"/>
+					</TableColumn.columnLength>
+					<TextField visible="true" fieldTable="" identifier="appl_num"/>
+				</TableColumn>
+				<TableColumn text="inv_num" resizable="true" visible="true" fieldTable="" identifier="tc_inv_num">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="16.66%" gridMinLength="5rem" gridMaxLength="10rem"/>
+					</TableColumn.columnLength>
+					<TextField visible="true" fieldTable="" identifier="inv_num"/>
+				</TableColumn>
+				<TableColumn text="apply_num" resizable="true" visible="true" fieldTable="" identifier="tc_apply_num">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="16.66%" gridMinLength="5rem" gridMaxLength="10rem"/>
+					</TableColumn.columnLength>
+					<TextField visible="true" fieldTable="" identifier="apply_num"/>
+				</TableColumn>
+				<TableColumn text="pay_date" resizable="true" visible="true" fieldTable="" identifier="tc_pay_date">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="16.66%" gridMinLength="5rem" gridMaxLength="10rem"/>
+					</TableColumn.columnLength>
+					<TextField visible="true" fieldTable="" identifier="pay_date"/>
+				</TableColumn>
+				<TableColumn text="pay_amt" resizable="true" visible="true" fieldTable="" identifier="tc_pay_amt">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="16.66%" gridMinLength="5rem" gridMaxLength="10rem"/>
+					</TableColumn.columnLength>
+					<TextField visible="true" fieldTable="" identifier="pay_amt"/>
+				</TableColumn>
+				<TableColumn text="disc_amt" resizable="true" visible="true" fieldTable="" identifier="tc_disc_amt">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="16.66%" gridMinLength="5rem" gridMaxLength="10rem"/>
+					</TableColumn.columnLength>
+					<TextField visible="true" fieldTable="" identifier="disc_amt"/>
+				</TableColumn>
+			</Table>
+			<GridPanel classNames="fcls_statusbar_cnt" visible="true" verticalAlignment="Bottom" horizontalAlignment="Stretch" gridItemLocation="0,4,1,1" fieldTable="formonly" identifier="cntStatusBar">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="100%"/>
+				</GridPanel.gridColumnDefinitions>
+				<Label isDynamic="true" text="" classNames="fcls_sblabel" visible="true" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="lbInfo1"/>
+				<Label isDynamic="true" text="" classNames="fcls_sblabel" visible="true" gridItemLocation="0,1,1,1" fieldTable="formonly" identifier="lbInfo2"/>
+			</GridPanel>
+		</GridPanel>
+	</form.rootContainer>
+	<form.screenRecords>
+		<ScreenRecord identifier="s_reqthdr" fields=""/>
+		<ScreenRecord identifier="FORMONLY" fields="print_opt,credithead.cust_code,name_text,cred_num,total_amt,appl_amt,cred_date"/>
+		<ScreenRecord identifier="sr_invoicepay" fields="appl_num,inv_num,apply_num,pay_date,pay_amt,disc_amt"/>
+	</form.screenRecords>
+</form>
+

@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?><form xmlns="http://namespaces.querix.com/2015/fglForms">
+	<form.rootContainer>
+		<GridPanel classNames="fcls_rootContainer" fieldTable="" horizontalAlignment="Left" identifier="rootContainer" verticalAlignment="Top">
+			<GridPanel.gridRowDefinitions>
+				<GridRowDefinition gridLengthValue=""/>
+				<GridRowDefinition gridLengthValue=""/>
+				<GridRowDefinition gridLengthValue=""/>
+				<GridRowDefinition gridLengthValue=""/>
+				<GridRowDefinition gridLengthValue=""/>
+				<GridRowDefinition gridLengthValue=""/>
+			</GridPanel.gridRowDefinitions>
+			<GridPanel.gridColumnDefinitions>
+				<GridColumnDefinition gridLengthValue="100%"/>
+			</GridPanel.gridColumnDefinitions>
+			<GridPanel classNames="fcls_title_cnt" fieldTable="formonly" gridItemLocation="0,0,1,1" identifier="cntTitle" verticalAlignment="Top" visible="true">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="100%"/>
+					<GridColumnDefinition gridLengthValue=""/>
+				</GridPanel.gridColumnDefinitions>
+				<Label classNames="fcls_title_lb" fieldTable="formonly" gridItemLocation="0,0,1,1" identifier="header_text" isDynamic="true" text="Account Budget Detail" visible="true"/>
+				<Label classNames="fcls_title_lb" fieldTable="" gridItemLocation="1,0,1,1" identifier="lbFormName" isDynamic="true" text="G105" visible="true"/>
+			</GridPanel>
+			<GroupBox classNames="fcls_detail_gb_cnt" fieldTable="" gridItemLocation="0,1,1,1" identifier="cntDetail1GroupBox" title="Account" visible="true">
+				<GridPanel classNames="fcls_detail_gb_cnt_sub,fcls_detail_cnt_sub,fcls_data_cnt,fcls_align_left" fieldTable="formonly" gridItemLocation="0,0,1,1" horizontalAlignment="Left" identifier="cntDetail1Sub" verticalAlignment="Top" visible="true">
+					<GridPanel.gridRowDefinitions>
+						<GridRowDefinition gridLengthValue=""/>
+						<GridRowDefinition gridLengthValue=""/>
+					</GridPanel.gridRowDefinitions>
+					<GridPanel.gridColumnDefinitions>
+						<GridColumnDefinition gridLengthValue="" gridMinLength="10rem"/>
+						<GridColumnDefinition gridLengthValue=""/>
+						<GridColumnDefinition gridLengthValue=""/>
+					</GridPanel.gridColumnDefinitions>
+					<Label classNames="fcls_fieldlabel,fcls_align_left" fieldTable="formonly" gridItemLocation="0,0,1,1" identifier="lb57" isDynamic="true" text="G/L Account" visible="true"/>
+					<ComboBox classNames="fcls_data_widget,fcls_align_left,fcls_length_10qch,list-show-value-text,field-show-value" comment="G/L Account of the required GL account" dataType="Char,,,,18" editable="true" fieldTable="accounthist" gridItemLocation="1,0,1,1" identifier="acct_code" preferredSize="19qch,1qch" toolTip="G/L Account of the required GL account"/>
+					<TextField classNames="fcls_data_widget,fcls_align_left,fcls_length_40qch"  dataType="Char,,,,40" fieldTable="coa" gridItemLocation="2,0,1,1" identifier="desc_text" noEntry="true" preferredSize="35qch,1qch"/>
+					<Label classNames="fcls_fieldlabel,fcls_align_left" fieldTable="" gridItemLocation="0,1,1,1" identifier="lb73" isDynamic="true" text="Year/Period" visible="true"/>
+					<StackPanel fieldTable="" gridItemLocation="1,1,1,1" identifier="c1" visible="true">
+						<ComboBox classNames="fcls_data_widget,fcls_align_left,fcls_length_05qch" comment="The year of this account ledger's period totals" dataType="SmallInt,,,," editable="true" fieldTable="accounthist" gridItemLocation="7,3,4,1" identifier="year_num" preferredSize="5qch,1qch" toolTip="The year of this account ledger's period totals"/>
+						<Label fieldTable="" gridItemLocation="12,3,1,1" identifier="label5" text="/"/>
+						<ComboBox classNames="fcls_data_widget,fcls_align_left,fcls_length_05qch" comment="The period or month of this account ledger's totals" dataType="SmallInt,,,," editable="true" fieldTable="accounthist" gridItemLocation="13,3,2,1" identifier="period_num" preferredSize="4qch,1qch" toolTip="The period or month of this account ledger's totals"/>
+					</StackPanel>
+				</GridPanel>
+			</GroupBox>
+			<GroupBox classNames="fcls_detail_gb_cnt" fieldTable="formonly" gridItemLocation="0,2,1,1" identifier="cntDetail2GroupBox" title="Year Balances" verticalAlignment="Top" visible="true">
+				<GridPanel classNames="fcls_detail_gb_cnt_sub,fcls_detail_cnt_sub,fcls_data_cnt,fcls_align_left" fieldTable="formonly" horizontalAlignment="Left" identifier="cntDetail2Sub" verticalAlignment="Top" visible="true">
+					<GridPanel.gridRowDefinitions>
+						<GridRowDefinition gridLengthValue=""/>
+					</GridPanel.gridRowDefinitions>
+					<GridPanel.gridColumnDefinitions>
+						<GridColumnDefinition gridLengthValue="" gridMinLength="10rem"/>
+						<GridColumnDefinition gridLengthValue=""/>
+						<GridColumnDefinition gridLengthValue="" gridMinLength="10rem"/>
+						<GridColumnDefinition gridLengthValue=""/>
+					</GridPanel.gridColumnDefinitions>
+					<Label fieldTable="" gridItemLocation="0,0,1,1" identifier="label7" text="Current"/>
+					<TextField classNames="fcls_data_widget,fcls_align_left,fcls_length_20qch" dataType="Decimal,,,2,16" fieldTable="account" gridItemLocation="1,0,1,1" identifier="bal_amt" noEntry="true" preferredSize="16qch,1qch"/>
+					<Label fieldTable="" gridItemLocation="2,0,1,1" identifier="label8" text="YTD Actual"/>
+					<TextField classNames="fcls_data_widget,fcls_align_left,fcls_length_20qch" comment="Running balance of the account for the YTD amount before any closing entries" dataType="Decimal,,,2,16" fieldTable="accounthist" gridItemLocation="3,0,1,1" identifier="ytd_pre_close_amt" preferredSize="16qch,1qch" toolTip="Running balance of the account for the YTD amount before any closing entries"/>
+				</GridPanel>
+			</GroupBox>
+			<GroupBox classNames="fcls_detail_gb_cnt" fieldTable="formonly" gridItemLocation="0,3,1,1" identifier="cntDetail3GroupBox" title="Period Balances" visible="true">
+				<GridPanel classNames="fcls_detail_gb_cnt_sub,fcls_detail_cnt_sub,fcls_data_cnt,fcls_align_left" fieldTable="formonly" horizontalAlignment="Left" identifier="cntDetail3Sub" verticalAlignment="Top" visible="true">
+					<GridPanel.gridRowDefinitions>
+						<GridRowDefinition gridLengthValue=""/>
+						<GridRowDefinition gridLengthValue=""/>
+						<GridRowDefinition gridLengthValue=""/>
+					</GridPanel.gridRowDefinitions>
+					<GridPanel.gridColumnDefinitions>
+						<GridColumnDefinition gridLengthValue="" gridMinLength="10rem"/>
+						<GridColumnDefinition gridLengthValue=""/>
+						<GridColumnDefinition gridLengthValue="" gridMinLength="10rem"/>
+						<GridColumnDefinition gridLengthValue=""/>
+					</GridPanel.gridColumnDefinitions>
+					<Label fieldTable="" gridItemLocation="0,0,1,1" identifier="label10" text="Opening"/>
+					<TextField classNames="fcls_data_widget,fcls_align_left,fcls_length_20qch" comment="The balance of this account at the beginning of the period" dataType="Decimal,,,2,16" fieldTable="accounthist" gridItemLocation="1,0,1,1" identifier="open_amt" preferredSize="16qch,1qch" toolTip="The balance of this account at the beginning of the period"/>
+					<Label fieldTable="" gridItemLocation="2,0,1,1" identifier="label11" text="Debits"/>
+					<TextField classNames="fcls_data_widget,fcls_align_left,fcls_length_20qch" comment="Total debits to this account for the given period" dataType="Decimal,,,2,16" fieldTable="accounthist" gridItemLocation="3,0,1,1" identifier="debit_amt" preferredSize="16qch,1qch" toolTip="Total debits to this account for the given period"/>
+					<Label fieldTable="" gridItemLocation="0,1,1,1" identifier="label12" text="Closing"/>
+					<TextField classNames="fcls_data_widget,fcls_align_left,fcls_length_20qch" comment="The balance of this account at the end of the period" dataType="Decimal,,,2,16" fieldTable="accounthist" gridItemLocation="1,1,1,1" identifier="close_amt" preferredSize="16qch,1qch" toolTip="The balance of this account at the end of the period"/>
+					<Label fieldTable="" gridItemLocation="2,1,1,1" identifier="label13" text="Credits"/>
+					<TextField classNames="fcls_data_widget,fcls_align_left,fcls_length_20qch" comment="Total credits to this account for the given period" dataType="Decimal,,,2,16" fieldTable="accounthist" gridItemLocation="3,1,1,1" identifier="credit_amt" preferredSize="16qch,1qch" toolTip="Total credits to this account for the given period"/>
+					<Label fieldTable="" gridItemLocation="0,2,1,1" identifier="label14" text="Actual"/>
+					<TextField classNames="fcls_data_widget,fcls_align_left,fcls_length_20qch" comment="The actual balance for this month" dataType="Decimal,,,2,16" fieldTable="accounthist" gridItemLocation="1,2,1,1" identifier="pre_close_amt" preferredSize="16qch,1qch" toolTip="The actual balance for this month"/>
+					<Label fieldTable="" gridItemLocation="2,2,1,1" identifier="label15" text="Quantity"/>
+					<TextField classNames="fcls_data_widget,fcls_align_left,fcls_length_20qch" comment="Total quantity of this account for the given period" dataType="Float,,,," fieldTable="accounthist" gridItemLocation="3,2,1,1" identifier="stats_qty" preferredSize="15qch,1qch" toolTip="Total quantity of this account for the given period"/>
+				</GridPanel>
+			</GroupBox>
+			<GroupBox classNames="fcls_detail_gb_cnt" fieldTable="" gridItemLocation="0,4,1,1" identifier="cntDetail4GroupBox" title="Period Budgets" visible="true">
+				<GridPanel classNames="fcls_detail_gb_cnt_sub,fcls_detail_cnt_sub,fcls_data_cnt,fcls_align_left" fieldTable="formonly" gridItemLocation="0,0,1,1" horizontalAlignment="Left" identifier="cntDetail4Sub" verticalAlignment="Top" visible="true">
+					<GridPanel.gridRowDefinitions>
+						<GridRowDefinition gridLengthValue=""/>
+						<GridRowDefinition gridLengthValue=""/>
+						<GridRowDefinition gridLengthValue=""/>
+					</GridPanel.gridRowDefinitions>
+					<GridPanel.gridColumnDefinitions>
+						<GridColumnDefinition gridLengthValue="" gridMinLength="10rem"/>
+						<GridColumnDefinition gridLengthValue=""/>
+						<GridColumnDefinition gridLengthValue="" gridMinLength="10rem"/>
+						<GridColumnDefinition gridLengthValue=""/>
+						<GridColumnDefinition gridLengthValue=""/>
+					</GridPanel.gridColumnDefinitions>
+					<Label fieldTable="" gridItemLocation="0,0,1,1" identifier="label17" text="Budget 1"/>
+					<TextField classNames="fcls_data_widget,fcls_align_left,fcls_length_20qch" comment="The period budget1 allocated for this account" dataType="Decimal,,,2,16" fieldTable="accounthist" gridItemLocation="1,0,1,1" identifier="budg1_amt" preferredSize="16qch,1qch" toolTip="The period budget1 allocated for this account"/>
+					<Label classNames="fcls_fieldlabel,fcls_align_left" fieldTable="" gridItemLocation="2,0,1,1" identifier="lb115" isDynamic="true" text="Budget 4" visible="true"/>
+					<TextField classNames="fcls_data_widget,fcls_align_left,fcls_length_20qch" comment="The period budget4 allocated for this account" dataType="Decimal,,,2,16" fieldTable="accounthist" gridItemLocation="3,0,2,1" identifier="budg4_amt" preferredSize="16qch,1qch" toolTip="The period budget4 allocated for this account"/>
+					<Label fieldTable="" gridItemLocation="0,1,1,1" identifier="label19" text="Budget 2"/>
+					<TextField classNames="fcls_data_widget,fcls_align_left,fcls_length_20qch" comment="The period budget2 allocated for this account" dataType="Decimal,,,2,16" fieldTable="accounthist" gridItemLocation="1,1,1,1" identifier="budg2_amt" preferredSize="16qch,1qch" toolTip="The period budget2 allocated for this account"/>
+					<Label classNames="fcls_fieldlabel,fcls_align_left" fieldTable="" gridItemLocation="2,1,1,1" identifier="lb116" isDynamic="true" text="Budget 5" visible="true"/>
+					<TextField classNames="fcls_data_widget,fcls_align_left,fcls_length_20qch" comment="The period budget5 allocated for this account" dataType="Decimal,,,2,16" fieldTable="accounthist" gridItemLocation="3,1,2,1" identifier="budg5_amt" preferredSize="16qch,1qch" toolTip="The period budget5 allocated for this account"/>
+					<Label fieldTable="" gridItemLocation="0,2,1,1" identifier="label21" text="Budget 3"/>
+					<TextField classNames="fcls_data_widget,fcls_align_left,fcls_length_20qch" comment="The period budget3 allocated for this account" dataType="Decimal,,,2,16" fieldTable="accounthist" gridItemLocation="1,2,1,1" identifier="budg3_amt" preferredSize="16qch,1qch" toolTip="The period budget3 allocated for this account"/>
+					<Label classNames="fcls_fieldlabel,fcls_align_left" fieldTable="" gridItemLocation="2,2,1,1" identifier="lb120" isDynamic="true" text="Budget 6" visible="true"/>
+					<TextField classNames="fcls_data_widget,fcls_align_left,fcls_length_20qch" comment="The period budget6 allocated for this account" dataType="Decimal,,,2,16" fieldTable="accounthist" gridItemLocation="3,2,2,1" identifier="budg6_amt" preferredSize="16qch,1qch" toolTip="The period budget6 allocated for this account"/>
+				</GridPanel>
+			</GroupBox>
+			<GridPanel classNames="fcls_statusbar_cnt" fieldTable="formonly" gridItemLocation="0,5,1,1" identifier="cntStatusBar" verticalAlignment="Top" visible="true">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="100%"/>
+				</GridPanel.gridColumnDefinitions>
+				<Label classNames="fcls_sblabel" fieldTable="formonly" gridItemLocation="0,0,1,1" identifier="lbInfo1" isDynamic="true" text="" visible="true"/>
+				<Label classNames="fcls_sblabel" fieldTable="formonly" gridItemLocation="0,1,1,1" identifier="lbInfo2" isDynamic="true" text="" visible="true"/>
+			</GridPanel>
+		</GridPanel>
+	</form.rootContainer>
+	<form.screenRecords>
+		<ScreenRecord fields="bal_amt" identifier="account"/>
+		<ScreenRecord fields="acct_code,year_num,period_num,open_amt,debit_amt,credit_amt,close_amt,pre_close_amt,stats_qty,budg1_amt,budg2_amt,budg3_amt,budg4_amt,budg5_amt,budg6_amt,ytd_pre_close_amt" identifier="accounthist"/>
+		<ScreenRecord fields="desc_text" identifier="coa"/>
+		<ScreenRecord identifier="FormOnly"/>
+	</form.screenRecords>
+</form>

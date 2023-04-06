@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form xmlns="http://namespaces.querix.com/2015/fglForms">
+	<form.rootContainer>
+		<CoordPanel preferredSize="79qch,20qch" fieldTable="" identifier="coord1">
+			<Label text="Code" location="0qch,0qch" preferredSize="4qch,1qch" fieldTable="" identifier="label1"/>
+			<TextField noEntry="true" dataType="Integer,,,," location="4qch,0qch" preferredSize="12qch,1qch" fieldTable="mailing_role" identifier="mailing_role_code"/>
+			<Label text="Name" location="17qch,0qch" preferredSize="4qch,1qch" fieldTable="" identifier="label2"/>
+			<TextField toCase="Up" dataType="Char,,,,20" location="21qch,0qch" preferredSize="21qch,1qch" toolTip="Name of the role" fieldTable="mailing_role" comment="Name of the role" identifier="mailing_name"/>
+			<Label text="Valid from" location="43qch,0qch" preferredSize="10qch,1qch" fieldTable="" identifier="label3"/>
+			<TextField dataType="Date,,,," location="53qch,0qch" preferredSize="11qch,1qch" toolTip="Date the entry is valid from" fieldTable="mailing_role" comment="Date the entry is valid from" identifier="valid_from"/>
+			<Label text="to" location="65qch,0qch" preferredSize="2qch,1qch" fieldTable="" identifier="label4"/>
+			<TextField dataType="Date,,,," location="67qch,0qch" preferredSize="11qch,1qch" toolTip="Date the entry is valid to " fieldTable="mailing_role" comment="Date the entry is valid to " identifier="valid_to"/>
+			<Label text="Select SQL where part:" location="18qch,1qch" preferredSize="22qch,1qch" fieldTable="" identifier="label5"/>
+			<TextField autonext="true" dataType="Char,,,,800" location="0qch,2qch" preferredSize="71qch,1qch" toolTip="SQL statemant where part that defines the selection criteria" fieldTable="mailing_role" comment="SQL statemant where part that defines the selection criteria" identifier="select_sql"/>
+			<TextField autonext="true" dataType="Char,,,," location="0qch,3qch" preferredSize="71qch,1qch" toolTip="SQL statemant where part that defines the selection criteria" fieldTable="formonly" comment="SQL statemant where part that defines the selection criteria" identifier="select_sql2"/>
+			<TextField autonext="true" dataType="Char,,,," location="0qch,4qch" preferredSize="71qch,1qch" toolTip="SQL statemant where part that defines the selection criteria" fieldTable="formonly" comment="SQL statemant where part that defines the selection criteria" identifier="select_sql3"/>
+			<TextField autonext="true" dataType="Char,,,," location="0qch,5qch" preferredSize="71qch,1qch" toolTip="SQL statemant where part that defines the selection criteria" fieldTable="formonly" comment="SQL statemant where part that defines the selection criteria" identifier="select_sql4"/>
+			<TextField autonext="true" dataType="Char,,,," location="0qch,6qch" preferredSize="71qch,1qch" toolTip="SQL statemant where part that defines the selection criteria" fieldTable="formonly" comment="SQL statemant where part that defines the selection criteria" identifier="select_sql5"/>
+			<TextField autonext="true" dataType="Char,,,," location="0qch,7qch" preferredSize="71qch,1qch" toolTip="SQL statemant where part that defines the selection criteria" fieldTable="formonly" comment="SQL statemant where part that defines the selection criteria" identifier="select_sql6"/>
+			<TextField autonext="true" dataType="Char,,,," location="0qch,8qch" preferredSize="71qch,1qch" toolTip="SQL statemant where part that defines the selection criteria" fieldTable="formonly" comment="SQL statemant where part that defines the selection criteria" identifier="select_sql7"/>
+			<TextField autonext="true" dataType="Char,,,," location="0qch,9qch" preferredSize="71qch,1qch" toolTip="SQL statemant where part that defines the selection criteria" fieldTable="formonly" comment="SQL statemant where part that defines the selection criteria" identifier="select_sql8"/>
+			<TextField dataType="Char,,,," location="0qch,10qch" preferredSize="71qch,1qch" toolTip="SQL statemant where part that defines the selection criteria" fieldTable="formonly" comment="SQL statemant where part that defines the selection criteria" identifier="select_sql9"/>
+			<Label text="Selection criteria description:" location="13qch,11qch" preferredSize="31qch,1qch" fieldTable="" identifier="label6"/>
+			<TextField autonext="true" reverse="true" dataType="Char,,,,800" location="0qch,12qch" preferredSize="71qch,1qch" toolTip="SQL statemant selection criteria description" fieldTable="mailing_role" comment="SQL statemant selection criteria description" identifier="select_desc"/>
+			<TextField autonext="true" reverse="true" dataType="Char,,,," location="0qch,13qch" preferredSize="71qch,1qch" toolTip="SQL statemant selection criteria description" fieldTable="formonly" comment="SQL statemant selection criteria description" identifier="select_desc2"/>
+			<TextField autonext="true" reverse="true" dataType="Char,,,," location="0qch,14qch" preferredSize="71qch,1qch" toolTip="SQL statemant selection criteria description" fieldTable="formonly" comment="SQL statemant selection criteria description" identifier="select_desc3"/>
+			<TextField autonext="true" reverse="true" dataType="Char,,,," location="0qch,15qch" preferredSize="71qch,1qch" toolTip="SQL statemant selection criteria description" fieldTable="formonly" comment="SQL statemant selection criteria description" identifier="select_desc4"/>
+			<TextField autonext="true" reverse="true" dataType="Char,,,," location="0qch,16qch" preferredSize="71qch,1qch" toolTip="SQL statemant selection criteria description" fieldTable="formonly" comment="SQL statemant selection criteria description" identifier="select_desc5"/>
+			<TextField autonext="true" reverse="true" dataType="Char,,,," location="0qch,17qch" preferredSize="71qch,1qch" toolTip="SQL statemant selection criteria description" fieldTable="formonly" comment="SQL statemant selection criteria description" identifier="select_desc6"/>
+			<TextField autonext="true" reverse="true" dataType="Char,,,," location="0qch,18qch" preferredSize="71qch,1qch" toolTip="SQL statemant selection criteria description" fieldTable="formonly" comment="SQL statemant selection criteria description" identifier="select_desc7"/>
+			<TextField autonext="true" reverse="true" dataType="Char,,,," location="0qch,19qch" preferredSize="71qch,1qch" toolTip="SQL statemant selection criteria description" fieldTable="formonly" comment="SQL statemant selection criteria description" identifier="select_desc8"/>
+		</CoordPanel>
+	</form.rootContainer>
+	<form.screenRecords>
+		<ScreenRecord identifier="S_code" fields="mailing_role_code,mailing_name,valid_from,valid_to,select_sql,select_sql2,select_sql3,select_sql4,select_sql5,select_sql6,select_sql7,select_sql8,select_sql9,select_desc,select_desc2,select_desc3,select_desc4,select_desc5,select_desc6,select_desc7,select_desc8"/>
+		<ScreenRecord identifier="formonly" fields="select_sql2,select_sql3,select_sql4,select_sql5,select_sql6,select_sql7,select_sql8,select_sql9,select_desc2,select_desc3,select_desc4,select_desc5,select_desc6,select_desc7,select_desc8"/>
+		<ScreenRecord identifier="mailing_role" fields="mailing_role_code,mailing_name,valid_from,valid_to,select_sql,select_desc"/>
+	</form.screenRecords>
+</form>
+

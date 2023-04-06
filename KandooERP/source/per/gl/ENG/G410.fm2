@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form xmlns="http://namespaces.querix.com/2015/fglForms">
+	<form.rootContainer>
+		<GridPanel classNames="fcls_rootContainer" verticalAlignment="Stretch" horizontalAlignment="Stretch" fieldTable="" identifier="rootContainer">
+			<GridPanel.gridRowDefinitions>
+				<GridRowDefinition gridLengthValue=""/>
+				<GridRowDefinition gridLengthValue=""/>
+				<GridRowDefinition gridLengthValue=""/>
+				<GridRowDefinition gridLengthValue=""/>
+				<GridRowDefinition gridLengthValue="100%"/>
+				<GridRowDefinition gridLengthValue=""/>
+			</GridPanel.gridRowDefinitions>
+			<GridPanel.gridColumnDefinitions>
+				<GridColumnDefinition gridLengthValue="100%"/>
+			</GridPanel.gridColumnDefinitions>
+			<GridPanel classNames="fcls_title_cnt" visible="true" verticalAlignment="Top" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="cnttitle">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="100%"/>
+					<GridColumnDefinition gridLengthValue=""/>
+				</GridPanel.gridColumnDefinitions>
+				<Label isDynamic="true" text="Disbursements" classNames="fcls_title_lb" visible="true" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="header_text"/>
+				<Label isDynamic="true" text="G410" classNames="fcls_title_lb" visible="true" gridItemLocation="1,0,1,1" fieldTable="" identifier="lbformname"/>
+			</GridPanel>
+			<GridPanel classNames="fcls_detail_cnt,fcls_data_cnt,fcls_align_hstretch" visible="true" verticalAlignment="Top" horizontalAlignment="Stretch" gridItemLocation="0,1,1,1" fieldTable="formonly" identifier="cntdetail1">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue=""/>
+				</GridPanel.gridColumnDefinitions>
+				<TextField noEntry="true" dataType="Char,,,," classNames="fcls_data_widget,fcls_align_hstretch" location="29qch,0qch" preferredSize="7qch,1qch" horizontalAlignment="Stretch" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="amt_type_text"/>
+			</GridPanel>
+			<GridPanel classNames="fcls_detail_cnt,fcls_data_cnt,fcls_align_left" visible="true" verticalAlignment="Top" gridItemLocation="0,2,1,1" fieldTable="formonly" identifier="cntdetail2">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="" gridMinLength="10rem"/>
+					<GridColumnDefinition gridLengthValue=""/>
+				</GridPanel.gridColumnDefinitions>
+				<Label isDynamic="true" text="Transaction Amount" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="lb36"/>
+				<Label isDynamic="true" text="Dissected Amount" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,1,1,1" fieldTable="formonly" identifier="lb37"/>
+				<TextField noEntry="true" dataType="Decimal,,,2,16" classNames="fcls_data_widget,fcls_align_left,fcls_length_20qch" location="23qch,2qch" preferredSize="14qch,1qch" gridItemLocation="1,0,1,1" fieldTable="formonly" identifier="total_tran_amt"/>
+				<TextField noEntry="true" dataType="Decimal,,,2,16" classNames="fcls_data_widget,fcls_align_left,fcls_length_20qch" location="23qch,3qch" preferredSize="14qch,1qch" gridItemLocation="1,1,1,1" fieldTable="formonly" identifier="dissect_amt"/>
+			</GridPanel>
+			<GridPanel classNames="fcls_detail_cnt,fcls_data_cnt" visible="true" verticalAlignment="Top" horizontalAlignment="Left" gridItemLocation="0,3,1,1" fieldTable="" identifier="cntdetail3">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="" gridMinLength="10rem"/>
+					<GridColumnDefinition gridLengthValue=""/>
+				</GridPanel.gridColumnDefinitions>
+				<TextField noEntry="true" dataType="Char,,,," classNames="fcls_data_widget,fcls_align_left,fcls_length_10qch" location="38qch,6qch" preferredSize="7qch,1qch" gridItemLocation="1,0,1,1" fieldTable="formonly" identifier="amt_type_text2"/>
+			</GridPanel>
+			<Table rowCount="12" location="0qch,7qch" preferredSize="75qch,12qch" gridItemLocation="0,4,1,1" fieldTable="" identifier="sr_disbdetl">
+				<TableColumn text="GL-Account" fieldTable="" identifier="f4">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="15rem"/>
+					</TableColumn.columnLength>
+					<ComboBox toCase="Up" dataType="Char,,,,18" toolTip=" The GL account applicable to this disbursement (W)" comment=" The GL account applicable to this disbursement (W)" fieldTable="bankdetails" identifier="acct_code"/>
+				</TableColumn>
+				<TableColumn text="Analysis" fieldTable="" identifier="f5">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="15rem"/>
+					</TableColumn.columnLength>
+					<TextField dataType="Char,,,,16" toolTip=" Analysis information " comment=" Analysis information " fieldTable="bankdetails" identifier="ref_text"/>
+				</TableColumn>
+				<TableColumn text="Tr. Amount" fieldTable="" identifier="f6">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="15rem"/>
+					</TableColumn.columnLength>
+					<TextField dataType="Money,,,2,12" toolTip=" Amount of the disbursement" comment=" Amount of the disbursement" fieldTable="bankdetails" identifier="tran_amt"/>
+				</TableColumn>
+				<TableColumn text="Description" fieldTable="" identifier="f7">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="100%"/>
+					</TableColumn.columnLength>
+					<TextField dataType="Char,,,,30" toolTip=" Description of disbursement - CTRL-N for Notes " comment=" Description of disbursement - CTRL-N for Notes " fieldTable="bankdetails" identifier="desc_text"/>
+				</TableColumn>
+			</Table>
+			<GridPanel classNames="fcls_statusbar_cnt" visible="true" verticalAlignment="Top" gridItemLocation="0,5,1,1" fieldTable="formonly" identifier="cntStatusBar">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="100%"/>
+				</GridPanel.gridColumnDefinitions>
+				<Label isDynamic="true" text="" classNames="fcls_sblabel" visible="true" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="lbInfo1"/>
+				<Label isDynamic="true" text="" classNames="fcls_sblabel" visible="true" gridItemLocation="0,1,1,1" fieldTable="formonly" identifier="lbInfo2"/>
+			</GridPanel>
+		</GridPanel>
+	</form.rootContainer>
+	<form.screenRecords>
+		<ScreenRecord identifier="sr_disbdetl" fields="acct_code,ref_text,tran_amt,desc_text"/>
+		<ScreenRecord identifier="bankdetails" fields="acct_code,ref_text,tran_amt,desc_text"/>
+		<ScreenRecord identifier="formonly" fields="amt_type_text,total_tran_amt,dissect_amt,amt_type_text2"/>
+	</form.screenRecords>
+</form>
+

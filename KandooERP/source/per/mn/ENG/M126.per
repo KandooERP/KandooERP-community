@@ -1,0 +1,61 @@
+{
+###########################################################################
+# This program is free software; you can redistribute it and/or modify it
+# under the terms of the GNU General Public License as published by the
+# Free Software Foundation; either version 2 of the License, or (at your
+# option) any later version.
+#
+# This program is distributed in the hope that it will be useful, but
+# WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+# General Public License for more details.
+#
+# You should have received a copy of the GNU General Public License along
+# with this program; if not, write to the Free Software Foundation, Inc.,
+# 59 Temple Place, Suite 330, Boston, MA 02111-1307 USA
+#
+###########################################################################
+
+	 $Id: M126.per,v 1.1 2003/05/20 23:53:06 tpavlek Exp $
+}
+
+
+database kandoodb
+
+screen
+{
+                   Manufacturing Product Lookup              M126
+\g------------------------------------------------------------------\g
+ Product           Description                   Type
+\g------------------------------------------------------------------\g
+[f001           ][f002                          ][a][f003        ]
+[f001           ][f002                          ][a][f003        ]
+[f001           ][f002                          ][a][f003        ]
+[f001           ][f002                          ][a][f003        ]
+[f001           ][f002                          ][a][f003        ]
+[f001           ][f002                          ][a][f003        ]
+[f001           ][f002                          ][a][f003        ]
+[f001           ][f002                          ][a][f003        ]
+[f001           ][f002                          ][a][f003        ]
+[f001           ][f002                          ][a][f003        ]
+}
+
+tables
+prodmfg
+product
+
+attributes
+f001 = prodmfg.part_code, upshift,
+comments = " Product code of a manufacturing product";
+f002 = product.desc_text, comments = " Description of a manufacturing product";
+a    = prodmfg.part_type_ind, upshift, include=("G","M","P","R"),
+comments = " G = Generic, M = Manufactured, P = Phantom, R = Raw Material";
+f003 = formonly.desc_text type char;
+
+instructions
+delimiters "  "
+
+screen record sr_prodmfg[10] (prodmfg.part_code,
+                              product.desc_text,
+                              part_type_ind,
+                              formonly.desc_text)

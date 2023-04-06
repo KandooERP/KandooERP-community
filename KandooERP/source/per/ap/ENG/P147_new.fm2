@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form xmlns="http://namespaces.querix.com/2015/fglForms">
+	<form.rootContainer>
+		<GridPanel classNames="fcls_rootContainer" verticalAlignment="Stretch" horizontalAlignment="Stretch" fieldTable="" identifier="rootContainer">
+			<GridPanel.gridRowDefinitions>
+				<GridRowDefinition gridLengthValue=""/>
+				<GridRowDefinition gridLengthValue="100%"/>
+				<GridRowDefinition gridLengthValue=""/>
+			</GridPanel.gridRowDefinitions>
+			<GridPanel.gridColumnDefinitions>
+				<GridColumnDefinition gridLengthValue="100%"/>
+			</GridPanel.gridColumnDefinitions>
+			<GridPanel classNames="fcls_title_cnt" visible="true" verticalAlignment="Top" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="cntTitle">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="100%"/>
+					<GridColumnDefinition gridLengthValue=""/>
+				</GridPanel.gridColumnDefinitions>
+				<Label isDynamic="true" text="AP Posting" classNames="fcls_title_lb" visible="true" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="header_text"/>
+				<Label isDynamic="true" text="P147" classNames="fcls_title_lb" visible="true" gridItemLocation="1,0,1,1" fieldTable="" identifier="lbFormName"/>
+			</GridPanel>
+			<Table rowCount="12" preferredSize="35qch,12qch" gridItemLocation="0,1,1,1" fieldTable="" identifier="sr_period">
+				<TableColumn text="Year" fieldTable="" identifier="tc_year_num">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="12rem"/>
+					</TableColumn.columnLength>
+					<ComboBox dataType="SmallInt,,,," toolTip=" The financial year of this period " comment=" The financial year of this period " fieldTable="period" identifier="year_num" enable="true"/>
+				</TableColumn>
+				<TableColumn text="Period" fieldTable="" identifier="tc_period_num">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="12rem"/>
+					</TableColumn.columnLength>
+					<ComboBox dataType="SmallInt,,,," toolTip=" The period number " comment=" The period number " fieldTable="period" identifier="period_num" enable="true"/>
+				</TableColumn>
+				<TableColumn text="Objects" resizable="true" visible="true" identifier="tc_f3">
+					<TextField visible="true" identifier="ap_object" fieldTable="formonly"/>
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="12rem"/>
+					</TableColumn.columnLength>
+				</TableColumn>
+				<TableColumn text="Approval" resizable="true" visible="true" identifier="tc_f4">
+					<TextField visible="true" identifier="approval_status" fieldTable="formonly"/>
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="12rem"/>
+					</TableColumn.columnLength>
+				</TableColumn>
+				<TableColumn text="Status" resizable="true" visible="true" identifier="tc_f5">
+					<TextField visible="true" identifier="readiness" fieldTable="formonly"/>
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="12rem"/>
+					</TableColumn.columnLength>
+				</TableColumn>
+				<TableColumn text="Count" resizable="true" visible="true" identifier="tc_f6">
+					<TextField visible="true" identifier="objects_count" fieldTable="formonly"/>
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="8rem"/>
+					</TableColumn.columnLength>
+				</TableColumn>
+				<TableColumn text="To be Posted" resizable="true" visible="true" identifier="tc_f7">
+					<CheckBox title="Post" visible="true" notNull="true" identifier="post_req" fieldTable="formonly">
+						<CheckBox.checkedValue>
+							<IntegerLiteral integerValue="1"/>
+						</CheckBox.checkedValue>
+						<CheckBox.uncheckedValue>
+							<IntegerLiteral integerValue="0"/>
+						</CheckBox.uncheckedValue>
+					</CheckBox>
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="12rem"/>
+					</TableColumn.columnLength>
+				</TableColumn>
+				<TableColumn resizable="true" visible="true" fieldTable="" identifier="tc_lb3">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="100%"/>
+					</TableColumn.columnLength>
+				</TableColumn>
+			</Table>
+			<GridPanel classNames="fcls_statusbar_cnt" visible="true" verticalAlignment="Top" gridItemLocation="0,2,1,1" fieldTable="formonly" identifier="cntStatusBar">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="100%"/>
+				</GridPanel.gridColumnDefinitions>
+				<Label isDynamic="true" text="" classNames="fcls_sblabel" visible="true" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="lbInfo1"/>
+				<Label isDynamic="true" text="" classNames="fcls_sblabel" visible="true" gridItemLocation="0,1,1,1" fieldTable="formonly" identifier="lbInfo2"/>
+			</GridPanel>
+		</GridPanel>
+	</form.rootContainer>
+	<form.screenRecords>
+		<ScreenRecord identifier="sr_period" fields="period.year_num,period.period_num,formonly.ap_object,formonly.approval_status,formonly.readiness,formonly.objects_count,formonly.post_req"/>
+		<ScreenRecord identifier="formonly" fields=""/>
+		<ScreenRecord identifier="period" fields="period.year_num,period.period_num"/>
+	</form.screenRecords>
+</form>
+

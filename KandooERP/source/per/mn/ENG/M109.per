@@ -1,0 +1,68 @@
+{
+###########################################################################
+# This program is free software; you can redistribute it and/or modify it
+# under the terms of the GNU General Public License as published by the
+# Free Software Foundation; either version 2 of the License, or (at your
+# option) any later version.
+#
+# This program is distributed in the hope that it will be useful, but
+# WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+# General Public License for more details.
+#
+# You should have received a copy of the GNU General Public License along
+# with this program; if not, write to the Free Software Foundation, Inc.,
+# 59 Temple Place, Suite 330, Boston, MA 02111-1307 USA
+#
+###########################################################################
+
+	 $Id: M109.per,v 1.2 2003/11/19 22:22:59 afalout Exp $
+}
+
+
+database kandoodb
+
+screen
+{
+                                Cost Details                           M109
+\g----------------------------------------------------------------------------\g
+ Description
+[f001                                                                      ]
+
+ Cost          [f002             ]
+ Price         [f003             ]
+ Fixed or Var  [a]
+
+ Effectivity Start Date[f004      ]    Effectivity End Date[f005      ]
+
+[f006                |f007                ]
+[f008                |f009                ]
+[f010                |f011                ] [b]
+
+}
+
+tables
+bor
+mnparms
+
+attributes
+f001 = bor.desc_text,
+comments = " Description of the Cost, CTRL-N for Notes";
+f002 = bor.cost_amt, comments = " Amount of the Cost";
+f003 = bor.price_amt,
+comments = " Amount of the price associated with the Cost";
+a    = bor.cost_type_ind, upshift, comments = " F = Fixed, V = Variable";
+f004 = bor.start_date,
+comments = " Date when the Cost becomes effective for Shop Orders";
+f005 = bor.end_date,
+comments = " Date when the cost ceases to be effective for Shop Orders";
+f006 = mnparms.ref1_text;
+f007 = bor.user1_text, comments = " User defined field";
+f008 = mnparms.ref2_text;
+f009 = bor.user2_text, comments = " User defined field";
+f010 = mnparms.ref3_text;
+f011 = bor.user3_text, comments = " User defined field";
+b    = formonly.dummy, noentry;
+
+instructions
+delimiters "  "

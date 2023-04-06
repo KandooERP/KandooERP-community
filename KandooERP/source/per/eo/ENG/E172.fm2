@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form xmlns="http://namespaces.querix.com/2015/fglForms">
+	<form.rootContainer>
+		<GridPanel classNames="fcls_rootContainer" preferredSize="160qch,30qch" verticalAlignment="Stretch" horizontalAlignment="Stretch" fieldTable="" identifier="rootContainer">
+			<GridPanel.gridRowDefinitions>
+				<GridRowDefinition gridLengthValue=""/>
+				<GridRowDefinition gridLengthValue=""/>
+				<GridRowDefinition gridLengthValue="100%"/>
+				<GridRowDefinition gridLengthValue=""/>
+			</GridPanel.gridRowDefinitions>
+			<GridPanel.gridColumnDefinitions>
+				<GridColumnDefinition gridLengthValue="50%"/>
+			</GridPanel.gridColumnDefinitions>
+			<GridPanel classNames="fcls_title_cnt" visible="true" verticalAlignment="Top" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="cntTitle">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="100%"/>
+					<GridColumnDefinition gridLengthValue=""/>
+				</GridPanel.gridColumnDefinitions>
+				<Label isDynamic="true" text="Automated Delivery Cycle Monitor" classNames="fcls_title_lb" visible="true" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="header_text"/>
+				<Label isDynamic="true" text="E172" classNames="fcls_title_lb" visible="true" gridItemLocation="1,0,1,1" fieldTable="" identifier="lbFormName"/>
+			</GridPanel>
+			<GridPanel classNames="fcls_detail_cnt,fcls_data_cnt,fcls_align_left" visible="true" verticalAlignment="Top" horizontalAlignment="Left" gridItemLocation="0,1,1,1" fieldTable="formonly" identifier="cntDetail1">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="" gridMinLength="10rem"/>
+					<GridColumnDefinition gridLengthValue=""/>
+				</GridPanel.gridColumnDefinitions>
+				<TextField dataType="Char,,,,30" preferredSize="31qch,1qch" fieldTable="warehouse" identifier="desc_text" gridItemLocation="1,0,1,1" classNames="fcls_data_widget,fcls_align_left,fcls_length_30qch"/>
+				<Calendar dataType="Char,,,," preferredSize="9qch,1qch" fieldTable="formonly" identifier="sched_date" gridItemLocation="1,1,1,1" classNames="fcls_data_widget,fcls_align_left,fcls_length_10qch"/>
+				<TextField dataType="Char,,,," preferredSize="6qch,1qch" fieldTable="formonly" identifier="sched_time" gridItemLocation="1,2,1,1" classNames="fcls_data_widget,fcls_align_left,fcls_length_10qch"/>
+				<Label isDynamic="true" text="Next Scheduled" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,0,1,1" fieldTable="" identifier="lb51"/>
+				<Label isDynamic="true" text="Date" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,1,1,1" fieldTable="" identifier="lb52"/>
+				<Label isDynamic="true" text="Time" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,2,1,1" fieldTable="" identifier="lb66"/>
+			</GridPanel>
+			<Table rowCount="12" preferredSize="74qch,12qch" fieldTable="" identifier="sr_delivmsg" gridItemLocation="0,2,1,1">
+				<TableColumn fieldTable="" identifier="tc_scroll_flag">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="2rem" gridMinLength="2rem" gridMaxLength="2rem"/>
+					</TableColumn.columnLength>
+					<CheckBox dataType="Char,,,," fieldTable="formonly" identifier="scroll_flag">
+						<CheckBox.checkedValue>
+							<StringLiteral stringValue="*"/>
+						</CheckBox.checkedValue>
+						<CheckBox.uncheckedValue>
+							<NullLiteral/>
+						</CheckBox.uncheckedValue>
+					</CheckBox>
+				</TableColumn>
+				<TableColumn fieldTable="" identifier="tc_msg_date">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="10rem" gridMaxLength="10rem" gridMinLength="10rem"/>
+					</TableColumn.columnLength>
+					<Calendar dataType="Date,,,," toolTip="Enter the message date" fieldTable="delivmsg" comment="Enter the message date" identifier="msg_date"/>
+				</TableColumn>
+				<TableColumn fieldTable="" identifier="tc_msg_time">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="10rem" gridMaxLength="10rem" gridMinLength="10rem"/>
+					</TableColumn.columnLength>
+					<TextField dataType="Char,,,,5" toolTip="Enter the message time" fieldTable="delivmsg" comment="Enter the message time" identifier="msg_time"/>
+				</TableColumn>
+				<TableColumn fieldTable="" identifier="tc_ware_code">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="10rem" gridMaxLength="10rem" gridMinLength="10rem"/>
+					</TableColumn.columnLength>
+					<TextField toCase="Up" dataType="Char,,,,3" toolTip="Enter the warehouse code" fieldTable="delivmsg" comment="Enter the warehouse code" identifier="ware_code"/>
+				</TableColumn>
+				<TableColumn fieldTable="" identifier="tc_event_text">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="30rem" gridMaxLength="30rem" gridMinLength="30rem"/>
+					</TableColumn.columnLength>
+					<TextField dataType="Char,,,,40" toolTip="Enter the event text of error indication" fieldTable="delivmsg" comment="Enter the event text of error indication" identifier="event_text"/>
+				</TableColumn>
+				<TableColumn fieldTable="" identifier="tc_msg_num">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="10rem" gridMaxLength="10rem" gridMinLength="10rem"/>
+					</TableColumn.columnLength>
+					<TextField dataType="Integer,,,," toolTip="Enter the error number" fieldTable="delivmsg" comment="Enter the error number" identifier="msg_num"/>
+				</TableColumn>
+				<TableColumn  resizable="true" visible="true" identifier="tc_lbEOL">
+					<Label isDynamic="true" visible="true" identifier="lbEOL"/>
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="100%"/>
+					</TableColumn.columnLength>
+				</TableColumn>
+			</Table>
+			<GridPanel classNames="fcls_statusbar_cnt" visible="true" verticalAlignment="Top" gridItemLocation="0,3,1,1" fieldTable="formonly" identifier="cntStatusBar">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="100%"/>
+				</GridPanel.gridColumnDefinitions>
+				<Label isDynamic="true" text="" classNames="fcls_sblabel" visible="true" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="lbInfo1"/>
+				<Label isDynamic="true" text="" classNames="fcls_sblabel" visible="true" gridItemLocation="0,1,1,1" fieldTable="formonly" identifier="lbInfo2"/>
+			</GridPanel>
+		</GridPanel>
+	</form.rootContainer>
+	<form.screenRecords>
+		<ScreenRecord identifier="sr_delivmsg" fields="formonly.scroll_flag,delivmsg.msg_date,delivmsg.msg_time,delivmsg.ware_code,delivmsg.event_text,delivmsg.msg_num" elements="12"/>
+		<ScreenRecord identifier="delivmsg" fields="delivmsg.msg_date,delivmsg.msg_time,delivmsg.ware_code,delivmsg.event_text,delivmsg.msg_num"/>
+		<ScreenRecord identifier="formonly" fields="formonly.sched_date,formonly.sched_time,formonly.scroll_flag"/>
+		<ScreenRecord identifier="warehouse" fields="warehouse.desc_text"/>
+	</form.screenRecords>
+</form>
+

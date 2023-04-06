@@ -1,0 +1,265 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form xmlns="http://namespaces.querix.com/2015/fglForms">
+	<form.rootContainer>
+		<GridPanel classNames="fcls_rootContainer" verticalAlignment="Stretch" horizontalAlignment="Stretch" fieldTable="" identifier="rootContainer">
+			<GridPanel.gridRowDefinitions>
+				<GridRowDefinition gridLengthValue=""/>
+				<GridRowDefinition gridLengthValue="100%"/>
+				<GridRowDefinition gridLengthValue=""/>
+			</GridPanel.gridRowDefinitions>
+			<GridPanel.gridColumnDefinitions>
+				<GridColumnDefinition gridLengthValue="100%"/>
+			</GridPanel.gridColumnDefinitions>
+			<GridPanel classNames="fcls_title_cnt" visible="true" verticalAlignment="Top" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="cntTitle">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="100%"/>
+					<GridColumnDefinition gridLengthValue=""/>
+				</GridPanel.gridColumnDefinitions>
+				<Label isDynamic="true" text="TGW Report Forms used/available" classNames="fcls_title_lb" visible="true" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="header_text"/>
+				<Label isDynamic="true" text="TGW000_All_GW_Forms_Print.fm2" classNames="fcls_title_lb" visible="true" gridItemLocation="1,0,1,1" fieldTable="" identifier="lbFormName"/>
+			</GridPanel>
+			<GridPanel classNames="fcls_detail_cnt,fcls_data_cnt,fcls_align_left" visible="true" verticalAlignment="Stretch" horizontalAlignment="Left" gridItemLocation="0,1,1,1" fieldTable="formonly" identifier="cntDetail1">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue="" gridMinLength="100%"/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="" gridMinLength="100%"/>
+				</GridPanel.gridColumnDefinitions>
+				<ListBox minSize="60rem,20rem" visible="true" verticalAlignment="Stretch" horizontalAlignment="Stretch" gridItemLocation="0,0,1,1" fieldTable="" identifier="formName">
+
+					<ListBoxItem text="TG500 - Management Report Processing" identifier="formName_TG500">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="TG500"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+
+					<ListBoxItem text="TG501 - Report Header Browse" identifier="formName_TG501">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="TG501"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+
+					<ListBoxItem text="TG509 - Print Report Writer Definitions" identifier="formName_TG509">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="TG509"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+
+					<ListBoxItem text="TG510 - Report Header Maintenance" identifier="formName_TG510">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="TG510"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+
+					<ListBoxItem text="TG511 - Report Column Browse" identifier="formName_TG511">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="TG511"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					
+					<ListBoxItem text="TG512 - Column Item type" identifier="formName_TG512">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="TG512"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					
+					<ListBoxItem text="TG513 - Column Maintenance" identifier="formName_TG513">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="TG513"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					
+					<ListBoxItem text="TG514 - Time Item Type" identifier="formName_TG514">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="TG514"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					
+					<ListBoxItem text="TG515 - Value Item type" identifier="formName_TG515">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="TG515"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					
+					<ListBoxItem text="TG516 - Underline Maintenance" identifier="formName_TG516">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="TG516"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					
+					<ListBoxItem text="TG521 - Accumulator" identifier="formName_TG521">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="TG521"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					
+					<ListBoxItem text="TG522 - Accumulator Maintenance" identifier="formName_TG522">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="TG522"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					
+					<ListBoxItem text="TG523 - Column Description Line Maintenance" identifier="formName_TG523">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="TG523"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					
+					<ListBoxItem text="TG524 - General Ledger Line Maintenance" identifier="formName_TG524">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="TG524"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					
+					<ListBoxItem text="TG525 - Report Line Maintenance" identifier="formName_TG525">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="TG525"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					
+					<ListBoxItem text="TG530 - Segment Maintenance" identifier="formName_TG530">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="TG530"/>
+						</ListBoxItem.value>
+					</ListBoxItem>					
+					
+					<ListBoxItem text="TG566 - Report Groups" identifier="formName_TG566">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="TG566"/>
+						</ListBoxItem.value>
+					</ListBoxItem>					
+					
+					<ListBoxItem text="TG567 - List Of Reports" identifier="formName_TG567">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="TG567"/>
+						</ListBoxItem.value>
+					</ListBoxItem>					
+					
+					<ListBoxItem text="TG566 - List Of Report Groups" identifier="formName_TG566">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="TG566"/>
+						</ListBoxItem.value>
+					</ListBoxItem>					
+					
+					<ListBoxItem text="TG568 - List Of Report Groups" identifier="formName_TG568">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="TG568"/>
+						</ListBoxItem.value>
+					</ListBoxItem>					
+					
+					<ListBoxItem text="TG569 - Group Management Report Processing" identifier="formName_TG569">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="TG569"/>
+						</ListBoxItem.value>
+					</ListBoxItem>					
+					
+					<ListBoxItem text="TG570 - Report Header Selection" identifier="formName_TG570">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="TG570"/>
+						</ListBoxItem.value>
+					</ListBoxItem>	
+					
+					<ListBoxItem text="TG571 - Management Report Processing" identifier="formName_TG571">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="TG571"/>
+						</ListBoxItem.value>
+					</ListBoxItem>	
+					
+					<ListBoxItem text="TG572 - Segment Maintenance" identifier="formName_TG572">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="TG572"/>
+						</ListBoxItem.value>
+					</ListBoxItem>	
+					
+					<ListBoxItem text="TG573 - External Link Maintenance" identifier="formName_TG573">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="TG573"/>
+						</ListBoxItem.value>
+					</ListBoxItem>	
+					
+					<ListBoxItem text="TG574 - IMAGE LINE GROUP" identifier="formName_TG574">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="TG574"/>
+						</ListBoxItem.value>
+					</ListBoxItem>	
+					
+					<ListBoxItem text="TG575 - Print Report Writer Definitions" identifier="formName_TG575">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="TG575"/>
+						</ListBoxItem.value>
+					</ListBoxItem>	
+					
+					<ListBoxItem text="TG576 - Print Report Writer Definitions" identifier="formName_TG576">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="TG576"/>
+						</ListBoxItem.value>
+					</ListBoxItem>	
+					
+					<ListBoxItem text="TG577 - Print Report Writer Definitions" identifier="formName_TG577">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="TG577"/>
+						</ListBoxItem.value>
+					</ListBoxItem>	
+					
+					<ListBoxItem text="TG578 - Print Report Writer Definitions" identifier="formName_TG578">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="TG578"/>
+						</ListBoxItem.value>
+					</ListBoxItem>	
+					
+					<ListBoxItem text="TG579 - Account Group Scan" identifier="formName_TG579">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="TG579"/>
+						</ListBoxItem.value>
+					</ListBoxItem>	
+					
+					<ListBoxItem text="TG580 - Account Group Maintenance" identifier="formName_TG580">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="TG580"/>
+						</ListBoxItem.value>
+					</ListBoxItem>	
+					
+					<ListBoxItem text="TG581 - Chart of Accounts" identifier="formName_TG581">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="TG581"/>
+						</ListBoxItem.value>
+					</ListBoxItem>	
+					
+					<ListBoxItem text="TG582 - Line Lookup" identifier="formName_TG582">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="TG582"/>
+						</ListBoxItem.value>
+					</ListBoxItem>	
+					
+					<ListBoxItem text="TG583 - Column Lookup" identifier="formName_TG583">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="TG583"/>
+						</ListBoxItem.value>
+					</ListBoxItem>	
+
+					<ListBox.onMouseDoubleClick>
+						<ActionEventHandler actionName="ViewForm"/>
+					</ListBox.onMouseDoubleClick>
+				</ListBox>
+			</GridPanel>
+			<GridPanel classNames="fcls_statusbar_cnt" visible="true" verticalAlignment="Bottom" gridItemLocation="0,2,1,1" fieldTable="formonly" identifier="cntStatusBar">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="100%"/>
+				</GridPanel.gridColumnDefinitions>
+				<Label isDynamic="true" text="" classNames="fcls_sblabel" visible="true" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="lbInfo1"/>
+				<Label isDynamic="true" text="" classNames="fcls_sblabel" visible="true" gridItemLocation="0,1,1,1" fieldTable="formonly" identifier="lbInfo2"/>
+			</GridPanel>
+		</GridPanel>
+	</form.rootContainer>
+	<form.screenRecords>
+		<ScreenRecord identifier="FORMONLY" fields="f151"/>
+	</form.screenRecords>
+</form>
+

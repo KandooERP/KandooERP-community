@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form xmlns="http://namespaces.querix.com/2015/fglForms">
+	<form.rootContainer>
+		<GridPanel classNames="fcls_rootContainer" verticalAlignment="Stretch" horizontalAlignment="Stretch" fieldTable="" identifier="rootContainer">
+			<GridPanel.gridRowDefinitions>
+				<GridRowDefinition>
+					<GridRowDefinition.gridLength>
+						<GridLength gridLengthValue=""/>
+					</GridRowDefinition.gridLength>
+				</GridRowDefinition>
+				<GridRowDefinition>
+					<GridRowDefinition.gridLength>
+						<GridLength gridLengthValue="100%"/>
+					</GridRowDefinition.gridLength>
+				</GridRowDefinition>
+				<GridRowDefinition>
+					<GridRowDefinition.gridLength>
+						<GridLength gridLengthValue=""/>
+					</GridRowDefinition.gridLength>
+				</GridRowDefinition>
+			</GridPanel.gridRowDefinitions>
+			<GridPanel.gridColumnDefinitions>
+				<GridColumnDefinition>
+					<GridColumnDefinition.gridLength>
+						<GridLength gridLengthValue="100%"/>
+					</GridColumnDefinition.gridLength>
+				</GridColumnDefinition>
+			</GridPanel.gridColumnDefinitions>
+			<GridPanel classNames="fcls_title_cnt" visible="true" verticalAlignment="Top" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="cntTitle">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition>
+						<GridRowDefinition.gridLength>
+							<GridLength gridLengthValue=""/>
+						</GridRowDefinition.gridLength>
+					</GridRowDefinition>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition>
+						<GridColumnDefinition.gridLength>
+							<GridLength gridLengthValue="100%"/>
+						</GridColumnDefinition.gridLength>
+					</GridColumnDefinition>
+					<GridColumnDefinition>
+						<GridColumnDefinition.gridLength>
+							<GridLength gridLengthValue=""/>
+						</GridColumnDefinition.gridLength>
+					</GridColumnDefinition>
+				</GridPanel.gridColumnDefinitions>
+				<Label isDynamic="true" text="Available Serial No." classNames="fcls_title_lb" visible="true" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="header_text"/>
+				<Label isDynamic="true" text="I130" classNames="fcls_title_lb" visible="true" gridItemLocation="1,0,1,1" fieldTable="" identifier="lbFormName"/>
+			</GridPanel>
+			<Table rowCount="14" preferredSize="33qch,14qch" gridItemLocation="0,1,1,1" fieldTable="" identifier="sr_serialinfo">
+				<TableColumn text="Serial Number" fieldTable="" identifier="tc_serial_code">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="30rem" gridMaxLength="30rem" gridMinLength="30rem"/>
+					</TableColumn.columnLength>
+					<TextField dataType="Char,,,,20" toolTip="Serial number for selection" fieldTable="serialinfo" comment="Serial number for selection" identifier="serial_code"/>
+				</TableColumn>
+				<TableColumn text="Receipt Date" fieldTable="" identifier="tc_receipt_date">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="10rem" gridMaxLength="10rem" gridMinLength="10rem"/>
+					</TableColumn.columnLength>
+					<TextField noEntry="true" dataType="Date,,,," toolTip="Indicates the date this serialized item was received" fieldTable="serialinfo" comment="Indicates the date this serialized item was received" identifier="receipt_date"/>
+				</TableColumn>
+				<TableColumn resizable="true" visible="true" identifier="tc_lb3">
+					<Label isDynamic="true" visible="true" identifier="lbEOL"/>
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="100%"/>
+					</TableColumn.columnLength>
+				</TableColumn>
+			</Table>
+			<GridPanel classNames="fcls_statusbar_cnt" visible="true" verticalAlignment="Top" gridItemLocation="0,2,1,1" fieldTable="formonly" identifier="cntStatusBar">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition>
+						<GridRowDefinition.gridLength>
+							<GridLength gridLengthValue=""/>
+						</GridRowDefinition.gridLength>
+					</GridRowDefinition>
+					<GridRowDefinition>
+						<GridRowDefinition.gridLength>
+							<GridLength gridLengthValue=""/>
+						</GridRowDefinition.gridLength>
+					</GridRowDefinition>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition>
+						<GridColumnDefinition.gridLength>
+							<GridLength gridLengthValue="100%"/>
+						</GridColumnDefinition.gridLength>
+					</GridColumnDefinition>
+				</GridPanel.gridColumnDefinitions>
+				<Label isDynamic="true" text="" classNames="fcls_sblabel" visible="true" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="lbInfo1"/>
+				<Label isDynamic="true" text="" classNames="fcls_sblabel" visible="true" gridItemLocation="0,1,1,1" fieldTable="formonly" identifier="lbInfo2"/>
+			</GridPanel>
+		</GridPanel>
+	</form.rootContainer>
+	<form.screenRecords>
+		<ScreenRecord identifier="sr_serialinfo" fields="serialinfo.serial_code,serialinfo.receipt_date" elements="14"/>
+		<ScreenRecord identifier="serialinfo" fields="serial_code,receipt_date"/>
+	</form.screenRecords>
+</form>
+

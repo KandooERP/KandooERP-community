@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?><form xmlns="http://namespaces.querix.com/2015/fglForms">
+	<form.rootContainer>
+		<GridPanel classNames="fcls_rootContainer" fieldTable="" horizontalAlignment="Stretch" identifier="rootContainer" preferredSize="130qch,30qch" verticalAlignment="Stretch">
+			<GridPanel.gridRowDefinitions>
+				<GridRowDefinition gridLengthValue=""/>
+				<GridRowDefinition gridLengthValue=""/>
+				<GridRowDefinition gridLengthValue="100%"/>
+				<GridRowDefinition gridLengthValue=""/>
+			</GridPanel.gridRowDefinitions>
+			<GridPanel.gridColumnDefinitions>
+				<GridColumnDefinition gridLengthValue="100%"/>
+			</GridPanel.gridColumnDefinitions>
+			<GridPanel classNames="fcls_title_cnt" fieldTable="formonly" gridItemLocation="0,0,1,1" identifier="cntTitle" verticalAlignment="Top" visible="true">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="100%"/>
+					<GridColumnDefinition gridLengthValue=""/>
+				</GridPanel.gridColumnDefinitions>
+				<Label classNames="fcls_title_lb" fieldTable="formonly" gridItemLocation="0,0,1,1" identifier="header_text" isDynamic="true" text="Reply Memo" visible="true"/>
+				<Label classNames="fcls_title_lb" fieldTable="" gridItemLocation="1,0,1,1" identifier="lbFormName" isDynamic="true" text="U538" visible="true"/>
+			</GridPanel>
+			<GridPanel classNames="fcls_detail_cnt,fcls_data_cnt,fcls_align_hstretch" fieldTable="formonly" gridItemLocation="0,1,1,1" horizontalAlignment="Left" identifier="cntDetail1" verticalAlignment="Top" visible="true">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="" gridMinLength="10rem"/>
+					<GridColumnDefinition gridLengthValue="100%"/>
+				</GridPanel.gridColumnDefinitions>
+				<TextField classNames="fcls_data_widget,fcls_align_hstretch" comment=" Enter user code. Use browse window to select multiple users (W)" dataType="Char,,,," fieldTable="formonly" gridItemLocation="1,0,1,1" identifier="user_code" preferredSize="9qch,1qch" toolTip=" Enter user code. Use browse window to select multiple users (W)"/>
+				<TextField classNames="fcls_data_widget,fcls_align_hstretch" dataType="Char,,,,40" fieldTable="kandoouser" gridItemLocation="1,1,1,1" identifier="name_text" noEntry="true" preferredSize="41qch,1qch"/>
+				<TextField classNames="fcls_data_widget,fcls_align_hstretch" comment=" Enter subject of message" dataType="Char,,,,40" fieldTable="kandoomemo" gridItemLocation="1,2,1,1" identifier="subject_text" preferredSize="41qch,1qch" toolTip=" Enter subject of message"/>
+				<Label classNames="fcls_fieldlabel,fcls_align_left" fieldTable="" gridItemLocation="0,0,1,1" identifier="lb51" isDynamic="true" text="Reply To" visible="true"/>
+				<Label classNames="fcls_fieldlabel,fcls_align_left" fieldTable="" gridItemLocation="0,1,1,1" identifier="lb52" isDynamic="true" text="Name" visible="true"/>
+				<Label classNames="fcls_fieldlabel,fcls_align_left" fieldTable="" gridItemLocation="0,2,1,1" identifier="lb66" isDynamic="true" text="Subject" visible="true"/>
+			</GridPanel>
+			<Table fieldTable="" gridItemLocation="0,2,1,1" identifier="sr_kandoomemoline" preferredSize="71qch,12qch" rowCount="12">
+				<TableColumn fieldTable="" identifier="memo_text" text="Memo">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="100%"/>
+					</TableColumn.columnLength>
+					<TextField comment=" CTRL+A Insert; CTRL+X Delete Char; CTRL+D Delete to end of line" dataType="Char,,,,70" fieldTable="kandoomemoline" identifier="memo_text" toolTip=" CTRL+A Insert; CTRL+X Delete Char; CTRL+D Delete to end of line"/>
+				</TableColumn>
+			</Table>
+			<GridPanel classNames="fcls_statusbar_cnt" fieldTable="formonly" gridItemLocation="0,3,1,1" identifier="cntStatusBar" verticalAlignment="Top" visible="true">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="100%"/>
+				</GridPanel.gridColumnDefinitions>
+				<Label classNames="fcls_sblabel" fieldTable="formonly" gridItemLocation="0,0,1,1" identifier="lbInfo1" isDynamic="true" text="" visible="true"/>
+				<Label classNames="fcls_sblabel" fieldTable="formonly" gridItemLocation="0,1,1,1" identifier="lbInfo2" isDynamic="true" text="" visible="true"/>
+			</GridPanel>
+		</GridPanel>
+	</form.rootContainer>
+	<form.screenRecords>
+		<ScreenRecord elements="12" fields="memo_text" identifier="sr_kandoomemoline"/>
+		<ScreenRecord fields="user_code" identifier="formonly"/>
+		<ScreenRecord fields="subject_text" identifier="kandoomemo"/>
+		<ScreenRecord fields="memo_text" identifier="kandoomemoline"/>
+		<ScreenRecord fields="name_text" identifier="kandoouser"/>
+	</form.screenRecords>
+</form>

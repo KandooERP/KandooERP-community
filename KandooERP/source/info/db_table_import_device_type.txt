@@ -1,0 +1,6 @@
+Note: This table exists in the database and has constraints..
+but original kandoo code does not use this table
+
+There is a device_type_indicator reference (1=printer, 2=terminal, 3=other)
+
+and print_code table

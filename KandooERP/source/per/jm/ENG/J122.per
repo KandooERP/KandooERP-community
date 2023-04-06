@@ -1,0 +1,101 @@
+{
+###########################################################################
+# This program is free software; you can redistribute it and/or modify it
+# under the terms of the GNU General Public License as published by the
+# Free Software Foundation; either version 2 of the License, or (at your
+# option) any later version.
+#
+# This program is distributed in the hope that it will be useful, but
+# WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+# General Public License for more details.
+#
+# You should have received a copy of the GNU General Public License along
+# with this program; if not, write to the Free Software Foundation, Inc.,
+# 59 Temple Place, Suite 330, Boston, MA 02111-1307 USA
+#
+###########################################################################
+
+	 $Id: J122.per,v 1.2 2003/11/19 22:22:45 afalout Exp $
+}
+
+
+database kandoodb
+
+screen
+{
+                       Resource Allocation Inquiry                      J122
+\g----------------------------------------------------------------------------\g
+Resource Code      [f01     ][h01                            ]
+Unit of Measure    [f02] [h02                   ]                       Mode
+Date               [f03        ]       Cost Rate per Unit:[f06          ][a]
+Year  [f04 ] Period  [f5]            Charge Rate per Unit:[f07          ][b]
+\g--------------------\g Resource Allocation [f08     ]\g-------------------------\g
+ Job       Var  Act         Qty    Cost    Charge    Ext Cost    Ext Charge
+\g----------------------------------------------------------------------------\g
+[f010    |f011|f012    |f013   |f014     |f015     |f017       |f018       ]
+[f010    |f011|f012    |f013   |f014     |f015     |f017       |f018       ]
+[f010    |f011|f012    |f013   |f014     |f015     |f017       |f018       ]
+[f010    |f011|f012    |f013   |f014     |f015     |f017       |f018       ]
+[f010    |f011|f012    |f013   |f014     |f015     |f017       |f018       ]
+\g----------------------------------------------------------------------------\g
+[f016p                         |f016                                    ]
+\g----------------------------------------------------------------------------\g
+               Total Qty   [f19        ]   Total Cost   [f21               ]
+               Avg Rate           [f20 ]   Total Charge [f22               ]
+}
+tables
+jmresource
+actiunit
+activity
+jobledger
+attributes
+f01 = jmresource.res_code, upshift, comments = 
+" Unique 8 character Resource ID ";
+h01 = formonly.res_desc_text;
+f02 = jmresource.unit_code, upshift, comments =
+" Unit of measurement of this resource ";
+h02 = formonly.unit_desc_text;
+f03 = jobledger.trans_date,format = "dd/mm/yyyy", default = today, comments = 
+" The transaction date of the job";
+f04 = jobledger.year_num, comments = 
+" Posting year";
+f5 = jobledger.period_num, comments =
+" The posting period of the job";
+f06 = formonly.unit_cost_rate type decimal(12,4);
+a = jmresource.cost_ind;
+f07  = formonly.unit_bill_rate type decimal(12,4);
+b = jmresource.bill_ind;
+f08 = jobledger.trans_source_num, comments = 
+" Resource Allocation Number (W) ";
+f010 = activity.job_code, upshift, comments = 
+" The job code";
+f011 = activity.var_code, noentry; 
+f012 = activity.activity_code, noentry;
+f013 = jobledger.trans_qty,noentry;
+f014 = jmresource.unit_cost_amt, noentry;
+f015 = jmresource.unit_bill_amt, noentry;
+f016p = formonly.desc_prompt;
+f016 = jobledger.desc_text, comments =
+ " Enter Comments relating to this Transaction";
+f017 = jobledger.trans_amt, noentry, comments = " Total Cost Amount";
+f018 = jobledger.charge_amt, noentry, comments = " Total Chargeable Amount";
+f19 = formonly.tot_trans_qty type decimal(10,2), noentry;
+f20 = formonly.avg_rate_amt type decimal(12,4), noentry;
+f21 = formonly.tot_cost_amt type decimal(16,2), noentry;
+f22 = formonly.tot_charge_amt type decimal(16,2), noentry;
+
+instructions
+delimiters "  "
+
+screen GRID sr_res_alloc[5]
+                 ( job_code,
+                   var_code,
+                   activity_code,
+                   trans_qty,
+                   unit_cost_amt,
+                   unit_bill_amt,
+                   trans_amt,
+                   charge_amt)
+
+

@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form xmlns="http://namespaces.querix.com/2015/fglForms">
+	<form.rootContainer>
+		<GridPanel classNames="fcls_rootContainer" verticalAlignment="Stretch" horizontalAlignment="Stretch" fieldTable="" identifier="rootContainer">
+			<GridPanel.gridRowDefinitions>
+				<GridRowDefinition gridLengthValue=""/>
+				<GridRowDefinition gridLengthValue=""/>
+				<GridRowDefinition gridLengthValue="100%"/>
+				<GridRowDefinition gridLengthValue=""/>
+			</GridPanel.gridRowDefinitions>
+			<GridPanel.gridColumnDefinitions>
+				<GridColumnDefinition gridLengthValue="50%"/>
+			</GridPanel.gridColumnDefinitions>
+			<GridPanel classNames="fcls_title_cnt" visible="true" verticalAlignment="Top" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="cntTitle">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="100%"/>
+					<GridColumnDefinition gridLengthValue=""/>
+				</GridPanel.gridColumnDefinitions>
+				<Label isDynamic="true" text="Report Line Maintenance" classNames="fcls_title_lb" visible="true" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="header_text"/>
+				<Label isDynamic="true" text="G525" classNames="fcls_title_lb" visible="true" gridItemLocation="1,0,1,1" fieldTable="" identifier="lbFormName"/>
+			</GridPanel>
+			<GridPanel classNames="fcls_detail_cnt,fcls_data_cnt,fcls_align_left" visible="true" verticalAlignment="Top" horizontalAlignment="Left" gridItemLocation="0,1,1,1" fieldTable="formonly" identifier="cntDetail1">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="" gridMinLength="10rem"/>
+					<GridColumnDefinition gridLengthValue=""/>
+				</GridPanel.gridColumnDefinitions>
+				<TextField toCase="Up" dataType="Char,,,,10" preferredSize="11qch,1qch" toolTip="The line code used by this report" fieldTable="rptlinegrp" comment="The line code used by this report" identifier="line_code" gridItemLocation="1,0,1,1" classNames="fcls_data_widget,fcls_align_left,fcls_length_20qch"/>
+				<TextField dataType="Char,,,,30" preferredSize="31qch,1qch" toolTip="The description of this line code" fieldTable="rptlinegrp" comment="The description of this line code" identifier="linegrp_desc" gridItemLocation="1,1,1,1" classNames="fcls_data_widget,fcls_align_left,fcls_length_20qch"/>
+				<Label isDynamic="true" text="Line Code" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,0,1,1" fieldTable="" identifier="lb51"/>
+				<Label isDynamic="true" text="Desc" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,1,1,1" fieldTable="" identifier="lb52"/>
+			</GridPanel>
+			<Table rowCount="10" preferredSize="72qch,10qch" fieldTable="" identifier="sa_rptline" gridItemLocation="0,2,1,1">
+				<TableColumn fieldTable="" identifier="tc_line_id" text="Line No">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="10rem" gridMaxLength="10rem" gridMinLength="10rem"/>
+					</TableColumn.columnLength>
+					<TextField noEntry="true" dataType="SmallInt,,,," toolTip="The Line number." fieldTable="rptline" comment="The Line number." identifier="line_id"/>
+				</TableColumn>
+				<TableColumn fieldTable="" identifier="tc_line_type" text="Line Type">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="10rem" gridMaxLength="10rem" gridMinLength="10rem"/>
+					</TableColumn.columnLength>
+					<TextField toCase="Up" dataType="Char,,,,1" toolTip="(G)eneral Ledger, (C)alc, (T)itle or text, (U)nderline, (E)xternal Link." fieldTable="rptline" comment="(G)eneral Ledger, (C)alc, (T)itle or text, (U)nderline, (E)xternal Link." identifier="line_type"/>
+				</TableColumn>
+				<TableColumn fieldTable="" identifier="tc_line_desc" text="Description">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="30rem" gridMaxLength="30rem" gridMinLength="30rem"/>
+					</TableColumn.columnLength>
+					<TextField dataType="Char,,,,60" fieldTable="rptline" identifier="line_desc"/>
+				</TableColumn>
+				<TableColumn fieldTable="" identifier="tc_accum_id" text="Accumulator">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="10rem" gridMaxLength="10rem" gridMinLength="10rem"/>
+					</TableColumn.columnLength>
+					<TextField dataType="SmallInt,,,," toolTip="Accumulator identifier." fieldTable="rptline" comment="Accumulator identifier." identifier="accum_id"/>
+				</TableColumn>
+				<TableColumn fieldTable="" identifier="tc_page_break_follow" text="Page Break">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="10rem" gridMaxLength="10rem" gridMinLength="10rem"/>
+					</TableColumn.columnLength>
+					<TextField toCase="Up" autonext="true" dataType="Char,,,,1" toolTip="(Y) Page break, (N)o page break." fieldTable="rptline" comment="(Y) Page break, (N)o page break." identifier="page_break_follow"/>
+				</TableColumn>
+				<TableColumn fieldTable="" identifier="tc_drop_lines" text="Drop Lines">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="10rem" gridMaxLength="10rem" gridMinLength="10rem"/>
+					</TableColumn.columnLength>
+					<TextField dataType="SmallInt,,,," toolTip="The number of lines to drop after this line" fieldTable="rptline" comment="The number of lines to drop after this line" identifier="drop_lines"/>
+				</TableColumn>
+				<TableColumn resizable="true" visible="true" identifier="tc_lbEOL">
+					<Label isDynamic="true" visible="true" identifier="lbEOL"/>
+					<TableColumn.columnLength>
+						<GridLength/>
+					</TableColumn.columnLength>
+				</TableColumn>
+			</Table>
+			<GridPanel classNames="fcls_statusbar_cnt" visible="true" verticalAlignment="Top" gridItemLocation="0,3,1,1" fieldTable="formonly" identifier="cntStatusBar">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="100%"/>
+				</GridPanel.gridColumnDefinitions>
+				<Label isDynamic="true" text="" classNames="fcls_sblabel" visible="true" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="lbInfo1"/>
+				<Label isDynamic="true" text="" classNames="fcls_sblabel" visible="true" gridItemLocation="0,1,1,1" fieldTable="formonly" identifier="lbInfo2"/>
+			</GridPanel>
+		</GridPanel>
+	</form.rootContainer>
+	<form.screenRecords>
+		<ScreenRecord identifier="sa_rptline" fields="rptline.line_id,rptline.line_type,rptline.line_desc,rptline.accum_id,rptline.page_break_follow,rptline.drop_lines" elements="10"/>
+		<ScreenRecord identifier="rptline" fields="rptline.line_id,rptline.line_type,rptline.line_desc,rptline.accum_id,rptline.page_break_follow,rptline.drop_lines"/>
+		<ScreenRecord identifier="rptlinegrp" fields="rptlinegrp.line_code,rptlinegrp.linegrp_desc"/>
+	</form.screenRecords>
+</form>
+

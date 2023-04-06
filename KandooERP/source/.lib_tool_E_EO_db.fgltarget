@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<fglBuildTarget xmlns="http://namespaces.querix.com/lyciaide/target" name="lib_tool_E_EO_db" type="fgl-library">
+
+  <sources type="fgl">
+    <file location="4gl/lib_tool_db/lib_tool_db_salesmgr.4gl"/>
+    <file location="4gl/lib_tool_db/lib_tool_db_customership.4gl"/>
+    <file location="4gl/common/glob_GLOBALS_constant.4gl"/>
+    <file location="4gl/lib_tool_db/lib_tool_db_salesperson.4gl"/>
+    <file location="4gl/lib_tool_db/lib_tool_db_statparms.4gl"/>
+    <file location="4gl/common/glob_GLOBALS.4gl"/>
+    <file location="4gl/common/glob_GLOBALS_userDataTypes.4gl"/>
+    <file location="4gl/lib_tool_db/lib_tool_db_cartarea.4gl"/>
+    <file location="4gl/lib_tool_db/lib_tool_db_salearea.4gl"/>
+    <file location="4gl/lib_tool_db/lib_tool_db_carrier.4gl"/>
+    <file location="4gl/common/glob_DATABASE.4gl"/>
+    <file location="4gl/lib_tool_db/lib_tool_db_orderhead.4gl"/>
+    <file location="4gl/lib_tool_db/lib_tool_db_offersale.4gl"/>
+    <file location="4gl/lib_tool_db/lib_tool_db_carriercost.4gl"/>
+  </sources>
+
+</fglBuildTarget>

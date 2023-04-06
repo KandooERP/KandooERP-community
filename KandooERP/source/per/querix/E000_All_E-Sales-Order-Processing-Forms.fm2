@@ -1,0 +1,1152 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form xmlns="http://namespaces.querix.com/2015/fglForms">
+	<form.rootContainer>
+		<GridPanel classNames="fcls_rootContainer" verticalAlignment="Stretch" horizontalAlignment="Stretch" fieldTable="" identifier="rootContainer">
+			<GridPanel.gridRowDefinitions>
+				<GridRowDefinition gridLengthValue=""/>
+				<GridRowDefinition gridLengthValue="100%"/>
+				<GridRowDefinition gridLengthValue=""/>
+			</GridPanel.gridRowDefinitions>
+			<GridPanel.gridColumnDefinitions>
+				<GridColumnDefinition gridLengthValue="100%"/>
+			</GridPanel.gridColumnDefinitions>
+			<GridPanel classNames="fcls_title_cnt" visible="true" verticalAlignment="Top" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="cntTitle">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="100%"/>
+					<GridColumnDefinition gridLengthValue=""/>
+				</GridPanel.gridColumnDefinitions>
+				<Label isDynamic="true" text="E/EO Sales Order Processing Form Viewer" classNames="fcls_title_lb" visible="true" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="header_text"/>
+				<Label isDynamic="true" text="_master_D1_1Gp_01b" classNames="fcls_title_lb" visible="true" gridItemLocation="1,0,1,1" fieldTable="" identifier="lbFormName"/>
+			</GridPanel>
+			<GridPanel classNames="fcls_detail_cnt,fcls_data_cnt,fcls_align_left" visible="true" verticalAlignment="Top" horizontalAlignment="Left" gridItemLocation="0,1,1,1" fieldTable="formonly" identifier="cntDetail1">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue="" gridMinLength="100%"/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="" gridMinLength="100%"/>
+				</GridPanel.gridColumnDefinitions>
+				<ListBox minSize="60rem,20rem" visible="true" verticalAlignment="Stretch" horizontalAlignment="Stretch" gridItemLocation="0,0,1,1" fieldTable="" identifier="formName">
+
+					<ListBoxItem text="E101 - Enhanced Order Processing Parameters" identifier="formName_E101">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="E101"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+
+					<ListBoxItem text="E102 - Session Parameters" identifier="formName_E102">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="E102"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+
+					<ListBoxItem text="E103 - Special Offers" identifier="formName_E103">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="E103"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+
+					<ListBoxItem text="E104 - Back Order Allocation" identifier="formName_E104">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="E104"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+
+					<ListBoxItem text="E105 - Sales Order Hold" identifier="formName_E105">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="E105"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+
+					<ListBoxItem text="E106 - Product" identifier="formName_E106">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="E106"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+
+					<ListBoxItem text="E107 - Sales Conditions" identifier="formName_E107">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="E107"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+
+					<ListBoxItem text="E109 - Sales Commission Sharing" identifier="formName_E109">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="E109"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+
+					<ListBoxItem text="E110 - Sales Orders Entry" identifier="formName_E110">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="E110"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+
+					<ListBoxItem text="E111 - Sales Order Information" identifier="formName_E111">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="E111"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+
+					<ListBoxItem text="E112 - Payment Details" identifier="formName_E112">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="E112"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+
+					<ListBoxItem text="E113 - Customer Account Status" identifier="formName_E113">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="E113"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+
+					<ListBoxItem text="E114 - Order Line Item Information" identifier="formName_E114">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="E114"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+
+					<ListBoxItem text="E115 - Product" identifier="formName_E115">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="E115"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+
+					<ListBoxItem text="E116 - Shipping Details" identifier="formName_E116">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="E116"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+
+					<ListBoxItem text="E117 - Offer" identifier="formName_E117">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="E117"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+
+					<ListBoxItem text="E118 - Required Special Offers" identifier="formName_E118">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="E118"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+
+					<ListBoxItem text="E119 - Sales Condition" identifier="formName_E119">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="E119"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+
+					<ListBoxItem text="E120 - Sales Order Information" identifier="formName_E120">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="E120"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+
+					<ListBoxItem text="E121 - Special Offers Detail Scan" identifier="formName_E121">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="E121"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+
+					<ListBoxItem text="E122 - Special Offer Maintenance" identifier="formName_E122">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="E122"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+
+					<ListBoxItem text="E123 - Products to be Sold" identifier="formName_E123">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="E123"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+
+					<ListBoxItem text="E124 - Bonus Products" identifier="formName_E124">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="E124"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+
+					<ListBoxItem text="E125 - Product Line Discounts" identifier="formName_E125">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="E125"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+
+					<ListBoxItem text="E126 - Automated Product Insertion" identifier="formName_E126">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="E126"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+
+					<ListBoxItem text="E127 - Automatic Product Line" identifier="formName_E127">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="E127"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+
+					<ListBoxItem text="E129 - Special Offer Details" identifier="formName_E129">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="E129"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+
+					<ListBoxItem text="E130 - Product Monthly Turnover" identifier="formName_E130">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="E130"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+
+					<ListBoxItem text="E131 - Sales Condition Details (list)" identifier="formName_E131">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="E131"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+
+					<ListBoxItem text="E132 - Sales Condition Details" identifier="formName_E132">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="E132"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+
+					<ListBoxItem text="E133 - Product Line Discounts" identifier="formName_E133">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="E133"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+
+					<ListBoxItem text="E134 - Sales Conditions Customers (list)" identifier="formName_E134">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="E134"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+
+					<ListBoxItem text="E136 - Tiered Discount Structures (list)" identifier="formName_E136">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="E136"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+
+					<ListBoxItem text="E141 - Carrier Information" identifier="formName_E141">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="E141"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+
+					<ListBoxItem text="E142 - Carrier Maintenance (list)" identifier="formName_E142">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="E142"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+
+					<ListBoxItem text="E143 - New Carrier Cost Configuration" identifier="formName_E143">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="E143"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					<ListBoxItem text="E144 - New Carrier Information" identifier="formName_E144">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="E144"/>
+						</ListBoxItem.value>
+					</ListBoxItem>					
+
+
+					<ListBoxItem text="E150 - Warehouse Picking Lists (list)" identifier="formName_E150">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="E150"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+
+					<ListBoxItem text="E151 - Picking List Detail" identifier="formName_E151">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="E151"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+
+					<ListBoxItem text="E152 - Picking Slip Generation Selection" identifier="formName_E152">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="E152"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+
+					<ListBoxItem text="E153 - Sales Order Confirmation" identifier="formName_E153">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="E153"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+
+					<ListBoxItem text="E154 - Order Delivery Information" identifier="formName_E154">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="E154"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+
+					<ListBoxItem text="E155 - Delivery Details" identifier="formName_E155">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="E155"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+
+					<ListBoxItem text="E156 - Shipment Scan" identifier="formName_E156">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="E156"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+
+					<ListBoxItem text="E157 - Consignment Note Detail" identifier="formName_E157">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="E157"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+
+					<ListBoxItem text="E158 - Consignment Note Generation Selection" identifier="formName_E158">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="E158"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+
+					<ListBoxItem text="E159 - Shipping Label Details" identifier="formName_E159">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="E159"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					
+					<ListBoxItem text="E160 - Held Order Scan" identifier="formName_E160">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="E160"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					
+					<ListBoxItem text="E161 - Order Amendment Log Scan (list)" identifier="formName_E161">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="E161"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					
+					<ListBoxItem text="E162 - Consignment Note Entry" identifier="formName_E162">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="E162"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					
+					<ListBoxItem text="E163 - Consignment Note Generation Selection" identifier="formName_E163">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="E163"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					
+					<ListBoxItem text="E164 - Salespersons Commission Structure Maintenance (list)" identifier="formName_E164">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="E164"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					
+					<ListBoxItem text="E165 - Sales Commission Structure" identifier="formName_E165">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="E165"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					
+					<ListBoxItem text="E166 - Image Sales Commission Structure" identifier="formName_E166">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="E166"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					
+					<ListBoxItem text="E167 - Salesperson Commission Report" identifier="formName_E167">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="E167"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+
+					<ListBoxItem text="E169 - Carrier Scan" identifier="formName_E169">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="E169"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+										
+					<ListBoxItem text="E171 - Stock Return Detail" identifier="formName_E171">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="E171"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+										
+					<ListBoxItem text="E172 - Automated Delivery Cycle Monitor (list)" identifier="formName_E172">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="E172"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+										
+					<ListBoxItem text="E173 - Delivery Message/Error Selection" identifier="formName_E173">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="E173"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+										
+					<ListBoxItem text="E174 - Product Serial Codes" identifier="formName_E174">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="E174"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+										
+					<ListBoxItem text="E182 - Salesperson Information" identifier="formName_E182">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="E182"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+										
+					<ListBoxItem text="E183 - Salesperson Inquiry" identifier="formName_E183">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="E183"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+										
+					<ListBoxItem text="E184 - Salespersons Statistics Information (list)" identifier="formName_E184">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="E184"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+										
+					<ListBoxItem text="E185 - Daily Salesperson Statistics" identifier="formName_E185">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="E185"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+										
+					<ListBoxItem text="E186 - Salesperson Monthly Sales (list)" identifier="formName_E186">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="E186"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+										
+					<ListBoxItem text="E187 - Special Offer Results" identifier="formName_E187">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="E187"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+										
+					<ListBoxItem text="E188 - Special Offer Results		(list)" identifier="formName_E188">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="E188"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+										
+					<ListBoxItem text="E209 - Statistic Sales Data Extraction" identifier="formName_E209">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="E209"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+										
+					<ListBoxItem text="E210 - Sales Targets Maintenance" identifier="formName_E210">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="E210"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+										
+					<ListBoxItem text="E211 - Sales Targets Imaging" identifier="formName_E211">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="E211"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+										
+					<ListBoxItem text="E212 - Year and Type" identifier="formName_E212">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="E212"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+										
+					<ListBoxItem text="E213 - Statistics Intervals" identifier="formName_E213">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="E213"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+										
+					<ListBoxItem text="E214 - Statistics Purging" identifier="formName_E214">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="E214"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+										
+					<ListBoxItem text="E215 - Transaction, Interval and Distributions" identifier="formName_E215">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="E215"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+										
+					<ListBoxItem text="E216 - Customer Statistics Information" identifier="formName_E216">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="E216"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+										
+					<ListBoxItem text="E217 - Customer Monthly Turnover" identifier="formName_E217">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="E217"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+										
+					<ListBoxItem text="E218 - Inventory Yearly Turnover" identifier="formName_E218">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="E218"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+										
+					<ListBoxItem text="E219 - Inventory Monthly Turnover" identifier="formName_E219">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="E219"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+										
+					<ListBoxItem text="E220 - Customer/Inventory Statistics Information" identifier="formName_E220">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="E220"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+										
+					<ListBoxItem text="E221 - Customer Profit Figures" identifier="formName_E221">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="E221"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+
+					<ListBoxItem text="E223 - Inventory Statistics Information" identifier="formName_E223">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="E223"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+										
+					<ListBoxItem text="E224 - Inventory/Customer Statistics Information" identifier="formName_E224">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="E224"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+										
+					<ListBoxItem text="E225 - Inventory Profit Figures" identifier="formName_E225">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="E225"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+										
+					<ListBoxItem text="E226 - Sales Manager Statistics Information" identifier="formName_E226">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="E226"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+										
+					<ListBoxItem text="E227 - Inventory Monthly Turnover" identifier="formName_E227">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="E227"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+										
+					<ListBoxItem text="E228 - Sales Manager Inquiry Statistics" identifier="formName_E228">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="E228"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+										
+					<ListBoxItem text="E229 - Sales Manager Monthly Turnover" identifier="formName_E229">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="E229"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+										
+					<ListBoxItem text="E230 - Sales Manager Profit Figures" identifier="formName_E230">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="E230"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+										
+					<ListBoxItem text="E231 - Salesperson Monthly Turnover" identifier="formName_E231">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="E231"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+										
+					<ListBoxItem text="E232 - Salesperson Profit Figures" identifier="formName_E232">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="E232"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+										
+					<ListBoxItem text="E233 - Monthly Turnover Vs Target" identifier="formName_E233">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="E233"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+										
+					<ListBoxItem text="E234 - Sales Manager Statistics Information" identifier="formName_E234">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="E234"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+										
+					<ListBoxItem text="E235 - Sales Manager Monthly Distribution" identifier="formName_E235">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="E235"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+										
+					<ListBoxItem text="E236 - Salesperson Statistics Information" identifier="formName_E236">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="E236"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+										
+					<ListBoxItem text="E237 - Salesperson Monthly Distribution" identifier="formName_E237">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="E237"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+										
+					<ListBoxItem text="E238 - Salesperson Commission" identifier="formName_E238">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="E238"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+										
+					<ListBoxItem text="E239 - Salesperson Monthly Sales Targets" identifier="formName_E239">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="E239"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+										
+					<ListBoxItem text="E240 - Sales Area Statistics Information" identifier="formName_E240">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="E240"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+										
+					<ListBoxItem text="E241 - Sales Area" identifier="formName_E241">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="E241"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+										
+					<ListBoxItem text="E242 - Sales Area Monthly Turnover" identifier="formName_E242">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="E242"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+										
+					<ListBoxItem text="E243 - Sales Area Statistics Information" identifier="formName_E243">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="E243"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+										
+					<ListBoxItem text="E244 - Sales Area Monthly Distribution" identifier="formName_E244">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="E244"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+										
+					<ListBoxItem text="E245 - Sales Area Profit Figures" identifier="formName_E245">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="E245"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+										
+					<ListBoxItem text="E246 - Sales Area Customers" identifier="formName_E246">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="E246"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+										
+					<ListBoxItem text="E247 - Sales Territory Statistics Information" identifier="formName_E247">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="E247"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+										
+					<ListBoxItem text="E248 - Sales Territory" identifier="formName_E248">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="E248"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+										
+					<ListBoxItem text="E249 - Salesperson Weekly Sales Targets" identifier="formName_E249">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="E249"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+										
+					<ListBoxItem text="E250 - Sales Territory Monthly Turnover" identifier="formName_E250">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="E250"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+										
+					<ListBoxItem text="E251 - Sales Territory Statistics Information" identifier="formName_E251">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="E251"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+										
+					<ListBoxItem text="E252 - Sales Territory Monthly Distribution" identifier="formName_E252">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="E252"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+										
+					<ListBoxItem text="E253 - Special Offer Statistics Information" identifier="formName_E253">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="E253"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+										
+					<ListBoxItem text="E254 - Special Offer Weekly Turnover" identifier="formName_E254">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="E254"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+										
+					<ListBoxItem text="E255 - Special Offer Weekly Sales Vs Target" identifier="formName_E255">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="E255"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+										
+					<ListBoxItem text="E256 - Special Offer Profit Figures" identifier="formName_E256">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="E256"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+										
+					<ListBoxItem text="E257 - Sales Condition Statistics Information" identifier="formName_E257">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="E257"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+										
+					<ListBoxItem text="E258 - Sales Condition Monthly Turnover" identifier="formName_E258">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="E258"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+										
+					<ListBoxItem text="E259 - Sales Condition Monthly Sales Targets" identifier="formName_E259">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="E259"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+										
+					<ListBoxItem text="E260 - Sales Condition Profit Figures" identifier="formName_E260">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="E260"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+										
+					<ListBoxItem text="E261 - Company Statistics Information" identifier="formName_E261">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="E261"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+										
+					<ListBoxItem text="E262 - Company Monthly Turnover" identifier="formName_E22">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="E262"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+										
+					<ListBoxItem text="E263 - Company Profit Figures" identifier="formName_E263">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="E263"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+										
+					<ListBoxItem text="E264 - Company Monthly Sales Targets" identifier="formName_E264">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="E264"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+										
+					<ListBoxItem text="E265 - Company Statistics Information" identifier="formName_E265">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="E265"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+										
+					<ListBoxItem text="E266 - Company Daily Sales Figures" identifier="formName_E266">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="E266"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+										
+					<ListBoxItem text="E267 - Company Statistics Information" identifier="formName_E267">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="E267"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+										
+					<ListBoxItem text="E268 - Company Monthly Distribution" identifier="formName_E268">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="E268"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+										
+										
+					<ListBoxItem text="E270 - Report" identifier="formName_E270">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="E270"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+										
+					<ListBoxItem text="E272 - Report" identifier="formName_E272">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="E272"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+
+										
+					<ListBoxItem text="E274 - Report" identifier="formName_E274">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="E274"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+										
+					<ListBoxItem text="E275 - Report" identifier="formName_E275">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="E275"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+										
+					<ListBoxItem text="E276 - Report" identifier="formName_E26">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="E276"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+										
+					<ListBoxItem text="E277 - Report" identifier="formName_E277">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="E277"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+										
+					<ListBoxItem text="E278 - Report" identifier="formName_E278">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="E278"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+										
+					<ListBoxItem text="E279 - Report" identifier="formName_E279">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="E279"/>
+						</ListBoxItem.value>
+					</ListBoxItem>										
+
+					<ListBoxItem text="E280 - Report" identifier="formName_E280">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="E280"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+
+					<ListBoxItem text="E281 - Report" identifier="formName_E281">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="E281"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+
+					<ListBoxItem text="E282 - Report" identifier="formName_E282">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="E282"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+
+					<ListBoxItem text="E283 - Report" identifier="formName_E283">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="E283"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+
+					<ListBoxItem text="E284 - Report" identifier="formName_E284">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="E284"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+
+					<ListBoxItem text="E285 - Report" identifier="formName_E285">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="E285"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+
+					<ListBoxItem text="E286 - Report" identifier="formName_E286">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="E286"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+
+					<ListBoxItem text="E287 - Report" identifier="formName_E287">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="E287"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+
+					<ListBoxItem text="E288 - Report" identifier="formName_E288">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="E288"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+
+					<ListBoxItem text="E289 - Report" identifier="formName_E289">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="E289"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+
+					<ListBoxItem text="E290 - Inventory Items Bought & Sold" identifier="formName_E290">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="E290"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+
+					<ListBoxItem text="E291 - Automated Product Insertion" identifier="formName_E291">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="E291"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+
+					<ListBoxItem text="E292 - Report" identifier="formName_E292">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="E292"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+
+					<ListBoxItem text="E293 - Delivery Cycle Schedule" identifier="formName_E293">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="E293"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+
+					<ListBoxItem text="E294 - Salesperson Commission Payable Report" identifier="formName_E294">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="E294"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+
+					<ListBoxItem text="E295 - Default Values" identifier="formName_E295">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="E295"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+
+					<ListBoxItem text="E400 - Order Inquiry" identifier="formName_E400">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="E400"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+
+					<ListBoxItem text="E401 - Order Scan" identifier="formName_E401">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="E401"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+
+					<ListBoxItem text="E403 - Order Scan" identifier="formName_E403">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="E403"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+
+					<ListBoxItem text="E404 - Backorder Allocation" identifier="formName_E404">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="E404"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+
+					<ListBoxItem text="E408 - Order Status" identifier="formName_E408">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="E408"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+
+					<ListBoxItem text="E416 - Product On-Order Scan" identifier="formName_E416">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="E416"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+
+					<ListBoxItem text="E417 - Backorder Allocation Release" identifier="formName_E417">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="E417"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+
+					<ListBoxItem text="E418 - Backorder Allocation" identifier="formName_E418">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="E418"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+
+					<ListBoxItem text="E419 - Order Line Info" identifier="formName_E419">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="E419"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+
+					<ListBoxItem text="E426 - Product On-Order Scan" identifier="formName_E426">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="E416"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+
+					<ListBoxItem text="E440 - Sales Orders Selection" identifier="formName_E440">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="E440"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+
+					<ListBoxItem text="E441 - Order Criteria" identifier="formName_E441">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="E441"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+
+					<ListBoxItem text="E442 - Order Criteria" identifier="formName_E442">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="E442"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+
+					<ListBoxItem text="E443 - Segment Total" identifier="formName_E443">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="E443"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+
+					<ListBoxItem text="E445 - Product Order Stocking" identifier="formName_E445">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="E445"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+
+					<ListBoxItem text="E446 - Warehouse Statistics Information" identifier="formName_E446">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="E446"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+
+					<ListBoxItem text="E447 - Order Summation" identifier="formName_E47">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="E447"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+
+					<ListBoxItem text="E448 - Order Load Parameters" identifier="formName_E48">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="E448"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+
+					<ListBoxItem text="E449 - Order Import Parameters" identifier="formName_E449">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="E449"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+
+					<ListBoxItem text="E450 - Order Import" identifier="formName_E450">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="E450"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+
+					<ListBoxItem text="E451 - Order Confirmation Summary" identifier="formName_E451">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="E451"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+
+					<ListBoxItem text="E452 - Order Amendment Unload" identifier="formName_E452">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="E452"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+
+					<ListBoxItem text="E453 - Bulk Delivery Override Details" identifier="formName_E453">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="E453"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+
+					<ListBoxItem text="E454 - Bulk Pick List Report" identifier="formName_E454">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="E454"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+
+					<ListBoxItem text="E455 - Back Order Information" identifier="formName_E455">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="E455"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+
+					<ListBoxItem text="E456 - Sales Orders Status Selection" identifier="formName_E456">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="E456"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+
+					<ListBoxItem text="E457 - Customer Shipping" identifier="formName_E457">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="E457"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+
+					<ListBoxItem text="E458 - Picking Slip Selection" identifier="formName_E458">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="E458"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+
+					<ListBoxItem text="E459 - Matrix Quantity Entry" identifier="formName_E459">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="E459"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+
+					<ListBoxItem text="E460 - Parent Product Order Quantities Summary" identifier="formName_E460">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="E460"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+
+					<ListBoxItem text="E461 - Pack Addition" identifier="formName_E461">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="E461"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+
+
+
+
+
+
+
+
+
+
+					<ListBox.onMouseDoubleClick>
+						<ActionEventHandler actionName="ViewForm"/>
+					</ListBox.onMouseDoubleClick>
+				</ListBox>
+			</GridPanel>
+			<GridPanel classNames="fcls_statusbar_cnt" visible="true" verticalAlignment="Bottom" gridItemLocation="0,2,1,1" fieldTable="formonly" identifier="cntStatusBar">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="100%"/>
+				</GridPanel.gridColumnDefinitions>
+				<Label isDynamic="true" text="" classNames="fcls_sblabel" visible="true" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="lbInfo1"/>
+				<Label isDynamic="true" text="" classNames="fcls_sblabel" visible="true" gridItemLocation="0,1,1,1" fieldTable="formonly" identifier="lbInfo2"/>
+			</GridPanel>
+		</GridPanel>
+	</form.rootContainer>
+	<form.screenRecords>
+		<ScreenRecord identifier="FORMONLY" fields="f151"/>
+	</form.screenRecords>
+</form>
+

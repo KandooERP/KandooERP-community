@@ -1,0 +1,974 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form xmlns="http://namespaces.querix.com/2015/fglForms">
+	<form.rootContainer>
+		<GridPanel classNames="fcls_rootContainer" verticalAlignment="Stretch" horizontalAlignment="Stretch" fieldTable="" identifier="rootContainer">
+			<GridPanel.gridRowDefinitions>
+				<GridRowDefinition gridLengthValue=""/>
+				<GridRowDefinition gridLengthValue="100%"/>
+				<GridRowDefinition gridLengthValue=""/>
+			</GridPanel.gridRowDefinitions>
+			<GridPanel.gridColumnDefinitions>
+				<GridColumnDefinition gridLengthValue="100%"/>
+			</GridPanel.gridColumnDefinitions>
+			<GridPanel classNames="fcls_title_cnt" visible="true" verticalAlignment="Top" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="cntTitle">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="100%"/>
+					<GridColumnDefinition gridLengthValue=""/>
+				</GridPanel.gridColumnDefinitions>
+				<Label isDynamic="true" text="Header-Text" classNames="fcls_title_lb" visible="true" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="header_text"/>
+				<Label isDynamic="true" text="_master_D1_1Gp_01b" classNames="fcls_title_lb" visible="true" gridItemLocation="1,0,1,1" fieldTable="" identifier="lbFormName"/>
+			</GridPanel>
+			<GridPanel classNames="fcls_detail_cnt,fcls_data_cnt,fcls_align_left" visible="true" verticalAlignment="Top" horizontalAlignment="Left" gridItemLocation="0,1,1,1" fieldTable="formonly" identifier="cntDetail1">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue="" gridMinLength="100%"/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="" gridMinLength="100%"/>
+				</GridPanel.gridColumnDefinitions>
+				<ListBox minSize="60rem,20rem" visible="true" verticalAlignment="Stretch" horizontalAlignment="Stretch" gridItemLocation="0,0,1,1" fieldTable="" identifier="formName">
+					<ListBoxItem text="G100 - Account Inquiry">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="G100"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					<ListBoxItem text="G101 - Account Ledger Scan">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="G101"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					<ListBoxItem text="G102 - Account Budget Scan">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="G102"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					<ListBoxItem text="G103 - Ledger Detail">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="G103"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					<ListBoxItem text="G104 - Ledger Detail Scan">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="G104"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					<ListBoxItem text="G105 - Account Budget Detail">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="G105"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					<ListBoxItem text="G106 - Ledger History Scan">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="G106"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					<ListBoxItem text="G107 - GA - Account Reports Sub-system">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="G107"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					<ListBoxItem text="G109 - Journal Batch Information">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="G109"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					<ListBoxItem text="G110 - Automatic Transaction Numbering">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="G110"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					<ListBoxItem text="G111 - Bank Account Reconciliation">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="G111"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					<ListBoxItem text="G112 - Batch Detail">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="G112"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					<ListBoxItem text="G114 - Journal Line Items">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="G114"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					<ListBoxItem text="G115 - Successful Addition of Batch Number">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="G115"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					<ListBoxItem text="G118 - Report Header">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="G118"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					<ListBoxItem text="G119 - Report Header">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="G119"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					<ListBoxItem text="G120 - Financial Report Instructions">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="G120"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					<ListBoxItem text="G121 - Financial Report Selector">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="G121"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					<ListBoxItem text="G122 - Chart of Accounts">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="G122"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					<ListBoxItem text="G123 - Chart of Accounts">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="G123"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					<ListBoxItem text="G124 - Journal Types">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="G124"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					<ListBoxItem text="G125 - Journal List - Header-Text (missing Form)">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="G125"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					<ListBoxItem text="G126 - GL Flexible Structure - CHAR(18)">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="G126"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					<ListBoxItem text="G128 - Flex Codes">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="G128"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					<ListBoxItem text="G129 - Flex Codes">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="G129"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					<ListBoxItem text="G130 - Company Scan">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="G130"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					<ListBoxItem text="G131 - Company Detail">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="G131"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					<ListBoxItem text="G132 - Currency">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="G132"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					<ListBoxItem text="G133 - General Ledger Parameters">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="G133"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					<ListBoxItem text="G134 - Bank Account Details">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="G134"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					<ListBoxItem text="G135 - Bank Scan">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="G135"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					<ListBoxItem text="G136 - Bank Account Details">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="G136"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					<ListBoxItem text="G136a - Create Historical Balances">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="G136a"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					<ListBoxItem text="G137 - Bank Reconciliation">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="G137"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					<ListBoxItem text="G138 - Title missing (needs adding - please give me a title for this form.window">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="G138"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					<ListBoxItem text="G144 - Split Deposits">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="G144"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					<ListBoxItem text="G145 - Cashbook Installation">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="G145"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					<ListBoxItem text="G146 - Account Details">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="G146"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					<ListBoxItem text="G147 - Account Verifier">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="G147"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					<ListBoxItem text="G148 - External Batch Load">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="G148"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					<ListBoxItem text="G149 - Batch Clearance">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="G149"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					<ListBoxItem text="G150 - Post Run Audit Trail">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="G150"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					<ListBoxItem text="G151 - Subsidiary Ledger Reconciliation">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="G151"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					<ListBoxItem text="G151a - Subsidiary Ledger Reconciliation">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="G151a"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					<ListBoxItem text="G153 - Fiscal Year and Period">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="G153"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					<ListBoxItem text="G154 - Journals">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="G154"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					<ListBoxItem text="G155 - GL Posting">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="G155"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					<ListBoxItem text="G156 - Recurring Journals">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="G156"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					<ListBoxItem text="G157 - Journal Detail">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="G157"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					<ListBoxItem text="G158 - Account Budgets">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="G158"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					<ListBoxItem text="G161 - GL Period Closing">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="G161"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					<ListBoxItem text="G162 - GL Year Closing">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="G162"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					<ListBoxItem text="G163 - Exchange Rate Scan">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="G163"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					<ListBoxItem text="G164 - Subsidiary to General Ledger Reconcile">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="G164"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					<ListBoxItem text="G165 - Subsidiary Verify">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="G165"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					<ListBoxItem text="G166 - Cashbook Audit Trail">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="G166"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					<ListBoxItem text="G167 - Foreign Currency Exchange">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="G167"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					<ListBoxItem text="G168 - Segment Searcher">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="G168"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					<ListBoxItem text="G169 - Group Codes">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="G169"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					<ListBoxItem text="G170 - Copy Chart of Account">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="G170"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					<ListBoxItem text="G173 - Budget Worksheet Selection">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="G173"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					<ListBoxItem text="G174 - Segment Searcher">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="G174"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					<ListBoxItem text="G175 - Bank Reconciliation Direct Entry">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="G175"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					<ListBoxItem text="G180 - Max Ledger Detail">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="G180"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					<ListBoxItem text="G181 - missing Form ...">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="G181"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					<ListBoxItem text="G182 - Bank Statement Details">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="G182"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					<ListBoxItem text="G184 - Copy Report Instructions">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="G184"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					<ListBoxItem text="G187 - Budget Year">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="G187"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					<ListBoxItem text="G188 - Trial Balance Report">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="G188"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					<ListBoxItem text="G190 - Segment Prefixed Transaction Numbering">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="G190"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					<ListBoxItem text="G191 - Exchange Rates">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="G191"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					<ListBoxItem text="G193 - Country Setup">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="G193"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					<ListBoxItem text="G195 - Country Details">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="G195"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					<ListBoxItem text="G196 - Account">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="G196"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					<ListBoxItem text="G197 - Ledger Scan">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="G197"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					<ListBoxItem text="G198 - Base Currency Ledger Summary">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="G198"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					<ListBoxItem text="G199 - Ledger Detail">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="G199"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					<ListBoxItem text="G200 - Ledger Detail">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="G200"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					<ListBoxItem text="G203 - Base Currency Account Summary">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="G203"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					<ListBoxItem text="G204 - Report Potential Exchange Variance">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="G204"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					<ListBoxItem text="G205 - Unrealised Exchange Variances">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="G205"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					<ListBoxItem text="G206 - Too many Unreconciled items">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="G206"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					<ListBoxItem text="G207 - Rollup Account History">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="G207"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					<ListBoxItem text="G208 - Update Account History">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="G208"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					<ListBoxItem text="G209 - GL Summary Segment Definition">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="G209"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					<ListBoxItem text="G210 - GL Summary Codes Definition">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="G210"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					<ListBoxItem text="G211 - GL Summary Block Definition">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="G211"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					<ListBoxItem text="G212 - GL Summary Report">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="G212"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					<ListBoxItem text="G213 - Summary Trial Balance Report">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="G213"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					<ListBoxItem text="G214 - Company Detail">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="G214"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					<ListBoxItem text="G400 - External Budget Interface">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="G400"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					<ListBoxItem text="G401 - Bank Sheet Entry &amp; Reconciliation">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="G401"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					<ListBoxItem text="G402 - Cheque Selection">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="G402"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					<ListBoxItem text="G403 - Selection">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="G403"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					<ListBoxItem text="G404 - Vendor Selection">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="G404"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					<ListBoxItem text="G405 - Customer Selection">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="G405"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					<ListBoxItem text="G408 - Bank Statement Entry &amp; Reconciliation">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="G408"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					<ListBoxItem text="G409 - Cash Book">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="G409"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					<ListBoxItem text="G410 - Disbursements">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="G410"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					<ListBoxItem text="G411 - Receipt Entry">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="G411"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					<ListBoxItem text="G412 - Cheque">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="G412"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					<ListBoxItem text="G413 - Receipt Application">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="G413"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					<ListBoxItem text="G414 - Bank Statement">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="G414"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					<ListBoxItem text="G415 - Payment Application">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="G415"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					<ListBoxItem text="G417 - Cash Book Transactions">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="G417"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					<ListBoxItem text="G418 - Currency Transfer Scan">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="G418"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					<ListBoxItem text="G419 - Bank Statement Load">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="G419"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					<ListBoxItem text="G420 - Bank Statement Print">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="G420"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					<ListBoxItem text="G421 - Payroll Batch Load">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="G421"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					<ListBoxItem text="G422 - General Ledger Budget Parameters">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="G422"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					<ListBoxItem text="G423 - End of Period Batch Reversal">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="G423"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					<ListBoxItem text="G444 - Multi-Ledger Exchange Variance">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="G444"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					<ListBoxItem text="G449 - Cash Receipt Scan">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="G449"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					<ListBoxItem text="G450 - Multi-Ledger Relationships">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="G450"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					<ListBoxItem text="G450 - Multi-Ledger Relationships">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="G450"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					<ListBoxItem text="G451 - Multi-Ledger Relationships">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="G451"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					<ListBoxItem text="G452 - Consolidated Report Codes">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="G452"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					<ListBoxItem text="G453 - Consolidated Report Codes">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="G453"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					<ListBoxItem text="G454 - GL Period Closing">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="G454"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					<ListBoxItem text="G455 - GL Year Closing">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="G455"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					<ListBoxItem text="G456 - Payroll Load Parameters">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="G456"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					<ListBoxItem text="G457 - Consolidated Summary Trial Balance Report">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="G457"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					<ListBoxItem text="G458 - Journal Disbursement Maintenance">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="G458"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					<ListBoxItem text="G459 - Standing Journal Disbursements">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="G459"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					<ListBoxItem text="G460 - Standing Journal Disbursements">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="G460"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					<ListBoxItem text="G461 - Journal Disbursement Processing">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="G461"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					<ListBoxItem text="G462 - Fiscal">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="G462"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					<ListBoxItem text="G463 - Journal Batch Information">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="G463"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					<ListBoxItem text="G464 - Journals">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="G464"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					<ListBoxItem text="G465 - Standing Journal Disbursement">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="G465"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					<ListBoxItem text="G467 - Journal Disbursements">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="G467"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					<ListBoxItem text="G500 - Management Report Processing">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="G500"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					<ListBoxItem text="G501 - Report Header Browse">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="G501"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					<ListBoxItem text="G504 - Report Position ? (Missing Form)">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="G504"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					<ListBoxItem text="G505 - missing form - needs title">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="G505"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					<ListBoxItem text="G506 - missing form - needs title">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="G506"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					<ListBoxItem text="G507 - Report Type (missing form)">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="G507"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					<ListBoxItem text="G509 - Print Report Writer Definitions">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="G509"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					<ListBoxItem text="G510 - Report Header Maintenance">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="G510"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					<ListBoxItem text="G511 - Report Column Browse">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="G511"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					<ListBoxItem text="G512 - Column Item type">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="G512"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					<ListBoxItem text="G513 - Column Maintenance">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="G513"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					<ListBoxItem text="G514 - Time Item Type">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="G514"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					<ListBoxItem text="G515 - Value Item type">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="G515"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					<ListBoxItem text="G516 - Underline Maintenance">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="G516"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					<ListBoxItem text="G517 - EFT Payment Scan">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="G517"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					<ListBoxItem text="G521 - Accumulator">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="G521"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					<ListBoxItem text="G522 - Accumulator Maintenance">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="G522"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					<ListBoxItem text="G523 - Column Description Line Maintenance">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="G523"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					<ListBoxItem text="G524 - General Ledger Line Maintenance">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="G524"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					<ListBoxItem text="G525 - Report Line Maintenance">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="G525"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					<ListBoxItem text="G526 - Segment Maintenance">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="G526"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					<ListBoxItem text="G527 - Segment Maintenance">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="G527"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					<ListBoxItem text="G528 - External Link Maintenance">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="G528"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					<ListBoxItem text="G529 - Print Report Writer Definitions">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="G529"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					<ListBoxItem text="G530 - Image Report">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="G530"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					<ListBoxItem text="G532 - Bank Types">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="G532"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					<ListBoxItem text="G533 - Bank Type Details">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="G533"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					<ListBoxItem text="G534 - Bank/State/Branch Codes">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="G534"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					<ListBoxItem text="G535 - Bank Group">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="G535"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					<ListBoxItem text="G536 - BIC">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="G536"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					<ListBoxItem text="G537 - EFT Selection">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="G537"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					<ListBoxItem text="G538 - Program Transaction Numbering">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="G538"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					<ListBoxItem text="G539 - Account Transaction Codes">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="G539"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					<ListBoxItem text="G540 - ANZ Transaction Load">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="G540"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					<ListBoxItem text="G542 -Report Sub Groups">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="G542"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					<ListBoxItem text="G543 - General Ledger Reports">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="G543"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					<ListBoxItem text="G544 - Report Details">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="G544"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					<ListBoxItem text="G545 - Report Data Extraction">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="G545"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					<ListBoxItem text="G546 - Report Group Order">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="G546"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					<ListBoxItem text="G547 - AR Posting Drill Down">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="G547"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					<ListBoxItem text="G548 - Post Journal">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="G548"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					<ListBoxItem text="G549 - General ledger account translation">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="G549"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					<ListBoxItem text="G550 - Report Data Import">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="G550"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					<ListBoxItem text="G551 - Financial Work Sheet Selection">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="G551"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					<ListBoxItem text="G552 - Approved Funds Account Details">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="G552"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					<ListBoxItem text="G555 - Transaction Numbering Menu">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="G555"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					<ListBoxItem text="G557 - Missing Form G557">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="G557"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					<ListBoxItem text="G559 - Tax Code">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="G559"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					<ListBoxItem text="G560 - Missing form...">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="G560"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					<ListBoxItem text="G579 - Account Group Management">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="G579"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					<ListBoxItem text="G580 - Header-Text">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="G580"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					<ListBoxItem text="G581 - Account Maintenance Group">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="G581"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					<ListBoxItem text="GB - Batch Reports Sub-system Menu (GB)">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="GB"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					<ListBox.onMouseDoubleClick>
+						<ActionEventHandler actionName="ViewForm"/>
+					</ListBox.onMouseDoubleClick>
+				</ListBox>
+			</GridPanel>
+			<GridPanel classNames="fcls_statusbar_cnt" visible="true" verticalAlignment="Bottom" gridItemLocation="0,2,1,1" fieldTable="formonly" identifier="cntStatusBar">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="100%"/>
+				</GridPanel.gridColumnDefinitions>
+				<Label isDynamic="true" text="" classNames="fcls_sblabel" visible="true" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="lbInfo1"/>
+				<Label isDynamic="true" text="" classNames="fcls_sblabel" visible="true" gridItemLocation="0,1,1,1" fieldTable="formonly" identifier="lbInfo2"/>
+			</GridPanel>
+		</GridPanel>
+	</form.rootContainer>
+	<form.screenRecords>
+		<ScreenRecord identifier="FORMONLY" fields="f151"/>
+	</form.screenRecords>
+</form>
+

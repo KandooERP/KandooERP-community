@@ -1,0 +1,267 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form xmlns="http://namespaces.querix.com/2015/fglForms">
+	<form.rootContainer>
+		<GridPanel classNames="fcls_rootContainer" verticalAlignment="Top" horizontalAlignment="Left" fieldTable="" identifier="rootContainer">
+			<GridPanel.gridRowDefinitions>
+				<GridRowDefinition>
+					<GridRowDefinition.gridLength>
+						<GridLength gridLengthValue=""/>
+					</GridRowDefinition.gridLength>
+				</GridRowDefinition>
+				<GridRowDefinition>
+					<GridRowDefinition.gridLength>
+						<GridLength gridLengthValue=""/>
+					</GridRowDefinition.gridLength>
+				</GridRowDefinition>
+				<GridRowDefinition>
+					<GridRowDefinition.gridLength>
+						<GridLength gridLengthValue="" />
+					</GridRowDefinition.gridLength>
+				</GridRowDefinition>
+				<GridRowDefinition>
+					<GridRowDefinition.gridLength>
+						<GridLength gridLengthValue=""/>
+					</GridRowDefinition.gridLength>
+				</GridRowDefinition>
+				<GridRowDefinition>
+					<GridRowDefinition.gridLength>
+						<GridLength gridLengthValue=""/>
+					</GridRowDefinition.gridLength>
+				</GridRowDefinition>
+				<GridRowDefinition>
+					<GridRowDefinition.gridLength>
+						<GridLength gridLengthValue=""/>
+					</GridRowDefinition.gridLength>
+				</GridRowDefinition>
+			</GridPanel.gridRowDefinitions>
+			<GridPanel.gridColumnDefinitions>
+				<GridColumnDefinition>
+					<GridColumnDefinition.gridLength>
+						<GridLength gridLengthValue="100%"/>
+					</GridColumnDefinition.gridLength>
+				</GridColumnDefinition>
+			</GridPanel.gridColumnDefinitions>
+			<GridPanel classNames="fcls_title_cnt" visible="true" verticalAlignment="Top" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="cntTitle">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition>
+						<GridRowDefinition.gridLength>
+							<GridLength gridLengthValue=""/>
+						</GridRowDefinition.gridLength>
+					</GridRowDefinition>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition>
+						<GridColumnDefinition.gridLength>
+							<GridLength gridLengthValue="100%"/>
+						</GridColumnDefinition.gridLength>
+					</GridColumnDefinition>
+					<GridColumnDefinition>
+						<GridColumnDefinition.gridLength>
+							<GridLength gridLengthValue=""/>
+						</GridColumnDefinition.gridLength>
+					</GridColumnDefinition>
+				</GridPanel.gridColumnDefinitions>
+				<Label isDynamic="true" text="AP Load Parameters" classNames="fcls_title_lb" visible="true" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="header_text"/>
+				<Label isDynamic="true" text="P230" classNames="fcls_title_lb" visible="true" gridItemLocation="1,0,1,1" fieldTable="" identifier="lbFormName"/>
+			</GridPanel>
+			<GridPanel classNames="fcls_detail_cnt,fcls_data_cnt,fcls_align_left" visible="true" verticalAlignment="Top" horizontalAlignment="Left" gridItemLocation="0,1,1,1" fieldTable="" identifier="cntDetail1">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition>
+						<GridRowDefinition.gridLength>
+							<GridLength gridLengthValue=""/>
+						</GridRowDefinition.gridLength>
+					</GridRowDefinition>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition>
+						<GridColumnDefinition.gridLength>
+							<GridLength gridLengthValue="" gridMinLength="10rem"/>
+						</GridColumnDefinition.gridLength>
+					</GridColumnDefinition>
+					<GridColumnDefinition>
+						<GridColumnDefinition.gridLength>
+							<GridLength gridLengthValue=""/>
+						</GridColumnDefinition.gridLength>
+					</GridColumnDefinition>
+					<GridColumnDefinition>
+						<GridColumnDefinition.gridLength>
+							<GridLength gridLengthValue=""/>
+						</GridColumnDefinition.gridLength>
+					</GridColumnDefinition>
+				</GridPanel.gridColumnDefinitions>
+				<Label isDynamic="true" text="Load Description" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,0,1,1" fieldTable="" identifier="lb139"/>
+				<TextField toCase="Up" dataType="Char,,,,3" classNames="fcls_data_widget,fcls_align_left,fcls_length_10qch" preferredSize="4qch,1qch" toolTip=" Enter Load Indicator" gridItemLocation="1,0,1,1" fieldTable="loadparms" comment=" Enter Load Indicator" identifier="load_ind"/>
+				<TextField dataType="Char,,,,30" classNames="fcls_data_widget,fcls_align_left,fcls_length_30qch" preferredSize="30qch,1qch" toolTip=" Brief description of Load Indicator" gridItemLocation="2,0,1,1" fieldTable="loadparms" comment=" Brief description of Load Indicator" identifier="desc_text"/>
+			</GridPanel>
+			<GroupBox title="Last Load" classNames="fcls_detail_gb_cnt" visible="true" verticalAlignment="Stretch" horizontalAlignment="Stretch" gridItemLocation="0,2,1,1" fieldTable="formonly" identifier="cntDetail2GroupBox">
+				<GridPanel classNames="fcls_detail_gb_cnt_sub,fcls_data_cnt,fcls_align_left" visible="true" verticalAlignment="Top" horizontalAlignment="Left" fieldTable="formonly" identifier="cntDetail2GBSubGp">
+					<GridPanel.gridRowDefinitions>
+						<GridRowDefinition>
+							<GridRowDefinition.gridLength>
+								<GridLength gridLengthValue=""/>
+							</GridRowDefinition.gridLength>
+						</GridRowDefinition>
+						<GridRowDefinition>
+							<GridRowDefinition.gridLength>
+								<GridLength gridLengthValue=""/>
+							</GridRowDefinition.gridLength>
+						</GridRowDefinition>
+						<GridRowDefinition>
+							<GridRowDefinition.gridLength>
+								<GridLength gridLengthValue=""/>
+							</GridRowDefinition.gridLength>
+						</GridRowDefinition>
+					</GridPanel.gridRowDefinitions>
+					<GridPanel.gridColumnDefinitions>
+						<GridColumnDefinition>
+							<GridColumnDefinition.gridLength>
+								<GridLength gridLengthValue="" gridMinLength="10rem"/>
+							</GridColumnDefinition.gridLength>
+						</GridColumnDefinition>
+						<GridColumnDefinition>
+							<GridColumnDefinition.gridLength>
+								<GridLength gridLengthValue=""/>
+							</GridColumnDefinition.gridLength>
+						</GridColumnDefinition>
+					</GridPanel.gridColumnDefinitions>
+					<Label isDynamic="true" text="Sequence" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,0,1,1" fieldTable="" identifier="lb91"/>
+					<TextField dataType="Integer,,,," classNames="fcls_data_widget,fcls_align_left,fcls_length_10qch" preferredSize="6qch,1qch" gridItemLocation="1,0,1,1" fieldTable="loadparms" identifier="seq_num"/>
+					<Label isDynamic="true" text="Date" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,1,1,1" fieldTable="formonly" identifier="lb64"/>
+					<Calendar dataType="Date,,,," classNames="fcls_data_widget,fcls_align_left,fcls_length_10qch" preferredSize="11qch,1qch" gridItemLocation="1,1,1,1" fieldTable="loadparms" identifier="load_date"/>
+					<Label isDynamic="true" text="Loaded" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,2,1,1" fieldTable="formonly" identifier="lb65"/>
+					<TextField dataType="Integer,,,," classNames="fcls_data_widget,fcls_align_left,fcls_length_10qch" preferredSize="9qch,1qch" gridItemLocation="1,2,1,1" fieldTable="loadparms" identifier="load_num"/>
+				</GridPanel>
+			</GroupBox>
+			<GroupBox title="File / Path" classNames="fcls_detail_gb_cnt" visible="true" verticalAlignment="Stretch" horizontalAlignment="Stretch" gridItemLocation="0,3,1,1" fieldTable="formonly" identifier="cntDetail3GroupBox">
+				<GridPanel classNames="fcls_detail_gb_cnt_sub,fcls_data_cnt,fcls_align_hstretch" visible="true" verticalAlignment="Top" horizontalAlignment="Stretch" fieldTable="formonly" identifier="cntDetail3GBSubGpLeft">
+					<GridPanel.gridRowDefinitions>
+						<GridRowDefinition>
+							<GridRowDefinition.gridLength>
+								<GridLength gridLengthValue=""/>
+							</GridRowDefinition.gridLength>
+						</GridRowDefinition>
+						<GridRowDefinition>
+							<GridRowDefinition.gridLength>
+								<GridLength gridLengthValue=""/>
+							</GridRowDefinition.gridLength>
+						</GridRowDefinition>
+						<GridRowDefinition>
+							<GridRowDefinition.gridLength>
+								<GridLength gridLengthValue=""/>
+							</GridRowDefinition.gridLength>
+						</GridRowDefinition>
+					</GridPanel.gridRowDefinitions>
+					<GridPanel.gridColumnDefinitions>
+						<GridColumnDefinition>
+							<GridColumnDefinition.gridLength>
+								<GridLength gridLengthValue="" gridMinLength="10rem"/>
+							</GridColumnDefinition.gridLength>
+						</GridColumnDefinition>
+						<GridColumnDefinition>
+							<GridColumnDefinition.gridLength>
+								<GridLength gridLengthValue="100%"/>
+							</GridColumnDefinition.gridLength>
+						</GridColumnDefinition>
+					</GridPanel.gridColumnDefinitions>
+					<Label isDynamic="true" text="Unix File Name" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="lb48"/>
+					<TextField dataType="Char,,,,20" classNames="fcls_data_widget,fcls_align_hstretch" preferredSize="21qch,1qch" toolTip=" Enter full name of interface load file" horizontalAlignment="Stretch" gridItemLocation="1,0,1,1" fieldTable="loadparms" comment=" Enter full name of interface load file" identifier="file_text"/>
+					<Label isDynamic="true" text="UNIX Path Name" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,1,1,1" fieldTable="formonly" identifier="lb49"/>
+					<ComboBox editable="true" dataType="Char,,,,60" classNames="fcls_data_widget,fcls_align_hstretch" preferredSize="41qch,1qch" toolTip=" Enter full UNIX path of interface load file" horizontalAlignment="Stretch" gridItemLocation="1,1,1,1" fieldTable="loadparms" comment=" Enter full UNIX path of interface load file" identifier="path_text"/>
+					<Label isDynamic="true" text="Format No" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,2,1,1" fieldTable="formonly" identifier="lb63"/>
+					<Spinner step="1" minValue="1" maxValue="99" dataType="Char,,,,2" classNames="fcls_data_widget,fcls_align_left,fcls_length_10qch" preferredSize="3qch,1qch" toolTip=" Enter AP Load Routine indicator" gridItemLocation="1,2,1,1" fieldTable="loadparms" comment=" Enter AP Load Routine indicator" identifier="format_ind"/>
+				</GridPanel>
+			</GroupBox>
+			<GroupBox title="Reference" classNames="fcls_detail_gb_cnt" visible="true" verticalAlignment="Stretch" horizontalAlignment="Stretch" gridItemLocation="0,4,1,1" fieldTable="" identifier="cntDetail4GroupBox">
+				<GridPanel classNames="fcls_detail_gb_cnt_sub,fcls_data_cnt,fcls_align_left" visible="true" verticalAlignment="Top" horizontalAlignment="Left" gridItemLocation="0,5,1,1" fieldTable="formonly" identifier="cntDetail4">
+					<GridPanel.gridRowDefinitions>
+						<GridRowDefinition>
+							<GridRowDefinition.gridLength>
+								<GridLength gridLengthValue=""/>
+							</GridRowDefinition.gridLength>
+						</GridRowDefinition>
+						<GridRowDefinition>
+							<GridRowDefinition.gridLength>
+								<GridLength gridLengthValue=""/>
+							</GridRowDefinition.gridLength>
+						</GridRowDefinition>
+						<GridRowDefinition>
+							<GridRowDefinition.gridLength>
+								<GridLength gridLengthValue=""/>
+							</GridRowDefinition.gridLength>
+						</GridRowDefinition>
+						<GridRowDefinition>
+							<GridRowDefinition.gridLength>
+								<GridLength gridLengthValue=""/>
+							</GridRowDefinition.gridLength>
+						</GridRowDefinition>
+					</GridPanel.gridRowDefinitions>
+					<GridPanel.gridColumnDefinitions>
+						<GridColumnDefinition>
+							<GridColumnDefinition.gridLength>
+								<GridLength gridLengthValue="" gridMinLength="10rem"/>
+							</GridColumnDefinition.gridLength>
+						</GridColumnDefinition>
+						<GridColumnDefinition>
+							<GridColumnDefinition.gridLength>
+								<GridLength gridLengthValue=""/>
+							</GridColumnDefinition.gridLength>
+						</GridColumnDefinition>
+						<GridColumnDefinition>
+							<GridColumnDefinition.gridLength>
+								<GridLength gridLengthValue=""/>
+							</GridColumnDefinition.gridLength>
+						</GridColumnDefinition>
+						<GridColumnDefinition>
+							<GridColumnDefinition.gridLength>
+								<GridLength gridLengthValue=""/>
+							</GridColumnDefinition.gridLength>
+						</GridColumnDefinition>
+					</GridPanel.gridColumnDefinitions>
+					<Label isDynamic="true" text="Prompt" classNames="fcls_columnlabel_rev_cell,fcls_align_hstretch" visible="true" gridItemLocation="1,0,1,1" fieldTable="" identifier="lb180" horizontalAlignment="Stretch"/>
+					<Label isDynamic="true" text="Default Value" classNames="fcls_columnlabel_rev_cell,fcls_align_hstretch" visible="true" gridItemLocation="2,0,1,1" fieldTable="" identifier="lb181" horizontalAlignment="Stretch"/>
+					<Label isDynamic="true" text="Entry Required" classNames="fcls_columnlabel_rev_cell,fcls_align_hstretch" visible="true" gridItemLocation="3,0,1,1" fieldTable="" identifier="lb182" horizontalAlignment="Stretch"/>
+					<Label isDynamic="true" text="Reference 1" classNames="fcls_columnlabel_rev_cell,fcls_align_hstretch" visible="true" gridItemLocation="0,1,1,1" fieldTable="" identifier="lb115" horizontalAlignment="Stretch"/>
+					<TextField dataType="Char,,,,15" classNames="fcls_data_widget,fcls_align_left,fcls_length_20qch" preferredSize="16qch,1qch" toolTip=" First Prompt during import" gridItemLocation="1,1,1,1" fieldTable="loadparms" comment=" First Prompt during import" identifier="prmpt1_text"/>
+					<TextField dataType="Char,,,,20" classNames="fcls_data_widget,fcls_align_left,fcls_length_20qch" preferredSize="21qch,1qch" toolTip=" First Default Value required during import" gridItemLocation="2,1,1,1" fieldTable="loadparms" comment=" First Default Value required during import" identifier="ref1_text"/>
+					<CheckBox dataType="Char,,,,1" classNames="fcls_data_widget,fcls_align_hcenter,fcls_length_05qch" preferredSize="2qch,1qch" toolTip=" Entry required during Load. (Y/N)?" horizontalAlignment="Center" textAlignment="Center," gridItemLocation="3,1,1,1" fieldTable="loadparms" comment=" Entry required during Load. (Y/N)?" identifier="entry1_flag"/>
+					<Label isDynamic="true" text="Reference 2" classNames="fcls_columnlabel_rev_cell,fcls_align_hstretch" visible="true" gridItemLocation="0,2,1,1" fieldTable="" identifier="lb116" horizontalAlignment="Stretch"/>
+					<TextField dataType="Char,,,,15" classNames="fcls_data_widget,fcls_align_left,fcls_length_20qch" preferredSize="16qch,1qch" toolTip=" Second Prompt during import" gridItemLocation="1,2,1,1" fieldTable="loadparms" comment=" Second Prompt during import" identifier="prmpt2_text"/>
+					<TextField dataType="Char,,,,20" classNames="fcls_data_widget,fcls_align_left,fcls_length_20qch" preferredSize="21qch,1qch" toolTip=" Second Default Value required during import" gridItemLocation="2,2,1,1" fieldTable="loadparms" comment=" Second Default Value required during import" identifier="ref2_text"/>
+					<CheckBox dataType="Char,,,,1" classNames="fcls_data_widget,fcls_align_hcenter,fcls_length_05qch" preferredSize="2qch,1qch" toolTip=" Entry required during Load. (Y/N)?" horizontalAlignment="Center" textAlignment="Center," gridItemLocation="3,2,1,1" fieldTable="loadparms" comment=" Entry required during Load. (Y/N)?" identifier="entry2_flag"/>
+					<Label isDynamic="true" text="Reference 3" classNames="fcls_columnlabel_rev_cell,fcls_align_hstretch" visible="true" gridItemLocation="0,3,1,1" fieldTable="" identifier="lb120" horizontalAlignment="Stretch"/>
+					<TextField dataType="Char,,,,15" classNames="fcls_data_widget,fcls_align_left,fcls_length_20qch" preferredSize="16qch,1qch" toolTip=" Third Prompt during import" gridItemLocation="1,3,1,1" fieldTable="loadparms" comment=" Third Prompt during import" identifier="prmpt3_text"/>
+					<TextField dataType="Char,,,,20" classNames="fcls_data_widget,fcls_align_left,fcls_length_20qch" preferredSize="21qch,1qch" toolTip=" Third Default Value required during import" gridItemLocation="2,3,1,1" fieldTable="loadparms" comment=" Third Default Value required during import" identifier="ref3_text"/>
+					<CheckBox dataType="Char,,,,1" classNames="fcls_data_widget,fcls_align_hcenter,fcls_length_05qch" preferredSize="2qch,1qch" toolTip=" Entry required during Load. (Y/N)?" horizontalAlignment="Center" textAlignment="Center," gridItemLocation="3,3,1,1" fieldTable="loadparms" comment=" Entry required during Load. (Y/N)?" identifier="entry3_flag"/>
+				</GridPanel>
+			</GroupBox>
+			<GridPanel classNames="fcls_statusbar_cnt" visible="true" verticalAlignment="Top" gridItemLocation="0,5,1,1" fieldTable="formonly" identifier="cntStatusBar">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition>
+						<GridRowDefinition.gridLength>
+							<GridLength gridLengthValue=""/>
+						</GridRowDefinition.gridLength>
+					</GridRowDefinition>
+					<GridRowDefinition>
+						<GridRowDefinition.gridLength>
+							<GridLength gridLengthValue=""/>
+						</GridRowDefinition.gridLength>
+					</GridRowDefinition>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition>
+						<GridColumnDefinition.gridLength>
+							<GridLength gridLengthValue="100%"/>
+						</GridColumnDefinition.gridLength>
+					</GridColumnDefinition>
+				</GridPanel.gridColumnDefinitions>
+				<Label isDynamic="true" text="" classNames="fcls_sblabel" visible="true" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="lbInfo1"/>
+				<Label isDynamic="true" text="" classNames="fcls_sblabel" visible="true" gridItemLocation="0,1,1,1" fieldTable="formonly" identifier="lbInfo2"/>
+			</GridPanel>
+		</GridPanel>
+	</form.rootContainer>
+	<form.screenRecords>
+		<ScreenRecord identifier="loadparms" fields="load_ind,seq_num,load_date,load_num,desc_text,file_text,path_text,prmpt1_text,prmpt2_text,prmpt3_text,ref1_text,ref2_text,ref3_text,entry1_flag,entry2_flag,entry3_flag,format_ind"/>
+		<ScreenRecord identifier="FormOnly"/>
+	</form.screenRecords>
+</form>
+

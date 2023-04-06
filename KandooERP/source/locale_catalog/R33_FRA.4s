@@ -1,0 +1,167 @@
+R33_FRA {
+% { "%" }
+/ { "/" }
+0-Immediate Transfer, 1-Confirm & Receipt, 2-Schedule Confirm and Receipt { "0-Transfert immédiat, 1-Confirmation et réception, 2-Planifier Confirmation et réception" }
+ABC Code { "N° SIREN" }
+Account { "Compte" }
+Activity { "Activité" }
+Address { "Adresse" }
+Amounts { "Montants" }
+Available Credit { "Crédit disponible" }
+Back Order { "Commande en cours" }
+Charge Amount { "Montant des charges" }
+City { "Ville" }
+Code { "Code" }
+Comments { "Commentaires" }
+Confirmed Quantity { "Quantité confirmée" }
+Contact { "Contact" }
+Country { "Pays" }
+Critical { "Critique" }
+Currency { "Devise" }
+Current Avail { "Actuellement dispo" }
+Date { "Date" }
+Delivery { "Livraison" }
+Department { "Départment" }
+Desc { "Description" }
+Description { "Description" }
+Description of this product { "Description de ce produit" }
+Dest Warehouse { "Entrepôt Destination" }
+Detail { "Détail" }
+Discount { "Remise" }
+Enter Date of this Requisition { "Entrez la date de cette demande" }
+Enter Unique Person Code { "Entrez le code unique de personne" }
+Entry Date { "Date d'entrée" }
+Entry Person { "Personne ayant saisi l'info" }
+FILTER { "Premier" }
+Fiscal Period { "Période fiscale" }
+Fiscal Year { "Exercice fiscal" }
+Future Avail { "Dispo à terme" }
+GL Integration { "Intégration Grand Livre" }
+Group 1 { "Groupe 1" }
+Group 2 { "Groupe 2" }
+Group 5 Left { "Groupe 5 gauche" }
+Group 5 Right { "Groupe 5 droite" }
+Group 6 Left { "Groupe 6 gauche" }
+Group 6 Right { "Groupe 6 droite" }
+History { "Historique" }
+ID { "ID" }
+Inventory Purchase Order Lines { "Lignes de commande d'inventaire" }
+Job Code { "Code JOB" }
+Job Code (W) { "Code de JOB" }
+Journal Number { "Numéro de Journal" }
+Language Code { "Code langue" }
+Line { "Ligne" }
+Line Number { "Numéro de ligne" }
+Line Status { "Situation de la line" }
+Line Total { "Total Ligne" }
+Lines { "Lignes" }
+List Price { "Prix Liste" }
+Maximum { "Maximum" }
+Minimum Order { "Commande minimum" }
+NOTES { "NOTES" }
+Name { "Nom" }
+New Label { "Références bancaires" }
+Note Code { "Note Code" }
+Notes { "Notes" }
+Number { "Numéro" }
+OEM { "OEM" }
+Order { "Commande" }
+Order No { "N° de Commande" }
+Order Qty { "Quantité commandée" }
+P.O. Number { "Numéro B.C." }
+Period { "Période" }
+Person { "Personne" }
+Person Code { "Code personne" }
+Phone { "Téléphone" }
+Picked Quantity { "Quantité prélevée" }
+Post Code { "Code Postal" }
+Posted { "Publié" }
+Price { "Price" }
+Product { "Produit" }
+Product Code { "Code Produit" }
+Product Code for Line Item  (W) { "Code produit pour cette ligne" }
+Product Scan { "Exploration de produits" }
+Purchase Order Line 2 Description { "Description ligne 2 du Bon de commande" }
+Purchase Order Line Description { "Description ligne  du Bon de commande" }
+Purchasing { "Achat" }
+Quantity { "Quantité" }
+REFRESH { "ACTUALISER" }
+Received { "Reçu" }
+Received Qty { "Quantité reçue" }
+Received Quantity { "Quantité reçue" }
+Reference { "Référence" }
+Relevant comments to this Requisition { "Commentaires pertinents à cette demande" }
+Remaining Quantity { "Quantité restante" }
+Reorder Point { "Point de réapprovisionnement" }
+Requisition { "réquisition" }
+Reserved { "Réservé" }
+Resource { "Ressource" }
+Scheduled Quantity { "Quantité prévue" }
+Source Warehouse { "Entrepôt source" }
+State/County { "Région" }
+Status { "Statut" }
+Status: (U) Undeliv'd, (P) Partially Deliv'd, (C) Complete, (R) Cancelled { "Statut : (U) Non livré, (P) Partiellement livré, (C) Totalement Livré, (R) Annulé" }
+Stock Onhand { "Stock disponible" }
+Stock/Order Level { "Stock/Niveau de commande" }
+Tax Amount { "Montant de la taxe" }
+The GL Account the goods are Committed (W) { "Compte Compta Géné affecté aux marchandises" }
+The GL period number for this transaction { "La période Compta Géné de cette transaction" }
+The GL year number for this transaction { "L'année Compta Géné pour cette transaction" }
+The Product Code assigned to the product { "le code attribué à ce produit" }
+The Tax Amount Per for each of the Items Ordered { "Code T.V.A pour chaque article commandé" }
+The code given by the original equipment manufacturer (OEM) { "Le code donné par le fabricant de l'équipement d'origine (OEM)." }
+The code of the product transferred { "Le code du produit transféré" }
+The date of the transfer { "La date du transfert" }
+The date of this transaction { "La date de cette transaction" }
+The destination location of the transfer { "Le lieu de destination du transfert" }
+The discount percentage to be applied { "Pourcentage de remise à appliquer" }
+The financial period { "La période fiscale" }
+The financial year { "L'année fiscale" }
+The line number of the transfer { "Le numéro de ligne du transfert" }
+The purchase order number { "Numéro bon de commande" }
+The quantity confirmed for delivery { "La quantité confirmée pour la livraison" }
+The quantity of the goods ordered { "La quantité de marchandises commandées" }
+The quantity of the goods received { "La quantité de marchandises reçues" }
+The quantity picked for delivery { "La quantité prélevée pour la livraison" }
+The quantity received this delivery { "La quantité reçue pour cette livraison" }
+The quantity remaining to be scheduled { "La quantité restant à planifier" }
+The quantity scheduled for delivery { "La quantité prévue pour la livraison" }
+The quantity to be transferred { "La quantité à transférer" }
+The source warehouse of the transfer { "L'entrepôt source du transfert" }
+The system generated transfer number { "Le numéro de transfert généré par le système" }
+The transfer description { "Description du transfert" }
+The unit list cost amount { "Prix liste unitaire" }
+The unit of measure, e.g each, dozen { "L'unité de mesure, exemple: douzaine" }
+The unit tax amount associated with this transaction { "Le montant de T.V.A. unitaire associé à cette transaction" }
+Total { "Total" }
+Total Amount { "Montant Total" }
+Total Cost { "Coût total" }
+Totals { "Totaux" }
+Transaction Date { "Date de la transaction" }
+Transaction Info { "Infos sur la transaction" }
+Transfer { "Transfert" }
+Transfer Date { "Date de transfert" }
+Transfer Indicator { "Indicateur de transfert" }
+Transfer Number { "Numéro de transfert" }
+Transfer Quantity { "Quantité à transférer" }
+Type { "Type" }
+UOM { "UDM" }
+Unit Cost { "Coût unitaire" }
+Unit Price { "Prix Unitaire" }
+Unit Tax { "T.V.A unité" }
+Variation { "Variation" }
+Vendor { "Fournisseur" }
+Vendor Account { "Compte fournisseur" }
+Vendor Code { "Code Fournisseur" }
+Vendor Ref { "Réf. Fournisseur" }
+Vendor Reference Information { "Informations de référence du fournisseur" }
+Vendor reference information to this purchase order { "Informations de référence du fournisseur pour cette commande" }
+Voucher { "Facture" }
+Warehouse { "Dépôt" }
+Warehouse Code { "Code Dépôt" }
+Warehouse of this Requisition { "Entrepôt de cette demande" }
+Year { "Année" }
+Year/Per { "Année/Période" }
+actToolbarManager { "actToolbarManager" }
+xxxx { "xxxx" }
+}

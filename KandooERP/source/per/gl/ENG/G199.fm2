@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form xmlns="http://namespaces.querix.com/2015/fglForms">
+	<form.rootContainer>
+		<GridPanel classNames="fcls_rootContainer" verticalAlignment="Stretch" horizontalAlignment="Stretch" fieldTable="" identifier="rootContainer">
+			<GridPanel.gridRowDefinitions>
+				<GridRowDefinition gridLengthValue=""/>
+				<GridRowDefinition gridLengthValue=""/>
+				<GridRowDefinition gridLengthValue=""/>
+				<GridRowDefinition gridLengthValue=""/>
+				<GridRowDefinition gridLengthValue="100%"/>
+				<GridRowDefinition gridLengthValue=""/>
+			</GridPanel.gridRowDefinitions>
+			<GridPanel.gridColumnDefinitions>
+				<GridColumnDefinition gridLengthValue="100%"/>
+			</GridPanel.gridColumnDefinitions>
+			<GridPanel classNames="fcls_title_cnt" visible="true" verticalAlignment="Top" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="cntTitle">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="100%"/>
+					<GridColumnDefinition gridLengthValue=""/>
+				</GridPanel.gridColumnDefinitions>
+				<Label isDynamic="true" text="Ledger Detail" classNames="fcls_title_lb" visible="true" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="header_text"/>
+				<Label isDynamic="true" text="G199" classNames="fcls_title_lb" visible="true" gridItemLocation="1,0,1,1" fieldTable="" identifier="lbFormName"/>
+			</GridPanel>
+			<GridPanel classNames="fcls_detail_cnt,fcls_data_cnt,fcls_align_left" visible="true" verticalAlignment="Top" horizontalAlignment="Left" gridItemLocation="0,1,1,1" fieldTable="formonly" identifier="cntDetail1">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="" gridMinLength="10rem"/>
+					<GridColumnDefinition gridLengthValue=""/>
+					<GridColumnDefinition gridLengthValue=""/>
+				</GridPanel.gridColumnDefinitions>
+				<ComboBox noEntry="true" dataType="Char,,,,2" classNames="list-show-text-value,field-show-value,fcls_data_widget,fcls_align_left,fcls_length_10qch" location="17qch,2qch" preferredSize="25qch,1qch" gridItemLocation="1,0,1,1" fieldTable="accounthist" identifier="cmpy_code"/>
+				<TextField noEntry="true" dataType="Char,,,,30" location="45qch,2qch" preferredSize="25qch,1qch" gridItemLocation="2,0,1,1" fieldTable="company" identifier="name_text"/>
+				<ComboBox noEntry="true" dataType="Char,,,,18" classNames="list-show-value-text,field-show-value,fcls_data_widget,fcls_align_left,fcls_length_10qch" location="17qch,3qch" preferredSize="25qch,1qch" gridItemLocation="1,1,1,1" fieldTable="accounthist" identifier="acct_code"/>
+				<TextField noEntry="true" dataType="Char,,,,40" location="45qch,3qch" preferredSize="25qch,1qch" gridItemLocation="2,1,1,1" fieldTable="coa" identifier="desc_text"/>
+				<Label isDynamic="true" text="Company" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,0,1,1" fieldTable="" identifier="lb51"/>
+				<Label isDynamic="true" text="G/L Account" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,1,1,1" fieldTable="" identifier="lb52"/>
+			</GridPanel>
+			<GridPanel classNames="fcls_detail_cnt,fcls_data_cnt,fcls_align_left" visible="true" verticalAlignment="Top" gridItemLocation="0,2,1,1" fieldTable="formonly" identifier="cntDetail2">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="" gridMinLength="10rem"/>
+					<GridColumnDefinition gridLengthValue=""/>
+					<GridColumnDefinition gridLengthValue=""/>
+				</GridPanel.gridColumnDefinitions>
+				<ComboBox noEntry="true" dataType="SmallInt,,,," classNames="list-show-text,field-show-text,fcls_data_widget,fcls_align_left,fcls_length_15qch" location="17qch,4qch" preferredSize="10qch,1qch" gridItemLocation="1,0,1,1" fieldTable="accounthist" identifier="year_num"/>
+				<ComboBox noEntry="true" dataType="SmallInt,,,," classNames="list-show-text,field-show-text,fcls_data_widget,fcls_align_left,fcls_length_15qch" location="45qch,4qch" preferredSize="10qch,1qch" gridItemLocation="1,1,1,1" fieldTable="accounthist" identifier="period_num"/>
+				<ComboBox noEntry="true" dataType="Char,,,," classNames="list-show-text-value,field-show-value,fcls_data_widget,fcls_align_left,fcls_length_15qch" location="17qch,5qch" preferredSize="25qch,1qch" gridItemLocation="1,2,1,1" fieldTable="formonly" identifier="currency_code"/>
+				<TextField noEntry="true" dataType="Char,,,,30" location="45qch,5qch" preferredSize="25qch,1qch" gridItemLocation="2,2,1,1" fieldTable="currency" identifier="desc_text" classNames="fcls_data_widget,fcls_align_left,fcls_length_30qch"/>
+				<Label isDynamic="true" text="Year" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="lb36"/>
+				<Label isDynamic="true" text="Period" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,1,1,1" fieldTable="formonly" identifier="lb37"/>
+				<Label isDynamic="true" text="Currency" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,2,1,1" fieldTable="formonly" identifier="lb38"/>
+			</GridPanel>
+			<GridPanel classNames="fcls_detail_cnt,fcls_data_cnt,fcls_align_left" visible="true" gridItemLocation="0,3,1,1" fieldTable="" identifier="cntDetail3">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="" gridMinLength="10rem"/>
+					<GridColumnDefinition gridLengthValue=""/>
+				</GridPanel.gridColumnDefinitions>
+				<ComboBox noEntry="true" dataType="Char,,,,3" classNames="list-show-text-value,field-show-value,fcls_data_widget,fcls_align_left,fcls_length_15qch" location="51qch,6qch" preferredSize="4qch,1qch" gridItemLocation="1,0,1,1" fieldTable="glparms" identifier="base_currency_code"/>
+				<Label isDynamic="true" text="Base Currency" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,0,1,1" fieldTable="" identifier="lb44"/>
+			</GridPanel>
+			<Table rowCount="10" preferredSize="70qch,10qch" verticalAlignment="Stretch" horizontalAlignment="Stretch" gridItemLocation="0,4,1,1" fieldTable="" identifier="sr_accountledger">
+				<TableColumn fieldTable="" identifier="c1" text="Currency">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="10%" gridMaxLength="10rem" gridMinLength="2rem"/>
+					</TableColumn.columnLength>
+					<TextField dataType="Char,,,,3" toolTip=" The currency code of the ledger " comment=" The currency code of the ledger " fieldTable="accountledger" identifier="currency_code"/>
+				</TableColumn>
+				<TableColumn text="Description" fieldTable="" identifier="f008">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="50%" gridMaxLength="30rem" gridMinLength="10rem"/>
+					</TableColumn.columnLength>
+					<TextField dataType="Char,,,,40" fieldTable="accountledger" identifier="desc_text"/>
+				</TableColumn>
+				<TableColumn text="Debit" fieldTable="" identifier="f009">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="20%" gridMaxLength="15rem" gridMinLength="5rem"/>
+					</TableColumn.columnLength>
+					<TextField noEntry="true" dataType="Decimal,,,2,16" fieldTable="accountledger" identifier="for_debit_amt"/>
+				</TableColumn>
+				<TableColumn text="Credit" fieldTable="" identifier="f010">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="20%" gridMaxLength="15rem" gridMinLength="5rem"/>
+					</TableColumn.columnLength>
+					<TextField noEntry="true" dataType="Decimal,,,2,16" fieldTable="accountledger" identifier="for_credit_amt"/>
+				</TableColumn>
+			</Table>
+			<GridPanel classNames="fcls_statusbar_cnt" visible="true" verticalAlignment="Top" gridItemLocation="0,5,1,1" fieldTable="formonly" identifier="cntStatusBar">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="100%"/>
+				</GridPanel.gridColumnDefinitions>
+				<Label isDynamic="true" text="" classNames="fcls_sblabel" visible="true" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="lbInfo1"/>
+				<Label isDynamic="true" text="" classNames="fcls_sblabel" visible="true" gridItemLocation="0,1,1,1" fieldTable="formonly" identifier="lbInfo2"/>
+			</GridPanel>
+		</GridPanel>
+	</form.rootContainer>
+	<form.screenRecords>
+	
+	
+		<ScreenRecord identifier="sr_accountledger" fields="accountledger.currency_code,accountledger.desc_text,accountledger.for_debit_amt,accountledger.for_credit_amt"/>
+		<ScreenRecord identifier="accounthist" fields="cmpy_code,acct_code,year_num,period_num"/>
+		<ScreenRecord identifier="accountledger" fields="currency_code,desc_text,for_debit_amt,for_credit_amt"/>
+		<ScreenRecord identifier="coa" fields="desc_text"/>
+		<ScreenRecord identifier="company" fields="name_text"/>
+		<ScreenRecord identifier="currency" fields="desc_text"/>
+		<ScreenRecord identifier="formonly" fields="currency_code"/>
+		<ScreenRecord identifier="glparms" fields="base_currency_code"/>
+	</form.screenRecords>
+</form>
+

@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<fglBuildTarget xmlns="http://namespaces.querix.com/lyciaide/target" name="Q18" type="fgl-program">
+
+  <libraries>
+    <library name="lib_common_pinq_wind" dynamic="false" location=""/>
+    <library name="lib_tool_A_AR_new" dynamic="false" location=""/>
+    <library name="lib_tool_G_GL_new" dynamic="false" location=""/>
+    <library name="lib_tool_I_IN_db" dynamic="false" location=""/>
+    <library name="lib_tool_I_IN_new" dynamic="false" location=""/>
+    <library name="lib_tool_L_LC_new" dynamic="false" location=""/>
+    <library name="lib_tool_Q_QE_db" dynamic="false" location=""/>
+    <library name="lib_tool_Q_QE_new" dynamic="false" location=""/>
+    <library name="lib_tool_U_UT_new" dynamic="false" location=""/>
+    <library name="lib_tool_W_WO_new" dynamic="false" location=""/>
+    <library name="lib_tool_common" dynamic="false" location=""/>
+    <library name="lib_tool_db_common" dynamic="false" location=""/>
+  </libraries>
+
+  <sources type="fgl">
+    <file location="4gl/common/glob_GLOBALS_constant.4gl"/>
+    <file location="4gl/qe/Q11_GLOBALS.4gl"/>
+    <file location="4gl/qe/Q18_GLOBALS.4gl"/>
+    <file location="4gl/common/glob_GLOBALS.4gl"/>
+    <file location="4gl/qe/Q18.4gl"/>
+    <file location="4gl/common/glob_GLOBALS_userDataTypes.4gl"/>
+    <file location="4gl/eo/E11_GLOBALS.4gl"/>
+    <file location="4gl/common/tablefunc.4gl"/>
+    <file location="4gl/qe/Q11i.4gl"/>
+    <file location="4gl/qe/Q18a.4gl"/>
+    <file location="4gl/eo/E14a.4gl"/>
+    <file location="4gl/common/taxwind.4gl"/>
+    <file location="4gl/qe/Q_QE_GLOBALS.4gl"/>
+  </sources>
+
+  <sources type="form">
+    <file location="per/utility/ENG/U156.fm2"/>
+    <file location="per/qe/ENG/Q101.fm2"/>
+    <file location="per/utility/ENG/U526.fm2"/>
+    <file location="per/utility/ENG/U162.fm2"/>
+    <file location="per/in/ENG/I600.fm2"/>
+  </sources>
+
+  <mediaFiles>
+    <file client="true" location="Q18.qxtheme" type="gui-theme-file"/>
+    <file client="true" location="Q18.css" type="other"/>
+  </mediaFiles>
+
+  <buildConfiguration name="development">
+    <additions>
+    </additions>
+    <exclusions>
+      <sources type="fgl">
+        <file location="4gl/eo/E11_GLOBALS.4gl"/>
+      </sources>
+
+    </exclusions>
+  </buildConfiguration>
+
+</fglBuildTarget>

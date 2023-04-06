@@ -1,0 +1,28 @@
+PC1_FRA {
+Accounting period to be used for posting purposes { "Période comptable à utiliser à des fins de comptabilisation" }
+Accounting year to be used for posting purposes { "Année comptable à utiliser aux fins de comptabilisation" }
+Bank Code { "Code Banque" }
+Currency { "Devise" }
+Date { "Date" }
+Entry Date { "Date d'entrée" }
+Entry Person { "Personne ayant saisi l'info" }
+ID { "ID" }
+Language Code { "Code langue" }
+Method: (1) auto/manual cheques, (3) EFT payments { "Méthode: (1) chèque auto/manuel, (3) paiements EFT" }
+Name { "Nom" }
+Name of person performing entry { "Nom de la personne effectuant la saisie" }
+Payment Method { "Mode de paiement" }
+Payment Number { "Numéro de paiement" }
+Posted { "Publié" }
+Posting Period { "Période de comptabilisation" }
+Posting Year { "Année de publication" }
+Tax Amount { "Montant de la taxe" }
+The contra amount of this cheque { "Montant de contre-écriture de ce chèque" }
+The currency used for this vendor { "Devise utilisée pour ce fournisseur" }
+The tax amount of this cheque { "Le montant de la T.V.A de ce chèque" }
+Title { "Titre" }
+Unique Vendor ID { "ID unique du fournisseur" }
+Vendor Code { "Code Fournisseur" }
+Vendor Type { "Type de Fournisseur" }
+actToolbarManager { "actToolbarManager" }
+}

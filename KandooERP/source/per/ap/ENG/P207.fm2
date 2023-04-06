@@ -1,0 +1,348 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form xmlns="http://namespaces.querix.com/2015/fglForms">
+	<form.rootContainer>
+		<GridPanel classNames="fcls_rootContainer" verticalAlignment="Top" horizontalAlignment="Left" fieldTable="" identifier="rootContainer">
+			<GridPanel.gridRowDefinitions>
+				<GridRowDefinition>
+					<GridRowDefinition.gridLength>
+						<GridLength gridLengthValue=""/>
+					</GridRowDefinition.gridLength>
+				</GridRowDefinition>
+				<GridRowDefinition>
+					<GridRowDefinition.gridLength>
+						<GridLength gridLengthValue=""/>
+					</GridRowDefinition.gridLength>
+				</GridRowDefinition>
+				<GridRowDefinition>
+					<GridRowDefinition.gridLength>
+						<GridLength gridLengthValue="" />
+					</GridRowDefinition.gridLength>
+				</GridRowDefinition>
+				<GridRowDefinition>
+					<GridRowDefinition.gridLength>
+						<GridLength gridLengthValue=""/>
+					</GridRowDefinition.gridLength>
+				</GridRowDefinition>
+				<GridRowDefinition>
+					<GridRowDefinition.gridLength>
+						<GridLength gridLengthValue=""/>
+					</GridRowDefinition.gridLength>
+				</GridRowDefinition>
+				<GridRowDefinition>
+					<GridRowDefinition.gridLength>
+						<GridLength gridLengthValue=""/>
+					</GridRowDefinition.gridLength>
+				</GridRowDefinition>
+			</GridPanel.gridRowDefinitions>
+			<GridPanel.gridColumnDefinitions>
+				<GridColumnDefinition>
+					<GridColumnDefinition.gridLength>
+						<GridLength gridLengthValue="100%"/>
+					</GridColumnDefinition.gridLength>
+				</GridColumnDefinition>
+			</GridPanel.gridColumnDefinitions>
+			<GridPanel classNames="fcls_title_cnt" visible="true" verticalAlignment="Top" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="cntTitle">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition>
+						<GridRowDefinition.gridLength>
+							<GridLength gridLengthValue=""/>
+						</GridRowDefinition.gridLength>
+					</GridRowDefinition>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition>
+						<GridColumnDefinition.gridLength>
+							<GridLength gridLengthValue="100%"/>
+						</GridColumnDefinition.gridLength>
+					</GridColumnDefinition>
+					<GridColumnDefinition>
+						<GridColumnDefinition.gridLength>
+							<GridLength gridLengthValue=""/>
+						</GridColumnDefinition.gridLength>
+					</GridColumnDefinition>
+				</GridPanel.gridColumnDefinitions>
+				<Label isDynamic="true" text="Voucher" classNames="fcls_title_lb" visible="true" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="header_text"/>
+				<Label isDynamic="true" text="P207" classNames="fcls_title_lb" visible="true" gridItemLocation="1,0,1,1" fieldTable="" identifier="lbFormName"/>
+			</GridPanel>
+			<GridPanel classNames="fcls_detail_cnt,fcls_data_cnt,fcls_align_left" visible="true" verticalAlignment="Top" horizontalAlignment="Left" gridItemLocation="0,1,1,1" fieldTable="" identifier="cntDetail1">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition>
+						<GridRowDefinition.gridLength>
+							<GridLength gridLengthValue=""/>
+						</GridRowDefinition.gridLength>
+					</GridRowDefinition>
+					<GridRowDefinition>
+						<GridRowDefinition.gridLength>
+							<GridLength gridLengthValue=""/>
+						</GridRowDefinition.gridLength>
+					</GridRowDefinition>
+					<GridRowDefinition>
+						<GridRowDefinition.gridLength>
+							<GridLength gridLengthValue=""/>
+						</GridRowDefinition.gridLength>
+					</GridRowDefinition>
+					<GridRowDefinition>
+						<GridRowDefinition.gridLength>
+							<GridLength gridLengthValue=""/>
+						</GridRowDefinition.gridLength>
+					</GridRowDefinition>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition>
+						<GridColumnDefinition.gridLength>
+							<GridLength gridLengthValue=""/>
+						</GridColumnDefinition.gridLength>
+					</GridColumnDefinition>
+					<GridColumnDefinition>
+						<GridColumnDefinition.gridLength>
+							<GridLength gridLengthValue=""/>
+						</GridColumnDefinition.gridLength>
+					</GridColumnDefinition>
+				</GridPanel.gridColumnDefinitions>
+				<Label text="Voucher Date" gridItemLocation="0,0,1,1" fieldTable="" identifier="label2" classNames="fcls_fieldlabel,fcls_align_left"/>
+				<Calendar dataType="Date,,,," preferredSize="11qch,1qch" toolTip=" Enter voucher date to generate payments" gridItemLocation="1,0,1,1" fieldTable="voucher" comment=" Enter voucher date to generate payments" identifier="vouch_date" classNames="fcls_data_widget,fcls_align_left,fcls_length_10qch"/>
+				<CheckBox toCase="Up" dataType="Char,,,," preferredSize="2qch,1qch" toolTip=" Generate vouchers for missed payments - (Y)es - (N)o " gridItemLocation="1,1,1,1" fieldTable="formonly" comment=" Generate vouchers for missed payments - (Y)es - (N)o " identifier="update_flag" classNames="fcls_data_widget,fcls_align_left,fcls_length_10qch" title="Bring To date">
+				<CheckBox.includes>
+					<ValueInclude>
+						<ValueInclude.value>
+							<StringLiteral stringValue="Y"/>
+						</ValueInclude.value>
+					</ValueInclude>
+					<ValueInclude>
+						<ValueInclude.value>
+							<StringLiteral stringValue="N"/>
+						</ValueInclude.value>
+					</ValueInclude>
+				</CheckBox.includes>
+				<CheckBox.checkedValue>
+					<StringLiteral stringValue="Y"/>
+				</CheckBox.checkedValue>
+				<CheckBox.uncheckedValue>
+					<StringLiteral stringValue="N"/>
+				</CheckBox.uncheckedValue>
+			</CheckBox>
+				<Label text="Fiscal Year" gridItemLocation="0,2,1,1" fieldTable="" identifier="label3" classNames="fcls_fieldlabel,fcls_align_left"/>
+				<ComboBox dataType="SmallInt,,,," preferredSize="9qch,1qch" toolTip=" Enter fiscal year to generate payments " gridItemLocation="1,2,1,1" fieldTable="voucher" comment=" Enter fiscal year to generate payments " identifier="year_num" classNames="fcls_data_widget,fcls_align_left,fcls_length_10qch"/>
+				<Label text="Period" gridItemLocation="0,3,1,1" fieldTable="" identifier="label5" classNames="fcls_fieldlabel,fcls_align_left"/>
+				<ComboBox dataType="SmallInt,,,," preferredSize="9qch,1qch" toolTip=" Enter fiscal period to generate payments " gridItemLocation="1,3,1,1" fieldTable="voucher" comment=" Enter fiscal period to generate payments " identifier="period_num" classNames="fcls_data_widget,fcls_align_left,fcls_length_10qch"/>
+			</GridPanel>
+			<GroupBox title="Voucher Selection" classNames="fcls_detail_gb_cnt" visible="true" verticalAlignment="Stretch" horizontalAlignment="Stretch" gridItemLocation="0,2,1,1" fieldTable="formonly" identifier="cntDetail2GroupBox">
+				<GridPanel classNames="fcls_detail_gb_cnt_sub,fcls_data_cnt,fcls_align_left" visible="true" verticalAlignment="Top" horizontalAlignment="Left" fieldTable="formonly" identifier="cntDetail2GBSubGp">
+					<GridPanel.gridRowDefinitions>
+						<GridRowDefinition>
+							<GridRowDefinition.gridLength>
+								<GridLength gridLengthValue=""/>
+							</GridRowDefinition.gridLength>
+						</GridRowDefinition>
+						<GridRowDefinition>
+							<GridRowDefinition.gridLength>
+								<GridLength gridLengthValue=""/>
+							</GridRowDefinition.gridLength>
+						</GridRowDefinition>
+						<GridRowDefinition>
+							<GridRowDefinition.gridLength>
+								<GridLength gridLengthValue=""/>
+							</GridRowDefinition.gridLength>
+						</GridRowDefinition>
+						<GridRowDefinition>
+							<GridRowDefinition.gridLength>
+								<GridLength gridLengthValue=""/>
+							</GridRowDefinition.gridLength>
+						</GridRowDefinition>
+						<GridRowDefinition>
+							<GridRowDefinition.gridLength>
+								<GridLength gridLengthValue=""/>
+							</GridRowDefinition.gridLength>
+						</GridRowDefinition>
+						<GridRowDefinition>
+							<GridRowDefinition.gridLength>
+								<GridLength gridLengthValue=""/>
+							</GridRowDefinition.gridLength>
+						</GridRowDefinition>
+					</GridPanel.gridRowDefinitions>
+					<GridPanel.gridColumnDefinitions>
+						<GridColumnDefinition>
+							<GridColumnDefinition.gridLength>
+								<GridLength gridLengthValue=""/>
+							</GridColumnDefinition.gridLength>
+						</GridColumnDefinition>
+						<GridColumnDefinition>
+							<GridColumnDefinition.gridLength>
+								<GridLength gridLengthValue=""/>
+							</GridColumnDefinition.gridLength>
+						</GridColumnDefinition>
+					</GridPanel.gridColumnDefinitions>
+					<Label text="Voucher Group" gridItemLocation="0,0,1,1" fieldTable="" identifier="label7" classNames="fcls_fieldlabel,fcls_align_left"/>
+					<TextField toCase="Up" dataType="Char,,,,8" preferredSize="9qch,1qch" toolTip=" Enter payment group selection criteria" gridItemLocation="1,0,1,1" fieldTable="recurhead" comment=" Enter payment group selection criteria" identifier="group_text" classNames="fcls_data_widget,fcls_align_left,fcls_length_10qch"/>
+					<Label text="Voucher Code" gridItemLocation="0,1,1,1" fieldTable="" identifier="label8" classNames="fcls_fieldlabel,fcls_align_left"/>
+					<TextField toCase="Up" dataType="Char,,,,8" preferredSize="9qch,1qch" toolTip=" Enter recurring voucher code" gridItemLocation="1,1,1,1" fieldTable="recurhead" comment=" Enter recurring voucher code" identifier="recur_code" classNames="fcls_data_widget,fcls_align_left,fcls_length_10qch"/>
+					<Label text="Description" gridItemLocation="0,2,1,1" fieldTable="" identifier="label9" classNames="fcls_fieldlabel,fcls_align_left"/>
+					<TextField dataType="Char,,,,30" preferredSize="31qch,1qch" toolTip=" Enter recurring voucher description" gridItemLocation="1,2,1,1" fieldTable="recurhead" comment=" Enter recurring voucher description" identifier="desc_text" classNames="fcls_data_widget,fcls_align_left,fcls_length_30qch"/>
+					<Label text="Vendor Code" gridItemLocation="0,3,1,1" fieldTable="" identifier="label10" classNames="fcls_fieldlabel,fcls_align_left"/>
+					<ComboBox toCase="Up" dataType="Char,,,,8" preferredSize="9qch,1qch" toolTip=" Enter vendor code " gridItemLocation="1,3,1,1" fieldTable="recurhead" comment=" Enter vendor code " identifier="vend_code" classNames="fcls_data_widget,fcls_align_left,fcls_length_30qch"/>
+					<Label text="Vendor Name" gridItemLocation="0,4,1,1" fieldTable="" identifier="label11" classNames="fcls_fieldlabel,fcls_align_left"/>
+					<TextField dataType="Char,,,,30" preferredSize="31qch,1qch" toolTip=" Enter vendor&apos;s name or description " gridItemLocation="1,4,1,1" fieldTable="vendor" comment=" Enter vendor&apos;s name or description " identifier="name_text" classNames="fcls_data_widget,fcls_align_left,fcls_length_30qch"/>
+					<Label text="Interval Type" gridItemLocation="0,5,1,1" fieldTable="" identifier="label12" classNames="fcls_fieldlabel,fcls_align_left"/>
+					<ComboBox dataType="Char,,,,1" preferredSize="4qch,1qch" toolTip=" Enter payment interval type - (1) -&gt; (8) " gridItemLocation="1,5,1,1" fieldTable="recurhead" comment=" Enter payment interval type - (1) -&gt; (8) " identifier="int_ind" classNames="fcls_data_widget,fcls_align_left,fcls_length_30qch">
+				<ComboBoxItem text="1" identifier="comboboxitem1">
+					<ComboBoxItem.value>
+						<StringLiteral stringValue="1"/>
+					</ComboBoxItem.value>
+				</ComboBoxItem>
+				<ComboBoxItem text="2" identifier="comboboxitem2">
+					<ComboBoxItem.value>
+						<StringLiteral stringValue="2"/>
+					</ComboBoxItem.value>
+				</ComboBoxItem>
+				<ComboBoxItem text="3" identifier="comboboxitem3">
+					<ComboBoxItem.value>
+						<StringLiteral stringValue="3"/>
+					</ComboBoxItem.value>
+				</ComboBoxItem>
+				<ComboBoxItem text="4" identifier="comboboxitem4">
+					<ComboBoxItem.value>
+						<StringLiteral stringValue="4"/>
+					</ComboBoxItem.value>
+				</ComboBoxItem>
+				<ComboBoxItem text="6" identifier="comboboxitem5">
+					<ComboBoxItem.value>
+						<StringLiteral stringValue="6"/>
+					</ComboBoxItem.value>
+				</ComboBoxItem>
+				<ComboBoxItem text="7" identifier="comboboxitem6">
+					<ComboBoxItem.value>
+						<StringLiteral stringValue="7"/>
+					</ComboBoxItem.value>
+				</ComboBoxItem>
+				<ComboBoxItem text="8" identifier="comboboxitem7">
+					<ComboBoxItem.value>
+						<StringLiteral stringValue="8"/>
+					</ComboBoxItem.value>
+				</ComboBoxItem>
+			</ComboBox>
+				</GridPanel>
+			</GroupBox>
+			<GroupBox title="Voucher Dates" classNames="fcls_detail_gb_cnt" visible="true" verticalAlignment="Stretch" horizontalAlignment="Stretch" gridItemLocation="0,3,1,1" fieldTable="formonly" identifier="cntDetail3GroupBox">
+				<GridPanel classNames="fcls_detail_gb_cnt_sub,fcls_data_cnt,fcls_align_left" visible="true" verticalAlignment="Top" horizontalAlignment="Left" fieldTable="formonly" identifier="cntDetail3GBSubGpLeft">
+					<GridPanel.gridRowDefinitions>
+						<GridRowDefinition>
+							<GridRowDefinition.gridLength>
+								<GridLength gridLengthValue=""/>
+							</GridRowDefinition.gridLength>
+						</GridRowDefinition>
+						<GridRowDefinition>
+							<GridRowDefinition.gridLength>
+								<GridLength gridLengthValue=""/>
+							</GridRowDefinition.gridLength>
+						</GridRowDefinition>
+						<GridRowDefinition>
+							<GridRowDefinition.gridLength>
+								<GridLength gridLengthValue=""/>
+							</GridRowDefinition.gridLength>
+						</GridRowDefinition>
+						<GridRowDefinition>
+							<GridRowDefinition.gridLength>
+								<GridLength gridLengthValue=""/>
+							</GridRowDefinition.gridLength>
+						</GridRowDefinition>
+						<GridRowDefinition>
+							<GridRowDefinition.gridLength>
+								<GridLength gridLengthValue=""/>
+							</GridRowDefinition.gridLength>
+						</GridRowDefinition>
+					</GridPanel.gridRowDefinitions>
+					<GridPanel.gridColumnDefinitions>
+						<GridColumnDefinition>
+							<GridColumnDefinition.gridLength>
+								<GridLength gridLengthValue=""/>
+							</GridColumnDefinition.gridLength>
+						</GridColumnDefinition>
+						<GridColumnDefinition>
+							<GridColumnDefinition.gridLength>
+								<GridLength gridLengthValue=""/>
+							</GridColumnDefinition.gridLength>
+						</GridColumnDefinition>
+					</GridPanel.gridColumnDefinitions>
+					<Label text="Last Voucher" gridItemLocation="0,0,1,1" fieldTable="" identifier="label14" classNames="fcls_fieldlabel,fcls_align_left"/>
+					<Calendar format="dd/mm/yyyy" dataType="Date,,,," preferredSize="11qch,1qch" toolTip=" Date last voucher was generated under this payment schedule" gridItemLocation="1,0,1,1" fieldTable="recurhead" comment=" Date last voucher was generated under this payment schedule" identifier="last_vouch_date" classNames="fcls_data_widget,fcls_align_left,fcls_length_10qch"/>
+					<Label text="Next Voucher" gridItemLocation="0,1,1,1" fieldTable="" identifier="label16" classNames="fcls_fieldlabel,fcls_align_left"/>
+					<Calendar format="dd/mm/yyyy" dataType="Date,,,," preferredSize="11qch,1qch" toolTip=" Date next voucher is to be generated under this schedule" gridItemLocation="1,1,1,1" fieldTable="recurhead" comment=" Date next voucher is to be generated under this schedule" identifier="next_vouch_date" classNames="fcls_data_widget,fcls_align_left,fcls_length_10qch"/>
+					<Label text="Start Date" gridItemLocation="0,2,1,1" fieldTable="" identifier="label15" classNames="fcls_fieldlabel,fcls_align_left"/>
+					<Calendar dataType="Date,,,," preferredSize="11qch,1qch" toolTip=" Enter start date of this recurring payment schedule" gridItemLocation="1,2,1,1" fieldTable="recurhead" comment=" Enter start date of this recurring payment schedule" identifier="start_date" classNames="fcls_data_widget,fcls_align_left,fcls_length_10qch"/>
+					<Label text="Finish Date" gridItemLocation="0,3,1,1" fieldTable="" identifier="label17" classNames="fcls_fieldlabel,fcls_align_left"/>
+					<Calendar dataType="Date,,,," preferredSize="11qch,1qch" toolTip=" Enter finish date of this recurring payment schedule" gridItemLocation="1,3,1,1" fieldTable="recurhead" comment=" Enter finish date of this recurring payment schedule" identifier="end_date" classNames="fcls_data_widget,fcls_align_left,fcls_length_10qch"/>
+				</GridPanel>
+			</GroupBox>
+			<GroupBox title="Vendor Invoice Info" classNames="fcls_detail_gb_cnt" visible="true" verticalAlignment="Stretch" horizontalAlignment="Stretch" gridItemLocation="0,4,1,1" fieldTable="" identifier="cntDetail4GroupBox">
+				<GridPanel classNames="fcls_detail_gb_cnt_sub,fcls_data_cnt,fcls_align_left" visible="true" verticalAlignment="Top" horizontalAlignment="Left" gridItemLocation="0,5,1,1" fieldTable="formonly" identifier="cntDetail4">
+					<GridPanel.gridRowDefinitions>
+						<GridRowDefinition>
+							<GridRowDefinition.gridLength>
+								<GridLength gridLengthValue=""/>
+							</GridRowDefinition.gridLength>
+						</GridRowDefinition>
+						<GridRowDefinition>
+							<GridRowDefinition.gridLength>
+								<GridLength gridLengthValue=""/>
+							</GridRowDefinition.gridLength>
+						</GridRowDefinition>
+						<GridRowDefinition>
+							<GridRowDefinition.gridLength>
+								<GridLength gridLengthValue=""/>
+							</GridRowDefinition.gridLength>
+						</GridRowDefinition>
+					</GridPanel.gridRowDefinitions>
+					<GridPanel.gridColumnDefinitions>
+						<GridColumnDefinition>
+							<GridColumnDefinition.gridLength>
+								<GridLength gridLengthValue=""/>
+							</GridColumnDefinition.gridLength>
+						</GridColumnDefinition>
+						<GridColumnDefinition>
+							<GridColumnDefinition.gridLength>
+								<GridLength gridLengthValue=""/>
+							</GridColumnDefinition.gridLength>
+						</GridColumnDefinition>
+					</GridPanel.gridColumnDefinitions>
+					<Label text="Voucher Amount" gridItemLocation="0,0,1,1" fieldTable="" identifier="label19" classNames="fcls_fieldlabel,fcls_align_left"/>
+					<TextField dataType="Decimal,,,2,16" preferredSize="14qch,1qch" toolTip=" Enter voucher amount selection criteria" gridItemLocation="1,0,1,1" fieldTable="recurhead" comment=" Enter voucher amount selection criteria" identifier="total_amt" classNames="fcls_data_widget,fcls_align_left,fcls_length_15qch"/>
+					<Label text="Currency" gridItemLocation="0,1,1,1" fieldTable="" identifier="label20" classNames="fcls_fieldlabel,fcls_align_left"/>
+					<ComboBox toCase="Up" noEntry="true" dataType="Char,,,,3" preferredSize="4qch,1qch" gridItemLocation="1,1,1,1" fieldTable="recurhead" identifier="curr_code" classNames="fcls_data_widget,fcls_align_left,fcls_length_15qch"/>
+					<Label text="Invoice No" gridItemLocation="0,2,1,1" fieldTable="" identifier="label21" classNames="fcls_fieldlabel,fcls_align_left"/>
+					<ComboBox dataType="Char,,,,20" preferredSize="17qch,1qch" toolTip=" Enter vendor invoice reference selection criteria" gridItemLocation="1,2,1,1" fieldTable="recurhead" comment=" Enter vendor invoice reference selection criteria" identifier="inv_text" classNames="fcls_data_widget,fcls_align_left,fcls_length_15qch"/>
+				</GridPanel>
+			</GroupBox>
+			<GridPanel classNames="fcls_statusbar_cnt" visible="true" verticalAlignment="Bottom" gridItemLocation="0,5,1,1" fieldTable="formonly" identifier="cntStatusBar">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition>
+						<GridRowDefinition.gridLength>
+							<GridLength gridLengthValue=""/>
+						</GridRowDefinition.gridLength>
+					</GridRowDefinition>
+					<GridRowDefinition>
+						<GridRowDefinition.gridLength>
+							<GridLength gridLengthValue=""/>
+						</GridRowDefinition.gridLength>
+					</GridRowDefinition>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition>
+						<GridColumnDefinition.gridLength>
+							<GridLength gridLengthValue="100%"/>
+						</GridColumnDefinition.gridLength>
+					</GridColumnDefinition>
+				</GridPanel.gridColumnDefinitions>
+				<Label isDynamic="true" text="" classNames="fcls_sblabel" visible="true" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="lbInfo1"/>
+				<Label isDynamic="true" text="" classNames="fcls_sblabel" visible="true" gridItemLocation="0,1,1,1" fieldTable="formonly" identifier="lbInfo2"/>
+			</GridPanel>
+		</GridPanel>
+	</form.rootContainer>
+	<form.screenRecords>
+		<ScreenRecord identifier="formonly" fields="formonly.update_flag"/>
+		<ScreenRecord identifier="kandooreport" fields="kandooreport.header_text"/>
+		<ScreenRecord identifier="recurhead" fields="recurhead.group_text,recurhead.recur_code,recurhead.desc_text,recurhead.vend_code,recurhead.int_ind,recurhead.last_vouch_date,recurhead.next_vouch_date,recurhead.start_date,recurhead.end_date,recurhead.total_amt,recurhead.curr_code,recurhead.inv_text"/>
+		<ScreenRecord identifier="vendor" fields="vendor.name_text"/>
+		<ScreenRecord identifier="voucher" fields="voucher.vouch_date,voucher.year_num,voucher.period_num"/>
+	</form.screenRecords>
+</form>
+

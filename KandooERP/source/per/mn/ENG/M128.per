@@ -1,0 +1,108 @@
+{
+###########################################################################
+# This program is free software; you can redistribute it and/or modify it
+# under the terms of the GNU General Public License as published by the
+# Free Software Foundation; either version 2 of the License, or (at your
+# option) any later version.
+#
+# This program is distributed in the hope that it will be useful, but
+# WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+# General Public License for more details.
+#
+# You should have received a copy of the GNU General Public License along
+# with this program; if not, write to the Free Software Foundation, Inc.,
+# 59 Temple Place, Suite 330, Boston, MA 02111-1307 USA
+#
+###########################################################################
+
+	 $Id: M128.per,v 1.2 2003/11/19 22:22:59 afalout Exp $
+}
+
+
+database kandoodb
+
+screen
+{
+                             Shop Order Header                         M128
+\g----------------------------------------------------------------------------\g
+ Shop Order No      [f001      ]    Suffix Number         [f002 ]
+ Parent Product   [f003           ][f004                          ]
+ Shop Order Type  [a]               Originating Order No  [f005      ]
+ Customer         [f006    ]       [f007                          ]
+ Product          [f008           ][f009                          ]
+ Order Status     [b]              [f010    ]
+ Order Quantity   [f011        ]    Unit Of Measure       [f012]
+ Qty Receipted    [f013        ]    Qty Rejected          [f014        ]
+ Costing Method   [f015            ]
+ Unit Cost        [f016            ]Unit Price            [f017            ]
+ Extended Cost    [f018            ]Extended Price        [f019            ]
+ Actual Unit Cost [f020            ]Actual Unit Price     [f021            ]
+ Actual Ext. Cost [f022            ]Actual Extended Price [f023            ]
+ Start Date       [f024      ]      Release Date          [f025      ]
+ End Date         [f026      ]      Job Length            [f027  ]
+ Actual Start Date[f028      ]      Actual End Date       [f029      ]
+[f030                |f031                ] [c]
+}
+
+tables
+shopordhead
+customer
+product
+mnparms
+
+attributes
+f001 = shopordhead.shop_order_num, comments = " Unique shop order number";
+f002 = shopordhead.suffix_num, comments = " Suffix number of the shop order";
+f003 = shopordhead.parent_part_code, upshift, comments =
+" Code for a generic configurable product used to create multiple shop orders";
+f004 = formonly.parent_desc;
+a    = shopordhead.order_type_ind, upshift,
+comments = " O = Normal shop order, S = Originates from a sales order";
+f005 = shopordhead.sales_order_num, comments =
+" Sales or job order number from which the shop order originates";
+f006 = shopordhead.cust_code, upshift,
+comments = " Code for the customer of the shop order";
+f007 = customer.name_text;
+f008 = shopordhead.part_code, upshift, comments =
+" Code of the product that is being produced for the shop order (W)";
+f009 = product.desc_text;
+b    = shopordhead.status_ind, upshift,
+comments = " H = Held, R = Released, C = Closed";
+f010 = formonly.status_text type char;
+f011 = shopordhead.order_qty,
+comments = " Quantity of the product to be produced for the shop order";
+f012 = shopordhead.uom_code, upshift, comments =
+" Code for the unit of measure of the shop order product";
+f013 = shopordhead.receipted_qty,
+comments = " Quantity of the shop order product receipted to date";
+f014 = shopordhead.rejected_qty,
+comments = " Quantity of the shop order product rejected to date";
+f015 = formonly.cost_method_text type char;
+f016 = formonly.unit_cost_amt type decimal;
+f017 = formonly.unit_price_amt type decimal;
+f018 = formonly.ext_cost_amt type decimal;
+f019 = shopordhead.std_price_amt;
+f020 = formonly.act_unit_cost_amt type decimal;
+f021 = formonly.act_unit_price_amt type decimal;
+f022 = formonly.act_ext_cost_amt type decimal;
+f023 = shopordhead.act_price_amt;
+f024 = shopordhead.start_date,
+comments = " Date when manufacturing begins for the shop order";
+f025 = shopordhead.release_date,
+comments = " Date when the shop order is released";
+f026 = shopordhead.end_date,
+comments = " Date when manufacturing ends for the shop order";
+f027 = shopordhead.job_length_num,
+comments = " Length of the shop order in days";
+f028 = shopordhead.actual_start_date,
+comments = " Date when manufacturing actually began for the shop order";
+f029 = shopordhead.actual_end_date,
+comments = " Date when manufacturing actually ended for the shop order";
+f030 = mnparms.ref4_text;
+f031 = shopordhead.user4_text,
+comments = " User defined field, CTRL-N for notes";
+c    = formonly.dummy, noentry;
+
+instructions
+delimiters "  "

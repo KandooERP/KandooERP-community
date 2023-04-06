@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form xmlns="http://namespaces.querix.com/2015/fglForms">
+	<form.rootContainer>
+		<GridPanel classNames="fcls_rootContainer" verticalAlignment="Top" horizontalAlignment="Left" fieldTable="" identifier="rootContainer" preferredSize="75rem," maxSize="75rem,">
+			<GridPanel.gridRowDefinitions>
+				<GridRowDefinition gridLengthValue=""/>
+				<GridRowDefinition gridLengthValue=""/>
+				<GridRowDefinition gridLengthValue=""/>
+			</GridPanel.gridRowDefinitions>
+			<GridPanel.gridColumnDefinitions>
+				<GridColumnDefinition gridLengthValue="100%"/>
+			</GridPanel.gridColumnDefinitions>
+			<GridPanel classNames="fcls_title_cnt" visible="true" verticalAlignment="Top" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="cntTitle">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="100%"/>
+					<GridColumnDefinition gridLengthValue=""/>
+				</GridPanel.gridColumnDefinitions>
+				<Label isDynamic="true" text="Quotation Text" classNames="fcls_title_lb" visible="true" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="header_text"/>
+				<Label isDynamic="true" text="Q119" classNames="fcls_title_lb" visible="true" gridItemLocation="1,0,1,1" fieldTable="" identifier="lbFormName"/>
+			</GridPanel>
+			<GridPanel classNames="fcls_detail_cnt,fcls_data_cnt" visible="true" verticalAlignment="Top" horizontalAlignment="Stretch" gridItemLocation="0,1,1,1" fieldTable="formonly" identifier="cntDetail1">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="" gridMinLength="10rem"/>
+					<GridColumnDefinition gridLengthValue="100%"/>
+				</GridPanel.gridColumnDefinitions>
+				<TextField dataType="Char,,,,60" preferredSize="61qch,1qch" toolTip=" Text to print on the quotation - (line1)" comment=" Text to print on the quotation - (line1)" fieldTable="qpparms" identifier="footer1_text" gridItemLocation="1,0,1,1" classNames="fcls_data_widget" horizontalAlignment="Stretch"/>
+				<TextField dataType="Char,,,,60" preferredSize="61qch,1qch" toolTip=" Text to print on the quotation - (line2)" comment=" Text to print on the quotation - (line2)" fieldTable="qpparms" identifier="footer2_text" gridItemLocation="1,1,1,1" classNames="fcls_data_widget" horizontalAlignment="Stretch"/>
+				<TextField dataType="Char,,,,60" preferredSize="61qch,1qch" toolTip=" Text to print on the quotation - (line3)" comment=" Text to print on the quotation - (line3)" fieldTable="qpparms" identifier="footer3_text" gridItemLocation="1,2,1,1" classNames="fcls_data_widget" horizontalAlignment="Stretch"/>
+				<Label isDynamic="true" text="Import Text File" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,3,1,1" fieldTable="" identifier="lb67"/>
+				<TextField dataType="Char,,,,40" preferredSize="51qch,1qch" toolTip=" Name of text file to be imported into Quote print - (full pathname)" comment=" Name of text file to be imported into Quote print - (full pathname)" fieldTable="qpparms" identifier="quote_std_text" gridItemLocation="1,3,1,1" classNames="fcls_data_widget" horizontalAlignment="Stretch"/>
+				<Label isDynamic="true" text="Message" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,0,1,1" fieldTable="" identifier="lb51"/>
+			</GridPanel>
+			<GridPanel classNames="fcls_statusbar_cnt" visible="true" verticalAlignment="Bottom" gridItemLocation="0,2,1,1" fieldTable="formonly" identifier="cntStatusBar">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="100%"/>
+				</GridPanel.gridColumnDefinitions>
+				<Label isDynamic="true" text="" classNames="fcls_sblabel" visible="true" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="lbInfo1"/>
+				<Label isDynamic="true" text="" classNames="fcls_sblabel" visible="true" gridItemLocation="0,1,1,1" fieldTable="formonly" identifier="lbInfo2"/>
+			</GridPanel>
+		</GridPanel>
+	</form.rootContainer>
+	<form.screenRecords>
+		<ScreenRecord identifier="qpparms" fields="qpparms.footer1_text,qpparms.footer2_text,qpparms.footer3_text,qpparms.quote_std_text"/>
+	</form.screenRecords>
+</form>
+

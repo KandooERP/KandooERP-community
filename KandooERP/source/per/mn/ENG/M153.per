@@ -1,0 +1,79 @@
+{
+###########################################################################
+# This program is free software; you can redistribute it and/or modify it
+# under the terms of the GNU General Public License as published by the
+# Free Software Foundation; either version 2 of the License, or (at your
+# option) any later version.
+#
+# This program is distributed in the hope that it will be useful, but
+# WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+# General Public License for more details.
+#
+# You should have received a copy of the GNU General Public License along
+# with this program; if not, write to the Free Software Foundation, Inc.,
+# 59 Temple Place, Suite 330, Boston, MA 02111-1307 USA
+#
+###########################################################################
+
+	 $Id: M153.per,v 1.2 2003/11/19 22:23:00 afalout Exp $
+}
+
+
+database kandoodb
+
+screen
+{
+                            By-Product Details                       M153
+\g--------------------------------------------------------------------------\g
+ Product       [f001           ]     [f002                          ]
+
+ Qty Produced  [f003        ]         Unit of Measure  [f004]
+
+ Unit Cost     [f005             ]    Unit Price       [f006             ]
+ Ext. Cost     [f007             ]    Ext. Price       [f008             ]
+
+ Staging Work Centre   [f009      ]  [f010                          ]
+
+ Effectivity Start Date[f011      ]   Effectivity End Date[f012      ]
+
+[f013                |f014                ]
+[f015                |f016                ]
+[f017                |f018                ] [a]
+
+}
+
+tables
+bor
+product
+mnparms
+
+attributes
+f001 = bor.part_code, upshift,
+comments = " Product code of a manufacturing product (W)";
+f002 = product.desc_text;
+f003 = bor.required_qty, comments =
+" Quantity of the by-product produced while making one parent product";
+f004 = bor.uom_code, upshift,
+comments = " Code for the unit of measure applying to the quantity (W)";
+f005 = bor.cost_amt;
+f006 = bor.price_amt;
+f007 = formonly.ext_cost_amt type decimal;
+f008 = formonly.ext_price_amt type decimal;
+f009 = bor.work_centre_code, upshift,
+comments = " Code for the work centre at which the by-product is produced (W)";
+f010 = formonly.wc_desc_text type char;
+f011 = bor.start_date, comments =
+" Date when the by-product becomes effective for Shop Orders & Planning";
+f012 = bor.end_date, comments =
+" Date the by-product ceases to be effective for Shop Orders & Planning";
+f013 = mnparms.ref1_text;
+f014 = bor.user1_text, comments = " User defined field";
+f015 = mnparms.ref2_text;
+f016 = bor.user2_text, comments = " User defined field";
+f017 = mnparms.ref3_text;
+f018 = bor.user3_text, comments = " User defined field";
+a    = formonly.dummy, noentry;
+
+instructions
+delimiters "  "

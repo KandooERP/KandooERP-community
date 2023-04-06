@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form xmlns="http://namespaces.querix.com/2015/fglForms">
+	<form.rootContainer>
+		<GridPanel classNames="fcls_rootContainer" verticalAlignment="Stretch" horizontalAlignment="Stretch" fieldTable="" identifier="rootContainer">
+			<GridPanel.gridRowDefinitions>
+				<GridRowDefinition gridLengthValue=""/>
+				<GridRowDefinition gridLengthValue=""/>
+				<GridRowDefinition gridLengthValue="100%"/>
+				<GridRowDefinition gridLengthValue=""/>
+			</GridPanel.gridRowDefinitions>
+			<GridPanel.gridColumnDefinitions>
+				<GridColumnDefinition gridLengthValue="100%"/>
+			</GridPanel.gridColumnDefinitions>
+			<GridPanel classNames="fcls_title_cnt" visible="true" verticalAlignment="Top" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="cnttitle">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="100%"/>
+					<GridColumnDefinition gridLengthValue=""/>
+				</GridPanel.gridColumnDefinitions>
+				<Label isDynamic="true" text="Vendor Selection" classNames="fcls_title_lb" visible="true" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="header_text"/>
+				<Label isDynamic="true" text="G404" classNames="fcls_title_lb" visible="true" gridItemLocation="1,0,1,1" fieldTable="" identifier="lbformname"/>
+			</GridPanel>
+			<GridPanel classNames="fcls_detail_cnt,,fcls_align_left" visible="true" verticalAlignment="Top" horizontalAlignment="Left" gridItemLocation="0,1,1,1" fieldTable="formonly" identifier="cntdetail1">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="10rem"/>
+					<GridColumnDefinition gridLengthValue=""/>
+					<GridColumnDefinition gridLengthValue="10rem"/>
+					<GridColumnDefinition gridLengthValue=""/>
+				</GridPanel.gridColumnDefinitions>
+				<Label isDynamic="true" text="Vendor Code" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,0,1,1" fieldTable="" identifier="lb51"/>
+				<Label isDynamic="true" text="Vendor Name" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,1,1,1" fieldTable="" identifier="lb52"/>
+				<ComboBox dataType="Char,,,,8" location="14qch,2qch" preferredSize="20qch,1qch" toolTip=" Enter Vendor Code " gridItemLocation="1,0,1,1" comment=" Enter Vendor Code " fieldTable="vendor" identifier="vend_code"/>
+				<TextField dataType="Char,,,," location="14qch,3qch" preferredSize="29qch,1qch" toolTip=" Enter Vendor's Name " gridItemLocation="1,1,1,1" comment=" Enter Vendor's Name " fieldTable="formonly" identifier="name_text"/>
+				<Label isDynamic="true" text="Voucher Number" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="2,0,1,1" fieldTable="" identifier="lb53"/>
+				<Label isDynamic="true" text="Voucher Amount" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="2,1,1,1" fieldTable="" identifier="lb54"/>
+				<TextField dataType="Integer,,,," location="59qch,2qch" preferredSize="9qch,1qch" toolTip=" Enter Voucher Number " gridItemLocation="3,0,1,1" comment=" Enter Voucher Number " fieldTable="voucher" identifier="vouch_code"/>
+				<TextField dataType="Decimal,,,2,16" location="59qch,3qch" preferredSize="11qch,1qch" toolTip=" Enter Voucher Amount " gridItemLocation="3,1,1,1" comment=" Enter Voucher Amount " fieldTable="voucher" identifier="total_amt"/>
+			</GridPanel>
+			<Table rowCount="5" location="0qch,5qch" preferredSize="74qch,7qch" gridItemLocation="0,2,1,1" fieldTable="" identifier="sr_voucher">
+				<TableColumn text="Voucher" fieldTable="" identifier="f07">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="15rem"/>
+					</TableColumn.columnLength>
+					<TextField dataType="Integer,,,," fieldTable="formonly" identifier="voucher_code"/>
+				</TableColumn>
+				<TableColumn text="Date" fieldTable="" identifier="f08">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="15rem"/>
+					</TableColumn.columnLength>
+					<Calendar dataType="Date,,,," fieldTable="voucher" identifier="vouch_date"/>
+				</TableColumn>
+				<TableColumn text="vendor" fieldTable="" identifier="f09">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="15rem"/>
+					</TableColumn.columnLength>
+					<TextField noEntry="true" dataType="Char,,,,8" fieldTable="voucher" identifier="vend_code"/>
+				</TableColumn>
+				<TableColumn text="Name" fieldTable="" identifier="f10">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="30rem"/>
+					</TableColumn.columnLength>
+					<TextField noEntry="true" dataType="Char,,,,30" fieldTable="vendor" identifier="name_text"/>
+				</TableColumn>
+				<TableColumn text="Amount" fieldTable="" identifier="f11">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="15rem"/>
+					</TableColumn.columnLength>
+					<TextField noEntry="true" dataType="Decimal,,,2,16" fieldTable="formonly" identifier="unpaid_amt"/>
+				</TableColumn>
+				<TableColumn text="Pt." fieldTable="" identifier="f12">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="15rem"/>
+					</TableColumn.columnLength>
+					<TextField noEntry="true" dataType="Char,,,,3" fieldTable="voucher" identifier="currency_code"/>
+				</TableColumn>
+				<TableColumn text="Paid" fieldTable="" identifier="a">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="100%"/>
+					</TableColumn.columnLength>
+					<TextField noEntry="true" dataType="Char,,,," fieldTable="formonly" identifier="paid_ind"/>
+				</TableColumn>
+			</Table>
+			<GridPanel classNames="fcls_statusbar_cnt" visible="true" verticalAlignment="Top" gridItemLocation="0,3,1,1" fieldTable="formonly" identifier="cntstatusbar">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="100%"/>
+				</GridPanel.gridColumnDefinitions>
+				<Label isDynamic="true" text="" classNames="fcls_sblabel" visible="true" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="lbinfo1"/>
+				<Label isDynamic="true" text="" classNames="fcls_sblabel" visible="true" gridItemLocation="0,1,1,1" fieldTable="formonly" identifier="lbinfo2"/>
+			</GridPanel>
+		</GridPanel>
+	</form.rootContainer>
+	<form.screenRecords>
+		<ScreenRecord identifier="sr_voucher" fields="voucher_code,vouch_date,vend_code,name_text,unpaid_amt,currency_code,paid_ind"/>
+		<ScreenRecord identifier="formonly" fields="name_text,voucher_code,unpaid_amt,paid_ind"/>
+		<ScreenRecord identifier="vendor" fields="vend_code,name_text"/>
+		<ScreenRecord identifier="voucher" fields="vouch_code,total_amt,vouch_date,vend_code,currency_code"/>
+	</form.screenRecords>
+</form>
+

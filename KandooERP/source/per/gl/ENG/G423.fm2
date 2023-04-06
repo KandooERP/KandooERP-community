@@ -1,0 +1,257 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form xmlns="http://namespaces.querix.com/2015/fglForms">
+	<form.rootContainer>
+		<GridPanel classNames="fcls_rootContainer" verticalAlignment="Top" horizontalAlignment="Left" fieldTable="" identifier="rootContainer">
+			<GridPanel.gridRowDefinitions>
+				<GridRowDefinition>
+					<GridRowDefinition.gridLength>
+						<GridLength gridLengthValue=""/>
+					</GridRowDefinition.gridLength>
+				</GridRowDefinition>
+				<GridRowDefinition>
+					<GridRowDefinition.gridLength>
+						<GridLength gridLengthValue=""/>
+					</GridRowDefinition.gridLength>
+				</GridRowDefinition>
+				<GridRowDefinition>
+					<GridRowDefinition.gridLength>
+						<GridLength gridLengthValue=""/>
+					</GridRowDefinition.gridLength>
+				</GridRowDefinition>
+				<GridRowDefinition>
+					<GridRowDefinition.gridLength>
+						<GridLength gridLengthValue=""/>
+					</GridRowDefinition.gridLength>
+				</GridRowDefinition>
+				<GridRowDefinition>
+					<GridRowDefinition.gridLength>
+						<GridLength gridLengthValue=""/>
+					</GridRowDefinition.gridLength>
+				</GridRowDefinition>
+				<GridRowDefinition>
+					<GridRowDefinition.gridLength>
+						<GridLength gridLengthValue=""/>
+					</GridRowDefinition.gridLength>
+				</GridRowDefinition>
+			</GridPanel.gridRowDefinitions>
+			<GridPanel.gridColumnDefinitions>
+				<GridColumnDefinition>
+					<GridColumnDefinition.gridLength>
+						<GridLength gridLengthValue="100%"/>
+					</GridColumnDefinition.gridLength>
+				</GridColumnDefinition>
+			</GridPanel.gridColumnDefinitions>
+			<GridPanel classNames="fcls_title_cnt" visible="true" verticalAlignment="Top" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="cntTitle">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition>
+						<GridRowDefinition.gridLength>
+							<GridLength gridLengthValue=""/>
+						</GridRowDefinition.gridLength>
+					</GridRowDefinition>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition>
+						<GridColumnDefinition.gridLength>
+							<GridLength gridLengthValue="100%"/>
+						</GridColumnDefinition.gridLength>
+					</GridColumnDefinition>
+					<GridColumnDefinition>
+						<GridColumnDefinition.gridLength>
+							<GridLength gridLengthValue=""/>
+						</GridColumnDefinition.gridLength>
+					</GridColumnDefinition>
+				</GridPanel.gridColumnDefinitions>
+				<Label isDynamic="true" text="End of Period Batch Reversal" classNames="fcls_title_lb" visible="true" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="header_text"/>
+				<Label isDynamic="true" text="G423" classNames="fcls_title_lb" visible="true" gridItemLocation="1,0,1,1" fieldTable="" identifier="lbFormName"/>
+			</GridPanel>
+			<GroupBox title="Source" classNames="fcls_detail_gb_cnt" visible="true" gridItemLocation="0,1,1,1" fieldTable="" identifier="cntDetail1GroupBox">
+				<GridPanel classNames="fcls_detail_gb_cnt_sub,fcls_detail_cnt_sub,fcls_data_cnt,fcls_align_left" visible="true" verticalAlignment="Top" horizontalAlignment="Left" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="cntDetail1Sub">
+					<GridPanel.gridRowDefinitions>
+						<GridRowDefinition>
+							<GridRowDefinition.gridLength>
+								<GridLength gridLengthValue=""/>
+							</GridRowDefinition.gridLength>
+						</GridRowDefinition>
+						<GridRowDefinition>
+							<GridRowDefinition.gridLength>
+								<GridLength gridLengthValue=""/>
+							</GridRowDefinition.gridLength>
+						</GridRowDefinition>
+						<GridRowDefinition>
+							<GridRowDefinition.gridLength>
+								<GridLength gridLengthValue=""/>
+							</GridRowDefinition.gridLength>
+						</GridRowDefinition>
+					</GridPanel.gridRowDefinitions>
+					<GridPanel.gridColumnDefinitions>
+						<GridColumnDefinition>
+							<GridColumnDefinition.gridLength>
+								<GridLength gridLengthValue="" gridMinLength="10rem"/>
+							</GridColumnDefinition.gridLength>
+						</GridColumnDefinition>
+						<GridColumnDefinition>
+							<GridColumnDefinition.gridLength>
+								<GridLength gridLengthValue=""/>
+							</GridColumnDefinition.gridLength>
+						</GridColumnDefinition>
+						<GridColumnDefinition>
+							<GridColumnDefinition.gridLength>
+								<GridLength gridLengthValue=""/>
+							</GridColumnDefinition.gridLength>
+						</GridColumnDefinition>
+					</GridPanel.gridColumnDefinitions>
+					<Label isDynamic="true" text="Journal" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="lb57"/>
+					<ComboBox noEntry="true" dataType="Char,,,,3" classNames="fcls_data_widget,fcls_align_left,fcls_length_30qch" location="17qch,2qch" preferredSize="14qch,1qch" toolTip=" End of period accrual journal code " gridItemLocation="1,0,1,1" fieldTable="glparms" comment=" End of period accrual journal code " identifier="acrl_code"/>
+					<TextField noEntry="true" dataType="Char,,,,40" location="31qch,2qch" preferredSize="31qch,1qch" gridItemLocation="2,0,1,1" fieldTable="formonly" identifier="accdesc"/>
+					<Label isDynamic="true" text="Posting Year" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,1,1,1" fieldTable="" identifier="lb73"/>
+					<ComboBox dataType="SmallInt,,,," classNames="fcls_data_widget,fcls_align_left,fcls_length_05qch" location="17qch,3qch" preferredSize="5qch,1qch" toolTip=" Fiscal year in which the Accrual batches were entered" gridItemLocation="1,1,1,1" fieldTable="batchhead" comment=" Fiscal year in which the Accrual batches were entered" identifier="year_num"/>
+					<Label isDynamic="true" text="Posting Period." classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,2,1,1" fieldTable="" identifier="lb76"/>
+					<ComboBox dataType="SmallInt,,,," classNames="fcls_data_widget,fcls_align_left,fcls_length_05qch" location="18qch,4qch" preferredSize="4qch,1qch" toolTip=" Fiscal period in which the Accrual batches were entered" gridItemLocation="1,2,1,1" fieldTable="batchhead" comment=" Fiscal period in which the Accrual batches were entered" identifier="period_num"/>
+				</GridPanel>
+			</GroupBox>
+			<GroupBox title="Last Rev" classNames="fcls_detail_gb_cnt" visible="true" verticalAlignment="Top" gridItemLocation="0,2,1,1" fieldTable="formonly" identifier="cntDetail2GroupBox">
+				<GridPanel classNames="fcls_detail_gb_cnt_sub,fcls_detail_cnt_sub,fcls_data_cnt,fcls_align_left" visible="true" verticalAlignment="Top" horizontalAlignment="Left" fieldTable="formonly" identifier="cntDetail2Sub">
+					<GridPanel.gridRowDefinitions>
+						<GridRowDefinition>
+							<GridRowDefinition.gridLength>
+								<GridLength gridLengthValue=""/>
+							</GridRowDefinition.gridLength>
+						</GridRowDefinition>
+					</GridPanel.gridRowDefinitions>
+					<GridPanel.gridColumnDefinitions>
+						<GridColumnDefinition>
+							<GridColumnDefinition.gridLength>
+								<GridLength gridLengthValue="" gridMinLength="10rem"/>
+							</GridColumnDefinition.gridLength>
+						</GridColumnDefinition>
+						<GridColumnDefinition>
+							<GridColumnDefinition.gridLength>
+								<GridLength gridLengthValue=""/>
+							</GridColumnDefinition.gridLength>
+						</GridColumnDefinition>
+						<GridColumnDefinition>
+							<GridColumnDefinition.gridLength>
+								<GridLength gridLengthValue="" gridMinLength="10rem"/>
+							</GridColumnDefinition.gridLength>
+						</GridColumnDefinition>
+						<GridColumnDefinition>
+							<GridColumnDefinition.gridLength>
+								<GridLength gridLengthValue=""/>
+							</GridColumnDefinition.gridLength>
+						</GridColumnDefinition>
+					</GridPanel.gridColumnDefinitions>
+					<Label isDynamic="true" text="Last Rev Year" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="lb47"/>
+					<TextField noEntry="true" dataType="SmallInt,,,," classNames="fcls_data_widget,fcls_align_left,fcls_length_05qch" location="65qch,3qch" preferredSize="5qch,1qch" gridItemLocation="1,0,1,1" fieldTable="glparms" identifier="last_acrl_yr_num"/>
+					<Label isDynamic="true" text="Last Rev Period" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="2,0,1,1" fieldTable="" identifier="lb94"/>
+					<TextField noEntry="true" dataType="SmallInt,,,," classNames="fcls_data_widget,fcls_align_left,fcls_length_05qch" location="66qch,4qch" preferredSize="4qch,1qch" gridItemLocation="3,0,1,1" fieldTable="glparms" identifier="last_acrl_per_num"/>
+				</GridPanel>
+			</GroupBox>
+			<GroupBox title="Reversal" classNames="fcls_detail_gb_cnt" visible="true" gridItemLocation="0,3,1,1" fieldTable="formonly" identifier="cntDetail3GroupBox">
+				<GridPanel classNames="fcls_detail_gb_cnt_sub,fcls_detail_cnt_sub,fcls_data_cnt,fcls_align_left" visible="true" verticalAlignment="Top" horizontalAlignment="Left" fieldTable="formonly" identifier="cntDetail3Sub">
+					<GridPanel.gridRowDefinitions>
+						<GridRowDefinition>
+							<GridRowDefinition.gridLength>
+								<GridLength gridLengthValue=""/>
+							</GridRowDefinition.gridLength>
+						</GridRowDefinition>
+						<GridRowDefinition>
+							<GridRowDefinition.gridLength>
+								<GridLength gridLengthValue=""/>
+							</GridRowDefinition.gridLength>
+						</GridRowDefinition>
+						<GridRowDefinition>
+							<GridRowDefinition.gridLength>
+								<GridLength gridLengthValue=""/>
+							</GridRowDefinition.gridLength>
+						</GridRowDefinition>
+					</GridPanel.gridRowDefinitions>
+					<GridPanel.gridColumnDefinitions>
+						<GridColumnDefinition>
+							<GridColumnDefinition.gridLength>
+								<GridLength gridLengthValue="" gridMinLength="10rem"/>
+							</GridColumnDefinition.gridLength>
+						</GridColumnDefinition>
+						<GridColumnDefinition>
+							<GridColumnDefinition.gridLength>
+								<GridLength gridLengthValue=""/>
+							</GridColumnDefinition.gridLength>
+						</GridColumnDefinition>
+						<GridColumnDefinition>
+							<GridColumnDefinition.gridLength>
+								<GridLength gridLengthValue=""/>
+							</GridColumnDefinition.gridLength>
+						</GridColumnDefinition>
+					</GridPanel.gridColumnDefinitions>
+					<Label isDynamic="true" text="Journal" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="lb48"/>
+					<ComboBox noEntry="true" dataType="Char,,,,3" classNames="fcls_data_widget,fcls_align_left,fcls_length_20qch" location="17qch,7qch" preferredSize="14qch,1qch" toolTip=" End of period accrual reversal journal code " gridItemLocation="1,0,1,1" fieldTable="glparms" comment=" End of period accrual reversal journal code " identifier="rev_acrl_code"/>
+					<TextField noEntry="true" dataType="Char,,,,40" classNames="fcls_data_widget,fcls_align_left,fcls_length_20qch" location="31qch,7qch" preferredSize="31qch,1qch" gridItemLocation="2,0,1,1" fieldTable="formonly" identifier="acrdesc"/>
+					<Label isDynamic="true" text="Posting Year" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,1,1,1" fieldTable="formonly" identifier="lb49"/>
+					<ComboBox dataType="SmallInt,,,," classNames="fcls_data_widget,fcls_align_left,fcls_length_05qch" location="17qch,8qch" preferredSize="5qch,1qch" toolTip=" Fiscal year for Accrual reversal batches to be created" gridItemLocation="1,1,1,1" fieldTable="formonly" comment=" Fiscal year for Accrual reversal batches to be created" identifier="year"/>
+					<Label isDynamic="true" text="Posting Period." classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,2,1,1" fieldTable="formonly" identifier="lb63"/>
+					<ComboBox dataType="SmallInt,,,," classNames="fcls_data_widget,fcls_align_left,fcls_length_05qch" location="18qch,9qch" preferredSize="4qch,1qch" toolTip=" Fiscal period for Accrual reversal batches to be created" gridItemLocation="1,2,1,1" fieldTable="formonly" comment=" Fiscal period for Accrual reversal batches to be created" identifier="period"/>
+				</GridPanel>
+			</GroupBox>
+			<GroupBox title="Comments" classNames="fcls_detail_gb_cnt" visible="true" gridItemLocation="0,4,1,1" fieldTable="" identifier="cntDetail4GroupBox">
+				<GridPanel classNames="fcls_detail_gb_cnt_sub,fcls_detail_cnt_sub,fcls_data_cnt,fcls_align_left" visible="true" verticalAlignment="Top" horizontalAlignment="Stretch" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="cntDetail4Sub">
+					<GridPanel.gridRowDefinitions>
+						<GridRowDefinition>
+							<GridRowDefinition.gridLength>
+								<GridLength gridLengthValue=""/>
+							</GridRowDefinition.gridLength>
+						</GridRowDefinition>
+						<GridRowDefinition>
+							<GridRowDefinition.gridLength>
+								<GridLength gridLengthValue=""/>
+							</GridRowDefinition.gridLength>
+						</GridRowDefinition>
+					</GridPanel.gridRowDefinitions>
+					<GridPanel.gridColumnDefinitions>
+						<GridColumnDefinition>
+							<GridColumnDefinition.gridLength>
+								<GridLength gridLengthValue="" gridMinLength="10rem"/>
+							</GridColumnDefinition.gridLength>
+						</GridColumnDefinition>
+						<GridColumnDefinition>
+							<GridColumnDefinition.gridLength>
+								<GridLength gridLengthValue="100%"/>
+							</GridColumnDefinition.gridLength>
+						</GridColumnDefinition>
+					</GridPanel.gridColumnDefinitions>
+					<Label isDynamic="true" text="Line 1" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,0,1,1" fieldTable="" identifier="lb115"/>
+					<TextField dataType="Char,,,,40" classNames="fcls_data_widget,fcls_align_hstretch" location="17qch,12qch" preferredSize="41qch,1qch" toolTip=" Enter comments for this batch (line 1)" gridItemLocation="1,0,1,1" fieldTable="batchhead" comment=" Enter comments for this batch (line 1)" identifier="com1_text"/>
+					<Label isDynamic="true" text="Line 2" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,1,1,1" fieldTable="" identifier="lb116"/>
+					<TextField dataType="Char,,,,40" classNames="fcls_data_widget,fcls_align_hstretch" location="17qch,13qch" preferredSize="41qch,1qch" toolTip=" Enter comments for this batch (line 2)" gridItemLocation="1,1,1,1" fieldTable="batchhead" comment=" Enter comments for this batch (line 2)" identifier="com2_text"/>
+				</GridPanel>
+			</GroupBox>
+			<GridPanel classNames="fcls_statusbar_cnt" visible="true" verticalAlignment="Top" gridItemLocation="0,5,1,1" fieldTable="formonly" identifier="cntStatusBar">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition>
+						<GridRowDefinition.gridLength>
+							<GridLength gridLengthValue=""/>
+						</GridRowDefinition.gridLength>
+					</GridRowDefinition>
+					<GridRowDefinition>
+						<GridRowDefinition.gridLength>
+							<GridLength gridLengthValue=""/>
+						</GridRowDefinition.gridLength>
+					</GridRowDefinition>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition>
+						<GridColumnDefinition.gridLength>
+							<GridLength gridLengthValue="100%"/>
+						</GridColumnDefinition.gridLength>
+					</GridColumnDefinition>
+				</GridPanel.gridColumnDefinitions>
+				<Label isDynamic="true" text="" classNames="fcls_sblabel" visible="true" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="lbInfo1"/>
+				<Label isDynamic="true" text="" classNames="fcls_sblabel" visible="true" gridItemLocation="0,1,1,1" fieldTable="formonly" identifier="lbInfo2"/>
+			</GridPanel>
+		</GridPanel>
+	</form.rootContainer>
+	<form.screenRecords>
+		<ScreenRecord identifier="batchhead" fields="year_num,period_num,com1_text,com2_text"/>
+		<ScreenRecord identifier="formonly" fields="accdesc,acrdesc,year,period"/>
+		<ScreenRecord identifier="glparms" fields="acrl_code,last_acrl_yr_num,last_acrl_per_num,rev_acrl_code"/>
+	</form.screenRecords>
+</form>
+

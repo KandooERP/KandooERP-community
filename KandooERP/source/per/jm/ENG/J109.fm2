@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form xmlns="http://namespaces.querix.com/2015/fglForms">
+	<form.rootContainer>
+		<GridPanel classNames="fcls_rootContainer" verticalAlignment="Stretch" horizontalAlignment="Stretch" fieldTable="" identifier="rootContainer">
+			<GridPanel.gridRowDefinitions>
+				<GridRowDefinition gridLengthValue=""/>
+				<GridRowDefinition gridLengthValue=""/>
+				<GridRowDefinition gridLengthValue="100%"/>
+				<GridRowDefinition gridLengthValue=""/>
+			</GridPanel.gridRowDefinitions>
+			<GridPanel.gridColumnDefinitions>
+				<GridColumnDefinition gridLengthValue="100%"/>
+			</GridPanel.gridColumnDefinitions>
+			
+			
+			<GridPanel classNames="fcls_title_cnt" visible="true" verticalAlignment="Top" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="cntTitle">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="100%"/>
+					<GridColumnDefinition gridLengthValue=""/>
+				</GridPanel.gridColumnDefinitions>
+				<Label isDynamic="true" text="Activity Description" classNames="fcls_title_lb" visible="true" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="header_text"/>
+				<Label isDynamic="true" text="J109" classNames="fcls_title_lb" visible="true" gridItemLocation="1,0,1,1" fieldTable="" identifier="lbFormName"/>
+			</GridPanel>
+			
+			
+			<GridPanel classNames="fcls_detail_cnt,fcls_data_cnt" visible="true" verticalAlignment="Top" horizontalAlignment="Left" gridItemLocation="0,1,1,1" fieldTable="formonly" identifier="cntDetail1">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="" gridMinLength="10rem"/>
+					<GridColumnDefinition gridLengthValue=""/>
+					<GridColumnDefinition gridLengthValue=""/>
+				</GridPanel.gridColumnDefinitions>
+				<TextField dataType="Char,,,,8" preferredSize="13qch,1qch" toolTip="Job code" comment="Job code" fieldTable="activity" identifier="job_code" gridItemLocation="1,0,1,1" classNames="fcls_data_widget,fcls_length_15qch"/>
+				<TextField dataType="Char,,,,30" preferredSize="31qch,1qch" toolTip="Job title" comment="Job title" fieldTable="job" identifier="title_text" gridItemLocation="2,0,1,1" classNames="fcls_data_widget,fcls_length_30qch"/>
+				<TextField dataType="Char,,,,8" preferredSize="9qch,1qch" toolTip="Activity code" comment="Activity code" fieldTable="activity" identifier="activity_code" gridItemLocation="1,1,1,1" classNames="fcls_data_widget,fcls_length_15qch"/>
+				<TextField dataType="Char,,,,30" preferredSize="31qch,1qch" toolTip="Activity title" comment="Activity title" fieldTable="activity" identifier="title_text" gridItemLocation="2,1,1,1" classNames="fcls_data_widget,fcls_length_30qch"/>
+				<TextField dataType="SmallInt,,,," preferredSize="6qch,1qch" toolTip="Variation" comment="Variation" fieldTable="activity" identifier="var_code" gridItemLocation="1,2,1,1" classNames="fcls_data_widget,fcls_length_15qch"/>
+				<Label isDynamic="true" text="Job Code" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,0,1,1" fieldTable="" identifier="lb51"/>
+				<Label isDynamic="true" text="Activity Code" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,1,1,1" fieldTable="" identifier="lb52"/>
+				<Label isDynamic="true" text="Variation" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,2,1,1" fieldTable="" identifier="lb66"/>
+			</GridPanel>
+			<Table rowCount="12" preferredSize="57qch,12qch" fieldTable="" identifier="sr_act_desc" gridItemLocation="0,2,1,1">
+				<TableColumn fieldTable="" identifier="tc_desc_text">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="100.0%"/>
+					</TableColumn.columnLength>
+					<TextField dataType="Char,,,,56" toolTip="Activity description" comment="Activity description" fieldTable="act_desc" identifier="desc_text"/>
+				</TableColumn>
+			</Table>
+			<GridPanel classNames="fcls_statusbar_cnt" visible="true" verticalAlignment="Top" gridItemLocation="0,3,1,1" fieldTable="formonly" identifier="cntStatusBar">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="100%"/>
+				</GridPanel.gridColumnDefinitions>
+				<Label isDynamic="true" text="" classNames="fcls_sblabel" visible="true" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="lbInfo1"/>
+				<Label isDynamic="true" text="" classNames="fcls_sblabel" visible="true" gridItemLocation="0,1,1,1" fieldTable="formonly" identifier="lbInfo2"/>
+			</GridPanel>
+		</GridPanel>
+	</form.rootContainer>
+	<form.screenRecords>
+		<ScreenRecord identifier="sr_act_desc" fields="act_desc.desc_text"/>
+		<ScreenRecord identifier="act_desc" fields="act_desc.desc_text"/>
+		<ScreenRecord identifier="activity" fields="activity.job_code,activity.activity_code,activity.var_code,activity.title_text"/>
+		<ScreenRecord identifier="job" fields="job.title_text"/>
+	</form.screenRecords>
+</form>
+

@@ -1,0 +1,15 @@
+AZ2_FRA {
+ACCEPT { "VALIDER" }
+Code { "Code" }
+Date { "Date" }
+Description { "Description" }
+Discount { "Remise" }
+FILTER { "Premier" }
+ID { "ID" }
+LOOKUP { "RECHERCHER" }
+Language Code { "Code langue" }
+Name { "Nom" }
+Payment Term { "Conditions de paiement" }
+REFRESH { "ACTUALISER" }
+actToolbarManager { "actToolbarManager" }
+}

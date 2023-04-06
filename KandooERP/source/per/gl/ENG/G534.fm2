@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form xmlns="http://namespaces.querix.com/2015/fglForms">
+	<form.rootContainer>
+		<GridPanel classNames="fcls_rootContainer" verticalAlignment="Stretch" horizontalAlignment="Stretch" fieldTable="" identifier="rootContainer">
+			<GridPanel.gridRowDefinitions>
+				<GridRowDefinition gridLengthValue=""/>
+				<GridRowDefinition gridLengthValue="100%"/>
+				<GridRowDefinition gridLengthValue=""/>
+			</GridPanel.gridRowDefinitions>
+			<GridPanel.gridColumnDefinitions>
+				<GridColumnDefinition gridLengthValue="100%"/>
+			</GridPanel.gridColumnDefinitions>
+			<GridPanel classNames="fcls_title_cnt" visible="true" verticalAlignment="Top" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="cntTitle">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="100%"/>
+					<GridColumnDefinition gridLengthValue=""/>
+				</GridPanel.gridColumnDefinitions>
+				<Label isDynamic="true" text="BIC/Bank/State/Branch Codes" classNames="fcls_title_lb" visible="true" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="header_text"/>
+				<Label isDynamic="true" text="G534" classNames="fcls_title_lb" visible="true" gridItemLocation="1,0,1,1" fieldTable="" identifier="lbFormName"/>
+			</GridPanel>
+			<Table rowCount="12" location="1qch,2qch" preferredSize="59qch,15qch" gridItemLocation="0,1,1,1" fieldTable="" identifier="sr_bic">
+				<TableColumn text="BIC" fieldTable="" identifier="tc_bic_code">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="15rem" gridMinLength="15rem" gridMaxLength="15rem"/>
+					</TableColumn.columnLength>
+					<TextField toCase="Up" dataType="Char,,,,11" toolTip=" BIC Identification Code" comment=" BIC Identification Code" fieldTable="bic" identifier="bic_code"/>
+				</TableColumn>
+				<TableColumn text="Description" fieldTable="" identifier="tc_desc_text">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="15rem" gridMinLength="15rem" gridMaxLength="15rem"/>
+					</TableColumn.columnLength>
+					<TextField dataType="Char,,,,30" toolTip=" Location description for the BIC" comment=" Location description for the BIC" fieldTable="bic" identifier="desc_text"/>
+				</TableColumn>
+				<TableColumn text="Post Code" fieldTable="" identifier="tc_post_code">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="15rem" gridMinLength="15rem" gridMaxLength="15rem"/>
+					</TableColumn.columnLength>
+					<TextField dataType="Char,,,,10" toolTip=" Post Code for the BIC" comment=" Post Code for the BIC" fieldTable="bic" identifier="post_code"/>
+				</TableColumn>
+				<TableColumn text="Bank Reference" fieldTable="" identifier="tc_bank_ref">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="100%" gridMaxLength=""/>
+					</TableColumn.columnLength>
+					<TextField toCase="Up" dataType="Char,,,,8" toolTip=" Bank Type for BIC code" comment=" Bank Type for BIC code" fieldTable="bic" identifier="bank_ref"/>
+				</TableColumn>
+			</Table>
+			<GridPanel classNames="fcls_statusbar_cnt" visible="true" verticalAlignment="Top" gridItemLocation="0,2,1,1" fieldTable="formonly" identifier="cntStatusBar">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="100%"/>
+				</GridPanel.gridColumnDefinitions>
+				<Label isDynamic="true" text="" classNames="fcls_sblabel" visible="true" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="lbInfo1"/>
+				<Label isDynamic="true" text="" classNames="fcls_sblabel" visible="true" gridItemLocation="0,1,1,1" fieldTable="formonly" identifier="lbInfo2"/>
+			</GridPanel>
+		</GridPanel>
+	</form.rootContainer>
+	<form.screenRecords>
+		<ScreenRecord identifier="sr_bic" fields="bic_code,desc_text,post_code,bank_ref"/>
+		<ScreenRecord identifier="bic" fields="bic_code,desc_text,post_code,bank_ref"/>
+		<ScreenRecord identifier="formonly" fields=""/>
+	</form.screenRecords>
+</form>
+

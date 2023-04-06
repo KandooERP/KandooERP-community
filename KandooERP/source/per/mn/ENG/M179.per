@@ -1,0 +1,60 @@
+{
+###########################################################################
+# This program is free software; you can redistribute it and/or modify it
+# under the terms of the GNU General Public License as published by the
+# Free Software Foundation; either version 2 of the License, or (at your
+# option) any later version.
+#
+# This program is distributed in the hope that it will be useful, but
+# WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+# General Public License for more details.
+#
+# You should have received a copy of the GNU General Public License along
+# with this program; if not, write to the Free Software Foundation, Inc.,
+# 59 Temple Place, Suite 330, Boston, MA 02111-1307 USA
+#
+###########################################################################
+
+	 $Id: M179.per,v 1.2 2003/11/19 22:23:01 afalout Exp $
+}
+
+
+database kandoodb
+
+screen
+{
+                      Shop Order Listing                  M179
+\g---------------------------------------------------------------\g
+ Shop Order      [f000    ]
+ Suffix Number   [f001    ]
+ Customer        [f002    ]
+ Product         [f003           ]
+ Order Type      [b]
+ Order Status    [c]
+ Start Date      [f004       ]
+ End Date        [f005       ]
+
+}
+
+tables
+shopordhead
+
+attributes
+f000 = formonly.shop_order_num, comments = " Shop order number";
+f001 = formonly.suffix_num, comments = " Shop order suffix number"; 
+f002 = formonly.cust_code, upshift,
+comments = " Customer code from a sales order";
+f003 = formonly.product, upshift,
+comments = " Product code of the product being produced for the shop order";
+b    = formonly.order_type_ind type char, upshift,
+comments = " O = Normal shop order, S = Originates from a sales order";
+c    = formonly.status_ind type char, upshift,
+comments = " H = Held, R = Released, C = Closed";
+f004 = formonly.start_date type date,
+comments = " Date when manufacturing is due to begin for the shop order";
+f005 = formonly.end_date type date,
+comments = " Date when manufacturing is due to end for the shop order";
+
+instructions
+delimiters "  "

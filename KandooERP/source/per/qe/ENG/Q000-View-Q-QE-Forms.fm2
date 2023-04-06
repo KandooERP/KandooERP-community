@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form xmlns="http://namespaces.querix.com/2015/fglForms">
+	<form.rootContainer>
+		<GridPanel classNames="fcls_rootContainer" verticalAlignment="Stretch" horizontalAlignment="Stretch" fieldTable="" identifier="rootContainer">
+			<GridPanel.gridRowDefinitions>
+				<GridRowDefinition gridLengthValue=""/>
+				<GridRowDefinition gridLengthValue="100%"/>
+				<GridRowDefinition gridLengthValue=""/>
+			</GridPanel.gridRowDefinitions>
+			<GridPanel.gridColumnDefinitions>
+				<GridColumnDefinition gridLengthValue="100%"/>
+			</GridPanel.gridColumnDefinitions>
+			<GridPanel classNames="fcls_title_cnt" visible="true" verticalAlignment="Top" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="cntTitle">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="100%"/>
+					<GridColumnDefinition gridLengthValue=""/>
+				</GridPanel.gridColumnDefinitions>
+				<Label isDynamic="true" text="Header-Text" classNames="fcls_title_lb" visible="true" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="header_text"/>
+				<Label isDynamic="true" text="_master_D1_1Gp_01b" classNames="fcls_title_lb" visible="true" gridItemLocation="1,0,1,1" fieldTable="" identifier="lbFormName"/>
+			</GridPanel>
+			<GridPanel classNames="fcls_detail_cnt,fcls_data_cnt,fcls_align_left" visible="true" verticalAlignment="Top" horizontalAlignment="Left" gridItemLocation="0,1,1,1" fieldTable="formonly" identifier="cntDetail1">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue="" gridMinLength="100%"/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="" gridMinLength="100%"/>
+				</GridPanel.gridColumnDefinitions>
+				<ListBox minSize="60rem,20rem" visible="true" verticalAlignment="Stretch" horizontalAlignment="Stretch" gridItemLocation="0,0,1,1" fieldTable="" identifier="formName">
+
+
+					<ListBoxItem text="Q100 - Quote Inquiry" identifier="formName_Q100">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="Q100"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+
+					<ListBoxItem text="Q101 - Quotation Scan" identifier="formName_Q101">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="Q101"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+
+					<ListBoxItem text="Q102 - Quotation Scan" identifier="formName_Q102">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="Q102"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+
+					<ListBoxItem text="Q103 - Quotation Scan" identifier="formName_Q103">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="Q103"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+
+					<ListBoxItem text="Q114 - Quote Line Items" identifier="formName_Q114">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="Q114"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+
+					<ListBoxItem text="Q115 - Quote Line Detail" identifier="formName_Q115">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="Q115"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+
+					<ListBoxItem text="Q117 - Quotation Parameters" identifier="formName_Q117">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="Q117"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+
+					<ListBoxItem text="Q119 - Quotation Text" identifier="formName_Q119">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="Q119"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+
+					<ListBoxItem text="Q124 - Quotation Details" identifier="formName_Q124">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="Q124"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+
+					<ListBoxItem text="Q125 - Session Parameters" identifier="formName_Q125">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="Q125"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+
+					<ListBoxItem text="Q210 - Quotation Entry" identifier="formName_Q210">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="Q210"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+
+					<ListBoxItem text="Q211 - Quotation Information" identifier="formName_Q211">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="Q211"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+
+					<ListBoxItem text="Q212 - Payment Details" identifier="formName_Q212">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="Q212"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+
+					<ListBoxItem text="Q214 - Quote Line Item Information" identifier="formName_Q214">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="Q214"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+
+					<ListBoxItem text="Q215 - Product" identifier="formName_Q215">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="Q215"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+
+					<ListBoxItem text="Q216 - Shipping Details" identifier="formName_Q216">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="Q216"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+
+					<ListBoxItem text="Q220 - Quotation Information" identifier="formName_Q220">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="Q220"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+
+					<ListBoxItem text="Q224 - Quotation Image" identifier="formName_Q224">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="Q224"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+
+					<ListBox.onMouseDoubleClick>
+						<ActionEventHandler actionName="ViewForm"/>
+					</ListBox.onMouseDoubleClick>
+				</ListBox>
+			</GridPanel>
+			<GridPanel classNames="fcls_statusbar_cnt" visible="true" verticalAlignment="Bottom" gridItemLocation="0,2,1,1" fieldTable="formonly" identifier="cntStatusBar">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="100%"/>
+				</GridPanel.gridColumnDefinitions>
+				<Label isDynamic="true" text="" classNames="fcls_sblabel" visible="true" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="lbInfo1"/>
+				<Label isDynamic="true" text="" classNames="fcls_sblabel" visible="true" gridItemLocation="0,1,1,1" fieldTable="formonly" identifier="lbInfo2"/>
+			</GridPanel>
+		</GridPanel>
+	</form.rootContainer>
+	<form.screenRecords>
+		<ScreenRecord identifier="FORMONLY" fields="f151"/>
+	</form.screenRecords>
+</form>
+

@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form xmlns="http://namespaces.querix.com/2015/fglForms">
+	<form.rootContainer>
+		<GridPanel classNames="fcls_rootContainer" verticalAlignment="Top" horizontalAlignment="Left" fieldTable="" identifier="rootContainer">
+			<GridPanel.gridRowDefinitions>
+				<GridRowDefinition gridLengthValue=""/>
+				<GridRowDefinition gridLengthValue=""/>
+				<GridRowDefinition gridLengthValue=""/>
+				<GridRowDefinition gridLengthValue=""/>
+				<GridRowDefinition gridLengthValue=""/>
+				<GridRowDefinition gridLengthValue=""/>
+			</GridPanel.gridRowDefinitions>
+			<GridPanel.gridColumnDefinitions>
+				<GridColumnDefinition gridLengthValue="100%"/>
+			</GridPanel.gridColumnDefinitions>
+			<GridPanel classNames="fcls_title_cnt" visible="true" verticalAlignment="Top" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="cnttitle">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="35%"/>
+					<GridColumnDefinition gridLengthValue="10%"/>
+					<GridColumnDefinition gridLengthValue="30%"/>
+					<GridColumnDefinition gridLengthValue="25%"/>
+				</GridPanel.gridColumnDefinitions>
+				<Label isDynamic="true" text=" Purchasing Info" classNames="fcls_title_lb" visible="true" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="header_text"/>
+				<Label text="New Label" isDynamic="true" visible="true" identifier="hdr_cmpy_code" gridItemLocation="1,0,1,1"/>
+				<Label text="New Label" isDynamic="true" visible="true" identifier="hdr_cmpy_name" gridItemLocation="2,0,1,1"/>
+				<Label isDynamic="true" text="I105" classNames="fcls_title_lb" visible="true" gridItemLocation="3,0,1,1" fieldTable="" identifier="lbformname"/>
+			</GridPanel>
+			<GroupBox title="Purchasing Info" classNames="fcls_detail_gb_cnt" visible="true" gridItemLocation="0,1,1,1" fieldTable="" identifier="cntdetail1groupbox">
+				<GridPanel classNames="fcls_detail_gb_cnt_sub,fcls_detail_cnt_sub,fcls_data_cnt,fcls_align_left" visible="true" verticalAlignment="Top" horizontalAlignment="Left" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="cntdetail1sub">
+					<GridPanel.gridRowDefinitions>
+						<GridRowDefinition gridLengthValue=""/>
+						<GridRowDefinition gridLengthValue=""/>
+						<GridRowDefinition gridLengthValue=""/>
+						<GridRowDefinition gridLengthValue=""/>
+						<GridRowDefinition gridLengthValue=""/>
+						<GridRowDefinition gridLengthValue=""/>
+						<GridRowDefinition gridLengthValue=""/>
+						<GridRowDefinition gridLengthValue=""/>
+						<GridRowDefinition gridLengthValue=""/>
+					</GridPanel.gridRowDefinitions>
+					<GridPanel.gridColumnDefinitions>
+						<GridColumnDefinition gridLengthValue="" gridMinLength="12rem"/>
+						<GridColumnDefinition gridLengthValue=""/>
+					</GridPanel.gridColumnDefinitions>
+					<Label text="Part Code" isDynamic="true" visible="true" identifier="lb114" gridItemLocation="0,0,1,1"/>
+					<TextField visible="true" identifier="part_code" gridItemLocation="1,0,1,1" fieldTable="product" classNames="fcls_data_widget,fcls_align_left,fcls_length_15qch" noEntry="true"/>
+					<Label text="Description" isDynamic="true" visible="true" identifier="lb116" gridItemLocation="0,1,1,1"/>
+					<TextField visible="true" identifier="desc_text" gridItemLocation="1,1,1,1" fieldTable="product" noEntry="true"/>
+					<Label isDynamic="true" text="Usual Vendor" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,2,1,1" fieldTable="formonly" identifier="lb57"/>
+					<Label text="Vendor Name" isDynamic="true" visible="true" identifier="lb117" gridItemLocation="0,3,1,1"/>
+					<Label isDynamic="true" text="OEM Code" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,4,1,1" fieldTable="" identifier="lb73"/>
+					<Label isDynamic="true" text="Average Lead Time" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,5,1,1" fieldTable="" identifier="lb76"/>
+					<Label isDynamic="true" text="Tariff Code" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,6,1,1" fieldTable="" identifier="lb77"/>
+					<Label isDynamic="true" text="Min ReOrder Qty" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,7,1,1" fieldTable="" identifier="lb111"/>
+					<ComboBox toCase="Up" dataType="Char,,,,8" classNames="list-show-text,field-show-value,fcls_data_widget,fcls_align_left,fcls_length_20qch" preferredSize="9qch,1qch" toolTip=" Enter usual vendor for purchasing this product - (W)" gridItemLocation="1,2,1,1" comment=" Enter usual vendor for purchasing this product - (W)" fieldTable="product" identifier="vend_code"/>
+					<TextField noEntry="true" dataType="Char,,,,30" classNames="fcls_data_widget,fcls_align_left,fcls_length_20qch" preferredSize="31qch,1qch" gridItemLocation="1,3,1,1" fieldTable="vendor" identifier="name_text"/>
+					<TextField dataType="Char,,,,30" classNames="fcls_data_widget,fcls_align_left,fcls_length_20qch" preferredSize="31qch,1qch" toolTip="The original equipment manufacturers number for this product" gridItemLocation="1,4,1,1" comment="The original equipment manufacturers number for this product" fieldTable="product" identifier="oem_text"/>
+					<TextField dataType="SmallInt,,,," classNames="fcls_data_widget,fcls_align_left,fcls_length_20qch" preferredSize="11qch,1qch" toolTip="Average lead time in days for purchasing product" gridItemLocation="1,5,1,1" comment="Average lead time in days for purchasing product" fieldTable="product" identifier="days_lead_num"/>
+					<TextField dataType="Char,,,,12" classNames="fcls_data_widget,fcls_align_left,fcls_length_20qch" preferredSize="13qch,1qch" toolTip="The tariff code for the product" gridItemLocation="1,6,1,1" comment="The tariff code for the product" fieldTable="product" identifier="tariff_code"/>
+					<TextField dataType="Float,,,," classNames="fcls_data_widget,fcls_align_left,fcls_length_20qch" preferredSize="11qch,1qch" toolTip=" Minimum order quantity for this product" gridItemLocation="1,7,1,1" comment=" Minimum order quantity for this product" fieldTable="product" identifier="min_ord_qty"/>
+					<ComboBox toCase="Up" noEntry="true" dataType="Char,,,,4" classNames="fcls_data_widget,fcls_align_left,fcls_length_20qch" preferredSize="5qch,1qch" gridItemLocation="1,8,1,1" fieldTable="product" identifier="pur_uom_code"/>
+				</GridPanel>
+			</GroupBox>
+			<GroupBox title="Outer Info" classNames="fcls_detail_gb_cnt" visible="true" verticalAlignment="Top" gridItemLocation="0,2,1,1" fieldTable="formonly" identifier="cntdetail2groupbox">
+				<GridPanel classNames="fcls_detail_gb_cnt_sub,fcls_detail_cnt_sub,fcls_data_cnt,fcls_align_left" visible="true" verticalAlignment="Top" horizontalAlignment="Left" fieldTable="formonly" identifier="cntdetail2sub">
+					<GridPanel.gridRowDefinitions>
+						<GridRowDefinition gridLengthValue=""/>
+						<GridRowDefinition gridLengthValue=""/>
+					</GridPanel.gridRowDefinitions>
+					<GridPanel.gridColumnDefinitions>
+						<GridColumnDefinition gridLengthValue="" gridMinLength="12rem"/>
+						<GridColumnDefinition gridLengthValue=""/>
+					</GridPanel.gridColumnDefinitions>
+					<Label isDynamic="true" text="Outer Quantity" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="lb47"/>
+					<Label isDynamic="true" text="Break Outer Surcharge %" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,1,1,1" fieldTable="" identifier="lb92"/>
+					<TextField dataType="Decimal,,,,7" classNames="fcls_data_widget,fcls_align_left,fcls_length_20qch" preferredSize="8qch,1qch" toolTip=" Quantity of products in an outer package.(e.g. in a carton etc)" gridItemLocation="1,0,1,1" comment=" Quantity of products in an outer package.(e.g. in a carton etc)" fieldTable="product" identifier="outer_qty"/>
+					<TextField dataType="Decimal,,,3,6" classNames="fcls_data_widget,fcls_align_left,fcls_length_20qch" preferredSize="8qch,1qch" toolTip=" The surcharge percentage when outer packaging is broken " gridItemLocation="1,1,1,1" comment=" The surcharge percentage when outer packaging is broken " fieldTable="product" identifier="outer_sur_per"/>
+				</GridPanel>
+			</GroupBox>
+			<GroupBox title="General Info" classNames="fcls_detail_gb_cnt" visible="true" gridItemLocation="0,3,1,1" fieldTable="formonly" identifier="cntdetail3groupbox">
+				<GridPanel classNames="fcls_detail_gb_cnt_sub,fcls_detail_cnt_sub,fcls_data_cnt,fcls_align_left" visible="true" verticalAlignment="Top" horizontalAlignment="Left" fieldTable="formonly" identifier="cntdetail3sub">
+					<GridPanel.gridRowDefinitions>
+						<GridRowDefinition gridLengthValue=""/>
+						<GridRowDefinition gridLengthValue=""/>
+						<GridRowDefinition gridLengthValue=""/>
+						<GridRowDefinition gridLengthValue=""/>
+						<GridRowDefinition gridLengthValue=""/>
+					</GridPanel.gridRowDefinitions>
+					<GridPanel.gridColumnDefinitions>
+						<GridColumnDefinition gridLengthValue="" gridMinLength="12rem"/>
+						<GridColumnDefinition gridLengthValue=""/>
+					</GridPanel.gridColumnDefinitions>
+					<Label isDynamic="true" text="Bar Code Text" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="lb48"/>
+					<Label isDynamic="true" text="Setup Date" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,1,1,1" fieldTable="formonly" identifier="lb49"/>
+					<Label isDynamic="true" text="Warranty Days" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,2,1,1" fieldTable="formonly" identifier="lb63"/>
+					<Label isDynamic="true" text="Warehouse" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,3,1,1" fieldTable="" identifier="lb101"/>
+					<TextField dataType="Char,,,,20" classNames="fcls_data_widget,fcls_align_left,fcls_length_20qch" preferredSize="21qch,1qch" toolTip=" Bar code text for this product" gridItemLocation="1,0,1,1" comment=" Bar code text for this product" fieldTable="product" identifier="bar_code_text"/>
+					<Calendar dataType="Date,,,," classNames="fcls_data_widget,fcls_align_left,fcls_length_20qch" preferredSize="11qch,1qch" toolTip=" Date this product was setup " gridItemLocation="1,1,1,1" comment=" Date this product was setup " fieldTable="product" identifier="setup_date"/>
+					<ComboBox dataType="Integer,,,," classNames="fcls_data_widget,fcls_align_left,fcls_length_20qch" preferredSize="7qch,1qch" toolTip=" Product warranty (if applicable) in days " gridItemLocation="1,2,1,1" comment=" Product warranty (if applicable) in days " fieldTable="product" identifier="days_warr_num"/>
+					<ComboBox toCase="Up" dataType="Char,,,,3" classNames="list-show-text,field-show-value,fcls_data_widget,fcls_align_left,fcls_length_20qch" preferredSize="4qch,1qch" toolTip=" Product default warehouse (W)" gridItemLocation="1,3,1,1" comment=" Product default warehouse (W)" fieldTable="product" identifier="ware_code"/>
+					<Label text="Warehouse Name" isDynamic="true" visible="true" identifier="lb118" gridItemLocation="0,4,1,1"/>
+					<TextField noEntry="true" dataType="Char,,,,30" classNames="fcls_data_widget,fcls_align_left,fcls_length_20qch" preferredSize="31qch,1qch" gridItemLocation="1,4,1,1" fieldTable="warehouse" identifier="desc_text"/>
+				</GridPanel>
+			</GroupBox>
+			<GroupBox title="Product Flags" classNames="fcls_detail_gb_cnt" visible="true" gridItemLocation="0,4,1,1" fieldTable="" identifier="cntdetail4groupbox">
+				<GridPanel classNames="fcls_detail_gb_cnt_sub,fcls_detail_cnt_sub,fcls_data_cnt,fcls_align_left" visible="true" verticalAlignment="Top" horizontalAlignment="Left" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="cntdetail4sub">
+					<GridPanel.gridRowDefinitions>
+						<GridRowDefinition gridLengthValue=""/>
+						<GridRowDefinition gridLengthValue=""/>
+						<GridRowDefinition gridLengthValue=""/>
+						<GridRowDefinition gridLengthValue=""/>
+						<GridRowDefinition gridLengthValue=""/>
+						<GridRowDefinition gridLengthValue=""/>
+						<GridRowDefinition gridLengthValue=""/>
+					</GridPanel.gridRowDefinitions>
+					<GridPanel.gridColumnDefinitions>
+						<GridColumnDefinition gridLengthValue="" gridMinLength="12rem"/>
+						<GridColumnDefinition gridLengthValue=""/>
+					</GridPanel.gridColumnDefinitions>
+					<CheckBox title="Serialised Item" dataType="Char,,,,1" classNames="fcls_data_widget,fcls_align_left,fcls_length_20qch" preferredSize="2qch,1qch" toolTip=" Track each individual product via allocation of serial numbers. (Y/N)?" gridItemLocation="1,0,1,1" comment=" Track each individual product via allocation of serial numbers. (Y/N)?" fieldTable="product" identifier="serial_flag">
+						<CheckBox.checkedValue>
+							<StringLiteral stringValue="Y"/>
+						</CheckBox.checkedValue>
+						<CheckBox.uncheckedValue>
+							<StringLiteral stringValue="N"/>
+						</CheckBox.uncheckedValue>
+					</CheckBox>
+					<CheckBox title="Subject to Tax" dataType="Char,,,,1" classNames="fcls_data_widget,fcls_align_left,fcls_length_20qch" preferredSize="2qch,1qch" toolTip=" Is the product to be included in the taxable total. (Y/N)? " gridItemLocation="1,1,1,1" comment=" Is the product to be included in the taxable total. (Y/N)? " fieldTable="product" identifier="total_tax_flag">
+						<CheckBox.checkedValue>
+							<StringLiteral stringValue="Y"/>
+						</CheckBox.checkedValue>
+						<CheckBox.uncheckedValue>
+							<StringLiteral stringValue="N"/>
+						</CheckBox.uncheckedValue>
+					</CheckBox>
+					<CheckBox noEntry="true" title="Price Invoice" dataType="Char,,,,1" classNames="fcls_data_widget,fcls_align_left,fcls_length_20qch" preferredSize="2qch,1qch" gridItemLocation="1,2,1,1" fieldTable="product" identifier="price_inv_flag">
+						<CheckBox.checkedValue>
+							<StringLiteral stringValue="Y"/>
+						</CheckBox.checkedValue>
+						<CheckBox.uncheckedValue>
+							<StringLiteral stringValue="N"/>
+						</CheckBox.uncheckedValue>
+					</CheckBox>
+					<CheckBox noEntry="true" title="Discount Allowed" dataType="Char,,,,1" classNames="fcls_data_widget,fcls_align_left,fcls_length_20qch" preferredSize="2qch,1qch" gridItemLocation="1,3,1,1" fieldTable="product" identifier="disc_allow_flag">
+						<CheckBox.checkedValue>
+							<StringLiteral stringValue="Y"/>
+						</CheckBox.checkedValue>
+						<CheckBox.uncheckedValue>
+							<StringLiteral stringValue="N"/>
+						</CheckBox.uncheckedValue>
+					</CheckBox>
+					<CheckBox noEntry="true" title="Bonus Allowed" dataType="Char,,,,1" classNames="fcls_data_widget,fcls_align_left,fcls_length_20qch" preferredSize="2qch,1qch" gridItemLocation="1,4,1,1" fieldTable="product" identifier="bonus_allow_flag">
+						<CheckBox.checkedValue>
+							<StringLiteral stringValue="Y"/>
+						</CheckBox.checkedValue>
+						<CheckBox.uncheckedValue>
+							<StringLiteral stringValue="N"/>
+						</CheckBox.uncheckedValue>
+					</CheckBox>
+					<CheckBox noEntry="true" title="Back Order" dataType="Char,,,,1" classNames="fcls_data_widget,fcls_align_left,fcls_length_20qch" preferredSize="2qch,1qch" gridItemLocation="1,5,1,1" fieldTable="product" identifier="back_order_flag">
+						<CheckBox.checkedValue>
+							<StringLiteral stringValue="Y"/>
+						</CheckBox.checkedValue>
+						<CheckBox.uncheckedValue>
+							<StringLiteral stringValue="N"/>
+						</CheckBox.uncheckedValue>
+					</CheckBox>
+					<CheckBox noEntry="true" title="Trade In" dataType="Char,,,,1" classNames="fcls_data_widget,fcls_align_left,fcls_length_20qch" preferredSize="2qch,1qch" gridItemLocation="1,6,1,1" fieldTable="product" identifier="trade_in_flag">
+						<CheckBox.checkedValue>
+							<StringLiteral stringValue="Y"/>
+						</CheckBox.checkedValue>
+						<CheckBox.uncheckedValue>
+							<StringLiteral stringValue="N"/>
+						</CheckBox.uncheckedValue>
+					</CheckBox>
+				</GridPanel>
+			</GroupBox>
+			<GridPanel classNames="fcls_statusbar_cnt" visible="true" verticalAlignment="Top" gridItemLocation="0,5,1,1" fieldTable="formonly" identifier="cntStatusBar">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="100%"/>
+				</GridPanel.gridColumnDefinitions>
+				<Label isDynamic="true" text="" classNames="fcls_sblabel" visible="true" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="lbInfo1"/>
+				<Label isDynamic="true" text="" classNames="fcls_sblabel" visible="true" gridItemLocation="0,1,1,1" fieldTable="formonly" identifier="lbInfo2"/>
+			</GridPanel>
+		</GridPanel>
+	</form.rootContainer>
+	<form.screenRecords>
+		<ScreenRecord identifier="product" fields="product.desc_text,product.vend_code,product.oem_text,product.days_lead_num,product.tariff_code,product.min_ord_qty,product.pur_uom_code,product.outer_qty,product.outer_sur_per,product.bar_code_text,product.setup_date,product.days_warr_num,product.ware_code,product.serial_flag,product.total_tax_flag,product.price_inv_flag,product.disc_allow_flag,product.bonus_allow_flag,product.back_order_flag,product.trade_in_flag"/>
+		<ScreenRecord identifier="vendor" fields="name_text"/>
+		<ScreenRecord identifier="warehouse" fields="warehouse.desc_text"/>
+		<ScreenRecord identifier="FormOnly"/>
+	</form.screenRecords>
+</form>
+

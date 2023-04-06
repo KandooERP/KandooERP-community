@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form xmlns="http://namespaces.querix.com/2015/fglForms">
+	<form.rootContainer>
+		<GridPanel classNames="fcls_rootContainer" verticalAlignment="Stretch" horizontalAlignment="Stretch" fieldTable="" identifier="rootContainer">
+			<GridPanel.gridRowDefinitions>
+				<GridRowDefinition gridLengthValue=""/>
+				<GridRowDefinition gridLengthValue=""/>
+				<GridRowDefinition gridLengthValue="100%"/>
+				<GridRowDefinition gridLengthValue=""/>
+			</GridPanel.gridRowDefinitions>
+			<GridPanel.gridColumnDefinitions>
+				<GridColumnDefinition gridLengthValue="100%"/>
+			</GridPanel.gridColumnDefinitions>
+			<GridPanel classNames="fcls_title_cnt" visible="true" verticalAlignment="Top" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="cntTitle">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="100%"/>
+					<GridColumnDefinition gridLengthValue=""/>
+				</GridPanel.gridColumnDefinitions>
+				<Label isDynamic="true" text="Subscription Issues" classNames="fcls_title_lb" visible="true" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="header_text"/>
+				<Label isDynamic="true" text="K145" classNames="fcls_title_lb" visible="true" gridItemLocation="1,0,1,1" fieldTable="" identifier="lbFormName"/>
+			</GridPanel>
+			<GridPanel classNames="fcls_detail_cnt,fcls_data_cnt,fcls_align_left" visible="true" verticalAlignment="Top" horizontalAlignment="Left" gridItemLocation="0,1,1,1" fieldTable="formonly" identifier="cntDetail1">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="" gridMinLength="10rem"/>
+					<GridColumnDefinition gridLengthValue=""/>
+				</GridPanel.gridColumnDefinitions>
+				<Label text="Product" classNames="fcls_fieldlabel,fcls_align_left" gridItemLocation="0,0,1,1" fieldTable="" identifier="label1"/>
+				<ComboBox toCase="Up" dataType="Char,,,,15" preferredSize="16qch,1qch" toolTip=" Product Code for this subscription (W) " fieldTable="subproduct" comment=" Product Code for this subscription (W) " identifier="part_code" gridItemLocation="1,0,1,1" classNames="fcls_data_widget,fcls_align_left,fcls_length_20qch"/>
+				<TextField toCase="Up" dataType="Char,,,,3" preferredSize="4qch,1qch" toolTip=" Subscription type code (W)" fieldTable="subissues" comment=" Subscription type code (W)" identifier="type_code" gridItemLocation="1,1,1,1" classNames="fcls_data_widget,fcls_align_left,fcls_length_20qch"/>
+				<TextField dataType="Char,,,," preferredSize="41qch,1qch" toolTip=" Description of this subscription " fieldTable="formonly" comment=" Description of this subscription " identifier="sub_text" gridItemLocation="1,2,1,1" classNames="fcls_data_widget,fcls_align_left,fcls_length_20qch"/>
+				<Calendar format="dd/mm/yyyy" dataType="Date,,,," preferredSize="11qch,1qch" toolTip=" Start date of this subscription" fieldTable="subissues" comment=" Start date of this subscription" identifier="start_date" gridItemLocation="1,3,1,1" classNames="fcls_data_widget,fcls_align_left,fcls_length_20qch"/>
+				<Label isDynamic="true" text="End Date" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,4,1,1" fieldTable="" identifier="lb67"/>
+				<Calendar format="dd/mm/yyyy" dataType="Date,,,," preferredSize="11qch,1qch" toolTip=" End Date of this subscription" fieldTable="subissues" comment=" End Date of this subscription" identifier="end_date" gridItemLocation="1,4,1,1" classNames="fcls_data_widget,fcls_align_left,fcls_length_20qch"/>
+				<Label isDynamic="true" text="Sub Type" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,1,1,1" fieldTable="" identifier="lb51"/>
+				<Label isDynamic="true" text="Description" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,2,1,1" fieldTable="" identifier="lb52"/>
+				<Label isDynamic="true" text="Start Date" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,3,1,1" fieldTable="" identifier="lb66"/>
+			</GridPanel>
+			<Table rowCount="8" preferredSize="64qch,8qch" fieldTable="" identifier="sr_dates" gridItemLocation="0,2,1,1">
+				<TableColumn fieldTable="" identifier="tc_scroll_flag">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="2rem" gridMaxLength="2rem" gridMinLength="2rem"/>
+					</TableColumn.columnLength>
+					<CheckBox dataType="Char,,,," fieldTable="formonly" identifier="scroll_flag">
+						<CheckBox.checkedValue>
+							<StringLiteral stringValue="*"/>
+						</CheckBox.checkedValue>
+						<CheckBox.uncheckedValue>
+							<NullLiteral/>
+						</CheckBox.uncheckedValue>
+					</CheckBox>
+				</TableColumn>
+				<TableColumn fieldTable="" identifier="tc_plan_iss_date" text="Issue Date">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="10rem" gridMaxLength="10rem" gridMinLength="10rem"/>
+					</TableColumn.columnLength>
+					<Calendar dataType="Date,,,," toolTip=" Proposed issue date for this subscription " fieldTable="subissues" comment=" Proposed issue date for this subscription " identifier="plan_iss_date"/>
+				</TableColumn>
+				<TableColumn fieldTable="" identifier="tc_desc_text" text="Description">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="30rem" gridMaxLength="30rem" gridMinLength="30rem"/>
+					</TableColumn.columnLength>
+					<TextField dataType="Char,,,,30" toolTip=" Descriptive text regarding this issue " fieldTable="subissues" comment=" Descriptive text regarding this issue " identifier="desc_text"/>
+				</TableColumn>
+				<TableColumn fieldTable="" identifier="tc_issue_num" text="Issue Number">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="10rem" gridMaxLength="10rem" gridMinLength="10rem"/>
+					</TableColumn.columnLength>
+					<TextField dataType="SmallInt,,,," toolTip=" Number to identify this issue of this product" fieldTable="subissues" comment=" Number to identify this issue of this product" identifier="issue_num"/>
+				</TableColumn>
+				<TableColumn fieldTable="" identifier="tc_act_iss_date" text="Actual Issue Date">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="10rem" gridMaxLength="10rem" gridMinLength="10rem"/>
+					</TableColumn.columnLength>
+					<Calendar format="dd/mm/yyyy" noEntry="true" dataType="Date,,,," fieldTable="subissues" identifier="act_iss_date"/>
+				</TableColumn>
+				<TableColumn resizable="true" visible="true" identifier="tc_lbEOL">
+					<Label isDynamic="true" visible="true" identifier="lbEOL"/>
+					<TableColumn.columnLength>
+						<GridLength/>
+					</TableColumn.columnLength>
+				</TableColumn>
+			</Table>
+			<GridPanel classNames="fcls_statusbar_cnt" visible="true" verticalAlignment="Top" gridItemLocation="0,3,1,1" fieldTable="formonly" identifier="cntStatusBar">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="100%"/>
+				</GridPanel.gridColumnDefinitions>
+				<Label isDynamic="true" text="" classNames="fcls_sblabel" visible="true" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="lbInfo1"/>
+				<Label isDynamic="true" text="" classNames="fcls_sblabel" visible="true" gridItemLocation="0,1,1,1" fieldTable="formonly" identifier="lbInfo2"/>
+			</GridPanel>
+		</GridPanel>
+	</form.rootContainer>
+	<form.screenRecords>
+		<ScreenRecord identifier="sr_dates" fields="formonly.scroll_flag,subissues.plan_iss_date,subissues.desc_text,subissues.issue_num,subissues.act_iss_date" elements="8"/>
+		<ScreenRecord identifier="formonly" fields="formonly.sub_text,formonly.scroll_flag"/>
+		<ScreenRecord identifier="subissues" fields="subissues.type_code,subissues.start_date,subissues.end_date,subissues.plan_iss_date,subissues.issue_num,subissues.desc_text,subissues.act_iss_date"/>
+		<ScreenRecord identifier="subproduct" fields="subproduct.part_code"/>
+	</form.screenRecords>
+</form>
+

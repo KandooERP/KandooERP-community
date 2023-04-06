@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form xmlns="http://namespaces.querix.com/2015/fglForms">
+	<form.rootContainer>
+		<GridPanel classNames="fcls_rootContainer" preferredSize="," verticalAlignment="Stretch" horizontalAlignment="Stretch" fieldTable="" identifier="rootContainer">
+			<GridPanel.gridRowDefinitions>
+				<GridRowDefinition gridLengthValue=""/>
+				<GridRowDefinition gridLengthValue="100%"/>
+				<GridRowDefinition gridLengthValue=""/>
+			</GridPanel.gridRowDefinitions>
+			<GridPanel.gridColumnDefinitions>
+				<GridColumnDefinition gridLengthValue="100%"/>
+			</GridPanel.gridColumnDefinitions>
+			<GridPanel classNames="fcls_title_cnt" visible="true" verticalAlignment="Top" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="cntTitle">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="100%"/>
+					<GridColumnDefinition gridLengthValue=""/>
+				</GridPanel.gridColumnDefinitions>
+				<Label isDynamic="true" text="Automated Product Insertion" classNames="fcls_title_lb" visible="true" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="header_text"/>
+				<Label isDynamic="true" text="E291" classNames="fcls_title_lb" visible="true" gridItemLocation="1,0,1,1" fieldTable="" identifier="lbFormName"/>
+			</GridPanel>
+			<Table rowCount="13" preferredSize="71qch,13qch" fieldTable="" identifier="sr_offerauto" gridItemLocation="0,1,1,1">
+				<TableColumn fieldTable="" identifier="tc_scroll_flag">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="2rem" gridMaxLength="2rem" gridMinLength="2rem"/>
+					</TableColumn.columnLength>
+					<CheckBox dataType="Char,,,," fieldTable="formonly" identifier="scroll_flag">
+						<CheckBox.checkedValue>
+							<StringLiteral stringValue="*"/>
+						</CheckBox.checkedValue>
+						<CheckBox.uncheckedValue>
+							<NullLiteral/>
+						</CheckBox.uncheckedValue>
+					</CheckBox>
+				</TableColumn>
+				<TableColumn fieldTable="" identifier="tc_part_code" text="Product">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="22.5%" gridMinLength="5rem" gridMaxLength="10rem"/>
+					</TableColumn.columnLength>
+					<TextField toCase="Up" dataType="Char,,,,15" fieldTable="offerauto" identifier="part_code"/>
+				</TableColumn>
+				<TableColumn fieldTable="" identifier="tc_desc_text" text="Description">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="43.7%" gridMaxLength="30rem" gridMinLength="10rem"/>
+					</TableColumn.columnLength>
+					<TextField noEntry="true" dataType="VarChar,,,0,4" fieldTable="product" identifier="desc_text"/>
+				</TableColumn>
+				<TableColumn fieldTable="" identifier="tc_sold_qty" text="Sold Qty">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="15.5%" gridMinLength="5rem" gridMaxLength="10rem"/>
+					</TableColumn.columnLength>
+					<TextField noEntry="true" dataType="Float,,,," fieldTable="offerauto" identifier="sold_qty"/>
+				</TableColumn>
+				<TableColumn fieldTable="" identifier="tc_bonus_qty" text="Bonus Qty">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="15.5%" gridMinLength="5rem" gridMaxLength="10rem"/>
+					</TableColumn.columnLength>
+					<TextField noEntry="true" dataType="Float,,,," fieldTable="offerauto" identifier="bonus_qty"/>
+				</TableColumn>
+			</Table>
+			<GridPanel classNames="fcls_statusbar_cnt" visible="true" verticalAlignment="Top" gridItemLocation="0,2,1,1" fieldTable="formonly" identifier="cntStatusBar">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="100%"/>
+				</GridPanel.gridColumnDefinitions>
+				<Label isDynamic="true" text="" classNames="fcls_sblabel" visible="true" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="lbInfo1"/>
+				<Label isDynamic="true" text="" classNames="fcls_sblabel" visible="true" gridItemLocation="0,1,1,1" fieldTable="formonly" identifier="lbInfo2"/>
+			</GridPanel>
+		</GridPanel>
+	</form.rootContainer>
+	<form.screenRecords>
+		<ScreenRecord identifier="sr_offerauto" fields="formonly.scroll_flag,offerauto.part_code,product.desc_text,offerauto.sold_qty,offerauto.bonus_qty"/>
+		<ScreenRecord identifier="formonly" fields="formonly.scroll_flag"/>
+		<ScreenRecord identifier="offerauto" fields="offerauto.part_code,offerauto.sold_qty,offerauto.bonus_qty"/>
+		<ScreenRecord identifier="product" fields="product.desc_text"/>
+	</form.screenRecords>
+</form>
+

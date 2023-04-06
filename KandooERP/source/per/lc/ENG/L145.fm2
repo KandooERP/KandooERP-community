@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form xmlns="http://namespaces.querix.com/2015/fglForms">
+	<form.rootContainer>
+		<GridPanel classNames="fcls_rootContainer" verticalAlignment="Stretch" horizontalAlignment="Stretch" fieldTable="" identifier="rootContainer">
+			<GridPanel.gridRowDefinitions>
+				<GridRowDefinition gridLengthValue=""/>
+				<GridRowDefinition gridLengthValue=""/>
+				<GridRowDefinition gridLengthValue=""/>
+				<GridRowDefinition gridLengthValue="100%"/>
+				<GridRowDefinition gridLengthValue=""/>
+			</GridPanel.gridRowDefinitions>
+			<GridPanel.gridColumnDefinitions>
+				<GridColumnDefinition gridLengthValue="100%"/>
+			</GridPanel.gridColumnDefinitions>
+			<GridPanel classNames="fcls_title_cnt" visible="true" verticalAlignment="Top" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="cntTitle">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="100%"/>
+					<GridColumnDefinition gridLengthValue=""/>
+				</GridPanel.gridColumnDefinitions>
+				<Label isDynamic="true" text="Shipment Goods Receipt" classNames="fcls_title_lb" visible="true" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="header_text"/>
+				<Label isDynamic="true" text="L145" classNames="fcls_title_lb" visible="true" gridItemLocation="1,0,1,1" fieldTable="" identifier="lbFormName"/>
+			</GridPanel>
+			<GridPanel classNames="fcls_detail_cnt,fcls_data_cnt,fcls_align_left" visible="true" verticalAlignment="Top" horizontalAlignment="Left" gridItemLocation="0,1,1,1" fieldTable="formonly" identifier="cntDetail1">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="" gridMinLength="10rem"/>
+					<GridColumnDefinition gridLengthValue=""/>
+				</GridPanel.gridColumnDefinitions>
+				<Label isDynamic="true" text="Vendor Code" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="lb56"/>
+				<ComboBox toCase="Up" dataType="Char,,,,8" preferredSize="9qch,1qch" toolTip="Vendor Code for this shipment " fieldTable="shiphead" comment="Vendor Code for this shipment " identifier="vend_code" gridItemLocation="1,0,1,1" classNames="fcls_data_widget,fcls_align_left,fcls_length_20qch"/>
+				<TextField dataType="Char,,,,30" preferredSize="33qch,1qch" toolTip="Vendor name or description" fieldTable="vendor" comment="Vendor name or description" identifier="name_text" gridItemLocation="1,1,1,1" classNames="fcls_data_widget,fcls_align_left,fcls_length_20qch"/>
+				<Label isDynamic="true" text="Shipment Code" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,2,1,1" fieldTable="formonly" identifier="lb57"/>
+				<TextField dataType="Char,,,,8" preferredSize="9qch,1qch" toolTip="Shipment Code, unique code used to identify a shipment" fieldTable="shiphead" comment="Shipment Code, unique code used to identify a shipment" identifier="ship_code" gridItemLocation="1,2,1,1" classNames="fcls_data_widget,fcls_align_left,fcls_length_20qch"/>
+				<Label isDynamic="true" text="Type" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,3,1,1" fieldTable="" identifier="lb73"/>
+				<TextField toCase="Up" dataType="Char,,,,2" preferredSize="3qch,1qch" toolTip="Code used to identify the type of shipment" fieldTable="shiphead" comment="Code used to identify the type of shipment" identifier="ship_type_code" gridItemLocation="1,3,1,1" classNames="fcls_data_widget,fcls_align_left,fcls_length_20qch"/>
+				<Label isDynamic="true" text="E.T.A" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,4,1,1" fieldTable="" identifier="lb76"/>
+				<Calendar format="dd/mm/yyyy" dataType="Date,,,," preferredSize="11qch,1qch" toolTip="Current estimated time of arrival of shipment" fieldTable="shiphead" comment="Current estimated time of arrival of shipment" identifier="eta_curr_date" gridItemLocation="1,4,1,1" classNames="fcls_data_widget,fcls_align_left,fcls_length_20qch"/>
+				<Label isDynamic="true" text="Ship" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,5,1,1" fieldTable="" identifier="lb77"/>
+				<TextField toCase="Up" dataType="Char,,,,20" preferredSize="19qch,1qch" toolTip="Name of the vessel" fieldTable="shiphead" comment="Name of the vessel" identifier="vessel_text" gridItemLocation="1,5,1,1" classNames="fcls_data_widget,fcls_align_left,fcls_length_20qch"/>
+				<Label isDynamic="true" text="Port of Discharge" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,6,1,1" fieldTable="" identifier="lb111"/>
+				<TextField toCase="Up" dataType="Char,,,,20" preferredSize="19qch,1qch" toolTip="Port of discharge of this shipment" fieldTable="shiphead" comment="Port of discharge of this shipment" identifier="discharge_text" gridItemLocation="1,6,1,1" classNames="fcls_data_widget,fcls_align_left,fcls_length_20qch"/>
+				<Label isDynamic="true" text="Warehouse" classNames="fcls_fieldlabel,fcls_align_left" visible="true" fieldTable="" identifier="lb112" gridItemLocation="0,7,1,1"/>
+				<TextField noEntry="true" dataType="Char,,,,30" preferredSize="29qch,1qch" toolTip="Description of warehouse" fieldTable="warehouse" comment="Description of warehouse" identifier="desc_text" gridItemLocation="1,7,1,1" classNames="fcls_data_widget,fcls_align_left,fcls_length_20qch"/>
+			</GridPanel>
+			<GroupBox title="Group 2" classNames="fcls_detail_gb_cnt" visible="true" verticalAlignment="Top" gridItemLocation="0,2,1,1" fieldTable="formonly" identifier="cntDetail2GroupBox">
+				<GridPanel classNames="fcls_detail_gb_cnt_sub,fcls_detail_cnt_sub,fcls_data_cnt,fcls_align_left" visible="true" verticalAlignment="Top" horizontalAlignment="Left" fieldTable="formonly" identifier="cntDetail2Sub">
+					<GridPanel.gridRowDefinitions>
+						<GridRowDefinition gridLengthValue=""/>
+						<GridRowDefinition gridLengthValue=""/>
+						<GridRowDefinition gridLengthValue=""/>
+					</GridPanel.gridRowDefinitions>
+					<GridPanel.gridColumnDefinitions>
+						<GridColumnDefinition gridLengthValue="" gridMinLength="10rem"/>
+						<GridColumnDefinition gridLengthValue=""/>
+					</GridPanel.gridColumnDefinitions>
+					<Label isDynamic="true" text="Status" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,0,1,1" fieldTable="" identifier="lb91"/>
+					<TextField toCase="Up" dataType="Char,,,,2" preferredSize="3qch,1qch" toolTip="Status of this shipment (W)" fieldTable="shiphead" comment="Status of this shipment (W)" identifier="ship_status_code" gridItemLocation="1,0,1,1" classNames="fcls_data_widget,fcls_align_left,fcls_length_20qch"/>
+					<TextField dataType="Char,,,,15" preferredSize="16qch,1qch" toolTip="Description of shipment status " fieldTable="shipstatus" comment="Description of shipment status " identifier="desc_text" gridItemLocation="1,1,1,1" classNames="fcls_data_widget,fcls_align_left,fcls_length_20qch"/>
+					<Label isDynamic="true" text="Receipt Date" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,2,1,1" fieldTable="formonly" identifier="lb47"/>
+					<Calendar format="dd/mm/yyyy" dataType="Date,,,," preferredSize="11qch,1qch" toolTip=" Date goods received into warehouse" fieldTable="shiprec" comment=" Date goods received into warehouse" identifier="recpt_date" gridItemLocation="1,2,1,1" classNames="fcls_data_widget,fcls_align_left,fcls_length_20qch"/>
+				</GridPanel>
+			</GroupBox>
+			<Table rowCount="5" preferredSize="75qch,5qch" fieldTable="" identifier="sr_shipdetl" gridItemLocation="0,3,1,1">
+				<TableColumn fieldTable="" identifier="tc_trans_amt" text="Trans. Amt">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="10rem" gridMaxLength="10rem" gridMinLength="10rem"/>
+					</TableColumn.columnLength>
+					<TextField dataType="Decimal,,,2,16" toolTip="Value of this items received" fieldTable="shiprec" comment="Value of this items received" identifier="trans_amt"/>
+				</TableColumn>
+				<TableColumn fieldTable="" identifier="tc_total_amt" text="Total Amount">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="10rem" gridMaxLength="10rem" gridMinLength="10rem"/>
+					</TableColumn.columnLength>
+					<TextField noEntry="true" dataType="Decimal,,,2,16" toolTip="Total value of this items received" fieldTable="shiprec" comment="Total value of this items received" identifier="total_amt"/>
+				</TableColumn>
+				<TableColumn fieldTable="" identifier="tc_part_code" text="Product">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="10rem" gridMaxLength="10rem" gridMinLength="10rem"/>
+					</TableColumn.columnLength>
+					<TextField toCase="Up" noEntry="true" dataType="Char,,,,15" toolTip="The Product Code from inventory (W)" fieldTable="shipdetl" comment="The Product Code from inventory (W)" identifier="part_code"/>
+				</TableColumn>
+				<TableColumn fieldTable="" identifier="tc_desc_text" text="Description">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="10rem" gridMaxLength="10rem" gridMinLength="10rem"/>
+					</TableColumn.columnLength>
+					<TextField noEntry="true" dataType="Char,,,,30" toolTip="Descriptive text about product" fieldTable="shipdetl" comment="Descriptive text about product" identifier="desc_text"/>
+				</TableColumn>
+				<TableColumn fieldTable="" identifier="tc_bin1_text" text="Bin Location">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="10rem" gridMaxLength="10rem" gridMinLength="10rem"/>
+					</TableColumn.columnLength>
+					<TextField dataType="Char,,,,15" toolTip=" Bin location for this product" fieldTable="prodstatus" comment=" Bin location for this product" identifier="bin1_text"/>
+				</TableColumn>
+				<TableColumn resizable="true" visible="true" identifier="tc_lbEOL">
+					<Label isDynamic="true" visible="true" identifier="lbEOL"/>
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="100%"/>
+					</TableColumn.columnLength>
+				</TableColumn>
+			</Table>
+			<GridPanel classNames="fcls_statusbar_cnt" visible="true" verticalAlignment="Bottom" gridItemLocation="0,4,1,1" fieldTable="formonly" identifier="cntStatusBar">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="100%"/>
+				</GridPanel.gridColumnDefinitions>
+				<Label isDynamic="true" text="" classNames="fcls_sblabel" visible="true" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="lbInfo1"/>
+				<Label isDynamic="true" text="" classNames="fcls_sblabel" visible="true" gridItemLocation="0,1,1,1" fieldTable="formonly" identifier="lbInfo2"/>
+			</GridPanel>
+		</GridPanel>
+	</form.rootContainer>
+	<form.screenRecords>
+		<ScreenRecord identifier="sr_shipdetl" fields="shiprec.trans_amt,shiprec.total_amt,shipdetl.part_code,shipdetl.desc_text,prodstatus.bin1_text" elements="5"/>
+		<ScreenRecord identifier="prodstatus" fields="prodstatus.bin1_text"/>
+		<ScreenRecord identifier="shipdetl" fields="shipdetl.part_code,shipdetl.desc_text"/>
+		<ScreenRecord identifier="shiphead" fields="shiphead.vend_code,shiphead.ship_code,shiphead.ship_type_code,shiphead.eta_curr_date,shiphead.vessel_text,shiphead.discharge_text,shiphead.ship_status_code"/>
+		<ScreenRecord identifier="shiprec" fields="shiprec.total_amt,shiprec.trans_amt,shiprec.recpt_date"/>
+		<ScreenRecord identifier="shipstatus" fields="shipstatus.desc_text"/>
+		<ScreenRecord identifier="vendor" fields="vendor.name_text"/>
+		<ScreenRecord identifier="warehouse" fields="warehouse.desc_text"/>
+	</form.screenRecords>
+</form>
+

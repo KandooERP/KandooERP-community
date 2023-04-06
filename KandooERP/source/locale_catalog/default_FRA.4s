@@ -1,0 +1,1852 @@
+//French master localized strings file
+default_FRA {
+	SysActDef {
+		help_center { 
+			txt { "Centre d'aide" }
+			com { "Centre d'aide KandooERP (documentation en ligne)" }
+			}
+		toolbar {
+			txt { "Barre d'outils" }
+			com { "Ouvrez l'outil ToolbarManager pour définir les boutons de la barre d'outils pour ce contexte/cette boîte de dialogue." }
+			}
+		online_manual {
+			txt { "Manuel en ligne" }
+			com { "Documentation en ligne sur KandooERP" }
+			}
+		gnu_license { 
+			txt { "Licence GNU" }
+			com { "Informations sur la licence KandooERP GNU" }
+			}
+		sys_info { 
+			txt { "Information système" }
+			com { "Afficher les informations système avec la génération de rapports d'options" }
+			}
+		about { 
+			txt { "À propos de KandooERP" }
+			com { "Afficher les informations système avec la génération de rapports d'options" }
+			}
+		report {
+			txt { "Rapport" }
+			run {
+				txt { "Générer un rapport" }
+				com { "Rapport d'exécution" }
+			}
+			show {
+				txt { "Rapport" }
+				com { "Afficher les étiquettes de code de rapport" }
+			}
+			trial_balance {
+				txt { "Balance d'essai" }
+				com { "Rapport" }
+			}
+			print {
+				txt { "Impression" }
+				txtr { "Imprimer le rapport" }
+				com { "Rapport d'exécution" }
+				com2 { "Imprimer le rapport" }
+			}
+			filter {
+				txt { "Filtrer le rapport d" }
+				com { "Filtrer les données pour le rapport" }
+			}
+			message { 
+				txt { "Message" }
+				com { "Modifier le message d'en-tête de rapport" }
+			}
+		}
+		print_manager { 
+			txt { "Gestionnaire d'impression..." }
+			com { "Lancer l'utilitaire de gestion d'impression" }
+		}
+		filter { 
+			txt { "Filtre" }
+			com { "Filtrer par construction de requête" }
+			}
+		apply { 
+			txt { "Appliquer" }
+			com { "Appliquer les modifications" }
+			}
+		done { 
+			txt { "Terminé" }
+			com { "Terminé - ferme la fenêtre actuelle et continue" }
+			}
+		save { 
+			txt { "Enregistrer" }
+			com { "Acceptez" }
+			}
+		cancel { 
+			txt { "Annuler" }
+			}
+		exit { 
+			txt { "SORTIE" }
+			com { "Accueil/Sortie" }
+			}
+		return { 
+			txt { "Revenir" }
+			}
+		home { 
+			txt { "Accueil" }
+			com { "Revenir" }
+			}
+		new { 
+			txt { "Nouveau" }
+			com1 { "Créer un nouvel enregistrement" }
+			com2 { "Insérer/Créer un nouvel enregistrement" }
+			}
+		add { 
+			txt { "Ajouter" }
+			com { "Ajouter/Créer un nouvel enregistrement" }
+			com2 { "Ajouter" }
+			}
+		edit { 
+			txt { "Modifier" }
+			com { "Modifier les données d'enregistrement" }
+			}
+		delete { 
+			txt { "Effacer" }
+			com { "Supprimer l'enregistrement" }
+			com2 { "Marquer la ligne à supprimer" }
+			}
+		discard { 
+			txt { "Jeter" }
+			com { "Rejeter la transaction" }
+			}
+		reply { 
+			txt { "Répondre" }
+			com { "Répondre à l'expéditeur" }
+			}
+		post_batch { 
+			txt { "Publier Lot" }
+			com { "Publier Lot/Grand Livre" }
+			}
+		duplicate { 
+			txt { "Dupliquer" }
+			com { "Enregistrement en double" }
+			}
+		clear { 
+			txt { "Clair" }
+			}
+		detailed_info { 
+			txt { "Informations détaillées" }
+			com { "Voir les informations détaillées" }
+			}
+		view { 
+			txt { "Vue" }
+			com { "Voir les détails" }
+			}
+		details { 
+			txt { "Détails" }
+			com { "Enregistrer les détails" }
+			}
+		refresh { 
+			txt { "Rafraîchir" }
+			com { "Actualiser/Mettre à jour les données/écran" }
+			}
+		invoice { 
+			txt { "Facture d'achat" }
+			}
+		invoice_scan { 
+			txt { "Facture d'achat" }
+			com { "Facture d'achat" }
+			}
+		invoice_lookup { 
+			txt { "Consultation de facture" }
+			}
+		payment { 
+			txt { "Paiement" }
+			}
+		pay_type { 
+			txt { "Type de paiement" }
+			com { "Type de paiement" }
+			}
+		glaccount { 
+			txt { "Compte général" }
+			com { "Compte général" }
+			}
+		lookup { 
+			txt { "Chercher" }
+			com { "Rechercher dans une liste et choisir une valeur (Ctrl-B)" }
+			}
+		group { 
+			txt { "Groupe" }
+			}
+		corporate { 
+			txt { "D'entreprise" }
+			}
+		shipping { 
+			txt { "livraison" }
+			}
+		notes { 
+			txt { "Remarques" }
+			}
+		billing { 
+			txt { "Facturation" }
+			com { "Facturation" }
+			}
+		product { 
+			txt { "Produit" }
+			}
+		distribution { 
+			txt { "Distribution" }
+			}
+		credit { 
+			txt { "Crédit" }
+			}
+		purchase { 
+			txt { "Acheter" }
+			}
+		prod_code { 
+			txt { "Code produit" }
+			}
+		user_location { 
+			txt { "Localisation de l'utilisateur" }
+			com { "Localisation de l'utilisateur" }
+			}
+		generate { 
+			txt { "Générer" }
+			}
+		history { 
+			txt { "Histoire" }
+			}
+		load { 
+			txt { "Charge" }
+			com { "Charger/importer des données (UNL)" }
+			}
+		unload { 
+			txt { "Décharger" }
+			com { "Données de déchargement/exportation (UNL)" }
+			}
+		rerun { 
+			txt { "Rediffusion" }
+			com { "Relancez le chargement/déchargement" }
+			}
+		reset { 
+			txt { "Réinitialiser" }
+			}
+		data_manager { 
+			txt { "Gestionnaire de données..." }
+			com { "Module ouvert pour gérer les données (F10)" }
+			}
+		navigation {
+			first { 
+				txt { "Première" }
+				com { "Premier disque" }
+				comr { "Première rangée" }
+			}
+			last { 
+				txt { "Dernier" }
+				com { "Dernier enregistrement" }
+				com2 { "Dernière rangée" }
+			}
+			previous_record { 
+				txt { "Enregistrement précédent" }
+				com { "Enregistrement précédent" }
+			}
+			next_record { 
+				txt { "Enregistrement suivant" }
+				com { "Enregistrement suivant" }
+			}
+			prev_page { 
+				txt { "Page précédente" }
+				com { "Page précédente" }
+			}
+			next_page { 
+				txt { "Page suivante" }
+				com { "Page suivante" }
+			}
+			previous { 
+				txt { "Précédent" }
+				com { "Précédent - Revenir en arrière" }
+			}
+			next { 
+				txt { "Suivant" }
+				com { "Suivant - Naviguer vers l'avant" }
+			}
+			prev_field { 
+				txt { "Champ précédent" }
+				com { "Champ précédent" }
+			}
+			next_field { 
+				txt { "Champ suivant" }
+				com { "Champ suivant" }
+			}
+			prev_folder_tab { 
+				txt { "Onglet Dossier précédent" }
+				com { "Onglet Dossier précédent" }
+			}
+			next_folder_tab { 
+				txt { "Onglet Dossier suivant" }
+				com { "Onglet Dossier suivant" }
+			}
+		}
+		input { 
+			txt { "Contribution" }
+			com { "Contribution" }
+			}
+		select_all { 
+			txt { "Tout sélectionner" }
+			com { "Tout sélectionner" }
+			}
+		expand { 
+			txt { "Développer" }
+			com { "Développer" }
+			}
+		collapse { 
+			txt { "Effondrer" }
+			com { "Effondrer" }
+			}
+		copy {
+			cell {
+				txt { "Copier la cellule" }
+				com { "Copier le contenu actuel de la cellule dans le Presse-papiers" }
+			}
+			visible_collumn {
+				txt { "Copier la colonne visible" }
+				com { "Copier les données de colonne visibles dans le presse-papier" }
+			}
+			row {
+				txt { "Copier la ligne" }
+				com { "Copier la ligne actuelle dans le presse-papier" }
+			}
+			record { 
+				txt { "Copie" }
+				com { "Copier l'enregistrement" }
+			}
+			visible_table {
+				txt { "Copier la table visible" }
+				com { "Copier toutes les lignes visibles dans le presse-papier" }
+			}
+		}
+		clipboard {
+			editcopy {
+				txt { "Copie" }
+			}
+			editcut {
+				txt { "Couper" }
+			}
+			editpaste {
+				txt { "Pâte" }
+			}
+			editcopytitle {
+				txt { "Copier le titre" }
+			}
+		}
+		func_key { 
+			f1 {
+				txt { "F1  (F1)" }
+				com { "F1" }
+			}
+			f2 {
+				txt { "F2  (F2)" }
+				com { "F2" }
+			}
+			f3 {
+				txt { "F3  (F3)" }
+				com { "F3" }
+			}
+			f4 {
+				txt { "F4  (F4)" }
+				com { "F4" }
+			}
+			f5 {
+				txt { "F5  (F5)" }
+				com { "F5" }
+			}
+			f6 {
+				txt { "F6  (F6)" }
+				com { "F6" }
+			}
+			f7 {
+				txt { "F7  (F7)" }
+				com { "F7" }
+			}
+			f8 {
+				txt { "F8  (F8)" }
+				com { "F8" }
+			}
+			f9 {
+				txt { "F9  (F9)" }
+				com { "F9" }
+			}
+			f10 {
+				txt { "F10  (F10)" }
+				com { "F10" }
+			}
+			f11 {
+				txt { "F11  (F11)" }
+				com { "F11" }
+			}
+			f12 {
+				txt { "F12  (F12)" }
+				com { "F12" }
+			}
+			f13 {
+				txt { "F13  (F13)" }
+				com { "F13" }
+			}
+			f14 {
+				txt { "F14  (F14)" }
+				com { "F14" }
+			}
+			f15 {
+				txt { "F15  (F15)" }
+				com { "F15" }
+			}
+			f16 {
+				txt { "F16  (F16)" }
+				com { "F16" }
+			}
+			f17 {
+				txt { "F17  (F17)" }
+				com { "F17" }
+			}
+			f18 {
+				txt { "F18  (F18)" }
+				com { "F18" }
+			}
+			f19 {
+				txt { "F19  (F19)" }
+				com { "F19" }
+			}
+			f20 {
+				txt { "F20  (F20)" }
+				com { "F20" }
+			}
+			f21 {
+				txt { "F21  (F21)" }
+				com { "F21" }
+			}
+			f22 {
+				txt { "F22  (F22)" }
+				com { "F22" }
+			}
+			f23 {
+				txt { "F23  (F23)" }
+				com { "F23" }
+			}
+			f24 {
+				txt { "F24  (F24)" }
+				com { "F24" }
+			}
+		}
+		control_key {
+			control_a {
+				txt { "CONTROL-A" }
+				com { "CONTROL-a (CONTROL-A)" }
+			}
+			control_b {
+				txt { "CONTROL-B" }
+				com { "CONTROL-b (CONTROL-B)" }
+			}
+			control_c {
+				txt { "CONTROL-C" }
+				com { "CONTROL-c (CONTROL-C)" }
+			}
+			control_d {
+				txt { "CONTROL-D" }
+				com { "CONTROL-d (CONTROL-D)" }
+			}
+			control_e {
+				txt { "CONTROL-E" }
+				com { "CONTROL-e (CONTROL-E)" }
+			}
+			control_f {
+				txt { "CONTROL-F" }
+				com { "CONTROL-f (CONTROL-F)" }
+			}
+			control_g {
+				txt { "CONTROL-G" }
+				com { "CONTROL-g (CONTROL-G)" }
+			}
+			control_h {
+				txt { "CONTROL-H" }
+				com { "CONTROL-h (CONTROL-H)" }
+			}
+			control_i {
+				txt { "CONTROL-I" }
+				com { "CONTROL-i (CONTROL-I)" }
+			}
+			control_j {
+				txt { "CONTROL-J" }
+				com { "CONTROL-j (CONTROL-J)" }
+			}
+			control_k {
+				txt { "CONTROL-K" }
+				com { "CONTROL-k (CONTROL-K)" }
+			}
+			control_l {
+				txt { "CONTROL-L" }
+				com { "CONTROL-l (CONTROL-L)" }
+			}
+			control_m {
+				txt { "CONTROL-M" }
+				com { "CONTROL-m (CONTROL-M)" }
+			}
+			control_n {
+				txt { "CONTROL-N" }
+				com { "CONTROL-n (CONTROL-N)" }
+			}
+			control_o {
+				txt { "CONTROL-O" }
+				com { "CONTROL-o (CONTROL-O)" }
+			}
+			control_p {
+				txt { "CONTROL-P" }
+				com { "CONTROL-p (CONTROL-P)" }
+			}
+			control_q {
+				txt { "CONTROL-Q" }
+				com { "CONTROL-q (CONTROL-Q)" }
+			}
+			control_r {
+				txt { "CONTROL-R" }
+				com { "CONTROL-r (CONTROL-R)" }
+			}
+			control_s {
+				txt { "CONTROL-S" }
+				com { "CONTROL-s (CONTROL-S)" }
+			}
+			control_t {
+				txt { "CONTROL-T" }
+				com { "CONTROL-t (CONTROL-T)" }
+			}
+			control_u {
+				txt { "CONTROL-U" }
+				com { "CONTROL-u (CONTROL-U)" }
+			}
+			control_v {
+				txt { "CONTROL-V" }
+				com { "CONTROL-v (CONTROL-V)" }
+			}
+			control_w {
+				txt { "CONTROL-W" }
+				com { "CONTROL-w (CONTROL-W)" }
+			}
+			control_x {
+				txt { "CONTROL-X" }
+				com { "CONTROL-x (CONTROL-X)" }
+			}
+			control_y {
+				txt { "CONTROL-Y" }
+				com { "CONTROL-y (CONTROL-Y)" }
+			}
+			control_z {
+				txt { "CONTROL-Z" }
+				com { "CONTROL-z (CONTROL-Z)" }
+			}
+		}
+	}
+	ACCEPT { "ACCEPTEZ"}
+	APPEND { "AJOUTER"}
+	Account Details { "Détails du Compte"}
+	Apply Filter { "Appliquer le Filtre"}
+	Apply Filter Criteria { "Appliquer les Critères de Filtrage"}
+	Back { "Retour"}
+	Back TO previous { "Retour AU précédent"}
+	CANCEL { "ANNULER"}
+	CONTROL-B { "CONTROL-B"}
+	CONTROL-N { "CONTROL-N"}
+	CONTROL-P { "CONTROL-P"}
+	Cancel { "Annuler"}
+	Cancel current operation { "Annuler l'opération en cours"}
+	Create a new record { "Créer un nouvel enregistrement"}
+	Create a new record at the end of the list { "Créer un nouvel enregistrement à la fin de la liste"}
+	DELETE { "EFFACER"}
+	Data Mng { "Gestionnaire de Données"}
+	Delete { "Effacer"}
+	Delete currently selected record { "Supprimer l'enregistrement actuellement sélectionné"}
+	Details { "Détails"}
+	Directory { "Annuaire"}
+	EDIT { "MODIFIER"}
+	Edit { "Modifier"}
+	Edit Report Header Message { "Modifier le message d'en-tête de rapport"}
+	Edit Settings { "Modifier les Paramètres"}
+	Edit Settings... { "Modifier les Paramètres..."}
+	Edit currently selected record { "Modifier l'enregistrement actuellement sélectionné"}
+	EditSettings { "ModifierParamètres"}
+	Exit Module { "Module de Sortie"}
+	Export Data (UNL) { "Exporter des Données (UNL)"}
+	Extend Criteria { "Étendre les Critères"}
+	Extend Filter/Query Criteria { "Étendre les Critères de Filtrage/Requête"}
+	F1 { "F1"}
+	F10 { "F10"}
+	F11 { "F11"}
+	F12 { "F12"}
+	F2 { "F2"}
+	F3 { "F3"}
+	F4 { "F4"}
+	F5 { "F5"}
+	F6 { "F6"}
+	F7 { "F7"}
+	F8 { "F8"}
+	F9 { "F9"}
+	FIND { "TROUVER"}
+	FINDNEXT { "TROUVER SUIVANT"}
+	FIRST { "PREMIÈRE"}
+	FIRSTROW { "PREMIÈRE RANGÉE"}
+	Filter { "Filtre"}
+	Filter Data for the REPORT { "Filtrer les Données pour le RAPPORT"}
+	Filter Report { "Filtrer le Rapport"}
+	Filter records { "Filtrer les enregistrements"}
+	First { "Première"}
+	Folder { "Dossier"}
+	Folder/Directory (UNL) { "Dossier/Répertoire (UNL)"}
+	Generate { "Produire"}
+	Generate List { "Générer une Liste"}
+	Generate Report { "Générer un Rapport"}
+	Generate Report File { "Générer un Fichier de Rapport"}
+	HELP { "AIDEZ-MOI"}
+	Help { "Aidez-moi"}
+	Help... { "Aidez-moi..."}
+	Hide F1 { "Cacher F1"}
+	Hide F2 { "Cacher F2"}
+	Hide F3 { "Cacher F3"}
+	Hide F4 { "Cacher F4"}
+	Hide F5 { "Cacher F5"}
+	Hide F6 { "Cacher F6"}
+	Hide F7 { "Cacher F7"}
+	Hide F8 { "Cacher F8"}
+	Hide F9 { "Cacher F9"}
+	Hide F10 { "Cacher F10"}
+	Hide F11 { "Cacher F11"}
+	Hide F12 { "Cacher F12"}
+	Home { "Accueil"}
+	INSERT { "INSÉRER"}
+	Info { "Info"}
+	Input Bulk { "Vrac d'entrée"}
+	LAST { "DERNIER"}
+	LASTROW { "DERNIÈRE RANGÉE"}
+	Last { "Dernier"}
+	Launch Print Manager Module { "Lancer le Module de Gestion d'impression"}
+	Load { "Charge"}
+	Load/Import Data (UNL) { "Charger/Importer des Données (UNL)"}
+	Lookup (Ctrl-B) { "Chercher (Ctrl-B)"}
+	Lookup FROM a list AND choose a value { "Rechercher dans une liste et choisir une valeur"}
+	Message { "Message"}
+	Multiple Record creation (Input Bulk) { "Création d'enregistrements Multiples (Entrée en Bloc)"}
+	NEXT { "SUIVANT"}
+	NEXTPAGE { "PAGE SUIVANTE"}
+	Navigate TO first record { "Naviguer vers le premier enregistrement"}
+	Navigate TO last record { "Naviguer vers le dernier enregistrement"}
+	Navigate TO next record { "Accéder à l'enregistrement suivant"}
+	Navigate TO previous record { "Naviguer vers l'enregistrement précédent"}
+	New { "Nouveau"}
+	Next { "Prochain"}
+	Next Step { "L'étape Suivante"}
+	PREVIOUS { "PRÉCÉDENT"}
+	PREVPAGE { "PAGE PRÉCÉDENT"}
+	PRINT { "IMPRESSION"}
+	Previous { "Précédent"}
+	Previous Step { "Étape Précédente"}
+	Print { "Impression"}
+	Print Manager { "Gestionnaire d'impression"}
+	Rerun { "Rediffusion"}
+	Run Corresponding Settings Module... { "Exécuter le Module de Paramètres Correspondant..."}
+	Run Report { "Rapport d'exécution"}
+	Run Sttings Module TO manage table/lookup data... { "Exécuter le module de paramètres pour gérer les données de table / consultation..."}
+	Run/Generate Report { "Exécuter/Générer un Rapport"}
+	Save { "Sauver"}
+	Settings { "Paramètres"}
+	Settings... { "Paramètres..."}
+	Unload { "Décharger"}
+	verify { "vérifier"}
+	Verify { "Vérifier"}
+	Verify data { "Vérifiez les données"}
+	View { "Vue"}
+	View Details { "Voir les Détails"}
+	View Details TO the selected record { "Afficher les Détails de l'enregistrement sélectionné"}
+	View Details... { "Voir les Détails..."}
+	87 - Timesheet Posting { "87 - Timesheet Posting" }
+	A1 - Customer { "A1 - Customer" }
+	A11 - Customer addition { "A11 - Customer addition" }
+	A12 - Customer Inquiry { "A12 - Customer Inquiry" }
+	A12 - Customer inquiry { "A12 - Customer inquiry" }
+	A13 - Notes by customer scan { "A13 - Notes by customer scan" }
+	A14 - Customer notes scan { "A14 - Customer notes scan" }
+	A15 - Customer maintenance { "A15 - Customer maintenance" }
+	A16 - Customer credit status maintenance { "A16 - Customer credit status maintenance" }
+	A17 - Customer shipping address maintenance { "A17 - Customer shipping address maintenance" }
+	A18 - Customer contract & promotion maintenance { "A18 - Customer contract & promotion maintenance" }
+	A1A - Customer history inquiry { "A1A - Customer history inquiry" }
+	A1B - Customer ledger inquiry { "A1B - Customer ledger inquiry" }
+	A1C - Audit trail inquiry { "A1C - Audit trail inquiry" }
+	A1D - Customer card maintenance { "A1D - Customer card maintenance" }
+	A1E - Customer ledger by date { "A1E - Customer ledger by date" }
+	A1F - Customer Product Codes { "A1F - Customer Product Codes" }
+	A2 - Invoice { "A2 - Invoice" }
+	A21 - Invoice Entry { "A21 - Invoice Entry" }
+	A22 - Invoice & Receipt Entry { "A22 - Invoice & Receipt Entry" }
+	A25 - Invoice Inquiry { "A25 - Invoice Inquiry" }
+	A26 - Invoice Scan { "A26 - Invoice Scan" }
+	A27 - Invoice Edit { "A27 - Invoice Edit" }
+	A2A - Account Adjustments { "A2A - Account Adjustments" }
+	A2B - Invoice Payment Scan { "A2B - Invoice Payment Scan" }
+	A2E - Invoice Transfer { "A2E - Invoice Transfer" }
+	A2F - Invoice by Reference Scan { "A2F - Invoice by Reference Scan" }
+	A2R - Debtors Refunds { "A2R - Debtors Refunds" }
+	A3 - Receipt { "A3 - Receipt" }
+	A31 - Enter & Apply Receipt { "A31 - Enter & Apply Receipt" }
+	A32 - Receipt Entry { "A32 - Receipt Entry" }
+	A33 - Sundry Receipts { "A33 - Sundry Receipts" }
+	A35 - Receipt Inquiry { "A35 - Receipt Inquiry" }
+	A36 - Receipt Scan { "A36 - Receipt Scan" }
+	A37 - Receipt Edit { "A37 - Receipt Edit" }
+	A39 - Undo Receipt Application { "A39 - Undo Receipt Application" }
+	A3A - Receipt Application { "A3A - Receipt Application" }
+	A3B - Receipt Bulk Application { "A3B - Receipt Bulk Application" }
+	A4 - Credit { "A4 - Credit" }
+	A41 - Credit Enter & Apply { "A41 - Credit Enter & Apply" }
+	A45 - Credit Inquiry { "A45 - Credit Inquiry" }
+	A46 - Credit Scan { "A46 - Credit Scan" }
+	A48 - Credit Apply { "A48 - Credit Apply" }
+	A49 - Undo Credit Application { "A49 - Undo Credit Application" }
+	A5 - Overdue Collection { "A5 - Overdue Collection" }
+	A51 - Collection Calls { "A51 - Collection Calls" }
+	A52 - Print Receivables { "A52 - Print Receivables" }
+	A53 - Cash Flow Analysis { "A53 - Cash Flow Analysis" }
+	A54 - Hold & Release Customers { "A54 - Hold & Release Customers" }
+	A55 - Print Invoice Stories { "A55 - Print Invoice Stories" }
+	A6 - Bank Deposit Cycle { "A6 - Bank Deposit Cycle" }
+	A61 - Bank Deposit Calculator { "A61 - Bank Deposit Calculator" }
+	A62 - Trial Deposit Print { "A62 - Trial Deposit Print" }
+	A63 - Deposit Edit { "A63 - Deposit Edit" }
+	A64 - Generate Bank Deposit { "A64 - Generate Bank Deposit" }
+	A6P - POS Bank Deposit Calculator { "A6P - POS Bank Deposit Calculator" }
+	AA - Customer Reports { "AA - Customer Reports" }
+	AA1 - Customer Address List { "AA1 - Customer Address List" }
+	AA2 - Customer Telephone List { "AA2 - Customer Telephone List" }
+	AA3 - Customer Note PrintCustomer Notes { "AA3 - Customer Note PrintCustomer Notes" }
+	AA5 - Customer by Postcode Report { "AA5 - Customer by Postcode Report" }
+	AA6 - Customer by Salesperson Report { "AA6 - Customer by Salesperson Report" }
+	AA7 - Customer by Type Report { "AA7 - Customer by Type Report" }
+	AA8 - Customer Shipping Address List { "AA8 - Customer Shipping Address List" }
+	AAA - Customer Credit Status Report { "AAA - Customer Credit Status Report" }
+	AAB - Summary Aging Report { "AAB - Summary Aging Report" }
+	AAC - Customer History Report { "AAC - Customer History Report" }
+	AAD - Customer Ledger Report { "AAD - Customer Ledger Report" }
+	AAE - Summary Aging by Credit Balances Report { "AAE - Summary Aging by Credit Balances Report" }
+	AAF - Summary Aging by Debit Balances Report { "AAF - Summary Aging by Debit Balances Report" }
+	AAG - Summary Aging by Currency Report { "AAG - Summary Aging by Currency Report" }
+	AAH - Summary Aging by State Report { "AAH - Summary Aging by State Report" }
+	AAI - Corporate Debtor List { "AAI - Corporate Debtor List" }
+	AAJ - Customer Aging by Salesperson Report { "AAJ - Customer Aging by Salesperson Report" }
+	AAK - Detailed Aging by Salesperson Report { "AAK - Detailed Aging by Salesperson Report" }
+	AAL - Summary Aging by Age Date Report { "AAL - Summary Aging by Age Date Report" }
+	AAT - Summary Aging by Customer Type Report { "AAT - Summary Aging by Customer Type Report" }
+	AAU - Customer Audit Report { "AAU - Customer Audit Report" }
+	AB - Invoice Reports { "AB - Invoice Reports" }
+	AB0 - Invoice Reports { "AB0 - Invoice Reports" }
+	AB1 - Invoice by Customer Report { "AB1 - Invoice by Customer Report" }
+	AB2 - Invoice by Number Report { "AB2 - Invoice by Number Report" }
+	AB3 - Invoice by Period Report { "AB3 - Invoice by Period Report" }
+	AB4 - Invoice by Reference Report { "AB4 - Invoice by Reference Report" }
+	AB5 - Invoice by Order Number Report { "AB5 - Invoice by Order Number Report" }
+	ABA - Invoice by Detail Report { "ABA - Invoice by Detail Report" }
+	ABB - Invoice by Product Code Report { "ABB - Invoice by Product Code Report" }
+	ABD - Adjustment Report { "ABD - Adjustment Report" }
+	AC - Receipt Reports { "AC - Receipt Reports" }
+	AC1 - Receipt by Customer Report { "AC1 - Receipt by Customer Report" }
+	AC2 - Receipt by Number Report { "AC2 - Receipt by Number Report" }
+	AC3 - Receipt by Period Report { "AC3 - Receipt by Period Report" }
+	AC4 - Receipt by Cheque Report { "AC4 - Receipt by Cheque Report" }
+	AC5 - Receipt Application Report { "AC5 - Receipt Application Report" }
+	AC8 - Receipt by Reference Report { "AC8 - Receipt by Reference Report" }
+	AC9 - Receipt Detail Report { "AC9 - Receipt Detail Report" }
+	ACA - Unapplied Receipt Report { "ACA - Unapplied Receipt Report" }
+	Accrual Reversal { "Accrual Reversal" }
+	Activity Accrual Entry { "Activity Accrual Entry" }
+	Actual to Target Hours { "Actual to Target Hours" }
+	AD - Credit Reports { "AD - Credit Reports" }
+	ADA - Credit by Customer Report { "ADA - Credit by Customer Report" }
+	ADB - Credit by Number Report { "ADB - Credit by Number Report" }
+	ADC - Credit by Period Report { "ADC - Credit by Period Report" }
+	ADD - Credit by Reference Report { "ADD - Credit by Reference Report" }
+	ADE - Credit Detail Report { "ADE - Credit Detail Report" }
+	ADF - Credit Application Report { "ADF - Credit Application Report" }
+	ADR - Credit by Reason Report { "ADR - Credit by Reason Report" }
+	AE - Sales Analysis Reports { "AE - Sales Analysis Reports" }
+	AE1 - Analysis by Customer Report { "AE1 - Analysis by Customer Report" }
+	AE2 - Analysis by Invoice Report { "AE2 - Analysis by Invoice Report" }
+	AE3 - Analysis by Salesperson Report { "AE3 - Analysis by Salesperson Report" }
+	AE4 - Analysis by Customer Type Report { "AE4 - Analysis by Customer Type Report" }
+	AE6 - Analysis by Customer excluding Tax Report { "AE6 - Analysis by Customer excluding Tax Report" }
+	AE7 - Analysis by Product excluding Tax Report { "AE7 - Analysis by Product excluding Tax Report" }
+	AE8 - Analysis by Salesperson excluding Tax Report { "AE8 - Analysis by Salesperson excluding Tax Report" }
+	AE9 - Analysis by Invoice & Department Code Report { "AE9 - Analysis by Invoice & Department Code Report" }
+	AEC - Analysis by Invoice & Discount Report { "AEC - Analysis by Invoice & Discount Report" }
+	Aged FIFO Valuation Report { "Aged FIFO Valuation Report" }
+	Aged FIFO Write-down Val Rep { "Aged FIFO Write-down Val Rep" }
+	AP - Accounts Payable { "AP - Comptes à payer" }
+	AR - Accounts Receivable { "AR - Comptes débiteurs" }
+	AR - Accounts Receivable Reports { "AR - Accounts Receivable Reports" }
+	AR0 - Accounts Receivable Reports { "AR0 - Accounts Receivable Reports" }
+	AR1 - Detailed Aging Report { "AR1 - Detailed Aging Report" }
+	AR2 - Summary Aging Report { "AR2 - Summary Aging Report" }
+	AR3 - Activity Summary Report { "AR3 - Activity Summary Report" }
+	AR5 - Cash Forecast Report { "AR5 - Cash Forecast Report" }
+	AR6 - Sales Commission Report { "AR6 - Sales Commission Report" }
+	AR7 - Sales Tax Billed Report { "AR7 - Sales Tax Billed Report" }
+	AR8 - Accounts Receivable Snapshot Report { "AR8 - Accounts Receivable Snapshot Report" }
+	ARA - Audit Trail Report { "ARA - Audit Trail Report" }
+	ARB - Salesperson Commission Report { "ARB - Salesperson Commission Report" }
+	ARC - Period Post Report { "ARC - Period Post Report" }
+	ARD - Customer Summary Aging Report { "ARD - Customer Summary Aging Report" }
+	ARR - Detailed Aging by Reference Report { "ARR - Detailed Aging by Reference Report" }
+	AS - Special Processes { "AS - Special Processes" }
+	AS1 - Invoice Print { "AS1 - Invoice Print" }
+	AS5 - Account Aging { "AS5 - Account Aging" }
+	AS6 - Print Statements { "AS6 - Print Statements" }
+	AS7 - Post Period Activity { "AS7 - Post Period Activity" }
+	AS8 - Charge Interest & Service Fee { "AS8 - Charge Interest & Service Fee" }
+	ASA - Generate Mailing Labels { "ASA - Generate Mailing Labels" }
+	ASL - Transaction Load { "ASL - Transaction Load" }
+	ASU - Transaction Purge by Fiscal Year { "ASU - Transaction Purge by Fiscal Year" }
+	ASW - WHICS-OPEN Interface Load File { "ASW - WHICS-OPEN Interface Load File" }
+	AW - Customer Write Off { "AW - Customer Write Off" }
+	AW1 - Customer Balance Write Off { "AW1 - Customer Balance Write Off" }
+	AW2 - Tentative Write-off Adjustments { "AW2 - Tentative Write-off Adjustments" }
+	AW3 - Tentative Balance Report { "AW3 - Tentative Balance Report" }
+	AW4 - Generate Write-off Transactions { "AW4 - Generate Write-off Transactions" }
+	AZ - Configuration { "AZ - Configuration" }
+	AZ1 - Tax Code Maintenance { "AZ1 - Tax Code Maintenance" }
+	AZ2 - Term Code Maintenance { "AZ2 - Term Code Maintenance" }
+	AZ3 - Salesperson Maintenance { "AZ3 - Salesperson Maintenance" }
+	AZ4 - Customer Type Maintenance { "AZ4 - Customer Type Maintenance" }
+	AZ5 - Dunning Message Maintenance { "AZ5 - Dunning Message Maintenance" }
+	AZ6_J - Debt Types Scan { "AZ6_J - Debt Types Scan" }
+	AZ7 - Group Codes { "AZ7 - Group Codes" }
+	AZ7_J - Transaction Type Listing { "AZ7_J - Transaction Type Listing" }
+	AZ8 - Group Parameters { "AZ8 - Group Parameters" }
+	AZA - Sales Area Maintenance { "AZA - Sales Area Maintenance" }
+	AZH - Hold Sales Reason Maintenance { "AZH - Hold Sales Reason Maintenance" }
+	AZI - Transaction Load Parameter Maintenance { "AZI - Transaction Load Parameter Maintenance" }
+	AZM - Sales Manager Maintenance { "AZM - Sales Manager Maintenance" }
+	AZP - Accounts Receivable Parameter Maintenance { "AZP - Accounts Receivable Parameter Maintenance" }
+	AZR - Credit Reason Maintenance { "AZR - Credit Reason Maintenance" }
+	AZS - Invoice User Message { "AZS - Invoice User Message" }
+	AZT - Sales Territory Maintenance { "AZT - Sales Territory Maintenance" }
+	AZU - Amendment Log Maintenance { "AZU - Amendment Log Maintenance" }
+	Back Orders by Customer Report { "Back Orders by Customer Report" }
+	Back Orders by Due Date Report { "Back Orders by Due Date Report" }
+	Back Orders by Product Report { "Back Orders by Product Report" }
+	Batch Voucher Entry { "Entrée de bon de lot" }
+	Bin Location Maintenance { "Bin Location Maintenance" }
+	Bulk Product Recode { "Bulk Product Recode" }
+	Chargeable Hours { "Chargeable Hours" }
+	Cheque/Remittance Print { "Cheque/Remittance Print" }
+	Contract Add { "Contract Add" }
+	Contract Detail Report { "Contract Detail Report" }
+	Contract Edit { "Contract Edit" }
+	Contract Inquiry { "Contract Inquiry" }
+	Contract Scan { "Contract Scan" }
+	Contract Status Report { "Contract Status Report" }
+	Contracts { "Contracts" }
+	Create Contract Invoices { "Create Contract Invoices" }
+	Create Tentative Invoices { "Create Tentative Invoices" }
+	Customer Aging by Fiscal Perio { "Customer Aging by Fiscal Perio" }
+	Customer Product Codes { "Customer Product Codes" }
+	Customer Promotions Report { "Customer Promotions Report" }
+	Database Schema Comparison { "Database Schema Comparison" }
+	Debit Distribution { "Debit Distribution" }
+	Debit Entry { "Debit Entry" }
+	Debtors Funds Employed Report { "Debtors Funds Employed Report" }
+	Debtors Take-on Adjustments { "Debtors Take-on Adjustments" }
+	Delivery Docket Print { "Delivery Docket Print" }
+	Delivery Scheduling { "Delivery Scheduling" }
+	Depreciation Reconciliation { "Depreciation Reconciliation" }
+	Detailed FIFO Valuation Report { "Detailed FIFO Valuation Report" }
+	Detailed Resource Reconciliati { "Detailed Resource Reconciliati" }
+	Divisional Margin Analysis { "Divisional Margin Analysis" }
+	E1 - Sales Order { "E1 - Sales Order" }
+	E11 - Order Entry { "E11 - Order Entry" }
+	E14 - Order Amendment Inquiry { "E14 - Order Amendment Inquiry" }
+	E15 - Order Inquiry { "E15 - Order Inquiry" }
+	E16 - Order Scan { "E16 - Order Scan" }
+	E18 - Order Scan by Date { "E18 - Order Scan by Date" }
+	E19 - Outstanding Orders Scan { "E19 - Outstanding Orders Scan" }
+	E1A - Order Scan by Product { "E1A - Order Scan by Product" }
+	E3 - Back Order Replenishment { "E3 - Back Order Replenishment" }
+	E31 - Back Order Product Allocation { "E31 - Back Order Product Allocation" }
+	E32 - Back Order Allocation Report { "E32 - Back Order Allocation Report" }
+	E33 - Back Order Allocation Edit { "E33 - Back Order Allocation Edit" }
+	E34 - Back Order Product Release { "E34 - Back Order Product Release" }
+	E5 - Delivery Cycle { "E5 - Delivery Cycle" }
+	E52 - Picking Slip Generation { "E52 - Picking Slip Generation" }
+	E53 - Order Confirmation { "E53 - Order Confirmation" }
+	E54 - Consignment Note Generation { "E54 - Consignment Note Generation" }
+	E55 - Shipping Label Generation { "E55 - Shipping Label Generation" }
+	E5A - Automated Delivery Cycle { "E5A - Automated Delivery Cycle" }
+	E5B - Bulk Pick List Report { "E5B - Bulk Pick List Report" }
+	E5X - Order Confirmation { "E5X - Order Confirmation" }
+	E6 - Special Offers { "E6 - Special Offers" }
+	E61 - Special Offers Maintenance { "E61 - Special Offers Maintenance" }
+	E62 - Special Offers Inquiry { "E62 - Special Offers Inquiry" }
+	E63 - Special Offers Turnover Scan { "E63 - Special Offers Turnover Scan" }
+	E64 - Special Offers Sales Targets Scan { "E64 - Special Offers Sales Targets Scan" }
+	E65 - Special Offers Profit Scan { "E65 - Special Offers Profit Scan" }
+	E7 - Sales Conditions { "E7 - Sales Conditions" }
+	E71 - Sales Conditions Maintenance { "E71 - Sales Conditions Maintenance" }
+	E72 - Sales Conditions Inquiry { "E72 - Sales Conditions Inquiry" }
+	E73 - Sales Conditions Turnover Scan { "E73 - Sales Conditions Turnover Scan" }
+	E74 - Sales Conditions Targets Scan { "E74 - Sales Conditions Targets Scan" }
+	E75 - Sales Conditions Profit Scan { "E75 - Sales Conditions Profit Scan" }
+	E8 - Salesperson Detail { "E8 - Salesperson Detail" }
+	E82 - Commission Structure Maintenance { "E82 - Commission Structure Maintenance" }
+	E84 - Commission on Invoice Report { "E84 - Commission on Invoice Report" }
+	E85 - Commission Payable Report { "E85 - Commission Payable Report" }
+	E9 - Order Report { "E9 - Order Report" }
+	E90 - Order Reports { "E90 - Order Reports" }
+	E91 - Sales Order Report { "E91 - Sales Order Report" }
+	E92 - Sales Order by Number Report { "E92 - Sales Order by Number Report" }
+	E93 - Sales Order by Ship Date Report { "E93 - Sales Order by Ship Date Report" }
+	E94 - Sales Order by Project/Job Report { "E94 - Sales Order by Project/Job Report" }
+	E95 - Order Detail Report { "E95 - Order Detail Report" }
+	E96 - Order Detail by Product Report { "E96 - Order Detail by Product Report" }
+	E97 - Back Order Report { "E97 - Back Order Report" }
+	E97 - Back Orders by Customer Report { "E97 - Back Orders by Customer Report" }
+	E98 - Back Order by Product Report { "E98 - Back Order by Product Report" }
+	E98 - Back Orders by Product Report { "E98 - Back Orders by Product Report" }
+	E99 - Back Order by Date Report { "E99 - Back Order by Date Report" }
+	E99 - Back Orders by Due Date Report { "E99 - Back Orders by Due Date Report" }
+	E9A - Summary Held Order Report { "E9A - Summary Held Order Report" }
+	E9B - Detailed Held Order Report { "E9B - Detailed Held Order Report" }
+	E9C - Order Report by Sales { "E9C - Order Report by Sales" }
+	E9D - Sales Order Status Report { "E9D - Sales Order Status Report" }
+	E9E - Picking Slip Summary Report { "E9E - Picking Slip Summary Report" }
+	EA - Customer Inquiry { "EA - Customer Inquiry" }
+	EA2 - Customer Turnover Scan { "EA2 - Customer Turnover Scan" }
+	EA3 - Customer Product Yearly Turnover Scan { "EA3 - Customer Product Yearly Turnover Scan" }
+	EA4 - Customer Product Monthly Turnover Scan { "EA4 - Customer Product Monthly Turnover Scan" }
+	EA5 - Customer Profit Scan { "EA5 - Customer Profit Scan" }
+	EB - Product Inquiry { "EB - Product Inquiry" }
+	EB2 - Product Turnover Scan { "EB2 - Product Turnover Scan" }
+	EB3 - Products Bought and Sold Scan { "EB3 - Products Bought and Sold Scan" }
+	EB4 - Product and Customer Turnover Scan { "EB4 - Product and Customer Turnover Scan" }
+	EB5 - Product Profit Scan { "EB5 - Product Profit Scan" }
+	EB6 - Warehouse Turnover Scan { "EB6 - Warehouse Turnover Scan" }
+	EC - Salesperson Inquiry { "EC - Salesperson Inquiry" }
+	EC1 - Salesperson Inquiry { "EC1 - Salesperson Inquiry" }
+	EC2 - Salesperson Daily Sales Scan { "EC2 - Salesperson Daily Sales Scan" }
+	EC3 - Salesperson Monthly Sales Scan { "EC3 - Salesperson Monthly Sales Scan" }
+	EC4 - Salesperson Turnover Scan { "EC4 - Salesperson Turnover Scan" }
+	EC5 - Salesperson Weekly Targets Scan { "EC5 - Salesperson Weekly Targets Scan" }
+	EC6 - Salesperson Monthly Targets Scan { "EC6 - Salesperson Monthly Targets Scan" }
+	EC7 - Salesperson Special Offers Scan { "EC7 - Salesperson Special Offers Scan" }
+	EC8 - Salesperson Product Distribution Scan { "EC8 - Salesperson Product Distribution Scan" }
+	EC9 - Salesperson Profit Scan { "EC9 - Salesperson Profit Scan" }
+	ECA - Salesperson Commission Scan { "ECA - Salesperson Commission Scan" }
+	ED - Sales Manager Inquiry { "ED - Sales Manager Inquiry" }
+	ED1 - Sales Manager Inquiry { "ED1 - Sales Manager Inquiry" }
+	ED2 - Sales Manager Turnover Scan { "ED2 - Sales Manager Turnover Scan" }
+	ED3 - Sales Manager Targets Scan { "ED3 - Sales Manager Targets Scan" }
+	ED4 - Sales Manager Product Distribution Scan { "ED4 - Sales Manager Product Distribution Scan" }
+	ED5 - Sales Manager Profit Scan { "ED5 - Sales Manager Profit Scan" }
+	Edit Sundry Receipt { "Edit Sundry Receipt" }
+	EE - Sales Territory Inquiry { "EE - Sales Territory Inquiry" }
+	EE1 - Sales Territory Inquiry { "EE1 - Sales Territory Inquiry" }
+	EE2 - Sales Territory Turnover Scan { "EE2 - Sales Territory Turnover Scan" }
+	EE4 - Sales Territory Product Distribution Scan { "EE4 - Sales Territory Product Distribution Scan" }
+	EF - Sales Area Inquiry { "EF - Sales Area Inquiry" }
+	EF1 - Sales Area Inquiry { "EF1 - Sales Area Inquiry" }
+	EF2 - Sales Area Turnover Scan { "EF2 - Sales Area Turnover Scan" }
+	EF3 - Sales Area Customer Numbers Scan { "EF3 - Sales Area Customer Numbers Scan" }
+	EF4 - Sales Area Product Distribution Scan { "EF4 - Sales Area Product Distribution Scan" }
+	EF5 - Sales Area Profit Scan { "EF5 - Sales Area Profit Scan" }
+	EG - Company Inquiry { "EG - Company Inquiry" }
+	EG1 - Company Turnover Inquiry { "EG1 - Company Turnover Inquiry" }
+	EG2 - Company Sales Targets Inquiry { "EG2 - Company Sales Targets Inquiry" }
+	EG3 - Company Daily Sales Inquiry { "EG3 - Company Daily Sales Inquiry" }
+	EG4 - Company Product Distribution Scan { "EG4 - Company Product Distribution Scan" }
+	EG5 - Company Monthly Profit Inquiry { "EG5 - Company Monthly Profit Inquiry" }
+	Enter Budgets By Resource { "Enter Budgets By Resource" }
+	Enter Stock-take Count Details { "Enter Stock-take Count Details" }
+	EO - Sales Order Processing { "EO - Traitement des commandes clients" }
+	ER1 - Summary Held Order Report { "ER1 - Summary Held Order Report" }
+	ER2 - Detailed Held Order Report { "ER2 - Detailed Held Order Report" }
+	ES - Special Processes { "ES - Special Processes" }
+	ES1 - Statistics Extraction { "ES1 - Statistics Extraction" }
+	ES2 - Statistics Purging { "ES2 - Statistics Purging" }
+	ES4 - Order Amendment Unload { "ES4 - Order Amendment Unload" }
+	ES5_S - Order Confirmation Summary { "ES5_S - Order Confirmation Summary" }
+	ES6_S - Enhanced Order Confirmation { "ES6_S - Enhanced Order Confirmation" }
+	ESL_S - External File Load { "ESL_S - External File Load" }
+	ET - Salesperson Report { "ET - Salesperson Report" }
+	ET1 - Weekly Activity by Salesperson Report { "ET1 - Weekly Activity by Salesperson Report" }
+	ET2 - Weekly Activity by Manager Report { "ET2 - Weekly Activity by Manager Report" }
+	ET3 - Monthly Turnover by Manager Report { "ET3 - Monthly Turnover by Manager Report" }
+	ET4 - Monthly Turnover by Inventory Report { "ET4 - Monthly Turnover by Inventory Report" }
+	ET5 - Salesperson Turnover Comparison Report { "ET5 - Salesperson Turnover Comparison Report" }
+	ET6 - Salesperson Customer Ranking Report { "ET6 - Salesperson Customer Ranking Report" }
+	ET7 - Special Offer Results Report { "ET7 - Special Offer Results Report" }
+	ET8 - New Versus Repeat Sales Report { "ET8 - New Versus Repeat Sales Report" }
+	ET9 - Salesperson Performance Report { "ET9 - Salesperson Performance Report" }
+	ETA - Salesperson Contribution Report { "ETA - Salesperson Contribution Report" }
+	ETB - Salesperson Distribution Report { "ETB - Salesperson Distribution Report" }
+	EU - Inventory Report { "EU - Inventory Report" }
+	EU1 - Inventory Yearly Turnover Report { "EU1 - Inventory Yearly Turnover Report" }
+	EU2 - Inventory Customer Monthly Turnover Report { "EU2 - Inventory Customer Monthly Turnover Report" }
+	EU4 - Inventory Turnover by Volume Report { "EU4 - Inventory Turnover by Volume Report" }
+	EU5 - Product Monthly Turnover Report { "EU5 - Product Monthly Turnover Report" }
+	EU6 - Product Monthly Turnover by Net Value Report { "EU6 - Product Monthly Turnover by Net Value Report" }
+	EV - Customer Report { "EV - Customer Report" }
+	EV1 - Customer Yearly Turnover Report { "EV1 - Customer Yearly Turnover Report" }
+	EV2 - Yearly Turnover by Territory Report { "EV2 - Yearly Turnover by Territory Report" }
+	EV3 - Yearly Turnover by Area Report { "EV3 - Yearly Turnover by Area Report" }
+	EV4 - Yearly Turnover by Salesperson Report { "EV4 - Yearly Turnover by Salesperson Report" }
+	EV5 - Inventory Turnover by Customer Report { "EV5 - Inventory Turnover by Customer Report" }
+	EV6 - Top Customers by Rank Report { "EV6 - Top Customers by Rank Report" }
+	EW - Sales Area Report { "EW - Sales Area Report" }
+	EW1 - Sales Area Distribution Report { "EW1 - Sales Area Distribution Report" }
+	EW2 - Sales Area Distribution Trends Report { "EW2 - Sales Area Distribution Trends Report" }
+	Exit application { "Quitter l'application" }
+	External Stock-take Load { "External Stock-take Load" }
+	External Tariff Load { "External Tariff Load" }
+	EY - Company Distribution { "EY - Company Distribution" }
+	EY1 - Company Distribution Report { "EY1 - Company Distribution Report" }
+	EY2 - Company Distribution Trends Report { "EY2 - Company Distribution Trends Report" }
+	EZ - Configuration { "EZ - Configuration" }
+	EZ3 - Sales Targets Maintenance { "EZ3 - Sales Targets Maintenance" }
+	EZ4 - Carrier Maintenance { "EZ4 - Carrier Maintenance" }
+	EZA - Auto Delivery Cycle Maintenance { "EZA - Auto Delivery Cycle Maintenance" }
+	EZI - Order Import Facility { "EZI - Order Import Facility" }
+	EZP - Sales Order Processing Parameters Maintenance { "EZP - Sales Order Processing Parameters Maintenance" }
+	F1 - Asset Detail { "F1 - Asset Detail" }
+	F11 - General Information { "F11 - General Information" }
+	F2 - Batch Processing { "F2 - Batch Processing" }
+	F21 - Asset Addition { "F21 - Asset Addition" }
+	F22 - Asset Adjustment { "F22 - Asset Adjustment" }
+	F23 - Asset Transfer { "F23 - Asset Transfer" }
+	F24 - Asset Retirement { "F24 - Asset Retirement" }
+	F25 - Asset Revaluation { "F25 - Asset Revaluation" }
+	F26 - Asset Sale { "F26 - Asset Sale" }
+	F27 - Asset Life Adjustment { "F27 - Asset Life Adjustment" }
+	F28 - Asset Depreciation Code Adjustment { "F28 - Asset Depreciation Code Adjustment" }
+	F29 - Batch Edit { "F29 - Batch Edit" }
+	F31 - Book Code Maintenance { "F31 - Book Code Maintenance" }
+	F32 - Location Code Maintenance { "F32 - Location Code Maintenance" }
+	F33 - Authority Code Maintenance { "F33 - Authority Code Maintenance" }
+	F34 - Category Code Maintenance { "F34 - Category Code Maintenance" }
+	F35 - Responsibility Code Maintenance { "F35 - Responsibility Code Maintenance" }
+	F36 - Insurance Details { "F36 - Insurance Details" }
+	F37 - Leasing Codes { "F37 - Leasing Codes" }
+	F4 - Asset Inquiry { "F4 - Asset Inquiry" }
+	F41 - Asset Inquiry { "F41 - Asset Inquiry" }
+	F42 - Asset Scan { "F42 - Asset Scan" }
+	F6 - Financial Report { "F6 - Financial Report" }
+	F62 - Asset Additions Report { "F62 - Asset Additions Report" }
+	F63 - Asset Disposals Report { "F63 - Asset Disposals Report" }
+	F64 - Asset Transactions Report { "F64 - Asset Transactions Report" }
+	F8 - Detail Report { "F8 - Detail Report" }
+	F81 - Asset Listing { "F81 - Asset Listing" }
+	F82 - Insurance Details Report { "F82 - Insurance Details Report" }
+	F83 - Lease Details Report { "F83 - Lease Details Report" }
+	F84 - Asset Summary Report { "F84 - Asset Summary Report" }
+	FA - Fixed Assets { "FA - Immobilisations" }
+	FB - Batch Report { "FB - Batch Report" }
+	FB1 - Batch Report { "FB1 - Batch Report" }
+	FBC - Batch Clearance { "FBC - Batch Clearance" }
+	FBD - Book Rate Maintenance { "FBD - Book Rate Maintenance" }
+	FBS - Batch Scan { "FBS - Batch Scan" }
+	FDP - Depreciation Rate Maintenance { "FDP - Depreciation Rate Maintenance" }
+	FGL - Create General Ledger Batches { "FGL - Create General Ledger Batches" }
+	FIFO Cost Inquiry { "FIFO Cost Inquiry" }
+	FIFO Cost Ledger Inquiry { "FIFO Cost Ledger Inquiry" }
+	FIFO Cost Ledger Validation { "FIFO Cost Ledger Validation" }
+	FIFO Costing { "FIFO Costing" }
+	FIFO Stock Valuation Inquiry { "FIFO Stock Valuation Inquiry" }
+	FP - Period End { "FP - Period End" }
+	FP1 - Post Fixed Assets Batches { "FP1 - Post Fixed Assets Batches" }
+	FP2 - Depreciation Calculations { "FP2 - Depreciation Calculations" }
+	FZ - Configuration { "FZ - Configuration" }
+	FZ1 - Account Code Maintenance { "FZ1 - Account Code Maintenance" }
+	FZP - Fixed Assets Parameter Maintenance { "FZP - Fixed Assets Parameter Maintenance" }
+	G1 - Accounts { "G1 - Accounts" }
+	G11 - Account Inquiry { "G11 - Account Inquiry" }
+	G12 - Account Scan { "G12 - Account Scan" }
+	G13 - Multi Currency Inquiry { "G13 - Multi Currency Inquiry" }
+	G14 - Chart Of Account Inquiry { "G14 - Chart Of Account Inquiry" }
+	G15 - Account Budget { "G15 - Account Budget" }
+	G16 - Account History Inquiry { "G16 - Account History Inquiry" }
+	G1A - Ledger Detail Inquiry { "G1A - Ledger Detail Inquiry" }
+	G1B - Ledger Detail Scan { "G1B - Ledger Detail Scan" }
+	G2 - Batches { "G2 - Batches" }
+	G21 - Batch Entry { "G21 - Batch Entry" }
+	G22 - Batch Edit { "G22 - Batch Edit" }
+	G23 - Batch Recurring Entry { "G23 - Batch Recurring Entry" }
+	G24 - Batch Verify { "G24 - Batch Verify" }
+	G25 - Batch Inquiry { "G25 - Batch Inquiry" }
+	G26 - Batch Scan { "G26 - Batch Scan" }
+	G27 - External Batch File Load { "G27 - External Batch File Load" }
+	G28 - Batch Reversal { "G28 - Batch Reversal" }
+	G29 - Subsidiary Batch Edit { "G29 - Subsidiary Batch Edit" }
+	G2A - Batch Detail Inquiry { "G2A - Batch Detail Inquiry" }
+	G2C - Batch Clearance { "G2C - Batch Clearance" }
+	G2R - Period End Batch Reversal { "G2R - Period End Batch Reversal" }
+	G3 - Journal Disbursements { "G3 - Journal Disbursements" }
+	G31 - Disbursement Maintenance { "G31 - Disbursement Maintenance" }
+	G32 - Process Disbursements { "G32 - Process Disbursements" }
+	G33 - Disbursement Report { "G33 - Disbursement Report" }
+	GA - Account Reports { "GA - Account Reports" }
+	GA1 - Account versus Budget Report { "GA1 - Account versus Budget Report" }
+	GA2 - Account Period Summary Report { "GA2 - Account Period Summary Report" }
+	GA3 - Account Detail Report { "GA3 - Account Detail Report" }
+	GA4 - Financial Work Sheet Report { "GA4 - Financial Work Sheet Report" }
+	GA5 - Budget Variance Report { "GA5 - Budget Variance Report" }
+	GA6 - Available Funds Report { "GA6 - Available Funds Report" }
+	GA7 - Budget Percentage Report { "GA7 - Budget Percentage Report" }
+	GA9 - Budget Worksheet Report I { "GA9 - Budget Worksheet Report I" }
+	GAA - Account Detail by Reference Report { "GAA - Account Detail by Reference Report" }
+	GAC - Budget Worksheet Report II { "GAC - Budget Worksheet Report II" }
+	GAG - Account Detail by Chart Code Report { "GAG - Account Detail by Chart Code Report" }
+	GAH - Account Detail by Journal Code Report { "GAH - Account Detail by Journal Code Report" }
+	GAI - Account Reference Detail Report { "GAI - Account Reference Detail Report" }
+	GAJ - Account History by Journal Code Report { "GAJ - Account History by Journal Code Report" }
+	GB - Batch Reports { "GB - Batch Reports" }
+	GB1 - Batch Summary Report { "GB1 - Batch Summary Report" }
+	GB2 - Batches by Number Report { "GB2 - Batches by Number Report" }
+	GB3 - Batches by Entry Date Report { "GB3 - Batches by Entry Date Report" }
+	GB4 - Batch Detail Report { "GB4 - Batch Detail Report" }
+	GB5 - Batch Currency Detail Report { "GB5 - Batch Currency Detail Report" }
+	GB6 - Batch Details by Account Report { "GB6 - Batch Details by Account Report" }
+	GB7 - Post Run Report { "GB7 - Post Run Report" }
+	GB8 - Trial Multi-Ledger Posting Report { "GB8 - Trial Multi-Ledger Posting Report" }
+	GBQ - Summary Posting Drill Down Report { "GBQ - Summary Posting Drill Down Report" }
+	GC - Cash Book { "GC - Cash Book" }
+	GC1 - Deposits & Credits Entry { "GC1 - Deposits & Credits Entry" }
+	GC2 - Bank Charges & Debits Entry { "GC2 - Bank Charges & Debits Entry" }
+	GC3 - Reconciliation { "GC3 - Reconciliation" }
+	GC4 - Bank Statement Inquiry { "GC4 - Bank Statement Inquiry" }
+	GC5 - Bank Reconciliation Report { "GC5 - Bank Reconciliation Report" }
+	GC7 - Daily Audit Report { "GC7 - Daily Audit Report" }
+	GC8 - Bank Transfer Entry { "GC8 - Bank Transfer Entry" }
+	GC9 - Bank Statement { "GC9 - Bank Statement" }
+	GCA - For Cur Recon { "GCA - For Cur Recon" }
+	GCE - Electronic Statement Edit { "GCE - Electronic Statement Edit" }
+	GCL - Statement File Load { "GCL - Statement File Load" }
+	GCP - Statement Print { "GCP - Statement Print" }
+	GCW - WHICS-OPEN GL Interface Load { "GCW - WHICS-OPEN GL Interface Load" }
+	Generate Stock-take Count File { "Generate Stock-take Count File" }
+	GG - Group Summary Reporting { "GG - Group Summary Reporting" }
+	GGB - Group Summary Definition { "GGB - Group Summary Definition" }
+	GGR - Group Segment Summary Report { "GGR - Group Segment Summary Report" }
+	GGS - Segment Summary Definition { "GGS - Segment Summary Definition" }
+	GL - General Ledger { "GL - Grand livre général" }
+	GL - User Reports { "GL - User Reports" }
+	GL1 - Report Definitions { "GL1 - Report Definitions" }
+	GL2 - Report Data Extraction { "GL2 - Report Data Extraction" }
+	GL3 - Maintain Main Groups { "GL3 - Maintain Main Groups" }
+	GL4 - Maintain Sub Groups { "GL4 - Maintain Sub Groups" }
+	GL5 - Import Data Extraction { "GL5 - Import Data Extraction" }
+	GP - Period End { "GP - Period End" }
+	GP2 - Post Journals { "GP2 - Post Journals" }
+	GP4 - Close Period { "GP4 - Close Period" }
+	GP6 - Period End Reconciliation { "GP6 - Period End Reconciliation" }
+	GR - General Ledger Reports { "GR - General Ledger Reports" }
+	GR1 - Chart of Accounts Report { "GR1 - Chart of Accounts Report" }
+	GR2 - Report Instructions List { "GR2 - Report Instructions List" }
+	GR3 - Segment Codes Report { "GR3 - Segment Codes Report" }
+	GR4 - Journal Codes List { "GR4 - Journal Codes List" }
+	GR9 - Group Codes List { "GR9 - Group Codes List" }
+	GRA - Trial Balance Report { "GRA - Trial Balance Report" }
+	GRC - Accounts Receivable Reconciliation Report { "GRC - Accounts Receivable Reconciliation Report" }
+	GRD - Accounts Payable Reconciliation Report { "GRD - Accounts Payable Reconciliation Report" }
+	GRF - Trial Balance Pre-Close Report { "GRF - Trial Balance Pre-Close Report" }
+	GRG - Summary Trial Balance Report { "GRG - Summary Trial Balance Report" }
+	GRH - Potential Exchange Variances Report { "GRH - Potential Exchange Variances Report" }
+	GRI - Multi-Ledger Relationships List { "GRI - Multi-Ledger Relationships List" }
+	GRJ - Consolidated Reporting Codes List { "GRJ - Consolidated Reporting Codes List" }
+	GRK - Consolidated Summary Trial Balance Report { "GRK - Consolidated Summary Trial Balance Report" }
+	GRL - Approved Funds Account Details { "GRL - Approved Funds Account Details" }
+	Group Invoice { "Group Invoice" }
+	GS - Special Processes { "GS - Special Processes" }
+	GS1 - Run Finance Reports { "GS1 - Run Finance Reports" }
+	GS2 - Roll-up History { "GS2 - Roll-up History" }
+	GS3 - Copy Chart of Accounts { "GS3 - Copy Chart of Accounts" }
+	GS5 - Organisation Change { "GS5 - Organisation Change" }
+	GS6 - Inter-Company Copy { "GS6 - Inter-Company Copy" }
+	GS7 - Reset COA Start Dates { "GS7 - Reset COA Start Dates" }
+	GS8 - Reset COA End Dates { "GS8 - Reset COA End Dates" }
+	GS9 - Copy Report Instructions { "GS9 - Copy Report Instructions" }
+	GSA - Year End Close { "GSA - Year End Close" }
+	GSB - Subsidiary Postings { "GSB - Subsidiary Postings" }
+	GSC - Subsidiary Verify { "GSC - Subsidiary Verify" }
+	GSD - Update History { "GSD - Update History" }
+	GSH - Calculate Exchange Variances { "GSH - Calculate Exchange Variances" }
+	GSJ - External Budget Interface { "GSJ - External Budget Interface" }
+	GSP - Payroll Batch Load { "GSP - Payroll Batch Load" }
+	GSR - Reset Postruns { "GSR - Reset Postruns" }
+	GST - Consolidation Transfer { "GST - Consolidation Transfer" }
+	GSZ - Cashbook History Load { "GSZ - Cashbook History Load" }
+	GT - Tax processing Sub-system { "GT - Tax processing Sub-system" }
+	GT1 - Tax Code Maintenance { "GT1 - Tax Code Maintenance" }
+	GW - Management Report Writer { "GW - Management Report Writer" }
+	GW1 - Print Management Report { "GW1 - Print Management Report" }
+	GW2 - Report Definition Maintenance { "GW2 - Report Definition Maintenance" }
+	GW3 - Column Maintenance { "GW3 - Column Maintenance" }
+	GW4 - Line Maintenance { "GW4 - Line Maintenance" }
+	GW5 - Report Definition Print { "GW5 - Report Definition Print" }
+	GW6 - Header Group Maintenance { "GW6 - Header Group Maintenance" }
+	GWA - Table Reorganisation { "GWA - Table Reorganisation" }
+	GXX - Account Inquiry { "GXX - Account Inquiry" }
+	GZ - Configuration { "GZ - Configuration" }
+	GZ1 - Chart of Account Maintenance { "GZ1 - Chart of Account Maintenance" }
+	GZ2 - Journal Type Maintenance { "GZ2 - Journal Type Maintenance" }
+	GZ3 - Account Structure Maintenance { "GZ3 - Account Structure Maintenance" }
+	GZ4 - Account Segment Maintenance { "GZ4 - Account Segment Maintenance" }
+	GZ5 - Financial Reports Maintenance { "GZ5 - Financial Reports Maintenance" }
+	GZ6 - Bank Account Maintenance { "GZ6 - Bank Account Maintenance" }
+	GZ7 - Group Code Maintenance { "GZ7 - Group Code Maintenance" }
+	GZ8 - Currency Code and Rate Maintenance { "GZ8 - Currency Code and Rate Maintenance" }
+	GZ9 - Generate Chart of Account from template { "GZ9 - Generate Chart of Account from template" }
+	GZA - Year and Period Maintenance { "GZA - Year and Period Maintenance" }
+	GZB - Cash Book Install { "GZB - Cash Book Install" }
+	GZC - Company Information Maintenance { "GZC - Company Information Maintenance" }
+	GZD - Transaction Numbering Maintenance { "GZD - Transaction Numbering Maintenance" }
+	GZF - Account Group Maintenance { "GZF - Account Group Maintenance" }
+	GZI - Multi-Ledger Relationship Maintenance { "GZI - Multi-Ledger Relationship Maintenance" }
+	GZJ - Consolidated Report Code Maintenance { "GZJ - Consolidated Report Code Maintenance" }
+	GZK - Payroll Load Parameter Maintenance { "GZK - Payroll Load Parameter Maintenance" }
+	GZM - Segment Translation Maintenance { "GZM - Segment Translation Maintenance" }
+	GZO - Chart Translation Maintenance { "GZO - Chart Translation Maintenance" }
+	GZP - Parameter Maintenance { "GZP - Parameter Maintenance" }
+	GZT - Bank Type Maintenance { "GZT - Bank Type Maintenance" }
+	GZU - Bank Branch Maintenance { "GZU - Bank Branch Maintenance" }
+	Hourly Rate Maintenance { "Hourly Rate Maintenance" }
+	I1 - Products { "I1 - Products" }
+	I11 - Product Addition { "I11 - Product Addition" }
+	I12 - Product Inquiry { "I12 - Product Inquiry" }
+	I13 - Product Notes { "I13 - Product Notes" }
+	I15 - Product Fixed Details Maintenance { "I15 - Product Fixed Details Maintenance" }
+	I16 - Product Stock Status Maintenance { "I16 - Product Stock Status Maintenance" }
+	I17 - Product Purchase Details Maintenance { "I17 - Product Purchase Details Maintenance" }
+	I18 - Product Bar Code Validation { "I18 - Product Bar Code Validation" }
+	I1A - Product History Inquiry { "I1A - Product History Inquiry" }
+	I1B - Product Ledger Inquiry { "I1B - Product Ledger Inquiry" }
+	I1C - Product Movement Inquiry { "I1C - Product Movement Inquiry" }
+	I2 - Product Activity { "I2 - Product Activity" }
+	I21 - Stock Receipts { "I21 - Stock Receipts" }
+	I22 - Stock Issue { "I22 - Stock Issue" }
+	I27 - Stock Adjustment { "I27 - Stock Adjustment" }
+	I28 - Adjust Stock Cost { "I28 - Adjust Stock Cost" }
+	I2A - Stock Reclassification { "I2A - Stock Reclassification" }
+	I3 - Serialisation { "I3 - Serialisation" }
+	I32 - Change Serial Details { "I32 - Change Serial Details" }
+	I33 - Serial Inquiry { "I33 - Serial Inquiry" }
+	I3A - Serial by Product { "I3A - Serial by Product" }
+	I5 - Stock Transfer { "I5 - Stock Transfer" }
+	I50 - Stock Transfer Reports { "I50 - Stock Transfer Reports" }
+	I51 - Stock Transfer Entry { "I51 - Stock Transfer Entry" }
+	I55 - Stock Transfer Inquiry { "I55 - Stock Transfer Inquiry" }
+	I57 - Stock Transfer Edit { "I57 - Stock Transfer Edit" }
+	I58 - Stock Transfer Confirmation { "I58 - Stock Transfer Confirmation" }
+	I59 - Stock Transfer Receipt { "I59 - Stock Transfer Receipt" }
+	I5A - Stock Transfer Report { "I5A - Stock Transfer Report" }
+	I5B - Stock Transfer Entry - Type 0 { "I5B - Stock Transfer Entry - Type 0" }
+	I5C - Stock Transfer Entry - Type 1 { "I5B - Stock Transfer Entry - Type 0" }
+	I5D - Stock Transfer Entry - Type 2 { "I5B - Stock Transfer Entry - Type 0" }
+	I5T - Stock Transfer Confirmation Report { "I5B - Stock Transfer Entry - Type 0" }
+	IA - Product Reports { "IA - Product Reports" }
+	IA0 - Product Reports { "IA0 - Product Reports" }
+	IA1 - Product Detail List { "IA1 - Product Detail List" }
+	IA2 - Product by Inventory Category Report { "IA2 - Product by Inventory Category Report" }
+	IA3 - Product by Inventory Class Report { "IA3 - Product by Inventory Class Report" }
+	IA4 - Product Relationship Report { "IA4 - Product Relationship Report" }
+	IAA - Product History Print { "IAA - Product History Print" }
+	IAB - Product Ledger Print { "IAB - Product Ledger Print" }
+	IAD - Product Movement Ledger Print { "IAD - Product Movement Ledger Print" }
+	IAE - Product Master List { "IAE - Product Master List" }
+	IAH - Product Quantity History Print { "IAH - Product Quantity History Print" }
+	IAW - Product Ledger by Warehouse Print { "IAW - Product Ledger by Warehouse Print" }
+	IB - Warehouse Reports { "IB - Warehouse Reports" }
+	IB0 - Warehouse Reports { "IB0 - Warehouse Reports" }
+	IB1 - Product Status by Warehouse Report { "IB1 - Product Status by Warehouse Report" }
+	IB2 - Product Status Report { "IB2 - Product Status Report" }
+	IB3 - Stock Valuation Report { "IB3 - Stock Valuation Report" }
+	IB4 - Suggested Reorder Report { "IB4 - Suggested Reorder Report" }
+	IB5 - Critical Status Report { "IB5 - Critical Status Report" }
+	IB8 - Top 100 Products Report { "IB8 - Top 100 Products Report" }
+	IB9 - Bottom 100 Products Report { "IB9 - Bottom 100 Products Report" }
+	IBA - Top 100 Products by Sale or Volume { "IBA - Top 100 Products by Sale or Volume" }
+	IBC - Re-order Report { "IBC - Re-order Report" }
+	IBD - Stock Sales Extract Report { "IBD - Stock Sales Extract Report" }
+	IBS - Warehouse History Report { "IBS - Warehouse History Report" }
+	IBT - Coverage Trends Report { "IBT - Coverage Trends Report" }
+	IBT - Product Trends Report { "IBT - Product Trends Report" }
+	IC - Pricing Reports { "IC - Pricing Reports" }
+	IC0 - Pricing Reports { "IC0 - Pricing Reports" }
+	IC1 - Product Pricing by Product { "IC1 - Product Pricing by Product" }
+	IC2 - Product Pricing by Warehouse Report { "IC2 - Product Pricing by Warehouse Report" }
+	IC3 - Product Pricing by Category (FIFO) { "IC3 - Product Pricing by Category (FIFO)" }
+	IC5 - Product Pricing by Category { "IC5 - Product Pricing by Category" }
+	IC6 - Detailed Stock Valuation Report { "IC6 - Detailed Stock Valuation Report" }
+	IC7 - Summary Stock Valuation Report { "IC7 - Summary Stock Valuation Report" }
+	ICE - Price Execption Report by Product { "ICE - Price Execption Report by Product" }
+	ICF - Price Exception Report By Customer { "ICF - Price Exception Report By Customer" }
+	ICG - Price Gross Profit by Group Report { "ICG - Price Gross Profit by Group Report" }
+	ICH - Price List by Vendor { "ICH - Price List by Vendor" }
+	ICI - Gross Profit List by Vendor { "ICI - Gross Profit List by Vendor" }
+	ID - Stock Re-order Reports { "ID - Stock Re-order Reports" }
+	ID0 - Stock Re-order Reports { "ID0 - Stock Re-order Reports" }
+	ID1 - Replenish by Warehouse Report { "ID1 - Replenish by Warehouse Report" }
+	ID2 - Over-Stock by Warehouse Report { "ID2 - Over-Stock by Warehouse Report" }
+	ID3 - Replenish by Product Report { "ID3 - Replenish by Product Report" }
+	ID4 - Over-Stock by Product Report { "ID4 - Over-Stock by Product Report" }
+	ID6 - Generate Requisitions { "ID6 - Generate Requisitions" }
+	ID7 - Recommended Re-order Report { "ID7 - Recommended Re-order Report" }
+	ID8 - Stock Replenishment Report { "ID8 - Stock Replenishment Report" }
+	IE - Dangerous Goods { "IE - Dangerous Goods" }
+	IE1 - Dangerous Goods Class Maintenance { "IE1 - Dangerous Goods Class Maintenance" }
+	IE2 - Dangerous Goods Code Maintenance { "IE2 - Dangerous Goods Code Maintenance" }
+	IF - FIFO Costing { "IF - FIFO Costing" }
+	IF0 - FIFO Costing Reports { "IF0 - FIFO Costing Reports" }
+	IF1 - FIFO Cost Inquiry { "IF1 - FIFO Cost Inquiry" }
+	IF2 - FIFO Stock Valuation Inquiry { "IF2 - FIFO Stock Valuation Inquiry" }
+	IF3 - FIFO Cost Ledger Inquiry { "IF3 - FIFO Cost Ledger Inquiry" }
+	IF4 - Detailed FIFO Valuation Report { "IF4 - Detailed FIFO Valuation Report" }
+	IF5 - Summary FIFO Valuation Report { "IF5 - Summary FIFO Valuation Report" }
+	IF6 - Aged FIFO Valuation Report { "IF6 - Aged FIFO Valuation Report" }
+	IF7 - FIFO Cost Ledger Validation Report { "IF7 - FIFO Cost Ledger Validation Report" }
+	IF8 - Aged FIFO Write-down Valuation Report { "IF8 - Aged FIFO Write-down Valuation Report" }
+	IK - Product Kit/Blend Assembly { "IK - Product Kit/Blend Assembly" }
+	IK1 - Maintain Kit/Blend { "IK1 - Maintain Kit/Blend" }
+	IK2 - Compile Kit/Blend { "IK2 - Compile Kit/Blend" }
+	IN - Inventory { "IN - Inventaire" }
+	Inventory Margin Analysis { "Inventory Margin Analysis" }
+	Inventory Posting { "Inventory Posting" }
+	Inventory System Verify { "Inventory System Verify" }
+	Invisible Menus { "Invisible Menus" }
+	IR - Inventory Reports { "IR - Inventory Reports" }
+	IR1 - Period Activity Report { "IR1 - Period Activity Report" }
+	IR2 - Period Activity by Reference ID Report { "IR2 - Period Activity by Reference ID Report" }
+	IR3 - Serialised Products Report { "IR3 - Serialised Products Report" }
+	IR4 - Serialised Products by Serial Number Report { "IR4 - Serialised Products by Serial Number Report" }
+	IR5 - Purchasing Quotes Report { "IR5 - Purchasing Quotes Report" }
+	IR6 - Barcode label print { "IR6 - Barcode label print" }
+	IR7 - Return on Investment Report { "IR7 - Return on Investment Report" }
+	IR8 - Inventory Period Post Report { "IR8 - Inventory Period Post Report" }
+	IR9 - Inventory Snapshot Report { "IR9 - Inventory Snapshot Report" }
+	IRA - Product History Report { "IRA - Product History Report" }
+	IS - Special Processes { "IS - Special Processes" }
+	IS2 - Image Pricing and Costing { "IS2 - Image Pricing and Costing" }
+	IS3 - Automatic Price Change { "IS3 - Automatic Price Change" }
+	IS4 - Stock Turn Calculator { "IS4 - Stock Turn Calculator" }
+	IS7 - Product History Update { "IS7 - Product History Update" }
+	IS8 - Product Quotation Processing { "IS8 - Product Quotation Processing" }
+	ISA - Load Product Codes { "ISA - Load Product Codes" }
+	ISL - Product Label Generation { "ISL - Product Label Generation" }
+	ISU - Inventory Transaction Purge by Fiscal Year { "ISU - Inventory Transaction Purge by Fiscal Year" }
+	IU - Amendment Logs { "IU - Amendment Logs" }
+	IU1 - Product Amendment Inquiry { "IU1 - Product Amendment Inquiry" }
+	IU2 - Pricing Amendment Report { "IU2 - Pricing Amendment Report" }
+	IU3 - Costs Amendment Report { "IU3 - Costs Amendment Report" }
+	IZ - Configuration { "IZ - Configuration" }
+	IZ1 - Product Category Maintenance { "IZ1 - Product Category Maintenance" }
+	IZ2 - Inventory Class Maintenance { "IZ2 - Inventory Class Maintenance" }
+	IZ3 - Warehouse Maintenance { "IZ3 - Warehouse Maintenance" }
+	IZ4 - Alternate Group Maintenance { "IZ4 - Alternate Group Maintenance" }
+	IZ5 - Superseded Group Maintenance { "IZ5 - Superseded Group Maintenance" }
+	IZ6 - Companion Group Maintenance { "IZ6 - Companion Group Maintenance" }
+	IZ7 - Initial Stock Load { "IZ7 - Initial Stock Load" }
+	IZ8 - UOM Description Maintenance { "IZ8 - UOM Description Maintenance" }
+	IZ9 - Warehouse Image Maintenance { "IZ9 - Warehouse Image Maintenance" }
+	IZA - Adjustment Type Maintenance { "IZA - Adjustment Type Maintenance" }
+	IZB - Production Schedule Parameter Maintenance { "IZB - Production Schedule Parameter Maintenance" }
+	IZC - Production Schedule Maintenance { "IZC - Production Schedule Maintenance" }
+	IZD - Department Maintenance { "IZD - Department Maintenance" }
+	IZE - Product Surcharge Maintenance { "IZE - Product Surcharge Maintenance" }
+	IZF - Warehouse Group Maintenance { "IZF - Warehouse Group Maintenance" }
+	IZG - Product Group Maintenance { "IZG - Product Group Maintenance" }
+	IZI - Transaction Load Parameter Maintenance { "IZI - Transaction Load Parameter Maintenance" }
+	IZL - Product Label Format Maintenance { "IZL - Product Label Format Maintenance" }
+	IZM - Main Product Group Maintenance { "IZM - Main Product Group Maintenance" }
+	IZP - Inventory Parameter Maintenance { "IZP - Inventory Parameter Maintenance" }
+	IZR - Contract & Promotion Maintenance { "IZR - Contract & Promotion Maintenance" }
+	IZS - Product Segment Maintenance { "IZS - Product Segment Maintenance" }
+	IZU - Amendment Log Maintenance { "IZU - Amendment Log Maintenance" }
+	J1 - Job { "J1 - Job" }
+	J11 - Job Addition { "J11 - Job Addition" }
+	J12 - Job Inquiry { "J12 - Job Inquiry" }
+	J14 - Job Edit { "J14 - Job Edit" }
+	J15 - Job Ledger Scan { "J15 - Job Ledger Scan" }
+	J18 - Job Ledger Adjustment Scan { "J18 - Job Ledger Adjustment Scan" }
+	J19 - Job Master Addition { "J19 - Job Master Addition" }
+	J1A - Master Job Edit { "J1A - Master Job Edit" }
+	J2 - Voucher & Adjustment { "J2 - Voucher & Adjustment" }
+	J24 - Adjustment Entry { "J24 - Adjustment Entry" }
+	J25 - Adjustment Inquiry { "J25 - Adjustment Inquiry" }
+	J3 - Invoice & Receipt { "J3 - Invoice & Receipt" }
+	J31 - Invoice Jobs { "J31 - Invoice Jobs" }
+	J32 - Invoice Inquiry { "J32 - Invoice Inquiry" }
+	J33 - Invoice Print { "J33 - Invoice Print" }
+	J34 - Pre Invoice Report { "J34 - Pre Invoice Report" }
+	J36 - Invoice Edit { "J36 - Invoice Edit" }
+	J37 - Scan Resource Billing { "J37 - Scan Resource Billing" }
+	J4 - Status { "J4 - Status" }
+	J41 - Update Status { "J41 - Update Status" }
+	J43 - Reactivate Activity { "J43 - Reactivate Activity" }
+	J4A - Completed Activity Report { "J4A - Completed Activity Report" }
+	J5 - Activity { "J5 - Activity" }
+	J51 - Activity Addition { "J51 - Activity Addition" }
+	J52 - Activity Inquiry { "J52 - Activity Inquiry" }
+	J53 - Activity Image { "J53 - Activity Image" }
+	J54 - Activity Edit { "J54 - Activity Edit" }
+	J6 - Job Variation { "J6 - Job Variation" }
+	J61 - Variation Addition { "J61 - Variation Addition" }
+	J7 - Resource { "J7 - Resource" }
+	J71 - Resource Addition { "J71 - Resource Addition" }
+	J74 - Resource Edit { "J74 - Resource Edit" }
+	J75 - Resource Allocation { "J75 - Resource Allocation" }
+	J76 - Resource Allocation Inquiry { "J76 - Resource Allocation Inquiry" }
+	J8 - Timesheet { "J8 - Timesheet" }
+	J81 - Timesheet Entry { "J81 - Timesheet Entry" }
+	J82 - Timesheet Edit { "J82 - Timesheet Edit" }
+	J83 - Person Entry { "J83 - Person Entry" }
+	J84 - Timesheet Scan { "J84 - Timesheet Scan" }
+	J9 - Inventory Issue { "J9 - Inventory Issue" }
+	J91 - Product Issue { "J91 - Product Issue" }
+	J92 - Issue Inquiry { "J92 - Issue Inquiry" }
+	JC - Credits { "JC - Credits" }
+	JC1 - Job Credits { "JC1 - Job Credits" }
+	JM - Job Management { "JM - Gestion des travaux" }
+	Job Accrual Report { "Job Accrual Report" }
+	Job Cost Materials/Labour { "Job Cost Materials/Labour" }
+	Job Cost Transaction Report { "Job Cost Transaction Report" }
+	Job Cost Transfer { "Job Cost Transfer" }
+	Job Cost Worksheet { "Job Cost Worksheet" }
+	Job Invoice Print & Close { "Job Invoice Print & Close" }
+	Job Report { "Job Report" }
+	Job Revenue and Cost Analysis { "Job Revenue and Cost Analysis" }
+	Job Type Report { "Job Type Report" }
+	JR - Report { "JR - Report" }
+	JR1 - Activity Transactions Report { "JR1 - Activity Transactions Report" }
+	JR2 - Summary of Costs Report { "JR2 - Summary of Costs Report" }
+	JR3 - Available Funds Report { "JR3 - Available Funds Report" }
+	JR4 - Resources Report { "JR4 - Resources Report" }
+	JR6 - Timesheets by Person Report { "JR6 - Timesheets by Person Report" }
+	JR7 - Timesheets by Job Report { "JR7 - Timesheets by Job Report" }
+	JR9 - Resource Allocation Report { "JR9 - Resource Allocation Report" }
+	JRA - Job Summary Report { "JRA - Job Summary Report" }
+	JRC - Activity by Sort Code Report { "JRC - Activity by Sort Code Report" }
+	JRL - Job Listing Report { "JRL - Job Listing Report" }
+	JS - Special Processes { "JS - Special Processes" }
+	JS1 - Post Period Activity { "JS1 - Post Period Activity" }
+	JZ - Configuration { "JZ - Configuration" }
+	JZ4 - Job Types Maintenance { "JZ4 - Job Types Maintenance" }
+	JZ5 - Responsibility Codes Maintenance { "JZ5 - Responsibility Codes Maintenance" }
+	JZ6 - Job Unit Codes Maintenance { "JZ6 - Job Unit Codes Maintenance" }
+	JZ7 - Departments Maintenance { "JZ7 - Departments Maintenance" }
+	JZ8 - Task Periods Maintenance { "JZ8 - Task Periods Maintenance" }
+	JZP - Job Management Parameters Maintenance { "JZP - Job Management Parameters Maintenance" }
+	K1 - Subscription Maintenance { "K1 - Subscription Maintenance" }
+	K11 - Subscription Entry { "K11 - Subscription Entry" }
+	K12 - Subscription { "K12 - Subscription" }
+	K15 - Corporate Subscriptions { "K15 - Corporate Subscriptions" }
+	K4 - Credit { "K4 - Credit" }
+	K41 - Credit Entry { "K41 - Credit Entry" }
+	K47 - Credit Edit { "K47 - Credit Edit" }
+	KA - Automatic Renewal { "KA - Automatic Renewal" }
+	KA1 - Renewals Entry { "KA1 - Renewals Entry" }
+	KL - Label { "KL - Label" }
+	KL1 - Label Print { "KL1 - Label Print" }
+	KL2 - Invoice Generation { "KL2 - Invoice Generation" }
+	KR - Report { "KR - Report" }
+	KR1 - Customer Subscription Listing Report { "KR1 - Customer Subscription Listing Report" }
+	KR2 - Subscription Audit Details Report { "KR2 - Subscription Audit Details Report" }
+	KZ - Configuration { "KZ - Configuration" }
+	KZ1 - Subscription Type Maintenance { "KZ1 - Subscription Type Maintenance" }
+	KZ2 - Subscription Product Maintenance { "KZ2 - Subscription Product Maintenance" }
+	KZP - Parameter Maintenance { "KZP - Parameter Maintenance" }
+	L1 - Shipment Maintenance { "L1 - Shipment Maintenance" }
+	L11 - Shipment Entry { "L11 - Shipment Entry" }
+	L12 - Shipment Inquiry { "L12 - Shipment Inquiry" }
+	L13 - Shipment Detail Scan { "L13 - Shipment Detail Scan" }
+	L14 - Shipment Edit { "L14 - Shipment Edit" }
+	L15 - Potential to Finalise Scan { "L15 - Potential to Finalise Scan" }
+	L16 - Shipment Voucher Scan { "L16 - Shipment Voucher Scan" }
+	L17 - Shipment Debit Scan { "L17 - Shipment Debit Scan" }
+	L4 - Goods Receipt { "L4 - Goods Receipt" }
+	L41 - Goods Receipt by Quantity { "L41 - Goods Receipt by Quantity" }
+	L42 - Goods Receipt by Value { "L42 - Goods Receipt by Value" }
+	L6 - Credit Return { "L6 - Credit Return" }
+	L61 - Enter Credit Shipment { "L61 - Enter Credit Shipment" }
+	L62 - Credit Shipment Inquiry { "L62 - Credit Shipment Inquiry" }
+	L64 - Edit Credit Shipment { "L64 - Edit Credit Shipment" }
+	L65 - Potential to Finalise Credit Scan { "L65 - Potential to Finalise Credit Scan" }
+	L68 - Credit Receipt by Quantity { "L68 - Credit Receipt by Quantity" }
+	L69 - Credit Receipt by Value { "L69 - Credit Receipt by Value" }
+	LA - Report { "LA - Report" }
+	LA1 - Shipment Detail List { "LA1 - Shipment Detail List" }
+	LA2 - Goods Receipt Binning List { "LA2 - Goods Receipt Binning List" }
+	LA3 - Detailed Receipt Report { "LA3 - Detailed Receipt Report" }
+	LA4 - Shipments by Voucher Report { "LA4 - Shipments by Voucher Report" }
+	LA5 - Credit Shipment Detail Report { "LA5 - Credit Shipment Detail Report" }
+	LA6 - Shipment Summary Report { "LA6 - Shipment Summary Report" }
+	LA7 - Unpaid Vouchers by Shipment Report { "LA7 - Unpaid Vouchers by Shipment Report" }
+	LC - Shipment/Landed Costing { "LC - Expédition / coût au débarquement" }
+	LogOut { "Se déconnecter" }
+	LS - Special Processes { "LS - Special Processes" }
+	LS1 - Finalise Shipments { "LS1 - Finalise Shipments" }
+	LS2 - Finalise Shipment Credits { "LS2 - Finalise Shipment Credits" }
+	LZ - Configuration { "LZ - Configuration" }
+	LZ1 - Tariff Code Maintenance { "LZ1 - Tariff Code Maintenance" }
+	LZ2 - Status Code Maintenance { "LZ2 - Status Code Maintenance" }
+	LZ3 - Shipment Type Maintenance { "LZ3 - Shipment Type Maintenance" }
+	LZ4 - Cost Type Code Maintenance { "LZ4 - Cost Type Code Maintenance" }
+	LZP - Shipment/Landed Costing Parameter Maintenance { "LZP - Shipment/Landed Costing Parameter Maintenance" }
+	Master Activity Edit { "Master Activity Edit" }
+	Memo Facility { "Memo Facility" }
+	Missing/Incomplete Timesheets { "Missing/Incomplete Timesheets" }
+	N1 - Requisition { "N1 - Requisition" }
+	N11 - Requisition EntryRequisition Entry { "N11 - Requisition EntryRequisition Entry" }
+	N12 - Requisition Inquiry { "N12 - Requisition Inquiry" }
+	N14 - Requisition EditRequisition Edit { "N14 - Requisition EditRequisition Edit" }
+	N15 - Requisition Edit by Person { "N15 - Requisition Edit by Person" }
+	N2 - Deliveries { "N2 - Deliveries" }
+	N21 - Print Picking Slip { "N21 - Print Picking Slip" }
+	N22 - Issue Confirmation { "N22 - Issue Confirmation" }
+	N3 - Order Allocation { "N3 - Order Allocation" }
+	N31 - Allocate Requisitions { "N31 - Allocate Requisitions" }
+	N32 - Allocation Report { "N32 - Allocation Report" }
+	N33 - Alter Allocation { "N33 - Alter Allocation" }
+	N34 - Release Requisitions { "N34 - Release Requisitions" }
+	N4 - Purchase Order { "N4 - Purchase Order" }
+	N41 - Requisition Approval { "N41 - Requisition Approval" }
+	N42 - Purchase Order Authorisation { "N42 - Purchase Order Authorisation" }
+	N43 - Requisition Approval by Person { "N43 - Requisition Approval by Person" }
+	N4R - Pending Purchase Order Report { "N4R - Pending Purchase Order Report" }
+	New Job/Activity Report { "New Job/Activity Report" }
+	Notes Transfer to Customer { "Notes Transfer to Customer" }
+	NP - Person Information { "NP - Person Information" }
+	NP1 - Person Maintenance { "NP1 - Person Maintenance" }
+	NP2 - Person Inquiry { "NP2 - Person Inquiry" }
+	NPR - Person Report { "NPR - Person Report" }
+	NR - Reports { "NR - Reports" }
+	NR1 - Requisition Detail Report { "NR1 - Requisition Detail Report" }
+	NR2 - Requisition Line Detail Report { "NR2 - Requisition Line Detail Report" }
+	NR3 - Product History Report { "NR3 - Product History Report" }
+	NR4 - Back Order Detail Report I { "NR4 - Back Order Detail Report I" }
+	NR5 - Back Order Detail Report II { "NR5 - Back Order Detail Report II" }
+	NS - Special Processes { "NS - Special Processes" }
+	NS1 - Purchase Order Print { "NS1 - Purchase Order Print" }
+	NZ - Configuration { "NZ - Configuration" }
+	NZP - Internal Requisition Parameter Maintenance { "NZP - Internal Requisition Parameter Maintenance" }
+	Order Report by Sales { "Order Report by Sales" }
+	P1 - Vendor (Supplier) { "P1 - Vendeur (Fournisseurs)" }
+	P11 - Vendor Addition { "P11 - Ajout de fournisseur" }
+	P12 - Vendor Inquiry { "P12 - Demande de vendeur" }
+	P13 - Vendor Notes Maintenance { "P13 - Maintenance des notes du fournisseur" }
+	P15 - Vendor Address Maintenance { "P15 - Maintenance de l'adresse du fournisseur" }
+	P16 - Vendor Credit Status Maintenance { "P16 - Gestion du statut du crédit fournisseur" }
+	P1A - Vendor History Scan { "P1A - Analyse de l'historique des fournisseurs" }
+	P1B - Vendor Ledger Scan { "P1B - Analyse du grand livre des fournisseurs" }
+	P1C - Audit Trail Scan { "P1C - Analyse du journal d'audit" }
+	P2 - Voucher (Supplier Invoice) { "P2 - Bon (Facture fournisseur)" }
+	P21 - Voucher Entry { "P21 - Entrée du bon" }
+	P22 - Voucher & Payment Entry { "P22 - Bon et entrée de paiement" }
+	P23 - Approve Voucher Payment { "P23 - Approuver le paiement des bons" }
+	P24 - Batch Voucher Entry (04) { "P24 - Entrée de bon de lot (04)" }
+	P25 - Voucher Inquiry { "P25 - Demande de bon" }
+	P26 - Voucher Scan { "P26 - Balayage des bons" }
+	P26P - Voucher Payments { "P26P - Paiements de bons" }
+	P27 - Voucher Edit { "P27 - Modifier le bon" }
+	P28 - Vendor Invoices Scan { "P28 - Analyse des factures fournisseur" }
+	P29 - Voucher Distribution { "P29 - Distribution de bons" }
+	P29E - Voucher Edit Distrib. { "P29E - Distribution de modification des bons" }
+	P2B - Voucher Hold Change { "P2B - Changement de retenue de bon" }
+	P2D - Voucher Transfer { "P2D - Transfert de bon" }
+	P2E - Outstanding Vouchers Scan { "P2E - Numérisation des bons en circulation" }
+	P3 - Payment Cycle { "P3 - Cycle de paiement" }
+	P31 - Payment Calculator { "P31 - Payment Calculator" }
+	P32 - Payment Register Report { "P32 - Payment Register Report" }
+	P33 - Payment Adjustment { "P33 - Payment Adjustment" }
+	P34 - Generate Cheque or EFT Payments { "P34 - Generate Cheque or EFT Payments" }
+	P34k - Generate Cheque or EFT Payments { "P34k - Generate Cheque or EFT Payments" }
+	P34l - Generate Cheque or EFT Payments { "P34l - Generate Cheque or EFT Payments" }
+	P3A - Automatic Payment Generation { "P3A - Automatic Payment Generation" }
+	P3C - Payment Run Cancel { "P3C - Payment Run Cancel" }
+	P4 - Manual Cheques { "P4 - Vérifications manuelles" }
+	P41 - Cheque Enter & Apply { "P41 - Cheque Enter & Apply" }
+	P42 - Cheque Entry { "P42 - Cheque Entry" }
+	P43 - Cheque & Voucher Entry { "P43 - Cheque & Voucher Entry" }
+	P44 - Cheque Cancel { "P44 - Cheque Cancel" }
+	P45 - Payment Inquiry { "P45 - Payment Inquiry" }
+	P46 - Cheque Scan { "P46 - Cheque Scan" }
+	P47 - Cheque Edit { "P47 - Cheque Edit" }
+	P48 - Cheques by Number Scan { "P48 - Cheques by Number Scan" }
+	P49 - Undo Cheque Application { "P49 - Undo Cheque Application" }
+	P4A - Cheque Applications Scan { "P4A - Cheque Applications Scan" }
+	P4E - EFT Payment Scan { "P4E - EFT Payment Scan" }
+	P6 - Debit { "P6 - Débit" }
+	P61 - Debit Enter & Apply { "P61 - Debit Enter & Apply" }
+	P62 - Debit Enter { "P62 - Debit Enter" }
+	P64 - Batch Debit Entry { "P64 - Batch Debit Entry" }
+	P65 - Debit Inquiry { "P65 - Debit Inquiry" }
+	P66 - Debit Scan { "P66 - Debit Scan" }
+	P67 - Debit Edit { "P67 - Debit Edit" }
+	P68 - Debit Distribution { "P68 - Debit Distribution" }
+	P69 - Debit Apply { "P69 - Debit Apply" }
+	P6A - Undo Debit Application { "P6A - Undo Debit Application" }
+	P6B - Undo Debit Application { "P6B - Undo Debit Application" }
+	P7 - Recurring Expense { "P7 - Dépenses récurrentes" }
+	P71 - Recurring Expense Maintenance { "P71 - Recurring Expense Maintenance" }
+	P72 - Recurring Expense Processing { "P72 - Recurring Expense Processing" }
+	P73 - Recurring Expense Report { "P73 - Recurring Expense Report" }
+	P9 - Contractor { "P9 - Prestataire" }
+	P91 - Contractor Information Scan { "P91 - Contractor Information Scan" }
+	P93 - Contractor Details Report { "P93 - Contractor Details Report" }
+	P94 - Contractor Variations Report { "P94 - Contractor Variations Report" }
+	P95 - Tax Refund Entry { "P95 - Tax Refund Entry" }
+	P96 - Tax Summary Report { "P96 - Tax Summary Report" }
+	PA - Vendor Reports { "PA - Rapports des fournisseurs" }
+	PA1 - Vendor Report { "PA1 - Vendor Report" }
+	PA2 - Vendor Phone Number Report { "PA2 - Vendor Phone Number Report" }
+	PA3 - Vendor Notes Report { "PA3 - Vendor Notes Report" }
+	PA5 - Credit Status Report { "PA5 - Credit Status Report" }
+	PA6 - Credit Aging Report { "PA6 - Credit Aging Report" }
+	PA7 - Vendor Histories { "PA7 - Vendor Histories" }
+	PA8 - Vendor Ledger Report { "PA8 - Vendor Ledger Report" }
+	PA9 - Vendor Types Report { "PA9 - Vendor Types Report" }
+	PAA - Audit Report { "PAA - Audit Report" }
+	PAB - Vendor Open Item Report { "PAB - Vendor Open Item Report" }
+	PB - Voucher Reports { "PB - Rapports de bons" }
+	PB0 - Voucher Reports { "PB0 - Voucher Reports" }
+	PB1 - Voucher by Vendor Report { "PB1 - Voucher by Vendor Report" }
+	PB2 - Voucher by Number Report { "PB2 - Voucher by Number Report" }
+	PB3 - Voucher by Period Report { "PB3 - Voucher by Period Report" }
+	PB4 - Voucher by Vendor Invoice Report { "PB4 - Voucher by Vendor Invoice Report" }
+	PB5 - Voucher by Purchase Order Report { "PB5 - Voucher by Purchase Order Report" }
+	PB6 - Unapproved Vouchers by Vendor Report { "PB6 - Unapproved Vouchers by Vendor Report" }
+	PB7 - Approved Vouchers by Number Report { "PB7 - Approved Vouchers by Number Report" }
+	PB8 - Unapproved Vouchers By Vendor { "PB8 - Unapproved Vouchers By Vendor" }
+	PB9 - Vouchers By Period { "PB9 - Vouchers By Period" }
+	PBA - Voucher Detail Report { "PBA - Voucher Detail Report" }
+	PBC - Voucher Audit Trail Report { "PBC - Voucher Audit Trail Report" }
+	PBD - Duplicate Voucher Exception Report { "PBD - Duplicate Voucher Exception Report" }
+	PBE - Voucher Approval Report { "PBE - Voucher Approval Report" }
+	PC - Cheque & Debit Reports { "PC - Rapports de chèque et de débit" }
+	PC1 - Cheque Detail Report { "PC1 - Cheque Detail Report" }
+	PC2 - Cheque by Number Report { "PC2 - Cheque by Number Report" }
+	PC3 - Cheque by Period Report { "PC3 - Cheque by Period Report" }
+	PC4 - Cheque by Cancellation Report { "PC4 - Cheque by Cancellation Report" }
+	PC5 - Cheque Application Report { "PC5 - Cheque Application Report" }
+	PC7 - Treasury Report { "PC7 - Treasury Report" }
+	PC9 - EFT Payments { "PC9 - EFT Payments" }
+	PCA - Debits Report { "PCA - Debits Report" }
+	PCB - Debits by Number Report { "PCB - Debits by Number Report" }
+	PCC - Debits by Period Report { "PCC - Debits by Period Report" }
+	PCD - By Batch { "PCD - By Batch" }
+	PCE - Debit Detail Report { "PCE - Debit Detail Report" }
+	PCF - Remittance Advices { "PCF - Remittance Advices" }
+	PCG - Intersegment Payments { "PCG - Intersegment Payments" }
+	PCH - Missing Cheque Numbers Report { "PCH - Missing Cheque Numbers Report" }
+	PCJ - Debit Applications Report { "PCJ - Debit Applications Report" }
+	PCK - Prescribed Payment Tax Report { "PCK - Prescribed Payment Tax Report" }
+	PCL - Cleansing Report { "PCL - Cleansing Report" }
+	PCR - Remittance Statement Print { "PCR - Remittance Statement Print" }
+	PP - Period End { "PP - Fin de période" }
+	PP1 - Post Activity { "PP1 - Post Activity" }
+	PPT Report { "PPT Report" }
+	PR - Accounts Payable Reports { "PR - Rapports des comptes fournisseurs" }
+	PR1 - Detailed Aging Report { "PR1 - Detailed Aging Report" }
+	PR2 - Activity Summary Report { "PR2 - Activity Summary Report" }
+	PR3 - Audit Trail by Period Print { "PR3 - Audit Trail by Period Print" }
+	PR5 - Cash Forecast Report { "PR5 - Cash Forecast Report" }
+	PR6 - Accounts Payable Post Report { "PR6 - Accounts Payable Post Report" }
+	PR7 - Payment Register Report { "PR7 - Payment Register Report" }
+	PR8 - Summary Aging Report { "PR8 - Summary Aging Report" }
+	PR9 - Accounts Payable Snapshot Report { "PR9 - Accounts Payable Snapshot Report" }
+	PRA - Audit Trail by Date Report { "PRA - Audit Trail by Date Report" }
+	PRB - Batch Posting Report { "PRB - Batch Posting Report" }
+	PRC - Period Activity Report { "PRC - Period Activity Report" }
+	PRD - Vendor Aging by Type Report { "PRD - Vendor Aging by Type Report" }
+	PRE - Creditor Funds Employed Report { "PRE - Creditor Funds Employed Report" }
+	Pre Bill Report { "Pre Bill Report" }
+	Pre Invoice Summary Report { "Pre Invoice Summary Report" }
+	Print Stock-take Count Sheets { "Print Stock-take Count Sheets" }
+	PRJ - Purchase Journal Report { "PRJ - Purchase Journal Report" }
+	Product Bin Loc. Maintenance { "Product Bin Loc. Maintenance" }
+	Product Data Load { "Product Data Load" }
+	Product Master List { "Product Master List" }
+	PRT - Summary Aging by Vendor Type Report { "PRT - Summary Aging by Vendor Type Report" }
+	PS - Special Processes { "PS - Processus spéciaux" }
+	PS1 - Account Aging { "PS1 - Account Aging" }
+	PS4 - Mailing Labels Report { "PS4 - Mailing Labels Report" }
+	PSA - WHICS-OPEN AP Interface Load { "PSA - WHICS-OPEN AP Interface Load" }
+	PSK - Vendor Details Update { "PSK - Vendor Details Update" }
+	PSL_J - Vendor Load { "PSL_J - Vendor Load" }
+	PSU_J External AP Voucher Load { "PSU_J External AP Voucher Load" }
+	PSV - External Voucher File Load { "PSV - External Voucher File Load" }
+	PSW - WHICS-OPEN AP Interface File Load { "PSW - WHICS-OPEN AP Interface File Load" }
+	PU - Purchasing { "PU - Achat" }
+	PZ - Configuration { "PZ - Configuration" }
+	PZ1 - Tax Code Maintenance { "PZ1 - Tax Code Maintenance" }
+	PZ3 - Hold Pay Codes Maintenance { "PZ3 - Hold Pay Codes Maintenance" }
+	PZ5 - Vendor Types Maintenance { "PZ5 - Vendor Types Maintenance" }
+	PZI - Transaction Load Parameter Maintenance { "PZI - Transaction Load Parameter Maintenance" }
+	PZP - Accounts Payable Parameter Maintenance { "PZP - Accounts Payable Parameter Maintenance" }
+	PZU - Amendment Log Maintenance { "PZU - Amendment Log Maintenance" }
+	Q1 - Quotation Preparation { "Q1 - Quotation Preparation" }
+	Q11 - Quotation Entry/Edit { "Q11 - Quotation Entry/Edit" }
+	Q12 - Quotation Inquiry { "Q12 - Quotation Inquiry" }
+	Q13 - Quotation Scan { "Q13 - Quotation Scan" }
+	Q15 - Quotation Scan By Date { "Q15 - Quotation Scan By Date" }
+	Q16 - Quotation Scan By Valid Date { "Q16 - Quotation Scan By Valid Date" }
+	Q18 - Quotation Acceptance { "Q18 - Quotation Acceptance" }
+	QA - Quotation Report { "QA - Quotation Report" }
+	QA1 - By Customer { "QA1 - By Customer" }
+	QA5 - By Detail { "QA5 - By Detail" }
+	QA8a - Quotation Print (Std format) { "QA8a - Quotation Print (Std format)" }
+	QA8b - Quotation Print (CC  format) { "QA8b - Quotation Print (CC  format)" }
+	QE - Sales Quotation { "QE - Devis de vente" }
+	QZ - Configuration { "QZ - Configuration" }
+	QZP - QE Parameters { "QZP - QE Parameters" }
+	R1 - Purchase Order { "R1 - Purchase Order" }
+	R11 - Purchase Order Entry { "R11 - Purchase Order Entry" }
+	R12 - Purchase Order Confirmation { "R12 - Purchase Order Confirmation" }
+	R13 - Purchase Order Inquiry { "R13 - Purchase Order Inquiry" }
+	R14 - Purchase Order Header Edit { "R14 - Purchase Order Header Edit" }
+	R15 - Purchase Order Edit { "R15 - Purchase Order Edit" }
+	R16 - Purchase Order Scan { "R16 - Purchase Order Scan" }
+	R17 - Purchase Order Complete { "R17 - Purchase Order Complete" }
+	R19 - Purchase Order Audit Inquiry { "R19 - Purchase Order Audit Inquiry" }
+	R2 - Goods Receipt { "R2 - Goods Receipt" }
+	R21 - Goods Receipt { "R21 - Goods Receipt" }
+	R22 - Overdue Orders Scan { "R22 - Overdue Orders Scan" }
+	R23 - Receipts Scan by Job { "R23 - Receipts Scan by Job" }
+	R24 - Receipts Scan by Account { "R24 - Receipts Scan by Account" }
+	R25 - Receipts Scan by Product { "R25 - Receipts Scan by Product" }
+	R27 - Goods Receipt Inquiry { "R27 - Goods Receipt Inquiry" }
+	R3 - Commitments { "R3 - Commitments" }
+	R31 - Outstanding Orders Scan by Account { "R31 - Outstanding Orders Scan by Account" }
+	R32 - Outstanding Orders Scan by Job { "R32 - Outstanding Orders Scan by Job" }
+	R33 - Outstanding Commitments by Product { "R33 - Outstanding Commitments by Product" }
+	RA - Order Reports { "RA - Order Reports" }
+	RA1 - Purchase Order by Vendor Report { "RA1 - Purchase Order by Vendor Report" }
+	RA2 - Purchase Order by Number Report { "RA2 - Purchase Order by Number Report" }
+	RA3 - Purchase Order by Delivery Date Report { "RA3 - Purchase Order by Delivery Date Report" }
+	RA4 - Voucher Detail Report { "RA4 - Voucher Detail Report" }
+	RA5 - Purchase Order Detail Report { "RA5 - Purchase Order Detail Report" }
+	RA6 - Purchase Order by Product Report { "RA6 - Purchase Order by Product Report" }
+	RA7 - Purchase Order by Job Report { "RA7 - Purchase Order by Job Report" }
+	RA8 - Purchase Order by Currency Code Report { "RA8 - Purchase Order by Currency Code Report" }
+	RA9 - Purchase Order by Outstanding Qty Report { "RA9 - Purchase Order by Outstanding Qty Report" }
+	RAA - Goods Receipt by Date Report { "RAA - Goods Receipt by Date Report" }
+	RAB - Goods Receipt by Product Report { "RAB - Goods Receipt by Product Report" }
+	RAC - Goods Receipt by Voucher Details Report { "RAC - Goods Receipt by Voucher Details Report" }
+	RAE - Purchase Order Expedite Report { "RAE - Purchase Order Expedite Report" }
+	RAF - Purchase Order Detail 2 { "RAF - Purchase Order Detail 2" }
+	RB - Outstanding Reports { "RB - Outstanding Reports" }
+	RB1 - Outstanding Orders by Number Report { "RB1 - Outstanding Orders by Number Report" }
+	RB2 - Outstanding Orders by Account Report { "RB2 - Outstanding Orders by Account Report" }
+	RB3 - Outstanding Orders by Job Report { "RB3 - Outstanding Orders by Job Report" }
+	RB4 - Outstanding Orders by Product Report { "RB4 - Outstanding Orders by Product Report" }
+	RB5 - Commitment Orders by Number Report { "RB5 - Commitment Orders by Number Report" }
+	RB6 - Commitment Orders by Account Report { "RB6 - Commitment Orders by Account Report" }
+	RB7 - Outstanding PO's { "RB7 - Outstanding PO's" }
+	RB8 - Commitment Orders by Product Report { "RB8 - Commitment Orders by Product Report" }
+	RB9 - Outstanding GL Commitments Report { "RB9 - Outstanding GL Commitments Report" }
+	RBA - Order Detail by Account Report { "RBA - Order Detail by Account Report" }
+	RE - Internal Requisition { "RE - Demande interne" }
+	Re-order Report { "Re-order Report" }
+	Recommended Re-order Report { "Recommended Re-order Report" }
+	Remittance Print { "Remittance Print" }
+	Resource Allocation Load { "Resource Allocation Load" }
+	Resource Budget Inquiry { "Resource Budget Inquiry" }
+	Resource Groups { "Resource Groups" }
+	RS - Special Processes { "RS - Special Processes" }
+	RS1 - Print Purchase Orders { "RS1 - Print Purchase Orders" }
+	RS2 - Post Period Activity { "RS2 - Post Period Activity" }
+	RZ - Configuration { "RZ - Configuration" }
+	RZ3 - Purchase Order Type Maintenance { "RZ3 - Purchase Order Type Maintenance" }
+	RZ4 - Purchasing Group Maintenance { "RZ4 - Purchasing Group Maintenance" }
+	RZ5 - Maintain Descriptions { "RZ5 - Maintain Descriptions" }
+	RZP - Purchasing Parameter Maintenance { "RZP - Purchasing Parameter Maintenance" }
+	Special Hidden Processes { "Processus cachés spéciaux" }
+	Special Prints Test { "Special Prints Test" }
+	Special Processes { "Special Processes" }
+	SS - Subscription { "SS - Abonnement" }
+	Stock Loss Unload { "Stock Loss Unload" }
+	Stock Replenishment Report { "Stock Replenishment Report" }
+	Stock Transfer Confirmation -2 { "Stock Transfer Confirmation -2" }
+	Stock Transfer Entry - Type 0 { "Stock Transfer Entry - Type 0" }
+	Stock Transfer Entry - Type 1 { "Stock Transfer Entry - Type 1" }
+	Stock Transfer Entry - Type 2 { "Stock Transfer Entry - Type 2" }
+	Stock-take Adjustment Report { "Stock-take Adjustment Report" }
+	Stock-take Detail Report { "Stock-take Detail Report" }
+	Stock-take Post { "Stock-take Post" }
+	Stock-take Reversal Post { "Stock-take Reversal Post" }
+	Stocktake { "Stocktake" }
+	Summary Aging (Neg.Bal.) { "Summary Aging (Neg.Bal.)" }
+	Summary Aging (Pos.Bal.) { "Summary Aging (Pos.Bal.)" }
+	Summary FIFO Valuation Report { "Summary FIFO Valuation Report" }
+	Supplier Price Load - Alstom { "Supplier Price Load - Alstom" }
+	System Info { "Information système" }
+	System Notes Maintenance { "System Notes Maintenance" }
+	System Notes Report { "System Notes Report" }
+	System Notes Sub-system { "System Notes Sub-system" }
+	Tentative Invoice Adjustment { "Tentative Invoice Adjustment" }
+	Tentative Invoice Report { "Tentative Invoice Report" }
+	Timesheet Hours by Department { "Timesheet Hours by Department" }
+	Top 100 Prod's by Sale or Vol { "Top 100 Prod's by Sale or Vol" }
+	Transfer Confirmation Report { "Transfer Confirmation Report" }
+	U1 - Administration { "U1 - Administration" }
+	U11 - Change Company { "U11 - Change Company" }
+	U12 - User Maintenance { "U12 - User Maintenance" }
+	U14 - Error Log Print { "U14 - Error Log Print" }
+	U17 - Memo Facility { "U17 - Memo Facility" }
+	U18 - Database SQL Interface { "U18 - Database SQL Interface" }
+	U19 - Database Schema Comparison { "U19 - Database Schema Comparison" }
+	U1A - System Locks Maintenance { "U1A - System Locks Maintenance" }
+	U1D - User Reference Maintenance { "U1D - User Reference Maintenance" }
+	U1L - Language Maintenance { "U1L - Language Maintenance" }
+	U1M - Country Maintenance { "U1M - Country Maintenance" }
+	U1T - Tailoring Options Maintenance { "U1T - Tailoring Options Maintenance" }
+	U1W - Messages & Menu Options Update { "U1W - Messages & Menu Options Update" }
+	U2 - Menu Control { "U2 - Menu Control" }
+	U21 - Menu Maintenance { "U21 - Menu Maintenance" }
+	U2A - Menu Report { "U2A - Menu Report" }
+	U2B - User Security Report { "U2B - User Security Report" }
+	U3 - Message Library { "U3 - Message Library" }
+	U31 - Message Library Maintenance { "U31 - Message Library Maintenance" }
+	U32 - Message Library Report { "U32 - Message Library Report" }
+	U5 - Street and Suburb { "U5 - Street and Suburb" }
+	U51 - Suburb Maintenance { "U51 - Suburb Maintenance" }
+	U52 - Street Maintenance { "U52 - Street Maintenance" }
+	U55 - Street and Suburb Load { "U55 - Street and Suburb Load" }
+	U56 - Quadrant File Load and Maintenance { "U56 - Quadrant File Load and Maintenance" }
+	U57 - Suburb Distances Load { "U57 - Suburb Distances Load" }
+	U6 - Statistic Interval { "U6 - Statistic Interval" }
+	U61 - Interval Type Maintenance { "U61 - Interval Type Maintenance" }
+	U62 - Interval Maintenance { "U62 - Interval Maintenance" }
+	U63 - Statistic Parameters Maintenance { "U63 - Statistic Parameters Maintenance" }
+	UN - System Notes Sub-system { "UN - System Notes Sub-system" }
+	UN1 - System Notes Maintenance { "UN1 - System Notes Maintenance" }
+	UN2 - System Notes Report { "UN2 - System Notes Report" }
+	UN3 - Notes Transfer to Customer { "UN3 - Notes Transfer to Customer" }
+	Unapplied Credits { "Unapplied Credits" }
+	Unapproved Vocuhers by Vendor { "Unapproved Vocuhers by Vendor" }
+	UOM Descriptions { "UOM Descriptions" }
+	Update Budgets By Resource { "Update Budgets By Resource" }
+	Update Vendor Lead Times { "Update Vendor Lead Times" }
+	UR - Report Management (RMS) { "UR - Report Management (RMS)" }
+	UR1 - Report Parameter Maintenance { "UR1 - Report Parameter Maintenance" }
+	URP - Print Device Maintenance { "URP - Print Device Maintenance" }
+	URS - Report File Management { "URS - Report File Management" }
+	UT - Utilities { "UT - Utilitaires" }
+	UT1 - Schema Fix Manager { "UT1 - Schema Fix Manager" }
+	UT2 - Tables Documentation Manager { "UT2 - Tables Documentation Manager" }
+	UT3 - State Table Manager { "UT3 - State Table Manager" }
+	UT4 - Form Widgets Translate { "UT4 - Form Widgets Translate" }
+	Variation Inquiry { "Variation Inquiry" }
+	Vendor Price List Comparison { "Vendor Price List Comparison" }
+	Voucher Audit Trail { "Voucher Audit Trail" }
+	Voucher Edit Distrib. { "Voucher Edit Distrib." }
+	Voucher Payments { "Voucher Payments" }
+	Vouchers by Year { "Vouchers by Year" }
+	Voyager Details Extraction { "Voyager Details Extraction" }
+	W21 - Delivery Scheduling { "W21 - Delivery Scheduling" }
+	W22 - Delivery Docket Print { "W22 - Delivery Docket Print" }
+	W24 - Stock Transfer Confirmation -2 { "W24 - Stock Transfer Confirmation -2" }
+	Westpac Interface { "Westpac Interface" }
+	WIP Reconciliation Report { "WIP Reconciliation Report" }
+}

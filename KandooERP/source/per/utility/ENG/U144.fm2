@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form xmlns="http://namespaces.querix.com/2015/fglForms">
+	<form.rootContainer>
+		<GridPanel classNames="fcls_rootContainer" verticalAlignment="Stretch" horizontalAlignment="Stretch" fieldTable="" identifier="rootContainer">
+			<GridPanel.gridRowDefinitions>
+				<GridRowDefinition gridLengthValue=""/>
+				<GridRowDefinition gridLengthValue=""/>
+				<GridRowDefinition gridLengthValue="100%"/>
+				<GridRowDefinition gridLengthValue=""/>
+			</GridPanel.gridRowDefinitions>
+			<GridPanel.gridColumnDefinitions>
+				<GridColumnDefinition gridLengthValue="50%"/>
+			</GridPanel.gridColumnDefinitions>
+			<GridPanel classNames="fcls_title_cnt" visible="true" verticalAlignment="Top" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="cntTitle">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="100%"/>
+					<GridColumnDefinition gridLengthValue=""/>
+				</GridPanel.gridColumnDefinitions>
+				<Label isDynamic="true" text="Table Utility" classNames="fcls_title_lb" visible="true" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="header_text"/>
+				<Label isDynamic="true" text="U144" classNames="fcls_title_lb" visible="true" gridItemLocation="1,0,1,1" fieldTable="" identifier="lbFormName"/>
+			</GridPanel>
+			<GridPanel classNames="fcls_detail_cnt,fcls_data_cnt,fcls_align_left" visible="true" verticalAlignment="Top" horizontalAlignment="Left" gridItemLocation="0,1,1,1" fieldTable="formonly" identifier="cntDetail1">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue=""/>
+					<GridColumnDefinition gridLengthValue=""/>
+				</GridPanel.gridColumnDefinitions>
+				<TextField toCase="Down" noEntry="true" dataType="Char,,,," classNames="fcls_data_widget,fcls_align_left,fcls_length_20qch" preferredSize="19qch,1qch" gridItemLocation="1,0,1,1" fieldTable="formonly" identifier="tabname"/>
+				<Label isDynamic="true" text="Table:" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,0,1,1" fieldTable="" identifier="lb51"/>
+			</GridPanel>
+			<Table rowCount="14" preferredSize="49qch,14qch" gridItemLocation="0,2,1,1" fieldTable="" identifier="sr_syscolumns">
+				<TableColumn fieldTable="" identifier="tag_ind">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="1rem" gridMinLength="1rem" gridMaxLength="1rem"/>
+					</TableColumn.columnLength>
+					<TextField noEntry="true" dataType="Char,,,," fieldTable="formonly" identifier="tag_ind"/>
+				</TableColumn>
+				<TableColumn text="Column Name" fieldTable="" identifier="colname">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="15rem" gridMaxLength="15rem" gridMinLength="15rem"/>
+					</TableColumn.columnLength>
+					<TextField toCase="Down" noEntry="true" dataType="Char,,,," toolTip=" Name of Column" fieldTable="formonly" comment=" Name of Column" identifier="colname"/>
+				</TableColumn>
+				<TableColumn text="DataType" fieldTable="" identifier="datatype">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="15rem" gridMaxLength="15rem" gridMinLength="15rem"/>
+					</TableColumn.columnLength>
+					<TextField toCase="Down" noEntry="true" dataType="Char,,,," toolTip=" Data type and size" fieldTable="formonly" comment=" Data type and size" identifier="datatype"/>
+				</TableColumn>
+				<TableColumn resizable="true" visible="true" identifier="tc_lbEOL">
+					<Label isDynamic="true" visible="true" identifier="lbEOL"/>
+					<TableColumn.columnLength>
+						<GridLength/>
+					</TableColumn.columnLength>
+				</TableColumn>
+			</Table>
+			<GridPanel classNames="fcls_statusbar_cnt" visible="true" verticalAlignment="Top" gridItemLocation="0,3,1,1" fieldTable="formonly" identifier="cntStatusBar">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="100%"/>
+				</GridPanel.gridColumnDefinitions>
+				<Label isDynamic="true" text="" classNames="fcls_sblabel" visible="true" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="lbInfo1"/>
+				<Label isDynamic="true" text="" classNames="fcls_sblabel" visible="true" gridItemLocation="0,1,1,1" fieldTable="formonly" identifier="lbInfo2"/>
+			</GridPanel>
+		</GridPanel>
+	</form.rootContainer>
+	<form.screenRecords>
+		<ScreenRecord identifier="sr_syscolumns" fields="tag_ind,colname,datatype" elements="14"/>
+		<ScreenRecord identifier="formonly" fields="tabname,tag_ind,colname,datatype"/>
+	</form.screenRecords>
+</form>
+

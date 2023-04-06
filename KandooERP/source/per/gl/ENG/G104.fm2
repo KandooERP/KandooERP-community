@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form xmlns="http://namespaces.querix.com/2015/fglForms">
+	<form.rootContainer>
+		<GridPanel classNames="fcls_rootContainer" verticalAlignment="Stretch" horizontalAlignment="Stretch" fieldTable="" identifier="rootContainer">
+			<GridPanel.gridRowDefinitions>
+				<GridRowDefinition gridLengthValue=""/>
+				<GridRowDefinition gridLengthValue=""/>
+				<GridRowDefinition gridLengthValue=""/>
+				<GridRowDefinition gridLengthValue="100%"/>
+				<GridRowDefinition gridLengthValue=""/>
+			</GridPanel.gridRowDefinitions>
+			<GridPanel.gridColumnDefinitions>
+				<GridColumnDefinition gridLengthValue="100%"/>
+			</GridPanel.gridColumnDefinitions>
+			<GridPanel classNames="fcls_title_cnt" visible="true" verticalAlignment="Top" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="cntTitle">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="100%"/>
+					<GridColumnDefinition gridLengthValue=""/>
+				</GridPanel.gridColumnDefinitions>
+				<Label isDynamic="true" text="Ledger Detail Scan" classNames="fcls_title_lb" visible="true" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="header_text"/>
+				<Label isDynamic="true" text="G104" classNames="fcls_title_lb" visible="true" gridItemLocation="1,0,1,1" fieldTable="" identifier="lbFormName"/>
+			</GridPanel>
+			<GridPanel classNames="fcls_detail_cnt,,fcls_align_left" visible="true" verticalAlignment="Top" horizontalAlignment="Left" gridItemLocation="0,1,1,1" fieldTable="formonly" identifier="cntDetail1">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="" gridMinLength="10rem"/>
+					<GridColumnDefinition gridLengthValue=""/>
+					<GridColumnDefinition gridLengthValue=""/>
+				</GridPanel.gridColumnDefinitions>
+				<ComboBox toCase="Up" dataType="Char,,,,2" classNames="list-show-text-value,field-show-value,fcls_data_widget,fcls_align_left,fcls_length_10qch" location="13qch,2qch" preferredSize="15qch,1qch" toolTip="Enter the two character company ID " gridItemLocation="1,0,1,1" comment="Enter the two character company ID " fieldTable="accountledger" identifier="cmpy_code" horizontalAlignment="Left"/>
+				<TextField noEntry="true" dataType="Char,,,,30" location="32qch,2qch" preferredSize="31qch,1qch"  gridItemLocation="2,0,1,1" fieldTable="company" identifier="name_text" classNames="fcls_data_widget,fcls_align_left,fcls_length_30qch" horizontalAlignment="Left"/>
+				<ComboBox toCase="Up" dataType="Char,,,,18" classNames="list-show-value-text,field-show-value,fcls_data_widget,fcls_align_left,fcls_length_10qch" location="13qch,3qch" preferredSize="19qch,1qch" toolTip="Enter the required General Ledger account number (W)" gridItemLocation="1,1,1,1" comment="Enter the required General Ledger account number (W)" fieldTable="accountledger" identifier="acct_code" horizontalAlignment="Left"/>
+				<TextField noEntry="true" dataType="Char,,,,40" location="32qch,3qch" preferredSize="33qch,1qch"  gridItemLocation="2,1,1,1" fieldTable="coa" identifier="desc_text" classNames="fcls_data_widget,fcls_align_left,fcls_length_30qch" horizontalAlignment="Left"/>
+				<Label isDynamic="true" text="Company" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,0,1,1" fieldTable="" identifier="lb51"/>
+				<Label isDynamic="true" text="Account" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,1,1,1" fieldTable="" identifier="lb52"/>
+			</GridPanel>
+			<GridPanel classNames="fcls_detail_cnt,,fcls_align_left" visible="true" verticalAlignment="Top" gridItemLocation="0,2,1,1" fieldTable="formonly" identifier="cntDetail2">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="" gridMinLength="10rem"/>
+					<GridColumnDefinition gridLengthValue=""/>
+					<GridColumnDefinition gridLengthValue="" gridMinLength="10rem"/>
+					<GridColumnDefinition gridLengthValue=""/>
+				</GridPanel.gridColumnDefinitions>
+				<StackPanel visible="true" gridItemLocation="1,0,1,1" fieldTable="" identifier="c152">
+					<ComboBox dataType="SmallInt,,,," classNames="list-show-text,field-show-text,fcls_data_widget,fcls_align_left,fcls_length_05qch" location="13qch,4qch" preferredSize="5qch,1qch" toolTip="The Year for ledger detail" comment="The Year for ledger detail" fieldTable="accountledger" identifier="year_num" horizontalAlignment="Left"/>
+					<Label text="/" location="19qch,4qch" preferredSize="1qch,1qch" fieldTable="" identifier="label6"/>
+					<ComboBox dataType="SmallInt,,,," classNames="list-show-text,field-show-text,fcls_data_widget,fcls_align_left,fcls_length_05qch" location="20qch,4qch" preferredSize="4qch,1qch" toolTip="The fiscal accounting period required " comment="The fiscal accounting period required " fieldTable="accountledger" identifier="period_num" horizontalAlignment="Left"/>
+				</StackPanel>
+				<TextField dataType="Char,,,," classNames="fcls_data_widget,fcls_align_left,fcls_length_15qch" location="13qch,5qch" preferredSize="21qch,1qch" toolTip=" The opening balance for the period" gridItemLocation="1,1,1,1" comment=" The opening balance for the period" fieldTable="formonly" identifier="open_amt" horizontalAlignment="Left"/>
+				<TextField dataType="Decimal,,,2,16" classNames="fcls_data_widget,fcls_align_left,fcls_length_15qch" location="53qch,5qch" preferredSize="21qch,1qch" toolTip=" The total debits for the period" gridItemLocation="3,1,1,1" comment=" The total debits for the period" fieldTable="accounthist" identifier="debit_amt" horizontalAlignment="Left"/>
+				<TextField dataType="Char,,,," classNames="fcls_data_widget,fcls_align_left,fcls_length_15qch" location="13qch,6qch" preferredSize="21qch,1qch" toolTip=" The closing balance for the period" gridItemLocation="1,2,1,1" comment=" The closing balance for the period" fieldTable="formonly" identifier="close_amt" horizontalAlignment="Left"/>
+				<TextField dataType="Decimal,,,2,16" classNames="fcls_data_widget,fcls_align_left,fcls_length_15qch" location="53qch,6qch" preferredSize="21qch,1qch" toolTip=" The total credits for the period" gridItemLocation="3,2,1,1" comment=" The total credits for the period" fieldTable="accounthist" identifier="credit_amt" horizontalAlignment="Left"/>
+				<Label isDynamic="true" text="Year/Period" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="lb36"/>
+				<Label isDynamic="true" text="Opening Bal" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,1,1,1" fieldTable="formonly" identifier="lb37"/>
+				<Label isDynamic="true" text="Period Debits" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="2,1,1,1" fieldTable="" identifier="lb61"/>
+				<Label isDynamic="true" text="Closing Bal" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,2,1,1" fieldTable="formonly" identifier="lb38"/>
+				<Label isDynamic="true" text="Period Credits" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="2,2,1,1" fieldTable="" identifier="lb63"/>
+			</GridPanel>
+			<Table rowCount="8" preferredSize="73qch,8qch" gridItemLocation="0,3,1,1" fieldTable="" identifier="sr_accountledger">
+				<TableColumn fieldTable="" identifier="a">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="2rem" gridMaxLength="2rem" gridMinLength="2rem"/>
+					</TableColumn.columnLength>
+					<CheckBox dataType="Char,,,," fieldTable="formonly" identifier="scroll_flag">
+						<CheckBox.checkedValue>
+							<StringLiteral stringValue="*"/>
+						</CheckBox.checkedValue>
+						<CheckBox.uncheckedValue>
+							<NullLiteral/>
+						</CheckBox.uncheckedValue>
+					</CheckBox>
+				</TableColumn>
+				<TableColumn text="Journal" fieldTable="" identifier="f14">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="15%" gridMaxLength="15rem" gridMinLength="5rem"/>
+					</TableColumn.columnLength>
+					<TextField dataType="Char,,,,3" toolTip=" Journal type for this account" comment=" Journal type for this account" fieldTable="accountledger" identifier="jour_code"/>
+				</TableColumn>
+				<TableColumn text="Seq.No." fieldTable="" identifier="f15">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="15%" gridMaxLength="15rem" gridMinLength="5rem"/>
+					</TableColumn.columnLength>
+					<TextField dataType="Integer,,,," toolTip=" Sequence number for this account" comment=" Sequence number for this account" fieldTable="accountledger" identifier="seq_num"/>
+				</TableColumn>
+				<TableColumn text="Description" fieldTable="" identifier="f010">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="25%" gridMaxLength="30rem" gridMinLength="10rem"/>
+					</TableColumn.columnLength>
+					<TextField dataType="Char,,,,40" toolTip="Description of this account detail entry, CTRL N for notes" comment="Description of this account detail entry, CTRL N for notes" fieldTable="accountledger" identifier="desc_text"/>
+				</TableColumn>
+				<TableColumn text="Debit" fieldTable="" identifier="f011">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="15%" gridMaxLength="15rem" gridMinLength="5rem"/>
+					</TableColumn.columnLength>
+					<TextField dataType="Decimal,,,2,16" toolTip="Amount of entry that is to be debited to this account" comment="Amount of entry that is to be debited to this account" fieldTable="accountledger" identifier="debit_amt"/>
+				</TableColumn>
+				<TableColumn text="Credit" fieldTable="" identifier="f012">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="15%" gridMaxLength="15rem" gridMinLength="5rem"/>
+					</TableColumn.columnLength>
+					<TextField dataType="Decimal,,,2,16" toolTip="Amount of entry that is to be credited to this account" comment="Amount of entry that is to be credited to this account" fieldTable="accountledger" identifier="credit_amt"/>
+				</TableColumn>
+				<TableColumn text="Quantity" fieldTable="" identifier="f013">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="15%" gridMaxLength="15rem" gridMinLength="5rem"/>
+					</TableColumn.columnLength>
+					<TextField dataType="Float,,,," toolTip="Quantity for the account " comment="Quantity for the account " fieldTable="accountledger" identifier="stats_qty"/>
+				</TableColumn>
+			</Table>
+			<GridPanel classNames="fcls_statusbar_cnt" visible="true" verticalAlignment="Top" gridItemLocation="0,4,1,1" fieldTable="formonly" identifier="cntStatusBar">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="100%"/>
+				</GridPanel.gridColumnDefinitions>
+				<Label isDynamic="true" text="" classNames="fcls_sblabel" visible="true" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="lbInfo1"/>
+				<Label isDynamic="true" text="" classNames="fcls_sblabel" visible="true" gridItemLocation="0,1,1,1" fieldTable="formonly" identifier="lbInfo2"/>
+			</GridPanel>
+		</GridPanel>
+	</form.rootContainer>
+	<form.screenRecords>
+		<ScreenRecord identifier="sr_accountledger" fields="scroll_flag,accountledger.jour_code,accountledger.seq_num,accountledger.desc_text,accountledger.debit_amt,accountledger.credit_amt,accountledger.stats_qty"/>
+		<ScreenRecord identifier="accounthist" fields="debit_amt,credit_amt"/>
+		<ScreenRecord identifier="accountledger" fields="cmpy_code,acct_code,year_num,period_num,jour_code,seq_num,desc_text,debit_amt,credit_amt,stats_qty"/>
+		<ScreenRecord identifier="coa" fields="desc_text"/>
+		<ScreenRecord identifier="company" fields="name_text"/>
+		<ScreenRecord identifier="formonly" fields="scroll_flag,open_amt,close_amt"/>
+	</form.screenRecords>
+</form>
+

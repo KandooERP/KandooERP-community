@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form xmlns="http://namespaces.querix.com/2015/fglForms">
+	<form.rootContainer>
+		<GridPanel classNames="fcls_rootContainer" verticalAlignment="Top" horizontalAlignment="Stretch" fieldTable="" identifier="rootContainer">
+			<GridPanel.gridRowDefinitions>
+				<GridRowDefinition gridLengthValue=""/>
+				<GridRowDefinition gridLengthValue=""/>
+				<GridRowDefinition gridLengthValue=""/>
+				<GridRowDefinition gridLengthValue=""/>
+				<GridRowDefinition gridLengthValue=""/>
+			</GridPanel.gridRowDefinitions>
+			<GridPanel.gridColumnDefinitions>
+				<GridColumnDefinition gridLengthValue="100%"/>
+			</GridPanel.gridColumnDefinitions>
+			<GridPanel classNames="fcls_title_cnt" visible="true" verticalAlignment="Top" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="cntTitle">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="100%"/>
+					<GridColumnDefinition gridLengthValue=""/>
+				</GridPanel.gridColumnDefinitions>
+				<Label isDynamic="true" text="Maia Associates &amp; KandooERP Open Source" classNames="fcls_title_lb" visible="true" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="header_text"/>
+				<Label isDynamic="true" text="about_kandoo.fm2" classNames="fcls_title_lb" visible="true" gridItemLocation="1,0,1,1" fieldTable="" identifier="lbFormName"/>
+			</GridPanel>
+			<GroupBox title="About KandooERP" classNames="fcls_detail_gb_cnt" visible="true" verticalAlignment="Stretch" horizontalAlignment="Stretch" gridItemLocation="0,1,1,1" fieldTable="formonly" identifier="cntDetail1GroupBox">
+				<GridPanel classNames="fcls_detail_gb_cnt_sub,fcls_data_cnt,fcls_align_left" visible="true" verticalAlignment="Top" horizontalAlignment="Left" fieldTable="formonly" identifier="cntDetail1GBSubGp">
+					<GridPanel.gridRowDefinitions>
+						<GridRowDefinition gridLengthValue=""/>
+						<GridRowDefinition gridLengthValue=""/>
+					</GridPanel.gridRowDefinitions>
+					<GridPanel.gridColumnDefinitions>
+						<GridColumnDefinition gridLengthValue="" gridMinLength="10rem"/>
+					</GridPanel.gridColumnDefinitions>
+					<Label isDynamic="true" text="KandooERP is a fully integrated Web application suite that brings together top-tier open source projects to help you manage your business more effectively. Today, KandooERP supports Ecommerce, Customer Relationship Management, Warehouse and Inventory Management, Supply Chain Management, and Financial Management to Business Intelligence and mobility integration out-of-the-box. It&apos;s written in Lycia4GL with JScript / CSS UI customisations and aims to be a low-footprint, efficient, fast, and platform-independent system that&apos;s easy for business users." classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,0,1,1" fieldTable="" identifier="lb91x" allowNewlines="true"/>
+					<Label isDynamic="true" text="KandooERP is actively being developed by Maia Associates and has an active forum, where you can ask questions or learn more about using the application. You can also try the online demo or download the source code (licensed under GNU LESSER GENERAL PUBLIC LICENSE Version 3. 29) on GitLab." classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,1,1,1" fieldTable="formonly" identifier="lb47x" allowNewlines="true"/>
+				</GridPanel>
+			</GroupBox>
+			<GroupBox title="About Maia Associate" classNames="fcls_detail_gb_cnt" visible="true" verticalAlignment="Stretch" horizontalAlignment="Stretch" gridItemLocation="0,2,1,1" fieldTable="formonly" identifier="cntDetail2GroupBox">
+				<GridPanel classNames="fcls_detail_gb_cnt_sub,fcls_data_cnt,fcls_align_left" visible="true" verticalAlignment="Top" horizontalAlignment="Left" fieldTable="formonly" identifier="cntDetail2GBSubGp">
+					<GridPanel.gridRowDefinitions>
+						<GridRowDefinition gridLengthValue=""/>
+						<GridRowDefinition gridLengthValue=""/>
+					</GridPanel.gridRowDefinitions>
+					<GridPanel.gridColumnDefinitions>
+						<GridColumnDefinition gridLengthValue="" gridMinLength="10rem"/>
+					</GridPanel.gridColumnDefinitions>
+					<Label isDynamic="true" text="Maia Associates is a group of software experts offering services in the areas development, modernisation, consultancy and support with business data applications such as KandooERP and Databases. To get more information on our services or if you are interested in joining Maia Associates, please contact us thru the chat widget (on bottom right of this page) or email us at  info@kandooerp.org" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,0,1,1" fieldTable="" identifier="lb91z" allowNewlines="true"/>
+					<Label isDynamic="true" text="info@kandooerp.org" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,1,1,1" fieldTable="formonly" identifier="lb47z">
+						<Label.onInvoke>
+							<OpenUrlEventHandler type="OpenUrlEventHandler" url="mailto:info@kandooerp.org"/>
+						</Label.onInvoke>
+					</Label>
+				</GridPanel>
+			</GroupBox>
+			<GridPanel classNames="fcls_detail_cnt" visible="true" verticalAlignment="Top" gridItemLocation="0,3,1,1" fieldTable="formonly" identifier="cntDetail3" horizontalAlignment="Stretch">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="33%"/>
+					<GridColumnDefinition gridLengthValue="33%"/>
+					<GridColumnDefinition gridLengthValue="33%"/>
+				</GridPanel.gridColumnDefinitions>
+				<GroupBox title="Address" classNames="fcls_detail_gb_cnt" visible="true" verticalAlignment="Stretch" horizontalAlignment="Stretch" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="cntDetail3GroupBoxLeft">
+					<GridPanel classNames="fcls_detail_gb_cnt_sub,fcls_data_cnt" visible="true" verticalAlignment="Top" horizontalAlignment="Left" fieldTable="formonly" identifier="cntDetail3_1_GBSubGpLeft">
+						<GridPanel.gridRowDefinitions>
+							<GridRowDefinition gridLengthValue=""/>
+						</GridPanel.gridRowDefinitions>
+						<GridPanel.gridColumnDefinitions>
+							<GridColumnDefinition gridLengthValue="" gridMinLength="10rem"/>
+						</GridPanel.gridColumnDefinitions>
+						<Label isDynamic="true" text="Maia Associates&#13;&#10;&#13;&#10;5, Rue du Lycée&#13;&#10;&#13;&#10;29120 Pont l&apos;Abbé - France" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,0,1,1" fieldTable="" identifier="lb91a" allowNewlines="true"/>
+					</GridPanel>
+				</GroupBox>
+				<GroupBox title="Contacts" classNames="fcls_detail_gb_cnt" visible="true" verticalAlignment="Stretch" horizontalAlignment="Stretch" gridItemLocation="1,0,1,1" fieldTable="" identifier="cntDetail3GroupBoxMiddle">
+					<GridPanel classNames="fcls_detail_gb_cnt_sub,fcls_data_cnt" visible="true" verticalAlignment="Top" horizontalAlignment="Left" fieldTable="" identifier="cntDetail3_2_GBSubGpMiddle">
+						<GridPanel.gridRowDefinitions>
+							<GridRowDefinition gridLengthValue=""/>
+							<GridRowDefinition gridLengthValue=""/>
+						</GridPanel.gridRowDefinitions>
+						<GridPanel.gridColumnDefinitions>
+							<GridColumnDefinition gridLengthValue="" gridMinLength="10rem"/>
+						</GridPanel.gridColumnDefinitions>
+						<Label visible="true" identifier="lb216" gridItemLocation="0,0,1,1" isDynamic="true" classNames="fcls_fieldlabel,fcls_align_left" fieldTable="formonly" text="Email: info@kandooerp.org">
+							<Label.onInvoke>
+								<OpenUrlEventHandler type="OpenUrlEventHandler" url="mailto:info@kandooerp.org"/>
+							</Label.onInvoke>
+						</Label>
+						<Label isDynamic="true" text="Phone: +33 626 525068" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,1,1,1" fieldTable="" identifier="lb183"/>
+					</GridPanel>
+				</GroupBox>
+				<GroupBox title="Links" classNames="fcls_detail_gb_cnt" visible="true" verticalAlignment="Stretch" horizontalAlignment="Stretch" gridItemLocation="2,0,1,1" fieldTable="" identifier="cntDetail8GroupBoxRight">
+					<GridPanel classNames="fcls_detail_gb_cnt_sub,fcls_data_cnt" visible="true" verticalAlignment="Top" horizontalAlignment="Left" fieldTable="" identifier="cntDetail3_3_GBSubGpRight">
+						<GridPanel.gridRowDefinitions>
+							<GridRowDefinition gridLengthValue=""/>
+							<GridRowDefinition gridLengthValue=""/>
+							<GridRowDefinition gridLengthValue=""/>
+							<GridRowDefinition gridLengthValue=""/>
+						</GridPanel.gridRowDefinitions>
+						<GridPanel.gridColumnDefinitions>
+							<GridColumnDefinition gridLengthValue="" gridMinLength="10rem"/>
+						</GridPanel.gridColumnDefinitions>
+						<Label isDynamic="true" text="Privacy Policy" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,0,1,1" fieldTable="" identifier="lb161b"/>
+						<Label isDynamic="true" text="Kandoo on Facebook" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,1,1,1" fieldTable="" identifier="lb167b">
+							<Label.onInvoke>
+								<OpenUrlEventHandler type="OpenUrlEventHandler" url="https://www.facebook.com/groups/kandooerp/"/>
+							</Label.onInvoke>
+						</Label>
+						<Label isDynamic="true" text="Kandoo on LinkedIn" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,2,1,1" fieldTable="" identifier="lb168b">
+							<Label.onInvoke>
+								<OpenUrlEventHandler type="OpenUrlEventHandler" url="https://www.linkedin.com/in/kandoo-erp-121937165/"/>
+							</Label.onInvoke>
+						</Label>
+						<Label isDynamic="true" text="GNU Less General Public License" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,3,1,1" fieldTable="" identifier="lb169b">
+							<Label.onInvoke>
+								<OpenUrlEventHandler type="OpenUrlEventHandler" url="https://www.kandooerp.org/gnu-lesser-general-public"/>
+							</Label.onInvoke>
+						</Label>
+					</GridPanel>
+				</GroupBox>
+			</GridPanel>
+			<GridPanel classNames="fcls_statusbar_cnt" visible="true" verticalAlignment="Top" gridItemLocation="0,4,1,1" fieldTable="formonly" identifier="cntStatusBar">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="100%"/>
+				</GridPanel.gridColumnDefinitions>
+				<Label isDynamic="true" text="" classNames="fcls_sblabel" visible="true" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="lbInfo1"/>
+				<Label isDynamic="true" text="" classNames="fcls_sblabel" visible="true" gridItemLocation="0,1,1,1" fieldTable="formonly" identifier="lbInfo2"/>
+			</GridPanel>
+		</GridPanel>
+	</form.rootContainer>
+	<form.screenRecords>
+		<ScreenRecord identifier="s_reqthdr" fields=""/>
+		<ScreenRecord identifier="FORMONLY" fields="print_opt"/>
+	</form.screenRecords>
+</form>
+

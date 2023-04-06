@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form xmlns="http://namespaces.querix.com/2015/fglForms">
+	<form.rootContainer>
+		<GridPanel classNames="fcls_rootContainer" verticalAlignment="Stretch" horizontalAlignment="Stretch" fieldTable="" identifier="rootContainer">
+			<GridPanel.gridRowDefinitions>
+				<GridRowDefinition gridLengthValue=""/>
+				<GridRowDefinition gridLengthValue="100%"/>
+				<GridRowDefinition gridLengthValue=""/>
+			</GridPanel.gridRowDefinitions>
+			<GridPanel.gridColumnDefinitions>
+				<GridColumnDefinition gridLengthValue="100%"/>
+			</GridPanel.gridColumnDefinitions>
+			<GridPanel classNames="fcls_title_cnt" visible="true" verticalAlignment="Top" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="cntTitle">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="100%"/>
+					<GridColumnDefinition gridLengthValue=""/>
+				</GridPanel.gridColumnDefinitions>
+				<Label isDynamic="true" text="Cash Receipt Application" classNames="fcls_title_lb" visible="true" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="header_text"/>
+				<Label isDynamic="true" text="A150" classNames="fcls_title_lb" visible="true" gridItemLocation="1,0,1,1" fieldTable="" identifier="lbFormName"/>
+			</GridPanel>
+			<Table rowCount="14" preferredSize="75qch,14qch" verticalAlignment="Stretch" horizontalAlignment="Stretch" gridItemLocation="0,1,1,1" fieldTable="" identifier="sr_cashreceipt">
+				<TableColumn text="Receipt Number" fieldTable="" identifier="tc_cash_num">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="9%" gridMaxLength="12rem" gridMinLength="6rem"/>
+					</TableColumn.columnLength>
+					<TextField dataType="Integer,,,," toolTip=" Cash receipt number you wish to scan" fieldTable="cashreceipt" comment=" Cash receipt number you wish to scan" identifier="cash_num"/>
+				</TableColumn>
+				<TableColumn text="Receipt Entry Notes" resizable="true" visible="true" identifier="tc_f3">
+					<TextField visible="true" identifier="com1_text" fieldTable="cashreceipt"/>
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="16%" gridMaxLength="30rem" gridMinLength="10rem"/>
+					</TableColumn.columnLength>
+				</TableColumn>
+				<TableColumn text="Customer" fieldTable="" identifier="tc_cust_code">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="9%" gridMaxLength="12rem" gridMinLength="6rem"/>
+					</TableColumn.columnLength>
+					<TextField toCase="Up" noEntry="true" dataType="Char,,,,8" toolTip=" Customer code " fieldTable="cashreceipt" comment=" Customer code " identifier="cust_code"/>
+				</TableColumn>
+				<TableColumn text="Name" resizable="true" visible="true" identifier="tc_f3">
+					<TextField visible="true" identifier="name_text" fieldTable="customer"/>
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="16%" gridMaxLength="30rem" gridMinLength="10rem"/>
+					</TableColumn.columnLength>
+				</TableColumn>
+				<TableColumn text="Date" fieldTable="" identifier="tc_cash_date">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="9%" gridMaxLength="12rem" gridMinLength="6rem"/>
+					</TableColumn.columnLength>
+					<TextField noEntry="true" dataType="Date,,,," toolTip=" Date of specified cash receipt" fieldTable="cashreceipt" comment=" Date of specified cash receipt" identifier="cash_date"/>
+				</TableColumn>
+				<TableColumn text="Post-Year" fieldTable="" identifier="tc_year_num">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="9%" gridMaxLength="12rem" gridMinLength="6rem"/>
+					</TableColumn.columnLength>
+					<TextField noEntry="true" dataType="SmallInt,,,," toolTip=" Fiscal year relating to the cash receipt posting to the GL" fieldTable="cashreceipt" comment=" Fiscal year relating to the cash receipt posting to the GL" identifier="year_num"/>
+				</TableColumn>
+				<TableColumn text="Post-Period" fieldTable="" identifier="tc_period_num">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="9%" gridMaxLength="12rem" gridMinLength="6rem"/>
+					</TableColumn.columnLength>
+					<TextField noEntry="true" dataType="SmallInt,,,," toolTip=" Fiscal period relating to the cash receipt posting to the GL" fieldTable="cashreceipt" comment=" Fiscal period relating to the cash receipt posting to the GL" identifier="period_num"/>
+				</TableColumn>
+				<TableColumn text="Amount Received" fieldTable="" identifier="tc_cash_amt">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="9%" gridMaxLength="12rem" gridMinLength="6rem"/>
+					</TableColumn.columnLength>
+					<TextField noEntry="true" dataType="Decimal,,,2,16" toolTip=" Total Amount Received in this cash receipt" fieldTable="cashreceipt" comment=" Total Amount Received in this cash receipt" identifier="cash_amt"/>
+				</TableColumn>
+				<TableColumn text="Amount Applied" fieldTable="" identifier="tc_applied_amt">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="9%" gridMaxLength="12rem" gridMinLength="6rem"/>
+					</TableColumn.columnLength>
+					<TextField noEntry="true" dataType="Decimal,,,2,16" toolTip=" Total amount of cash receipt which has been applied to an invoice" fieldTable="cashreceipt" comment=" Total amount of cash receipt which has been applied to an invoice" identifier="applied_amt"/>
+				</TableColumn>
+				<TableColumn text="Posted" fieldTable="" identifier="tc_posted_flag">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="4%" gridMaxLength="4rem" gridMinLength="2rem"/>
+					</TableColumn.columnLength>
+					<CheckBox noEntry="true" dataType="Char,,,,1" toolTip=" Has this cashreceipt been posted to the General Ledger? (Y)es - (N)o" fieldTable="cashreceipt" comment=" Has this cashreceipt been posted to the General Ledger? (Y)es - (N)o" identifier="posted_flag">
+						<CheckBox.defaultValue>
+							<StringLiteral stringValue="N"/>
+						</CheckBox.defaultValue>
+						<CheckBox.checkedValue>
+							<StringLiteral stringValue="Y"/>
+						</CheckBox.checkedValue>
+						<CheckBox.uncheckedValue>
+							<StringLiteral stringValue="N"/>
+						</CheckBox.uncheckedValue>
+					</CheckBox>
+				</TableColumn>
+			</Table>
+			<GridPanel classNames="fcls_statusbar_cnt" visible="true" verticalAlignment="Bottom" gridItemLocation="0,2,1,1" fieldTable="formonly" identifier="cntStatusBar">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="100%"/>
+				</GridPanel.gridColumnDefinitions>
+				<Label isDynamic="true" text="" classNames="fcls_sblabel" visible="true" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="lbInfo1"/>
+				<Label isDynamic="true" text="" classNames="fcls_sblabel" visible="true" gridItemLocation="0,1,1,1" fieldTable="formonly" identifier="lbInfo2"/>
+			</GridPanel>
+		</GridPanel>
+	</form.rootContainer>
+	<form.screenRecords>
+		<ScreenRecord identifier="sr_cashreceipt" fields="cashreceipt.cash_num,cashreceipt.com1_text,cashreceipt.cust_code,customer.name_text,cashreceipt.cash_date,cashreceipt.year_num,cashreceipt.period_num,cashreceipt.cash_amt,cashreceipt.applied_amt,cashreceipt.posted_flag" elements="14"/>
+		<ScreenRecord identifier="cashreceipt" fields="cash_num,cust_code,cash_date,year_num,period_num,cash_amt,applied_amt,posted_flag"/>
+		<ScreenRecord identifier="formonly" fields="scroll_flag"/>
+	</form.screenRecords>
+</form>
+

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<fglBuildTarget xmlns="http://namespaces.querix.com/lyciaide/target" name="z_coa_tree_testcase" type="fgl-program">
+
+  <sources type="fgl">
+    <file location="z_coa_tree_test_case.4gl"/>
+  </sources>
+
+  <buildConfiguration name="development">
+    <additions>
+    </additions>
+    <exclusions>
+      <sources type="fgl">
+        <file location="z_coa_tree_test_case.4gl"/>
+      </sources>
+
+    </exclusions>
+  </buildConfiguration>
+
+</fglBuildTarget>

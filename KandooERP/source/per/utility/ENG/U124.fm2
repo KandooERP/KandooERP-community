@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?><form xmlns="http://namespaces.querix.com/2015/fglForms">
+	<form.rootContainer>
+		<GridPanel classNames="fcls_rootContainer" fieldTable="" horizontalAlignment="Stretch" identifier="rootContainer" verticalAlignment="Stretch">
+			<GridPanel.gridRowDefinitions>
+				<GridRowDefinition gridLengthValue=""/>
+				<GridRowDefinition gridLengthValue="100%"/>
+				<GridRowDefinition gridLengthValue=""/>
+				<GridRowDefinition gridLengthValue=""/>
+			</GridPanel.gridRowDefinitions>
+			<GridPanel.gridColumnDefinitions>
+				<GridColumnDefinition gridLengthValue="100%"/>
+			</GridPanel.gridColumnDefinitions>
+			<GridPanel classNames="fcls_title_cnt" fieldTable="formonly" gridItemLocation="0,0,1,1" identifier="cntTitle" verticalAlignment="Top" visible="true">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="100%"/>
+					<GridColumnDefinition gridLengthValue=""/>
+				</GridPanel.gridColumnDefinitions>
+				<Label classNames="fcls_title_lb" fieldTable="formonly" gridItemLocation="0,0,1,1" identifier="header_text" isDynamic="true" text="SQL Interface" visible="true"/>
+				<Label classNames="fcls_title_lb" fieldTable="" gridItemLocation="1,0,1,1" identifier="lbFormName" isDynamic="true" text="U124" visible="true"/>
+			</GridPanel>
+			<GridPanel classNames="fcls_detail_cnt,fcls_data_cnt,fcls_align_hstretch,fcls_align_vstretch" fieldTable="formonly" gridItemLocation="0,1,1,1" horizontalAlignment="Stretch" identifier="cntDetail1" verticalAlignment="Stretch" visible="true">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue="100%"/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="100%"/>
+				</GridPanel.gridColumnDefinitions>
+				<TextArea classNames="fcls_data_widget,fcls_align_hstretch,fcls_align_vstretch" comment=" F1=Add F2=Delete F3=Next F4=Prev ^A=Insert ^B=Lookup ^X=Erase ^N=Newline" dataType="Char,,,," fieldTable="formonly" gridItemLocation="0,0,1,1" identifier="sql_text" preferredSize="75qch,17qch" toolTip=" F1=Add F2=Delete F3=Next F4=Prev ^A=Insert ^B=Lookup ^X=Erase ^N=Newline">
+					<TextArea.displayModes>
+						<DisplayMode appearance="cyan"/>
+					</TextArea.displayModes>
+				</TextArea>
+			</GridPanel>
+			<GridPanel classNames="fcls_detail_cnt,fcls_data_cnt,fcls_align_hstretch" fieldTable="formonly" gridItemLocation="0,2,1,1" horizontalAlignment="Stretch" identifier="cntDetail2" verticalAlignment="Top" visible="true">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="" gridMinLength="10rem"/>
+					<GridColumnDefinition gridLengthValue="100%"/>
+				</GridPanel.gridColumnDefinitions>
+				<TextField classNames="fcls_data_widget,fcls_align_hstretch" comment=" Enter path of command file (with .sql suffix) then press ESC - (W)" dataType="Char,,,," fieldTable="formonly" gridItemLocation="1,0,1,1" horizontalAlignment="Stretch" identifier="path_text" preferredSize="39qch,1qch" toolTip=" Enter path of command file (with .sql suffix) then press ESC - (W)">
+					<TextField.displayModes>
+						<DisplayMode appearance="cyan"/>
+					</TextField.displayModes>
+				</TextField>
+				<StackPanel fieldTable="" gridItemLocation="1,1,1,1" identifier="c3" visible="true">
+					<TextField classNames="fcls_data_widget,fcls_align_left,fcls_length_05qch" comment=" Enter command number to Edit " dataType="SmallInt,,,," fieldTable="formonly" gridItemLocation="6,2,1,1" identifier="count" preferredSize="4qch,1qch" toolTip=" Enter command number to Edit ">
+						<TextField.includes>
+							<RangeInclude>
+								<RangeInclude.fromValue>
+									<IntegerLiteral integerValue="1"/>
+								</RangeInclude.fromValue>
+								<RangeInclude.toValue>
+									<IntegerLiteral integerValue="200"/>
+								</RangeInclude.toValue>
+							</RangeInclude>
+						</TextField.includes>
+						<TextField.displayModes>
+							<DisplayMode appearance="cyan"/>
+						</TextField.displayModes>
+					</TextField>
+					<Label classNames="fcls_fieldlabel,fcls_align_left" fieldTable="" gridItemLocation="8,2,1,1" identifier="label5" text="of" textAlignment="Center,Center" verticalAlignment="Center"/>
+					<TextField classNames="fcls_data_widget,fcls_align_left,fcls_length_05qch" dataType="SmallInt,,,," fieldTable="formonly" gridItemLocation="9,2,2,1" identifier="cmd_cnt" noEntry="true" preferredSize="4qch,1qch">
+						<TextField.displayModes>
+							<DisplayMode appearance="cyan"/>
+						</TextField.displayModes>
+					</TextField>
+				</StackPanel>
+				<Label classNames="fcls_fieldlabel,fcls_align_left" fieldTable="formonly" gridItemLocation="0,0,1,1" identifier="lb36" isDynamic="true" text="File path:" visible="true"/>
+				<Label classNames="fcls_fieldlabel,fcls_align_left" fieldTable="formonly" gridItemLocation="0,1,1,1" identifier="lb37" isDynamic="true" text="Command" visible="true"/>
+			</GridPanel>
+			<GridPanel classNames="fcls_statusbar_cnt" fieldTable="formonly" gridItemLocation="0,3,1,1" identifier="cntStatusBar" verticalAlignment="Top" visible="true">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="100%"/>
+				</GridPanel.gridColumnDefinitions>
+				<Label classNames="fcls_sblabel" fieldTable="formonly" gridItemLocation="0,0,1,1" identifier="lbInfo1" isDynamic="true" text="" visible="true"/>
+				<Label classNames="fcls_sblabel" fieldTable="formonly" gridItemLocation="0,1,1,1" identifier="lbInfo2" isDynamic="true" text="" visible="true"/>
+			</GridPanel>
+		</GridPanel>
+	</form.rootContainer>
+	<form.screenRecords>
+		<ScreenRecord fields="sql_text,path_text,count,cmd_cnt" identifier="formonly"/>
+	</form.screenRecords>
+</form>

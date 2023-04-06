@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form xmlns="http://namespaces.querix.com/2015/fglForms">
+	<form.rootContainer>
+		<GridPanel classNames="fcls_rootContainer" verticalAlignment="Stretch" horizontalAlignment="Left" fieldTable="" identifier="rootContainer">
+			<GridPanel.gridRowDefinitions>
+				<GridRowDefinition gridLengthValue=""/>
+				<GridRowDefinition gridLengthValue=""/>
+				<GridRowDefinition gridLengthValue="100%"/>
+				<GridRowDefinition gridLengthValue=""/>
+			</GridPanel.gridRowDefinitions>
+			<GridPanel.gridColumnDefinitions>
+				<GridColumnDefinition gridLengthValue="100%"/>
+			</GridPanel.gridColumnDefinitions>
+			<GridPanel classNames="fcls_title_cnt" visible="true" verticalAlignment="Top" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="cntTitle">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="100%"/>
+					<GridColumnDefinition gridLengthValue=""/>
+				</GridPanel.gridColumnDefinitions>
+				<Label isDynamic="true" text="Order Status" classNames="fcls_title_lb" visible="true" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="header_text"/>
+				<Label isDynamic="true" text="E408" classNames="fcls_title_lb" visible="true" gridItemLocation="1,0,1,1" fieldTable="" identifier="lbFormName"/>
+			</GridPanel>
+			<GridPanel classNames="fcls_detail_cnt,,fcls_align_hstretch" visible="true" verticalAlignment="Top" horizontalAlignment="Left" gridItemLocation="0,1,1,1" fieldTable="formonly" identifier="cntDetail1">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="10rem"/>
+					<GridColumnDefinition gridLengthValue=""/>
+					<GridColumnDefinition gridLengthValue=""/>
+				</GridPanel.gridColumnDefinitions>
+				<Label text="Customer Code" classNames="fcls_fieldlabel,fcls_align_left" gridItemLocation="0,0,1,1" fieldTable="" identifier="label1"/>
+				<TextField dataType="Char,,,,8" classNames="fcls_data_widget,fcls_align_left,fcls_length_10qch" location="17qch,2qch" preferredSize="25qch,1qch" toolTip="Customer Code associated with this order (W)" gridItemLocation="1,0,1,1" comment="Customer Code associated with this order (W)" fieldTable="orderhead" identifier="cust_code"/>
+				<TextField noEntry="true" dataType="Char,,,,30" classNames="fcls_data_widget,fcls_align_left,fcls_length_20qch" location="50qch,2qch" preferredSize="20qch,1qch" toolTip="Description of customer" gridItemLocation="2,0,1,1" comment="Description of customer" fieldTable="customer" identifier="name_text"/>
+				<TextField dataType="Integer,,,," classNames="fcls_data_widget,fcls_align_left,fcls_length_10qch" location="17qch,3qch" preferredSize="10qch,1qch" toolTip="Order Number of the order" gridItemLocation="1,1,1,1" comment="Order Number of the order" fieldTable="orderhead" identifier="order_num"/>
+				<Calendar noEntry="true" dataType="Date,,,," classNames="fcls_data_widget,fcls_align_left,fcls_length_10qch" location="54qch,3qch" preferredSize="11qch,1qch" toolTip=" Order Date of order " gridItemLocation="1,2,1,1" comment=" Order Date of order " fieldTable="orderhead" identifier="order_date"/>
+				<Label isDynamic="true" text="Order Number" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,1,1,1" fieldTable="" identifier="lb51"/>
+				<Label isDynamic="true" text="Order Date" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,2,1,1" fieldTable="" identifier="lb52"/>
+				<TextField noEntry="true" dataType="Char,,,,16" classNames="fcls_data_widget,fcls_align_hstretch" fieldTable="arparms" identifier="inv_ref1_text" gridItemLocation="0,3,1,1" horizontalAlignment="Stretch"/>
+				<TextField noEntry="true" dataType="Char,,,,20" classNames="fcls_data_widget,fcls_align_left,fcls_length_10qch" preferredSize="21qch,1qch" toolTip=" The reference number " comment=" The reference number " fieldTable="orderhead" identifier="ord_text" gridItemLocation="1,3,1,1"/>
+			</GridPanel>
+			<Table rowCount="10" location="0qch,6qch" preferredSize="75qch,13qch" gridItemLocation="0,2,1,1" fieldTable="" identifier="sr_orderdetl" minSize="50rem,10rem" verticalAlignment="Stretch">
+				<TableColumn text="Product Code" fieldTable="" identifier="f001">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="25%" gridMaxLength="16rem" gridMinLength="8rem"/>
+					</TableColumn.columnLength>
+					<TextField noEntry="true" dataType="Char,,,,15" toolTip=" Product Code of order line" comment=" Product Code of order line" fieldTable="orderdetl" identifier="part_code"/>
+				</TableColumn>
+				<TableColumn text="Quantity Ordered" fieldTable="" identifier="f003">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="15%" gridMaxLength="10rem" gridMinLength="3rem"/>
+					</TableColumn.columnLength>
+					<TextField noEntry="true" dataType="Float,,,," toolTip=" Quantity of this product ordered" comment=" Quantity of this product ordered" fieldTable="orderdetl" identifier="order_qty"/>
+				</TableColumn>
+				<TableColumn text="Quantity Backorder" fieldTable="" identifier="f002">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="15%" gridMaxLength="10rem" gridMinLength="3rem"/>
+					</TableColumn.columnLength>
+					<TextField dataType="Float,,,," toolTip=" Quantity backordered " comment=" Quantity backordered " fieldTable="orderdetl" identifier="back_qty"/>
+				</TableColumn>
+				<TableColumn text="Quantity Scheduled" fieldTable="" identifier="f007">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="15%" gridMaxLength="10rem" gridMinLength="3rem"/>
+					</TableColumn.columnLength>
+					<TextField dataType="Float,,,," toolTip=" Quantity awaiting picking slip print" comment=" Quantity awaiting picking slip print" fieldTable="orderdetl" identifier="sched_qty"/>
+				</TableColumn>
+				<TableColumn text="Quantity Picked" fieldTable="" identifier="f004">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="15%" gridMaxLength="10rem" gridMinLength="3rem"/>
+					</TableColumn.columnLength>
+					<TextField dataType="Float,,,," toolTip=" Quantity awaiting confirmation" comment=" Quantity awaiting confirmation" fieldTable="orderdetl" identifier="picked_qty"/>
+				</TableColumn>
+				<TableColumn text="Quantity Invoiced" fieldTable="" identifier="f005">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="15%" gridMaxLength="10rem" gridMinLength="3rem"/>
+					</TableColumn.columnLength>
+					<TextField noEntry="true" dataType="Float,,,," toolTip=" Quantity invoiced" comment=" Quantity invoiced" fieldTable="orderdetl" identifier="inv_qty"/>
+				</TableColumn>
+			</Table>
+			<GridPanel classNames="fcls_statusbar_cnt" visible="true" verticalAlignment="Top" gridItemLocation="0,3,1,1" fieldTable="formonly" identifier="cntStatusBar">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="100%"/>
+				</GridPanel.gridColumnDefinitions>
+				<Label isDynamic="true" text="" classNames="fcls_sblabel" visible="true" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="lbInfo1"/>
+				<Label isDynamic="true" text="" classNames="fcls_sblabel" visible="true" gridItemLocation="0,1,1,1" fieldTable="formonly" identifier="lbInfo2"/>
+			</GridPanel>
+		</GridPanel>
+	</form.rootContainer>
+	<form.screenRecords>
+		<ScreenRecord identifier="sr_orderdetl" fields="part_code,order_qty,back_qty,sched_qty,picked_qty,inv_qty"/>
+		<ScreenRecord identifier="arparms" fields="inv_ref1_text"/>
+		<ScreenRecord identifier="customer" fields="name_text"/>
+		<ScreenRecord identifier="orderdetl" fields="part_code,order_qty,back_qty,sched_qty,picked_qty,inv_qty"/>
+		<ScreenRecord identifier="orderhead" fields="cust_code,order_num,order_date,ord_text"/>
+	</form.screenRecords>
+</form>
+

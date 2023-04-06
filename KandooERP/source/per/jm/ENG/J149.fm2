@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form xmlns="http://namespaces.querix.com/2015/fglForms">
+	<form.rootContainer>
+		<GridPanel classNames="fcls_rootContainer" verticalAlignment="Top" horizontalAlignment="Left" fieldTable="" identifier="rootContainer">
+			<GridPanel.gridRowDefinitions>
+				<GridRowDefinition gridLengthValue=""/>
+				<GridRowDefinition gridLengthValue=""/>
+				<GridRowDefinition gridLengthValue=""/>
+				<GridRowDefinition gridLengthValue=""/>
+			</GridPanel.gridRowDefinitions>
+			<GridPanel.gridColumnDefinitions>
+				<GridColumnDefinition gridLengthValue="100%"/>
+			</GridPanel.gridColumnDefinitions>
+			<GridPanel classNames="fcls_title_cnt" visible="true" verticalAlignment="Top" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="cntTitle">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="100%"/>
+					<GridColumnDefinition gridLengthValue=""/>
+				</GridPanel.gridColumnDefinitions>
+				<Label isDynamic="true" text="Activity Transaction Selection" classNames="fcls_title_lb" visible="true" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="header_text"/>
+				<Label isDynamic="true" text="J149" classNames="fcls_title_lb" visible="true" gridItemLocation="1,0,1,1" fieldTable="" identifier="lbFormName"/>
+			</GridPanel>
+			<GridPanel classNames="fcls_detail_cnt,fcls_data_cnt,fcls_align_left" visible="true" verticalAlignment="Top" horizontalAlignment="Left" gridItemLocation="0,1,1,1" fieldTable="formonly" identifier="cntDetail1">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="" gridMinLength="10rem"/>
+					<GridColumnDefinition gridLengthValue=""/>
+					<GridColumnDefinition gridLengthValue=""/>
+				</GridPanel.gridColumnDefinitions>
+				<Label isDynamic="true" text="From" classNames="fcls_columnlabel_rev_cell,fcls_align_hstretch" visible="true" gridItemLocation="1,0,1,1" fieldTable="" identifier="lb48"/>
+				<ComboBox dataType="SmallInt,,,," preferredSize="5qch,1qch" toolTip=" Enter the FROM year if time frame is periods" comment=" Enter the FROM year if time frame is periods" fieldTable="formonly" identifier="from_year_num" gridItemLocation="1,1,1,1" classNames="list-show-value,field-show-value,fcls_data_widget,fcls_align_left,fcls_length_10qch"/>
+				<ComboBox dataType="SmallInt,,,," preferredSize="5qch,1qch" toolTip=" Enter the TO year if time frame is periods" comment=" Enter the TO year if time frame is periods" fieldTable="formonly" identifier="to_year_num" gridItemLocation="2,1,1,1" classNames="list-show-value,field-show-value,fcls_data_widget,fcls_align_left,fcls_length_10qch"/>
+				<ComboBox dataType="SmallInt,,,," preferredSize="3qch,1qch" toolTip=" Enter the FROM period if time frame is periods" comment=" Enter the FROM period if time frame is periods" fieldTable="formonly" identifier="from_period_num" gridItemLocation="1,2,1,1" classNames="list-show-value,field-show-value,fcls_data_widget,fcls_align_left,fcls_length_10qch"/>
+				<ComboBox dataType="SmallInt,,,," preferredSize="3qch,1qch" toolTip=" Enter the TO period if time frame is periods" comment=" Enter the TO period if time frame is periods" fieldTable="formonly" identifier="to_period_num" gridItemLocation="2,2,1,1" classNames="list-show-value,field-show-value,fcls_data_widget,fcls_align_left,fcls_length_10qch"/>
+				<Label isDynamic="true" text="To" classNames="fcls_columnlabel_rev_cell,fcls_align_hstretch" visible="true" gridItemLocation="2,0,1,1" fieldTable="" identifier="lb50"/>
+				<Label isDynamic="true" text="Year" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,1,1,1" fieldTable="" identifier="lb51"/>
+				<Label isDynamic="true" text="Period" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,2,1,1" fieldTable="" identifier="lb52"/>
+			</GridPanel>
+			<GridPanel classNames="fcls_detail_cnt,fcls_data_cnt,fcls_align_left" visible="true" verticalAlignment="Top" horizontalAlignment="Left" gridItemLocation="0,2,1,1" fieldTable="formonly" identifier="cntDetail2">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="" gridMinLength="10rem"/>
+					<GridColumnDefinition gridLengthValue=""/>
+					<GridColumnDefinition gridLengthValue=""/>
+				</GridPanel.gridColumnDefinitions>
+				<ComboBox toCase="Up" dataType="Char,,,," preferredSize="4qch,1qch" toolTip=" Sequence report is to be sorted in " comment=" Sequence report is to be sorted in " fieldTable="formonly" identifier="sort_ind" gridItemLocation="1,0,1,1">
+				<ComboBoxItem text="1">
+					<ComboBoxItem.value>
+						<StringLiteral stringValue="1"/>
+					</ComboBoxItem.value>
+				</ComboBoxItem>
+				<ComboBoxItem text="2">
+					<ComboBoxItem.value>
+						<StringLiteral stringValue="2"/>
+					</ComboBoxItem.value>
+				</ComboBoxItem>
+			</ComboBox>
+				<ComboBox toCase="Up" dataType="Char,,,," preferredSize="4qch,1qch" toolTip=" Print (D) detail, (B) brief or (S) summarised report " comment=" Print (D) detail, (B) brief or (S) summarised report " fieldTable="formonly" identifier="content_ind" gridItemLocation="1,1,1,1">
+				<ComboBoxItem text="B">
+					<ComboBoxItem.value>
+						<StringLiteral stringValue="B"/>
+					</ComboBoxItem.value>
+				</ComboBoxItem>
+				<ComboBoxItem text="D">
+					<ComboBoxItem.value>
+						<StringLiteral stringValue="D"/>
+					</ComboBoxItem.value>
+				</ComboBoxItem>
+				<ComboBoxItem text="S">
+					<ComboBoxItem.value>
+						<StringLiteral stringValue="S"/>
+					</ComboBoxItem.value>
+				</ComboBoxItem>
+			</ComboBox>
+				<Label isDynamic="true" text="Sort Sequence" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="lb36"/>
+				<Label isDynamic="true" text="1. CostCode/Zone/Comp/Sub&#13;&#10;2. Zone/Comp/Sub/CostCode" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="2,0,1,1" fieldTable="" identifier="lb60" allowNewlines="true"/>
+				<Label isDynamic="true" text="Report Content" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,1,1,1" fieldTable="formonly" identifier="lb37"/>
+			</GridPanel>
+			<GridPanel classNames="fcls_statusbar_cnt" visible="true" verticalAlignment="Top" gridItemLocation="0,3,1,1" fieldTable="formonly" identifier="cntStatusBar">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="100%"/>
+				</GridPanel.gridColumnDefinitions>
+				<Label isDynamic="true" text="" classNames="fcls_sblabel" visible="true" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="lbInfo1"/>
+				<Label isDynamic="true" text="" classNames="fcls_sblabel" visible="true" gridItemLocation="0,1,1,1" fieldTable="formonly" identifier="lbInfo2"/>
+			</GridPanel>
+		</GridPanel>
+	</form.rootContainer>
+	<form.screenRecords>
+		<ScreenRecord identifier="formonly" fields="formonly.from_year_num,formonly.from_period_num,formonly.to_year_num,formonly.to_period_num,formonly.sort_ind,formonly.content_ind"/>
+	</form.screenRecords>
+</form>
+

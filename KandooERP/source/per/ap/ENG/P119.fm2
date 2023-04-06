@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form xmlns="http://namespaces.querix.com/2015/fglForms">
+	<form.rootContainer>
+		<GridPanel classNames="fcls_rootContainer" verticalAlignment="Stretch" horizontalAlignment="Stretch" fieldTable="" identifier="rootContainer">
+			<GridPanel.gridRowDefinitions>
+				<GridRowDefinition gridLengthValue=""/>
+				<GridRowDefinition/>
+				<GridRowDefinition gridLengthValue="100%" gridMinLength="10rem"/>
+				<GridRowDefinition gridLengthValue=""/>
+			</GridPanel.gridRowDefinitions>
+			<GridPanel.gridColumnDefinitions>
+				<GridColumnDefinition gridLengthValue="100%"/>
+			</GridPanel.gridColumnDefinitions>
+			<GridPanel classNames="fcls_title_cnt" visible="true" verticalAlignment="Top" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="cntTitle">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="100%"/>
+					<GridColumnDefinition gridLengthValue=""/>
+				</GridPanel.gridColumnDefinitions>
+				<Label isDynamic="true" text="Purchasing Group (Vendor Group)" classNames="fcls_title_lb" visible="true" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="header_text"/>
+				<Label isDynamic="true" text="P119" classNames="fcls_title_lb" visible="true" gridItemLocation="1,0,1,1" fieldTable="" identifier="lbFormName"/>
+			</GridPanel>
+			<GridPanel visible="true" identifier="c164" gridItemLocation="0,1,1,1" horizontalAlignment="Left" verticalAlignment="Top">
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="" gridMinLength="12rem"/>
+					<GridColumnDefinition gridLengthValue=""/>
+				</GridPanel.gridColumnDefinitions>
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<Label isDynamic="true" text="Purchasing Group&apos;s Master Vendor" classNames="fcls_fieldlabel,fcls_align_left" visible="true" fieldTable="" identifier="lb_purchase_group_vendor" allowNewlines="true" comment="" textAlignment="Default,Default" gridItemLocation="0,0,1,1"/>
+				<ComboBox classNames="fcls_data_widget,fcls_align_left,fcls_length_30qch" visible="true" fieldTable="vendorgrp" identifier="mast_vend_code" toCase="Up" gridItemLocation="1,0,1,1"/>
+				<Label text="Description" isDynamic="true" visible="true" identifier="lb_description" classNames="fcls_fieldlabel" gridItemLocation="0,1,1,1"/>
+				<TextField classNames="fcls_data_widget,fcls_align_left,fcls_length_30qch" visible="true" fieldTable="vendorgrp" identifier="desc_text" gridItemLocation="1,1,1,1"/>
+			</GridPanel>
+			<GroupBox title="Add / Remove Vendors to &amp; from this vendor-purchase group" visible="true" identifier="cntDetail2GroupBox" gridItemLocation="0,2,1,1" classNames="fcls_detail_gb_cnt" horizontalAlignment="Stretch" verticalAlignment="Stretch">
+					<GridPanel visible="true" identifier="cntDetail2GBSubGp" gridItemLocation="0,0,1,1" classNames="fcls_detail_gb_cnt_sub,fcls_data_cnt" horizontalAlignment="Stretch" verticalAlignment="Stretch">
+						<GridPanel.gridColumnDefinitions>
+							<GridColumnDefinition gridLengthValue="45%"/>
+							<GridColumnDefinition gridLengthValue="10%" gridMinLength="80" gridMaxLength="80"/>
+							<GridColumnDefinition gridLengthValue="45%"/>
+						</GridPanel.gridColumnDefinitions>
+						<GridPanel.gridRowDefinitions>
+							<GridRowDefinition gridLengthValue=""/>
+							<GridRowDefinition gridLengthValue="100%"/>
+						</GridPanel.gridRowDefinitions>
+						<GridPanel visible="true" identifier="cntGpFilter" classNames="fcls_detail_cnt" gridItemLocation="2,0,1,1" horizontalAlignment="Left">
+					<GridPanel.gridColumnDefinitions>
+						<GridColumnDefinition gridLengthValue="" gridMinLength="12rem"/>
+						<GridColumnDefinition gridLengthValue=""/>
+						<GridColumnDefinition/>
+					</GridPanel.gridColumnDefinitions>
+					<GridPanel.gridRowDefinitions>
+						<GridRowDefinition gridLengthValue=""/>
+						<GridRowDefinition gridLengthValue=""/>
+						<GridRowDefinition gridLengthValue=""/>
+					</GridPanel.gridRowDefinitions>
+					<Label text="Filter by Vendor" isDynamic="true" visible="true" identifier="lb52" gridItemLocation="0,0,1,1"/>
+					<ComboBox visible="true" identifier="vend_code" gridItemLocation="1,0,1,1" classNames="fcls_data_widget,fcls_length_30qch" fieldTable="temp_table_vendor">
+						<ComboBoxItem text="value1">
+							<ComboBoxItem.value>
+								<StringLiteral stringValue="value_1"/>
+							</ComboBoxItem.value>
+						</ComboBoxItem>
+					</ComboBox>
+					<Button visible="true" identifier="btFilter" gridItemLocation="2,0,1,1" classNames="fcls_button_filter">
+						<Button.onInvoke>
+							<ActionEventHandler type="actioneventhandler" actionName="filterToggle"/>
+						</Button.onInvoke>
+					</Button>
+					<Label text="Filter by Name" isDynamic="true" visible="true" identifier="lb54" gridItemLocation="0,1,1,1"/>
+					<TextField visible="true" identifier="name_text" gridItemLocation="1,1,1,1" classNames="fcls_data_widget,fcls_length_30qch" fieldTable="temp_table_vendor"/>
+					<Label text="Filter by Address" isDynamic="true" visible="true" identifier="lb53" gridItemLocation="0,2,1,1"/>
+					<TextField visible="true" identifier="addr1_text" gridItemLocation="1,2,1,1" classNames="fcls_data_widget,fcls_length_30qch" fieldTable="temp_table_vendor"/>
+				</GridPanel>
+						<Table classNames="fcls_table_cnt" visible="true" fieldTable="" identifier="sr_vendorGrp" gridItemLocation="0,0,1,2" isMultiSelect="true" horizontalAlignment="Stretch">
+				<TableColumn text="Vendor" resizable="true" visible="true" fieldTable="" identifier="tc_f156">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="10rem" gridMinLength="10rem" gridMaxLength="10rem"/>
+					</TableColumn.columnLength>
+					<TextField notNull="true" visible="true" fieldTable="formonly" identifier="vend_code"/>
+				</TableColumn>
+				<TableColumn text="Name" resizable="true" visible="true" fieldTable="" identifier="tc_f157">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="20rem" gridMinLength="" gridMaxLength="20rem"/>
+					</TableColumn.columnLength>
+					<TextField visible="true" fieldTable="formonly" identifier="name_text" noEntry="true"/>
+				</TableColumn>
+				<TableColumn text="Address" resizable="true" visible="true" fieldTable="" identifier="Address">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="30rem" gridMaxLength="30rem"/>
+					</TableColumn.columnLength>
+					<TextField visible="true" fieldTable="formonly" identifier="addr1_text" noEntry="true"/>
+				</TableColumn>
+			</Table>
+			
+			
+			
+						<StackPanel visible="true" identifier="c163" gridItemLocation="1,1,1,1" orientation="Vertical" horizontalAlignment="Center" verticalAlignment="Center">
+
+							<Button visible="true" identifier="btRemove" classNames="fcls_button_left">
+								<Button.onInvoke>
+									<ActionEventHandler type="actioneventhandler" actionName="ADD_MOVE_LEFT"/>
+								</Button.onInvoke>
+							</Button>
+
+							<Button visible="true" identifier="btAdd" classNames="fcls_button_right">
+							<Button.onInvoke>
+								<ActionEventHandler type="actioneventhandler" actionName="DELETE_MOVE_RIGHT"/>
+							</Button.onInvoke>
+						</Button>
+
+						</StackPanel>
+						
+			
+						<Table visible="true" identifier="sr_vendorList" gridItemLocation="2,1,1,1" isMultiSelect="true" horizontalAlignment="Stretch">
+							<TableColumn text="Vendor Code" resizable="true" visible="true" identifier="tc_f63">
+								<TextField visible="true" identifier="list_vend_code" fieldTable="formonly"/>
+								<TableColumn.columnLength>
+									<GridLength/>
+								</TableColumn.columnLength>
+							</TableColumn>
+							<TableColumn text="Vendor Name" resizable="true" visible="true" identifier="tc_f64">
+								<TextField visible="true" identifier="list_name_text" fieldTable="formonly"/>
+								<TableColumn.columnLength>
+									<GridLength/>
+								</TableColumn.columnLength>
+							</TableColumn>
+							<TableColumn text="Address" resizable="true" visible="true" identifier="tc_f65">
+								<TextField visible="true" identifier="list_addr1_text" fieldTable="formonly"/>
+								<TableColumn.columnLength>
+									<GridLength/>
+								</TableColumn.columnLength>
+							</TableColumn>
+						</Table>
+
+						
+				</GridPanel>
+			</GroupBox>
+			<GridPanel classNames="fcls_statusbar_cnt" visible="true" verticalAlignment="Top" gridItemLocation="0,3,1,1" fieldTable="formonly" identifier="cntStatusBar">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="100%"/>
+				</GridPanel.gridColumnDefinitions>
+				<Label isDynamic="true" text="" classNames="fcls_sblabel" visible="true" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="lbInfo1"/>
+				<Label isDynamic="true" text="" classNames="fcls_sblabel" visible="true" gridItemLocation="0,1,1,1" fieldTable="formonly" identifier="lbInfo2"/>
+			</GridPanel>
+		</GridPanel>
+	</form.rootContainer>
+	<form.screenRecords>
+		<ScreenRecord identifier="FORMONLY" fields="formonly.vend_code,temp_table_vendor.vend_code,vendor.vend_code,vendorgrp.vend_code,vend_code,vendorgrp.mast_vend_code,formonly.name_text,temp_table_vendor.name_text,vendor.name_text,vendor.desc_text,vendorgrp.desc_text,vendor.name_text,formonly.addr1_text,temp_table_vendor.addr1_text,vendor.addr1_text,addr1_text,name_text,c164,lb55"/>
+		<ScreenRecord identifier="sr_vendorGrp" fields="formonly.vend_code,formonly.name_text,formonly.addr1_text"/>
+		<ScreenRecord identifier="sr_vendorList" fields="formonly.list_vend_code,formonly.list_name_text,formonly.list_addr1_text"/>
+	</form.screenRecords>
+</form>
+

@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form xmlns="http://namespaces.querix.com/2015/fglForms">
+	<form.rootContainer>
+		<GridPanel classNames="fcls_rootContainer" verticalAlignment="Stretch" horizontalAlignment="Stretch" fieldTable="" identifier="rootContainer">
+			<GridPanel.gridRowDefinitions>
+				<GridRowDefinition gridLengthValue=""/>
+				<GridRowDefinition gridLengthValue="100%"/>
+				<GridRowDefinition gridLengthValue=""/>
+			</GridPanel.gridRowDefinitions>
+			<GridPanel.gridColumnDefinitions>
+				<GridColumnDefinition gridLengthValue="100%"/>
+			</GridPanel.gridColumnDefinitions>
+			<GridPanel classNames="fcls_title_cnt" visible="true" verticalAlignment="Top" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="cntTitle">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="100%"/>
+					<GridColumnDefinition gridLengthValue=""/>
+				</GridPanel.gridColumnDefinitions>
+				<Label isDynamic="true" text="Shipment Scan" classNames="fcls_title_lb" visible="true" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="header_text"/>
+				<Label isDynamic="true" text="L107" classNames="fcls_title_lb" visible="true" gridItemLocation="1,0,1,1" fieldTable="" identifier="lbFormName"/>
+			</GridPanel>
+			<Table rowCount="10" preferredSize="72qch,10qch" gridItemLocation="0,1,1,1" fieldTable="" identifier="sr_shiphead">
+				<TableColumn text="Shipment" fieldTable="" identifier="tc_ship_code">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="10rem" gridMaxLength="10rem" gridMinLength="10rem"/>
+					</TableColumn.columnLength>
+					<TextField dataType="Char,,,,8" toolTip="Enter the Shipment Code you wish to begin the scan process at" fieldTable="shiphead" comment="Enter the Shipment Code you wish to begin the scan process at" identifier="ship_code"/>
+				</TableColumn>
+				<TableColumn text="Type" fieldTable="" identifier="tc_ship_type_code">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="10rem" gridMaxLength="10rem" gridMinLength="10rem"/>
+					</TableColumn.columnLength>
+					<TextField toCase="Up" dataType="Char,,,,2" toolTip="Indicates the type of shipment" fieldTable="shiphead" comment="Indicates the type of shipment" identifier="ship_type_code"/>
+				</TableColumn>
+				<TableColumn text="Vendor" fieldTable="" identifier="tc_vend_code">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="10rem" gridMaxLength="10rem" gridMinLength="10rem"/>
+					</TableColumn.columnLength>
+					<TextField toCase="Up" dataType="Char,,,,8" toolTip="Vendor Code of the vendor for this shipment" fieldTable="shiphead" comment="Vendor Code of the vendor for this shipment" identifier="vend_code"/>
+				</TableColumn>
+				<TableColumn text="Product" fieldTable="" identifier="tc_part_code">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="10rem" gridMaxLength="10rem" gridMinLength="10rem"/>
+					</TableColumn.columnLength>
+					<TextField toCase="Up" dataType="Char,,,,15" toolTip=" Product code for item on this shipment " fieldTable="shipdetl" comment=" Product code for item on this shipment " identifier="part_code"/>
+				</TableColumn>
+				<TableColumn text="P.O." fieldTable="" identifier="tc_source_doc_num">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="10rem" gridMaxLength="10rem" gridMinLength="10rem"/>
+					</TableColumn.columnLength>
+					<TextField dataType="Integer,,,," toolTip=" Number of originating purchase order" fieldTable="shipdetl" comment=" Number of originating purchase order" identifier="source_doc_num"/>
+				</TableColumn>
+				<TableColumn text="Port of Discharge" fieldTable="" identifier="tc_discharge_text">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="10rem" gridMaxLength="10rem" gridMinLength="10rem"/>
+					</TableColumn.columnLength>
+					<TextField toCase="Up" dataType="Char,,,,20" toolTip="Port of discharge for this shipment" fieldTable="shiphead" comment="Port of discharge for this shipment" identifier="discharge_text"/>
+				</TableColumn>
+				<TableColumn text="Status" fieldTable="" identifier="tc_ship_status_code">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="10rem" gridMaxLength="10rem" gridMinLength="10rem"/>
+					</TableColumn.columnLength>
+					<TextField toCase="Up" dataType="Char,,,,2" toolTip="Shipment status " fieldTable="shiphead" comment="Shipment status " identifier="ship_status_code"/>
+				</TableColumn>
+				<TableColumn resizable="true" visible="true" identifier="tc_lbEOL">
+					<Label isDynamic="true" visible="true" identifier="lbEOL"/>
+					<TableColumn.columnLength>
+						<GridLength/>
+					</TableColumn.columnLength>
+				</TableColumn>
+			</Table>
+			<GridPanel classNames="fcls_statusbar_cnt" visible="true" verticalAlignment="Top" gridItemLocation="0,2,1,1" fieldTable="formonly" identifier="cntStatusBar">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="100%"/>
+				</GridPanel.gridColumnDefinitions>
+				<Label isDynamic="true" text="" classNames="fcls_sblabel" visible="true" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="lbInfo1"/>
+				<Label isDynamic="true" text="" classNames="fcls_sblabel" visible="true" gridItemLocation="0,1,1,1" fieldTable="formonly" identifier="lbInfo2"/>
+			</GridPanel>
+		</GridPanel>
+	</form.rootContainer>
+	<form.screenRecords>
+		<ScreenRecord identifier="sr_shiphead" fields="shiphead.ship_code,shiphead.ship_type_code,shiphead.vend_code,shipdetl.part_code,shipdetl.source_doc_num,shiphead.discharge_text,shiphead.ship_status_code" elements="10"/>
+		<ScreenRecord identifier="shipdetl" fields="part_code,source_doc_num"/>
+		<ScreenRecord identifier="shiphead" fields="ship_code,ship_type_code,vend_code,discharge_text,ship_status_code"/>
+	</form.screenRecords>
+</form>
+

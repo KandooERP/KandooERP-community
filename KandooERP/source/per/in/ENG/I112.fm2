@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?><form xmlns="http://namespaces.querix.com/2015/fglForms">
+	<form.rootContainer>
+		<GridPanel classNames="fcls_rootContainer" fieldTable="" identifier="rootContainer" verticalAlignment="Stretch">
+			<GridPanel.gridRowDefinitions>
+				<GridRowDefinition gridLengthValue=""/>
+				<GridRowDefinition gridLengthValue=""/>
+				<GridRowDefinition gridLengthValue="100%"/>
+				<GridRowDefinition gridLengthValue=""/>
+			</GridPanel.gridRowDefinitions>
+			<GridPanel.gridColumnDefinitions>
+				<GridColumnDefinition gridLengthValue="100%"/>
+			</GridPanel.gridColumnDefinitions>
+			<GridPanel classNames="fcls_title_cnt" fieldTable="formonly" gridItemLocation="0,0,1,1" identifier="cnttitle" verticalAlignment="Top" visible="true">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="100%"/>
+					<GridColumnDefinition gridLengthValue=""/>
+				</GridPanel.gridColumnDefinitions>
+				<Label classNames="fcls_title_lb" fieldTable="formonly" gridItemLocation="0,0,1,1" identifier="header_text" isDynamic="true" text="Product Ledger" visible="true"/>
+				<Label classNames="fcls_title_lb" fieldTable="" gridItemLocation="1,0,1,1" identifier="lbformname" isDynamic="true" text="I112" visible="true"/>
+			</GridPanel>
+			<GridPanel classNames="fcls_detail_cnt,fcls_data_cnt,fcls_align_left" fieldTable="formonly" gridItemLocation="0,1,1,1" horizontalAlignment="Left" identifier="cntdetail1" verticalAlignment="Top" visible="true">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="" gridMinLength="10rem"/>
+					<GridColumnDefinition gridLengthValue=""/>
+					<GridColumnDefinition gridLengthValue=""/>
+				</GridPanel.gridColumnDefinitions>
+				<Label classNames="fcls_fieldlabel,fcls_align_left" fieldTable="" gridItemLocation="0,0,1,1" identifier="lb51" isDynamic="true" text="Product Code" visible="true"/>
+				<Label classNames="fcls_fieldlabel,fcls_align_left" fieldTable="" gridItemLocation="0,2,1,1" identifier="lb52" isDynamic="true" text="Warehouse Code" visible="true"/>
+				<ComboBox classNames="field-show-value,list-show-text-value,fcls_data_widget,fcls_align_left,fcls_length_15qch" comment="The Product code to begin this inquiry (W)" dataType="Char,,,,15" fieldTable="prodledg" gridItemLocation="1,0,1,1" identifier="part_code" preferredSize="16qch,1qch" toCase="Up" toolTip="The Product code to begin this inquiry (W)"/>
+				<ComboBox classNames="field-show-value,list-show-text-value,fcls_data_widget,fcls_align_left,fcls_length_15qch" comment="The warehouse code for this product activity (W)" dataType="Char,,,,3" fieldTable="prodledg" gridItemLocation="1,2,1,1" identifier="ware_code" preferredSize="4qch,1qch" toCase="Up" toolTip="The warehouse code for this product activity (W)"/>
+				<TextField classNames="fcls_data_widget,fcls_align_left,fcls_length_30qch" comment="Description of the product" dataType="Char,,,,36" fieldTable="product" gridItemLocation="2,0,1,1" identifier="desc_text" preferredSize="31qch,1qch" toolTip="Description of the product"/>
+				<TextField classNames="fcls_data_widget,fcls_align_left,fcls_length_30qch" comment="Second line of description of the product" dataType="Char,,,,36" fieldTable="product" gridItemLocation="2,1,1,1" identifier="desc2_text" preferredSize="31qch,1qch" toolTip="Second line of description of the product"/>
+				<TextField classNames="fcls_data_widget,fcls_align_left,fcls_length_30qch" comment="Full name or description of warehouse location" dataType="Char,,,,30" fieldTable="warehouse" gridItemLocation="2,2,1,1" identifier="desc_text" preferredSize="31qch,1qch" toolTip="Full name or description of warehouse location"/>
+				<Label visible="true" identifier="lb55" gridItemLocation="0,3,1,1" isDynamic="true" classNames="fcls_fieldlabel,fcls_align_left" fieldTable="" text="Transaction Date"/>
+				<TextField visible="true" identifier="filter_tran_date" gridItemLocation="1,3,1,1" classNames="fcls_data_widget,fcls_align_left,fcls_length_15qch"/>
+			</GridPanel>
+			<Table fieldTable="" gridItemLocation="0,2,1,1" identifier="sr_prodledg" preferredSize="74qch,10qch" rowCount="10">
+				<TableColumn fieldTable="" identifier="f001" text="Date">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="10rem"/>
+					</TableColumn.columnLength>
+					<TextField comment="Indicates the date of the product transaction (activity)" dataType="Date,,,," fieldTable="prodledg" identifier="tran_date" toolTip="Indicates the date of the product transaction (activity)"/>
+				</TableColumn>
+				<TableColumn fieldTable="" identifier="y1" text="Year">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="10rem"/>
+					</TableColumn.columnLength>
+					<TextField comment="Indicates the year of the product activity" dataType="SmallInt,,,," fieldTable="prodledg" identifier="year_num" toolTip="Indicates the year of the product activity"/>
+				</TableColumn>
+				<TableColumn fieldTable="" identifier="f3" text="Period Source">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="10rem"/>
+					</TableColumn.columnLength>
+					<TextField comment="Indicates the period of the product activity" dataType="SmallInt,,,," fieldTable="prodledg" identifier="period_num" toolTip="Indicates the period of the product activity"/>
+				</TableColumn>
+				<TableColumn fieldTable="" identifier="a" text="Type">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="10rem"/>
+					</TableColumn.columnLength>
+					<TextField comment="Identifies type of product activity, entries could be A, C, I, P, R, S, T" dataType="Char,,,,1" fieldTable="prodledg" identifier="trantype_ind" toCase="Up" toolTip="Identifies type of product activity, entries could be A, C, I, P, R, S, T"/>
+				</TableColumn>
+				<TableColumn identifier="tc_f54" resizable="true" text="Prod Adjustmt" visible="true">
+					<ComboBox fieldTable="prodledg" identifier="source_code" visible="true"/>
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="10rem"/>
+					</TableColumn.columnLength>
+				</TableColumn>
+				<TableColumn fieldTable="" identifier="f004" text="ID">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="10rem"/>
+					</TableColumn.columnLength>
+					<TextField comment="Identifies the document number for this product activity" dataType="Char,,,,8" fieldTable="prodledg" identifier="source_text" toolTip="Identifies the document number for this product activity"/>
+				</TableColumn>
+				<TableColumn allowNewlines="true" fieldTable="" identifier="f005" text="Source Document">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="10rem"/>
+					</TableColumn.columnLength>
+					<TextField comment="Indicates the document for this product activity" dataType="Integer,,,," fieldTable="prodledg" identifier="source_num" toolTip="Indicates the document for this product activity"/>
+				</TableColumn>
+				<TableColumn fieldTable="" identifier="f006" text="Quantity">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="10rem"/>
+					</TableColumn.columnLength>
+					<TextField comment="The quantity sold/received/transferred for this activity entry" dataType="Float,,,," fieldTable="prodledg" identifier="tran_qty" toolTip="The quantity sold/received/transferred for this activity entry"/>
+				</TableColumn>
+				<TableColumn fieldTable="" identifier="f007" text="Unit Cost">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="10rem"/>
+					</TableColumn.columnLength>
+					<TextField comment="Cost for product entry, i.e. for sales it would be the cost" dataType="Decimal,,,4,16" fieldTable="prodledg" identifier="cost_amt" toolTip="Cost for product entry, i.e. for sales it would be the cost"/>
+				</TableColumn>
+				<TableColumn fieldTable="" identifier="f008" text="Unit Price">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="10rem"/>
+					</TableColumn.columnLength>
+					<TextField comment="Price charged for the product when it was sold" dataType="Decimal,,,4,16" fieldTable="prodledg" identifier="sales_amt" toolTip="Price charged for the product when it was sold"/>
+				</TableColumn>
+				<TableColumn fieldTable="" identifier="tc_lb53" resizable="true" visible="true">
+					<TableColumn.columnLength>
+						<GridLength/>
+					</TableColumn.columnLength>
+					<Label fieldTable="" identifier="lb53" isDynamic="true" visible="true"/>
+				</TableColumn>
+			</Table>
+			<GridPanel classNames="fcls_statusbar_cnt" fieldTable="formonly" gridItemLocation="0,3,1,1" identifier="cntStatusBar" verticalAlignment="Top" visible="true">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="100%"/>
+				</GridPanel.gridColumnDefinitions>
+				<Label classNames="fcls_sblabel" fieldTable="formonly" gridItemLocation="0,0,1,1" identifier="lbInfo1" isDynamic="true" text="" visible="true"/>
+				<Label classNames="fcls_sblabel" fieldTable="formonly" gridItemLocation="0,1,1,1" identifier="lbInfo2" isDynamic="true" text="" visible="true"/>
+			</GridPanel>
+		</GridPanel>
+	</form.rootContainer>
+	<form.screenRecords>
+		<ScreenRecord fields="tran_date,year_num,period_num,trantype_ind,source_code,source_text,source_num,tran_qty,cost_amt,sales_amt" identifier="sr_prodledg"/>
+		<ScreenRecord fields="part_code,ware_code,tran_date,year_num,period_num,trantype_ind,source_text,source_num,tran_qty,cost_amt,sales_amt" identifier="prodledg"/>
+		<ScreenRecord fields="desc_text,desc2_text" identifier="product"/>
+		<ScreenRecord fields="desc_text" identifier="warehouse"/>
+	</form.screenRecords>
+</form>

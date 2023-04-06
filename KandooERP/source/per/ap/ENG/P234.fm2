@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form xmlns="http://namespaces.querix.com/2015/fglForms">
+	<form.rootContainer>
+		<GridPanel classNames="fcls_rootContainer" verticalAlignment="Stretch" horizontalAlignment="Stretch" fieldTable="" identifier="rootContainer">
+			<GridPanel.gridRowDefinitions>
+				<GridRowDefinition>
+					<GridRowDefinition.gridLength>
+						<GridLength gridLengthValue=""/>
+					</GridRowDefinition.gridLength>
+				</GridRowDefinition>
+				<GridRowDefinition>
+					<GridRowDefinition.gridLength>
+						<GridLength gridLengthValue=""/>
+					</GridRowDefinition.gridLength>
+				</GridRowDefinition>
+				<GridRowDefinition>
+					<GridRowDefinition.gridLength>
+						<GridLength gridLengthValue=""/>
+					</GridRowDefinition.gridLength>
+				</GridRowDefinition>
+				<GridRowDefinition>
+					<GridRowDefinition.gridLength>
+						<GridLength gridLengthValue="100%"/>
+					</GridRowDefinition.gridLength>
+				</GridRowDefinition>
+				<GridRowDefinition>
+					<GridRowDefinition.gridLength>
+						<GridLength gridLengthValue=""/>
+					</GridRowDefinition.gridLength>
+				</GridRowDefinition>
+			</GridPanel.gridRowDefinitions>
+			<GridPanel.gridColumnDefinitions>
+				<GridColumnDefinition>
+					<GridColumnDefinition.gridLength>
+						<GridLength gridLengthValue="100%"/>
+					</GridColumnDefinition.gridLength>
+				</GridColumnDefinition>
+			</GridPanel.gridColumnDefinitions>
+			<GridPanel classNames="fcls_title_cnt" visible="true" verticalAlignment="Top" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="cntTitle">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition>
+						<GridRowDefinition.gridLength>
+							<GridLength gridLengthValue=""/>
+						</GridRowDefinition.gridLength>
+					</GridRowDefinition>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition>
+						<GridColumnDefinition.gridLength>
+							<GridLength gridLengthValue="100%"/>
+						</GridColumnDefinition.gridLength>
+					</GridColumnDefinition>
+					<GridColumnDefinition>
+						<GridColumnDefinition.gridLength>
+							<GridLength gridLengthValue=""/>
+						</GridColumnDefinition.gridLength>
+					</GridColumnDefinition>
+				</GridPanel.gridColumnDefinitions>
+				<Label isDynamic="true" text="Automatic Payments Processing" classNames="fcls_title_lb" visible="true" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="header_text"/>
+				<Label isDynamic="true" text="P234" classNames="fcls_title_lb" visible="true" gridItemLocation="1,0,1,1" fieldTable="" identifier="lbFormName"/>
+			</GridPanel>
+			<GridPanel classNames="fcls_detail_cnt,fcls_data_cnt,fcls_align_left" visible="true" verticalAlignment="Top" horizontalAlignment="Left" gridItemLocation="0,1,1,1" fieldTable="formonly" identifier="cntDetail1">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition>
+						<GridRowDefinition.gridLength>
+							<GridLength gridLengthValue=""/>
+						</GridRowDefinition.gridLength>
+					</GridRowDefinition>
+					<GridRowDefinition>
+						<GridRowDefinition.gridLength>
+							<GridLength gridLengthValue=""/>
+						</GridRowDefinition.gridLength>
+					</GridRowDefinition>
+					<GridRowDefinition>
+						<GridRowDefinition.gridLength>
+							<GridLength gridLengthValue=""/>
+						</GridRowDefinition.gridLength>
+					</GridRowDefinition>
+					<GridRowDefinition>
+						<GridRowDefinition.gridLength>
+							<GridLength gridLengthValue=""/>
+						</GridRowDefinition.gridLength>
+					</GridRowDefinition>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition>
+						<GridColumnDefinition.gridLength>
+							<GridLength gridLengthValue="10rem"/>
+						</GridColumnDefinition.gridLength>
+					</GridColumnDefinition>
+					<GridColumnDefinition>
+						<GridColumnDefinition.gridLength>
+							<GridLength gridLengthValue=""/>
+						</GridColumnDefinition.gridLength>
+					</GridColumnDefinition>
+				</GridPanel.gridColumnDefinitions>
+				<Label isDynamic="true" text="Bank Code" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="lb57"/>
+				<ComboBox toCase="Up" dataType="Char,,,,9" preferredSize="11qch,1qch" toolTip=" Enter the Bank from which the payments will be paid (W)" gridItemLocation="1,0,1,1" fieldTable="bank" comment=" Enter the Bank from which the payments will be paid (W)" identifier="bank_code" classNames="fcls_data_widget,fcls_align_left,fcls_length_10qch"/>
+				<Label isDynamic="true" text="Bank" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,1,1,1" fieldTable="" identifier="lb76"/>
+				<TextField noEntry="true" dataType="Char,,,,40" preferredSize="41qch,1qch" gridItemLocation="1,1,1,1" fieldTable="bank" identifier="name_acct_text" classNames="fcls_data_widget,fcls_align_left,fcls_length_40qch"/>
+				<Label isDynamic="true" text="Cheque Date" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,2,1,1" fieldTable="" identifier="lb73"/>
+				<Calendar format="dd/mm/yyyy" dataType="Date,,,," preferredSize="11qch,1qch" toolTip=" Enter date to print on cheques " gridItemLocation="1,2,1,1" fieldTable="formonly" comment=" Enter date to print on cheques " identifier="cheq_date" classNames="fcls_data_widget,fcls_align_left,fcls_length_10qch"/>
+			</GridPanel>
+			<GroupBox title="Payment" classNames="fcls_detail_gb_cnt" visible="true" verticalAlignment="Top" gridItemLocation="0,2,1,1" fieldTable="formonly" identifier="cntDetail2GroupBox">
+				<GridPanel classNames="fcls_detail_gb_cnt_sub,fcls_detail_cnt_sub,fcls_data_cnt,fcls_align_left" visible="true" verticalAlignment="Top" horizontalAlignment="Left" fieldTable="formonly" identifier="cntDetail2Sub">
+					<GridPanel.gridRowDefinitions>
+						<GridRowDefinition>
+							<GridRowDefinition.gridLength>
+								<GridLength gridLengthValue=""/>
+							</GridRowDefinition.gridLength>
+						</GridRowDefinition>
+						<GridRowDefinition>
+							<GridRowDefinition.gridLength>
+								<GridLength gridLengthValue=""/>
+							</GridRowDefinition.gridLength>
+						</GridRowDefinition>
+						<GridRowDefinition>
+							<GridRowDefinition.gridLength>
+								<GridLength gridLengthValue=""/>
+							</GridRowDefinition.gridLength>
+						</GridRowDefinition>
+					</GridPanel.gridRowDefinitions>
+					<GridPanel.gridColumnDefinitions>
+						<GridColumnDefinition>
+							<GridColumnDefinition.gridLength>
+								<GridLength gridLengthValue="10rem"/>
+							</GridColumnDefinition.gridLength>
+						</GridColumnDefinition>
+						<GridColumnDefinition>
+							<GridColumnDefinition.gridLength>
+								<GridLength gridLengthValue=""/>
+							</GridColumnDefinition.gridLength>
+						</GridColumnDefinition>
+						<GridColumnDefinition>
+							<GridColumnDefinition.gridLength>
+								<GridLength gridLengthValue=""/>
+							</GridColumnDefinition.gridLength>
+						</GridColumnDefinition>
+					</GridPanel.gridColumnDefinitions>
+					<Label isDynamic="true" text="Total Payment" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="lb47"/>
+					<TextField noEntry="true" dataType="Char,,,," preferredSize="12qch,1qch" gridItemLocation="1,0,1,1" fieldTable="formonly" identifier="total_pay_amt" classNames="fcls_data_widget,fcls_align_left,fcls_length_10qch"/>
+					<TextField noEntry="true" dataType="Char,,,,3" preferredSize="4qch,1qch" gridItemLocation="2,0,1,1" fieldTable="bank" identifier="currency_code" classNames="fcls_data_widget,fcls_align_left,fcls_length_10qch"/>
+					<Label isDynamic="true" text="Cheques." classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,1,1,1" fieldTable="formonly" identifier="lb46"/>
+					<TextField noEntry="true" dataType="Char,,,," preferredSize="9qch,1qch" gridItemLocation="1,1,1,1" fieldTable="formonly" identifier="number_of_cheques" classNames="fcls_data_widget,fcls_align_left,fcls_length_10qch"/>
+					<Label isDynamic="true" text="EFTs" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,2,1,1" fieldTable="formonly" identifier="lb44"/>
+					<TextField noEntry="true" dataType="Char,,,," preferredSize="9qch,1qch" gridItemLocation="1,2,1,1" fieldTable="formonly" identifier="number_of_efts" classNames="fcls_data_widget,fcls_align_left,fcls_length_10qch"/>
+				</GridPanel>
+			</GroupBox>
+			<Table rowCount="9" preferredSize="58qch,9qch" gridItemLocation="0,3,1,1" fieldTable="" identifier="sr_comments">
+				<TableColumn fieldTable="" identifier="tc_comments" text="Automatic Payment Progress">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="100%"/>
+					</TableColumn.columnLength>
+					<TextField noEntry="true" dataType="Char,,,," fieldTable="formonly" identifier="comments"/>
+				</TableColumn>
+			</Table>
+			<GridPanel classNames="fcls_statusbar_cnt" visible="true" verticalAlignment="Bottom" gridItemLocation="0,4,1,1" fieldTable="formonly" identifier="cntStatusBar">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition>
+						<GridRowDefinition.gridLength>
+							<GridLength gridLengthValue=""/>
+						</GridRowDefinition.gridLength>
+					</GridRowDefinition>
+					<GridRowDefinition>
+						<GridRowDefinition.gridLength>
+							<GridLength gridLengthValue=""/>
+						</GridRowDefinition.gridLength>
+					</GridRowDefinition>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition>
+						<GridColumnDefinition.gridLength>
+							<GridLength gridLengthValue="100%"/>
+						</GridColumnDefinition.gridLength>
+					</GridColumnDefinition>
+				</GridPanel.gridColumnDefinitions>
+				<Label isDynamic="true" text="" classNames="fcls_sblabel" visible="true" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="lbInfo1"/>
+				<Label isDynamic="true" text="" classNames="fcls_sblabel" visible="true" gridItemLocation="0,1,1,1" fieldTable="formonly" identifier="lbInfo2"/>
+			</GridPanel>
+		</GridPanel>
+	</form.rootContainer>
+	<form.screenRecords>
+		<ScreenRecord identifier="sr_comments" fields="formonly.comments" elements="9"/>
+		<ScreenRecord identifier="bank" fields="bank.bank_code,bank.name_acct_text,bank.currency_code"/>
+		<ScreenRecord identifier="formonly" fields="formonly.cheq_date,formonly.total_pay_amt,formonly.comments,formonly.number_of_cheques,formonly.number_of_efts"/>
+	</form.screenRecords>
+</form>
+

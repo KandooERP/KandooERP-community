@@ -1,0 +1,91 @@
+{
+###########################################################################
+# This program is free software; you can redistribute it and/or modify it
+# under the terms of the GNU General Public License as published by the
+# Free Software Foundation; either version 2 of the License, or (at your
+# option) any later version.
+#
+# This program is distributed in the hope that it will be useful, but
+# WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+# General Public License for more details.
+#
+# You should have received a copy of the GNU General Public License along
+# with this program; if not, write to the Free Software Foundation, Inc.,
+# 59 Temple Place, Suite 330, Boston, MA 02111-1307 USA
+#
+###########################################################################
+
+	 $Id: M183.per,v 1.2 2003/11/19 22:23:01 afalout Exp $
+}
+
+
+database kandoodb
+
+screen
+{
+                          Work In Progress Receipt                     M183
+\g----------------------------------------------------------------------------\g
+ Work Centre          [f001      ]      [f002                          ]
+ Shop Order Number      [f003      ]
+ Suffix Number               [f004 ]
+ Product              [f005           ] [f006                          ]
+ Order Quantity       [f007        ]
+ Unit of Measure      [f008]
+
+ Receipt Type         [a]               [f009     ]
+ Required Quantity    [f010        ]     Receipted to Date   [f011        ]
+ Quantity to Receipt  [f012        ]
+ Unit of Measure      [f013]            [f014   ]
+ Cost Amount          [f015             ]Price Amount   [f016             ]
+ Start Date           [f017      ]       Start Time     [f018    ]
+ End Date             [f019      ]       End Time       [f020    ]
+ Work Centre Status   [b]               [f021      ]
+ Receipt Description  [f022                          ]
+
+}
+
+tables
+shoporddetl
+shopordhead
+product
+wipreceipt
+
+attributes
+f001 = shoporddetl.work_centre_code;
+f002 = formonly.wc_desc type char;
+f003 = shoporddetl.shop_order_num;
+f004 = shoporddetl.suffix_num;
+f005 = shopordhead.part_code;
+f006 = formonly.prod_desc type char;
+f007 = shopordhead.order_qty;
+f008 = formonly.uomcode type char;
+a    = wipreceipt.type_ind, upshift,
+comments = " T = Time, M = Materials, C = Costs";
+f009 = formonly.type_desc type char;
+f010 = shoporddetl.required_qty;
+f011 = shoporddetl.receipted_qty;
+f012 = wipreceipt.receipt_qty,
+comments = " Quantity of time or materials to be receipted at this work centre";
+f013 = wipreceipt.uom_code;
+f014 = formonly.uom_desc type char;
+f015 = wipreceipt.cost_amt,
+comments = " Amount of cost to be receipted at this workcentre";
+f016 = wipreceipt.price_amt,
+comments = " Amount of price to be receipted at this workcentre";
+f017 = wipreceipt.start_date,
+comments = " Start date of this work in progress receipt";
+f018 = wipreceipt.start_time, picture = "XX:XX:XX",
+comments = " Start time of this work in progress receipt";
+f019 = wipreceipt.end_date,
+comments = " End date of this work in progress receipt";
+f020 = wipreceipt.end_time, picture = "XX:XX:XX",
+comments = " End time of this work in progress receipt";
+b    = wipreceipt.status_ind, upshift,
+comments = " I = Incomplete, C = Complete";
+f021 = formonly.status_desc type char;
+f022 = wipreceipt.desc_text,
+comments = " Description of this work in progress receipt";
+
+instructions
+delimiters "  "

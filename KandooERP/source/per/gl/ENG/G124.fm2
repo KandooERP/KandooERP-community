@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form xmlns="http://namespaces.querix.com/2015/fglForms">
+	<form.rootContainer>
+		<GridPanel classNames="fcls_rootContainer" verticalAlignment="Stretch" horizontalAlignment="Stretch" fieldTable="" identifier="rootContainer">
+			<GridPanel.gridRowDefinitions>
+				<GridRowDefinition>
+					<GridRowDefinition.gridLength>
+						<GridLength gridLengthValue=""/>
+					</GridRowDefinition.gridLength>
+				</GridRowDefinition>
+				<GridRowDefinition>
+					<GridRowDefinition.gridLength>
+						<GridLength gridLengthValue="100%"/>
+					</GridRowDefinition.gridLength>
+				</GridRowDefinition>
+				<GridRowDefinition>
+					<GridRowDefinition.gridLength>
+						<GridLength gridLengthValue=""/>
+					</GridRowDefinition.gridLength>
+				</GridRowDefinition>
+			</GridPanel.gridRowDefinitions>
+			<GridPanel.gridColumnDefinitions>
+				<GridColumnDefinition>
+					<GridColumnDefinition.gridLength>
+						<GridLength gridLengthValue="100%"/>
+					</GridColumnDefinition.gridLength>
+				</GridColumnDefinition>
+			</GridPanel.gridColumnDefinitions>
+			<GridPanel classNames="fcls_title_cnt" visible="true" verticalAlignment="Top" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="cntTitle">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition>
+						<GridRowDefinition.gridLength>
+							<GridLength gridLengthValue=""/>
+						</GridRowDefinition.gridLength>
+					</GridRowDefinition>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition>
+						<GridColumnDefinition.gridLength>
+							<GridLength gridLengthValue="100%"/>
+						</GridColumnDefinition.gridLength>
+					</GridColumnDefinition>
+					<GridColumnDefinition>
+						<GridColumnDefinition.gridLength>
+							<GridLength gridLengthValue=""/>
+						</GridColumnDefinition.gridLength>
+					</GridColumnDefinition>
+				</GridPanel.gridColumnDefinitions>
+				<Label isDynamic="true" text="Journal Types" classNames="fcls_title_lb" visible="true" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="header_text"/>
+				<Label isDynamic="true" text="G124" classNames="fcls_title_lb" visible="true" gridItemLocation="1,0,1,1" fieldTable="" identifier="lbFormName"/>
+			</GridPanel>
+			<Table rowCount="12" location="1qch,3qch" preferredSize="53qch,14qch" gridItemLocation="0,1,1,1" fieldTable="" identifier="sr_journal">
+				<TableColumn text="JournalCode" fieldTable="" identifier="a0">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="15%" gridMaxLength="100"/>
+					</TableColumn.columnLength>
+					<TextField toCase="Up" dataType="Char,,,,3" toolTip="A meaningful code for the Journal" fieldTable="journal" comment="A meaningful code for the Journal" identifier="jour_code"/>
+				</TableColumn>
+				<TableColumn text="Description" fieldTable="" identifier="f000">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="75%" gridMaxLength="400"/>
+					</TableColumn.columnLength>
+					<TextField dataType="Char,,,,40" toolTip="A meaningful description of the Journal" fieldTable="journal" comment="A meaningful description of the Journal" identifier="desc_text"/>
+				</TableColumn>
+				<TableColumn text="GL-Entry" fieldTable="" identifier="b">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="10%" gridMaxLength="100"/>
+					</TableColumn.columnLength>
+					<CheckBox dataType="Char,,,,1" notNull="true" toolTip="Can this journal be added/edited in the GL (y/n) ?" horizontalAlignment="Center" textAlignment="Center," fieldTable="journal" comment="Can this journal be added/edited in the GL (y/n) ?" identifier="gl_flag">
+						<CheckBox.defaultValue>
+							<StringLiteral stringValue="Y"/>
+						</CheckBox.defaultValue>
+						<CheckBox.checkedValue>
+							<StringLiteral stringValue="Y"/>
+						</CheckBox.checkedValue>
+						<CheckBox.uncheckedValue>
+							<StringLiteral stringValue="N"/>
+						</CheckBox.uncheckedValue>
+					</CheckBox>
+				</TableColumn>
+			</Table>
+			<GridPanel classNames="fcls_statusbar_cnt" visible="true" verticalAlignment="Top" gridItemLocation="0,2,1,1" fieldTable="formonly" identifier="cntStatusBar">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition>
+						<GridRowDefinition.gridLength>
+							<GridLength gridLengthValue=""/>
+						</GridRowDefinition.gridLength>
+					</GridRowDefinition>
+					<GridRowDefinition>
+						<GridRowDefinition.gridLength>
+							<GridLength gridLengthValue=""/>
+						</GridRowDefinition.gridLength>
+					</GridRowDefinition>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition>
+						<GridColumnDefinition.gridLength>
+							<GridLength gridLengthValue="100%"/>
+						</GridColumnDefinition.gridLength>
+					</GridColumnDefinition>
+				</GridPanel.gridColumnDefinitions>
+				<Label isDynamic="true" text="" classNames="fcls_sblabel" visible="true" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="lbInfo1"/>
+				<Label isDynamic="true" text="" classNames="fcls_sblabel" visible="true" gridItemLocation="0,1,1,1" fieldTable="formonly" identifier="lbInfo2"/>
+			</GridPanel>
+		</GridPanel>
+	</form.rootContainer>
+	<form.screenRecords>
+		<ScreenRecord identifier="sr_journal" fields="jour_code,desc_text,gl_flag" elements="12"/>
+		<ScreenRecord identifier="journal" fields="jour_code,desc_text,gl_flag"/>
+	</form.screenRecords>
+</form>
+

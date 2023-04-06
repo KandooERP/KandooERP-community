@@ -1,0 +1,105 @@
+{
+###########################################################################
+# This program is free software; you can redistribute it and/or modify it
+# under the terms of the GNU General Public License as published by the
+# Free Software Foundation; either version 2 of the License, or (at your
+# option) any later version.
+#
+# This program is distributed in the hope that it will be useful, but
+# WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+# General Public License for more details.
+#
+# You should have received a copy of the GNU General Public License along
+# with this program; if not, write to the Free Software Foundation, Inc.,
+# 59 Temple Place, Suite 330, Boston, MA 02111-1307 USA
+#
+###########################################################################
+
+	 $Id: mail_role.per,v 1.4 2003/05/03 08:09:30 afalout Exp $
+}
+
+
+database kandoodb
+screen size 24 by 80
+{
+Code[f000       ]Name[f001                ]Valid from[f002      ]to[f003      ]
+                  Select SQL where part:
+[f005                                                                  ]
+[f006                                                                  ]
+[f007                                                                  ]
+[f008                                                                  ]
+[f009                                                                  ]
+[f0010                                                                 ]
+[f0011                                                                 ]
+[f0012                                                                 ]
+[f0013                                                                 ]
+             Selection criteria description:
+[f0015                                                                 ]
+[f0016                                                                 ]
+[f0017                                                                 ]
+[f0018                                                                 ]
+[f0019                                                                 ]
+[f0020                                                                 ]
+[f0021                                                                 ]
+[f0022                                                                 ]
+}
+end
+tables
+mailing_role
+
+
+attributes
+f000 = mailing_role.mailing_role_code, NOENTRY;
+f001 = mailing_role.mailing_name, UPSHIFT, comments =
+	"Name of the role";
+f002 = mailing_role.valid_from , comments =
+	"Date the entry is valid from";
+f003 = mailing_role.valid_to, comments =
+	"Date the entry is valid to ";
+
+f005 = mailing_role.select_sql[1,70],autonext,comments=
+	"SQL statemant where part that defines the selection criteria" ;
+f006 = formonly.select_sql2,autonext,comments=
+	"SQL statemant where part that defines the selection criteria" ;
+f007 = formonly.select_sql3,autonext,comments=
+	"SQL statemant where part that defines the selection criteria" ;
+f008 = formonly.select_sql4,autonext,comments=
+	"SQL statemant where part that defines the selection criteria" ;
+f009 = formonly.select_sql5,autonext,comments=
+	"SQL statemant where part that defines the selection criteria" ;
+f0010 = formonly.select_sql6,autonext,comments=
+	"SQL statemant where part that defines the selection criteria" ;
+f0011 = formonly.select_sql7,autonext,comments=
+	"SQL statemant where part that defines the selection criteria" ;
+f0012 = formonly.select_sql8,autonext,comments=
+	"SQL statemant where part that defines the selection criteria" ;
+f0013 = formonly.select_sql9,comments=
+	"SQL statemant where part that defines the selection criteria" ;
+
+f0015 = mailing_role.select_desc[1,70],autonext,reverse,comments=
+	"SQL statemant selection criteria description" ;
+f0016 = formonly.select_desc2,autonext,reverse,comments=
+	"SQL statemant selection criteria description" ;
+f0017 = formonly.select_desc3,autonext,reverse,comments=
+	"SQL statemant selection criteria description" ;
+f0018 = formonly.select_desc4,autonext,reverse,comments=
+	"SQL statemant selection criteria description" ;
+f0019 = formonly.select_desc5,autonext,reverse,comments=
+	"SQL statemant selection criteria description" ;
+f0020 = formonly.select_desc6,autonext,reverse,comments=
+	"SQL statemant selection criteria description" ;
+f0021 = formonly.select_desc7,autonext,reverse,comments=
+	"SQL statemant selection criteria description" ;
+f0022 = formonly.select_desc8,autonext,reverse,comments=
+	"SQL statemant selection criteria description" ;
+
+end
+
+
+INSTRUCTIONS
+
+DELIMITERS "  ";
+SCREEN RECORD S_code (mailing_role_code THRU select_desc8)
+
+

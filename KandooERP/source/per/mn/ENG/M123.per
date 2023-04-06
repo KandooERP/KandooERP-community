@@ -1,0 +1,74 @@
+{
+###########################################################################
+# This program is free software; you can redistribute it and/or modify it
+# under the terms of the GNU General Public License as published by the
+# Free Software Foundation; either version 2 of the License, or (at your
+# option) any later version.
+#
+# This program is distributed in the hope that it will be useful, but
+# WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+# General Public License for more details.
+#
+# You should have received a copy of the GNU General Public License along
+# with this program; if not, write to the Free Software Foundation, Inc.,
+# 59 Temple Place, Suite 330, Boston, MA 02111-1307 USA
+#
+###########################################################################
+
+	 $Id: M123.per,v 1.2 2003/11/19 22:22:59 afalout Exp $
+}
+
+
+database kandoodb
+
+screen
+{
+                          Bill of Resource Inquiry                     M123
+\g----------------------------------------------------------------------------\g
+ Parent Product   [f001           ]        [f002                          ]
+ Min Reorder Qty  [f003      ]              UOM         [f004]
+ Cost Type        [f005            ][f006]  Unit Cost   [f007             ]
+\g----------------------------------------------------------------------------\g
+ Type     Item       Description                 Quantity         Unit Cost  
+\g----------------------------------------------------------------------------\g
+ [a][f008           |f009                     |f010      |f011             ]
+ [a][f008           |f009                     |f010      |f011             ]
+ [a][f008           |f009                     |f010      |f011             ]
+ [a][f008           |f009                     |f010      |f011             ]
+ [a][f008           |f009                     |f010      |f011             ]
+ [a][f008           |f009                     |f010      |f011             ]
+ [a][f008           |f009                     |f010      |f011             ]
+ [a][f008           |f009                     |f010      |f011             ]
+ [a][f008           |f009                     |f010      |f011             ]
+ [a][f008           |f009                     |f010      |f011             ]
+ [a][f008           |f009                     |f010      |f011             ]
+}
+
+tables
+bor
+product
+prodmfg
+
+attributes
+f001 = bor.parent_part_code;
+f002 = product.desc_text;
+f003 = product.min_ord_qty;
+f004 = prodmfg.man_uom_code;
+f005 = formonly.cost_type type char;
+f006 = formonly.cogs_text type char;
+f007 = formonly.ext_cost_amt type decimal;
+a    = bor.type_ind, upshift;
+f008 = bor.part_code;
+f009 = formonly.desc_text type char;
+f010 = bor.required_qty;
+f011 = bor.cost_amt;
+
+instructions
+delimiters "  "
+
+screen record sr_bor_child[11] (bor.type_ind,
+                                bor.part_code,
+                                formonly.desc_text,
+                                bor.required_qty,
+                                bor.cost_amt)

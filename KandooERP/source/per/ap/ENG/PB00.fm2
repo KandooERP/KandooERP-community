@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form xmlns="http://namespaces.querix.com/2015/fglForms">
+	<form.rootContainer>
+		<GridPanel classNames="fcls_rootContainer" verticalAlignment="Top" horizontalAlignment="Left" fieldTable="" identifier="rootContainer">
+			<GridPanel.gridRowDefinitions>
+				<GridRowDefinition gridLengthValue=""/>
+				<GridRowDefinition gridLengthValue=""/>
+				<GridRowDefinition gridLengthValue=""/>
+			</GridPanel.gridRowDefinitions>
+			<GridPanel.gridColumnDefinitions>
+				<GridColumnDefinition gridLengthValue="100%"/>
+			</GridPanel.gridColumnDefinitions>
+			<GridPanel classNames="fcls_title_cnt" visible="true" verticalAlignment="Top" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="cntTitle">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="100%"/>
+					<GridColumnDefinition gridLengthValue=""/>
+				</GridPanel.gridColumnDefinitions>
+				<Label isDynamic="true" text="PB - Voucher Reports Sub-system" classNames="fcls_title_lb" visible="true" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="header_text"/>
+				<Label isDynamic="true" text="PB00" classNames="fcls_title_lb" visible="true" gridItemLocation="1,0,1,1" fieldTable="" identifier="lbFormName"/>
+			</GridPanel>
+			<GridPanel classNames="fcls_detail_cnt,fcls_data_cnt,fcls_align_left" visible="true" verticalAlignment="Top" horizontalAlignment="Left" gridItemLocation="0,1,1,1" fieldTable="formonly" identifier="cntDetail1">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue="100%"/>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue=""/>
+				</GridPanel.gridColumnDefinitions>
+				<ListBox minSize="400,400" visible="true" verticalAlignment="Stretch" horizontalAlignment="Stretch" gridItemLocation="0,0,1,1" fieldTable="" identifier="list_menuchoice">
+
+
+					<ListBoxItem text="Voucher by Vendor Report (PB1)" identifier="menuChoice_PB1">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="PB1"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+
+					<ListBoxItem text="Voucher by Number Report (PB2)" identifier="menuChoice_PB2">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="PB2"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+
+					<ListBoxItem text="Voucher by Period Report (PB3)" identifier="menuChoice_PB3">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="PB3"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+
+					<ListBoxItem text="Voucher by Vendor Invoice Report (PB4)" identifier="menuChoice_PB4">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="PB4"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+
+					<ListBoxItem text="Voucher by Purchase Order Report (PB5)" identifier="menuChoice_PB5">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="PB5"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+
+					<ListBoxItem text="Unapproved Vouchers by Vendor Report (PB6)" identifier="menuChoice_PB6">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="PB6"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+
+					<ListBoxItem text="Approved Vouchers by Number Report (PB7)" identifier="menuChoice_PB7">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="PB7"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+
+					<ListBoxItem text="Unapproved Vouchers By Vendor (PB8)" identifier="menuChoice_PB8">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="PB8"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+
+					<ListBoxItem text="Vouchers By Period (PB9)" identifier="menuChoice_PB9">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="PB9"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+
+					<ListBoxItem text="Voucher Detail Report (PBA)" identifier="menuChoice_PBA">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="PBA"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+
+					<ListBoxItem text="Voucher Audit Trail Report (PBC)" identifier="menuChoice_PBC">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="PBC"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+
+					<ListBoxItem text="Duplicate Voucher Exception Report (PBD)" identifier="menuChoice_PBD">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="PBD"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+
+
+					<ListBoxItem text="Voucher Approval Report (PBE)" identifier="menuChoice_PBE">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="PBE"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+	
+
+					<ListBox.onMouseDoubleClick>
+						<ActionEventHandler actionName="DoubleClickItem"/>
+					</ListBox.onMouseDoubleClick>
+				</ListBox>
+				<StackPanel visible="true" horizontalAlignment="Right" gridItemLocation="0,1,1,1" fieldTable="" identifier="c2">
+					<TextField classNames="fcls_data_widget,fcls_align_left,fcls_length_05qch" visible="true" fieldTable="" identifier="tf_menuChoice"/>
+					<Button text="Cancel" classNames="fcls_button_2" visible="true" fieldTable="" identifier="btCancel">
+						<Button.onInvoke>
+							<ActionEventHandler actionName="CANCEL"/>
+						</Button.onInvoke>
+					</Button>
+					<Button text="OK" classNames="fcls_button_2" visible="true" fieldTable="" identifier="btAccept">
+						<Button.onInvoke>
+							<ActionEventHandler actionName="ACCEPT"/>
+						</Button.onInvoke>
+					</Button>
+					<Button text="Help" classNames="fcls_button_2" visible="true" fieldTable="" identifier="btHelp">
+						<Button.onInvoke>
+							<ActionEventHandler actionName="WEB-HELP"/>
+						</Button.onInvoke>
+					</Button>
+				</StackPanel>
+			</GridPanel>
+			<GridPanel classNames="fcls_statusbar_cnt" visible="true" verticalAlignment="Bottom" gridItemLocation="0,2,1,1" fieldTable="formonly" identifier="cntStatusBar">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="100%"/>
+				</GridPanel.gridColumnDefinitions>
+				<Label isDynamic="true" text="" classNames="fcls_sblabel" visible="true" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="lbInfo1"/>
+				<Label isDynamic="true" text="" classNames="fcls_sblabel" visible="true" gridItemLocation="0,1,1,1" fieldTable="formonly" identifier="lbInfo2"/>
+			</GridPanel>
+		</GridPanel>
+	</form.rootContainer>
+	<form.screenRecords>
+		<ScreenRecord identifier="FORMONLY" fields="menuChoice,inpMenuChoice"/>
+	</form.screenRecords>
+</form>
+

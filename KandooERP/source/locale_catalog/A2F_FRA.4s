@@ -1,0 +1,79 @@
+A2F_FRA {
+/ { "/" }
+ACCEPT { "VALIDER" }
+Back Order { "Commande en cours" }
+Charge { "Facturation" }
+Comments { "Commentaires" }
+Cost { "Coût" }
+Currency { "Devise" }
+Currency in which this customer deals { "Devise avec laquelle ce client traite" }
+Customer { "Client" }
+Customer Code { "Code Client" }
+Customer Invoice { "Facture Client" }
+Customer Name { "Nom du client" }
+Date { "Date" }
+Description { "Description" }
+Discount Info { "Infos remise" }
+Due Date { "Date d'échéance" }
+Entered { "Saisie" }
+Expiry Date { "Date d'expiration" }
+FILTER { "Premier" }
+Fiscal Year { "Exercice fiscal" }
+Freight { "Fret" }
+Goods { "Marchandises" }
+Handling { "Manutention" }
+ID { "ID" }
+Invoice { "Facture" }
+Invoice Date { "Date de facturation" }
+Invoice Number { "Numéro de facture" }
+Journal { "Journal" }
+Label or description of this tax code { "Étiquette ou description de ce code taxe" }
+Language Code { "Code langue" }
+Line Total { "Total Ligne" }
+Line or total { "Ligne ou total" }
+List Price { "Prix Liste" }
+Name { "Nom" }
+Note Code { "Note Code" }
+Notes { "Notes" }
+Number { "Numéro" }
+Offer { "Offre" }
+Order { "Commande" }
+Order Date { "Date de Commande" }
+Order No { "N° de Commande" }
+Order Number { "Numéro de commande" }
+Paid { "Payé" }
+Period { "Période" }
+Person { "Personne" }
+Posted { "Publié" }
+Price Level { "Niveau de prix" }
+Price used for the customer: C)ost, L)ist or 1-9 Price Level { "Prix utilisé pour le client: C) Coût, L) Liste ou 1-9 Niveau de prix" }
+Product { "Produit" }
+Product Code { "Code Produit" }
+Purchase Code { "Code d'achat" }
+Quantity { "Quantité" }
+REFRESH { "ACTUALISER" }
+Reference { "Référence" }
+Reserved { "Réservé" }
+Sales Tax { "Taxe de vente" }
+Salesperson { "Vendeur" }
+Shipping Address { "Adresse de livraison" }
+Stocking { "Stockage" }
+Tax { "T.V.A." }
+Tax Code { "Code T.V.A." }
+Territory { "Territoire" }
+The Product Code from inventory { "Le code produit de l'inventaire" }
+The Product Code from inventory (W) { "Code produit de l'inventaire (W)" }
+The reference number { "Numéro de référence" }
+Total { "Total" }
+Total Amt { "Montant Total" }
+Totals { "Totaux" }
+Type { "Type" }
+Unique Customer Code (W) { "Code client unique (W)" }
+Unit Price { "Prix Unitaire" }
+Unit of Measure { "Unité de mesure" }
+Warehouse { "Dépôt" }
+XXXX { "XXXX" }
+XXXXX { "XXXXX" }
+Year { "Année" }
+actToolbarManager { "actToolbarManager" }
+}

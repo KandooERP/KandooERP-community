@@ -1,0 +1,398 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form xmlns="http://namespaces.querix.com/2015/fglForms">
+	<form.rootContainer>
+		<GridPanel classNames="fcls_rootContainer" verticalAlignment="Stretch" horizontalAlignment="Stretch" fieldTable="" identifier="rootContainer">
+			<GridPanel.gridRowDefinitions>
+				<GridRowDefinition gridLengthValue=""/>
+				<GridRowDefinition gridLengthValue="100%"/>
+				<GridRowDefinition gridLengthValue=""/>
+			</GridPanel.gridRowDefinitions>
+			<GridPanel.gridColumnDefinitions>
+				<GridColumnDefinition gridLengthValue="100%"/>
+			</GridPanel.gridColumnDefinitions>
+			<GridPanel classNames="fcls_title_cnt" visible="true" verticalAlignment="Top" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="cntTitle">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="100%"/>
+					<GridColumnDefinition gridLengthValue=""/>
+				</GridPanel.gridColumnDefinitions>
+				<Label isDynamic="true" text="Header-Text" classNames="fcls_title_lb" visible="true" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="header_text"/>
+				<Label isDynamic="true" text="_master_D1_1Gp_01b" classNames="fcls_title_lb" visible="true" gridItemLocation="1,0,1,1" fieldTable="" identifier="lbFormName"/>
+			</GridPanel>
+			<GridPanel classNames="fcls_detail_cnt,fcls_data_cnt,fcls_align_left" visible="true" verticalAlignment="Top" horizontalAlignment="Left" gridItemLocation="0,1,1,1" fieldTable="formonly" identifier="cntDetail1">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue="" gridMinLength="100%"/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="" gridMinLength="100%"/>
+				</GridPanel.gridColumnDefinitions>
+				<ListBox minSize="60rem,20rem" visible="true" verticalAlignment="Stretch" horizontalAlignment="Stretch" gridItemLocation="0,0,1,1" fieldTable="" identifier="formName">
+
+
+					<ListBoxItem text="L100 - Shipment Header" identifier="formName_L100">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="L100"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+
+					<ListBoxItem text="L101 - Shipment" identifier="formName_L101">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="L101"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+
+					<ListBoxItem text="L102 - Line Items" identifier="formName_L102">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="L102"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+
+					<ListBoxItem text="L103 - needs a title" identifier="formName_L103">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="L103"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+
+					<ListBoxItem text="L104 - Shipment Summation" identifier="formName_L104">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="L104"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+
+					<ListBoxItem text="L105 - Shipment Inquiry" identifier="formName_L105">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="L105"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+
+					<ListBoxItem text="L106 - Shipment Status	" identifier="formName_L106">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="L106"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+
+					<ListBoxItem text="L107 - Shipment Scan (list)" identifier="formName_L107">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="L107"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+
+					<ListBoxItem text="L108 - Shipment Scan (list)" identifier="formName_L108">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="L108"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+
+					<ListBoxItem text="L109 - Shipments by Voucher" identifier="formName_L109">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="L109"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+
+					<ListBoxItem text="L109a - Shipments by Voucher" identifier="formName_L109a">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="L109a"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+
+					<ListBoxItem text="L110 - Shipment Goods Receipt" identifier="formName_L110">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="L110"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+
+					<ListBoxItem text="L114 - Tariff Codes (list)" identifier="formName_L114">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="L114"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+
+					<ListBoxItem text="L115 - Shipment Status (list)" identifier="formName_L115">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="L115"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+
+					<ListBoxItem text="L116 - Landed Costing Parameters" identifier="formName_L116">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="L116"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+
+					<ListBoxItem text="L121 - Shipment Distribution Scan" identifier="formName_L121">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="L121"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+
+					<ListBoxItem text="L123 - Finalise Shipment" identifier="formName_L123">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="L123"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+
+					<ListBoxItem text="L124 - Unit FOB Cost entered does not equal" identifier="formName_L124">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="L124"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+
+					<ListBoxItem text="L125 - Duty entered does not equal" identifier="formName_L125">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="L125"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+
+					<ListBoxItem text="L126 - A shipment line has been found" identifier="formName_L126">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="L126"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+
+					<ListBoxItem text="L127 - No products have been recieved	" identifier="formName_L127">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="L127"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+
+					<ListBoxItem text="L128 - Give me a title (missing title)" identifier="formName_L128">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="L128"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+
+					<ListBoxItem text="L132 - Shipment Debit Distribution Scan" identifier="formName_L132">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="L132"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+
+					<ListBoxItem text="L133 - Shipment Type Codes (list)" identifier="formName_L133">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="L133"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+
+					<ListBoxItem text="L134 - Purchase Order Scan (list)" identifier="formName_L134">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="L134"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+
+					<ListBoxItem text="L135 - Purchase Line Scan" identifier="formName_L135">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="L135"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+
+					<ListBoxItem text="L136 - Shipment Scan (list)" identifier="formName_L136">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="L136"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+
+					<ListBoxItem text="L137 - Tariff Verification Scan" identifier="formName_L137">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="L137"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+
+					<ListBoxItem text="L138 - Tariff Verification Breakdown (list)" identifier="formName_L138">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="L138"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+
+					<ListBoxItem text="L140 - Shipment Cost Type Scan (list)" identifier="formName_L140">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="L140"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+
+					<ListBoxItem text="L141 - Shipment Cost Types" identifier="formName_L141">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="L141"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+
+					<ListBoxItem text="L142 - GL Account Distribution" identifier="formName_L142">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="L142"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+
+					<ListBoxItem text="L143 - Shipment Goods Receipt" identifier="formName_L143">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="L143"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+
+					<ListBoxItem text="L144 - Shipment Costs" identifier="formName_L144">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="L144"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+
+					<ListBoxItem text="L145 - Shipment Goods Receipt" identifier="formName_L145">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="L145"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+
+					<ListBoxItem text="L146 - Shipment" identifier="formName_L146">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="L146"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+
+					<ListBoxItem text="L147 - Line Items" identifier="formName_L147">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="L147"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+
+					<ListBoxItem text="L148 - missing title" identifier="formName_L148">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="L148"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+
+					<ListBoxItem text="L149 - Shipment Summation" identifier="formName_L149">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="L149"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+
+					<ListBoxItem text="L150 - missing title" identifier="formName_L150">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="L150"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+
+					<ListBoxItem text="L151 - Shipment Scan (list)" identifier="formName_L151">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="L151"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+
+					<ListBoxItem text="L154 - Warehouse Returned" identifier="formName_L154">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="L154"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+
+					<ListBoxItem text="L155 - Line Items" identifier="formName_L155">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="L155"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+
+					<ListBoxItem text="L156 - Shipment Summary" identifier="formName_L156">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="L156"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+
+					<ListBoxItem text="L157 - ?????????????????" identifier="formName_L157">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="L157"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+
+					<ListBoxItem text="L158 - Invoice Scan" identifier="formName_L158">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="L158"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+
+					<ListBoxItem text="L159 - Shipment Scan (list)" identifier="formName_L159">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="L159"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+
+					<ListBoxItem text="L160 - Shipment Goods Receipt" identifier="formName_L160">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="L160"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+
+					<ListBoxItem text="L161 - Shipment Goods Receipt" identifier="formName_L161">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="L161"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+
+					<ListBoxItem text="L162 - Shipment Scan" identifier="formName_L162">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="L162"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+
+					<ListBoxItem text="L163 - Credit Shipment Details" identifier="formName_L163">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="L163"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+
+					<ListBoxItem text="L164 - Credit Shipment Inquiry" identifier="formName_L164">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="L164"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+
+					<ListBoxItem text="L165 - Shipment Status" identifier="formName_L165">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="L165"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+
+					<ListBoxItem text="L166 - Shipment Scan (list)" identifier="formName_L166">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="L166"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+
+					<ListBoxItem text="L167 - Finalise Shipmen" identifier="formName_L167">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="L167"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+
+					<ListBoxItem text="L168 - Shipment Summary" identifier="formName_L168">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="L168"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+
+					<ListBoxItem text="L169 - Transaction Details" identifier="formName_L169">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="L169"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+
+					<ListBox.onMouseDoubleClick>
+						<ActionEventHandler actionName="ViewForm"/>
+					</ListBox.onMouseDoubleClick>
+				</ListBox>
+			</GridPanel>
+			<GridPanel classNames="fcls_statusbar_cnt" visible="true" verticalAlignment="Bottom" gridItemLocation="0,2,1,1" fieldTable="formonly" identifier="cntStatusBar">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="100%"/>
+				</GridPanel.gridColumnDefinitions>
+				<Label isDynamic="true" text="" classNames="fcls_sblabel" visible="true" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="lbInfo1"/>
+				<Label isDynamic="true" text="" classNames="fcls_sblabel" visible="true" gridItemLocation="0,1,1,1" fieldTable="formonly" identifier="lbInfo2"/>
+			</GridPanel>
+		</GridPanel>
+	</form.rootContainer>
+	<form.screenRecords>
+		<ScreenRecord identifier="FORMONLY" fields="f151"/>
+	</form.screenRecords>
+</form>
+

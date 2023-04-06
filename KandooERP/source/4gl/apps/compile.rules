@@ -1,0 +1,184 @@
+# compile.rules: determines the generic compilation rules for Informix 4GL C compiled, 4GL rds and temptative to querix lycia on linux
+######################################################################################################################
+# generic targets 
+
+# target informix 4gl compiled
+inf: $(4GE)
+infx: rep $(4GE) $(FORMS)
+
+EXE := $(4GE:.4ge=.exe)
+4GI := $(4GE:.4ge=.4gi)
+
+lib: $(LIB)
+
+all:	inf
+
+forms: $(FORMS)
+
+rds:  rep $(4GI) $(FORMS)
+
+rep :
+	@if [ ! -d $(BUILD_4GL) ]; then mkdir -p $(BUILD_4GL); fi
+	@cat /dev/null > $(LOGFILE)
+
+
+clean_informix:
+	rm -f $(OBJETS_4GL)
+
+run_informix:
+	$(4GE) /dev/tty01
+
+clean_forms:
+	rm -f $(FORMS)
+
+
+copyobj:
+	@cp $(OBJETS_4GL) $(GLOBALS) $(BUILD_4GL)
+######################################################################################################################
+# 1st part: general rules for i4gl C compiled
+
+$(4GE) :	$(GLOBALS_4GL) $(OBJETS_4GL) $(COMMON_4GL) $(LIB_4GL) $(OBJETS_C)
+	@echo -n "$(TS) Linking Standard Informix Program $@ " | tee -a $(LOGFILE)
+	@c4gl -o $(4GE)  $(GLOBALS_4GL) $(OBJETS_4GL) $(COMMON_4GL) $(LIB_4GL) $(OBJETS_C) ; if [ $$? -eq 0 ]; then echo "OK :-)" | tee -a $(LOGFILE); else echo "FAILED :-(" | tee -a $(LOGFILE) ; \
+	if [ $(STOPLINK) -eq 1 ]; then exit 1 ; fi;fi;
+
+$(BUILD_4GL)/%.o: $(FS)/%.4gl
+	@echo -n "$(TS) Building $*.o " | tee -a $(LOGFILE)
+	@c4gl -c $? ; if [ $$? -eq 0 ]; then mv $*.o $@; echo "OK :-)" | tee -a $(LOGFILE); else  echo "FAILED :-(" | tee -a $(LOGFILE) ; rm $@ ; \
+	if [ $(STOPCOMPIL) -eq 1 ]; then exit 2 ; fi; fi
+
+%.o: %.4gl
+	@echo -n "$(TS) Building $*.o " | tee -a $(LOGFILE)
+	@c4gl -c $? -o $@ ; if [ $$? -eq 0 ]; then echo "OK :-)" | tee -a $(LOGFILE) ; else echo "FAILED :-(" | tee -a $(LOGFILE) ; rm $@ ; \
+	if [ $(STOPCOMPIL) -eq 1 ]; then exit 2 ; fi; fi
+
+$(COMPIL)/%.o: $(FS)/%.4gl
+	@echo -n "$(TS) Building $*.o " | tee -a $(LOGFILE)
+	@c4gl -c $? -o $@ ; if [ $$? -eq 0 ]; then echo "OK :-)" | tee -a $(LOGFILE) ; else echo "FAILED :-(" | tee -a $(LOGFILE) ; rm $@ ; \
+	if [ $(STOPCOMPIL) -eq 1 ]; then exit 2 ; fi; fi
+
+$(LIB) : $(OBJETS_LIB)
+	@echo -n "$(TS) Building 4gl library $@ " | tee -a $(LOGFILE)
+	ar cr $(LIB) $(OBJETS_LIB)	; if [ $$? -eq 0 ]; then echo "OK :-)" | tee -a $(LOGFILE) ; else echo "FAILED :-(" | tee -a $(LOGFILE) ; rm $@ ; \
+	if [ $(STOPCOMPIL) -eq 1 ]; then exit 2 ; fi; fi
+
+######################################################################################################################
+# 2nd part: general rules for  Lycia compiled
+
+EXE := $(4GE:.4ge=.exe)
+
+OBJETS_4O := $(OBJETS_4GL:.o=.4o)
+GLOBALS_4O := $(GLOBALS:.o=.4o)
+COMMON_4O := $(COMMON:.o=.4o)
+LIB_4O := $(LIB:.o=.4o)
+
+
+$(EXE) :	$(GLOBALS_4O) $(OBJETS_4O) $(COMMON_4O) $(LIB_4O)
+	@echo -n "$(TS) Linking Lycia Program $@ " | tee -a $(LOGFILE)
+	@qlink -o $(EXE)  $(GLOBALS_4O) $(OBJETS_4O) $(COMMON_4O) $(LIB_4O) $(OBJETS_C) ; if [ $$? -eq 0 ]; then echo "OK :-)" | tee -a $(LOGFILE); else echo "FAILED :-(" | tee -a $(LOGFILE) ; \
+	if [ $(STOPLINK) -eq 1 ]; then exit 1 ; fi;fi;
+
+$(BUILD)/%.4o: $(FS)/%.4gl
+	@echo -n "$(TS) Building $*.4o " | tee -a $(LOGFILE)
+	@qfgl -c $? -o $@; if [ $$? -eq 0 ]; then mv $*.4o $@; echo "OK :-)" | tee -a $(LOGFILE); else  echo "FAILED :-(" | tee -a $(LOGFILE) ; rm $@ ; \
+	if [ $(STOPCOMPIL) -eq 1 ]; then exit 2 ; fi; fi
+
+%.4o: %.4gl
+	@echo -n "$(TS) Building $*.4o " | tee -a $(LOGFILE)
+	@qfgl -c $? -o $@ ; if [ $$? -eq 0 ]; then echo "OK :-)" | tee -a $(LOGFILE) ; else echo "FAILED :-(" | tee -a $(LOGFILE) ; rm $@ ; \
+	if [ $(STOPCOMPIL) -eq 1 ]; then exit 2 ; fi; fi
+
+$(COMPIL)/%.4o: $(FS)/%.4gl
+	@echo -n "$(TS) Building $*.4o " | tee -a $(LOGFILE)
+	@qfgl -c $? -o $@ ; if [ $$? -eq 0 ]; then echo "OK :-)" | tee -a $(LOGFILE) ; else echo "FAILED :-(" | tee -a $(LOGFILE) ; rm $@ ; \
+	if [ $(STOPCOMPIL) -eq 1 ]; then exit 2 ; fi; fi
+
+$(LIB_4O) : $(OBJETS_LIB)
+	@echo -n "$(TS) Building 4gl library $@ " | tee -a $(LOGFILE)
+	ar cr $(LIB) $(OBJETS_LIB)	; if [ $$? -eq 0 ]; then echo "OK :-)" | tee -a $(LOGFILE) ; else echo "FAILED :-(" | tee -a $(LOGFILE) ; rm $@ ; \
+	if [ $(STOPCOMPIL) -eq 1 ]; then exit 2 ; fi; fi
+
+######################################################################################################################
+#3rd part: rules to compile C
+$(FC)/%.o: $(FC)/%.c
+	@cd $(FC);make
+$(BUILD_C)/%.o: $(FC)/%.c
+	@cd $(FC);make; make install
+
+$(FC)/commun/%.o: $FC/commun/%.c
+	@cd $(FC)/commun ; ;make; make install
+
+$(FC)/bdafic/%.o: $FC/bdafic/%.c
+	@cd $(FC)/bdafic ; ;make; make install
+######################################################################################################################
+
+# 4th part: rules to compile ESQL/C
+$(COMPIL)/%.o: $(COMPIL)/%.ec
+	esql -c $?
+
+######################################################################################################################
+# 5th part: rules to compile Informix Legacy forms
+$(IFMXFRM)/%.frm: $(FRM)/%.per
+	@echo -n "$(TS) Building informix form $*.frm " | tee -a $(LOGFILE)
+	@form4gl $? 1>/dev/null; if [ $$? -eq 0 ]; then a=1; echo "OK :-)" | tee -a $(LOGFILE); else  echo "FAILED :-(" | tee -a $(LOGFILE) ; a=1 ; \
+	if [ $(STOPCOMPIL) -eq 1 ]; then exit 2 ; fi; fi
+
+######################################################################################################################
+# 6th part: rules to compile Informix RDS modules
+
+4GI := $(4GE:.4ge=.4gi)
+
+OBJETS_4GO := $(OBJETS_4GL:.o=.4go)
+ 
+GLOBALS_4GO := $(GLOBALS:.o=.4go)
+
+$(4GI) :	$(OBJETS_4GO) $(GLOBALS_4GO)
+	cat $(OBJETS_4GO) $(GLOBALS_4GO) > $@
+
+$(BUILD_4GL)/%.4go: $(COMPIL)/%.4gl
+	@fglpc $? ; if [ $$? -eq 0 ]; then mv $*.o $@; echo "OK :-)" | tee -a $(LOGFILE); else  echo "FAILED :-(" | tee -a $(LOGFILE) ; rm $@ ; \
+	if [ $(STOPCOMPIL) -eq 1 ]; then exit 2 ; fi; fi
+
+$(COMPIL)/%.4go: $(COMPIL)/%.4gl
+	@fglpc $? ; if [ $$? -eq 0 ]; then mv $*.o $@; echo "OK :-)" | tee -a $(LOGFILE); else  echo "FAILED :-(" | tee -a $(LOGFILE) ; rm $@ ; \
+	if [ $(STOPCOMPIL) -eq 1 ]; then exit 2 ; fi; fi
+
+######################################################################################################################
+# 7th part: rules to compile Querix Lycia modules
+
+$(4GE) :	$(GLOBALS_4GL) $(OBJETS_4GL) $(COMMON_4GL) $(LIB_4GL) $(OBJETS_C)
+EXE := $(4GE:.4ge=.exe)
+
+OBJETS_4O := $(OBJETS_4GL:.o=.4o)
+ 
+GLOBALS_4O := $(GLOBALS:.o=.4o)
+
+COMMON_4O := $(COMMON_4GL:.o=.4o)
+
+LIB_4O := $(LIB_4GL:.o=.4o)
+
+OBJETS_LIB4A := $(OBJETS_LIB)
+
+$(EXE) :	$(OBJETS_4O) $(GLOBALS_4O) $(COMMON_4O) $(LIB_4O) $(OBJETS_C)
+	@echo -n "$(TS) linking Lycia Program $@ " | tee -a $(LOGFILE)
+	qlink -o $@ $(GLOBALS_4O) $(OBJETS_4O) $(COMMON_4O) $(LIB_4O) $(OBJETS_C) ; if [ $$? -eq 0 ]; then mv $*.o $@; echo "OK :-)" | tee -a $(LOGFILE); else  echo "FAILED :-(" | tee -a $(LOGFILE) ; rm $@ ; \
+	if [ $(STOPCOMPIL) -eq 1 ]; then exit 2 ; fi; fi
+
+%.4o: %.4gl
+	@qfgl $? -o $@ ; if [ $$? -eq 0 ]; then echo "OK :-)" | tee -a $(LOGFILE) ; else echo "FAILED :-(" | tee -a $(LOGFILE) ; rm $@ ; \
+	if [ $(STOPCOMPIL) -eq 1 ]; then exit 2 ; fi; fi
+
+$(BUILD_4GL)/%.4go: $(COMPIL)/%.4gl
+	@qfgl $? ; if [ $$? -eq 0 ]; then mv $*.o $@; echo "OK :-)" | tee -a $(LOGFILE); else  echo "FAILED :-(" | tee -a $(LOGFILE) ; rm $@ ; \
+	if [ $(STOPCOMPIL) -eq 1 ]; then exit 2 ; fi; fi
+
+$(COMPIL)/%.4go: $(COMPIL)/%.4gl
+	@qfgl $? ; if [ $$? -eq 0 ]; then mv $*.o $@; echo "OK :-)" | tee -a $(LOGFILE); else  echo "FAILED :-(" | tee -a $(LOGFILE) ; rm $@ ; \
+	if [ $(STOPCOMPIL) -eq 1 ]; then exit 2 ; fi; fi
+
+$(LIB4A) : $(OBJETS_LIB4A)
+	@echo -n "$(TS) Building Lycia library $@ " | tee -a $(LOGFILE)
+	qlink -o $(LIB) $(OBJETS_LIB4A)	; if [ $$? -eq 0 ]; then echo "OK :-)" | tee -a $(LOGFILE) ; else echo "FAILED :-(" | tee -a $(LOGFILE) ; rm $@ ; \
+	if [ $(STOPCOMPIL) -eq 1 ]; then exit 2 ; fi; fi
+
+######################################################################################################################

@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form xmlns="http://namespaces.querix.com/2015/fglForms">
+	<form.rootContainer>
+		<GridPanel classNames="fcls_rootContainer" preferredSize="," verticalAlignment="Stretch" horizontalAlignment="Stretch" fieldTable="" identifier="rootContainer">
+			<GridPanel.gridRowDefinitions>
+				<GridRowDefinition gridLengthValue=""/>
+				<GridRowDefinition gridLengthValue="100%"/>
+				<GridRowDefinition gridLengthValue=""/>
+			</GridPanel.gridRowDefinitions>
+			<GridPanel.gridColumnDefinitions>
+				<GridColumnDefinition gridLengthValue="100%"/>
+			</GridPanel.gridColumnDefinitions>
+			<GridPanel classNames="fcls_title_cnt" visible="true" verticalAlignment="Top" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="cntTitle">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="100%"/>
+					<GridColumnDefinition gridLengthValue=""/>
+				</GridPanel.gridColumnDefinitions>
+				<Label isDynamic="true" text="Segment Total" classNames="fcls_title_lb" visible="true" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="header_text"/>
+				<Label isDynamic="true" text="Segment Total" classNames="fcls_title_lb" visible="true" gridItemLocation="1,0,1,1" fieldTable="" identifier="lbFormName"/>
+			</GridPanel>
+			<Table rowCount="10" preferredSize="51qch,10qch" fieldTable="" identifier="sr_structure" gridItemLocation="0,1,1,1">
+				<TableColumn fieldTable="" identifier="tc_level_ind" text="Subtotal Indicator">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="15rem" gridMaxLength="15rem" gridMinLength="10rem"/>
+					</TableColumn.columnLength>
+					<TextField dataType="Char,,,," toolTip="Enter &apos;1&apos; next to field to be subtotalled " comment="Enter &apos;1&apos; next to field to be subtotalled " fieldTable="formonly" identifier="level_ind"/>
+				</TableColumn>
+				<TableColumn fieldTable="" identifier="tc_start_num" text="Start Position">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="15rem" gridMaxLength="15rem" gridMinLength="10rem"/>
+					</TableColumn.columnLength>
+					<TextField dataType="SmallInt,,,," toolTip="Start position of the Code" comment="Start position of the Code" fieldTable="structure" identifier="start_num"/>
+				</TableColumn>
+				<TableColumn fieldTable="" identifier="tc_length_num" text="Length">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="15rem" gridMaxLength="15rem" gridMinLength="10rem"/>
+					</TableColumn.columnLength>
+					<TextField noEntry="true" dataType="SmallInt,,,," toolTip="Length of the Code" comment="Length of the Code" fieldTable="structure" identifier="length_num"/>
+				</TableColumn>
+				<TableColumn fieldTable="" identifier="tc_desc_text" text="Field Description">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="100%"/>
+					</TableColumn.columnLength>
+					<TextField noEntry="true" dataType="VarChar,,,0,4" toolTip=" Title of this field in the GL " comment=" Title of this field in the GL " fieldTable="structure" identifier="desc_text"/>
+				</TableColumn>
+			</Table>
+			<GridPanel classNames="fcls_statusbar_cnt" visible="true" verticalAlignment="Top" gridItemLocation="0,2,1,1" fieldTable="formonly" identifier="cntStatusBar">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="100%"/>
+				</GridPanel.gridColumnDefinitions>
+				<Label isDynamic="true" text="" classNames="fcls_sblabel" visible="true" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="lbInfo1"/>
+				<Label isDynamic="true" text="" classNames="fcls_sblabel" visible="true" gridItemLocation="0,1,1,1" fieldTable="formonly" identifier="lbInfo2"/>
+			</GridPanel>
+		</GridPanel>
+	</form.rootContainer>
+	<form.screenRecords>
+		<ScreenRecord identifier="sr_structure" fields="formonly.level_ind,structure.start_num,structure.length_num,structure.desc_text"/>
+		<ScreenRecord identifier="formonly" fields="formonly.level_ind"/>
+		<ScreenRecord identifier="structure" fields="structure.start_num,structure.length_num,structure.desc_text"/>
+	</form.screenRecords>
+</form>
+

@@ -1,0 +1,67 @@
+{
+###########################################################################
+# This program is free software; you can redistribute it and/or modify it
+# under the terms of the GNU General Public License as published by the
+# Free Software Foundation; either version 2 of the License, or (at your
+# option) any later version.
+#
+# This program is distributed in the hope that it will be useful, but
+# WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+# General Public License for more details.
+#
+# You should have received a copy of the GNU General Public License along
+# with this program; if not, write to the Free Software Foundation, Inc.,
+# 59 Temple Place, Suite 330, Boston, MA 02111-1307 USA
+#
+###########################################################################
+
+	 $Id: M101.per,v 1.1 2003/05/20 23:53:06 tpavlek Exp $
+}
+
+
+database kandoodb
+
+screen
+{
+                         Configuration Maintenance                     M101
+\g----------------------------------------------------------------------------\g
+ Generic Product  Description                    Feature/Option  Option Qty
+\g----------------------------------------------------------------------------\g
+[f000           ][f001                          ]     [a]         [f002]
+[f000           ][f001                          ]     [a]         [f002]
+[f000           ][f001                          ]     [a]         [f002]
+[f000           ][f001                          ]     [a]         [f002]
+[f000           ][f001                          ]     [a]         [f002]
+[f000           ][f001                          ]     [a]         [f002]
+[f000           ][f001                          ]     [a]         [f002]
+[f000           ][f001                          ]     [a]         [f002]
+[f000           ][f001                          ]     [a]         [f002]
+[f000           ][f001                          ]     [a]         [f002]
+[f000           ][f001                          ]     [a]         [f002]
+[f000           ][f001                          ]     [a]         [f002]
+[f000           ][f001                          ]     [a]         [f002]
+[f000           ][f001                          ]     [a]         [f002]
+}
+
+tables
+configuration
+product
+
+attributes
+f000 = configuration.generic_part_code, upshift,
+comments = " Product code of a generic product";
+f001 = product.desc_text, noentry, 
+comments = " Description of the generic product";
+a    = configuration.config_ind, upshift, noentry,
+comments = " F = Feature, O = Option";
+f002 = configuration.option_num, noentry,
+comments = " The number of allowable options that can be configured";
+
+instructions
+delimiters "  "
+
+screen record config_generic[14] (configuration.generic_part_code,
+                                  product.desc_text,
+                                  configuration.config_ind,
+                                  configuration.option_num)

@@ -1,0 +1,108 @@
+R000-View-_FRA {
+/ { "/" }
+Account { "Compte" }
+Activity { "Activité" }
+Address { "Adresse" }
+Amount { "Montant" }
+Amounts { "Montants" }
+Available Credit { "Crédit disponible" }
+City { "Ville" }
+Code { "Code" }
+Comments { "Commentaires" }
+Company { "Société" }
+Contact { "Contact" }
+Country { "Pays" }
+Currency { "Devise" }
+Currency Code { "Code devise" }
+Customer Code { "Code Client" }
+Date { "Date" }
+Desc { "Description" }
+Description { "Description" }
+Discount { "Remise" }
+Distributed { "Distribué" }
+Due Date { "Date d'échéance" }
+Entered { "Saisie" }
+Entry Date { "Date d'entrée" }
+Entry Person { "Personne ayant saisi l'info" }
+Exchange Rate { "Taux de Change" }
+Fiscal Period { "Période fiscale" }
+Fiscal Year { "Exercice fiscal" }
+GL Integration { "Intégration Grand Livre" }
+Header { "Entête" }
+Job Code { "Code JOB" }
+Journal Number { "Numéro de Journal" }
+Line { "Ligne" }
+Line Info { "Infos ligne" }
+Line Number { "Numéro de ligne" }
+Line Total { "Total Ligne" }
+List Price { "Prix Liste" }
+Name { "Nom" }
+Note Code { "Note Code" }
+Notes { "Notes" }
+Number { "Numéro" }
+OEM { "OEM" }
+Order { "Commande" }
+Order Date { "Date de Commande" }
+Order No { "N° de Commande" }
+Order Number { "Numéro de commande" }
+Order Qty { "Quantité commandée" }
+Other Info { "Autres informations" }
+P.O. Number { "Numéro B.C." }
+Period { "Période" }
+Person { "Personne" }
+Phone { "Téléphone" }
+Post Code { "Code Postal" }
+Posted { "Publié" }
+Product { "Produit" }
+Product Code { "Code Produit" }
+Purchase Order Line 2 Description { "Description ligne 2 du Bon de commande" }
+Quantity { "Quantité" }
+Receipt Date { "Date de réception" }
+Received { "Reçu" }
+Received Qty { "Quantité reçue" }
+Received Quantity { "Quantité reçue" }
+Reference { "Référence" }
+Revision { "Révision" }
+State/County { "Région" }
+Status { "Statut" }
+Tax Amount { "Montant de la taxe" }
+Tax Code { "Code T.V.A." }
+Term Code { "Code Conditions" }
+The GL period number for this transaction { "La période Compta Géné de cette transaction" }
+The GL year number for this transaction { "L'année Compta Géné pour cette transaction" }
+The date of this transaction { "La date de cette transaction" }
+The discount percentage to be applied { "Pourcentage de remise à appliquer" }
+The financial year of this period { "Année financière de cette période" }
+The period number { "Numéro de période" }
+The purchase order number { "Numéro bon de commande" }
+The quantity of the goods ordered { "La quantité de marchandises commandées" }
+The quantity of the goods received { "La quantité de marchandises reçues" }
+The unit list cost amount { "Prix liste unitaire" }
+The unit of measure, e.g each, dozen { "L'unité de mesure, exemple: douzaine" }
+The unit tax amount associated with this transaction { "Le montant de T.V.A. unitaire associé à cette transaction" }
+Total { "Total" }
+Total Amount { "Montant Total" }
+Total Cost { "Coût total" }
+Totals { "Totaux" }
+Transaction Date { "Date de la transaction" }
+Transaction Info { "Infos sur la transaction" }
+Type { "Type" }
+UOM { "UDM" }
+Unit Cost { "Coût unitaire" }
+Unit Price { "Prix Unitaire" }
+Unit Tax { "T.V.A unité" }
+Variation { "Variation" }
+Variation Number { "Numéro de variation" }
+Vendor { "Fournisseur" }
+Vendor Code { "Code Fournisseur" }
+Vendor Ref { "Réf. Fournisseur" }
+Vendor Reference { "Références du fournisseur" }
+Vendor Reference Information { "Informations de référence du fournisseur" }
+Vendor reference information to this purchase order { "Informations de référence du fournisseur pour cette commande" }
+Voucher { "Facture" }
+Voucher Number { "Numéro de Facture" }
+Voucher Total { "Total Facture" }
+Warehouse { "Dépôt" }
+Warehouse Code { "Code Dépôt" }
+Year { "Année" }
+}

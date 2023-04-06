@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form xmlns="http://namespaces.querix.com/2015/fglForms">
+	<form.rootContainer>
+		<GridPanel classNames="fcls_rootContainer" preferredSize="," verticalAlignment="Top" horizontalAlignment="Left" fieldTable="" identifier="rootContainer">
+			<GridPanel.gridRowDefinitions>
+				<GridRowDefinition gridLengthValue=""/>
+				<GridRowDefinition gridLengthValue=""/>
+				<GridRowDefinition gridLengthValue=""/>
+				<GridRowDefinition gridLengthValue=""/>
+				<GridRowDefinition gridLengthValue=""/>
+			</GridPanel.gridRowDefinitions>
+			<GridPanel.gridColumnDefinitions>
+				<GridColumnDefinition gridLengthValue="100%"/>
+			</GridPanel.gridColumnDefinitions>
+			<GridPanel classNames="fcls_title_cnt" visible="true" verticalAlignment="Top" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="cntTitle">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="100%"/>
+					<GridColumnDefinition gridLengthValue=""/>
+				</GridPanel.gridColumnDefinitions>
+				<Label isDynamic="true" text="Posting Details" classNames="fcls_title_lb" visible="true" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="header_text"/>
+				<Label isDynamic="true" text="I645" classNames="fcls_title_lb" visible="true" gridItemLocation="1,0,1,1" fieldTable="" identifier="lbFormName"/>
+			</GridPanel>
+			<GridPanel classNames="fcls_detail_cnt,fcls_data_cnt,fcls_align_left" visible="true" verticalAlignment="Top" horizontalAlignment="Left" gridItemLocation="0,1,1,1" fieldTable="formonly" identifier="cntDetail1">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="" gridMinLength="10rem"/>
+					<GridColumnDefinition gridLengthValue=""/>
+				</GridPanel.gridColumnDefinitions>
+				<Label isDynamic="true" text="Transaction Date" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="lb57"/>
+				<Calendar dataType="Date,,,," classNames="fcls_data_widget,fcls_align_left,fcls_length_30qch" preferredSize="11qch,1qch" toolTip=" Enter product ledger transaction date" gridItemLocation="1,0,1,1" fieldTable="prodledg" comment=" Enter product ledger transaction date" identifier="tran_date"/>
+				<Label isDynamic="true" text="Fiscal Year" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,1,1,1" fieldTable="" identifier="lb73"/>
+				<ComboBox dataType="SmallInt,,,," classNames="fcls_data_widget,fcls_align_left,fcls_length_30qch" preferredSize="5qch,1qch" toolTip=" Fiscal year that stock adjustments will post " gridItemLocation="1,1,1,1" fieldTable="prodledg" comment=" Fiscal year that stock adjustments will post " identifier="year_num"/>
+				<Label isDynamic="true" text="Period" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,2,1,1" fieldTable="" identifier="lb77"/>
+				<ComboBox dataType="SmallInt,,,," classNames="fcls_data_widget,fcls_align_left,fcls_length_30qch" preferredSize="4qch,1qch" toolTip=" Fiscal period that stock adjustments will post " gridItemLocation="1,2,1,1" fieldTable="prodledg" comment=" Fiscal period that stock adjustments will post " identifier="period_num"/>
+				<Label isDynamic="true" text="Comments" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,3,1,1" fieldTable="" identifier="lb76"/>
+				<TextField dataType="Char,,,,25" classNames="fcls_data_widget,fcls_align_left,fcls_length_30qch" preferredSize="27qch,1qch" toolTip=" Enter transaction comments" gridItemLocation="1,3,1,1" fieldTable="prodledg" comment=" Enter transaction comments" identifier="desc_text"/>
+			</GridPanel>
+			<GroupBox title="Miscellaneous" classNames="fcls_detail_gb_cnt" visible="true" verticalAlignment="Stretch" horizontalAlignment="Stretch" gridItemLocation="0,2,1,1" fieldTable="formonly" identifier="cntDetail2GroupBox">
+				<GridPanel classNames="fcls_detail_gb_cnt_sub,fcls_detail_cnt_sub,fcls_data_cnt,fcls_align_left" visible="true" verticalAlignment="Top" horizontalAlignment="Left" fieldTable="formonly" identifier="cntDetail2GrBoxSub">
+					<GridPanel.gridRowDefinitions>
+						<GridRowDefinition gridLengthValue=""/>
+						<GridRowDefinition gridLengthValue=""/>
+						<GridRowDefinition gridLengthValue=""/>
+					</GridPanel.gridRowDefinitions>
+					<GridPanel.gridColumnDefinitions>
+						<GridColumnDefinition gridLengthValue="" gridMinLength="10rem"/>
+						<GridColumnDefinition gridLengthValue=""/>
+					</GridPanel.gridColumnDefinitions>
+					<Label isDynamic="true" text="Adjustment Type" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,0,1,1" fieldTable="" identifier="lb91"/>
+					<ComboBox dataType="Char,,,,8" classNames="fcls_data_widget,fcls_align_left,fcls_length_30qch" preferredSize="9qch,1qch" toolTip=" Enter adjustment type code - (W)" gridItemLocation="1,0,1,1" fieldTable="prodadjtype" comment=" Enter adjustment type code - (W)" identifier="adj_type_code"/>
+					<TextField noEntry="true" dataType="Char,,,,40" classNames="fcls_data_widget,fcls_align_left,fcls_length_30qch" preferredSize="39qch,1qch" gridItemLocation="1,1,1,1" fieldTable="prodadjtype" identifier="desc_text"/>
+					<Label isDynamic="true" text="G/L Account" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,2,1,1" fieldTable="formonly" identifier="lb44"/>
+					<ComboBox noEntry="true" dataType="Char,,,,18" classNames="fcls_data_widget,fcls_align_left,fcls_length_30qch" preferredSize="20qch,1qch" gridItemLocation="1,2,1,1" fieldTable="prodadjtype" identifier="adj_acct_code"/>
+				</GridPanel>
+			</GroupBox>
+			<GridPanel classNames="fcls_statusbar_cnt" visible="true" verticalAlignment="Top" gridItemLocation="0,3,1,1" fieldTable="formonly" identifier="cntStatusBar">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="100%"/>
+				</GridPanel.gridColumnDefinitions>
+				<Label isDynamic="true" text="" classNames="fcls_sblabel" visible="true" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="lbInfo1"/>
+				<Label isDynamic="true" text="" classNames="fcls_sblabel" visible="true" gridItemLocation="0,1,1,1" fieldTable="formonly" identifier="lbInfo2"/>
+			</GridPanel>
+		</GridPanel>
+	</form.rootContainer>
+	<form.screenRecords>
+		<ScreenRecord identifier="prodadjtype" fields="prodadjtype.adj_type_code,prodadjtype.desc_text,prodadjtype.adj_acct_code"/>
+		<ScreenRecord identifier="prodledg" fields="prodledg.tran_date,prodledg.year_num,prodledg.period_num,prodledg.desc_text"/>
+		<ScreenRecord identifier="FormOnly"/>
+	</form.screenRecords>
+</form>
+

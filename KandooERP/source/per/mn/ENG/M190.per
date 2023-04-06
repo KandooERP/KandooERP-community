@@ -1,0 +1,59 @@
+{
+###########################################################################
+# This program is free software; you can redistribute it and/or modify it
+# under the terms of the GNU General Public License as published by the
+# Free Software Foundation; either version 2 of the License, or (at your
+# option) any later version.
+#
+# This program is distributed in the hope that it will be useful, but
+# WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+# General Public License for more details.
+#
+# You should have received a copy of the GNU General Public License along
+# with this program; if not, write to the Free Software Foundation, Inc.,
+# 59 Temple Place, Suite 330, Boston, MA 02111-1307 USA
+#
+###########################################################################
+
+	 $Id: M190.per,v 1.2 2003/11/19 22:23:01 afalout Exp $
+}
+
+
+database kandoodb
+
+screen
+{
+                         Forecast Header                     M190
+\g------------------------------------------------------------------\g
+
+ Forecast No     [f001  ]
+ Product         [f002           ][f003                          ]
+ Order Quantity  [f004           ]
+ Unit Of Measure [f005]
+ Start Date      [f006      ]
+ Due Date        [f007      ]
+
+}
+
+tables
+shopordhead
+shoporddetl
+
+attributes
+f001 = shopordhead.shop_order_num, upshift,
+comments = " The number identifying the forecast ";
+f002 = shopordhead.part_code, upshift,
+comments = " The Product that is being planned by this forecast ";
+f003 = formonly.part_description type char, noentry;
+f004 = shopordhead.order_qty,
+comments = " The quantity of the Product planned by the forecast";
+f005 = shopordhead.uom_code, upshift,
+comments = " The planned unit of measure for the Forecasted Products ";
+f006 = shopordhead.start_date, format = "dd/mm/yyyy",
+comments = " The date when the forecast starts production";
+f007 = shopordhead.end_date, format = "dd/mm/yyyy",
+comments = " The date when the forecast is due";
+
+instructions
+delimiters "  "

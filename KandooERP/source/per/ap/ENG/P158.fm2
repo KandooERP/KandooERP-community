@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form xmlns="http://namespaces.querix.com/2015/fglForms">
+	<form.rootContainer>
+		<GridPanel classNames="fcls_rootContainer" verticalAlignment="Stretch" horizontalAlignment="Stretch" fieldTable="" identifier="rootContainer">
+			<GridPanel.gridRowDefinitions>
+				<GridRowDefinition gridLengthValue=""/>
+				<GridRowDefinition gridLengthValue="100%"/>
+				<GridRowDefinition gridLengthValue=""/>
+			</GridPanel.gridRowDefinitions>
+			<GridPanel.gridColumnDefinitions>
+				<GridColumnDefinition gridLengthValue="100%"/>
+			</GridPanel.gridColumnDefinitions>
+			<GridPanel classNames="fcls_title_cnt" visible="true" verticalAlignment="Top" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="cntTitle">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="100%"/>
+					<GridColumnDefinition gridLengthValue=""/>
+				</GridPanel.gridColumnDefinitions>
+				<Label isDynamic="true" text="Contractor Scan" classNames="fcls_title_lb" visible="true" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="header_text"/>
+				<Label isDynamic="true" text="P158" classNames="fcls_title_lb" visible="true" gridItemLocation="1,0,1,1" fieldTable="" identifier="lbFormName"/>
+			</GridPanel>
+			<Table rowCount="14" preferredSize="59qch,14qch" gridItemLocation="0,1,1,1" fieldTable="" identifier="sr_contractor">
+				<TableColumn fieldTable="" identifier="tc_scroll_flag">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="2rem" gridMinLength="2rem" gridMaxLength="2rem"/>
+					</TableColumn.columnLength>
+					<CheckBox dataType="Char,,,," fieldTable="formonly" identifier="scroll_flag">
+						<CheckBox.checkedValue>
+							<StringLiteral stringValue="*"/>
+						</CheckBox.checkedValue>
+						<CheckBox.uncheckedValue>
+							<NullLiteral/>
+						</CheckBox.uncheckedValue>
+					</CheckBox>
+				</TableColumn>
+				<TableColumn text="Vendor" fieldTable="" identifier="tc_vend_code">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="10rem" gridMinLength="10rem" gridMaxLength="10rem"/>
+					</TableColumn.columnLength>
+					<TextField toCase="Up" dataType="Char,,,,8" toolTip="Unique Vendor ID " comment="Unique Vendor ID " fieldTable="contractor" identifier="vend_code"/>
+				</TableColumn>
+				<TableColumn text="Name" fieldTable="" identifier="tc_name_text">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="10rem" gridMinLength="10rem" gridMaxLength="10rem"/>
+					</TableColumn.columnLength>
+					<TextField dataType="Char,,,,30" toolTip="Vendor name as it appears on cheques and remittance" comment="Vendor name as it appears on cheques and remittance" fieldTable="vendor" identifier="name_text"/>
+				</TableColumn>
+				<TableColumn text="Variation Number" fieldTable="" identifier="tc_variation_text">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="10rem" gridMinLength="10rem" gridMaxLength="10rem"/>
+					</TableColumn.columnLength>
+					<TextField dataType="Char,,,,10" toolTip="Tax Variation Number of contractor " comment="Tax Variation Number of contractor " fieldTable="contractor" identifier="variation_text"/>
+				</TableColumn>
+				<TableColumn resizable="true" visible="true" fieldTable="" identifier="tc_lb3">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="100%"/>
+					</TableColumn.columnLength>
+				</TableColumn>
+			</Table>
+			<GridPanel classNames="fcls_statusbar_cnt" visible="true" verticalAlignment="Top" gridItemLocation="0,2,1,1" fieldTable="formonly" identifier="cntStatusBar">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="100%"/>
+				</GridPanel.gridColumnDefinitions>
+				<Label isDynamic="true" text="" classNames="fcls_sblabel" visible="true" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="lbInfo1"/>
+				<Label isDynamic="true" text="" classNames="fcls_sblabel" visible="true" gridItemLocation="0,1,1,1" fieldTable="formonly" identifier="lbInfo2"/>
+			</GridPanel>
+		</GridPanel>
+	</form.rootContainer>
+	<form.screenRecords>
+		<ScreenRecord identifier="sr_contractor" fields="formonly.scroll_flag,contractor.vend_code,vendor.name_text,contractor.variation_text"/>
+		<ScreenRecord identifier="contractor" fields="vend_code,variation_text"/>
+		<ScreenRecord identifier="formonly" fields="scroll_flag"/>
+		<ScreenRecord identifier="vendor" fields="name_text"/>
+	</form.screenRecords>
+</form>
+

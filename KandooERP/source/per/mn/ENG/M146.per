@@ -1,0 +1,30 @@
+database formonly
+
+screen
+{
+                  Unix Version Selection                  M146  
+
+                       Unix Version
+                  \g-----------------------\g
+
+                [a][f000                ]
+                [a][f000                ]
+                [a][f000                ]
+                [a][f000                ]
+                [a][f000                ]
+                [a][f000                ]
+                [a][f000                ]
+                [a][f000                ]
+                [a][f000                ]
+                [a][f000                ]
+}
+
+attributes
+a    = formonly.blank_field type char;
+f000 = formonly.unix_name type char, noentry;
+
+instructions
+delimiters "  "
+
+screen record unix_array[10] (blank_field,
+                              unix_name)

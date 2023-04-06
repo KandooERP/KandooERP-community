@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form xmlns="http://namespaces.querix.com/2015/fglForms">
+	<form.rootContainer>
+		<CoordPanel preferredSize="37qch,5qch" fieldTable="" identifier="coord1">
+			<Label text="Mailing Name" location="0qch,0qch" preferredSize="12qch,1qch" fieldTable="" identifier="label1"/>
+			<TextField toCase="Up" required="true" reverse="true" dataType="Char,,,," location="15qch,0qch" preferredSize="21qch,1qch" toolTip="Mailing list name that will be executed (F10=L&amp;P)" fieldTable="formonly" comment="Mailing list name that will be executed (F10=L&amp;P)" identifier="mailing_name"/>
+			<Label text="Scheduled date" location="0qch,1qch" preferredSize="14qch,1qch" fieldTable="" identifier="label2"/>
+			<TextField required="true" dataType="Date,,,," location="15qch,1qch" preferredSize="11qch,1qch" toolTip="Date that this mailing will be executed" fieldTable="mailing_dates" comment="Date that this mailing will be executed" identifier="mail_date"/>
+			<Label text="User prepared" location="0qch,2qch" preferredSize="13qch,1qch" fieldTable="" identifier="label3"/>
+			<TextField toCase="Down" dataType="Char,,,,8" location="15qch,2qch" preferredSize="9qch,1qch" toolTip="User that last entered/changed this entry" fieldTable="mailing_dates" comment="User that last entered/changed this entry" identifier="user_id_prepared"/>
+			<Label text="Date prepared" location="0qch,3qch" preferredSize="13qch,1qch" fieldTable="" identifier="label4"/>
+			<TextField dataType="Date,,,," location="15qch,3qch" preferredSize="11qch,1qch" toolTip="Date when this mailing was prepared" fieldTable="mailing_dates" comment="Date when this mailing was prepared" identifier="date_prepared"/>
+			<Label text="Date completed" location="0qch,4qch" preferredSize="14qch,1qch" fieldTable="" identifier="label5"/>
+			<TextField dataType="Date,,,," location="15qch,4qch" preferredSize="11qch,1qch" toolTip="Date this entry was completed" fieldTable="mailing_dates" comment="Date this entry was completed" identifier="date_completed"/>
+		</CoordPanel>
+	</form.rootContainer>
+	<form.screenRecords>
+		<ScreenRecord identifier="s_mailing_dates" fields="mailing_name,mail_date,user_id_prepared,date_prepared,date_completed"/>
+		<ScreenRecord identifier="formonly" fields="mailing_name"/>
+		<ScreenRecord identifier="mailing_dates" fields="mail_date,user_id_prepared,date_prepared,date_completed"/>
+	</form.screenRecords>
+</form>
+

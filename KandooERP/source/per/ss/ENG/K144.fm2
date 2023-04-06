@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form xmlns="http://namespaces.querix.com/2015/fglForms">
+	<form.rootContainer>
+		<GridPanel classNames="fcls_rootContainer" verticalAlignment="Stretch" horizontalAlignment="Stretch" fieldTable="" identifier="rootContainer">
+			<GridPanel.gridRowDefinitions>
+				<GridRowDefinition gridLengthValue=""/>
+				<GridRowDefinition gridLengthValue=""/>
+				<GridRowDefinition gridLengthValue="100%"/>
+				<GridRowDefinition gridLengthValue=""/>
+			</GridPanel.gridRowDefinitions>
+			<GridPanel.gridColumnDefinitions>
+				<GridColumnDefinition gridLengthValue="100%"/>
+			</GridPanel.gridColumnDefinitions>
+			<GridPanel classNames="fcls_title_cnt" visible="true" verticalAlignment="Top" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="cntTitle">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="100%"/>
+					<GridColumnDefinition gridLengthValue=""/>
+				</GridPanel.gridColumnDefinitions>
+				<Label isDynamic="true" text="Corporate Subscription Entry" classNames="fcls_title_lb" visible="true" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="header_text"/>
+				<Label isDynamic="true" text="K144" classNames="fcls_title_lb" visible="true" gridItemLocation="1,0,1,1" fieldTable="" identifier="lbFormName"/>
+			</GridPanel>
+			<GridPanel classNames="fcls_detail_cnt,fcls_data_cnt,fcls_align_left" visible="true" verticalAlignment="Top" horizontalAlignment="Left" gridItemLocation="0,1,1,1" fieldTable="formonly" identifier="cntDetail1">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="" gridMinLength="10rem"/>
+					<GridColumnDefinition gridLengthValue=""/>
+				</GridPanel.gridColumnDefinitions>
+				<TextField noEntry="true" dataType="Char,,,,8" preferredSize="9qch,1qch" fieldTable="subhead" identifier="corp_cust_code" gridItemLocation="1,0,1,1" classNames="fcls_data_widget,fcls_align_left,fcls_length_30qch"/>
+				<TextField noEntry="true" dataType="Char,,,," preferredSize="44qch,1qch" fieldTable="formonly" identifier="corp_text" gridItemLocation="1,1,1,1" classNames="fcls_data_widget,fcls_align_left,fcls_length_30qch"/>
+				<TextField noEntry="true" dataType="Char,,,,30" preferredSize="32qch,1qch" fieldTable="customer" identifier="name_text" gridItemLocation="1,2,1,1" classNames="fcls_data_widget,fcls_align_left,fcls_length_30qch"/>
+				<Label isDynamic="true" text="Corporate Code" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,0,1,1" fieldTable="" identifier="lb51"/>
+				<Label isDynamic="true" text="Customer Name:" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,2,1,1" fieldTable="" identifier="lb52"/>
+			</GridPanel>
+			<Table rowCount="9" preferredSize="68qch,9qch" fieldTable="" identifier="sr_subhead" gridItemLocation="0,2,1,1">
+				<TableColumn fieldTable="" identifier="tc_scroll_flag">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="2rem" gridMaxLength="2rem" gridMinLength="2rem"/>
+					</TableColumn.columnLength>
+					<CheckBox dataType="Char,,,," fieldTable="formonly" identifier="scroll_flag">
+						<CheckBox.checkedValue>
+							<StringLiteral stringValue="*"/>
+						</CheckBox.checkedValue>
+						<CheckBox.uncheckedValue>
+							<NullLiteral/>
+						</CheckBox.uncheckedValue>
+					</CheckBox>
+				</TableColumn>
+				<TableColumn fieldTable="" identifier="tc_sub_num" text="Record ID">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="10rem" gridMaxLength="10rem" gridMinLength="10rem"/>
+					</TableColumn.columnLength>
+					<TextField dataType="Integer,,,," toolTip=" Enter subscription number selection criteria " fieldTable="subhead" comment=" Enter subscription number selection criteria " identifier="sub_num"/>
+				</TableColumn>
+				<TableColumn fieldTable="" identifier="tc_cust_code" text="Customer">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="10rem" gridMaxLength="10rem" gridMinLength="10rem"/>
+					</TableColumn.columnLength>
+					<TextField toCase="Up" noEntry="true" dataType="Char,,,,8" toolTip=" Enter subscription customer code selection criteria " fieldTable="subhead" comment=" Enter subscription customer code selection criteria " identifier="cust_code"/>
+				</TableColumn>
+				<TableColumn fieldTable="" identifier="tc_sub_type_code" text="Sub Type">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="10rem" gridMaxLength="10rem" gridMinLength="10rem"/>
+					</TableColumn.columnLength>
+					<TextField dataType="Char,,,,3" toolTip=" Subscription type " fieldTable="subhead" comment=" Subscription type " identifier="sub_type_code"/>
+				</TableColumn>
+				<TableColumn fieldTable="" identifier="tc_start_date" text="Start Date">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="10rem" gridMaxLength="10rem" gridMinLength="10rem"/>
+					</TableColumn.columnLength>
+					<Calendar format="dd/mm/yyyy" dataType="Date,,,," toolTip=" Enter subscription start date selection criteria " fieldTable="subhead" comment=" Enter subscription start date selection criteria " identifier="start_date"/>
+				</TableColumn>
+				<TableColumn fieldTable="" identifier="tc_end_date" text="End Date">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="10rem" gridMaxLength="10rem" gridMinLength="10rem"/>
+					</TableColumn.columnLength>
+					<Calendar format="dd/mm/yyyy" dataType="Date,,,," toolTip=" Enter subscription end date selection criteria " fieldTable="subhead" comment=" Enter subscription end date selection criteria " identifier="end_date"/>
+				</TableColumn>
+				<TableColumn fieldTable="" identifier="tc_status_ind" text="Status">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="10rem" gridMaxLength="10rem" gridMinLength="10rem"/>
+					</TableColumn.columnLength>
+					<TextField toCase="Up" noEntry="true" dataType="Char,,,,1" toolTip=" Subscription Status: (U) Unshipped - (P) Partially shipped - (C) Complete " fieldTable="subhead" comment=" Subscription Status: (U) Unshipped - (P) Partially shipped - (C) Complete " identifier="status_ind"/>
+				</TableColumn>
+				<TableColumn resizable="true" visible="true" identifier="tc_lbEOL">
+					<Label isDynamic="true" visible="true" identifier="lbEOL"/>
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="100%"/>
+					</TableColumn.columnLength>
+				</TableColumn>
+			</Table>
+			<GridPanel classNames="fcls_statusbar_cnt" visible="true" verticalAlignment="Top" gridItemLocation="0,3,1,1" fieldTable="formonly" identifier="cntStatusBar">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="100%"/>
+				</GridPanel.gridColumnDefinitions>
+				<Label isDynamic="true" text="" classNames="fcls_sblabel" visible="true" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="lbInfo1"/>
+				<Label isDynamic="true" text="" classNames="fcls_sblabel" visible="true" gridItemLocation="0,1,1,1" fieldTable="formonly" identifier="lbInfo2"/>
+			</GridPanel>
+		</GridPanel>
+	</form.rootContainer>
+	<form.screenRecords>
+		<ScreenRecord identifier="sr_subhead" fields="formonly.scroll_flag,subhead.sub_num,subhead.cust_code,subhead.sub_type_code,subhead.start_date,subhead.end_date,subhead.status_ind" elements="9"/>
+		<ScreenRecord identifier="customer" fields="customer.name_text"/>
+		<ScreenRecord identifier="formonly" fields="formonly.scroll_flag,formonly.corp_text"/>
+		<ScreenRecord identifier="subhead" fields="subhead.sub_num,subhead.cust_code,subhead.start_date,subhead.end_date,subhead.sub_type_code,subhead.status_ind,subhead.corp_cust_code"/>
+	</form.screenRecords>
+</form>
+

@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form xmlns="http://namespaces.querix.com/2015/fglForms">
+	<form.rootContainer>
+		<GridPanel classNames="fcls_rootContainer" verticalAlignment="Stretch" horizontalAlignment="Stretch" fieldTable="" identifier="rootContainer">
+			<GridPanel.gridRowDefinitions>
+				<GridRowDefinition gridLengthValue=""/>
+				<GridRowDefinition gridLengthValue=""/>
+				<GridRowDefinition gridLengthValue=""/>
+				<GridRowDefinition/>
+				<GridRowDefinition gridLengthValue="100%"/>
+				<GridRowDefinition gridLengthValue=""/>
+			</GridPanel.gridRowDefinitions>
+			<GridPanel.gridColumnDefinitions>
+				<GridColumnDefinition gridLengthValue="100%"/>
+			</GridPanel.gridColumnDefinitions>
+			<GridPanel classNames="fcls_title_cnt" visible="true" verticalAlignment="Top" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="cntTitle">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="100%"/>
+					<GridColumnDefinition gridLengthValue=""/>
+				</GridPanel.gridColumnDefinitions>
+				<Label isDynamic="true" text="Bank Sheet Entry &amp; Reconciliation" classNames="fcls_title_lb" visible="true" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="header_text"/>
+				<Label isDynamic="true" text="G401" classNames="fcls_title_lb" visible="true" gridItemLocation="1,0,1,1" fieldTable="" identifier="lbFormName"/>
+			</GridPanel>
+			<GridPanel classNames="fcls_detail_cnt,fcls_data_cnt,fcls_align_left" visible="true" verticalAlignment="Top" horizontalAlignment="Left" gridItemLocation="0,1,1,1" fieldTable="formonly" identifier="cntDetail1">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="10rem"/>
+					<GridColumnDefinition gridLengthValue=""/>
+					<GridColumnDefinition gridLengthValue="10rem"/>
+					<GridColumnDefinition gridLengthValue=""/>
+					<GridColumnDefinition gridLengthValue=""/>
+				</GridPanel.gridColumnDefinitions>
+				<ComboBox noEntry="true" dataType="Char,,,,9" classNames="list-show-value-text,field-show-value,fcls_data_widget,fcls_align_left,fcls_length_10qch" location="7qch,2qch" preferredSize="10qch,1qch" gridItemLocation="1,0,1,1" fieldTable="bank" identifier="bank_code"/>
+				<TextField noEntry="true" dataType="SmallInt,,,," classNames="fcls_data_widget,fcls_align_left,fcls_length_10qch" location="28qch,2qch" preferredSize="6qch,1qch" gridItemLocation="3,0,1,1" fieldTable="bank" identifier="sheet_num"/>
+				<TextField noEntry="true" dataType="Char,,,," classNames="fcls_data_widget,fcls_align_left,fcls_length_10qch" location="47qch,3qch" preferredSize="14qch,1qch" gridItemLocation="1,1,1,1" fieldTable="formonly" identifier="open_bal_amt"/>
+				<TextField noEntry="true" dataType="Decimal,,,2,16" classNames="fcls_data_widget,fcls_align_left,fcls_length_10qch" location="61qch,3qch" preferredSize="14qch,1qch" gridItemLocation="3,1,1,1" fieldTable="formonly" identifier="close_bal_amt"/>
+				<Label isDynamic="true" text="Bank" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,0,1,1" fieldTable="" identifier="lb51"/>
+				<Label isDynamic="true" text="Page No" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="2,0,1,1" fieldTable="" identifier="lb53"/>
+				<Label isDynamic="true" text="Opening Bal" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,1,1,1" fieldTable="" identifier="lb52"/>
+				<Label isDynamic="true" text="Closing Bal" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="2,1,1,1" fieldTable="" identifier="lb54"/>
+				<Label text="IBAN" isDynamic="true" visible="true" identifier="lb78" gridItemLocation="0,2,1,1" classNames="fcls_fieldlabel,fcls_align_left"/>
+				<TextField noEntry="true" classNames="fcls_data_widget,fcls_align_qstretch" location="0qch,3qch" preferredSize="41qch,1qch" gridItemLocation="1,2,4,1" fieldTable="bank" identifier="iban"/>
+			</GridPanel>
+			<GridPanel classNames="fcls_detail_cnt,fcls_data_cnt" visible="true" verticalAlignment="Top" horizontalAlignment="Left" gridItemLocation="0,2,1,1" fieldTable="" identifier="cntDetail2">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="" gridMinLength="10rem"/>
+					<GridColumnDefinition gridLengthValue=""/>
+				</GridPanel.gridColumnDefinitions>
+				<Label text="Bank Currency" isDynamic="true" visible="true" identifier="lb80" gridItemLocation="0,0,1,1"/>
+				<Label text="Cheque Currency" isDynamic="true" visible="true" identifier="lb79" gridItemLocation="0,1,1,1"/>
+				<ComboBox noEntry="true" dataType="Char,,,," classNames="list-show-text-value,field-show-value,fcls_data_widget,fcls_align_left,fcls_length_05qch" preferredSize="4qch,1qch" fieldTable="formonly" identifier="currency_code2" gridItemLocation="1,1,1,1"/>
+				<ComboBox noEntry="true" dataType="Char,,,," classNames="list-show-text-value,field-show-value,fcls_data_widget,fcls_align_left,fcls_length_05qch" preferredSize="4qch,1qch" fieldTable="formonly" identifier="currency_code1" gridItemLocation="1,0,1,1"/>
+			</GridPanel>
+			<Table rowCount="10" preferredSize="75qch,10qch" verticalAlignment="Stretch" horizontalAlignment="Stretch" gridItemLocation="0,4,1,1" fieldTable="" identifier="sr_bankstate">
+				<TableColumn fieldTable="" identifier="a">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="2rem" gridMaxLength="2rem" gridMinLength="2rem"/>
+					</TableColumn.columnLength>
+					<CheckBox dataType="Char,,,," fieldTable="formonly" identifier="scroll_flag">
+						<CheckBox.checkedValue>
+							<StringLiteral stringValue="*"/>
+						</CheckBox.checkedValue>
+						<CheckBox.uncheckedValue>
+							<NullLiteral/>
+						</CheckBox.uncheckedValue>
+					</CheckBox>
+				</TableColumn>
+				<TableColumn fieldTable="" identifier="f05">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="5%" gridMinLength="2rem" gridMaxLength="2rem"/>
+					</TableColumn.columnLength>
+					<TextField noEntry="true" text="Seq.Num" dataType="SmallInt,,,," fieldTable="bankstatement" identifier="seq_num"/>
+				</TableColumn>
+				<TableColumn text="Type" fieldTable="" identifier="f6">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="5%" gridMinLength="4rem" gridMaxLength="5rem"/>
+					</TableColumn.columnLength>
+					<ComboBox toCase="Up" dataType="Char,,,,2" toolTip=" Enter Cash Book Transaction Type (W)" comment=" Enter Cash Book Transaction Type (W)" fieldTable="bankstatement" identifier="entry_type_code" classNames="list-show-value-text,field-show-value">
+						<ComboBoxItem text="BC">
+							<ComboBoxItem.value>
+								<StringLiteral stringValue="BC"/>
+							</ComboBoxItem.value>
+						</ComboBoxItem>
+						<ComboBoxItem text="BD">
+							<ComboBoxItem.value>
+								<StringLiteral stringValue="BD"/>
+							</ComboBoxItem.value>
+						</ComboBoxItem>
+						<ComboBoxItem text="CH">
+							<ComboBoxItem.value>
+								<StringLiteral stringValue="CH"/>
+							</ComboBoxItem.value>
+						</ComboBoxItem>
+						<ComboBoxItem text="DC">
+							<ComboBoxItem.value>
+								<StringLiteral stringValue="DC"/>
+							</ComboBoxItem.value>
+						</ComboBoxItem>
+						<ComboBoxItem text="EF">
+							<ComboBoxItem.value>
+								<StringLiteral stringValue="EF"/>
+							</ComboBoxItem.value>
+						</ComboBoxItem>
+						<ComboBoxItem text="ER">
+							<ComboBoxItem.value>
+								<StringLiteral stringValue="ER"/>
+							</ComboBoxItem.value>
+						</ComboBoxItem>
+						<ComboBoxItem text="PA">
+							<ComboBoxItem.value>
+								<StringLiteral stringValue="PA"/>
+							</ComboBoxItem.value>
+						</ComboBoxItem>
+						<ComboBoxItem text="RE">
+							<ComboBoxItem.value>
+								<StringLiteral stringValue="RE"/>
+							</ComboBoxItem.value>
+						</ComboBoxItem>
+						<ComboBoxItem text="SC">
+							<ComboBoxItem.value>
+								<StringLiteral stringValue="SC"/>
+							</ComboBoxItem.value>
+						</ComboBoxItem>
+						<ComboBoxItem text="TI">
+							<ComboBoxItem.value>
+								<StringLiteral stringValue="TI"/>
+							</ComboBoxItem.value>
+						</ComboBoxItem>
+						<ComboBoxItem text="TO">
+							<ComboBoxItem.value>
+								<StringLiteral stringValue="TO"/>
+							</ComboBoxItem.value>
+						</ComboBoxItem>
+						<ComboBoxItem text="value12">
+							<ComboBoxItem.value>
+								<StringLiteral stringValue=""/>
+							</ComboBoxItem.value>
+						</ComboBoxItem>
+					</ComboBox>
+				</TableColumn>
+				<TableColumn text="Date" fieldTable="" identifier="f07">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="10%" gridMinLength="10rem" gridMaxLength="12rem"/>
+					</TableColumn.columnLength>
+					<Calendar dataType="Date,,,," toolTip=" Transaction Date (W)" comment=" Transaction Date (W)" fieldTable="bankstatement" identifier="tran_date"/>
+				</TableColumn>
+				<TableColumn text="Ref" fieldTable="" identifier="f08">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="10%" gridMinLength="4rem" gridMaxLength="6rem"/>
+					</TableColumn.columnLength>
+					<TextField toCase="Up" dataType="Char,,,,8" toolTip=" Transaction Reference. ie:  (RE) Customer, (PA) Vendor, (CH) Cheque No." comment=" Transaction Reference. ie:  (RE) Customer, (PA) Vendor, (CH) Cheque No." fieldTable="bankstatement" identifier="ref_code"/>
+				</TableColumn>
+				<TableColumn text="Description" fieldTable="" identifier="f14">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="20%" gridMinLength="10rem" gridMaxLength="20rem"/>
+					</TableColumn.columnLength>
+					<TextField dataType="Char,,,,16" toolTip=" The reference / description as loaded from the bank" comment=" The reference / description as loaded from the bank" fieldTable="bankstatement" identifier="ref_text"/>
+				</TableColumn>
+				<TableColumn text="DR/Payment" fieldTable="" identifier="f09">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="10%" gridMinLength="8rem" gridMaxLength="10rem"/>
+					</TableColumn.columnLength>
+					<TextField dataType="Decimal,,,2,16" toolTip=" Transaction debit amount" comment=" Transaction debit amount" fieldTable="formonly" identifier="dr_tran_amt"/>
+				</TableColumn>
+				<TableColumn text="CR/Deposit" fieldTable="" identifier="f10">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="10%" gridMinLength="8rem" gridMaxLength="10rem"/>
+					</TableColumn.columnLength>
+					<TextField dataType="Decimal,,,2,16" toolTip=" Transaction credit amount" comment=" Transaction credit amount" fieldTable="formonly" identifier="cr_tran_amt"/>
+				</TableColumn>
+				<TableColumn fieldTable="" identifier="b">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="5%" gridMaxLength="3rem" gridMinLength="2rem"/>
+					</TableColumn.columnLength>
+					<TextField noEntry="true" dataType="Char,,,," fieldTable="formonly" identifier="recon_flag"/>
+				</TableColumn>
+			</Table>
+			<GridPanel classNames="fcls_detail_cnt,fcls_data_cnt,fcls_align_left" visible="true" horizontalAlignment="Left" gridItemLocation="0,3,1,1" fieldTable="" identifier="cntDetail4">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridMinLength="10rem"/>
+					<GridColumnDefinition/>
+					<GridColumnDefinition/>
+					<GridColumnDefinition/>
+				</GridPanel.gridColumnDefinitions>
+				<Label text="Balance State" isDynamic="true" visible="true" identifier="balance_state" gridItemLocation="0,0,4,1" horizontalAlignment="Stretch" textAlignment="Center,Default"/>
+				<Label isDynamic="true" text="Totals:" classNames="fcls_fieldlabel,fcls_align_right" visible="true" textAlignment="Right," gridItemLocation="0,1,1,1" fieldTable="" identifier="lb77"/>
+				<TextField noEntry="true" dataType="Decimal,,,2,16" location="33qch,18qch" preferredSize="14qch,1qch" gridItemLocation="1,1,1,1" fieldTable="formonly" identifier="dr_tot_amt" classNames="fcls_data_widget,fcls_align_left,fcls_length_10qch"/>
+				<TextField noEntry="true" dataType="Decimal,,,2,16" location="47qch,18qch" preferredSize="13qch,1qch" gridItemLocation="2,1,1,1" fieldTable="formonly" identifier="cr_tot_amt" classNames="fcls_data_widget,fcls_align_left,fcls_length_10qch"/>
+				<TextField noEntry="true" dataType="Decimal,,,2,16" location="60qch,18qch" preferredSize="13qch,1qch" gridItemLocation="3,1,1,1" fieldTable="formonly" identifier="bal_tot_amt" classNames="fcls_data_widget,fcls_align_left,fcls_length_10qch"/>
+			</GridPanel>
+			<GridPanel classNames="fcls_statusbar_cnt" visible="true" verticalAlignment="Top" gridItemLocation="0,5,1,1" fieldTable="formonly" identifier="cntStatusBar">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="100%"/>
+				</GridPanel.gridColumnDefinitions>
+				<Label isDynamic="true" text="" classNames="fcls_sblabel" visible="true" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="lbInfo1"/>
+				<Label isDynamic="true" text="" classNames="fcls_sblabel" visible="true" gridItemLocation="0,1,1,1" fieldTable="formonly" identifier="lbInfo2"/>
+			</GridPanel>
+		</GridPanel>
+	</form.rootContainer>
+	<form.screenRecords>
+		<ScreenRecord identifier="sr_bankstate" fields="scroll_flag,seq_num,entry_type_code,tran_date,ref_code,ref_text,dr_tran_amt,cr_tran_amt,recon_flag"/>
+		<ScreenRecord identifier="bank" fields="bank_code,iban,sheet_num"/>
+		<ScreenRecord identifier="bankstatement" fields="seq_num,entry_type_code,tran_date,ref_code,ref_text"/>
+		<ScreenRecord identifier="formonly" fields="open_bal_amt,close_bal_amt,dr_tran_amt,cr_tran_amt,scroll_flag,recon_flag,dr_tot_amt,cr_tot_amt,bal_tot_amt,currency_code1,currency_code2,lb78"/>
+	</form.screenRecords>
+</form>
+

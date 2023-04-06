@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form xmlns="http://namespaces.querix.com/2015/fglForms">
+	<form.rootContainer>
+		<GridPanel classNames="fcls_rootContainer" verticalAlignment="Top" horizontalAlignment="Left" fieldTable="" identifier="rootContainer">
+			<GridPanel.gridRowDefinitions>
+				<GridRowDefinition gridLengthValue=""/>
+				<GridRowDefinition gridLengthValue=""/>
+				<GridRowDefinition gridLengthValue=""/>
+				<GridRowDefinition gridLengthValue=""/>
+				<GridRowDefinition gridLengthValue=""/>
+				<GridRowDefinition gridLengthValue=""/>
+				<GridRowDefinition gridLengthValue=""/>
+				<GridRowDefinition gridLengthValue=""/>
+			</GridPanel.gridRowDefinitions>
+			<GridPanel.gridColumnDefinitions>
+				<GridColumnDefinition gridLengthValue="100%"/>
+			</GridPanel.gridColumnDefinitions>
+			<GridPanel classNames="fcls_title_cnt" visible="true" verticalAlignment="Top" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="cntTitle">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="100%"/>
+					<GridColumnDefinition gridLengthValue=""/>
+				</GridPanel.gridColumnDefinitions>
+				<Label isDynamic="true" text="Contractors" classNames="fcls_title_lb" visible="true" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="header_text"/>
+				<Label isDynamic="true" text="P157" classNames="fcls_title_lb" visible="true" gridItemLocation="1,0,1,1" fieldTable="" identifier="lbFormName"/>
+			</GridPanel>
+			<GridPanel classNames="fcls_detail_cnt,fcls_data_cnt,fcls_align_left" visible="true" verticalAlignment="Top" horizontalAlignment="Left" gridItemLocation="0,1,1,1" fieldTable="formonly" identifier="cntDetail1">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="" gridMinLength="10rem"/>
+					<GridColumnDefinition gridLengthValue=""/>
+					<GridColumnDefinition gridLengthValue=""/>
+				</GridPanel.gridColumnDefinitions>
+				<Label isDynamic="true" text="Vendor" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="lb57"/>
+				<TextField dataType="Char,,,,8" classNames="fcls_data_widget,fcls_align_left,fcls_length_10qch" location="20qch,2qch" preferredSize="25qch,1qch" toolTip=" Vendor code for Contractor" gridItemLocation="1,0,1,1" fieldTable="contractor" comment=" Vendor code for Contractor" identifier="vend_code"/>
+				<TextField dataType="Char,,,,30" classNames="fcls_data_widget,fcls_align_left,fcls_length_30qch" location="46qch,2qch" preferredSize="20qch,1qch" gridItemLocation="2,0,1,1" fieldTable="vendor" identifier="name_text"/>
+				<Label isDynamic="true" text="Start Date" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,1,1,1" fieldTable="" identifier="lb73"/>
+				<Calendar dataType="Date,,,," classNames="fcls_data_widget,fcls_align_left,fcls_length_10qch" location="20qch,3qch" preferredSize="11qch,1qch" toolTip=" Commencement date" gridItemLocation="1,1,1,1" fieldTable="contractor" comment=" Commencement date" identifier="start_date"/>
+			</GridPanel>
+			<GroupBox title="Contact Info" classNames="fcls_detail_gb_cnt" visible="true" verticalAlignment="Stretch" horizontalAlignment="Stretch" gridItemLocation="0,2,1,1" fieldTable="formonly" identifier="cntDetail2GroupBox">
+				<GridPanel classNames="fcls_detail_gb_cnt_sub,fcls_detail_cnt_sub,fcls_data_cnt,fcls_align_left" visible="true" verticalAlignment="Top" horizontalAlignment="Left" fieldTable="formonly" identifier="cntDetail2Sub">
+					<GridPanel.gridRowDefinitions>
+						<GridRowDefinition gridLengthValue=""/>
+						<GridRowDefinition gridLengthValue=""/>
+					</GridPanel.gridRowDefinitions>
+					<GridPanel.gridColumnDefinitions>
+						<GridColumnDefinition gridLengthValue="" gridMinLength="10rem"/>
+						<GridColumnDefinition gridLengthValue=""/>
+						<GridColumnDefinition gridLengthValue=""/>
+						<GridColumnDefinition gridLengthValue=""/>
+					</GridPanel.gridColumnDefinitions>
+					<Label isDynamic="true" text="Home Phone" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="lb47"/>
+					<TextField dataType="Char,,,,20" classNames="fcls_data_widget,fcls_align_left,fcls_length_20qch" location="20qch,5qch" preferredSize="11qch,1qch" toolTip=" Home phone number" gridItemLocation="1,0,1,1" fieldTable="contractor" comment=" Home phone number" identifier="home_phone_text"/>
+					<Label isDynamic="true" text="Pager Phone" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,1,1,1" fieldTable="formonly" identifier="lb46"/>
+					<TextField dataType="Char,,,,15" classNames="fcls_data_widget,fcls_align_left,fcls_length_20qch" location="20qch,6qch" preferredSize="16qch,1qch" toolTip=" Pager phone number" gridItemLocation="1,1,1,1" fieldTable="contractor" comment=" Pager phone number" identifier="pager_comp_text"/>
+					<Label isDynamic="true" text="Number" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="2,1,1,1" fieldTable="" identifier="lb143"/>
+					<TextField dataType="Char,,,,10" classNames="fcls_data_widget,fcls_align_left,fcls_length_20qch" location="50qch,6qch" preferredSize="11qch,1qch" toolTip=" Pager number" gridItemLocation="3,1,1,1" fieldTable="contractor" comment=" Pager number" identifier="pager_num_text"/>
+				</GridPanel>
+			</GroupBox>
+			<GroupBox title="Licence Details" classNames="fcls_detail_gb_cnt" visible="true" verticalAlignment="Stretch" horizontalAlignment="Stretch" gridItemLocation="0,3,1,1" fieldTable="formonly" identifier="cntDetail3GroupBox">
+				<GridPanel classNames="fcls_detail_gb_cnt_sub,fcls_detail_cnt_sub,fcls_data_cnt,fcls_align_left" visible="true" verticalAlignment="Top" horizontalAlignment="Left" fieldTable="formonly" identifier="cntDetail3Sub">
+					<GridPanel.gridRowDefinitions>
+						<GridRowDefinition gridLengthValue=""/>
+					</GridPanel.gridRowDefinitions>
+					<GridPanel.gridColumnDefinitions>
+						<GridColumnDefinition gridLengthValue="" gridMinLength="10rem"/>
+						<GridColumnDefinition gridLengthValue=""/>
+						<GridColumnDefinition gridLengthValue="" gridMinLength="10rem"/>
+						<GridColumnDefinition gridLengthValue=""/>
+					</GridPanel.gridColumnDefinitions>
+					<Label isDynamic="true" text="Licence Number" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="lb48"/>
+					<TextField dataType="Char,,,,12" classNames="fcls_data_widget,fcls_align_left,fcls_length_10qch" location="20qch,8qch" preferredSize="13qch,1qch" toolTip=" Licence number" gridItemLocation="1,0,1,1" fieldTable="contractor" comment=" Licence number" identifier="licence_text"/>
+					<Label isDynamic="true" text="Licence Expiry" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="2,0,1,1" fieldTable="" identifier="lb147"/>
+					<Calendar dataType="Date,,,," classNames="fcls_data_widget,fcls_align_left,fcls_length_10qch" location="56qch,8qch" preferredSize="11qch,1qch" toolTip=" Licence expiry date" gridItemLocation="3,0,1,1" fieldTable="contractor" comment=" Licence expiry date" identifier="expiry_date"/>
+				</GridPanel>
+			</GroupBox>
+			<GroupBox title="Tax Info" classNames="fcls_detail_gb_cnt" visible="true" verticalAlignment="Stretch" horizontalAlignment="Stretch" gridItemLocation="0,4,1,1" fieldTable="" identifier="cntDetail4GroupBox">
+				<GridPanel classNames="fcls_detail_gb_cnt_sub,fcls_detail_cnt_sub,fcls_data_cnt,fcls_align_left" visible="true" verticalAlignment="Top" horizontalAlignment="Left" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="cntDetail4Sub">
+					<GridPanel.gridRowDefinitions>
+						<GridRowDefinition gridLengthValue=""/>
+						<GridRowDefinition gridLengthValue=""/>
+						<GridRowDefinition gridLengthValue=""/>
+						<GridRowDefinition gridLengthValue=""/>
+					</GridPanel.gridRowDefinitions>
+					<GridPanel.gridColumnDefinitions>
+						<GridColumnDefinition gridLengthValue="" gridMinLength="10rem"/>
+						<GridColumnDefinition gridLengthValue=""/>
+						<GridColumnDefinition gridLengthValue="" gridMinLength="10rem"/>
+						<GridColumnDefinition gridLengthValue=""/>
+					</GridPanel.gridColumnDefinitions>
+					<Label isDynamic="true" text="Tax File Number" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,0,1,1" fieldTable="" identifier="lb115"/>
+					<TextField dataType="Char,,,,10" classNames="fcls_data_widget,fcls_align_left,fcls_length_10qch" location="20qch,10qch" preferredSize="11qch,1qch" toolTip=" Tax File number" gridItemLocation="1,0,1,1" fieldTable="contractor" comment=" Tax File number" identifier="tax_no_text"/>
+					<Label isDynamic="true" text="Registration Nos" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="2,0,1,1" fieldTable="" identifier="lb152"/>
+					<TextField dataType="Char,,,,10" classNames="fcls_data_widget,fcls_align_left,fcls_length_10qch" location="56qch,10qch" preferredSize="11qch,1qch" toolTip=" Tax Registration number" gridItemLocation="3,0,1,1" fieldTable="contractor" comment=" Tax Registration number" identifier="regist_num_text"/>
+					<Label isDynamic="true" text="Withhold Tax ID" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,1,1,1" fieldTable="" identifier="lb116"/>
+					<ComboBox toCase="Up" dataType="Char,,,,3" classNames="fcls_data_widget,fcls_align_left,fcls_length_10qch" location="20qch,11qch" preferredSize="4qch,1qch" toolTip=" Code for Withholding Tax rate (W)" gridItemLocation="1,1,1,1" fieldTable="contractor" comment=" Code for Withholding Tax rate (W)" identifier="tax_code"/>
+					<Label isDynamic="true" text="Tax Rate in %" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="2,1,1,1" fieldTable="" identifier="lb119"/>
+					<TextField noEntry="true" dataType="Decimal,,,2,4" classNames="fcls_data_widget,fcls_align_left,fcls_length_10qch" location="25qch,11qch" preferredSize="7qch,1qch" toolTip=" Withholding Tax rate" gridItemLocation="3,1,1,1" fieldTable="contractor" comment=" Withholding Tax rate" identifier="tax_rate_qty"/>
+					<Label isDynamic="true" text="Variation Number" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,2,1,1" fieldTable="" identifier="lb153"/>
+					<TextField dataType="Char,,,,10" classNames="fcls_data_widget,fcls_align_left,fcls_length_10qch" location="56qch,11qch" preferredSize="11qch,1qch" toolTip=" Withholding tax variation or exemption number" gridItemLocation="1,2,1,1" fieldTable="contractor" comment=" Withholding tax variation or exemption number" identifier="variation_text"/>
+					<Label isDynamic="true" text="Variation Start" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,3,1,1" fieldTable="" identifier="lb120"/>
+					<Calendar dataType="Date,,,," classNames="fcls_data_widget,fcls_align_left,fcls_length_10qch" location="20qch,12qch" preferredSize="11qch,1qch" toolTip=" Start date for tax variation " gridItemLocation="1,3,1,1" fieldTable="contractor" comment=" Start date for tax variation " identifier="var_start_date"/>
+					<Label isDynamic="true" text="Variation Expiry" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="2,3,1,1" fieldTable="" identifier="lb154"/>
+					<Calendar dataType="Date,,,," classNames="fcls_data_widget,fcls_align_left,fcls_length_10qch" location="56qch,12qch" preferredSize="11qch,1qch" toolTip=" Expiry date for tax variation" gridItemLocation="3,3,1,1" fieldTable="contractor" comment=" Expiry date for tax variation" identifier="var_exp_date"/>
+				</GridPanel>
+			</GroupBox>
+			<GroupBox title="Union Info" classNames="fcls_detail_gb_cnt" visible="true" verticalAlignment="Stretch" horizontalAlignment="Stretch" gridItemLocation="0,5,1,1" fieldTable="" identifier="cntDetail5GroupBox">
+				<GridPanel classNames="fcls_detail_gb_cnt_sub,fcls_detail_cnt_sub,fcls_data_cnt,fcls_align_left" visible="true" verticalAlignment="Top" horizontalAlignment="Left" fieldTable="" identifier="cntDetail5Sub">
+					<GridPanel.gridRowDefinitions>
+						<GridRowDefinition gridLengthValue=""/>
+						<GridRowDefinition gridLengthValue=""/>
+					</GridPanel.gridRowDefinitions>
+					<GridPanel.gridColumnDefinitions>
+						<GridColumnDefinition gridLengthValue="" gridMinLength="10rem"/>
+						<GridColumnDefinition gridLengthValue=""/>
+						<GridColumnDefinition gridLengthValue="" gridMinLength="10rem"/>
+						<GridColumnDefinition gridLengthValue=""/>
+					</GridPanel.gridColumnDefinitions>
+					<Label isDynamic="true" text="Union" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,0,1,1" fieldTable="" identifier="lb128"/>
+					<TextField dataType="Char,,,,20" classNames="fcls_data_widget,fcls_align_left,fcls_length_20qch" location="20qch,14qch" preferredSize="21qch,1qch" toolTip=" Name of relevant union" gridItemLocation="1,0,1,1" fieldTable="contractor" comment=" Name of relevant union" identifier="union_text"/>
+					<Label isDynamic="true" text="Union Number" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,1,1,1" fieldTable="" identifier="lb129"/>
+					<TextField dataType="Char,,,,10" classNames="fcls_data_widget,fcls_align_left,fcls_length_20qch" location="20qch,15qch" preferredSize="11qch,1qch" toolTip=" Union Membership number" gridItemLocation="1,1,1,1" fieldTable="contractor" comment=" Union Membership number" identifier="union_num_text"/>
+					<Label isDynamic="true" text="Union Expiry Date" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="2,1,1,1" fieldTable="" identifier="lb162"/>
+					<Calendar dataType="Date,,,," classNames="fcls_data_widget,fcls_align_left,fcls_length_10qch" location="56qch,15qch" preferredSize="11qch,1qch" toolTip=" Union Membership expiry date" gridItemLocation="3,1,1,1" fieldTable="contractor" comment=" Union Membership expiry date" identifier="union_exp_date"/>
+				</GridPanel>
+			</GroupBox>
+			<GroupBox title="Insurance" classNames="fcls_detail_gb_cnt" visible="true" verticalAlignment="Stretch" horizontalAlignment="Stretch" gridItemLocation="0,6,1,1" fieldTable="" identifier="cntDetail6GroupBox">
+				<GridPanel classNames="fcls_detail_gb_cnt_sub,fcls_detail_cnt_sub,fcls_data_cnt,fcls_align_left" visible="true" verticalAlignment="Top" horizontalAlignment="Left" fieldTable="" identifier="cntDetail6Sub">
+					<GridPanel.gridRowDefinitions>
+						<GridRowDefinition gridLengthValue=""/>
+						<GridRowDefinition gridLengthValue=""/>
+					</GridPanel.gridRowDefinitions>
+					<GridPanel.gridColumnDefinitions>
+						<GridColumnDefinition gridLengthValue="" gridMinLength="10rem"/>
+						<GridColumnDefinition gridLengthValue=""/>
+						<GridColumnDefinition gridLengthValue="" gridMinLength="10rem"/>
+						<GridColumnDefinition gridLengthValue=""/>
+					</GridPanel.gridColumnDefinitions>
+					<Label isDynamic="true" text="Insurance Comp." classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,0,1,1" fieldTable="" identifier="lb134"/>
+					<TextField dataType="Char,,,,20" classNames="fcls_data_widget,fcls_align_left,fcls_length_20qch" location="20qch,17qch" preferredSize="21qch,1qch" toolTip=" Name of Insurance Company" gridItemLocation="1,0,1,1" fieldTable="contractor" comment=" Name of Insurance Company" identifier="insurance_text"/>
+					<Label isDynamic="true" text="Policy Number" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,1,1,1" fieldTable="" identifier="lb135"/>
+					<TextField dataType="Char,,,,10" classNames="fcls_data_widget,fcls_align_left,fcls_length_20qch" location="20qch,18qch" preferredSize="11qch,1qch" toolTip=" Insurance Policy number" gridItemLocation="1,1,1,1" fieldTable="contractor" comment=" Insurance Policy number" identifier="comp_num_text"/>
+					<Label isDynamic="true" text="Expiry Date" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="2,1,1,1" fieldTable="" identifier="lb171"/>
+					<Calendar dataType="Date,,,," classNames="fcls_data_widget,fcls_align_left,fcls_length_10qch" location="56qch,18qch" preferredSize="11qch,1qch" toolTip=" Insurance Policy expiry date" gridItemLocation="3,1,1,1" fieldTable="contractor" comment=" Insurance Policy expiry date" identifier="ins_exp_date"/>
+				</GridPanel>
+			</GroupBox>
+			<GridPanel classNames="fcls_statusbar_cnt" visible="true" verticalAlignment="Bottom" gridItemLocation="0,7,1,1" fieldTable="formonly" identifier="cntStatusBar">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="100%"/>
+				</GridPanel.gridColumnDefinitions>
+				<Label isDynamic="true" text="" classNames="fcls_sblabel" visible="true" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="lbInfo1"/>
+				<Label isDynamic="true" text="" classNames="fcls_sblabel" visible="true" gridItemLocation="0,1,1,1" fieldTable="formonly" identifier="lbInfo2"/>
+			</GridPanel>
+		</GridPanel>
+	</form.rootContainer>
+	<form.screenRecords>
+		<ScreenRecord identifier="contractor" fields="vend_code,home_phone_text,pager_comp_text,pager_num_text,start_date,licence_text,expiry_date,tax_no_text,regist_num_text,tax_code,tax_rate_qty,variation_text,var_start_date,var_exp_date,union_text,union_num_text,union_exp_date,comp_num_text,insurance_text,ins_exp_date"/>
+		<ScreenRecord identifier="vendor" fields="name_text"/>
+		<ScreenRecord identifier="FormOnly"/>
+	</form.screenRecords>
+</form>
+

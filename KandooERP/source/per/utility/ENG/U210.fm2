@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?><form xmlns="http://namespaces.querix.com/2015/fglForms">
+	<form.rootContainer>
+		<GridPanel classNames="fcls_rootContainer" fieldTable="" horizontalAlignment="Left" identifier="rootContainer" verticalAlignment="Top">
+			<GridPanel.gridRowDefinitions>
+				<GridRowDefinition gridLengthValue=""/>
+				<GridRowDefinition gridLengthValue=""/>
+				<GridRowDefinition gridLengthValue=""/>
+			</GridPanel.gridRowDefinitions>
+			<GridPanel.gridColumnDefinitions>
+				<GridColumnDefinition gridLengthValue="100%"/>
+			</GridPanel.gridColumnDefinitions>
+			<GridPanel classNames="fcls_title_cnt" fieldTable="formonly" gridItemLocation="0,0,1,1" identifier="cntTitle" verticalAlignment="Top" visible="true">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="100%"/>
+					<GridColumnDefinition gridLengthValue=""/>
+				</GridPanel.gridColumnDefinitions>
+				<Label classNames="fcls_title_lb" fieldTable="formonly" gridItemLocation="0,0,1,1" identifier="header_text" isDynamic="true" text="Quadrant Data Transfer" visible="true"/>
+				<Label classNames="fcls_title_lb" fieldTable="" gridItemLocation="1,0,1,1" identifier="lbFormName" isDynamic="true" text="U210" visible="true"/>
+			</GridPanel>
+			<GridPanel classNames="fcls_detail_cnt,fcls_data_cnt,fcls_align_left" fieldTable="formonly" gridItemLocation="0,1,1,1" horizontalAlignment="Left" identifier="cntDetail1" verticalAlignment="Top" visible="true">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="" gridMinLength="10rem"/>
+					<GridColumnDefinition gridLengthValue=""/>
+				</GridPanel.gridColumnDefinitions>
+				<TextField classNames="fcls_data_widget,fcls_align_left,fcls_length_10qch" comment=" Enter the warehouse code for the quadrant data being loaded (W)" dataType="Char,,,,3" fieldTable="quadrant" gridItemLocation="1,0,1,1" identifier="ware_code" preferredSize="4qch,1qch" toCase="Up" toolTip=" Enter the warehouse code for the quadrant data being loaded (W)"/>
+				<TextField classNames="fcls_data_widget,fcls_align_left,fcls_length_50qch" comment=" Enter full UNIX path and filename of the file to load" dataType="Char,,,," fieldTable="formonly" gridItemLocation="1,1,1,1" identifier="filename" preferredSize="51qch,1qch" toolTip=" Enter full UNIX path and filename of the file to load"/>
+				<Label classNames="fcls_fieldlabel,fcls_align_left" fieldTable="" gridItemLocation="0,0,1,1" identifier="lb51" isDynamic="true" text="Ware Code" visible="true"/>
+				<Label classNames="fcls_fieldlabel,fcls_align_left" fieldTable="" gridItemLocation="0,1,1,1" identifier="lb52" isDynamic="true" text="File Name" visible="true"/>
+			</GridPanel>
+			<GridPanel classNames="fcls_statusbar_cnt" fieldTable="formonly" gridItemLocation="0,2,1,1" identifier="cntStatusBar" verticalAlignment="Top" visible="true">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="100%"/>
+				</GridPanel.gridColumnDefinitions>
+				<Label classNames="fcls_sblabel" fieldTable="formonly" gridItemLocation="0,0,1,1" identifier="lbInfo1" isDynamic="true" text="" visible="true"/>
+				<Label classNames="fcls_sblabel" fieldTable="formonly" gridItemLocation="0,1,1,1" identifier="lbInfo2" isDynamic="true" text="" visible="true"/>
+			</GridPanel>
+		</GridPanel>
+	</form.rootContainer>
+	<form.screenRecords>
+		<ScreenRecord fields="filename" identifier="formonly"/>
+		<ScreenRecord fields="ware_code" identifier="quadrant"/>
+	</form.screenRecords>
+</form>

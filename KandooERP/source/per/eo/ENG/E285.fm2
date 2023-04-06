@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form xmlns="http://namespaces.querix.com/2015/fglForms">
+	<form.rootContainer>
+		<GridPanel classNames="fcls_rootContainer" verticalAlignment="Top" horizontalAlignment="Left" fieldTable="" identifier="rootContainer">
+			<GridPanel.gridRowDefinitions>
+				<GridRowDefinition gridLengthValue=""/>
+				<GridRowDefinition gridLengthValue=""/>
+				<GridRowDefinition gridLengthValue=""/>
+				<GridRowDefinition gridLengthValue=""/>
+				<GridRowDefinition gridLengthValue=""/>
+			</GridPanel.gridRowDefinitions>
+			<GridPanel.gridColumnDefinitions>
+				<GridColumnDefinition gridLengthValue="100%"/>
+			</GridPanel.gridColumnDefinitions>
+			<GridPanel classNames="fcls_title_cnt" visible="true" verticalAlignment="Top" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="cntTitle">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="100%"/>
+					<GridColumnDefinition gridLengthValue=""/>
+				</GridPanel.gridColumnDefinitions>
+				<Label isDynamic="true" text="Report" classNames="fcls_title_lb" visible="true" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="header_text"/>
+				<Label isDynamic="true" text="E285" classNames="fcls_title_lb" visible="true" gridItemLocation="1,0,1,1" fieldTable="" identifier="lbFormName"/>
+			</GridPanel>
+			<GridPanel classNames="fcls_detail_cnt,fcls_data_cnt" visible="true" verticalAlignment="Top" horizontalAlignment="Left" gridItemLocation="0,1,1,1" fieldTable="formonly" identifier="cntDetail1">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="" gridMinLength="10rem"/>
+					<GridColumnDefinition gridLengthValue="" gridMinLength="10rem"/>
+					<GridColumnDefinition gridLengthValue=""/>
+					<GridColumnDefinition gridLengthValue=""/>
+					<GridColumnDefinition gridLengthValue=""/>
+				</GridPanel.gridColumnDefinitions>
+				<TextField visible="true" identifier="header_text" gridItemLocation="1,0,4,1" dataType="VarChar,,,0,12" fieldTable="kandooreport" noEntry="true" preferredSize="51qch,1qch" classNames="fcls_data_widget"/>
+				<Label isDynamic="true" text="Report Interval:" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,1,1,1" fieldTable="formonly" identifier="lb57"/>
+				<Label isDynamic="true" text="Year No" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="1,1,1,1" fieldTable="formonly" identifier="lb61"/>
+				<TextField dataType="SmallInt,,,," preferredSize="5qch,1qch" toolTip=" The year to run this report for" comment=" The year to run this report for" fieldTable="statparms" identifier="year_num" gridItemLocation="2,1,1,1" classNames="fcls_data_widget,fcls_length_10qch">
+				<TextField.includes>
+					<RangeInclude>
+						<RangeInclude.fromValue>
+							<IntegerLiteral integerValue="1000"/>
+						</RangeInclude.fromValue>
+						<RangeInclude.toValue>
+							<IntegerLiteral integerValue="9999"/>
+						</RangeInclude.toValue>
+					</RangeInclude>
+				</TextField.includes>
+			</TextField>
+				<Label isDynamic="true" text="Beginning" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="3,1,1,1" fieldTable="" identifier="lb135"/>
+				<Calendar noEntry="true" dataType="Date,,,," preferredSize="11qch,1qch" fieldTable="statint" identifier="start_date" gridItemLocation="4,1,1,1" classNames="fcls_data_widget,fcls_length_10qch"/>
+				<Label isDynamic="true" text="Month No" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="1,2,1,1" fieldTable="formonly" identifier="lb59"/>
+				<TextField toCase="Up" dataType="Char,,,,10" preferredSize="9qch,1qch" toolTip=" The monthly interval to run this report for -(W)" comment=" The monthly interval to run this report for -(W)" fieldTable="statint" identifier="int_text" gridItemLocation="2,2,1,1" classNames="fcls_data_widget,fcls_length_10qch"/>
+				<Label isDynamic="true" text="Ending" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="3,2,1,1" fieldTable="" identifier="lb136"/>
+				<Calendar noEntry="true" dataType="Date,,,," preferredSize="11qch,1qch" fieldTable="statint" identifier="end_date" gridItemLocation="4,2,1,1" classNames="fcls_data_widget,fcls_length_10qch"/>
+			</GridPanel>
+			<GroupBox title="Print Totals on Product" classNames="fcls_detail_gb_cnt" visible="true" verticalAlignment="Stretch" horizontalAlignment="Stretch" gridItemLocation="0,2,1,1" fieldTable="formonly" identifier="cntDetail2GroupBox">
+				<GridPanel classNames="fcls_detail_gb_cnt_sub,fcls_detail_cnt_sub,fcls_data_cnt" visible="true" verticalAlignment="Top" horizontalAlignment="Left" fieldTable="formonly" identifier="cntDetail2GrBoxSub">
+					<GridPanel.gridRowDefinitions>
+						<GridRowDefinition gridLengthValue=""/>
+						<GridRowDefinition gridLengthValue=""/>
+						<GridRowDefinition gridLengthValue=""/>
+					</GridPanel.gridRowDefinitions>
+					<GridPanel.gridColumnDefinitions>
+						<GridColumnDefinition gridLengthValue="" gridMinLength="10rem"/>
+						<GridColumnDefinition gridLengthValue=""/>
+					</GridPanel.gridColumnDefinitions>
+					<Label isDynamic="true" text="Print Totals on Product" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="lb47"/>
+					<TextField toCase="Up" dataType="Char,,,," preferredSize="2qch,1qch" toolTip=" Print totals for each product item - (Y)es - (N)o " comment=" Print totals for each product item - (Y)es - (N)o " fieldTable="formonly" identifier="part_ind" gridItemLocation="1,0,1,1" classNames="fcls_data_widget,fcls_length_10qch">
+				<TextField.includes>
+					<ValueInclude>
+						<ValueInclude.value>
+							<StringLiteral stringValue="Y"/>
+						</ValueInclude.value>
+					</ValueInclude>
+					<ValueInclude>
+						<ValueInclude.value>
+							<StringLiteral stringValue="N"/>
+						</ValueInclude.value>
+					</ValueInclude>
+				</TextField.includes>
+			</TextField>
+					<Label isDynamic="true" text="on Product Group" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,1,1,1" fieldTable="formonly" identifier="lb46"/>
+					<TextField toCase="Up" dataType="Char,,,," preferredSize="2qch,1qch" toolTip=" Print totals for each product group - (Y)es - (N)o " comment=" Print totals for each product group - (Y)es - (N)o " fieldTable="formonly" identifier="pgrp_ind" gridItemLocation="1,1,1,1" classNames="fcls_data_widget,fcls_length_10qch">
+				<TextField.includes>
+					<ValueInclude>
+						<ValueInclude.value>
+							<StringLiteral stringValue="Y"/>
+						</ValueInclude.value>
+					</ValueInclude>
+					<ValueInclude>
+						<ValueInclude.value>
+							<StringLiteral stringValue="N"/>
+						</ValueInclude.value>
+					</ValueInclude>
+				</TextField.includes>
+			</TextField>
+					<Label isDynamic="true" text="on Main Group" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,2,1,1" fieldTable="formonly" identifier="lb44"/>
+					<TextField toCase="Up" dataType="Char,,,," preferredSize="2qch,1qch" toolTip=" Print totals for each main product group - (Y)es - (N)o " comment=" Print totals for each main product group - (Y)es - (N)o " fieldTable="formonly" identifier="mgrp_ind" gridItemLocation="1,2,1,1" classNames="fcls_data_widget,fcls_length_10qch">
+				<TextField.includes>
+					<ValueInclude>
+						<ValueInclude.value>
+							<StringLiteral stringValue="Y"/>
+						</ValueInclude.value>
+					</ValueInclude>
+					<ValueInclude>
+						<ValueInclude.value>
+							<StringLiteral stringValue="N"/>
+						</ValueInclude.value>
+					</ValueInclude>
+				</TextField.includes>
+			</TextField>
+				</GridPanel>
+			</GroupBox>
+			<GroupBox title="Group 3" classNames="fcls_detail_gb_cnt" visible="true" verticalAlignment="Stretch" horizontalAlignment="Stretch" gridItemLocation="0,3,1,1" fieldTable="formonly" identifier="cntDetail3GroupBox">
+				<GridPanel classNames="fcls_detail_gb_cnt_sub,fcls_detail_cnt_sub,fcls_data_cnt" visible="true" verticalAlignment="Top" horizontalAlignment="Left" fieldTable="formonly" identifier="cntDetail3GrBoxSub">
+					<GridPanel.gridRowDefinitions>
+						<GridRowDefinition gridLengthValue=""/>
+						<GridRowDefinition gridLengthValue=""/>
+						<GridRowDefinition gridLengthValue=""/>
+						<GridRowDefinition gridLengthValue=""/>
+					</GridPanel.gridRowDefinitions>
+					<GridPanel.gridColumnDefinitions>
+						<GridColumnDefinition gridLengthValue="" gridMinLength="10rem"/>
+						<GridColumnDefinition gridLengthValue=""/>
+					</GridPanel.gridColumnDefinitions>
+					<Label isDynamic="true" text="Sales Area" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="lb48"/>
+					<TextField toCase="Up" dataType="Char,,,,5" preferredSize="9qch,1qch" toolTip=" Sales area code " comment=" Sales area code " fieldTable="salearea" identifier="area_code" gridItemLocation="1,0,1,1" classNames="fcls_data_widget,fcls_length_10qch"/>
+					<Label isDynamic="true" text="SA Description" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,1,1,1" fieldTable="formonly" identifier="lb49"/>
+					<TextField dataType="VarChar,,,0,14" preferredSize="31qch,1qch" toolTip=" Sales area description" comment=" Sales area description" fieldTable="salearea" identifier="desc_text" gridItemLocation="1,1,1,1" classNames="fcls_data_widget,fcls_length_30qch"/>
+					<Label isDynamic="true" text="Sales Territory" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,2,1,1" fieldTable="formonly" identifier="lb63"/>
+					<TextField toCase="Up" dataType="VarChar,,,0,5" preferredSize="9qch,1qch" toolTip=" Sales territory code " comment=" Sales territory code " fieldTable="territory" identifier="terr_code" gridItemLocation="1,2,1,1" classNames="fcls_data_widget,fcls_length_10qch"/>
+					<Label isDynamic="true" text="ST Description" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,3,1,1" fieldTable="" identifier="lb101"/>
+					<TextField dataType="VarChar,,,0,14" preferredSize="31qch,1qch" toolTip=" Sales territory description" comment=" Sales territory description" fieldTable="territory" identifier="desc_text" gridItemLocation="1,3,1,1" classNames="fcls_data_widget,fcls_length_30qch"/>
+				</GridPanel>
+			</GroupBox>
+			<GridPanel classNames="fcls_statusbar_cnt" visible="true" verticalAlignment="Bottom" gridItemLocation="0,4,1,1" fieldTable="formonly" identifier="cntStatusBar">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="100%"/>
+				</GridPanel.gridColumnDefinitions>
+				<Label isDynamic="true" text="" classNames="fcls_sblabel" visible="true" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="lbInfo1"/>
+				<Label isDynamic="true" text="" classNames="fcls_sblabel" visible="true" gridItemLocation="0,1,1,1" fieldTable="formonly" identifier="lbInfo2"/>
+			</GridPanel>
+		</GridPanel>
+	</form.rootContainer>
+	<form.screenRecords>
+		<ScreenRecord identifier="formonly" fields="formonly.part_ind,formonly.pgrp_ind,formonly.mgrp_ind,f154"/>
+		<ScreenRecord identifier="kandooreport" fields="kandooreport.header_text"/>
+		<ScreenRecord identifier="salearea" fields="salearea.area_code,salearea.desc_text"/>
+		<ScreenRecord identifier="statint" fields="statint.int_text,statint.start_date,statint.end_date"/>
+		<ScreenRecord identifier="statparms" fields="statparms.year_num"/>
+		<ScreenRecord identifier="territory" fields="territory.terr_code,territory.desc_text"/>
+	</form.screenRecords>
+</form>
+

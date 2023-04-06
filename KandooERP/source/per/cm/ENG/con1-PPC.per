@@ -1,0 +1,67 @@
+{
+###########################################################################
+# This program is free software; you can redistribute it and/or modify it
+# under the terms of the GNU General Public License as published by the
+# Free Software Foundation; either version 2 of the License, or (at your
+# option) any later version.
+#
+# This program is distributed in the hope that it will be useful, but
+# WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+# General Public License for more details.
+#
+# You should have received a copy of the GNU General Public License along
+# with this program; if not, write to the Free Software Foundation, Inc.,
+# 59 Temple Place, Suite 330, Boston, MA 02111-1307 USA
+#
+###########################################################################
+
+	 $Id: con1-PPC.per,v 1.1 2003/05/03 08:09:30 afalout Exp $
+}
+
+database kandoodb
+screen size 9 by 72
+{
+Last/O[f008                   ] [c]
+First [f004                   ] [d]
+Salute[f11salute      ] Sex [b] [e]
+Title [f015                   ]
+Age [f16age         ]   Org [a] [f]
+}
+end
+
+-- fields c,d,e are jut about out of screen with open window 0,0
+
+tables
+contact
+
+attributes
+
+a = contact.org_ind, upshift, include=("O","P"), required, autonext,comments=
+	"(O)rganisation or (P)erson";
+f004 = contact.first_name, comments=
+	"Person only: First name";
+c    = contact.mid_name, comments=
+	"Person only: Middle name";
+f008 = contact.last_org_name, required, reverse, comments=
+	"Person = last name        Organisation = organisation name";
+f11salute = contact.salutation, comments=
+	"Person only: Salutation";
+d    = contact.initials ,upshift,comments=
+	"Person only: Initials";
+e    = contact.user_defined1, comments=
+	"User defined field 1";
+f    = contact.user_defined2, comments=
+	"User defined field 2";
+f015 = contact.title, comments=
+	"Person only: Title";
+b = contact.sex_ind, upshift,{ include=("M","F", null), required,} autonext,comments=
+	"Person only: (M)ale or (F)emale";
+f16age = formonly.age, comments=
+	"Person only: age (F10 for L&P)";
+
+
+instructions
+delimiters "  "
+screen record s_contact (org_ind through age)
+

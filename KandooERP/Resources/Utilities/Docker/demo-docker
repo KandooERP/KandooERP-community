@@ -1,0 +1,22 @@
+echo "Stopping old container if needed"
+docker stop kandoodb 2> /dev/null
+echo "Removing old container if needed"
+docker rm kandoodb 2> /dev/null
+echo "Clearing mount directory"
+rm -rf ~/.kandoodb
+echo "Recreating mount directory"
+mkdir ~/.kandoodb 2> /dev/null
+echo "Copying configuration files"
+cp informix_config.custom sch_init_informix.custom.sql ~/.kandoodb 
+echo "Pulling latest Informix DE docker image"
+docker pull ibmcom/informix-developer-database:latest
+echo "Initialising kandoodb container"
+docker run -td --name kandoodb --privileged -v ~/.kandoodb:/opt/ibm/data -p 9088:9088 -e SIZE=custom -e LICENSE=accept ibmcom/informix-developer-database:latest
+docker exec --privileged -it kandoodb chown informix:informix /opt/ibm/data /opt/ibm/data/spaces
+echo "Getting latest demo database version"
+cd ~/.kandoodb 2> /dev/null
+git clone git@gitlab.com:Kandoo-org/KandooERP.git
+cd ~/.kandoodb/KandooERP/KandooERP/Resources/database/informix/current_demo_db/
+echo "Waiting for dbspaces and initialisation"
+docker exec -u informix -w /opt/ibm/data/KandooERP/KandooERP/Resources/database/informix/current_demo_db/ -e DBDATE=DMY4/ -it kandoodb bash -c 'source /opt/ibm/scripts/informix_inf.env; while ! onstat -m | grep sysadmin | grep successfully; do printf "%s" "."; sleep 1; done ; dbimport kandoodb -d datadbs -l buffered'
+echo "Docker initialisation complete"

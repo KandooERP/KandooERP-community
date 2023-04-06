@@ -1,0 +1,84 @@
+{
+###########################################################################
+# This program is free software; you can redistribute it and/or modify it
+# under the terms of the GNU General Public License as published by the
+# Free Software Foundation; either version 2 of the License, or (at your
+# option) any later version.
+#
+# This program is distributed in the hope that it will be useful, but
+# WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+# General Public License for more details.
+#
+# You should have received a copy of the GNU General Public License along
+# with this program; if not, write to the Free Software Foundation, Inc.,
+# 59 Temple Place, Suite 330, Boston, MA 02111-1307 USA
+#
+###########################################################################
+
+	 $Id: M143.per,v 1.2 2003/11/19 22:23:00 afalout Exp $
+}
+
+
+database kandoodb
+
+screen
+{
+                         Shop Order Set Up Details                     M143
+\g----------------------------------------------------------------------------\g
+ Description
+[f001                                                                      ]
+
+ Time               [f002        ]     Unit of Time      [f003]
+ Cost               [f004             ]Actual Ext. Cost  [f005             ]
+ Price              [f006             ]Actual Ext. Price [f007             ]
+ Fixed or Var       [a]                Per Quantity      [f008     ]
+
+ Start Date         [f009      ]       Start Time        [f010    ]
+ End Date           [f011      ]       End Time          [f012    ]
+ Actual Start Date  [f013      ]       Actual Start Time [f014    ]
+ Actual End Date    [f015      ]       Actual End Time   [f016    ]
+
+[f017                |f018                ]
+[f019                |f020                ]
+[f021                |f022                ] [b]
+
+}
+
+tables
+shoporddetl
+mnparms
+
+attributes
+f001 = shoporddetl.desc_text,
+comments = " Description of the set up, CTRL-N for Notes";
+f002 = shoporddetl.required_qty, comments = " Time required for one set up";
+f003 = shoporddetl.uom_code, upshift,
+comments = " M = Minutes, H = Hours, D = Days";
+f004 = shoporddetl.std_est_cost_amt, comments = " Cost of one set up";
+f005 = shoporddetl.act_act_cost_amt;
+f006 = shoporddetl.std_price_amt,
+comments = " Price associated with the set up cost";
+f007 = shoporddetl.act_price_amt;
+a    = shoporddetl.cost_type_ind, upshift,
+comments = " F = Fixed, M = Minutes, H = Hours, D = Days, Q = Quantities";
+f008 = shoporddetl.var_amt,
+comments = " Interval or quantity produced between set ups";
+f009 = shoporddetl.start_date;
+f010 = shoporddetl.start_time;
+f011 = shoporddetl.end_date;
+f012 = shoporddetl.end_time;
+f013 = shoporddetl.actual_start_date;
+f014 = shoporddetl.actual_start_time;
+f015 = shoporddetl.actual_end_date;
+f016 = shoporddetl.actual_end_time;
+f017 = mnparms.ref1_text;
+f018 = shoporddetl.user1_text, comments = " User defined field";
+f019 = mnparms.ref2_text;
+f020 = shoporddetl.user2_text, comments = " User defined field";
+f021 = mnparms.ref3_text;
+f022 = shoporddetl.user3_text, comments = " User defined field";
+b    = formonly.dummy, noentry;
+
+instructions
+delimiters "  "

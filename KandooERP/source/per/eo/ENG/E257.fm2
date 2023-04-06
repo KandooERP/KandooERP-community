@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form xmlns="http://namespaces.querix.com/2015/fglForms">
+	<form.rootContainer>
+		<GridPanel classNames="fcls_rootContainer" preferredSize="," verticalAlignment="Stretch" horizontalAlignment="Stretch" fieldTable="" identifier="rootContainer">
+			<GridPanel.gridRowDefinitions>
+				<GridRowDefinition gridLengthValue=""/>
+				<GridRowDefinition gridLengthValue="100%"/>
+				<GridRowDefinition gridLengthValue=""/>
+			</GridPanel.gridRowDefinitions>
+			<GridPanel.gridColumnDefinitions>
+				<GridColumnDefinition gridLengthValue="100%"/>
+			</GridPanel.gridColumnDefinitions>
+			<GridPanel classNames="fcls_title_cnt" visible="true" verticalAlignment="Top" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="cntTitle">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="100%"/>
+					<GridColumnDefinition gridLengthValue=""/>
+				</GridPanel.gridColumnDefinitions>
+				<Label isDynamic="true" text="Sales Condition Statistics Information" classNames="fcls_title_lb" visible="true" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="header_text"/>
+				<Label isDynamic="true" text="E257" classNames="fcls_title_lb" visible="true" gridItemLocation="1,0,1,1" fieldTable="" identifier="lbFormName"/>
+			</GridPanel>
+			<Table rowCount="13" preferredSize="68qch,13qch" fieldTable="" identifier="sr_condsale" gridItemLocation="0,1,1,1">
+				<TableColumn fieldTable="" identifier="tc_scroll_flag">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="2rem" gridMaxLength="2rem" gridMinLength="2rem"/>
+					</TableColumn.columnLength>
+					<CheckBox dataType="Char,,,," fieldTable="formonly" identifier="scroll_flag">
+						<CheckBox.checkedValue>
+							<StringLiteral stringValue="*"/>
+						</CheckBox.checkedValue>
+						<CheckBox.uncheckedValue>
+							<NullLiteral/>
+						</CheckBox.uncheckedValue>
+					</CheckBox>
+				</TableColumn>
+				<TableColumn fieldTable="" identifier="tc_cond_code" text="S.C.-Code">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="10rem" gridMaxLength="10rem"/>
+					</TableColumn.columnLength>
+					<TextField toCase="Up" dataType="Char,,,,3" toolTip=" Enter unique sales condition code " comment=" Enter unique sales condition code " fieldTable="condsale" identifier="cond_code"/>
+				</TableColumn>
+				<TableColumn fieldTable="" identifier="tc_desc_text" text="Sales Condition Description">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="30rem" gridMaxLength="30rem"/>
+					</TableColumn.columnLength>
+					<TextField noEntry="true" dataType="VarChar,,,0,14" toolTip=" Enter description of sales condition " comment=" Enter description of sales condition " fieldTable="condsale" identifier="desc_text"/>
+				</TableColumn>
+				<TableColumn fieldTable="" identifier="tc_scheme_amt" text="Scheme Amount">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="10rem" gridMaxLength="10rem"/>
+					</TableColumn.columnLength>
+					<TextField noEntry="true" dataType="Decimal,,,2,16" toolTip=" Enter scheme amount of sales condition " comment=" Enter scheme amount of sales condition " fieldTable="condsale" identifier="scheme_amt"/>
+				</TableColumn>
+				<TableColumn fieldTable="" identifier="tc_prodline_disc_flag" text="P.L. Discount">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="10rem" gridMaxLength="10rem"/>
+					</TableColumn.columnLength>
+					<TextField toCase="Up" noEntry="true" dataType="Char,,,,1" toolTip=" Are product line discounts included in this sales condition. " comment=" Are product line discounts included in this sales condition. " fieldTable="condsale" identifier="prodline_disc_flag">
+						<TextField.includes>
+							<ValueInclude>
+								<ValueInclude.value>
+									<StringLiteral stringValue="Y"/>
+								</ValueInclude.value>
+							</ValueInclude>
+							<ValueInclude>
+								<ValueInclude.value>
+									<StringLiteral stringValue="N"/>
+								</ValueInclude.value>
+							</ValueInclude>
+						</TextField.includes>
+					</TextField>
+				</TableColumn>
+				<TableColumn fieldTable="" identifier="tc_stat_flag" text="State">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="10rem" gridMaxLength="10rem"/>
+					</TableColumn.columnLength>
+					<TextField noEntry="true" dataType="Char,,,," fieldTable="formonly" identifier="stat_flag"/>
+				</TableColumn>
+			</Table>
+			<GridPanel classNames="fcls_statusbar_cnt" visible="true" verticalAlignment="Top" gridItemLocation="0,2,1,1" fieldTable="formonly" identifier="cntStatusBar">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="100%"/>
+				</GridPanel.gridColumnDefinitions>
+				<Label isDynamic="true" text="" classNames="fcls_sblabel" visible="true" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="lbInfo1"/>
+				<Label isDynamic="true" text="" classNames="fcls_sblabel" visible="true" gridItemLocation="0,1,1,1" fieldTable="formonly" identifier="lbInfo2"/>
+			</GridPanel>
+		</GridPanel>
+	</form.rootContainer>
+	<form.screenRecords>
+		<ScreenRecord identifier="sr_condsale" fields="formonly.scroll_flag,condsale.cond_code,condsale.desc_text,condsale.scheme_amt,condsale.prodline_disc_flag,formonly.stat_flag"/>
+		<ScreenRecord identifier="condsale" fields="condsale.cond_code,condsale.desc_text,condsale.scheme_amt,condsale.prodline_disc_flag"/>
+		<ScreenRecord identifier="formonly" fields="formonly.scroll_flag,formonly.stat_flag"/>
+	</form.screenRecords>
+</form>
+

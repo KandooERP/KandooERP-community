@@ -1,0 +1,11 @@
+--# description: this script loads data to coatempltdetl
+--# tables list: coatempltdetl
+--# dependencies: 
+--# author: ericv
+--# date: 2020-06-24
+--# Ticket #  KD-2239	
+
+--delete from coatempltdetl WHERE language_code = "FR" and country_code = "ENU";
+--delete from cogatemplthead WHERE language_code = "FR" and country_code = "ENU";
+--INSERT INTO coatemplthead VALUES ("FR","ENG","The French Chart of Account in English","01/01/2019","Very detailed chart, may be used for European countries");
+--load from unl/coa-FR-ENU.tmplt INSERT INTO coatempltdetl;

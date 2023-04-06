@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<fglBuildTarget xmlns="http://namespaces.querix.com/lyciaide/target" name="G_All_G-Forms" type="fgl-program">
+
+  <libraries>
+    <library name= "lib_tool_common" dynamic="false" location=""/>
+    <library name= "lib_tool_G_GL_new" dynamic="false" location=""/>
+    <library name="lib_tool_G_GL_db" dynamic="false" location=""/>
+   </libraries>
+
+  <sources type="fgl">
+    <file location="4gl/common/glob_GLOBALS_constant.4gl"/>
+    <file location="4gl/gl/G_GL_GLOBALS.4gl"/>
+    <file location="4gl/gl/G_All_G-Forms.4gl"/>
+    <file location="4gl/common/glob_GLOBALS.4gl"/>
+    <file location="4gl/common/glob_GLOBALS_userDataTypes.4gl"/>
+  </sources>
+
+  <sources type="form">
+    <file location="per/gl/ENG/G462.fm2"/>
+    <file location="per/gl/ENG/G450.fm2"/>
+    <file location="per/gl/ENG/G125.fm2"/>
+    <file location="per/gl/ENG/G101.fm2"/>
+    <file location="per/gl/ENG/G174.fm2"/>
+    <file location="per/gl/ENG/G162.fm2"/>
+    <file location="per/gl/ENG/G149.fm2"/>
+    <file location="per/gl/ENG/G150.fm2"/>
+    <file location="per/gl/ENG/G137.fm2"/>
+    <file location="per/gl/ENG/G198.fm2"/>
+    <file location="per/gw/ENG/G154_l2x.fm2"/>
+    <file location="per/gl/ENG/G545.fm2"/>
+    <file location="per/gl/ENG/G533.fm2"/>
+    <file location="per/gl/ENG/G557.fm2"/>
+    <file location="per/gl/ENG/G521.fm2"/>
+    <file location="per/gl/ENG/G418.fm2"/>
+    <file location="per/gl/ENG/G527.fm2"/>
+    <file location="per/gl/ENG/G467.fm2"/>
+    <file location="per/gl/ENG/G552.fm2"/>
+    <file location="per/gl/ENG/G131.fm2"/>
+    <file location="per/gl/ENG/G106.fm2"/>
+    <file location="per/gl/ENG/G180.fm2"/>
+    <file location="per/gl/ENG/G155.fm2"/>
+    <file location="per/gl/ENG/G413.fm2"/>
+    <file location="per/gl/ENG/G514.fm2"/>
+    <file location="per/gl/ENG/G000-View-G-GL-Forms.fm2"/>
+    <file location="per/gl/ENG/G210.fm2"/>
+    <file location="per/gl/ENG/G420.fm2"/>
+    <file location="per/gl/ENG/coaLookup.fm2"/>
+    <file location="per/gw/ENG/TG570.fm2"/>
+    <file location="per/gl/ENG/G456.fm2"/>
+    <file location="per/gl/ENG/G119.fm2"/>
+    <file location="per/gl/ENG/G144.fm2"/>
+    <file location="per/gl/ENG/G156.fm2"/>
+    <file location="per/gl/ENG/G400.fm2"/>
+    <file location="per/gl/ENG/G461.fm2"/>
+    <file location="per/gl/ENG/G181.fm2"/>
+    <file location="per/gl/ENG/G124.fm2"/>
+    <file location="per/gl/ENG/G138.fm2"/>
+    <file location="per/gl/ENG/G197.fm2"/>
+    <file location="per/gl/ENG/G515.fm2"/>
+    <file location="per/gl/ENG/G455.fm2"/>
+    <file location="per/gl/ENG/G163.fm2"/>
+    <file location="per/gl/ENG/G540.fm2"/>
+    <file location="per/gl/ENG/G203.fm2"/>
+    <file location="per/gl/ENG/G118.fm2"/>
+    <file location="per/gl/ENG/G509.fm2"/>
+    <file location="per/gl/ENG/G401.fm2"/>
+    <file location="per/gl/ENG/G449.fm2"/>
+    <file location="per/gl/ENG/G534.fm2"/>
+    <file location="per/gl/ENG/G182.fm2"/>
+    <file location="per/gl/ENG/G405.fm2"/>
+    <file location="per/gl/ENG/G417.fm2"/>
+    <file location="per/gl/ENG/G528.fm2"/>
+    <file location="per/gl/ENG/G129.fm2"/>
+    <file location="per/gl/ENG/G166.fm2"/>
+    <file location="per/gl/ENG/G154.fm2"/>
+    <file location="per/gl/ENG/G204.fm2"/>
+    <file location="per/gl/ENG/G191.fm2"/>
+    <file location="per/gl/ENG/G402.fm2"/>
+    <file location="per/gl/ENG/G513.fm2"/>
+    <file location="per/gl/ENG/G112.fm2"/>
+    <file location="per/gl/ENG/G537.fm2"/>
+    <file location="per/gl/ENG/G126.fm2"/>
+    <file location="per/gl/ENG/G151a.fm2"/>
+    <file location="per/gl/ENG/G102.fm2"/>
+    <file location="per/gl/ENG/G151.fm2"/>
+    <file location="per/gl/ENG/G408.fm2"/>
+    <file location="per/gl/ENG/G457.fm2"/>
+    <file location="per/gl/ENG/G169.fm2"/>
+    <file location="per/gl/ENG/G522.fm2"/>
+    <file location="per/gl/ENG/G526.fm2"/>
+    <file location="per/gl/ENG/G209.fm2"/>
+    <file location="per/gl/ENG/G551.fm2"/>
+    <file location="per/gl/ENG/G538.fm2"/>
+    <file location="per/gl/ENG/G419.fm2"/>
+    <file location="per/gl/ENG/G115.fm2"/>
+    <file location="per/gl/ENG/G444.fm2"/>
+    <file location="per/gl/ENG/G206.fm2"/>
+    <file location="per/gl/ENG/G579.fm2"/>
+    <file location="per/gl/ENG/G523.fm2"/>
+    <file location="per/gl/ENG/G193.fm2"/>
+    <file location="per/gl/ENG/G511.fm2"/>
+    <file location="per/gl/ENG/G168.fm2"/>
+    <file location="per/gl/ENG/G100.fm2"/>
+    <file location="per/gl/ENG/G208.fm2"/>
+    <file location="per/gl/ENG/G550.fm2"/>
+    <file location="per/gl/ENG/G525.fm2"/>
+    <file location="per/gl/ENG/G539.fm2"/>
+    <file location="per/gl/ENG/G114.fm2"/>
+    <file location="per/gl/ENG/G153.fm2"/>
+    <file location="per/gw/ENG/G212_l2x.fm2"/>
+    <file location="per/gl/ENG/G128.fm2"/>
+    <file location="per/gl/ENG/G459.fm2"/>
+    <file location="per/gl/ENG/G510.fm2"/>
+    <file location="per/gl/ENG/G167.fm2"/>
+    <file location="per/gl/ENG/G207.fm2"/>
+    <file location="per/gl/ENG/G548.fm2"/>
+    <file location="per/gl/ENG/G536.fm2"/>
+    <file location="per/gl/ENG/G512.fm2"/>
+    <file location="per/gl/ENG/G524.fm2"/>
+    <file location="per/gl/ENG/G500.fm2"/>
+    <file location="per/gl/ENG/G212.fm2"/>
+    <file location="per/gl/ENG/G200.fm2"/>
+    <file location="per/gl/ENG/G410.fm2"/>
+    <file location="per/gl/ENG/G409.fm2"/>
+    <file location="per/gl/ENG/G458.fm2"/>
+    <file location="per/gl/ENG/G422.fm2"/>
+    <file location="per/gl/ENG/G122.fm2"/>
+    <file location="per/gl/ENG/G134.fm2"/>
+    <file location="per/gl/ENG/G109.fm2"/>
+    <file location="per/gl/ENG/G110.fm2"/>
+    <file location="per/gl/ENG/G146.fm2"/>
+    <file location="per/gl/ENG/G404.fm2"/>
+    <file location="per/gl/ENG/G195.fm2"/>
+    <file location="per/gl/ENG/G453.fm2"/>
+    <file location="per/gl/ENG/G517.fm2"/>
+    <file location="per/gl/ENG/G165.fm2"/>
+    <file location="per/gl/ENG/G542.fm2"/>
+    <file location="per/gl/ENG/G190.fm2"/>
+    <file location="per/gl/ENG/G205.fm2"/>
+    <file location="per/gl/ENG/G415.fm2"/>
+    <file location="per/gl/ENG/G403.fm2"/>
+    <file location="per/gl/ENG/G111.fm2"/>
+    <file location="per/gl/ENG/G123.fm2"/>
+    <file location="per/gl/ENG/G196.fm2"/>
+    <file location="per/gl/ENG/G184.fm2"/>
+    <file location="per/gl/ENG/G103.fm2"/>
+    <file location="per/gl/ENG/G164.fm2"/>
+    <file location="per/gl/ENG/G555.fm2"/>
+    <file location="per/gl/ENG/G580.fm2"/>
+    <file location="per/gl/ENG/G535.fm2"/>
+    <file location="per/gl/ENG/G501.fm2"/>
+    <file location="per/gl/ENG/G560.fm2"/>
+    <file location="per/gl/ENG/G158.fm2"/>
+    <file location="per/gl/ENG/G549.fm2"/>
+    <file location="per/gl/ENG/G104.fm2"/>
+    <file location="per/gl/ENG/G421.fm2"/>
+    <file location="per/gl/ENG/G529.fm2"/>
+    <file location="per/gl/ENG/G460.fm2"/>
+    <file location="per/gl/ENG/G157.fm2"/>
+    <file location="per/gl/ENG/G454.fm2"/>
+    <file location="per/gl/ENG/G504.fm2"/>
+    <file location="per/gl/ENG/G541.fm2"/>
+    <file location="per/gl/ENG/G516.fm2"/>
+    <file location="per/gl/ENG/G130.fm2"/>
+    <file location="per/gl/ENG/G105.fm2"/>
+    <file location="per/gl/ENG/G414.fm2"/>
+    <file location="per/gl/ENG/G463.fm2"/>
+    <file location="per/gl/ENG/G547.fm2"/>
+    <file location="per/gl/ENG/G161.fm2"/>
+    <file location="per/gl/ENG/G211.fm2"/>
+    <file location="per/gl/ENG/G136.fm2"/>
+    <file location="per/gl/ENG/G175.fm2"/>
+    <file location="per/gl/ENG/G199.fm2"/>
+    <file location="per/gl/ENG/G423.fm2"/>
+    <file location="per/gl/ENG/G532.fm2"/>
+    <file location="per/gl/ENG/G507.fm2"/>
+    <file location="per/gl/ENG/G581.fm2"/>
+    <file location="per/gl/ENG/G121.fm2"/>
+    <file location="per/gl/ENG/G170.fm2"/>
+    <file location="per/gl/ENG/G546.fm2"/>
+    <file location="per/gl/ENG/G145.fm2"/>
+    <file location="per/gl/ENG/G135.fm2"/>
+    <file location="per/gl/ENG/G147.fm2"/>
+    <file location="per/gl/ENG/G136a.fm2"/>
+    <file location="per/gl/ENG/G464.fm2"/>
+    <file location="per/gl/ENG/G452.fm2"/>
+    <file location="per/gl/ENG/GB.fm2"/>
+    <file location="per/gl/ENG/G188.fm2"/>
+    <file location="per/gl/ENG/G214.fm2"/>
+    <file location="per/gl/ENG/G506.fm2"/>
+    <file location="per/gl/ENG/G107.fm2"/>
+    <file location="per/gl/ENG/G543.fm2"/>
+    <file location="per/gl/ENG/G120.fm2"/>
+    <file location="per/gl/ENG/G412.fm2"/>
+    <file location="per/gl/ENG/G132.fm2"/>
+    <file location="per/gl/ENG/G451.fm2"/>
+    <file location="per/gl/ENG/G559.fm2"/>
+    <file location="per/gl/ENG/G148.fm2"/>
+    <file location="per/gl/ENG/G465.fm2"/>
+    <file location="per/gl/ENG/G173.fm2"/>
+    <file location="per/gl/ENG/G505.fm2"/>
+    <file location="per/gl/ENG/G187.fm2"/>
+    <file location="per/gl/ENG/G213.fm2"/>
+    <file location="per/gl/ENG/G530.fm2"/>
+    <file location="per/gl/ENG/G411.fm2"/>
+    <file location="per/gl/ENG/G544.fm2"/>
+    <file location="per/gl/ENG/G133.fm2"/>
+  </sources>
+
+  <mediaFiles>
+    <file client="true" location="G_All_G-Forms.css" type="other"/>
+    <file client="true" location="G_All_G-Forms.qxtheme" type="gui-theme-file"/>
+  </mediaFiles>
+
+  <buildConfiguration name="development">
+    <additions>
+    </additions>
+    <exclusions>
+      <sources type="form">
+        <file location="per/gw/ENG/G212_l2x.fm2"/>
+        <file location="per/gw/ENG/G154_l2x.fm2"/>
+      </sources>
+
+    </exclusions>
+  </buildConfiguration>
+
+</fglBuildTarget>

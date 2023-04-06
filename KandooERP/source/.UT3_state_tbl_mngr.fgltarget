@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<fglBuildTarget xmlns="http://namespaces.querix.com/lyciaide/target" name="UT3_state_tbl_mngr" type="fgl-program">
+
+  <libraries>
+    <library name= "lib_tool_common" dynamic="false" location=""/>
+    <library name= "lib_tool_U_UT_new" dynamic="false" location=""/>
+    <library name="lib_tool_U_UT_db" dynamic="false" location=""/>
+    <library name= "lib_tool_db_common" dynamic="false" location=""/>
+   </libraries>
+
+  <sources type="fgl">
+    <file location="4gl/utility/UT3_state_tbl_mngr_sta.4gl"/>
+  </sources>
+
+  <sources type="form">
+    <file location="per/utility/ENG/U803_state_tbl_mngr.fm2"/>
+  </sources>
+
+  <mediaFiles>
+    <file client="true" location="UT3_state_tbl_mngr.qxtheme" type="gui-theme-file"/>
+    <file client="true" location="UT3_state_tbl_mngr.css" type="other"/>
+  </mediaFiles>
+
+</fglBuildTarget>

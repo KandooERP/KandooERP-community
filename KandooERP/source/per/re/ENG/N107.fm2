@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form xmlns="http://namespaces.querix.com/2015/fglForms">
+	<form.rootContainer>
+		<GridPanel classNames="fcls_rootContainer" verticalAlignment="Stretch" horizontalAlignment="Stretch" fieldTable="" identifier="rootContainer">
+			<GridPanel.gridRowDefinitions>
+				<GridRowDefinition gridLengthValue=""/>
+				<GridRowDefinition gridLengthValue="100%"/>
+				<GridRowDefinition gridLengthValue=""/>
+				<GridRowDefinition gridLengthValue=""/>
+			</GridPanel.gridRowDefinitions>
+			<GridPanel.gridColumnDefinitions>
+				<GridColumnDefinition gridLengthValue="100%"/>
+			</GridPanel.gridColumnDefinitions>
+			<GridPanel classNames="fcls_title_cnt" visible="true" verticalAlignment="Top" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="cntTitle">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="100%"/>
+					<GridColumnDefinition gridLengthValue=""/>
+				</GridPanel.gridColumnDefinitions>
+				<Label isDynamic="true" text="Requisition Line Item Entry" classNames="fcls_title_lb" visible="true" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="header_text"/>
+				<Label isDynamic="true" text="N107" classNames="fcls_title_lb" visible="true" gridItemLocation="1,0,1,1" fieldTable="" identifier="lbFormName"/>
+			</GridPanel>
+			<Table rowCount="10" preferredSize="75qch,10qch" gridItemLocation="0,1,1,1" fieldTable="" identifier="sr_reqdetl">
+				<TableColumn fieldTable="" identifier="tc_scroll_flag">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="2rem" gridMaxLength="2rem" gridMinLength="2rem"/>
+					</TableColumn.columnLength>
+					<CheckBox dataType="Char,,,," fieldTable="formonly" identifier="scroll_flag">
+						<CheckBox.checkedValue>
+							<StringLiteral stringValue="*"/>
+						</CheckBox.checkedValue>
+						<CheckBox.uncheckedValue>
+							<NullLiteral/>
+						</CheckBox.uncheckedValue>
+					</CheckBox>
+				</TableColumn>
+				<TableColumn text="No." fieldTable="" identifier="tc_line_num">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="10rem" gridMaxLength="10rem" gridMinLength="10rem"/>
+					</TableColumn.columnLength>
+					<TextField dataType="SmallInt,,,," fieldTable="reqdetl" identifier="line_num"/>
+				</TableColumn>
+				<TableColumn text="Product" fieldTable="" identifier="tc_part_code">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="10rem" gridMaxLength="10rem" gridMinLength="10rem"/>
+					</TableColumn.columnLength>
+					<TextField toCase="Up" dataType="Char,,,,15" toolTip=" Requisition Product Code (W) " fieldTable="reqdetl" comment=" Requisition Product Code (W) " identifier="part_code"/>
+				</TableColumn>
+				<TableColumn text="Required" fieldTable="" identifier="tc_req_qty">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="10rem" gridMaxLength="10rem" gridMinLength="10rem"/>
+					</TableColumn.columnLength>
+					<TextField dataType="Float,,,," fieldTable="reqdetl" identifier="req_qty"/>
+				</TableColumn>
+				<TableColumn text="UOM" fieldTable="" identifier="tc_uom_code">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="10rem" gridMaxLength="10rem" gridMinLength="10rem"/>
+					</TableColumn.columnLength>
+					<TextField noEntry="true" dataType="Char,,,,4" fieldTable="reqdetl" identifier="uom_code"/>
+				</TableColumn>
+				<TableColumn text="Warn" fieldTable="" identifier="tc_warn_flag">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="3.125%"/>
+					</TableColumn.columnLength>
+					<CheckBox noEntry="true" dataType="Char,,,," fieldTable="formonly" identifier="warn_flag"/>
+				</TableColumn>
+				<TableColumn text="Price" fieldTable="" identifier="tc_unit_sales_amt">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="10rem" gridMaxLength="10rem" gridMinLength="10rem"/>
+					</TableColumn.columnLength>
+					<TextField noEntry="true" dataType="Decimal,,,4,16" fieldTable="reqdetl" identifier="unit_sales_amt"/>
+				</TableColumn>
+				<TableColumn text="Total" fieldTable="" identifier="tc_line_total_amt">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="10rem" gridMaxLength="10rem" gridMinLength="10rem"/>
+					</TableColumn.columnLength>
+					<TextField noEntry="true" dataType="Float,,,," fieldTable="formonly" identifier="line_total_amt"/>
+				</TableColumn>
+				<TableColumn text="Ins" fieldTable="" identifier="tc_autoinsert_flag">
+					<TableColumn.columnLength>
+						<GridLength/>
+					</TableColumn.columnLength>
+					<CheckBox noEntry="true" dataType="Char,,,," fieldTable="formonly" identifier="autoinsert_flag"/>
+				</TableColumn>
+			</Table>
+			<GridPanel classNames="fcls_detail_cnt,fcls_data_cnt,fcls_align_left" visible="true" verticalAlignment="Top" horizontalAlignment="Left" gridItemLocation="0,2,1,1" fieldTable="formonly" identifier="cntDetail1">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue=""/>
+					<GridColumnDefinition gridLengthValue=""/>
+					<GridColumnDefinition gridLengthValue=""/>
+					<GridColumnDefinition gridLengthValue=""/>
+					<GridColumnDefinition gridLengthValue=""/>
+					<GridColumnDefinition gridLengthValue=""/>
+					<GridColumnDefinition gridLengthValue=""/>
+				</GridPanel.gridColumnDefinitions>
+				<TextField noEntry="true" dataType="Char,,,,40" classNames="fcls_data_widget,fcls_align_left,fcls_length_30qch" preferredSize="31qch,1qch" gridItemLocation="1,0,2,1" fieldTable="reqdetl" identifier="desc_text"/>
+				<TextField noEntry="true" dataType="Float,,,," classNames="fcls_data_widget,fcls_align_left,fcls_length_10qch" preferredSize="10qch,1qch" gridItemLocation="4,0,1,1" fieldTable="prodstatus" identifier="onhand_qty"/>
+				<TextField noEntry="true" dataType="Decimal,,,2,12" classNames="fcls_data_widget,fcls_align_left,fcls_length_10qch" preferredSize="11qch,1qch" gridItemLocation="6,0,1,1" fieldTable="reqhead" identifier="total_sales_amt"/>
+				<TextField noEntry="true" dataType="Char,,,,40" classNames="fcls_data_widget,fcls_align_left,fcls_length_30qch" preferredSize="31qch,1qch" gridItemLocation="1,1,2,1" fieldTable="reqhead" identifier="del_dept_text"/>
+				<TextField noEntry="true" dataType="Char,,,," classNames="fcls_data_widget,fcls_align_left,fcls_length_10qch" preferredSize="10qch,1qch" gridItemLocation="4,1,1,1" fieldTable="formonly" identifier="pr_fut_avail"/>
+				<TextField noEntry="true" dataType="Char,,,,3" classNames="fcls_data_widget,fcls_align_left,fcls_length_05qch" preferredSize="4qch,1qch" gridItemLocation="1,2,1,1" fieldTable="reqhead" identifier="ware_code"/>
+				<TextField noEntry="true" dataType="Char,,,,30" classNames="fcls_data_widget,fcls_align_left,fcls_length_25qch" preferredSize="27qch,1qch" gridItemLocation="2,2,1,1" fieldTable="warehouse" identifier="desc_text"/>
+				<TextField noEntry="true" dataType="Float,,,," classNames="fcls_data_widget,fcls_align_left,fcls_length_10qch" preferredSize="10qch,1qch" gridItemLocation="4,2,1,1" fieldTable="prodstatus" identifier="max_qty"/>
+				<Label isDynamic="true" text="Desc" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,0,1,1" fieldTable="" identifier="lb51"/>
+				<Label isDynamic="true" text="Onhand" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="3,0,1,1" fieldTable="" identifier="lb53"/>
+				<Label isDynamic="true" text="Total" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="5,0,1,1" fieldTable="" identifier="lb81"/>
+				<Label isDynamic="true" text="Dept" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,1,1,1" fieldTable="" identifier="lb52"/>
+				<Label isDynamic="true" text="Future" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="3,1,1,1" fieldTable="" identifier="lb54"/>
+				<Label isDynamic="true" text="Ware" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,2,1,1" fieldTable="" identifier="lb66"/>
+				<Label isDynamic="true" text="Maximum" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="3,2,1,1" fieldTable="" identifier="lb55"/>
+				<TextField noEntry="true" dataType="Char,,,," classNames="fcls_data_widget,fcls_align_hstretch" preferredSize="19qch,1qch" gridItemLocation="4,3,3,1" fieldTable="formonly" identifier="warn_message"/>
+			</GridPanel>
+			<GridPanel classNames="fcls_statusbar_cnt" visible="true" verticalAlignment="Top" gridItemLocation="0,3,1,1" fieldTable="formonly" identifier="cntStatusBar">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="100%"/>
+				</GridPanel.gridColumnDefinitions>
+				<Label isDynamic="true" text="" classNames="fcls_sblabel" visible="true" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="lbInfo1"/>
+				<Label isDynamic="true" text="" classNames="fcls_sblabel" visible="true" gridItemLocation="0,1,1,1" fieldTable="formonly" identifier="lbInfo2"/>
+			</GridPanel>
+		</GridPanel>
+	</form.rootContainer>
+	<form.screenRecords>
+		<ScreenRecord identifier="sr_reqdetl" fields="formonly.scroll_flag,reqdetl.line_num,reqdetl.part_code,reqdetl.req_qty,reqdetl.uom_code,formonly.warn_flag,reqdetl.unit_sales_amt,formonly.line_total_amt,formonly.autoinsert_flag" elements="10"/>
+		<ScreenRecord identifier="formonly" fields="scroll_flag,warn_flag,line_total_amt,autoinsert_flag,pr_fut_avail,warn_message"/>
+		<ScreenRecord identifier="prodstatus" fields="onhand_qty,max_qty"/>
+		<ScreenRecord identifier="reqdetl" fields="line_num,part_code,req_qty,desc_text,unit_sales_amt,uom_code"/>
+		<ScreenRecord identifier="reqhead" fields="del_dept_text,ware_code,total_sales_amt"/>
+		<ScreenRecord identifier="warehouse" fields="desc_text"/>
+	</form.screenRecords>
+</form>
+

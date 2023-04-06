@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<fglBuildTarget xmlns="http://namespaces.querix.com/lyciaide/target" name="lib_tool_common" type="fgl-library">
+
+  <sources type="fgl">
+    <file location="4gl/lib_tool/lib_tool_arg_var.4gl"/>
+    <file location="4gl/lib_tool/lib_tool_arg_vdom.4gl"/>
+    <file location="4gl/lib_tool/lib_tool_prompt.4gl"/>
+    <file location="4gl/lib_tool/lib_tool_general.4gl"/>
+    <file location="4gl/lib_tool/lib_tool_ui_collapse_element.4gl"/>
+    <file location="4gl/lib_tool/lib_widget_tool.4gl"/>
+    <file location="4gl/lib_tool/lib_tool_arg_kandooinfo.4gl"/>
+    <file location="4gl/lib_tool/lib_tool_arg_var_path.4gl"/>
+    <file location="4gl/lib_tool/lib_tool_tax.4gl"/>
+    <file location="4gl/lib_tool/lib_tool_log_file.4gl"/>
+    <file location="4gl/lib_tool/lib_tool_license.4gl"/>
+    <file location="4gl/lib_tool/lib_tool_settings.4gl"/>
+    <file location="4gl/lib_tool/lib_tool_arg_authenticate.4gl"/>
+    <file location="locale_catalog/default_DEU.4s"/>
+    <file location="4gl/lib_tool/lib_tool_admin.4gl"/>
+    <file location="4gl/lib_tool/lib_tool_ui_copy_abstractUiElement.4gl"/>
+    <file location="4gl/lib_tool/lib_tool_arg_id.4gl"/>
+    <file location="4gl/lib_tool/lib_tool_action_state.4gl"/>
+    <file location="locale_catalog/default.4s"/>
+    <file location="4gl/lib_tool/lib_tool_arg_help_url.4gl"/>
+    <file location="locale_catalog/default_FRA.4s"/>
+    <file location="4gl/common/glob_GLOBALS.4gl"/>
+    <file location="4gl/lib_tool/lib_tool_help.4gl"/>
+    <file location="4gl/common/glob_GLOBALS_userDataTypes.4gl"/>
+    <file location="4gl/lib_tool/lib_tool_field.4gl"/>
+    <file location="4gl/lib_tool/lib_tool_ui_morph_widget.4gl"/>
+    <file location="4gl/lib_tool/lib_tool_ui_init.4gl"/>
+    <file location="4gl/lib_tool/lib_tool_ui_utilities.4gl"/>
+    <file location="4gl/lib_tool/lib_menu_info.4gl"/>
+    <file location="4gl/lib_tool/lib_tool_kandoo_info.4gl"/>
+    <file location="4gl/lib_tool/lib_tool_arg_url.4gl"/>
+    <file location="4gl/common/secufunc.4gl"/>
+    <file location="4gl/lib_tool/lib_form_translate.4gl"/>
+    <file location="4gl/lib_tool/lib_tool_os.4gl"/>
+    <file location="4gl/lib_tool/lib_tool_message.4gl"/>
+    <file location="4gl/lib_tool/lib_tool_arg_var_report.4gl"/>
+    <file location="4gl/lib_tool/lib_qxt_toolbar.4gl"/>
+    <file location="4gl/lib_tool/lib_tool_arg_demo.4gl"/>
+    <file location="4gl/lib_tool/lib_tool_arg_mode.4gl"/>
+    <file location="4gl/lib_tool/lib_tool_current_user.4gl"/>
+    <file location="4gl/lib_tool/lib_tool_localization.4gl"/>
+    <file location="4gl/lib_tool/lib_tool_ui_scriptimport.4gl"/>
+    <file location="4gl/common/generic_functions.4gl"/>
+    <file location="4gl/lib_tool/lib_tool_debug.4gl"/>
+    <file location="4gl/lib_tool/lib_tool_glob_accessor.4gl"/>
+    <file location="4gl/menu/lib_tool_login.4gl"/>
+    <file location="4gl/menu/lib_tool_authentication.4gl"/>
+    <file location="4gl/lib_tool/lib_tool_company.4gl"/>
+    <file location="4gl/lib_tool/lib_tool_toolbarManagerRun.4gl"/>
+    <file location="4gl/lib_tool/lib_tool_operating_system.4gl"/>
+    <file location="4gl/common/glob_GLOBALS_constant.4gl"/>
+    <file location="locale_catalog/default_RUS.4s"/>
+    <file location="4gl/lib_tool/lib_tool_environment_read.4gl"/>
+    <file location="4gl/lib_tool/lib_tool_error_handler.4gl"/>
+    <file location="4gl/lib_tool/lib_tool_arg_debug.4gl"/>
+    <file location="4gl/common/glob_DATABASE.4gl"/>
+    <file location="4gl/lib_tool/lib_tool_moduleManager.4gl"/>
+    <file location="4gl/lib_tool/lib_tool_arg_db.4gl"/>
+    <file location="4gl/lib_tool/lib_tool_table.4gl"/>
+    <file location="4gl/lib_tool/lib_tool_environment_info.4gl"/>
+    <file location="4gl/lib_tool/lib_validation_tax.4gl"/>
+    <file location="4gl/common/glob_GLOBALS_accessor.4gl"/>
+    <file location="4gl/lib_tool/lib_tool_settings_kandoooption.4gl"/>
+    <file location="4gl/lib_tool/lib_tool_listItemPopulation.4gl"/>
+    <file location="4gl/lib_tool/lib_tool_zeromq_server.4gl"/>
+    <file location="4gl/lib_tool/lib_tool_navigation_screen_cursor.4gl"/>
+    <file location="4gl/lib_tool/lib_tool_string.4gl"/>
+  </sources>
+
+  <sources type="form">
+    <file location="form/kandoo_change_pwd.fm2"/>
+    <file location="per/querix/Z101_debug_current_status.fm2"/>
+    <file location="form/gnu_license.fm2"/>
+    <file location="form/lib_tool_choose_combo.fm2"/>
+    <file location="form/kandoo_login.fm2"/>
+    <file location="form/4gl_environment_sql_error.fm2"/>
+    <file location="form/4gl_questionaire.fm2"/>
+    <file location="per/utility/ENG/C101_status_report_lbl_val.fm2"/>
+    <file location="form/toolbar/_qxt_toolbar2_manager_user.fm2"/>
+    <file location="form/kandoo_environment.fm2"/>
+    <file location="per/utility/ENG/U998.fm2"/>
+    <file location="form/about_kandoo.fm2"/>
+    <file location="per/utility/ENG/U162.fm2"/>
+  </sources>
+
+  <mediaFiles>
+    <file client="true" location="quotationUserPath/quotationUserFile.txt" type="text"/>
+    <file client="true" location="data/read/folder5/read_folder5.txt" type="text"/>
+    <file client="true" location="spool/spool.txt" type="text"/>
+    <file client="true" location="data/write/payroll/payroll_write.txt" type="text"/>
+    <file client="true" location="data/read/ap_load/ap_demo_load_l01.unl" type="text"/>
+    <file client="true" location="info/GZT.txt" type="text"/>
+    <file client="true" location="unixPathName/unixFileName.txt" type="text"/>
+    <file client="true" location="data/export/dos/public/subscriptions/data_export_dos_public_subscriptions.txt" type="text"/>
+    <file client="true" location="unl/database_info.unl" type="text"/>
+    <file client="true" location="quotationDefaultPath/quotationDefaultFile.txt" type="text"/>
+    <file client="true" location="info/db_table_import_device_type.txt" type="text"/>
+    <file client="true" location="data/report/report.txt" type="text"/>
+    <file client="true" location="data/write/payment/payment_write.txt" type="text"/>
+    <file client="true" location="license/GNU_Lesser_General_Public_License_v3.txt" type="text"/>
+    <file client="true" location="data/write/folder2/write_folder2.txt" type="text"/>
+    <file client="true" location="data/write/folder4/write_folder4.txt" type="text"/>
+    <file client="true" location="info/izm_info.txt" type="text"/>
+    <file client="true" location="lib_tool.css" type="other"/>
+    <file client="true" location="data/export/dos/public/products/data_export_dos_public_products.txt" type="text"/>
+    <file client="true" location="spool/uucppublic/uucppublic.txt" type="text"/>
+    <file client="true" location="data/read/payment/payment_read.txt" type="text"/>
+    <file client="true" location="data/read/payroll/payroll_read.txt" type="text"/>
+    <file client="true" location="data/export/information/groups/business/vw/data_export_information_groups_business_vw.txt" type="text"/>
+    <file client="true" location="miscellaneous/signature_eric.txt" type="text"/>
+    <file client="true" location="data/read/folder1/read_folder1.txt" type="text"/>
+    <file client="true" location="data/read/folder3/read_folder3.txt" type="text"/>
+    <file client="true" location="data/read/vendor/vendor_read.txt" type="text"/>
+    <file client="true" location="info/db_term_info.txt" type="text"/>
+    <file client="true" location="info/WZ2.txt" type="text"/>
+    <file client="true" location="quotationPath/quotationFile.txt" type="text"/>
+    <file client="true" location="process/process.txt" type="text"/>
+    <file client="true" location="info/izg_info.txt" type="text"/>
+    <file client="true" location="info/GZ2.txt" type="text"/>
+    <file client="true" location="data/report/data_report.txt" type="text"/>
+    <file client="true" location="data/write/vendor_write/vendor_write.txt" type="text"/>
+    <file client="true" location="01PathName/01PathName.txt" type="text"/>
+    <file client="true" location="data/export/data_export.txt" type="text"/>
+    <file client="true" location="data/write/folder1/write_folder1.txt" type="text"/>
+    <file client="true" location="data/write/folder3/write_folder3.txt" type="text"/>
+    <file client="true" location="data/export/dos/public/customers/data_export_dos_public_customers.txt" type="text"/>
+    <file client="true" location="data/import/data_import.txt" type="text"/>
+    <file client="true" location="info/lib_db_device_type.txt" type="text"/>
+    <file client="true" location="data/write/folder5/write_folder5.txt" type="text"/>
+    <file client="true" location="02PathName/02PathName.txt" type="text"/>
+    <file client="true" location="info/kandooERP-Setup.txt" type="text"/>
+    <file client="true" location="info/db_table_import_rptpos.txt" type="text"/>
+    <file client="true" location="lib_tool.qxtheme" type="gui-theme-file"/>
+    <file client="true" location="quotationStandardPath/quotationStandardFile.txt" type="text"/>
+    <file client="true" location="info/U12.txt" type="text"/>
+    <file client="true" location="info/setup.txt" type="text"/>
+    <file client="true" location="data/read/folder2/read_folder2.txt" type="text"/>
+    <file client="true" location="data/read/folder4/read_folder4.txt" type="text"/>
+    <file client="true" location="info/GZD.txt" type="text"/>
+  </mediaFiles>
+
+  <buildConfiguration name="development">
+    <additions>
+    </additions>
+    <exclusions>
+      <sources type="fgl">
+        <file location="4gl/lib_tool/lib_tool_zeromq_server.4gl"/>
+      </sources>
+
+    </exclusions>
+  </buildConfiguration>
+
+</fglBuildTarget>

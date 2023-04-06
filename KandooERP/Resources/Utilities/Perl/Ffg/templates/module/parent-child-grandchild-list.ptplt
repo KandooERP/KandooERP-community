@@ -1,0 +1,6 @@
+# this program template generates a program with parent + child + grandchild with access to parent data by picking a row in the list screen
+# the child and grandchild screen arrays can be included in the main form, else specify the -
+-maintemplate parent-form-list.mtplt 
+-childtemplate child-form-basic.mtplt
+-grandchildtemplate grandchild-form-basic.mtplt
+-listtemplate list-form-basic.mtplt

@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form xmlns="http://namespaces.querix.com/2015/fglForms">
+	<form.rootContainer>
+		<GridPanel classNames="fcls_rootContainer" preferredSize="," verticalAlignment="Stretch" horizontalAlignment="Stretch" fieldTable="" identifier="rootContainer">
+			<GridPanel.gridRowDefinitions>
+				<GridRowDefinition gridLengthValue=""/>
+				<GridRowDefinition gridLengthValue=""/>
+				<GridRowDefinition gridLengthValue="100%"/>
+				<GridRowDefinition gridLengthValue=""/>
+				<GridRowDefinition gridLengthValue=""/>
+			</GridPanel.gridRowDefinitions>
+			<GridPanel.gridColumnDefinitions>
+				<GridColumnDefinition gridLengthValue="100%"/>
+			</GridPanel.gridColumnDefinitions>
+			<GridPanel classNames="fcls_title_cnt" visible="true" verticalAlignment="Top" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="cntTitle">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="100%"/>
+					<GridColumnDefinition gridLengthValue=""/>
+				</GridPanel.gridColumnDefinitions>
+				<Label isDynamic="true" text="Inventory Profit Figures" classNames="fcls_title_lb" visible="true" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="header_text"/>
+				<Label isDynamic="true" text="E225" classNames="fcls_title_lb" visible="true" gridItemLocation="1,0,1,1" fieldTable="" identifier="lbFormName"/>
+			</GridPanel>
+			<GridPanel classNames="fcls_detail_cnt,fcls_data_cnt" visible="true" verticalAlignment="Top" horizontalAlignment="Left" gridItemLocation="0,1,1,1" fieldTable="formonly" identifier="cntDetail1">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="" gridMinLength="10rem"/>
+					<GridColumnDefinition gridLengthValue=""/>
+					<GridColumnDefinition gridLengthValue="" gridMinLength="10rem"/>
+					<GridColumnDefinition gridLengthValue=""/>
+				</GridPanel.gridColumnDefinitions>
+				<TextField noEntry="true" dataType="Char,,,," preferredSize="14qch,1qch" fieldTable="formonly" identifier="prompt_text" gridItemLocation="1,0,1,1" classNames="fcls_data_widget,fcls_length_05qch"/>
+				<TextField noEntry="true" dataType="SmallInt,,,," preferredSize="5qch,1qch" fieldTable="statparms" identifier="year_num" gridItemLocation="3,0,1,1" classNames="fcls_data_widget,fcls_length_05qch"/>
+				<TextField toCase="Up" noEntry="true" dataType="Char,,,,15" preferredSize="16qch,1qch" fieldTable="product" identifier="part_code" gridItemLocation="1,1,1,1" classNames="fcls_data_widget,fcls_length_05qch"/>
+				<TextField noEntry="true" dataType="SmallInt,,,," preferredSize="5qch,1qch" fieldTable="statparms" identifier="year_num" gridItemLocation="3,1,1,1" classNames="fcls_data_widget,fcls_length_05qch"/>
+				<TextField noEntry="true" dataType="VarChar,,,0,4" preferredSize="31qch,1qch" fieldTable="product" identifier="desc_text" gridItemLocation="1,2,1,1" classNames="fcls_data_widget,fcls_length_30qch"/>
+				<Label isDynamic="true" text="Info" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,0,1,1" fieldTable="" identifier="lb51"/>
+				<Label isDynamic="true" text="Year Section 1" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="2,0,1,1" fieldTable="" identifier="lb53"/>
+				<Label isDynamic="true" text="Product Code" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,1,1,1" fieldTable="" identifier="lb52"/>
+				<Label isDynamic="true" text="Year Section 2" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="2,1,1,1" fieldTable="" identifier="lb54"/>
+				<Label isDynamic="true" text="Product Desc" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,2,1,1" fieldTable="" identifier="lb66"/>
+			</GridPanel>
+			<Table rowCount="12" preferredSize="75qch,12qch" fieldTable="" identifier="sr_statprod" gridItemLocation="0,2,1,1">
+				<TableColumn fieldTable="" identifier="tc_scroll_flag">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="2rem" gridMaxLength="2rem" gridMinLength="2rem"/>
+					</TableColumn.columnLength>
+					<CheckBox dataType="Char,,,," fieldTable="formonly" identifier="scroll_flag">
+						<CheckBox.checkedValue>
+							<StringLiteral stringValue="*"/>
+						</CheckBox.checkedValue>
+						<CheckBox.uncheckedValue>
+							<NullLiteral/>
+						</CheckBox.uncheckedValue>
+					</CheckBox>
+				</TableColumn>
+				<TableColumn fieldTable="" identifier="tc_int_text" text="Month">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="13.3%"/>
+					</TableColumn.columnLength>
+					<TextField toCase="Up" dataType="Char,,,,10" fieldTable="statint" identifier="int_text"/>
+				</TableColumn>
+				<TableColumn fieldTable="" identifier="tc_net_amt" text="Nett">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="14.7%"/>
+					</TableColumn.columnLength>
+					<TextField format="---------&amp;" noEntry="true" dataType="Decimal,,,2,16" fieldTable="statcust" identifier="net_amt"/>
+				</TableColumn>
+				<TableColumn fieldTable="" identifier="tc_prof_amt" text="Profit">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="13.3%"/>
+					</TableColumn.columnLength>
+					<TextField format="--------&amp;" noEntry="true" dataType="Decimal,,,2,16" fieldTable="formonly" identifier="prof_amt"/>
+				</TableColumn>
+				<TableColumn fieldTable="" identifier="tc_disc_per" text="Disc%">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="9.3%"/>
+					</TableColumn.columnLength>
+					<TextField format="---&amp;.&amp;" noEntry="true" dataType="Float,,,," fieldTable="formonly" identifier="disc_per"/>
+				</TableColumn>
+				<TableColumn fieldTable="" identifier="tc_prv_net_amt" text="Nett">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="14.7%"/>
+					</TableColumn.columnLength>
+					<TextField format="---------&amp;" noEntry="true" dataType="Decimal,,,2,16" fieldTable="formonly" identifier="prv_net_amt"/>
+				</TableColumn>
+				<TableColumn fieldTable="" identifier="tc_prv_prof_amt" text="Profit">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="13.3%"/>
+					</TableColumn.columnLength>
+					<TextField format="--------&amp;" noEntry="true" dataType="Decimal,,,2,16" fieldTable="formonly" identifier="prv_prof_amt"/>
+				</TableColumn>
+				<TableColumn fieldTable="" identifier="tc_prv_disc_per" text="Disc%">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="9.3%"/>
+					</TableColumn.columnLength>
+					<TextField format="---&amp;.&amp;" noEntry="true" dataType="Float,,,," fieldTable="formonly" identifier="prv_disc_per"/>
+				</TableColumn>
+				<TableColumn fieldTable="" identifier="tc_prof_var_per" text="Prof%">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="9.3%"/>
+					</TableColumn.columnLength>
+					<TextField format="---&amp;.&amp;" noEntry="true" dataType="Float,,,," fieldTable="formonly" identifier="prof_var_per"/>
+				</TableColumn>
+			</Table>
+			<GridPanel classNames="fcls_detail_cnt,fcls_data_cnt" visible="true" verticalAlignment="Top" horizontalAlignment="Left" gridItemLocation="0,3,1,1" fieldTable="formonly" identifier="cntDetail2">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="" gridMinLength="10rem"/>
+					<GridColumnDefinition gridLengthValue=""/>
+					<GridColumnDefinition gridLengthValue=""/>
+					<GridColumnDefinition gridLengthValue=""/>
+					<GridColumnDefinition gridLengthValue=""/>
+					<GridColumnDefinition gridLengthValue=""/>
+					<GridColumnDefinition gridLengthValue=""/>
+					<GridColumnDefinition gridLengthValue=""/>
+				</GridPanel.gridColumnDefinitions>
+				<TextField format="----------&amp;" dataType="Decimal,,,2,16" preferredSize="12qch,1qch" fieldTable="formonly" identifier="tot_net_amt" gridItemLocation="1,0,1,1" classNames="fcls_data_widget,fcls_length_10qch"/>
+				<TextField format="--------&amp;" dataType="Decimal,,,2,16" preferredSize="10qch,1qch" fieldTable="formonly" identifier="tot_prof_amt" gridItemLocation="2,0,1,1" classNames="fcls_data_widget,fcls_length_10qch"/>
+				<TextField format="---&amp;.&amp;" noEntry="true" dataType="Float,,,," preferredSize="7qch,1qch" fieldTable="formonly" identifier="tot_disc_per" gridItemLocation="3,0,1,1" classNames="fcls_data_widget,fcls_length_10qch"/>
+				<TextField format="---------&amp;" noEntry="true" dataType="Decimal,,,2,16" preferredSize="11qch,1qch" fieldTable="formonly" identifier="tot_prv_net_amt" gridItemLocation="4,0,1,1" classNames="fcls_data_widget,fcls_length_10qch"/>
+				<TextField format="--------&amp;" dataType="Decimal,,,2,16" preferredSize="10qch,1qch" fieldTable="formonly" identifier="tot_prv_prof_amt" gridItemLocation="5,0,1,1" classNames="fcls_data_widget,fcls_length_10qch"/>
+				<TextField format="---&amp;.&amp;" noEntry="true" dataType="Float,,,," preferredSize="7qch,1qch" fieldTable="formonly" identifier="tot_prv_disc_per" gridItemLocation="6,0,1,1" classNames="fcls_data_widget,fcls_length_10qch"/>
+				<TextField format="---&amp;.&amp;" noEntry="true" dataType="Float,,,," preferredSize="7qch,1qch" fieldTable="formonly" identifier="tot_prof_var_per" gridItemLocation="7,0,1,1" classNames="fcls_data_widget,fcls_length_10qch"/>
+				<TextField format="----------&amp;" dataType="Decimal,,,2,16" preferredSize="12qch,1qch" fieldTable="formonly" identifier="tot_net_amt" gridItemLocation="1,1,1,1" classNames="fcls_data_widget,fcls_length_10qch"/>
+				<TextField format="--------&amp;" dataType="Decimal,,,2,16" preferredSize="10qch,1qch" fieldTable="formonly" identifier="tot_prof_amt" gridItemLocation="2,1,1,1" classNames="fcls_data_widget,fcls_length_10qch"/>
+				<TextField format="---&amp;.&amp;" noEntry="true" dataType="Float,,,," preferredSize="7qch,1qch" fieldTable="formonly" identifier="tot_disc_per" gridItemLocation="3,1,1,1" classNames="fcls_data_widget,fcls_length_10qch"/>
+				<TextField format="---------&amp;" noEntry="true" dataType="Decimal,,,2,16" preferredSize="11qch,1qch" fieldTable="formonly" identifier="tot_prv_net_amt" gridItemLocation="4,1,1,1" classNames="fcls_data_widget,fcls_length_10qch"/>
+				<TextField format="--------&amp;" dataType="Decimal,,,2,16" preferredSize="10qch,1qch" fieldTable="formonly" identifier="tot_prv_prof_amt" gridItemLocation="5,1,1,1" classNames="fcls_data_widget,fcls_length_10qch"/>
+				<TextField format="---&amp;.&amp;" noEntry="true" dataType="Float,,,," preferredSize="7qch,1qch" fieldTable="formonly" identifier="tot_prv_disc_per" gridItemLocation="6,1,1,1" classNames="fcls_data_widget,fcls_length_10qch"/>
+				<TextField format="---&amp;.&amp;" noEntry="true" dataType="Float,,,," preferredSize="7qch,1qch" fieldTable="formonly" identifier="tot_prof_var_per" gridItemLocation="7,1,1,1" classNames="fcls_data_widget,fcls_length_10qch"/>
+				<Label isDynamic="true" text="Total :" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="lb36"/>
+				<Label isDynamic="true" text="Y.T.D :" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,1,1,1" fieldTable="formonly" identifier="lb37"/>
+			</GridPanel>
+			<GridPanel classNames="fcls_statusbar_cnt" visible="true" verticalAlignment="Top" gridItemLocation="0,4,1,1" fieldTable="formonly" identifier="cntStatusBar">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="100%"/>
+				</GridPanel.gridColumnDefinitions>
+				<Label isDynamic="true" text="" classNames="fcls_sblabel" visible="true" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="lbInfo1"/>
+				<Label isDynamic="true" text="" classNames="fcls_sblabel" visible="true" gridItemLocation="0,1,1,1" fieldTable="formonly" identifier="lbInfo2"/>
+			</GridPanel>
+		</GridPanel>
+	</form.rootContainer>
+	<form.screenRecords>
+		<ScreenRecord identifier="sr_statprod" fields="formonly.scroll_flag,statint.int_text,statcust.net_amt,formonly.prof_amt,formonly.disc_per,formonly.prv_net_amt,formonly.prv_prof_amt,formonly.prv_disc_per,formonly.prof_var_per"/>
+		<ScreenRecord identifier="sr_stattotal" fields="formonly.tot_net_amt,formonly.tot_prof_amt,formonly.tot_disc_per,formonly.tot_prv_net_amt,formonly.tot_prv_prof_amt,formonly.tot_prv_disc_per,formonly.tot_prof_var_per"/>
+		<ScreenRecord identifier="sr_year" fields="statparms.year_num"/>
+		<ScreenRecord identifier="formonly" fields="formonly.prompt_text,formonly.scroll_flag,formonly.prof_amt,formonly.disc_per,formonly.prv_net_amt,formonly.prv_prof_amt,formonly.prv_disc_per,formonly.prof_var_per,formonly.tot_net_amt,formonly.tot_prof_amt,formonly.tot_disc_per,formonly.tot_prv_net_amt,formonly.tot_prv_prof_amt,formonly.tot_prv_disc_per,formonly.tot_prof_var_per" scrollId="formonly.sr_stattotal"/>
+		<ScreenRecord identifier="product" fields="product.part_code,product.desc_text"/>
+		<ScreenRecord identifier="statcust" fields="statcust.net_amt"/>
+		<ScreenRecord identifier="statint" fields="statint.int_text"/>
+		<ScreenRecord identifier="statparms" fields="statparms.year_num" scrollId="formonly.sr_year"/>
+	</form.screenRecords>
+</form>
+

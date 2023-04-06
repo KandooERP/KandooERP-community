@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<fglBuildTarget xmlns="http://namespaces.querix.com/lyciaide/target" name="AD0" type="fgl-program">
+
+  <libraries>
+    <library name="lib_report" dynamic="false" location=""/>
+    <library name="lib_report_ar" dynamic="false" location=""/>
+    <library name="lib_tool_A_AR_db" dynamic="false" location=""/>
+    <library name="lib_tool_A_AR_new" dynamic="false" location=""/>
+    <library name="lib_tool_common" dynamic="false" location=""/>
+    <library name="lib_tool_db_common" dynamic="false" location=""/>
+  </libraries>
+
+  <sources type="fgl">
+    <file location="4gl/ar/AD0.4gl"/>
+    <file location="4gl/ar/ADF.4gl"/>
+    <file location="4gl/ar/ADU_GLOBALS.4gl"/>
+    <file location="4gl/ar/ADR_GLOBALS.4gl"/>
+    <file location="4gl/ar/ADU.4gl"/>
+    <file location="4gl/common/conv_rate.4gl"/>
+    <file location="4gl/ar/ADA.4gl"/>
+    <file location="4gl/common/psepwind.4gl"/>
+    <file location="4gl/ar/ADC.4gl"/>
+    <file location="4gl/common/conv_curr.4gl"/>
+    <file location="4gl/ar/ADE.4gl"/>
+    <file location="4gl/ar/ADR.4gl"/>
+    <file location="4gl/ar/AD0_GLOBALS.4gl"/>
+    <file location="4gl/ar/ADA_GLOBALS.4gl"/>
+    <file location="4gl/ar/ADB.4gl"/>
+    <file location="4gl/ar/ADE_GLOBALS.4gl"/>
+    <file location="4gl/ar/ADF_GLOBALS.4gl"/>
+    <file location="4gl/ar/ADB_GLOBALS.4gl"/>
+    <file location="4gl/ar/ADC_GLOBALS.4gl"/>
+    <file location="4gl/ar/ADD_GLOBALS.4gl"/>
+    <file location="4gl/ar/ADD.4gl"/>
+  </sources>
+
+  <sources type="form">
+    <file location="per/utility/ENG/U156.fm2"/>
+    <file location="per/utility/ENG/U102.fm2"/>
+    <file location="per/utility/ENG/U505.fm2"/>
+    <file location="per/ar/ENG/A215.fm2"/>
+    <file location="per/ar/ENG/A653.fm2"/>
+    <file location="per/ar/ENG/A121.fm2"/>
+    <file location="per/ar/ENG/AD0.fm2"/>
+    <file location="per/ar/ENG/A200.fm2"/>
+    <file location="per/utility/ENG/U526.fm2"/>
+    <file location="per/utility/ENG/U162.fm2"/>
+    <file location="per/utility/ENG/U103.fm2"/>
+    <file location="per/utility/ENG/U115.fm2"/>
+    <file location="per/utility/ENG/U129.fm2"/>
+  </sources>
+
+  <mediaFiles>
+    <file client="true" location="AD0.qxtheme" type="gui-theme-file"/>
+    <file client="true" location="AD0.css" type="other"/>
+  </mediaFiles>
+
+</fglBuildTarget>

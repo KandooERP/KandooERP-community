@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<fglBuildTarget xmlns="http://namespaces.querix.com/lyciaide/target" name="GR0" type="fgl-program">
+
+  <libraries>
+    <library name="lib_report" dynamic="false" location=""/>
+    <library name= "lib_tool_common" dynamic="false" location=""/>
+    <library name= "lib_tool_G_GL_new" dynamic="false" location=""/>
+    <library name="lib_tool_G_GL_db" dynamic="false" location=""/>
+    <library name= "lib_tool_db_common" dynamic="false" location=""/>
+   </libraries>
+
+  <sources type="fgl">
+    <file location="4gl/common/ac_form.4gl"/>
+    <file location="4gl/gl/GRC.4gl"/>
+    <file location="4gl/common/conv_rate.4gl"/>
+    <file location="4gl/common/seg_con.4gl"/>
+    <file location="4gl/gl/GRGa.4gl"/>
+    <file location="4gl/gl/GR_GROUP_GLOBALS.4gl"/>
+    <file location="4gl/gl/GR1.4gl"/>
+    <file location="4gl/gl/GRG.4gl"/>
+    <file location="4gl/gl/GRK.4gl"/>
+    <file location="4gl/gl/GRKb.4gl"/>
+    <file location="4gl/common/vperfunc.4gl"/>
+    <file location="4gl/gl/GR9.4gl"/>
+    <file location="4gl/gl/GRF.4gl"/>
+    <file location="4gl/gl/GR0.4gl"/>
+    <file location="4gl/gl/GRGb.4gl"/>
+    <file location="4gl/common/reptcurwind.4gl"/>
+    <file location="4gl/gl/GRJ.4gl"/>
+    <file location="4gl/gl/GR4.4gl"/>
+    <file location="4gl/gl/GRA.4gl"/>
+    <file location="4gl/gl/GRKa.4gl"/>
+     <file location="4gl/common/glob_GLOBALS_constant.4gl"/>
+    <file location="4gl/gl/G_GL_GLOBALS.4gl"/>
+    <file location="4gl/common/currwind.4gl"/>
+    <file location="4gl/common/glob_GLOBALS.4gl"/>
+    <file location="4gl/common/glob_GLOBALS_userDataTypes.4gl"/>
+    <file location="4gl/gl/GRI.4gl"/>
+    <file location="4gl/gl/GR3.4gl"/>
+    <file location="4gl/gl/GR0_GLOBALS.4gl"/>
+    <file location="4gl/gl/GR0_main.4gl"/>
+    <file location="4gl/gl/GRD.4gl"/>
+    <file location="4gl/gl/GRK_GLOBALS.4gl"/>
+    <file location="4gl/gl/GRG_GLOBALS.4gl"/>
+    <file location="4gl/gl/GR2.4gl"/>
+    <file location="4gl/common/glob_GLOBALS_report.4gl"/>
+    <file location="4gl/gl/GRH.4gl"/>
+    <file location="4gl/common/postwind.4gl"/>
+    <file location="4gl/gl/GRL.4gl"/>
+  </sources>
+
+  <sources type="form">
+    <file location="per/utility/ENG/U156.fm2"/>
+    <file location="per/gl/ENG/G450.fm2"/>
+    <file location="per/gl/ENG/G204.fm2"/>
+    <file location="per/gl/ENG/G146.fm2"/>
+    <file location="per/gl/ENG/G151a.fm2"/>
+    <file location="per/utility/ENG/U526.fm2"/>
+    <file location="per/gl/ENG/G151.fm2"/>
+    <file location="per/gl/ENG/G552.fm2"/>
+    <file location="per/utility/ENG/U115.fm2"/>
+    <file location="per/gl/ENG/GR00.fm2"/>
+    <file location="per/gl/ENG/G457.fm2"/>
+    <file location="per/gl/ENG/G121.fm2"/>
+    <file location="per/utility/ENG/U129.fm2"/>
+    <file location="per/gl/ENG/G169.fm2"/>
+    <file location="per/gl/ENG/G950.fm2"/>
+    <file location="per/gl/ENG/G452.fm2"/>
+    <file location="per/utility/ENG/U102.fm2"/>
+    <file location="per/utility/ENG/U505.fm2"/>
+    <file location="per/gl/ENG/G188.fm2"/>
+    <file location="per/gl/ENG/G120.fm2"/>
+    <file location="per/gl/ENG/G132.fm2"/>
+    <file location="per/gl/ENG/G168.fm2"/>
+    <file location="per/gl/ENG/G124.fm2"/>
+    <file location="per/gl/ENG/G213.fm2"/>
+    <file location="per/utility/ENG/U162.fm2"/>
+    <file location="per/gl/ENG/G128.fm2"/>
+    <file location="per/utility/ENG/U103.fm2"/>
+  </sources>
+
+  <mediaFiles>
+    <file client="true" location="GR0.css" type="other"/>
+    <file client="true" location="GR0.qxtheme" type="gui-theme-file"/>
+  </mediaFiles>
+
+</fglBuildTarget>

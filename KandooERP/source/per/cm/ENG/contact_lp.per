@@ -1,0 +1,52 @@
+{
+###########################################################################
+# This program is free software; you can redistribute it and/or modify it
+# under the terms of the GNU General Public License as published by the
+# Free Software Foundation; either version 2 of the License, or (at your
+# option) any later version.
+#
+# This program is distributed in the hope that it will be useful, but
+# WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+# General Public License for more details.
+#
+# You should have received a copy of the GNU General Public License along
+# with this program; if not, write to the Free Software Foundation, Inc.,
+# 59 Temple Place, Suite 330, Boston, MA 02111-1307 USA
+#
+###########################################################################
+
+	 $Id: contact_lp.per,v 1.3 2003/04/08 12:53:57 afalout Exp $
+}
+
+database kandoodb
+screen size 24 by 80
+{
+   Last/Org        First         Midle       Initials       Title
+[f008             |f004            |f006        |f012     |f015           ]
+[f008             |f004            |f006        |f012     |f015           ]
+[f008             |f004            |f006        |f012     |f015           ]
+[f008             |f004            |f006        |f012     |f015           ]
+[f008             |f004            |f006        |f012     |f015           ]
+}
+end
+
+tables
+contact
+
+attributes
+f008 = contact.last_org_name, required, reverse, comments=
+	"Person = last name        Organisation = organisation name";
+f004 = contact.first_name, comments=
+	"Person only: First name";
+f006 = contact.mid_name, comments=
+	"Person only: Middle name";
+f012 = contact.initials, comments=
+	"Person only: Initials";
+f015 = contact.title, comments=
+	"Person only: Title";
+
+instructions
+delimiters "  "
+screen record s_display [5] (last_org_name through title)
+

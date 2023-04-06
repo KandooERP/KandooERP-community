@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form xmlns="http://namespaces.querix.com/2015/fglForms">
+	<form.rootContainer>
+		<GridPanel classNames="fcls_rootContainer" verticalAlignment="Top" horizontalAlignment="Left" fieldTable="" identifier="rootContainer">
+			<GridPanel.gridRowDefinitions>
+				<GridRowDefinition gridLengthValue=""/>
+				<GridRowDefinition gridLengthValue=""/>
+				<GridRowDefinition gridLengthValue=""/>
+				<GridRowDefinition gridLengthValue=""/>
+				<GridRowDefinition gridLengthValue=""/>
+				<GridRowDefinition gridLengthValue=""/>
+			</GridPanel.gridRowDefinitions>
+			<GridPanel.gridColumnDefinitions>
+				<GridColumnDefinition gridLengthValue="100%"/>
+			</GridPanel.gridColumnDefinitions>
+			<GridPanel classNames="fcls_title_cnt" visible="true" verticalAlignment="Top" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="cnttitle">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="100%"/>
+					<GridColumnDefinition gridLengthValue=""/>
+				</GridPanel.gridColumnDefinitions>
+				<Label isDynamic="true" text="Payroll Batch Load" classNames="fcls_title_lb" visible="true" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="header_text"/>
+				<Label isDynamic="true" text="G421" classNames="fcls_title_lb" visible="true" gridItemLocation="1,0,1,1" fieldTable="" identifier="lbformname"/>
+			</GridPanel>
+			<GridPanel classNames="fcls_detail_cnt,fcls_data_cnt,,fcls_align_left" visible="true" verticalAlignment="Top" horizontalAlignment="Left" gridItemLocation="0,1,1,1" fieldTable="" identifier="cntdetail1">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="" gridMinLength="10rem"/>
+					<GridColumnDefinition gridLengthValue=""/>
+					<GridColumnDefinition gridLengthValue=""/>
+				</GridPanel.gridColumnDefinitions>
+				<Label isDynamic="true" text="Journal" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,0,1,1" fieldTable="" identifier="lb139"/>
+				<ComboBox dataType="Char,,,,3" classNames="fcls_data_widget,fcls_align_left,fcls_length_25qch" location="13qch,2qch" preferredSize="25qch,1qch" toolTip=" Journal code of this batch - (W) " gridItemLocation="1,0,1,1" comment=" Journal code of this batch - (W) " fieldTable="batchhead" identifier="jour_code"/>
+				<TextField noEntry="true" dataType="Char,,,,40" classNames="fcls_data_widget,fcls_align_left,fcls_length_25qch" location="40qch,2qch" preferredSize="20qch,1qch" gridItemLocation="2,0,1,1" fieldTable="journal" identifier="desc_text"/>
+			</GridPanel>
+			<GroupBox title="Post and Entry Info" classNames="fcls_detail_gb_cnt" visible="true" verticalAlignment="Top" gridItemLocation="0,2,1,1" fieldTable="formonly" identifier="cntdetail2groupbox">
+				<GridPanel classNames="fcls_detail_gb_cnt_sub,fcls_data_cnt,fcls_align_left" visible="true" verticalAlignment="Top" horizontalAlignment="Left" fieldTable="formonly" identifier="cntdetail2gbsubgp">
+					<GridPanel.gridRowDefinitions>
+						<GridRowDefinition gridLengthValue=""/>
+						<GridRowDefinition gridLengthValue=""/>
+					</GridPanel.gridRowDefinitions>
+					<GridPanel.gridColumnDefinitions>
+						<GridColumnDefinition gridLengthValue="" gridMinLength="10rem"/>
+						<GridColumnDefinition gridLengthValue=""/>
+						<GridColumnDefinition gridLengthValue="" gridMinLength="10rem"/>
+						<GridColumnDefinition gridLengthValue=""/>
+					</GridPanel.gridColumnDefinitions>
+					<Label isDynamic="true" text="Year" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="lb47"/>
+					<Label isDynamic="true" text="Period" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,1,1,1" fieldTable="formonly" identifier="lb46"/>
+					<ComboBox dataType="SmallInt,,,," classNames="fcls_data_widget,fcls_align_left,fcls_length_10qch" location="13qch,5qch" preferredSize="10qch,1qch" toolTip=" Fiscal accounting year in which batch is to be posted" gridItemLocation="1,0,1,1" comment=" Fiscal accounting year in which batch is to be posted" fieldTable="batchhead" identifier="year_num"/>
+					<ComboBox dataType="SmallInt,,,," classNames="fcls_data_widget,fcls_align_left,fcls_length_10qch" location="13qch,6qch" preferredSize="10qch,1qch" toolTip=" Fiscal accounting period in which batch is to be posted" gridItemLocation="1,1,1,1" comment=" Fiscal accounting period in which batch is to be posted" fieldTable="batchhead" identifier="period_num"/>
+					<Label isDynamic="true" text="Person" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="2,0,1,1" fieldTable="" identifier="lb92"/>
+					<Label isDynamic="true" text="Date" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="2,1,1,1" fieldTable="" identifier="lb93"/>
+					<ComboBox noEntry="true" dataType="Char,,,,8" classNames="fcls_data_widget,fcls_align_left,fcls_length_10qch" location="63qch,5qch" preferredSize="11qch,1qch" gridItemLocation="3,0,1,1" fieldTable="batchhead" identifier="entry_code"/>
+					<Calendar noEntry="true" text="" dataType="Date,,,," classNames="fcls_data_widget,fcls_align_left,fcls_length_10qch" location="63qch,6qch" preferredSize="11qch,1qch" gridItemLocation="3,1,1,1" fieldTable="batchhead" identifier="jour_date"/>
+				</GridPanel>
+			</GroupBox>
+			<GroupBox title="Description" classNames="fcls_detail_gb_cnt" visible="true" gridItemLocation="0,3,1,1" fieldTable="formonly" identifier="cntdetail3groupbox">
+				<GridPanel classNames="fcls_detail_cnt_sub,fcls_data_cnt,fcls_align_hstretch" visible="true" verticalAlignment="Top" horizontalAlignment="Stretch" fieldTable="formonly" identifier="cntdetail3gbsubgpleft">
+					<GridPanel.gridRowDefinitions>
+						<GridRowDefinition gridLengthValue=""/>
+						<GridRowDefinition gridLengthValue=""/>
+						<GridRowDefinition gridLengthValue=""/>
+					</GridPanel.gridRowDefinitions>
+					<GridPanel.gridColumnDefinitions>
+						<GridColumnDefinition gridLengthValue="" gridMinLength="10rem"/>
+						<GridColumnDefinition gridLengthValue="100%"/>
+					</GridPanel.gridColumnDefinitions>
+					<Label isDynamic="true" text="Description" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="lb48"/>
+					<Label isDynamic="true" text="Comments" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,1,1,1" fieldTable="formonly" identifier="lb49"/>
+					<TextField dataType="Char,,,," classNames="fcls_data_widget,fcls_align_hstretch" location="13qch,9qch" preferredSize="31qch,1qch" toolTip=" Default Description to apply to each account loaded" horizontalAlignment="Stretch" gridItemLocation="1,0,1,1" comment=" Default Description to apply to each account loaded" fieldTable="formonly" identifier="default_desc"/>
+					<TextField dataType="Char,,,,40" classNames="fcls_data_widget,fcls_align_hstretch" location="13qch,10qch" preferredSize="41qch,1qch" toolTip=" Enter comments for this batch (line 1)" horizontalAlignment="Stretch" gridItemLocation="1,1,1,1" comment=" Enter comments for this batch (line 1)" fieldTable="batchhead" identifier="com1_text"/>
+					<TextField dataType="Char,,,,40" classNames="fcls_data_widget,fcls_align_hstretch" location="13qch,11qch" preferredSize="41qch,1qch" toolTip=" Enter comments for this batch (line 2)" horizontalAlignment="Stretch" gridItemLocation="1,2,1,1" comment=" Enter comments for this batch (line 2)" fieldTable="batchhead" identifier="com2_text"/>
+				</GridPanel>
+			</GroupBox>
+			<GroupBox title="Import File" classNames="fcls_detail_gb_cnt" visible="true" gridItemLocation="0,4,1,1" fieldTable="" identifier="cntdetail4groupbox">
+				<GridPanel classNames="fcls_detail_gb_cnt_sub,fcls_data_cnt,fcls_align_left" visible="true" verticalAlignment="Top" horizontalAlignment="Left" gridItemLocation="0,5,1,1" fieldTable="formonly" identifier="cntdetail4">
+					<GridPanel.gridRowDefinitions>
+						<GridRowDefinition gridLengthValue=""/>
+						<GridRowDefinition gridLengthValue=""/>
+					</GridPanel.gridRowDefinitions>
+					<GridPanel.gridColumnDefinitions>
+						<GridColumnDefinition gridLengthValue="" gridMinLength="10rem"/>
+						<GridColumnDefinition gridLengthValue="100%"/>
+					</GridPanel.gridColumnDefinitions>
+					<Label isDynamic="true" text="Directory" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,0,1,1" fieldTable="" identifier="lb115"/>
+					<Label isDynamic="true" text="File Name" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,1,1,1" fieldTable="" identifier="lb116"/>
+					<TextField dataType="Char,,,,40" classNames="fcls_data_widget,fcls_align_hstretch" location="13qch,14qch" preferredSize="41qch,1qch" toolTip=" Directory name including full UNIX path" horizontalAlignment="Stretch" gridItemLocation="1,0,1,1" comment=" Directory name including full UNIX path" fieldTable="payparms" identifier="path_name"/>
+					<TextField dataType="Char,,,,40" classNames="fcls_data_widget,fcls_align_hstretch" location="13qch,15qch" preferredSize="41qch,1qch" toolTip=" Name of the file which contains the payroll details" horizontalAlignment="Stretch" gridItemLocation="1,1,1,1" comment=" Name of the file which contains the payroll details" fieldTable="payparms" identifier="file_name"/>
+				</GridPanel>
+			</GroupBox>
+			<GridPanel classNames="fcls_statusbar_cnt" visible="true" verticalAlignment="Top" gridItemLocation="0,5,1,1" fieldTable="formonly" identifier="cntstatusbar">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="100%"/>
+				</GridPanel.gridColumnDefinitions>
+				<Label isDynamic="true" text="" classNames="fcls_sblabel" visible="true" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="lbinfo1"/>
+				<Label isDynamic="true" text="" classNames="fcls_sblabel" visible="true" gridItemLocation="0,1,1,1" fieldTable="formonly" identifier="lbinfo2"/>
+			</GridPanel>
+		</GridPanel>
+	</form.rootContainer>
+	<form.screenRecords>
+		<ScreenRecord identifier="batchhead" fields="jour_code,year_num,period_num,com1_text,com2_text,entry_code,jour_date"/>
+		<ScreenRecord identifier="formonly" fields="default_desc"/>
+		<ScreenRecord identifier="journal" fields="desc_text"/>
+		<ScreenRecord identifier="payparms" fields="path_name,file_name"/>
+	</form.screenRecords>
+</form>
+

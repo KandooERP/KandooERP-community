@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form xmlns="http://namespaces.querix.com/2015/fglForms">
+	<form.rootContainer>
+		<GridPanel classNames="fcls_rootContainer" preferredSize="130qch,25qch" verticalAlignment="Stretch" horizontalAlignment="Stretch" fieldTable="" identifier="rootContainer">
+			<GridPanel.gridRowDefinitions>
+				<GridRowDefinition gridLengthValue=""/>
+				<GridRowDefinition gridLengthValue=""/>
+				<GridRowDefinition gridLengthValue="100%"/>
+				<GridRowDefinition gridLengthValue=""/>
+				<GridRowDefinition gridLengthValue=""/>
+			</GridPanel.gridRowDefinitions>
+			<GridPanel.gridColumnDefinitions>
+				<GridColumnDefinition gridLengthValue="100%"/>
+			</GridPanel.gridColumnDefinitions>
+			<GridPanel classNames="fcls_title_cnt" visible="true" verticalAlignment="Top" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="cntTitle">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="100%"/>
+					<GridColumnDefinition gridLengthValue=""/>
+				</GridPanel.gridColumnDefinitions>
+				<Label isDynamic="true" text="Product Stock Status" classNames="fcls_title_lb" visible="true" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="header_text"/>
+				<Label isDynamic="true" text="I613" classNames="fcls_title_lb" visible="true" gridItemLocation="1,0,1,1" fieldTable="" identifier="lbFormName"/>
+				
+			</GridPanel>
+			<GridPanel visible="true" identifier="ProductClass" gridItemLocation="0,1,1,1">
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue=""/>
+					<GridColumnDefinition gridLengthValue=""/>
+					<GridColumnDefinition gridLengthValue=""/>
+					<GridColumnDefinition gridLengthValue=""/>
+				</GridPanel.gridColumnDefinitions>
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<Label text="Category" isDynamic="true" visible="true" identifier="lb55" gridItemLocation="0,0,1,1"/>
+				<Label text="Department" isDynamic="true" visible="true" identifier="lb57" gridItemLocation="2,0,1,1"/>
+				<ComboBox visible="true" identifier="dept_code" gridItemLocation="3,0,1,1" fieldTable="product" editable="true">
+					<ComboBoxItem text="value1">
+						<ComboBoxItem.value>
+							<StringLiteral stringValue="value_1"/>
+						</ComboBoxItem.value>
+					</ComboBoxItem>
+				</ComboBox>
+				<Label text="Class" isDynamic="true" visible="true" identifier="lb56" gridItemLocation="0,1,1,1"/>
+				<ComboBox visible="true" identifier="class_code" gridItemLocation="1,1,1,1" fieldTable="product" editable="true">
+					<ComboBoxItem text="value1">
+						<ComboBoxItem.value>
+							<StringLiteral stringValue="value_1"/>
+						</ComboBoxItem.value>
+					</ComboBoxItem>
+				</ComboBox>
+				<ComboBox visible="true" identifier="cat_code" gridItemLocation="1,0,1,1" fieldTable="product" editable="true">
+					<ComboBoxItem text="value1">
+						<ComboBoxItem.value>
+							<StringLiteral stringValue="value_1"/>
+						</ComboBoxItem.value>
+					</ComboBoxItem>
+				</ComboBox>
+				<Label text="Main Group" isDynamic="true" visible="true" identifier="lb58" gridItemLocation="2,1,1,1"/>
+				<ComboBox visible="true" identifier="maingrp_code" gridItemLocation="3,1,1,1" fieldTable="product" editable="true">
+					<ComboBoxItem text="value1">
+						<ComboBoxItem.value>
+							<StringLiteral stringValue="value_1"/>
+						</ComboBoxItem.value>
+					</ComboBoxItem>
+				</ComboBox>
+				<Label text="Group" isDynamic="true" visible="true" identifier="lb59" gridItemLocation="2,2,1,1"/>
+				<ComboBox visible="true" identifier="prodgrp_code" gridItemLocation="3,2,1,1" fieldTable="product" editable="true">
+					<ComboBoxItem text="value1">
+						<ComboBoxItem.value>
+							<StringLiteral stringValue="value_1"/>
+						</ComboBoxItem.value>
+					</ComboBoxItem>
+				</ComboBox>
+			</GridPanel>
+			<Table rowCount="13" preferredSize="75qch,13qch" gridItemLocation="0,2,1,1" fieldTable="" identifier="sr_prodstatus">
+				<TableColumn fieldTable="" identifier="tc_scroll_flag">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="2rem" gridMinLength="2rem" gridMaxLength="2rem"/>
+					</TableColumn.columnLength>
+					<CheckBox dataType="Char,,,," fieldTable="formonly" identifier="scroll_flag">
+						<CheckBox.checkedValue>
+							<StringLiteral stringValue="*"/>
+						</CheckBox.checkedValue>
+						<CheckBox.uncheckedValue>
+							<NullLiteral/>
+						</CheckBox.uncheckedValue>
+					</CheckBox>
+				</TableColumn>
+				<TableColumn text="Product" fieldTable="" identifier="tc_part_code">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="10rem" gridMaxLength="10rem" gridMinLength="10rem"/>
+					</TableColumn.columnLength>
+					<TextField toCase="Up" dataType="Char,,,,15" toolTip=" Enter the product selection criteria " fieldTable="prodstatus" comment=" Enter the product selection criteria " identifier="part_code"/>
+				</TableColumn>
+				<TableColumn text="Designation" resizable="true" visible="true" identifier="tc_f52">
+					<TextField visible="true" identifier="desc_text" fieldTable="product" noEntry="true"/>
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="20rem" gridMaxLength="20rem" gridMinLength="20rem"/>
+					</TableColumn.columnLength>
+				</TableColumn>
+				<TableColumn text="Warehouse" fieldTable="" identifier="tc_ware_code">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="10rem" gridMaxLength="10rem" gridMinLength="10rem"/>
+					</TableColumn.columnLength>
+					<TextField toCase="Up" noEntry="true" dataType="Char,,,,3" toolTip=" Enter warehouse selection criteria " fieldTable="prodstatus" comment=" Enter warehouse selection criteria " identifier="ware_code"/>
+				</TableColumn>
+				<TableColumn text="Warehouse Name" resizable="true" visible="true" identifier="tc_f53">
+					<TextField visible="true" identifier="warehouse_name" fieldTable="formonly"/>
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="15rem" gridMaxLength="15rem" gridMinLength="15rem"/>
+					</TableColumn.columnLength>
+				</TableColumn>
+				<TableColumn text="On Hand" fieldTable="" identifier="tc_onhand_qty">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="10rem" gridMaxLength="10rem" gridMinLength="10rem"/>
+					</TableColumn.columnLength>
+					<TextField noEntry="true" text="On Hand" dataType="Float,,,," toolTip=" The quantity of this product currently on hand at this warehouse" fieldTable="prodstatus" comment=" The quantity of this product currently on hand at this warehouse" identifier="onhand_qty"/>
+				</TableColumn>
+				<TableColumn text="Reserved" fieldTable="" identifier="tc_reserved_qty">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="10rem" gridMaxLength="10rem" gridMinLength="10rem"/>
+					</TableColumn.columnLength>
+					<TextField noEntry="true" dataType="Float,,,," toolTip=" The quantity of this product currently reserved for sale at this warehouse" fieldTable="prodstatus" comment=" The quantity of this product currently reserved for sale at this warehouse" identifier="reserved_qty"/>
+				</TableColumn>
+				<TableColumn text="Available" fieldTable="" identifier="tc_avail">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="10rem" gridMaxLength="10rem" gridMinLength="10rem"/>
+					</TableColumn.columnLength>
+					<TextField noEntry="true" dataType="Char,,,," fieldTable="formonly" identifier="avail"/>
+				</TableColumn>
+				<TableColumn text="Status Date" fieldTable="" identifier="tc_status_date">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="10rem" gridMaxLength="10rem" gridMinLength="10rem"/>
+					</TableColumn.columnLength>
+					<Calendar noEntry="true" dataType="Date,,,," toolTip=" Date of last change in product/warehouse status " fieldTable="prodstatus" comment=" Date of last change in product/warehouse status " identifier="status_date"/>
+				</TableColumn>
+				<TableColumn text="Status" fieldTable="" identifier="tc_status_ind">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="10rem" gridMaxLength="10rem" gridMinLength="10rem"/>
+					</TableColumn.columnLength>
+					<ComboBox toCase="Up" noEntry="true" dataType="Char,,,,1" toolTip=" (1) Available, (2) On Hold, (3) Deleted, (4) Stop Re-order " fieldTable="prodstatus" comment=" (1) Available, (2) On Hold, (3) Deleted, (4) Stop Re-order " identifier="status_ind">
+
+					</ComboBox>
+				</TableColumn>
+				<TableColumn resizable="true" visible="true" fieldTable="" identifier="tc_lbEOL">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="100%"/>
+					</TableColumn.columnLength>
+					<Label isDynamic="true" visible="true" fieldTable="" identifier="lbEOL"/>
+				</TableColumn>
+			</Table>
+			<GridPanel classNames="fcls_detail_cnt,fcls_data_cnt,fcls_align_left" visible="true" verticalAlignment="Top" horizontalAlignment="Left" gridItemLocation="0,3,1,1" fieldTable="formonly" identifier="cntDetail1">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="" gridMinLength="10rem"/>
+					<GridColumnDefinition gridLengthValue=""/>
+					<GridColumnDefinition gridLengthValue=""/>
+				</GridPanel.gridColumnDefinitions>
+				<TextField noEntry="true" dataType="Char,,,,36" classNames="fcls_data_widget,fcls_align_left,fcls_length_30qch" preferredSize="31qch,1qch" gridItemLocation="1,0,1,1" fieldTable="product" identifier="desc_text"/>
+				<TextField noEntry="true" dataType="Char,,,,36" classNames="fcls_data_widget,fcls_align_left,fcls_length_30qch" preferredSize="31qch,1qch" gridItemLocation="2,0,1,1" fieldTable="product" identifier="desc2_text"/>
+				<Label isDynamic="true" text="Description" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,0,1,1" fieldTable="" identifier="lb51"/>
+			</GridPanel>
+			<GridPanel classNames="fcls_statusbar_cnt" visible="true" verticalAlignment="Bottom" gridItemLocation="0,4,1,1" fieldTable="formonly" identifier="cntStatusBar">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="100%"/>
+				</GridPanel.gridColumnDefinitions>
+				<Label isDynamic="true" text="" classNames="fcls_sblabel" visible="true" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="lbInfo1"/>
+				<Label isDynamic="true" text="" classNames="fcls_sblabel" visible="true" gridItemLocation="0,1,1,1" fieldTable="formonly" identifier="lbInfo2"/>
+			</GridPanel>
+		</GridPanel>
+	</form.rootContainer>
+	<form.screenRecords>
+		<ScreenRecord identifier="sr_prodstatus" fields="formonly.scroll_flag,prodstatus.part_code,product.desc_text,prodstatus.ware_code,formonly.warehouse_name,prodstatus.onhand_qty,prodstatus.reserved_qty,formonly.avail,prodstatus.status_date,prodstatus.status_ind" elements="13"/>
+		<ScreenRecord identifier="formonly" fields="formonly.scroll_flag,formonly.avail"/>
+		<ScreenRecord identifier="prodstatus" fields="prodstatus.part_code,prodstatus.ware_code,prodstatus.onhand_qty,prodstatus.reserved_qty,prodstatus.status_date,prodstatus.status_ind"/>
+		<ScreenRecord identifier="product" fields="product.desc_text,product.desc2_text"/>
+	</form.screenRecords>
+</form>
+

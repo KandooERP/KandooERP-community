@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<fglBuildTarget xmlns="http://namespaces.querix.com/lyciaide/target" name="z_sucash" type="fgl-program">
+
+  <sources type="fgl">
+    <file location="4gl/ar/z_sucash.4gl"/>
+  </sources>
+
+  <mediaFiles>
+    <file client="true" location="z_sucash.qxtheme" type="gui-theme-file"/>
+    <file client="true" location="z_sucash.css" type="other"/>
+  </mediaFiles>
+
+</fglBuildTarget>

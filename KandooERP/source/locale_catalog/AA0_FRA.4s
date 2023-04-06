@@ -1,0 +1,106 @@
+AA0_FRA {
++1-30 Days Overdue { "+ 1-30 jours de retard" }
++31-60 Days Overdue { "31 à 60 jours de retard" }
++61-90 Days Overdue { "+61 -90 jours de retard" }
++90+Days Overdue { "90+ J. retard de paiement" }
+= Balance { "= Solde" }
+A Valid Code for this part of the chart { "Un code valid pour cette partie du numéro de compte" }
+Account { "Compte" }
+Account Info { "Informations sur le compte" }
+Account Status { "Situation du Compte" }
+Account Verifier { "Vérificateur de compte" }
+Account code to identify this account { "Numéro de compte identifiant ce client" }
+Address { "Adresse" }
+Aging Date { "Date de vieillissement" }
+Amount { "Montant" }
+Available Credit { "Crédit disponible" }
+Balance { "Solde" }
+Carrier { "Transporteur" }
+Chart of Accounts { "Plan Comptable" }
+City { "Ville" }
+Class Code { "Code classe" }
+Code { "Code" }
+Code representing the Country of this Customer { "Code pays de ce client" }
+Comments { "Commentaires" }
+Contact { "Contact" }
+Contact Info { "Informations du contact" }
+Country { "Pays" }
+Credit { "Crédit" }
+Credit Limit { "Limite de Crédit" }
+Currency { "Devise" }
+Currency Code { "Code devise" }
+Currency in which this customer deals { "Devise avec laquelle ce client traite" }
+Current { "Actuel" }
+Customer { "Client" }
+Customer Code { "Code Client" }
+Customer Name { "Nom du client" }
+Customer Type { "Type de Client" }
+Customer name or description { "Nom ou description du client" }
+Date { "Date" }
+Description { "Description" }
+End Date { "Date de fin" }
+Enter customer address selection criteria { "Saisir les critères de sélection de l'adresse client" }
+Enter customer code selection criteria { "Entrer les critères de sélection du code client" }
+Enter customer name selection criteria { "Entrez les critères de sélection du nom de client" }
+Enter sales 'On-Hold' code selection criteria { "Saisir les critères de sélection du code "En attente" des ventes" }
+Enter sales territory selection criteria { "Saisir les critères de sélection du territoire de vente" }
+Enter salesperson code selection criteria { "Saisir les critères de sélection du code vendeur" }
+Entered { "Saisie" }
+Exit { "Quitter" }
+FILTER { "Premier" }
+Fax { "Fax" }
+Field Description { "Description du champ" }
+Fiscal Period { "Période fiscale" }
+Fiscal Year { "Exercice fiscal" }
+Flex Codes { "Flex Codes" }
+Hold Sales { "Ventes à livrer" }
+ID { "ID" }
+Invoice Number { "Numéro de facture" }
+LOOKUP { "RECHERCHER" }
+Language Code { "Code langue" }
+Last Sale Date { "Date de dernière vente" }
+Length { "Longueur" }
+Length of the Code { "Longueur Numéro de compte" }
+Main Group { "Groupe Principal" }
+Name { "Nom" }
+New Label { "Références bancaires" }
+Other Info { "Autres informations" }
+Password { "Mot de passe" }
+Period { "Période" }
+Phone { "Téléphone" }
+Post Code { "Code Postal" }
+Postal code of customer { "Code postal du client" }
+Product Code { "Code Produit" }
+Product Group { "Groupe du Produit" }
+Sales { "Ventes" }
+Sales Condition { "Condition de vente" }
+Salesperson { "Vendeur" }
+Salesperson Code { "Code vendeur" }
+Shipping Address { "Adresse de livraison" }
+Shipping Code { "Code de livraison" }
+Start Date { "Date de Début" }
+Start Pos. { "Positions Départ" }
+Start position of the Code { "Position de départ du code" }
+State/County { "Région" }
+State/Province { "Région" }
+Tax Code { "Code T.V.A." }
+Term Code { "Code Conditions" }
+Territory { "Territoire" }
+Territory Code { "Code territoire" }
+The Description of the Account { "Description du compte" }
+The account balance between 61 and 90 Days Overdue { "Le solde du compte avec retard entre 61 et 90 jours" }
+The account balance more than 90 Days Overdue { "Le solde du compte avec retard de plus de 90 jours" }
+The customer city { "La ville du client" }
+The description for this code { "L'intitulé de ce code" }
+The valid flex segment { "Le segment Flex valide" }
+Title { "Titre" }
+Title of this field in the GL { "Titre de ce champ en Compta géné" }
+Transaction Date { "Date de la transaction" }
+Type { "Type" }
+Unit of Measure { "Unité de mesure" }
+Value added tax registration number { "Code T.V.A. intracommunautaire" }
+Vat Reg No { "N° T.V.A. intracommunautaire" }
+Warehouse { "Dépôt" }
+Year { "Année" }
+actToolbarManager { "actToolbarManager" }
+}

@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form xmlns="http://namespaces.querix.com/2015/fglForms">
+	<form.rootContainer>
+		<GridPanel classNames="fcls_rootContainer" verticalAlignment="Stretch" horizontalAlignment="Stretch" fieldTable="" identifier="rootContainer">
+			<GridPanel.gridRowDefinitions>
+				<GridRowDefinition gridLengthValue=""/>
+				<GridRowDefinition gridLengthValue="100%"/>
+				<GridRowDefinition gridLengthValue=""/>
+				<GridRowDefinition gridLengthValue=""/>
+			</GridPanel.gridRowDefinitions>
+			<GridPanel.gridColumnDefinitions>
+				<GridColumnDefinition gridLengthValue="50%"/>
+			</GridPanel.gridColumnDefinitions>
+			<GridPanel classNames="fcls_title_cnt" visible="true" verticalAlignment="Top" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="cntTitle">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="100%"/>
+					<GridColumnDefinition gridLengthValue=""/>
+				</GridPanel.gridColumnDefinitions>
+				<Label isDynamic="true" text="Give me a title" classNames="fcls_title_lb" visible="true" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="header_text"/>
+				<Label isDynamic="true" text="U520" classNames="fcls_title_lb" visible="true" gridItemLocation="1,0,1,1" fieldTable="" identifier="lbFormName"/>
+			</GridPanel>
+			<Table rowCount="10" preferredSize="43qch,10qch" fieldTable="" identifier="sa_levmenu" gridItemLocation="0,1,1,1">
+				<TableColumn fieldTable="" identifier="tc_answer">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="10rem" gridMaxLength="10rem" gridMinLength="10rem"/>
+					</TableColumn.columnLength>
+					<TextField toCase="Up" autonext="true" dataType="Char,,,," fieldTable="formonly" identifier="answer"/>
+				</TableColumn>
+				<TableColumn fieldTable="" identifier="tc_l_id">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="10rem" gridMaxLength="10rem" gridMinLength="10rem"/>
+					</TableColumn.columnLength>
+					<TextField toCase="Up" autonext="true" dataType="Char,,,," fieldTable="formonly" identifier="l_id"/>
+				</TableColumn>
+				<TableColumn fieldTable="" identifier="tc_l_name">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="30rem" gridMaxLength="30rem" gridMinLength="30rem"/>
+					</TableColumn.columnLength>
+					<TextField toCase="Up" dataType="Char,,,," fieldTable="formonly" identifier="l_name"/>
+				</TableColumn>
+				<TableColumn fieldTable="" identifier="tc_l_prg">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="20rem" gridMaxLength="20rem" gridMinLength="20rem"/>
+					</TableColumn.columnLength>
+					<TextField toCase="Up" dataType="Char,,,," fieldTable="formonly" identifier="l_prg"/>
+				</TableColumn>
+			</Table>
+			<TextField noEntry="true" dataType="Char,,,," preferredSize="4qch,1qch" fieldTable="formonly" identifier="more" gridItemLocation="0,2,1,1"/>
+			<GridPanel classNames="fcls_statusbar_cnt" visible="true" verticalAlignment="Bottom" gridItemLocation="0,3,1,1" fieldTable="formonly" identifier="cntStatusBar">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="100%"/>
+				</GridPanel.gridColumnDefinitions>
+				<Label isDynamic="true" text="" classNames="fcls_sblabel" visible="true" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="lbInfo1"/>
+				<Label isDynamic="true" text="" classNames="fcls_sblabel" visible="true" gridItemLocation="0,1,1,1" fieldTable="formonly" identifier="lbInfo2"/>
+			</GridPanel>
+		</GridPanel>
+	</form.rootContainer>
+	<form.screenRecords>
+		<ScreenRecord identifier="sa_levmenu" fields="formonly.answer,formonly.l_id,formonly.l_name,formonly.l_prg" elements="10"/>
+		<ScreenRecord identifier="formonly" fields="formonly.answer,formonly.l_id,formonly.l_name,formonly.l_prg,formonly.more"/>
+	</form.screenRecords>
+</form>
+

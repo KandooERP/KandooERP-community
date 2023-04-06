@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form xmlns="http://namespaces.querix.com/2015/fglForms">
+	<form.rootContainer>
+		<GridPanel classNames="fcls_rootContainer" preferredSize="70qch,25qch" verticalAlignment="Stretch" horizontalAlignment="Stretch" fieldTable="" identifier="rootContainer">
+			<GridPanel.gridRowDefinitions>
+				<GridRowDefinition gridLengthValue=""/>
+				<GridRowDefinition gridLengthValue="100%"/>
+				<GridRowDefinition gridLengthValue=""/>
+				<GridRowDefinition gridLengthValue=""/>
+				<GridRowDefinition gridLengthValue=""/>
+			</GridPanel.gridRowDefinitions>
+			<GridPanel.gridColumnDefinitions>
+				<GridColumnDefinition gridLengthValue="100%"/>
+			</GridPanel.gridColumnDefinitions>
+			<GridPanel classNames="fcls_title_cnt" visible="true" verticalAlignment="Top" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="cntTitle">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="100%"/>
+					<GridColumnDefinition gridLengthValue=""/>
+				</GridPanel.gridColumnDefinitions>
+				<Label isDynamic="true" text="Debit Entry Batch Details" classNames="fcls_title_lb" visible="true" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="header_text"/>
+				<Label isDynamic="true" text="P240" classNames="fcls_title_lb" visible="true" gridItemLocation="1,0,1,1" fieldTable="" identifier="lbFormName"/>
+			</GridPanel>
+			<Table rowCount="8" preferredSize="74qch,8qch" gridItemLocation="0,1,1,1" fieldTable="" identifier="sr_debithead">
+				<TableColumn fieldTable="" identifier="tc_scroll_flag">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="2rem" gridMaxLength="2rem" gridMinLength="2rem"/>
+					</TableColumn.columnLength>
+					<CheckBox dataType="Char,,,," fieldTable="formonly" identifier="scroll_flag">
+						<CheckBox.checkedValue>
+							<StringLiteral stringValue="*"/>
+						</CheckBox.checkedValue>
+						<CheckBox.uncheckedValue>
+							<NullLiteral/>
+						</CheckBox.uncheckedValue>
+					</CheckBox>
+				</TableColumn>
+				<TableColumn text="No" fieldTable="" identifier="tc_line_num">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="10rem" gridMinLength="10rem" gridMaxLength="10rem"/>
+					</TableColumn.columnLength>
+					<TextField dataType="Char,,,," toolTip=" Current entry sequence number" comment=" Current entry sequence number" fieldTable="formonly" identifier="line_num"/>
+				</TableColumn>
+				<TableColumn text="Debit" fieldTable="" identifier="tc_debit_num">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="10rem" gridMinLength="10rem" gridMaxLength="10rem"/>
+					</TableColumn.columnLength>
+					<TextField noEntry="true" dataType="Integer,,,," fieldTable="debithead" identifier="debit_num"/>
+				</TableColumn>
+				<TableColumn text="Vendor" fieldTable="" identifier="tc_vend_code">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="10rem" gridMinLength="10rem" gridMaxLength="10rem"/>
+					</TableColumn.columnLength>
+					<TextField noEntry="true" dataType="Char,,,,8" fieldTable="debithead" identifier="vend_code"/>
+				</TableColumn>
+				<TableColumn text="Invoice No" fieldTable="" identifier="tc_debit_text">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="10rem" gridMinLength="10rem" gridMaxLength="10rem"/>
+					</TableColumn.columnLength>
+					<TextField noEntry="true" dataType="Char,,,,20" fieldTable="debithead" identifier="debit_text"/>
+				</TableColumn>
+				<TableColumn text="Distributed" fieldTable="" identifier="tc_dist_amt">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="10rem" gridMinLength="10rem" gridMaxLength="10rem"/>
+					</TableColumn.columnLength>
+					<TextField noEntry="true" dataType="Decimal,,,2,16" fieldTable="debithead" identifier="dist_amt"/>
+				</TableColumn>
+				<TableColumn text="Total Amount" fieldTable="" identifier="tc_total_amt">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="10rem" gridMinLength="10rem" gridMaxLength="10rem"/>
+					</TableColumn.columnLength>
+					<TextField noEntry="true" dataType="Decimal,,,2,16" fieldTable="debithead" identifier="total_amt"/>
+				</TableColumn>
+				<TableColumn resizable="true" visible="true" fieldTable="" identifier="tc_lb121">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="100%"/>
+					</TableColumn.columnLength>
+					<Label isDynamic="true" visible="true" fieldTable="" identifier="lb121"/>
+				</TableColumn>
+			</Table>
+			<GroupBox title="Totals" classNames="fcls_detail_gb_cnt" visible="true" verticalAlignment="Stretch" horizontalAlignment="Stretch" gridItemLocation="0,2,1,1" fieldTable="formonly" identifier="cntDetail3GroupBox">
+				<GridPanel classNames="fcls_detail_gb_cnt_sub,fcls_data_cnt,fcls_align_hstretch" visible="true" verticalAlignment="Top" horizontalAlignment="Stretch" fieldTable="formonly" identifier="cntDetail3GBSubGpLeft">
+					<GridPanel.gridRowDefinitions>
+						<GridRowDefinition gridLengthValue=""/>
+						<GridRowDefinition gridLengthValue=""/>
+						<GridRowDefinition gridLengthValue=""/>
+					</GridPanel.gridRowDefinitions>
+					<GridPanel.gridColumnDefinitions>
+						<GridColumnDefinition gridLengthValue="10rem" gridMinLength="10rem"/>
+						<GridColumnDefinition gridLengthValue="50%"/>
+						<GridColumnDefinition gridLengthValue="20%"/>
+						<GridColumnDefinition gridLengthValue="20%"/>
+					</GridPanel.gridColumnDefinitions>
+					<Label isDynamic="true" text="Totals" classNames="fcls_columnlabel_rev_cell,fcls_align_hstretch" visible="true" gridItemLocation="0,0,2,1" fieldTable="" identifier="lb103"/>
+					<Label isDynamic="true" text="Line" classNames="fcls_columnlabel_rev_cell,fcls_align_hstretch" visible="true" gridItemLocation="2,0,1,1" fieldTable="formonly" identifier="lb67"/>
+					<Label isDynamic="true" text="Amount" classNames="fcls_columnlabel_rev_cell,fcls_align_hstretch" visible="true" gridItemLocation="3,0,1,1" fieldTable="" identifier="lb96"/>
+					<Label isDynamic="true" text="Batch" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,1,1,1" fieldTable="formonly" identifier="lb49"/>
+					<TextField noEntry="true" dataType="Char,,,," preferredSize="9qch,1qch" gridItemLocation="1,1,1,1" fieldTable="formonly" identifier="batch_num"/>
+					<TextField noEntry="true" dataType="Char,,,," preferredSize="5qch,1qch" toolTip=" Current batch tally" gridItemLocation="2,1,1,1" comment=" Current batch tally" fieldTable="formonly" identifier="bat_linetotal"/>
+					<TextField noEntry="true" dataType="Char,,,," preferredSize="15qch,1qch" toolTip=" Current batch total" gridItemLocation="3,1,1,1" comment=" Current batch total" fieldTable="formonly" identifier="bat_amttotal"/>
+					<Label isDynamic="true" text="Control" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,2,1,1" fieldTable="formonly" identifier="lb63"/>
+					<TextField dataType="Char,,,," preferredSize="5qch,1qch" toolTip=" Enter control tally for this batch" gridItemLocation="2,2,1,1" comment=" Enter control tally for this batch" fieldTable="formonly" identifier="ctl_linetotal"/>
+					<TextField dataType="Char,,,," preferredSize="15qch,1qch" toolTip=" Enter control total for this batch" gridItemLocation="3,2,1,1" comment=" Enter control total for this batch" fieldTable="formonly" identifier="ctl_amttotal"/>
+				</GridPanel>
+			</GroupBox>
+			<GroupBox title="Default Values" classNames="fcls_detail_gb_cnt" visible="true" verticalAlignment="Stretch" horizontalAlignment="Stretch" gridItemLocation="0,3,1,1" fieldTable="" identifier="cntDetail4GroupBox">
+				<GridPanel classNames="fcls_detail_gb_cnt_sub,fcls_data_cnt,fcls_align_left" visible="true" verticalAlignment="Top" horizontalAlignment="Left" gridItemLocation="0,5,1,1" fieldTable="formonly" identifier="cntDetail4">
+					<GridPanel.gridRowDefinitions>
+						<GridRowDefinition gridLengthValue=""/>
+						<GridRowDefinition gridLengthValue=""/>
+						<GridRowDefinition gridLengthValue=""/>
+					</GridPanel.gridRowDefinitions>
+					<GridPanel.gridColumnDefinitions>
+						<GridColumnDefinition gridLengthValue="10rem"/>
+						<GridColumnDefinition gridLengthValue=""/>
+					</GridPanel.gridColumnDefinitions>
+					<Label isDynamic="true" text="Voucher Date" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,0,1,1" fieldTable="" identifier="lb115"/>
+					<Calendar format="dd/mm/yyyy" dataType="Date,,,," preferredSize="11qch,1qch" toolTip=" Enter default date for proceeding debits" gridItemLocation="1,0,1,1" comment=" Enter default date for proceeding debits" fieldTable="debithead" identifier="debit_date"/>
+					<Label isDynamic="true" text="Year" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,1,1,1" fieldTable="" identifier="lb116"/>
+					<ComboBox dataType="SmallInt,,,," preferredSize="5qch,1qch" toolTip=" Enter default fiscal year for proceeding debits" gridItemLocation="1,1,1,1" comment=" Enter default fiscal year for proceeding debits" fieldTable="debithead" identifier="year_num"/>
+					<Label isDynamic="true" text="Period" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,2,1,1" fieldTable="" identifier="lb120"/>
+					<ComboBox dataType="SmallInt,,,," preferredSize="4qch,1qch" toolTip=" Enter default fiscal period for proceeding debits" gridItemLocation="1,2,1,1" comment=" Enter default fiscal period for proceeding debits" fieldTable="debithead" identifier="period_num"/>
+				</GridPanel>
+			</GroupBox>
+			<GridPanel classNames="fcls_statusbar_cnt" visible="true" verticalAlignment="Bottom" gridItemLocation="0,4,1,1" fieldTable="formonly" identifier="cntStatusBar">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="100%"/>
+				</GridPanel.gridColumnDefinitions>
+				<Label isDynamic="true" text="" classNames="fcls_sblabel" visible="true" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="lbInfo1"/>
+				<Label isDynamic="true" text="" classNames="fcls_sblabel" visible="true" gridItemLocation="0,1,1,1" fieldTable="formonly" identifier="lbInfo2"/>
+			</GridPanel>
+		</GridPanel>
+	</form.rootContainer>
+	<form.screenRecords>
+		<ScreenRecord identifier="sr_debithead" fields="formonly.scroll_flag,formonly.line_num,debithead.debit_num,debithead.vend_code,debithead.debit_text,debithead.dist_amt,debithead.total_amt"/>
+		<ScreenRecord identifier="debithead" fields="debithead.debit_date,debithead.year_num,debithead.period_num,debithead.debit_num,debithead.vend_code,debithead.debit_text,debithead.dist_amt,debithead.total_amt"/>
+		<ScreenRecord identifier="formonly" fields="formonly.bat_linetotal,formonly.bat_amttotal,formonly.batch_num,formonly.ctl_linetotal,formonly.ctl_amttotal,formonly.scroll_flag,formonly.line_num"/>
+	</form.screenRecords>
+</form>
+

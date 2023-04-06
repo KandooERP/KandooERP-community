@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<fglBuildTarget xmlns="http://namespaces.querix.com/lyciaide/target" name="AR3" type="fgl-program">
+
+  <libraries>
+    <library name="lib_report" dynamic="false" location=""/>
+    <library name="lib_report_ar" dynamic="false" location=""/>
+    <library name="lib_tool_common" dynamic="false" location=""/>
+    <library name="lib_tool_A_AR_new" dynamic="false" location=""/>
+    <library name="lib_tool_A_AR_db" dynamic="false" location=""/>
+    <library name="lib_tool_db_common" dynamic="false" location=""/>
+      </libraries>
+
+  <sources type="fgl">
+    <file location="4gl/common/conv_curr.4gl"/>
+    <file location="4gl/ar/AR3.4gl"/>
+    <file location="4gl/common/glob_GLOBALS_constant.4gl"/>
+    <file location="4gl/ar/AR3_GLOBALS.4gl"/>
+    <file location="4gl/ar/AR_common.4gl"/>
+    <file location="4gl/ar/AR3_main.4gl"/>
+    <file location="4gl/common/glob_GLOBALS.4gl"/>
+    <file location="4gl/common/glob_GLOBALS_userDataTypes.4gl"/>
+      </sources>
+
+  <mediaFiles>
+    <file client="true" location="AR3.qxtheme" type="gui-theme-file"/>
+    <file client="true" location="AR3.css" type="other"/>
+  </mediaFiles>
+
+</fglBuildTarget>

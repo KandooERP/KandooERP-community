@@ -1,0 +1,93 @@
+A15_FRA {
++1-30 Days Overdue { "+ 1-30 jours de retard" }
++31-60 Days Overdue { "31 à 60 jours de retard" }
++61-90 Days Overdue { "+61 -90 jours de retard" }
+= Balance { "= Solde" }
+A second line for customer address { "2ème ligne d'adresse client" }
+Accept Backorders { "Accept. commandes en attente" }
+Account Status { "Situation du Compte" }
+Addr { "Adresse" }
+Address { "Adresse" }
+Available Credit { "Crédit disponible" }
+Balance { "Solde" }
+Bank Account { "Compte bancaire" }
+Carrier { "Transporteur" }
+City { "Ville" }
+Code { "Code" }
+Code representing the Country of this Customer { "Code pays de ce client" }
+Comments { "Commentaires" }
+Contact { "Contact" }
+Corporate { "Entreprise" }
+Country { "Pays" }
+Credit { "Crédit" }
+Credit Limit { "Limite de Crédit" }
+Currency { "Devise" }
+Current { "Actuel" }
+Customer { "Client" }
+Customer Code { "Code Client" }
+Customer Details { "Détails client" }
+Customer Scan { "Exploration client" }
+Customer Type { "Type de Client" }
+Customer type code { "Code type de client" }
+Date { "Date" }
+Description { "Description" }
+Details { "Détails" }
+Enter a Unique Transaction Number { "Saisir un numéro unique de transaction" }
+Exit { "Quitter" }
+Expiry Date { "Date d'expiration" }
+FILTER { "Premier" }
+Fax { "Fax" }
+Full Name or description of customer { "Nom complet ou description du client" }
+Group { "Groupe" }
+Group Code { "Code Groupe" }
+Hold Sales { "Ventes à livrer" }
+ID { "ID" }
+Invoice Address { "Adresse de facturation" }
+LOOKUP { "RECHERCHER" }
+Language { "Langue" }
+Language Code { "Code langue" }
+Name { "Nom" }
+Name of accounts contact person for the customer { "Nom de la personne de contact pour le compte du client" }
+No { "Non" }
+Notes { "Notes" }
+Other { "Autre" }
+PO Code { "Code Bon de commande" }
+Payment { "Paiement" }
+Payment Method { "Mode de paiement" }
+Payments { "Paiements" }
+Phone { "Téléphone" }
+Post Code { "Code Postal" }
+Postal code of customer { "Code postal du client" }
+Price Level { "Niveau de prix" }
+Prompt { "Invite" }
+REFRESH { "ACTUALISER" }
+Sales { "Ventes" }
+Sales Condition { "Condition de vente" }
+Salesperson { "Vendeur" }
+Salesperson resonsible for the customer { "Nom du commercial responsable pour ce client" }
+Save { "Enregistrer" }
+Shipping Address { "Adresse de livraison" }
+Shipping Code { "Code de livraison" }
+State { "Etat" }
+State/County { "Région" }
+State/Province { "Région" }
+Tax Code { "Code T.V.A." }
+Tax code applicable to the customer { "Code T.V.A applicable à ce client" }
+Taxation { "Imposition" }
+Telephone { "Telephone" }
+Term Code { "Code Conditions" }
+Territory { "Territoire" }
+The address of the customer { "L'adresse du client" }
+The customer city { "La ville du client" }
+The customer code of the corporate debtor the customer is attached to { "Le code client de la société débitrice à laquelle le client est rattaché." }
+The telephone number of the customer { "Numéro de téléphone du client" }
+Title { "Titre" }
+Trading terms applicable to the customer { "Conditions de paiement applicables à ce client" }
+Transaction Number Entry { "Saisie du numéro de transaction" }
+Type { "Type" }
+Value added tax registration number { "Code T.V.A. intracommunautaire" }
+Vat Reg No { "N° T.V.A. intracommunautaire" }
+Warehouse { "Dépôt" }
+actToolbarManager { "actToolbarManager" }
+salesperson comments { "Commentaires sur le vendeur" }
+}

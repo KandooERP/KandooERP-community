@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form xmlns="http://namespaces.querix.com/2015/fglForms">
+	<form.rootContainer>
+		<GridPanel classNames="fcls_rootContainer" verticalAlignment="Stretch" horizontalAlignment="Stretch" fieldTable="" identifier="rootContainer">
+			<GridPanel.gridRowDefinitions>
+				<GridRowDefinition gridLengthValue=""/>
+				<GridRowDefinition gridLengthValue=""/>
+				<GridRowDefinition gridLengthValue="100%"/>
+				<GridRowDefinition gridLengthValue=""/>
+			</GridPanel.gridRowDefinitions>
+			<GridPanel.gridColumnDefinitions>
+				<GridColumnDefinition gridLengthValue="100%"/>
+			</GridPanel.gridColumnDefinitions>
+			
+			
+			<GridPanel classNames="fcls_title_cnt" visible="true" verticalAlignment="Top" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="cntTitle">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="100%"/>
+					<GridColumnDefinition gridLengthValue=""/>
+				</GridPanel.gridColumnDefinitions>
+				<Label isDynamic="true" text="Sales Targets Maintenance" classNames="fcls_title_lb" visible="true" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="header_text"/>
+				<Label isDynamic="true" text="E210" classNames="fcls_title_lb" visible="true" gridItemLocation="1,0,1,1" fieldTable="" identifier="lbFormName"/>
+			</GridPanel>
+			
+			
+			<GridPanel classNames="fcls_detail_cnt,fcls_data_cnt" visible="true" verticalAlignment="Top" horizontalAlignment="Left" gridItemLocation="0,1,1,1" fieldTable="formonly" identifier="cntDetail1">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="" gridMinLength="10rem"/>
+					<GridColumnDefinition gridLengthValue=""/>
+					<GridColumnDefinition gridLengthValue=""/>
+				</GridPanel.gridColumnDefinitions>
+				<TextField dataType="SmallInt,,,," preferredSize="5qch,1qch" toolTip=" Enter year interval number " comment=" Enter year interval number " fieldTable="stattarget" identifier="year_num" gridItemLocation="1,0,1,1" classNames="fcls_length_05qch,fcls_align_left,fcls_data_widget">
+						<TextField.includes>
+							<RangeInclude>
+								<RangeInclude.fromValue>
+									<IntegerLiteral integerValue="1000"/>
+								</RangeInclude.fromValue>
+								<RangeInclude.toValue>
+									<IntegerLiteral integerValue="9999"/>
+								</RangeInclude.toValue>
+							</RangeInclude>
+						</TextField.includes>
+					</TextField>
+				<ComboBox toCase="Up" dataType="Char,,,,3" preferredSize="4qch,1qch" toolTip=" Type of statistic interval " comment=" Type of statistic interval " fieldTable="stattarget" identifier="type_code" gridItemLocation="1,1,1,1" classNames="list-show-text-value,field-show-value,fcls_length_05qch,fcls_align_left,fcls_data_widget"/>
+				<Label isDynamic="true" text="Year:" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,0,1,1" fieldTable="" identifier="lb51"/>
+				<Label isDynamic="true" text="Type:" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,1,1,1" fieldTable="" identifier="lb52"/>
+				<TextField noEntry="true" dataType="Char,,,," preferredSize="12qch,1qch" fieldTable="formonly" identifier="prompt_text" gridItemLocation="2,1,1,1"/>
+			</GridPanel>
+			<Table rowCount="13" preferredSize="75qch,13qch" fieldTable="" identifier="sr_stattarget" gridItemLocation="0,2,1,1">
+				<TableColumn fieldTable="" identifier="tc_scroll_flag">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="2rem" gridMaxLength="2rem" gridMinLength="2rem"/>
+					</TableColumn.columnLength>
+					<CheckBox dataType="Char,,,," fieldTable="formonly" identifier="scroll_flag">
+						<CheckBox.checkedValue>
+							<StringLiteral stringValue="*"/>
+						</CheckBox.checkedValue>
+						<CheckBox.uncheckedValue>
+							<NullLiteral/>
+						</CheckBox.uncheckedValue>
+					</CheckBox>
+				</TableColumn>
+				<TableColumn fieldTable="" identifier="tc_int_num" text="No">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="6.7%" gridMaxLength="5rem" gridMinLength="3rem"/>
+					</TableColumn.columnLength>
+					<TextField dataType="SmallInt,,,," toolTip=" Sequential number of interval for this year " comment=" Sequential number of interval for this year " fieldTable="stattarget" identifier="int_num"/>
+				</TableColumn>
+				<TableColumn fieldTable="" identifier="tc_int_text" text="Ref">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="14.7%" gridMaxLength="10rem" gridMinLength="5rem"/>
+					</TableColumn.columnLength>
+					<TextField toCase="Up" dataType="Char,,,,10" toolTip=" Reference text used to identify an interval " comment=" Reference text used to identify an interval " fieldTable="statint" identifier="int_text"/>
+				</TableColumn>
+				<TableColumn fieldTable="" identifier="tc_bdgt_type_code" text="Type">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="12.0%" gridMaxLength="10rem" gridMinLength="5rem"/>
+					</TableColumn.columnLength>
+					<TextField toCase="Up" dataType="Char,,,,8" toolTip=" Enter reference code (ie: area,territory,offer etc. ) - (W)" comment=" Enter reference code (ie: area,territory,offer etc. ) - (W)" fieldTable="stattarget" identifier="bdgt_type_code"/>
+				</TableColumn>
+				<TableColumn fieldTable="" identifier="tc_type_text" text="Description">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="33.3%" gridMaxLength="30rem" gridMinLength="15rem"/>
+					</TableColumn.columnLength>
+					<TextField dataType="Char,,,," fieldTable="formonly" identifier="type_text"/>
+				</TableColumn>
+				<TableColumn fieldTable="" identifier="tc_bdgt_ind" text="Budget">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="2.7%" gridMaxLength="5rem" gridMinLength="2rem"/>
+					</TableColumn.columnLength>
+					<TextField toCase="Up" dataType="Char,,,,1" toolTip=" Enter sales target number. (1) -&gt; (9) " comment=" Enter sales target number. (1) -&gt; (9) " fieldTable="stattarget" identifier="bdgt_ind">
+						<TextField.includes>
+							<ValueInclude>
+								<ValueInclude.value>
+									<NullLiteral/>
+								</ValueInclude.value>
+							</ValueInclude>
+							<RangeInclude>
+								<RangeInclude.fromValue>
+									<StringLiteral stringValue="1"/>
+								</RangeInclude.fromValue>
+								<RangeInclude.toValue>
+									<StringLiteral stringValue="9"/>
+								</RangeInclude.toValue>
+							</RangeInclude>
+						</TextField.includes>
+					</TextField>
+				</TableColumn>
+				<TableColumn fieldTable="" identifier="tc_bdgt_amt" text="Amount">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="14.7%" gridMaxLength="10rem" gridMinLength="5rem"/>
+					</TableColumn.columnLength>
+					<TextField dataType="Decimal,,,2,16" toolTip=" Enter sales target gross amount " comment=" Enter sales target gross amount " fieldTable="stattarget" identifier="bdgt_amt"/>
+				</TableColumn>
+				<TableColumn fieldTable="" identifier="tc_bdgt_qty" text="Quantity">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="13.3%" gridMaxLength="10rem" gridMinLength="5rem"/>
+					</TableColumn.columnLength>
+					<TextField dataType="Float,,,," toolTip=" Enter sales target selling units " comment=" Enter sales target selling units " fieldTable="stattarget" identifier="bdgt_qty"/>
+				</TableColumn>
+			</Table>
+			<GridPanel classNames="fcls_statusbar_cnt" visible="true" verticalAlignment="Top" gridItemLocation="0,3,1,1" fieldTable="formonly" identifier="cntStatusBar">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="100%"/>
+				</GridPanel.gridColumnDefinitions>
+				<Label isDynamic="true" text="" classNames="fcls_sblabel" visible="true" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="lbInfo1"/>
+				<Label isDynamic="true" text="" classNames="fcls_sblabel" visible="true" gridItemLocation="0,1,1,1" fieldTable="formonly" identifier="lbInfo2"/>
+			</GridPanel>
+		</GridPanel>
+	</form.rootContainer>
+	<form.screenRecords>
+		<ScreenRecord identifier="sr_stattarget" fields="formonly.scroll_flag,stattarget.int_num,statint.int_text,stattarget.bdgt_type_code,formonly.type_text,stattarget.bdgt_ind,stattarget.bdgt_amt,stattarget.bdgt_qty"/>
+		<ScreenRecord identifier="formonly" fields="formonly.scroll_flag,formonly.prompt_text,formonly.type_text"/>
+		<ScreenRecord identifier="statint" fields="statint.int_text"/>
+		<ScreenRecord identifier="stattarget" fields="stattarget.year_num,stattarget.type_code,stattarget.int_num,stattarget.bdgt_type_code,stattarget.bdgt_ind,stattarget.bdgt_amt,stattarget.bdgt_qty"/>
+	</form.screenRecords>
+</form>
+

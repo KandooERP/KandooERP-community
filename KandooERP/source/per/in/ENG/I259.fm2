@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form xmlns="http://namespaces.querix.com/2015/fglForms">
+	<form.rootContainer>
+		<GridPanel classNames="fcls_rootContainer" preferredSize="," verticalAlignment="Stretch" horizontalAlignment="Stretch" fieldTable="" identifier="rootContainer">
+			<GridPanel.gridRowDefinitions>
+				<GridRowDefinition gridLengthValue=""/>
+				<GridRowDefinition gridLengthValue=""/>
+				<GridRowDefinition gridLengthValue="100%"/>
+				<GridRowDefinition gridLengthValue=""/>
+			</GridPanel.gridRowDefinitions>
+			<GridPanel.gridColumnDefinitions>
+				<GridColumnDefinition gridLengthValue="100%"/>
+			</GridPanel.gridColumnDefinitions>
+			<GridPanel classNames="fcls_title_cnt" visible="true" verticalAlignment="Top" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="cntTitle">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="100%"/>
+					<GridColumnDefinition gridLengthValue=""/>
+				</GridPanel.gridColumnDefinitions>
+				<Label isDynamic="true" text="Product Blend/Kit Maintenance" classNames="fcls_title_lb" visible="true" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="header_text"/>
+				<Label isDynamic="true" text="I259" classNames="fcls_title_lb" visible="true" gridItemLocation="1,0,1,1" fieldTable="" identifier="lbFormName"/>
+			</GridPanel>
+			<GridPanel classNames="fcls_detail_cnt,fcls_data_cnt,fcls_align_left" visible="true" verticalAlignment="Top" horizontalAlignment="Left" gridItemLocation="0,1,1,1" fieldTable="formonly" identifier="cntDetail1">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="" gridMinLength="10rem"/>
+					<GridColumnDefinition gridLengthValue=""/>
+				</GridPanel.gridColumnDefinitions>
+				<ComboBox toCase="Up" dataType="Char,,,,15" preferredSize="16qch,1qch" toolTip=" Product code of this blend/kit (W)" gridItemLocation="1,0,1,1" fieldTable="kithead" comment=" Product code of this blend/kit (W)" identifier="kit_code" classNames="fcls_data_widget,fcls_align_left,fcls_length_30qch"/>
+				<TextField dataType="Char,,,,30" preferredSize="31qch,1qch" gridItemLocation="1,1,1,1" fieldTable="kithead" identifier="kit_text" classNames="fcls_data_widget,fcls_align_left,fcls_length_30qch"/>
+				<TextField noEntry="true" dataType="Char,,,," preferredSize="19qch,1qch" gridItemLocation="1,2,1,1" fieldTable="formonly" identifier="serialised" classNames="fcls_data_widget,fcls_align_left,fcls_length_30qch"/>
+				<Label isDynamic="true" text="Kit Type" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,3,1,1" fieldTable="" identifier="lb67"/>
+				<RadioGroup orientation="Vertical" visible="true" gridItemLocation="1,3,1,1" fieldTable="" identifier="type_ind">
+					<Radio title="Assemble Kit before using" identifier="type_ind_1">
+						<Radio.value>
+							<IntegerLiteral integerValue="1"/>
+						</Radio.value>
+					</Radio>
+					<Radio title="Include Lines when using" identifier="type_ind_2">
+						<Radio.value>
+							<IntegerLiteral integerValue="2"/>
+						</Radio.value>
+					</Radio>
+				</RadioGroup>
+				<Label isDynamic="true" text="Blend/Kit Code" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,0,1,1" fieldTable="" identifier="lb51"/>
+				<Label isDynamic="true" text="Description" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,1,1,1" fieldTable="" identifier="lb52"/>
+				<Label isDynamic="true" text="Lines" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,5,1,1" fieldTable="" identifier="lb65"/>
+				<RadioGroup orientation="Vertical" visible="true" gridItemLocation="1,5,1,1" fieldTable="" identifier="qtyper_ind">
+					<Radio title="Quantity Based" identifier="qtyper_ind_1">
+						<Radio.value>
+							<IntegerLiteral integerValue="1"/>
+						</Radio.value>
+					</Radio>
+					<Radio title="Percentage Based" identifier="qtyper_ind_2">
+						<Radio.value>
+							<IntegerLiteral integerValue="2"/>
+						</Radio.value>
+					</Radio>
+				</RadioGroup>
+			</GridPanel>
+			<Table rowCount="8" preferredSize="74qch,8qch" gridItemLocation="0,2,1,1" fieldTable="" identifier="sr_kitdetl">
+				<TableColumn fieldTable="" identifier="tc_scroll_flag">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="1rem" gridMinLength="1rem" gridMaxLength="1rem"/>
+					</TableColumn.columnLength>
+					<TextField dataType="Char,,,," fieldTable="formonly" identifier="scroll_flag"/>
+				</TableColumn>
+				<TableColumn text="Component" fieldTable="" identifier="tc_part_code">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="10rem" gridMinLength="10rem" gridMaxLength="10rem"/>
+					</TableColumn.columnLength>
+					<TextField toCase="Up" dataType="Char,,,,15" toolTip=" Product code of blend/kit component (W)" fieldTable="kitdetl" comment=" Product code of blend/kit component (W)" identifier="part_code"/>
+				</TableColumn>
+				<TableColumn text="Description" fieldTable="" identifier="tc_desc_text">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="30rem" gridMinLength="30rem" gridMaxLength="30rem"/>
+					</TableColumn.columnLength>
+					<TextField noEntry="true" dataType="Char,,,,36" fieldTable="product" identifier="desc_text"/>
+				</TableColumn>
+				<TableColumn text="Serial" fieldTable="" identifier="tc_serial_flag">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="10rem" gridMinLength="10rem" gridMaxLength="10rem"/>
+					</TableColumn.columnLength>
+					<TextField dataType="Char,,,,1" toolTip=" Is this product serialised Y/N" fieldTable="product" comment=" Is this product serialised Y/N" identifier="serial_flag">
+						<TextField.includes>
+							<ValueInclude>
+								<ValueInclude.value>
+									<StringLiteral stringValue="Y"/>
+								</ValueInclude.value>
+							</ValueInclude>
+							<ValueInclude>
+								<ValueInclude.value>
+									<StringLiteral stringValue="N"/>
+								</ValueInclude.value>
+							</ValueInclude>
+						</TextField.includes>
+					</TextField>
+				</TableColumn>
+				<TableColumn text="Percentage" fieldTable="" identifier="tc_kit_per">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="10rem" gridMinLength="10rem" gridMaxLength="10rem"/>
+					</TableColumn.columnLength>
+					<TextField dataType="Decimal,,,3,6" toolTip=" Percentage of blend/kit made up by this component" fieldTable="kitdetl" comment=" Percentage of blend/kit made up by this component" identifier="kit_per"/>
+				</TableColumn>
+				<TableColumn text="Quantity" fieldTable="" identifier="tc_kit_qty">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="10rem" gridMinLength="10rem" gridMaxLength="10rem"/>
+					</TableColumn.columnLength>
+					<TextField dataType="Float,,,," toolTip=" Quantity of this component in blend/kit" fieldTable="kitdetl" comment=" Quantity of this component in blend/kit" identifier="kit_qty"/>
+				</TableColumn>
+				<TableColumn resizable="true" visible="true" fieldTable="" identifier="tc_lbEOL">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="100%"/>
+					</TableColumn.columnLength>
+					<Label isDynamic="true" visible="true" fieldTable="" identifier="lbEOL"/>
+				</TableColumn>
+			</Table>
+			<GridPanel classNames="fcls_statusbar_cnt" visible="true" verticalAlignment="Top" gridItemLocation="0,3,1,1" fieldTable="formonly" identifier="cntStatusBar">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="100%"/>
+				</GridPanel.gridColumnDefinitions>
+				<Label isDynamic="true" text="" classNames="fcls_sblabel" visible="true" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="lbInfo1"/>
+				<Label isDynamic="true" text="" classNames="fcls_sblabel" visible="true" gridItemLocation="0,1,1,1" fieldTable="formonly" identifier="lbInfo2"/>
+			</GridPanel>
+		</GridPanel>
+	</form.rootContainer>
+	<form.screenRecords>
+		<ScreenRecord identifier="sr_kitdetl" fields="formonly.scroll_flag,kitdetl.part_code,product.desc_text,product.serial_flag,kitdetl.kit_per,kitdetl.kit_qty" elements="8"/>
+		<ScreenRecord identifier="formonly" fields="formonly.scroll_flag,formonly.serialised,qtyper_ind_1,null,null"/>
+		<ScreenRecord identifier="kitdetl" fields="kitdetl.part_code,kitdetl.kit_per,kitdetl.kit_qty"/>
+		<ScreenRecord identifier="kithead" fields="kithead.kit_code,kithead.kit_text,kithead.type_ind,kithead.qtyper_ind"/>
+		<ScreenRecord identifier="product" fields="product.serial_flag,product.desc_text"/>
+	</form.screenRecords>
+</form>
+

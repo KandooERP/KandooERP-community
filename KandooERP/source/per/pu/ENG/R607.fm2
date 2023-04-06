@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form xmlns="http://namespaces.querix.com/2015/fglForms">
+	<form.rootContainer>
+		<GridPanel classNames="fcls_rootContainer" preferredSize="807.0,472.0" verticalAlignment="Stretch" horizontalAlignment="Stretch" fieldTable="" identifier="rootContainer">
+			<GridPanel.gridRowDefinitions>
+				<GridRowDefinition gridLengthValue=""/>
+				<GridRowDefinition gridLengthValue="100%"/>
+				<GridRowDefinition gridLengthValue=""/>
+				<GridRowDefinition gridLengthValue=""/>
+			</GridPanel.gridRowDefinitions>
+			<GridPanel.gridColumnDefinitions>
+				<GridColumnDefinition gridLengthValue="100%"/>
+			</GridPanel.gridColumnDefinitions>
+			<GridPanel classNames="fcls_title_cnt" visible="true" verticalAlignment="Top" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="cntTitle">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="100%"/>
+					<GridColumnDefinition gridLengthValue=""/>
+				</GridPanel.gridColumnDefinitions>
+				<Label isDynamic="true" text="Purchase Order Line Inquiry" classNames="fcls_title_lb" visible="true" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="header_text"/>
+				<Label isDynamic="true" text="R607" classNames="fcls_title_lb" visible="true" gridItemLocation="1,0,1,1" fieldTable="" identifier="lbFormName"/>
+			</GridPanel>
+			<Table rowCount="12" preferredSize="73qch,12qch" gridItemLocation="0,1,1,1" fieldTable="" identifier="sr_purchdetl">
+				<TableColumn fieldTable="" identifier="c">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="2rem" gridMaxLength="2rem" gridMinLength="2rem"/>
+					</TableColumn.columnLength>
+					<CheckBox dataType="Char,,,," fieldTable="formonly" identifier="scroll_flag">
+						<CheckBox.checkedValue>
+							<StringLiteral stringValue="*"/>
+						</CheckBox.checkedValue>
+						<CheckBox.uncheckedValue>
+							<NullLiteral/>
+						</CheckBox.uncheckedValue>
+					</CheckBox>
+				</TableColumn>
+				<TableColumn text="Line" fieldTable="" identifier="b">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="10rem" gridMaxLength="10rem" gridMinLength="10rem"/>
+					</TableColumn.columnLength>
+					<TextField toCase="Up" dataType="SmallInt,,,," toolTip=" Purchase order line number" fieldTable="purchdetl" comment=" Purchase order line number" identifier="line_num"/>
+				</TableColumn>
+				<TableColumn text="Type" fieldTable="" identifier="a">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="10rem" gridMaxLength="10rem" gridMinLength="10rem"/>
+					</TableColumn.columnLength>
+					<TextField toCase="Up" dataType="Char,,,,1" toolTip=" The Order Type:  G-General, I-Inventory, J-Job Management" fieldTable="purchdetl" comment=" The Order Type:  G-General, I-Inventory, J-Job Management" identifier="type_ind"/>
+				</TableColumn>
+				<TableColumn text="Reference" fieldTable="" identifier="f004">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="10rem" gridMaxLength="10rem" gridMinLength="10rem"/>
+					</TableColumn.columnLength>
+					<TextField dataType="Char,,,,25" toolTip=" Item/Reference text" fieldTable="purchdetl" comment=" Item/Reference text" identifier="ref_text"/>
+				</TableColumn>
+				<TableColumn text="Quantity" fieldTable="" identifier="f005">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="10rem" gridMaxLength="10rem" gridMinLength="10rem"/>
+					</TableColumn.columnLength>
+					<TextField noEntry="true" dataType="Float,,,," toolTip=" The quantity of these goods ordered" fieldTable="poaudit" comment=" The quantity of these goods ordered" identifier="order_qty"/>
+				</TableColumn>
+				<TableColumn text="Code" fieldTable="" identifier="f01">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="10rem" gridMaxLength="10rem" gridMinLength="10rem"/>
+					</TableColumn.columnLength>
+					<TextField toCase="Up" noEntry="true" dataType="Char,,,,4" fieldTable="purchdetl" identifier="uom_code"/>
+				</TableColumn>
+				<TableColumn text="Line Total Cost" fieldTable="" identifier="f014">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="10rem" gridMaxLength="10rem" gridMinLength="10rem"/>
+					</TableColumn.columnLength>
+					<TextField noEntry="true" dataType="Decimal,,,2,16" toolTip=" The total for this line" fieldTable="poaudit" comment=" The total for this line" identifier="line_total_amt"/>
+				</TableColumn>
+				<TableColumn resizable="true" visible="true" identifier="tc_lbEOL">
+					<Label isDynamic="true" visible="true" identifier="lbEOL"/>
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="100%"/>
+					</TableColumn.columnLength>
+				</TableColumn>
+			</Table>
+			<GridPanel classNames="fcls_detail_cnt,fcls_data_cnt,fcls_align_hstretch" visible="true" verticalAlignment="Top" horizontalAlignment="Left" gridItemLocation="0,2,1,1" fieldTable="formonly" identifier="cntDetail1">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="75%"/>
+					<GridColumnDefinition gridLengthValue="6%"/>
+					<GridColumnDefinition gridLengthValue="19.1781%"/>
+				</GridPanel.gridColumnDefinitions>
+				<TextField dataType="Char,,,,40" classNames="fcls_data_widget,fcls_align_hstretch" preferredSize="41qch,1qch" toolTip=" The description of this line of the P.O." gridItemLocation="0,0,1,1" fieldTable="purchdetl" comment=" The description of this line of the P.O." identifier="desc_text"/>
+				<Label text="Order Total" gridItemLocation="1,0,1,1" fieldTable="" identifier="label6"/>
+				<TextField noEntry="true" dataType="Char,,,," classNames="fcls_data_widget,fcls_align_hstretch" preferredSize="14qch,1qch" toolTip=" The total for this purchase order" gridItemLocation="2,0,1,1" fieldTable="formonly" comment=" The total for this purchase order" identifier="order_total"/>
+				<Label text="Available Credit" gridItemLocation="1,1,1,1" fieldTable="" identifier="label7"/>
+				<TextField noEntry="true" dataType="Char,,,," classNames="fcls_data_widget,fcls_align_hstretch" preferredSize="14qch,1qch" toolTip=" The credit available from this vendor" gridItemLocation="2,1,1,1" fieldTable="formonly" comment=" The credit available from this vendor" identifier="credit_avail"/>
+			</GridPanel>
+			<GridPanel classNames="fcls_statusbar_cnt" visible="true" verticalAlignment="Top" gridItemLocation="0,3,1,1" fieldTable="formonly" identifier="cntStatusBar">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="100%"/>
+				</GridPanel.gridColumnDefinitions>
+				<Label isDynamic="true" text="" classNames="fcls_sblabel" visible="true" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="lbInfo1"/>
+				<Label isDynamic="true" text="" classNames="fcls_sblabel" visible="true" gridItemLocation="0,1,1,1" fieldTable="formonly" identifier="lbInfo2"/>
+			</GridPanel>
+		</GridPanel>
+	</form.rootContainer>
+	<form.screenRecords>
+		<ScreenRecord identifier="sr_purchdetl" fields="scroll_flag,line_num,type_ind,ref_text,order_qty,uom_code,line_total_amt" elements="12"/>
+		<ScreenRecord identifier="formonly" fields="scroll_flag,order_total,credit_avail"/>
+		<ScreenRecord identifier="poaudit" fields="order_qty,line_total_amt"/>
+		<ScreenRecord identifier="purchdetl" fields="type_ind,line_num,uom_code,desc_text,ref_text"/>
+	</form.screenRecords>
+</form>
+

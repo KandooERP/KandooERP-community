@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<fglBuildTarget xmlns="http://namespaces.querix.com/lyciaide/target" name="lib_common_wind" type="fgl-library">
+
+  <sources type="fgl">
+    <file location="4gl/common/clntwind.4gl"/>
+    <file location="4gl/common/cinwind.4gl"/>
+    <file location="4gl/common/glob_GLOBALS_constant.4gl"/>
+    <file location="4gl/common/circwind.4gl"/>
+    <file location="4gl/common/glob_GLOBALS.4gl"/>
+    <file location="4gl/common/glob_GLOBALS_userDataTypes.4gl"/>
+    <file location="4gl/common/collwind.4gl"/>
+    <file location="4gl/common/cigdwind.4gl"/>
+    <file location="4gl/common/cicdwind.4gl"/>
+    <file location="4gl/common/cistwind.4gl"/>
+    <file location="4gl/common/ccorpwind.4gl"/>
+    <file location="4gl/common/cioiwind.4gl"/>
+    <file location="4gl/common/cishwind.4gl"/>
+  </sources>
+
+  <sources type="form">
+    <file location="per/ar/ENG/A678.fm2"/>
+    <file location="per/ar/ENG/A607.fm2"/>
+    <file location="per/ar/ENG/A206.fm2"/>
+    <file location="per/ar/ENG/A158.fm2"/>
+    <file location="per/ar/ENG/A205a.fm2"/>
+    <file location="per/ar/ENG/A233.fm2"/>
+    <file location="per/ar/ENG/A602.fm2"/>
+    <file location="per/ar/ENG/A699.fm2"/>
+    <file location="per/ar/ENG/A165.fm2"/>
+    <file location="per/ar/ENG/A108.fm2"/>
+    <file location="per/wo/W229.fm2"/>
+    <file location="per/ar/ENG/A643.fm2"/>
+    <file location="per/wo/W232.fm2"/>
+    <file location="per/ar/ENG/A111.fm2"/>
+    <file location="per/ar/ENG/A234.fm2"/>
+    <file location="per/ar/ENG/A105.fm2"/>
+    <file location="per/ar/ENG/A107.fm2"/>
+  </sources>
+
+  <buildConfiguration name="development">
+    <additions>
+      <sources type="fgl">
+        <file location="4gl/common/cpartwind.4gl"/>
+      </sources>
+
+    </additions>
+    <exclusions>
+    </exclusions>
+  </buildConfiguration>
+
+</fglBuildTarget>

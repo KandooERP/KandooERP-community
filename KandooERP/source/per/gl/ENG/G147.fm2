@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form xmlns="http://namespaces.querix.com/2015/fglForms">
+	<form.rootContainer>
+		<GridPanel classNames="fcls_rootContainer" verticalAlignment="Stretch" horizontalAlignment="Stretch" fieldTable="" identifier="rootContainer">
+			<GridPanel.gridRowDefinitions>
+				<GridRowDefinition gridLengthValue=""/>
+				<GridRowDefinition gridLengthValue="100%"/>
+				<GridRowDefinition gridLengthValue=""/>
+			</GridPanel.gridRowDefinitions>
+			<GridPanel.gridColumnDefinitions>
+				<GridColumnDefinition gridLengthValue="100%"/>
+			</GridPanel.gridColumnDefinitions>
+			<GridPanel classNames="fcls_title_cnt" visible="true" verticalAlignment="Top" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="cntTitle">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="100%"/>
+					<GridColumnDefinition gridLengthValue=""/>
+				</GridPanel.gridColumnDefinitions>
+				<Label isDynamic="true" text="Account Verifier" classNames="fcls_title_lb" visible="true" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="header_text"/>
+				<Label isDynamic="true" text="G147" classNames="fcls_title_lb" visible="true" gridItemLocation="1,0,1,1" fieldTable="" identifier="lbFormName"/>
+			</GridPanel>
+			<Table rowCount="10" location="2qch,2qch" preferredSize="52qch,13qch" gridItemLocation="0,1,1,1" fieldTable="" identifier="sr_structure">
+				<TableColumn text="Start Pos." fieldTable="" identifier="a1">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="20%" gridMaxLength="10rem" gridMinLength="5rem"/>
+					</TableColumn.columnLength>
+					<TextField noEntry="true" dataType="SmallInt,,,," toolTip="Start position of the Code" comment="Start position of the Code" fieldTable="structure" identifier="start_num"/>
+				</TableColumn>
+				<TableColumn text="Length" fieldTable="" identifier="a2">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="20%" gridMaxLength="10rem" gridMinLength="5rem"/>
+					</TableColumn.columnLength>
+					<TextField noEntry="true" dataType="SmallInt,,,," toolTip="Length of the Code" comment="Length of the Code" fieldTable="structure" identifier="length_num"/>
+				</TableColumn>
+				<TableColumn text="Field Description" fieldTable="" identifier="f002">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="35%" gridMaxLength="40rem" gridMinLength="20rem"/>
+					</TableColumn.columnLength>
+					<TextField noEntry="true" dataType="Char,,,,20" toolTip=" Title of this field in the GL " comment=" Title of this field in the GL " fieldTable="structure" identifier="desc_text"/>
+				</TableColumn>
+				<TableColumn text="Code" fieldTable="" identifier="f003">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="25%" gridMaxLength="20rem" gridMinLength="10rem"/>
+					</TableColumn.columnLength>
+					<TextField toCase="Up" dataType="Char,,,," toolTip=" The valid flex segment" comment=" The valid flex segment" fieldTable="account" identifier="flex_code"/>
+				</TableColumn>
+			</Table>
+			<GridPanel classNames="fcls_statusbar_cnt" visible="true" verticalAlignment="Top" gridItemLocation="0,2,1,1" fieldTable="formonly" identifier="cntStatusBar">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="100%"/>
+				</GridPanel.gridColumnDefinitions>
+				<Label isDynamic="true" text="" classNames="fcls_sblabel" visible="true" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="lbInfo1"/>
+				<Label isDynamic="true" text="" classNames="fcls_sblabel" visible="true" gridItemLocation="0,1,1,1" fieldTable="formonly" identifier="lbInfo2"/>
+			</GridPanel>
+		</GridPanel>
+	</form.rootContainer>
+	<form.screenRecords>
+		<ScreenRecord identifier="sr_structure" fields="start_num,length_num,desc_text,flex_code"/>
+		<ScreenRecord identifier="formonly" fields="flex_code"/>
+		<ScreenRecord identifier="structure" fields="start_num,length_num,desc_text"/>
+	</form.screenRecords>
+</form>
+

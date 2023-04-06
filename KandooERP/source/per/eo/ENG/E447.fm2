@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form xmlns="http://namespaces.querix.com/2015/fglForms">
+	<form.rootContainer>
+		<GridPanel classNames="fcls_rootContainer" verticalAlignment="Top" horizontalAlignment="Left" fieldTable="" identifier="rootContainer">
+			<GridPanel.gridRowDefinitions>
+				<GridRowDefinition gridLengthValue=""/>
+				<GridRowDefinition gridLengthValue=""/>
+				<GridRowDefinition gridLengthValue=""/>
+				<GridRowDefinition gridLengthValue=""/>
+				<GridRowDefinition gridLengthValue=""/>
+				<GridRowDefinition gridLengthValue=""/>
+				<GridRowDefinition gridLengthValue=""/>
+			</GridPanel.gridRowDefinitions>
+			<GridPanel.gridColumnDefinitions>
+				<GridColumnDefinition gridLengthValue="100%"/>
+			</GridPanel.gridColumnDefinitions>
+			<GridPanel classNames="fcls_title_cnt" visible="true" verticalAlignment="Top" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="cntTitle">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="100%"/>
+					<GridColumnDefinition gridLengthValue=""/>
+				</GridPanel.gridColumnDefinitions>
+				<Label isDynamic="true" text="Order Summation" classNames="fcls_title_lb" visible="true" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="header_text"/>
+				<Label isDynamic="true" text="E447" classNames="fcls_title_lb" visible="true" gridItemLocation="1,0,1,1" fieldTable="" identifier="lbFormName"/>
+			</GridPanel>
+			<GridPanel classNames="fcls_detail_cnt,fcls_data_cnt" visible="true" verticalAlignment="Top" horizontalAlignment="Left" gridItemLocation="0,1,1,1" fieldTable="formonly" identifier="cntDetail1">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="" gridMinLength="10rem"/>
+					<GridColumnDefinition gridLengthValue=""/>
+					<GridColumnDefinition gridLengthValue=""/>
+				</GridPanel.gridColumnDefinitions>
+				<Label isDynamic="true" text="Customer Code" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="lb57"/>
+				<TextField toCase="Up" noEntry="true" dataType="Char,,,,8" preferredSize="9qch,1qch" fieldTable="orderhead" identifier="cust_code" gridItemLocation="1,0,1,1" classNames="fcls_data_widget,fcls_length_10qch"/>
+				<TextField noEntry="true" dataType="VarChar,,,0,14" preferredSize="31qch,1qch" fieldTable="customer" identifier="name_text" gridItemLocation="2,0,1,1" classNames="fcls_data_widget,fcls_length_30qch"/>
+				<Label isDynamic="true" text="Order Number" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,1,1,1" fieldTable="" identifier="lb73"/>
+				<TextField noEntry="true" dataType="Integer,,,," preferredSize="8qch,1qch" fieldTable="orderhead" identifier="order_num" gridItemLocation="1,1,1,1" classNames="fcls_data_widget,fcls_length_10qch"/>
+			</GridPanel>
+			<GroupBox title="Credit &amp; Balance" classNames="fcls_detail_gb_cnt" visible="true" verticalAlignment="Stretch" horizontalAlignment="Stretch" gridItemLocation="0,2,1,1" fieldTable="formonly" identifier="cntDetail2GroupBox">
+				<GridPanel classNames="fcls_detail_gb_cnt_sub,fcls_detail_cnt_sub,fcls_data_cnt" visible="true" verticalAlignment="Top" horizontalAlignment="Left" fieldTable="formonly" identifier="cntDetail2Sub">
+					<GridPanel.gridRowDefinitions>
+						<GridRowDefinition gridLengthValue=""/>
+						<GridRowDefinition gridLengthValue=""/>
+					</GridPanel.gridRowDefinitions>
+					<GridPanel.gridColumnDefinitions>
+						<GridColumnDefinition gridLengthValue="" gridMinLength="10rem"/>
+						<GridColumnDefinition gridLengthValue=""/>
+						<GridColumnDefinition gridLengthValue="" gridMinLength="10rem"/>
+						<GridColumnDefinition gridLengthValue=""/>
+					</GridPanel.gridColumnDefinitions>
+					<Label isDynamic="true" text="Balance" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="lb47"/>
+					<TextField noEntry="true" dataType="Decimal,,,2,16" preferredSize="13qch,1qch" fieldTable="customer" identifier="bal_amt" gridItemLocation="1,0,1,1" classNames="fcls_data_widget,fcls_length_10qch"/>
+					<Label isDynamic="true" text="Credit Limit" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="2,0,1,1" fieldTable="" identifier="lb142"/>
+					<TextField noEntry="true" dataType="Decimal,,,2,16" preferredSize="13qch,1qch" fieldTable="customer" identifier="cred_limit_amt" gridItemLocation="3,0,1,1" classNames="fcls_data_widget,fcls_length_10qch"/>
+					<Label isDynamic="true" text="Highest Balance" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,1,1,1" fieldTable="formonly" identifier="lb46"/>
+					<TextField noEntry="true" dataType="Decimal,,,2,16" preferredSize="13qch,1qch" fieldTable="customer" identifier="highest_bal_amt" gridItemLocation="1,1,1,1" classNames="fcls_data_widget,fcls_length_10qch"/>
+					<Label isDynamic="true" text="Last Sale Date" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="2,1,1,1" fieldTable="" identifier="lb143"/>
+					<Calendar format="dd/mm/yyyy" noEntry="true" dataType="Date,,,," preferredSize="11qch,1qch" fieldTable="customer" identifier="last_inv_date" gridItemLocation="3,1,1,1" classNames="fcls_data_widget,fcls_length_10qch"/>
+				</GridPanel>
+			</GroupBox>
+			<GroupBox title="Line Item" classNames="fcls_detail_gb_cnt" visible="true" verticalAlignment="Stretch" horizontalAlignment="Stretch" gridItemLocation="0,3,1,1" fieldTable="formonly" identifier="cntDetail3GroupBox">
+				<GridPanel classNames="fcls_detail_gb_cnt_sub,fcls_detail_cnt_sub,fcls_data_cnt" visible="true" verticalAlignment="Top" horizontalAlignment="Left" fieldTable="formonly" identifier="cntDetail3Sub">
+					<GridPanel.gridRowDefinitions>
+						<GridRowDefinition gridLengthValue=""/>
+						<GridRowDefinition gridLengthValue=""/>
+						<GridRowDefinition gridLengthValue=""/>
+					</GridPanel.gridRowDefinitions>
+					<GridPanel.gridColumnDefinitions>
+						<GridColumnDefinition gridLengthValue="" gridMinLength="10rem"/>
+						<GridColumnDefinition gridLengthValue=""/>
+						<GridColumnDefinition gridLengthValue="" gridMinLength="10rem"/>
+						<GridColumnDefinition gridLengthValue=""/>
+					</GridPanel.gridColumnDefinitions>
+					<Label isDynamic="true" text="Line Item Total" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="lb48"/>
+					<TextField noEntry="true" dataType="Decimal,,,2,16" preferredSize="12qch,1qch" fieldTable="orderhead" identifier="goods_amt" gridItemLocation="1,0,1,1" classNames="fcls_data_widget,fcls_length_10qch"/>
+					<Label isDynamic="true" text="Handling" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="2,0,1,1" fieldTable="" identifier="lb147"/>
+					<TextField dataType="Decimal,,,2,16" preferredSize="12qch,1qch" toolTip="Indicates total labour charge, if any, for this sales order" comment="Indicates total labour charge, if any, for this sales order" fieldTable="orderhead" identifier="hand_amt" gridItemLocation="3,0,1,1" classNames="fcls_data_widget,fcls_length_10qch"/>
+					<Label isDynamic="true" text="Freight" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,1,1,1" fieldTable="formonly" identifier="lb49"/>
+					<TextField dataType="Decimal,,,2,16" preferredSize="12qch,1qch" toolTip="Enter the total amount of freight charges, if any" comment="Enter the total amount of freight charges, if any" fieldTable="orderhead" identifier="freight_amt" gridItemLocation="1,1,1,1" classNames="fcls_data_widget,fcls_length_10qch"/>
+					<Label isDynamic="true" text="Sales Tax" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="2,1,1,1" fieldTable="" identifier="lb148"/>
+					<TextField dataType="Decimal,,,2,16" preferredSize="12qch,1qch" toolTip="Tax as calculated according to tax code already established" comment="Tax as calculated according to tax code already established" fieldTable="orderhead" identifier="tax_amt" gridItemLocation="3,1,1,1" classNames="fcls_data_widget,fcls_length_10qch"/>
+					<Label isDynamic="true" text="Total Amount" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,2,1,1" fieldTable="formonly" identifier="lb63"/>
+					<TextField dataType="Decimal,,,2,16" preferredSize="12qch,1qch" toolTip="Total amount of sales order - generated by system" comment="Total amount of sales order - generated by system" fieldTable="orderhead" identifier="total_amt" gridItemLocation="1,2,1,1" classNames="fcls_data_widget,fcls_length_10qch"/>
+					<Label isDynamic="true" text="Possible Discount" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="2,2,1,1" fieldTable="" identifier="lb149"/>
+					<TextField dataType="Decimal,,,2,16" preferredSize="12qch,1qch" toolTip="Discount potential, if paid with the time defined by your specific term code" comment="Discount potential, if paid with the time defined by your specific term code" fieldTable="orderhead" identifier="disc_amt" gridItemLocation="3,2,1,1" classNames="fcls_data_widget,fcls_length_10qch"/>
+				</GridPanel>
+			</GroupBox>
+			<GroupBox title="Shipping" classNames="fcls_detail_gb_cnt" visible="true" verticalAlignment="Stretch" horizontalAlignment="Stretch" gridItemLocation="0,4,1,1" fieldTable="" identifier="cntDetail4GroupBox">
+				<GridPanel classNames="fcls_detail_gb_cnt_sub,fcls_detail_cnt_sub,fcls_data_cnt" visible="true" verticalAlignment="Top" horizontalAlignment="Left" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="cntDetail4Sub">
+					<GridPanel.gridRowDefinitions>
+						<GridRowDefinition gridLengthValue=""/>
+						<GridRowDefinition gridLengthValue=""/>
+						<GridRowDefinition gridLengthValue=""/>
+					</GridPanel.gridRowDefinitions>
+					<GridPanel.gridColumnDefinitions>
+						<GridColumnDefinition gridLengthValue="" gridMinLength="10rem"/>
+						<GridColumnDefinition gridLengthValue=""/>
+						<GridColumnDefinition gridLengthValue="" gridMinLength="10rem"/>
+						<GridColumnDefinition gridLengthValue=""/>
+					</GridPanel.gridColumnDefinitions>
+					<Label isDynamic="true" text="Date Shipped" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,0,1,1" fieldTable="" identifier="lb115"/>
+					<Calendar format="dd/mm/yyyy" dataType="Date,,,," preferredSize="11qch,1qch" toolTip="Indicates the date shipment of order was made" comment="Indicates the date shipment of order was made" fieldTable="orderhead" identifier="ship_date" gridItemLocation="1,0,1,1" classNames="fcls_data_widget,fcls_length_10qch"/>
+					<Label isDynamic="true" text="F.O.B. Point" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="2,0,1,1" fieldTable="" identifier="lb152"/>
+					<TextField dataType="Char,,,,20" preferredSize="21qch,1qch" toolTip="Enter the Free On Board shipping point, usually your outgoing location" comment="Enter the Free On Board shipping point, usually your outgoing location" fieldTable="orderhead" identifier="fob_text" gridItemLocation="3,0,1,1" classNames="fcls_data_widget,fcls_length_10qch"/>
+					<Label isDynamic="true" text="Ship Via" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,1,1,1" fieldTable="" identifier="lb116"/>
+					<TextField dataType="Char,,,,60" preferredSize="61qch,1qch" toolTip="Indicates how order is to be shipped, i.e. TNT, Comet, Kwikasair" comment="Indicates how order is to be shipped, i.e. TNT, Comet, Kwikasair" fieldTable="orderhead" identifier="ship1_text" gridItemLocation="1,1,3,1" horizontalAlignment="Stretch"/>
+					<TextField dataType="Char,,,,60" preferredSize="61qch,1qch" toolTip="A second shipment method line if necessary" comment="A second shipment method line if necessary" fieldTable="orderhead" identifier="ship2_text" gridItemLocation="1,2,3,1" horizontalAlignment="Stretch"/>
+				</GridPanel>
+			</GroupBox>
+			<GroupBox title="Comments &amp; Revision" classNames="fcls_detail_gb_cnt" visible="true" verticalAlignment="Stretch" horizontalAlignment="Stretch" gridItemLocation="0,5,1,1" fieldTable="" identifier="cntDetail5GroupBox">
+				<GridPanel classNames="fcls_detail_gb_cnt_sub,fcls_detail_cnt_sub,fcls_data_cnt" visible="true" verticalAlignment="Top" horizontalAlignment="Left" fieldTable="" identifier="cntDetail5Sub">
+					<GridPanel.gridRowDefinitions>
+						<GridRowDefinition gridLengthValue=""/>
+						<GridRowDefinition gridLengthValue=""/>
+					</GridPanel.gridRowDefinitions>
+					<GridPanel.gridColumnDefinitions>
+						<GridColumnDefinition gridLengthValue="" gridMinLength="10rem"/>
+						<GridColumnDefinition gridLengthValue=""/>
+						<GridColumnDefinition gridLengthValue=""/>
+						<GridColumnDefinition gridLengthValue=""/>
+					</GridPanel.gridColumnDefinitions>
+					<Label isDynamic="true" text="Comment" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,0,1,1" fieldTable="" identifier="lb128"/>
+					<TextField dataType="Char,,,,30" preferredSize="31qch,1qch" toolTip="Used to record any specific detail about this sales order" comment="Used to record any specific detail about this sales order" fieldTable="orderhead" identifier="com1_text" gridItemLocation="1,0,1,1" classNames="fcls_data_widget,fcls_length_30qch"/>
+					<Label isDynamic="true" text="Revision Date" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="2,0,1,1" fieldTable="" identifier="lb161"/>
+					<Calendar format="dd/mm/yyyy" noEntry="true" dataType="Date,,,," preferredSize="11qch,1qch" fieldTable="orderhead" identifier="rev_date" gridItemLocation="3,0,1,1" classNames="fcls_data_widget,fcls_length_10qch"/>
+					<TextField dataType="Char,,,,30" preferredSize="31qch,1qch" toolTip="A second comments line to be used for recording sales order information" comment="A second comments line to be used for recording sales order information" fieldTable="orderhead" identifier="com2_text" gridItemLocation="1,1,1,1" classNames="fcls_data_widget,fcls_length_30qch"/>
+					<Label isDynamic="true" text="Revision Number" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="2,1,1,1" fieldTable="" identifier="lb162"/>
+					<TextField noEntry="true" dataType="SmallInt,,,," preferredSize="5qch,1qch" fieldTable="orderhead" identifier="rev_num" gridItemLocation="3,1,1,1" classNames="fcls_data_widget,fcls_length_10qch"/>
+				</GridPanel>
+			</GroupBox>
+			<GridPanel classNames="fcls_statusbar_cnt" visible="true" verticalAlignment="Top" gridItemLocation="0,6,1,1" fieldTable="formonly" identifier="cntStatusBar">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="100%"/>
+				</GridPanel.gridColumnDefinitions>
+				<Label isDynamic="true" text="" classNames="fcls_sblabel" visible="true" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="lbInfo1"/>
+				<Label isDynamic="true" text="" classNames="fcls_sblabel" visible="true" gridItemLocation="0,1,1,1" fieldTable="formonly" identifier="lbInfo2"/>
+			</GridPanel>
+		</GridPanel>
+	</form.rootContainer>
+	<form.screenRecords>
+		<ScreenRecord identifier="customer" fields="customer.name_text,customer.bal_amt,customer.cred_limit_amt,customer.highest_bal_amt,customer.last_inv_date"/>
+		<ScreenRecord identifier="orderhead" fields="orderhead.cust_code,orderhead.order_num,orderhead.goods_amt,orderhead.hand_amt,orderhead.freight_amt,orderhead.tax_amt,orderhead.total_amt,orderhead.disc_amt,orderhead.ship1_text,orderhead.ship2_text,orderhead.fob_text,orderhead.ship_date,orderhead.com1_text,orderhead.rev_date,orderhead.com2_text,orderhead.rev_num"/>
+	</form.screenRecords>
+</form>
+

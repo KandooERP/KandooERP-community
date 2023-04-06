@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form xmlns="http://namespaces.querix.com/2015/fglForms">
+	<form.rootContainer>
+		<GridPanel classNames="fcls_rootContainer" verticalAlignment="Stretch" horizontalAlignment="Stretch" fieldTable="" identifier="rootContainer">
+			<GridPanel.gridRowDefinitions>
+				<GridRowDefinition gridLengthValue=""/>
+				<GridRowDefinition gridLengthValue=""/>
+				<GridRowDefinition gridLengthValue=""/>
+				<GridRowDefinition gridLengthValue=""/>
+				<GridRowDefinition gridLengthValue="100%"/>
+				<GridRowDefinition gridLengthValue=""/>
+			</GridPanel.gridRowDefinitions>
+			<GridPanel.gridColumnDefinitions>
+				<GridColumnDefinition gridLengthValue="100%"/>
+			</GridPanel.gridColumnDefinitions>
+			<GridPanel classNames="fcls_title_cnt" visible="true" verticalAlignment="Top" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="cntTitle">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="100%"/>
+					<GridColumnDefinition gridLengthValue=""/>
+				</GridPanel.gridColumnDefinitions>
+				<Label isDynamic="true" text="Payment Term Detail" classNames="fcls_title_lb" visible="true" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="header_text"/>
+				<Label isDynamic="true" text="A617" classNames="fcls_title_lb" visible="true" gridItemLocation="1,0,1,1" fieldTable="" identifier="lbFormName"/>
+			</GridPanel>
+			<GridPanel classNames="fcls_detail_cnt,fcls_data_cnt,fcls_align_hstretch" visible="true" verticalAlignment="Top" horizontalAlignment="Stretch" gridItemLocation="0,1,1,1" fieldTable="formonly" identifier="cntDetail1">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="" gridMinLength="10rem"/>
+					<GridColumnDefinition gridLengthValue="100%"/>
+				</GridPanel.gridColumnDefinitions>
+				<TextField dataType="Char,,,,3" classNames="fcls_data_widget,fcls_align_left,fcls_length_20qch" preferredSize="4qch,1qch" toolTip=" The term code for this payment term " gridItemLocation="1,0,1,1" fieldTable="term" comment=" The term code for this payment term " identifier="term_code" toCase="Up"/>
+				<TextField dataType="Char,,,,30" classNames="fcls_data_widget,fcls_align_left,fcls_length_30qch" preferredSize="31qch,1qch" toolTip=" A description of the payment term " gridItemLocation="1,1,1,1" fieldTable="term" comment=" A description of the payment term " identifier="desc_text" horizontalAlignment="Left"/>
+				<Label isDynamic="true" text="Payment Term" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,0,1,1" fieldTable="" identifier="lb51"/>
+				<Label isDynamic="true" text="Description" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,1,1,1" fieldTable="" identifier="lb52"/>
+			</GridPanel>
+			<GridPanel classNames="fcls_detail_cnt,fcls_data_cnt,fcls_align_hstretch" visible="true" verticalAlignment="Top" horizontalAlignment="Stretch" gridItemLocation="0,2,1,1" fieldTable="formonly" identifier="cntDetail2">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="" gridMinLength="10rem"/>
+					<GridColumnDefinition gridLengthValue="100%"/>
+				</GridPanel.gridColumnDefinitions>
+				<ComboBox dataType="Char,,,,1" classNames="fcls_data_widget,fcls_align_left,fcls_length_30qch" preferredSize="2qch,1qch" toolTip=" The method used to determine the payment day - (W)" gridItemLocation="1,0,1,1" fieldTable="term" comment=" The method used to determine the payment day - (W)" identifier="day_date_ind" horizontalAlignment="Left"/>
+				<TextField dataType="Char,,,," classNames="fcls_data_widget,fcls_align_left,fcls_length_30qch" preferredSize="41qch,1qch" horizontalAlignment="Left" gridItemLocation="1,1,1,1" fieldTable="formonly" identifier="term_desc_text"/>
+				<Label isDynamic="true" text="Due Days" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,2,1,1" fieldTable="" identifier="lb53"/>
+				<TextField dataType="SmallInt,,,," classNames="fcls_data_widget,fcls_align_left,fcls_length_10qch" preferredSize="4qch,1qch" gridItemLocation="1,2,1,1" fieldTable="term" identifier="due_day_num"/>
+				<Label isDynamic="true" text="P-Term Method" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="lb36"/>
+			</GridPanel>
+			<GroupBox title="Row Details To Edit and Add" visible="true" identifier="c3" gridItemLocation="0,3,1,1" classNames="fcls_detail_gb_cnt">
+				<GridPanel visible="true" identifier="c4" horizontalAlignment="Left">
+					<GridPanel.gridColumnDefinitions>
+						<GridColumnDefinition gridLengthValue="10rem" gridMaxLength="10rem"/>
+						<GridColumnDefinition gridLengthValue=""/>
+						<GridColumnDefinition gridLengthValue=""/>
+						<GridColumnDefinition gridLengthValue=""/>
+						<GridColumnDefinition gridLengthValue=""/>
+					</GridPanel.gridColumnDefinitions>
+					<GridPanel.gridRowDefinitions>
+						<GridRowDefinition gridLengthValue=""/>
+						<GridRowDefinition gridLengthValue=""/>
+						<GridRowDefinition gridLengthValue=""/>
+					</GridPanel.gridRowDefinitions>
+					<Label text="Days" isDynamic="true" visible="true" identifier="lb54" gridItemLocation="0,0,1,1"/>
+					<TextField visible="true" identifier="edit_days_num" gridItemLocation="1,0,1,1" fieldTable="edit" classNames="fcls_data_widget,fcls_length_10qch"/>
+					<Label text="Company ID" isDynamic="true" visible="true" identifier="lb57" gridItemLocation="2,0,1,1"/>
+					<TextField visible="true" identifier="edit_cmpy_code" gridItemLocation="3,0,1,1" noEntry="true"/>
+					<StackPanel visible="true" identifier="cntSpButtons" gridItemLocation="4,0,1,3" orientation="Vertical">
+						<Button text="Add" visible="true" identifier="btAdd" classNames="fcls_button,fcls_length_10qch">
+							<Button.onInvoke>
+								<ActionEventHandler type="actioneventhandler" actionName="Add"/>
+							</Button.onInvoke>
+						</Button>
+						<Button text="Delete" visible="true" identifier="btDelete" classNames="fcls_button,fcls_length_10qch">
+							<Button.onInvoke>
+								<ActionEventHandler type="actioneventhandler" actionName="DELETE"/>
+							</Button.onInvoke>
+						</Button>
+					</StackPanel>
+					<Label text="Discount" isDynamic="true" visible="true" identifier="lb56" gridItemLocation="0,1,1,1"/>
+					<TextField visible="true" identifier="edit_disc_per" gridItemLocation="1,1,1,1" fieldTable="edit" classNames="fcls_data_widget,fcls_length_10qch"/>
+					<Label text="Payment Term" isDynamic="true" visible="true" identifier="lb58" gridItemLocation="2,1,1,1"/>
+					<TextField visible="true" identifier="edit_term_code" gridItemLocation="3,1,1,1" noEntry="true"/>
+				</GridPanel>
+			</GroupBox>
+			<Table rowCount="3" verticalAlignment="Stretch" horizontalAlignment="Stretch" gridItemLocation="0,4,1,1" fieldTable="" identifier="sr_termdetl">
+				<TableColumn text="Valid Days" fieldTable="" identifier="tc_days_num">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="10rem" gridMaxLength="10rem" gridMinLength="10rem"/>
+					</TableColumn.columnLength>
+					<TextField dataType="SmallInt,,,," toolTip=" Number of days during which taking discount is allowed" fieldTable="termdetl" comment=" Number of days during which taking discount is allowed" identifier="days_num"/>
+				</TableColumn>
+				<TableColumn text="Discount" fieldTable="" identifier="tc_disc_per">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="10rem" gridMaxLength="10rem" gridMinLength="10rem"/>
+					</TableColumn.columnLength>
+					<TextField dataType="Decimal,,,3,6" toolTip=" Discount percentage to be applied for this period" fieldTable="termdetl" comment=" Discount percentage to be applied for this period" identifier="disc_per"/>
+				</TableColumn>
+			</Table>
+			<GridPanel classNames="fcls_statusbar_cnt" visible="true" verticalAlignment="Top" gridItemLocation="0,5,1,1" fieldTable="formonly" identifier="cntStatusBar">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="100%"/>
+				</GridPanel.gridColumnDefinitions>
+				<Label isDynamic="true" text="" classNames="fcls_sblabel" visible="true" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="lbInfo1"/>
+				<Label isDynamic="true" text="" classNames="fcls_sblabel" visible="true" gridItemLocation="0,1,1,1" fieldTable="formonly" identifier="lbInfo2"/>
+			</GridPanel>
+		</GridPanel>
+	</form.rootContainer>
+	<form.screenRecords>
+		<ScreenRecord identifier="sr_termdetl" fields="termdetl.days_num,termdetl.disc_per" elements="3"/>
+		<ScreenRecord identifier="formonly" fields="term_desc_text,edit_days_num,edit.days_num,days_num,disc_per,edit_cmpy_code,term_code"/>
+		<ScreenRecord identifier="term" fields="term_code,desc_text,day_date_ind,due_day_num"/>
+		<ScreenRecord identifier="termdetl" fields="edit_days_num,edit.days_num,days_num,disc_per"/>
+		<ScreenRecord identifier="sr_termdedit" fields="edit_cmpy_code,edit_term_code,edit_days_num,edit_disc_per"/>		
+	</form.screenRecords>
+</form>
+

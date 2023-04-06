@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<fglBuildTarget xmlns="http://namespaces.querix.com/lyciaide/target" name="GC3" type="fgl-program">
+
+  <libraries>
+    <library name="lib_tool_G_GL_db" dynamic="false" location=""/>
+    <library name="lib_tool_G_GL_new" dynamic="false" location=""/>
+    <library name="lib_tool_U_UT_new" dynamic="false" location=""/>
+    <library name="lib_tool_common" dynamic="false" location=""/>
+    <library name="lib_tool_db_common" dynamic="false" location=""/>
+  </libraries>
+
+  <sources type="fgl">
+    <file location="4gl/gl/GC3.4gl"/>
+    <file location="4gl/gl/GC3_GLOBALS.4gl"/>
+    <file location="4gl/common/glob_GLOBALS_constant.4gl"/>
+    <file location="4gl/gl/G_GL_GLOBALS.4gl"/>
+    <file location="4gl/common/glob_GLOBALS.4gl"/>
+    <file location="4gl/common/glob_GLOBALS_userDataTypes.4gl"/>
+    <file location="4gl/common/bankwind.4gl"/>
+    <file location="4gl/gl/GC_GROUP_GLOBALS.4gl"/>
+  </sources>
+
+  <sources type="form">
+    <file location="per/gl/ENG/G135.fm2"/>
+    <file location="per/utility/ENG/U156.fm2"/>
+    <file location="per/gl/ENG/G136.fm2"/>
+    <file location="per/gl/ENG/G137.fm2"/>
+    <file location="per/gl/ENG/G175.fm2"/>
+    <file location="per/utility/ENG/U526.fm2"/>
+    <file location="per/utility/ENG/U162.fm2"/>
+    <file location="per/gl/ENG/G144.fm2"/>
+    <file location="per/gl/ENG/G206.fm2"/>
+  </sources>
+
+  <mediaFiles>
+    <file client="true" location="GC3.css" type="other"/>
+    <file client="true" location="GC3.qxtheme" type="gui-theme-file"/>
+  </mediaFiles>
+
+</fglBuildTarget>

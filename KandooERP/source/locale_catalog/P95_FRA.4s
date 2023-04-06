@@ -1,0 +1,50 @@
+P95_FRA {
++1-30 Days Overdue { "+ 1-30 jours de retard" }
++31-60 Days Overdue { "31 à 60 jours de retard" }
++61-90 Days Overdue { "+61 -90 jours de retard" }
++90+Days Overdue { "90+ J. retard de paiement" }
+=Balance { "= Solde" }
+Account Status { "Situation du Compte" }
+Bank Account { "Compte bancaire" }
+Bank Code { "Code Banque" }
+Cheque Date { "Date du chèque" }
+Cheque Number { "Numéro de chèque" }
+Comments { "Commentaires" }
+Current { "Actuel" }
+Date { "Date" }
+Dates { "Dates" }
+Description { "Description" }
+Entry Date { "Date d'entrée" }
+Entry Info { "Informations sur l'entrée" }
+Entry Person { "Personne ayant saisi l'info" }
+Exchange Rate { "Taux de Change" }
+Filter { "Filtrer" }
+Full name or description of vendor { "Nom complet ou description du vendeur" }
+GL Account { "Compte de Compta Générale" }
+GL Integration { "Intégration Grand Livre" }
+ID { "ID" }
+Indicates the date of last debit from this vendor { "Indique la date du dernier débit de ce fournisseur" }
+Indicates the date of last purchase raised for this vendor { "Indique la date du dernier achat effectué chez ce fournisseur" }
+Indicates the date of last voucher from this vendor { "Indique la date de la dernière facture de ce fournisseur" }
+Indicates the date of the most recent payment made to this vendor { "Indique la date du dernier paiement effectué à ce fournisseur" }
+Language Code { "Code langue" }
+Last Debit { "Dernier débit" }
+Last Payment { "Dernier paiement" }
+Last Purchase { "Dernier achat" }
+Last Voucher { "Dernière facture" }
+Name { "Nom" }
+Period { "Période" }
+Receipt Reference { "Référence du reçu" }
+Status { "Statut" }
+The (1-30 day) account balance with this vendor { "Le solde du compte (1-30 jours) chez ce fournisseur" }
+The (31-60 day) account balance with this vendor { "Le solde du compte (31-60 jours) chez ce fournisseur" }
+The (61-90 day) account balance with this vendor { "Le solde du compte (61-90 jours) chez ce fournisseur" }
+The (90+ days) account balance with this vendor { "Solde du compte à 90+ J chez ce fournisseur" }
+The balance with this vendor { "Solde chez ce fournisseur" }
+The currency used for this vendor { "Devise utilisée pour ce fournisseur" }
+The current balance being maintained by this vendor { "Le solde actuel maintenu par ce fournisseur" }
+Unique Vendor ID (W) { "ID unique du fournisseur (W)" }
+Vendor Code { "Code Fournisseur" }
+Year { "Année" }
+actToolbarManager { "actToolbarManager" }
+}

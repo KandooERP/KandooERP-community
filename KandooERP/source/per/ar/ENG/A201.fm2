@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form xmlns="http://namespaces.querix.com/2015/fglForms">
+	<form.rootContainer>
+		<GridPanel classNames="fcls_rootContainer" verticalAlignment="Top" horizontalAlignment="Left" fieldTable="" identifier="rootContainer">
+			<GridPanel.gridRowDefinitions>
+				<GridRowDefinition gridLengthValue=""/>
+				<GridRowDefinition gridLengthValue=""/>
+				<GridRowDefinition gridLengthValue=""/>
+				<GridRowDefinition gridLengthValue=""/>
+			</GridPanel.gridRowDefinitions>
+			<GridPanel.gridColumnDefinitions>
+				<GridColumnDefinition gridLengthValue="100%"/>
+			</GridPanel.gridColumnDefinitions>
+			<GridPanel classNames="fcls_title_cnt" visible="true" verticalAlignment="Top" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="cntTitle">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="100%"/>
+					<GridColumnDefinition gridLengthValue=""/>
+				</GridPanel.gridColumnDefinitions>
+				<Label isDynamic="true" text="Customer Type" classNames="fcls_title_lb" visible="true" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="header_text"/>
+				<Label isDynamic="true" text="A201" classNames="fcls_title_lb" visible="true" gridItemLocation="1,0,1,1" fieldTable="" identifier="lbFormName"/>
+			</GridPanel>
+			<GridPanel classNames="fcls_detail_cnt,fcls_data_cnt" visible="true" verticalAlignment="Top" horizontalAlignment="Left" gridItemLocation="0,1,1,1" fieldTable="formonly" identifier="cntDetail1">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="" gridMinLength="10rem"/>
+					<GridColumnDefinition gridLengthValue=""/>
+				</GridPanel.gridColumnDefinitions>
+				<TextField toCase="Up" dataType="Char,,,,3" classNames="fcls_data_widget,fcls_align_left,fcls_length_05qch" preferredSize="4qch,1qch" toolTip=" A code to identify this customer type " gridItemLocation="1,0,1,1" comment=" A code to identify this customer type " fieldTable="customertype" identifier="type_code"/>
+				<TextField dataType="Char,,,,30" classNames="fcls_data_widget,fcls_align_left,fcls_length_30qch" preferredSize="27qch,1qch" toolTip=" A Description of the customer type " gridItemLocation="1,1,1,1" comment=" A Description of the customer type " fieldTable="customertype" identifier="type_text"/>
+				<Label isDynamic="true" text="Customer Type" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,0,1,1" fieldTable="" identifier="lb51"/>
+				<Label isDynamic="true" text="Description" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,1,1,1" fieldTable="" identifier="lb52"/>
+			</GridPanel>
+			<GridPanel classNames="fcls_detail_cnt,fcls_data_cnt" visible="true" verticalAlignment="Top" gridItemLocation="0,2,1,1" fieldTable="formonly" identifier="cntDetail2" horizontalAlignment="Left">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="" gridMinLength="10rem"/>
+					<GridColumnDefinition gridLengthValue=""/>
+					<GridColumnDefinition gridLengthValue=""/>
+				</GridPanel.gridColumnDefinitions>
+				<Label isDynamic="true" text="Account" classNames="fcls_columnlabel_rev_cell,fcls_align_hstretch" visible="true" horizontalAlignment="Stretch" gridItemLocation="1,0,1,1" fieldTable="" identifier="lb57"/>
+				<Label isDynamic="true" text="Description" classNames="fcls_columnlabel_rev_cell,fcls_align_hstretch" visible="true" horizontalAlignment="Stretch" gridItemLocation="2,0,1,1" fieldTable="formonly" identifier="lb42"/>
+				<ComboBox dataType="Char,,,,18" classNames="list-show-value-text,field-show-value,fcls_data_widget,fcls_align_left,fcls_length_15qch" preferredSize="19qch,1qch" toolTip=" Accounts Receivable Control account (W) " gridItemLocation="1,1,1,1" comment=" Accounts Receivable Control account (W) " fieldTable="customertype" identifier="ar_acct_code"/>
+				<TextField noEntry="true" dataType="Char,,,," classNames="fcls_data_widget,fcls_align_left,fcls_length_30qch" preferredSize="41qch,1qch" gridItemLocation="2,1,1,1" fieldTable="formonly" identifier="acct1_text"/>
+				<ComboBox dataType="Char,,,,18" classNames="list-show-value-text,field-show-value,fcls_data_widget,fcls_align_left,fcls_length_15qch" preferredSize="19qch,1qch" toolTip=" Freight charged out account (W) " gridItemLocation="1,2,1,1" comment=" Freight charged out account (W) " fieldTable="customertype" identifier="freight_acct_code"/>
+				<TextField noEntry="true" dataType="Char,,,," classNames="fcls_data_widget,fcls_align_left,fcls_length_30qch" preferredSize="41qch,1qch" gridItemLocation="2,2,1,1" fieldTable="formonly" identifier="acct2_text"/>
+				<ComboBox dataType="Char,,,,18" classNames="list-show-value-text,field-show-value,fcls_data_widget,fcls_align_left,fcls_length_15qch" preferredSize="19qch,1qch" toolTip=" Account to be credited with handling charges (W) " gridItemLocation="1,3,1,1" comment=" Account to be credited with handling charges (W) " fieldTable="customertype" identifier="lab_acct_code"/>
+				<TextField noEntry="true" dataType="Char,,,," classNames="fcls_data_widget,fcls_align_left,fcls_length_30qch" preferredSize="41qch,1qch" gridItemLocation="2,3,1,1" fieldTable="formonly" identifier="acct3_text"/>
+				<Label isDynamic="true" text="Tax" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,4,1,1" fieldTable="" identifier="lb63"/>
+				<ComboBox dataType="Char,,,,18" classNames="list-show-value-text,field-show-value,fcls_data_widget,fcls_align_left,fcls_length_15qch" preferredSize="19qch,1qch" toolTip=" Tax payable account (W) " gridItemLocation="1,4,1,1" comment=" Tax payable account (W) " fieldTable="customertype" identifier="tax_acct_code"/>
+				<TextField noEntry="true" dataType="Char,,,," classNames="fcls_data_widget,fcls_align_left,fcls_length_30qch" preferredSize="41qch,1qch" gridItemLocation="2,4,1,1" fieldTable="formonly" identifier="acct4_text"/>
+				<Label isDynamic="true" text="Discount" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,5,1,1" fieldTable="" identifier="lb141"/>
+				<ComboBox dataType="Char,,,,18" classNames="list-show-value-text,field-show-value,fcls_data_widget,fcls_align_left,fcls_length_15qch" preferredSize="19qch,1qch" toolTip=" Discount given account (W) " gridItemLocation="1,5,1,1" comment=" Discount given account (W) " fieldTable="customertype" identifier="disc_acct_code"/>
+				<TextField noEntry="true" dataType="Char,,,," classNames="fcls_data_widget,fcls_align_left,fcls_length_30qch" preferredSize="41qch,1qch" gridItemLocation="2,5,1,1" fieldTable="formonly" identifier="acct5_text"/>
+				<Label isDynamic="true" text="Exchange" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,6,1,1" fieldTable="" identifier="lb142"/>
+				<ComboBox dataType="Char,,,,18" classNames="list-show-value-text,field-show-value,fcls_data_widget,fcls_align_left,fcls_length_15qch" preferredSize="19qch,1qch" toolTip=" Loss or gain account for exchange rate variance (W) " gridItemLocation="1,6,1,1" comment=" Loss or gain account for exchange rate variance (W) " fieldTable="customertype" identifier="exch_acct_code"/>
+				<TextField noEntry="true" dataType="Char,,,," classNames="fcls_data_widget,fcls_align_left,fcls_length_30qch" preferredSize="41qch,1qch" gridItemLocation="2,6,1,1" fieldTable="formonly" identifier="acct6_text"/>
+				<Label isDynamic="true" text="Sales Mask" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,7,1,1" fieldTable="" identifier="lb131"/>
+				<TextField toCase="Up" dataType="Char,,,,18" classNames="fcls_data_widget,fcls_align_left,fcls_length_15qch" preferredSize="19qch,1qch" gridItemLocation="1,7,1,1" fieldTable="customertype" identifier="acct_mask_code"/>
+				<Label isDynamic="true" text="AR Control" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,1,1,1" fieldTable="formonly" identifier="lb36"/>
+				<Label isDynamic="true" text="Freight" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,2,1,1" fieldTable="formonly" identifier="lb37"/>
+				<Label isDynamic="true" text="Handling" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,3,1,1" fieldTable="formonly" identifier="lb38"/>
+			</GridPanel>
+			<GridPanel classNames="fcls_statusbar_cnt" visible="true" verticalAlignment="Top" gridItemLocation="0,3,1,1" fieldTable="formonly" identifier="cntStatusBar">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="100%"/>
+				</GridPanel.gridColumnDefinitions>
+				<Label isDynamic="true" text="" classNames="fcls_sblabel" visible="true" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="lbInfo1"/>
+				<Label isDynamic="true" text="" classNames="fcls_sblabel" visible="true" gridItemLocation="0,1,1,1" fieldTable="formonly" identifier="lbInfo2"/>
+			</GridPanel>
+		</GridPanel>
+	</form.rootContainer>
+	<form.screenRecords>
+		<ScreenRecord identifier="customertype" fields="type_code,type_text,ar_acct_code,freight_acct_code,lab_acct_code,tax_acct_code,disc_acct_code,exch_acct_code,acct_mask_code"/>
+		<ScreenRecord identifier="formonly" fields="acct1_text,acct2_text,acct3_text,acct4_text,acct5_text,acct6_text"/>
+	</form.screenRecords>
+</form>
+

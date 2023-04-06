@@ -1,0 +1,124 @@
+P65_FRA {
+- Contra Amount { "Montant de la contre-écriture" }
+- Tax Amount { "Montant de la T.V.A." }
+-Y- or -N- if cheque has been processed through the posting program { "-Y- ou -N- si le chèque a été processé par le programme de compt" }
+Account { "Compte" }
+Account number used by bank { "Numéro de compte utilisé par la banque" }
+Account quantity Unit Of Measure { "Quantité en unités de mesure" }
+Accounting period to be used for posting purposes { "Période comptable à utiliser à des fins de comptabilisation" }
+Accounting period you wish this debit to be posted to { "Période comptable à laquelle vous souhaitez que ce débit soit im" }
+Accounting year to be used for posting purposes { "Année comptable à utiliser aux fins de comptabilisation" }
+Actual amount distributed to this debit { "Montant réel réparti sur ce débit" }
+Additional comments line for recording information about this debit { "Ligne de commentaires supplémentaire pour enregistrer des inform" }
+Additional comments lines for cheque information, if needed { "Lignes de commentaires supplémentaires pour les informations de " }
+Amount of discount available on this remittance { "Montant de la remise disponible sur ce versement" }
+Amounts { "Montants" }
+Analysis information { "Information analytique" }
+Applied Amount { "Montant appliqué" }
+Applied to Vouchers { "Appliqué aux factures fournisseur" }
+Bank Account Number { "Numéro de compte bancaire" }
+Bank Code { "Code Banque" }
+Bank Code of bank to be inquired on { "Code de la banque interrogée" }
+Bank statement line number where  the cheque was reconciled { "Numéro de ligne du relevé bancaire où le chèque a été lettré" }
+Bank statement transaction date on which the payment was presented { "Date de la transaction du relevé bancaire à laquelle le paiement" }
+Batch Number { "Numéro de lot" }
+Cheque Date { "Date du chèque" }
+Cheque Gross Amount { "Montant Brut du chèque" }
+Cheque Net Amount { "Montant Net du chèque" }
+Closed { "Clôturé" }
+Comments { "Commentaires" }
+Currency { "Devise" }
+Current date cheque was entered into the system { "Date à laquelle le chèque a été saisi" }
+Date { "Date" }
+Date Presented { "Date de présentation" }
+Date used for recording cheque information in the appropriate ledgers { "Date utilisée pour enregistrer les informations du chèque dans l" }
+Debit { "Débit" }
+Debit Distribution { "Répartition  du débit" }
+Debit Header { "Entête du débit" }
+Debit No { "Débit N°" }
+Debit Number { "Numéro de débit" }
+Debit Totals: { "Totaux débit" }
+Description { "Description" }
+Description Text { "Description" }
+Description of transaction - CTRL-N for Notes { "Description de la transaction" }
+Discount Taken { "Remise obtenue" }
+Discounts Taken { "Remises accordées" }
+Dist.Amount { "Montant réparti" }
+Distributed { "Distribué" }
+Distribution amount of the transaction { "Montant de la répartition de la transaction" }
+Employee sign-on or initials of person entering document { "Login de l'utilisateur faisant la saisie" }
+Entry Date { "Date d'entrée" }
+Entry Info { "Informations sur l'entrée" }
+Entry Person { "Personne ayant saisi l'info" }
+Entry date of this debit into the system { "Date de saisie de ce débit dans le système" }
+Exchange Rate { "Taux de Change" }
+Exchange rate { "Taux de change" }
+Full name or description of vendor { "Nom complet ou description du fournisseur" }
+G-General, A-Chrg Thru Sale, P-Purch Ord, J-Dist to Job, S-Shipment, W-Order { "G_Général, A imputer à Ventes, P Bon de commande, J imputer à service, S livraison, W commande" }
+GL Account { "Compte de Compta Générale" }
+GL Integration { "Intégration Grand Livre" }
+General Ledger Account Number (W) { "Compte de Comptabilité Générale" }
+ID { "ID" }
+Identifies any receipt of item referencing this transaction { "Identifie tout reçu ou document référençant cette transaction" }
+If posted the journal number of that post { "Si clôturé, le numéro de journal de cette clôture" }
+Indicator if posting process has been utilized, -Y- or -N- { "Indicateur si le process de clôturé a été lancé ( O/N)" }
+Journal Number { "Numéro de Journal" }
+Language Code { "Code langue" }
+Line { "Ligne" }
+Line Info { "Infos ligne" }
+Line No { "Ligne N°" }
+Method { "Méthode" }
+Method: (1) auto/manual cheques, (3) EFT payments { "Méthode: (1) chèque auto/manuel, (3) paiements EFT" }
+Mode { "Mode" }
+Name { "Nom" }
+Name of bank to be inquired on { "Nom de la banque interrogée" }
+Name of person performing entry { "Nom de la personne effectuant la saisie" }
+Net cheque amount after tax and contra { "Montant total du chèque" }
+Number assigned to this debit { "Numéro attribué à ce débit" }
+Number to uniquely identify and reference this debit { "Numéro unique d'identification de ce débit" }
+Other Info { "Autres informations" }
+Payment Information { "Information sur le paiement" }
+Payment Number { "Numéro de paiement" }
+Period { "Période" }
+Post Period { "Période de clôture" }
+Post Year { "Année de clôture" }
+Posted { "Publié" }
+Quantity { "Quantité" }
+Query { "Interroger" }
+Receipt Reference { "Référence du reçu" }
+Reconciliation { "Lettrage" }
+Sheet No { "Folio N°" }
+Statement sheet number on which the cheque was reconciled { "Numéro de la feuille de relevé sur laquelle le chèque a été lett" }
+Statistical quantity of the transaction { "Quantité statistique de la transaction" }
+Tax % { "% T.V.A." }
+Tax Code { "Code T.V.A." }
+The General Ledger account applicable to this transaction (W) { "Le compte de comta générale application à cette transaction" }
+The Year Number of the transaction { "Année fiscale de la transaction" }
+The batch number of the debit { "Le numéro de folio du débit" }
+The contra amount of this cheque { "Montant de contre-écriture de ce chèque" }
+The currency conversion rate for this debit { "Le taux de change de la devise de ce débit" }
+The currency used for this vendor { "Devise utilisée pour ce fournisseur" }
+The currency used for this vendor { "Devise utilisée pour ces fournisseurs" }
+The discount amount used (taken) on this remittance { "Le montant de la remise prélevé sur cette remise" }
+The given date of vendor credit memo { "La date donnée de l'avoir fournisseur" }
+The specific cheque or EFT number already entered in the system { "Le chèque ou le numéro de virmt électronique spécifique déjà entré dans le système" }
+The tax amount of this cheque { "Le montant de la T.V.A de ce chèque" }
+The total amount applied to a particular remittance(s) { "Le montant total appliqué à un ou plusieurs paiements" }
+Total amount applied to this debit { "Montant total appliqué à ce débit" }
+Total amount of debit { "Montant total du débit" }
+Total cheque amount including tax and contra { "Montant total du chèque incluant T.V.A et montant H.T." }
+Type { "Type" }
+UOM { "UDM" }
+Unique Vendor ID { "ID unique du fournisseur" }
+Used to record any pertinent information about the cheque { "Utilisé pour enregistrer toute information pertinente sur le chè" }
+Used to record pertinent information about this debit { "Utilisé pour enregistrer des informations pertinentes sur ce débit" }
+Vendor { "Fournisseur" }
+Vendor Code { "Code Fournisseur" }
+Vendor Code assigned to this vendor { "Code fournisseur attribué à ce fournisseur" }
+Vendor Reference { "Références du fournisseur" }
+Vendor credit number, if applicable { "Numéro de crédit du fournisseur, le cas échéant" }
+Withholding Tax Code { "Code T.V.A déductible" }
+Withholding Tax Percentage { "Pourcentage de T.V.A. déductible" }
+Year { "Année" }
+actToolbarManager { "actToolbarManager" }
+}

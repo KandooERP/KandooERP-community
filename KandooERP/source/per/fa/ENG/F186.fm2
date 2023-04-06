@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form xmlns="http://namespaces.querix.com/2015/fglForms">
+	<form.rootContainer>
+		<GridPanel classNames="fcls_rootContainer" verticalAlignment="Top" horizontalAlignment="Left" fieldTable="" identifier="rootContainer">
+			<GridPanel.gridRowDefinitions>
+				<GridRowDefinition gridLengthValue=""/>
+				<GridRowDefinition gridLengthValue=""/>
+				<GridRowDefinition gridLengthValue=""/>
+			</GridPanel.gridRowDefinitions>
+			<GridPanel.gridColumnDefinitions>
+				<GridColumnDefinition gridLengthValue="100%"/>
+			</GridPanel.gridColumnDefinitions>
+			<GridPanel classNames="fcls_title_cnt" visible="true" verticalAlignment="Top" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="cntTitle">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="100%"/>
+					<GridColumnDefinition gridLengthValue=""/>
+				</GridPanel.gridColumnDefinitions>
+				<Label isDynamic="true" text="Insurance Details" classNames="fcls_title_lb" visible="true" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="header_text"/>
+				<Label isDynamic="true" text="F186" classNames="fcls_title_lb" visible="true" gridItemLocation="1,0,1,1" fieldTable="" identifier="lbFormName"/>
+			</GridPanel>
+			<GridPanel classNames="fcls_detail_cnt,fcls_data_cnt,fcls_align_left" visible="true" verticalAlignment="Top" horizontalAlignment="Left" gridItemLocation="0,1,1,1" fieldTable="formonly" identifier="cntDetail1">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue="2rem"/>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="" gridMinLength="10rem"/>
+					<GridColumnDefinition gridLengthValue=""/>
+				</GridPanel.gridColumnDefinitions>
+				<TextField dataType="Char,,,,10" preferredSize="11qch,1qch" toolTip=" The asset ID" fieldTable="fainsure" comment=" The asset ID" identifier="asset_code" gridItemLocation="1,0,1,1" classNames="fcls_data_widget,fcls_align_left,fcls_length_20qch"/>
+				<TextField dataType="Char,,,,10" preferredSize="11qch,1qch" toolTip=" The asset add on code " fieldTable="fainsure" comment=" The asset add on code " identifier="add_on_code" gridItemLocation="1,1,1,1" classNames="fcls_data_widget,fcls_align_left,fcls_length_20qch"/>
+				<TextField dataType="Char,,,,3" preferredSize="4qch,1qch" toolTip=" The asset category code" fieldTable="famast" comment=" The asset category code" identifier="facat_code" gridItemLocation="1,2,1,1" classNames="fcls_data_widget,fcls_align_left,fcls_length_20qch"/>
+				<Label isDynamic="true" text="Asset Location" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,3,1,1" fieldTable="" identifier="lb67"/>
+				<TextField dataType="Char,,,,10" preferredSize="11qch,1qch" toolTip=" The asset location code" fieldTable="famast" comment=" The asset location code" identifier="location_code" gridItemLocation="1,3,1,1" classNames="fcls_data_widget,fcls_align_left,fcls_length_20qch"/>
+				<Label isDynamic="true" text="Asset ID" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,0,1,1" fieldTable="" identifier="lb51"/>
+				<Label isDynamic="true" text="Add on code" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,1,1,1" fieldTable="" identifier="lb52"/>
+				<Label isDynamic="true" text="Asset Category" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,2,1,1" fieldTable="" identifier="lb66"/>
+				<Label isDynamic="true" text="Insured Value" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,5,1,1" fieldTable="" identifier="lb134"/>
+				<TextField dataType="Decimal,,,2,16" preferredSize="18qch,1qch" toolTip=" The fainsured value " fieldTable="fainsure" comment=" The fainsured value " identifier="insure_value_amt" gridItemLocation="1,5,1,1" classNames="fcls_data_widget,fcls_align_left,fcls_length_20qch"/>
+				<Label isDynamic="true" text="Insurance Company" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,6,1,1" fieldTable="" identifier="lb135"/>
+				<TextField toCase="Up" dataType="Char,,,,20" preferredSize="21qch,1qch" toolTip=" The insurance company name " fieldTable="fainsure" comment=" The insurance company name " identifier="insure_comp_code" gridItemLocation="1,6,1,1" classNames="fcls_data_widget,fcls_align_left,fcls_length_20qch"/>
+				<Label isDynamic="true" text="Policy Number" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,7,1,1" fieldTable="" identifier="lb136"/>
+				<TextField dataType="Char,,,,20" preferredSize="21qch,1qch" toolTip=" The insurance policy number " fieldTable="fainsure" comment=" The insurance policy number " identifier="policy_text" gridItemLocation="1,7,1,1" classNames="fcls_data_widget,fcls_align_left,fcls_length_20qch"/>
+				<Label isDynamic="true" text="Insured From" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,8,1,1" fieldTable="" identifier="lb137"/>
+				<Calendar format="dd/mm/yyyy" dataType="Date,,,," preferredSize="11qch,1qch" toolTip=" The insurance start date " fieldTable="fainsure" comment=" The insurance start date " identifier="insure_start_date" gridItemLocation="1,8,1,1" classNames="fcls_data_widget,fcls_align_left,fcls_length_20qch"/>
+				<Label isDynamic="true" text="Insured To" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,9,1,1" fieldTable="" identifier="lb138"/>
+				<Calendar format="dd/mm/yyyy" dataType="Date,,,," preferredSize="11qch,1qch" toolTip=" The insurance end date " fieldTable="fainsure" comment=" The insurance end date " identifier="insure_end_date" gridItemLocation="1,9,1,1" classNames="fcls_data_widget,fcls_align_left,fcls_length_20qch"/>
+				<Label isDynamic="true" text="Reminder Date" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,10,1,1" fieldTable="" identifier="lb153"/>
+				<Calendar format="dd/mm/yyyy" dataType="Date,,,," preferredSize="11qch,1qch" toolTip=" The reminder date of policy renewal approaching" fieldTable="fainsure" comment=" The reminder date of policy renewal approaching" identifier="reminder_date" gridItemLocation="1,10,1,1" classNames="fcls_data_widget,fcls_align_left,fcls_length_20qch"/>
+			</GridPanel>
+			<GridPanel classNames="fcls_statusbar_cnt" visible="true" verticalAlignment="Bottom" gridItemLocation="0,2,1,1" fieldTable="formonly" identifier="cntStatusBar">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="100%"/>
+				</GridPanel.gridColumnDefinitions>
+				<Label isDynamic="true" text="" classNames="fcls_sblabel" visible="true" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="lbInfo1"/>
+				<Label isDynamic="true" text="" classNames="fcls_sblabel" visible="true" gridItemLocation="0,1,1,1" fieldTable="formonly" identifier="lbInfo2"/>
+			</GridPanel>
+		</GridPanel>
+	</form.rootContainer>
+	<form.screenRecords>
+		<ScreenRecord identifier="fainsure" fields="fainsure.asset_code,fainsure.add_on_code,fainsure.insure_value_amt,fainsure.insure_comp_code,fainsure.policy_text,fainsure.insure_start_date,fainsure.insure_end_date,fainsure.reminder_date"/>
+		<ScreenRecord identifier="famast" fields="famast.facat_code,famast.location_code"/>
+	</form.screenRecords>
+</form>
+

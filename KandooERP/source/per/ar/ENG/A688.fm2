@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form xmlns="http://namespaces.querix.com/2015/fglForms">
+	<form.rootContainer>
+		<GridPanel classNames="fcls_rootContainer" verticalAlignment="Stretch" horizontalAlignment="Stretch" fieldTable="" identifier="rootContainer">
+			<GridPanel.gridRowDefinitions>
+				<GridRowDefinition gridLengthValue=""/>
+				<GridRowDefinition gridLengthValue=""/>
+				<GridRowDefinition gridLengthValue="100%"/>
+				<GridRowDefinition gridLengthValue=""/>
+			</GridPanel.gridRowDefinitions>
+			<GridPanel.gridColumnDefinitions>
+				<GridColumnDefinition gridLengthValue="100%"/>
+			</GridPanel.gridColumnDefinitions>
+			<GridPanel classNames="fcls_title_cnt" visible="true" verticalAlignment="Top" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="cntTitle">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="100%"/>
+					<GridColumnDefinition gridLengthValue=""/>
+				</GridPanel.gridColumnDefinitions>
+				<Label isDynamic="true" text="Bank Deposit Edit" classNames="fcls_title_lb" visible="true" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="header_text"/>
+				<Label isDynamic="true" text="A688" classNames="fcls_title_lb" visible="true" gridItemLocation="1,0,1,1" fieldTable="" identifier="lbFormName"/>
+			</GridPanel>
+			<GridPanel classNames="fcls_detail_cnt,fcls_data_cnt,fcls_align_left" visible="true" verticalAlignment="Top" horizontalAlignment="Left" gridItemLocation="0,1,1,1" fieldTable="formonly" identifier="cntDetail1">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="" gridMinLength="10rem"/>
+					<GridColumnDefinition gridLengthValue=""/>
+					<GridColumnDefinition gridLengthValue=""/>
+					<GridColumnDefinition gridLengthValue="" gridMinLength="10rem"/>
+					<GridColumnDefinition gridLengthValue=""/>
+				</GridPanel.gridColumnDefinitions>
+				<ComboBox toCase="Up" dataType="Char,,,,9" classNames="list-show-value-text,field-show-value,fcls_data_widget,fcls_align_left,fcls_length_15qch" preferredSize="10qch,1qch" toolTip=" The bank to which the deposit was made" gridItemLocation="1,0,1,1" fieldTable="tentbankhead" comment=" The bank to which the deposit was made" identifier="bank_code"/>
+				<TextField noEntry="true" dataType="Char,,,," classNames="fcls_data_widget,fcls_align_left,fcls_length_15qch" preferredSize="14qch,1qch" gridItemLocation="4,0,1,1" fieldTable="formonly" identifier="pos_amt"/>
+				<TextField dataType="Integer,,,," classNames="fcls_data_widget,fcls_align_left,fcls_length_15qch" preferredSize="10qch,1qch" toolTip=" The bank deposit number" gridItemLocation="1,1,1,1" fieldTable="tentbankhead" comment=" The bank deposit number" identifier="bank_dep_num"/>
+				<TextField dataType="Char,,,,30" classNames="fcls_data_widget,fcls_align_left,fcls_length_20qch" preferredSize="20qch,1qch" toolTip=" The description text entered for this bank deposit " gridItemLocation="2,1,1,1" fieldTable="tentbankhead" comment=" The description text entered for this bank deposit " identifier="desc_text"/>
+				<TextField noEntry="true" dataType="Char,,,," classNames="fcls_data_widget,fcls_align_left,fcls_length_15qch" preferredSize="14qch,1qch" gridItemLocation="4,1,1,1" fieldTable="formonly" identifier="cash_amt"/>
+				<TextField noEntry="true" dataType="Char,,,," classNames="fcls_data_widget,fcls_align_left,fcls_length_15qch" preferredSize="14qch,1qch" gridItemLocation="1,2,1,1" fieldTable="formonly" identifier="deposit_amt"/>
+				<TextField noEntry="true" dataType="Char,,,," classNames="fcls_data_widget,fcls_align_left,fcls_length_15qch" preferredSize="14qch,1qch" gridItemLocation="4,2,1,1" fieldTable="formonly" identifier="other_amt"/>
+				<Label isDynamic="true" text="Currency" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,3,1,1" fieldTable="" identifier="lb67"/>
+				<ComboBox dataType="Char,,,,3" classNames="list-show-value-text,field-show-value,fcls_data_widget,fcls_align_left,fcls_length_15qch" preferredSize="4qch,1qch" gridItemLocation="1,3,1,1" fieldTable="tentbankhead" identifier="currency_code"/>
+				<Label isDynamic="true" text="Bank Code" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,0,1,1" fieldTable="" identifier="lb51"/>
+				<Label isDynamic="true" text="Total POS" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="3,0,1,1" fieldTable="" identifier="lb53"/>
+				<Label isDynamic="true" text="Deposit Number" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,1,1,1" fieldTable="" identifier="lb52"/>
+				<Label isDynamic="true" text="Total Cash" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="3,1,1,1" fieldTable="" identifier="lb54"/>
+				<Label isDynamic="true" text="Deposit Amount" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,2,1,1" fieldTable="" identifier="lb66"/>
+				<Label isDynamic="true" text="Total Other" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="3,2,1,1" fieldTable="" identifier="lb55"/>
+			</GridPanel>
+			<Table rowCount="10" preferredSize="85qch,10qch" verticalAlignment="Stretch" horizontalAlignment="Stretch" gridItemLocation="0,2,1,1" fieldTable="" identifier="sr_tentbankdetl">
+				<TableColumn fieldTable="" identifier="tc_scroll_flag">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="2rem" gridMaxLength="2rem" gridMinLength="2rem"/>
+					</TableColumn.columnLength>
+					<CheckBox dataType="Char,,,," fieldTable="formonly" identifier="scroll_flag">
+						<CheckBox.checkedValue>
+							<StringLiteral stringValue="*"/>
+						</CheckBox.checkedValue>
+						<CheckBox.uncheckedValue>
+							<NullLiteral/>
+						</CheckBox.uncheckedValue>
+					</CheckBox>
+				</TableColumn>
+				<TableColumn text="Number" fieldTable="" identifier="tc_cash_num">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="10rem" gridMaxLength="10rem" gridMinLength="10rem"/>
+					</TableColumn.columnLength>
+					<TextField dataType="Integer,,,," toolTip=" The unique reference number of the receipt" fieldTable="tentbankdetl" comment=" The unique reference number of the receipt" identifier="cash_num"/>
+				</TableColumn>
+				<TableColumn text="Customer Date" fieldTable="" identifier="tc_cust_code">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="10rem" gridMaxLength="10rem" gridMinLength="10rem"/>
+					</TableColumn.columnLength>
+					<TextField toCase="Up" dataType="Char,,,,8" toolTip=" The unique code of the customer who made the receipt" fieldTable="tentbankdetl" comment=" The unique code of the customer who made the receipt" identifier="cust_code" noEntry="true"/>
+				</TableColumn>
+				<TableColumn text="Paid Date" fieldTable="" identifier="tc_cash_date">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="10rem" gridMaxLength="10rem" gridMinLength="10rem"/>
+					</TableColumn.columnLength>
+					<TextField dataType="Date,,,," toolTip=" The transaction date of the receipt" fieldTable="tentbankdetl" comment=" The transaction date of the receipt" identifier="cash_date" noEntry="true"/>
+				</TableColumn>
+				<TableColumn text="Amount" fieldTable="" identifier="tc_tran_amt">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="10rem" gridMaxLength="10rem" gridMinLength="10rem"/>
+					</TableColumn.columnLength>
+					<TextField dataType="Decimal,,,2,16" toolTip=" The amount of the receipt" fieldTable="tentbankdetl" comment=" The amount of the receipt" identifier="tran_amt" noEntry="true"/>
+				</TableColumn>
+				<TableColumn text="Cheque No." fieldTable="" identifier="tc_cheque_text">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="10rem" gridMaxLength="10rem" gridMinLength="10rem"/>
+					</TableColumn.columnLength>
+					<TextField dataType="Char,,,,10" toolTip=" The cheque reference text (ie cheque number)" fieldTable="tentbankdetl" comment=" The cheque reference text (ie cheque number)" identifier="cheque_text" noEntry="true"/>
+				</TableColumn>
+				<TableColumn text="Bank/Card Ref" fieldTable="" identifier="tc_bank_text">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="10rem" gridMaxLength="10rem" gridMinLength="10rem"/>
+					</TableColumn.columnLength>
+					<TextField toCase="Up" dataType="Char,,,,15" toolTip=" The bank/card name" fieldTable="tentbankdetl" comment=" The bank/card name" identifier="bank_text" noEntry="true"/>
+				</TableColumn>
+				<TableColumn text="Type" fieldTable="" identifier="tc_cash_type_ind">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="10rem" gridMaxLength="10rem" gridMinLength="10rem"/>
+					</TableColumn.columnLength>
+					<TextField toCase="Up" dataType="Char,,,,1" toolTip=" The Payment Type: (C)ash  Che(Q)ue  (P)lastic  (O)ther" fieldTable="tentbankdetl" comment=" The Payment Type: (C)ash  Che(Q)ue  (P)lastic  (O)ther" identifier="cash_type_ind" noEntry="true"/>
+				</TableColumn>
+				<TableColumn resizable="true" visible="true" identifier="tc_EOL">
+					<TableColumn.columnLength>
+						<GridLength/>
+					</TableColumn.columnLength>
+				</TableColumn>
+			</Table>
+			<GridPanel classNames="fcls_statusbar_cnt" visible="true" verticalAlignment="Bottom" horizontalAlignment="Stretch" gridItemLocation="0,3,1,1" fieldTable="formonly" identifier="cntStatusBar">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="100%"/>
+				</GridPanel.gridColumnDefinitions>
+				<Label isDynamic="true" text="" classNames="fcls_sblabel" visible="true" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="lbInfo1"/>
+				<Label isDynamic="true" text="" classNames="fcls_sblabel" visible="true" gridItemLocation="0,1,1,1" fieldTable="formonly" identifier="lbInfo2"/>
+			</GridPanel>
+		</GridPanel>
+	</form.rootContainer>
+	<form.screenRecords>
+		<ScreenRecord identifier="sr_tentbankdetl" fields="formonly.scroll_flag,tentbankdetl.cash_num,tentbankdetl.cust_code,tentbankdetl.cash_date,tentbankdetl.tran_amt,tentbankdetl.cheque_text,tentbankdetl.bank_text,tentbankdetl.cash_type_ind" elements="10"/>
+		<ScreenRecord identifier="formonly" fields="scroll_flag,deposit_amt,cash_amt,pos_amt,other_amt"/>
+		<ScreenRecord identifier="tentbankdetl" fields="cust_code,cash_num,cash_date,tran_amt,cheque_text,bank_text,cash_type_ind"/>
+		<ScreenRecord identifier="tentbankhead" fields="bank_code,bank_dep_num,desc_text,currency_code"/>
+	</form.screenRecords>
+</form>
+

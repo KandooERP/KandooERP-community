@@ -1,0 +1,74 @@
+{
+###########################################################################
+# This program is free software; you can redistribute it and/or modify it
+# under the terms of the GNU General Public License as published by the
+# Free Software Foundation; either version 2 of the License, or (at your
+# option) any later version.
+#
+# This program is distributed in the hope that it will be useful, but
+# WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+# General Public License for more details.
+#
+# You should have received a copy of the GNU General Public License along
+# with this program; if not, write to the Free Software Foundation, Inc.,
+# 59 Temple Place, Suite 330, Boston, MA 02111-1307 USA
+#
+###########################################################################
+
+	 $Id: M111.per,v 1.2 2003/11/19 22:22:59 afalout Exp $
+}
+
+
+database kandoodb
+
+screen
+{
+                               Set Up Details                          M111
+\g----------------------------------------------------------------------------\g
+ Description
+[f001                                                                      ]
+
+ Time          [f002        ]          Unit of Time   [f003]
+
+ Cost          [f004             ]
+ Price         [f005             ]
+
+ Fixed or Var  [a]                     Per Quantity   [f006     ]
+
+ Effectivity Start Date[f007      ]    Effectivity End Date[f008      ]
+
+[f009                |f010                ]
+[f011                |f012                ]
+[f013                |f014                ] [b]
+
+}
+
+tables
+bor
+mnparms
+
+attributes
+f001 = bor.desc_text,
+comments = " Description of the Set Up, CTRL-N for Notes";
+f002 = bor.required_qty, comments = " Time required for one Set Up";
+f003 = bor.uom_code, upshift, comments = " M = Minutes, H = Hours, D = Days";
+f004 = bor.cost_amt, comments = " Cost of one Set Up";
+f005 = bor.price_amt, comments = " Price associated with the Set Up cost";
+a    = bor.cost_type_ind, upshift,
+comments = " F = Fixed, M = Minutes, H = Hours, D = Days, Q = Quantities";
+f006 = bor.var_amt, comments = " Interval or quantity produced between Set Ups";
+f007 = bor.start_date,
+comments = " Date the Set Up becomes effective for Shop Orders & Planning";
+f008 = bor.end_date,
+comments = " Date the Set Up ceases to be effective for Shop Orders & Planning";
+f009 = mnparms.ref1_text;
+f010 = bor.user1_text, comments = " User defined field";
+f011 = mnparms.ref2_text;
+f012 = bor.user2_text, comments = " User defined field";
+f013 = mnparms.ref3_text;
+f014 = bor.user3_text, comments = " User defined field";
+b    = formonly.dummy, noentry;
+
+instructions
+delimiters "  "

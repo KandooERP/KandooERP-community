@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form xmlns="http://namespaces.querix.com/2015/fglForms">
+	<form.rootContainer>
+		<GridPanel classNames="fcls_rootContainer" verticalAlignment="Top" horizontalAlignment="Left" fieldTable="" identifier="rootContainer">
+			<GridPanel.gridRowDefinitions>
+				<GridRowDefinition gridLengthValue=""/>
+				<GridRowDefinition gridLengthValue=""/>
+				<GridRowDefinition gridLengthValue=""/>
+			</GridPanel.gridRowDefinitions>
+			<GridPanel.gridColumnDefinitions>
+				<GridColumnDefinition gridLengthValue="50%"/>
+			</GridPanel.gridColumnDefinitions>
+			
+			<GridPanel classNames="fcls_title_cnt" visible="true" verticalAlignment="Top" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="cntTitle">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="100%"/>
+					<GridColumnDefinition gridLengthValue=""/>
+				</GridPanel.gridColumnDefinitions>
+				<Label isDynamic="true" text="Report Options" classNames="fcls_title_lb" visible="true" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="header_text"/>
+				<Label isDynamic="true" text="R606" classNames="fcls_title_lb" visible="true" gridItemLocation="1,0,1,1" fieldTable="" identifier="lbFormName"/>
+			</GridPanel>
+			<GridPanel classNames="fcls_detail_cnt,fcls_data_cnt,fcls_align_left" visible="true" verticalAlignment="Top" horizontalAlignment="Left" gridItemLocation="0,1,1,1" fieldTable="formonly" identifier="cntDetail1">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue="" gridMinLength="1rem"/>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="" gridMinLength="10rem"/>
+					<GridColumnDefinition gridLengthValue=""/>
+					<GridColumnDefinition gridLengthValue=""/>
+				</GridPanel.gridColumnDefinitions>
+				<Label text="Header" classNames="fcls_columnlabel_rev_cell,fcls_align_hstretch" gridItemLocation="1,0,1,1" fieldTable="" identifier="label1" textAlignment="Center,Default"/>
+				<CheckBox toCase="Up" dataType="Char,,,," preferredSize="2qch,1qch" toolTip=" Print Purchase Order Header information in detail? - (Y)es - (N)o" fieldTable="formonly" comment=" Print Purchase Order Header information in detail? - (Y)es - (N)o" identifier="head_detl_flag" gridItemLocation="1,1,1,1" horizontalAlignment="Center">
+				<CheckBox.includes>
+					<ValueInclude>
+						<ValueInclude.value>
+							<StringLiteral stringValue="Y"/>
+						</ValueInclude.value>
+					</ValueInclude>
+					<ValueInclude>
+						<ValueInclude.value>
+							<StringLiteral stringValue="N"/>
+						</ValueInclude.value>
+					</ValueInclude>
+				</CheckBox.includes>
+				<CheckBox.checkedValue>
+					<StringLiteral stringValue="Y"/>
+				</CheckBox.checkedValue>
+				<CheckBox.uncheckedValue>
+					<StringLiteral stringValue="N"/>
+				</CheckBox.uncheckedValue>
+			</CheckBox>
+				<CheckBox toCase="Up" dataType="Char,,,," preferredSize="2qch,1qch" toolTip=" Print Purchase Order Line information in detail? - (Y)es - (N)o" fieldTable="formonly" comment=" Print Purchase Order Line information in detail? - (Y)es - (N)o" identifier="line_detl_flag" gridItemLocation="2,1,1,1" horizontalAlignment="Center">
+				<CheckBox.includes>
+					<ValueInclude>
+						<ValueInclude.value>
+							<StringLiteral stringValue="Y"/>
+						</ValueInclude.value>
+					</ValueInclude>
+					<ValueInclude>
+						<ValueInclude.value>
+							<StringLiteral stringValue="N"/>
+						</ValueInclude.value>
+					</ValueInclude>
+				</CheckBox.includes>
+				<CheckBox.checkedValue>
+					<StringLiteral stringValue="Y"/>
+				</CheckBox.checkedValue>
+				<CheckBox.uncheckedValue>
+					<StringLiteral stringValue="N"/>
+				</CheckBox.uncheckedValue>
+			</CheckBox>
+				<CheckBox toCase="Up" dataType="Char,,,," preferredSize="2qch,1qch" toolTip=" Print Purchase Order Delivery details? - (Y)es - (N)o" fieldTable="formonly" comment=" Print Purchase Order Delivery details? - (Y)es - (N)o" identifier="head_deliv_flag" gridItemLocation="1,2,1,1" horizontalAlignment="Center">
+				<CheckBox.includes>
+					<ValueInclude>
+						<ValueInclude.value>
+							<StringLiteral stringValue="Y"/>
+						</ValueInclude.value>
+					</ValueInclude>
+					<ValueInclude>
+						<ValueInclude.value>
+							<StringLiteral stringValue="N"/>
+						</ValueInclude.value>
+					</ValueInclude>
+				</CheckBox.includes>
+				<CheckBox.checkedValue>
+					<StringLiteral stringValue="Y"/>
+				</CheckBox.checkedValue>
+				<CheckBox.uncheckedValue>
+					<StringLiteral stringValue="N"/>
+				</CheckBox.uncheckedValue>
+			</CheckBox>
+				<CheckBox toCase="Up" dataType="Char,,,," preferredSize="2qch,1qch" toolTip=" Print Purchase Order Line Notes? - (Y)es - (N)o" fieldTable="formonly" comment=" Print Purchase Order Line Notes? - (Y)es - (N)o" identifier="line_notes_flag" gridItemLocation="2,2,1,1" horizontalAlignment="Center">
+				<CheckBox.includes>
+					<ValueInclude>
+						<ValueInclude.value>
+							<StringLiteral stringValue="Y"/>
+						</ValueInclude.value>
+					</ValueInclude>
+					<ValueInclude>
+						<ValueInclude.value>
+							<StringLiteral stringValue="N"/>
+						</ValueInclude.value>
+					</ValueInclude>
+				</CheckBox.includes>
+				<CheckBox.checkedValue>
+					<StringLiteral stringValue="Y"/>
+				</CheckBox.checkedValue>
+				<CheckBox.uncheckedValue>
+					<StringLiteral stringValue="N"/>
+				</CheckBox.uncheckedValue>
+			</CheckBox>
+				<CheckBox toCase="Up" dataType="Char,,,," preferredSize="2qch,1qch" toolTip=" Print Purchase Order Header Notes? - (Y)es - (N)o" fieldTable="formonly" comment=" Print Purchase Order Header Notes? - (Y)es - (N)o" identifier="head_notes_flag" gridItemLocation="1,3,1,1" horizontalAlignment="Center">
+				<CheckBox.includes>
+					<ValueInclude>
+						<ValueInclude.value>
+							<StringLiteral stringValue="Y"/>
+						</ValueInclude.value>
+					</ValueInclude>
+					<ValueInclude>
+						<ValueInclude.value>
+							<StringLiteral stringValue="N"/>
+						</ValueInclude.value>
+					</ValueInclude>
+				</CheckBox.includes>
+				<CheckBox.checkedValue>
+					<StringLiteral stringValue="Y"/>
+				</CheckBox.checkedValue>
+				<CheckBox.uncheckedValue>
+					<StringLiteral stringValue="N"/>
+				</CheckBox.uncheckedValue>
+			</CheckBox>
+				<CheckBox toCase="Up" dataType="Char,,,," preferredSize="2qch,1qch" toolTip=" Print Purchase Order Line Status information? - (Y)es - (N)o" fieldTable="formonly" comment=" Print Purchase Order Line Status information? - (Y)es - (N)o" identifier="status_flag" gridItemLocation="2,3,1,1" horizontalAlignment="Center">
+				<CheckBox.includes>
+					<ValueInclude>
+						<ValueInclude.value>
+							<StringLiteral stringValue="Y"/>
+						</ValueInclude.value>
+					</ValueInclude>
+					<ValueInclude>
+						<ValueInclude.value>
+							<StringLiteral stringValue="N"/>
+						</ValueInclude.value>
+					</ValueInclude>
+				</CheckBox.includes>
+				<CheckBox.checkedValue>
+					<StringLiteral stringValue="Y"/>
+				</CheckBox.checkedValue>
+				<CheckBox.uncheckedValue>
+					<StringLiteral stringValue="N"/>
+				</CheckBox.uncheckedValue>
+			</CheckBox>
+				<Label isDynamic="true" text="Line" classNames="fcls_columnlabel_rev_cell,fcls_align_hstretch" visible="true" gridItemLocation="2,0,1,1" fieldTable="" identifier="lb49" textAlignment="Center,Default"/>
+				<Label isDynamic="true" text="Full Detail" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,1,1,1" fieldTable="" identifier="lb51"/>
+				<Label isDynamic="true" text="Delivery Details" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,2,1,1" fieldTable="" identifier="lb52"/>
+				<Label isDynamic="true" text="Notes" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,3,1,1" fieldTable="" identifier="lb66"/>
+				<Label isDynamic="true" text="Sort Method" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,5,1,1" fieldTable="" identifier="lb134"/>
+				<RadioGroup visible="true" identifier="sort_flag" gridItemLocation="1,5,2,1">
+					<Radio title="By Vendor then order" identifier="sort_flag_1">
+						<Radio.value>
+							<IntegerLiteral integerValue="1"/>
+						</Radio.value>
+					</Radio>
+					<Radio title="By Vendor then due date" identifier="sort_flag_2">
+						<Radio.value>
+							<IntegerLiteral integerValue="2"/>
+						</Radio.value>
+					</Radio>
+					<Radio title="By Order then vendor" identifier="sort_flag_3">
+						<Radio.value>
+							<IntegerLiteral integerValue="3"/>
+						</Radio.value>
+					</Radio>
+					<Radio title="By Due Date then vendor" identifier="sort_flag_4">
+						<Radio.value>
+							<IntegerLiteral integerValue="4"/>
+						</Radio.value>
+					</Radio>
+
+
+				</RadioGroup>
+			</GridPanel>
+			<GridPanel classNames="fcls_statusbar_cnt" visible="true" verticalAlignment="Bottom" gridItemLocation="0,2,1,1" fieldTable="formonly" identifier="cntStatusBar">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="100%"/>
+				</GridPanel.gridColumnDefinitions>
+				<Label isDynamic="true" text="" classNames="fcls_sblabel" visible="true" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="lbInfo1"/>
+				<Label isDynamic="true" text="" classNames="fcls_sblabel" visible="true" gridItemLocation="0,1,1,1" fieldTable="formonly" identifier="lbInfo2"/>
+			</GridPanel>
+		</GridPanel>
+	</form.rootContainer>
+	<form.screenRecords>
+		<ScreenRecord identifier="formonly" fields="formonly.head_detl_flag,formonly.head_deliv_flag,formonly.head_notes_flag,formonly.line_detl_flag,formonly.line_notes_flag,formonly.status_flag,formonly.sort_flag,sort_flag"/>
+	</form.screenRecords>
+</form>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

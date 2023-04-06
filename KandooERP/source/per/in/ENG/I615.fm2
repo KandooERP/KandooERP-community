@@ -1,0 +1,531 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form xmlns="http://namespaces.querix.com/2015/fglForms">
+	<form.rootContainer>
+		<GridPanel classNames="fcls_rootContainer" verticalAlignment="Top" horizontalAlignment="Left" fieldTable="" identifier="rootContainer">
+			<GridPanel.gridRowDefinitions>
+				<GridRowDefinition gridLengthValue=""/>
+				<GridRowDefinition gridLengthValue=""/>
+				<GridRowDefinition gridLengthValue=""/>
+				<GridRowDefinition gridLengthValue=""/>
+				<GridRowDefinition gridLengthValue=""/>
+				<GridRowDefinition gridLengthValue=""/>
+			</GridPanel.gridRowDefinitions>
+			<GridPanel.gridColumnDefinitions>
+				<GridColumnDefinition gridLengthValue="100%"/>
+			</GridPanel.gridColumnDefinitions>
+			<GridPanel classNames="fcls_title_cnt" visible="true" verticalAlignment="Top" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="cntTitle">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="100%"/>
+					<GridColumnDefinition gridLengthValue=""/>
+				</GridPanel.gridColumnDefinitions>
+				<Label isDynamic="true" text="Warehouse Pricing" classNames="fcls_title_lb" visible="true" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="header_text"/>
+				<Label isDynamic="true" text="I615" classNames="fcls_title_lb" visible="true" gridItemLocation="1,0,1,1" fieldTable="" identifier="lbFormName"/>
+			</GridPanel>
+			<GroupBox title="Warehouse Product" classNames="fcls_detail_gb_cnt" visible="true" gridItemLocation="0,1,1,1" fieldTable="" identifier="cntDetail1GroupBox">
+				<GridPanel classNames="fcls_detail_gb_cnt_sub,fcls_align_left,fcls_align_top,fcls_data_cnt" visible="true" verticalAlignment="Top" horizontalAlignment="Left" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="cntDetail1GBSubGp">
+					<GridPanel.gridRowDefinitions>
+						<GridRowDefinition gridLengthValue=""/>
+						<GridRowDefinition gridLengthValue=""/>
+						<GridRowDefinition gridLengthValue=""/>
+						<GridRowDefinition gridLengthValue=""/>
+						<GridRowDefinition gridLengthValue=""/>
+					</GridPanel.gridRowDefinitions>
+					<GridPanel.gridColumnDefinitions>
+						<GridColumnDefinition gridLengthValue="" gridMinLength="10rem"/>
+						<GridColumnDefinition gridLengthValue=""/>
+					</GridPanel.gridColumnDefinitions>
+					<Label isDynamic="true" text="Product Code" classNames="fcls_fieldlabel" visible="true" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="lb57"/>
+					<ComboBox noEntry="true" dataType="Char,,,,15" classNames="fcls_data_widget,fcls_align_left,fcls_length_30qch" preferredSize="16qch,1qch" gridItemLocation="1,0,1,1" fieldTable="product" identifier="part_code"/>
+					<TextField noEntry="true" dataType="Char,,,," classNames="fcls_data_widget,fcls_align_left,fcls_length_30qch" preferredSize="31qch,1qch" fieldTable="formonly" identifier="part_desc_text" gridItemLocation="1,1,1,1"/>
+					<TextField noEntry="true" dataType="Char,,,," classNames="fcls_data_widget,fcls_align_left,fcls_length_30qch" preferredSize="31qch,1qch" fieldTable="formonly" identifier="part_desc2_text" gridItemLocation="1,2,1,1"/>
+					<Label isDynamic="true" text="Warehouse Code" classNames="fcls_fieldlabel" visible="true" gridItemLocation="0,3,1,1" fieldTable="" identifier="lb76"/>
+					<ComboBox toCase="Up" dataType="Char,,,,3" classNames="fcls_data_widget,fcls_align_left,fcls_length_30qch" preferredSize="4qch,1qch" toolTip=" The warehouse code where the product is located " gridItemLocation="1,3,1,1" fieldTable="warehouse" comment=" The warehouse code where the product is located " identifier="ware_code"/>
+					<TextField noEntry="true" dataType="Char,,,," classNames="fcls_data_widget,fcls_align_left,fcls_length_30qch" preferredSize="31qch,1qch" fieldTable="formonly" identifier="ware_desc_text" gridItemLocation="1,4,1,1"/>
+				</GridPanel>
+			</GroupBox>
+			<GroupBox title="Price" classNames="fcls_detail_gb_cnt" visible="true" verticalAlignment="Top" gridItemLocation="0,2,1,1" fieldTable="formonly" identifier="cntDetail2GroupBox">
+				<GridPanel classNames="fcls_detail_gb_cnt_sub,fcls_align_left,fcls_align_top,fcls_data_cnt" visible="true" verticalAlignment="Top" horizontalAlignment="Left" fieldTable="formonly" identifier="cntDetail2GBSubGp">
+					<GridPanel.gridRowDefinitions>
+						<GridRowDefinition gridLengthValue=""/>
+						<GridRowDefinition gridLengthValue=""/>
+						<GridRowDefinition gridLengthValue=""/>
+						<GridRowDefinition gridLengthValue=""/>
+						<GridRowDefinition gridLengthValue=""/>
+						<GridRowDefinition gridLengthValue=""/>
+						<GridRowDefinition gridLengthValue=""/>
+						<GridRowDefinition gridLengthValue=""/>
+						<GridRowDefinition gridLengthValue=""/>
+						<GridRowDefinition gridLengthValue=""/>
+						<GridRowDefinition gridLengthValue=""/>
+					</GridPanel.gridRowDefinitions>
+					<GridPanel.gridColumnDefinitions>
+						<GridColumnDefinition gridLengthValue="" gridMinLength="10rem"/>
+						<GridColumnDefinition gridLengthValue=""/>
+						<GridColumnDefinition gridLengthValue=""/>
+						<GridColumnDefinition gridLengthValue=""/>
+					</GridPanel.gridColumnDefinitions>
+					<Label isDynamic="true" text="Price per" classNames="fcls_fieldlabel" visible="true" gridItemLocation="0,0,1,1" fieldTable="" identifier="lb91"/>
+					<ComboBox noEntry="true" dataType="Char,,,,4" classNames="fcls_data_widget,fcls_align_left,fcls_length_15qch" preferredSize="5qch,1qch" toolTip=" The pricing units for this product " gridItemLocation="1,0,1,1" fieldTable="product" comment=" The pricing units for this product " identifier="price_uom_code"/>
+					<Label isDynamic="true" text="Type" classNames="fcls_columnlabel_rev_cell,fcls_align_hstretch" visible="true" gridItemLocation="2,0,1,1" fieldTable="" identifier="lb86"/>
+					<Label isDynamic="true" text="Markup" classNames="fcls_columnlabel_rev_cell,fcls_align_hstretch" visible="true" gridItemLocation="3,0,1,1" fieldTable="" identifier="lb92"/>
+					<Label isDynamic="true" text="Listed" classNames="fcls_fieldlabel" visible="true" gridItemLocation="0,1,1,1" fieldTable="formonly" identifier="lb47"/>
+					<TextField dataType="Decimal,,,4,16" classNames="fcls_data_widget,fcls_align_left,fcls_length_15qch" preferredSize="14qch,1qch" toolTip=" The listed price charged for this product " gridItemLocation="1,1,1,1" fieldTable="prodstatus" comment=" The listed price charged for this product " identifier="list_amt"/>
+					<ComboBox dataType="Char,,,,1" classNames="fcls_data_widget,fcls_align_left,fcls_length_10qch" preferredSize="4qch,1qch" toolTip=" (S)tandard Cost (W)eighted Cost (A)ctual Cost (F)oreign Cost " gridItemLocation="2,1,1,1" fieldTable="prodstatus" comment=" (S)tandard Cost (W)eighted Cost (A)ctual Cost (F)oreign Cost " identifier="priceL_ind">
+						<ComboBoxItem text="List Price" identifier="comboboxitem1">
+							<ComboBoxItem.value>
+								<StringLiteral stringValue="L"/>
+							</ComboBoxItem.value>
+						</ComboBoxItem>
+						<ComboBoxItem text="Standard Cost" identifier="comboboxitem2">
+							<ComboBoxItem.value>
+								<StringLiteral stringValue="S"/>
+							</ComboBoxItem.value>
+						</ComboBoxItem>
+						<ComboBoxItem text="Weighted Cost" identifier="comboboxitem3">
+							<ComboBoxItem.value>
+								<StringLiteral stringValue="W"/>
+							</ComboBoxItem.value>
+						</ComboBoxItem>
+						<ComboBoxItem text="Actual Cost" identifier="comboboxitem4">
+							<ComboBoxItem.value>
+								<StringLiteral stringValue="A"/>
+							</ComboBoxItem.value>
+						</ComboBoxItem>
+						<ComboBoxItem text="Foreign Cost" identifier="comboboxitem5">
+							<ComboBoxItem.value>
+								<StringLiteral stringValue="F"/>
+							</ComboBoxItem.value>
+						</ComboBoxItem>
+						<ComboBoxItem identifier="comboboxitem6">
+							<ComboBoxItem.value>
+								<NullLiteral/>
+							</ComboBoxItem.value>
+						</ComboBoxItem>
+					</ComboBox>
+					<TextField dataType="Float,,,," classNames="fcls_data_widget,fcls_align_left,fcls_length_10qch" preferredSize="8qch,1qch" toolTip=" The listed price markup percentage " gridItemLocation="3,1,1,1" fieldTable="prodstatus" comment=" The listed price markup percentage " identifier="priceL_per"/>
+					<Label isDynamic="true" text="Price 1." classNames="fcls_fieldlabel" visible="true" gridItemLocation="0,2,1,1" fieldTable="formonly" identifier="lb46"/>
+					<TextField dataType="Decimal,,,4,16" classNames="fcls_data_widget,fcls_align_left,fcls_length_15qch" preferredSize="14qch,1qch" toolTip=" The price charged for this product at level 1 " gridItemLocation="1,2,1,1" fieldTable="prodstatus" comment=" The price charged for this product at level 1 " identifier="price1_amt"/>
+					<ComboBox dataType="Char,,,,1" classNames="fcls_data_widget,fcls_align_left,fcls_length_10qch" preferredSize="4qch,1qch" toolTip=" (L)ist Price (S)tandard Cost (W)eighted Cost (A)ctual Cost (F)oreign Cost" gridItemLocation="2,2,1,1" fieldTable="prodstatus" comment=" (L)ist Price (S)tandard Cost (W)eighted Cost (A)ctual Cost (F)oreign Cost" identifier="price1_ind">
+						<ComboBoxItem text="List Price" identifier="comboboxitem7">
+							<ComboBoxItem.value>
+								<StringLiteral stringValue="L"/>
+							</ComboBoxItem.value>
+						</ComboBoxItem>
+						<ComboBoxItem text="Standard Cost" identifier="comboboxitem8">
+							<ComboBoxItem.value>
+								<StringLiteral stringValue="S"/>
+							</ComboBoxItem.value>
+						</ComboBoxItem>
+						<ComboBoxItem text="Weighted Cost" identifier="comboboxitem9">
+							<ComboBoxItem.value>
+								<StringLiteral stringValue="W"/>
+							</ComboBoxItem.value>
+						</ComboBoxItem>
+						<ComboBoxItem text="Actual Cost" identifier="comboboxitem10">
+							<ComboBoxItem.value>
+								<StringLiteral stringValue="A"/>
+							</ComboBoxItem.value>
+						</ComboBoxItem>
+						<ComboBoxItem text="Foreign Cost" identifier="comboboxitem11">
+							<ComboBoxItem.value>
+								<StringLiteral stringValue="F"/>
+							</ComboBoxItem.value>
+						</ComboBoxItem>
+						<ComboBoxItem identifier="comboboxitem12">
+							<ComboBoxItem.value>
+								<NullLiteral/>
+							</ComboBoxItem.value>
+						</ComboBoxItem>
+					</ComboBox>
+					<TextField dataType="Float,,,," classNames="fcls_data_widget,fcls_align_left,fcls_length_10qch" preferredSize="8qch,1qch" toolTip=" The price level 1 markup percentage " gridItemLocation="3,2,1,1" fieldTable="prodstatus" comment=" The price level 1 markup percentage " identifier="price1_per"/>
+					<Label isDynamic="true" text="Price 2." classNames="fcls_fieldlabel" visible="true" gridItemLocation="0,3,1,1" fieldTable="formonly" identifier="lb44"/>
+					<TextField dataType="Decimal,,,4,16" classNames="fcls_data_widget,fcls_align_left,fcls_length_15qch" preferredSize="14qch,1qch" toolTip=" The price charged for this product at level 2 " gridItemLocation="1,3,1,1" fieldTable="prodstatus" comment=" The price charged for this product at level 2 " identifier="price2_amt"/>
+					<ComboBox dataType="Char,,,,1" classNames="fcls_data_widget,fcls_align_left,fcls_length_10qch" preferredSize="4qch,1qch" toolTip=" (L)ist Price (S)tandard Cost (W)eighted Cost (A)ctual Cost (F)oreign Cost" gridItemLocation="2,3,1,1" fieldTable="prodstatus" comment=" (L)ist Price (S)tandard Cost (W)eighted Cost (A)ctual Cost (F)oreign Cost" identifier="price2_ind">
+						<ComboBoxItem text="List Price" identifier="comboboxitem13">
+							<ComboBoxItem.value>
+								<StringLiteral stringValue="L"/>
+							</ComboBoxItem.value>
+						</ComboBoxItem>
+						<ComboBoxItem text="Standard Cost" identifier="comboboxitem14">
+							<ComboBoxItem.value>
+								<StringLiteral stringValue="S"/>
+							</ComboBoxItem.value>
+						</ComboBoxItem>
+						<ComboBoxItem text="Weighted Cost" identifier="comboboxitem15">
+							<ComboBoxItem.value>
+								<StringLiteral stringValue="W"/>
+							</ComboBoxItem.value>
+						</ComboBoxItem>
+						<ComboBoxItem text="Actual Cost" identifier="comboboxitem16">
+							<ComboBoxItem.value>
+								<StringLiteral stringValue="A"/>
+							</ComboBoxItem.value>
+						</ComboBoxItem>
+						<ComboBoxItem text="Foreign Cost" identifier="comboboxitem17">
+							<ComboBoxItem.value>
+								<StringLiteral stringValue="F"/>
+							</ComboBoxItem.value>
+						</ComboBoxItem>
+						<ComboBoxItem identifier="comboboxitem18">
+							<ComboBoxItem.value>
+								<NullLiteral/>
+							</ComboBoxItem.value>
+						</ComboBoxItem>
+					</ComboBox>
+					<TextField dataType="Float,,,," classNames="fcls_data_widget,fcls_align_left,fcls_length_10qch" preferredSize="8qch,1qch" toolTip=" The price level 2 markup percentage " gridItemLocation="3,3,1,1" fieldTable="prodstatus" comment=" The price level 2 markup percentage " identifier="price2_per"/>
+					<Label isDynamic="true" text="Price 3." classNames="fcls_fieldlabel" visible="true" gridItemLocation="0,4,1,1" fieldTable="" identifier="lb89"/>
+					<TextField dataType="Decimal,,,4,16" classNames="fcls_data_widget,fcls_align_left,fcls_length_15qch" preferredSize="14qch,1qch" toolTip=" The price charged for this product at level 3 " gridItemLocation="1,4,1,1" fieldTable="prodstatus" comment=" The price charged for this product at level 3 " identifier="price3_amt"/>
+					<ComboBox dataType="Char,,,,1" classNames="fcls_data_widget,fcls_align_left,fcls_length_10qch" preferredSize="4qch,1qch" toolTip=" (L)ist Price (S)tandard Cost (W)eighted Cost (A)ctual Cost (F)oreign Cost" gridItemLocation="2,4,1,1" fieldTable="prodstatus" comment=" (L)ist Price (S)tandard Cost (W)eighted Cost (A)ctual Cost (F)oreign Cost" identifier="price3_ind">
+						<ComboBoxItem text="List Price" identifier="comboboxitem19">
+							<ComboBoxItem.value>
+								<StringLiteral stringValue="L"/>
+							</ComboBoxItem.value>
+						</ComboBoxItem>
+						<ComboBoxItem text="Standard Cost" identifier="comboboxitem20">
+							<ComboBoxItem.value>
+								<StringLiteral stringValue="S"/>
+							</ComboBoxItem.value>
+						</ComboBoxItem>
+						<ComboBoxItem text="Weighted Cost" identifier="comboboxitem21">
+							<ComboBoxItem.value>
+								<StringLiteral stringValue="W"/>
+							</ComboBoxItem.value>
+						</ComboBoxItem>
+						<ComboBoxItem text="Actual Cost" identifier="comboboxitem22">
+							<ComboBoxItem.value>
+								<StringLiteral stringValue="A"/>
+							</ComboBoxItem.value>
+						</ComboBoxItem>
+						<ComboBoxItem text="Foreign Cost" identifier="comboboxitem23">
+							<ComboBoxItem.value>
+								<StringLiteral stringValue="F"/>
+							</ComboBoxItem.value>
+						</ComboBoxItem>
+						<ComboBoxItem identifier="comboboxitem24">
+							<ComboBoxItem.value>
+								<NullLiteral/>
+							</ComboBoxItem.value>
+						</ComboBoxItem>
+					</ComboBox>
+					<TextField dataType="Float,,,," classNames="fcls_data_widget,fcls_align_left,fcls_length_10qch" preferredSize="8qch,1qch" toolTip=" The price level 3 markup percentage " gridItemLocation="3,4,1,1" fieldTable="prodstatus" comment=" The price level 3 markup percentage " identifier="price3_per"/>
+					<Label isDynamic="true" text="Price 4." classNames="fcls_fieldlabel" visible="true" gridItemLocation="0,5,1,1" fieldTable="" identifier="lb113"/>
+					<TextField dataType="Decimal,,,4,16" classNames="fcls_data_widget,fcls_align_left,fcls_length_15qch" preferredSize="14qch,1qch" toolTip=" The price charged for this product at level 4 " gridItemLocation="1,5,1,1" fieldTable="prodstatus" comment=" The price charged for this product at level 4 " identifier="price4_amt"/>
+					<ComboBox dataType="Char,,,,1" classNames="fcls_data_widget,fcls_align_left,fcls_length_10qch" preferredSize="4qch,1qch" toolTip=" (L)ist Price (S)tandard Cost (W)eighted Cost (A)ctual Cost (F)oreign Cost" gridItemLocation="2,5,1,1" fieldTable="prodstatus" comment=" (L)ist Price (S)tandard Cost (W)eighted Cost (A)ctual Cost (F)oreign Cost" identifier="price4_ind">
+						<ComboBoxItem text="List Price" identifier="comboboxitem25">
+							<ComboBoxItem.value>
+								<StringLiteral stringValue="L"/>
+							</ComboBoxItem.value>
+						</ComboBoxItem>
+						<ComboBoxItem text="Standard Cost" identifier="comboboxitem26">
+							<ComboBoxItem.value>
+								<StringLiteral stringValue="S"/>
+							</ComboBoxItem.value>
+						</ComboBoxItem>
+						<ComboBoxItem text="Weighted Cost" identifier="comboboxitem27">
+							<ComboBoxItem.value>
+								<StringLiteral stringValue="W"/>
+							</ComboBoxItem.value>
+						</ComboBoxItem>
+						<ComboBoxItem text="Actual Cost" identifier="comboboxitem28">
+							<ComboBoxItem.value>
+								<StringLiteral stringValue="A"/>
+							</ComboBoxItem.value>
+						</ComboBoxItem>
+						<ComboBoxItem text="Foreign Cost" identifier="comboboxitem29">
+							<ComboBoxItem.value>
+								<StringLiteral stringValue="F"/>
+							</ComboBoxItem.value>
+						</ComboBoxItem>
+						<ComboBoxItem identifier="comboboxitem30">
+							<ComboBoxItem.value>
+								<NullLiteral/>
+							</ComboBoxItem.value>
+						</ComboBoxItem>
+					</ComboBox>
+					<TextField dataType="Float,,,," classNames="fcls_data_widget,fcls_align_left,fcls_length_10qch" preferredSize="8qch,1qch" toolTip=" The price level 4 markup percentage " gridItemLocation="3,5,1,1" fieldTable="prodstatus" comment=" The price level 4 markup percentage " identifier="price4_per"/>
+					<Label isDynamic="true" text="Price 5." classNames="fcls_fieldlabel" visible="true" gridItemLocation="0,6,1,1" fieldTable="" identifier="lb93y"/>
+					<TextField dataType="Decimal,,,4,16" classNames="fcls_data_widget,fcls_align_left,fcls_length_15qch" preferredSize="14qch,1qch" toolTip=" The price charged for this product at level 5 " gridItemLocation="1,6,1,1" fieldTable="prodstatus" comment=" The price charged for this product at level 5 " identifier="price5_amt"/>
+					<ComboBox dataType="Char,,,,1" classNames="fcls_data_widget,fcls_align_left,fcls_length_10qch" preferredSize="4qch,1qch" toolTip=" (L)ist Price (S)tandard Cost (W)eighted Cost (A)ctual Cost (F)oreign Cost" gridItemLocation="2,6,1,1" fieldTable="prodstatus" comment=" (L)ist Price (S)tandard Cost (W)eighted Cost (A)ctual Cost (F)oreign Cost" identifier="price5_ind">
+						<ComboBoxItem text="List Price" identifier="comboboxitem31">
+							<ComboBoxItem.value>
+								<StringLiteral stringValue="L"/>
+							</ComboBoxItem.value>
+						</ComboBoxItem>
+						<ComboBoxItem text="Standard Cost" identifier="comboboxitem32">
+							<ComboBoxItem.value>
+								<StringLiteral stringValue="S"/>
+							</ComboBoxItem.value>
+						</ComboBoxItem>
+						<ComboBoxItem text="Weighted Cost" identifier="comboboxitem33">
+							<ComboBoxItem.value>
+								<StringLiteral stringValue="W"/>
+							</ComboBoxItem.value>
+						</ComboBoxItem>
+						<ComboBoxItem text="Actual Cost" identifier="comboboxitem34">
+							<ComboBoxItem.value>
+								<StringLiteral stringValue="A"/>
+							</ComboBoxItem.value>
+						</ComboBoxItem>
+						<ComboBoxItem text="Foreign Cost" identifier="comboboxitem35">
+							<ComboBoxItem.value>
+								<StringLiteral stringValue="F"/>
+							</ComboBoxItem.value>
+						</ComboBoxItem>
+						<ComboBoxItem identifier="comboboxitem36">
+							<ComboBoxItem.value>
+								<NullLiteral/>
+							</ComboBoxItem.value>
+						</ComboBoxItem>
+					</ComboBox>
+					<TextField dataType="Float,,,," classNames="fcls_data_widget,fcls_align_left,fcls_length_10qch" preferredSize="8qch,1qch" toolTip=" The price level 5 markup percentage " gridItemLocation="3,6,1,1" fieldTable="prodstatus" comment=" The price level 5 markup percentage " identifier="price5_per"/>
+					<Label isDynamic="true" text="Price 6." classNames="fcls_fieldlabel" visible="true" gridItemLocation="0,7,1,1" fieldTable="" identifier="lb94y"/>
+					<TextField dataType="Decimal,,,4,16" classNames="fcls_data_widget,fcls_align_left,fcls_length_15qch" preferredSize="14qch,1qch" toolTip=" The price charged for this product at level 6 " gridItemLocation="1,7,1,1" fieldTable="prodstatus" comment=" The price charged for this product at level 6 " identifier="price6_amt"/>
+					<ComboBox dataType="Char,,,,1" classNames="fcls_data_widget,fcls_align_left,fcls_length_10qch" preferredSize="4qch,1qch" toolTip=" (L)ist Price (S)tandard Cost (W)eighted Cost (A)ctual Cost (F)oreign Cost" gridItemLocation="2,7,1,1" fieldTable="prodstatus" comment=" (L)ist Price (S)tandard Cost (W)eighted Cost (A)ctual Cost (F)oreign Cost" identifier="price6_ind">
+						<ComboBoxItem text="List Price" identifier="comboboxitem37">
+							<ComboBoxItem.value>
+								<StringLiteral stringValue="L"/>
+							</ComboBoxItem.value>
+						</ComboBoxItem>
+						<ComboBoxItem text="Standard Cost" identifier="comboboxitem38">
+							<ComboBoxItem.value>
+								<StringLiteral stringValue="S"/>
+							</ComboBoxItem.value>
+						</ComboBoxItem>
+						<ComboBoxItem text="Weighted Cost" identifier="comboboxitem39">
+							<ComboBoxItem.value>
+								<StringLiteral stringValue="W"/>
+							</ComboBoxItem.value>
+						</ComboBoxItem>
+						<ComboBoxItem text="Actual Cost" identifier="comboboxitem40">
+							<ComboBoxItem.value>
+								<StringLiteral stringValue="A"/>
+							</ComboBoxItem.value>
+						</ComboBoxItem>
+						<ComboBoxItem text="Foreign Cost" identifier="comboboxitem41">
+							<ComboBoxItem.value>
+								<StringLiteral stringValue="F"/>
+							</ComboBoxItem.value>
+						</ComboBoxItem>
+						<ComboBoxItem identifier="comboboxitem42">
+							<ComboBoxItem.value>
+								<NullLiteral/>
+							</ComboBoxItem.value>
+						</ComboBoxItem>
+					</ComboBox>
+					<TextField dataType="Float,,,," classNames="fcls_data_widget,fcls_align_left,fcls_length_10qch" preferredSize="8qch,1qch" toolTip=" The price level 6 markup percentage " gridItemLocation="3,7,1,1" fieldTable="prodstatus" comment=" The price level 6 markup percentage " identifier="price6_per"/>
+					<Label isDynamic="true" text="Price 7." classNames="fcls_fieldlabel" visible="true" gridItemLocation="0,8,1,1" fieldTable="" identifier="lb95y"/>
+					<TextField dataType="Decimal,,,4,16" classNames="fcls_data_widget,fcls_align_left,fcls_length_15qch" preferredSize="14qch,1qch" toolTip=" The price charged for this product at level 7 " gridItemLocation="1,8,1,1" fieldTable="prodstatus" comment=" The price charged for this product at level 7 " identifier="price7_amt"/>
+					<ComboBox dataType="Char,,,,1" classNames="fcls_data_widget,fcls_align_left,fcls_length_10qch" preferredSize="4qch,1qch" toolTip=" (L)ist Price (S)tandard Cost (W)eighted Cost (A)ctual Cost (F)oreign Cost" gridItemLocation="2,8,1,1" fieldTable="prodstatus" comment=" (L)ist Price (S)tandard Cost (W)eighted Cost (A)ctual Cost (F)oreign Cost" identifier="price7_ind">
+						<ComboBoxItem text="List Price" identifier="comboboxitem43">
+							<ComboBoxItem.value>
+								<StringLiteral stringValue="L"/>
+							</ComboBoxItem.value>
+						</ComboBoxItem>
+						<ComboBoxItem text="Standard Cost" identifier="comboboxitem44">
+							<ComboBoxItem.value>
+								<StringLiteral stringValue="S"/>
+							</ComboBoxItem.value>
+						</ComboBoxItem>
+						<ComboBoxItem text="Weighted Cost" identifier="comboboxitem45">
+							<ComboBoxItem.value>
+								<StringLiteral stringValue="W"/>
+							</ComboBoxItem.value>
+						</ComboBoxItem>
+						<ComboBoxItem text="Actual Cost" identifier="comboboxitem46">
+							<ComboBoxItem.value>
+								<StringLiteral stringValue="A"/>
+							</ComboBoxItem.value>
+						</ComboBoxItem>
+						<ComboBoxItem text="Foreign Cost" identifier="comboboxitem47">
+							<ComboBoxItem.value>
+								<StringLiteral stringValue="F"/>
+							</ComboBoxItem.value>
+						</ComboBoxItem>
+						<ComboBoxItem identifier="comboboxitem48">
+							<ComboBoxItem.value>
+								<NullLiteral/>
+							</ComboBoxItem.value>
+						</ComboBoxItem>
+					</ComboBox>
+					<TextField dataType="Float,,,," classNames="fcls_data_widget,fcls_align_left,fcls_length_10qch" preferredSize="8qch,1qch" toolTip=" The price level 7 markup percentage " gridItemLocation="3,8,1,1" fieldTable="prodstatus" comment=" The price level 7 markup percentage " identifier="price7_per"/>
+					<Label isDynamic="true" text="Price 8." classNames="fcls_fieldlabel" visible="true" gridItemLocation="0,9,1,1" fieldTable="" identifier="lb114y"/>
+					<TextField dataType="Decimal,,,4,16" classNames="fcls_data_widget,fcls_align_left,fcls_length_15qch" preferredSize="14qch,1qch" toolTip=" The price charged for this product at level 8 " gridItemLocation="1,9,1,1" fieldTable="prodstatus" comment=" The price charged for this product at level 8 " identifier="price8_amt"/>
+					<ComboBox dataType="Char,,,,1" classNames="fcls_data_widget,fcls_align_left,fcls_length_10qch" preferredSize="4qch,1qch" toolTip=" (L)ist Price (S)tandard Cost (W)eighted Cost (A)ctual Cost (F)oreign Cost" gridItemLocation="2,9,1,1" fieldTable="prodstatus" comment=" (L)ist Price (S)tandard Cost (W)eighted Cost (A)ctual Cost (F)oreign Cost" identifier="price8_ind">
+						<ComboBoxItem text="List Price" identifier="comboboxitem49">
+							<ComboBoxItem.value>
+								<StringLiteral stringValue="L"/>
+							</ComboBoxItem.value>
+						</ComboBoxItem>
+						<ComboBoxItem text="Standard Cost" identifier="comboboxitem50">
+							<ComboBoxItem.value>
+								<StringLiteral stringValue="S"/>
+							</ComboBoxItem.value>
+						</ComboBoxItem>
+						<ComboBoxItem text="Weighted Cost" identifier="comboboxitem51">
+							<ComboBoxItem.value>
+								<StringLiteral stringValue="W"/>
+							</ComboBoxItem.value>
+						</ComboBoxItem>
+						<ComboBoxItem text="Actual Cost" identifier="comboboxitem52">
+							<ComboBoxItem.value>
+								<StringLiteral stringValue="A"/>
+							</ComboBoxItem.value>
+						</ComboBoxItem>
+						<ComboBoxItem text="Foreign Cost" identifier="comboboxitem53">
+							<ComboBoxItem.value>
+								<StringLiteral stringValue="F"/>
+							</ComboBoxItem.value>
+						</ComboBoxItem>
+						<ComboBoxItem identifier="comboboxitem54">
+							<ComboBoxItem.value>
+								<NullLiteral/>
+							</ComboBoxItem.value>
+						</ComboBoxItem>
+					</ComboBox>
+					<TextField dataType="Float,,,," classNames="fcls_data_widget,fcls_align_left,fcls_length_10qch" preferredSize="8qch,1qch" toolTip=" The price level 8 markup percentage " gridItemLocation="3,9,1,1" fieldTable="prodstatus" comment=" The price level 8 markup percentage " identifier="price8_per"/>
+					<Label isDynamic="true" text="Price 9." classNames="fcls_fieldlabel" visible="true" gridItemLocation="0,10,1,1" fieldTable="" identifier="lb92y"/>
+					<TextField dataType="Decimal,,,4,16" classNames="fcls_data_widget,fcls_align_left,fcls_length_15qch" preferredSize="14qch,1qch" toolTip=" The price charged for this product at level 9 " gridItemLocation="1,10,1,1" fieldTable="prodstatus" comment=" The price charged for this product at level 9 " identifier="price9_amt"/>
+					<ComboBox dataType="Char,,,,1" classNames="fcls_data_widget,fcls_align_left,fcls_length_10qch" preferredSize="4qch,1qch" toolTip=" (L)ist Price (S)tandard Cost (W)eighted Cost (A)ctual Cost (F)oreign Cost" gridItemLocation="2,10,1,1" fieldTable="prodstatus" comment=" (L)ist Price (S)tandard Cost (W)eighted Cost (A)ctual Cost (F)oreign Cost" identifier="price9_ind">
+						<ComboBoxItem text="List Price" identifier="comboboxitem55">
+							<ComboBoxItem.value>
+								<StringLiteral stringValue="L"/>
+							</ComboBoxItem.value>
+						</ComboBoxItem>
+						<ComboBoxItem text="Standard Cost" identifier="comboboxitem56">
+							<ComboBoxItem.value>
+								<StringLiteral stringValue="S"/>
+							</ComboBoxItem.value>
+						</ComboBoxItem>
+						<ComboBoxItem text="Weighted Cost" identifier="comboboxitem57">
+							<ComboBoxItem.value>
+								<StringLiteral stringValue="W"/>
+							</ComboBoxItem.value>
+						</ComboBoxItem>
+						<ComboBoxItem text="Actual Cost" identifier="comboboxitem58">
+							<ComboBoxItem.value>
+								<StringLiteral stringValue="A"/>
+							</ComboBoxItem.value>
+						</ComboBoxItem>
+						<ComboBoxItem text="Foreign Cost" identifier="comboboxitem59">
+							<ComboBoxItem.value>
+								<StringLiteral stringValue="F"/>
+							</ComboBoxItem.value>
+						</ComboBoxItem>
+						<ComboBoxItem identifier="comboboxitem60">
+							<ComboBoxItem.value>
+								<NullLiteral/>
+							</ComboBoxItem.value>
+						</ComboBoxItem>
+					</ComboBox>
+					<TextField dataType="Float,,,," classNames="fcls_data_widget,fcls_align_left,fcls_length_10qch" preferredSize="8qch,1qch" toolTip=" The price level 9 markup percentage " gridItemLocation="3,10,1,1" fieldTable="prodstatus" comment=" The price level 9 markup percentage " identifier="price9_per"/>
+				</GridPanel>
+			</GroupBox>
+			<GridPanel classNames="fcls_detail_cnt" visible="true" verticalAlignment="Top" gridItemLocation="0,3,1,1" fieldTable="formonly" identifier="cntDetail3">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="50%"/>
+					<GridColumnDefinition gridLengthValue="50%"/>
+				</GridPanel.gridColumnDefinitions>
+				<GroupBox title="Cost" classNames="fcls_detail_gb_cnt" visible="true" verticalAlignment="Top" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="cntDetail3GroupBoxLeft">
+					<GridPanel classNames="fcls_detail_gb_cnt_sub,fcls_align_left,fcls_align_top,fcls_data_cnt" visible="true" verticalAlignment="Top" horizontalAlignment="Left" fieldTable="formonly" identifier="cntDetail3GBSubGpLeft">
+						<GridPanel.gridRowDefinitions>
+							<GridRowDefinition gridLengthValue=""/>
+							<GridRowDefinition gridLengthValue=""/>
+							<GridRowDefinition gridLengthValue=""/>
+							<GridRowDefinition gridLengthValue=""/>
+							<GridRowDefinition gridLengthValue=""/>
+							<GridRowDefinition gridLengthValue=""/>
+						</GridPanel.gridRowDefinitions>
+						<GridPanel.gridColumnDefinitions>
+							<GridColumnDefinition gridLengthValue="" gridMinLength="10rem"/>
+							<GridColumnDefinition gridLengthValue=""/>
+						</GridPanel.gridColumnDefinitions>
+						<Label isDynamic="true" text="Cost per" classNames="fcls_fieldlabel" visible="true" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="lb47x"/>
+						<ComboBox noEntry="true" dataType="Char,,,,4" classNames="fcls_data_widget,fcls_align_left,fcls_length_15qch" preferredSize="5qch,1qch" toolTip=" The selling units for this product " gridItemLocation="1,0,1,1" fieldTable="product" comment=" The selling units for this product " identifier="sell_uom_code"/>
+						<Label isDynamic="true" text="Weighted Average" classNames="fcls_fieldlabel" visible="true" gridItemLocation="0,1,1,1" fieldTable="formonly" identifier="lb46x"/>
+						<TextField dataType="Decimal,,,4,16" classNames="fcls_data_widget,fcls_align_left,fcls_length_15qch" preferredSize="14qch,1qch" toolTip=" Weighted average cost determined at time of product receipt" gridItemLocation="1,1,1,1" fieldTable="prodstatus" comment=" Weighted average cost determined at time of product receipt" identifier="wgted_cost_amt"/>
+						<Label isDynamic="true" text="Standard Cost" classNames="fcls_fieldlabel" visible="true" gridItemLocation="0,2,1,1" fieldTable="formonly" identifier="lb44x"/>
+						<TextField dataType="Decimal,,,4,16" classNames="fcls_data_widget,fcls_align_left,fcls_length_15qch" preferredSize="14qch,1qch" toolTip=" The standard cost of this product, for actual comparisons " gridItemLocation="1,2,1,1" fieldTable="prodstatus" comment=" The standard cost of this product, for actual comparisons " identifier="est_cost_amt"/>
+						<Label isDynamic="true" text="Latest Cost" classNames="fcls_fieldlabel" visible="true" gridItemLocation="0,3,1,1" fieldTable="" identifier="lb89x"/>
+						<TextField dataType="Decimal,,,4,16" classNames="fcls_data_widget,fcls_align_left,fcls_length_15qch" preferredSize="14qch,1qch" toolTip=" The actual cost of product - determined through actual usage" gridItemLocation="1,3,1,1" fieldTable="prodstatus" comment=" The actual cost of product - determined through actual usage" identifier="act_cost_amt"/>
+						<Label isDynamic="true" text="Supplier Cost" classNames="fcls_fieldlabel" visible="true" gridItemLocation="0,4,1,1" fieldTable="" identifier="lb113x"/>
+						<TextField dataType="Decimal,,,4,16" classNames="fcls_data_widget,fcls_align_left,fcls_length_15qch" preferredSize="14qch,1qch" toolTip=" The foreign cost amount of the latest purchase transaction " gridItemLocation="1,4,1,1" fieldTable="prodstatus" comment=" The foreign cost amount of the latest purchase transaction " identifier="for_cost_amt"/>
+						<Label text="Currency" isDynamic="true" visible="true" identifier="lb_currency" gridItemLocation="0,5,1,1" classNames="fcls_fieldlabel"/>
+						<ComboBox dataType="Char,,,,3" classNames="fcls_data_widget,fcls_align_left,fcls_length_15qch" preferredSize="4qch,1qch" toolTip=" The currency code of the latest purchase transaction " fieldTable="prodstatus" comment=" The currency code of the latest purchase transaction " identifier="for_curr_code" gridItemLocation="1,5,1,1"/>
+					</GridPanel>
+				</GroupBox>
+				<GroupBox title="Product Tax" classNames="fcls_detail_gb_cnt" visible="true" gridItemLocation="1,0,1,1" fieldTable="" identifier="cntDetail3GroupBoxRight">
+					<GridPanel classNames="fcls_detail_gb_cnt_sub,fcls_align_left,fcls_align_top,fcls_data_cnt" visible="true" verticalAlignment="Top" horizontalAlignment="Left" fieldTable="" identifier="cntDetail3GBSubGpRight">
+						<GridPanel.gridRowDefinitions>
+							<GridRowDefinition gridLengthValue=""/>
+							<GridRowDefinition gridLengthValue=""/>
+							<GridRowDefinition gridLengthValue=""/>
+							<GridRowDefinition gridLengthValue=""/>
+							<GridRowDefinition gridLengthValue="" gridMinLength="22"/>
+							<GridRowDefinition gridLengthValue=""/>
+						</GridPanel.gridRowDefinitions>
+						<GridPanel.gridColumnDefinitions>
+							<GridColumnDefinition gridLengthValue="" gridMinLength="10rem"/>
+							<GridColumnDefinition gridLengthValue=""/>
+						</GridPanel.gridColumnDefinitions>
+						<Label isDynamic="true" text="Sale Tax Code" classNames="fcls_fieldlabel" visible="true" gridItemLocation="0,0,1,1" fieldTable="" identifier="lb167x"/>
+						<ComboBox dataType="Char,,,,3" classNames="fcls_data_widget,fcls_align_left,fcls_length_15qch" preferredSize="4qch,1qch" toolTip=" The tax code applicable to the sale of this product (W)" gridItemLocation="1,0,1,1" fieldTable="prodstatus" comment=" The tax code applicable to the sale of this product (W)" identifier="sale_tax_code"/>
+						<StackPanel visible="true" gridItemLocation="1,1,1,1" fieldTable="" identifier="c4">
+							<TextField dataType="Char,,,," classNames="fcls_data_widget,fcls_align_left,fcls_length_05qch" preferredSize="6qch,1qch" toolTip=" The tax percentage applicable to the sale of this product (W)" gridItemLocation="1,1,1,1" fieldTable="formonly" comment=" The tax percentage applicable to the sale of this product (W)" identifier="sale_tax_per"/>
+							<Label isDynamic="true" text="%" classNames="fcls_fieldlabel" visible="true" gridItemLocation="2,0,1,1" fieldTable="" identifier="lb172x"/>
+						</StackPanel>
+						<Label isDynamic="true" text="Sale Tax Amount" classNames="fcls_fieldlabel" visible="true" gridItemLocation="0,2,1,1" fieldTable="" identifier="lb168x"/>
+						<TextField dataType="Decimal,,,4,16" classNames="fcls_data_widget,fcls_align_left,fcls_length_15qch" preferredSize="13qch,1qch" toolTip=" Sale tax amount, overrides sale tax percentage if greater than 0" gridItemLocation="1,2,1,1" fieldTable="prodstatus" comment=" Sale tax amount, overrides sale tax percentage if greater than 0" identifier="sale_tax_amt"/>
+						<Label isDynamic="true" text="Purchase Tax Code" classNames="fcls_fieldlabel" visible="true" gridItemLocation="0,3,1,1" fieldTable="" identifier="lb169x"/>
+						<ComboBox toCase="Up" dataType="Char,,,,3" classNames="fcls_data_widget,fcls_align_left,fcls_length_15qch" preferredSize="4qch,1qch" toolTip=" The tax code applicable to the purchase of this product (W)" gridItemLocation="1,3,1,1" fieldTable="prodstatus" comment=" The tax code applicable to the purchase of this product (W)" identifier="purch_tax_code"/>
+						<StackPanel visible="true" gridItemLocation="1,4,1,1" fieldTable="" identifier="c5">
+							<TextField dataType="Char,,,," classNames="fcls_data_widget,fcls_align_left,fcls_length_05qch" preferredSize="6qch,1qch" toolTip=" The tax percentage applicable to the purchase of this product (W)" gridItemLocation="2,3,1,1" fieldTable="formonly" comment=" The tax percentage applicable to the purchase of this product (W)" identifier="purch_tax_per"/>
+							<Label isDynamic="true" text="%" classNames="fcls_fieldlabel" visible="true" gridItemLocation="3,3,1,1" fieldTable="" identifier="lb175x"/>
+						</StackPanel>
+						<Label isDynamic="true" text="Purch. Tax Amount" classNames="fcls_fieldlabel" visible="true" gridItemLocation="0,5,1,1" fieldTable="" identifier="lb170x"/>
+						<TextField dataType="Decimal,,,4,16" classNames="fcls_data_widget,fcls_align_left,fcls_length_15qch" preferredSize="13qch,1qch" toolTip=" Purchase tax amount, overrides purchase tax percentage if greater than 0" gridItemLocation="1,5,1,1" fieldTable="prodstatus" comment=" Purchase tax amount, overrides purchase tax percentage if greater than 0" identifier="purch_tax_amt"/>
+					</GridPanel>
+				</GroupBox>
+			</GridPanel>
+			<GroupBox title="Dates" classNames="fcls_detail_gb_cnt" visible="true" verticalAlignment="Top" gridItemLocation="0,4,1,1" fieldTable="formonly" identifier="cntDetail4GroupBox">
+				<GridPanel classNames="fcls_detail_gb_cnt_sub,fcls_align_left,fcls_align_top,fcls_data_cnt" visible="true" verticalAlignment="Top" horizontalAlignment="Left" fieldTable="formonly" identifier="cntDetail4GBSubGp">
+					<GridPanel.gridRowDefinitions>
+						<GridRowDefinition gridLengthValue=""/>
+						<GridRowDefinition gridLengthValue=""/>
+					</GridPanel.gridRowDefinitions>
+					<GridPanel.gridColumnDefinitions>
+						<GridColumnDefinition gridLengthValue="" gridMinLength="10rem"/>
+						<GridColumnDefinition gridLengthValue=""/>
+					</GridPanel.gridColumnDefinitions>
+					<Label isDynamic="true" text="Last Price Change" classNames="fcls_fieldlabel" visible="true" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="lb47y"/>
+					<Calendar dataType="Date,,,," classNames="fcls_data_widget,fcls_align_left,fcls_length_15qch" preferredSize="11qch,1qch" toolTip=" Date of last price change for this product/warehouse " gridItemLocation="1,0,1,1" fieldTable="prodstatus" comment=" Date of last price change for this product/warehouse " identifier="last_price_date"/>
+					<Label isDynamic="true" text="Last List Change" classNames="fcls_fieldlabel" visible="true" gridItemLocation="0,1,1,1" fieldTable="formonly" identifier="lb46y"/>
+					<Calendar dataType="Date,,,," classNames="fcls_data_widget,fcls_align_left,fcls_length_15qch" preferredSize="11qch,1qch" toolTip=" Date of last list price change for this product/warehouse " gridItemLocation="1,1,1,1" fieldTable="prodstatus" comment=" Date of last list price change for this product/warehouse " identifier="last_list_date"/>
+				</GridPanel>
+			</GroupBox>
+			<GridPanel classNames="fcls_statusbar_cnt" visible="true" verticalAlignment="Top" gridItemLocation="0,5,1,1" fieldTable="formonly" identifier="cntStatusBar">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="100%"/>
+				</GridPanel.gridColumnDefinitions>
+				<Label isDynamic="true" text="" classNames="fcls_sblabel" visible="true" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="lbInfo1"/>
+				<Label isDynamic="true" text="" classNames="fcls_sblabel" visible="true" gridItemLocation="0,1,1,1" fieldTable="formonly" identifier="lbInfo2"/>
+			</GridPanel>
+		</GridPanel>
+	</form.rootContainer>
+	<form.screenRecords>
+		<ScreenRecord identifier="formonly" fields="part_desc_text,part_desc2_text,ware_desc_text,sale_tax_per,purch_tax_per"/>
+		<ScreenRecord identifier="prodstatus" fields="list_amt,priceL_ind,priceL_per,price1_amt,price1_ind,price1_per,price2_amt,price2_ind,price2_per,price3_amt,price3_ind,price3_per,price4_amt,price4_ind,price4_per,price5_amt,price5_ind,price5_per,price6_amt,price6_ind,price6_per,price7_amt,price7_ind,price7_per,price8_amt,price8_ind,price8_per,price9_amt,price9_ind,price9_per,wgted_cost_amt,est_cost_amt,act_cost_amt,for_curr_code,for_cost_amt,sale_tax_code,sale_tax_amt,purch_tax_code,purch_tax_amt,last_price_date,last_list_date"/>
+		<ScreenRecord identifier="product" fields="part_code,price_uom_code,sell_uom_code"/>
+		<ScreenRecord identifier="warehouse" fields="ware_code"/>
+	</form.screenRecords>
+</form>
+

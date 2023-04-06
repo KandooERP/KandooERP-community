@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<fglBuildTarget xmlns="http://namespaces.querix.com/lyciaide/target" name="A46" type="fgl-program">
+
+  <libraries>
+    <library name="lib_tool_A_AR_db" dynamic="false" location=""/>
+    <library name="lib_tool_A_AR_new" dynamic="false" location=""/>
+    <library name="lib_tool_E_EO_db" dynamic="false" location=""/>
+    <library name="lib_tool_U_UT_new" dynamic="false" location=""/>
+    <library name="lib_tool_common" dynamic="false" location=""/>
+    <library name="lib_tool_db_common" dynamic="false" location=""/>
+  </libraries>
+
+  <sources type="fgl">
+    <file location="4gl/ar/A46.4gl"/>
+    <file location="4gl/common/clntwind.4gl"/>
+    <file location="4gl/common/credfunc.4gl"/>
+    <file location="4gl/ar/A4_GROUP_GLOBALS.4gl"/>
+    <file location="4gl/common/centwind.4gl"/>
+    <file location="4gl/common/note_disp.4gl"/>
+    <file location="4gl/ar/A_AR_GLOBALS.4gl"/>
+    <file location="4gl/common/glob_GLOBALS.4gl"/>
+    <file location="4gl/ar/A46_GLOBALS.4gl"/>
+    <file location="4gl/common/psepwind.4gl"/>
+  </sources>
+
+  <sources type="form">
+    <file location="per/utility/ENG/U122.fm2"/>
+    <file location="per/ar/ENG/A121.fm2"/>
+    <file location="per/utility/ENG/U156.fm2"/>
+    <file location="per/ar/ENG/A122.fm2"/>
+    <file location="per/utility/ENG/U526.fm2"/>
+    <file location="per/utility/ENG/U162.fm2"/>
+    <file location="per/ar/ENG/A104.fm2"/>
+    <file location="per/ar/ENG/A107.fm2"/>
+  </sources>
+
+  <mediaFiles>
+    <file client="true" location="A46.qxtheme" type="gui-theme-file"/>
+    <file client="true" location="A46.css" type="other"/>
+  </mediaFiles>
+
+</fglBuildTarget>

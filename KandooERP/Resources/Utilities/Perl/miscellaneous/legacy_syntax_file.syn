@@ -1,0 +1,34 @@
+:regexp=\bGOTO\s+\w+:tag=ISS_GOTO
+:regexp=\/\D+\w+/\D+\w+:tag=ISS_HARDPATH:exclexp=USING.*/.*/
+:regexp=\bcp\s+\w+|\bmv\s+\w+|\brm\s+\w+|\blp\s+\w+|\bcat\s+\w+|\becho\s+:tag=ISS_SYSTEMCMD
+:regexp=\bfglgo\s+\w+:tag=ISS_USERUNNER
+:regexp=^\s*DISPLAY\s+.*AT\s+\d+,\d+:tag=ISS_DISPLAYAT
+:regexp=^\s*PROMPT\b:tag=ISS_PROMPT
+:regexp=^\s*WHENEVER ERROR CONTINUE\b|^\s*WHENEVER ERROR GOTO\b:tag=ISS_WHENEVER_BAD
+:regexp=^\s*OPEN\s+WINDOW\b.*at.*WITH \d+\s+rows.*\d+\s+columns:tag=ISS_OPENWINDOW
+:regexp=^\s*OPEN\s+WINDOW\b.*at\s:tag=ISS_OPENWINDOW
+:regexp=\=\s+scr_line\(\):tag=ISS_SCREENLINE
+:regexp=\bat\s+\d+,\d+:tag=ISS_USECOORDINATES
+:regexp=^\s*IF\s:tag=IF
+:regexp=^\s*CASE\s+\w+:tag=CASE
+:regexp=^\s*FOR\s+\w+:tag=FORLOOP
+:regexp=^\s*FOREACH\s+\w+:tag=FOREACH
+:regexp=^\s*WHILE\b
+:regexp=^\s*OPEN\s+WINDOW\b:tag=OPENWINDOW
+:regexp=^\s*DISPLAY\s+ARRAY\s+\w+
+:regexp=^\s*DISPLAY\s+FORM\b
+:regexp=^\s*INPUT\s+ARRAY\b
+:regexp=^\s*INPUT\b
+:regexp=^\s*CONSTRUCT\b
+:regexp=^\s*MENU\b
+:regexp=^\s*REPORT\b:tag=REPORTDEF
+:regexp=^\s*OUTPUT\s+TO\s+REPORT\b:tag=REPORTCALL
+:regexp=^\s*SELECT\b
+:regexp=^\s*UPDATE\b
+:regexp=^\s*INSERT\s+INTO\b
+:regexp=^\s*PREPARE\s+\w+:tag=PREPARE
+:regexp=^\s*COMMIT\b
+:regexp=^\s*DECLARE\s\w+.*CURSOR\b:tag=DECLARECURSOR
+:regexp=^\s*ON\s+KEY\b
+:regexp=\bINFIELD\b
+:regexp=^\s*RUN\b

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<fglBuildTarget xmlns="http://namespaces.querix.com/lyciaide/target" name="E62" type="fgl-program">
+
+  <libraries>
+    <library name="lib_tool_E_EO_db" dynamic="false" location=""/>
+    <library name="lib_tool_E_EO_new" dynamic="false" location=""/>
+    <library name="lib_tool_I_IN_db" dynamic="false" location=""/>
+    <library name="lib_tool_U_UT_new" dynamic="false" location=""/>
+    <library name="lib_tool_common" dynamic="false" location=""/>
+    <library name="lib_tool_db_common" dynamic="false" location=""/>
+  </libraries>
+
+  <sources type="fgl">
+    <file location="4gl/eo/E_EO_GLOBALS.4gl"/>
+    <file location="4gl/common/glob_GLOBALS_constant.4gl"/>
+    <file location="4gl/eo/E6_GROUP_GLOBALS.4gl"/>
+    <file location="4gl/eo/E62_main.4gl"/>
+    <file location="4gl/eo/E62.4gl"/>
+    <file location="4gl/common/glob_GLOBALS.4gl"/>
+    <file location="4gl/common/glob_GLOBALS_userDataTypes.4gl"/>
+    <file location="4gl/eo/E62a.4gl"/>
+    <file location="4gl/eo/E62_GLOBALS.4gl"/>
+  </sources>
+
+  <sources type="form">
+    <file location="per/utility/ENG/U156.fm2"/>
+    <file location="per/eo/ENG/E129.fm2"/>
+    <file location="per/eo/ENG/E121.fm2"/>
+    <file location="per/eo/ENG/E123.fm2"/>
+    <file location="per/utility/ENG/U526.fm2"/>
+    <file location="per/eo/ENG/E291.fm2"/>
+    <file location="per/utility/ENG/U162.fm2"/>
+    <file location="per/eo/ENG/E124.fm2"/>
+    <file location="per/eo/ENG/E125.fm2"/>
+    <file location="per/eo/ENG/E127.fm2"/>
+  </sources>
+
+  <mediaFiles>
+    <file client="true" location="E62.qxtheme" type="gui-theme-file"/>
+    <file client="true" location="E62.css" type="other"/>
+  </mediaFiles>
+
+</fglBuildTarget>

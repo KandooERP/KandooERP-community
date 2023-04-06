@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<fglBuildTarget xmlns="http://namespaces.querix.com/lyciaide/target" name="J000_All_J_Forms" type="fgl-program">
+
+  <libraries>
+    <library name="lib_tool_J_JM_db" dynamic="false" location=""/>
+    <library name="lib_tool_J_JM_new" dynamic="false" location=""/>
+    <library name="lib_tool_U_UT_new" dynamic="false" location=""/>
+    <library name="lib_tool_common" dynamic="false" location=""/>
+    <library name="lib_tool_db_common" dynamic="false" location=""/>
+  </libraries>
+
+  <sources type="fgl">
+    <file location="4gl/common/glob_GLOBALS_constant.4gl"/>
+    <file location="4gl/jm/J_JM_GLOBALS.4gl"/>
+    <file location="4gl/jm/J000_All_J_Forms.4gl"/>
+    <file location="4gl/common/glob_GLOBALS.4gl"/>
+    <file location="4gl/common/glob_GLOBALS_userDataTypes.4gl"/>
+  </sources>
+
+  <sources type="form">
+    <file location="per/jm/ENG/J147.fm2"/>
+    <file location="per/jm/ENG/J159.fm2"/>
+    <file location="per/jm/ENG/J111.fm2"/>
+    <file location="per/jm/ENG/J123.fm2"/>
+    <file location="per/jm/ENG/J135.fm2"/>
+    <file location="per/jm/ENG/J184.fm2"/>
+    <file location="per/jm/ENG/J196.fm2"/>
+    <file location="per/jm/ENG/J160.fm2"/>
+    <file location="per/jm/ENG/J172.fm2"/>
+    <file location="per/jm/ENG/J321.fm2"/>
+    <file location="per/jm/ENG/J127c.fm2"/>
+    <file location="per/jm/ENG/J117.fm2"/>
+    <file location="per/jm/ENG/J166.fm2"/>
+    <file location="per/jm/ENG/J142.fm2"/>
+    <file location="per/jm/ENG/J315.fm2"/>
+    <file location="per/jm/ENG/J191.fm2"/>
+    <file location="per/jm/ENG/JA12.fm2"/>
+    <file location="per/jm/ENG/J116.fm2"/>
+    <file location="per/jm/ENG/J165.fm2"/>
+    <file location="per/jm/ENG/J302.fm2"/>
+    <file location="per/jm/ENG/J177.fm2"/>
+    <file location="per/jm/ENG/J190.fm2"/>
+    <file location="per/jm/ENG/J130.fm2"/>
+    <file location="per/jm/ENG/J105.fm2"/>
+    <file location="per/jm/ENG/J178.fm2"/>
+    <file location="per/jm/ENG/JA00.fm2"/>
+    <file location="per/jm/ENG/J110.fm2"/>
+    <file location="per/jm/ENG/J183.fm2"/>
+    <file location="per/jm/ENG/J158.fm2"/>
+    <file location="per/jm/ENG/J121a.fm2"/>
+    <file location="per/jm/ENG/J197.fm2"/>
+    <file location="per/jm/ENG/J104.fm2"/>
+    <file location="per/jm/ENG/J143.fm2"/>
+    <file location="per/jm/ENG/J118.fm2"/>
+    <file location="per/jm/ENG/J179.fm2"/>
+    <file location="per/jm/ENG/J192.fm2"/>
+    <file location="per/jm/ENG/J155.fm2"/>
+    <file location="per/jm/ENG/J167.fm2"/>
+    <file location="per/jm/ENG/J205.fm2"/>
+    <file location="per/jm/ENG/J103.fm2"/>
+    <file location="per/jm/ENG/J140.fm2"/>
+    <file location="per/jm/ENG/J152.fm2"/>
+    <file location="per/jm/ENG/J139.fm2"/>
+    <file location="per/jm/ENG/J154a.fm2"/>
+    <file location="per/jm/ENG/J301.fm2"/>
+    <file location="per/jm/ENG/J112.fm2"/>
+    <file location="per/jm/ENG/J195.fm2"/>
+    <file location="per/jm/ENG/J310.fm2"/>
+    <file location="per/jm/ENG/J141.fm2"/>
+    <file location="per/jm/ENG/J314.fm2"/>
+    <file location="per/jm/ENG/J169.fm2"/>
+    <file location="per/jm/ENG/J194.fm2"/>
+    <file location="per/jm/ENG/JA05.fm2"/>
+    <file location="per/jm/ENG/J000_All_J_Forms.fm2"/>
+    <file location="per/jm/ENG/J101.fm2"/>
+    <file location="per/jm/ENG/J113.fm2"/>
+    <file location="per/jm/ENG/J311.fm2"/>
+    <file location="per/jm/ENG/J129.fm2"/>
+    <file location="per/jm/ENG/J154.fm2"/>
+    <file location="per/jm/ENG/J193.fm2"/>
+    <file location="per/jm/ENG/J168.fm2"/>
+    <file location="per/jm/ENG/J100.fm2"/>
+    <file location="per/jm/ENG/JA04.fm2"/>
+    <file location="per/jm/ENG/J128.fm2"/>
+    <file location="per/jm/ENG/J199.fm2"/>
+    <file location="per/jm/ENG/JA15.fm2"/>
+    <file location="per/jm/ENG/JA03.fm2"/>
+    <file location="per/jm/ENG/J210.fm2"/>
+    <file location="per/jm/ENG/J107.fm2"/>
+    <file location="per/jm/ENG/J156.fm2"/>
+    <file location="per/jm/ENG/J666.fm2"/>
+    <file location="per/jm/ENG/J152a.fm2"/>
+    <file location="per/jm/ENG/J151.fm2"/>
+    <file location="per/jm/ENG/J203.fm2"/>
+    <file location="per/jm/ENG/J157.fm2"/>
+    <file location="per/jm/ENG/J170.fm2"/>
+    <file location="per/jm/ENG/J318.fm2"/>
+    <file location="per/jm/ENG/J125.fm2"/>
+    <file location="per/jm/ENG/J137.fm2"/>
+    <file location="per/jm/ENG/J198.fm2"/>
+    <file location="per/jm/ENG/J164.fm2"/>
+    <file location="per/jm/ENG/J119.fm2"/>
+    <file location="per/jm/ENG/J204.fm2"/>
+    <file location="per/jm/ENG/J144.fm2"/>
+    <file location="per/jm/ENG/JA14.fm2"/>
+    <file location="per/jm/ENG/J317.fm2"/>
+    <file location="per/jm/ENG/J163.fm2"/>
+    <file location="per/jm/ENG/J106.fm2"/>
+    <file location="per/jm/ENG/J131.fm2"/>
+    <file location="per/jm/ENG/JA11.fm2"/>
+    <file location="per/jm/ENG/J665.fm2"/>
+    <file location="per/jm/ENG/J202.fm2"/>
+    <file location="per/jm/ENG/J176.fm2"/>
+    <file location="per/jm/ENG/J122.fm2"/>
+    <file location="per/jm/ENG/J171.fm2"/>
+    <file location="per/jm/ENG/J319.fm2"/>
+    <file location="per/jm/ENG/J320.fm2"/>
+    <file location="per/jm/ENG/J136.fm2"/>
+    <file location="per/jm/ENG/J215.fm2"/>
+    <file location="per/jm/ENG/J189.fm2"/>
+    <file location="per/jm/ENG/J121.fm2"/>
+    <file location="per/jm/ENG/J133.fm2"/>
+    <file location="per/jm/ENG/J306.fm2"/>
+    <file location="per/jm/ENG/J212.fm2"/>
+    <file location="per/jm/ENG/J149.fm2"/>
+    <file location="per/jm/ENG/J200.fm2"/>
+    <file location="per/jm/ENG/J186.fm2"/>
+    <file location="per/jm/ENG/J177a.fm2"/>
+    <file location="per/jm/ENG/J188.fm2"/>
+    <file location="per/jm/ENG/J214.fm2"/>
+    <file location="per/jm/ENG/J120.fm2"/>
+    <file location="per/jm/ENG/J134.fm2"/>
+    <file location="per/jm/ENG/J109.fm2"/>
+    <file location="per/jm/ENG/J148.fm2"/>
+    <file location="per/jm/ENG/J173.fm2"/>
+    <file location="per/jm/ENG/J187.fm2"/>
+    <file location="per/jm/ENG/J213.fm2"/>
+  </sources>
+
+  <mediaFiles>
+    <file client="true" location="per/jm/ENG/J118.fm2.orig" type="other"/>
+    <file client="true" location="J000_All_J_Forms.qxtheme" type="gui-theme-file"/>
+    <file client="true" location="J000_All_J_Forms.css" type="other"/>
+  </mediaFiles>
+
+  <buildConfiguration name="development">
+    <additions>
+    </additions>
+    <exclusions>
+    </exclusions>
+  </buildConfiguration>
+
+</fglBuildTarget>

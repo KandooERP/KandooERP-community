@@ -1,0 +1,223 @@
+binaryudt.1.0|71|binaryvar|informix|7|binaryvar|informix|R|D|R||||
+binaryudt.1.0|5|binaryvarIn (lvarchar)|informix|7|binaryvar|informix|R|D|R||||
+binaryudt.1.0|181|Alter-ExternalName-binaryvarIn (lvarchar)|informix|5|binaryvarIn (lvarchar)|informix|R|D|R||||
+binaryudt.1.0|37|Alter-Parallelize-binaryvarIn (lvarchar)|informix|5|binaryvarIn (lvarchar)|informix|R|D|R||||
+binaryudt.1.0|85|Alter-Variant-binaryvarIn (lvarchar)|informix|5|binaryvarIn (lvarchar)|informix|R|D|R||||
+binaryudt.1.0|69|binaryvarIn (lvarchar)|informix|5|binaryvarIn (lvarchar)|informix|R|D|R||||
+binaryudt.1.0|3|lvarchar->binaryvar|informix|7|binaryvar|informix|R|D|R||||
+binaryudt.1.0|5|binaryvarOut (binaryvar)|informix|7|binaryvar|informix|R|D|R||||
+binaryudt.1.0|181|Alter-ExternalName-binaryvarOut (binaryvar)|informix|5|binaryvarOut (binaryvar)|informix|R|D|R||||
+binaryudt.1.0|69|binaryvarOut (binaryvar)|informix|5|binaryvarOut (binaryvar)|informix|R|D|R||||
+binaryudt.1.0|3|binaryvar->lvarchar|informix|7|binaryvar|informix|R|D|R||||
+binaryudt.1.0|5|binaryvarSend (binaryvar)|informix|7|binaryvar|informix|R|D|R||||
+binaryudt.1.0|181|Alter-ExternalName-binaryvarSend (binaryvar)|informix|5|binaryvarSend (binaryvar)|informix|R|D|R||||
+binaryudt.1.0|69|binaryvarSend (binaryvar)|informix|5|binaryvarSend (binaryvar)|informix|R|D|R||||
+binaryudt.1.0|3|binaryvar->sendrecv|informix|7|binaryvar|informix|R|D|R||||
+binaryudt.1.0|5|binaryvarRecv (sendrecv)|informix|7|binaryvar|informix|R|D|R||||
+binaryudt.1.0|181|Alter-ExternalName-binaryvarRecv (sendrecv)|informix|5|binaryvarRecv (sendrecv)|informix|R|D|R||||
+binaryudt.1.0|69|binaryvarRecv (sendrecv)|informix|5|binaryvarRecv (sendrecv)|informix|R|D|R||||
+binaryudt.1.0|3|sendrecv->binaryvar|informix|7|binaryvar|informix|R|D|R||||
+binaryudt.1.0|5|binaryvarImpT (impexp)|informix|7|binaryvar|informix|R|D|R||||
+binaryudt.1.0|181|Alter-ExternalName-binaryvarImpT (impexp)|informix|5|binaryvarImpT (impexp)|informix|R|D|R||||
+binaryudt.1.0|69|binaryvarImpT (impexp)|informix|5|binaryvarImpT (impexp)|informix|R|D|R||||
+binaryudt.1.0|3|impexp->binaryvar|informix|7|binaryvar|informix|R|D|R||||
+binaryudt.1.0|5|binaryvarExpT (binaryvar)|informix|7|binaryvar|informix|R|D|R||||
+binaryudt.1.0|181|Alter-ExternalName-binaryvarExpT (binaryvar)|informix|5|binaryvarExpT (binaryvar)|informix|R|D|R||||
+binaryudt.1.0|69|binaryvarExpT (binaryvar)|informix|5|binaryvarExpT (binaryvar)|informix|R|D|R||||
+binaryudt.1.0|3|binaryvar->impexp|informix|7|binaryvar|informix|R|D|R||||
+binaryudt.1.0|5|binaryvarImpB (impexpbin)|informix|7|binaryvar|informix|R|D|R||||
+binaryudt.1.0|181|Alter-ExternalName-binaryvarImpB (impexpbin)|informix|5|binaryvarImpB (impexpbin)|informix|R|D|R||||
+binaryudt.1.0|69|binaryvarImpB (impexpbin)|informix|5|binaryvarImpB (impexpbin)|informix|R|D|R||||
+binaryudt.1.0|3|impexpbin->binaryvar|informix|7|binaryvar|informix|R|D|R||||
+binaryudt.1.0|5|binaryvarExpB (binaryvar)|informix|7|binaryvar|informix|R|D|R||||
+binaryudt.1.0|181|Alter-ExternalName-binaryvarExpB (binaryvar)|informix|5|binaryvarExpB (binaryvar)|informix|R|D|R||||
+binaryudt.1.0|69|binaryvarExpB (binaryvar)|informix|5|binaryvarExpB (binaryvar)|informix|R|D|R||||
+binaryudt.1.0|3|binaryvar->impexpbin|informix|7|binaryvar|informix|R|D|R||||
+binaryudt.1.0|5|Compare (binaryvar,binaryvar)|informix|7|binaryvar|informix|R|D|R||||
+binaryudt.1.0|181|Alter-ExternalName-Compare (binaryvar,binaryvar)|informix|5|Compare (binaryvar,binaryvar)|informix|R|D|R||||
+binaryudt.1.0|85|Alter-Variant-Compare (binaryvar,binaryvar)|informix|5|Compare (binaryvar,binaryvar)|informix|R|D|R||||
+binaryudt.1.0|69|Compare (binaryvar,binaryvar)|informix|5|Compare (binaryvar,binaryvar)|informix|R|D|R||||
+binaryudt.1.0|5|Equal (binaryvar,binaryvar)|informix|7|binaryvar|informix|R|D|R||||
+binaryudt.1.0|181|Alter-ExternalName-Equal (binaryvar,binaryvar)|informix|5|Equal (binaryvar,binaryvar)|informix|R|D|R||||
+binaryudt.1.0|85|Alter-Variant-Equal (binaryvar,binaryvar)|informix|5|Equal (binaryvar,binaryvar)|informix|R|D|R||||
+binaryudt.1.0|95|Alter-Negator-Equal (binaryvar,binaryvar)|informix|5|Equal (binaryvar,binaryvar)|informix|R|D|R||||
+binaryudt.1.0|101|Alter-Commutator-Equal (binaryvar,binaryvar)|informix|5|Equal (binaryvar,binaryvar)|informix|R|D|R||||
+binaryudt.1.0|69|Equal (binaryvar,binaryvar)|informix|5|Equal (binaryvar,binaryvar)|informix|R|D|R||||
+binaryudt.1.0|5|NotEqual (binaryvar,binaryvar)|informix|7|binaryvar|informix|R|D|R||||
+binaryudt.1.0|181|Alter-ExternalName-NotEqual (binaryvar,binaryvar)|informix|5|NotEqual (binaryvar,binaryvar)|informix|R|D|R||||
+binaryudt.1.0|85|Alter-Variant-NotEqual (binaryvar,binaryvar)|informix|5|NotEqual (binaryvar,binaryvar)|informix|R|D|R||||
+binaryudt.1.0|95|Alter-Negator-NotEqual (binaryvar,binaryvar)|informix|5|NotEqual (binaryvar,binaryvar)|informix|R|D|R||||
+binaryudt.1.0|101|Alter-Commutator-NotEqual (binaryvar,binaryvar)|informix|5|NotEqual (binaryvar,binaryvar)|informix|R|D|R||||
+binaryudt.1.0|69|NotEqual (binaryvar,binaryvar)|informix|5|NotEqual (binaryvar,binaryvar)|informix|R|D|R||||
+binaryudt.1.0|5|LessThan (binaryvar,binaryvar)|informix|7|binaryvar|informix|R|D|R||||
+binaryudt.1.0|181|Alter-ExternalName-LessThan (binaryvar,binaryvar)|informix|5|LessThan (binaryvar,binaryvar)|informix|R|D|R||||
+binaryudt.1.0|85|Alter-Variant-LessThan (binaryvar,binaryvar)|informix|5|LessThan (binaryvar,binaryvar)|informix|R|D|R||||
+binaryudt.1.0|95|Alter-Negator-LessThan (binaryvar,binaryvar)|informix|5|LessThan (binaryvar,binaryvar)|informix|R|D|R||||
+binaryudt.1.0|101|Alter-Commutator-LessThan (binaryvar,binaryvar)|informix|5|LessThan (binaryvar,binaryvar)|informix|R|D|R||||
+binaryudt.1.0|69|LessThan (binaryvar,binaryvar)|informix|5|LessThan (binaryvar,binaryvar)|informix|R|D|R||||
+binaryudt.1.0|5|GreaterThan (binaryvar,binaryvar)|informix|7|binaryvar|informix|R|D|R||||
+binaryudt.1.0|181|Alter-ExternalName-GreaterThan (binaryvar,binaryvar)|informix|5|GreaterThan (binaryvar,binaryvar)|informix|R|D|R||||
+binaryudt.1.0|85|Alter-Variant-GreaterThan (binaryvar,binaryvar)|informix|5|GreaterThan (binaryvar,binaryvar)|informix|R|D|R||||
+binaryudt.1.0|95|Alter-Negator-GreaterThan (binaryvar,binaryvar)|informix|5|GreaterThan (binaryvar,binaryvar)|informix|R|D|R||||
+binaryudt.1.0|101|Alter-Commutator-GreaterThan (binaryvar,binaryvar)|informix|5|GreaterThan (binaryvar,binaryvar)|informix|R|D|R||||
+binaryudt.1.0|69|GreaterThan (binaryvar,binaryvar)|informix|5|GreaterThan (binaryvar,binaryvar)|informix|R|D|R||||
+binaryudt.1.0|5|LessThanOrEqual (binaryvar,binaryvar)|informix|7|binaryvar|informix|R|D|R||||
+binaryudt.1.0|181|Alter-ExternalName-LessThanOrEqual (binaryvar,binaryvar)|informix|5|LessThanOrEqual (binaryvar,binaryvar)|informix|R|D|R||||
+binaryudt.1.0|85|Alter-Variant-LessThanOrEqual (binaryvar,binaryvar)|informix|5|LessThanOrEqual (binaryvar,binaryvar)|informix|R|D|R||||
+binaryudt.1.0|95|Alter-Negator-LessThanOrEqual (binaryvar,binaryvar)|informix|5|LessThanOrEqual (binaryvar,binaryvar)|informix|R|D|R||||
+binaryudt.1.0|101|Alter-Commutator-LessThanOrEqual (binaryvar,binaryvar)|informix|5|LessThanOrEqual (binaryvar,binaryvar)|informix|R|D|R||||
+binaryudt.1.0|69|LessThanOrEqual (binaryvar,binaryvar)|informix|5|LessThanOrEqual (binaryvar,binaryvar)|informix|R|D|R||||
+binaryudt.1.0|5|GreaterThanOrEqual (binaryvar,binaryvar)|informix|7|binaryvar|informix|R|D|R||||
+binaryudt.1.0|181|Alter-ExternalName-GreaterThanOrEqual (binaryvar,binaryvar)|informix|5|GreaterThanOrEqual (binaryvar,binaryvar)|informix|R|D|R||||
+binaryudt.1.0|85|Alter-Variant-GreaterThanOrEqual (binaryvar,binaryvar)|informix|5|GreaterThanOrEqual (binaryvar,binaryvar)|informix|R|D|R||||
+binaryudt.1.0|95|Alter-Negator-GreaterThanOrEqual (binaryvar,binaryvar)|informix|5|GreaterThanOrEqual (binaryvar,binaryvar)|informix|R|D|R||||
+binaryudt.1.0|101|Alter-Commutator-GreaterThanOrEqual (binaryvar,binaryvar)|informix|5|GreaterThanOrEqual (binaryvar,binaryvar)|informix|R|D|R||||
+binaryudt.1.0|69|GreaterThanOrEqual (binaryvar,binaryvar)|informix|5|GreaterThanOrEqual (binaryvar,binaryvar)|informix|R|D|R||||
+binaryudt.1.0|71|binary18|informix|7|binary18|informix|R|D|R||||
+binaryudt.1.0|5|binary18In (lvarchar)|informix|7|binary18|informix|R|D|R||||
+binaryudt.1.0|181|Alter-ExternalName-binary18In (lvarchar)|informix|5|binary18In (lvarchar)|informix|R|D|R||||
+binaryudt.1.0|37|Alter-Parallelize-binary18In (lvarchar)|informix|5|binary18In (lvarchar)|informix|R|D|R||||
+binaryudt.1.0|85|Alter-Variant-binary18In (lvarchar)|informix|5|binary18In (lvarchar)|informix|R|D|R||||
+binaryudt.1.0|69|binary18In (lvarchar)|informix|5|binary18In (lvarchar)|informix|R|D|R||||
+binaryudt.1.0|3|lvarchar->binary18|informix|7|binary18|informix|R|D|R||||
+binaryudt.1.0|5|binary18Out (binary18)|informix|7|binary18|informix|R|D|R||||
+binaryudt.1.0|181|Alter-ExternalName-binary18Out (binary18)|informix|5|binary18Out (binary18)|informix|R|D|R||||
+binaryudt.1.0|37|Alter-Parallelize-binary18Out (binary18)|informix|5|binary18Out (binary18)|informix|R|D|R||||
+binaryudt.1.0|85|Alter-Variant-binary18Out (binary18)|informix|5|binary18Out (binary18)|informix|R|D|R||||
+binaryudt.1.0|69|binary18Out (binary18)|informix|5|binary18Out (binary18)|informix|R|D|R||||
+binaryudt.1.0|3|binary18->lvarchar|informix|7|binary18|informix|R|D|R||||
+binaryudt.1.0|5|binary18Send (binary18)|informix|7|binary18|informix|R|D|R||||
+binaryudt.1.0|181|Alter-ExternalName-binary18Send (binary18)|informix|5|binary18Send (binary18)|informix|R|D|R||||
+binaryudt.1.0|69|binary18Send (binary18)|informix|5|binary18Send (binary18)|informix|R|D|R||||
+binaryudt.1.0|3|binary18->sendrecv|informix|7|binary18|informix|R|D|R||||
+binaryudt.1.0|5|binary18Recv (sendrecv)|informix|7|binary18|informix|R|D|R||||
+binaryudt.1.0|181|Alter-ExternalName-binary18Recv (sendrecv)|informix|5|binary18Recv (sendrecv)|informix|R|D|R||||
+binaryudt.1.0|37|Alter-Parallelize-binary18Recv (sendrecv)|informix|5|binary18Recv (sendrecv)|informix|R|D|R||||
+binaryudt.1.0|85|Alter-Variant-binary18Recv (sendrecv)|informix|5|binary18Recv (sendrecv)|informix|R|D|R||||
+binaryudt.1.0|69|binary18Recv (sendrecv)|informix|5|binary18Recv (sendrecv)|informix|R|D|R||||
+binaryudt.1.0|3|sendrecv->binary18|informix|7|binary18|informix|R|D|R||||
+binaryudt.1.0|5|binary18ImpT (impexp)|informix|7|binary18|informix|R|D|R||||
+binaryudt.1.0|181|Alter-ExternalName-binary18ImpT (impexp)|informix|5|binary18ImpT (impexp)|informix|R|D|R||||
+binaryudt.1.0|37|Alter-Parallelize-binary18ImpT (impexp)|informix|5|binary18ImpT (impexp)|informix|R|D|R||||
+binaryudt.1.0|85|Alter-Variant-binary18ImpT (impexp)|informix|5|binary18ImpT (impexp)|informix|R|D|R||||
+binaryudt.1.0|69|binary18ImpT (impexp)|informix|5|binary18ImpT (impexp)|informix|R|D|R||||
+binaryudt.1.0|3|impexp->binary18|informix|7|binary18|informix|R|D|R||||
+binaryudt.1.0|5|binary18ExpT (binary18)|informix|7|binary18|informix|R|D|R||||
+binaryudt.1.0|181|Alter-ExternalName-binary18ExpT (binary18)|informix|5|binary18ExpT (binary18)|informix|R|D|R||||
+binaryudt.1.0|37|Alter-Parallelize-binary18ExpT (binary18)|informix|5|binary18ExpT (binary18)|informix|R|D|R||||
+binaryudt.1.0|85|Alter-Variant-binary18ExpT (binary18)|informix|5|binary18ExpT (binary18)|informix|R|D|R||||
+binaryudt.1.0|69|binary18ExpT (binary18)|informix|5|binary18ExpT (binary18)|informix|R|D|R||||
+binaryudt.1.0|3|binary18->impexp|informix|7|binary18|informix|R|D|R||||
+binaryudt.1.0|5|binary18ImpB (impexpbin)|informix|7|binary18|informix|R|D|R||||
+binaryudt.1.0|181|Alter-ExternalName-binary18ImpB (impexpbin)|informix|5|binary18ImpB (impexpbin)|informix|R|D|R||||
+binaryudt.1.0|37|Alter-Parallelize-binary18ImpB (impexpbin)|informix|5|binary18ImpB (impexpbin)|informix|R|D|R||||
+binaryudt.1.0|85|Alter-Variant-binary18ImpB (impexpbin)|informix|5|binary18ImpB (impexpbin)|informix|R|D|R||||
+binaryudt.1.0|69|binary18ImpB (impexpbin)|informix|5|binary18ImpB (impexpbin)|informix|R|D|R||||
+binaryudt.1.0|3|impexpbin->binary18|informix|7|binary18|informix|R|D|R||||
+binaryudt.1.0|5|binary18ExpB (binary18)|informix|7|binary18|informix|R|D|R||||
+binaryudt.1.0|181|Alter-ExternalName-binary18ExpB (binary18)|informix|5|binary18ExpB (binary18)|informix|R|D|R||||
+binaryudt.1.0|37|Alter-Parallelize-binary18ExpB (binary18)|informix|5|binary18ExpB (binary18)|informix|R|D|R||||
+binaryudt.1.0|85|Alter-Variant-binary18ExpB (binary18)|informix|5|binary18ExpB (binary18)|informix|R|D|R||||
+binaryudt.1.0|69|binary18ExpB (binary18)|informix|5|binary18ExpB (binary18)|informix|R|D|R||||
+binaryudt.1.0|3|binary18->impexpbin|informix|7|binary18|informix|R|D|R||||
+binaryudt.1.0|5|Compare (binary18,binary18)|informix|7|binary18|informix|R|D|R||||
+binaryudt.1.0|181|Alter-ExternalName-Compare (binary18,binary18)|informix|5|Compare (binary18,binary18)|informix|R|D|R||||
+binaryudt.1.0|37|Alter-Parallelize-Compare (binary18,binary18)|informix|5|Compare (binary18,binary18)|informix|R|D|R||||
+binaryudt.1.0|85|Alter-Variant-Compare (binary18,binary18)|informix|5|Compare (binary18,binary18)|informix|R|D|R||||
+binaryudt.1.0|69|Compare (binary18,binary18)|informix|5|Compare (binary18,binary18)|informix|R|D|R||||
+binaryudt.1.0|5|Equal (binary18,binary18)|informix|7|binary18|informix|R|D|R||||
+binaryudt.1.0|181|Alter-ExternalName-Equal (binary18,binary18)|informix|5|Equal (binary18,binary18)|informix|R|D|R||||
+binaryudt.1.0|37|Alter-Parallelize-Equal (binary18,binary18)|informix|5|Equal (binary18,binary18)|informix|R|D|R||||
+binaryudt.1.0|85|Alter-Variant-Equal (binary18,binary18)|informix|5|Equal (binary18,binary18)|informix|R|D|R||||
+binaryudt.1.0|95|Alter-Negator-Equal (binary18,binary18)|informix|5|Equal (binary18,binary18)|informix|R|D|R||||
+binaryudt.1.0|101|Alter-Commutator-Equal (binary18,binary18)|informix|5|Equal (binary18,binary18)|informix|R|D|R||||
+binaryudt.1.0|69|Equal (binary18,binary18)|informix|5|Equal (binary18,binary18)|informix|R|D|R||||
+binaryudt.1.0|5|NotEqual (binary18,binary18)|informix|7|binary18|informix|R|D|R||||
+binaryudt.1.0|181|Alter-ExternalName-NotEqual (binary18,binary18)|informix|5|NotEqual (binary18,binary18)|informix|R|D|R||||
+binaryudt.1.0|37|Alter-Parallelize-NotEqual (binary18,binary18)|informix|5|NotEqual (binary18,binary18)|informix|R|D|R||||
+binaryudt.1.0|85|Alter-Variant-NotEqual (binary18,binary18)|informix|5|NotEqual (binary18,binary18)|informix|R|D|R||||
+binaryudt.1.0|95|Alter-Negator-NotEqual (binary18,binary18)|informix|5|NotEqual (binary18,binary18)|informix|R|D|R||||
+binaryudt.1.0|101|Alter-Commutator-NotEqual (binary18,binary18)|informix|5|NotEqual (binary18,binary18)|informix|R|D|R||||
+binaryudt.1.0|69|NotEqual (binary18,binary18)|informix|5|NotEqual (binary18,binary18)|informix|R|D|R||||
+binaryudt.1.0|5|LessThan (binary18,binary18)|informix|7|binary18|informix|R|D|R||||
+binaryudt.1.0|181|Alter-ExternalName-LessThan (binary18,binary18)|informix|5|LessThan (binary18,binary18)|informix|R|D|R||||
+binaryudt.1.0|37|Alter-Parallelize-LessThan (binary18,binary18)|informix|5|LessThan (binary18,binary18)|informix|R|D|R||||
+binaryudt.1.0|85|Alter-Variant-LessThan (binary18,binary18)|informix|5|LessThan (binary18,binary18)|informix|R|D|R||||
+binaryudt.1.0|95|Alter-Negator-LessThan (binary18,binary18)|informix|5|LessThan (binary18,binary18)|informix|R|D|R||||
+binaryudt.1.0|101|Alter-Commutator-LessThan (binary18,binary18)|informix|5|LessThan (binary18,binary18)|informix|R|D|R||||
+binaryudt.1.0|69|LessThan (binary18,binary18)|informix|5|LessThan (binary18,binary18)|informix|R|D|R||||
+binaryudt.1.0|5|GreaterThan (binary18,binary18)|informix|7|binary18|informix|R|D|R||||
+binaryudt.1.0|181|Alter-ExternalName-GreaterThan (binary18,binary18)|informix|5|GreaterThan (binary18,binary18)|informix|R|D|R||||
+binaryudt.1.0|37|Alter-Parallelize-GreaterThan (binary18,binary18)|informix|5|GreaterThan (binary18,binary18)|informix|R|D|R||||
+binaryudt.1.0|85|Alter-Variant-GreaterThan (binary18,binary18)|informix|5|GreaterThan (binary18,binary18)|informix|R|D|R||||
+binaryudt.1.0|95|Alter-Negator-GreaterThan (binary18,binary18)|informix|5|GreaterThan (binary18,binary18)|informix|R|D|R||||
+binaryudt.1.0|101|Alter-Commutator-GreaterThan (binary18,binary18)|informix|5|GreaterThan (binary18,binary18)|informix|R|D|R||||
+binaryudt.1.0|69|GreaterThan (binary18,binary18)|informix|5|GreaterThan (binary18,binary18)|informix|R|D|R||||
+binaryudt.1.0|5|LessThanOrEqual (binary18,binary18)|informix|7|binary18|informix|R|D|R||||
+binaryudt.1.0|181|Alter-ExternalName-LessThanOrEqual (binary18,binary18)|informix|5|LessThanOrEqual (binary18,binary18)|informix|R|D|R||||
+binaryudt.1.0|37|Alter-Parallelize-LessThanOrEqual (binary18,binary18)|informix|5|LessThanOrEqual (binary18,binary18)|informix|R|D|R||||
+binaryudt.1.0|85|Alter-Variant-LessThanOrEqual (binary18,binary18)|informix|5|LessThanOrEqual (binary18,binary18)|informix|R|D|R||||
+binaryudt.1.0|95|Alter-Negator-LessThanOrEqual (binary18,binary18)|informix|5|LessThanOrEqual (binary18,binary18)|informix|R|D|R||||
+binaryudt.1.0|101|Alter-Commutator-LessThanOrEqual (binary18,binary18)|informix|5|LessThanOrEqual (binary18,binary18)|informix|R|D|R||||
+binaryudt.1.0|69|LessThanOrEqual (binary18,binary18)|informix|5|LessThanOrEqual (binary18,binary18)|informix|R|D|R||||
+binaryudt.1.0|5|GreaterThanOrEqual (binary18,binary18)|informix|7|binary18|informix|R|D|R||||
+binaryudt.1.0|181|Alter-ExternalName-GreaterThanOrEqual (binary18,binary18)|informix|5|GreaterThanOrEqual (binary18,binary18)|informix|R|D|R||||
+binaryudt.1.0|37|Alter-Parallelize-GreaterThanOrEqual (binary18,binary18)|informix|5|GreaterThanOrEqual (binary18,binary18)|informix|R|D|R||||
+binaryudt.1.0|85|Alter-Variant-GreaterThanOrEqual (binary18,binary18)|informix|5|GreaterThanOrEqual (binary18,binary18)|informix|R|D|R||||
+binaryudt.1.0|95|Alter-Negator-GreaterThanOrEqual (binary18,binary18)|informix|5|GreaterThanOrEqual (binary18,binary18)|informix|R|D|R||||
+binaryudt.1.0|101|Alter-Commutator-GreaterThanOrEqual (binary18,binary18)|informix|5|GreaterThanOrEqual (binary18,binary18)|informix|R|D|R||||
+binaryudt.1.0|69|GreaterThanOrEqual (binary18,binary18)|informix|5|GreaterThanOrEqual (binary18,binary18)|informix|R|D|R||||
+binaryudt.1.0|5|length (binaryvar)|informix|7|binaryvar|informix|R|D|R||||
+binaryudt.1.0|181|Alter-ExternalName-length (binaryvar)|informix|5|length (binaryvar)|informix|R|D|R||||
+binaryudt.1.0|37|Alter-Parallelize-length (binaryvar)|informix|5|length (binaryvar)|informix|R|D|R||||
+binaryudt.1.0|55|Alter-HandleNul-length (binaryvar)|informix|5|length (binaryvar)|informix|R|D|R||||
+binaryudt.1.0|85|Alter-Variant-length (binaryvar)|informix|5|length (binaryvar)|informix|R|D|R||||
+binaryudt.1.0|69|length (binaryvar)|informix|5|length (binaryvar)|informix|R|D|R||||
+binaryudt.1.0|5|bit_or (binaryvar,binaryvar)|informix|7|binaryvar|informix|R|D|R||||
+binaryudt.1.0|181|Alter-ExternalName-bit_or (binaryvar,binaryvar)|informix|5|bit_or (binaryvar,binaryvar)|informix|R|D|R||||
+binaryudt.1.0|37|Alter-Parallelize-bit_or (binaryvar,binaryvar)|informix|5|bit_or (binaryvar,binaryvar)|informix|R|D|R||||
+binaryudt.1.0|55|Alter-HandleNul-bit_or (binaryvar,binaryvar)|informix|5|bit_or (binaryvar,binaryvar)|informix|R|D|R||||
+binaryudt.1.0|85|Alter-Variant-bit_or (binaryvar,binaryvar)|informix|5|bit_or (binaryvar,binaryvar)|informix|R|D|R||||
+binaryudt.1.0|69|bit_or (binaryvar,binaryvar)|informix|5|bit_or (binaryvar,binaryvar)|informix|R|D|R||||
+binaryudt.1.0|5|bit_and (binaryvar,binaryvar)|informix|7|binaryvar|informix|R|D|R||||
+binaryudt.1.0|181|Alter-ExternalName-bit_and (binaryvar,binaryvar)|informix|5|bit_and (binaryvar,binaryvar)|informix|R|D|R||||
+binaryudt.1.0|37|Alter-Parallelize-bit_and (binaryvar,binaryvar)|informix|5|bit_and (binaryvar,binaryvar)|informix|R|D|R||||
+binaryudt.1.0|55|Alter-HandleNul-bit_and (binaryvar,binaryvar)|informix|5|bit_and (binaryvar,binaryvar)|informix|R|D|R||||
+binaryudt.1.0|85|Alter-Variant-bit_and (binaryvar,binaryvar)|informix|5|bit_and (binaryvar,binaryvar)|informix|R|D|R||||
+binaryudt.1.0|69|bit_and (binaryvar,binaryvar)|informix|5|bit_and (binaryvar,binaryvar)|informix|R|D|R||||
+binaryudt.1.0|5|bit_xor (binaryvar,binaryvar)|informix|7|binaryvar|informix|R|D|R||||
+binaryudt.1.0|181|Alter-ExternalName-bit_xor (binaryvar,binaryvar)|informix|5|bit_xor (binaryvar,binaryvar)|informix|R|D|R||||
+binaryudt.1.0|37|Alter-Parallelize-bit_xor (binaryvar,binaryvar)|informix|5|bit_xor (binaryvar,binaryvar)|informix|R|D|R||||
+binaryudt.1.0|55|Alter-HandleNul-bit_xor (binaryvar,binaryvar)|informix|5|bit_xor (binaryvar,binaryvar)|informix|R|D|R||||
+binaryudt.1.0|85|Alter-Variant-bit_xor (binaryvar,binaryvar)|informix|5|bit_xor (binaryvar,binaryvar)|informix|R|D|R||||
+binaryudt.1.0|69|bit_xor (binaryvar,binaryvar)|informix|5|bit_xor (binaryvar,binaryvar)|informix|R|D|R||||
+binaryudt.1.0|5|bit_complement (binaryvar)|informix|7|binaryvar|informix|R|D|R||||
+binaryudt.1.0|181|Alter-ExternalName-bit_complement (binaryvar)|informix|5|bit_complement (binaryvar)|informix|R|D|R||||
+binaryudt.1.0|37|Alter-Parallelize-bit_complement (binaryvar)|informix|5|bit_complement (binaryvar)|informix|R|D|R||||
+binaryudt.1.0|55|Alter-HandleNul-bit_complement (binaryvar)|informix|5|bit_complement (binaryvar)|informix|R|D|R||||
+binaryudt.1.0|85|Alter-Variant-bit_complement (binaryvar)|informix|5|bit_complement (binaryvar)|informix|R|D|R||||
+binaryudt.1.0|69|bit_complement (binaryvar)|informix|5|bit_complement (binaryvar)|informix|R|D|R||||
+binaryudt.1.0|181|Alter-ExternalName-BDTRelease ()|informix|5|BDTRelease ()|informix|R|D|R||||
+binaryudt.1.0|55|Alter-HandleNul-BDTRelease ()|informix|5|BDTRelease ()|informix|R|D|R||||
+binaryudt.1.0|85|Alter-Variant-BDTRelease ()|informix|5|BDTRelease ()|informix|R|D|R||||
+binaryudt.1.0|69|BDTRelease ()|informix|5|BDTRelease ()|informix|R|D|R||||
+binaryudt.1.0|181|Alter-ExternalName-BDTTrace (lvarchar)|informix|5|BDTTrace (lvarchar)|informix|R|D|R||||
+binaryudt.1.0|55|Alter-HandleNul-BDTTrace (lvarchar)|informix|5|BDTTrace (lvarchar)|informix|R|D|R||||
+binaryudt.1.0|85|Alter-Variant-BDTTrace (lvarchar)|informix|5|BDTTrace (lvarchar)|informix|R|D|R||||
+binaryudt.1.0|69|BDTTrace (lvarchar)|informix|5|BDTTrace (lvarchar)|informix|R|D|R||||
+binaryudt.1.0|5|octet_length (binaryvar)|informix|7|binaryvar|informix|R|D|R||||
+binaryudt.1.0|181|Alter-ExternalName-octet_length (binaryvar)|informix|5|octet_length (binaryvar)|informix|R|D|R||||
+binaryudt.1.0|37|Alter-Parallelize-octet_length (binaryvar)|informix|5|octet_length (binaryvar)|informix|R|D|R||||
+binaryudt.1.0|55|Alter-HandleNul-octet_length (binaryvar)|informix|5|octet_length (binaryvar)|informix|R|D|R||||
+binaryudt.1.0|85|Alter-Variant-octet_length (binaryvar)|informix|5|octet_length (binaryvar)|informix|R|D|R||||
+binaryudt.1.0|69|octet_length (binaryvar)|informix|5|octet_length (binaryvar)|informix|R|D|R||||
+binaryudt.1.0|5|binary18Cast (binaryvar)|informix|7|binaryvar|informix|R|D|R||||
+binaryudt.1.0|5|binary18Cast (binaryvar)|informix|7|binary18|informix|R|D|R||||
+binaryudt.1.0|69|binary18Cast (binaryvar)|informix|5|binary18Cast (binaryvar)|informix|R|D|R||||
+binaryudt.1.0|3|binaryvar->binary18|informix|7|binary18|informix|R|D|R||||
+binaryudt.1.0|3|binaryvar->binary18|informix|7|binaryvar|informix|R|D|R||||
+binaryudt.1.0|5|binaryvarCast (binary18)|informix|7|binary18|informix|R|D|R||||
+binaryudt.1.0|5|binaryvarCast (binary18)|informix|7|binaryvar|informix|R|D|R||||
+binaryudt.1.0|69|binaryvarCast (binary18)|informix|5|binaryvarCast (binary18)|informix|R|D|R||||
+binaryudt.1.0|3|binary18->binaryvar|informix|7|binaryvar|informix|R|D|R||||
+binaryudt.1.0|3|binary18->binaryvar|informix|7|binary18|informix|R|D|R||||

@@ -1,0 +1,63 @@
+{
+###########################################################################
+# This program is free software; you can redistribute it and/or modify it
+# under the terms of the GNU General Public License as published by the
+# Free Software Foundation; either version 2 of the License, or (at your
+# option) any later version.
+#
+# This program is distributed in the hope that it will be useful, but
+# WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+# General Public License for more details.
+#
+# You should have received a copy of the GNU General Public License along
+# with this program; if not, write to the Free Software Foundation, Inc.,
+# 59 Temple Place, Suite 330, Boston, MA 02111-1307 USA
+#
+###########################################################################
+
+	 $Id: bank_acc.per,v 1.3 2003/04/08 12:53:57 afalout Exp $
+}
+
+database kandoodb
+screen size 24 by 80
+{
+
+Bank name          [f002                ]    Branch [f003                ]
+
+Account number     [f004                ] Role [r001                     ]
+
+Account name       [f005                ]
+
+Country            [f006                ]
+
+Valid from         [f007      ]     Valid to           [f008      ]
+}
+end
+
+tables
+bank_acc
+
+attributes
+f002 = bank_acc.bank_name, required, upshift, comments=
+	"Name of the bank in which the account is open";
+f003 = bank_acc.bank_branch, upshift, comments=
+	"Branch of the bank in which the account is open";
+f004 = bank_acc.acc_no, required,comments=
+	"Account number";
+r001 = formonly.acc_role_name, upshift, comments=
+	"Account role name (F10 for L&P)";
+f005 = bank_acc.acc_name, upshift, comments=
+	"Name of the account";
+f006 = bank_acc.country, upshift,comments=
+	"Country in which the account is open";
+f007 = bank_acc.valid_from, required, comments=
+	"Date from which this account is vald";
+f008 = bank_acc.valid_to, comments=
+	"Date from which this account is unvalid";
+end
+
+
+instructions
+delimiters "  "
+screen record s_bank_acc (bank_name through valid_to)

@@ -1,0 +1,59 @@
+{
+###########################################################################
+# This program is free software; you can redistribute it and/or modify it
+# under the terms of the GNU General Public License as published by the
+# Free Software Foundation; either version 2 of the License, or (at your
+# option) any later version.
+#
+# This program is distributed in the hope that it will be useful, but
+# WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+# General Public License for more details.
+#
+# You should have received a copy of the GNU General Public License along
+# with this program; if not, write to the Free Software Foundation, Inc.,
+# 59 Temple Place, Suite 330, Boston, MA 02111-1307 USA
+#
+###########################################################################
+
+	 $Id: credit_c.per,v 1.3 2003/04/08 12:53:57 afalout Exp $
+}
+
+database kandoodb
+screen size 24 by 80
+{
+Credit Card type     [f002       ]  Card Role [r001                     ]
+Credit Card number   [f003                ]
+Card expiration date [f004      ]
+
+Valid from         [f005      ]
+Valid to           [f006      ]
+}
+end
+
+tables
+credit_card
+cc_type
+
+attributes
+f002 = cc_type.cc_type_name, upshift, required, comments=
+	"Type of the card (F10 for L&P)";
+r001 = formonly.cc_role_name, upshift, required, comments=
+	"Role of this card (F10 for L&P)";
+f003 = credit_card.cc_no, required, comments=
+	"Credit card number";
+f004 = credit_card.cc_expire, required, comments=
+	"Date of this card expiration";
+f005 = credit_card.valid_from, required, comments =
+	"Date from which this information is valid";
+f006 = credit_card.valid_to, comments=
+	"Date from which this information is not valid";
+end
+
+
+
+instructions
+delimiters "  "
+screen record s_cc (cc_type_name through valid_to)
+
+

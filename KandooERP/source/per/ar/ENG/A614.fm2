@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form xmlns="http://namespaces.querix.com/2015/fglForms">
+	<form.rootContainer>
+		<GridPanel classNames="fcls_rootContainer" verticalAlignment="Top" horizontalAlignment="Left" fieldTable="" identifier="rootContainer">
+			<GridPanel.gridRowDefinitions>
+				<GridRowDefinition gridLengthValue=""/>
+				<GridRowDefinition gridLengthValue=""/>
+				<GridRowDefinition gridLengthValue=""/>
+			</GridPanel.gridRowDefinitions>
+			<GridPanel.gridColumnDefinitions>
+				<GridColumnDefinition gridLengthValue="100%"/>
+			</GridPanel.gridColumnDefinitions>
+			<GridPanel classNames="fcls_title_cnt" visible="true" verticalAlignment="Top" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="cntTitle">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="100%"/>
+					<GridColumnDefinition gridLengthValue=""/>
+				</GridPanel.gridColumnDefinitions>
+				<Label isDynamic="true" text="Sales Territory Information" classNames="fcls_title_lb" visible="true" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="header_text"/>
+				<Label isDynamic="true" text="A614" classNames="fcls_title_lb" visible="true" gridItemLocation="1,0,1,1" fieldTable="" identifier="lbFormName"/>
+			</GridPanel>
+			<GridPanel classNames="fcls_detail_cnt,fcls_data_cnt,fcls_align_left" visible="true" verticalAlignment="Top" horizontalAlignment="Left" gridItemLocation="0,1,1,1" fieldTable="formonly" identifier="cntDetail1">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="" gridMinLength="10rem"/>
+					<GridColumnDefinition gridLengthValue=""/>
+					<GridColumnDefinition gridLengthValue=""/>
+				</GridPanel.gridColumnDefinitions>
+				<TextField toCase="Up" dataType="Char,,,,5" classNames="fcls_length_05qch,fcls_data_widget,fcls_align_left" preferredSize="6qch,1qch" toolTip=" Enter unique sales territory code " gridItemLocation="1,0,1,1" fieldTable="territory" comment=" Enter unique sales territory code " identifier="terr_code"/>
+				<TextField dataType="Char,,,,30" classNames="fcls_data_widget,fcls_align_left,fcls_length_30qch" preferredSize="31qch,1qch" toolTip=" Enter sales territory name or description " gridItemLocation="2,0,1,1" fieldTable="territory" comment=" Enter sales territory name or description " identifier="desc_text"/>
+				<ComboBox dataType="Char,,,,5" classNames="list-show-text-value,field-show-value,fcls_data_widget,fcls_align_left,fcls_length_05qch" preferredSize="18qch,1qch" toolTip=" Enter territory&apos;s sales area - (W) " gridItemLocation="1,1,1,1" fieldTable="territory" comment=" Enter territory&apos;s sales area - (W) " identifier="area_code" editable="true"/>
+				<TextField noEntry="true" dataType="Char,,,,30" classNames="fcls_data_widget,fcls_align_left,fcls_length_30qch" preferredSize="20qch,1qch" gridItemLocation="2,1,1,1" fieldTable="salearea" identifier="desc_text"/>
+				<CheckBox title="Real Territory ? (or pseudo)" dataType="Char,,,,1" preferredSize="2qch,1qch" notNull="true" toolTip=" Territory type: -(1) Pseudo (ie:phone sales) -(2) Real" gridItemLocation="0,2,3,1" fieldTable="territory" comment=" Territory type: -(1) Pseudo (ie:phone sales) -(2) Real" identifier="terr_type_ind">
+					<CheckBox.defaultValue>
+						<IntegerLiteral integerValue="1"/>
+					</CheckBox.defaultValue>
+					<CheckBox.checkedValue>
+						<IntegerLiteral integerValue="2"/>
+					</CheckBox.checkedValue>
+					<CheckBox.uncheckedValue>
+						<IntegerLiteral integerValue="1"/>
+					</CheckBox.uncheckedValue>
+				</CheckBox>
+				<Label isDynamic="true" text="Sales Person" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,3,1,1" fieldTable="" identifier="lb67"/>
+				<ComboBox editable="true" dataType="Char,,,,8" classNames="list-show-text-value,field-show-value,fcls_data_widget,fcls_align_left,fcls_length_05qch" preferredSize="20qch,1qch" toolTip=" Enter salesperson for this territory (if required) -(W) " gridItemLocation="1,3,1,1" fieldTable="territory" comment=" Enter salesperson for this territory (if required) -(W) " identifier="sale_code"/>
+				<Label isDynamic="true" text="Sales Territory" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,0,1,1" fieldTable="" identifier="lb51"/>
+				<Label isDynamic="true" text="Sales Area" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,1,1,1" fieldTable="" identifier="lb52"/>
+				<TextField noEntry="true" dataType="Char,,,,30" classNames="fcls_data_widget,fcls_align_left,fcls_length_30qch" preferredSize="17qch,1qch" gridItemLocation="2,3,1,1" fieldTable="salesperson" identifier="name_text"/>
+			</GridPanel>
+			<GridPanel classNames="fcls_statusbar_cnt" visible="true" verticalAlignment="Bottom" gridItemLocation="0,2,1,1" fieldTable="formonly" identifier="cntStatusBar">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="100%"/>
+				</GridPanel.gridColumnDefinitions>
+				<Label isDynamic="true" text="" classNames="fcls_sblabel" visible="true" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="lbInfo1"/>
+				<Label isDynamic="true" text="" classNames="fcls_sblabel" visible="true" gridItemLocation="0,1,1,1" fieldTable="formonly" identifier="lbInfo2"/>
+			</GridPanel>
+		</GridPanel>
+	</form.rootContainer>
+	<form.screenRecords>
+		<ScreenRecord identifier="salearea" fields="desc_text"/>
+		<ScreenRecord identifier="salesperson" fields="name_text"/>
+		<ScreenRecord identifier="territory" fields="terr_code,desc_text,area_code,terr_type_ind,sale_code"/>
+	</form.screenRecords>
+</form>
+

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<fglBuildTarget xmlns="http://namespaces.querix.com/lyciaide/target" name="z_test_hello_with_libs" type="fgl-program">
+
+  <libraries>
+    <library name="lib_tool" dynamic="false" location=""/>
+    <library name="lib_tool_G_GL" dynamic="false" location=""/>
+    <library name="lib_tool_db" dynamic="false" location=""/>
+    <library name="lib_tool_windecoration" dynamic="false" location=""/>
+  </libraries>
+
+  <sources type="fgl">
+    <file location="4gl/common/glob_GLOBALS_constant.4gl"/>
+    <file location="4gl/common/glob_GLOBALS.4gl"/>
+    <file location="4gl/common/glob_GLOBALS_userDataTypes.4gl"/>
+    <file location="4gl/dummy/z_test_hello_with_libs.4gl"/>
+  </sources>
+
+  <sources type="form">
+    <file location="per/gl/ENG/G100.fm2"/>
+  </sources>
+
+  <mediaFiles>
+    <file client="true" location="z_test_hello_with_libs.qxtheme" type="gui-theme-file"/>
+    <file client="true" location="z_test_hello_with_libs.css" type="other"/>
+  </mediaFiles>
+
+</fglBuildTarget>

@@ -1,0 +1,11 @@
+our $DatabaseName="kandoodb";
+our $FFGDATADIR=sprintf "%s/database",$FFGDIR;	# Directory where database schema file is located
+our $Qx4glLocation=sprintf "%s/source/4gl",$ProjectDir;		# location of the 4gl source files
+our $QxPerLocation=sprintf "%s/source/per",$ProjectDir;		# location of the forms source files 
+our $Language="ENU"								# Language for standard messages and menus
+our $MainAttributeExpression="name\|description\|desc\|_text";   # expression to identify the most likely main attribute for a table (to grab attribute in generate_form)
+our $GlobalReferenceTable="kandoouser";				# Name of the reference table
+our $GlobalReferenceRecord=${GlobalVarPrefix} . ${RecordPrefix} . ${GlobalReferenceTable} ; # Name of the global record for this table
+our $GlobalReferenceKey="cmpy_code";		# this is the column name that appears in most of the tables, which makes things hectic when choosing a foreign key for instance
+our $GlobalReferenceWhereClause=sprintf "\" AND %s = \'\",%s.%s,\"\'\"\n",$GlobalReferenceKey,$GlobalReferenceRecord,$GlobalReferenceKey;   # constant where clause as defined above
+our %BM_Letters=(GL  => "General Ledger",AP => "Accounts Payable",AR  => "Accounts Receivable",IN  => "Inventory");

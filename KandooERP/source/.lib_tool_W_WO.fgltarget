@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<fglBuildTarget xmlns="http://namespaces.querix.com/lyciaide/target" name="lib_tool_W_WO" type="fgl-library">
+
+  <sources type="fgl">
+    <file location="4gl/common/glob_GLOBALS_constant.4gl"/>
+    <file location="4gl/lib_tool/lib_winDecoration_W.4gl"/>
+    <file location="4gl/common/glob_GLOBALS.4gl"/>
+    <file location="4gl/common/glob_GLOBALS_userDataTypes.4gl"/>
+    <file location="4gl/wo/lib_tool_w_wo_init.4gl"/>
+  </sources>
+
+</fglBuildTarget>

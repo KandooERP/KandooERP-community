@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form xmlns="http://namespaces.querix.com/2015/fglForms">
+	<form.rootContainer>
+		<GridPanel classNames="fcls_rootContainer" verticalAlignment="Stretch" horizontalAlignment="Stretch" fieldTable="" identifier="rootContainer">
+			<GridPanel.gridRowDefinitions>
+				<GridRowDefinition gridLengthValue=""/>
+				<GridRowDefinition gridLengthValue="100%"/>
+				<GridRowDefinition gridLengthValue=""/>
+			</GridPanel.gridRowDefinitions>
+			<GridPanel.gridColumnDefinitions>
+				<GridColumnDefinition gridLengthValue="100%"/>
+			</GridPanel.gridColumnDefinitions>
+			<GridPanel classNames="fcls_title_cnt" visible="true" verticalAlignment="Top" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="cntTitle">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="100%"/>
+					<GridColumnDefinition gridLengthValue=""/>
+				</GridPanel.gridColumnDefinitions>
+				<Label isDynamic="true" text="Cheque Scan" classNames="fcls_title_lb" visible="true" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="header_text"/>
+				<Label isDynamic="true" text="P135" classNames="fcls_title_lb" visible="true" gridItemLocation="1,0,1,1" fieldTable="" identifier="lbFormName"/>
+			</GridPanel>
+			<Table rowCount="10" preferredSize="74qch,10qch" gridItemLocation="0,1,1,1" fieldTable="" identifier="sr_cheque">
+				<TableColumn text="Cheque Number" fieldTable="" identifier="tc_cheq_code">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="10rem" gridMinLength="10rem" gridMaxLength="10rem"/>
+					</TableColumn.columnLength>
+					<TextField text="Cheque Number" dataType="Integer,,,," toolTip="Enter the beginning cheque number to be scanned" comment="Enter the beginning cheque number to be scanned" fieldTable="cheque" identifier="cheq_code"/>
+				</TableColumn>
+				<TableColumn text="Vendor Code" fieldTable="" identifier="tc_vend_code">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="10rem" gridMinLength="10rem" gridMaxLength="10rem"/>
+					</TableColumn.columnLength>
+					<TextField toCase="Up" dataType="Char,,,,8" toolTip="Unique Vendor ID " comment="Unique Vendor ID " fieldTable="cheque" identifier="vend_code"/>
+				</TableColumn>
+				<TableColumn text="Date" fieldTable="" identifier="tc_cheq_date">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="10rem" gridMinLength="10rem" gridMaxLength="10rem"/>
+					</TableColumn.columnLength>
+					<TextField dataType="Date,,,," toolTip="Date of specified cheque" comment="Date of specified cheque" fieldTable="cheque" identifier="cheq_date"/>
+				</TableColumn>
+				<TableColumn text="Year" fieldTable="" identifier="tc_year_num">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="10rem" gridMinLength="10rem" gridMaxLength="10rem"/>
+					</TableColumn.columnLength>
+					<TextField dataType="SmallInt,,,," toolTip="Indicates the year used to post this cheque to the GL" comment="Indicates the year used to post this cheque to the GL" fieldTable="cheque" identifier="year_num"/>
+				</TableColumn>
+				<TableColumn text="Period" fieldTable="" identifier="tc_period_num">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="10rem" gridMinLength="10rem" gridMaxLength="10rem"/>
+					</TableColumn.columnLength>
+					<TextField dataType="SmallInt,,,," toolTip="Indicates the period used to post this cheque to the GL" comment="Indicates the period used to post this cheque to the GL" fieldTable="cheque" identifier="period_num"/>
+				</TableColumn>
+				<TableColumn text="Gross Amount" fieldTable="" identifier="tc_pay_amt">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="10rem" gridMinLength="10rem" gridMaxLength="10rem"/>
+					</TableColumn.columnLength>
+					<TextField dataType="Decimal,,,2,16" toolTip="Total amount of cheque" comment="Total amount of cheque" fieldTable="cheque" identifier="pay_amt"/>
+				</TableColumn>
+				<TableColumn text="Amount Applied" fieldTable="" identifier="tc_apply_amt">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="10rem" gridMinLength="10rem" gridMaxLength="10rem"/>
+					</TableColumn.columnLength>
+					<TextField dataType="Decimal,,,2,16" toolTip="Specific amount of cheque already applied" comment="Specific amount of cheque already applied" fieldTable="cheque" identifier="apply_amt"/>
+				</TableColumn>
+				<TableColumn text="Post" horizontalAlignment="Left" fieldTable="" identifier="tc_post_flag">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="4rem" gridMaxLength="4rem" gridMinLength="4rem"/>
+					</TableColumn.columnLength>
+					<CheckBox dataType="Char,,,,1" toolTip="Indicates if cheque has been posted to GL; or if it has been voided" comment="Indicates if cheque has been posted to GL; or if it has been voided" fieldTable="cheque" identifier="post_flag">
+						<CheckBox.checkedValue>
+							<StringLiteral stringValue="Y"/>
+						</CheckBox.checkedValue>
+						<CheckBox.uncheckedValue>
+							<StringLiteral stringValue="N"/>
+						</CheckBox.uncheckedValue>
+					</CheckBox>
+				</TableColumn>
+			</Table>
+			<GridPanel classNames="fcls_statusbar_cnt" visible="true" verticalAlignment="Top" gridItemLocation="0,2,1,1" fieldTable="formonly" identifier="cntStatusBar">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="100%"/>
+				</GridPanel.gridColumnDefinitions>
+				<Label isDynamic="true" text="" classNames="fcls_sblabel" visible="true" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="lbInfo1"/>
+				<Label isDynamic="true" text="" classNames="fcls_sblabel" visible="true" gridItemLocation="0,1,1,1" fieldTable="formonly" identifier="lbInfo2"/>
+			</GridPanel>
+		</GridPanel>
+	</form.rootContainer>
+	<form.screenRecords>
+		<ScreenRecord identifier="sr_cheque" fields="cheque.cheq_code,cheque.vend_code,cheque.cheq_date,cheque.year_num,cheque.period_num,cheque.pay_amt,cheque.apply_amt,cheque.post_flag"/>
+		<ScreenRecord identifier="cheque" fields="cheque.vend_code,cheque.cheq_code,cheque.cheq_date,cheque.year_num,cheque.period_num,cheque.pay_amt,cheque.apply_amt,cheque.post_flag"/>
+	</form.screenRecords>
+</form>
+

@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?><form xmlns="http://namespaces.querix.com/2015/fglForms" title="f_state">
+	<form.rootContainer>
+		<GridPanel classNames="fcls_rootContainer" fieldTable="" identifier="rootContainer" preferredSize="30qch,7qch" verticalAlignment="Top">
+			<GridPanel.gridRowDefinitions>
+				<GridRowDefinition gridLengthValue=""/>
+				<GridRowDefinition gridLengthValue=""/>
+				<GridRowDefinition gridLengthValue=""/>
+			</GridPanel.gridRowDefinitions>
+			<GridPanel.gridColumnDefinitions>
+				<GridColumnDefinition gridLengthValue="100%"/>
+			</GridPanel.gridColumnDefinitions>
+			<GridPanel classNames="fcls_title_cnt" fieldTable="formonly" gridItemLocation="0,0,1,1" horizontalAlignment="Stretch" identifier="cntTitle" verticalAlignment="Top" visible="true">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue=""/>
+					<GridColumnDefinition gridLengthValue=""/>
+				</GridPanel.gridColumnDefinitions>
+				<Label classNames="fcls_title_lb" fieldTable="formonly" gridItemLocation="0,0,1,1" identifier="header_text" isDynamic="true" text="Data Management for table state" visible="true"/>
+				<Label classNames="fcls_title_lb" fieldTable="" gridItemLocation="1,0,1,1" identifier="lbFormName" isDynamic="true" text="f_state" visible="true"/>
+			</GridPanel>
+			<GridPanel classNames="fcls_detail_cnt,fcls_data_cnt,fcls_align_left" fieldTable="formonly" gridItemLocation="0,1,1,1" horizontalAlignment="Left" identifier="cntDetail" verticalAlignment="Top" visible="true">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue="114"/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="" gridMinLength="10rem"/>
+					<GridColumnDefinition gridLengthValue=""/>
+					<GridColumnDefinition gridLengthValue=""/>
+				</GridPanel.gridColumnDefinitions>
+				<Label classNames="" fieldTable="state" gridItemLocation="0,2,1,1" identifier="lb_country_code" isDynamic="true" text="country_code" visible="true"/>
+				<ComboBox editable="true" fieldTable="state" gridItemLocation="1,2,1,1" identifier="country_code" toCase="Up" visible="true"/>
+				<TextField fieldTable="country" gridItemLocation="2,2,1,1" identifier="country_text" noEntry="true" visible="true"/>
+				<Label classNames="" fieldTable="state" gridItemLocation="0,3,1,1" identifier="lb_state_code" isDynamic="true" text="state_code" visible="true"/>
+				<TextField fieldTable="state" gridItemLocation="1,3,1,1" identifier="state_code" toCase="Up" visible="true"/>
+				<Label classNames="" fieldTable="state" gridItemLocation="0,4,1,1" identifier="lb_state_code_iso366_2" isDynamic="true" text="state_code_iso366_2" visible="true"/>
+				<TextField fieldTable="state" gridItemLocation="1,4,1,1" identifier="state_code_iso366_2" toCase="Up" visible="true"/>
+				<Label classNames="" fieldTable="state" gridItemLocation="0,5,1,1" identifier="lb_state_text" isDynamic="true" text="state_text" visible="true"/>
+				<TextField fieldTable="state" gridItemLocation="1,5,1,1" identifier="state_text" visible="true"/>
+				<Label classNames="" fieldTable="state" gridItemLocation="0,6,1,1" identifier="lb_state_text_enu" isDynamic="true" text="state_text_enu" visible="true"/>
+				<TextField fieldTable="state" gridItemLocation="1,6,1,1" identifier="state_text_enu" visible="true"/>
+			</GridPanel>
+			<GridPanel classNames="fcls_statusbar_cnt" fieldTable="formonly" gridItemLocation="0,2,1,1" identifier="cntStatusBar" verticalAlignment="Top" visible="true">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="100%"/>
+				</GridPanel.gridColumnDefinitions>
+				<Label classNames="fcls_sblabel" fieldTable="formonly" gridItemLocation="0,0,1,1" identifier="lbInfo1" isDynamic="true" text="" visible="true"/>
+				<Label classNames="fcls_sblabel" fieldTable="formonly" gridItemLocation="0,1,1,1" identifier="lbInfo2" isDynamic="true" text="" visible="true"/>
+			</GridPanel>
+		</GridPanel>
+	</form.rootContainer>
+	<form.screenRecords>
+		<ScreenRecord fields="country_code,state_code,state_code_iso366_2,state_text,state_text_enu" identifier="state"/>
+		<ScreenRecord fields="country_code" identifier="country"/>
+	</form.screenRecords>
+</form>

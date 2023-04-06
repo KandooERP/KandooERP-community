@@ -1,0 +1,16 @@
+FUNCTION ${LkUpPickListFct}_${ParentTable} ()
+    DEFINE l_${ParentTable} RECORD
+        <Script:define_table_columns ($SRCHANDLE,${ParentTable},"","","all","record",$MstTableRec,"    "):Script>
+    END RECORD
+    
+	WHENEVER SQLERROR CONTINUE		
+	SELECT desc_text		
+	INTO l_desc_text		
+	FROM journal		
+	WHERE 	jour_code = l_acrl_code		
+	IF sqlca.sqlcode = 100 THEN		
+		LET l_desc_text = NULL		
+	END IF		
+	WHENEVER SQLERROR CALL error_mngmt		
+	RETURN sqlca.sqlcode,l_desc_text		
+END FUNCTION # 	${LkUpPickListFct}_${ParentTable}	

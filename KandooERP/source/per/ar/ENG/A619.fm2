@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form xmlns="http://namespaces.querix.com/2015/fglForms">
+	<form.rootContainer>
+		<GridPanel classNames="fcls_rootContainer" verticalAlignment="Stretch" horizontalAlignment="Stretch" fieldTable="" identifier="rootContainer">
+			<GridPanel.gridRowDefinitions>
+				<GridRowDefinition gridLengthValue=""/>
+				<GridRowDefinition gridLengthValue="100%"/>
+				<GridRowDefinition gridLengthValue=""/>
+			</GridPanel.gridRowDefinitions>
+			<GridPanel.gridColumnDefinitions>
+				<GridColumnDefinition gridLengthValue="100%"/>
+			</GridPanel.gridColumnDefinitions>
+			<GridPanel classNames="fcls_title_cnt" visible="true" verticalAlignment="Top" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="cntTitle">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="100%"/>
+					<GridColumnDefinition gridLengthValue=""/>
+				</GridPanel.gridColumnDefinitions>
+				<Label isDynamic="true" text="Customer Scan" classNames="fcls_title_lb" visible="true" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="header_text"/>
+				<Label isDynamic="true" text="A619" classNames="fcls_title_lb" visible="true" gridItemLocation="1,0,1,1" fieldTable="" identifier="lbFormName"/>
+			</GridPanel>
+			<Table rowCount="15" preferredSize="74qch,15qch" verticalAlignment="Stretch" horizontalAlignment="Stretch" gridItemLocation="0,1,1,1" fieldTable="" identifier="sr_customer">
+				<TableColumn fieldTable="" identifier="tc_scroll_flag">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="2rem" gridMaxLength="2rem" gridMinLength="2rem"/>
+					</TableColumn.columnLength>
+					<CheckBox dataType="Char,,,," fieldTable="formonly" identifier="scroll_flag">
+						<CheckBox.checkedValue>
+							<StringLiteral stringValue="*"/>
+						</CheckBox.checkedValue>
+						<CheckBox.uncheckedValue>
+							<NullLiteral/>
+						</CheckBox.uncheckedValue>
+					</CheckBox>
+				</TableColumn>
+				<TableColumn text="Customer" fieldTable="" identifier="tc_cust_code">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="20rem" gridMaxLength="20rem" gridMinLength="20rem"/>
+					</TableColumn.columnLength>
+					<TextField toCase="Up" dataType="Char,,,,8" toolTip=" Enter customer code" fieldTable="customer" comment=" Enter customer code" identifier="cust_code"/>
+				</TableColumn>
+				<TableColumn text="Name" fieldTable="" identifier="tc_name_text">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="20rem" gridMaxLength="20rem" gridMinLength="20rem"/>
+					</TableColumn.columnLength>
+					<TextField noEntry="true" dataType="Char,,,,30" toolTip=" Enter full name or description of the customer" fieldTable="customer" comment=" Enter full name or description of the customer" identifier="name_text"/>
+				</TableColumn>
+				<TableColumn text="Contact" fieldTable="" identifier="tc_contact_text">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="20rem" gridMaxLength="20rem" gridMinLength="20rem"/>
+					</TableColumn.columnLength>
+					<TextField noEntry="true" dataType="Char,,,,30" toolTip=" Billing contact or name of the customer" fieldTable="customer" comment=" Billing contact or name of the customer" identifier="contact_text"/>
+				</TableColumn>
+				<TableColumn text="Phone" fieldTable="" identifier="tc_tele_text">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="100%"/>
+					</TableColumn.columnLength>
+					<TextField noEntry="true" dataType="Char,,,,20" toolTip=" Main telephone number of the customer" fieldTable="customer" comment=" Main telephone number of the customer" identifier="tele_text"/>
+				</TableColumn>
+			</Table>
+			<GridPanel classNames="fcls_statusbar_cnt" visible="true" verticalAlignment="Bottom" gridItemLocation="0,2,1,1" fieldTable="formonly" identifier="cntStatusBar">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="100%"/>
+				</GridPanel.gridColumnDefinitions>
+				<Label isDynamic="true" text="" classNames="fcls_sblabel" visible="true" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="lbInfo1"/>
+				<Label isDynamic="true" text="" classNames="fcls_sblabel" visible="true" gridItemLocation="0,1,1,1" fieldTable="formonly" identifier="lbInfo2"/>
+			</GridPanel>
+		</GridPanel>
+	</form.rootContainer>
+	<form.screenRecords>
+		<ScreenRecord identifier="sr_customer" fields="formonly.scroll_flag,customer.cust_code,customer.name_text,customer.contact_text,customer.tele_text" elements="15"/>
+		<ScreenRecord identifier="customer" fields="cust_code,name_text,contact_text,tele_text"/>
+		<ScreenRecord identifier="formonly" fields="scroll_flag"/>
+	</form.screenRecords>
+</form>
+

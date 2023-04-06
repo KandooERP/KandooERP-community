@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form xmlns="http://namespaces.querix.com/2015/fglForms">
+	<form.rootContainer>
+		<CoordPanel preferredSize="70qch,6qch" fieldTable="" identifier="coord1">
+			<Label text="contact id" location="0qch,1qch" preferredSize="10qch,1qch" fieldTable="" identifier="label1"/>
+			<TextField noEntry="true" dataType="Integer,,,," location="11qch,1qch" preferredSize="12qch,1qch" fieldTable="contact" identifier="contact_id"/>
+			<Label text="Valid from" location="25qch,1qch" preferredSize="10qch,1qch" fieldTable="" identifier="label2"/>
+			<TextField noEntry="true" dataType="Date,,,," location="36qch,1qch" preferredSize="11qch,1qch" fieldTable="contact" identifier="valid_from"/>
+			<Label text="Valid to" location="49qch,1qch" preferredSize="8qch,1qch" fieldTable="" identifier="label3"/>
+			<TextField noEntry="true" dataType="Date,,,," location="58qch,1qch" preferredSize="11qch,1qch" fieldTable="contact" identifier="valid_to"/>
+			<Label text="Modified by" location="0qch,4qch" preferredSize="11qch,1qch" fieldTable="" identifier="label4"/>
+			<TextField noEntry="true" dataType="Char,,,,8" location="12qch,4qch" preferredSize="12qch,1qch" fieldTable="contact" identifier="mod_user_id"/>
+		</CoordPanel>
+	</form.rootContainer>
+	<form.screenRecords>
+		<ScreenRecord identifier="s_contact" fields="contact_id,valid_from,valid_to,mod_user_id"/>
+		<ScreenRecord identifier="contact" fields="contact_id,valid_from,valid_to,mod_user_id"/>
+	</form.screenRecords>
+</form>
+

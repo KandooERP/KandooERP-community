@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form xmlns="http://namespaces.querix.com/2015/fglForms">
+	<form.rootContainer>
+		<GridPanel classNames="fcls_rootContainer" verticalAlignment="Stretch" horizontalAlignment="Stretch" fieldTable="" identifier="rootContainer">
+			<GridPanel.gridRowDefinitions>
+				<GridRowDefinition gridLengthValue=""/>
+				<GridRowDefinition gridLengthValue=""/>
+				<GridRowDefinition gridLengthValue="100%"/>
+				<GridRowDefinition gridLengthValue=""/>
+			</GridPanel.gridRowDefinitions>
+			<GridPanel.gridColumnDefinitions>
+				<GridColumnDefinition gridLengthValue="100%"/>
+			</GridPanel.gridColumnDefinitions>
+			<GridPanel classNames="fcls_title_cnt" visible="true" verticalAlignment="Top" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="cntTitle">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="100%"/>
+					<GridColumnDefinition gridLengthValue=""/>
+					<GridColumnDefinition gridLengthValue=""/>
+				</GridPanel.gridColumnDefinitions>
+				<Label isDynamic="true" text="Transaction Detail" classNames="fcls_title_lb" visible="true" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="header_text"/>
+				<TextField dataType="Char,,,," preferredSize="25qch,1qch" fieldTable="formonly" identifier="trans_header" gridItemLocation="1,0,1,1"/>
+				<Label isDynamic="true" text="F159" classNames="fcls_title_lb" visible="true" gridItemLocation="2,0,1,1" fieldTable="" identifier="lbFormName"/>
+			</GridPanel>
+			<GridPanel classNames="fcls_detail_cnt,fcls_data_cnt,fcls_align_left" visible="true" verticalAlignment="Top" horizontalAlignment="Left" gridItemLocation="0,1,1,1" fieldTable="formonly" identifier="cntDetail1">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="" gridMinLength="10rem"/>
+					<GridColumnDefinition gridLengthValue=""/>
+					<GridColumnDefinition gridLengthValue="" gridMinLength="10rem"/>
+					<GridColumnDefinition gridLengthValue=""/>
+				</GridPanel.gridColumnDefinitions>
+				<TextField dataType="Integer,,,," preferredSize="8qch,1qch" fieldTable="fabatch" identifier="batch_num" gridItemLocation="1,0,1,1" classNames="fcls_data_widget,fcls_align_left,fcls_length_15qch"/>
+				<Calendar format="dd/mm/yyyy" dataType="Date,,,," preferredSize="11qch,1qch" fieldTable="faaudit" identifier="entry_date" gridItemLocation="3,0,1,1" classNames="fcls_data_widget,fcls_align_left,fcls_length_15qch"/>
+				<TextField noEntry="true" dataType="Decimal,,,2,16" preferredSize="17qch,1qch" fieldTable="fabatch" identifier="actual_asset_amt" gridItemLocation="1,1,1,1" classNames="fcls_data_widget,fcls_align_left,fcls_length_15qch"/>
+				<TextField noEntry="true" dataType="Decimal,,,2,16" preferredSize="18qch,1qch" fieldTable="fabatch" identifier="actual_depr_amt" gridItemLocation="3,1,1,1" classNames="fcls_data_widget,fcls_align_left,fcls_length_15qch"/>
+				<Label isDynamic="true" text="Batch Number" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,0,1,1" fieldTable="" identifier="lb51"/>
+				<Label isDynamic="true" text="Entry Date" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="2,0,1,1" fieldTable="" identifier="lb53"/>
+				<Label isDynamic="true" text="Total Assets" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,1,1,1" fieldTable="" identifier="lb52"/>
+				<Label isDynamic="true" text="Total Deprn" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="2,1,1,1" fieldTable="" identifier="lb54"/>
+			</GridPanel>
+			<Table rowCount="10" preferredSize="75qch,10qch" fieldTable="" identifier="sr_faaudit" gridItemLocation="0,2,1,1">
+				<TableColumn fieldTable="" identifier="tc_batch_line_num" text="Seq">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="10rem" gridMaxLength="10rem" gridMinLength="10rem"/>
+					</TableColumn.columnLength>
+					<TextField noEntry="true" dataType="Integer,,,," fieldTable="faaudit" identifier="batch_line_num"/>
+				</TableColumn>
+				<TableColumn fieldTable="" identifier="tc_asset_code" text="Asset">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="10rem" gridMaxLength="10rem" gridMinLength="10rem"/>
+					</TableColumn.columnLength>
+					<TextField toCase="Up" dataType="Char,,,,10" toolTip=" The Asset Code that this transaction will affect (W)" fieldTable="faaudit" comment=" The Asset Code that this transaction will affect (W)" identifier="asset_code"/>
+				</TableColumn>
+				<TableColumn fieldTable="" identifier="tc_add_on_code" text="Add On">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="10rem" gridMaxLength="10rem" gridMinLength="10rem"/>
+					</TableColumn.columnLength>
+					<TextField toCase="Up" dataType="Char,,,,10" toolTip="The add on asset code for this asset" fieldTable="faaudit" comment="The add on asset code for this asset" identifier="add_on_code"/>
+				</TableColumn>
+				<TableColumn fieldTable="" identifier="tc_book_code" text="Book ID">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="10rem" gridMaxLength="10rem" gridMinLength="10rem"/>
+					</TableColumn.columnLength>
+					<TextField toCase="Up" dataType="Char,,,,2" toolTip="The Book Code that the transaction will affect (W)" fieldTable="faaudit" comment="The Book Code that the transaction will affect (W)" identifier="book_code"/>
+				</TableColumn>
+				<TableColumn fieldTable="" identifier="tc_asset_amt" text="Asset Amount">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="10rem" gridMaxLength="10rem" gridMinLength="10rem"/>
+					</TableColumn.columnLength>
+					<TextField noEntry="true" dataType="Decimal,,,2,16" toolTip=" The cost amount to affect the asset " fieldTable="faaudit" comment=" The cost amount to affect the asset " identifier="asset_amt"/>
+				</TableColumn>
+				<TableColumn fieldTable="" identifier="tc_depr_amt" text="Depreciation Amt">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="10rem" gridMaxLength="10rem" gridMinLength="10rem"/>
+					</TableColumn.columnLength>
+					<TextField noEntry="true" dataType="Decimal,,,2,16" toolTip=" The depreciation amount to affect the asset " fieldTable="faaudit" comment=" The depreciation amount to affect the asset " identifier="depr_amt"/>
+				</TableColumn>
+				<TableColumn resizable="true" visible="true" identifier="tc_lbEOL">
+					<Label isDynamic="true" visible="true" identifier="lbEOL"/>
+					<TableColumn.columnLength>
+						<GridLength/>
+					</TableColumn.columnLength>
+				</TableColumn>
+			</Table>
+			<GridPanel classNames="fcls_statusbar_cnt" visible="true" verticalAlignment="Top" gridItemLocation="0,3,1,1" fieldTable="formonly" identifier="cntStatusBar">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="100%"/>
+				</GridPanel.gridColumnDefinitions>
+				<Label isDynamic="true" text="" classNames="fcls_sblabel" visible="true" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="lbInfo1"/>
+				<Label isDynamic="true" text="" classNames="fcls_sblabel" visible="true" gridItemLocation="0,1,1,1" fieldTable="formonly" identifier="lbInfo2"/>
+			</GridPanel>
+		</GridPanel>
+	</form.rootContainer>
+	<form.screenRecords>
+		<ScreenRecord identifier="sr_faaudit" fields="faaudit.batch_line_num,faaudit.asset_code,faaudit.add_on_code,faaudit.book_code,faaudit.asset_amt,faaudit.depr_amt" elements="10"/>
+		<ScreenRecord identifier="faaudit" fields="faaudit.entry_date,faaudit.batch_line_num,faaudit.asset_code,faaudit.add_on_code,faaudit.book_code,faaudit.asset_amt,faaudit.depr_amt"/>
+		<ScreenRecord identifier="fabatch" fields="fabatch.batch_num,fabatch.actual_asset_amt,fabatch.actual_depr_amt"/>
+		<ScreenRecord identifier="formonly" fields="formonly.trans_header"/>
+	</form.screenRecords>
+</form>
+

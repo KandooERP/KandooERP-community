@@ -1,0 +1,890 @@
+############################################################
+# GLOBAL Scope Variables
+############################################################
+GLOBALS "../common/glob_GLOBALS.4gl" 
+
+FUNCTION windecoration_p(pwinname) 
+	DEFINE pwinname STRING 
+	DEFINE errmsg STRING 
+
+	CASE pwinname 
+
+		WHEN "PA00" #Vendor Reports Sub-system
+		WHEN "PB00" #Voucher Reports Sub-system
+		WHEN "PC00" #Cheque & Debit Reports Sub-system
+
+	# Prog: U11
+	# User Parameters
+		WHEN "P100" --vendor HEADER --ps1 
+			CALL combolist_vendorcode ("vend_code", COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_VALUE,COMBO_VALUE_AND_LABEL,combo_label_is_value_dash_label,NULL,COMBO_NULL_NOT) 
+			CALL combolist_country ("country_code", COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_VALUE,COMBO_VALUE_AND_LABEL,combo_label_is_value_dash_label,NULL,COMBO_NULL_NOT) 
+			CALL combolist_vendortype ("type_code", COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_LABEL,COMBO_VALUE_AND_LABEL,combo_label_is_label_brace_value,NULL,COMBO_NULL_NOT) 
+			CALL combolist_termcode ("term_code", COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_LABEL,COMBO_VALUE_AND_LABEL,combo_label_is_label_brace_value,NULL,COMBO_NULL_NOT) 
+			CALL combolist_tax_code ("tax_code", COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_LABEL,COMBO_VALUE_AND_LABEL,combo_label_is_label_brace_value,NULL,COMBO_NULL_NOT) 
+			CALL combolist_currency ("currency_code", COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_LABEL,COMBO_VALUE_AND_LABEL,combo_label_is_label_brace_value,NULL,COMBO_NULL_NOT) 
+			CALL combolist_language ("language_code", COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_LABEL,COMBO_VALUE_AND_LABEL,combo_label_is_label_brace_value,NULL,COMBO_NULL_NOT) 
+			#			CALL comboList_location    ("locn_code",     COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_VALUE,COMBO_VALUE_AND_LABEL,COMBO_LABEL_IS_VALUE_DASH_LABEL,NULL,COMBO_NULL_NOT)
+
+		WHEN "P101" --vendor scan --p15 
+
+		WHEN "P102" 
+			CALL combolist_vendorcode ("vend_code", COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_VALUE,COMBO_VALUE_AND_LABEL,combo_label_is_value_dash_label,NULL,COMBO_NULL_NOT) 
+			CALL combolist_company ("cmpy_name", COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_VALUE,COMBO_VALUE_AND_LABEL,combo_label_is_value_dash_label,NULL,COMBO_NULL_NOT) 
+
+			#DISPLAY getLangStr("lb_crn") TO lb_crn
+			DISPLAY getlangstr("lb_state") TO lb_state 
+
+		WHEN "P103" 
+			CALL combolist_vendorcode     ("vend_code",        COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_VALUE,COMBO_VALUE_AND_LABEL,COMBO_LABEL_IS_LABEL,NULL,COMBO_NULL_NOT) 
+			#CALL comboList_holdReasCode  ("hold_code",			   COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_LABEL,COMBO_VALUE_AND_LABEL,COMBO_LABEL_IS_LABEL_BRACE_VALUE,NULL,COMBO_NULL_NOT)
+			CALL combolist_holdpaycode    ("hold_code",        COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_VALUE,COMBO_VALUE_AND_LABEL,COMBO_LABEL_IS_LABEL,NULL,COMBO_NULL_SPACE) 
+			CALL combolist_expensetype    ("def_exp_ind",      COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_LABEL,COMBO_VALUE_AND_LABEL,COMBO_LABEL_IS_LABEL,NULL,COMBO_NULL_NOT) 
+			CALL combolist_coa_account    ("usual_acct_code",  COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_VALUE,COMBO_VALUE_AND_LABEL,COMBO_LABEL_IS_LABEL,NULL,COMBO_NULL_NOT) --pvariable,psort,psingle,phint) 
+			CALL combolist_currency       ("currency_code",    COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_VALUE,COMBO_VALUE_AND_LABEL,COMBO_LABEL_IS_LABEL,NULL,COMBO_NULL_NOT) 
+
+		WHEN "P104" --vendor credit --p16 
+
+		WHEN "P105" --vendor inquiry 
+			CALL combolist_vendorcode     ("vend_code",        COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_VALUE,COMBO_VALUE_AND_LABEL,COMBO_LABEL_IS_LABEL,NULL,COMBO_NULL_NOT) 
+
+			CALL combolist_country        ("country_code",     COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_LABEL,COMBO_VALUE_AND_LABEL,COMBO_LABEL_IS_LABEL,NULL,COMBO_NULL_NOT) 
+
+			CALL combolist_vendortype     ("type_code",        COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_LABEL,COMBO_VALUE_AND_LABEL,COMBO_LABEL_IS_LABEL,NULL,COMBO_NULL_NOT) 
+			CALL combolist_termcode       ("term_code",        COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_LABEL,COMBO_VALUE_AND_LABEL,COMBO_LABEL_IS_LABEL,NULL,COMBO_NULL_NOT) 
+			CALL combolist_tax_code       ("tax_code",         COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_LABEL,COMBO_VALUE_AND_LABEL,COMBO_LABEL_IS_LABEL,NULL,COMBO_NULL_NOT) 
+			CALL combolist_holdreascode   ("hold_code",        COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_LABEL,COMBO_VALUE_AND_LABEL,COMBO_LABEL_IS_LABEL,NULL,COMBO_NULL_NOT) 
+			CALL combolist_paymentmethod  ("pay_meth_ind",     COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_LABEL,COMBO_VALUE_AND_LABEL,COMBO_LABEL_IS_LABEL,NULL,COMBO_NULL_NOT) 
+
+			CALL combolist_coa_account    ("usual_acct_code",  COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_VALUE,COMBO_VALUE_AND_LABEL,combo_label_is_value_dash_label,NULL,COMBO_NULL_NOT) --pvariable,psort,psingle,phint) 
+			CALL combolist_currency       ("currency_code",    COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_VALUE,COMBO_VALUE_AND_LABEL,combo_label_is_value_dash_label,NULL,COMBO_NULL_NOT) 
+
+			--DISPLAY getlangstr            ("lb_vat_reg_no") TO lb_vat_reg_no 
+			--DISPLAY getlangstr            ("lb_state") TO lb_state 
+
+
+		WHEN "P106" --vendor ledger --p1b 
+			CALL combolist_vendorcode     ("vend_code",        COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_VALUE,COMBO_VALUE_AND_LABEL,COMBO_LABEL_IS_LABEL,NULL,COMBO_NULL_NOT) 
+			CALL combolist_currency       ("currency_code",    COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_VALUE,COMBO_VALUE_AND_LABEL,combo_label_is_value_dash_label,NULL,COMBO_NULL_NOT) 
+			#CALL comboList_trantype_ind ("trantype_ind",      COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_LABEL,COMBO_VALUE_AND_LABEL,COMBO_LABEL_IS_LABEL_BRACE_VALUE,NULL,COMBO_NULL_NOT)
+
+		WHEN "P107" --vendor history 
+			CALL combolist_vendorcode     ("vend_code",        COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_LABEL,COMBO_VALUE_AND_LABEL,COMBO_LABEL_IS_LABEL,NULL,COMBO_NULL_NOT) 
+			CALL combolist_currency       ("currency_code",    COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_VALUE,COMBO_VALUE_AND_LABEL,combo_label_is_value_dash_label,NULL,COMBO_NULL_NOT) 
+
+		WHEN "P108" --Vendor Information  missing form??? 
+
+		WHEN "P109" --audit trail 
+			CALL combolist_vendorcode     ("apaudit.vend_code",COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_LABEL,COMBO_VALUE_AND_LABEL,COMBO_LABEL_IS_LABEL,NULL,COMBO_NULL_NOT) --pvariable,psort,psingle,phint) 
+
+		WHEN "P109a" --reporting years & periods 
+			CALL combolist_year_from_period           ("start_year",       COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_LABEL,COMBO_VALUE_AND_LABEL,COMBO_LABEL_IS_LABEL,NULL,COMBO_NULL_NOT) 
+			CALL combolist_period         ("start_period",     COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_LABEL,COMBO_VALUE_AND_LABEL,COMBO_LABEL_IS_LABEL,NULL,COMBO_NULL_NOT) 
+			CALL combolist_year_from_period           ("end_year",         COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_LABEL,COMBO_VALUE_AND_LABEL,COMBO_LABEL_IS_LABEL,NULL,COMBO_NULL_NOT) 
+			CALL combolist_period         ("end_period",       COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_LABEL,COMBO_VALUE_AND_LABEL,COMBO_LABEL_IS_LABEL,NULL,COMBO_NULL_NOT) 
+
+			--P1A
+
+		WHEN "P110" --vendor notes 
+			CALL combolist_vendorcode     ("vend_code",        COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_LABEL,COMBO_VALUE_AND_LABEL,COMBO_LABEL_IS_LABEL,NULL,COMBO_NULL_NOT) --pvariable,psort,psingle,phint) 
+
+		WHEN "P111" --automatic payment maintenance 
+
+		WHEN "P112" --debit HEADER 
+			CALL combolist_vendorcode ("vend_code", COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_VALUE,COMBO_VALUE_AND_LABEL,combo_label_is_value_dash_label,NULL,COMBO_NULL_NOT) 
+			CALL combolist_currency ("currency_code", COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_VALUE,COMBO_VALUE_AND_LABEL,combo_label_is_value_dash_label,NULL,COMBO_NULL_NOT) 
+			CALL combolist_year_from_period ("year_num", COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_LABEL,COMBO_VALUE_AND_LABEL,COMBO_LABEL_IS_LABEL,NULL,COMBO_NULL_NOT) 
+			CALL combolist_period ("period_num", COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_LABEL,COMBO_VALUE_AND_LABEL,COMBO_LABEL_IS_LABEL,NULL,COMBO_NULL_NOT) 
+			CALL combolist_journalcode ("jour_num", COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_VALUE,COMBO_VALUE_AND_LABEL,combo_label_is_value_dash_label,NULL,COMBO_NULL_NOT) 
+
+
+
+		WHEN "P113" --debit scan 
+			CALL comboList_vendorCode("vend_code",COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_VALUE,COMBO_VALUE_AND_LABEL,COMBO_LABEL_IS_VALUE_DASH_LABEL,NULL,COMBO_NULL_NOT) 
+			CALL comboList_currency("currency_code",COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_VALUE,COMBO_VALUE_AND_LABEL,COMBO_LABEL_IS_VALUE_DASH_LABEL,NULL,COMBO_NULL_NOT) 
+
+		WHEN "P114" --debit scan 
+
+		WHEN "P115" --debit scan 
+
+		WHEN "P116" --vendor payment details 
+			CALL comboList_paymentMethod("pay_meth_ind",COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_LABEL,COMBO_VALUE_AND_LABEL,COMBO_LABEL_IS_LABEL,NULL,COMBO_NULL_NOT) 
+			CALL comboList_bank("bank_code",COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_VALUE,COMBO_VALUE_AND_LABEL,COMBO_LABEL_IS_VALUE_DASH_LABEL,NULL,COMBO_NULL_NOT) 
+			CALL comboList_customer("contra_cust_code",COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_VALUE,COMBO_VALUE_AND_LABEL,COMBO_LABEL_IS_VALUE_DASH_LABEL,NULL,COMBO_NULL_NOT) 
+			CALL comboList_contraMethod("contra_meth_ind",COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_LABEL,COMBO_VALUE_AND_LABEL,COMBO_LABEL_IS_LABEL,NULL,COMBO_NULL_NOT) 
+			CALL comboList_BICCode("bic_text",COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_LABEL,COMBO_VALUE_AND_LABEL,COMBO_LABEL_IS_LABEL,NULL,COMBO_NULL_NOT) 
+
+			DISPLAY getlangstr("lb_paymentMethod") TO lb_paymentmethod 
+			DISPLAY getlangstr("lb_bank") TO lb_bank 
+			DISPLAY getlangstr("lb_subcontractor") TO lb_subcontractor 
+			DISPLAY getlangstr("lb_contraCustomer") TO lb_contracustomer 
+			DISPLAY getlangstr("lb_contraMethod") TO lb_contramethod 
+
+			DISPLAY getlangstr("lb_vendorBankAccount") TO lb_vendorbankaccount 
+			DISPLAY getlangstr("lb_bic") TO lb_bic 
+			DISPLAY getlangstr("lb_acctNo") TO lb_acctno 
+			DISPLAY getlangstr("lb_suf") TO lb_suf 
+
+			#CALL comboList_priceLevel("inv_level_ind",COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_LABEL,COMBO_VALUE_AND_LABEL,COMBO_LABEL_IS_LABEL_BRACE_VALUE,NULL,COMBO_NULL_NOT)
+			#CALL comboList_salesCondition("cond_code",COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_LABEL,COMBO_VALUE_AND_LABEL,COMBO_LABEL_IS_LABEL_BRACE_VALUE,NULL,COMBO_NULL_NOT)
+			#CALL comboList_tax_code("tax_code",COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_LABEL,COMBO_VALUE_AND_LABEL,COMBO_LABEL_IS_LABEL_BRACE_VALUE,NULL,COMBO_NULL_NOT)
+			#CALL comboList_termCode("term_code",COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_LABEL,COMBO_VALUE_AND_LABEL,COMBO_LABEL_IS_LABEL_BRACE_VALUE,NULL,COMBO_NULL_NOT)
+			#CALL comboList_invoiceAddress("invoice_to_ind",COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_LABEL,COMBO_VALUE_AND_LABEL,COMBO_LABEL_IS_LABEL_BRACE_VALUE,NULL,COMBO_NULL_NOT)
+
+		WHEN "P116AU" --vendor payment details 
+			CALL comboList_paymentMethod("pay_meth_ind",COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_LABEL,COMBO_VALUE_AND_LABEL,COMBO_LABEL_IS_LABEL,NULL,COMBO_NULL_NOT) 
+			CALL comboList_bank("bank_code",COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_LABEL,COMBO_VALUE_AND_LABEL,COMBO_LABEL_IS_LABEL,NULL,COMBO_NULL_NOT) 
+			CALL comboList_customer("contra_cust_code",COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_LABEL,COMBO_VALUE_AND_LABEL,COMBO_LABEL_IS_LABEL_BRACE_VALUE,NULL,COMBO_NULL_NOT) 
+			CALL comboList_contraMethod("contra_meth_ind",COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_LABEL,COMBO_VALUE_AND_LABEL,COMBO_LABEL_IS_LABEL,NULL,COMBO_NULL_NOT) 
+			CALL comboList_BICCode("bic_text",COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_LABEL,COMBO_VALUE_AND_LABEL,COMBO_LABEL_IS_LABEL,NULL,COMBO_NULL_NOT) 
+
+			DISPLAY getlangstr("lb_paymentMethod") TO lb_paymentmethod 
+			DISPLAY getlangstr("lb_bank") TO lb_bank 
+			DISPLAY getlangstr("lb_subcontractor") TO lb_subcontractor 
+			DISPLAY getlangstr("lb_contraCustomer") TO lb_contracustomer 
+			DISPLAY getlangstr("lb_contraMethod") TO lb_contramethod 
+
+			DISPLAY getlangstr("lb_vendorBankAccount") TO lb_vendorbankaccount 
+			DISPLAY getlangstr("lb_bic") TO lb_bic 
+			DISPLAY getlangstr("lb_acctNo") TO lb_acctno 
+			DISPLAY getlangstr("lb_suf") TO lb_suf 
+
+
+		WHEN "P116EU" --vendor payment details 
+			CALL comboList_paymentMethod("pay_meth_ind", COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_LABEL,COMBO_VALUE_AND_LABEL,COMBO_LABEL_IS_LABEL,NULL,COMBO_NULL_NOT) 
+			CALL comboList_bank("bank_code", COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_LABEL,COMBO_VALUE_AND_LABEL,COMBO_LABEL_IS_LABEL,NULL,COMBO_NULL_NOT) 
+			CALL comboList_customer("contra_cust_code", COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_LABEL,COMBO_VALUE_AND_LABEL,combo_label_is_label_brace_value,NULL,COMBO_NULL_NOT) 
+			CALL comboList_contraMethod("contra_meth_ind",COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_LABEL,COMBO_VALUE_AND_LABEL,COMBO_LABEL_IS_LABEL,NULL,COMBO_NULL_NOT) 
+			CALL comboList_BICCode("bic_text", COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_LABEL,COMBO_VALUE_AND_LABEL,COMBO_LABEL_IS_LABEL,NULL,COMBO_NULL_NOT) 
+
+			DISPLAY getlangstr("lb_paymentMethod") TO lb_paymentmethod 
+			DISPLAY getlangstr("lb_bank") TO lb_bank 
+			DISPLAY getlangstr("lb_subcontractor") TO lb_subcontractor 
+			DISPLAY getlangstr("lb_contraCustomer") TO lb_contracustomer 
+			DISPLAY getlangstr("lb_contraMethod") TO lb_contramethod 
+
+			DISPLAY getlangstr("lb_vendorBankAccount") TO lb_vendorbankaccount 
+			DISPLAY getlangstr("lb_bic") TO lb_bic 
+			DISPLAY getlangstr("lb_acctNo") TO lb_acctno 
+			#DISPLAY getLangStr("lb_suf") TO lb_suf
+
+
+		WHEN "P116UA" --vendor payment details ukraine 
+			CALL comboList_paymentMethod("pay_meth_ind",COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_LABEL,COMBO_VALUE_AND_LABEL,COMBO_LABEL_IS_LABEL,NULL,COMBO_NULL_NOT) 
+			CALL comboList_bank("bank_code",COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_LABEL,COMBO_VALUE_AND_LABEL,COMBO_LABEL_IS_LABEL,NULL,COMBO_NULL_NOT) 
+			CALL comboList_customer("contra_cust_code",COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_LABEL,COMBO_VALUE_AND_LABEL,COMBO_LABEL_IS_LABEL_BRACE_VALUE,NULL,COMBO_NULL_NOT) 
+			CALL comboList_contraMethod("contra_meth_ind",COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_LABEL,COMBO_VALUE_AND_LABEL,COMBO_LABEL_IS_LABEL,NULL,COMBO_NULL_NOT) 
+			CALL comboList_BICCode("bic_text",COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_LABEL,COMBO_VALUE_AND_LABEL,COMBO_LABEL_IS_LABEL,NULL,COMBO_NULL_NOT) 
+
+			DISPLAY getlangstr("lb_paymentMethod") TO lb_paymentmethod 
+			DISPLAY getlangstr("lb_bank") TO lb_bank 
+			DISPLAY getlangstr("lb_subcontractor") TO lb_subcontractor 
+			DISPLAY getlangstr("lb_contraCustomer") TO lb_contracustomer 
+			DISPLAY getlangstr("lb_contraMethod") TO lb_contramethod 
+
+			DISPLAY getlangstr("lb_vendorBankAccount") TO lb_vendorbankaccount 
+			DISPLAY getlangstr("lb_bic") TO lb_bic 
+			DISPLAY getlangstr("lb_acctNo") TO lb_acctno 
+			DISPLAY getlangstr("lb_suf") TO lb_suf 
+
+
+		WHEN "P116NZ" --vendor payment details ukraine 
+			CALL comboList_paymentMethod("pay_meth_ind",COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_LABEL,COMBO_VALUE_AND_LABEL,COMBO_LABEL_IS_LABEL,NULL,COMBO_NULL_NOT) 
+			CALL comboList_bank("bank_code",COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_LABEL,COMBO_VALUE_AND_LABEL,COMBO_LABEL_IS_LABEL,NULL,COMBO_NULL_NOT) 
+			CALL comboList_customer("contra_cust_code",COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_LABEL,COMBO_VALUE_AND_LABEL,COMBO_LABEL_IS_LABEL_BRACE_VALUE,NULL,COMBO_NULL_NOT) 
+			CALL comboList_contraMethod("contra_meth_ind",COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_LABEL,COMBO_VALUE_AND_LABEL,COMBO_LABEL_IS_LABEL,NULL,COMBO_NULL_NOT) 
+			CALL comboList_BICCode("bic_text",COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_LABEL,COMBO_VALUE_AND_LABEL,COMBO_LABEL_IS_LABEL,NULL,COMBO_NULL_NOT) 
+
+			DISPLAY getlangstr("lb_paymentMethod") TO lb_paymentmethod 
+			DISPLAY getlangstr("lb_bank") TO lb_bank 
+			DISPLAY getlangstr("lb_subcontractor") TO lb_subcontractor 
+			DISPLAY getlangstr("lb_contraCustomer") TO lb_contracustomer 
+			DISPLAY getlangstr("lb_contraMethod") TO lb_contramethod 
+
+			DISPLAY getlangstr("lb_vendorBankAccount") TO lb_vendorbankaccount 
+			DISPLAY getlangstr("lb_bic") TO lb_bic 
+			DISPLAY getlangstr("lb_acctNo") TO lb_acctno 
+			DISPLAY getlangstr("lb_suf") TO lb_suf 
+
+
+		WHEN "P116US" --vendor payment details ukraine 
+			CALL comboList_paymentMethod("pay_meth_ind",COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_LABEL,COMBO_VALUE_AND_LABEL,COMBO_LABEL_IS_LABEL,NULL,COMBO_NULL_NOT) 
+			CALL comboList_bank("bank_code",COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_LABEL,COMBO_VALUE_AND_LABEL,COMBO_LABEL_IS_LABEL,NULL,COMBO_NULL_NOT) 
+			CALL comboList_customer("contra_cust_code",COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_LABEL,COMBO_VALUE_AND_LABEL,COMBO_LABEL_IS_LABEL_BRACE_VALUE,NULL,COMBO_NULL_NOT) 
+			CALL comboList_contraMethod("contra_meth_ind",COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_LABEL,COMBO_VALUE_AND_LABEL,COMBO_LABEL_IS_LABEL,NULL,COMBO_NULL_NOT) 
+			CALL comboList_BICCode("bic_text",COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_LABEL,COMBO_VALUE_AND_LABEL,COMBO_LABEL_IS_LABEL,NULL,COMBO_NULL_NOT) 
+
+			DISPLAY getlangstr("lb_paymentMethod") TO lb_paymentmethod 
+			DISPLAY getlangstr("lb_bank") TO lb_bank 
+			DISPLAY getlangstr("lb_subcontractor") TO lb_subcontractor 
+			DISPLAY getlangstr("lb_contraCustomer") TO lb_contracustomer 
+			DISPLAY getlangstr("lb_contraMethod") TO lb_contramethod 
+
+			DISPLAY getlangstr("lb_vendorBankAccount") TO lb_vendorbankaccount 
+			DISPLAY getlangstr("lb_bic") TO lb_bic 
+			DISPLAY getlangstr("lb_acctNo") TO lb_acctno 
+			DISPLAY getlangstr("lb_suf") TO lb_suf 
+
+		WHEN "P117" --debit details 
+			CALL combolist_vendorcode ("vend_code", COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_VALUE,COMBO_VALUE_AND_LABEL,combo_label_is_value_dash_label,NULL,COMBO_NULL_NOT) 
+			CALL combolist_currency ("currency_code", COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_VALUE,COMBO_VALUE_AND_LABEL,combo_label_is_value_dash_label,NULL,COMBO_NULL_NOT) 
+			CALL combolist_usercode ("entry_code", COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_VALUE,COMBO_VALUE_AND_LABEL,combo_label_is_value_dash_label,NULL,COMBO_NULL_NOT) 
+			CALL combolist_year_from_period ("year_num", COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_LABEL,COMBO_VALUE_AND_LABEL,COMBO_LABEL_IS_LABEL,NULL,COMBO_NULL_NOT) 
+			CALL combolist_period ("period_num", COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_LABEL,COMBO_VALUE_AND_LABEL,COMBO_LABEL_IS_LABEL,NULL,COMBO_NULL_NOT) 
+			CALL combolist_journalcode ("jour_num", COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_VALUE,COMBO_VALUE_AND_LABEL,combo_label_is_value_dash_label,NULL,COMBO_NULL_NOT) 
+
+		WHEN "P118" --purchasing information 
+			CALL comboList_purchtype("purchtype_code",COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_VALUE,COMBO_VALUE_AND_LABEL,COMBO_LABEL_IS_VALUE_DASH_LABEL,NULL,COMBO_NULL_NOT) 
+			CALL comboList_currency("currency_code",COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_VALUE,COMBO_VALUE_AND_LABEL,COMBO_LABEL_IS_VALUE_DASH_LABEL,NULL,COMBO_NULL_NOT) 
+			CALL comboList_masterVendorCode("mast_vend_code",COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_VALUE,COMBO_VALUE_AND_LABEL,COMBO_LABEL_IS_VALUE_DASH_LABEL,NULL,COMBO_NULL_NOT) 
+
+		WHEN "P119" --purchasing GROUP (Missing FORM p119) 
+			--CALL comboList_masterVendorCode     ("mast_vend_code",COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_VALUE,COMBO_VALUE_AND_LABEL,COMBO_LABEL_IS_VALUE_DASH_LABEL,NULL,COMBO_NULL_NOT)
+			CALL comboList_vendorCode             ("mast_vend_code",COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_VALUE,COMBO_VALUE_AND_LABEL,COMBO_LABEL_IS_VALUE_DASH_LABEL,NULL,COMBO_NULL_NOT) 
+			CALL comboList_vendorCode             ("temp_table_vendor.vend_code",COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_VALUE,COMBO_VALUE_AND_LABEL,COMBO_LABEL_IS_VALUE_DASH_LABEL,NULL,COMBO_NULL_NOT) 
+
+
+
+		WHEN "P120" --voucher inquiry 
+--			CALL comboList_vendorCode           ("vend_code",			COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_VALUE,COMBO_VALUE_AND_LABEL,COMBO_LABEL_IS_VALUE_DASH_LABEL,NULL,COMBO_NULL_NOT)
+			CALL combolist_vendorcode     		("vend_code",        COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_VALUE,COMBO_VALUE_AND_LABEL,COMBO_LABEL_IS_LABEL,NULL,COMBO_NULL_NOT)
+			CALL combolist_currency               ("currency_code", COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_VALUE,COMBO_VALUE_AND_LABEL,COMBO_VALUE_AND_LABEL,NULL,COMBO_NULL_NOT) 
+
+			CALL combolist_termcode               ("term_code", COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_VALUE,COMBO_VALUE_AND_LABEL,COMBO_VALUE_AND_LABEL,NULL,COMBO_NULL_NOT) 
+			CALL combolist_tax_code               ("tax_code", COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_VALUE,COMBO_VALUE_AND_LABEL,COMBO_VALUE_AND_LABEL,NULL,COMBO_NULL_NOT) 
+			--CALL comboList_holdReasCode          ("hold_code",			COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_VALUE,COMBO_VALUE_AND_LABEL,COMBO_VALUE_AND_LABEL,NULL,COMBO_NULL_NOT)
+			CALL combolist_holdpaycode            ("hold_code", COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_VALUE,COMBO_VALUE_AND_LABEL,COMBO_VALUE_AND_LABEL,NULL,COMBO_NULL_SPACE) 
+
+			CALL combolist_year_from_period                   ("year_num", COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_LABEL,COMBO_VALUE_AND_LABEL,COMBO_LABEL_IS_LABEL,NULL,COMBO_NULL_NOT) 
+			CALL combolist_period                 ("period_num", COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_LABEL,COMBO_VALUE_AND_LABEL,COMBO_LABEL_IS_LABEL,NULL,COMBO_NULL_NOT) 
+			--CALL comboList_invoiceNumVoucher    ("inv_text",       COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_VALUE,COMBO_VALUE_AND_LABEL,COMBO_VALUE_AND_LABEL,NULL,COMBO_NULL_NOT)
+
+			--CALL comboList_vendorCode           ("vend_code",      COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_LABEL,COMBO_VALUE_AND_LABEL,COMBO_LABEL_IS_LABEL_BRACE_VALUE,NULL,COMBO_NULL_NOT)
+			--CALL comboList_vendorType           ("type_code",      COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_LABEL,COMBO_VALUE_AND_LABEL,COMBO_LABEL_IS_LABEL_BRACE_VALUE,NULL,COMBO_NULL_NOT)
+			CALL combolist_usercode               ("entry_code", COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_LABEL,COMBO_VALUE_AND_LABEL,COMBO_LABEL_IS_LABEL,NULL,COMBO_NULL_NOT) 
+
+		WHEN "P121" --voucher scan 
+			CALL comboList_vendorCode             ("vend_code",COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_VALUE,COMBO_VALUE_AND_LABEL,COMBO_VALUE_AND_LABEL,NULL,COMBO_NULL_NOT) 
+			CALL comboList_currency               ("currency_code",COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_VALUE,COMBO_VALUE_AND_LABEL,COMBO_LABEL_IS_VALUE_DASH_LABEL,NULL,COMBO_NULL_NOT) 
+
+		WHEN "P122" --vendor invoices 
+			CALL combolist_vendorcode             ("vend_code",COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_LABEL,COMBO_VALUE_AND_LABEL,COMBO_LABEL_IS_LABEL,NULL,COMBO_NULL_NOT) 
+			#CALL comboList_invoiceNumVoucher ("inv_text",COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_LABEL,COMBO_VALUE_AND_LABEL,COMBO_LABEL_IS_LABEL,NULL,COMBO_NULL_NOT)
+
+		WHEN "P123" --voucher edit 
+
+		WHEN "P124" --was a missing FORM - needs doing 
+			#CALL fgl_winmessage("HuHo Debug - Missing Form P124","Form P124 needs TO be created/fixed\nDebug this place AND adjust the form accordingly","error")
+			CALL combolist_vendorcode             ("vend_code", COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_VALUE,COMBO_VALUE_AND_LABEL,combo_label_is_value_dash_label,NULL,COMBO_NULL_NOT) 
+			CALL combolist_currency               ("currency_code",COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_VALUE,COMBO_VALUE_AND_LABEL,COMBO_LABEL_IS_VALUE_DASH_LABEL,NULL,COMBO_NULL_NOT) 
+			CALL comboList_invoiceNumVoucher      ("inv_text", COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_VALUE,COMBO_VALUE_AND_LABEL,combo_label_is_value_dash_label,NULL,COMBO_NULL_NOT) 
+			CALL combolist_termcode               ("term_code", COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_VALUE,COMBO_VALUE_AND_LABEL,combo_label_is_value_dash_label,NULL,COMBO_NULL_NOT) 
+			CALL combolist_tax_code               ("tax_code", COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_VALUE,COMBO_VALUE_AND_LABEL,combo_label_is_value_dash_label,NULL,COMBO_NULL_NOT) 
+			CALL combolist_holdreascode           ("hold_code", COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_VALUE,COMBO_VALUE_AND_LABEL,combo_label_is_value_dash_label,NULL,COMBO_NULL_NOT) 
+			CALL combolist_year_from_period                   ("year_num", COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_LABEL,COMBO_VALUE_AND_LABEL,COMBO_LABEL_IS_LABEL,NULL,COMBO_NULL_NOT) 
+			CALL combolist_period                 ("period_num", COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_LABEL,COMBO_VALUE_AND_LABEL,COMBO_LABEL_IS_LABEL,NULL,COMBO_NULL_NOT) 
+
+		WHEN "P125" --voucher information --p21 
+			CALL combolist_vendorcode ("vend_code",COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_VALUE,COMBO_VALUE_AND_LABEL,COMBO_VALUE_AND_LABEL,NULL,COMBO_NULL_NOT) 
+			CALL combolist_currency ("currency_code",COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_VALUE,COMBO_VALUE_AND_LABEL,COMBO_LABEL_IS_VALUE_DASH_LABEL,NULL,COMBO_NULL_NOT) 
+			CALL combolist_vendorcode ("name_text",COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_VALUE,COMBO_VALUE_AND_LABEL,COMBO_LABEL_IS_VALUE_DASH_LABEL,NULL,COMBO_NULL_NOT) --pvariable,psort,psingle,phint) 
+			CALL combolist_termcode ("term_code",COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_VALUE,COMBO_VALUE_AND_LABEL,COMBO_LABEL_IS_LABEL,NULL,COMBO_NULL_NOT) 
+			CALL combolist_tax_code ("tax_code",COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_VALUE,COMBO_VALUE_AND_LABEL,COMBO_LABEL_IS_LABEL,NULL,COMBO_NULL_NOT) 
+			CALL combolist_holdpaycode ("hold_code",COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_VALUE,COMBO_VALUE_AND_LABEL,COMBO_LABEL_IS_LABEL,NULL,COMBO_NULL_NOT_ON_HOLD) #combo_null_not_on_hold
+			CALL combolist_year_from_period ("year_num",COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_VALUE,COMBO_VALUE_AND_LABEL,COMBO_LABEL_IS_LABEL,NULL,COMBO_NULL_NOT) 
+			CALL combolist_period ("period_num",COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_VALUE,COMBO_VALUE_AND_LABEL,COMBO_LABEL_IS_LABEL,NULL,COMBO_NULL_NOT) 
+			CALL combolist_usercode ("entry_code",COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_VALUE,COMBO_VALUE_AND_LABEL,COMBO_LABEL_IS_VALUE_DASH_LABEL,NULL,COMBO_NULL_NOT) 
+			CALL combolist_taxindicator ("withhold_tax_ind",COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_VALUE,COMBO_VALUE_AND_LABEL,COMBO_LABEL_IS_VALUE_DASH_LABEL,NULL,COMBO_NULL_NOT) 
+			CALL combolist_country ("country_code", COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_LABEL,COMBO_VALUE_AND_LABEL,COMBO_LABEL_IS_LABEL,NULL,COMBO_NULL_NOT) 
+
+		WHEN "P126" --vendor - DISPLAY ARRAY 
+		WHEN "P127" --vendor lookup 
+
+		WHEN "P129" --voucher scan (List) 
+
+		WHEN "P130" -- PB Voucher Reports )List)
+
+		WHEN "P132" --payment information 
+			CALL combolist_vendorcode ("vend_code", COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_VALUE,COMBO_VALUE_AND_LABEL,combo_label_is_value_dash_label,NULL,COMBO_NULL_NOT) 
+			CALL combolist_bank ("bank_code", COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_VALUE,COMBO_VALUE_AND_LABEL,combo_label_is_value_dash_label,NULL,COMBO_NULL_NOT) 
+			CALL comboList_paymentMethod2("pay_meth_ind", COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_VALUE,COMBO_VALUE_AND_LABEL,combo_label_is_value_dash_label,NULL,COMBO_NULL_NOT) 
+			CALL combolist_currency ("currency_code", COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_VALUE,COMBO_VALUE_AND_LABEL,combo_label_is_value_dash_label,NULL,COMBO_NULL_NOT) 
+			CALL combolist_tax_code ("tax_code", COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_VALUE,COMBO_VALUE_AND_LABEL,combo_label_is_value_dash_label,NULL,COMBO_NULL_NOT) 
+			CALL combolist_bankacctnum ("iban", COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_VALUE,COMBO_VALUE_AND_LABEL,combo_label_is_value_dash_label,NULL,COMBO_NULL_NOT) 
+			CALL combolist_year_from_period ("year_num", COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_VALUE,COMBO_VALUE_AND_LABEL,COMBO_LABEL_IS_LABEL,NULL,COMBO_NULL_NOT) 
+			CALL combolist_period ("period_num", COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_VALUE,COMBO_VALUE_AND_LABEL,COMBO_LABEL_IS_LABEL,NULL,COMBO_NULL_NOT) 
+			CALL combolist_coa_account ("bank_acct_code",COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_VALUE,COMBO_VALUE_AND_LABEL,COMBO_LABEL_IS_VALUE_DASH_LABEL,NULL,COMBO_NULL_NOT) --pvariable,psort,psingle,phint) 
+
+		WHEN "P133" --payment details scan (List) 
+			CALL combolist_year_from_period ("year_num", COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_LABEL,COMBO_VALUE_AND_LABEL,COMBO_LABEL_IS_LABEL,NULL,COMBO_NULL_NOT) 
+			CALL combolist_period ("period_num",COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_LABEL,COMBO_VALUE_AND_LABEL,COMBO_LABEL_IS_LABEL,NULL,COMBO_NULL_NOT) 
+
+		WHEN "P134" --cheque BY number (LIST) 
+
+		WHEN "P135" --cheque scan (List) 
+
+		WHEN "P137" --cheque entry 
+			CALL comboList_vendorCode("vend_code", COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_LABEL,COMBO_VALUE_AND_LABEL,COMBO_LABEL_IS_LABEL,NULL,COMBO_NULL_NOT) 
+			CALL comboList_bank("bank_code", COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_LABEL,COMBO_VALUE_AND_LABEL,COMBO_LABEL_IS_LABEL,NULL,COMBO_NULL_NOT) 
+
+			CALL comboList_currency("currency_code", COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_LABEL,COMBO_VALUE_AND_LABEL,COMBO_LABEL_IS_LABEL,NULL,COMBO_NULL_NOT) 
+			CALL comboList_currency("bank_currency_code", COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_LABEL,COMBO_VALUE_AND_LABEL,COMBO_LABEL_IS_LABEL,NULL,COMBO_NULL_NOT) 
+
+			CALL comboList_tax_code("tax_code", COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_LABEL,COMBO_VALUE_AND_LABEL,COMBO_LABEL_IS_LABEL,NULL,COMBO_NULL_NOT) 
+			CALL comboList_currency("curr_code", COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_LABEL,COMBO_VALUE_AND_LABEL,COMBO_LABEL_IS_LABEL,NULL,COMBO_NULL_NOT) 
+			CALL comboList_taxIndicator("withhold_tax_ind", COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_LABEL,COMBO_VALUE_AND_LABEL,COMBO_LABEL_IS_LABEL,NULL,COMBO_NULL_NOT) 
+
+			CALL combolist_year_from_period("year_num", COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_LABEL,COMBO_VALUE_AND_LABEL,COMBO_LABEL_IS_LABEL,NULL,COMBO_NULL_NOT) 
+			CALL comboList_period("period_num", COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_LABEL,COMBO_VALUE_AND_LABEL,COMBO_LABEL_IS_LABEL,NULL,COMBO_NULL_NOT) 
+			CALL comboList_coa_account("bank_acct_code", COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_LABEL,COMBO_VALUE_AND_LABEL,COMBO_LABEL_IS_LABEL,NULL,COMBO_NULL_NOT) --pvariable,psort,psingle,phint) 
+
+			CALL comboList_userCode("entry_code", COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_LABEL,COMBO_VALUE_AND_LABEL,COMBO_LABEL_IS_LABEL,NULL,COMBO_NULL_NOT) 
+
+		WHEN "P138" --cheque application 
+			CALL comboList_vendorCode("vend_code", COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_LABEL,COMBO_VALUE_AND_LABEL,COMBO_LABEL_IS_LABEL,NULL,COMBO_NULL_NOT) 
+			CALL comboList_currency("currency_code", COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_LABEL,COMBO_VALUE_AND_LABEL,COMBO_LABEL_IS_LABEL,NULL,COMBO_NULL_NOT) 
+
+		WHEN "P139" --hold voucher codes - DISPLAY ARRAY 
+
+		WHEN "P140" --accounts payable parameters --pzp 
+			CALL comboList_journalCode("chq_jour_code", 			COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_LABEL,COMBO_VALUE_AND_LABEL,COMBO_LABEL_IS_LABEL,NULL,COMBO_NULL_NOT) 
+			CALL comboList_journalCode("pur_jour_code", 			COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_LABEL,COMBO_VALUE_AND_LABEL,COMBO_LABEL_IS_LABEL,NULL,COMBO_NULL_NOT) 
+
+			#CALL comboList_coa_account     ("acct_code",          COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_VALUE,COMBO_VALUE_AND_LABEL,COMBO_LABEL_IS_LABEL,NULL,COMBO_NULL_NOT)  ----pVariable,pSort,pSingle,pHint)
+			CALL combolist_coa_account ("bank_acct_code", 		COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_VALUE,COMBO_VALUE_AND_LABEL,COMBO_LABEL_IS_LABEL,NULL,COMBO_NULL_NOT) --pvariable,psort,psingle,phint) 
+			#CALL comboList_bank        ("bank_acct_code",     COMBO_FIRST_ARG_IS_VALUE,v,COMBO_VALUE_AND_LABEL,COMBO_LABEL_IS_LABEL,NULL,COMBO_NULL_NOT)
+			CALL combolist_coa_account ("pay_acct_code", 			COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_VALUE,COMBO_VALUE_AND_LABEL,COMBO_LABEL_IS_LABEL,NULL,COMBO_NULL_NOT) 
+			CALL combolist_coa_account ("freight_acct_code", 	COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_VALUE,COMBO_VALUE_AND_LABEL,COMBO_LABEL_IS_LABEL,NULL,COMBO_NULL_NOT) 
+			CALL combolist_coa_account ("salestax_acct_code", COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_VALUE,COMBO_VALUE_AND_LABEL,COMBO_LABEL_IS_LABEL,NULL,COMBO_NULL_NOT) 
+			CALL combolist_coa_account ("disc_acct_code", 		COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_VALUE,COMBO_VALUE_AND_LABEL,COMBO_LABEL_IS_LABEL,NULL,COMBO_NULL_NOT) 
+			CALL combolist_coa_account ("exch_acct_code", 		COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_VALUE,COMBO_VALUE_AND_LABEL,COMBO_LABEL_IS_LABEL,NULL,COMBO_NULL_NOT) 
+
+			#			CALL comboList_bankAcctNum("bank_acct_code",COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_LABEL,COMBO_VALUE_AND_LABEL,COMBO_LABEL_IS_LABEL_BRACE_VALUE,NULL,COMBO_NULL_NOT)
+			#			CALL comboList_bankAcctNum("pay_acct_code",COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_LABEL,COMBO_VALUE_AND_LABEL,COMBO_LABEL_IS_LABEL_BRACE_VALUE,NULL,COMBO_NULL_NOT)
+			#			CALL comboList_bankAcctNum("freight_acct_code",COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_LABEL,COMBO_VALUE_AND_LABEL,COMBO_LABEL_IS_LABEL_BRACE_VALUE,NULL,COMBO_NULL_NOT)
+			#			CALL comboList_bankAcctNum("salestax_acct_code",COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_LABEL,COMBO_VALUE_AND_LABEL,COMBO_LABEL_IS_LABEL_BRACE_VALUE,NULL,COMBO_NULL_NOT)
+			#			CALL comboList_bankAcctNum("disc_acct_code",COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_LABEL,COMBO_VALUE_AND_LABEL,COMBO_LABEL_IS_LABEL_BRACE_VALUE,NULL,COMBO_NULL_NOT)
+			#			CALL comboList_bankAcctNum("exch_acct_code",COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_LABEL,COMBO_VALUE_AND_LABEL,COMBO_LABEL_IS_LABEL_BRACE_VALUE,NULL,COMBO_NULL_NOT)
+
+			#WHEN "P141" --does NOT exist ? remove this line ?
+			#WHEN "P142" --does NOT exist ? remove this line ?
+
+		WHEN "P143" --auto cheque PRINT 
+			CALL combolist_bank ("bank_code", COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_LABEL,COMBO_VALUE_AND_LABEL,COMBO_LABEL_IS_LABEL,NULL,COMBO_NULL_NOT)
+			CALL combolist_currency ("currency_code",COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_LABEL,COMBO_VALUE_AND_LABEL,COMBO_LABEL_IS_VALUE_DASH_LABEL,NULL,COMBO_NULL_NOT) 
+
+			#WHEN "P144" --does NOT exist ? remove this line ?
+			#WHEN "P145" --does NOT exist ? remove this line ?
+
+		WHEN "P146" --voucher approval (List) 
+
+		WHEN "P147" --ap posting 
+			CALL combolist_year_from_period ("year_num" ,COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_LABEL,COMBO_VALUE_AND_LABEL,COMBO_LABEL_IS_LABEL,NULL,COMBO_NULL_NOT) 
+			CALL combolist_period ("period_num" ,COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_LABEL,COMBO_VALUE_AND_LABEL,COMBO_LABEL_IS_LABEL,NULL,COMBO_NULL_NOT) 
+
+		WHEN "P148" --automatic payment creation 
+			CALL combolist_currency ("currency_code",COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_LABEL,COMBO_VALUE_AND_LABEL,COMBO_LABEL_IS_LABEL,NULL,COMBO_NULL_NOT) 
+			CALL combolist_vendortype ("type_code", COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_LABEL,COMBO_VALUE_AND_LABEL,COMBO_LABEL_IS_LABEL,NULL,COMBO_NULL_NOT) 
+			CALL combolist_vendorcode ("vend_code", COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_LABEL,COMBO_VALUE_AND_LABEL,COMBO_LABEL_IS_LABEL,NULL,COMBO_NULL_NOT) 
+			CALL combolist_termcode ("term_code", COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_LABEL,COMBO_VALUE_AND_LABEL,COMBO_LABEL_IS_LABEL,NULL,COMBO_NULL_NOT) 
+			CALL combolist_bank ("bank_code", COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_LABEL,COMBO_VALUE_AND_LABEL,COMBO_LABEL_IS_LABEL,NULL,COMBO_NULL_NOT) 
+			CALL comboList_paymentMethod2("pay_meth_ind", COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_LABEL,COMBO_VALUE_AND_LABEL,COMBO_LABEL_IS_LABEL,NULL,COMBO_NULL_NOT) 
+
+
+			CALL combolist_currency ("currency_code",COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_LABEL,COMBO_VALUE_AND_LABEL,COMBO_LABEL_IS_LABEL,NULL,COMBO_NULL_NOT) 
+
+			CALL combolist_termcode ("term_code", COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_LABEL,COMBO_VALUE_AND_LABEL,COMBO_LABEL_IS_LABEL,NULL,COMBO_NULL_NOT) 
+			CALL combolist_tax_code ("tax_code", COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_LABEL,COMBO_VALUE_AND_LABEL,COMBO_LABEL_IS_LABEL,NULL,COMBO_NULL_NOT) 
+			CALL combolist_coa_account ("our_acct_code",COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_LABEL,COMBO_VALUE_AND_LABEL,COMBO_LABEL_IS_LABEL,NULL,COMBO_NULL_NOT) --pvariable,psort,psingle,phint) 
+			#CALL comboList_yesNo        ("tax_incl_flag",COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_LABEL,COMBO_VALUE_AND_LABEL,COMBO_LABEL_IS_LABEL_BRACE_VALUE,NULL,COMBO_NULL_NOT)
+			CALL combolist_currency ("currency_code",COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_LABEL,COMBO_VALUE_AND_LABEL,COMBO_LABEL_IS_LABEL,NULL,COMBO_NULL_NOT) 
+			CALL combolist_country ("country_code", COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_LABEL,COMBO_VALUE_AND_LABEL,COMBO_LABEL_IS_LABEL,NULL,COMBO_NULL_NOT) 
+
+		WHEN "P149" --cheque detail 
+			CALL combolist_vendorcode ("vend_code", COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_LABEL,COMBO_VALUE_AND_LABEL,COMBO_LABEL_IS_LABEL,NULL,COMBO_NULL_NOT) 
+			CALL combolist_bank ("bank_code", COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_LABEL,COMBO_VALUE_AND_LABEL,COMBO_LABEL_IS_LABEL,NULL,COMBO_NULL_NOT) 
+			CALL comboList_paymentMethod2("pay_meth_ind", COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_LABEL,COMBO_VALUE_AND_LABEL,COMBO_LABEL_IS_LABEL,NULL,COMBO_NULL_NOT) 
+			CALL combolist_vendortype ("type_code", COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_LABEL,COMBO_VALUE_AND_LABEL,COMBO_LABEL_IS_LABEL,NULL,COMBO_NULL_NOT) 
+			CALL combolist_currency ("currency_code",COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_LABEL,COMBO_VALUE_AND_LABEL,COMBO_LABEL_IS_LABEL,NULL,COMBO_NULL_NOT) 
+			CALL combolist_usercode ("entry_code", COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_LABEL,COMBO_VALUE_AND_LABEL,COMBO_LABEL_IS_LABEL,NULL,COMBO_NULL_NOT) 
+			CALL combolist_year_from_period ("year_num", COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_LABEL,COMBO_VALUE_AND_LABEL,COMBO_LABEL_IS_LABEL,NULL,COMBO_NULL_NOT) 
+			CALL combolist_period ("period_num", COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_LABEL,COMBO_VALUE_AND_LABEL,COMBO_LABEL_IS_LABEL,NULL,COMBO_NULL_NOT) 
+
+
+
+
+
+		WHEN "P150" --cheque details REPORT 
+			CALL combolist_vendorcode ("vend_code", COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_LABEL,COMBO_VALUE_AND_LABEL,COMBO_LABEL_IS_LABEL,NULL,COMBO_NULL_NOT) 
+			CALL combolist_bank ("bank_code", COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_LABEL,COMBO_VALUE_AND_LABEL,COMBO_LABEL_IS_LABEL,NULL,COMBO_NULL_NOT) 
+			CALL comboList_paymentMethod2("pay_meth_ind", COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_LABEL,COMBO_VALUE_AND_LABEL,COMBO_LABEL_IS_LABEL,NULL,COMBO_NULL_NOT) 
+			CALL combolist_currency ("currency_code",COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_LABEL,COMBO_VALUE_AND_LABEL,COMBO_LABEL_IS_LABEL,NULL,COMBO_NULL_NOT) 
+
+
+
+		WHEN "P152" --voucher distribution 
+			CALL combolist_vendorcode ("vend_code", COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_LABEL,COMBO_VALUE_AND_LABEL,COMBO_LABEL_IS_LABEL,NULL,COMBO_NULL_NOT) 
+			CALL combolist_year_from_period ("year_num", COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_LABEL,COMBO_VALUE_AND_LABEL,COMBO_LABEL_IS_LABEL,NULL,COMBO_NULL_NOT) 
+			CALL combolist_period ("period_num", COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_LABEL,COMBO_VALUE_AND_LABEL,COMBO_LABEL_IS_LABEL,NULL,COMBO_NULL_NOT) 
+			CALL combolist_currency ("currency_code",COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_LABEL,COMBO_VALUE_AND_LABEL,COMBO_LABEL_IS_LABEL,NULL,COMBO_NULL_NOT) 
+			CALL comboList_coa_account("acct_code", COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_LABEL,COMBO_VALUE_AND_LABEL,COMBO_LABEL_IS_LABEL,NULL,COMBO_NULL_NOT) 
+
+
+		WHEN "P153" --debit distribution 
+			CALL combolist_vendorcode ("vend_code", COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_LABEL,COMBO_VALUE_AND_LABEL,COMBO_LABEL_IS_LABEL,NULL,COMBO_NULL_NOT) 
+			CALL combolist_year_from_period ("year_num", COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_LABEL,COMBO_VALUE_AND_LABEL,COMBO_LABEL_IS_LABEL,NULL,COMBO_NULL_NOT) 
+			CALL combolist_period ("period_num", COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_LABEL,COMBO_VALUE_AND_LABEL,COMBO_LABEL_IS_LABEL,NULL,COMBO_NULL_NOT) 
+			CALL combolist_currency ("currency_code",COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_LABEL,COMBO_VALUE_AND_LABEL,COMBO_LABEL_IS_LABEL,NULL,COMBO_NULL_NOT) 
+			CALL comboList_coa_account("acct_code", COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_LABEL,COMBO_VALUE_AND_LABEL,COMBO_LABEL_IS_LABEL,NULL,COMBO_NULL_NOT) 
+
+
+		WHEN "P154" --activity summary -vendor CONSTRUCT 
+			CALL comboList_vendorCode("vend_code", COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_LABEL,COMBO_VALUE_AND_LABEL,COMBO_LABEL_IS_LABEL,NULL,COMBO_NULL_NOT) 
+			CALL comboList_vendorType("type_code", COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_LABEL,COMBO_VALUE_AND_LABEL,COMBO_LABEL_IS_LABEL,NULL,COMBO_NULL_NOT) 
+			CALL combolist_currency ("currency_code",COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_LABEL,COMBO_VALUE_AND_LABEL,COMBO_LABEL_IS_LABEL,NULL,COMBO_NULL_NOT) 
+			CALL combolist_termcode ("term_code", COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_LABEL,COMBO_VALUE_AND_LABEL,COMBO_LABEL_IS_LABEL,NULL,COMBO_NULL_NOT) 
+			CALL combolist_tax_code ("tax_code", COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_LABEL,COMBO_VALUE_AND_LABEL,COMBO_LABEL_IS_LABEL,NULL,COMBO_NULL_NOT) 
+			CALL combolist_year_from_period ("year_num", COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_LABEL,COMBO_VALUE_AND_LABEL,COMBO_LABEL_IS_LABEL,NULL,COMBO_NULL_NOT) 
+			CALL combolist_period ("period_num", COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_LABEL,COMBO_VALUE_AND_LABEL,COMBO_LABEL_IS_LABEL,NULL,COMBO_NULL_NOT) 
+
+
+
+		WHEN "P155" --contractors details selection 
+			CALL comboList_vendorCode("vend_code", COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_LABEL,COMBO_VALUE_AND_LABEL,COMBO_LABEL_IS_LABEL,NULL,COMBO_NULL_NOT) 
+
+		WHEN "P156" --was a missing FORM - needs doing 
+			CALL fgl_winmessage("HuHo Debug - Missing Form P156","Form P156 needs TO be created/fixed\nDebug this place AND adjust the form accordingly","error") 
+			CALL combolist_vendorcode ("vend_code", COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_VALUE,COMBO_VALUE_AND_LABEL,combo_label_is_value_dash_label,NULL,COMBO_NULL_NOT) 
+			CALL combolist_currency ("currency_code",COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_VALUE,COMBO_VALUE_AND_LABEL,COMBO_LABEL_IS_VALUE_DASH_LABEL,NULL,COMBO_NULL_NOT) 
+			CALL comboList_invoiceNumVoucher("inv_text", COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_VALUE,COMBO_VALUE_AND_LABEL,combo_label_is_value_dash_label,NULL,COMBO_NULL_NOT) 
+			CALL combolist_termcode ("term_code", COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_VALUE,COMBO_VALUE_AND_LABEL,combo_label_is_value_dash_label,NULL,COMBO_NULL_NOT) 
+			CALL combolist_tax_code ("tax_code", COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_VALUE,COMBO_VALUE_AND_LABEL,combo_label_is_value_dash_label,NULL,COMBO_NULL_NOT) 
+			CALL combolist_holdpaycode ("hold_code", COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_VALUE,COMBO_VALUE_AND_LABEL,combo_label_is_value_dash_label,NULL,COMBO_NULL_SPACE) 
+			CALL combolist_year_from_period ("year_num", COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_VALUE,COMBO_VALUE_AND_LABEL,COMBO_LABEL_IS_LABEL,NULL,COMBO_NULL_NOT) 
+			CALL combolist_period ("period_num", COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_VALUE,COMBO_VALUE_AND_LABEL,COMBO_LABEL_IS_LABEL,NULL,COMBO_NULL_NOT) 
+			CALL combolist_usercode ("entry_code", COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_VALUE,COMBO_VALUE_AND_LABEL,combo_label_is_value_dash_label,NULL,COMBO_NULL_NOT) 
+
+		WHEN "P157" --contractors 
+			CALL comboList_vendorCode("vend_code",COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_VALUE,COMBO_VALUE_AND_LABEL,COMBO_LABEL_IS_VALUE_DASH_LABEL,NULL,COMBO_NULL_NOT) 
+			CALL comboList_tax_code("tax_code",COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_VALUE,COMBO_VALUE_AND_LABEL,COMBO_LABEL_IS_VALUE_DASH_LABEL,NULL,COMBO_NULL_NOT) 
+
+		WHEN "P158" --contractor scan (List) --p11 
+
+		WHEN "P159" -- ap post REPORT (list) 
+			CALL combolist_year_from_period ("year_num", COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_VALUE,COMBO_VALUE_AND_LABEL,COMBO_LABEL_IS_LABEL,NULL,COMBO_NULL_NOT) 
+			CALL comboList_period("period_num",COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_VALUE,COMBO_VALUE_AND_LABEL,COMBO_LABEL_IS_LABEL,NULL,COMBO_NULL_NOT) 
+
+		WHEN "P160" --treasury REPORT cheque selector 
+			CALL comboList_bank("bank_code",COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_VALUE,COMBO_VALUE_AND_LABEL,COMBO_LABEL_IS_VALUE_DASH_LABEL,NULL,COMBO_NULL_NOT) 
+
+		WHEN "P161" --missing cheque selection 
+			CALL combolist_bank ("bank_code",COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_VALUE,COMBO_VALUE_AND_LABEL,COMBO_LABEL_IS_VALUE_DASH_LABEL,NULL,COMBO_NULL_NOT) 
+			CALL comboList_coa_account("acct_code",COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_LABEL,COMBO_VALUE_AND_LABEL,COMBO_LABEL_IS_VALUE_DASH_LABEL,NULL,COMBO_NULL_NOT) 
+
+		WHEN "P163" --cancelled cheque selection 
+			CALL combolist_bank ("bank_code", COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_VALUE,COMBO_VALUE_AND_LABEL,combo_label_is_value_dash_label,NULL,COMBO_NULL_NOT) 
+			CALL comboList_coa_account("bank_acct_code", COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_VALUE,COMBO_VALUE_AND_LABEL,combo_label_is_value_dash_label,NULL,COMBO_NULL_NOT) 
+			CALL combolist_vendorcode ("vend_code", COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_VALUE,COMBO_VALUE_AND_LABEL,combo_label_is_value_dash_label,NULL,COMBO_NULL_NOT) 
+			CALL combolist_year_from_period ("orig_year_num", COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_VALUE,COMBO_VALUE_AND_LABEL,COMBO_LABEL_IS_LABEL,NULL,COMBO_NULL_NOT) 
+			CALL combolist_period ("orig_period_num", COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_VALUE,COMBO_VALUE_AND_LABEL,COMBO_LABEL_IS_LABEL,NULL,COMBO_NULL_NOT) 
+			CALL combolist_year_from_period ("cancel_year_num", COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_VALUE,COMBO_VALUE_AND_LABEL,COMBO_LABEL_IS_LABEL,NULL,COMBO_NULL_NOT) 
+			CALL combolist_period ("cancel_period_num",COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_VALUE,COMBO_VALUE_AND_LABEL,COMBO_LABEL_IS_LABEL,NULL,COMBO_NULL_NOT) 
+
+		WHEN "P164" --reason FOR cheque cancellation (Comment) 
+			#nothing TO do
+		WHEN "P165" --creditors AUDIT trail 
+			CALL comboList_vendorCode("vend_code", COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_VALUE,COMBO_VALUE_AND_LABEL,COMBO_LABEL_IS_LABEL,NULL,COMBO_NULL_NOT) 
+			CALL combolist_year_from_period ("temp_start_year", COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_VALUE,COMBO_VALUE_AND_LABEL,COMBO_LABEL_IS_LABEL,NULL,COMBO_NULL_NOT) 
+			CALL combolist_period ("temp_start_period",COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_VALUE,COMBO_VALUE_AND_LABEL,COMBO_LABEL_IS_LABEL,NULL,COMBO_NULL_NOT) 
+			CALL combolist_year_from_period ("temp_end_year", COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_VALUE,COMBO_VALUE_AND_LABEL,COMBO_LABEL_IS_LABEL,NULL,COMBO_NULL_NOT) 
+			CALL combolist_period ("temp_end_period", COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_VALUE,COMBO_VALUE_AND_LABEL,COMBO_LABEL_IS_LABEL,NULL,COMBO_NULL_NOT) 
+
+
+		WHEN "P166" --vendor type scan --pzu (list) 
+
+		WHEN "P167" --vendor type - DISPLAY ARRAY (list) 
+
+		WHEN "P168" --voucher reports / purchase journal REPORT 
+			CALL comboList_vendorCode("vend_code", COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_LABEL,COMBO_VALUE_AND_LABEL,COMBO_LABEL_IS_LABEL,NULL,COMBO_NULL_NOT) 
+			CALL combolist_currency ("currency_code",COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_LABEL,COMBO_VALUE_AND_LABEL,COMBO_LABEL_IS_LABEL,NULL,COMBO_NULL_NOT) 
+			CALL combolist_year_from_period ("year_num", COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_VALUE,COMBO_VALUE_AND_LABEL,COMBO_LABEL_IS_LABEL,NULL,COMBO_NULL_NOT) 
+			CALL combolist_period ("period_num", COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_VALUE,COMBO_VALUE_AND_LABEL,COMBO_LABEL_IS_LABEL,NULL,COMBO_NULL_NOT) 
+
+
+
+		WHEN "P169" --voucher distribution 
+			CALL comboList_vendorCode("vend_code", COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_VALUE,COMBO_VALUE_AND_LABEL,COMBO_LABEL_IS_LABEL,NULL,COMBO_NULL_NOT) 
+			CALL comboList_currency("currency_code", COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_VALUE,COMBO_VALUE_AND_LABEL,COMBO_LABEL_IS_LABEL,NULL,COMBO_NULL_NOT) 
+			CALL comboList_voucherType("type_ind", COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_VALUE,COMBO_VALUE_AND_LABEL,COMBO_LABEL_IS_LABEL,NULL,COMBO_NULL_NOT) 
+			CALL comboList_coa_account("acct_code", COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_VALUE,COMBO_VALUE_AND_LABEL,COMBO_LABEL_IS_LABEL,NULL,COMBO_NULL_NOT) --pvariable,psort,psingle,phint) 
+
+
+		WHEN "P170" --debit distribution 
+			CALL comboList_vendorCode("vend_code",COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_VALUE,COMBO_VALUE_AND_LABEL,COMBO_LABEL_IS_LABEL,NULL,COMBO_NULL_NOT) 
+			#CALL comboList_coa_account_current("acct_code",			COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_VALUE,COMBO_VALUE_AND_LABEL,COMBO_LABEL_IS_LABEL,NULL,COMBO_NULL_NOT)  --pVariable,pSort,pSingle,pHint)
+			CALL comboList_coa_account("acct_code", COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_VALUE,COMBO_VALUE_AND_LABEL,COMBO_LABEL_IS_LABEL,NULL,COMBO_NULL_NOT) --pvariable,psort,psingle,phint) 
+			CALL comboList_voucherType("type_ind", COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_VALUE,COMBO_VALUE_AND_LABEL,COMBO_LABEL_IS_LABEL,NULL,COMBO_NULL_NOT) --pvariable,psort,psingle,phint) 
+
+		WHEN "P171" --debit application 
+			CALL comboList_vendorCode("vend_code",COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_VALUE,COMBO_VALUE_AND_LABEL,COMBO_LABEL_IS_VALUE_DASH_LABEL,NULL,COMBO_NULL_NOT) 
+			CALL comboList_currency("currency_code",COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_VALUE,COMBO_VALUE_AND_LABEL,COMBO_LABEL_IS_VALUE_DASH_LABEL,NULL,COMBO_NULL_NOT) 
+
+		WHEN "P173" --debit applications 
+			CALL comboList_vendorCode("vend_code",COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_VALUE,COMBO_VALUE_AND_LABEL,COMBO_LABEL_IS_VALUE_DASH_LABEL,NULL,COMBO_NULL_NOT) 
+			CALL comboList_currency("currency_code",COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_VALUE,COMBO_VALUE_AND_LABEL,COMBO_LABEL_IS_VALUE_DASH_LABEL,NULL,COMBO_NULL_NOT) 
+
+		WHEN "P174" --vendor type 
+			CALL comboList_vendorType("type_code", COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_VALUE,COMBO_VALUE_AND_LABEL,COMBO_LABEL_IS_LABEL,NULL,COMBO_NULL_NOT) 
+			CALL comboList_taxIndicator("withhold_tax_ind", COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_LABEL,COMBO_VALUE_AND_LABEL,COMBO_LABEL_IS_LABEL,NULL,COMBO_NULL_NOT) 
+			CALL comboList_vendorCode("tax_vend_code", COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_LABEL,COMBO_VALUE_AND_LABEL,COMBO_LABEL_IS_LABEL,NULL,COMBO_NULL_NOT) 
+			# Initializing ComboBoxes for form P174 takes quite a while, so initialization is disabled. -- albo
+			# Instead of ComboBoxes in the P174 form, the “Lookup” Action will be used.
+			#CALL comboList_coa_account_current("pay_acct_code", COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_VALUE,COMBO_VALUE_AND_LABEL,COMBO_LABEL_IS_LABEL,COA_ACCOUNT_REQUIRED_CAN_BE_NORMAL_TRANSACTION,COMBO_NULL_NOT) 
+			#CALL comboList_coa_account_current("freight_acct_code", COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_VALUE,COMBO_VALUE_AND_LABEL,COMBO_LABEL_IS_LABEL,COA_ACCOUNT_REQUIRED_CAN_BE_NORMAL_TRANSACTION,COMBO_NULL_NOT) 
+			#CALL comboList_coa_account_current("salestax_acct_code",COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_VALUE,COMBO_VALUE_AND_LABEL,COMBO_LABEL_IS_LABEL,COA_ACCOUNT_REQUIRED_CAN_BE_NORMAL_TRANSACTION,COMBO_NULL_NOT) 
+			#CALL comboList_coa_account_current("disc_acct_code", COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_VALUE,COMBO_VALUE_AND_LABEL,COMBO_LABEL_IS_LABEL,COA_ACCOUNT_REQUIRED_CAN_BE_NORMAL_TRANSACTION,COMBO_NULL_NOT) 
+			#CALL comboList_coa_account_current("exch_acct_code", COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_VALUE,COMBO_VALUE_AND_LABEL,COMBO_LABEL_IS_LABEL,COA_ACCOUNT_REQUIRED_CAN_BE_NORMAL_TRANSACTION,COMBO_NULL_NOT) 
+
+		WHEN "P175" --account status (only dates.. nothing TO do) 
+
+		WHEN "P176" --vendor information   (Create/New.. do NOT make vendor FIELD a lookup) 
+			#CALL comboList_vendorCode        ("vend_code",     COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_LABEL,COMBO_VALUE_AND_LABEL,COMBO_LABEL_IS_LABEL,NULL,COMBO_NULL_NOT)
+			CALL comboList_vendorType         ("type_code",     COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_LABEL,COMBO_VALUE_AND_LABEL,COMBO_LABEL_IS_LABEL,NULL,COMBO_NULL_NOT) 
+			CALL comboList_termCode           ("term_code",     COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_LABEL,COMBO_VALUE_AND_LABEL,COMBO_LABEL_IS_LABEL,NULL,COMBO_NULL_NOT) 
+			CALL comboList_tax_code           ("tax_code",      COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_LABEL,COMBO_VALUE_AND_LABEL,COMBO_LABEL_IS_LABEL,NULL,COMBO_NULL_NOT) 
+			CALL comboList_coa_account        ("our_acct_code", COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_VALUE,COMBO_VALUE_AND_LABEL,COMBO_LABEL_IS_LABEL,NULL,COMBO_NULL_NOT) --pvariable,psort,psingle,phint) 
+			#CALL comboList_yesNo             ("tax_incl_flag",	COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_LABEL,COMBO_VALUE_AND_LABEL,COMBO_LABEL_IS_LABEL,NULL,COMBO_NULL_NOT)
+			CALL comboList_currency           ("currency_code", COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_LABEL,COMBO_VALUE_AND_LABEL,COMBO_LABEL_IS_LABEL,NULL,COMBO_NULL_NOT) 
+			CALL comboList_country            ("country_code",  COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_LABEL,COMBO_VALUE_AND_LABEL,COMBO_LABEL_IS_LABEL,NULL,COMBO_NULL_NOT)
+			CALL combolist_coa_account   		 ("our_acct_code" ,COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_VALUE,COMBO_VALUE_AND_LABEL,COMBO_LABEL_IS_LABEL,NULL,COMBO_NULL_NOT) 
+			 
+
+			--#{ alch 2019.12.17 KD-1527: translation will be performed using locale catalogue
+			DISPLAY getlangstr("lb_vendor") TO lb_vendor 
+			DISPLAY getlangstr("lb_address") TO lb_address 
+			DISPLAY getlangstr("lb_city") TO lb_city 
+			DISPLAY getlangstr("lb_state") TO lb_state 
+			DISPLAY getlangstr("lb_postCode") TO lb_postcode 
+			DISPLAY getlangstr("lb_country") TO lb_country 
+			DISPLAY getlangstr("lb_currency") TO lb_currency 
+			DISPLAY getlangstr("lb_vendorType") TO lb_vendortype 
+			DISPLAY getlangstr("lb_termCode") TO lb_termcode 
+			DISPLAY getlangstr("lb_crn") TO lb_vat_reg_no 
+			#DISPLAY getLangStr("lb_tax") TO lb_tax
+			DISPLAY getlangstr("lb_accountCode") TO lb_accountcode 
+			DISPLAY getlangstr("lb_contactName") TO lb_contactname 
+			DISPLAY getlangstr("lb_phone") TO lb_phone 
+			DISPLAY getlangstr("lb_fax") TO lb_fax 
+			DISPLAY getlangstr("lb_extension") TO lb_extension 
+			--#}
+
+		WHEN "P177" --voucher transfer 
+			CALL combolist_currency      ("currency_code", COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_VALUE,COMBO_VALUE_AND_LABEL,combo_label_is_value_dash_label,NULL,COMBO_NULL_NOT) 
+			CALL combolist_vendorcode    ("formonly.vendor_code",COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_VALUE,COMBO_VALUE_AND_LABEL,COMBO_VALUE_AND_LABEL,NULL,COMBO_NULL_NOT) 
+			CALL combolist_vendorcode    ("vendor.vend_code", COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_VALUE,COMBO_VALUE_AND_LABEL,COMBO_VALUE_AND_LABEL,NULL,COMBO_NULL_NOT) 
+			CALL combolist_termcode      ("term_code", COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_VALUE,COMBO_VALUE_AND_LABEL,combo_label_is_value_dash_label,NULL,COMBO_NULL_NOT) 
+			CALL combolist_holdpaycode   ("hold_code", COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_VALUE,COMBO_VALUE_AND_LABEL,combo_label_is_value_dash_label,NULL,COMBO_NULL_SPACE) 
+			CALL combolist_year_from_period          ("year_num", COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_VALUE,COMBO_VALUE_AND_LABEL,COMBO_LABEL_IS_LABEL,NULL,COMBO_NULL_NOT) 
+			CALL combolist_period        ("period_num", COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_VALUE,COMBO_VALUE_AND_LABEL,COMBO_LABEL_IS_LABEL,NULL,COMBO_NULL_NOT) 
+			CALL combolist_usercode      ("entry_code", COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_VALUE,COMBO_VALUE_AND_LABEL,combo_label_is_value_dash_label,NULL,COMBO_NULL_NOT) 
+			CALL combolist_tax_code      ("tax_code", COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_VALUE,COMBO_VALUE_AND_LABEL,combo_label_is_value_dash_label,NULL,COMBO_NULL_NOT) 
+
+		WHEN "P178" --ap batch posting REPORT 
+			CALL combolist_year_from_period          ("year_num" ,COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_VALUE,COMBO_VALUE_AND_LABEL,COMBO_LABEL_IS_LABEL,NULL,COMBO_NULL_NOT) 
+			CALL combolist_period        ("period_num",COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_VALUE,COMBO_VALUE_AND_LABEL,COMBO_LABEL_IS_LABEL,NULL,COMBO_NULL_NOT) 
+			CALL combolist_journalcode   ("jour_num" ,COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_VALUE,COMBO_VALUE_AND_LABEL,combo_label_is_value_dash_label,NULL,COMBO_NULL_NOT) 
+			CALL combolist_coa_account   ("acct_code" ,COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_VALUE,COMBO_VALUE_AND_LABEL,combo_label_is_value_dash_label,NULL,COMBO_NULL_NOT) 
+
+		WHEN "P179" --ap inter segment payments 
+			CALL combolist_year_from_period          ("year_num" ,COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_VALUE,COMBO_VALUE_AND_LABEL,COMBO_LABEL_IS_LABEL,NULL,COMBO_NULL_NOT) 
+			CALL combolist_period        ("period_num",COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_VALUE,COMBO_VALUE_AND_LABEL,COMBO_LABEL_IS_LABEL,NULL,COMBO_NULL_NOT) 
+
+		WHEN "P180" --automatic cheque PRINT (nothing TO do) 
+
+		WHEN "P181" --a/c payable snapshot 
+			CALL combolist_year_from_period          ("year_num", COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_VALUE,COMBO_VALUE_AND_LABEL,COMBO_LABEL_IS_LABEL,NULL,COMBO_NULL_NOT) 
+			CALL combolist_period        ("period_num",COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_VALUE,COMBO_VALUE_AND_LABEL,COMBO_LABEL_IS_LABEL,NULL,COMBO_NULL_NOT) 
+
+		WHEN "P182" --year & period 
+			CALL combolist_year_from_period          ("year_num", COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_VALUE,COMBO_VALUE_AND_LABEL,COMBO_LABEL_IS_LABEL,NULL,COMBO_NULL_NOT) 
+			CALL combolist_period        ("period_num",COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_VALUE,COMBO_VALUE_AND_LABEL,COMBO_LABEL_IS_LABEL,NULL,COMBO_NULL_NOT) 
+
+		WHEN "P190" --recurring expense maintenance (List) 
+
+		WHEN "P191" --recurring voucher maintenance 
+			CALL comboList_vendorCode    ("vend_code",COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_VALUE,COMBO_VALUE_AND_LABEL,COMBO_LABEL_IS_VALUE_DASH_LABEL,NULL,COMBO_NULL_NOT) 
+			CALL comboList_intervalType  ("int_ind",COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_VALUE,COMBO_VALUE_AND_LABEL,COMBO_LABEL_IS_VALUE_DASH_LABEL,NULL,COMBO_NULL_NOT) 
+
+			CALL comboList_termCode         ("term_code",COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_VALUE,COMBO_VALUE_AND_LABEL,COMBO_LABEL_IS_VALUE_DASH_LABEL,NULL,COMBO_NULL_NOT) 
+			CALL comboList_holdPayCode      ("hold_code",COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_VALUE,COMBO_VALUE_AND_LABEL,COMBO_LABEL_IS_VALUE_DASH_LABEL,NULL,COMBO_NULL_SPACE) 
+			CALL comboList_tax_code         ("tax_code",COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_VALUE,COMBO_VALUE_AND_LABEL,COMBO_LABEL_IS_VALUE_DASH_LABEL,NULL,COMBO_NULL_NOT) 
+			CALL comboList_userCode         ("rev_code",COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_VALUE,COMBO_VALUE_AND_LABEL,COMBO_LABEL_IS_VALUE_DASH_LABEL,NULL,COMBO_NULL_NOT) 
+
+
+		WHEN "P192" --recurring vouchers history 
+			CALL comboList_currency         ("curr_code",COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_VALUE,COMBO_VALUE_AND_LABEL,COMBO_LABEL_IS_VALUE_DASH_LABEL,NULL,COMBO_NULL_NOT) 
+
+		WHEN "P193" --recurring voucher schedule 
+			CALL comboList_currency         ("curr_code",COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_VALUE,COMBO_VALUE_AND_LABEL,COMBO_LABEL_IS_VALUE_DASH_LABEL,NULL,COMBO_NULL_NOT) 
+
+		WHEN "P194" --disbursement journals 
+			CALL comboList_DisbursementCode ("disb_code",COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_VALUE,COMBO_VALUE_AND_LABEL,COMBO_LABEL_IS_LABEL,NULL,COMBO_NULL_NOT) 
+
+
+
+		WHEN "P195" --terms 
+			CALL comboList_termCode         ("term_code",COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_VALUE,COMBO_VALUE_AND_LABEL,COMBO_LABEL_IS_VALUE_DASH_LABEL,NULL,COMBO_NULL_NOT) 
+
+		WHEN "P196" --interval types (List) 
+		WHEN "P197" --header-text ???? 
+			CALL comboList_vendorCode       ("vend_code",COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_VALUE,COMBO_VALUE_AND_LABEL,COMBO_LABEL_IS_VALUE_DASH_LABEL,NULL,COMBO_NULL_NOT) 
+			CALL comboList_intervalType     ("int_ind",COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_VALUE,COMBO_VALUE_AND_LABEL,COMBO_LABEL_IS_VALUE_DASH_LABEL,NULL,COMBO_NULL_NOT) 
+			CALL comboList_invoiceNumVoucher("inv_text",COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_VALUE,COMBO_VALUE_AND_LABEL,COMBO_LABEL_IS_VALUE_DASH_LABEL,NULL,COMBO_NULL_NOT) 
+			CALL comboList_currency         ("curr_code",COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_VALUE,COMBO_VALUE_AND_LABEL,COMBO_LABEL_IS_VALUE_DASH_LABEL,NULL,COMBO_NULL_NOT) 
+			CALL comboList_termCode         ("term_code",COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_VALUE,COMBO_VALUE_AND_LABEL,COMBO_LABEL_IS_VALUE_DASH_LABEL,NULL,COMBO_NULL_NOT) 
+			CALL comboList_holdPayCode      ("hold_code",COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_VALUE,COMBO_VALUE_AND_LABEL,COMBO_LABEL_IS_VALUE_DASH_LABEL,NULL,COMBO_NULL_SPACE) 
+			CALL comboList_tax_code         ("tax_code",COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_VALUE,COMBO_VALUE_AND_LABEL,COMBO_LABEL_IS_VALUE_DASH_LABEL,NULL,COMBO_NULL_NOT) 
+			CALL comboList_userCode         ("rev_code",COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_VALUE,COMBO_VALUE_AND_LABEL,COMBO_LABEL_IS_VALUE_DASH_LABEL,NULL,COMBO_NULL_NOT) 
+
+
+		WHEN "P200" --voucher distribution (List) 
+
+		WHEN "P203" --tax debit cross reference --was a missing FORM - needs doing 
+			CALL fgl_winmessage("HuHo Debug - Missing Form P203","Form P203 needs TO be created/fixed\nDebug this place AND adjust the form accordingly","error") 
+			CALL combolist_vendorcode       ("vend_code", COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_VALUE,COMBO_VALUE_AND_LABEL,combo_label_is_value_dash_label,NULL,COMBO_NULL_NOT) 
+			CALL combolist_usercode         ("entry_code", COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_VALUE,COMBO_VALUE_AND_LABEL,combo_label_is_value_dash_label,NULL,COMBO_NULL_NOT) 
+			CALL combolist_currency         ("currency_code",COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_VALUE,COMBO_VALUE_AND_LABEL,COMBO_LABEL_IS_VALUE_DASH_LABEL,NULL,COMBO_NULL_NOT) 
+			CALL combolist_termcode         ("term_code", COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_VALUE,COMBO_VALUE_AND_LABEL,combo_label_is_value_dash_label,NULL,COMBO_NULL_NOT) 
+			CALL combolist_tax_code         ("tax_code", COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_VALUE,COMBO_VALUE_AND_LABEL,combo_label_is_value_dash_label,NULL,COMBO_NULL_NOT) 
+			CALL comboList_holdPayCode      ("hold_code", COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_VALUE,COMBO_VALUE_AND_LABEL,combo_label_is_value_dash_label,NULL,COMBO_NULL_SPACE) 
+			CALL combolist_year_from_period             ("year_num", COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_VALUE,COMBO_VALUE_AND_LABEL,COMBO_LABEL_IS_LABEL,NULL,COMBO_NULL_NOT) 
+			CALL combolist_period           ("period_num", COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_VALUE,COMBO_VALUE_AND_LABEL,COMBO_LABEL_IS_LABEL,NULL,COMBO_NULL_NOT) 
+			CALL combolist_usercode         ("entry_code", COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_VALUE,COMBO_VALUE_AND_LABEL,combo_label_is_value_dash_label,NULL,COMBO_NULL_NOT) 
+
+		WHEN "P204" --tax refund entry 
+			CALL combolist_vendorcode       ("vend_code", COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_VALUE,COMBO_VALUE_AND_LABEL,combo_label_is_value_dash_label,NULL,COMBO_NULL_NOT) 
+			CALL combolist_bank             ("bank_code", COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_VALUE,COMBO_VALUE_AND_LABEL,combo_label_is_value_dash_label,NULL,COMBO_NULL_NOT) 
+			CALL combolist_currency         ("currency_code", COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_VALUE,COMBO_VALUE_AND_LABEL,combo_label_is_value_dash_label,NULL,COMBO_NULL_NOT) 
+			CALL combolist_currency         ("bank_currency_code",COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_VALUE,COMBO_VALUE_AND_LABEL,COMBO_LABEL_IS_VALUE_DASH_LABEL,NULL,COMBO_NULL_NOT) 
+			CALL combolist_usercode         ("entry_code", COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_VALUE,COMBO_VALUE_AND_LABEL,combo_label_is_value_dash_label,NULL,COMBO_NULL_NOT) 
+			CALL combolist_year_from_period             ("year_num", COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_VALUE,COMBO_VALUE_AND_LABEL,COMBO_LABEL_IS_LABEL,NULL,COMBO_NULL_NOT) 
+			CALL combolist_period           ("period_num", COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_VALUE,COMBO_VALUE_AND_LABEL,COMBO_LABEL_IS_LABEL,NULL,COMBO_NULL_NOT) 
+			CALL comboList_coa_account      ("bank_acct_code", COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_VALUE,COMBO_VALUE_AND_LABEL,combo_label_is_value_dash_label,NULL,COMBO_NULL_NOT) --pvariable,psort,psingle,phint) 
+
+		WHEN "P207" --voucher 
+			CALL combolist_year_from_period             ("year_num", COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_VALUE,COMBO_VALUE_AND_LABEL,COMBO_LABEL_IS_LABEL,NULL,COMBO_NULL_NOT) 
+			CALL combolist_period           ("period_num",COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_VALUE,COMBO_VALUE_AND_LABEL,COMBO_LABEL_IS_LABEL,NULL,COMBO_NULL_NOT) 
+			CALL combolist_vendorcode       ("vend_code", COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_VALUE,COMBO_VALUE_AND_LABEL,combo_label_is_value_dash_label,NULL,COMBO_NULL_NOT) 
+			CALL combolist_intervaltype     ("int_ind", COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_VALUE,COMBO_VALUE_AND_LABEL,combo_label_is_value_dash_label,NULL,COMBO_NULL_NOT) 
+			CALL combolist_currency         ("curr_code", COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_VALUE,COMBO_VALUE_AND_LABEL,combo_label_is_value_dash_label,NULL,COMBO_NULL_NOT) 
+			CALL comboList_invoiceNumVoucher("inv_text", COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_VALUE,COMBO_VALUE_AND_LABEL,combo_label_is_value_dash_label,NULL,COMBO_NULL_NOT) 
+
+		WHEN "P208" --tax payment summary 
+			CALL comboList_vendorCode       ("tax_vend_code",COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_VALUE,COMBO_VALUE_AND_LABEL,COMBO_LABEL_IS_VALUE_DASH_LABEL,NULL,COMBO_NULL_NOT) 
+			CALL combolist_year_from_period             ("year_num", COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_VALUE,COMBO_VALUE_AND_LABEL,COMBO_LABEL_IS_LABEL,NULL,COMBO_NULL_NOT) 
+			CALL combolist_period           ("period_num", COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_VALUE,COMBO_VALUE_AND_LABEL,COMBO_LABEL_IS_LABEL,NULL,COMBO_NULL_NOT) 
+			CALL comboList_vendorCode       ("vend_code", COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_VALUE,COMBO_VALUE_AND_LABEL,combo_label_is_value_dash_label,NULL,COMBO_NULL_NOT) 
+
+		WHEN "P212" --vendor MENU DISPLAY ARRAY --dialog list 
+			CALL fgl_settitle("Vendor Menu") 
+			CALL comboList_vendorCode       ("vend_code",COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_VALUE,COMBO_VALUE_AND_LABEL,COMBO_LABEL_IS_VALUE_DASH_LABEL,NULL,COMBO_NULL_NOT) 
+
+		WHEN "P213" --outstanding vouchers 
+			CALL comboList_vendorCode       ("vend_code",COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_VALUE,COMBO_VALUE_AND_LABEL,COMBO_VALUE_AND_LABEL,NULL,COMBO_NULL_NOT) 
+			CALL comboList_currency         ("currency_code",COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_VALUE,COMBO_VALUE_AND_LABEL,COMBO_LABEL_IS_VALUE_DASH_LABEL,NULL,COMBO_NULL_NOT) 
+
+		WHEN "P214" --batch voucher entry 
+			CALL comboList_termCode         ("term_code", COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_VALUE,COMBO_VALUE_AND_LABEL,combo_label_is_value_dash_label,NULL,COMBO_NULL_NOT) 
+			CALL comboList_tax_code         ("tax_code", COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_VALUE,COMBO_VALUE_AND_LABEL,combo_label_is_value_dash_label,NULL,COMBO_NULL_NOT) 
+			CALL combolist_year_from_period             ("year_num", COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_VALUE,COMBO_VALUE_AND_LABEL,COMBO_LABEL_IS_LABEL,NULL,COMBO_NULL_NOT) 
+			CALL combolist_period           ("period_num",COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_VALUE,COMBO_VALUE_AND_LABEL,COMBO_LABEL_IS_LABEL,NULL,COMBO_NULL_NOT) 
+
+		WHEN "P215" --vendor import --psl_j 
+			CALL comboList_read_file_path_default("pr_path_text",0,0,1,COMBO_LABEL_IS_LABEL,NULL,COMBO_NULL_NOT) --(cb_field_name,ptable, pfield1, pfield2, pwhere, pvariable,psort,psingle,phint) 
+			CALL comboList_vendorCode       ("vend_code",COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_VALUE,COMBO_VALUE_AND_LABEL,COMBO_LABEL_IS_VALUE_DASH_LABEL,NULL,COMBO_NULL_NOT) 
+
+		WHEN "P218" --voucher import 
+			CALL combolist_year_from_period             ("year_num", COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_VALUE,COMBO_VALUE_AND_LABEL,COMBO_LABEL_IS_LABEL,NULL,COMBO_NULL_NOT) 
+			CALL comboList_period           ("period_num",COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_VALUE,COMBO_VALUE_AND_LABEL,COMBO_LABEL_IS_LABEL,NULL,COMBO_NULL_NOT) 
+
+		WHEN "P219" --cheque details extract 
+			CALL comboList_read_file_path_default("pr_path_text",0,0,1,COMBO_LABEL_IS_LABEL,NULL,COMBO_NULL_NOT) --(cb_field_name,ptable, pfield1, pfield2, pwhere, pvariable,psort,psingle,phint) 
+
+		WHEN "P221" --automatic payments maintenance (List) 
+
+		WHEN "P222" --automatic debit application 
+			CALL comboList_vendorCode         ("vend_code",COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_VALUE,COMBO_VALUE_AND_LABEL,COMBO_LABEL_IS_VALUE_DASH_LABEL,NULL,COMBO_NULL_NOT) 
+			CALL comboList_vendorType         ("type_code",COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_VALUE,COMBO_VALUE_AND_LABEL,COMBO_LABEL_IS_VALUE_DASH_LABEL,NULL,COMBO_NULL_NOT) 
+			CALL comboList_currency           ("currency_code",COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_VALUE,COMBO_VALUE_AND_LABEL,COMBO_LABEL_IS_VALUE_DASH_LABEL,NULL,COMBO_NULL_NOT) 
+			CALL comboList_termCode           ("term_code",COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_VALUE,COMBO_VALUE_AND_LABEL,COMBO_LABEL_IS_VALUE_DASH_LABEL,NULL,COMBO_NULL_NOT) 
+
+		WHEN "P224" --automatic debit application 
+			CALL comboList_strategy_ind       ("pr_strategy_ind",0,0,1,COMBO_LABEL_IS_LABEL,NULL,COMBO_NULL_NOT) --(cb_field_name,ptable, pfield1, pfield2, pwhere, pvariable,psort,psingle,phint) 
+
+
+		WHEN "P225" --ap voucher import --psu_j 
+			CALL comboList_read_file_path_default("pr_path_text",0,0,1,COMBO_LABEL_IS_LABEL,NULL,COMBO_NULL_NOT) --(cb_field_name,ptable, pfield1, pfield2, pwhere, pvariable,psort,psingle,phint) 
+			CALL comboList_vendorCode         ("vend_code",COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_VALUE,COMBO_VALUE_AND_LABEL,COMBO_LABEL_IS_VALUE_DASH_LABEL,NULL,COMBO_NULL_NOT) 
+
+		WHEN "P226" --charge thru sales 
+			CALL comboList_vendorCode         ("vend_code",COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_VALUE,COMBO_VALUE_AND_LABEL,COMBO_LABEL_IS_VALUE_DASH_LABEL,NULL,COMBO_NULL_NOT) 
+			CALL comboList_currency           ("currency_code",COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_VALUE,COMBO_VALUE_AND_LABEL,COMBO_LABEL_IS_VALUE_DASH_LABEL,NULL,COMBO_NULL_NOT) 
+			CALL comboList_termCode           ("term_code",COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_VALUE,COMBO_VALUE_AND_LABEL,COMBO_LABEL_IS_VALUE_DASH_LABEL,NULL,COMBO_NULL_NOT) 
+			CALL comboList_tax_code           ("tax_code",COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_VALUE,COMBO_VALUE_AND_LABEL,COMBO_LABEL_IS_VALUE_DASH_LABEL,NULL,COMBO_NULL_NOT) 
+
+		WHEN "P227" --charge thru distribution 
+			CALL comboList_customer           ("cust_code",COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_VALUE,COMBO_VALUE_AND_LABEL,COMBO_LABEL_IS_VALUE_DASH_LABEL,NULL,COMBO_NULL_NOT) 
+			CALL comboList_currency           ("currency_code",COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_VALUE,COMBO_VALUE_AND_LABEL,COMBO_LABEL_IS_VALUE_DASH_LABEL,NULL,COMBO_NULL_NOT) 
+
+
+		WHEN "P228" --whics-open ap interface file LOAD --psw 
+			CALL comboList_read_file_path_default("pr_path_text",0,0,1,COMBO_LABEL_IS_LABEL,NULL,COMBO_NULL_NOT) --(cb_field_name,ptable, pfield1, pfield2, pwhere, pvariable,psort,psingle,phint) 
+
+
+		WHEN "P229" --ap LOAD parameters --pzi(list) 
+
+
+		WHEN "P230" --edit/new ap LOAD parameters --pzi 
+			CALL comboList_read_file_path_default("path_text",0,0,1,COMBO_LABEL_IS_LABEL,NULL,COMBO_NULL_NOT) --(cb_field_name,ptable, pfield1, pfield2, pwhere, pvariable,psort,psingle,phint) 
+
+		WHEN "P231" --shipment costs distribution 
+			CALL comboList_coa_account        ("acct_code",COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_VALUE,COMBO_VALUE_AND_LABEL,COMBO_LABEL_IS_VALUE_DASH_LABEL,NULL,COMBO_NULL_NOT) --pvariable,psort,psingle,phint) 
+
+
+		WHEN "P233" --automatic payment details 
+			CALL comboList_vendorCode         ("vend_code",COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_VALUE,COMBO_VALUE_AND_LABEL,COMBO_LABEL_IS_VALUE_DASH_LABEL,NULL,COMBO_NULL_NOT) 
+			CALL comboList_taxIndicator       ("withhold_tax_ind",COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_VALUE,COMBO_VALUE_AND_LABEL,COMBO_LABEL_IS_VALUE_DASH_LABEL,NULL,COMBO_NULL_NOT) 
+			CALL comboList_paymentMethod2     ("pay_meth_ind",COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_VALUE,COMBO_VALUE_AND_LABEL,COMBO_LABEL_IS_VALUE_DASH_LABEL,NULL,COMBO_NULL_NOT) 
+
+
+		WHEN "P234" --automatic payments processing 
+			CALL comboList_bank("bank_code",COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_VALUE,COMBO_VALUE_AND_LABEL,COMBO_LABEL_IS_VALUE_DASH_LABEL,NULL,COMBO_NULL_NOT) 
+
+		WHEN "P235" --automatic cheque number (list) 
+
+		WHEN "P236" --cheque/remittance PRINT -- something with automatic payment cycle --px1 
+			#nothing TO do, just some kind of comments form
+
+		WHEN "P237" --cheque/eft remittance advice 
+			#nothing TO do, just some kind of comments form
+
+		WHEN "P238" --remittance statement PRINT 
+			CALL comboList_bank("bank_code",COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_VALUE,COMBO_VALUE_AND_LABEL,COMBO_LABEL_IS_VALUE_DASH_LABEL,NULL,COMBO_NULL_NOT) 
+			CALL comboList_paymentMethod2("pay_meth_ind",COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_VALUE,COMBO_VALUE_AND_LABEL,COMBO_LABEL_IS_VALUE_DASH_LABEL,NULL,COMBO_NULL_NOT) 
+			CALL comboList_vendorCode("vend_code",COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_VALUE,COMBO_VALUE_AND_LABEL,COMBO_LABEL_IS_VALUE_DASH_LABEL,NULL,COMBO_NULL_NOT) 
+
+		WHEN "P239" --cheque range numbering (List) 
+			#nothing TO do
+
+		WHEN "P240" --debit entry batch details 
+			CALL combolist_year_from_period ("year_num", COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_VALUE,COMBO_VALUE_AND_LABEL,COMBO_LABEL_IS_LABEL,NULL,COMBO_NULL_NOT) 
+			CALL comboList_period("period_num",COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_VALUE,COMBO_VALUE_AND_LABEL,COMBO_LABEL_IS_LABEL,NULL,COMBO_NULL_NOT) 
+
+		WHEN "P241" --whics-open ap interface LOAD 
+			CALL comboList_userCode("entry_code",COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_VALUE,COMBO_VALUE_AND_LABEL,COMBO_LABEL_IS_VALUE_DASH_LABEL,NULL,COMBO_NULL_NOT) 
+			CALL comboList_read_file_path_default("path_text",0,0,1,COMBO_LABEL_IS_LABEL,NULL,COMBO_NULL_NOT) --(cb_field_name,ptable, pfield1, pfield2, pwhere, pvariable,psort,psingle,phint) 
+
+		WHEN "P500" --generate eft payments (List) 
+			CALL comboList_bank("bank_code",COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_VALUE,COMBO_VALUE_AND_LABEL,COMBO_LABEL_IS_VALUE_DASH_LABEL,NULL,COMBO_NULL_NOT) 
+
+		WHEN "P501" --generate eft payments 
+			#nothing TO do
+
+		WHEN "P502" -- eft payments 
+			CALL combolist_bank ("bank_code", COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_VALUE,COMBO_VALUE_AND_LABEL,combo_label_is_value_dash_label,NULL,COMBO_NULL_NOT) 
+			CALL comboList_vendorCode("vend_code", COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_VALUE,COMBO_VALUE_AND_LABEL,combo_label_is_value_dash_label,NULL,COMBO_NULL_NOT) 
+			CALL combolist_usercode ("entry_code",COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_VALUE,COMBO_VALUE_AND_LABEL,COMBO_LABEL_IS_VALUE_DASH_LABEL,NULL,COMBO_NULL_NOT) 
+			CALL combolist_year_from_period ("age_year", COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_VALUE,COMBO_VALUE_AND_LABEL,COMBO_LABEL_IS_LABEL,NULL,COMBO_NULL_NOT) 
+			CALL combolist_period ("age_period",COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_VALUE,COMBO_VALUE_AND_LABEL,COMBO_LABEL_IS_LABEL,NULL,COMBO_NULL_NOT) 
+
+		WHEN "P503" --eft payment scan 
+			CALL comboList_bank("bank_code",COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_VALUE,COMBO_VALUE_AND_LABEL,COMBO_LABEL_IS_VALUE_DASH_LABEL,NULL,COMBO_NULL_NOT) 
+			CALL comboList_currency("currency_code",COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_VALUE,COMBO_VALUE_AND_LABEL,COMBO_LABEL_IS_VALUE_DASH_LABEL,NULL,COMBO_NULL_NOT) 
+
+		WHEN "P504" --remittance advices PRINT 
+			CALL comboList_bank("bank_code",COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_VALUE,COMBO_VALUE_AND_LABEL,COMBO_LABEL_IS_VALUE_DASH_LABEL,NULL,COMBO_NULL_NOT) 
+			CALL comboList_paymentMethod2("pay_meth_ind",COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_VALUE,COMBO_VALUE_AND_LABEL,COMBO_LABEL_IS_VALUE_DASH_LABEL,NULL,COMBO_NULL_NOT) 
+
+		WHEN "P505" -- purchase journal REPORT 
+			CALL combolist_warehouse ("ware_code", COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_VALUE,COMBO_VALUE_AND_LABEL,combo_label_is_value_dash_label,NULL,COMBO_NULL_NOT) 
+			CALL combolist_vendorcode ("vend_code", COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_VALUE,COMBO_VALUE_AND_LABEL,combo_label_is_value_dash_label,NULL,COMBO_NULL_NOT) 
+			CALL comboList_invoiceNumVoucher("inv_text", COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_VALUE,COMBO_VALUE_AND_LABEL,combo_label_is_value_dash_label,NULL,COMBO_NULL_NOT) 
+			CALL combolist_year_from_period ("year_num", COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_VALUE,COMBO_VALUE_AND_LABEL,COMBO_LABEL_IS_LABEL,NULL,COMBO_NULL_NOT) 
+			CALL combolist_period ("period_num",COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_VALUE,COMBO_VALUE_AND_LABEL,COMBO_LABEL_IS_LABEL,NULL,COMBO_NULL_NOT) 
+
+		WHEN "P506" -- distribute ORDER costs 
+			CALL comboList_vendorCode("vend_code",COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_VALUE,COMBO_VALUE_AND_LABEL,COMBO_LABEL_IS_VALUE_DASH_LABEL,NULL,COMBO_NULL_NOT) 
+			CALL comboList_customer("cust_code",COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_VALUE,COMBO_VALUE_AND_LABEL,COMBO_LABEL_IS_VALUE_DASH_LABEL,NULL,COMBO_NULL_NOT) 
+			CALL comboList_coa_account("acct_code",COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_VALUE,COMBO_VALUE_AND_LABEL,COMBO_LABEL_IS_VALUE_DASH_LABEL,NULL,COMBO_NULL_NOT) --pvariable,psort,psingle,phint) 
+			CALL comboList_uomCode("uom_code",COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_VALUE,COMBO_VALUE_AND_LABEL,COMBO_LABEL_IS_VALUE_DASH_LABEL,NULL,COMBO_NULL_NOT) 
+
+		WHEN "P507" -- vendor type period aging 
+			CALL combolist_year_from_period           ("age_year",      COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_VALUE,COMBO_VALUE_AND_LABEL,COMBO_LABEL_IS_LABEL,NULL,COMBO_NULL_NOT) 
+			CALL combolist_period         ("age_period",    COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_VALUE,COMBO_VALUE_AND_LABEL,COMBO_LABEL_IS_LABEL,NULL,COMBO_NULL_NOT) 
+			CALL comboList_reportingLevel ("report_level",  COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_VALUE,COMBO_VALUE_AND_LABEL,combo_label_is_value_dash_label,NULL,COMBO_NULL_NOT) 
+			CALL combolist_vendorcode     ("vend_code",     COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_VALUE,COMBO_VALUE_AND_LABEL,combo_label_is_value_dash_label,NULL,COMBO_NULL_NOT) 
+			CALL combolist_country        ("country_code",  COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_VALUE,COMBO_VALUE_AND_LABEL,combo_label_is_value_dash_label,NULL,COMBO_NULL_NOT) 
+			CALL combolist_vendortype     ("type_code",     COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_VALUE,COMBO_VALUE_AND_LABEL,combo_label_is_value_dash_label,NULL,COMBO_NULL_NOT) 
+			CALL combolist_currency       ("currency_code", COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_VALUE,COMBO_VALUE_AND_LABEL,COMBO_LABEL_IS_VALUE_DASH_LABEL,NULL,COMBO_NULL_NOT) 
+			CALL combolist_termcode       ("term_code",     COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_VALUE,COMBO_VALUE_AND_LABEL,combo_label_is_value_dash_label,NULL,COMBO_NULL_NOT) 
+			CALL combolist_tax_code       ("tax_code",      COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_VALUE,COMBO_VALUE_AND_LABEL,combo_label_is_value_dash_label,NULL,COMBO_NULL_NOT) 
+			CALL combolist_coa_account    ("our_acct_code", COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_VALUE,COMBO_VALUE_AND_LABEL,COMBO_LABEL_IS_VALUE_DASH_LABEL,NULL,COMBO_NULL_NOT) --pvariable,psort,psingle,phint) 
+
+			DISPLAY getlangstr("lb_state") TO lb_state 
+
+		WHEN "P508" --aging DATE --ps1 
+			#nothing TO do
+
+		WHEN "P509" --duplicate voucher exception 
+			#nothing TO do
+
+		WHEN "P510" --password entry 
+			#nothing TO do
+
+		WHEN "P511" --payment RUN CANCEL 
+			CALL comboList_bank("bank_code",COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_VALUE,COMBO_VALUE_AND_LABEL,COMBO_LABEL_IS_VALUE_DASH_LABEL,NULL,COMBO_NULL_NOT) 
+			CALL comboList_userCode("entry_code",COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_VALUE,COMBO_VALUE_AND_LABEL,COMBO_LABEL_IS_VALUE_DASH_LABEL,NULL,COMBO_NULL_NOT) 
+
+		WHEN "P512" --cancel payment generation 
+			#nothing TO do
+
+		WHEN "P513" --payment generation restart 
+
+		WHEN "P514" --vendor aging 
+			CALL comboList_vendorCode("vend_code",COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_VALUE,COMBO_VALUE_AND_LABEL,COMBO_LABEL_IS_VALUE_DASH_LABEL,NULL,COMBO_NULL_NOT) 
+			CALL comboList_country("country_code",COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_VALUE,COMBO_VALUE_AND_LABEL,COMBO_LABEL_IS_VALUE_DASH_LABEL,NULL,COMBO_NULL_NOT) 
+			CALL comboList_vendorType("type_code",COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_VALUE,COMBO_VALUE_AND_LABEL,COMBO_LABEL_IS_VALUE_DASH_LABEL,NULL,COMBO_NULL_NOT) 
+			CALL comboList_currency("currency_code",COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_VALUE,COMBO_VALUE_AND_LABEL,COMBO_LABEL_IS_VALUE_DASH_LABEL,NULL,COMBO_NULL_NOT) 
+			CALL comboList_termCode("term_code",COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_VALUE,COMBO_VALUE_AND_LABEL,COMBO_LABEL_IS_VALUE_DASH_LABEL,NULL,COMBO_NULL_NOT) 
+			CALL comboList_tax_code("tax_code",COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_VALUE,COMBO_VALUE_AND_LABEL,COMBO_LABEL_IS_VALUE_DASH_LABEL,NULL,COMBO_NULL_NOT) 
+			CALL comboList_coa_account("our_acct_code",COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_VALUE,COMBO_VALUE_AND_LABEL,COMBO_LABEL_IS_VALUE_DASH_LABEL,NULL,COMBO_NULL_NOT) --pvariable,psort,psingle,phint) 
+
+			DISPLAY getlangstr("lb_state") TO lb_state 
+
+		WHEN "P515" --payee details 
+			CALL comboList_country("country_code",COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_VALUE,COMBO_VALUE_AND_LABEL,COMBO_LABEL_IS_VALUE_DASH_LABEL,NULL,COMBO_NULL_NOT) 
+			CALL comboList_paymentMethod2("pay_meth_ind",COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_VALUE,COMBO_VALUE_AND_LABEL,COMBO_LABEL_IS_VALUE_DASH_LABEL,NULL,COMBO_NULL_NOT) 
+			CALL comboList_BICCode("pr_bic_text",COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_VALUE,COMBO_VALUE_AND_LABEL,COMBO_LABEL_IS_VALUE_DASH_LABEL,NULL,COMBO_NULL_NOT) 
+
+
+			DISPLAY getlangstr("lb_name") TO lb_name 
+
+			DISPLAY getlangstr("lb_address") TO lb_address 
+			DISPLAY getlangstr("lb_city") TO lb_city 
+			DISPLAY getlangstr("lb_state") TO lb_state 
+			--DISPLAY getlangstr("lb_postCode") TO lb_postcode 
+			DISPLAY getlangstr("lb_country") TO lb_country 
+			DISPLAY getlangstr("lb_paymentMethod") TO lb_paymentmethod 
+			#DISPLAY getLangStr("lb_bankAccount") TO lb_bankAccount
+			DISPLAY getlangstr("lb_bic") TO lb_bic 
+			DISPLAY getlangstr("lb_acctNo") TO lb_acctno 
+
+		WHEN "P516" --authority code 
+			CALL comboList_userCode("approved_by_code",COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_VALUE,COMBO_VALUE_AND_LABEL,COMBO_LABEL_IS_VALUE_DASH_LABEL,NULL,COMBO_NULL_NOT) 
+
+
+		OTHERWISE 
+			LET errmsg = "Invalid Window name passed TO winDecoration_P(", trim(pwinname), ")" 
+			CALL fgl_winmessage("Internal 4GL Error",errMsg, "error") 
+	END CASE 
+
+END FUNCTION 

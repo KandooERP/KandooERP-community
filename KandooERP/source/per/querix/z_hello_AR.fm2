@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form xmlns="http://namespaces.querix.com/2015/fglForms">
+	<form.rootContainer>
+		<GridPanel classNames="fcls_rootContainer" verticalAlignment="Top" horizontalAlignment="Left" fieldTable="" identifier="rootContainer">
+			<GridPanel.gridRowDefinitions>
+				<GridRowDefinition gridLengthValue=""/>
+				<GridRowDefinition gridLengthValue=""/>
+				<GridRowDefinition gridLengthValue=""/>
+				<GridRowDefinition gridLengthValue=""/>
+				<GridRowDefinition gridLengthValue=""/>
+			</GridPanel.gridRowDefinitions>
+			<GridPanel.gridColumnDefinitions>
+				<GridColumnDefinition gridLengthValue="100%"/>
+			</GridPanel.gridColumnDefinitions>
+			<GridPanel classNames="fcls_title_cnt" visible="true" verticalAlignment="Top" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="cntTitle">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="25%"/>
+					<GridColumnDefinition gridLengthValue="7%"/>
+					<GridColumnDefinition gridLengthValue="23%"/>
+					<GridColumnDefinition gridLengthValue="45%"/>
+				</GridPanel.gridColumnDefinitions>
+				<Label isDynamic="true" text="Product Category" classNames="fcls_title_lb" visible="true" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="header_text"/>
+				<Label text="CmpyCode" isDynamic="true" visible="true" identifier="hdr_cmpy_code" gridItemLocation="1,0,1,1"/>
+				<Label text="CmpyName" isDynamic="true" visible="true" identifier="hdr_cmpy_name" gridItemLocation="2,0,1,1"/>
+				<Label isDynamic="true" text="I135" classNames="fcls_title_lb" visible="true" gridItemLocation="3,0,1,1" fieldTable="" identifier="lbFormName" horizontalAlignment="Right"/>
+			</GridPanel>
+			<GridPanel classNames="fcls_detail_cnt,fcls_data_cnt,fcls_align_left" visible="true" verticalAlignment="Top" horizontalAlignment="Left" gridItemLocation="0,1,1,1" fieldTable="formonly" identifier="cntDetail1">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="" gridMinLength="12rem"/>
+					<GridColumnDefinition gridLengthValue=""/>
+					<GridColumnDefinition gridLengthValue=""/>
+				</GridPanel.gridColumnDefinitions>
+				<Label isDynamic="true" text="Product Category" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="lb57"/>
+				<TextField toCase="Up" dataType="Char,,,,3" classNames="fcls_data_widget,fcls_align_left,fcls_length_05qch" location="20qch,2qch" preferredSize="4qch,1qch" toolTip=" A three character code to identify this Product Category " gridItemLocation="1,0,1,1" comment=" A three character code to identify this Product Category " fieldTable="category" identifier="cat_code"/>
+				<TextField dataType="Char,,,,30" classNames="fcls_data_widget,fcls_align_left,fcls_length_30qch" location="34qch,2qch" preferredSize="31qch,1qch" toolTip=" A Description of this product category" gridItemLocation="2,0,1,1" comment=" A Description of this product category" fieldTable="category" identifier="desc_text"/>
+			</GridPanel>
+			<GroupBox title="GL Integration" classNames="fcls_detail_gb_cnt,fcls_detail_cnt,,fcls_align_hstretch" visible="true" verticalAlignment="Stretch" horizontalAlignment="Stretch" gridItemLocation="0,3,1,1" fieldTable="formonly" identifier="cntDetail2GroupBox">
+				<GridPanel classNames="fcls_detail_gb_cnt_sub,fcls_detail_cnt_sub,fcls_data_cnt,fcls_align_left" visible="true" verticalAlignment="Top" horizontalAlignment="Left" fieldTable="formonly" identifier="cntDetail2GrBoxSub">
+					<GridPanel.gridRowDefinitions>
+						<GridRowDefinition gridLengthValue=""/>
+						<GridRowDefinition gridLengthValue=""/>
+						<GridRowDefinition gridLengthValue=""/>
+						<GridRowDefinition gridLengthValue=""/>
+						<GridRowDefinition gridLengthValue=""/>
+						<GridRowDefinition gridLengthValue=""/>
+						<GridRowDefinition gridLengthValue=""/>
+					</GridPanel.gridRowDefinitions>
+					<GridPanel.gridColumnDefinitions>
+						<GridColumnDefinition gridLengthValue="" gridMinLength="12rem"/>
+						<GridColumnDefinition gridLengthValue=""/>
+						<GridColumnDefinition gridLengthValue=""/>
+					</GridPanel.gridColumnDefinitions>
+					<Label isDynamic="true" text="Account" classNames="fcls_columnlabel_rev_cell,fcls_align_hstretch" visible="true" gridItemLocation="1,0,1,1" fieldTable="formonly" identifier="lb64" />
+					<Label isDynamic="true" text="Description" classNames="fcls_columnlabel_rev_cell,fcls_align_hstretch" visible="true" gridItemLocation="2,0,1,1" fieldTable="formonly" identifier="lb65" />
+					<Label isDynamic="true" text="Sales Account" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,1,1,1" fieldTable="formonly" identifier="lb47"/>
+					<ComboBox dataType="Char,,,,18" classNames="list-show-value-text,field-show-value,fcls_data_widget,fcls_length_flex_15qch" location="20qch,4qch" preferredSize="21qch,1qch" toolTip=" Sales Account to which sales to are credited (W)" gridItemLocation="1,1,1,1" comment=" Sales Account to which sales to are credited (W)" fieldTable="category" identifier="sale_acct_code"/>
+					<TextField noEntry="true" dataType="Char,,,," classNames="fcls_data_widget,fcls_align_left,fcls_length_30qch" location="42qch,4qch" preferredSize="31qch,1qch" gridItemLocation="2,1,1,1" fieldTable="formonly" identifier="sale_acct_name"/>
+					<Label isDynamic="true" text="Cost of Goods Sold" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,2,1,1" fieldTable="formonly" identifier="lb46"/>
+					<ComboBox dataType="Char,,,,18" classNames="list-show-value-text,field-show-value,fcls_data_widget,fcls_length_flex_15qch" location="20qch,5qch" preferredSize="21qch,1qch" toolTip=" Account to which Cost of Goods is debited (W)" gridItemLocation="1,2,1,1" comment=" Account to which Cost of Goods is debited (W)" fieldTable="category" identifier="cogs_acct_code"/>
+					<TextField noEntry="true" dataType="Char,,,," classNames="fcls_data_widget,fcls_align_left,fcls_length_30qch" location="42qch,5qch" preferredSize="31qch,1qch" gridItemLocation="2,2,1,1" fieldTable="formonly" identifier="cogs_acct_name"/>
+					<Label isDynamic="true" text="Inventory Account" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,3,1,1" fieldTable="formonly" identifier="lb44"/>
+					<ComboBox dataType="Char,,,,18" classNames="list-show-value-text,field-show-value,fcls_data_widget,fcls_length_flex_15qch" location="20qch,6qch" preferredSize="21qch,1qch" toolTip=" Account to which Cost of Goods is credited (W)" gridItemLocation="1,3,1,1" comment=" Account to which Cost of Goods is credited (W)" fieldTable="category" identifier="stock_acct_code"/>
+					<TextField noEntry="true" dataType="Char,,,," classNames="fcls_data_widget,fcls_align_left,fcls_length_30qch" location="42qch,6qch" preferredSize="31qch,1qch" gridItemLocation="2,3,1,1" fieldTable="formonly" identifier="stock_acct_name"/>
+					<Label isDynamic="true" text="Adjustments Account" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,4,1,1" fieldTable="" identifier="lb89"/>
+					<ComboBox dataType="Char,,,,18" classNames="list-show-value-text,field-show-value,fcls_data_widget,fcls_length_flex_15qch" location="20qch,7qch" preferredSize="21qch,1qch" toolTip=" Account to which inventory adjustments are credited (W)" gridItemLocation="1,4,1,1" comment=" Account to which inventory adjustments are credited (W)" fieldTable="category" identifier="adj_acct_code"/>
+					<TextField noEntry="true" dataType="Char,,,," classNames="fcls_data_widget,fcls_align_left,fcls_length_30qch" location="42qch,7qch" preferredSize="31qch,1qch" gridItemLocation="2,4,1,1" fieldTable="formonly" identifier="adj_acct_name"/>
+					<Label isDynamic="true" text="Thru-Sales Revenue" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,5,1,1" fieldTable="" identifier="lb113"/>
+					<ComboBox dataType="Char,,,,18" classNames="list-show-value-text,field-show-value,fcls_data_widget,fcls_length_flex_15qch" location="20qch,8qch" preferredSize="21qch,1qch" toolTip=" Account to which Charge Thru-Sales Internal Revenue are credited (W)" gridItemLocation="1,5,1,1" comment=" Account to which Charge Thru-Sales Internal Revenue are credited (W)" fieldTable="category" identifier="int_rev_acct_code"/>
+					<TextField noEntry="true" dataType="Char,,,," classNames="fcls_data_widget,fcls_align_left,fcls_length_30qch" location="42qch,8qch" preferredSize="31qch,1qch" gridItemLocation="2,5,1,1" fieldTable="formonly" identifier="int_rev_acct_name"/>
+					<Label isDynamic="true" text="Thru-Sales Expense" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,6,1,1" fieldTable="" identifier="lb112"/>
+					<ComboBox dataType="Char,,,,18" classNames="list-show-value-text,field-show-value,fcls_data_widget,fcls_length_flex_15qch" location="20qch,9qch" preferredSize="21qch,1qch" toolTip=" Account to which Charge Thru-Sales Internal Cost of Goods are debited (W)" gridItemLocation="1,6,1,1" comment=" Account to which Charge Thru-Sales Internal Cost of Goods are debited (W)" fieldTable="category" identifier="int_cogs_acct_code"/>
+					<TextField noEntry="true" dataType="Char,,,," classNames="fcls_data_widget,fcls_align_left,fcls_length_30qch" location="42qch,9qch" preferredSize="31qch,1qch" gridItemLocation="2,6,1,1" fieldTable="formonly" identifier="int_cogs_acct_name"/>
+				</GridPanel>
+			</GroupBox>
+			<GridPanel classNames="fcls_statusbar_cnt" visible="true" verticalAlignment="Top" gridItemLocation="0,4,1,1" fieldTable="formonly" identifier="cntStatusBar">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="100%"/>
+				</GridPanel.gridColumnDefinitions>
+				<Label isDynamic="true" text="" classNames="fcls_sblabel" visible="true" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="lbInfo1"/>
+				<Label isDynamic="true" text="" classNames="fcls_sblabel" visible="true" gridItemLocation="0,1,1,1" fieldTable="formonly" identifier="lbInfo2"/>
+			</GridPanel>
+		</GridPanel>
+	</form.rootContainer>
+	<form.screenRecords>
+		<ScreenRecord identifier="sr_coadesc" fields="coadesc3,coadesc5,coadesc6,coadesc7,coadesc8,coadesc9"/>
+		<ScreenRecord identifier="category" fields="cat_code,desc_text,sale_acct_code,cogs_acct_code,stock_acct_code,adj_acct_code,int_rev_acct_code,int_cogs_acct_code"/>
+		<ScreenRecord identifier="formonly" fields="sale_acct_name,cogs_acct_name,stock_acct_name,adj_acct_name,int_rev_acct_name,int_cogs_acct_name"/>
+	</form.screenRecords>
+</form>
+

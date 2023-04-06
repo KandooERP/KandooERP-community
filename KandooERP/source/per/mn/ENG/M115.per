@@ -1,0 +1,95 @@
+{
+###########################################################################
+# This program is free software; you can redistribute it and/or modify it
+# under the terms of the GNU General Public License as published by the
+# Free Software Foundation; either version 2 of the License, or (at your
+# option) any later version.
+#
+# This program is distributed in the hope that it will be useful, but
+# WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+# General Public License for more details.
+#
+# You should have received a copy of the GNU General Public License along
+# with this program; if not, write to the Free Software Foundation, Inc.,
+# 59 Temple Place, Suite 330, Boston, MA 02111-1307 USA
+#
+###########################################################################
+
+	 $Id: M115.per,v 1.2 2003/11/19 22:22:59 afalout Exp $
+}
+
+
+database kandoodb
+
+screen
+{
+                           Work Centre Details                      M115 
+\g-------------------------------------------------------------------------\g
+ Work Centre             [f000      ]    [f001                          ]
+ Department              [f002      ]    [f003                          ]
+ Alternate Work Centre   [f004      ]    [f017                          ]
+ Processing Type         [a]              Time Unit          [b]
+ Capacity Units          [f006        ]   Unit of Measure    [f007]
+ Work Stations           [f008 ]
+ Utilization Factor      [f009 ]          Efficiency Factor  [f010 ]
+ Operation Hours: Start  [f011    ]       Finish             [f012    ]
+ Cost Markup Percentage  [f013   ]        Count Centre       [c]
+\g-------------------------------------------------------------------------\g
+ Description                               Rate          Type
+\g-------------------------------------------------------------------------\g
+[f014                          ]   [f015             ]   [d]   [f016    ]
+[f014                          ]   [f015             ]   [d]   [f016    ]
+[f014                          ]   [f015             ]   [d]   [f016    ]
+[f014                          ]   [f015             ]   [d]   [f016    ]
+
+}
+
+tables
+workcentre
+workctrrate
+
+attributes
+f000 = workcentre.work_centre_code, upshift,
+comments = " Unique work centre code";
+f001 = workcentre.desc_text, comments = " A description of this work centre";
+f002 = workcentre.dept_code, upshift,
+comments = " Code for the department to which this work centre belongs (W)";
+f003 = formonly.dept_desc type char, noentry;
+f004 = workcentre.alternate_wc_code, upshift,
+comments = " An alternate work centre where products are produced (W)";
+f017 = formonly.alternate_desc type char, noentry;
+a    = workcentre.processing_ind, upshift,
+comments = " Q = Quantity per time unit, T = Time unit per quantity";
+b    = workcentre.time_unit_ind, upshift,
+comments = " D = Days, H = Hours, M = Minutes";
+f006 = workcentre.time_qty,
+comments = " The time taken to produce a standard quantity at this work centre";
+f007 = workcentre.unit_uom_code, upshift,
+comments = " The processing unit of measure for this work centre (W)";
+f008 = workcentre.work_station_num,
+comments = " The number of work stations within this work centre";
+f009 = workcentre.utilization_rate,
+comments = " The utilization factor for this work centre";
+f010 = workcentre.efficiency_rate,
+comments = " The efficiency factor for this work centre";
+f011 = workcentre.oper_start_time , picture = "XX:XX:XX",
+comments = " The normal operational daily start time for this work centre";
+f012 = workcentre.oper_end_time , picture = "XX:XX:XX", 
+comments = " The normal operational daily finish time for this work centre";
+f013 = workcentre.cost_markup_per,
+comments = " The % markup on the cost of items produced at this work centre";
+c    = workcentre.count_centre_ind, upshift,
+comments = " P = Products, T = Labr/Mach, B = Both, N = None, O = Outwork";
+f014 = workctrrate.desc_text, comments = " A description of the rate";
+f015 = workctrrate.rate_amt, comments = " The rate charged at this workcentre";
+d    = workctrrate.rate_ind, upshift, comments = " F = Fixed, V = Variable";
+f016 = formonly.rate_desc type char, noentry;
+
+instructions
+delimiters "  "
+
+screen record sr_rate[4] (workctrrate.desc_text,
+                          rate_amt,
+                          rate_ind,
+                          formonly.rate_desc)

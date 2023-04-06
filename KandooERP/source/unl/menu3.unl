@@ -1,0 +1,1250 @@
+N|3|2|C|Allocation Report| |1|N32.4gi|||||
+N|3|3|C|Alter Allocation| |1|N33.4gi|||||
+N|3|4|C|Release Requisitions| |1|N34.4gi|||||
+N|4|1|C|Requisition Approval| |1|N41.4gi|||||
+N|4|2|C|Pending P.O. Authorization| |1|N42.4gi|||||
+W|B|E|G|Sales Analysis Report||1|WBE.4gi|||||
+I|S|R|G|Bulk Product Recode||1|ISR.4gi|||||
+N|4|R|C|Pending P.O. Report| |1|N4R.4gi|||||
+N|P|1|C|Person Maintenance| |1|NP1.4gi|||||
+N|P|2|C|Person Inquiry| |1|NP2.4gi|||||
+N|P|R|C|Person Report| |1|NPR.4gi|||||
+N|R|1|C|Requisition Detail| |1|NR1.4gi|||||
+N|R|2|C|Req. Line Detail| |1|NR2.4gi|||||
+N|R|3|C|Product History| |1|NR3.4gi|||||
+N|R|4|C|Back Order Detail I| |1|NR4.4gi|||||
+N|R|5|C|Back Order Detail II| |1|NR5.4gi|||||
+P|A|B|G|Vendor Open Item Report||1|PAB.4gi|||||
+N|Z|P|C|Set Up Parameters| |1|NZP.4gi|||||
+G|S|Z|G|Cashbook History Load||1|GSZ.4gi|||||
+P|R|B|G|Batch Posting Report| |1|PRB.4gi|||||
+A|8|3|G|Special Pricing Scan| |1|I43.4gi|||||
+A|8|4|G|Special Pricing Enquiry| |1|I42.4gi|||||
+A|8|5|G|Product Fixed Details| |1|I15.4gi|||||
+I|T|1|G|Generate Stock-take Count File| |1|IT1.4gi|||||
+L|S|2|G|Finalise Shipment Credits||1|LS2.4gi|||||
+E|6|1|G|Special Offers Maintenance| |1|E61.4gi|||||
+E|6|2|G|Special Offers Inquiry| |1|E62.4gi|||||
+I|Z|U|G|Amendment Log Maintenance||2|IZU.4gi|||||
+P|9|1|G|Contractor Information||1|P91.4gi|||||
+P|9|4|G|Contractor Var'ns Report||1|P94.4gi|||||
+P|9|3|G|Contractor Details Report||1|P93.4gi|||||
+A|2|E|G|Invoice Transfer||1|A2E.4gi|||||
+A|W|1|G|Customer Balance Write Off||4|AW1.4gi|||||
+A|A|E|G|Summary Aging (Neg.Bal.)||1|AAE.4gi|||||
+A|A|F|G|Summary Aging (Pos.Bal.)||1|AAF.4gi|||||
+A|A|G|G|Summary Aging (By Currency)||1|AAG.4gi|||||
+A|A|H|G|Summary Aging (By State)||1|AAH.4gi|||||
+I|D|1|G|Replenish by Warehouse||1|ID1.4gi|||||
+I|D|2|G|Over-Stock by Warehouse||1|ID2.4gi|||||
+I|D|3|G|Replenish by Product||1|ID3.4gi|||||
+I|D|4|G|Over-Stock by Product||1|ID4.4gi|||||
+P|Z|U|G|Amendment Log Maintenance||2|PZU.4gi|||||
+A|Z|U|G|Amendment Log Maintenance||2|AZU.4gi|||||
+E|1|4|G|Order Amendment Inquiry||1|E14.4gi|||||
+E|7|1|G|Sales Conditions Maintenance||1|E71.4gi|||||
+E|7|2|G|Sales Conditions Inquiry||1|E72.4gi|||||
+E|U|3|G|Coverage Trends||1|IBT.4gi|||||
+A|1|8|G|Customer Promotion Maintenance||1|A18.4gi|||||
+U|1|W|G|Messages & Menu Options Update| |1|U1W.4gi|||||
+L|A|4|G|Shipments by Voucher||1|LA4.4gi|||||
+L|A|7|G|Unpaid Vouchers by Shipment||1|LA7.4gi|||||
+L|A|6|G|Shipment Summary||1|LA6.4gi|||||
+E|Z|3|G|Sales Targets Maintenance| |1|EZ3.4gi|||||
+G|A|4|G|Financial Work Sheet Report||1|GA4.4gi|||||
+E|S|1|G|Statistics Extraction||1|ES1.4gi|||||
+E|S|2|G|Statistics Purging||1|ES2.4gi|||||
+F|1|6|G|Insurance Details||1|F36.4gi|||||
+F|1|7|G|Leasing Codes||1|F37.4gi|||||
+F|1|B|G|Book/Rate Maintenance||1|FBD.4gi|||||
+F|2|1|G|Asset Addition||1|F21.4gi|||||
+E|A|1|G|Customer Inquiry||9|A12.4gi|||||
+E|A|2|G|Customer Turnover Scan||9|EA2.4gi|||||
+E|A|3|G|Cust/Product Turnover Scan I||9|EA3.4gi|||||
+E|A|4|G|Cust/Product Turnover Scan II||9|EA4.4gi|||||
+E|A|5|G|Customer Profit Scan||9|EA5.4gi|||||
+E|C|1|G|Salesperson Inquiry||1|EC1.4gi|||||
+E|C|2|G|Salesperson Daily Sales Scan||1|EC2.4gi|||||
+E|C|3|G|Salesperson Monthly Sales Scan||1|EC3.4gi|||||
+E|C|4|G|Salesperson Turnover Scan||1|EC4.4gi|||||
+E|C|5|G|Salesperson Weekly Targets||1|EC5.4gi|||||
+E|C|6|G|Salesperson Monthly Targets||1|EC6.4gi|||||
+E|C|7|G|Salesperson Special Offers||1|EC7.4gi|||||
+E|C|8|G|Salesperson Product Distrib'n||1|EC8.4gi|||||
+E|C|9|G|Salesperson Profit Scan||1|EC9.4gi|||||
+E|C|A|G|Salesperson Commission Scan||1|ECA.4gi|||||
+E|B|1|G|Product Inquiry||1|I12.4gi|||||
+E|B|2|G|Product Turnover Scan||1|EB2.4gi|||||
+E|B|3|G|Products Bought & Sold Scan||1|EB3.4gi|||||
+E|B|4|G|Product/Customer Turnover Scan||1|EB4.4gi|||||
+E|B|5|G|Product Profit Scan||1|EB5.4gi|||||
+E|D|1|G|Sales Manager Inquiry||1|ED1.4gi|||||
+E|D|2|G|Sales Managers Turnover Scan||1|ED2.4gi|||||
+E|D|3|G|Sales Manager/Person Targets||1|ED3.4gi|||||
+E|D|4|G|Sales Manager Product Dist'n||1|ED4.4gi|||||
+E|D|5|G|Sales Managers Profit Scan||1|ED5.4gi|||||
+E|E|1|G|Sales Territory Inquiry||1|EE1.4gi|||||
+E|E|2|G|Sales Territory Turnover Scan||1|EE2.4gi|||||
+E|E|3|G|Sales Territory Product Dist'n||1|EE4.4gi|||||
+A|1|D|G|Customer Card Maintenance||1|A1D.4gi|||||
+I|F|5|G|Summary FIFO Valuation Report||1|IF5.4gi|||||
+I|F|6|G|Aged FIFO Valuation Report||1|IF6.4gi|||||
+I|F|7|G|FIFO Cost Ledger Validation||1|IF7.4gi|||||
+E|G|1|G|Company Turnover Inquiry||1|EG1.4gi|||||
+E|G|2|G|Company Sales Targets Inquiry||1|EG2.4gi|||||
+E|G|3|G|Company Daily Sales Inquiry||1|EG3.4gi|||||
+E|G|4|G|Company Product Distribution||1|EG4.4gi|||||
+E|G|5|G|Company Monthly Profit Inquiry||1|EG5.4gi|||||
+E|7|3|G|Sales Conditions Turnover Scan| |9|E73.4gi|||||
+E|7|4|G|Sales Conditions Targets Scan| |9|E74.4gi|||||
+E|7|5|G|Sales Conditions Profit Scan||9|E75.4gi|||||
+E|6|3|G|Special Offers Turnover Scan| |1|E63.4gi|||||
+E|6|4|G|Special Offers Targets Scan| |1|E64.4gi|||||
+E|6|5|G|Special Offers Profit Scan||1|E65.4gi|||||
+E|8|1|G|Salesperson Maintenance||1|AZ3.4gi|||||
+E|8|2|G|Commission Structure Maint.||1|E82.4gi|||||
+E|8|4|G|Commission on Invoice Report||1|E84.4gi|||||
+E|U|2|G|Inventory/Customer Turnover||1|EU2.4gi|||||
+E|U|1|G|Inventory Yearly Turnover||1|EU1.4gi|||||
+G|Z|T|G|Bank Types||1|GZT.4gi|||||
+E|T|8|G|New Vs Repeat Sales||1|ET8.4gi|||||
+E|T|A|G|Salesperson Contribution||1|ETA.4gi|||||
+E|T|9|G|Salesperson Performance||1|ET9.4gi|||||
+E|T|7|G|Special Offer Results||1|ET7.4gi|||||
+E|T|6|G|Salesperson Customer Ranking||1|ET6.4gi|||||
+E|T|5|G|Salesperson T'over Comparison||1|ET5.4gi|||||
+E|T|4|G|Monthly Turnover by Inventory||1|ET4.4gi|||||
+E|T|3|G|Monthly Turnover by Manager||1|ET3.4gi|||||
+E|T|2|G|Weekly Activity by Manager||1|ET2.4gi|||||
+E|T|1|G|Weekly Activity by Salesperson||1|ET1.4gi|||||
+E|T|B|G|Salesperson Distribution||1|ETB.4gi|||||
+E|V|1|G|Customer Yearly Turnover||1|EV1.4gi|||||
+E|V|2|G|Yearly Turnover by Territory||1|EV2.4gi|||||
+E|V|3|G|Yearly Turnover by Area||1|EV3.4gi|||||
+E|V|4|G|Yearly Turnover by Salesperson||1|EV4.4gi|||||
+E|V|5|G|Inventory Turnover by Customer||1|EV5.4gi|||||
+E|V|6|G|Top Customers by Rank||1|EV6.4gi|||||
+E|Y|1|G|Yearly Distribution||1|EY1.4gi|||||
+E|Y|2|G|Distribution Trends||1|EY2.4gi|||||
+I|B|T|G|Product Trends||1|IBT.4gi|||||
+P|2|D|G|Voucher Transfer||1|P2D.4gi|||||
+U|5|1|G|Suburb Maintenance||1|U51.4gi|||||
+E|3|2|G|Back Order Allocation Report||1|E32.4gi|||||
+E|3|3|G|Back Order Allocation Edit||1|E33.4gi|||||
+E|3|4|G|Back Orders Product Release||1|E34.4gi|||||
+A|A|I|G|Corporate Debtors Listing||1|AAI.4gi|||||
+G|Z|I|G|Multi-Ledger Relationships||1|GZI.4gi|||||
+G|Z|J|G|Consolidated Report Codes||1|GZJ.4gi|||||
+A|A|J|G|Summary Aging (By Salesperson)||1|AAJ.4gi|||||
+A|A|K|G|Detailed Aging(By Salesperson)||1|AAK.4gi|||||
+G|R|K|G|Consol Summary Trial Balance||1|GRK.4gi|||||
+G|R|J|G|Consolidated Reporting Codes||1|GRJ.4gi|||||
+G|R|I|G|Multi-Ledger Relationships||1|GRI.4gi|||||
+G|B|8|G|Trial Multi-Ledger Posting||1|GB8.4gi|||||
+G|C|L|G|Statement File Load||1|GCL.4gi|||||
+W|Z|U|G|Amendment Log Maintenance||2|WZU.4gi|||||
+G|A|H|G|Account Detail by Journal Code||1|GAH.4gi|||||
+W|1|1|G|Order Entry||1|W11.4gi|||||
+G|3|1|G|Disbursement Maintenance||1|G31.4gi|||||
+G|3|2|G|Process Disbursements||1|G32.4gi|||||
+G|3|3|G|Disbursement Report||1|G33.4gi|||||
+G|C|P|G|Statement Print||1|GCP.4gi|||||
+G|W|1|G|----Print Mgr Report----||1|GW1.4gi|||||
+G|W|2|G|Report Definition||1|GW2.4gi|||||
+G|Z|M|G|Segment Translation Maintenanc||1|GZM.4gi|||||
+G|W|3|G|Column Maintenance||1|GW3.4gi|||||
+G|W|4|G|Line Maintenance||1|GW4.4gi|||||
+G|W|5|G|Definition Setup Report||1|GW5.4gi|||||
+P|7|2|G|Recurring Expense Processing||1|P72.4gi|||||
+P|7|3|G|Recurring Expense Report||1|P73.4gi|||||
+P|9|5|G|Tax Refund Entry||1|P95.4gi|||||
+P|9|6|G|Tax Summary Report||1|P96.4gi|||||
+G|S|J|G|External Budget Interface||1|GSJ.4gi|||||
+G|Z|K|G|Payroll Load Parameters||1|GZK.4gi|||||
+G|S|P|G|Payroll Batch Load||1|GSP.4gi|||||
+G|Z|O|G|Chart Translation Maintenance||1|GZO.4gi|||||
+P|A|A|G|Audit Report||1|PAA.4gi|||||
+P|R|J|G|Purchase Journal Report||1|PRJ.4gi|||||
+F|6|3|G|Asset Disposals||1|F63.4gi|||||
+I|C|5|G|Product Pricing by Category||1|IC5.4gi|||||
+I|C|6|G|Detailed Stock Valuation||1|IC6.4gi|||||
+I|C|7|G|Stock Valuation Summary||1|IC7.4gi|||||
+P|2|E|G|Oustanding Vouchers||1|P2E.4gi|||||
+G|Z|U|G|BSBs||1|GZU.4gi|||||
+F|6|4|G|Asset Transactions||1|F64.4gi|||||
+F|8|1|G|Asset Listing||1|F81.4gi|||||
+F|8|2|G|Insurance Details||1|F82.4gi|||||
+G|2|R|G|Period End Batch Reversal||1|G2R.4gi|||||
+E|1|5|G|Order Inquiry| |1|E15.4gi|||||
+F|2|2|G|Asset Adjustment||1|F22.4gi|||||
+F|2|3|G|Asset Transfer||1|F23.4gi|||||
+F|2|4|G|Asset Retirement||1|F24.4gi|||||
+F|2|5|G|Asset Revaluation||1|F25.4gi|||||
+F|2|6|G|Asset Sale||1|F26.4gi|||||
+F|2|7|G|Asset Life Adjustment||1|F27.4gi|||||
+F|2|8|G|Asset Depn Code Adjust||1|F29.4gi|||||
+F|2|9|G|Batch Edit||1|F28.4gi|||||
+F|2|A|G|Batch Scan||1|FBS.4gi|||||
+F|2|C|G|Batch Clearance||1|FBC.4gi|||||
+F|4|1|G|Asset Inquiry||1|F41.4gi|||||
+F|4|2|G|Asset Scan||1|F42.4gi|||||
+I|5|7|G|Stock Transfer Edit||1|I57.4gi|||||
+F|6|2|G|Asset Additions||1|F62.4gi|||||
+F|8|3|G|Lease Details||1|F83.4gi|||||
+F|8|4|G|Asset Summary Report||1|F84.4gi|||||
+F|B|1|G|Batch Report||1|FB1.4gi|||||
+I|F|8|G|Aged FIFO Write-down Val Rep||1|IF8.4gi|||||
+F|P|1|G|Post FA Batches||1|FP1.4gi|||||
+F|P|2|G|Depreciation Calc.||1|FP2.4gi|||||
+F|P|3|G|Create GL Batches||1|FGL.4gi|||||
+F|Z|1|G|Book Codes||1|F31.4gi|||||
+F|Z|2|G|Location Codes||1|F32.4gi|||||
+F|Z|3|G|Authority Codes||1|F33.4gi|||||
+F|Z|4|G|Category Codes||1|F34.4gi|||||
+F|Z|5|G|Responsibility Codes||1|F35.4gi|||||
+F|Z|D|G|Depr'n Rate Maintenance||1|FDP.4gi|||||
+F|Z|G|G|GL Account Codes||1|FZ1.4gi|||||
+F|Z|P|G|FA Parameters||1|FZP.4gi|||||
+P|4|E|G|EFT Payment Scan||1|P4E.4gi|||||
+P|C|9|G|EFT Payments||1|PC9.4gi|||||
+P|C|K|G|PPT Report||1|PCK.4gi|||||
+W|7|3|G|Quotation Scan - By Suburb||1|W73.4gi|||||
+A|D|F|G|Credit Application||1|ADF.4gi|||||
+A|Z|I|G|Invoice/Credit Import Facility||1|AZI.4gi|||||
+I|2|A|G|Stock Reclassification||1|I2A.4gi|||||
+I|S|L|G|Product Label Generation||1|ISL.4gi|||||
+I|Z|A|G|Adjustment Types||1|IZA.4gi|||||
+I|Z|B|G|Production Schedule Parameters||1|IZB.4gi|||||
+I|Z|C|G|Production Schedule||1|IZC.4gi|||||
+I|Z|D|G|Department Maintenance||1|IZD.4gi|||||
+I|Z|L|G|Product Label Formats||1|IZL.4gi|||||
+I|Z|S|G|Product Segments||1|IZS.4gi|||||
+P|C|H|G|Missing Cheques Numbers||1|PCH.4gi|||||
+P|C|J|G|Debit Applications||1|PCJ.4gi|||||
+P|C|L|G|Cleansing Report||1|PCL.4gi|||||
+P|R|3|G|Audit Trail by Period||1|PR3.4gi|||||
+S|1|1|G|Point of Sale Entry||9|sepos03|||||
+S|1|2|G|Batch Document Print||1|srpos03|||||
+S|1|3|G|Cash Receipt Entry||1|secash|||||
+S|C|1|G|Maintain Cash Drawer||1|smcdraw|||||
+S|C|2|G|Cash Drawer Banking||1|secbank|||||
+S|C|3|G|Cash Drawer Report||1|srcdraw|||||
+S|E|1|G|Theoretical Cash Drawer||1|srcdeod|||||
+S|E|2|G|Daily Backorders Report||1|srdord|||||
+S|E|3|G|Daily Sales Analysis||1|srdsanl|||||
+S|E|4|G|Profitability Report||1|srdprft|||||
+S|E|5|G|Price Override Report||1|sroride|||||
+S|E|6|G|Suspended Sales Report||1|srsuss|||||
+S|E|U|G|End of Day Update||1|sueod|||||
+S|L|1|G|Conditions List||1|slcond|||||
+S|L|2|G|Customer Conditions Lst||1|slccond|||||
+S|L|3|G|Bad Cheque Listing||1|slbadq|||||
+S|L|4|G|Bad Credit Card Listing||1|slbadcc|||||
+S|L|5|G|Customer Price Level Listing||1|slatpri|||||
+S|R|2|G|Backorders by Customer||1|srcusor|||||
+S|R|3|G|Backorders by Product||1|srprdor|||||
+S|R|4|G|Backorders by S'person||1|srordsp|||||
+S|R|5|G|Backorders x Cust x Prod||1|srcpord|||||
+S|R|6|G|Quotes by Product Rpt.||1|srprdqt|||||
+S|R|7|G|Quotes by Customer Rpt.||1|srcusqt|||||
+S|R|8|G|Quotes Report||1|srquote|||||
+S|R|9|G|Price Override Analysis||1|srpoanl|||||
+S|S|I|G|Activity Log Inquiry||1|sqactl|||||
+S|R|B|G|Fill Backorders Report||1|srfillbo|||||
+S|R|O|G|Overdue Backorder Report||1|sroord|||||
+S|S|P|G|Profit Analysis||1|sqpranl|||||
+S|S|B|G|ALPOS Deposit Slips| |1|srbankd|||||
+S|S|Q|G|Quote Purge Program||1|suqtprg|||||
+S|S|S|G|Daily Sales Inquiry||1|sqdsal|||||
+S|Z|1|G|POS Parameters||1|smgparm|||||
+S|Z|4|G|Conditions Maintenance||1|smcond|||||
+S|Z|5|G|Salesperson Maintenance||1|AZ3|||||
+S|Z|6|G|Bad Cheque A/c Maint.||1|smbadac|||||
+S|Z|7|G|Bad Credit Card Maint.||1|smbadcc|||||
+S|Z|8|G|Customer Conditions POS||1|smccond|||||
+S|Z|9|G|Customer Price Levels||1|smatpri|||||
+S|Z|A|G|Warehouse Segments||1|smware|||||
+S|Z|D|G|Assign Debtor Messages||1|smdemes|||||
+S|Z|E|G|Station Device Maintenance||1|smstdev|||||
+S|Z|L|G|Maintain Locations||1|smvallc|||||
+S|Z|M|G|Maintain System Messages||1|smsymes|||||
+S|Z|O|G|Default Special Offers||1|smspoff|||||
+S|Z|P|G|Maintain Payment Types||1|smpaytp|||||
+S|Z|S|G|Maintain Scratch Pad UOM||1|smscuom|||||
+S|Z|T|G|Station Maintenance||1|smsparm|||||
+S|Z|U|G|Maintain User Definable Fields||1|smuparm|||||
+S|Z|V|G|POS Valid Device Maintenance||1|smvaldv|||||
+U|2|B|G|User Security Report||1|U2B.4gi|||||
+W|S|D|G|Invoice/Credit Reprint (QLD)||1|WSD.4gi|||||
+U|1|A|G|System Locks Maintenance||3|U1A.4gi|||||
+A|C|8|G|Receipt by Reference||1|AC8.4gi|||||
+W|1|2|G|Order Scan - By Order||1|W12.4gi|||||
+W|1|3|G|Order Scan - By Job Suburb||1|W13.4gi|||||
+W|1|5|G|Order Inquiry||1|W15.4gi|||||
+W|1|7|G|Order Edit||1|W17.4gi|||||
+W|1|C|G|Order Cancel||1|W1C.4gi|||||
+W|2|1|G|Schedule Deliveries||1|W21.4gi|||||
+W|2|2|G|Create Delivery Dockets||1|W22.4gi|||||
+W|2|3|G|Delivery Docket Re-Print||1|W23.4gi|||||
+W|2|4|G|Confirm Deliveries - Invoice||1|W24.4gi|||||
+W|2|5|G|Cancel Deliveries||1|W25.4gi|||||
+W|2|6|G|Credit Approval - Held Loads||1|W26.4gi|||||
+W|2|7|G|Manual Delivery - Invoice||1|W27.4gi|||||
+W|3|1|G|Invoice Entry||1|W31.4gi|||||
+W|3|7|G|Invoice Edit||1|W37.4gi|||||
+W|3|A|G|Receipt Entry||1|W3A.4gi|||||
+I|B|S|G|Warehouse History Report||1|IBS.4gi|||||
+W|4|1|G|Manual Return Entry||1|W41.4gi|||||
+W|4|7|G|Automatic Refunds Report||1|W47.4gi|||||
+W|Q|1|G|Tentative Labour Transactions||1|WQ1.4gi|||||
+W|R|1|G|Order Detail||1|WR1.4gi|||||
+W|R|2|G|Orders by Customer||1|WR2.4gi|||||
+W|R|3|G|Orders by Order Number||1|WR3.4gi|||||
+W|R|4|G|Orders by Suburb||1|WR4.4gi|||||
+W|R|5|G|Orders by Product||1|WR5.4gi|||||
+W|R|6|G|Daily Delivery Schedule||1|WR6.4gi|||||
+W|R|7|G|Order Entry Report||1|WR7.4gi|||||
+W|U|1|G|Order Inquiry||1|WU1.4gi|||||
+W|U|2|G|Call Forward Inquiry||1|WU2.4gi|||||
+I|Z|F|G|Warehouse Groups||1|IZF.4gi|||||
+W|S|1|G|Post Transport Transactions||1|WS1.4gi|||||
+W|T|1|G|Driver Maintenance||1|WT1.4gi|||||
+W|T|2|G|Driver Notes||1|WT2.4gi|||||
+W|T|3|G|Vehicle Types||1|WT3.4gi|||||
+W|T|4|G|Driver Types||1|WT4.4gi|||||
+W|T|5|G|Transport Types||1|WT5.4gi|||||
+W|T|6|G|Vehicle Maintenance||1|WT6.4gi|||||
+W|T|7|G|Cartage Payment Rates||1|WT7.4gi|||||
+W|T|8|G|Extra Payment Rates||1|WT8.4gi|||||
+W|T|9|G|Transport Rates||1|WT9.4gi|||||
+W|T|A|G|Extra Transport Rates||1|WTA.4gi|||||
+W|Z|2|G|Cartage Areas||1|WZ2.4gi|||||
+W|Z|3|G|Order Rate Types||1|WZ3.4gi|||||
+W|Z|5|G|Sales Locations||1|WZ5.4gi|||||
+W|Z|8|G|Unit Of Measure Conversions||1|WZ8.4gi|||||
+W|Z|C|G|Cartage Rates||1|WZC.4gi|||||
+W|Z|D|G|Additional Charges||1|WZD.4gi|||||
+W|Z|E|G|Cancellation Reasons||1|WZE.4gi|||||
+W|D|5|G|Transport Costing Report||1|WD5.4gi|||||
+W|Z|R|G|Charge Rates||1|WZR.4gi|||||
+A|A|U|G|Customer Audit||1|AAU.4gi|||||
+J|R|N|G|Job Accrual Report||1|JRN.4gi|||||
+W|S|U|G|Delivery Schedule Unload||1|WSU.4gi|||||
+W|D|6|G|Daily Vehicle Usage Report||1|WD6.4gi|||||
+W|D|2|G|Driver Ledger Scan||1|WD2.4gi|||||
+W|D|3|G|Transactions By Vendor||1|WD3.4gi|||||
+W|D|4|G|Transactions By Vehicle||1|WD4.4gi|||||
+W|4|A|G|Credit Entry||1|W4A.4gi|||||
+W|4|E|G|Credit Edit||1|W4E.4gi|||||
+W|R|8|G|Forward Credit Report||1|WR8.4gi|||||
+W|R|9|G|Call Forwards By Product||1|WR9.4gi|||||
+P|C|R|G|Remittance Statement Print||1|PCR.4gi|||||
+K|S|1|G|Voyager Details Extraction|||KS1.4gi|||||
+K|Z|1|G|Subscription Types|||KZ1.4gi|||||
+K|Z|2|G|Subscription Products|||KZ2.4gi|||||
+S|1|5|G|Cash Receipt Edit||1|sucash|||||
+A|C|A|G|Unapplied Receipts||1|ACA.4gi|||||
+W|A|2|G|Orders by Salesperson/Product| |1|WA2.4gi|||||
+I|C|G|G|Price Gross Profit by Grp||1|ICG.4gi|||||
+I|C|H|G|Price List by Vendor||1|ICH.4gi|||||
+I|C|I|G|Gross Profit List by Vendor||1|ICI.4gi|||||
+W|S|V|G|Delivery Schedule Load||1|WSV.4gi|||||
+S|1|L|G|ALPOS Layby Inquiry||1|sqlby|||||
+A|2|R|G|Debtors Refunds||1|A2R.4gi|||||
+A|3|3|G|Sundry Receipts||1|A33.4gi|||||
+A|A|L|G|Summary Aging (By Age Date)||1|AAL.4gi|||||
+A|D|R|G|Credits by Credit Reason||1|ADR.4gi|||||
+A|E|C|G|Analysis By Invoice & Discount||1|AEC.4gi|||||
+A|R|R|G|Detailed Aging by Reference||1|ARR.4gi|||||
+S|R|S|G|Sales by Salesperson||1|srsbsp|||||
+A|S|8|G|Charge Service Fee/Interest||1|AS8.4gi|||||
+P|R|T|G|Summary Aging by Type||1|PRT.4gi|||||
+E|8|5|G|Commission on Payment Report||1|E85.4gi|||||
+W|A|A|G|Customer Orders Ranking Report||1|WAA.4gi|||||
+R|Z|4|G|Purchasing Groups||1|RZ4.4gi|||||
+E|U|4|G|Inventory Turnover by Volume||1|EU4.4gi|||||
+E|Z|A|G|Auto delivery Cycle Setup| |1|EZA.4gi|||||
+A|A|9|G|Customer Promotions Report||1|AA9.4gi|||||
+I|A|W|G|Product Ledger by Warehouse||1|IAW.4gi|||||
+I|Z|9|G|Warehouse Image||1|IZ9.4gi|||||
+I|Z|E|G|Product Surcharges||1|IZE.4gi|||||
+K|1|1|G|Subscription Entry|||K11.4gi|||||
+K|1|2|G|Subscription Inquiry|||K12.4gi|||||
+K|4|1|G|Credit Entry|||K41.4gi|||||
+K|4|7|G|Credit Edit|||K47.4gi|||||
+K|L|1|G|Print Labels|||KL1.4gi|||||
+K|R|1|G|Summary|||KR1.4gi|||||
+K|R|2|G|Audit Details|||KR2.4gi|||||
+P|6|B|G|Debit Unapply||1|P6B.4gi|||||
+P|R|D|G|Vendor Aging by Type||1|PRD.4gi|||||
+Q|A|C|G|Quotation Print (CC  format)||1|QA8b.4gi|||||
+W|S|E|G|Invoice/Credit Reprint (TAS)||1|WSE.4gi|||||
+W|1|A|G|Completed Orders||1|W1A.4gi|||||
+W|1|B|G|Order Inquiry By Product||1|W1B.4gi|||||
+W|3|B|G|Receipt Enter & Apply||1|W3B.4gi|||||
+W|3|C|G|Receipt Print||1|W3C.4gi|||||
+W|3|D|G|Automatic Receipt Apply||1|A3B.4gi|||||
+W|4|2|G|Pallet Return Entry||1|W42.4gi|||||
+W|4|3|G|Manual Pallet Refund||1|W43.4gi|||||
+W|4|4|G|Pallet Refund Calculator||1|W44.4gi|||||
+W|4|5|G|Edit Pallet Refunds||1|W45.4gi|||||
+W|4|6|G|Generate Refund Vouchers||1|W46.4gi|||||
+W|5|1|G|Export Order Entry||1|W51.4gi|||||
+W|5|2|G|Confirm Container Delivery||1|W52.4gi|||||
+W|5|3|G|Create Invoice||1|W53.4gi|||||
+W|5|A|G|Print Packing List||1|W5A.4gi|||||
+W|9|1|G|Docket Transfer||1|W91.4gi|||||
+W|9|2|G|Levies to Waste Management||1|W92.4gi|||||
+W|9|3|G|Product Weekly Sales by Loads||1|W93.4gi|||||
+W|9|4|G|Customer Weekly Sales by Prod||1|W94.4gi|||||
+W|9|5|G|Sands/Stones MTD Deliveries||1|W95.4gi|||||
+W|9|6|G|Customer Invoice Listing||1|W96.4gi|||||
+W|A|3|G|Orders by Sales Area/Customer| |1|WA3.4gi|||||
+W|A|4|G|Orders by Sales Area/Product| |1|WA4.4gi|||||
+W|A|5|G|Orders by Job Area/Customer| |1|WA5.4gi|||||
+W|A|6|G|Orders by Job Area/Product| |1|WA6.4gi|||||
+W|A|7|G|Orders by Customer Type| |1|WA7.4gi|||||
+W|A|8|G|Orders by Product| |1|WA8.4gi|||||
+W|A|9|G|Orders by Reporting Code| |1|WA9.4gi|||||
+W|B|1|G|Sales by Salesperson/Customer| |1|WB1.4gi|||||
+W|B|2|G|Sales by Salesperson/Product| |1|WB2.4gi|||||
+W|B|3|G|Sales by Sales Area/Customer| |1|WB3.4gi|||||
+W|B|4|G|Sales by Sales Area/Product| |1|WB4.4gi|||||
+W|B|5|G|Sales by Job Area/Customer| |1|WB5.4gi|||||
+W|B|6|G|Sales by Job Area/Product| |1|WB6.4gi|||||
+W|B|7|G|Sales by Customer Type| |1|WB7.4gi|||||
+W|B|8|G|Sales by Product| |1|WB8.4gi|||||
+W|B|9|G|Sales by Reporting Code| |1|WB9.4gi|||||
+W|R|A|G|O/S Pallets by Customer||1|WRA.4gi|||||
+W|R|B|G|O/S Pallets by Job Address||1|WRB.4gi|||||
+W|R|C|G|Pallet Transactions by Order||1|WRC.4gi|||||
+W|R|E|G|Price Exception Report||1|WRE.4gi|||||
+W|R|F|G|Outstanding Deliveries||1|WRF.4gi|||||
+W|R|G|G|Sales by Product||1|WRG.4gi|||||
+W|R|S|G|Stock/Orders on Hand Summary||1|WRS.4gi|||||
+W|S|3|G|Post Order Statistics||1|WS3.4gi|||||
+W|S|5|G|Post Sales Statistics||1|WS5.4gi|||||
+E|B|6|G|Warehouse Turnover Scan||1|EB6.4gi|||||
+W|S|A|G|Summary Pallet Aging||1|WSA.4gi|||||
+W|S|B|G|Detailed Pallet Aging||1|WSB.4gi|||||
+W|T|B|G|Transport Adjustments Types||1|WTB.4gi|||||
+I|S|2|G|Image Pricing/Costing||1|IS2.4gi|||||
+I|C|3|G|Product Pricing (FIFO)||1|IC3.4gi|||||
+W|4|C|G|Surplus Pallet Returns||1|W4C.4gi|||||
+I|A|H|G|Product Quantity History||1|IAH.4gi|||||
+A|3|B|G|Receipt Bulk Application||1|A3B.4gi|||||
+E|9|A|G|Summary Held Order Report||1|ER1.4gi|||||
+A|A|T|G|Summary Aging (By Cust Type)||1|AAT.4gi|||||
+A|Z|H|G|Hold Sales Reasons||1|AZH.4gi|||||
+A|W|2|G|Tentative Write Off Adjustment||5|AW2.4gi|||||
+A|W|3|G|Tentative Balance Report||5|AW3.4gi|||||
+A|W|4|G|Generate Write Off Transaction||5|AW4.4gi|||||
+I|R|A|G|Product History Report||1|IRA.4gi|||||
+A|B|D|G|Adjustments Report||1|ABD.4gi|||||
+W|B|A|G|Customer Sales Ranking| |1|WBA.4gi|||||
+W|B|B|G|Sales, Orders and Production| |1|WBB.4gi|||||
+W|B|C|G|Sales By State, Group, Quality| |1|WBC.4gi|||||
+W|L|1|G|Labourer Maintenance||9|WL1.4gi|||||
+W|L|2|G|Labour Class||1|WL2.4gi|||||
+W|L|3|G|Labour Type||1|WL3.4gi|||||
+W|L|4|G|Labour Rates||1|WL4.4gi|||||
+W|L|5|G|Labour Charge||1|WL5.4gi|||||
+W|L|6|G|Supervisor Maintenance||1|WL6.4gi|||||
+W|L|9|G|Labourer Notes||1|WL9.4gi|||||
+W|6|1|G|Supply and Lay Orders||9|W61.4gi|||||
+I|K|1|G|Maintain Kit/Blend||1|IK1.4gi|||||
+I|K|2|G|Compile Kit/Blend||1|IK2.4gi|||||
+W|9|7|G|Sands/Stones Invoice Entry||1|W31 S|||||
+W|9|8|G|Landfill Invoice Entry||1|W31 L|||||
+W|U|5|G|Orders Report||1|WU5.4gi|||||
+W|U|6|G|Order Lines Report||1|WU6.4gi|||||
+W|U|7|G|Order Line Rates Report||1|WU7.4gi|||||
+W|U|8|G|Call Forward Report||1|WU8.4gi|||||
+W|6|2|G|Payment Generation||1|W62.4gi|||||
+W|6|3|G|Labourer Scan||1|W63.4gi|||||
+W|Q|2|G|Labour Payments||1|WQ2.4gi|||||
+W|Q|3|G|Labour Pay Advice||1|WQ3.4gi|||||
+W|Q|4|G|Outstanding Labour||1|WQ4.4gi|||||
+P|B|9|G|Vouchers by Year||1|PB9.4gi|||||
+W|S|2|G|Post Labour Transactions||1|WS2.4gi|||||
+W|6|6|G|Invoice Generation||1|W66.4gi|||||
+W|M|1|G|Sales by Salesperson/Customer| |1|WM1.4gi|||||
+W|M|2|G|Sales by Sales Area/Customer| |1|WM2.4gi|||||
+W|M|3|G|Sales by Sales Area/Product| |1|WM3.4gi|||||
+A|S|L|G|External Load||1|ASL.4gi|||||
+R|Z|3|G|Purchase Order Types/Formats||1|RZ3.4gi|||||
+I|U|1|G|Product Amendment Inquiry||1|IU1.4gi|||||
+I|U|2|G|Pricing Amendment Report||1|IU2.4gi|||||
+I|U|3|G|Costs Amendment Report||1|IU3.4gi|||||
+W|S|H|G|Statement Print (VIC)||1|WSH.4gi|||||
+W|S|I|G|Statement Print (QLD)||1|WSI.4gi|||||
+W|S|J|G|Statement Print (TAS)||1|WSJ.4gi|||||
+W|Q|9|G|Work Orders Report||1|WQ9.4gi|||||
+U|5|2|G|Street Maintenance||9|U52.4gi|||||
+U|5|5|G|Street and Suburb Load||1|U55.4gi|||||
+P|S|W|G|WHICS-OPEN AP Interface File L||1|PSW.4gi|||||
+E|9|B|G|Detailed Held Order Report||1|ER2.4gi|||||
+G|Z|2|G|Journal Types||1|GZ2.4gi|||||
+K|Z|P|G|Subscription Parameters|||KZP.4gi|||||
+K|L|2|G|Generate Invoices|||KL2.4gi|||||
+K|1|5|G|Corporate Subscriptions|||K15.4gi|||||
+K|A|1|G|Renewals Entry||1|KA1.4gi|||||
+I|E|1|G|Dangerous Goods Classes||1|IE1.4gi|||||
+I|E|2|G|Dangerous Goods Codes||1|IE2.4gi|||||
+P|2|B|G|Voucher Hold Change||1|P2B.4gi|||||
+W|R|K|G|Outstanding Invoices||1|WRK.4gi|||||
+G|L|3|G|Maintain Main Groups||1|GL3.4gi|||||
+W|U|3|G|Credit Approval Inquiry||1|WU3.4gi|||||
+W|U|9|G|Credit Approval Report||1|WU9.4gi|||||
+G|L|4|G|Maintain Sub Groups||1|GL4.4gi|||||
+G|L|1|G|Report Definitions||1|GL1.4gi|||||
+G|L|2|G|Report Data Extraction||1|GL2.4gi|||||
+W|2|Z|G|Delivery Docket Re-Print (TAS)||1|W2Z.4gi|||||
+W|2|Y|G|Create Delivery Dockets  (TAS)||1|W2Y.4gi|||||
+W|M|4|G|Sales by Reporting Code| |1|WM4.4gi|||||
+W|M|5|G|Orders by Salesperson/Customer| |1|WM5.4gi|||||
+W||1|G|Automatic Price Update|||W 1.4gi|||||
+W|I|1|G|Generate Price Updates||1|WI1.4gi|||||
+W|I|2|G|Pending Price Change Report||1|WI2.4gi|||||
+W|I|3|G|Pending Product Pricing||1|WI3.4gi|||||
+W|I|4|G|Automatic Price Update||1|WI4.4gi|||||
+W|R|I|G|Cancelled Orders||1|WRI.4gi|||||
+W|Q|6|G|Supervisor Quote Details||1|WQ6.4gi|||||
+W|Z|P|G|Parameter Maintenance||1|WZP.4gi|||||
+W|R|T|G|Invoice Charging Details||1|WRT.4gi|||||
+W|R|U|G|Credit Charging Details||1|WRU.4gi|||||
+E|1|8|G|Order Scan by Date||1|E18.4gi|||||
+E|1|9|G|Outstanding Orders Scan||1|E19.4gi|||||
+E|1|A|G|Order Scan by Product||1|E1A.4gi|||||
+G|1|4|G|Chart of Accounts Inquiry||1|G14.4gi|||||
+E|3|A|G|Back Orders by Customer Report||1|E97.4gi|||||
+E|3|B|G|Back Orders by Product Report||1|E98.4gi|||||
+E|3|C|G|Back Orders by Due Date Report||1|E99.4gi|||||
+E|9|1|G|Sales Orders Report||1|E91.4gi|||||
+E|9|2|G|Sales Orders By Number||1|E92.4gi|||||
+E|9|3|G|Sales Orders By Ship Date||1|E93.4gi|||||
+E|9|4|G|Sales Orders By Project/Job||1|E94.4gi|||||
+E|9|5|G|Order Detail Report||1|E95.4gi|||||
+E|9|6|G|Order Detail By Product ID||1|E96.4gi|||||
+E|9|7|G|Back Orders Report||1|E97.4gi|||||
+E|9|8|G|Back Orders by Product ID||1|E98.4gi|||||
+E|9|9|G|Back Orders by Date||1|E99.4gi|||||
+S|P|1|G|Customer/Product Pricing||1|smcupri|||||
+S|P|2|G|Customer Price List||1|slcupri|||||
+P|R|C|G|Period Activity Report||1|PRC.4gi|||||
+S|R|M|G|Delivery Manifest||1|srdelm|||||
+S|R|R|G|Production List||1|srprlst|||||
+S|Z|C|G|Carrier Maintenance||1|smcarr|||||
+P|3|C|G|Payment Run Cancel||1|P3C.4gi|||||
+E|1|6|G|Order Scan||1|E16.4gi|||||
+W|7|A|G|Quotation Entry Report||1|W7A.4gi|||||
+W|7|C|G|Quotation Detail Report||1|W7C.4gi|||||
+W|7|4|G|Quotation Scan - By Product||1|W74.4gi|||||
+W|7|6|G|Quotation Inquiry by Product||1|W76.4gi|||||
+W|7|9|G|Quotation Cancel||1|W79.4gi|||||
+G|B|Q|G|AR Summary Batch Drill Down||1|GBQ.4gi|||||
+P|3|A|G|Automatic Payment Generation||1|P3A.4gi|||||
+W|Q|A|G|Roof Tile Certificate||1|WQA.4gi|||||
+W|M|6|G|Orders by Sales Area/Customer| |1|WM6.4gi|||||
+W|M|7|G|Orders by Sales Area/Product| |1|WM7.4gi|||||
+W|M|8|G|Orders by Reporting Code| |1|WM8.4gi|||||
+E|U|5|G|Product Monthly Turnover||1|EU5.4gi|||||
+P|B|E|G|Voucher Approval Report||1|PBE.4gi|||||
+I|S|U|G|Product Transaction Purge||1|ISU.4gi|||||
+E|U|6|G|Product Turnover by Net Value||1|EU6.4gi|||||
+I|5|1|G|Stock Transfer Entry||1|I51.4gi|||||
+W|2|9|G|Stock Transfer Receipt||1|W29.4gi|||||
+I|T|A|G|External Stock-take Load||1|ITA.4gi|||||
+I|Z|I|G|Transaction Load Parameter Mai||1|IZI.4gi|||||
+I|5|8|G|Stock Transfer Confirmation||1|I58.4gi|||||
+I|5|9|G|Stock Transfer Receipt||1|I59.4gi|||||
+I|5|A|G|Stock Transfer Report||1|I5A.4gi|||||
+I|5|2|G|Delivery Scheduling||1|W21.4gi|||||
+I|5|3|G|Delivery Docket Print||1|W22.4gi|||||
+J|7|C|G|Accrual Reversal||1|J7C.4gi|||||
+N|1|5|G|Requisition Edit by Person||9|N15.4gi|||||
+W|Z|S|G|Additional Charge Rates||1|WZS.4gi|||||
+A|6|3|G|Deposit Edit||1|A63.4gi|||||
+A|6|4|G|Generate Bank Deposit||1|A64.4gi|||||
+A|6|P|G|POS Bank Deposit Calculator||1|A6P.4gi|||||
+I|Z|Q|G|Product Data Load||1|IZQc.4gi|||||
+W|Z|Q|G|Data Load Programs||1|WZQa.4gi|||||
+I|B|C|G|Re-order Report||1|IBC.4gi|||||
+U|5|7|G|Suburb Distances Load||1|U57.4gi|||||
+W|Z|F|G|Notional Cartage Rates||1|WZF.4gi|||||
+J|1|1|G|Job Addition||1|J11.4gi|||||
+A|6|1|G|Bank Deposit Calculator||1|A61.4gi|||||
+A|6|2|G|Trial Deposit Print||1|A62.4gi|||||
+I|D|6|G|Generate Requisitions||1|ID6.4gi|||||
+A|S|W|G|WHICS-OPEN AR Interface Load||1|ASW.4gi|||||
+W|R|N|G|Credits by Credit Reason||1|WRN.4gi|||||
+G|R|L|G|Approved Funds Account Details||1|GRL.4gi|||||
+J|1|2|G|Job Inquiry||1|J12.4gi|||||
+J|R|8|G|Timesheet Hours by Department||1|JR8.4gi|||||
+I|5|C|G|Stock Transfer Entry - Type 1||1|I5C.4gi|||||
+I|5|D|G|Stock Transfer Entry - Type 2||1|I5D.4gi|||||
+W|R|H|G|Order Line Changes Report!!!!!||1|WRH.4gi|||||
+I|Z|H|G|Bin Location Maintenance||1|IZH.4gi|||||
+W|R|D|G|Forward Schedule Report||1|WRD.4gi|||||
+I|S|V|G|Inventory System Verify||1|ISV.4gi|||||
+P|X|3|G|Westpac Interface| |1|PX3_J.4gi| | | | |
+P|S|K|G|Vendor Details Update||1|PSK.4gi|||||
+W|D|8|G|Driver Transactions Extract||1|WD8.4gi|||||
+A|1|F|G|Customer Product Codes||1|A1F.4gi|||||
+J|1|4|G|Job Edit||1|J14.4gi|||||
+J|1|5|G|Job Ledger Scan||1|J15.4gi|||||
+J|1|8|G|Job Ledger by Job||1|J18.4gi|||||
+J|1|9|G|Job Master Add||1|J19.4gi|||||
+J|2|1|G|Voucher Entry||1|P21.4gi|||||
+J|2|2|G|Voucher Distribution||1|P29.4gi|||||
+J|2|3|G|Voucher Inquiry||1|P25.4gi|||||
+J|2|4|G|Voucher Edit||1|P27.4gi|||||
+J|2|5|G|Adjustment Entry||1|J24.4gi|||||
+J|2|6|G|Adjustment Inquiry||1|J25.4gi|||||
+J|3|1|G|Invoice Jobs||1|J31.4gi|||||
+J|3|2|G|Invoice Inquiry||1|J32.4gi|||||
+J|3|3|G|Invoice Print||1|J33.4gi|||||
+J|3|4|G|Pre Invoice Report||1|J34.4gi|||||
+J|3|6|G|Invoice Edit| |1|J36.4gi|||||
+J|3|7|G|Scan Resource Billing||1|J37.4gi|||||
+J|4|1|G|Update Status||1|J41.4gi|||||
+J|4|3|G|Reactivate Activity||1|J43.4gi|||||
+J|4|A|G|Completed Report||1|J4A.4gi|||||
+J|5|1|G|Activity Addition||1|J51.4gi|||||
+J|5|2|G|Activity Inquiry||1|J52.4gi|||||
+J|5|3|G|Activity Image||1|J53.4gi|||||
+J|5|4|G|Activity Edit||1|J54.4gi|||||
+J|6|1|G|Variation Addition||1|J61.4gi|||||
+J|6|2|G|Variation Inquiry||z|J62.4gi|||||
+J|7|1|G|Resource Addition||1|J71.4gi|||||
+J|7|4|G|Resource Edit||1|J74.4gi|||||
+J|7|5|G|Resource Allocation||1|J75.4gi|||||
+J|7|6|G|Resource All. Inquiry||1|J76.4gi|||||
+J|8|1|G|Timesheet Entry||1|J81.4gi|||||
+J|8|2|G|Timesheet Edit||1|J82.4gi|||||
+J|8|3|G|Person Maintenance||1|J83.4gi|||||
+J|8|4|G|Timesheet Scan||1|J84.4gi|||||
+J|8|7|G|Timesheet Posting||1|J87.4gi|||||
+J|9|1|G|Product Issue||1|J91.4gi|||||
+J|9|2|G|Issue Inquiry||1|J92.4gi|||||
+J|A|1|G|Contract Add||1|JA1.4gi|||||
+J|A|2|G|Contract Edit||1|JA2.4gi|||||
+W|Q|7|G|Supply and Lay Profit||1|WQ7.4gi|||||
+A|1|1|G|Customer Addition||3|A11.4gi|||||
+A|1|2|G|Customer Inquiry||1|A12.4gi|||||
+A|1|3|G|Customer Notes (by Cust)||3|A13.4gi|||||
+A|1|5|G|Customer Maintenance||1|A15.4gi|||||
+A|1|6|G|Customer Credit Status||1|A16.4gi|||||
+A|1|7|G|Customer Shipping Addr.||1|A17.4gi|||||
+A|1|A|G|Customer History||1|A1A.4gi|||||
+A|1|B|G|Customer Ledger||1|A1B.4gi|||||
+A|2|2|G|Invoice & Receipt Entry||1|A22.4gi|||||
+A|2|5|G|Invoice Inquiry||1|A25.4gi|||||
+A|2|6|G|Invoice Scan||1|A26.4gi|||||
+A|2|7|G|Invoice Edit||1|A27.4gi|||||
+P|4|9|G|Cheque Unapply||1|P49.4gi|||||
+A|3|1|G|Enter & Apply Receipt||1|A31.4gi|||||
+A|3|2|G|Receipt Entry||1|A32.4gi|||||
+A|3|5|G|Receipt Inquiry||1|A35.4gi|||||
+A|3|6|G|Receipt Scan||1|A36.4gi|||||
+A|3|7|G|Receipt Edit||1|A37.4gi|||||
+A|3|A|G|Receipt Application||1|A3A.4gi|||||
+A|4|1|G|Credit Entry/Edit||1|A41.4gi|||||
+A|4|5|G|Credit Inquiry||1|A45.4gi|||||
+A|4|6|G|Credit Scan||1|A46.4gi|||||
+W|A|1|G|Orders by Salesperson/Customer| |1|WA1.4gi|||||
+A|4|8|G|Credit Apply||1|A48.4gi|||||
+A|A|1|G|Customer Addr. Listing||5|AA1.4gi|||||
+A|B|4|G|Invoice by Customer PO||1|AB4.4gi|||||
+A|B|5|G|Invoice by Order Number||1|AB5.4gi|||||
+A|B|A|G|Invoice Detail||1|ABA.4gi|||||
+A|B|B|G|Invoice by Product||1|ABB.4gi|||||
+G|A|6|G|Available Funds Report||1|GA6.4gi|||||
+A|C|1|G|Receipt by Customer||1|AC1.4gi|||||
+A|C|2|G|   By Number||1|AC2.4gi|||||
+A|C|3|G|   By Period||1|AC3.4gi|||||
+A|C|4|G|   By Cheque||1|AC4.4gi|||||
+A|D|B|G|Credits by Number||1|ADB.4gi|||||
+A|D|C|G|Credits by Period||1|ADC.4gi|||||
+A|D|D|G|Credits by Cust. Memo||1|ADD.4gi|||||
+A|D|E|G|Credit Detail||1|ADE.4gi|||||
+A|R|1|G|Detailed Aging||1|AR1.4gi|||||
+A|R|5|G|Cash Forecast||1|AR5.4gi|||||
+A|R|6|G|Sales Commissions||1|AR6.4gi|||||
+A|A|2|G|Customer Phone Listing||4|AA2.4gi|||||
+A|A|D|G|Customer Ledger||1|AAD.4gi|||||
+A|A|C|G|Customer History||1|AAC.4gi|||||
+A|A|B|G|Summary Aging Report||1|AAB.4gi|||||
+A|R|7|G|Sales Tax Billed||1|AR7.4gi|||||
+A|R|A|G|Audit Trail||1|ARA.4gi|||||
+A|S|5|G|Account Aging||1|AS5.4gi|||||
+A|S|6|G|Print Statements||1|AS6|||||
+A|S|1|G|Invoice Print||1|AS1|||||
+A|S|7|G|Post Period Activity||1|AS7.4gi|||||
+A|D|A|G|Credits by Customer||1|ADA.4gi|||||
+A|R|2|G|Activity Summary||1|AR2.4gi|||||
+A|A|A|G|Credit Status||1|AAA.4gi|||||
+A|A|8|G|Shipping Address||1|AA8.4gi|||||
+A|1|C|G|Audit Trail||1|A1C.4gi|||||
+A|B|1|G|Invoice by Customer||1|AB1.4gi|||||
+A|B|2|G|Invoice by Number||1|AB2.4gi|||||
+A|C|5|G|Receipt Applications||1|AC5.4gi|||||
+A|B|3|G|Invoice by Period||1|AB3.4gi|||||
+A|2|1|G|Invoice Entry||1|A21.4gi|||||
+A|A|3|G|Customer Notes||1|AA3.4gi|||||
+A|A|5|G|Customer By Postcode||1|AA5.4gi|||||
+A|A|6|G|Customer By Salesperson||1|AA6.4gi|||||
+A|A|7|G|Customer By Cust. Type||1|AA7.4gi|||||
+A|S|A|G|Mailing Labels||1|ASA.4gi|||||
+G|Z|7|G|Group Codes||1|GZ7.4gi|||||
+G|R|9|G|Group Codes||1|GR9.4gi|||||
+I|S|8|G|Product Quotation Processing||1|IS8.4gi|||||
+A|Z|2|G|Term Codes||1|AZ2.4gi|||||
+A|Z|3|G|Salespersons||1|AZ3.4gi|||||
+A|Z|4|G|Customer Types||1|AZ4.4gi|||||
+A|Z|5|G|Statement Messages||1|AZ5.4gi|||||
+A|Z|P|G|AR Parameters||1|AZP.4gi|||||
+W|7|1|G|Quotation Entry||1|W71.4gi|||||
+G|1|1|G|Account Inquiry||1|G11.4gi|||||
+G|1|2|G|Account Scan||1|G12.4gi|||||
+G|1|5|G|Account Budget||1|G15.4gi|||||
+G|1|6|G|Account History||1|G16.4gi|||||
+G|1|A|G|Ledger Detail Inquiry||1|G1A.4gi|||||
+G|1|B|G|Ledger Detail Scan||1|G1B.4gi|||||
+G|2|1|G|Batch Entry||1|G21.4gi|||||
+G|2|2|G|Batch Edit||1|G22.4gi|||||
+G|2|5|G|Batch Inquiry||1|G25.4gi|||||
+G|2|6|G|Batch Scan||1|G26.4gi|||||
+G|2|A|G|Batch Detail Inquiry||1|G2A.4gi|||||
+P|7|1|G|Recurring Expense Maintenance||1|P71.4gi|||||
+G|A|1|G|Account vs Budget Report||1|GA1.4gi|||||
+G|A|2|G|Account Period Summary Report||1|GA2.4gi|||||
+G|A|3|G|Account Detail Report||1|GA3.4gi|||||
+G|A|5|G|Budget Variance Report||1|GA5.4gi|||||
+G|2|C|G|Batch Clearance||1|G2C.4gi|||||
+G|A|7|G|Budget Percentage Report||1|GA7.4gi|||||
+G|2|7|G|External Batch Load||1|G27.4gi|||||
+G|A|9|G|Budget Worksheet Report I||1|GA9.4gi|||||
+G|B|1|G|Batch Summary||1|GB1.4gi|||||
+G|B|2|G|By Number||1|GB2.4gi|||||
+G|B|3|G|By Entry Date||1|GB3.4gi|||||
+G|B|5|G|Batch Detail II||1|GB5.4gi|||||
+G|B|6|G|By Account||1|GB6.4gi|||||
+G|R|1|G|Chart of Accounts||1|GR1.4gi|||||
+W|7|2|G|Quotation Scan - By Quote||1|W72.4gi|||||
+W|7|5|G|Quotation Inquiry||1|W75.4gi|||||
+W|7|7|G|Quotation Edit||1|W77.4gi|||||
+G|R|A|G|Trial Balance||1|GRA.4gi|||||
+U|N|1|G|System Notes Maintenance||1|UN1.4gi|||||
+G|S|2|G|Rollup History||1|GS2.4gi|||||
+G|S|3|G|Copy COA||1|GS3.4gi|||||
+I|Z|R|G|Promotion Maintenance||1|IZR.4gi|||||
+J|1|A|G|Master Job Edit||1|J1A.4gi|||||
+G|S|6|G|Inter Company Copy||1|GS6.4gi|||||
+G|S|7|G|Reset COA Start Dates||1|GS7.4gi|||||
+G|Z|1|G|Chart of Accounts||1|GZ1.4gi|||||
+G|G|B|G|Group Summary Definition||1|GGB.4gi|||||
+G|Z|3|G|Define GL Structure||1|GZ3.4gi|||||
+G|Z|4|G|Maintain Segments||1|GZ4.4gi|||||
+G|Z|8|G|Currency||1|GZ8.4gi|||||
+P|Z|5|G|Vendor Types||1|PZ5.4gi|||||
+G|Z|C|G|Company Information||1|GZC.4gi|||||
+G|Z|P|G|GL Parameters||1|GZP.4gi|||||
+G|C|1|G|Deposit/Credits||1|GC1.4gi|||||
+R|1|4|G|P.O. Header Edit||1|R14.4gi|||||
+N|4|Z|G|P.O Inquiry||1|R13.4gi|||||
+G|A|C| |Budget Worksheet Report II||1|GAC.4gi|||||
+A|1|4|G|Customer Notes (by Note)||3|A14.4gi|||||
+E|3|1|G|Back Order Product Allocation||1|E31.4gi|||||
+R|1|3|G|P.O. Inquiry||1|R13.4gi|||||
+G|L|5|G|Import Data Extraction||1|GL5.4gi|||||
+L|1|6|G|Shipment Voucher Scan||1|L16.4gi|||||
+G|X|X|G|Account Inquiry||1|GXX.4gi|||||
+J|5|5|G|Master Activity Edit||1|J55.4gi|||||
+G|S|A|G|Year End Close||1|GSA.4gi|||||
+P|4|3|G|Cheque, Voucher & Apply||1|P43.4gi|||||
+G|Z|6|G|Bank Accounts||1|GZ6.4gi|||||
+U|6|1|G|Interval Type Maintenance||1|U61.4gi|||||
+P|4|4|G|Payment Cancel||1|P44.4gi|||||
+L|A|5|G|Credit - Details||1|LA5.4gi|||||
+L|6|4|G|Credit Shipment Edit||1|L64.4gi|||||
+G|G|S|G|Segment Summary Definition||1|GGS.4gi|||||
+N|4|3|G|Requisition Approval by Person||1|N43.4gi|||||
+R|1|7|G|P.O. Complete||1|R17.4gi|||||
+L|6|9|G|Quantity Receipt Entry||1|L69.4gi|||||
+L|6|8|G|Goods Receipt Entry||1|L68.4gi|||||
+E|W|2|G|Distribution Trends||9|EW2.4gi|||||
+E|5|A|G|Automated Delivery Cycle| |1|E5A.4gi|||||
+E|Z|4|G|Carrier Maintenance| |1|EZ4.4gi|||||
+E|Z|P|G|EO Parameters| |1|EZP.4gi|||||
+E|W|1|G|Distribution||9|EW1.4gi|||||
+U|N|2|G|System Notes Report||1|UN2.4gi|||||
+L|6|1|G|Credit Shipment Entry||1|L61.4gi|||||
+E|5|5|G|Shipping Label Generation| |1|E55.4gi|||||
+E|S|6|G|Enhanced Order Confirmation||1|ES6_S.4gi|||||
+E|5|4|G|Consignment Note Generation| |1|E54.4gi|||||
+L|4|2|G|By Value||1|L42.4gi|||||
+E|S|5|G|Order Confirmation Summary||1|ES5_S.4gi|||||
+L|A|3|G|Detailed Receipt Report||1|LA3.4gi|||||
+U|N|3|G|Notes Transfer to Customer||1|UN3.4gi|||||
+A|Z|M|G|Sales Managers| |1|AZM.4gi|||||
+A|Z|R|G|Account Credit Reasons| |1|AZR.4gi|||||
+I|Z|G|G|Product Groups| |1|IZG.4gi|||||
+L|1|5|G|Potential to Finalise Scan||1|L15.4gi|||||
+E|S|4|G|Order Amendment Unload||1|ES4.4gi|||||
+A|Z|T|G|Sales Territories| |1|AZT.4gi|||||
+I|Z|M|G|Main Product Groups||1|IZM.4gi|||||
+E|5|3|G|Order Confirmation| |1|E53.4gi|||||
+U|3|1|G|Message Library Maintenance| |1|U31.4gi|||||
+U|3|2|G|Message Library Report| |1|U32.4gi|||||
+E|1|1|G|Order Entry| |1|E11.4gi|||||
+G|A|J|G|Account History by Jrnl Code||1|GAJ.4gi|||||
+E|5|2|G|Picking Slip Generation||1|E52.4gi|||||
+A|Z|A|G|Sales Areas| |1|AZA.4gi|||||
+A|C|9|G|Receipt Details||1|AC9.4gi|||||
+I|S|P|G|Inventory Posting||1|ISP.4gi|||||
+L|Z|1|G|Tariff Codes||1|LZ1.4gi|||||
+L|Z|2|G|Status Codes||1|LZ2.4gi|||||
+L|Z|3|G|Shipment Types||1|LZ3.4gi|||||
+L|Z|4|G|Cost Type Codes||1|LZ4.4gi|||||
+I|B|A|G|Top 100 Prod's by Sale or Vol||1|IBA.4gi|||||
+I|F|1|G|FIFO Cost Inquiry||1|IF1.4gi|||||
+I|F|2|G|FIFO Stock Valuation Inquiry||1|IF2.4gi|||||
+L|1|7|G|Shipment Debit Scan||1|L17.4gi|||||
+L|4|1|G|By Qty||1|L41.4gi|||||
+I|D|8|G|Stock Replenishment Report||1|ID8.4gi|||||
+L|A|1|G|Shipment Detail List||1|LA1.4gi|||||
+L|A|2|G|Goods Receipt Binning List||1|LA2.4gi|||||
+L|S|1|G|Finalise Shipment||1|LS1.4gi|||||
+I|1|8|G|Product Barcodes||1|I18.4gi|||||
+I|F|3|G|FIFO Cost Ledger Inquiry||1|IF3.4gi|||||
+E|9|E|G|Picking Slip Summary Report||1|E9E.4gi|||||
+I|F|4|G|Detailed FIFO Valuation Report||1|IF4.4gi|||||
+L|1|4|G|Shipment Edit||1|L14.4gi|||||
+L|1|3|G|Shipment Detail Scan||1|L13.4gi|||||
+L|Z|P|G|Setup Parameters||1|LZP.4gi|||||
+L|1|2|G|Shipment Inquiry||1|L12.4gi|||||
+L|1|1|G|Shipment Entry||1|L11.4gi|||||
+E|S|L|G|Order Entry External File Load||1|ESL_S|||||
+E|Z|I|G|Order Import Facility||1|EZI.4gi|||||
+I|B|D|G|Stock Sales Extract Report||1|IBD.4gi|||||
+W|C|1|G|Complaint Entry| |1|WC1.4gi|||||
+W|R|J|G|Stock/Orders on Hand Detail||1|WRJ.4gi|||||
+W|C|5|G|Complaint Inquiry||1|WC5.4gi|||||
+W|C|7|G|Complaint Edit||1|WC7.4gi|||||
+W|C|8|G|Complaint Group Maintenance| |1|WC8.4gi|||||
+W|C|9|G|Complaint Code Maintenance| |1|WC9.4gi|||||
+W|C|A|G|Outstanding Complaints| |1|WCA.4gi|||||
+W|C|B|G|Complaints by Department| |1|WCB.4gi|||||
+W|C|C|G|Completed Complaints| |1|WCC.4gi|||||
+W|1|I|G|Inter Division Orders||1|W1I.4gi|||||
+W|D|1|G|Manual Driver Transaction Entr||1|WD1.4gi|||||
+Q|A|8|G|Quotation Print (Std format)||1|QA8a.4gi|||||
+Q|A|5|G|   By Detail||1|QA5.4gi|||||
+W|D|7|G|Transport Trip Summary Report||1|WD7.4gi|||||
+J|7|7|G|Enter Budgets By Resource||1|J77.4gi|||||
+G|G|R|G|Group Segment Summary Report||1|GGR.4gi|||||
+I|T|7|G|Stock-take Reversal Post||1|IT7.4gi|||||
+W|S|7|G|Invoice Upload| |1|WS7.4gi|||||
+P|B|D|G|Duplicate Voucher Exception||1|PBD.4gi|||||
+W|7|B|G|Quote Summary by Salesperson||1|W7B.4gi|||||
+P|1|1|G|Vendor Addition||1|P11.4gi|||||
+P|1|2|G|Vendor Inquiry||1|P12.4gi|||||
+P|2|C|G|Voucher Edit Distrib.||1|P29.4gi E|||||
+P|1|3|G|Vendor Notes||1|P13.4gi|||||
+P|1|5|G|Vendor Address Maintenance||1|P15.4gi|||||
+P|1|6|G|Vendor Maintenance||1|P16.4gi|||||
+P|1|A|G|Vendor History||1|P1A.4gi|||||
+P|1|B|G|Vendor Ledger||1|P1B.4gi|||||
+P|1|C|G|Audit Trail||1|P1C.4gi|||||
+P|2|1|G|Voucher Entry||1|P21.4gi|||||
+P|2|2|G|Voucher & Payment Entry||1|P22.4gi|||||
+P|2|5|G|Voucher Inquiry||1|P25.4gi|||||
+P|2|6|G|Voucher Scan||1|P26.4gi|||||
+P|2|7|G|Voucher Edit||1|P27.4gi|||||
+P|2|8|G|Vendor Invoices||1|P28.4gi|||||
+P|2|A|G|Voucher Payments||1|P26 P|||||
+P|3|1|G|Payment Calculator||1|P31.4gi|||||
+P|3|2|G|Payment Register Report||1|P32.4gi|||||
+P|3|3|G|Payment Adjustment||1|P33.4gi|||||
+P|4|1|G|Cheque Enter & Apply||1|P41.4gi|||||
+P|4|2|G|Cheque Entry||1|P42.4gi|||||
+P|4|5|G|Payment Inquiry||1|P45.4gi|||||
+P|4|6|G|Payment Scan||1|P46.4gi|||||
+P|4|7|G|Cheque Edit||1|P47.4gi|||||
+P|4|8|G|Cheques by Number||1|P48.4gi|||||
+P|4|A|G|Cheque Apply||1|P4A.4gi|||||
+U|6|2|G|Interval Maintenance||1|U62.4gi|||||
+U|6|3|G|Statistic Parameters||1|U63.4gi|||||
+J|7|8|G|Update Budgets By Resource||1|J78.4gi|||||
+P|A|1|G|Vendors||1|PA1.4gi|||||
+P|A|2|G|Vendor Phone List||1|PA2.4gi|||||
+P|A|3|G|Vendor Notes||1|PA3.4gi|||||
+P|A|5|G|Credit Status||1|PA5.4gi|||||
+P|A|6|G|Credit Aging||1|PA6.4gi|||||
+P|A|7|G|Vendor Histories||1|PA7.4gi|||||
+P|A|8|G|Vendor Ledgers||1|PA8.4gi|||||
+P|B|1|G|Vouchers||1|PB1.4gi|||||
+P|B|2|G|   By Number||1|PB2.4gi|||||
+P|B|3|G|   By Period||1|PB3.4gi|||||
+P|B|4|G|   By Vendor Invoice||1|PB4.4gi|||||
+P|B|5|G|   By P.O. Number||1|PB5.4gi|||||
+P|B|A|G|Voucher Detail||1|PBA.4gi|||||
+P|C|1|G|Cheques||1|PC1.4gi|||||
+P|C|2|G|   By Number||1|PC2.4gi|||||
+P|3|4|G|Generate Cheque or EFT Payment||1|P34.4gi|||||
+P|C|3|G|   By Period||1|PC3.4gi|||||
+G|R|C|G|AR - GL Reconcile||1|GRC.4gi|||||
+P|C|5|G|Cheque Applications||1|PC5.4gi|||||
+P|C|A|G|Debits||1|PCA.4gi|||||
+P|C|B|G|   By Number||1|PCB.4gi|||||
+P|C|C|G|   By Period||1|PCC.4gi|||||
+P|Z|I|G|AP Load File Defaults||1|PZI.4gi|||||
+I|R|5|G|Product Quotation Report||1|IR5.4gi|||||
+P|R|1|G|Detailed Aging||1|PR1.4gi|||||
+P|R|2|G|Activity Summary||1|PR2.4gi|||||
+J|7|9|G|Resource Budget Inquiry||1|J79.4gi|||||
+A|4|9|G|Credit Unapply||1|A49.4gi|||||
+P|R|5|G|Cash Forecast||1|PR5.4gi|||||
+Q|1|3|G|Quotation Scan||1|Q13.4gi|||||
+P|R|A|G|Audit Trail by Date||1|PRA.4gi|||||
+P|P|1|G|Post Activity||1|PP1.4gi|||||
+R|2|7|G|Goods Receipt Inquiry||1|R27.4gi|||||
+E|5|X|G|Order Confirmation| |1|E5X.4gi|||||
+I|5|6|G|Stock Transfer Confirmation -2||1|W24.4gi|||||
+I|S|9|G|Vendor Price List Comparison||1|IS9.4gi|||||
+A|A|M|G|Debtors Funds Employed Report||1|AAM.4gi|||||
+P|R|E|G|Creditor Funds Employed Report||1|PRE.4gi|||||
+J|R|M|G|Job Cost Transaction Report||1|JRM.4gi|||||
+I|5|T|G|Transfer Confirmation Report||1|I5T.4gi|||||
+J|7|B|G|Activity Accrual Entry||1|J7B.4gi|||||
+G|C|A|G|For Cur Recon||1|GCA.4gi|||||
+U|1|7|G|Memo Facility||2|U17.4gi|||||
+G|S|B|G|Subsidiary Postings||1|GSB.4gi|||||
+P|S|4|G|Mailing Labels||1|PS4.4gi|||||
+P|6|1|G|Debit Enter & Apply||1|P61.4gi|||||
+P|Z|3|G|Hold Pay Codes||1|PZ3.4gi|||||
+P|Z|P|G|AP Parameters||1|PZP.4gi|||||
+R|1|9|G|P.O. Audit Inquiry||9|R19.4gi|||||
+R|1|1|G|P.O. Entry||1|R11.4gi|||||
+R|1|2|G|P.O. Confirmation||1|R12.4gi|||||
+R|1|6|G|P.O. Scan||1|R16.4gi|||||
+R|2|1|G|Goods Receipt||1|R21.4gi|||||
+R|3|3|G|Outstanding by Product||1|R33.4gi|||||
+R|3|2|G|Outstanding by Job||1|R32.4gi|||||
+R|3|1|G|Outstanding by Account||1|R31.4gi|||||
+P|X|1|G|Cheque/Remittance Print| |1|PX1.4gi| | | | |
+P|X|2|G|Remittance Print| |1|PX2.4gi| | | | |
+P|S|1|G|Account Aging||1|PS1.4gi|||||
+R|S|1|G|Print P.O.'s||1|RS1.4gi|||||
+I|S|A|G|External Product File Load||1|ISA.4gi|||||
+R|2|5|G|Scan by Product||1|R25.4gi|||||
+R|2|4|G|Scan by Account||1|R24.4gi|||||
+R|2|3|G|Scan by Job||1|R23.4gi|||||
+R|S|2|G|Post to GL||1|RS2.4gi|||||
+G|C|8|G|Bank Transfer/FOREX||1|GC8.4gi|||||
+R|2|2|G|Scan Overdue Orders||1|R22.4gi|||||
+R|Z|P|G|PU Parameters||1|RZP.4gi|||||
+J|3|8|G|Job Invoice Print & Close||1|J38.4gi|||||
+U|1|1|G|Change Company||3|U11.4gi|||||
+U|1|2|G|User Maintenance||2|U12.4gi|||||
+U|R|P|G|Print Device Maintenance||1|URP.4gi|||||
+U|2|1|G|Menu Maintenance||1|U21.4gi|||||
+U|2|A|G|Menu Report||1|U2A.4gi|||||
+A|5|1|G|Collection Calls||1|A51.4gi|||||
+A|5|2|G|Print Receivables||1|AR1.4gi|||||
+A|5|3|G|Cash Flow Analysis||1|A53.4gi|||||
+A|5|4|G|Hold (Release) Customers||1|A54.4gi|||||
+A|5|5|G|Print Invoice Stories||1|AAZ.4gi|||||
+J|7|A|G|Resource Allocation Load||1|J7A.4gi|||||
+A|2|B|G|Invoice Payment Scan||1|A2B.4gi|||||
+P|B|6|G|   By Batch Number||1|PB6.4gi|||||
+W|S|C|G|Invoice/Credit Reprint (VIC)||1|WSC.4gi|||||
+J|R|D|G|Job Type Report||1|JRD.4gi|||||
+P|C|F|G|Remittance Advices||1|PCF.4gi|||||
+G|2|3|G|Batch - Recurring||1|G23.4gi|||||
+W|B|D|G|Sales By Promotions||1|WBD.4gi|||||
+G|P|2|G|Post Journals||1|GP2.4gi|||||
+G|P|4|G|Close Period||1|GP4.4gi|||||
+G|2|4|G|Batch Verify||1|G24.4gi|||||
+P|6|2|G|Debit Enter||1|P62.4gi|||||
+P|6|5|G|Debit Inquiry||1|P65.4gi|||||
+P|6|6|G|Debit Scan||1|P66.4gi|||||
+P|6|7|G|Debit Edit||1|P67.4gi|||||
+P|6|8|G|Debit Distribution||1|P68.4gi|||||
+P|6|9|G|Debit Apply||1|P69.4gi|||||
+P|2|9|G|Voucher Distribution||1|P29.4gi|||||
+A|2|A|G|Account Adjustments||1|A2A.4gi|||||
+A|3|9|G|Receipt Application (Reversal)||1|A39.4gi|||||
+U|R|S|G|Report File Management||1|URS.4gi|||||
+U|1|4|G|Error Log Print||2|U14.4gi|||||
+G|C|2|G|Bank Charges/Debits||1|GC2.4gi|||||
+G|C|3|G|Reconciliation||1|GC3.4gi|||||
+G|C|4|G|Examine Bank Statement||1|GC4.4gi|||||
+G|C|5|G|Bank Reconciliation Report||1|GC5.4gi|||||
+G|B|7|G|Post Runs||1|GB7.4gi|||||
+G|S|5|G|Organisation Change||1|GS5.4gi|||||
+G|S|8|G|Reset COA End Dates||1|GS8.4gi|||||
+G|R|3|G|Segment Codes||1|GR3.4gi|||||
+G|R|4|G|Journals||1|GR4.4gi|||||
+G|Z|A|G|Years & Periods||1|GZA.4gi|||||
+P|6|A|G|Automatic Debit Application||1|P6A.4gi|||||
+G|S|C|G|GL Subsidiary Verify||1|GSC.4gi|||||
+G|A|A|G|Account Detail by Reference||1|GAA.4gi|||||
+G|B|4|G|Batch Detail||1|GB4.4gi|||||
+G|2|8|G|Batch Reversal||1|G28.4gi|||||
+G|C|7|G|Daily Audit||1|GC7.4gi|||||
+G|S|T|G|Consolidation Transfer||1|GST.4gi|||||
+R|1|5|G|P.O. Edit||1|R15.4gi|||||
+G|S|R|G|Reset Postruns||1|GSR.4gi|||||
+G|P|6|G|Period End Reconciliation||1|GP6.4gi|||||
+J|R|E|G|Job Report||1|JRE.4gi|||||
+G|S|D|G|Update History||1|GSD.4gi|||||
+G|A|G|G|Account Detail by Chart Code||1|GAG.4gi|||||
+W|Q|8|G|Monthly Profit Report||1|WQ8.4gi|||||
+W|1|8|G|Domestic Charge Thru Sales||1|W18.4gi|||||
+W|6|8|G|S&L Charge Thru Sales||1|W68.4gi|||||
+U|R|1|G|Report Parameter Maintenance||1|UR1.4gi|||||
+A|7|4|G|Print Recurring Invoices||1|AS1h.4gi|||||
+J|R|F|G|WIP Reconciliation Report||1|JRF.4gi|||||
+J|R|G|G|Pre Invoice Summary Report||1|JRG.4gi|||||
+Q|1|8|G|Quotation Acceptance||1|Q18.4gi|||||
+J|2|7|G|Debit Entry||1|P61.4gi|||||
+J|2|8|G|Debit Distribution||1|P69.4gi|||||
+E|9|D|G|Sales Order Status Report||1|E9D.4gi|||||
+Q|A|1|G|   By Customer||1|QA1.4gi|||||
+W|2|D|G|Schedule Deliveries by Desc||1|W2D.4gi|||||
+A|S|T|G|Debtors Take-on Adjustments||1|AST.4gi|||||
+W|R|P|G|Sales/Orders by Category||1|WRP.4gi|||||
+W|B|F|G|Spending Analysis Report||1|WBF.4gi|||||
+E|5|B|G|Bulk Pick List Report||1|E5B.4gi|||||
+W|S|K|G|Outsourced Inv/Cred (VIC)||1|WSK.4gi|||||
+U||1|G|Suburb Maintenance||1|U 1.4gi|||||
+Q|1|5|G|Quotation Scan By Date||1|Q15.4gi|||||
+W|R|M|G|Credits by State Code||1|WRM.4gi|||||
+W|S|L|G|Outsourced Inv/Cred(QLD)||1|WSL.4gi|||||
+A|R|C|G|AR Period Post Report||1|ARC.4gi|||||
+W|S|M|G|Outsourced Inv/Cred (TAS)||1|WSM.4gi|||||
+W|S|N|G|Outsourced Statement (VIC)||1|WSN.4gi|||||
+W|S|O|G|Outsourced Statement (QLD)||1|WSO.4gi|||||
+W|S|P|G|Outsourced Statement (TAS)||1|WSP.4gi|||||
+A|R|8|G|AR Snapshot||1|AR8.4gi|||||
+Q|1|6|G|Quotation Scan By Valid Date||1|Q16.4gi|||||
+I|D|7|G|Recommended Re-order Report||1|ID7.4gi|||||
+I|5|B|G|Stock Transfer Entry - Type 0||1|I5B.4gi|||||
+Q|Z|P|G|QE Parameters||1|QZP.4gi|||||
+G|A|I|G|Account Reference Detail||1|GAI.4gi|||||
+W|1|4|G|Order Scan - By Product||1|W14.4gi|||||
+P|C|4|G|   By Cancellation||1|PC4.4gi|||||
+G|R|D|G|AP - GL Reconcile||1|GRD.4gi|||||
+P|R|6|G|AP Post Report||1|PR6.4gi|||||
+G|Z|D|G|Transaction Numbering||1|GZD.4gi|||||
+P|2|3|G|Voucher Approval||1|P23.4gi|||||
+P|C|7|G|Treasury Report I||1|PC7.4gi|||||
+I|S|4|G|Stock Turn Calculator||1|IS4.4gi|||||
+P|C|G|G|Intersegment Payments||1|PCG.4gi|||||
+P|C|E|G|Debit Detail||1|PCE.4gi|||||
+P|R|8|G|Summary Aging||1|PR8.4gi|||||
+P|R|9|G|AP Snapshot||1|PR9.4gi|||||
+U|1|T|G|Tailoring Options Maintenance||1|U1T.4gi|||||
+P|B|7|G|Approved Vouchers by Number||1|PB7.4gi|||||
+W|R|L|G|Invoices by State Code||1|WRL.4gi|||||
+W|Q|5|G|Labour Payments by Product||1|WQ5.4gi|||||
+I|1|1|G|Product Addition||1|I11.4gi|||||
+I|1|2|G|Product Inquiry||1|I12.4gi|||||
+I|1|3|G|Product Notes||1|I13.4gi|||||
+I|1|5|G|Product Fixed Details||1|I15.4gi|||||
+I|1|6|G|Product Stock Status||1|I16.4gi|||||
+I|1|7|G|Product Purchase Details||1|I17.4gi|||||
+I|1|A|G|Product History||1|I1A.4gi|||||
+I|1|B|G|Product Ledger||1|I1B.4gi|||||
+I|1|C|G|Product Movement||1|I1C.4gi|||||
+I|A|D|G|Product Movement Ledger||1|IAD.4gi|||||
+I|B|1|G|Status by Warehouse||1|IB1.4gi|||||
+I|B|2|G|Status by Product||1|IB2.4gi|||||
+I|B|3|G|Stock Valuation||1|IB3.4gi|||||
+I|B|4|G|Suggested Reorder||1|IB4.4gi|||||
+I|B|5|G|Critical Status||1|IB5.4gi|||||
+W|Q|B|G|Supply and Lay Accrual Details||1|WQB.4gi|||||
+I|2|1|G|Stock Receipts||1|I21.4gi|||||
+I|2|2|G|Stock Issue||1|I22.4gi|||||
+I|5|5|G|Stock Transfer Inquiry||1|I55.4gi|||||
+I|2|7|G|Stock Adjustment||1|I27.4gi|||||
+I|2|8|G|Adjust Stock Cost||1|I28.4gi|||||
+P|6|4|G|Batch Debit Entry||1|P64.4gi|||||
+I|3|2|G|Change Serial Details||1|I32.4gi|||||
+I|3|3|G|Serial Inquiry||1|I33.4gi|||||
+I|3|A|G|Serial by Product||1|IR3.4gi|||||
+I|A|1|G|Product Detail Listing||1|IA1.4gi|||||
+I|A|2|G|Product by Category||1|IA2.4gi|||||
+I|A|3|G|Product by Inv. Class||1|IA3.4gi|||||
+I|A|4|G|Product Relationships||1|IA4.4gi|||||
+I|A|A|G|Product History||1|IAA.4gi|||||
+I|A|B|G|Product Ledger||1|IAB.4gi|||||
+I|B|8|G|Top 100 Products||1|IB8.4gi|||||
+I|B|9|G|Bottom 100 Products||1|IB9.4gi|||||
+I|C|1|G|Product Pricing by Product||1|IC1.4gi|||||
+I|C|2|G|Product Pricing by Description||1|IC2.4gi|||||
+I|R|1|G|Period Activity||1|IR1.4gi|||||
+I|R|2|G|   By Reference ID||1|IR2.4gi|||||
+I|R|3|G|Serialized Products||1|IR3.4gi|||||
+I|R|4|G|   By Serial Number||1|IR4.4gi|||||
+Q|1|1|G|Quotation Entry/Edit||1|Q11.4gi|||||
+Q|1|2|G|Quotation Inquiry||1|Q12.4gi|||||
+I|R|7|G|Return on Investment||1|IR7.4gi|||||
+I|R|8|G|IN Period Post Report||1|IR8.4gi|||||
+I|R|9|G|IN Snapshot||1|IR9.4gi|||||
+I|S|3|G|Automatic Price Change||1|IS3.4gi|||||
+U|5|6|G|Quadrant Load||1|U56.4gi|||||
+I|Z|1|G|Product Category||1|IZ1.4gi|||||
+I|Z|2|G|Inventory Classes||1|IZ2.4gi|||||
+I|Z|3|G|Warehouses||1|IZ3.4gi|||||
+I|Z|4|G|Alternate Groups||1|IZ4.4gi|||||
+I|Z|5|G|Superseded Groups||1|IZ5.4gi|||||
+I|Z|6|G|Companion Groups||1|IZ6.4gi|||||
+A|S|U|G|AR Transaction Purge||1|ASU.4gi|||||
+I|Z|8|G|UOM Descriptions||1|IZ8.4gi|||||
+I|Z|P|G|IN Parameters||1|IZP.4gi|||||
+A|E|1|G|Analysis By Customer||1|AE1.4gi|||||
+A|E|2|G| By Invoice||1|AE2.4gi|||||
+A|E|3|G| By Salesperson||1|AE3.4gi|||||
+A|E|4|G| By Customer Type||1|AE4.4gi|||||
+A|E|6|G| By Cust. - Net of Tax||1|AE6.4gi|||||
+A|E|7|G| By Product-Net of Tax||1|AE7.4gi|||||
+A|E|8|G| By Salesperson-Net Tax||1|AE8.4gi|||||
+A|E|9|G| By Invoice Dept Code||1|AE9.4gi|||||
+R|A|1|G|Purchase Orders||1|RA1.4gi|||||
+R|A|2|G|   by Number||1|RA2.4gi|||||
+R|A|3|G|   by Delivery Date||1|RA3.4gi|||||
+R|A|4|G|   Voucher Details||1|RA4.4gi|||||
+R|A|5|G|Purchase Order Detail||1|RA5.4gi|||||
+R|A|6|G|   by Product||1|RA6.4gi|||||
+R|A|7|G|   by Job||1|RA7.4gi|||||
+R|A|8|G|   by Currency Code||1|RA8.4gi|||||
+R|A|9|G|   Outstanding Qty||1|RA9.4gi|||||
+R|A|A|G|Goods Receipt by Date||1|RAA.4gi|||||
+R|A|B|G|   by Product||1|RAB.4gi|||||
+R|A|C|G|   Voucher Details||1|RAC.4gi|||||
+R|B|1|G|Outstanding by Order||1|RB1.4gi|||||
+R|B|2|G|            by Account||1|RB2.4gi|||||
+R|B|3|G|            by Job||1|RB3.4gi|||||
+R|B|4|G|            by Product||1|RB4.4gi|||||
+R|B|5|G|Commitments by Order||1|RB5.4gi|||||
+R|B|6|G|            by Account||1|RB6.4gi|||||
+R|B|8|G|            by Product||1|RB8.4gi|||||
+R|B|9|G|Outstanding GL Commits.||1|RB9.4gi|||||
+R|B|A|G|Received/Vouchered  O/S||1|RBA.4gi|||||
+R|B|B|G|Available Funds||1|GA6.4gi|||||
+P|S|U|G|External AP Voucher Load||1|PSU_J.4gi|||||
+P|A|9|G|Vendor Types||1|PA9.4gi|||||
+G|R|F|G|Trial Balance Pre-Close||1|GRF.4gi|||||
+G|2|9|G|Interface Batch Edit||1|G29.4gi|||||
+A|2|F|G|Invoice Scan (by Reference)||1|A2F.4gi|||||
+G|1|3|G|Multi Currency Inquiry||1|G13.4gi|||||
+G|S|H|G|Calculate Exch Variances||1|GSH.4gi|||||
+G|R|H|G|Report Exch Variances||9|GRH.4gi|||||
+U||2|G|Street Maintenance||1|U 2.4gi|||||
+U||5|G|Street and Suburb Load||1|U 5.4gi|||||
+A|1|E|G|Customer Ledger by Date||9|A1B.4gi D|||||
+G|R|G|G|Summary Trial Balance II| |1|GRG.4gi|||||
+F|1|1|G|General Information||1|F11.4gi|||||
+U|1|8|G|Database SQL Interface||2|U18.4gi|||||
+W|3|E|G|Receipt Edit||1|W3E.4gi|||||
+I|S|7|G|Product History Update| |1|IS7.4gi|||||
+A|R|B|G|Salesperson Commision| |1|ARB.4gi|||||
+U|1|D|G|User Reference Maintenance| |2|U1D.4gi|||||
+G|C|E|G|Electronic Statement Edit||1|GCE.4gi|||||
+U|1|L|G|Language Maintenance||3|U1L.4gi|||||
+U|1|M|G|Country Maintenance||2|U1M.4gi|||||
+N|1|1|C|Requisition Entry||1|N11.4gi|||||
+N|1|2|C|Requisition Inquiry| |9|N12.4gi|||||
+N|1|4|C|Requisition Edit| |9|N14.4gi|||||
+N|2|1|C|Print Picking Slip| |1|N21.4gi|||||
+I|T|2|G|Print Stock-take Count Sheets| |1|IT2.4gi|||||
+I|T|3|G|Enter Stock-take Count Details| |1|IT3.4gi|||||
+I|T|4|G|Stock-take Detail Report| |1|IT4.4gi|||||
+I|T|5|G|Stock-take Adjustment Report| |1|IT5.4gi|||||
+I|T|6|G|Stock-take Post| |1|IT6.4gi|||||
+L|6|2|G|Credit Shipment Inquiry||1|L62.4gi|||||
+L|6|5|G|Potential Finalise Credit Scan||1|L65.4gi|||||
+N|2|2|C|Issue Confirmation| |1|N22.4gi|||||
+N|3|1|C|Allocate Requisitions| |1|N31.4gi|||||
+J|A|3|G|Contract Inquiry||1|JA3.4gi|||||
+J|A|4|G|Contract Scan||1|JA4.4gi|||||
+J|A|5|G|Contract Detail Report||1|JA5.4gi|||||
+J|A|6|G|Create Tentative Invoices||1|JA6.4gi|||||
+J|A|7|G|Tentative Invoice Adjustment||1|JA7.4gi|||||
+J|A|8|G|Tentative Invoice Report||1|JA8.4gi|||||
+J|A|9|G|Create Contract Invoices||1|JA9.4gi|||||
+J|C|1|G|Job Credits| |1|JC1.4gi|||||
+J|R|1|G|Activity Transactions||1|JR1.4gi|||||
+J|R|2|G|Summary of Costs||1|JR2.4gi|||||
+J|R|3|G|Available Funds||1|JR3.4gi|||||
+J|R|4|G|Resources||1|JR4.4gi|||||
+J|R|6|G|Timesheets By Person||1|JR6.4gi|||||
+J|R|7|G|Timesheets by Job||1|JR7.4gi|||||
+J|R|9|G|Resource Allocation||1|JR9.4gi|||||
+J|R|A|G|Job Summary||1|JRA.4gi|||||
+J|R|C|G|Activity By Sort Code||1|JRC.4gi|||||
+J|R|L|G|Job Listing||1|JRL.4gi|||||
+J|S|1|G|Post Jobs to GL||1|JS1.4gi|||||
+J|S|2|G|Job Cost Transfer||1|JS2.4gi|||||
+J|Z|1|G|Resource Groups||1|JZ1.4gi|||||
+J|Z|4|G|Job Types||1|JZ4.4gi|||||
+J|Z|5|G|Responsibility Codes||1|JZ5.4gi|||||
+J|Z|6|G|Job Unit Codes||1|JZ6.4gi|||||
+J|Z|7|G|Departments Maintenance||1|JZ7.4gi|||||
+J|Z|8|G|Task Periods Maintenance||1|JZ8.4gi|||||
+J|Z|P|G|JM Parameters||1|JZP.4gi|||||
+P|S|L|G|Vendor Load||1|PSL_J|||||
+R|A|E|G|Purchase Order Expedite Report||1|RAE.4gi|||||
+R|A|F|G|Purchase Order Detail 2||1|RAF.4gi|||||
+I|S|B|G|Update Vendor Lead Times||1|ISB.4gi|||||
+J|R|B|G|Contract Status Report||1|JRB.4gi|||||
+J|4|2|G|Compute Balance to Complete||1|J42.4gi|||||
+I|S|C|G|External Tariff Load||1|ISC.4gi|||||
+J|R|H|G|Detailed Resource Reconciliati||1|JRH.4gi|||||
+J|R|I|G|Job Cost Materials/Labour||1|JRI.4gi|||||
+I|A|E|G|Product Master List||1|IAE.4gi|||||
+A|E|D|G|Divisional Margin Analysis||1|AED.4gi|||||
+A|E|E|G|Inventory Margin Analysis||1|AEE.4gi|||||
+I|A|F|G|Stock Loss Unload||1|IAF.4gi|||||
+A|D|U|G|Unapplied Credits||1|ADU.4gi|||||
+W|R|O|G|Cancelled Deliveries Report||1|WRO.4gi|||||
+W|D|9|G|Driver Ledger Scan by Vehicle||1|WD9.4gi|||||
+I|1|9|G|Product Bin Loc. Maintenance||1|I19.4gi|||||
+P|2|4|G|Batch Voucher Entry||1|P24.4gi|||||
+P|B|8|G|Unapproved Vocuhers by Vendor||1|PB8.4gi|||||
+W|2|A|G|Delivery Docket Inquiry||1|W2A.4gi|||||
+P|C|D|G|   By Batch||1|PCD.4gi|||||
+W|7|8|G|Supply & Lay Quotation Entry||1|W78.4gi|||||
+F|6|D|G|Depreciation Reconciliation||1|F6D.4gi|||||
+W|S|4|G|Post Supply & Lay Accruals||1|WS4.4gi|||||
+W|Q|D|G|Supply and Lay Profit 2 Report||1|WQD.4gi|||||
+W|Q|C|G|Monthly Status Report||1|WQC.4gi|||||
+W|Q|E|G|Incomplete Order Status Report||1|WQE.4gi|||||
+P|B|C|G|Voucher Audit Trail||1|PBC.4gi|||||
+A|R|3|G|Activity by Period||1|AR3.4gi|||||
+R|A|D|G|   by Date||1|RAD.4gi|||||
+E|9|C|G|Order Report by Sales||1|E9C.4gi|||||
+P|S|A|G|WHICS-OPEN AP Interface Load||1|PSA.4gi|||||
+G|C|W|G|WHICS-OPEN GL Interface Load||1|GCW.4gi|||||
+J|R|O|G|Job Cost Worksheet||1|JRO.4gi|||||
+J|R|Q|G|Actual to Target Hours||1|JRQ.4gi|||||
+R|Z|5|G|Maintain Descriptions||1|RZ5.4gi|||||
+J|S|3|G|Hourly Rate Maintenance||1|JS3.4gi|||||
+A|A|P|G|Customer Aging by Fiscal Perio||1|AAP.4gi|||||
+G|T|1|G|Tax Code Maintenance||1|GT1.4gi|||||
+U|1|9|G|Database Schema Comparison||1|U19.4gi|||||
+R|B|7|G|Outstanding PO's||1|RB7.4gi|||||
+J|3|C|G|Pre Bill Report||1|J3C.4gi|||||
+J|R|5|G|Job Revenue and Cost Analysis||1|JR5.4gi|||||
+J|R|R|G|Missing/Incomplete Timesheets||1|JRR.4gi|||||
+J|R|S|G|Chargeable Hours||1|JRS.4gi|||||
+I|R|6|G|Barcode label print||1|IR6.4gi|||||
+A|3|C|G|Edit Sundry Receipt||1|A3C.4gi|||||
+J|R|K|G|New Job/Activity Report||1|JRK.4gi|||||
+A|2|S|G|Group Invoice||1|A2S.4gi|||||
+G|W|6|G|Header Group Maintenance||1|GW6.4gi|||||
+G|Z|F|G|Account Group Maintenance||1|GZF.4gi|||||
+G|W|A|G|Table Reorganisation||1|GWA.4gi|||||

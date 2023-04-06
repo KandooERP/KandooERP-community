@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<fglBuildTarget xmlns="http://namespaces.querix.com/lyciaide/target" name="IZM" type="fgl-program">
+
+  <libraries>
+    <library name="lib_tool_I_IN_db" dynamic="false" location=""/>
+    <library name="lib_tool_I_IN_new" dynamic="false" location=""/>
+    <library name="lib_tool_U_UT_new" dynamic="false" location=""/>
+    <library name="lib_tool_common" dynamic="false" location=""/>
+    <library name="lib_tool_db_common" dynamic="false" location=""/>
+  </libraries>
+
+  <sources type="fgl">
+    <file location="4gl/common/mgrpwind.4gl"/>
+    <file location="4gl/common/glob_GLOBALS_constant.4gl"/>
+    <file location="4gl/in/IZM.4gl"/>
+    <file location="4gl/common/pdeptwind.4gl"/>
+    <file location="4gl/common/glob_GLOBALS.4gl"/>
+    <file location="4gl/in/I_IN_GLOBALS.4gl"/>
+    <file location="4gl/common/glob_GLOBALS_userDataTypes.4gl"/>
+    <file location="4gl/in/IZM_main.4gl"/>
+  </sources>
+
+  <sources type="form">
+    <file location="per/in/ENG/I602.fm2"/>
+    <file location="per/utility/ENG/U156.fm2"/>
+    <file location="per/in/ENG/I603.fm2"/>
+    <file location="per/in/ENG/I604.fm2"/>
+    <file location="per/utility/ENG/U526.fm2"/>
+    <file location="per/utility/ENG/U162.fm2"/>
+    <file location="per/in/ENG/I603_query.fm2"/>
+    <file location="per/in/ENG/I609.fm2"/>
+  </sources>
+
+  <mediaFiles>
+    <file client="true" location="IZM.qxtheme" type="gui-theme-file"/>
+    <file client="true" location="IZM.css" type="other"/>
+    <file client="true" location="info/izm_info.txt" type="text"/>
+  </mediaFiles>
+
+</fglBuildTarget>

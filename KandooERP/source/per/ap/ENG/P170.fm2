@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form xmlns="http://namespaces.querix.com/2015/fglForms">
+	<form.rootContainer>
+		<GridPanel classNames="fcls_rootContainer" preferredSize="849,601" verticalAlignment="Stretch" horizontalAlignment="Stretch" fieldTable="" identifier="rootContainer">
+			<GridPanel.gridRowDefinitions>
+				<GridRowDefinition gridLengthValue=""/>
+				<GridRowDefinition gridLengthValue=""/>
+				<GridRowDefinition gridLengthValue="100%" gridMinLength="10rem"/>
+				<GridRowDefinition gridLengthValue=""/>
+				<GridRowDefinition gridLengthValue=""/>
+				<GridRowDefinition gridLengthValue=""/>
+				<GridRowDefinition gridLengthValue=""/>
+			</GridPanel.gridRowDefinitions>
+			<GridPanel.gridColumnDefinitions>
+				<GridColumnDefinition gridLengthValue="100%"/>
+			</GridPanel.gridColumnDefinitions>
+			<GridPanel classNames="fcls_title_cnt" visible="true" verticalAlignment="Top" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="cntTitle">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="100%"/>
+					<GridColumnDefinition gridLengthValue=""/>
+				</GridPanel.gridColumnDefinitions>
+				<Label isDynamic="true" text="Debit Distribution" classNames="fcls_title_lb" visible="true" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="header_text"/>
+				<Label isDynamic="true" text="P170" classNames="fcls_title_lb" visible="true" gridItemLocation="1,0,1,1" fieldTable="" identifier="lbFormName"/>
+			</GridPanel>
+			<GroupBox title="Vendor" classNames="fcls_detail_gb_cnt" visible="true" verticalAlignment="Stretch" horizontalAlignment="Stretch" gridItemLocation="0,1,1,1" fieldTable="" identifier="cntDetail1GroupBox">
+				<GridPanel classNames="fcls_detail_gb_cnt_sub,fcls_data_cnt,fcls_align_left" visible="true" verticalAlignment="Top" horizontalAlignment="Left" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="cntDetail1GBSubGp">
+					<GridPanel.gridRowDefinitions>
+						<GridRowDefinition gridLengthValue=""/>
+						<GridRowDefinition gridLengthValue=""/>
+						<GridRowDefinition gridLengthValue=""/>
+					</GridPanel.gridRowDefinitions>
+					<GridPanel.gridColumnDefinitions>
+						<GridColumnDefinition gridLengthValue="" gridMinLength="10rem"/>
+						<GridColumnDefinition gridLengthValue=""/>
+						<GridColumnDefinition gridLengthValue=""/>
+					</GridPanel.gridColumnDefinitions>
+					<Label isDynamic="true" text="Vendor" classNames="fcls_fieldlabel" visible="true" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="lb57"/>
+					<ComboBox dataType="Char,,,,8" classNames="fcls_data_widget,fcls_align_left,fcls_length_25qch" location="9qch,2qch" preferredSize="25qch,1qch" gridItemLocation="1,0,1,1" fieldTable="voucher" identifier="vend_code"/>
+					<TextField noEntry="true" dataType="Char,,,,30" classNames="fcls_data_widget,fcls_align_left,fcls_length_25qch" location="40qch,2qch" preferredSize="15qch,1qch" gridItemLocation="2,0,1,1" fieldTable="vendor" identifier="name_text"/>
+					<Label isDynamic="true" text="Debit No" classNames="fcls_fieldlabel" visible="true" gridItemLocation="0,1,1,1" fieldTable="" identifier="lb73"/>
+					<TextField dataType="Integer,,,," classNames="fcls_data_widget,fcls_align_left,fcls_length_10qch" preferredSize="9qch,1qch" toolTip=" Number to uniquely identify and reference this debit" gridItemLocation="1,1,1,1" comment=" Number to uniquely identify and reference this debit" fieldTable="debithead" identifier="debit_num"/>
+					<Label isDynamic="true" text="Currency" visible="true" gridItemLocation="0,2,1,1" fieldTable="" identifier="lb173"/>
+					<ComboBox noEntry="true" dataType="Char,,,,3" classNames="fcls_data_widget,fcls_align_left,fcls_length_25qch" preferredSize="4qch,1qch" gridItemLocation="1,2,1,1" fieldTable="vendor" identifier="currency_code"/>
+				</GridPanel>
+			</GroupBox>
+			<Table rowCount="7" minSize="60rem,10rem" gridItemLocation="0,2,1,1" fieldTable="" identifier="sr_debitdist">
+				<TableColumn fieldTable="" identifier="a">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="2rem" gridMaxLength="2rem" gridMinLength="2rem"/>
+					</TableColumn.columnLength>
+					<CheckBox dataType="Char,,,," fieldTable="formonly" identifier="scroll_flag">
+						<CheckBox.checkedValue>
+							<StringLiteral stringValue="*"/>
+						</CheckBox.checkedValue>
+						<CheckBox.uncheckedValue>
+							<NullLiteral/>
+						</CheckBox.uncheckedValue>
+					</CheckBox>
+				</TableColumn>
+				<TableColumn text="Line" fieldTable="" identifier="f03">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="10%" gridMaxLength="10rem" gridMinLength="5rem"/>
+					</TableColumn.columnLength>
+					<TextField noEntry="true" dataType="SmallInt,,,," fieldTable="voucherdist" identifier="line_num"/>
+				</TableColumn>
+				<TableColumn text="Type" fieldTable="" identifier="b">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="15%" gridMaxLength="15rem" gridMinLength="5rem"/>
+					</TableColumn.columnLength>
+					<ComboBox toCase="Up" dataType="Char,,,,1" toolTip="G-General, A-Chrg Thru Sale, P-Purch Ord, J-Dist to Job, S-Shipment, W-Order" comment="G-General, A-Chrg Thru Sale, P-Purch Ord, J-Dist to Job, S-Shipment, W-Order" fieldTable="voucherdist" identifier="type_ind" classNames="list-show-text-value,field-show-value"/>
+				</TableColumn>
+				<TableColumn text="Account" fieldTable="" identifier="f04">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="30%" gridMaxLength="30rem" gridMinLength="10rem"/>
+					</TableColumn.columnLength>
+					<ComboBox toCase="Up" dataType="Char,,,,18" toolTip=" The General Ledger account applicable to this transaction (W)" comment=" The General Ledger account applicable to this transaction (W)" fieldTable="voucherdist" identifier="acct_code" classNames="list-show-text-value,field-show-value"/>
+				</TableColumn>
+				<TableColumn text="Dist.Amount" fieldTable="" identifier="f05">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="15%" gridMaxLength="15rem" gridMinLength="5rem"/>
+					</TableColumn.columnLength>
+					<TextField dataType="Decimal,,,2,16" toolTip=" Distribution amount of the transaction" comment=" Distribution amount of the transaction" fieldTable="voucherdist" identifier="dist_amt"/>
+				</TableColumn>
+				<TableColumn text="Quantity" fieldTable="" identifier="f06">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="15%" gridMaxLength="15rem" gridMinLength="5rem"/>
+					</TableColumn.columnLength>
+					<TextField dataType="Float,,,," toolTip=" Statistical quantity of the transaction" comment=" Statistical quantity of the transaction" fieldTable="voucherdist" identifier="dist_qty"/>
+				</TableColumn>
+				<TableColumn text="UOM" fieldTable="" identifier="f07">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="15%" gridMaxLength="15rem" gridMinLength="5rem"/>
+					</TableColumn.columnLength>
+					<TextField toCase="Up" noEntry="true" dataType="Char,,,,4" toolTip=" Account quantity Unit Of Measure" comment=" Account quantity Unit Of Measure" fieldTable="coa" identifier="uom_code"/>
+				</TableColumn>
+			</Table>
+			<GridPanel classNames="fcls_detail_gb_cnt_sub,fcls_data_cnt,fcls_align_hstretch" visible="true" verticalAlignment="Top" horizontalAlignment="Stretch" gridItemLocation="0,3,1,1" fieldTable="" identifier="cntDetail4">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="10rem" gridMinLength="10rem"/>
+					<GridColumnDefinition gridLengthValue="32%"/>
+					<GridColumnDefinition gridLengthValue="24%"/>
+					<GridColumnDefinition gridLengthValue="22%"/>
+					<GridColumnDefinition gridLengthValue="6%"/>
+				</GridPanel.gridColumnDefinitions>
+				<Label isDynamic="true" text="Debit Totals:" classNames="fcls_fieldlabel" visible="true" gridItemLocation="0,0,1,1" fieldTable="" identifier="lb167"/>
+				<TextField noEntry="true" dataType="Decimal,,,2,16" location="21qch,14qch" preferredSize="13qch,1qch" gridItemLocation="1,0,1,1" fieldTable="voucher" identifier="total_amt"/>
+				<TextField noEntry="true" dataType="Decimal,,,2,16" location="40qch,14qch" preferredSize="15qch,1qch" gridItemLocation="2,0,1,1" fieldTable="voucher" identifier="dist_amt"/>
+				<TextField noEntry="true" dataType="Float,,,," location="56qch,14qch" preferredSize="14qch,1qch" gridItemLocation="3,0,1,1" fieldTable="voucher" identifier="dist_qty"/>
+			</GridPanel>
+			<GroupBox title="Line" classNames="fcls_detail_gb_cnt" visible="true" verticalAlignment="Stretch" horizontalAlignment="Stretch" gridItemLocation="0,4,1,1" fieldTable="formonly" identifier="cntDetail5GroupBox">
+				<GridPanel classNames="fcls_detail_gb_cnt_sub,fcls_data_cnt,fcls_align_left" visible="true" verticalAlignment="Top" horizontalAlignment="Left" fieldTable="formonly" identifier="cntDetail5GBSubGpLeft">
+					<GridPanel.gridRowDefinitions>
+						<GridRowDefinition gridLengthValue=""/>
+						<GridRowDefinition gridLengthValue=""/>
+					</GridPanel.gridRowDefinitions>
+					<GridPanel.gridColumnDefinitions>
+						<GridColumnDefinition gridLengthValue="" gridMinLength="10rem"/>
+						<GridColumnDefinition gridLengthValue=""/>
+						<GridColumnDefinition gridLengthValue=""/>
+					</GridPanel.gridColumnDefinitions>
+					<Label isDynamic="true" text="Line" classNames="fcls_fieldlabel" visible="true" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="lb47x"/>
+					<TextField noEntry="true" dataType="Char,,,," classNames="fcls_data_widget,fcls_align_left,fcls_length_05qch" location="26qch,15qch" preferredSize="5qch,1qch" gridItemLocation="1,0,1,1" fieldTable="formonly" identifier="idx"/>
+					<TextField noEntry="true" dataType="Char,,,,20" classNames="fcls_data_widget,fcls_align_left,fcls_length_20qch" location="0qch,16qch" preferredSize="21qch,1qch" gridItemLocation="1,1,1,1" fieldTable="coa" identifier="analy_prompt_text"/>
+					<TextField dataType="Char,,,,16" classNames="fcls_data_widget,fcls_align_left,fcls_length_20qch" location="21qch,16qch" preferredSize="17qch,1qch" toolTip=" Analysis information " gridItemLocation="2,1,1,1" comment=" Analysis information " fieldTable="voucherdist" identifier="analysis_text"/>
+				</GridPanel>
+			</GroupBox>
+			<GridPanel classNames="fcls_detail_cnt" visible="true" verticalAlignment="Top" gridItemLocation="0,5,1,1" fieldTable="formonly" identifier="cntDetail6">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="65%"/>
+					<GridColumnDefinition gridLengthValue="35%"/>
+				</GridPanel.gridColumnDefinitions>
+				<GroupBox title="Description" classNames="fcls_detail_gb_cnt" visible="true" verticalAlignment="Top" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="cntDetail6GroupBoxLeft">
+					<GridPanel classNames="fcls_detail_gb_cnt_sub,fcls_data_cnt,fcls_align_left" visible="true" verticalAlignment="Top" horizontalAlignment="Left" fieldTable="formonly" identifier="cntDetail6GBSubGpLeft">
+						<GridPanel.gridRowDefinitions>
+							<GridRowDefinition gridLengthValue=""/>
+							<GridRowDefinition gridLengthValue=""/>
+						</GridPanel.gridRowDefinitions>
+						<GridPanel.gridColumnDefinitions>
+							<GridColumnDefinition gridLengthValue="" gridMinLength="10rem"/>
+							<GridColumnDefinition gridLengthValue=""/>
+						</GridPanel.gridColumnDefinitions>
+						<Label isDynamic="true" text="Description Text" classNames="fcls_fieldlabel" visible="true" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="lb47y"/>
+						<TextField dataType="Char,,,,40" classNames="fcls_data_widget,fcls_align_left,fcls_length_40qch" location="13qch,17qch" preferredSize="41qch,1qch" toolTip=" Description of transaction - CTRL-N for Notes" gridItemLocation="1,0,1,1" comment=" Description of transaction - CTRL-N for Notes" fieldTable="voucherdist" identifier="desc_text"/>
+						<Label isDynamic="true" text="Mode" classNames="fcls_fieldlabel" visible="true" gridItemLocation="0,1,1,1" fieldTable="formonly" identifier="lb46y"/>
+						<TextField noEntry="true" dataType="Char,,,," classNames="fcls_data_widget,fcls_align_left,fcls_length_10qch" location="5qch,18qch" preferredSize="12qch,1qch" gridItemLocation="1,1,1,1" fieldTable="formonly" identifier="desc_mode"/>
+					</GridPanel>
+				</GroupBox>
+				<GroupBox title="Line Info" classNames="fcls_detail_gb_cnt" visible="true" gridItemLocation="1,0,1,1" fieldTable="" identifier="cntDetail6GroupBoxRight">
+					<GridPanel classNames="fcls_detail_gb_cnt_sub,fcls_data_cnt,fcls_align_left" visible="true" verticalAlignment="Top" horizontalAlignment="Left" fieldTable="" identifier="cntDetail6GBSubGpRight">
+						<GridPanel.gridRowDefinitions>
+							<GridRowDefinition gridLengthValue=""/>
+							<GridRowDefinition gridLengthValue=""/>
+						</GridPanel.gridRowDefinitions>
+						<GridPanel.gridColumnDefinitions>
+							<GridColumnDefinition gridLengthValue=""/>
+							<GridColumnDefinition gridLengthValue=""/>
+						</GridPanel.gridColumnDefinitions>
+						<TextField noEntry="true" dataType="Char,,,," classNames="fcls_data_widget,fcls_align_left,fcls_length_10qch" location="54qch,17qch" preferredSize="12qch,1qch" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="line_1"/>
+						<TextField noEntry="true" dataType="Char,,,,8" classNames="fcls_data_widget,fcls_align_left,fcls_length_10qch" location="66qch,17qch" preferredSize="9qch,1qch" gridItemLocation="1,0,1,1" fieldTable="voucherdist" identifier="job_code"/>
+						<TextField noEntry="true" dataType="Char,,,," classNames="fcls_data_widget,fcls_align_left,fcls_length_10qch" location="54qch,18qch" preferredSize="12qch,1qch" gridItemLocation="0,1,1,1" fieldTable="formonly" identifier="line_2"/>
+						<TextField noEntry="true" dataType="Char,,,,8" classNames="fcls_data_widget,fcls_align_left,fcls_length_10qch" location="66qch,18qch" preferredSize="9qch,1qch" gridItemLocation="1,1,1,1" fieldTable="voucherdist" identifier="res_code"/>
+					</GridPanel>
+				</GroupBox>
+			</GridPanel>
+			<GridPanel classNames="fcls_statusbar_cnt" visible="true" verticalAlignment="Top" gridItemLocation="0,6,1,1" fieldTable="formonly" identifier="cntStatusBar">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="100%"/>
+				</GridPanel.gridColumnDefinitions>
+				<Label isDynamic="true" text="" classNames="fcls_sblabel" visible="true" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="lbInfo1"/>
+				<Label isDynamic="true" text="" classNames="fcls_sblabel" visible="true" gridItemLocation="0,1,1,1" fieldTable="formonly" identifier="lbInfo2"/>
+			</GridPanel>
+		</GridPanel>
+	</form.rootContainer>
+	<form.screenRecords>
+		<ScreenRecord identifier="sr_debitdist" fields="scroll_flag,line_num,type_ind,acct_code,dist_amt,dist_qty,uom_code"/>
+		<ScreenRecord identifier="coa" fields="uom_code,analy_prompt_text"/>
+		<ScreenRecord identifier="debitdist" fields="type_ind,line_num,acct_code,dist_amt,dist_qty,analysis_text,desc_text,job_code,res_code"/>
+		<ScreenRecord identifier="debithead" fields="vend_code,debit_num,total_amt,dist_amt,dist_qty"/>
+		<ScreenRecord identifier="formonly" fields="scroll_flag,idx,desc_mode,line_1,line_2"/>
+		<ScreenRecord identifier="vendor" fields="name_text,currency_code"/>
+	</form.screenRecords>
+</form>
+

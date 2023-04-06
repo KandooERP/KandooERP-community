@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form xmlns="http://namespaces.querix.com/2015/fglForms">
+	<form.rootContainer>
+		<GridPanel classNames="fcls_rootContainer" verticalAlignment="Stretch" horizontalAlignment="Stretch" fieldTable="" identifier="rootContainer">
+			<GridPanel.gridRowDefinitions>
+				<GridRowDefinition gridLengthValue=""/>
+				<GridRowDefinition gridLengthValue=""/>
+				<GridRowDefinition gridLengthValue="100%"/>
+				<GridRowDefinition gridLengthValue=""/>
+			</GridPanel.gridRowDefinitions>
+			<GridPanel.gridColumnDefinitions>
+				<GridColumnDefinition gridLengthValue="100%"/>
+			</GridPanel.gridColumnDefinitions>
+			<GridPanel classNames="fcls_title_cnt" visible="true" verticalAlignment="Top" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="cntTitle">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="100%"/>
+					<GridColumnDefinition gridLengthValue=""/>
+				</GridPanel.gridColumnDefinitions>
+				<Label isDynamic="true" text="JM Credit" classNames="fcls_title_lb" visible="true" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="header_text"/>
+				<Label isDynamic="true" text="J183" classNames="fcls_title_lb" visible="true" gridItemLocation="1,0,1,1" fieldTable="" identifier="lbFormName"/>
+			</GridPanel>
+			<GridPanel classNames="fcls_detail_cnt,fcls_data_cnt" visible="true" verticalAlignment="Top" horizontalAlignment="Left" gridItemLocation="0,1,1,1" fieldTable="formonly" identifier="cntDetail1">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="" gridMinLength="10rem"/>
+					<GridColumnDefinition gridLengthValue=""/>
+				</GridPanel.gridColumnDefinitions>
+				<TextField toCase="Up" dataType="Char,,,,8" preferredSize="13qch,1qch" toolTip=" Enter the Job Code (W)" comment=" Enter the Job Code (W)" fieldTable="invoicehead" identifier="job_code" gridItemLocation="1,0,1,1" classNames="fcls_data_widget,fcls_length_20qch"/>
+				<TextField toCase="Up" dataType="Char,,,,8" preferredSize="11qch,1qch" toolTip=" Enter Customer Code (W)" comment=" Enter Customer Code (W)" fieldTable="invoicehead" identifier="cust_code" gridItemLocation="1,1,1,1" classNames="fcls_data_widget,fcls_length_20qch"/>
+				<TextField toCase="Up" dataType="Char,,,,8" preferredSize="11qch,1qch" toolTip=" Enter Original Customer Code (W)" comment=" Enter Original Customer Code (W)" fieldTable="invoicehead" identifier="org_cust_code" gridItemLocation="1,2,1,1" classNames="fcls_data_widget,fcls_length_20qch"/>
+				<Label isDynamic="true" text="Job Code" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,0,1,1" fieldTable="" identifier="lb51"/>
+				<Label isDynamic="true" text="Customer Code" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,1,1,1" fieldTable="" identifier="lb52"/>
+				<Label isDynamic="true" text="Original Customer" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,2,1,1" fieldTable="" identifier="lb66"/>
+			</GridPanel>
+			<Table rowCount="10" preferredSize="64qch,10qch" fieldTable="" identifier="sr_invoicehead" gridItemLocation="0,2,1,1">
+				<TableColumn fieldTable="" identifier="tc_inv_num" text="Invoice">
+					<TextField dataType="Integer,,,," toolTip=" Enter Invoice Number to begin your scan" comment=" Enter Invoice Number to begin your scan" fieldTable="invoicehead" identifier="inv_num"/>
+					<TableColumn.columnLength>
+						<GridLength gridMaxLength="10rem"/>
+					</TableColumn.columnLength>
+				</TableColumn>
+				<TableColumn fieldTable="" identifier="tc_inv_date" text="Date">
+					<Calendar format="dd/mm/yyyy" dataType="Date,,,," toolTip=" The specific Date of this invoice number" comment=" The specific Date of this invoice number" fieldTable="invoicehead" identifier="inv_date"/>
+					<TableColumn.columnLength>
+						<GridLength gridMaxLength="10rem"/>
+					</TableColumn.columnLength>
+				</TableColumn>
+				<TableColumn fieldTable="" identifier="tc_year_num" text="Post-Year">
+					<TextField dataType="SmallInt,,,," toolTip=" Fiscal year related to this invoice posting to the GL" comment=" Fiscal year related to this invoice posting to the GL" fieldTable="invoicehead" identifier="year_num"/>
+					<TableColumn.columnLength>
+						<GridLength gridMaxLength="10rem"/>
+					</TableColumn.columnLength>
+				</TableColumn>
+				<TableColumn fieldTable="" identifier="tc_period_num" text="Post Period">
+					<TextField dataType="SmallInt,,,," toolTip=" Fiscal period related to this invoice posting to the GL" comment=" Fiscal period related to this invoice posting to the GL" fieldTable="invoicehead" identifier="period_num"/>
+					<TableColumn.columnLength>
+						<GridLength gridMaxLength="10rem"/>
+					</TableColumn.columnLength>
+				</TableColumn>
+				<TableColumn fieldTable="" identifier="tc_total_amt" text="Total Amt">
+					<TextField dataType="Decimal,,,2,16" toolTip=" The Total Amount of the invoice" comment=" The Total Amount of the invoice" fieldTable="invoicehead" identifier="total_amt"/>
+					<TableColumn.columnLength>
+						<GridLength gridMaxLength="10rem"/>
+					</TableColumn.columnLength>
+				</TableColumn>
+				<TableColumn fieldTable="" identifier="tc_paid_amt" text="Amount Paid">
+					<TextField dataType="Decimal,,,2,16" toolTip=" Total Amount Paid toward this invoice" comment=" Total Amount Paid toward this invoice" fieldTable="invoicehead" identifier="paid_amt"/>
+					<TableColumn.columnLength>
+						<GridLength gridMaxLength="10rem"/>
+					</TableColumn.columnLength>
+				</TableColumn>
+				<TableColumn fieldTable="" identifier="tc_posted_flag" text="Posted">
+					<TextField toCase="Up" dataType="Char,,,,1" toolTip=" Y or N to indicate if invoice has been posted GL" comment=" Y or N to indicate if invoice has been posted GL" fieldTable="invoicehead" identifier="posted_flag"/>
+					<TableColumn.columnLength>
+						<GridLength gridMaxLength="10rem"/>
+					</TableColumn.columnLength>
+				</TableColumn>
+			</Table>
+			<GridPanel classNames="fcls_statusbar_cnt" visible="true" verticalAlignment="Top" gridItemLocation="0,3,1,1" fieldTable="formonly" identifier="cntStatusBar">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="100%"/>
+				</GridPanel.gridColumnDefinitions>
+				<Label isDynamic="true" text="" classNames="fcls_sblabel" visible="true" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="lbInfo1"/>
+				<Label isDynamic="true" text="" classNames="fcls_sblabel" visible="true" gridItemLocation="0,1,1,1" fieldTable="formonly" identifier="lbInfo2"/>
+			</GridPanel>
+		</GridPanel>
+	</form.rootContainer>
+	<form.screenRecords>
+		<ScreenRecord identifier="sr_invoicehead" fields="invoicehead.inv_num,invoicehead.inv_date,invoicehead.year_num,invoicehead.period_num,invoicehead.total_amt,invoicehead.paid_amt,invoicehead.posted_flag"/>
+		<ScreenRecord identifier="invoicehead" fields="invoicehead.job_code,invoicehead.cust_code,invoicehead.org_cust_code,invoicehead.inv_num,invoicehead.inv_date,invoicehead.year_num,invoicehead.period_num,invoicehead.total_amt,invoicehead.paid_amt,invoicehead.posted_flag"/>
+	</form.screenRecords>
+</form>
+

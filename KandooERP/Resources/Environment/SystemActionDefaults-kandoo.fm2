@@ -1,0 +1,509 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form xmlns="http://namespaces.querix.com/2015/fglForms">
+	<form.actions>
+
+		<!-- Author: AlCh & HuHo -->
+		<!-- Last Modified: 01.09.2020 -->
+		<!-- Modified by: HuHo -->
+		<!-- Comment: detailed and suppary report action -->
+
+
+		<!--Action identifier="ident_val" text="text_val" comment="comment_val" actionImage="uri_val" accelerator1="key1_val,true(ControlModifier),true(AltModifier),true(ShiftModifier)" accelerator2="key2_val,true,true,true" accelerator3="key3_val,true,true,true" accelerator4="key4_val,true,true,true" showInContextMenu="No" statical="true" order="5" place="top" validate="true"/-->
+
+		<!-- Hide specific events -->
+		<Action identifier="doubleclick"       text="" actionImage=""  showInContextMenu="No" defaultView="No"/>
+		<Action identifier="DEBUG"             text="%&quot;SysActDef.debug.txt&quot;" comment="%&quot;SysActDef.debug.com&quot;" actionImage="{CONTEXT}/public/querix/icon/svg/24/ic_debug_24px.svg"        accelerator1="f9,false,false,false" accelerator2="f9,false,false,false,false" accelerator3="f9,false,false,false" accelerator4="f9,false,false,false" order="111" validate="false" statical="false" />
+		<Action identifier="DIRECT_LAUNCH"     text="Direct Launch"                    comment="Direct Launch"                    actionImage="{CONTEXT}/public/querix/icon/svg/24/ic_launch_run_1_24px.svg" accelerator1="f9,false,false,false" accelerator2="f9,false,false,false,false" accelerator3="f9,false,false,false" accelerator4="f11,false,false,false" order="111" validate="false" statical="false" />		
+		<!-- NOTE: SYSINFO must be located in the main menu - not top toolbar or hamburger AND NO ICON -->
+		<Action identifier="SYSINFO"           text="%&quot;SysActDef.debug.txt&quot;" comment="%&quot;SysActDef.debug.com&quot;" actionImage=""      accelerator1="f9,false,false,false" accelerator2="f9,false,false,false,false" accelerator3="f9,false,false,false" accelerator4="f10,false,false,false" order="111" validate="false" statical="false" />		
+
+
+		<Action identifier="actToolbarManager" text="%&quot;SysActDef.toolbar.txt&quot;" comment="%&quot;SysActDef.toolbar.com&quot;" actionImage="{CONTEXT}/public/querix/icon/svg/24/ic_toolbarmanager_24px.svg" order="9998" />
+
+
+		<!-- ############### HELP ########################## -->
+		<!-- WEB-HELP is the main menu for Help -->
+		<Action identifier="WEB-HELP"        text="%&quot;SysActDef.help_center.txt&quot;"   comment="%&quot;SysActDef.help_center.com&quot;"   actionImage="{CONTEXT}/public/querix/icon/svg/24/ic_help_outline_24px.svg"    statical="false" order="999999" accelerator1="f1,false,false,false"/>
+
+		<!-- HELP Sub-menu items -->
+		<Action identifier="Online Docs"     text="%&quot;SysActDef.online_manual.txt&quot;" comment="%&quot;SysActDef.online_manual.com&quot;" actionImage="{CONTEXT}/public/querix/icon/svg/24/ic_help_outline_24px.svg"    statical="false" order="71" place="top" accelerator1="r,false,true,false"  />
+		<Action identifier="GNU License"     text="%&quot;SysActDef.gnu_license.txt&quot;"   comment="%&quot;SysActDef.gnu_license.com&quot;"   actionImage="{CONTEXT}/public/querix/icon/svg/24/ic_lock_open_24px.svg"       statical="false" order="72" place="top" />
+		<Action identifier="SystemInfo"      text="%&quot;SysActDef.sys_info.txt&quot;"      comment="%&quot;SysActDef.sys_info.com&quot;"      actionImage="{CONTEXT}/public/querix/icon/svg/24/ic_settings_24px.svg"        statical="false" order="73" place="top" />
+		<Action identifier="About"           text="%&quot;SysActDef.about.txt&quot;"         comment="%&quot;SysActDef.about.com&quot;"         actionImage="{CONTEXT}/public/querix/icon/svg/24/ic_info_24px.svg"            statical="false" order="9999" place="top" />
+
+
+		<!-- Report PS: There are too many synonyms for reporting.... -->
+		<Action identifier="REPORT"          text="%&quot;SysActDef.report.txt&quot;"        comment="%&quot;SysActDef.report.txt&quot;"        actionImage="{CONTEXT}/public/querix/icon/svg/24/ic_library_books_24px.svg"   statical="false" order="72" place="top"/>
+		<Action identifier="DETAILED REPORT" text="%&quot;SysActDef.report.txt&quot;"        comment="%&quot;SysActDef.report.txt&quot;"        actionImage="{CONTEXT}/public/querix/icon/svg/24/ic_library_books_24px.svg"   statical="false" order="73" place="top"/>
+		<Action identifier="SUMMARY REPORT"  text="%&quot;SysActDef.report.txt&quot;"        comment="%&quot;SysActDef.report.txt&quot;"        actionImage="{CONTEXT}/public/querix/icon/svg/24/ic_library_books_24px.svg"   statical="false" order="74" place="top"/>
+		<Action identifier="Reporting"       text="%&quot;SysActDef.report.show.txt&quot;"   comment="%&quot;SysActDef.report.show.com&quot;"   actionImage="{CONTEXT}/public/querix/icon/svg/24/ic_library_books_24px.svg"   statical="false" order="61" place="top" accelerator1="r,false,true,false"   />
+		<Action identifier="Run Report"      text="%&quot;SysActDef.report.run.txt&quot;"    comment="%&quot;SysActDef.report.run.com&quot;"    actionImage="{CONTEXT}/public/querix/icon/svg/24/ic_report_generate_24px.svg" statical="false" order="73" place="top"/>
+		<Action identifier="Run"             text="%&quot;SysActDef.report.print.txtr&quot;" comment="%&quot;SysActDef.report.print.com&quot;"  actionImage="{CONTEXT}/public/querix/icon/svg/24/ic_filter_list_24px.svg"      statical="false" order="74" place="top"/>
+		<Action identifier="REPORT Trial Balance" text="%&quot;SysActDef.report.trial_balance.txt&quot;" comment="%&quot;SysActDef.report.trial_balance.com&quot;" actionImage="{CONTEXT}/public/querix/icon/svg/24/ic_library_books_24px.svg" statical="false" order="72" place="top"/>
+		<Action identifier="REPORTING CODE"  text="Reporting Codes"                          comment="Reporting Codes"                          actionImage="{CONTEXT}/public/querix/icon/svg/24/ic_report_code_24px.svg"     statical="false" order="75" accelerator1="F8,false,false,false" />
+
+		<!-- ??? duplicates ??? - Reports -->
+		<Action identifier="REPORT_SUMMARY"  text="Report Summary"  comment="Filter by Criteria AND Run Summary Report"  actionImage="{CONTEXT}/public/querix/icon/svg/24/ic_library_books_24px.svg" statical="false" order="71" place="top"/>
+		<Action identifier="REPORT_DETAILED" text="Report Detailed" comment="Filter by Criteria AND Run Detailed Report" actionImage="{CONTEXT}/public/querix/icon/svg/24/ic_library_books_24px.svg" statical="false" order="72" place="top"/>
+		<Action identifier="REPORT_ITEMISED" text="Report Itemised" comment="Filter by Criteria AND Run Itemised Report" actionImage="{CONTEXT}/public/querix/icon/svg/24/ic_library_books_24px.svg" statical="false" order="73" place="top"/>
+
+
+
+		<!-- MAIN/File Section -->		<!-- Customer Specific: Maia -->
+
+		<!-- Yes / OK / ACCEPT / Possitive -->
+		<Action identifier="ACCEPT"          text="%&quot;SysActDef.apply.txt&quot;"         comment="%&quot;SysActDef.apply.com&quot;" actionImage="{CONTEXT}/public/querix/icon/svg/24/ic_check_circle_24px.svg" accelerator2="ENTER,false,true,false" order="3" place="top"/>
+		<Action identifier="DONE"            text="%&quot;SysActDef.done.txt&quot;"          comment="%&quot;SysActDef.done.com&quot;" actionImage="{CONTEXT}/public/querix/icon/svg/24/ic_check_circle_24px.svg" accelerator2="ENTER,false,true,false" order="3" place="top"/>
+		<Action identifier="SAVE"            text="%&quot;SysActDef.save.txt&quot;"          comment="%&quot;SysActDef.save.com&quot;" actionImage="{CONTEXT}/public/querix/icon/svg/24/ic_save_24px.svg" accelerator2="ENTER,false,true,false" order="3" place="top"/>
+		<Action identifier="SAVE2"            text="%&quot;SysActDef.save.txt&quot;"          comment="%&quot;SysActDef.save.com&quot;" actionImage="{CONTEXT}/public/querix/icon/svg/24/ic_save_24px.svg" accelerator2="ENTER,false,true,false" order="4" place="top"/> <!-- temp - remove later -->		
+		<Action identifier="UPDATE"          text="%&quot;SysActDef.update.txt&quot;"        comment="%&quot;SysActDef.update.com&quot;" actionImage="{CONTEXT}/public/querix/icon/svg/24/ic_save_24px.svg" accelerator2="ENTER,false,true,false" order="3" place="top"/>
+
+		<!-- Do not enable close - this build in action is assigned to the build in event on application close -->
+
+		<!-- No / Cancel / Exit / Quit -->
+		<Action identifier="CANCEL"         text="%&quot;SysActDef.cancel.txt&quot;"        comment="%&quot;SysActDef.cancel.txt&quot;" actionImage="{CONTEXT}/public/querix/icon/svg/24/ic_cancel_24px.svg"                             order="1" validate="false" accelerator1="ESCAPE,false,false,false" place="top"/>
+		<Action identifier="EXIT"           text="%&quot;SysActDef.exit.txt&quot;"          comment="%&quot;SysActDef.exit.com&quot;" actionImage="{CONTEXT}/public/querix/icon/svg/24/ic_cancel_24px.svg"                               order="1" validate="true" accelerator1="ESCAPE,false,false,false" place="top"/>
+		<Action identifier="RETURN"         text="%&quot;SysActDef.return.txt&quot;"        comment="%&quot;SysActDef.return.txt&quot;" actionImage="{CONTEXT}/public/querix/icon/svg/24/ic_cancel_24px.svg"                             order="1" validate="true" accelerator1="ESCAPE,false,false,false" place="top"/>
+		<Action identifier="HOME"           text="%&quot;SysActDef.home.txt&quot;"          comment="%&quot;SysActDef.home.com&quot;" actionImage="{CONTEXT}/public/querix/icon/svg/24/ic_home_24px.svg"                                 order="1" validate="true" accelerator1="ESCAPE,false,false,false" place="top"/>
+
+		<!-- Edit Section -->		<!-- Customer Specific: Maia -->
+		<Action identifier="EDIT"						text="%&quot;SysActDef.edit.txt&quot;" 					comment="%&quot;SysActDef.edit.com&quot;"              		actionImage="{CONTEXT}/public/querix/icon/svg/24/ic_mode_edit_24px.svg"	         	order="13" validate="true" place="top"/>
+		<Action identifier="EDIT COMPANY" 	text="Edit Company"															comment="Edit Company"										             		actionImage="{CONTEXT}/public/querix/icon/svg/24/ic_company_edit.svg"		         	order="13" validate="true" place="top"/>
+		<Action identifier="COMPANY ACCESS"	text="Company Access"														comment="Edit/Update user company security access"	   		actionImage="{CONTEXT}/public/querix/icon/svg/24/ic_company_edit.svg"		         	order="13" validate="true" place="top"/>		
+		<Action identifier="EDIT USER"			text="Edit User"																comment="Edit User"												             		actionImage="{CONTEXT}/public/querix/icon/svg/24/ic_user_edit.svg"			         	order="14" validate="true" place="top"/>				
+		<Action identifier="NEW"						text="%&quot;SysActDef.new.txt&quot;" 					comment="%&quot;SysActDef.new.com1&quot;"              		actionImage="{CONTEXT}/public/querix/icon/svg/24/ic_add_box_24px.svg"		         	order="11" statical="false" place="top"/>
+		<Action identifier="ADD"						text="%&quot;SysActDef.new.txt&quot;" 					comment="%&quot;SysActDef.new.com1&quot;"              		actionImage="{CONTEXT}/public/querix/icon/svg/24/ic_add_box_24px.svg"		         	order="11" statical="false" place="top"/>
+		<Action identifier="INSERT"					text="%&quot;SysActDef.new.txt&quot;" 					comment="%&quot;SysActDef.new.com2&quot;"              		actionImage="{CONTEXT}/public/querix/icon/svg/24/ic_add_box_24px.svg"		         	order="11" validate="true" accelerator2="n,false,true,false" place="top"/>
+		<Action identifier="APPEND"					text="%&quot;SysActDef.add.txt&quot;" 					comment="%&quot;SysActDef.add.com&quot;" 	             		actionImage="{CONTEXT}/public/querix/icon/svg/24/ic_add_box_24px.svg"		         	order="11" validate="true" accelerator2="n,false,true,false" place="top"/>
+		<Action identifier="UNDO RECEIPT APPLY"	  text="Undo Receipt Apply"                	comment="Undo Receipt Apply"                              actionImage="{CONTEXT}/public/querix/icon/svg/24/ic_manual_operation_hand_24px.svg"		order="13" validate="true" place="top"/>
+		<Action identifier="F1"							text="%&quot;SysActDef.add.txt&quot;" 					comment="%&quot;SysActDef.add.com2&quot;"	             		actionImage="{CONTEXT}/public/querix/icon/svg/24/ic_add_box_24px.svg"             order="11" statical="false" accelerator1="f1,false,false,false" place="top"/>
+		<Action identifier="CHANGE"					text="%&quot;SysActDef.edit.txt&quot;"					comment="%&quot;SysActDef.edit.com&quot;"		           		actionImage="{CONTEXT}/public/querix/icon/svg/24/ic_mode_edit_24px.svg"           order="13" validate="true" place="top"/>
+		<Action identifier="DELETE"					text="%&quot;SysActDef.delete.txt&quot;"				comment="%&quot;SysActDef.delete.com&quot;"	            	actionImage="{CONTEXT}/public/querix/icon/svg/24/ic_delete_24px.svg"              order="12" accelerator2="delete,false,false,false" statical="false" validate="false" place="top"/>
+		<Action identifier="DELETE_MARKER"	text="%&quot;SysActDef.delete.txt&quot;" 				comment="%&quot;SysActDef.delete.com&quot;"	            	actionImage="{CONTEXT}/public/querix/icon/svg/24/ic_delete_24px.svg"              order="12" accelerator2="delete,false,false,false" statical="false" validate="false" place="top"/>
+		<Action identifier="F2"							text="%&quot;SysActDef.delete.txt&quot;" 				comment="%&quot;SysActDef.delete.com2&quot;"             	actionImage="{CONTEXT}/public/querix/icon/svg/24/ic_remove_circle_24px.svg"       order="12" accelerator1="f2,false,false,false" statical="false" place="top"/>
+		<Action identifier="DELETE_RECORD"	text="%&quot;SysActDef.delete.txt&quot;"				comment="%&quot;SysActDef.delete.com&quot;"	            	actionImage="{CONTEXT}/public/querix/icon/svg/24/ic_delete_24px.svg"              order="12" validate="false" accelerator2="delete,false,false,false" place="top"/>
+		<Action identifier="DELETE_ROW"			text="%&quot;SysActDef.delete.txt&quot;"				comment="%&quot;SysActDef.delete.com2&quot;"	            actionImage="{CONTEXT}/public/querix/icon/svg/24/ic_delete_24px.svg"              order="12" validate="false" accelerator2="delete,false,false,false" place="top"/>
+
+		<Action identifier="DISCARD"         text="%&quot;SysActDef.discard.txt&quot;"       comment="%&quot;SysActDef.discard.com&quot;"             actionImage="{CONTEXT}/public/querix/icon/svg/24/ic_delete_24px.svg"               order="13" statical="false" validate="true" place="top"/>
+		<Action identifier="REPLY"           text="%&quot;SysActDef.reply.txt&quot;"         comment="%&quot;SysActDef.reply.com&quot;"               actionImage="{CONTEXT}/public/querix/icon/svg/24/ic_reply_24px.svg"                order="15" statical="false" validate="true" place="top" accelerator2="f12,false,false,false"/>
+		<Action identifier="POST BATCH"      text="%&quot;SysActDef.post_batch.txt&quot;"    comment="%&quot;SysActDef.post_batch.com&quot;"          actionImage="{CONTEXT}/public/querix/icon/svg/24/ic_check_circle_24px.svg"         order="13" statical="false" validate="true" place="top"/>
+		<Action identifier="POST"            text="%&quot;SysActDef.post_activity.txt&quot;" comment="%&quot;SysActDef.post_activity.com&quot;"       actionImage="{CONTEXT}/public/querix/icon/svg/24/ic_check_circle_24px.svg"         order="13" statical="false" validate="true" place="top"/>
+		<Action identifier="COPY"            text="%&quot;SysActDef.copy.record.txt&quot;"   comment="%&quot;SysActDef.copy.record.com&quot;"         actionImage="{CONTEXT}/public/querix/icon/svg/24/ic_copy_24px.svg"                 order="18" statical="false" validate="true" place="top"/>
+		<Action identifier="TEMPLATE"        text="%&quot;SysActDef.copy.template.txt&quot;" comment="%&quot;SysActDef.copy.template.com&quot;"       actionImage="{CONTEXT}/public/querix/icon/svg/24/ic_library_books_24px.svg"        order="18" statical="false" validate="true" place="top"/>
+		<Action identifier="DUPLICATE"       text="%&quot;SysActDef.duplicate.txt&quot;"     comment="%&quot;SysActDef.duplicate.com&quot;"           actionImage="{CONTEXT}/public/querix/icon/svg/24/ic_duplicate_24px.svg"            order="18" statical="false" validate="true" place="top"/>
+		<Action identifier="CLEAR"           text="%&quot;SysActDef.clear.txt&quot;"         comment="%&quot;SysActDef.clear.txt&quot;"               actionImage="{CONTEXT}/public/querix/icon/svg/24/ic_clear_24px.svg"                order="19" statical="false" validate="true" place="top"/>
+		<Action identifier="VALIDATE"        text="Validate"                                 comment="Validate"                                       actionImage="{CONTEXT}/public/querix/icon/svg/24/ic_validate_24px.svg"             order="19" statical="false" validate="true" place="top"/>
+
+		<!-- View Section -->		<!-- Customer Specific: Maia -->
+		<Action identifier="CONTROL-P"            text="%&quot;SysActDef.detailed_info.txt&quot;"    comment="%&quot;SysActDef.detailed_info.com&quot;"    actionImage="{CONTEXT}/public/querix/icon/svg/24/ic_info_outline_24px.svg"         statical="false" order="54"/>
+		<Action identifier="SUMMARY"              text="%&quot;SysActDef.summary.txt&quot;"          comment="%&quot;SysActDef.summary.com&quot;"          actionImage="{CONTEXT}/public/querix/icon/svg/24/ic_info_24px.svg"                 statical="false" order="51" place="top"/>
+		<Action identifier="VIEW"                 text="%&quot;SysActDef.view.txt&quot;"             comment="%&quot;SysActDef.view.com&quot;"             actionImage="{CONTEXT}/public/querix/icon/svg/24/ic_details_24px.svg"              statical="false" order="14" place="top"/>
+		<Action identifier="F20"                  text="%&quot;SysActDef.details.txt&quot;"          comment="%&quot;SysActDef.details.com&quot;"          actionImage="{CONTEXT}/public/querix/icon/svg/24/ic_details_24px.svg"              statical="false" order="53" place="top"/>
+		<Action identifier="DETAILS"              text="%&quot;SysActDef.details.txt&quot;"          comment="%&quot;SysActDef.details.com&quot;"          actionImage="{CONTEXT}/public/querix/icon/svg/24/ic_details_24px.svg"              statical="false" order="53" place="top"/>
+		<Action identifier="DETAIL"               text="%&quot;SysActDef.details.txt&quot;"          comment="%&quot;SysActDef.details.com&quot;"          actionImage="{CONTEXT}/public/querix/icon/svg/24/ic_details_24px.svg"              statical="false" order="53" place="top"/>
+		<!--View Sub Section -> Filter-->
+		<Action identifier="FILTER"               text="%&quot;SysActDef.filter.txt&quot;"           comment="%&quot;SysActDef.filter.com&quot;"           actionImage="{CONTEXT}/public/querix/icon/svg/24/ic_filter_list_24px.svg"          statical="false" order="8"  place="top"/>
+		<Action identifier="DEFAULT FILTER"       text="DEFAULT FILTER"                              comment="DEFAULT FILTER"                              actionImage="{CONTEXT}/public/querix/icon/svg/24/ic_default_24px.svg"                  statical="false" order="8"  place="top"/>
+		<Action identifier="DEFAULT"              text="DEFAULT"                                     comment="DEFAULT"                                     actionImage="{CONTEXT}/public/querix/icon/svg/24/ic_default_24px.svg"                  statical="false" order="8"  place="top"/>
+		<Action identifier="REFRESH"              text="%&quot;SysActDef.refresh.txt&quot;"          comment="%&quot;SysActDef.refresh.com&quot;"          actionImage="{CONTEXT}/public/querix/icon/svg/24/ic_refresh_24px.svg"              statical="false" order="59"/>
+		<Action identifier="Q"                    text="%&quot;SysActDef.filter.txt&quot;"           comment="%&quot;SysActDef.filter.com&quot;"           actionImage="{CONTEXT}/public/querix/icon/svg/24/ic_filter_list_24px.svg"          statical="false" order="51" place="top"/>
+		<Action identifier="F17"                  text="%&quot;SysActDef.filter.txt&quot;"           comment="%&quot;SysActDef.filter.com&quot;"           actionImage="{CONTEXT}/public/querix/icon/svg/24/ic_filter_list_24px.svg"          statical="false" order="51" place="top"/>
+		<Action identifier="Query"                text="%&quot;SysActDef.filter.txt&quot;"           comment="%&quot;SysActDef.filter.com&quot;"           actionImage="{CONTEXT}/public/querix/icon/svg/24/ic_filter_list_24px.svg"          statical="false" order="51" place="top"/>
+		<Action identifier="FILTER CURRENCY"      text="%&quot;SysActDef.filter_currency.txt&quot;"  comment="%&quot;SysActDef.filter_currency.com&quot;"  actionImage="{CONTEXT}/public/querix/icon/svg/24/ic_filter_list_24px.svg"          statical="false" order="51" place="top"/>
+
+
+	<!-- Receipt -->
+		<Action identifier="TOGGLE"					      text="Toggle (F10)"					comment="Toggle (F10)"		           		actionImage="{CONTEXT}/public/querix/icon/svg/24/ic_mode_edit_24px.svg"                                 accelerator1="f10,false,true,false" order="13" validate="true" place="top"/>
+<!-- 		<Action identifier="TOGGLE"					      text="Toggle (F10)"					comment="Toggle (F10)"		           		actionImage="{CONTEXT}/public/querix/icon/svg/24/ic_mode_edit_24px.svg"                                 accelerator1="f10,false,true,false" order="13" validate="true" place="top"/>  -->
+		
+		<!-- Payment and Payment Types -->
+		<!-- <Action identifier="PAYMENT"         text="%&quot;SysActDef.payment.txt&quot;"          comment="%&quot;SysActDef.payment.com&quot;"          actionImage="{CONTEXT}/public/querix/icon/svg/24/ic_attach_money_24px.svg"              statical="false" order="68" place="top"/>		  -->
+		<Action identifier="PAYMENT"              text="%&quot;SysActDef.payment.txt&quot;"          comment="%&quot;SysActDef.payment.com&quot;"          actionImage="{CONTEXT}/public/querix/icon/svg/24/ic_attach_money_24px.svg"             statical="false" order="17" place="top"/>
+		<Action identifier="PAYMENT_TYPE"         text="%&quot;SysActDef.pay_type.txt&quot;"         comment="%&quot;SysActDef.pay_type.com&quot;"         actionImage="{CONTEXT}/public/querix/icon/svg/24/ic_payment_24px.svg"                  statical="false" order="17" place="top"/>
+		<Action identifier="PAYMENT DETAILS"      text="Payment Details"                             comment="Payment Details"                             actionImage="{CONTEXT}/public/querix/icon/svg/24/ic_payment_24px.svg"                  statical="false" order="19" place="top"/>
+
+		<!-- General Ledger Accounts -->
+		<Action identifier="GL_ACCOUNT"           text="%&quot;SysActDef.glaccount.txt&quot;"        comment="%&quot;SysActDef.glaccount.com&quot;"        actionImage="{CONTEXT}/public/querix/icon/svg/24/ic_gl_account_24px.svg"               statical="false" order="18"/>
+		<Action identifier="GL_ACCOUNTS"          text="%&quot;SysActDef.glaccount.txt&quot;"        comment="%&quot;SysActDef.glaccount.com&quot;"        actionImage="{CONTEXT}/public/querix/icon/svg/24/ic_gl_account_24px.svg"               statical="false" order="19"/>
+		<Action identifier="EXCHANGE RATE"        text="Exchange Rate"                               comment="Exchange Rate"                               actionImage="{CONTEXT}/public/querix/icon/svg/24/ic_exchange_rate_24px.svg"            statical="false" order="11" place="top"/>
+
+
+		<!-- Edit 2 / Special Section -->		<!-- Customer Specific: Maia -->
+		<Action identifier="on:key:CONTROL-b"     text="%&quot;SysActDef.lookup.txt&quot;"           comment="%&quot;SysActDef.lookup.com&quot;"           actionImage="{CONTEXT}/public/querix/icon/svg/24/ic_search_24px.svg"                accelerator1="b,false,true,false" statical="false" order="21" place="top"/>
+
+		<Action identifier="LOOKUP"               text="%&quot;SysActDef.lookup.txt&quot;"           comment="%&quot;SysActDef.lookup.com&quot;"           actionImage="{CONTEXT}/public/querix/icon/svg/24/ic_search_24px.svg"                accelerator1="b,false,true,false" statical="false" order="22" place="top"/>
+		<Action identifier="ADVANCED LOOKUP"      text="Adv. Lookup"                                 comment="Adv. Lookup"                                 actionImage="{CONTEXT}/public/querix/icon/svg/24/ic_search_24px.svg"                accelerator1="f,false,true,false" statical="false" order="23" place="top"/>
+<!--  Changed by HuHo 22.04.2020 different icon and tooltip (must not be just find.. as it will get confusing with different finds..)
+		<Action identifier="FIND" text="%&quot;SysActDef.find.txt&quot;" comment="%&quot;SysActDef.find.com&quot;" actionImage="{CONTEXT}/public/querix/icon/svg/24/ic_search_table_24px.svg" accelerator1="b,false,true,false" statical="false" order="21" place="top"/>
+-->		
+		<Action identifier="FIND"                  text="Find in table"                                    comment="Find in table"                                    actionImage="{CONTEXT}/public/querix/icon/svg/24/ic_search_table_24px.svg"      statical="false" order="21"  place="top-popup" accelerator1="b,false,true,false" /> <!-- never top please -->
+		<Action identifier="SEARCH"                text="%&quot;SysActDef.search.txt&quot;"                comment="%&quot;SysActDef.search.com&quot;"                actionImage="{CONTEXT}/public/querix/icon/svg/24/ic_search_24px.svg"            statical="false" order="21"  place="top"       accelerator1="b,false,true,false"/>
+		<Action identifier="BROWSE"                text="%&quot;SysActDef.browse.txt&quot;"                comment="%&quot;SysActDef.browse.com&quot;"                actionImage="{CONTEXT}/public/querix/icon/svg/24/ic_search_24px.svg"            statical="false" order="21"  place="top"       accelerator1="b,false,true,false"/>
+		<Action identifier="Group"                 text="%&quot;SysActDef.group.txt&quot;"                 comment="%&quot;SysActDef.group.com&quot;"                 actionImage="{CONTEXT}/public/querix/icon/svg/24/ic_group_24px.svg"             statical="false" order="61"  place="top"/>
+		<Action identifier="Corporate"             text="%&quot;SysActDef.corporate.txt&quot;"             comment="%&quot;SysActDef.corporate.com&quot;"             actionImage="{CONTEXT}/public/querix/icon/svg/24/ic_baseline-business_24px.svg" statical="false" order="62"  place="top"/>
+		<Action identifier="Shipping"              text="%&quot;SysActDef.shipping.txt&quot;"              comment="%&quot;SysActDef.shipping.com&quot;"              actionImage="{CONTEXT}/public/querix/icon/svg/24/ic_local_shipping_24px.svg"    statical="false" order="63"  place="top"/>
+		<Action identifier="NOTES"                 text="%&quot;SysActDef.notes.txt&quot;"                 comment="%&quot;SysActDef.notes.com&quot;"                 actionImage="{CONTEXT}/public/querix/icon/svg/24/ic_note_24px.svg"              statical="false" order="64"  place="top-popup"/>
+	 	<Action identifier="on:key:CONTROL-n"      text="%&quot;SysActDef.control_key.control_n.txt&quot;" comment="%&quot;SysActDef.control_key.control_n.com&quot;" actionImage="{CONTEXT}/public/querix/icon/svg/24/ic_note_24px.svg"              statical="false" order="64"  place="top-popup" accelerator1="n,false,true,false"/> 		
+
+		<!--<Action identifier="Notes"             text="Notes (Ctrl-N)"                                   comment="Notes (Ctrl-N)"                                   actionImage="{CONTEXT}/public/querix/icon/svg/24/ic_speaker_notes_24px.svg"     statical="false" order="102" place="top-popup" accelerator1="n,false,true,false"/> -->		
+		<Action identifier="Billing"               text="%&quot;SysActDef.billing.txt&quot;"               comment="%&quot;SysActDef.billing.com&quot;"               actionImage="{CONTEXT}/public/querix/icon/svg/24/ic_attach_money_24px.svg"      statical="false" order="65"  place="top"/>
+		<Action identifier="Distribution"          text="%&quot;SysActDef.distribution.txt&quot;"          comment="%&quot;SysActDef.distribution.com&quot;"          actionImage="{CONTEXT}/public/querix/icon/svg/24/ic_distribution_24px.svg"      statical="false" order="67"  place="top"/>
+		<Action identifier="CREDIT"                text="%&quot;SysActDef.credit.txt&quot;"                comment="%&quot;SysActDef.credit.com&quot;"                actionImage="{CONTEXT}/public/querix/icon/svg/24/ic_credit_card_24px.svg"       statical="false" order="67"  place="top"/>
+		<Action identifier="PURCHASE"              text="%&quot;SysActDef.purchase.txt&quot;"              comment="%&quot;SysActDef.purchase.com&quot;"              actionImage="{CONTEXT}/public/querix/icon/svg/24/ic_shopping_basket_24px.svg"   statical="false" order="69"  place="top"/>
+		<Action identifier="CUST PROD CODE"        text="Cust. Product Code"                               comment="Customer Product Code"                            actionImage="{CONTEXT}/public/querix/icon/svg/24/ic_developer_mode_24px.svg"    statical="false" order="69"  place="top"/>
+		<Action identifier="CUST PROD CODE LOOKUP" text="Cust. Product Code Lookup"                        comment="Customer Product Code Lookup"                     actionImage="{CONTEXT}/public/querix/icon/svg/24/ic_developer_mode_24px.svg"    statical="false" order="69"  place="top"/>		
+		<Action identifier="CUST PROD CODE SETUP"  text="Cust. Product Code Setup"                         comment="Customer Product Code Setup"                      actionImage="{CONTEXT}/public/querix/icon/svg/24/ic_developer_mode_24px.svg"    statical="false" order="69"  place="top-popup"/>
+		<Action identifier="User Location"         text="%&quot;SysActDef.user_location.txt&quot;"         comment="%&quot;SysActDef.user_location.com&quot;"         actionImage="{CONTEXT}/public/querix/icon/svg/24/ic_location_24px.svg"          statical="false" order="61"  place="top"/>
+		<Action identifier="Generate"              text="%&quot;SysActDef.generate.txt&quot;"              comment="%&quot;SysActDef.generate.com&quot;"              actionImage="{CONTEXT}/public/querix/icon/svg/24/ic_settings_24px.svg"          statical="false" order="70"  place="top"/>
+		<Action identifier="HISTORY"               text="%&quot;SysActDef.history.txt&quot;"               comment="%&quot;SysActDef.history.com&quot;"               actionImage="{CONTEXT}/public/querix/icon/svg/24/ic_history_24px.svg"           statical="false" order="71"  place="top"/>
+		<Action identifier="ANALYSIS"              text="%&quot;SysActDef.analysis.txt&quot;"              comment="%&quot;SysActDef.analysis.com&quot;"              actionImage="{CONTEXT}/public/querix/icon/svg/24/ic_history_24px.svg"           statical="false" order="71"  place="top"/>
+
+
+		<Action identifier="HEADER"                text="%&quot;SysActDef.header.txt&quot;"                comment="%&quot;SysActDef.header.com&quot;"                actionImage="{CONTEXT}/public/querix/icon/svg/24/ic_header_24px.svg"            order="25" validate="false" accelerator2="delete,false,false,false" place="top"/>
+		<Action identifier="COLUMN"                text="%&quot;SysActDef.column.txt&quot;"                comment="%&quot;SysActDef.column.com&quot;"                actionImage="{CONTEXT}/public/querix/icon/svg/24/ic_column_24px.svg"            order="26" validate="false" accelerator2="delete,false,false,false" place="top"/>
+		<Action identifier="LINE"                  text="%&quot;SysActDef.line.txt&quot;"                  comment="%&quot;SysActDef.line.com&quot;"                  actionImage="{CONTEXT}/public/querix/icon/svg/24/ic_line_24px.svg"              order="27" validate="false" accelerator2="delete,false,false,false" place="top"/>
+		<Action identifier="ROW"                   text="%&quot;SysActDef.row.txt&quot;"                   comment="%&quot;SysActDef.row.com&quot;"                   actionImage="{CONTEXT}/public/querix/icon/svg/24/ic_row_24px.svg"               order="27" validate="false" accelerator2="delete,false,false,false" place="top"/>
+ 
+
+		<!-- PRINT Section -->		<!-- Customer Specific: Maia -->
+		<!-- <Action identifier="PRINT" text="Print" comment="Print" actionImage="{CONTEXT}/public/querix/icon/svg/24/ic_print_24px.svg" showInContextMenu="No" defaultView="No"/> -->
+		<Action identifier="Print" text="%&quot;SysActDef.report.print.txt&quot;" comment="%&quot;SysActDef.report.print.com2&quot;" actionImage="{CONTEXT}/public/querix/icon/svg/24/ic_print_24px.svg" statical="false" order="75" place="top"/>
+		<Action identifier="Print Report" text="%&quot;SysActDef.report.print.txtr&quot;" comment="%&quot;SysActDef.report.print.com2&quot;" actionImage="{CONTEXT}/public/querix/icon/svg/24/ic_print_24px.svg" statical="false" order="75" place="top"/>
+		<Action identifier="Print Manager" text="%&quot;SysActDef.print_manager.txt&quot;" comment="%&quot;SysActDef.print_manager.com&quot;" actionImage="{CONTEXT}/public/querix/icon/svg/24/ic_print_24px.svg" statical="false" order="75" place="top"/>
+		<Action identifier="F11" text="%&quot;SysActDef.report.print.txtr&quot;" comment="%&quot;SysActDef.report.print.com3&quot;" actionImage="{CONTEXT}/public/querix/icon/svg/24/ic_print_24px.svg" statical="false" order="77"/>
+		<Action identifier="Filter Report" text="%&quot;SysActDef.report.filter.txt&quot;" comment="%&quot;SysActDef.report.filter.com&quot;" actionImage="{CONTEXT}/public/querix/icon/svg/24/ic_filter_list_24px.svg" statical="false" order="78"/>
+
+		<Action identifier="Message" text="%&quot;SysActDef.report.message.txt&quot;" comment="%&quot;SysActDef.report.message.com&quot;" actionImage="{CONTEXT}/public/querix/icon/svg/24/ic_message_24px.svg" statical="false" order="79"/>
+
+		<Action identifier="LOAD" text="%&quot;SysActDef.load.txt&quot;" comment="%&quot;SysActDef.load.com&quot;" actionImage="{CONTEXT}/public/querix/icon/svg/24/ic_cloud_download_24px.svg" statical="false" order="80"/>
+		<Action identifier="IMPORT" text="%&quot;SysActDef.import.txt&quot;" comment="%&quot;SysActDef.import.com&quot;" actionImage="{CONTEXT}/public/querix/icon/svg/24/ic_cloud_download_24px.svg" statical="false" order="80"/>
+		<Action identifier="UNLOAD" text="%&quot;SysActDef.unload.txt&quot;" comment="%&quot;SysActDef.unload.com&quot;" actionImage="{CONTEXT}/public/querix/icon/svg/24/ic_cloud_upload_24px.svg" statical="false" order="81"/>
+		<Action identifier="EXPORT" text="%&quot;SysActDef.export.txt&quot;" comment="%&quot;SysActDef.export.com&quot;" actionImage="{CONTEXT}/public/querix/icon/svg/24/ic_cloud_upload_24px.svg" statical="false" order="81"/>
+
+		<Action identifier="Rerun" text="%&quot;SysActDef.rerun.txt&quot;" comment="%&quot;SysActDef.rerun.com&quot;" actionImage="{CONTEXT}/public/querix/icon/svg/24/ic_directions_run_24px.svg" statical="false" order="82"/>
+		<Action identifier="Reset" text="%&quot;SysActDef.reset.txt&quot;" comment="%&quot;SysActDef.reset.txt&quot;" actionImage="{CONTEXT}/public/querix/icon/svg/24/ic_refresh_24px.svg" statical="false" order="83"/>
+
+		<!-- Pseudo Spinner Action INCREMENT/DEPRECIATE ++/-- -->
+		<Action identifier="YEAR-1" text="Prev.Year" comment="Previous Year" actionImage="{CONTEXT}/public/querix/icon/svg/24/ic_year-depreciate_24px.svg" accelerator1="F9,false,false,false" order="64" place="top"/>
+		<Action identifier="YEAR+1" text="Next Year" comment="Next Year"     actionImage="{CONTEXT}/public/querix/icon/svg/24/ic_year_increment_24px.svg" accelerator1="F10,false,false,false" order="66" place="top"/>
+
+		<!-- Run External Program #####################################################################-->
+		<!--  F10 = URS - Report File Management-->
+		<Action identifier="F10" text="%&quot;SysActDef.data_manager.txt&quot;" comment="%&quot;SysActDef.data_manager.com&quot;" actionImage="{CONTEXT}/public/querix/icon/svg/24/ic_settings_24px.svg" accelerator1="f10,false,false,false" statical="false" order="71"/>
+
+
+		<!-- ???? Navigation Section -->		<!-- Customer Specific: Maia  #####################################################################-->
+
+		<Action identifier="on:key:f" text="%&quot;SysActDef.navigation.first.txt&quot;" comment="%&quot;SysActDef.navigation.first.com&quot;" actionImage="{CONTEXT}/public/querix/icon/svg/24/ic_first_page_24px.svg" defaultView="No" order="61" place="top"/>
+		<Action identifier="on:key:p" text="%&quot;SysActDef.navigation.previous_record.txt&quot;" comment="%&quot;SysActDef.navigation.previous_record.com&quot;" actionImage="{CONTEXT}/public/querix/icon/svg/24/ic_navigate_before_24px.svg" defaultView="No" order="63" place="top"/>
+
+			<!-- !!! "N" has too many side effects/clashes with other N menu items.. .need to comment it again 
+			<Action identifier="on:key:n" text="%&quot;SysActDef.navigation.next_record.txt&quot;" actionImage="{CONTEXT}/public/querix/icon/svg/24/ic_navigate_next_24px.svg" comment="%&quot;SysActDef.navigation.next_record.com&quot;" defaultView="No" order="64" place="top"/>
+			-->
+
+		<Action identifier="on:key:l" text="%&quot;SysActDef.navigation.last.txt&quot;" comment="%&quot;SysActDef.navigation.last.com&quot;" actionImage="{CONTEXT}/public/querix/icon/svg/24/ic_last_page_24px.svg" defaultView="No" order="66" place="top"/>
+
+		<Action identifier="F18" text="%&quot;SysActDef.navigation.first.txt&quot;" comment="%&quot;SysActDef.navigation.first.com&quot;" actionImage="{CONTEXT}/public/querix/icon/svg/24/ic_first_page_24px.svg" order="61" place="top"/>
+		<Action identifier="F19" text="%&quot;SysActDef.navigation.previous_record.txt&quot;" comment="%&quot;SysActDef.navigation.previous_record.com&quot;" actionImage="{CONTEXT}/public/querix/icon/svg/24/ic_navigate_before_24px.svg" order="63" place="top"/>
+		<Action identifier="F21" text="%&quot;SysActDef.navigation.next_record.txt&quot;" comment="%&quot;SysActDef.navigation.next_record.com&quot;" actionImage="{CONTEXT}/public/querix/icon/svg/24/ic_navigate_next_24px.svg" order="64" place="top"/>
+
+		<Action identifier="F22" text="%&quot;SysActDef.navigation.last.txt&quot;" comment="%&quot;SysActDef.navigation.last.com&quot;" actionImage="{CONTEXT}/public/querix/icon/svg/24/ic_last_page_24px.svg" order="66" place="top"/>
+
+
+		<!-- ???? Help Section -->		<!-- Customer Specific: Maia -->
+
+		<!-- Used for Demo purpose ###########################################-->
+		<Action identifier="message" text="%&quot;SysActDef.report.message.txt&quot;" comment="%&quot;SysActDef.report.message.txt&quot;" actionImage="{CONTEXT}/public/querix/icon/svg/24/ic_info_outline_24px.svg" order="1" validate="true"/>
+		<Action identifier="input" text="%&quot;SysActDef.input.txt&quot;" comment="%&quot;SysActDef.input.com&quot;" actionImage="{CONTEXT}/public/querix/icon/svg/24/ic_mode_edit_24px.svg" order="10" validate="true"/>
+
+
+		<!-- Shown by default if the event exists -->
+
+
+		<!-- Navigation ##############################################-->
+		<!-- Navigation between screens i.e. wizzard nex/previous -->
+		<Action identifier="NAV_BACKWARD" 	      text="Previous" 	comment="Previous Screen"	actionImage="{CONTEXT}/public/querix/icon/svg/24/ic_navigate_before_24px.svg"	 		order="7" place="top"/>
+		<Action identifier="NAV_FORWARD" 	        text="Next" 		comment="Next Screen"		actionImage="{CONTEXT}/public/querix/icon/svg/24/ic_navigate_next_24px.svg" 			    order="9" place="top"/>
+		
+		
+		<!-- Table Navigation-->
+
+		<!--first row of table: firstrow -->
+		<Action identifier="FIRSTROW"             text="%&quot;SysActDef.navigation.first.txt&quot;" 			     comment="%&quot;SysActDef.navigation.first.comr&quot;" 				actionImage="{CONTEXT}/public/querix/icon/svg/24/ic_first_page_24px.svg" 	accelerator1="home,false,false,false" 	showInContextMenu="Yes" order="61" place="top"/>
+		<!--previous page of table: prevpage -->
+		<Action identifier="PREVPAGE"             text="%&quot;SysActDef.navigation.prev_page.txt&quot;" 	     comment="%&quot;SysActDef.navigation.prev_page.com&quot;"      actionImage="{CONTEXT}/public/querix/icon/svg/24/ic_navigate_before_24px.svg" accelerator2="pageup,false,false,false" showInContextMenu="No" order="63" place="top"/>
+
+
+		<Action identifier="PREVROW"                                              accelerator1="up,false,false,false" 		showInContextMenu="No" order="63"/>
+		<Action identifier="NEXTROW"                                              accelerator1="down,false,false,false"	  showInContextMenu="No" order="64"/>
+
+		<!--next page of table: nextpage -->
+		<Action identifier="nextpage"             text="%&quot;SysActDef.navigation.next_page.txt&quot;"       comment="%&quot;SysActDef.navigation.next_page.com&quot;"      actionImage="{CONTEXT}/public/querix/icon/svg/24/ic_navigate_next_24px.svg" accelerator2="pagedown,false,false,false" showInContextMenu="No" order="64" place="top"/>
+		<!--last row of table: lastrow -->
+		<Action identifier="lastrow"              text="%&quot;SysActDef.navigation.last.txt&quot;"            comment="%&quot;SysActDef.navigation.last.com2&quot;"          actionImage="{CONTEXT}/public/querix/icon/svg/24/ic_last_page_24px.svg" accelerator1="end,false,false,false" showInContextMenu="No" order="66" place="top"/>
+
+
+
+		<!-- ???? Navigation First, Previous, Next, Last-->
+
+		<Action identifier="first"                text="%&quot;SysActDef.navigation.first.txt&quot;"           comment="%&quot;SysActDef.navigation.first.comr&quot;" actionImage="{CONTEXT}/public/querix/icon/svg/24/ic_first_page_24px.svg" order="61" place="top"/>
+
+		<Action identifier="previous"             text="%&quot;SysActDef.navigation.previous.txt&quot;"        comment="%&quot;SysActDef.navigation.previous.com&quot;" actionImage="{CONTEXT}/public/querix/icon/svg/24/ic_navigate_before_24px.svg" order="63" place="top"/>
+		<Action identifier="PREVIOUS YEAR"        text="%&quot;SysActDef.navigation.prev.year.txt&quot;"       comment="%&quot;SysActDef.navigation.prev.year.com&quot;" actionImage="{CONTEXT}/public/querix/icon/svg/24/ic_navigate_before_24px.svg" order="62" place="top"/>
+		<Action identifier="PREVIOUS PERIOD"      text="%&quot;SysActDef.navigation.prev.period.txt&quot;"      comment="%&quot;SysActDef.navigation.prev.period.com&quot;" actionImage="{CONTEXT}/public/querix/icon/svg/24/ic_navigate_before_24px.svg" order="63" place="top"/>
+		<Action identifier="previous statement"   text="%&quot;SysActDef.navigation.prev.statement.txt&quot;"      comment="%&quot;SysActDef.navigation.prev.statement.com&quot;" actionImage="{CONTEXT}/public/querix/icon/svg/24/ic_navigate_before_24px.svg" order="63" place="top"/>
+		<Action identifier="previous sheet"       text="%&quot;SysActDef.navigation.prev.sheet.txt&quot;"      comment="%&quot;SysActDef.navigation.prev.sheet.com&quot;" actionImage="{CONTEXT}/public/querix/icon/svg/24/ic_navigate_before_24px.svg" order="63" place="top"/>
+
+		<Action identifier="next"                 text="%&quot;SysActDef.navigation.next.txt&quot;"           comment="%&quot;SysActDef.navigation.next.com&quot;" actionImage="{CONTEXT}/public/querix/icon/svg/24/ic_navigate_next_24px.svg" order="64" place="top"/>
+		<Action identifier="NEXT YEAR"            text="%&quot;SysActDef.navigation.nxt.year.txt&quot;"      comment="%&quot;SysActDef.navigation.nxt.year.com&quot;" actionImage="{CONTEXT}/public/querix/icon/svg/24/ic_navigate_next_24px.svg" order="65" place="top"/>
+		<Action identifier="NEXT PERIOD"          text="%&quot;SysActDef.navigation.nxt.period.txt&quot;"      comment="%&quot;SysActDef.navigation.nxt.period.com&quot;" actionImage="{CONTEXT}/public/querix/icon/svg/24/ic_navigate_next_24px.svg" order="64" place="top"/>
+		<Action identifier="next statement"       text="%&quot;SysActDef.navigation.nxt.statement.txt&quot;" comment="%&quot;SysActDef.navigation.nxt.statement.com&quot;" actionImage="{CONTEXT}/public/querix/icon/svg/24/ic_navigate_next_24px.svg" order="64" place="top"/>
+		<Action identifier="next sheet"           text="%&quot;SysActDef.navigation.nxt.sheet.txt&quot;"      comment="%&quot;SysActDef.navigation.nxt.sheet.com&quot;" actionImage="{CONTEXT}/public/querix/icon/svg/24/ic_navigate_next_24px.svg" order="64" place="top"/>
+
+		<Action identifier="last"                 text="%&quot;SysActDef.navigation.last.txt&quot;"      comment="%&quot;SysActDef.navigation.last.com&quot;" actionImage="{CONTEXT}/public/querix/icon/svg/24/ic_last_page_24px.svg" order="66" place="top"/>
+
+		<!--
+		<Action identifier="previous" text="%&quot;SysActDef.navigation.previous_record.txt&quot;" comment="%&quot;SysActDef.navigation.previous_record.com&quot;" actionImage="{CONTEXT}/public/querix/icon/svg/24/ic_navigate_before_24px.svg" order="20120" place="top"/>
+		<Action identifier="next" text="%&quot;SysActDef.navigation.next_record.txt&quot;" comment="%&quot;SysActDef.navigation.next_record.com&quot;" actionImage="{CONTEXT}/public/querix/icon/svg/24/ic_navigate_next_24px.svg" order="20130" place="top"/>
+		-->
+
+
+		<Action identifier="selectnextrow" accelerator1="down,false,false,true" showInContextMenu="No" defaultView="No"/>
+		<Action identifier="selectprevrow" accelerator1="up,false,false,true" showInContextMenu="No" defaultView="No"/>
+		<Action identifier="highlightnextrow" accelerator1="down,true,false,false" showInContextMenu="No" defaultView="No"/>
+		<Action identifier="highlightprevrow" accelerator1="up,true,false,false" showInContextMenu="No" defaultView="No"/>
+
+
+
+		<!-- Field Navigation-->
+		<Action identifier="nextfield" text="%&quot;SysActDef.navigation.next_field.txt&quot;" comment="%&quot;SysActDef.navigation.next_field.com&quot;" accelerator1="tab,false,false,false" accelerator2="right,false,false,false" accelerator3="return,false,false,false" showInContextMenu="No" defaultView="No" order="20010" place="top"/>
+		<Action identifier="prevfield" text="%&quot;SysActDef.navigation.prev_field.txt&quot;" comment="%&quot;SysActDef.navigation.prev_field.com&quot;" accelerator1="tab,false,false,true" accelerator2="left,false,false,false" showInContextMenu="No" defaultView="No" order="20020" place="top"/>
+		<Action identifier="upfield" accelerator1="up,false,false,false" showInContextMenu="No" defaultView="No"/>
+		<Action identifier="downfield" accelerator1="down,false,false,false" showInContextMenu="No" defaultView="No"/>
+
+		<!-- TabPage Navigation -->
+		<Action identifier="nexttab" text="%&quot;SysActDef.navigation.next_folder_tab.txt&quot;" comment="%&quot;SysActDef.navigation.next_folder_tab.com&quot;" accelerator1="tab,true,false,false" showInContextMenu="No" defaultView="No" place="top"/>
+		<Action identifier="prevtab" text="%&quot;SysActDef.navigation.prev_folder_tab.txt&quot;" comment="%&quot;SysActDef.navigation.prev_folder_tab.com&quot;" accelerator1="tab,true,false,true" showInContextMenu="No" defaultView="No" place="top"/>
+
+		<!-- Menu Navigation -->
+		<Action identifier="selectmenu" accelerator1="space,false,false,false" accelerator2="return,false,false,false" showInContextMenu="No" defaultView="No"/>
+		<Action identifier="nextmenu" accelerator1="right,false,false,false" showInContextMenu="No" defaultView="No"/>
+		<Action identifier="prevmenu" accelerator1="left,false,false,false" showInContextMenu="No" defaultView="No"/>
+
+		<!-- Clipboard -->
+		<!--<Action identifier="editcopy" text="%&quot;SysActDef.clipboard.editcopy.txt&quot;" comment="%&quot;SysActDef.clipboard.editcopy.com&quot;" actionImage="{CONTEXT}/public/querix/icon/svg/24/ic_content_copy_24px.svg" accelerator1="c,true,false,false" showInContextMenu="Yes" defaultView="No"/>
+		<Action identifier="editcut" text="%&quot;SysActDef.clipboard.editcut.txt&quot;" comment="%&quot;SysActDef.clipboard.editcut.com&quot;" actionImage="{CONTEXT}/public/querix/icon/svg/24/ic_content_cut_24px.svg" accelerator1="x,true,false,false" showInContextMenu="Yes" defaultView="No"/>
+		<Action identifier="editpaste" text="%&quot;SysActDef.clipboard.editpaste.txt&quot;" comment="%&quot;SysActDef.clipboard.editpaste.com&quot;" actionImage="{CONTEXT}/public/querix/icon/svg/24/ic_content_paste_24px.svg" accelerator1="v,true,false,false" showInContextMenu="Yes" defaultView="No"/>
+		<Action identifier="editcopytitle" text="%&quot;SysActDef.clipboard.editcopytitle.txt&quot;" comment="%&quot;SysActDef.clipboard.editcopytitle.com&quot;" showInContextMenu="Yes" defaultView="No"/>
+		-->
+		<!-- Selection -->
+		<Action identifier="editselectall" text="%&quot;SysActDef.select_all.txt&quot;" comment="%&quot;SysActDef.select_all.com&quot;" accelerator1="a,true,false,false" showInContextMenu="Yes" defaultView="No"/>
+
+
+		<!-- Other events - NOT Shown by default if the event exists -->
+
+		<Action identifier="expand" text="%&quot;SysActDef.expand.txt&quot;" comment="%&quot;SysActDef.expand.com&quot;" accelerator1="right,false,false,false" showInContextMenu="No" defaultView="No"/>
+		<Action identifier="collapse" text="%&quot;SysActDef.collapse.txt&quot;" comment="%&quot;SysActDef.collapse.com&quot;" accelerator1="left,false,false,false" showInContextMenu="No" defaultView="No"/>
+		<Action identifier="dialogtouched" showInContextMenu="No" defaultView="No" validate="false"/>
+		<Action identifier="copycell" text="%&quot;SysActDef.copy.cell.txt&quot;" comment="%&quot;SysActDef.copy.cell.com&quot;" showInContextMenu="Yes" defaultView="No"/>
+		<Action identifier="copyvisiblecolumn" text="%&quot;SysActDef.copy.visible_column.txt&quot;" comment="%&quot;SysActDef.copy.visible_column.com&quot;" showInContextMenu="Yes" defaultView="No"/>
+		<Action identifier="copyrow" text="%&quot;SysActDef.copy.row.txt&quot;" comment="%&quot;SysActDef.copy.row.com&quot;" showInContextMenu="Yes" defaultView="No"/>
+		<Action identifier="copyvisibletable" text="%&quot;SysActDef.copy.visible_table.txt&quot;" comment="%&quot;SysActDef.copy.visible_table.com&quot;" showInContextMenu="Yes" defaultView="No"/>
+		<Action identifier="start_menu_id" showInContextMenu="No" defaultView="No"/>
+		<Action identifier="on:sort" showInContextMenu="No" defaultView="No"/>
+		<Action identifier="showpoptreemenu" accelerator1="f12,true,false,true" showInContextMenu="No" defaultView="No"/>
+
+		<!-- Migration Help - to see events in toolbar ###############################################################################################-->
+		<!-- Migration Help - to see F-key events in toolbar -->
+		<!--
+		<Action identifier="F1" text="%&quot;SysActDef.func_key.f1.txt&quot;" comment="%&quot;SysActDef.func_key.f1.com&quot;" actionImage="{CONTEXT}/public/querix/icon/svg/24/key/ic_key_f1_24px.svg" accelerator1="f1,false,false,false" statical="false" order="990000"/>
+		<Action identifier="F2" text="%&quot;SysActDef.func_key.f2.txt&quot;" comment="%&quot;SysActDef.func_key.f2.com&quot;" actionImage="{CONTEXT}/public/querix/icon/svg/24/key/ic_key_f2_24px.svg" accelerator1="f2,false,false,false" statical="false" order="990001"/>
+		-->
+		<Action identifier="F3" text="%&quot;SysActDef.func_key.f3.txt&quot;" comment="%&quot;SysActDef.func_key.f3.com&quot;" actionImage="{CONTEXT}/public/querix/icon/svg/24/key/ic_key_f3_24px.svg" accelerator1="f3,false,false,false" statical="false" order="990002"/>
+		<Action identifier="F4" text="%&quot;SysActDef.func_key.f4.txt&quot;" comment="%&quot;SysActDef.func_key.f4.com&quot;" actionImage="{CONTEXT}/public/querix/icon/svg/24/key/ic_key_f4_24px.svg" accelerator1="f4,false,false,false" statical="false" order="990003"/>
+		<Action identifier="F5" text="%&quot;SysActDef.func_key.f5.txt&quot;" comment="%&quot;SysActDef.func_key.f5.com&quot;" actionImage="{CONTEXT}/public/querix/icon/svg/24/key/ic_key_f5_24px.svg" accelerator1="f5,false,false,false" statical="false" order="990004"/>
+		<Action identifier="F6" text="%&quot;SysActDef.func_key.f6.txt&quot;" comment="%&quot;SysActDef.func_key.f6.com&quot;" actionImage="{CONTEXT}/public/querix/icon/svg/24/key/ic_key_f6_24px.svg" accelerator1="f6,false,false,false" statical="false" order="990005"/>
+		<Action identifier="F7" text="%&quot;SysActDef.func_key.f7.txt&quot;" comment="%&quot;SysActDef.func_key.f7.com&quot;" actionImage="{CONTEXT}/public/querix/icon/svg/24/key/ic_key_f7_24px.svg" accelerator1="f7,false,false,false" statical="false" order="990006"/>
+		<Action identifier="F8" text="%&quot;SysActDef.func_key.f8.txt&quot;" comment="%&quot;SysActDef.func_key.f8.com&quot;" actionImage="{CONTEXT}/public/querix/icon/svg/24/key/ic_key_f8_24px.svg" accelerator1="f8,false,false,false" statical="false" order="990007"  place="top"/>
+		<Action identifier="F9" text="%&quot;SysActDef.func_key.f9.txt&quot;" comment="%&quot;SysActDef.func_key.f9.com&quot;" actionImage="{CONTEXT}/public/querix/icon/svg/24/key/ic_key_f9_24px.svg" accelerator1="f9,false,false,false" statical="false" order="990008"/>
+		<!--<Action identifier="F10" text="%&quot;SysActDef.func_key.f10.txt&quot;" comment="%&quot;SysActDef.func_key.f10.com&quot;" actionImage="{CONTEXT}/public/querix/icon/svg/24/key/ic_key_f9_plus_24px.svg" accelerator1="f10,false,false,false" statical="false" order="990009"/>
+		<Action identifier="F11" text="%&quot;SysActDef.func_key.f11.txt&quot;" comment="%&quot;SysActDef.func_key.f11.com&quot;" actionImage="{CONTEXT}/public/querix/icon/svg/24/key/ic_key_f1_24px.svg" accelerator1="f11,false,false,false" statical="false" order="990010"/>
+		-->
+		<Action identifier="F12" text="%&quot;SysActDef.func_key.f12.txt&quot;" comment="%&quot;SysActDef.func_key.f12.com&quot;" actionImage="{CONTEXT}/public/querix/icon/svg/24/key/ic_key_f2_24px.svg" accelerator1="f12,false,false,false" statical="false" order="990011"/>
+		<Action identifier="F13" text="%&quot;SysActDef.func_key.f13.txt&quot;" comment="%&quot;SysActDef.func_key.f13.com&quot;" actionImage="{CONTEXT}/public/querix/icon/svg/24/key/ic_key_f3_24px.svg" accelerator1="f1,true,false,false" statical="false" order="990012"/>
+		<Action identifier="F14" text="%&quot;SysActDef.func_key.f14.txt&quot;" comment="%&quot;SysActDef.func_key.f14.com&quot;" actionImage="{CONTEXT}/public/querix/icon/svg/24/key/ic_key_f4_24px.svg" accelerator1="f2,true,false,false" statical="false" order="990013"/>
+		<Action identifier="F15" text="%&quot;SysActDef.func_key.f15.txt&quot;" comment="%&quot;SysActDef.func_key.f15.com&quot;" actionImage="{CONTEXT}/public/querix/icon/svg/24/key/ic_key_f5_24px.svg" accelerator1="f3,true,false,false" statical="false" order="990014"/>
+		<Action identifier="F16" text="%&quot;SysActDef.func_key.f16.txt&quot;" comment="%&quot;SysActDef.func_key.f16.com&quot;" actionImage="{CONTEXT}/public/querix/icon/svg/24/key/ic_key_f6_24px.svg" accelerator1="f4,true,false,false" statical="false" order="990015"/>
+		<!--
+		<Action identifier="F17" text="%&quot;SysActDef.func_key.f17.txt&quot;" comment="%&quot;SysActDef.func_key.f17.com&quot;" actionImage="{CONTEXT}/public/querix/icon/svg/24/key/ic_key_f7_24px.svg" accelerator1="f5,true,false,false" statical="false" order="990016"/>
+		
+		<Action identifier="F18" text="%&quot;SysActDef.func_key.f18.txt&quot;" comment="%&quot;SysActDef.func_key.f18.com&quot;" actionImage="{CONTEXT}/public/querix/icon/svg/24/key/ic_key_f8_24px.svg" accelerator1="f6,true,false,false" statical="false" order="990017"/>
+		<Action identifier="F19" text="%&quot;SysActDef.func_key.f19.txt&quot;" comment="%&quot;SysActDef.func_key.f19.com&quot;" actionImage="{CONTEXT}/public/querix/icon/svg/24/key/ic_key_f9_24px.svg" accelerator1="f7,true,false,false" statical="false" order="990018"/>
+		<Action identifier="F20" text="%&quot;SysActDef.func_key.f20.txt&quot;" comment="%&quot;SysActDef.func_key.f20.com&quot;" actionImage="{CONTEXT}/public/querix/icon/svg/24/key/ic_key_f9_plus_24px.svg" accelerator1="f8,true,false,false" statical="false" order="990019"/>
+		<Action identifier="F21" text="%&quot;SysActDef.func_key.f21.txt&quot;" comment="%&quot;SysActDef.func_key.f21.com&quot;" actionImage="{CONTEXT}/public/querix/icon/svg/24/key/ic_key_f1_24px.svg" accelerator1="f9,true,false,false" statical="false" order="990020"/>
+		<Action identifier="F22" text="%&quot;SysActDef.func_key.f22.txt&quot;" comment="%&quot;SysActDef.func_key.f22.com&quot;" actionImage="{CONTEXT}/public/querix/icon/svg/24/key/ic_key_f2_24px.svg" accelerator1="f10,true,false,false" statical="false" order="990021"/>
+		-->
+		<Action identifier="F23" text="%&quot;SysActDef.func_key.f23.txt&quot;" comment="%&quot;SysActDef.func_key.f23.com&quot;" actionImage="{CONTEXT}/public/querix/icon/svg/24/key/ic_key_f9_plus_24px.svg" accelerator1="f11,true,false,false" statical="false" order="990022"/>
+		<Action identifier="F24" text="%&quot;SysActDef.func_key.f24.txt&quot;" comment="%&quot;SysActDef.func_key.f24.com&quot;" actionImage="{CONTEXT}/public/querix/icon/svg/24/key/ic_key_f9_plus_24px.svg" accelerator1="f12,true,false,false" statical="false" order="990023"/>
+
+		<!-- Migration Help - to see Ctrl-key events in toolbar -->
+		<Action identifier="on:key:CONTROL-a" text="%&quot;SysActDef.control_key.control_a.txt&quot;" comment="%&quot;SysActDef.control_key.control_a.com&quot;" actionImage="{CONTEXT}/public/querix/icon/svg/24/key/ic_key_f24px.svg" accelerator1="a,false,true,false" statical="false" order="990100"/>
+		<!--
+		<Action identifier="on:key:CONTROL-b" text="%&quot;SysActDef.control_key.control_b.txt&quot;" comment="%&quot;SysActDef.control_key.control_b.com&quot;" actionImage="{CONTEXT}/public/querix/icon/svg/24/key/ic_key_f24px.svg" accelerator1="b,false,true,false" statical="false" order="990101"/>
+-->
+		<Action identifier="on:key:CONTROL-c" text="%&quot;SysActDef.control_key.control_c.txt&quot;" comment="%&quot;SysActDef.control_key.control_c.com&quot;" actionImage="{CONTEXT}/public/querix/icon/svg/24/key/ic_key_24px.svg" accelerator1="c,false,true,false" statical="false" order="990102"/>
+		<Action identifier="on:key:CONTROL-d" text="%&quot;SysActDef.control_key.control_d.txt&quot;" comment="%&quot;SysActDef.control_key.control_d.com&quot;" actionImage="{CONTEXT}/public/querix/icon/svg/24/key/ic_key_24px.svg" accelerator1="d,false,true,false" statical="false" order="990103"/>
+		<Action identifier="on:key:CONTROL-e" text="%&quot;SysActDef.control_key.control_e.txt&quot;" comment="%&quot;SysActDef.control_key.control_e.com&quot;" actionImage="{CONTEXT}/public/querix/icon/svg/24/key/ic_key_24px.svg" accelerator1="e,false,true,false" statical="false" order="990104"/>
+		<Action identifier="on:key:CONTROL-f" text="%&quot;SysActDef.control_key.control_f.txt&quot;" comment="%&quot;SysActDef.control_key.control_f.com&quot;" actionImage="{CONTEXT}/public/querix/icon/svg/24/key/ic_key_24px.svg" accelerator1="f,false,true,false" statical="false" order="990105"/>
+		<Action identifier="on:key:CONTROL-g" text="%&quot;SysActDef.control_key.control_g.txt&quot;" comment="%&quot;SysActDef.control_key.control_g.com&quot;" actionImage="{CONTEXT}/public/querix/icon/svg/24/key/ic_key_24px.svg" accelerator1="g,false,true,false" statical="false" order="990106"/>
+		<Action identifier="on:key:CONTROL-h" text="%&quot;SysActDef.control_key.control_h.txt&quot;" comment="%&quot;SysActDef.control_key.control_h.com&quot;" actionImage="{CONTEXT}/public/querix/icon/svg/24/key/ic_key_24px.svg" accelerator1="h,false,true,false" statical="false" order="990107"/>
+		<Action identifier="on:key:CONTROL-i" text="%&quot;SysActDef.control_key.control_i.txt&quot;" comment="%&quot;SysActDef.control_key.control_i.com&quot;" actionImage="{CONTEXT}/public/querix/icon/svg/24/key/ic_key_24px.svg" accelerator1="i,false,true,false" statical="false" order="990108"/>
+		<Action identifier="on:key:CONTROL-j" text="%&quot;SysActDef.control_key.control_j.txt&quot;" comment="%&quot;SysActDef.control_key.control_j.com&quot;" actionImage="{CONTEXT}/public/querix/icon/svg/24/key/ic_key_24px.svg" accelerator1="j,false,true,false" statical="false" order="990109"/>
+		<Action identifier="on:key:CONTROL-k" text="%&quot;SysActDef.control_key.control_k.txt&quot;" comment="%&quot;SysActDef.control_key.control_k.com&quot;" actionImage="{CONTEXT}/public/querix/icon/svg/24/key/ic_key_24px.svg" accelerator1="k,false,true,false" statical="false" order="990110"/>
+		<Action identifier="on:key:CONTROL-l" text="%&quot;SysActDef.control_key.control_l.txt&quot;" comment="%&quot;SysActDef.control_key.control_l.com&quot;" actionImage="{CONTEXT}/public/querix/icon/svg/24/key/ic_key_24px.svg" accelerator1="l,false,true,false" statical="false" order="990111"/>
+		<Action identifier="on:key:CONTROL-m" text="%&quot;SysActDef.control_key.control_m.txt&quot;" comment="%&quot;SysActDef.control_key.control_m.com&quot;" actionImage="{CONTEXT}/public/querix/icon/svg/24/key/ic_key_24px.svg" accelerator1="m,false,true,false" statical="false" order="990112"/>
+	<!--  	<Action identifier="on:key:CONTROL-n" text="%&quot;SysActDef.control_key.control_n.txt&quot;" comment="%&quot;SysActDef.control_key.control_n.com&quot;" actionImage="{CONTEXT}/public/querix/icon/svg/24/key/ic_key_24px.svg" accelerator1="n,false,true,false" statical="false" order="990113"/> -->
+		<Action identifier="on:key:CONTROL-o" text="%&quot;SysActDef.control_key.control_o.txt&quot;" comment="%&quot;SysActDef.control_key.control_o.com&quot;" actionImage="{CONTEXT}/public/querix/icon/svg/24/key/ic_key_24px.svg" accelerator1="o,false,true,false" statical="false" order="990114"/>
+		<Action identifier="on:key:CONTROL-p" text="%&quot;SysActDef.control_key.control_p.txt&quot;" comment="%&quot;SysActDef.control_key.control_p.com&quot;" actionImage="{CONTEXT}/public/querix/icon/svg/24/key/ic_key_24px.svg" accelerator1="p,false,true,false" statical="false" order="990115"/>
+		<Action identifier="on:key:CONTROL-q" text="%&quot;SysActDef.control_key.control_q.txt&quot;" comment="%&quot;SysActDef.control_key.control_q.com&quot;" actionImage="{CONTEXT}/public/querix/icon/svg/24/key/ic_key_24px.svg" accelerator1="q,false,true,false" statical="false" order="990116"/>
+		<Action identifier="on:key:CONTROL-r" text="%&quot;SysActDef.control_key.control_r.txt&quot;" comment="%&quot;SysActDef.control_key.control_r.com&quot;" actionImage="{CONTEXT}/public/querix/icon/svg/24/key/ic_key_24px.svg" accelerator1="r,false,true,false" statical="false" order="990117"/>
+		<Action identifier="on:key:CONTROL-s" text="%&quot;SysActDef.control_key.control_s.txt&quot;" comment="%&quot;SysActDef.control_key.control_s.com&quot;" actionImage="{CONTEXT}/public/querix/icon/svg/24/key/ic_key_24px.svg" accelerator1="s,false,true,false" statical="false" order="990118"/>
+		<Action identifier="on:key:CONTROL-t" text="%&quot;SysActDef.control_key.control_t.txt&quot;" comment="%&quot;SysActDef.control_key.control_t.com&quot;" actionImage="{CONTEXT}/public/querix/icon/svg/24/key/ic_key_24px.svg" accelerator1="t,false,true,false" statical="false" order="990119"/>
+		<Action identifier="on:key:CONTROL-u" text="%&quot;SysActDef.control_key.control_u.txt&quot;" comment="%&quot;SysActDef.control_key.control_u.com&quot;" actionImage="{CONTEXT}/public/querix/icon/svg/24/key/ic_key_24px.svg" accelerator1="u,false,true,false" statical="false" order="990120"/>
+		<Action identifier="on:key:CONTROL-v" text="%&quot;SysActDef.control_key.control_v.txt&quot;" comment="%&quot;SysActDef.control_key.control_v.com&quot;" actionImage="{CONTEXT}/public/querix/icon/svg/24/key/ic_key_24px.svg" accelerator1="v,false,true,false" statical="false" order="990121"/>
+		<!--
+		<Action identifier="on:key:CONTROL-w" text="%&quot;SysActDef.control_key.control_w.txt&quot;" comment="%&quot;SysActDef.control_key.control_w.com&quot;" actionImage="{CONTEXT}/public/querix/icon/svg/24/key/ic_key_24px.svg" accelerator1="w,false,true,false" statical="false" order="990122"/>
+-->
+		<Action identifier="on:key:CONTROL-x" text="%&quot;SysActDef.control_key.control_x.txt&quot;" comment="%&quot;SysActDef.control_key.control_x.com&quot;" actionImage="{CONTEXT}/public/querix/icon/svg/24/key/ic_key_24px.svg" accelerator1="x,false,true,false" statical="false" order="990123"/>
+		<Action identifier="on:key:CONTROL-y" text="%&quot;SysActDef.control_key.control_y.txt&quot;" comment="%&quot;SysActDef.control_key.control_y.com&quot;" actionImage="{CONTEXT}/public/querix/icon/svg/24/key/ic_key_24px.svg" accelerator1="y,false,true,false" statical="false" order="990124"/>
+		<Action identifier="on:key:CONTROL-z" text="%&quot;SysActDef.control_key.control_z.txt&quot;" comment="%&quot;SysActDef.control_key.control_z.com&quot;" actionImage="{CONTEXT}/public/querix/icon/svg/24/key/ic_key_24px.svg" accelerator1="z,false,true,false" statical="false" order="990125"/>
+
+<!-- Needs adding by Alex C.-->
+<!-- CashBook Reconciliation-->
+		<Action identifier="F1-Upd.Balance"   text="Match (F1)"                                       comment="Match (F1)  Upd.Balance"                          actionImage="{CONTEXT}/public/querix/icon/svg/24/ic_check_box_24px.svg"               order="11" place="top" accelerator1="f1,false,false,false" />
+		<Action identifier="F2-Res Bal"       text="Unmatch (F2)"                                     comment="Unmatch (F2)Res Bal"                              actionImage="{CONTEXT}/public/querix/icon/svg/24/ic_check_box_outline_blank_24px.svg" order="12" place="top" accelerator1="f2,false,false,false"/>
+		<Action identifier="F5-Direct In."    text="Cheque-Direct (F5)"                               comment="Cheque-Direct (F5)"                               actionImage="{CONTEXT}/public/querix/icon/svg/24/ic_money_24px.svg"                   order="15" place="top" accelerator1="f5,false,false,false" />
+		<Action identifier="F9-Unload"        text="Sort/Unload (F9)"                                 comment="Sort by unloading and loading table data (F9)"    actionImage="{CONTEXT}/public/querix/icon/svg/24/ic_sort_24px.svg"                    order="19" accelerator1="f9,false,false,false" />
+		<Action identifier="F10-Split"        text="Split (F10)"                                      comment="Split (F10)"                                      actionImage="{CONTEXT}/public/querix/icon/svg/24/ic_split_24px.svg"                   order="20" place="top" accelerator1="f10,false,false,false"/>
+
+		<!-- Invoice/Bill -->
+		<Action identifier="INVOICE"          text="%&quot;SysActDef.invoice.txt&quot;"               comment="%&quot;SysActDef.invoice.txt&quot;"               actionImage="{CONTEXT}/public/querix/icon/svg/24/ic_invoice_24px.svg"           statical="false" order="17" place="top"/>		
+		<Action identifier="NEW INVOICE"      text="New Invoice"                                      comment="New Invoice"                                      actionImage="{CONTEXT}/public/querix/icon/svg/24/ic_invoice_24px.svg"           statical="false" order="11" place="top"/>		
+		<Action identifier="EDIT INVOICE"     text="Edit Invoice"                                     comment="Edit Invoice"                                     actionImage="{CONTEXT}/public/querix/icon/svg/24/ic_invoice_24px.svg"           statical="false" order="12" place="top"/>		
+		<Action identifier="INVOICE RECEIPT"  text="Invoice Receipt"                                  comment="Invoice Receipt"                                  actionImage="{CONTEXT}/public/querix/icon/svg/24/ic_receipt_24px.svg"           statical="false" order="13" place="top"/>
+		<Action identifier="INVOICE SCAN"     text="%&quot;SysActDef.invoice_scan.txt&quot;"          comment="%&quot;SysActDef.invoice_scan.com&quot;"          actionImage="{CONTEXT}/public/querix/icon/svg/24/ic_invoice-search_24px.svg"    statical="false" order="17" place="top"/>
+		<Action identifier="INVOICE LOOKUP"   text="%&quot;SysActDef.invoice_lookup.txt&quot;"        comment="%&quot;SysActDef.invoice_lookup.txt&quot;"        actionImage="{CONTEXT}/public/querix/icon/svg/24/ic_invoice-search_24px.svg"    statical="false" order="17" place="top"/>
+
+<!-- Invoice Details-->
+		<Action identifier="View Header"      text="View Header (F8)"                                 comment="View Header (F8)"                                 actionImage="{CONTEXT}/public/querix/icon/svg/24/ic_search_24px.svg"          accelerator1="f8,false,false,false"  order="101" />
+		<Action identifier="Totals"           text="Totals (Ctrl-T)"                                  comment="Totals (Ctrl-T)"                                  actionImage="{CONTEXT}/public/querix/icon/svg/24/ic_star_rate_18px.svg"       accelerator1="t,false,true,false"    order="103" />
+		<Action identifier="Line Total"       text="Line total (Ctrl-P)"                              comment="Line total (Ctrl-P)"                              actionImage="{CONTEXT}/public/querix/icon/svg/24/ic_linear_scale_24px.svg"    accelerator1="p,false,true,false"    order="104" />
+		<Action identifier="Serial Details"   text="Serial Details (F9)"                              comment="Serial Details (F9)"                              actionImage="{CONTEXT}/public/querix/icon/svg/24/ic_closed_caption_18px.svg"  accelerator1="f9,false,false,false"  order="105" />
+		<Action identifier="GL Distribution"  text="GL Distribution"                                  comment="Serial Details (F9)"                              actionImage="{CONTEXT}/public/querix/icon/svg/24/ic_account_balance_24px.svg" accelerator1="g,false,true,false"    order="106" />
+		<Action identifier="Line Details"     text="Line Details (F8)"                                comment="Line Details (F8)"                                actionImage="{CONTEXT}/public/querix/icon/svg/24/ic_details_24px.svg"         accelerator1="f8,false,false,false"  order="107" />
+		<Action identifier="Invoice Details"  text="Invoice Details (F10)"                            comment="Invoice Details (F10)"                            actionImage="{CONTEXT}/public/querix/icon/svg/24/ic_invoice_24px.svg"         accelerator1="f10,false,false,false" order="108" />
+
+<!-- Bank Account-->
+		<Action identifier="ACCOUNT STATUS"   text="Account Status"                                   comment="Account Status"                                   actionImage="{CONTEXT}/public/querix/icon/svg/24/ic_money_24px.svg" statical="false" order="81" place="top"/>
+
+<!-- GL Batch-->
+		<Action identifier="DESC_IND+"                text="Desc Ind. +1"   comment="Desc Ind. +1"                                        actionImage="{CONTEXT}/public/querix/icon/svg/24/ic_switch_camera_24px.svg"                statical="false" order="71" place="top"/>
+		<Action identifier="DISBURSE"                 text="Disburse"       comment="Disburse"                                            actionImage="{CONTEXT}/public/querix/icon/svg/24/ic_payment_24px.svg"                      statical="false" order="72" place="top"/>
+
+
+<!-- Customer-->
+		<Action identifier="CUSTOMER"                 text="Customer"        comment="Customer"                                           actionImage="{CONTEXT}/public/querix/icon/svg/24/ic_customer_24px.svg"                     statical="false" order="71" place="top"/>
+		<Action identifier="CORPORATE"                text="Corporate Cust." comment="Corporate Cust."                                          actionImage="{CONTEXT}/public/querix/icon/svg/24/ic_cooperate_24px.svg"                    statical="false" order="72" place="top"/>
+
+<!-- STORY-->
+		<Action identifier="STORY"                    text="Story"           comment="Story"                                              actionImage="{CONTEXT}/public/querix/icon/svg/24/ic_story_24px.svg"                        statical="false" order="72" place="top"/>
+
+
+<!-- Credit Notes -->
+		<Action identifier="MANUAL"                   text="Apply Manual"    comment="Apply credit note TO invoices"                      actionImage="{CONTEXT}/public/querix/icon/svg/24/ic_manual_operation_hand_24px.svg"   accelerator1="f5,false,false,false"  order="11" place="top" />
+		<Action identifier="AUTO"                     text="Apply Auto"      comment="Apply credit note TO invoices in date sequence"     actionImage="{CONTEXT}/public/querix/icon/svg/24/ic_automated_24px.svg"               accelerator1="f6,false,false,false"  order="12" place="top" />
+
+<!-- Receipt -->
+		<Action identifier="RECEIPT"                  text="Receipt"         comment="Receipt"                                            actionImage="{CONTEXT}/public/querix/icon/svg/24/ic_receipt_24px.svg"                                                          order="11" place="top" />
+		<Action identifier="MANUAL APPLY"             text="Apply Manual"    comment="Apply receipt TO invoices"                          actionImage="{CONTEXT}/public/querix/icon/svg/24/ic_manual_operation_hand_24px.svg"       accelerator1="f5,false,false,false"  order="11" place="top" />
+		<Action identifier="AUTO APPLY"               text="Apply Auto"      comment="Apply receipt TO invoices in date sequence"         actionImage="{CONTEXT}/public/querix/icon/svg/24/ic_automated_24px.svg"                   accelerator1="f6,false,false,false"  order="12" place="top" />
+
+
+<!-- Settings-->
+		<Action identifier="SETTINGS"                 text="Modify Settings" comment="AR Settings"                                        actionImage="{CONTEXT}/public/querix/icon/svg/24/ic_settings_24px.svg"             statical="false" order="81" place="top"/>
+		<Action identifier="PARAMETERS"               text="Modify Settings" comment="AR Settings"                                        actionImage="{CONTEXT}/public/querix/icon/svg/24/ic_settings_24px.svg"             statical="false" order="81" place="top"/>
+
+<!-- money-->
+		<Action identifier="CASH"                     text="Cash Application" comment="Cash Application"                                  actionImage="{CONTEXT}/public/querix/icon/svg/24/ic_money_24px.svg"                statical="false" order="82" place="top"/>
+		<Action identifier="ACCOUNT STATUS"           text="Account Status"   comment="Account Status"                                    actionImage="{CONTEXT}/public/querix/icon/svg/24/ic_money-circle_24px.svg"         statical="false" order="83" place="top"/>
+
+<!-- EO OFFER -->
+		<Action identifier="OFFER"                    text="Offer"            comment="Offer"                                             actionImage="{CONTEXT}/public/querix/icon/svg/24/ic_offer_outl_24px.svg"           statical="false" order="81" place="top"/>
+		<Action identifier="BONUS"                    text="Bonus"            comment="Bonus"                                             actionImage="{CONTEXT}/public/querix/icon/svg/24/ic_bonus_24px.svg"                statical="false" order="82" place="top"/>
+		<Action identifier="LINES"                    text="Lines"            comment="Lines"                                             actionImage="{CONTEXT}/public/querix/icon/svg/24/ic_product_24px.svg"              statical="false" order="83" place="top"/>
+		
+
+<!-- Warehouse Product-->
+<!-- 
+		<Action identifier="PRODUCT"               text="%&quot;SysActDef.product.txt&quot;"               comment="%&quot;SysActDef.product.com&quot;"               actionImage="{CONTEXT}/public/querix/icon/svg/24/ic_card_giftcard_24px.svg"     statical="false" order="66"  place="top"/>
+		<Action identifier="PRODUCTS"              text="%&quot;SysActDef.product.txt&quot;"               comment="%&quot;SysActDef.product.com&quot;"               actionImage="{CONTEXT}/public/querix/icon/svg/24/ic_card_giftcard_24px.svg"     statical="false" order="66"  place="top"/>
+ -->
+		<Action identifier="WAREHOUSE"                text="Warehouse"         			 	comment="Warehouse"                                         actionImage="{CONTEXT}/public/querix/icon/svg/24/ic_warehouse_24px.svg"            statical="false" order="97" place="top"/>
+		<Action identifier="STOCK"                    text="Stock"              			comment="Warehouse Stock"                                   actionImage="{CONTEXT}/public/querix/icon/svg/24/ic_stock_24px.svg"                statical="false" order="91" place="top"/>
+		<Action identifier="PRODUCT"                  text="Product"          			  comment="Product/Part"                                      actionImage="{CONTEXT}/public/querix/icon/svg/24/ic_product_24px.svg"              statical="false" order="92" place="top"/>
+		<Action identifier="PRODUCTS"                 text="Product"          			  comment="Product/Part"                                      actionImage="{CONTEXT}/public/querix/icon/svg/24/ic_product_24px.svg"              statical="false" order="92" place="top"/>
+		<Action identifier="DIMENSIONS"               text="Dimensions"       			  comment="Product Dimensions"                                actionImage="{CONTEXT}/public/querix/icon/svg/24/ic_dimension_24px.svg"            statical="false" order="93" place="top"/>
+		<Action identifier="REPORT_CODE"              text="Report Codes"     			  comment="Product Reporting Codes"                           actionImage="{CONTEXT}/public/querix/icon/svg/24/ic_report_code_24px.svg"          statical="false" order="94" place="top"/>
+		<Action identifier="TURNOVER"                 text="Turnover"         			  comment="Product Turnover"                                  actionImage="{CONTEXT}/public/querix/icon/svg/24/ic_turnover_24px.svg"             statical="false" order="95" place="top"/>
+		<Action identifier="INFORMATION"              text="Information"      			  comment="Information"                                       actionImage="{CONTEXT}/public/querix/icon/svg/24/ic_info_24px.svg"                 statical="false" order="96" place="top"/>
+		<Action identifier="PRODUCT GROUP"            text="Product Group"    			  comment="Product Group"                                     actionImage="{CONTEXT}/public/querix/icon/svg/24/ic_product_group_24px.svg"        statical="false" order="97" place="top"/>
+		<Action identifier="MAIN GROUP"               text="MAIN Group"       			  comment="Main Group"                                        actionImage="{CONTEXT}/public/querix/icon/svg/24/ic_group_main_24px.svg"           statical="false" order="98" place="top"/>
+		
+		<Action identifier="TRANSIT STATUS"           text="Transit Status"    				comment="Stock transit status"                              actionImage="{CONTEXT}/public/querix/icon/svg/24/ic_product_transit_24px.svg"      statical="false" order="101" place="top"/>
+		<Action identifier="SET AVAILABLE"            text="Set Available"     				comment="Set Product Available"                             actionImage="{CONTEXT}/public/querix/icon/svg/24/ic_product_available_24px.svg"    statical="false" order="102" place="top"/>
+		<Action identifier="SET ON HOLD"              text="Set On Hold"       				comment="Set On Hold"                                       actionImage="{CONTEXT}/public/querix/icon/svg/24/ic_product_on_hold_24px.svg"      statical="false" order="103" place="top"/>
+		<Action identifier="HOLD"                     text="Hold Status"       				comment="Hold Status"                                       actionImage="{CONTEXT}/public/querix/icon/svg/24/ic_product_on_hold_24px.svg"      statical="false" order="103" place="top"/>
+		<Action identifier="STOP RE-ORDER"            text="Stop Re-Order"     				comment="Stop Re-Order"                                     actionImage="{CONTEXT}/public/querix/icon/svg/24/ic_stop_24px.svg"                 statical="false" order="104" place="top"/>
+
+		<Action identifier="PRODUCT INFO"             text="Product Info"      				comment="Product/Part Info"                                 actionImage="{CONTEXT}/public/querix/icon/svg/24/ic_product_info_24px.svg"         statical="false" order="91" place="top"/>
+		<Action identifier="PRODUCT ADD"              text="Add Product"       				comment="Add Product/Part"                                  actionImage="{CONTEXT}/public/querix/icon/svg/24/ic_product_add_24px.svg"          statical="false" order="92" place="top"/>
+
+<!-- ORDER-->
+		<Action identifier="ORDER STATISTIC"          text="Order Statistic"   				comment="Show Order Statistic"                              actionImage="{CONTEXT}/public/querix/icon/svg/24/ic_order_statistic_24px.svg"      statical="false" order="91" place="top"/>
+		<Action identifier="ORDER NOTES"              text="Order Notes"       				comment="Show Order Notes"                                  actionImage="{CONTEXT}/public/querix/icon/svg/24/ic_order_notes_24px.svg"          statical="false" order="92" place="top"/>
+		<Action identifier="ORDER TOTAL"              text="Order Total"        			comment="Show Order Total"                                  actionImage="{CONTEXT}/public/querix/icon/svg/24/ic_order_total_24px.svg"          statical="false" order="93" place="top"/>
+		<Action identifier="ORDER LINE TOTALS"        text="Order Line Totals"  			comment="Show Order Line Totals"                            actionImage="{CONTEXT}/public/querix/icon/svg/24/ic_order_line_total_24px.svg"     statical="false" order="94" place="top"/>
+		<Action identifier="ORDER SHOW"               text="Show Order"         			comment="Show Order"                                        actionImage="{CONTEXT}/public/querix/icon/svg/24/ic_order_24px.svg"                statical="false" order="95" place="top"/>
+
+<!-- Sales Discount-->
+		<Action identifier="TIERED DISCOUNT"          text="Tiered Discount"   				comment="Include tiered discount in sales condition"        actionImage="{CONTEXT}/public/querix/icon/svg/24/ic_tiered_24px.svg"               statical="false" order="91" place="top"/>
+		<Action identifier="PRODUCT DISCOUNT"         text="Product Discount"  				comment="Include product line discount in sales condition"  actionImage="{CONTEXT}/public/querix/icon/svg/24/ic_product_discount_24px.svg"     statical="false" order="92" place="top"/>
+		<Action identifier="CUSTOMERS DISCOUNT"       text="Tiered Product"    				comment="Add or remove customers using this sales condition"actionImage="{CONTEXT}/public/querix/icon/svg/24/ic_customer_discount_24px.svg"    statical="false" order="93" place="top"/>
+		<Action identifier="AUTO DISC CALC"           text="Auto Disc. Calc."   			comment="Auto Discount Calculation"                         actionImage="{CONTEXT}/public/querix/icon/svg/24/ic_auto_calculator_24px.svg"      statical="false" order="93" place="top"/>
+		<Action identifier="SPECIAL OFFERS"           text="Special Offers"     			comment="Special Offers"                                    actionImage="{CONTEXT}/public/querix/icon/svg/24/ic_discount_special_24px.svg"     statical="false" order="93" place="top"/>
+		<Action identifier="SPECIAL OFFERS MANAGER"   text="Special Offers Mgr" 			comment="Special Offers Manager"                            actionImage="{CONTEXT}/public/querix/icon/svg/24/ic_discount_special_manager_24px.svg" statical="false" order="93" place="top-popup" accelerator1="f10,false,false,false"/>
+
+<!-- Sales Person-->
+		<Action identifier="COMMISSION"               text="Sales Commission"  				comment="Sales Commission"                                  actionImage="{CONTEXT}/public/querix/icon/svg/24/ic_sales_commission_24px.svg"     statical="false" order="91" place="top"/>
+
+<!-- EO Sales Target NOTE: We need icons -->
+		<Action identifier="SALES_TARGET_AREA"        text="Sales Target Area" 				comment="Maintain sales targets FOR Sales areas"            actionImage="{CONTEXT}/public/querix/icon/svg/24/ic_sales_commission_24px.svg"     statical="false" order="91" place="top"/>
+		<Action identifier="SALES_TARGET_TERRITORIES" text="Sales Target Territories" comment="Maintain sales targets FOR Sales Territories"      actionImage="{CONTEXT}/public/querix/icon/svg/24/ic_sales_commission_24px.svg"     statical="false" order="92" place="top"/>
+		<Action identifier="SALES_TARGET_MANAGER"     text="Sales Target Manager"  		comment="Maintain sales targets FOR Sales Manager"          actionImage="{CONTEXT}/public/querix/icon/svg/24/ic_sales_commission_24px.svg"     statical="false" order="93" place="top"/>
+		<Action identifier="SALES_TARGET_PERSON"      text="Sales Target Person"  		comment="Maintain sales targets FOR Sales Person"           actionImage="{CONTEXT}/public/querix/icon/svg/24/ic_sales_commission_24px.svg"     statical="false" order="94" place="top"/>
+		<Action identifier="SALES_TARGET_CONDITION"   text="Sales Target Condition"  	comment="Maintain sales targets FOR Sales Condition"				actionImage="{CONTEXT}/public/querix/icon/svg/24/ic_sales_commission_24px.svg"     statical="false" order="95" place="top"/>
+		<Action identifier="SALES_TARGET_OFFER"       text="Sales Target Offer"  			comment="Maintain sales targets FOR Sales Offer"            actionImage="{CONTEXT}/public/querix/icon/svg/24/ic_sales_commission_24px.svg"     statical="false" order="96" place="top"/>
+		<Action identifier="PERIOD OPTIONS"     		  text="Period Options"  					comment="Set Current yea,interval type,.. etc"              actionImage="{CONTEXT}/public/querix/icon/svg/24/ic_sales_commission_24px.svg"     statical="false" order="97" place="top"/>
+		<Action identifier="OPTIONS"						      text="Options"  								comment="Set Options"														            actionImage="{CONTEXT}/public/querix/icon/svg/24/ic_sales_commission_24px.svg"     statical="false" order="97" place="top"/>
+
+
+<!-- Eric 4gl code generator NOTE: We need icons -->
+		<Action identifier="GENERATEPROGRAM"          text="Generate Program"					comment="Generate new 4GL program"                          actionImage="{CONTEXT}/public/querix/icon/svg/24/ic_sales_commission_24px.svg"     statical="false" order="91" place="top-popup"/>
+		<Action identifier="MOD TEMPLATE"             text="Edit Template?"   				comment="Edit Template?"                                    actionImage="{CONTEXT}/public/querix/icon/svg/24/ic_sales_commission_24px.svg"     statical="false" order="92" place="top-popup"/>
+		<Action identifier="FORM TEMPLATE"            text="Form Template?"   				comment="Form Template?"                                    actionImage="{CONTEXT}/public/querix/icon/svg/24/ic_sales_commission_24px.svg"     statical="false" order="93" place="top-popup"/>
+		<Action identifier="WORK SPACE"               text="Work Space?"      				comment="Work Space?"                                       actionImage="{CONTEXT}/public/querix/icon/svg/24/ic_sales_commission_24px.svg"     statical="false" order="94" place="top-popup"/>
+		<Action identifier="EDIT GLOBAL PARM"         text="Edit &Global parm" 				comment="Edit global parameters?"                           actionImage="{CONTEXT}/public/querix/icon/svg/24/ic_sales_commission_24px.svg"     statical="false" order="95" place="top-popup"/>		
+		<Action identifier="EDIT CURRENT PARM"        text="Edit &Cur. parm."  				comment="Edit current parameter?"                           actionImage="{CONTEXT}/public/querix/icon/svg/24/ic_sales_commission_24px.svg"     statical="false" order="96" place="top-popup"/>						
+		<Action identifier="EDIT PROJECT PARM"        text="Edit &Proj. parm." 				comment="Edit project parameter?"                           actionImage="{CONTEXT}/public/querix/icon/svg/24/ic_sales_commission_24px.svg"     statical="false" order="97" place="top-popup"/>		
+	</form.actions>
+</form>

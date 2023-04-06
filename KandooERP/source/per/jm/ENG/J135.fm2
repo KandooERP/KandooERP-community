@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form xmlns="http://namespaces.querix.com/2015/fglForms">
+	<form.rootContainer>
+		<GridPanel classNames="fcls_rootContainer" verticalAlignment="Top" horizontalAlignment="Left" fieldTable="" identifier="rootContainer">
+			<GridPanel.gridRowDefinitions>
+				<GridRowDefinition gridLengthValue=""/>
+				<GridRowDefinition gridLengthValue=""/>
+				<GridRowDefinition gridLengthValue=""/>
+				<GridRowDefinition gridLengthValue=""/>
+			</GridPanel.gridRowDefinitions>
+			<GridPanel.gridColumnDefinitions>
+				<GridColumnDefinition gridLengthValue="100%"/>
+			</GridPanel.gridColumnDefinitions>
+			<GridPanel classNames="fcls_title_cnt" visible="true" verticalAlignment="Top" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="cntTitle">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="100%"/>
+					<GridColumnDefinition gridLengthValue=""/>
+				</GridPanel.gridColumnDefinitions>
+				<Label isDynamic="true" text="Adjust Costing and Billing Rates" classNames="fcls_title_lb" visible="true" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="header_text"/>
+				<Label isDynamic="true" text="J135" classNames="fcls_title_lb" visible="true" gridItemLocation="1,0,1,1" fieldTable="" identifier="lbFormName"/>
+			</GridPanel>
+			<GridPanel classNames="fcls_detail_cnt,fcls_data_cnt,fcls_align_left" visible="true" verticalAlignment="Top" horizontalAlignment="Left" gridItemLocation="0,1,1,1" fieldTable="formonly" identifier="cntDetail1">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="" gridMinLength="10rem"/>
+					<GridColumnDefinition gridLengthValue=""/>
+					<GridColumnDefinition gridLengthValue=""/>
+				</GridPanel.gridColumnDefinitions>
+				<TextField toCase="Up" dataType="Char,,,,8" preferredSize="9qch,1qch" fieldTable="ts_detail" identifier="res_code" gridItemLocation="1,0,1,1" classNames="fcls_data_widget,fcls_length_10qch"/>
+				<TextField noEntry="true" dataType="Char,,,,40" preferredSize="40qch,1qch" fieldTable="jmresource" identifier="desc_text" gridItemLocation="2,0,1,1" classNames="fcls_data_widget,fcls_length_30qch"/>
+				<TextField dataType="Float,,,," preferredSize="6qch,1qch" fieldTable="ts_detail" identifier="dur_qty" gridItemLocation="1,1,1,1" classNames="fcls_data_widget,fcls_length_10qch"/>
+				<TextField dataType="Char,,,,3" preferredSize="4qch,1qch" fieldTable="jmresource" identifier="unit_code" gridItemLocation="2,1,1,1" classNames="fcls_data_widget,fcls_length_30qch"/>
+				<Label isDynamic="true" text="Resource" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,0,1,1" fieldTable="" identifier="lb51"/>
+				<Label isDynamic="true" text="Quantity" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,1,1,1" fieldTable="" identifier="lb52"/>
+			</GridPanel>
+			<GridPanel classNames="fcls_detail_cnt,fcls_data_cnt,fcls_align_left" visible="true" verticalAlignment="Top" horizontalAlignment="Left" gridItemLocation="0,2,1,1" fieldTable="formonly" identifier="cntDetail2">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="" gridMinLength="10rem"/>
+					<GridColumnDefinition gridLengthValue=""/>
+					<GridColumnDefinition gridLengthValue=""/>
+				</GridPanel.gridColumnDefinitions>
+				<TextField dataType="Decimal,,,4,12" preferredSize="13qch,1qch" toolTip=" Enter Cost per Unit of This Resource" comment=" Enter Cost per Unit of This Resource" fieldTable="ts_detail" identifier="unit_cost_amt" gridItemLocation="1,0,1,1" classNames="fcls_data_widget,fcls_length_10qch"/>
+				<TextField dataType="Decimal,,,2,16" preferredSize="17qch,1qch" fieldTable="jobledger" identifier="trans_amt" gridItemLocation="2,0,1,1" classNames="fcls_data_widget,fcls_length_10qch"/>
+				<TextField dataType="Decimal,,,4,12" preferredSize="13qch,1qch" toolTip=" Enter Charge per Unit of This Resource" comment=" Enter Charge per Unit of This Resource" fieldTable="ts_detail" identifier="unit_bill_amt" gridItemLocation="1,1,1,1" classNames="fcls_data_widget,fcls_length_10qch"/>
+				<TextField dataType="Decimal,,,2,16" preferredSize="17qch,1qch" fieldTable="jobledger" identifier="charge_amt" gridItemLocation="2,1,1,1" classNames="fcls_data_widget,fcls_length_10qch"/>
+				<Label isDynamic="true" text="Costing" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="lb36"/>
+				<Label isDynamic="true" text="Billing" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,1,1,1" fieldTable="formonly" identifier="lb37"/>
+			</GridPanel>
+			<GridPanel classNames="fcls_statusbar_cnt" visible="true" verticalAlignment="Top" gridItemLocation="0,3,1,1" fieldTable="formonly" identifier="cntStatusBar">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="100%"/>
+				</GridPanel.gridColumnDefinitions>
+				<Label isDynamic="true" text="" classNames="fcls_sblabel" visible="true" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="lbInfo1"/>
+				<Label isDynamic="true" text="" classNames="fcls_sblabel" visible="true" gridItemLocation="0,1,1,1" fieldTable="formonly" identifier="lbInfo2"/>
+			</GridPanel>
+		</GridPanel>
+	</form.rootContainer>
+	<form.screenRecords>
+		<ScreenRecord identifier="jmresource" fields="jmresource.desc_text,jmresource.unit_code"/>
+		<ScreenRecord identifier="jobledger" fields="jobledger.trans_amt,jobledger.charge_amt"/>
+		<ScreenRecord identifier="ts_detail" fields="ts_detail.res_code,ts_detail.dur_qty,ts_detail.unit_cost_amt,ts_detail.unit_bill_amt"/>
+	</form.screenRecords>
+</form>
+

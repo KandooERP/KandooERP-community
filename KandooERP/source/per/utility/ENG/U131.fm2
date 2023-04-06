@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form xmlns="http://namespaces.querix.com/2015/fglForms">
+	<form.rootContainer>
+		<GridPanel classNames="fcls_rootContainer" verticalAlignment="Stretch" horizontalAlignment="Stretch" fieldTable="" identifier="rootContainer">
+			<GridPanel.gridRowDefinitions>
+				<GridRowDefinition gridLengthValue=""/>
+				<GridRowDefinition gridLengthValue="100%"/>
+				<GridRowDefinition gridLengthValue=""/>
+			</GridPanel.gridRowDefinitions>
+			<GridPanel.gridColumnDefinitions>
+				<GridColumnDefinition gridLengthValue="100%"/>
+			</GridPanel.gridColumnDefinitions>
+			<GridPanel classNames="fcls_title_cnt" visible="true" verticalAlignment="Top" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="cntTitle">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="100%"/>
+					<GridColumnDefinition gridLengthValue=""/>
+				</GridPanel.gridColumnDefinitions>
+				<Label isDynamic="true" text="Languages" classNames="fcls_title_lb" visible="true" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="header_text"/>
+				<Label isDynamic="true" text="U131" classNames="fcls_title_lb" visible="true" gridItemLocation="1,0,1,1" fieldTable="" identifier="lbFormName"/>
+			</GridPanel>
+			<Table rowCount="6" location="2qch,3qch" preferredSize="57qch,8qch" gridItemLocation="0,1,1,1" fieldTable="" identifier="sr_language">
+				<TableColumn text="Lang Code" fieldTable="" identifier="f1">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="10%" gridMaxLength="10rem" gridMinLength="5rem"/>
+					</TableColumn.columnLength>
+					<TextField toCase="Up" dataType="Char,,,,3" toolTip=" Code to identify the language " fieldTable="language" comment=" Code to identify the language " identifier="language_code"/>
+				</TableColumn>
+				<TableColumn text="Description" fieldTable="" identifier="f2">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="35%" gridMaxLength="30rem" gridMinLength="15rem"/>
+					</TableColumn.columnLength>
+					<TextField dataType="Char,,,,20" toolTip=" Name of the language " fieldTable="language" comment=" Name of the language " identifier="language_text"/>
+				</TableColumn>
+				<TableColumn text="(Y)es Resp." fieldTable="" identifier="a">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="10%" gridMaxLength="10rem" gridMinLength="5rem"/>
+					</TableColumn.columnLength>
+					<TextField toCase="Up" dataType="Char,,,,1" toolTip=" Character that indicates a positive response " fieldTable="language" comment=" Character that indicates a positive response " identifier="yes_flag"/>
+				</TableColumn>
+				<TableColumn text="(N)o Response" fieldTable="" identifier="b">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="10%" gridMaxLength="10rem" gridMinLength="5rem"/>
+					</TableColumn.columnLength>
+					<TextField toCase="Up" dataType="Char,,,,1" toolTip=" Character that indicates a negative response " fieldTable="language" comment=" Character that indicates a negative response " identifier="no_flag"/>
+				</TableColumn>
+				<TableColumn text="National Text" resizable="true" visible="true" identifier="tc_f3">
+					<TextField visible="true" identifier="national_text" fieldTable="language"/>
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="35%" gridMaxLength="30rem" gridMinLength="15rem"/>
+					</TableColumn.columnLength>
+				</TableColumn>
+			</Table>
+			<GridPanel classNames="fcls_statusbar_cnt" visible="true" verticalAlignment="Top" gridItemLocation="0,2,1,1" fieldTable="formonly" identifier="cntStatusBar">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="100%"/>
+				</GridPanel.gridColumnDefinitions>
+				<Label isDynamic="true" text="" classNames="fcls_sblabel" visible="true" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="lbInfo1"/>
+				<Label isDynamic="true" text="" classNames="fcls_sblabel" visible="true" gridItemLocation="0,1,1,1" fieldTable="formonly" identifier="lbInfo2"/>
+			</GridPanel>
+		</GridPanel>
+	</form.rootContainer>
+	<form.screenRecords>
+		<ScreenRecord identifier="sr_language" fields="language_code,language_text,yes_flag,no_flag,language.national_text" elements="6"/>
+		<ScreenRecord identifier="language" fields="language_code,language_text,yes_flag,no_flag"/>
+	</form.screenRecords>
+</form>
+

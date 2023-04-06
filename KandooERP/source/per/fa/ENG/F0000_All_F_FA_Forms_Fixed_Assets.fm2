@@ -1,0 +1,390 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form xmlns="http://namespaces.querix.com/2015/fglForms">
+	<form.rootContainer>
+		<GridPanel classNames="fcls_rootContainer" verticalAlignment="Stretch" horizontalAlignment="Stretch" fieldTable="" identifier="rootContainer">
+			<GridPanel.gridRowDefinitions>
+				<GridRowDefinition gridLengthValue=""/>
+				<GridRowDefinition gridLengthValue="100%"/>
+				<GridRowDefinition gridLengthValue=""/>
+			</GridPanel.gridRowDefinitions>
+			<GridPanel.gridColumnDefinitions>
+				<GridColumnDefinition gridLengthValue="100%"/>
+			</GridPanel.gridColumnDefinitions>
+			<GridPanel classNames="fcls_title_cnt" visible="true" verticalAlignment="Top" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="cntTitle">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="100%"/>
+					<GridColumnDefinition gridLengthValue=""/>
+				</GridPanel.gridColumnDefinitions>
+				<Label isDynamic="true" text="Header-Text" classNames="fcls_title_lb" visible="true" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="header_text"/>
+				<Label isDynamic="true" text="_master_D1_1Gp_01b" classNames="fcls_title_lb" visible="true" gridItemLocation="1,0,1,1" fieldTable="" identifier="lbFormName"/>
+			</GridPanel>
+			<GridPanel classNames="fcls_detail_cnt,fcls_data_cnt,fcls_align_left" visible="true" verticalAlignment="Top" horizontalAlignment="Left" gridItemLocation="0,1,1,1" fieldTable="formonly" identifier="cntDetail1">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue="" gridMinLength="100%"/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="" gridMinLength="100%"/>
+				</GridPanel.gridColumnDefinitions>
+				<ListBox minSize="60rem,20rem" visible="true" verticalAlignment="Stretch" horizontalAlignment="Stretch" gridItemLocation="0,0,1,1" fieldTable="" identifier="formName">
+
+
+					<ListBoxItem text="F100 - Fixed Asset Financial Batch" identifier="formName_F100">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="F100"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+
+					<ListBoxItem text="F101 - Asset Transaction" identifier="formName_F101">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="F101"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+
+					<ListBoxItem text="F103 - Asset Transaction" identifier="formName_F103">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="F103"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+
+					<ListBoxItem text="F107 - Assets" identifier="formName_F107">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="F107"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+
+					<ListBoxItem text="F110 - Books Available" identifier="formName_F110">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="F110"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+
+					<ListBoxItem text="F112 - Categories Available " identifier="formName_F112">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="F112"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+
+					<ListBoxItem text="F113 - Responsibilities Available" identifier="formName_F113">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="F113"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+
+					<ListBoxItem text="F114 - Books Available" identifier="formName_F114">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="F114"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+
+					<ListBoxItem text="F115 - Book Parameter Entry" identifier="formName_F115">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="F115"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+
+					<ListBoxItem text="F116 - Location Details" identifier="formName_F116">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="F116"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+
+					<ListBoxItem text="F117 - Asset Locations" identifier="formName_F117">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="F117"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+
+					<ListBoxItem text="F118 - Authority Codes" identifier="formName_F118">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="F118"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+
+					<ListBoxItem text="F119 - Authority Codes" identifier="formName_F119">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="F119"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+
+					<ListBoxItem text="F120 - Category Details" identifier="formName_F120">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="F120"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+
+					<ListBoxItem text="F121 - Asset Categories" identifier="formName_F121">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="F121"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+
+					<ListBoxItem text="F123 - Insurance Details" identifier="formName_F123">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="F123"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+
+					<ListBoxItem text="F124 - Leasing Details" identifier="formName_F124">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="F124"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+
+					<ListBoxItem text="F125 - Lease Details" identifier="formName_F125">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="F125"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+
+					<ListBoxItem text="F126 - Responsibility Entries " identifier="formName_F126">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="F126"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+
+					<ListBoxItem text="F127 - Responsibility Codes" identifier="formName_F127">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="F127"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+
+					<ListBoxItem text="F128 - Asset Browse" identifier="formName_F128">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="F128"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+
+					<ListBoxItem text="F129 - Asset Master Details" identifier="formName_F129">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="F129"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+
+
+					<ListBoxItem text="F130 - Vendor Browse" identifier="formName_F130">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="F130"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+
+					<ListBoxItem text="F131 - Fixed Asset Parameters" identifier="formName_F131">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="F131"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+
+					<ListBoxItem text="F133 - Asset Master Details" identifier="formName_F133">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="F133"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+
+					<ListBoxItem text="F134 - Asset Information" identifier="formName_F134">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="F134"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+
+					<ListBoxItem text="F137 - Asset Master Details" identifier="formName_F137">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="F137"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+
+					<ListBoxItem text="F139 - Asset Book" identifier="formName_F139">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="F139"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+
+					<ListBoxItem text="F140 - Book Enquiry" identifier="formName_F140">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="F140"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+
+					<ListBoxItem text="F141 - Asset Transaction Enquiry" identifier="formName_F141">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="F141"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+
+					<ListBoxItem text="F142 - Asset Transaction List" identifier="formName_F142">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="F142"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+
+					<ListBoxItem text="F143 - Transaction Details" identifier="formName_F143">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="F143"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+
+					<ListBoxItem text="F144 - General Ledger Integration" identifier="formName_F144">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="F144"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+
+					<ListBoxItem text="F145 - General Ledger Integration By Category" identifier="formName_F145">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="F145"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+
+					<ListBoxItem text="F151 - Batch Scan" identifier="formName_F151">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="F151"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+
+					<ListBoxItem text="F152 - Batch Line Details" identifier="formName_F152">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="F152"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+
+					<ListBoxItem text="F153 - Batch Line Details " identifier="formName_F153">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="F153"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+
+					<ListBoxItem text="F154 - New Asset ID" identifier="formName_F154">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="F154"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+
+					<ListBoxItem text="F155 - FA GL Posting" identifier="formName_F155">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="F155"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+
+					<ListBoxItem text="F157 - Batch Posting" identifier="formName_F157">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="F157"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+
+					<ListBoxItem text="F159 - Transaction Detail" identifier="formName_F159">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="F159"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+
+					<ListBoxItem text="F163 - Category Report" identifier="formName_F163">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="F163"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+
+					<ListBoxItem text="F165 - Authority Report" identifier="formName_F165">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="F165"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+
+					<ListBoxItem text="F168 - Depreciation Code Entry / Maintenance" identifier="formName_F168">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="F168"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+
+					<ListBoxItem text="F169 - Valid Depreciation Methods" identifier="formName_F169">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="F169"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+
+					<ListBoxItem text="F170 - Depreciation by Book by Asset Entry" identifier="formName_F170">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="F170"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+
+					<ListBoxItem text="F176 - Depreciation Calculation" identifier="formName_F176">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="F176"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+
+					<ListBoxItem text="F178 - Stocktake Load Module" identifier="formName_F178">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="F178"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+
+					<ListBoxItem text="F180 - Asset Master Details" identifier="formName_F180">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="F180"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+
+					<ListBoxItem text="F181 - Asset Register" identifier="formName_F181">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="F181"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+
+					<ListBoxItem text="F183 - Year and Periods" identifier="formName_F183">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="F183"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+
+					<ListBoxItem text="F184 - Depreciation code" identifier="formName_F184">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="F184"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+
+					<ListBoxItem text="F185 - Leasing Details" identifier="formName_F185">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="F185"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+
+					<ListBoxItem text="F186 - Insurance Details" identifier="formName_F186">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="F186"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+
+					<ListBoxItem text="F187 - Fixed Asset Financial Batch" identifier="formName_F187">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="F187"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+
+
+
+
+					<ListBox.onMouseDoubleClick>
+						<ActionEventHandler actionName="ViewForm"/>
+					</ListBox.onMouseDoubleClick>
+				</ListBox>
+			</GridPanel>
+			<GridPanel classNames="fcls_statusbar_cnt" visible="true" verticalAlignment="Bottom" gridItemLocation="0,2,1,1" fieldTable="formonly" identifier="cntStatusBar">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="100%"/>
+				</GridPanel.gridColumnDefinitions>
+				<Label isDynamic="true" text="" classNames="fcls_sblabel" visible="true" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="lbInfo1"/>
+				<Label isDynamic="true" text="" classNames="fcls_sblabel" visible="true" gridItemLocation="0,1,1,1" fieldTable="formonly" identifier="lbInfo2"/>
+			</GridPanel>
+		</GridPanel>
+	</form.rootContainer>
+	<form.screenRecords>
+		<ScreenRecord identifier="FORMONLY" fields="f151"/>
+	</form.screenRecords>
+</form>
+

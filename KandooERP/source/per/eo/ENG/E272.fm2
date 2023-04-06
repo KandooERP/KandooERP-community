@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?><form xmlns="http://namespaces.querix.com/2015/fglForms">
+	<form.rootContainer>
+		<GridPanel classNames="fcls_rootContainer" fieldTable="" horizontalAlignment="Left" identifier="rootContainer" verticalAlignment="Top">
+			<GridPanel.gridRowDefinitions>
+				<GridRowDefinition gridLengthValue=""/>
+				<GridRowDefinition gridLengthValue=""/>
+				<GridRowDefinition gridLengthValue=""/>
+				<GridRowDefinition gridLengthValue=""/>
+				<GridRowDefinition gridLengthValue=""/>
+			</GridPanel.gridRowDefinitions>
+			<GridPanel.gridColumnDefinitions>
+				<GridColumnDefinition gridLengthValue="100%"/>
+			</GridPanel.gridColumnDefinitions>
+			<GridPanel classNames="fcls_title_cnt" fieldTable="formonly" gridItemLocation="0,0,1,1" identifier="cntTitle" verticalAlignment="Top" visible="true">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="100%"/>
+					<GridColumnDefinition gridLengthValue=""/>
+				</GridPanel.gridColumnDefinitions>
+				<Label classNames="fcls_title_lb" fieldTable="formonly" gridItemLocation="0,0,1,1" identifier="header_text" isDynamic="true" text="Report" visible="true"/>
+				<Label classNames="fcls_title_lb" fieldTable="" gridItemLocation="1,0,1,1" identifier="lbFormName" isDynamic="true" text="E272" visible="true"/>
+			</GridPanel>
+			<GridPanel classNames="fcls_detail_cnt,fcls_data_cnt" fieldTable="formonly" gridItemLocation="0,1,1,1" horizontalAlignment="Stretch" identifier="cntDetail1" verticalAlignment="Top" visible="true">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="100%"/>
+				</GridPanel.gridColumnDefinitions>
+				<TextField classNames="fcls_data_widget,fcls_length_50qch" dataType="VarChar,,,0,12" fieldTable="kandooreport" gridItemLocation="0,0,1,1" identifier="header_text" noEntry="true" preferredSize="51qch,1qch" horizontalAlignment="Stretch"/>
+			</GridPanel>
+			<GroupBox classNames="fcls_detail_gb_cnt" fieldTable="formonly" gridItemLocation="0,2,1,1" horizontalAlignment="Stretch" identifier="cntDetail2GroupBox" title="Report Interval:" verticalAlignment="Stretch" visible="true">
+				<GridPanel classNames="fcls_detail_gb_cnt_sub,fcls_detail_cnt_sub,fcls_data_cnt" fieldTable="formonly" horizontalAlignment="Left" identifier="cntDetail2GrBoxSub" verticalAlignment="Top" visible="true">
+					<GridPanel.gridRowDefinitions>
+						<GridRowDefinition gridLengthValue=""/>
+						<GridRowDefinition gridLengthValue=""/>
+						<GridRowDefinition gridLengthValue=""/>
+						<GridRowDefinition gridLengthValue=""/>
+					</GridPanel.gridRowDefinitions>
+					<GridPanel.gridColumnDefinitions>
+						<GridColumnDefinition gridLengthValue="" gridMinLength="10rem"/>
+						<GridColumnDefinition gridLengthValue=""/>
+					</GridPanel.gridColumnDefinitions>
+					<Label classNames="fcls_fieldlabel,fcls_align_left" fieldTable="formonly" gridItemLocation="0,0,1,1" identifier="lb47" isDynamic="true" text="Year No" visible="true"/>
+					<Spinner classNames="fcls_data_widget,fcls_length_10qch" comment=" The year to which run this report for" dataType="SmallInt,,,," fieldTable="statint" gridItemLocation="1,0,1,1" identifier="year_num" preferredSize="5qch,1qch" toolTip=" The year to which run this report for" maxValue="2050" minValue="2018" step="1" horizontalAlignment="Left"/>
+					<Label classNames="fcls_fieldlabel,fcls_align_left" fieldTable="formonly" gridItemLocation="0,1,1,1" identifier="lb46" isDynamic="true" text="Month No" visible="true"/>
+					<TextField classNames="fcls_data_widget,fcls_length_10qch" comment=" The month to run this report for (W)" dataType="Char,,,,10" fieldTable="statint" gridItemLocation="1,1,1,1" identifier="int_text" preferredSize="11qch,1qch" toCase="Up" toolTip=" The month to run this report for (W)" horizontalAlignment="Left"/>
+					<Label classNames="fcls_fieldlabel,fcls_align_left" fieldTable="formonly" gridItemLocation="0,2,1,1" identifier="lb44" isDynamic="true" text="Beginning" visible="true"/>
+					<Calendar classNames="fcls_data_widget,fcls_length_10qch" dataType="Date,,,," fieldTable="statint" gridItemLocation="1,2,1,1" identifier="start_date" noEntry="true" preferredSize="11qch,1qch" horizontalAlignment="Left"/>
+					<Label classNames="fcls_fieldlabel,fcls_align_left" fieldTable="" gridItemLocation="0,3,1,1" identifier="lb89" isDynamic="true" text="Ending" visible="true"/>
+					<Calendar classNames="fcls_data_widget,fcls_length_10qch" dataType="Date,,,," fieldTable="statint" gridItemLocation="1,3,1,1" identifier="end_date" noEntry="true" preferredSize="11qch,1qch" horizontalAlignment="Left"/>
+				</GridPanel>
+			</GroupBox>
+			<GroupBox classNames="fcls_detail_gb_cnt" fieldTable="formonly" gridItemLocation="0,3,1,1" horizontalAlignment="Stretch" identifier="cntDetail3GroupBox" title="Sales Staff" verticalAlignment="Stretch" visible="true">
+				<GridPanel classNames="fcls_detail_gb_cnt_sub,fcls_detail_cnt_sub,fcls_data_cnt" fieldTable="formonly" horizontalAlignment="Left" identifier="cntDetail3GrBoxSub" verticalAlignment="Top" visible="true">
+					<GridPanel.gridRowDefinitions>
+						<GridRowDefinition gridLengthValue=""/>
+						<GridRowDefinition gridLengthValue=""/>
+						<GridRowDefinition gridLengthValue=""/>
+					</GridPanel.gridRowDefinitions>
+					<GridPanel.gridColumnDefinitions>
+						<GridColumnDefinition gridLengthValue="" gridMinLength="10rem"/>
+						<GridColumnDefinition gridLengthValue=""/>
+					</GridPanel.gridColumnDefinitions>
+					<CheckBox classNames="fcls_data_widget,fcls_length_10qch" comment=" Print Salesperson detail lines? - (Y)es - (N)o " dataType="Char,,,," fieldTable="formonly" gridItemLocation="0,0,2,1" identifier="print_detl_flag" preferredSize="2qch,1qch" toolTip=" Print Salesperson detail lines? - (Y)es - (N)o " title="Print Salespersons">
+						<CheckBox.checkedValue>
+							<StringLiteral stringValue="Y"/>
+						</CheckBox.checkedValue>
+						<CheckBox.uncheckedValue>
+							<StringLiteral stringValue="N"/>
+						</CheckBox.uncheckedValue>
+					</CheckBox>
+					<Label classNames="fcls_fieldlabel,fcls_align_left" fieldTable="formonly" gridItemLocation="0,1,1,1" identifier="lb63" isDynamic="true" text="Sales Manager Code" visible="true"/>
+					<TextField classNames="fcls_data_widget,fcls_length_10qch" comment=" Sales Manager unique code " dataType="VarChar,,,0,8" fieldTable="salesmgr" gridItemLocation="1,1,1,1" identifier="mgr_code" preferredSize="9qch,1qch" toCase="Up" toolTip=" Sales Manager unique code " horizontalAlignment="Left"/>
+					<Label classNames="fcls_fieldlabel,fcls_align_left" fieldTable="" gridItemLocation="0,2,1,1" identifier="lb101" isDynamic="true" text="Sales Manager Name" visible="true"/>
+					<TextField classNames="fcls_data_widget,fcls_length_10qch" comment=" Sales Manager name" dataType="VarChar,,,0,14" fieldTable="salesmgr" gridItemLocation="1,2,1,1" identifier="name_text" preferredSize="31qch,1qch" toolTip=" Sales Manager name" horizontalAlignment="Left"/>
+				</GridPanel>
+			</GroupBox>
+			<GridPanel classNames="fcls_statusbar_cnt" fieldTable="formonly" gridItemLocation="0,4,1,1" identifier="cntStatusBar" verticalAlignment="Bottom" visible="true">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="100%"/>
+				</GridPanel.gridColumnDefinitions>
+				<Label classNames="fcls_sblabel" fieldTable="formonly" gridItemLocation="0,0,1,1" identifier="lbInfo1" isDynamic="true" text="" visible="true"/>
+				<Label classNames="fcls_sblabel" fieldTable="formonly" gridItemLocation="0,1,1,1" identifier="lbInfo2" isDynamic="true" text="" visible="true"/>
+			</GridPanel>
+		</GridPanel>
+	</form.rootContainer>
+	<form.screenRecords>
+		<ScreenRecord fields="print_detl_flag" identifier="formonly"/>
+		<ScreenRecord fields="kandooreport.header_text" identifier="kandooreport"/>
+		<ScreenRecord fields="salesmgr.mgr_code,salesmgr.name_text" identifier="salesmgr"/>
+		<ScreenRecord fields="statint.year_num,statint.int_text,statint.start_date,statint.end_date" identifier="statint"/>
+	</form.screenRecords>
+</form>

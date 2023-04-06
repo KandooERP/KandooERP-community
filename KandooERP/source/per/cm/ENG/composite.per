@@ -1,0 +1,90 @@
+{
+###########################################################################
+# This program is free software; you can redistribute it and/or modify it
+# under the terms of the GNU General Public License as published by the
+# Free Software Foundation; either version 2 of the License, or (at your
+# option) any later version.
+#
+# This program is distributed in the hope that it will be useful, but
+# WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+# General Public License for more details.
+#
+# You should have received a copy of the GNU General Public License along
+# with this program; if not, write to the Free Software Foundation, Inc.,
+# 59 Temple Place, Suite 330, Boston, MA 02111-1307 USA
+#
+###########################################################################
+
+	 $Id: composite.per,v 1.4 2003/11/19 22:22:28 afalout Exp $
+}
+
+database kandoodb
+screen size 24 by 80
+{
+Last or Organisation [f001               ]   First [f002                  ]
+
+City      [f003                    ]   Suburb      [f004                  ]
+
+Area code [f005  ]                     Phone number[f006                  ]
+
+Bank      [f007                    ]   Branch      [f008                  ]
+
+         Credit card [f009                          ]
+
+		 In role of  [f010                          ]
+
+		 Related to  [f011                          ]
+
+		 In relation of [f012                       ]
+
+		 With comment line  [f013                   ]
+
+		 In Mailing role of [f014                   ]
+
+}
+end
+
+tables
+contact,
+address,
+phone,
+bank_acc,
+credit_card,
+comment,
+mailing_role
+
+attributes
+f001 = contact.last_org_name_up, reverse, upshift,comments=
+	"Person = last name        Organisation = organisation name";
+f002 = contact.first_name_up, upshift,comments=
+	"Person only: First name";
+f003 = address.city, upshift, comments =
+    "City name";
+f004 = address.suburb, upshift,comments =
+    "Suburb name";
+f005 = phone.area_code, comments =
+    "Phone area code";
+f006 = phone.phone_number, comments =
+    "Phone number";
+f007 = bank_acc.bank_name,upshift, comments =
+    "Bank name";
+f008 = bank_acc.bank_branch, upshift, comments =
+    "Bank branch name";
+f009 = credit_card.cc_no, comments=
+    "Credit card number";
+f010 = formonly.in_role_of, upshift, comments =
+    "Contact have the role of (type) (L&P)";
+f011 = formonly.related_to, upshift, comments =
+    "Contact is related to (Last or Organisation name)";
+f012 = formonly.in_relation_of, upshift, comments =
+    "Contact is in the relation of (type)";
+f013 = comment.comment_text, comments =
+    "Contact have comment line containig text";
+f014 = mailing_role.mailing_name, upshift, comments =
+    "Contact have a mailing role of (type)";
+
+instructions
+delimiters "  "
+screen record s_composite (last_org_name_up through mailing_name)
+

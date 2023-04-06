@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?><form xmlns="http://namespaces.querix.com/2015/fglForms">
+	<form.rootContainer>
+		<GridPanel classNames="fcls_rootContainer" fieldTable="" horizontalAlignment="Stretch" identifier="rootContainer" maxSize="60rem," preferredSize="," verticalAlignment="Stretch">
+			<GridPanel.gridRowDefinitions>
+				<GridRowDefinition gridLengthValue=""/>
+				<GridRowDefinition gridLengthValue=""/>
+				<GridRowDefinition gridLengthValue=""/>
+				<GridRowDefinition gridLengthValue="100%"/>
+				<GridRowDefinition gridLengthValue=""/>
+			</GridPanel.gridRowDefinitions>
+			<GridPanel.gridColumnDefinitions>
+				<GridColumnDefinition gridLengthValue="100%"/>
+			</GridPanel.gridColumnDefinitions>
+			<GridPanel classNames="fcls_title_cnt" fieldTable="formonly" gridItemLocation="0,0,1,1" identifier="cntTitle" verticalAlignment="Top" visible="true">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="100%"/>
+					<GridColumnDefinition gridLengthValue=""/>
+				</GridPanel.gridColumnDefinitions>
+				<Label classNames="fcls_title_lb" fieldTable="formonly" gridItemLocation="0,0,1,1" identifier="header_text" isDynamic="true" text="Product Surcharge" visible="true"/>
+				<Label classNames="fcls_title_lb" fieldTable="" gridItemLocation="1,0,1,1" identifier="lbFormName" isDynamic="true" text="I640" visible="true"/>
+			</GridPanel>
+			<GridPanel classNames="fcls_detail_cnt,fcls_data_cnt" fieldTable="formonly" gridItemLocation="0,1,1,1" horizontalAlignment="Left" identifier="cntDetail1" verticalAlignment="Top" visible="true">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="" gridMinLength="10rem"/>
+					<GridColumnDefinition gridLengthValue=""/>
+				</GridPanel.gridColumnDefinitions>
+				<ComboBox classNames="fcls_data_widget,fcls_align_left,fcls_length_30qch" comment=" Enter product code - (W)" dataType="Char,,,,15" fieldTable="product" gridItemLocation="1,0,1,1" identifier="part_code" preferredSize="16qch,1qch" toCase="Up" toolTip=" Enter product code - (W)"/>
+				<Label classNames="fcls_fieldlabel,fcls_align_left" fieldTable="" gridItemLocation="0,0,1,1" identifier="lb51" isDynamic="true" text="Product" visible="true"/>
+				<TextField classNames="fcls_data_widget,fcls_align_left,fcls_length_30qch" comment=" Description of this product " dataType="Char,,,,36" fieldTable="product" gridItemLocation="1,1,1,1" identifier="desc_text" preferredSize="31qch,1qch" toolTip=" Description of this product "/>
+			</GridPanel>
+			<GridPanel classNames="fcls_detail_cnt,fcls_data_cnt" fieldTable="formonly" gridItemLocation="0,2,1,1" horizontalAlignment="Stretch" identifier="cntDetail2" verticalAlignment="Top" visible="true">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="33.33%"/>
+					<GridColumnDefinition gridLengthValue="33.33%"/>
+					<GridColumnDefinition gridLengthValue="33.33%"/>
+				</GridPanel.gridColumnDefinitions>
+				<ComboBox classNames="fcls_data_widget" dataType="Char,,,,4" fieldTable="product" gridItemLocation="0,0,1,1" identifier="sell_uom_code" noEntry="true" preferredSize="4qch,1qch" toCase="Up"/>
+				<ComboBox classNames="fcls_data_widget" dataType="Char,,,,4" fieldTable="product" gridItemLocation="1,0,1,1" identifier="sell_uom_code" noEntry="true" preferredSize="4qch,1qch" toCase="Up"/>
+				<ComboBox classNames="fcls_data_widget" dataType="Char,,,,3" fieldTable="glparms" gridItemLocation="2,0,1,1" identifier="base_currency_code" noEntry="true" preferredSize="4qch,1qch" toCase="Up"/>
+			</GridPanel>
+			<Table fieldTable="" gridItemLocation="0,3,1,1" identifier="sr_prodsurcharge" preferredSize="48qch,8qch" rowCount="8">
+				<TableColumn fieldTable="" identifier="tc_low_qty" text="Lower Qty">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="33.33%"/>
+					</TableColumn.columnLength>
+					<TextField comment=" Enter minimum selling quantity which the surcharge is to apply" dataType="Float,,,," fieldTable="formonly" identifier="low_qty" toolTip=" Enter minimum selling quantity which the surcharge is to apply" notNull="true"/>
+				</TableColumn>
+				<TableColumn fieldTable="" identifier="tc_up_qty" text="Upper Qty">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="33.33%"/>
+					</TableColumn.columnLength>
+					<TextField comment=" Enter maximum selling quantity which the surcharge is to apply" dataType="Float,,,," fieldTable="formonly" identifier="up_qty" toolTip=" Enter maximum selling quantity which the surcharge is to apply" notNull="true"/>
+				</TableColumn>
+				<TableColumn fieldTable="" identifier="tc_sur_amt" text="Surcharge Amt">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="33.33%"/>
+					</TableColumn.columnLength>
+					<TextField comment=" Enter the surcharge which is to apply" dataType="Decimal,,,2,16" fieldTable="formonly" identifier="sur_amt" toolTip=" Enter the surcharge which is to apply" notNull="true"/>
+				</TableColumn>
+			</Table>
+			<GridPanel classNames="fcls_statusbar_cnt" fieldTable="formonly" gridItemLocation="0,4,1,1" identifier="cntStatusBar" verticalAlignment="Top" visible="true">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="100%"/>
+				</GridPanel.gridColumnDefinitions>
+				<Label classNames="fcls_sblabel" fieldTable="formonly" gridItemLocation="0,0,1,1" identifier="lbInfo1" isDynamic="true" text="" visible="true"/>
+				<Label classNames="fcls_sblabel" fieldTable="formonly" gridItemLocation="0,1,1,1" identifier="lbInfo2" isDynamic="true" text="" visible="true"/>
+			</GridPanel>
+		</GridPanel>
+	</form.rootContainer>
+	<form.screenRecords>
+		<ScreenRecord elements="8" fields="formonly.low_qty,formonly.up_qty,formonly.sur_amt" identifier="sr_prodsurcharge"/>
+		<ScreenRecord elements="2" fields="product.sell_uom_code" identifier="sr_uom"/>
+		<ScreenRecord fields="formonly.low_qty,formonly.up_qty,formonly.sur_amt" identifier="formonly"/>
+		<ScreenRecord fields="glparms.base_currency_code" identifier="glparms"/>
+		<ScreenRecord fields="product.part_code,product.desc_text,product.sell_uom_code" identifier="product"/>
+	</form.screenRecords>
+</form>

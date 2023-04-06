@@ -1,0 +1,187 @@
+P61_FRA {
++1-30 Days Overdue { "+ 1-30 jours de retard" }
++31-60 Days Overdue { "31 à 60 jours de retard" }
++61-90 Days Overdue { "+61 -90 jours de retard" }
+=Balance { "= Solde" }
+A Valid Code for this part of the chart { "Un code valid pour cette partie du numéro de compte" }
+Account { "Compte" }
+Account Code { "Code Compte" }
+Account Status { "Situation du Compte" }
+Account Verifier { "Vérificateur de compte" }
+Account code to identify this account { "Numéro de compte identifiant ce client" }
+Account quantity Unit Of Measure { "Quantité en unités de mesure" }
+Activity { "Activité" }
+Activity Code { "Code Activité" }
+Activity code of job to which distribute voucher - (W) { "Code d'activité du JOB à distribuer dans la facture" }
+Amount { "Montant" }
+Amount Applied { "Montant Appliqué" }
+Amount Paid { "Montant payé" }
+Amount to distribute to this order { "Montant à répartir sur cette commande" }
+Amounts { "Montants" }
+Analysis information { "Information analytique" }
+Applied to Vouchers { "Appliqué aux factures fournisseur" }
+Approval Date { "Date d'autorisation" }
+Charge { "Facturation" }
+Charge Code { "Code de facturation" }
+Charge code for costs related to Additional Charges (W) { "Code de facturation pour les coûts liés aux frais supplémentaires (W)" }
+Chart of Accounts { "Plan Comptable" }
+Code { "Code" }
+Code used to identify the type of shipment { "Code utilisé pour identifier le type d'expédition" }
+Comments { "Commentaires" }
+Completed? { "Terminé?" }
+Cost { "Coût" }
+Cost Code { "Code coût" }
+Credit Amt { "Montant Crédit" }
+Currency { "Devise" }
+Currency of this shipment { "Devise de cette expédition" }
+Current { "Actuel" }
+Current estimated time of arrival of shipment { "Heure estimée d'arrivée de l'envoi" }
+Customer { "Client" }
+Customer Code { "Code Client" }
+Customer Order { "Commande client" }
+Customer name or description { "Nom ou description du client" }
+Date { "Date" }
+Date of approval of this variation by customer { "Date d'approbation de cette modification par le client" }
+Debit { "Débit" }
+Debit Distribution { "Répartition  du débit" }
+Debit No { "Débit N°" }
+Debit Number { "Numéro de débit" }
+Debit Totals: { "Totaux débit" }
+Description { "Description" }
+Description Text { "Description" }
+Description of transaction - CTRL-N for Notes { "Description de la transaction" }
+Descriptions { "Descriptions" }
+Details { "Détails" }
+Discount Taken { "Remise obtenue" }
+Dist. Amt { "Mont. Distrib." }
+Dist.Amount { "Montant réparti" }
+Dist.Amt { "Mont. Distrib." }
+Distribute Order Costs { "Répartir les coûts de commande" }
+Distributed { "Distribué" }
+Distribution amount of the transaction { "Montant de la répartition de la transaction" }
+E.T.A { "Date Estimée de livraison" }
+Enter Activity Code { "Saisir le code d'activité" }
+Enter Activity Name { "Saisir le nom de l'activité" }
+Enter Estimated Finish Date { "Saisir la date de fin estimée" }
+Enter Job Variation (W) { "Saisir la variation du JOB (W)" }
+Enter Responsibility Code { "Saisir le code responsabilité" }
+Enter Sort Code { "Saisir le code de tri" }
+Enter Unique Job Code (W) { "Entrez le code unique du JOB (W)" }
+Enter any additional information about the distribution { "Saisir toute information supplémentaire sur la répartition" }
+Enter description for analysis { "Saisir la description pour analytique" }
+Enter quantity for statistics { "Saisir la quantité pour les statistiques" }
+Enter the Code of the Shipment Cost Type - (W) { "Saisir le code du type de coût d'expédition - (W)" }
+Enter the Description of the Distributed Cost - CTRL-N for Notes { "Saisir la description du coût réparti" }
+Enter the General Ledger account code { "Saisir le numéro de compte compta générale" }
+Enter the Shipment Code you wish to begin the scan process at { "Saisir le code d’expédition pour lequel vous souhaitez commencer le processus de numérisation." }
+Enter the Unique Code of the Shipment - (W) { "Saisir le code unique d'expédition" }
+Enter the amount to distributed { "Saisir le montant à répartir" }
+Enter the quantity amount of this distribution { "Saisir le montant de la quantité de cette distribution" }
+Entered { "Saisie" }
+Entry Date { "Date d'entrée" }
+Entry Person { "Personne ayant saisi l'info" }
+Exchange Rate { "Taux de Change" }
+Expense account code for GL posting (W) { "Code compte de dépenses pour imputation compta générale" }
+FILTER { "Premier" }
+Field Description { "Description du champ" }
+Filter { "Filtrer" }
+Finish Date { "Date de fin" }
+Flex Codes { "Flex Codes" }
+Full name or description of vendor { "Nom complet ou description du vendeur" }
+G-General, A-Chrg Thru Sale, P-Purch Ord, J-Dist to Job, S-Shipment, W-Order { "G_Général, A imputer à Ventes, P Bon de commande, J imputer à service, S livraison, W commande" }
+GL Integration { "Intégration Grand Livre" }
+Group { "Groupe" }
+ID { "ID" }
+Indicates the type of shipment { "Indique le type d'expédition" }
+Is Additional Charge complete? { "Les frais supplémentaires sont-ils complets?" }
+Job { "JOB" }
+Job Address { "Adresse du Service" }
+Job Code { "Code JOB" }
+Job Code (W) { "Code de JOB" }
+Job Management AP Distribution { "Distribution du JOB dans compta fournisseurs" }
+Job Scan { "Exploration JOB" }
+Job Type Code { "Code type de JOB" }
+Job Variations { "Variations des tâches" }
+Job description { "Description du JOB" }
+Journal Number { "Numéro de Journal" }
+LOOKUP { "RECHERCHER" }
+Language Code { "Code langue" }
+Length { "Longueur" }
+Length of the Code { "Longueur Numéro de compte" }
+Line { "Ligne" }
+Line Info { "Infos ligne" }
+Mode { "Mode" }
+NOTES { "NOTES" }
+Name { "Nom" }
+New Label { "Références bancaires" }
+Number { "Numéro" }
+Number to uniquely identify and reference this debit { "Numéro unique d'identification de ce débit" }
+Numeric variation number { "Numéro de variation" }
+Order { "Commande" }
+Order Number { "Numéro de commande" }
+Order number to distribute costs to (W) { "Numéro de commande auquel répartir les coûts (W)" }
+Other { "Autre" }
+Product { "Produit" }
+Product Code { "Code Produit" }
+Qty { "Qté" }
+Quantity { "Quantité" }
+REFRESH { "ACTUALISER" }
+Received Qty { "Quantité reçue" }
+Resource { "Ressource" }
+Resource Code { "Code Ressource" }
+Resource Group Code { "Code groupe de ressources" }
+Resource Scan { "Exploration des ressources" }
+Resource description { "Description des ressources" }
+Responsibility Id { "ID de responsabilité" }
+SCANNER { "EXPLORATEUR" }
+SETTINGS { "REGLAGES" }
+Save { "Enregistrer" }
+Scan Activities { "Explorer Activités" }
+Shipment Code { "Code d'expédition" }
+Shipment Code, unique code used to identify a shipment { "Code d'expédition, code unique utilisé pour identifier une expédition" }
+Shipment Costs Distribution { "Répartition des coûts d'expédition" }
+Shipment status { "Situation de l'expédition" }
+Short description of variation { "Brève description de la variation" }
+Sort Id { "ID de tri" }
+Start Pos. { "Positions Départ" }
+Start position of the Code { "Position de départ du code" }
+Statistical quantity of the transaction { "Quantité statistique de la transaction" }
+Status { "Statut" }
+Status of job { "Statut du JOB" }
+Status of this shipment { "Etat de cette expédition" }
+Tariff Code { "Code tarifaire" }
+The Customer code for the order (W) { "Le code client pour la commande (W)" }
+The Description of the Account { "Description du compte" }
+The General Ledger account applicable to this transaction (W) { "Le compte de comta générale application à cette transaction" }
+The Product Code from inventory (W) { "Code produit de l'inventaire (W)" }
+The currency used for this vendor { "Devise utilisée pour ce fournisseur" }
+The customers name { "Le nom du client" }
+The description for this code { "L'intitulé de ce code" }
+The valid flex segment { "Le segment Flex valide" }
+Title { "Titre" }
+Title of this field in the GL { "Titre de ce champ en Compta géné" }
+Total { "Total" }
+Total Amount { "Montant Total" }
+Total Amt { "Montant Total" }
+Totals { "Totaux" }
+Trans { "Trans" }
+Type { "Type" }
+UOM { "UDM" }
+Unique Resource Code { "Code unique de ressource" }
+Unique Vendor ID (W) { "ID unique du fournisseur (W)" }
+Unit { "Unité" }
+Unit and Cost { "Unité et coût" }
+Unit charge rate of resource in Base Currency { "Taux de charge unitaire de la ressource en devise de base" }
+Unit cost of resource to be distributed to { "Coût unitaire de la ressource à distribuer" }
+Var. { "Var." }
+Variation { "Variation" }
+Variation Number { "Numéro de variation" }
+Vendor { "Fournisseur" }
+Vendor Code { "Code Fournisseur" }
+Vendor Invoice { "Facture fournisseur" }
+Vendor Reference { "Références du fournisseur" }
+Vendor name or description { "Nom ou description du fournisseur" }
+Voucher Number { "Numéro de Facture" }
+Warehouse { "Dépôt" }
+actToolbarManager { "actToolbarManager" }
+}

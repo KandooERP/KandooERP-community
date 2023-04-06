@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form xmlns="http://namespaces.querix.com/2015/fglForms">
+	<form.rootContainer>
+		<GridPanel classNames="fcls_rootContainer" verticalAlignment="Stretch" horizontalAlignment="Stretch" fieldTable="" identifier="rootContainer">
+			<GridPanel.gridRowDefinitions>
+				<GridRowDefinition gridLengthValue=""/>
+				<GridRowDefinition gridLengthValue=""/>
+				<GridRowDefinition gridLengthValue="100%"/>
+				<GridRowDefinition gridLengthValue=""/>
+			</GridPanel.gridRowDefinitions>
+			<GridPanel.gridColumnDefinitions>
+				<GridColumnDefinition gridLengthValue="100%"/>
+			</GridPanel.gridColumnDefinitions>
+			<GridPanel classNames="fcls_title_cnt" visible="true" verticalAlignment="Top" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="cntTitle">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="100%"/>
+					<GridColumnDefinition gridLengthValue=""/>
+				</GridPanel.gridColumnDefinitions>
+				<Label isDynamic="true" text="Shipment Distribution Scan" classNames="fcls_title_lb" visible="true" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="header_text"/>
+				<Label isDynamic="true" text="L121" classNames="fcls_title_lb" visible="true" gridItemLocation="1,0,1,1" fieldTable="" identifier="lbFormName"/>
+			</GridPanel>
+			<GridPanel classNames="fcls_detail_cnt,fcls_data_cnt,fcls_align_left" visible="true" verticalAlignment="Top" horizontalAlignment="Left" gridItemLocation="0,1,1,1" fieldTable="formonly" identifier="cntDetail1">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="" gridMinLength="10rem"/>
+					<GridColumnDefinition gridLengthValue=""/>
+				</GridPanel.gridColumnDefinitions>
+				<ComboBox toCase="Up" noEntry="true" dataType="Char,,,,8" preferredSize="9qch,1qch" toolTip=" Unique Vendor Code" fieldTable="vendor" comment=" Unique Vendor Code" identifier="vend_code" gridItemLocation="1,0,1,1" classNames="fcls_data_widget,fcls_align_left,fcls_length_20qch"/>
+				<TextField noEntry="true" dataType="Char,,,,30" preferredSize="31qch,1qch" toolTip=" Full name or description of vendor" fieldTable="vendor" comment=" Full name or description of vendor" identifier="name_text" gridItemLocation="1,1,1,1" classNames="fcls_data_widget,fcls_align_left,fcls_length_20qch"/>
+				<TextField noEntry="true" dataType="Char,,,,8" preferredSize="9qch,1qch" toolTip=" The Shipment Code to which this amount relates " fieldTable="shiphead" comment=" The Shipment Code to which this amount relates " identifier="ship_code" gridItemLocation="1,2,1,1" classNames="fcls_data_widget,fcls_align_left,fcls_length_20qch"/>
+				<ComboBox noEntry="true" dataType="Char,,,,3" preferredSize="4qch,1qch" toolTip=" The currency used for this vendor" fieldTable="vendor" comment=" The currency used for this vendor" identifier="currency_code" gridItemLocation="1,3,1,1" classNames="fcls_data_widget,fcls_align_left,fcls_length_20qch"/>
+				<Label isDynamic="true" text="Vendor Code" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,0,1,1" fieldTable="" identifier="lb51"/>
+				<Label isDynamic="true" text="Shipment Code" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,2,1,1" fieldTable="" identifier="lb52"/>
+				<Label isDynamic="true" text="Currency" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,3,1,1" fieldTable="" identifier="lb66"/>
+			</GridPanel>
+			<Table rowCount="7" preferredSize="75qch,7qch" fieldTable="" identifier="sr_ship_dist" gridItemLocation="0,2,1,1">
+				<TableColumn fieldTable="" identifier="tc_vouch_date" text="Date">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="10rem" gridMaxLength="10rem" gridMinLength="10rem"/>
+					</TableColumn.columnLength>
+					<Calendar format="dd/mm/yyyy" dataType="Date,,,," toolTip=" Date of the voucher " fieldTable="voucher" comment=" Date of the voucher " identifier="vouch_date"/>
+				</TableColumn>
+				<TableColumn fieldTable="" identifier="tc_vouch_code" text="Voucher">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="10rem" gridMaxLength="10rem" gridMinLength="10rem"/>
+					</TableColumn.columnLength>
+					<TextField dataType="Integer,,,," toolTip=" Unique number automatically assigned by the system" fieldTable="voucherdist" comment=" Unique number automatically assigned by the system" identifier="vouch_code"/>
+				</TableColumn>
+				<TableColumn fieldTable="" identifier="tc_line_num" text="Line No">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="10rem" gridMaxLength="10rem" gridMinLength="10rem"/>
+					</TableColumn.columnLength>
+					<TextField noEntry="true" dataType="SmallInt,,,," toolTip=" Line number of this distribution within the voucher" fieldTable="voucherdist" comment=" Line number of this distribution within the voucher" identifier="line_num"/>
+				</TableColumn>
+				<TableColumn fieldTable="" identifier="tc_cost_type_code" text="Type">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="10rem" gridMaxLength="10rem" gridMinLength="10rem"/>
+					</TableColumn.columnLength>
+					<TextField toCase="Up" noEntry="true" dataType="Char,,,,8" toolTip=" Cost type code" fieldTable="shipcosttype" comment=" Cost type code" identifier="cost_type_code"/>
+				</TableColumn>
+				<TableColumn fieldTable="" identifier="tc_desc_text" text="Description">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="30rem" gridMaxLength="30rem" gridMinLength="30rem"/>
+					</TableColumn.columnLength>
+					<TextField noEntry="true" dataType="Char,,,,40" toolTip="Description of transaction, default account description, CTRL N notes" fieldTable="voucherdist" comment="Description of transaction, default account description, CTRL N notes" identifier="desc_text"/>
+				</TableColumn>
+				<TableColumn fieldTable="" identifier="tc_dist_amt" text="Amount">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="10rem" gridMaxLength="10rem" gridMinLength="10rem"/>
+					</TableColumn.columnLength>
+					<TextField noEntry="true" dataType="Decimal,,,2,16" toolTip=" Amount that will be distributed to the Purchases Account" fieldTable="voucherdist" comment=" Amount that will be distributed to the Purchases Account" identifier="dist_amt"/>
+				</TableColumn>
+				<TableColumn resizable="true" visible="true" identifier="tc_lbEOL">
+					<Label isDynamic="true" visible="true" identifier="lbEOL"/>
+					<TableColumn.columnLength>
+						<GridLength/>
+					</TableColumn.columnLength>
+				</TableColumn>
+			</Table>
+			<GridPanel classNames="fcls_statusbar_cnt" visible="true" verticalAlignment="Top" gridItemLocation="0,3,1,1" fieldTable="formonly" identifier="cntStatusBar">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="100%"/>
+				</GridPanel.gridColumnDefinitions>
+				<Label isDynamic="true" text="" classNames="fcls_sblabel" visible="true" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="lbInfo1"/>
+				<Label isDynamic="true" text="" classNames="fcls_sblabel" visible="true" gridItemLocation="0,1,1,1" fieldTable="formonly" identifier="lbInfo2"/>
+			</GridPanel>
+		</GridPanel>
+	</form.rootContainer>
+	<form.screenRecords>
+		<ScreenRecord identifier="sr_ship_dist" fields="voucher.vouch_date,voucherdist.vouch_code,voucherdist.line_num,shipcosttype.cost_type_code,voucherdist.desc_text,voucherdist.dist_amt" elements="7"/>
+		<ScreenRecord identifier="shipcosttype" fields="shipcosttype.cost_type_code"/>
+		<ScreenRecord identifier="shiphead" fields="shiphead.ship_code"/>
+		<ScreenRecord identifier="vendor" fields="vendor.vend_code,vendor.name_text,vendor.currency_code"/>
+		<ScreenRecord identifier="voucher" fields="voucher.vouch_date"/>
+		<ScreenRecord identifier="voucherdist" fields="voucherdist.vouch_code,voucherdist.desc_text,voucherdist.dist_amt,voucherdist.line_num"/>
+	</form.screenRecords>
+</form>
+

@@ -1,0 +1,113 @@
+{
+###########################################################################
+# This program is free software; you can redistribute it and/or modify it
+# under the terms of the GNU General Public License as published by the
+# Free Software Foundation; either version 2 of the License, or (at your
+# option) any later version.
+#
+# This program is distributed in the hope that it will be useful, but
+# WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+# General Public License for more details.
+#
+# You should have received a copy of the GNU General Public License along
+# with this program; if not, write to the Free Software Foundation, Inc.,
+# 59 Temple Place, Suite 330, Boston, MA 02111-1307 USA
+#
+###########################################################################
+
+	 $Id: J113.per,v 1.2 2003/11/19 22:22:44 afalout Exp $
+}
+
+
+database kandoodb
+
+screen
+{
+                       Job Management Parameters                       J113
+\g---------------------------------------------------------------------------\g
+ Next Adjustment Number            [f02      ]
+ Next Resource Allocation Number   [f03      ]
+ Next Product Issue Number         [f08      ]
+ Job Management Installed?         [a]   Last Posted Date     [f04       ]
+ Job Management Journal            [f05] [h05                            ]
+ Job Management COS Journal        [f06] [h06                            ]
+ Job Management Adjustment Journal [f07] [h07                            ]
+ Override Account Segments?        [c]
+ Default cost allocation method    [d]   [d001                           ]
+ Post Timesheets to Payroll?       [b]
+\g---------------------------------------------------------------------------\g
+                            User Prompts
+\g----\g Prompt \g--------------\g Indicator \g----\g Prompt \g-------------\g Indicator \g--\g
+ 1  [rc001               ]   [s]     2  [rc002               ]   [t]
+ 3  [rc003               ]   [u]     4  [rc004               ]   [v]
+ 5  [rc005               ]   [w]     6  [rc006               ]   [x]
+ 7  [rc007               ]   [y]     8  [rc008               ]   [z]
+}
+end
+tables
+jmparms
+journal
+attributes
+f02 = jmparms.adj_num, comments = 
+ " Next Adjustment Number ";
+f03 = jmparms.ra_num, comments = 
+ " Next Resource Allocation Number ";
+f08 = jmparms.next_issue_num, comments = 
+ " Next Product Issue Number ";
+a = jmparms.jm_flag, upshift, comments = 
+" Enter Y if Job Management is installed";
+f04 = jmparms.last_post_date,format = "dd/mm/yyyy",  comments = 
+ " Date last posted";
+f05 = jmparms.jm_jour_code, upshift, comments = 
+ " Job Management Journal Code (W)";
+h05 = formonly.jm_desc_text;
+f06 = jmparms.cos_jour_code, upshift, comments = 
+ " Job Management Cost of Sales Journal Code (W)";
+h06 = formonly.cos_desc_text;
+f07 = jmparms.adj_jour_code, upshift, comments = 
+ " Job Management Adjustments Journal Code (W)";
+h07 = formonly.adj_desc_text;
+b = jmparms.pa_post_flag, upshift, comments = 
+" Enter Y to Post Timesheets to Payroll";
+c = jmparms.acct_image_flag, upshift, comments = 
+" When Imaging Activities override account segments with target values";
+d = jmparms.cost_alloc_ind, upshift, include=("1","2","3","4","5"), comments = 
+" Default Cost Allocation method for Fixed Price Actvities (W)";
+d001 = formonly.alloc_ind_text type char, comments =
+" Description of the default Cost Allocation method ";
+rc001 = jmparms.prompt1_text, comments =
+" Enter User Prompt ";  
+s = jmparms.prompt1_ind, required, include=("1","2","5"), comments =
+" Enter Indicator (1)Optional, (2)Must Enter, (5)No Entry Required";
+rc002 = jmparms.prompt2_text, comments =
+" Enter User Prompt ";  
+t = jmparms.prompt2_ind, required, include=("1","2","5"), comments =
+" Enter Indicator (1)Optional, (2)Must Enter, (5)No Entry Required";
+rc003 = jmparms.prompt3_text, comments =
+" Enter User Prompt ";  
+u = jmparms.prompt3_ind, required, include=("1","2","5"), comments =
+" Enter Indicator (1)Optional, (2)Must Enter, (5)No Entry Required";
+rc004 = jmparms.prompt4_text, comments =
+" Enter User Prompt ";  
+v = jmparms.prompt4_ind, required, include=("1","2","5"), comments =
+" Enter Indicator (1)Optional, (2)Must Enter, (5)No Entry Required";
+rc005 = jmparms.prompt5_text, comments =
+" Enter User Prompt ";  
+w = jmparms.prompt5_ind, required, include=("1","2","5"), comments =
+" Enter Indicator (1)Optional, (2)Must Enter, (5)No Entry Required";
+rc006 = jmparms.prompt6_text, comments =
+" Enter User Prompt ";  
+x = jmparms.prompt6_ind, required, include=("1","2","5"), comments =
+" Enter Indicator (1)Optional, (2)Must Enter, (5)No Entry Required";
+rc007 = jmparms.prompt7_text, comments =
+" Enter User Prompt ";  
+y = jmparms.prompt7_ind, required, include=("1","2","5"), comments =
+" Enter Indicator (1)Optional, (2)Must Enter, (5)No Entry Required";
+rc008 = jmparms.prompt8_text, comments =
+" Enter User Prompt ";  
+z = jmparms.prompt8_ind, required, include=("1","2","5"), comments =
+" Enter Indicator (1)Optional, (2)Must Enter, (5)No Entry Required";
+end
+instructions
+delimiters "  "

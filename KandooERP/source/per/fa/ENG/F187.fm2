@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form xmlns="http://namespaces.querix.com/2015/fglForms">
+	<form.rootContainer>
+		<GridPanel classNames="fcls_rootContainer" verticalAlignment="Top" horizontalAlignment="Left" fieldTable="" identifier="rootContainer">
+			<GridPanel.gridRowDefinitions>
+				<GridRowDefinition gridLengthValue=""/>
+				<GridRowDefinition gridLengthValue=""/>
+				<GridRowDefinition gridLengthValue=""/>
+				<GridRowDefinition gridLengthValue=""/>
+				<GridRowDefinition gridLengthValue=""/>
+			</GridPanel.gridRowDefinitions>
+			<GridPanel.gridColumnDefinitions>
+				<GridColumnDefinition gridLengthValue="100%"/>
+			</GridPanel.gridColumnDefinitions>
+			<GridPanel classNames="fcls_title_cnt" visible="true" verticalAlignment="Top" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="cntTitle">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="100%"/>
+					<GridColumnDefinition gridLengthValue=""/>
+					<GridColumnDefinition gridLengthValue=""/>
+				</GridPanel.gridColumnDefinitions>
+				<Label isDynamic="true" text="Fixed Asset Financial Batch" classNames="fcls_title_lb" visible="true" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="header_text"/>
+				<TextField dataType="Char,,,," preferredSize="25qch,1qch" fieldTable="formonly" identifier="trans_header" gridItemLocation="1,0,1,1"/>
+				<Label isDynamic="true" text="F187" classNames="fcls_title_lb" visible="true" gridItemLocation="2,0,1,1" fieldTable="" identifier="lbFormName"/>
+			</GridPanel>
+			<GroupBox title="General Information" classNames="fcls_detail_gb_cnt" visible="true" verticalAlignment="Stretch" horizontalAlignment="Stretch" gridItemLocation="0,1,1,1" fieldTable="" identifier="cntDetail1GroupBox">
+				<GridPanel classNames="fcls_detail_gb_cnt_sub,fcls_detail_cnt_sub,fcls_data_cnt,fcls_align_left" visible="true" verticalAlignment="Top" horizontalAlignment="Left" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="cntDetail1Sub">
+					<GridPanel.gridRowDefinitions>
+						<GridRowDefinition gridLengthValue=""/>
+						<GridRowDefinition gridLengthValue=""/>
+						<GridRowDefinition gridLengthValue=""/>
+						<GridRowDefinition gridLengthValue=""/>
+						<GridRowDefinition gridLengthValue=""/>
+					</GridPanel.gridRowDefinitions>
+					<GridPanel.gridColumnDefinitions>
+						<GridColumnDefinition gridLengthValue="" gridMinLength="10rem"/>
+						<GridColumnDefinition gridLengthValue=""/>
+					</GridPanel.gridColumnDefinitions>
+					<Label isDynamic="true" text="Batch Number" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="lb57"/>
+					<TextField dataType="Integer,,,," preferredSize="12qch,1qch" toolTip=" The Batch Number system allocated to this transaction " fieldTable="fabatch" comment=" The Batch Number system allocated to this transaction " identifier="batch_num" gridItemLocation="1,0,1,1" classNames="fcls_data_widget,fcls_align_left,fcls_length_20qch"/>
+					<Label isDynamic="true" text="Year Number" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,1,1,1" fieldTable="" identifier="lb73"/>
+					<TextField dataType="SmallInt,,,," preferredSize="5qch,1qch" toolTip=" The Year Number allocated to this transaction " fieldTable="fabatch" comment=" The Year Number allocated to this transaction " identifier="year_num" gridItemLocation="1,1,1,1" classNames="fcls_data_widget,fcls_align_left,fcls_length_20qch"/>
+					<Label isDynamic="true" text="Period Number" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,2,1,1" fieldTable="" identifier="lb76"/>
+					<TextField dataType="SmallInt,,,," preferredSize="5qch,1qch" toolTip=" The Period Number allocated to this transaction " fieldTable="fabatch" comment=" The Period Number allocated to this transaction " identifier="period_num" gridItemLocation="1,2,1,1" classNames="fcls_data_widget,fcls_align_left,fcls_length_20qch"/>
+					<Label isDynamic="true" text="Comments" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,3,1,1" fieldTable="" identifier="lb77"/>
+					<TextField dataType="Char,,,,30" preferredSize="32qch,1qch" toolTip=" First line of comments for this batch " fieldTable="fabatch" comment=" First line of comments for this batch " identifier="com1_text" gridItemLocation="1,3,1,1" classNames="fcls_data_widget,fcls_align_left,fcls_length_20qch"/>
+					<TextField dataType="Char,,,,30" preferredSize="32qch,1qch" toolTip=" Second line of comments for this batch " fieldTable="fabatch" comment=" Second line of comments for this batch " identifier="com2_text" gridItemLocation="1,4,1,1" classNames="fcls_data_widget,fcls_align_left,fcls_length_20qch"/>
+				</GridPanel>
+			</GroupBox>
+			<GroupBox title="Amount" classNames="fcls_detail_gb_cnt" visible="true" verticalAlignment="Stretch" horizontalAlignment="Stretch" gridItemLocation="0,2,1,1" fieldTable="formonly" identifier="cntDetail2GroupBox">
+				<GridPanel classNames="fcls_detail_gb_cnt_sub,fcls_detail_cnt_sub,fcls_data_cnt,fcls_align_left" visible="true" verticalAlignment="Top" horizontalAlignment="Left" fieldTable="formonly" identifier="cntDetail2Sub">
+					<GridPanel.gridRowDefinitions>
+						<GridRowDefinition gridLengthValue=""/>
+						<GridRowDefinition gridLengthValue=""/>
+						<GridRowDefinition gridLengthValue=""/>
+					</GridPanel.gridRowDefinitions>
+					<GridPanel.gridColumnDefinitions>
+						<GridColumnDefinition gridLengthValue="" gridMinLength="10rem"/>
+						<GridColumnDefinition gridLengthValue=""/>
+						<GridColumnDefinition gridLengthValue=""/>
+					</GridPanel.gridColumnDefinitions>
+					<Label isDynamic="true" text="Control" classNames="fcls_columnlabel_rev_cell,fcls_align_hstretch" visible="true" gridItemLocation="1,0,1,1" fieldTable="formonly" identifier="lb64"/>
+					<Label isDynamic="true" text="Actual" classNames="fcls_columnlabel_rev_cell,fcls_align_hstretch" visible="true" gridItemLocation="2,0,1,1" fieldTable="" identifier="lb122"/>
+					<Label isDynamic="true" text="Asset Amount" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,1,1,1" fieldTable="formonly" identifier="lb47"/>
+					<TextField dataType="Decimal,,,2,16" preferredSize="20qch,1qch" toolTip=" The Control total for assets for this batch " fieldTable="fabatch" comment=" The Control total for assets for this batch " identifier="control_asset_amt" gridItemLocation="1,1,1,1" classNames="fcls_data_widget,fcls_align_left,fcls_length_20qch"/>
+					<TextField dataType="Decimal,,,2,16" preferredSize="20qch,1qch" toolTip=" The entered total amount for assets for this batch " fieldTable="fabatch" comment=" The entered total amount for assets for this batch " identifier="actual_asset_amt" gridItemLocation="2,1,1,1" classNames="fcls_data_widget,fcls_align_left,fcls_length_20qch"/>
+					<Label isDynamic="true" text="Deprec Amount" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,2,1,1" fieldTable="formonly" identifier="lb46"/>
+					<TextField dataType="Decimal,,,2,16" preferredSize="20qch,1qch" toolTip=" The Control total for assets for this batch " fieldTable="fabatch" comment=" The Control total for assets for this batch " identifier="control_depr_amt" gridItemLocation="1,2,1,1" classNames="fcls_data_widget,fcls_align_left,fcls_length_20qch"/>
+					<TextField dataType="Decimal,,,2,16" preferredSize="20qch,1qch" toolTip=" The entered total amount for depreciation for this batch " fieldTable="fabatch" comment=" The entered total amount for depreciation for this batch " identifier="actual_depr_amt" gridItemLocation="2,2,1,1" classNames="fcls_data_widget,fcls_align_left,fcls_length_20qch"/>
+				</GridPanel>
+			</GroupBox>
+			<GroupBox title="Post Information" classNames="fcls_detail_gb_cnt" visible="true" verticalAlignment="Stretch" horizontalAlignment="Stretch" gridItemLocation="0,3,1,1" fieldTable="formonly" identifier="cntDetail3GroupBox">
+				<GridPanel classNames="fcls_detail_gb_cnt_sub,fcls_detail_cnt_sub,fcls_data_cnt,fcls_align_left" visible="true" verticalAlignment="Top" horizontalAlignment="Left" fieldTable="formonly" identifier="cntDetail3Sub">
+					<GridPanel.gridRowDefinitions>
+						<GridRowDefinition gridLengthValue=""/>
+						<GridRowDefinition gridLengthValue=""/>
+						<GridRowDefinition gridLengthValue=""/>
+						<GridRowDefinition gridLengthValue=""/>
+						<GridRowDefinition gridLengthValue=""/>
+					</GridPanel.gridRowDefinitions>
+					<GridPanel.gridColumnDefinitions>
+						<GridColumnDefinition gridLengthValue="" gridMinLength="10rem"/>
+						<GridColumnDefinition gridLengthValue=""/>
+					</GridPanel.gridColumnDefinitions>
+					<CheckBox dataType="Char,,,,1" preferredSize="2qch,1qch" toolTip=" Has the transaction been cleared to post " fieldTable="fabatch" comment=" Has the transaction been cleared to post " identifier="cleared_flag" gridItemLocation="1,0,1,1" classNames="fcls_data_widget,fcls_align_hstretch" title="Cleared to Post">
+						<CheckBox.checkedValue>
+							<StringLiteral stringValue="Y"/>
+						</CheckBox.checkedValue>
+						<CheckBox.uncheckedValue>
+							<StringLiteral stringValue="N"/>
+						</CheckBox.uncheckedValue>
+					</CheckBox>
+					<CheckBox dataType="Char,,,,1" preferredSize="2qch,1qch" toolTip=" Has the transaction been added to the asset " fieldTable="fabatch" comment=" Has the transaction been added to the asset " identifier="post_asset_flag" gridItemLocation="1,1,1,1" classNames="fcls_data_widget,fcls_align_hstretch" title="Posted to Asset">
+						<CheckBox.checkedValue>
+							<StringLiteral stringValue="Y"/>
+						</CheckBox.checkedValue>
+						<CheckBox.uncheckedValue>
+							<StringLiteral stringValue="N"/>
+						</CheckBox.uncheckedValue>
+					</CheckBox>
+					<CheckBox dataType="Char,,,,1" preferredSize="2qch,1qch" toolTip=" Has the transaction been posted to the GL " fieldTable="fabatch" comment=" Has the transaction been posted to the GL " identifier="post_gl_flag" gridItemLocation="1,2,1,1" classNames="fcls_data_widget,fcls_align_hstretch" title="Posted to GL">
+						<CheckBox.checkedValue>
+							<StringLiteral stringValue="Y"/>
+						</CheckBox.checkedValue>
+						<CheckBox.uncheckedValue>
+							<StringLiteral stringValue="N"/>
+						</CheckBox.uncheckedValue>
+					</CheckBox>
+					<Label isDynamic="true" text="Journal Number" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,3,1,1" fieldTable="" identifier="lb101"/>
+					<TextField dataType="Integer,,,," preferredSize="12qch,1qch" toolTip=" The GL journal number if posted to the GL " fieldTable="fabatch" comment=" The GL journal number if posted to the GL " identifier="jour_num" gridItemLocation="1,3,1,1" classNames="fcls_data_widget,fcls_align_left,fcls_length_20qch"/>
+					<Label isDynamic="true" text="Transaction Type" classNames="fcls_fieldlabel,fcls_align_left" visible="true" fieldTable="formonly" identifier="lb48" gridItemLocation="0,4,1,1"/>
+					<TextField dataType="Char,,,,1" preferredSize="2qch,1qch" toolTip="Transaction type of this batch" fieldTable="faaudit" comment="Transaction type of this batch" identifier="trans_ind" gridItemLocation="1,4,1,1" classNames="fcls_data_widget,fcls_align_left,fcls_length_20qch"/>
+				</GridPanel>
+			</GroupBox>
+			<GridPanel classNames="fcls_statusbar_cnt" visible="true" verticalAlignment="Top" gridItemLocation="0,4,1,1" fieldTable="formonly" identifier="cntStatusBar">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="100%"/>
+				</GridPanel.gridColumnDefinitions>
+				<Label isDynamic="true" text="" classNames="fcls_sblabel" visible="true" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="lbInfo1"/>
+				<Label isDynamic="true" text="" classNames="fcls_sblabel" visible="true" gridItemLocation="0,1,1,1" fieldTable="formonly" identifier="lbInfo2"/>
+			</GridPanel>
+		</GridPanel>
+	</form.rootContainer>
+	<form.screenRecords>
+		<ScreenRecord identifier="faaudit" fields="faaudit.trans_ind"/>
+		<ScreenRecord identifier="fabatch" fields="fabatch.batch_num,fabatch.year_num,fabatch.period_num,fabatch.control_depr_amt,fabatch.actual_depr_amt,fabatch.control_asset_amt,fabatch.actual_asset_amt,fabatch.com1_text,fabatch.com2_text,fabatch.post_asset_flag,fabatch.post_gl_flag,fabatch.cleared_flag,fabatch.jour_num"/>
+		<ScreenRecord identifier="formonly" fields="formonly.trans_header"/>
+	</form.screenRecords>
+</form>
+

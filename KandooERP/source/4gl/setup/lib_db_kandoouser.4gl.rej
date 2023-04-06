@@ -1,0 +1,10 @@
+diff a/KandooERP/source/4gl/setup/lib_db_kandoouser.4gl b/KandooERP/source/4gl/setup/lib_db_kandoouser.4gl	(rejected hunks)
+@@ -473,6 +473,8 @@
+                  pr_kandoouser.email without defaults
+ 		BEFORE INPUT
+ 		  CALL publish_toolbar("kandoo","U12","input-kandoouser-1") 
++		ON ACTION "WEB-HELP"
++			CALL onlineHelp(getModuleId(),NULL)
+ 			ON ACTION "actToolbarManager"
+ 		 	CALL setupToolbar()
+ 

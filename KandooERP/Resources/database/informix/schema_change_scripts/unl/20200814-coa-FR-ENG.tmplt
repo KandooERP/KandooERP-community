@@ -1,0 +1,988 @@
+1|Capital accounts|FR|ENG||1|| |0|
+10|capital and reserves|FR|ENG||2||1|0|
+101|Capital|FR|ENG||3|L|10|0|
+1011|Subscribed capital uncalled|FR|ENG||4|L|101|1|
+1012|Subscribed capital called up, unpaid|FR|ENG||4|L|101|1|
+1013|Subscribed capital called up, paid|FR|ENG||4|L|101|0|
+10131|Capital not written off|FR|ENG||5|L|1013|1|
+10132|Capital written off|FR|ENG||5|L|1013|1|
+1018|Subscribed capital subject to particular regulations|FR|ENG||4|L|101|1|
+104|Premiums on share capital|FR|ENG||3|L|10|0|
+1041|Share premiums|FR|ENG||4|L|104|1|
+1042|Merger premiums|FR|ENG||4|L|104|1|
+1043|Contribution premiums|FR|ENG||4|L|104|1|
+1044|Premiums on conversion of bonds into shares|FR|ENG||4|L|104|1|
+1045|Equity warrants|FR|ENG||4|L|104|1|
+105|Revaluation differences|FR|ENG||3|L|10|0|
+1051|Special revaluation reserve|FR|ENG||4|L|105|1|
+1052|Voluntary revaluation difference|FR|ENG||4|L|105|1|
+1053|Revaluation reserve|FR|ENG||4|L|105|1|
+1055|Revaluation differences (other legal transactions)|FR|ENG||4|L|105|1|
+1057|Other revaluation differences in France|FR|ENG||4|L|105|1|
+1058|Other revaluation differences outside France|FR|ENG||4|L|105|1|
+106|Reserves|FR|ENG||3|L|10|0|
+1061|Legal reserve|FR|ENG||4|L|106|0|
+10611|Basic legal reserve|FR|ENG||5|L|1061|1|
+10612|Net long-term capital gains|FR|ENG||5|L|1061|1|
+1062|Undistributable reserves|FR|ENG||4|L|106|1|
+1063|Statutory or contractual reserves|FR|ENG||4|L|106|1|
+1064|Tax-regulated reserves|FR|ENG||4|L|106|0|
+10641|Net long-term capital gains|FR|ENG||5|L|1064|1|
+10643|Reserves consequent on award of investment grants|FR|ENG||5|L|1064|1|
+10648|Other tax-regulated reserves|FR|ENG||5|L|1064|1|
+1068|Other reserves|FR|ENG||4|L|106|0|
+10681|Self-insurance reserve|FR|ENG||5|L|1068|1|
+10688|Sundry reserves|FR|ENG||5|L|1068|1|
+107|Difference on equity accounted investments|FR|ENG||3|L|10|1|
+108|Drawings account|FR|ENG||3|L|10|1|
+109|Shareholders: Subscribed capital uncalled|FR|ENG||3|A|10|1|
+11|Profit or loss carried forward (debit or credit balance)|FR|ENG||2||1|0|
+110|Profit carried forward|FR|ENG||3|L|11|1|
+119|Loss carried forward|FR|ENG||3|L|11|1|
+12|Profit or loss for the financial year|FR|ENG||2||1|0|
+120|Profit for the financial year|FR|ENG||3|L|12|1|
+129|Loss for the financial year|FR|ENG||3|L|12|1|
+13|Investment grants|FR|ENG||2|L|1|0|
+131|Equipment grants|FR|ENG||3|L|13|0|
+1311|State|FR|ENG||4|L|131|1|
+1312|Regions|FR|ENG||4|L|131|1|
+1313|Departments|FR|ENG||4|L|131|1|
+1314|Municipalities|FR|ENG||4|L|131|1|
+1315|Public authorities|FR|ENG||4|L|131|1|
+1316|Public enterprises|FR|ENG||4|L|131|1|
+1317|Enterprises and private bodies|FR|ENG||4|L|131|1|
+1318|Other|FR|ENG||4|L|131|1|
+138|Other investment grants (same allocation as for Account 131)|FR|ENG||3|L|13|1|
+139|Investment grants credited to the profit and loss account|FR|ENG||3|L|13|0|
+1391|Equipment grants|FR|ENG||4|L|139|0|
+13911|State|FR|ENG||5|L|1391|1|
+13912|Regions|FR|ENG||5|L|1391|1|
+13913|Departments|FR|ENG||5|L|1391|1|
+13914|Municipalities|FR|ENG||5|L|1391|1|
+13915|Public authorities|FR|ENG||5|L|1391|1|
+13916|Public enterprises|FR|ENG||5|L|1391|1|
+13917|Enterprises and private bodies|FR|ENG||5|L|1391|1|
+13918|Other|FR|ENG||5|L|1391|1|
+1398|Other investment grants (same allocation as for Account 1391)|FR|ENG||4|L|139|1|
+14|Tax-regulated provisions|FR|ENG||2|L|1|0|
+142|Tax-regulated provisions relating to fixed assets|FR|ENG||3|L|14|0|
+1423|Provisions for reconstitution of mining and petroleum deposits|FR|ENG||4|L|142|1|
+1424|Provisions for investment (employee profit share)|FR|ENG||4|L|142|1|
+143|Tax-regulated provisions relating to stocks|FR|ENG||3|L|14|0|
+1431|Price increase|FR|ENG||4|L|143|1|
+1432|Exchange rate fluctuations|FR|ENG||4|L|143|1|
+144|Tax-regulated provisions relating to other asset components|FR|ENG||3|L|14|1|
+145|Depreciation by derogation|FR|ENG||3|L|14|1|
+146|Special revaluation provision|FR|ENG||3|L|14|1|
+147|Capital gains reinvested|FR|ENG||3|L|14|1|
+148|Other tax-regulated provisions|FR|ENG||3|L|14|1|
+15|Provisions for liabilities and charges|FR|ENG||2|L|1|0|
+151|Provisions for liabilities|FR|ENG||3|L|15|0|
+1511|Provisions for litigation|FR|ENG||4|L|151|1|
+1512|Provisions for customer warranties|FR|ENG||4|L|151|1|
+1513|Provisions for losses on futures|FR|ENG||4|L|151|1|
+1514|Provisions for fines and penalties|FR|ENG||4|L|151|1|
+1515|Provisions for foreign exchange losses|FR|ENG||4|L|151|1|
+1516|Provisions for losses on contracts|FR|ENG||4|L|151|1|
+1518|Other provisions for liabilities|FR|ENG||4|L|151|1|
+153|Provisions for pensions and similar obligations|FR|ENG||3|L|15|1|
+154|Provisions for restructuring|FR|ENG||3|L|15|1|
+155|Provisions for taxation|FR|ENG||3|L|15|1|
+156|Provisions for fixed asset renewal (concession entities)|FR|ENG||3|L|15|1|
+157|Provisions for deferred charges|FR|ENG||3|L|15|0|
+1572|Provisions for major repairs|FR|ENG||4|L|157|1|
+158|Other provisions for charges|FR|ENG||3|L|15|0|
+1581|Provisions for repairs|FR|ENG||4|L|158|1|
+1582|Provisions for social security and tax charges on holiday pay|FR|ENG||4|L|158|1|
+16|Loans and similar debts payable|FR|ENG||2|L|1|0|
+161|Convertible debenture loans|FR|ENG||3|L|16|1|
+163|Other debenture loans|FR|ENG||3|L|16|1|
+164|Loans from credit institutions|FR|ENG||3|L|16|1|
+165|Deposits and sureties received|FR|ENG||3|L|16|0|
+1651|Deposits|FR|ENG||4|L|165|1|
+1655|Sureties|FR|ENG||4|L|165|1|
+166|Employee profit share|FR|ENG||3|L|16|0|
+1661|Blocked accounts|FR|ENG||4|L|166|1|
+1662|Profit share funds|FR|ENG||4|L|166|1|
+167|Loans and debts payable subject to particular conditions|FR|ENG||3|L|16|0|
+1671|Issues of non-voting shares|FR|ENG||4|L|167|1|
+1674|Advances by the state subject to conditions|FR|ENG||4|L|167|1|
+1675|Participating loans|FR|ENG||4|L|167|1|
+168|Other loans and similar debts payable|FR|ENG||3|L|16|0|
+1681|Other loans|FR|ENG||4|L|168|1|
+1685|Capitalised life annuities|FR|ENG||4|L|168|1|
+1687|Other debts payable|FR|ENG||4|L|168|1|
+1688|Accrued interest|FR|ENG||4|L|168|0|
+16881|On convertible debenture loans|FR|ENG||5|L|1688|1|
+16883|On other debenture loans|FR|ENG||5|L|1688|1|
+16884|On loans from credit institutions|FR|ENG||5|L|1688|1|
+16885|On deposits and sureties received|FR|ENG||5|L|1688|1|
+16886|On employee profit share|FR|ENG||5|L|1688|1|
+16887|On loans and debts payable subject to particular conditions|FR|ENG||5|L|1688|1|
+16888|On other loans and similar debts payable|FR|ENG||5|L|1688|1|
+169|Debt redemption premiums|FR|ENG||3|L|16|1|
+17|Debts payable related to participating interests|FR|ENG||2|L|1|0|
+171|Debts payable related to participating interests (group)|FR|ENG||3|L|17|1|
+174|Debts payable related to participating interests (apart from group)|FR|ENG||3|L|17|1|
+178|Debts payable related to joint ventures|FR|ENG||3|L|17|0|
+1781|Principal|FR|ENG||4|L|178|1|
+1788|Accrued interest|FR|ENG||4|L|178|1|
+18|Reciprocal branch and joint venture accounts|FR|ENG||2|L|1|0|
+181|Reciprocal branch accounts|FR|ENG||3|L|18|1|
+186|Goods and services exchanged between establishments (charges)|FR|ENG||3|L|18|1|
+187|Goods and services exchanged between establishments (income)|FR|ENG||3|L|18|1|
+188|Reciprocal joint venture accounts|FR|ENG||3|L|18|1|
+2|Fixed asset accounts|FR|ENG||1|A| |0|
+20|Intangible fixed assets|FR|ENG||2|A|2|0|
+201|Establishment costs|FR|ENG||3|A|20|0|
+2011|Incorporation costs|FR|ENG||4|A|201|1|
+2012|Start-up costs|FR|ENG||4|A|201|0|
+20121|Commercial assessment costs|FR|ENG||5|A|2012|1|
+20122|Marketing costs|FR|ENG||5|A|2012|1|
+2013|Capital increase and sundry transaction costs (mergers, demergers,restructurations)|FR|ENG||4|A|201|1|
+203|Research and development costs|FR|ENG||3|A|20|1|
+205|Concessions and similar rights, patents, licences, trade marks, processes, softw|FR|ENG||3|A|20|1|
+206|Lease premium|FR|ENG||3|A|20|1|
+207|Goodwill|FR|ENG||3|A|20|1|
+208|Other intangible fixed assets|FR|ENG||3|A|20|1|
+21|Tangible fixed assets|FR|ENG||2|A|2|0|
+211|Land|FR|ENG||3|A|21|0|
+2111|Undeveloped land|FR|ENG||4|A|211|1|
+2112|Serviced land|FR|ENG||4|A|211|1|
+2113|Underground and aboveground sites|FR|ENG||4|A|211|1|
+2114|Mining sites|FR|ENG||4|A|211|0|
+21141|Quarries|FR|ENG||5|A|2114|1|
+2115|Developed land|FR|ENG||4|A|211|0|
+21151|Industrial property complexes (A, B...)|FR|ENG||5|A|2115|1|
+21155|Administrative and commercial property complexes (A, B...)|FR|ENG||5|A|2115|1|
+21158|Other property complexes|FR|ENG||5|A|2115|0|
+211581|Property assigned to normal entity operations (A, B...)|FR|ENG||6|A|21158|1|
+211588|Property assigned to other than entity operations (A, B...)|FR|ENG||6|A|21158|1|
+2116|Suspense account for nondepreciable fixed assets revalued in 1976 (Article 6, De|FR|ENG||4|A|211|1|
+212|Site development (same allocation as for Account 211)|FR|ENG||3|A|21|1|
+213|Constructions|FR|ENG||3|A|21|0|
+2131|Buildings|FR|ENG||4|A|213|0|
+21311|Industrial property complexes (A, B...)|FR|ENG||5|A|2131|1|
+21315|Administrative and commercial property complexes (A, B...)|FR|ENG||5|A|2131|1|
+21318|Other property complexes|FR|ENG||5|A|2131|0|
+213181|Property assigned to normal entity operations (A, B...)|FR|ENG||6|A|21318|1|
+213188|Property assigned to other than normal entity operations (A, B...)|FR|ENG||6|A|21318|1|
+2135|Building fixtures and fittings (same allocation as for Account 2131)|FR|ENG||4|A|213|1|
+2138|Infrastructure development|FR|ENG||4|A|213|0|
+21381|Roadways|FR|ENG||5|A|2138|1|
+21382|Railways|FR|ENG||5|A|2138|1|
+21383|Water channels|FR|ENG||5|A|2138|1|
+21384|Dams|FR|ENG||5|A|2138|1|
+21385|Airfields|FR|ENG||5|A|2138|1|
+214|Constructions on third-party sites (same allocation as for Account 213)|FR|ENG||3|A|21|1|
+215|Technical installations, plant and machinery, equipment and fixtures|FR|ENG||3|A|21|0|
+2151|Specialised complex installations|FR|ENG||4|A|215|0|
+21511|On own site|FR|ENG||5|A|2151|1|
+21514|On third-party site|FR|ENG||5|A|2151|1|
+2153|Installations of specific nature|FR|ENG||4|A|215|0|
+21531|On own site|FR|ENG||5|A|2153|1|
+21534|On third-party site|FR|ENG||5|A|2153|1|
+2154|Plant and machinery|FR|ENG||4|A|215|1|
+2155|Equipment and fixtures|FR|ENG||4|A|215|1|
+2157|Fixtures and fittings for plant and machinery,equipment and fixtures|FR|ENG||4|A|215|1|
+218|Other tangible fixed assets|FR|ENG||3|A|21|0|
+2181|Sundry general fixtures and fittings|FR|ENG||4|A|218|1|
+2182|Transport equipment|FR|ENG||4|A|218|1|
+2183|Office and computing equipment|FR|ENG||4|A|218|1|
+2184|Furnishings|FR|ENG||4|A|218|1|
+2185|Livestock|FR|ENG||4|A|218|1|
+2186|Recoverable packaging|FR|ENG||4|A|218|1|
+22|Fixed assets in concession|FR|ENG||2|A|2|1|
+23|Fixed assets in progress|FR|ENG||2|A|2|0|
+231|Tangible fixed assets in progress|FR|ENG||3|A|23|0|
+2312|Land|FR|ENG||4|A|231|1|
+2313|Constructions|FR|ENG||4|A|231|1|
+2315|Technical installations, plant and machinery,equipment and fixtures|FR|ENG||4|A|231|1|
+2318|Other tangible fixed assets|FR|ENG||4|A|231|1|
+232|Intangible fixed assets in progress|FR|ENG||3|A|23|1|
+237|Payments on account on intangible fixed assets|FR|ENG||3|A|23|1|
+238|Payments on account on orders for tangible fixed assets|FR|ENG||3|A|23|0|
+2382|Land|FR|ENG||4|A|238|1|
+2383|Constructions|FR|ENG||4|A|238|1|
+2385|Technical installations, plant and machinery,equipment and fixtures|FR|ENG||4|A|238|1|
+2388|Other tangible fixed assets|FR|ENG||4|A|238|1|
+25|Shares in and receivables due from affiliated entities|FR|ENG||2|A|2|1|
+26|Participating interests and related debts receivable|FR|ENG||2|A|2|0|
+261|Long-term equity interests|FR|ENG||3|A|26|0|
+2611|Shares|FR|ENG||4|A|261|1|
+2618|Other securities|FR|ENG||4|A|261|1|
+266|Other categories of participating interest|FR|ENG||3|A|26|1|
+267|Debts receivable related to participating interests|FR|ENG||3|A|26|0|
+2671|Debts receivable related to participating interests (group)|FR|ENG||4|A|267|1|
+2674|Debts receivable related to participating interests (apart from group)|FR|ENG||4|A|267|1|
+2675|Payments representing non-capitalised contributions (call for funds)|FR|ENG||4|A|267|1|
+2676|Long-term capital advances|FR|ENG||4|A|267|1|
+2677|Other debts receivable related to participating interests|FR|ENG||4|A|267|1|
+2678|Accrued interest|FR|ENG||4|A|267|1|
+268|Debts receivable related to joint ventures|FR|ENG||3|A|26|0|
+2681|Principal|FR|ENG||4|A|268|1|
+2688|Accrued interest|FR|ENG||4|A|268|1|
+269|Unpaid instalments on unpaid long-term equity interests|FR|ENG||3|A|26|1|
+27|Other financial fixed assets|FR|ENG||2|A|2|0|
+271|Long-term investment equity securities other than portfolio long-term investment|FR|ENG||3|A|27|0|
+2711|Shares|FR|ENG||4|A|271|1|
+2718|Other securities|FR|ENG||4|A|271|1|
+272|Long-term investment debt securities|FR|ENG||3|A|27|0|
+2721|Bonds|FR|ENG||4|A|272|1|
+2722|Warrants|FR|ENG||4|A|272|1|
+273|Portfolio long-term investment securities|FR|ENG||3|A|27|1|
+274|Loans|FR|ENG||3|A|27|0|
+2741|Participating loans|FR|ENG||4|A|274|1|
+2742|Loans to partners/associates|FR|ENG||4|A|274|1|
+2743|Loans to personnel|FR|ENG||4|A|274|1|
+2748|Other loans|FR|ENG||4|A|274|1|
+275|Deposits and sureties advanced|FR|ENG||3|A|27|0|
+2751|Deposits|FR|ENG||4|A|275|1|
+2755|Sureties|FR|ENG||4|A|275|1|
+276|Other capitalised debts receivable|FR|ENG||3|A|27|0|
+2761|Sundry debts receivable|FR|ENG||4|A|276|1|
+2768|Accrued interest|FR|ENG||4|A|276|0|
+27682|Long-term investment debt securities|FR|ENG||5|A|2768|1|
+27684|Loans|FR|ENG||5|A|2768|1|
+27685|Deposits and sureties|FR|ENG||5|A|2768|1|
+27688|On sundry debts receivable|FR|ENG||5|A|2768|1|
+277|(Own shares)|FR|ENG||3|A|27|0|
+2771|Own shares|FR|ENG||4|A|277|1|
+2772|Own shares in process of cancellation|FR|ENG||4|A|277|1|
+279|Unpaid instalments on unpaid long-term investment securities|FR|ENG||3|A|27|1|
+28|Cumulative depreciation on fixed assets|FR|ENG||2|A|2|0|
+280|Depreciation on intangible fixed assets|FR|ENG||3|A|28|0|
+2801|Establishment costs (same allocation as for Account 201)|FR|ENG||4|A|280|1|
+2803|Research and development costs|FR|ENG||4|A|280|1|
+2805|Concessions and similar rights, patents, licences,software, rights and similar assets|FR|ENG||4|A|280|1|
+2807|Goodwill|FR|ENG||4|A|280|1|
+2808|Other intangible fixed assets|FR|ENG||4|A|280|1|
+281|Depreciation on tangible fixed assets|FR|ENG||3|A|28|0|
+2811|Mining sites|FR|ENG||4|A|281|1|
+2812|Site development (same allocation as for Account 212)|FR|ENG||4|A|281|1|
+2813|Constructions (same allocation as for Account 213)|FR|ENG||4|A|281|1|
+2814|Constructions on third-party site (same allocation as for Account 214)|FR|ENG||4|A|281|1|
+2815|Technical installations, plant and machinery, equipment and fixtures (same alloc|FR|ENG||4|A|281|1|
+2818|Other tangible fixed assets (same allocation as for Account 218)|FR|ENG||4|A|281|1|
+282|Depreciation on fixed assets in concession|FR|ENG||3|A|28|1|
+29|Provisions for diminution in value of fixed assets|FR|ENG||2|A|2|0|
+290|Provisions for diminution in value of intangible fixed assets|FR|ENG||3|A|29|0|
+2905|Trade marks, processes, rights and similar assets|FR|ENG||4|A|290|1|
+2906|Lease premium|FR|ENG||4|A|290|1|
+2907|Goodwill|FR|ENG||4|A|290|1|
+2908|Other intangible fixed assets|FR|ENG||4|A|290|1|
+291|Provisions for diminution in value of tangible fixed assets (same allocation as|FR|ENG||3|A|29|0|
+2911|Land (other than mining sites)|FR|ENG||4|A|291|1|
+292|Provisions for diminution in value of fixed assets in concession|FR|ENG||3|A|29|1|
+293|Provisions for diminution in value of fixed assets in progress|FR|ENG||3|A|29|0|
+2931|Tangible fixed assets in progress|FR|ENG||4|A|293|1|
+2932|Intangible fixed assets in progress|FR|ENG||4|A|293|1|
+296|Provisions for diminution in value of participating interests and related debts receivable|FR|ENG||3|A|29|0|
+2961|Long-term equity interests|FR|ENG||4|A|296|1|
+2966|Other categories of participating interests|FR|ENG||4|A|296|1|
+2967|Debts receivable related to participating interests (same allocation as for Account 267)|FR|ENG||4|A|296|1|
+2968|Debts receivable related to joint ventures (same allocation as for Account 268)|FR|ENG||4|A|296|1|
+297|Provisions for diminution in value of other financial fixed assets|FR|ENG||3|A|29|0|
+2971|Long-term investment equity securities other than portfolio long-term equity inv|FR|ENG||4|A|297|1|
+2972|Long-term investment debt securities (same allocation as for Account 272)|FR|ENG||4|A|297|1|
+2973|Portfolio long-term investment securities|FR|ENG||4|A|297|1|
+2974|Loans (same allocation as for Account 274)|FR|ENG||4|A|297|1|
+2975|Deposits and sureties advanced (same allocation as for Account 275)|FR|ENG||4|A|297|1|
+2976|Other debts receivable (same allocation as for Account 276)|FR|ENG||4|A|297|1|
+3|Stocks and work in progress accounts|FR|ENG||1|A| |0|
+31|Raw materials (and supplies)|FR|ENG||2|A|3|0|
+311|Materials (or group) A|FR|ENG||3|A|31|1|
+312|Materials (or group) B|FR|ENG||3|A|31|1|
+317|Supplies A, B, C, ...|FR|ENG||3|A|31|1|
+32|Other consumables|FR|ENG||2|A|3|0|
+321|Consumable materials|FR|ENG||3|A|32|0|
+3211|Materials (or group) C|FR|ENG||4|A|321|1|
+3212|Materials (or group) D|FR|ENG||4|A|321|1|
+322|Consumable supplies|FR|ENG||3|A|32|0|
+3221|Fuels|FR|ENG||4|A|322|1|
+3222|Cleaning products|FR|ENG||4|A|322|1|
+3223|Workshop and factory supplies|FR|ENG||4|A|322|1|
+3224|Store supplies|FR|ENG||4|A|322|1|
+3225|Office supplies|FR|ENG||4|A|322|1|
+326|Packaging|FR|ENG||3|A|32|0|
+3261|Non-returnable packaging|FR|ENG||4|A|326|1|
+3265|Unidentifiable recoverable packaging|FR|ENG||4|A|326|1|
+3267|Mixed usage packaging|FR|ENG||4|A|326|1|
+33|Work in progress (goods)|FR|ENG||2|A|3|0|
+331|Products in progress (goods)|FR|ENG||3|A|33|0|
+3311|Products in progress P 1|FR|ENG||4|A|331|1|
+3312|Products in progress P 2|FR|ENG||4|A|331|1|
+335|Works in progress|FR|ENG||3|A|33|0|
+3351|Works in progress T 1|FR|ENG||4|A|335|1|
+3352|Works in progress T 2|FR|ENG||4|A|335|1|
+34|Work in progress (services)|FR|ENG||2|A|3|0|
+341|Project studies in progress|FR|ENG||3|A|34|0|
+3411|Project studies in progress E 1|FR|ENG||4|A|341|1|
+3412|Project studies in progress E 2|FR|ENG||4|A|341|1|
+345|Supply of services in progress|FR|ENG||3|A|34|0|
+3451|Supply of services in progress S 1|FR|ENG||4|A|345|1|
+3452|Supply of services in progress S 2|FR|ENG||4|A|345|1|
+35|Product stocks|FR|ENG||2|A|3|0|
+351|Semi-finished products|FR|ENG||3|A|35|0|
+3511|Semi-finished products (or group) A|FR|ENG||4|A|351|1|
+3512|Semi-finished products (or group) B|FR|ENG||4|A|351|1|
+355|Finished products|FR|ENG||3|A|35|0|
+3551|Finished products (or group) A|FR|ENG||4|A|355|1|
+3552|Finished products (or group) B|FR|ENG||4|A|355|1|
+358|Residual products (or recoverable materials)|FR|ENG||3|A|35|0|
+3581|Waste|FR|ENG||4|A|358|1|
+3585|Refuse|FR|ENG||4|A|358|1|
+3586|Recoverable materials|FR|ENG||4|A|358|1|
+36|(Account to be opened, as applicable, under the title, Stocks derived from fixed assets)|FR|ENG||2|A|3|1|
+37|Stocks of goods for resale|FR|ENG||2|A|3|0|
+371|Goods for resale (or group) A|FR|ENG||3|A|37|1|
+372|Goods for resale (or group) B|FR|ENG||3|A|37|1|
+38|(Where an entity maintains a perpetual inventory in its financial accounting, Account 38 m|FR|ENG||2|A|3|1|
+39|Provisions for diminution in value of stocks and work in progress|FR|ENG||2|A|3|0|
+391|Provisions for diminution in value of raw materials (and supplies)|FR|ENG||3|A|39|0|
+3911|Materials (or group) A|FR|ENG||4|A|391|1|
+3912|Materials (or group) B|FR|ENG||4|A|391|1|
+3917|Supplies A, B, C, ...|FR|ENG||4|A|391|1|
+392|Provisions for diminution in value of other consumables|FR|ENG||3|A|39|0|
+3921|Consumable materials (same allocation as for Account 321)|FR|ENG||4|A|392|1|
+3922|Consumable supplies (same allocation as for Account 322)|FR|ENG||4|A|392|1|
+3926|Packaging (same allocation as for Account 326)|FR|ENG||4|A|392|1|
+393|Provisions for diminution in value of work in progress (goods)|FR|ENG||3|A|39|0|
+3931|Products in progress (same allocation as for Account 331)|FR|ENG||4|A|393|1|
+3935|Works in progress (same allocation as for Account 335)|FR|ENG||4|A|393|1|
+394|Provisions for diminution in value of work in progress (services)|FR|ENG||3|A|39|0|
+3941|Project studies in progress (same allocation as for Account 341)|FR|ENG||4|A|394|1|
+3945|Supply of services in progress (same allocation as for Account 345)|FR|ENG||4|A|394|1|
+395|Provisions for diminution in value of product stocks|FR|ENG||3|A|39|0|
+3951|Semi-finished products (same allocation as for Account 351)|FR|ENG||4|A|395|1|
+3955|Finished products (same allocation as for Account 355)|FR|ENG||4|A|395|1|
+397|Provisions for diminution in value of stocks of goods for resale|FR|ENG||3|A|39|0|
+3971|Goods for resale (or group) A|FR|ENG||4|A|397|1|
+3972|Goods for resale (or group) B|FR|ENG||4|A|397|1|
+4|Accounts for debts receivable and payable|FR|ENG||1|| |0|
+40|Suppliers and related accounts|FR|ENG||2|L|4|0|
+400|Suppliers and related accounts|FR|ENG||3|L|40|1|
+401|Suppliers|FR|ENG||3|L|40|0|
+4011|Suppliers Purchases of goods and services|FR|ENG||4|L|401|1|
+4017|Suppliers Contract performance holdbacks|FR|ENG||4|L|401|1|
+403|Suppliers Bills payable|FR|ENG||3|L|40|1|
+404|Fixed asset suppliers|FR|ENG||3|L|40|0|
+4041|Suppliers Fixed asset purchases|FR|ENG||4|L|404|1|
+4047|Fixed asset suppliers Contract performance holdbacks|FR|ENG||4|L|404|1|
+405|Fixed asset suppliers Bills payable|FR|ENG||3|L|40|1|
+408|Suppliers Invoices outstanding|FR|ENG||3|L|40|0|
+4081|Suppliers|FR|ENG||4|L|408|1|
+4084|Fixed asset suppliers|FR|ENG||4|L|408|1|
+4088|Suppliers Accrued interest|FR|ENG||4|L|408|1|
+409|Suppliers in debit|FR|ENG||3|L|40|0|
+4091|Suppliers Payments on account on orders|FR|ENG||4|L|409|1|
+4096|Suppliers Debts receivable for returnable packaging and equipment|FR|ENG||4|L|409|1|
+4097|Suppliers Other debits|FR|ENG||4|L|409|0|
+40971|Operating suppliers|FR|ENG||5|L|4097|1|
+40974|Fixed asset suppliers|FR|ENG||5|L|4097|1|
+4098|Purchase rebates, discounts, allowances and other outstanding debits|FR|ENG||4|L|409|1|
+41|Customers and related accounts|FR|ENG||2|A|4|0|
+410|Customers and related accounts|FR|ENG||3|A|41|1|
+411|Customers|FR|ENG||3|A|41|0|
+4111|Customers Sales of goods and services|FR|ENG||4|A|411|1|
+4117|Customers Contract performance holdbacks|FR|ENG||4|A|411|1|
+413|Customers Bills receivable|FR|ENG||3|A|41|1|
+416|Doubtful or contested customer accounts|FR|ENG||3|A|41|1|
+417|Future debts receivable for work not yet chargeable|FR|ENG||3|A|41|1|
+418|Customers Charges not yet invoiced|FR|ENG||3|A|41|0|
+4181|Customers Invoices to be made out|FR|ENG||4|A|418|1|
+4188|Customers Accrued interest|FR|ENG||4|A|418|1|
+419|Customers in credit|FR|ENG||3|A|41|0|
+4191|Customers Payments on account received on orders|FR|ENG||4|A|419|1|
+4196|Customers Debts payable for returnable packaging and equipment|FR|ENG||4|A|419|1|
+4197|Customers Other credits|FR|ENG||4|A|419|1|
+4198|Sales rebates, discounts, allowances and other credits notyet issued|FR|ENG||4|A|419|1|
+42|Personnel and related accounts|FR|ENG||2|L|4|0|
+421|Personnel Remuneration payable|FR|ENG||3|L|42|1|
+422|Enterprise/establishment consultative committees|FR|ENG||3|L|42|1|
+424|Employee profit share|FR|ENG||3|L|42|0|
+4246|Special reserve (Art. L. 442-2, Code du travail)|FR|ENG||4|L|424|1|
+4248|Current accounts|FR|ENG||4|L|424|1|
+425|Personnel Payments on account|FR|ENG||3|L|42|1|
+426|Personnel Deposits|FR|ENG||3|L|42|1|
+427|Personnel Stoppages of payment|FR|ENG||3|L|42|1|
+428|Personnel Accrued charges payable and income receivable|FR|ENG||3|L|42|0|
+4282|Accrued charges payable for holiday pay|FR|ENG||4|L|428|1|
+4284|Accrued charges payable for employee profit share|FR|ENG||4|L|428|1|
+4286|Other accrued charges payable|FR|ENG||4|L|428|1|
+4287|Accrued income receivable|FR|ENG||4|L|428|1|
+43|Social security and other social agencies|FR|ENG||2|L|4|0|
+431|Social security|FR|ENG||3|L|43|1|
+437|Other social agencies|FR|ENG||3|L|43|1|
+438|Social agencies Accrued charges payable and income receivable|FR|ENG||3|L|43|0|
+4382|Contributions for holiday pay|FR|ENG||4|L|438|1|
+4386|Other accrued charges payable|FR|ENG||4|L|438|1|
+4387|Accrued income receivable|FR|ENG||4|L|438|1|
+44|State and other public authorities|FR|ENG||2|L|4|0|
+441|State Grants receivable|FR|ENG||3|L|44|0|
+4411|Investment grants|FR|ENG||4|L|441|1|
+4417|Operating grants|FR|ENG||4|L|441|1|
+4418|Deficit grants|FR|ENG||4|L|441|1|
+4419|Grant advances|FR|ENG||4|L|441|1|
+442|State Taxes and levies recoverable from third parties|FR|ENG||3|L|44|0|
+4424|Bondholders|FR|ENG||4|L|442|1|
+4425|Partners/associates|FR|ENG||4|L|442|1|
+443|Particular transactions with the state, public authorities,international bodies|FR|ENG||3|L|44|0|
+4431|Debts receivable from the state resulting from abolition of the rule relating to|FR|ENG||4|L|443|1|
+4438|Accrued interest on debts receivable recorded in Account 4431|FR|ENG||4|L|443|1|
+444|State Income tax|FR|ENG||3|L|44|1|
+445|State Turnover tax|FR|ENG||3|L|44|0|
+4452|Value added tax due within the European Union|FR|ENG||4|L|445|1|
+4455|Turnover tax payable|FR|ENG||4|L|445|0|
+44551|Value added tax to be disbursed|FR|ENG||5|L|4455|1|
+44558|Taxes in the same category as value added tax|FR|ENG||5|L|4455|1|
+4456|Turnover tax deductible|FR|ENG||4|L|445|0|
+44562|Value added tax on fixed assets|FR|ENG||5|L|4456|1|
+44563|Value added tax transferred by other entities|FR|ENG||5|L|4456|1|
+44566|Value added tax on other goods and services|FR|ENG||5|L|4456|1|
+44567|Value added tax credit to be carried forward|FR|ENG||5|L|4456|1|
+44568|Taxes in the same category as value added tax|FR|ENG||5|L|4456|1|
+4457|Turnover tax collected by the entity|FR|ENG||4|L|445|0|
+44571|Value added tax collected|FR|ENG||5|L|4457|1|
+44578|Taxes in the same category as value added tax|FR|ENG||5|L|4457|1|
+4458|Turnover tax to be settled or in suspense|FR|ENG||4|L|445|0|
+44581|Instalments Simplified tax regime|FR|ENG||5|L|4458|1|
+44582|Instalments Substituted assessment of estimated turnover|FR|ENG||5|L|4458|1|
+44583|Requested reimbursement of turnover tax|FR|ENG||5|L|4458|1|
+44584|Value added tax recovered in advance|FR|ENG||5|L|4458|1|
+44586|Turnover tax on invoices outstanding|FR|ENG||5|L|4458|1|
+44587|Turnover tax on invoices to be made out|FR|ENG||5|L|4458|1|
+446|Guaranteed bonds|FR|ENG||3|L|44|1|
+447|Other taxes, levies and similar payments|FR|ENG||3|L|44|1|
+448|State Accrued charges payable and income receivable|FR|ENG||3|L|44|0|
+4482|Tax charges on holiday pay|FR|ENG||4|L|448|1|
+4486|Accrued charges payable|FR|ENG||4|L|448|1|
+4487|Accrued income receivable|FR|ENG||4|L|448|1|
+449|Emission quotas to be returned to the State|FR|ENG||3|L|44|1|
+45|Group and partners/associates|FR|ENG||2||4|0|
+451|Group|FR|ENG||3|A|45|1|
+455|Partners/associates Current accounts|FR|ENG||3|A|45|0|
+4551|Principal|FR|ENG||4|A|455|1|
+4558|Accrued interest|FR|ENG||4|A|455|1|
+456|Partners/associates Capital transactions|FR|ENG||3|A|45|0|
+4561|Partners/associates Company contribution accounts|FR|ENG||4|A|456|0|
+45611|Contributions in kind|FR|ENG||5|A|4561|1|
+45615|Contributions in money|FR|ENG||5|A|4561|1|
+4562|Contributors Capital called up, unpaid|FR|ENG||4|A|456|0|
+45621|Shareholders Subscribed capital called up, unpaid|FR|ENG||5|A|4562|1|
+45625|Partners/associates Capital called up,unpaid|FR|ENG||5|A|4562|1|
+4563|Partners/associates Payments received for capital increase|FR|ENG||4|A|456|1|
+4564|Partners/associates Advance payments|FR|ENG||4|A|456|1|
+4566|Defaulting shareholders|FR|ENG||4|A|456|1|
+4567|Partners/associates Capital to be reimbursed|FR|ENG||4|A|456|1|
+457|Partners/associates Dividends payable|FR|ENG||3|L|45|1|
+458|Partners/associates Joint and Economic Interest Group transactions|FR|ENG||3|A|45|0|
+4581|Current transactions|FR|ENG||4|A|458|1|
+4588|Accrued interest|FR|ENG||4|A|458|1|
+46|Sundry debts receivable and payable|FR|ENG||2|A|4|0|
+462|Debts receivable on realisation of fixed assets|FR|ENG||3|A|46|1|
+464|Debts payable on purchases of short-term investment securities|FR|ENG||3|L|46|1|
+465|Debts receivable on realisation of short-term investment securities|FR|ENG||3|A|46|1|
+467|Other debtors or creditors|FR|ENG||3|A|46|1|
+468|Sundry Accrued charges payable and income receivable|FR|ENG||3|A|46|0|
+4686|Accrued charges payable|FR|ENG||4|L|468|1|
+4687|Accrued income receivable|FR|ENG||4|A|468|1|
+47|Provisional or suspense accounts|FR|ENG||2||4|0|
+471|Suspense account A|FR|ENG||3|A|47|1|
+472|Suspense account B|FR|ENG||3|L|47|1|
+473|Suspense account C|FR|ENG||3|L|47|1|
+474|Suspense account D|FR|ENG||3|L|47|1|
+475|Suspense account E|FR|ENG||3|L|47|1|
+476|Realisable currency exchange losses|FR|ENG||3|A|47|0|
+4761|Decrease in debts receivable|FR|ENG||4|A|476|1|
+4762|Increase in debts payable|FR|ENG||4|A|476|1|
+4768|Differences offset by foreign currency hedging|FR|ENG||4|A|476|1|
+477|Realisable currency exchange gains|FR|ENG||3|L|47|0|
+4771|Increase in debts receivable|FR|ENG||4|L|477|1|
+4772|Decrease in debts payable|FR|ENG||4|L|477|1|
+4778|Differences offset by foreign currency hedging|FR|ENG||4|L|477|1|
+478|Other provisional accounts|FR|ENG||3|A|47|1|
+48|Accrual accounts|FR|ENG||2||4|0|
+481|Charges to be allocated to more than one period|FR|ENG||3|A|48|0|
+4811|Deferred charges|FR|ENG||4|A|481|1|
+4812|Fixed asset acquisition costs|FR|ENG||4|A|481|1|
+4816|Loan issue costs|FR|ENG||4|A|481|1|
+4818|Charges to be apportioned|FR|ENG||4|A|481|1|
+486|Prepayments|FR|ENG||3|A|48|1|
+487|Deferred income|FR|ENG||3|L|48|1|
+488|Periodic allocation of charges and income|FR|ENG||3||48|0|
+4886|Charges|FR|ENG||4|A|488|1|
+4887|Income|FR|ENG||4|L|488|1|
+489|Emission quotas allocated by the State|FR|ENG||3||48|1|
+49|Provisions for doubtful debts|FR|ENG||2|A|4|0|
+491|Provisions for doubtful trade debts|FR|ENG||3|A|49|1|
+495|Provisions for group and partners/associates doubtful debts|FR|ENG||3|A|49|0|
+4951|Group accounts|FR|ENG||4|A|495|1|
+4955|Current accounts of partners/associates|FR|ENG||4|A|495|1|
+4958|Joint and Economic Interest Group transactions|FR|ENG||4|A|495|1|
+496|Provisions for sundry doubtful debts|FR|ENG||3|A|49|0|
+4962|Debts receivable on realisation of fixed assets|FR|ENG||4|A|496|1|
+4965|Debts receivable on realisation of short-term investment securities|FR|ENG||4|A|496|1|
+4967|Other debtor accounts|FR|ENG||4|A|496|1|
+5|Financial accounts|FR|ENG||1|| |0|
+50|Short-term investment securities|FR|ENG||2|A|5|0|
+501|Shares in affiliated entities|FR|ENG||3|A|50|1|
+502|Own shares|FR|ENG||3|A|50|1|
+503|Shares|FR|ENG||3|A|50|0|
+5031|Quoted shares|FR|ENG||4|A|503|1|
+5035|Unquoted shares|FR|ENG||4|A|503|1|
+504|Other equity securities|FR|ENG||3|A|50|1|
+505|Own bonds and warrants bought back|FR|ENG||3|A|50|1|
+506|Bonds|FR|ENG||3|A|50|0|
+5061|Quoted bonds|FR|ENG||4|A|506|1|
+5065|Unquoted bonds|FR|ENG||4|A|506|1|
+507|Treasury bills and short-term notes|FR|ENG||3|A|50|1|
+508|Other short-term investment securities and similar debts receivable|FR|ENG||3|A|50|0|
+5081|Other securities|FR|ENG||4|A|508|1|
+5082|Equity and bond warrants|FR|ENG||4|A|508|1|
+5088|Accrued interest on bonds, warrants and similar securities|FR|ENG||4|A|508|1|
+509|Unpaid instalments on unpaid short-term investment securities|FR|ENG||3|A|50|1|
+51|Banks, financial and similar institutions|FR|ENG||2|A|5|0|
+511|Financial instruments for collection|FR|ENG||3|A|51|0|
+5111|Outstanding coupons for collection|FR|ENG||4|A|511|1|
+5112|Cheques for collection|FR|ENG||4|A|511|1|
+5113|Bills for collection|FR|ENG||4|A|511|1|
+5114|Bills for discount|FR|ENG||4|A|511|1|
+512|Banks|FR|ENG||3|A|51|0|
+5121|Accounts in French francs/euros|FR|ENG||4|A|512|1|
+5124|Accounts in foreign currencies|FR|ENG||4|A|512|1|
+514|Postal cheques|FR|ENG||3|A|51|1|
+515|Treasury and public agency accounts|FR|ENG||3|A|51|1|
+516|Stockbrokers|FR|ENG||3|A|51|1|
+517|Other financial bodies|FR|ENG||3|A|51|1|
+518|Accrued interest|FR|ENG||3|A|51|0|
+5181|Accrued interest payable|FR|ENG||4|A|518|1|
+5188|Accrued interest receivable|FR|ENG||4|A|518|1|
+519|Current bank advances|FR|ENG||3|A|51|0|
+5191|Credit for assignment of commercial debts receivable|FR|ENG||4|A|519|1|
+5193|Assignment of debts receivable originating outside France|FR|ENG||4|A|519|1|
+5198|Accrued interest on current bank advances|FR|ENG||4|A|519|1|
+52|Short-term financial instruments|FR|ENG||2|A|5|1|
+53|Cash on hand|FR|ENG||2|A|5|0|
+531|Head office cash|FR|ENG||3|A|53|0|
+5311|Cash in French francs/euros|FR|ENG||4|A|531|1|
+5314|Cash in foreign currencies|FR|ENG||4|A|531|1|
+532|Cash at branch (or factory) A|FR|ENG||3|A|53|1|
+533|Cash at branch (or factory) B|FR|ENG||3|A|53|1|
+54|Expenditure authorisations and letters of credit|FR|ENG||2|A|5|1|
+58|Internal transfers|FR|ENG||2|A|5|1|
+59|Provisions for diminution in value of financial assets|FR|ENG||2|A|5|0|
+590|Provisions for diminution in value of short-term investment securities|FR|ENG||3|A|59|0|
+5903|Shares|FR|ENG||4|A|590|1|
+5904|Other equity securities|FR|ENG||4|A|590|1|
+5906|Bonds|FR|ENG||4|A|590|1|
+5908|Other short-term investment securities and similar debts receivable|FR|ENG||4|A|590|1|
+6|Accounts for charges|FR|ENG||1|E| |0|
+60|Purchases (except 603)|FR|ENG||2|E|6|0|
+601|Inventory item purchases Raw materials (and supplies)|FR|ENG||3|E|60|0|
+6011|Materials (or group) A|FR|ENG||4|E|601|1|
+6012|Materials (or group) B|FR|ENG||4|E|601|1|
+6017|Supplies A, B, C...|FR|ENG||4|E|601|1|
+602|Inventory item purchases Other consumables|FR|ENG||3|E|60|0|
+6021|Consumable materials|FR|ENG||4|E|602|0|
+60211|Materials (or group) C|FR|ENG||5|E|6021|1|
+60212|Materials (or group) D|FR|ENG||5|E|6021|1|
+6022|Consumable supplies|FR|ENG||4|E|602|0|
+60221|Fuels|FR|ENG||5|E|6022|1|
+60222|Maintenance products|FR|ENG||5|E|6022|1|
+60223|Workshop and factory supplies|FR|ENG||5|E|6022|1|
+60224|Store supplies|FR|ENG||5|E|6022|1|
+60225|Office supplies|FR|ENG||5|E|6022|1|
+6026|Packaging|FR|ENG||4|E|602|0|
+60261|Non-returnable packaging|FR|ENG||5|E|6026|1|
+60265|Unidentifiable recoverable packaging|FR|ENG||5|E|6026|1|
+60267|Mixed usage packaging|FR|ENG||5|E|6026|1|
+603|Change in stocks (consumables and goods for resale)|FR|ENG||3|E|60|0|
+6031|Change in stocks of raw materials (and supplies)|FR|ENG||4|E|603|1|
+6032|Change in stocks of other consumables|FR|ENG||4|E|603|1|
+6037|Change in stocks of goods for resale|FR|ENG||4|E|603|1|
+604|Purchases of project studies and services|FR|ENG||3|A|60|1|
+605|Purchases of equipment, facilities and works|FR|ENG||3|E|60|1|
+606|Non-inventory materials and supplies|FR|ENG||3|E|60|0|
+6061|Non-inventoriable supplies (eg. water, energy)|FR|ENG||4|E|606|1|
+6063|Maintenance and minor equipment supplies|FR|ENG||4|E|606|1|
+6064|Administrative supplies|FR|ENG||4|E|606|1|
+6068|Other materials and supplies|FR|ENG||4|E|606|1|
+607|Purchases of goods for resale|FR|ENG||3|E|60|0|
+6071|Goods for resale (or group) A|FR|ENG||4|E|607|1|
+6072|Goods for resale (or group) B|FR|ENG||4|E|607|1|
+608|(Account reserved, as applicable, for recapitulation of ancillary purchase costs)|FR|ENG||3|A|60|1|
+609|Purchase rebates, discounts, allowances on:|FR|ENG||3|E|60|0|
+6091|Raw materials (and supplies)|FR|ENG||4|E|609|1|
+6092|Other inventory item consumables|FR|ENG||4|E|609|1|
+6094|Project studies and services supplied|FR|ENG||4|E|609|1|
+6095|Equipment, facilities and works|FR|ENG||4|E|609|1|
+6096|Non-inventory consumables|FR|ENG||4|E|609|1|
+6097|Goods for resale|FR|ENG||4|E|609|1|
+6098|Unallocated rebates, discounts, allowances|FR|ENG||4|E|609|1|
+61|External services|FR|ENG||2|E|6|0|
+611|General subcontracting|FR|ENG||3|E|61|1|
+612|Lease instalments|FR|ENG||3|E|61|0|
+6122|Movable property leases|FR|ENG||4|E|612|1|
+6125|Real property leases|FR|ENG||4|E|612|1|
+613|Rental|FR|ENG||3|E|61|0|
+6132|Real property rental|FR|ENG||4|E|613|1|
+6135|Movable property rental|FR|ENG||4|E|613|1|
+6136|Surchages on packaging|FR|ENG||4|E|613|1|
+614|Rental and joint ownership property costs|FR|ENG||3|E|61|1|
+615|Maintenance and repairs|FR|ENG||3|E|61|0|
+6152|On real property items|FR|ENG||4|E|615|1|
+6155|On movable property items|FR|ENG||4|E|615|1|
+6156|Maintenance|FR|ENG||4|E|615|1|
+616|Insurance premiums|FR|ENG||3|E|61|0|
+6161|Comprehensive risk|FR|ENG||4|E|616|1|
+6162|Compulsory construction loss insurance|FR|ENG||4|E|616|1|
+6163|Transport insurance|FR|ENG||4|E|616|0|
+61636|Purchases|FR|ENG||5|E|6163|1|
+61637|Sales|FR|ENG||5|E|6163|1|
+61638|Other items|FR|ENG||5|E|6163|1|
+6164|Operating risks|FR|ENG||4|E|616|1|
+6165|Customer insolvency|FR|ENG||4|E|616|1|
+617|Project studies, surveys, assessments|FR|ENG||3|E|61|1|
+618|Sundry|FR|ENG||3|E|61|0|
+6181|General documentation|FR|ENG||4|E|618|1|
+6183|Technical documentation|FR|ENG||4|E|618|1|
+6185|Colloquium, seminar, conference costs|FR|ENG||4|E|618|1|
+619|Purchase rebates, discounts, allowances on external services|FR|ENG||3|E|61|1|
+62|Other external services|FR|ENG||2|E|6|0|
+621|Personnel external to the entity|FR|ENG||3|E|62|0|
+6211|Temporary personnel|FR|ENG||4|E|621|1|
+6214|Personnel on secondment or loan to the entity|FR|ENG||4|E|621|1|
+622|Agents remuneration and fees|FR|ENG||3|E|62|0|
+6221|Purchase commission and brokerage|FR|ENG||4|E|622|1|
+6222|Sales commission and brokerage|FR|ENG||4|E|622|1|
+6224|Payments to forwarding agents|FR|ENG||4|E|622|1|
+6225|Payments for factoring|FR|ENG||4|E|622|1|
+6226|Fees|FR|ENG||4|E|622|1|
+6227|Legal and litigation fees|FR|ENG||4|E|622|1|
+6228|Sundry|FR|ENG||4|E|622|1|
+623|Advertising, publications, public relations|FR|ENG||3|E|62|0|
+6231|Announcements and advertisements|FR|ENG||4|E|623|1|
+6232|Samples|FR|ENG||4|E|623|1|
+6233|Fairs and exhibitions|FR|ENG||4|E|623|1|
+6234|Gifts to customers|FR|ENG||4|E|623|1|
+6235|Premiums|FR|ENG||4|E|623|1|
+6236|Catalogues and printed material|FR|ENG||4|E|623|1|
+6237|Publications|FR|ENG||4|E|623|1|
+6238|Sundry (eg. tips, standard donations)|FR|ENG||4|E|623|1|
+624|Transport of goods and collective personnel transport|FR|ENG||3|E|62|0|
+6241|Freight in|FR|ENG||4|E|624|1|
+6242|Freight out|FR|ENG||4|E|624|1|
+6243|Transport between establishments or construction sites|FR|ENG||4|E|624|1|
+6244|Administrative transport|FR|ENG||4|E|624|1|
+6247|Collective transport of personnel|FR|ENG||4|E|624|1|
+6248|Sundry|FR|ENG||4|E|624|1|
+625|Business travel, missions and receptions|FR|ENG||3|E|62|0|
+6251|Journeys and business travel|FR|ENG||4|E|625|1|
+6255|Relocation costs|FR|ENG||4|E|625|1|
+6256|Missions|FR|ENG||4|E|625|1|
+6257|Receptions|FR|ENG||4|E|625|1|
+626|Postal and telecommunication costs|FR|ENG||3|E|62|1|
+627|Banking and similar services|FR|ENG||3|E|62|0|
+6271|Securities costs (purchase, sale, safe custody)|FR|ENG||4|E|627|1|
+6272|Commissions and loan issue costs|FR|ENG||4|E|627|1|
+6275|Charges on bills|FR|ENG||4|E|627|1|
+6276|Rental of safes|FR|ENG||4|E|627|1|
+6278|Other expenses and commissions on services supplied|FR|ENG||4|E|627|1|
+628|Sundry|FR|ENG||3|E|62|0|
+6281|Sundry assistance (eg. contributions)|FR|ENG||4|E|628|1|
+6284|Personnel recruitment costs|FR|ENG||4|E|628|1|
+629|Purchase rebates, discounts, allowances on other external services|FR|ENG||3|E|62|1|
+63|Taxes, levies and similar payments|FR|ENG||2|E|6|0|
+631|Taxes, levies and similar payments on wages and salaries (to the tax administration)|FR|ENG||3|E|63|0|
+6311|Tax on salaries|FR|ENG||4|E|631|1|
+6312|Apprenticeship tax|FR|ENG||4|E|631|1|
+6313|Employer participation in ongoing personnel training and development|FR|ENG||4|E|631|1|
+6314|Default contribution for compulsory investment in construction|FR|ENG||4|E|631|1|
+6318|Other|FR|ENG||4|E|631|1|
+633|Taxes, levies and similar payments on wages and salaries (to other bodies)|FR|ENG||3|E|63|0|
+6331|Transport expenditures|FR|ENG||4|E|633|0|
+63311|Business entity tax|FR|ENG||5|E|6331|1|
+6332|Accommodation allowances|FR|ENG||4|E|633|1|
+6333|Employer participation in ongoing personnel training and development|FR|ENG||4|E|633|1|
+6334|Employer participation in construction projects|FR|ENG||4|E|633|1|
+6335|Discharge payments entitling exemption from apprenticeship tax|FR|ENG||4|E|633|1|
+6338|Other|FR|ENG||4|E|633|1|
+635|Other taxes, levies and similar payments (to the tax administration)|FR|ENG||3|E|63|0|
+6351|Direct taxes (except income tax)|FR|ENG||4|E|635|0|
+63511|Professional tax|FR|ENG||5|E|6351|1|
+63512|Property taxes|FR|ENG||5|E|6351|1|
+63513|Other local rates and taxes|FR|ENG||5|E|6351|1|
+63514|Tax on company vehicles|FR|ENG||5|E|6351|1|
+6352|Non-recoverable turnover tax|FR|ENG||4|E|635|1|
+6353|Indirect taxes|FR|ENG||4|E|635|1|
+6354|Registration and stamp duties|FR|ENG||4|E|635|0|
+63541|Transfer duty|FR|ENG||5|E|6354|1|
+6358|Other duties|FR|ENG||4|E|635|1|
+637|Other taxes, levies and similar payments (to other bodies)|FR|ENG||3|E|63|0|
+6371|Social solidarity contribution chargeable to companies|FR|ENG||4|E|637|1|
+6372|Taxes collected by international public bodies|FR|ENG||4|E|637|1|
+6374|Taxes and levies due for payment outside France|FR|ENG||4|E|637|1|
+6378|Sundry taxes|FR|ENG||4|E|637|1|
+64|Personnel costs|FR|ENG||2|E|6|0|
+641|Personnel wages and salaries|FR|ENG||3|E|64|0|
+6411|Salaries, emoluments|FR|ENG||4|E|641|1|
+6412|Holiday pay|FR|ENG||4|E|641|1|
+6413|Premiums and bonuses|FR|ENG||4|E|641|1|
+6414|Allowances and sundry benefits|FR|ENG||4|E|641|1|
+6415|Family income supplement|FR|ENG||4|E|641|1|
+644|Owner remuneration|FR|ENG||3|E|64|1|
+645|Social security and provident fund contributions|FR|ENG||3|E|64|0|
+6451|Social Security Collection Office (URSSAF) contributions|FR|ENG||4|E|645|1|
+6452|Mutual organisation contributions|FR|ENG||4|E|645|1|
+6453|Pension fund contributions|FR|ENG||4|E|645|1|
+6454|Association for Industrial and Commercial Employment (ASSEDIC) contributions|FR|ENG||4|E|645|1|
+6458|Contributions to other social agencies|FR|ENG||4|E|645|1|
+646|Owner social security contributions|FR|ENG||3|E|64|1|
+647|Other welfare costs|FR|ENG||3|E|64|0|
+6471|Direct allowances|FR|ENG||4|E|647|1|
+6472|Payments to enterprise/establishment consultative committees|FR|ENG||4|E|647|1|
+6473|Payments to health and occupational safety committees|FR|ENG||4|E|647|1|
+6474|Payments to other company benefit schemes|FR|ENG||4|E|647|1|
+6475|Occupational medicine, pharmacy|FR|ENG||4|A|647|1|
+648|Other personnel costs|FR|ENG||3|E|64|1|
+65|Other current operating charges|FR|ENG||2|E|6|0|
+651|Royalties and licence fees for concessions, patents,licences, trade marks, proce|FR|ENG||3|E|65|0|
+6511|Concessions, patents, licences, trade marks, processes,software|FR|ENG||4|E|651|1|
+6516|Author and reproduction royalties|FR|ENG||4|E|651|1|
+6518|Other royalties and similar assets|FR|ENG||4|E|651|1|
+653|Directors fees|FR|ENG||3|E|65|1|
+654|Bad debts written off|FR|ENG||3|E|65|0|
+6541|Debts receivable for the financial year|FR|ENG||4|E|654|1|
+6544|Debts receivable for previous financial years|FR|ENG||4|E|654|1|
+655|Share of joint venture profit or loss|FR|ENG||3|E|65|0|
+6551|Share of profit transferred (accounts of the managing entity)|FR|ENG||4|E|655|1|
+6555|Share of loss (accounts of non-managing partners/associates)|FR|ENG||4|E|655|1|
+658|Sundry current operating charges|FR|ENG||3|E|65|1|
+66|Financial charges|FR|ENG||2|E|6|0|
+661|Interest charges|FR|ENG||3|E|66|0|
+6611|Loan and debt interest|FR|ENG||4|E|661|0|
+66116|Loans and similar debts payable|FR|ENG||5|E|6611|1|
+66117|Debts payable related to participating interests|FR|ENG||5|E|6611|1|
+6615|Current account and credit deposit interest|FR|ENG||4|E|661|1|
+6616|Bank and financing transaction interest (eg. discounting)|FR|ENG||4|E|661|1|
+6617|Interest on guaranteed bonds|FR|ENG||4|E|661|1|
+6618|Interest on other debts payable|FR|ENG||4|E|661|0|
+66181|Commercial debts payable|FR|ENG||5|E|6618|1|
+66188|Sundry debts payable|FR|ENG||5|E|6618|1|
+664|Losses on debts receivable related to participating interests|FR|ENG||3|E|66|1|
+665|Discounts allowed|FR|ENG||3|E|66|1|
+666|Exchange losses|FR|ENG||3|E|66|1|
+667|Net charges on realisation of short-term investment securities|FR|ENG||3|E|66|1|
+668|Other financial charges|FR|ENG||3|E|66|1|
+67|Extraordinary charges|FR|ENG||2|E|6|0|
+671|Extraordinary charges on operating transactions|FR|ENG||3|E|67|0|
+6711|Market penalties (and forfeits on purchases and sales)|FR|ENG||4|E|671|1|
+6712|Fines, tax and criminal penalties|FR|ENG||4|A|671|1|
+6713|Gifts and donations|FR|ENG||4|E|671|1|
+6714|Bad debts written off for the financial year|FR|ENG||4|E|671|1|
+6715|Grants awarded|FR|ENG||4|E|671|1|
+6717|Additional taxes assessed (other than income tax)|FR|ENG||4|E|671|1|
+6718|Other extraordinary operating charges|FR|ENG||4|E|671|1|
+672|(Account available to entities to record prior period charges during the financial year)|FR|ENG||3|E|67|1|
+675|Book values of realised assets|FR|ENG||3|E|67|0|
+6751|Intangible fixed assets|FR|ENG||4|E|675|1|
+6752|Tangible fixed assets|FR|ENG||4|E|675|1|
+6756|Financial fixed assets|FR|ENG||4|E|675|1|
+6758|Other asset components|FR|ENG||4|E|675|1|
+678|Other extraordinary charges|FR|ENG||3|E|67|0|
+6781|Surcharges resulting from escalation clauses|FR|ENG||4|E|678|1|
+6782|Prizes|FR|ENG||4|E|678|1|
+6783|Deficits resulting from own shares and bonds bought back by the entity|FR|ENG||4|E|678|1|
+6788|Sundry extraordinary charges|FR|ENG||4|E|678|1|
+68|Appropriations to depreciation and provisions|FR|ENG||2|E|6|0|
+681|Appropriations to depreciation and provisions Operating charges|FR|ENG||3|E|68|0|
+6811|Appropriations to depreciation on intangible and tangible fixed assets|FR|ENG||4|E|681|0|
+68111|Intangible fixed assets|FR|ENG||5|E|6811|1|
+68112|Tangible fixed assets|FR|ENG||5|E|6811|1|
+6812|Amortisation of deferred operating charges|FR|ENG||4|E|681|1|
+6815|Appropriations to provisions for operating liabilities and charges|FR|ENG||4|E|681|1|
+6816|Appropriations to provisions for diminution in value of intangible and tangible|FR|ENG||4|E|681|0|
+68161|Intangible fixed assets|FR|ENG||5|E|6816|1|
+68162|Tangible fixed assets|FR|ENG||5|E|6816|1|
+6817|Appropriations to provisions for diminution in value of current assets|FR|ENG||4|E|681|0|
+68173|Stocks and work in progress|FR|ENG||5|E|6817|1|
+68174|Debts receivable|FR|ENG||5|E|6817|1|
+686|Appropriations to depreciation and provisions Financial charges|FR|ENG||3|E|68|0|
+6861|Appropriations to amortisation of premiums on redemption of debt securities|FR|ENG||4|E|686|1|
+6865|Appropriations to provisions for financial liabilities and charges|FR|ENG||4|E|686|1|
+6866|Appropriations to provisions for diminution in value of financial components|FR|ENG||4|E|686|0|
+68662|Financial fixed assets|FR|ENG||5|E|6866|1|
+68665|Short-term investment securities|FR|ENG||5|E|6866|1|
+6868|Other appropriations|FR|ENG||4|E|686|1|
+687|Appropriations to depreciation and provisions Extraordinary charges|FR|ENG||3|E|68|0|
+6871|Appropriations to extraordinary fixed asset depreciation|FR|ENG||4|E|687|1|
+6872|Appropriations to tax-regulated provisions (fixed assets)|FR|ENG||4|E|687|0|
+68725|Depreciation by derogation|FR|ENG||5|E|6872|1|
+6873|Appropriations to tax-regulated provisions (stocks)|FR|ENG||4|E|687|1|
+6874|Appropriations to other tax-regulated provisions|FR|ENG||4|E|687|1|
+6875|Appropriations to provisions for extraordinary liabilities and charges|FR|ENG||4|E|687|1|
+6876|Appropriations to provisions for extraordinary diminution in value|FR|ENG||4|E|687|1|
+69|Employee profit share Income and similar taxes|FR|ENG||2|E|6|0|
+691|Employee profit share|FR|ENG||3|E|69|1|
+695|Income tax|FR|ENG||3|E|69|0|
+6951|Income tax due in France|FR|ENG||4|E|695|1|
+6952|Additional contribution to income tax|FR|ENG||4|E|695|1|
+6954|Income tax due outside France|FR|ENG||4|E|695|1|
+696|Supplementary company tax related to profit distributions|FR|ENG||3|E|69|1|
+697|Annual company imputed tax|FR|ENG||3|E|69|1|
+698|Group tax|FR|ENG||3|E|69|0|
+6981|Group tax Charges|FR|ENG||4|E|698|1|
+6989|Group tax Income|FR|ENG||4|E|698|1|
+699|Income Carry-back of losses|FR|ENG||3|E|69|1|
+7|Income accounts|FR|ENG||1|I| |0|
+70|Sales of manufactured products, services, goods for resale|FR|ENG||2|I|7|0|
+701|Sales of finished products|FR|ENG||3|I|70|0|
+7011|Finished products (or group) A|FR|ENG||4|I|701|1|
+7012|Finished products (or group) B|FR|ENG||4|I|701|1|
+702|Sales of semi-finished products|FR|ENG||3|I|70|1|
+703|Sales of residual products|FR|ENG||3|I|70|1|
+704|Works|FR|ENG||3|I|70|0|
+7041|Works of category (or activity) A|FR|ENG||4|I|704|1|
+7042|Works of category (or activity) B|FR|ENG||4|I|704|1|
+705|Project studies|FR|ENG||3|I|70|1|
+706|Services supplied|FR|ENG||3|I|70|1|
+707|Sales of goods for resale|FR|ENG||3|I|70|0|
+7071|Goods for resale (or group) A|FR|ENG||4|I|707|1|
+7072|Goods for resale (or group) B|FR|ENG||4|I|707|1|
+708|Income from related activities|FR|ENG||3|A|70|0|
+7081|Income from services operated in the interest of personnel|FR|ENG||4|A|708|1|
+7082|Commission and brokerage|FR|ENG||4|A|708|1|
+7083|Sundry rentals|FR|ENG||4|A|708|1|
+7084|Personnel charged out|FR|ENG||4|A|708|1|
+7085|Carriage and ancillary costs invoiced|FR|ENG||4|A|708|1|
+7086|Surplus on recovery of returnable packaging|FR|ENG||4|A|708|1|
+7087|Bonuses obtained from customers and sales premiums|FR|ENG||4|A|708|1|
+7088|Other income from ancillary activities (eg. disposal of consumables)|FR|ENG||4|A|708|1|
+709|Sales rebates, discounts, allowances granted by the entity|FR|ENG||3|I|70|0|
+7091|Sales of finished products|FR|ENG||4|I|709|1|
+7092|Sales of semi-finished products|FR|ENG||4|I|709|1|
+7094|Works|FR|ENG||4|I|709|1|
+7095|Project studies|FR|ENG||4|I|709|1|
+7096|Services supplied|FR|ENG||4|I|709|1|
+7097|Sales of goods for resale|FR|ENG||4|I|709|1|
+7098|Income from ancillary activities|FR|ENG||4|I|709|1|
+71|Change in stocks of finished products and work in progress|FR|ENG||2|I|7|0|
+713|Change in stocks (work in progress, products)|FR|ENG||3|I|71|0|
+7133|Change in work in progress (goods)|FR|ENG||4|I|713|0|
+71331|Products in progress|FR|ENG||5|I|7133|1|
+71335|Works in progress|FR|ENG||5|I|7133|1|
+7134|Change in work in progress (services)|FR|ENG||4|I|713|0|
+71341|Project studies in progress|FR|ENG||5|I|7134|1|
+71345|Supply of services in progress|FR|ENG||5|I|7134|1|
+7135|Change in product stocks|FR|ENG||4|I|713|0|
+71351|Semi-finished products|FR|ENG||5|I|7135|1|
+71355|Finished products|FR|ENG||5|I|7135|1|
+71358|Residual products|FR|ENG||5|I|7135|1|
+72|Own work capitalised|FR|ENG||2|I|7|0|
+721|Intangible fixed assets|FR|ENG||3|I|72|1|
+722|Tangible fixed assets|FR|ENG||3|A|72|1|
+73|Net period income from long-term transactions|FR|ENG||2|I|7|0|
+731|Net period income on transactions in progress (to be subdivided by transaction)|FR|ENG||3|I|73|1|
+739|Net period income on completed transactions|FR|ENG||3|I|73|1|
+74|Operating grants|FR|ENG||2|I|7|1|
+75|Other current operating income|FR|ENG||2|I|7|0|
+751|Royalties and licence fees for concessions, patents,licences, trade marks, proce|FR|ENG||3|I|75|0|
+7511|Concessions, patents, licences, trade marks, processes, software|FR|ENG||4|I|751|1|
+7516|Author and reproduction royalties|FR|ENG||4|I|751|1|
+7518|Other royalties and similar assets|FR|ENG||4|I|751|1|
+752|Revenues from buildings not allocated to professional activities|FR|ENG||3|I|75|1|
+753|Directors fees and remuneration (eg. administrators,managers)|FR|ENG||3|I|75|1|
+754|Rebates from cooperatives (resulting from surpluses)|FR|ENG||3|I|75|1|
+755|Share of joint venture profit or loss|FR|ENG||3|I|75|0|
+7551|Share of loss transferred (accounts of the managing entity)|FR|ENG||4|I|755|1|
+7555|Share of profit (accounts of non-managing partners/associates)|FR|ENG||4|I|755|1|
+758|Sundry current operating income|FR|ENG||3|I|75|1|
+76|Financial income|FR|ENG||2|I|7|0|
+761|Income from participating interests|FR|ENG||3|I|76|0|
+7611|Income from long-term equity interests|FR|ENG||4|I|761|1|
+7616|Income from other forms of participating interests|FR|ENG||4|I|761|1|
+7617|Income from debts receivable related to participating interests|FR|ENG||4|I|761|1|
+762|Income from other financial fixed assets|FR|ENG||3|I|76|0|
+7621|Income from long-term investment securities|FR|ENG||4|I|762|1|
+7626|Income from loans|FR|ENG||4|I|762|1|
+7627|Income from capitalised debts receivable|FR|ENG||4|I|762|1|
+763|Income from other debts receivable|FR|ENG||3|I|76|0|
+7631|Income from commercial debts receivable|FR|ENG||4|I|763|1|
+7638|Income from sundry debts receivable|FR|ENG||4|I|763|1|
+764|Income from short-term investment securities|FR|ENG||3|I|76|1|
+765|Discounts obtained|FR|ENG||3|I|76|1|
+766|Exchange gains|FR|ENG||3|I|76|1|
+767|Net income on realisation of short-term investment securities|FR|ENG||3|I|76|1|
+768|Other financial income|FR|ENG||3|I|76|1|
+77|Extraordinary income|FR|ENG||2|I|7|0|
+771|Extraordinary income on operating transactions|FR|ENG||3|I|77|0|
+7711|Forfeits and penalties on purchases and sales|FR|ENG||4|I|771|1|
+7713|Donations received|FR|ENG||4|I|771|1|
+7714|Collection of debts receivable written off|FR|ENG||4|I|771|1|
+7715|Deficit grants|FR|ENG||4|I|771|1|
+7717|Tax allowances other than income tax|FR|ENG||4|I|771|1|
+7718|Other extraordinary income on operating transactions|FR|ENG||4|I|771|1|
+772|(Account available to entities to record prior period income during the financial year)|FR|ENG||3|I|77|1|
+775|Income from asset realisation|FR|ENG||3|I|77|0|
+7751|Intangible fixed assets|FR|ENG||4|I|775|1|
+7752|Tangible fixed assets|FR|ENG||4|I|775|1|
+7756|Financial fixed assets|FR|ENG||4|I|775|1|
+7758|Other asset components|FR|ENG||4|I|775|1|
+777|Share of investment grants transferred to profit or loss for the financial year|FR|ENG||3|I|77|1|
+778|Other extraordinary income|FR|ENG||3|I|77|0|
+7781|Surpluses resulting from escalation clauses|FR|ENG||4|I|778|1|
+7782|Prizes|FR|ENG||4|I|778|1|
+7783|Surpluses resulting from own shares and bonds bought back by the entity|FR|ENG||4|I|778|1|
+7788|Sundry extraordinary income|FR|ENG||4|I|778|1|
+78|Depreciation and provisions written back|FR|ENG||2|I|7|0|
+781|Depreciation and provisions written back (to be entered in operating income)|FR|ENG||3|I|78|0|
+7811|Depreciation of intangible and tangible fixed assets written back|FR|ENG||4|I|781|0|
+78111|Intangible fixed assets|FR|ENG||5|I|7811|1|
+78112|Tangible fixed assets|FR|ENG||5|I|7811|1|
+7815|Provisions for operating liabilities and charges written back|FR|ENG||4|I|781|1|
+7816|Provisions for diminution in value of intangible and tangible fixed assets written back|FR|ENG||4|I|781|0|
+78161|Intangible fixed assets|FR|ENG||5|I|7816|1|
+78162|Tangible fixed assets|FR|ENG||5|I|7816|1|
+7817|Provisions for diminution in value of current assets written back|FR|ENG||4|I|781|0|
+78173|Stocks and work in progress|FR|ENG||5|I|7817|1|
+78174|Debts receivable|FR|ENG||5|I|7817|1|
+786|Provisions for liabilities written back (to be entered in financial income)|FR|ENG||3|I|78|0|
+7865|Provisions for financial liabilities and charges written back|FR|ENG||4|I|786|1|
+7866|Provisions for diminution in value of financial components written back|FR|ENG||4|I|786|0|
+78662|Financial fixed assets|FR|ENG||5|I|7866|1|
+78665|Short-term investment securities|FR|ENG||5|I|7866|1|
+787|Provisions written back (to be entered in extraordinary income)|FR|ENG||3|I|78|0|
+7872|Tax-regulated provisions written back (fixed assets)|FR|ENG||4|I|787|0|
+78725|Depreciation by derogation|FR|ENG||5|I|7872|1|
+78726|Special revaluation provision|FR|ENG||5|I|7872|1|
+78727|Reinvested capital gain|FR|ENG||5|I|7872|1|
+7873|Tax-regulated provisions written back (stocks)|FR|ENG||4|I|787|1|
+7874|Other tax-regulated provisions written back|FR|ENG||4|I|787|1|
+7875|Provisions for extraordinary liabilities and charges written back|FR|ENG||4|I|787|1|
+7876|Provisions for extraordinary diminution in value written back|FR|ENG||4|I|787|1|
+79|Charges transferred|FR|ENG||2|I|7|0|
+791|Operating charges transferred|FR|ENG||3|I|79|1|
+796|Financial charges transferred|FR|ENG||3|I|79|1|
+797|Extraordinary charges transferred|FR|ENG||3|I|79|1|
+8|Special accounts|FR|ENG||1|N| |0|
+80|Commitments|FR|ENG||2|N|8|0|
+801|Commitments given by entity|FR|ENG||3|N|80|0|
+8011|Guarantees, sureties, guarantees|FR|ENG||4|N|801|1|
+8014|Effets circulant sous l'endos de l'entitÃ©|FR|ENG||4|N|801|1|
+8016|Leasing fees still outstanding|FR|ENG||4|N|801|0|
+80161|Furniture leasing|FR|ENG||5|N|8016|1|
+80165|Real estate leasing|FR|ENG||5|N|8016|1|
+8018|Other commitments given|FR|ENG||4|N|801|1|
+802|Commitments received by the entity|FR|ENG||3|N|80|0|
+8021|Guarantees, sureties, guarantees|FR|ENG||4|N|802|1|
+8024|Discounted claims not yet due|FR|ENG||4|N|802|1|
+8026|Commitments received for use in leasing|FR|ENG||4|N|802|0|
+80261|Furniture leasing|FR|ENG||5|N|8026|1|
+80265|Real estate leasing|FR|ENG||5|N|8026|1|
+8028|Other commitments received|FR|ENG||4|N|802|1|
+809|Counterpart of commitments|FR|ENG||3|N|80|0|
+8091|Counterpart 801|FR|ENG||4|N|809|1|
+8092|Counterpart 802|FR|ENG||4|N|809|1|
+88|Result pending allocation|FR|ENG||2|N|8|1|
+89|Balance sheet|FR|ENG||2|N|8|1|

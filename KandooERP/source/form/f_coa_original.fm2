@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form xmlns="http://namespaces.querix.com/2015/fglForms" title="f_coa">
+	<form.rootContainer>
+		<CoordPanel preferredSize="664.0,511.0" fieldTable="" identifier="Coordf_coa">
+			<Label text="Data management for table coa" location="5qch,1qch" preferredSize="26qch,1qch" fieldTable="" identifier="FormTitle"/>
+			<Label text="cmpy_code" location="1qch,4qch" preferredSize="9qch,1qch" fieldTable="" identifier="lb_cmpy_code"/>
+			<TextField  visible="true" dataType=",,,,0" location="11qch,4qch" preferredSize="10qch,1qch" fieldTable="coa" identifier="cmpy_code"/>
+			<Label text="acct_code" location="1qch,5qch" preferredSize="9qch,1qch" fieldTable="" identifier="lb_acct_code"/>
+			<TextField  visible="true" dataType=",,,,0" location="11qch,5qch" preferredSize="10qch,1qch" fieldTable="coa" identifier="acct_code"/>
+			<Label text="desc_text" location="1qch,6qch" preferredSize="9qch,1qch" fieldTable="" identifier="lb_desc_text"/>
+			<TextField  visible="true" dataType=",,,,0" location="11qch,6qch" preferredSize="18qch,1qch" fieldTable="coa" identifier="desc_text"/>
+			<Label text="start_year_num" location="1qch,7qch" preferredSize="14qch,1qch" fieldTable="" identifier="lb_start_year_num"/>
+			<TextField  visible="true" dataType=",,,,0" location="16qch,7qch" preferredSize="4qch,1qch" fieldTable="coa" identifier="start_year_num"/>
+			<Label text="start_period_num" location="1qch,8qch" preferredSize="16qch,1qch" fieldTable="" identifier="lb_start_period_num"/>
+			<TextField  visible="true" dataType=",,,,0" location="18qch,8qch" preferredSize="4qch,1qch" fieldTable="coa" identifier="start_period_num"/>
+			<Label text="end_year_num" location="1qch,9qch" preferredSize="12qch,1qch" fieldTable="" identifier="lb_end_year_num"/>
+			<TextField  visible="true" dataType=",,,,0" location="14qch,9qch" preferredSize="4qch,1qch" fieldTable="coa" identifier="end_year_num"/>
+			<Label text="end_period_num" location="1qch,10qch" preferredSize="14qch,1qch" fieldTable="" identifier="lb_end_period_num"/>
+			<TextField  visible="true" dataType=",,,,0" location="16qch,10qch" preferredSize="4qch,1qch" fieldTable="coa" identifier="end_period_num"/>
+			<Label text="group_code" location="1qch,11qch" preferredSize="10qch,1qch" fieldTable="" identifier="lb_group_code"/>
+			<TextField  visible="true" dataType=",,,,0" location="12qch,11qch" preferredSize="8qch,1qch" fieldTable="coa" identifier="group_code"/>
+			<Label text="analy_req_flag" location="1qch,12qch" preferredSize="14qch,1qch" fieldTable="" identifier="lb_analy_req_flag"/>
+			<TextField  visible="true" dataType=",,,,0" location="16qch,12qch" preferredSize="4qch,1qch" fieldTable="coa" identifier="analy_req_flag"/>
+			<Label text="analy_prompt_text" location="1qch,13qch" preferredSize="17qch,1qch" fieldTable="" identifier="lb_analy_prompt_text"/>
+			<TextField  visible="true" dataType=",,,,0" location="19qch,13qch" preferredSize="10qch,1qch" fieldTable="coa" identifier="analy_prompt_text"/>
+			<Label text="qty_flag" location="1qch,14qch" preferredSize="8qch,1qch" fieldTable="" identifier="lb_qty_flag"/>
+			<TextField  visible="true" dataType=",,,,0" location="10qch,14qch" preferredSize="4qch,1qch" fieldTable="coa" identifier="qty_flag" fieldType="COLUMN_LIKE"/>
+			<Label text="uom_code" location="1qch,15qch" preferredSize="8qch,1qch" fieldTable="" identifier="lb_uom_code"/>
+			<TextField  visible="true" dataType=",,,,0" location="10qch,15qch" preferredSize="4qch,1qch" fieldTable="coa" identifier="uom_code"/>
+			<Label text="type_ind" location="1qch,16qch" preferredSize="8qch,1qch" fieldTable="" identifier="lb_type_ind"/>
+			<TextField  visible="true" dataType=",,,,0" location="10qch,16qch" preferredSize="4qch,1qch" fieldTable="coa" identifier="type_ind"/>
+			<Label text="tax_code" location="1qch,17qch" preferredSize="8qch,1qch" fieldTable="" identifier="lb_tax_code"/>
+			<TextField  visible="true" dataType=",,,,0" location="10qch,17qch" preferredSize="4qch,1qch" fieldTable="coa" identifier="tax_code"/>
+			<TextField visible="true" identifier="t_desc_text" location="17qch,17qch" preferredSize="10qch,1qch" noEntry="true" text="" fieldTable="tax" fieldColumn="desc_text" fieldType="COLUMN_LIKE"/>
+			<Calendar dataType="Date,,,," visible="true" identifier="oper_date" location="1qch,18qch" preferredSize="10qch,1qch" fieldTable="formonly" />
+			<TimeEditField visible="true" identifier="oper_timestamp" location="1qch,19qch" preferredSize="18qch,1qch" fieldTable="formonly" dataType="DateTime,Year,Minute,,"/>
+		</CoordPanel>
+	</form.rootContainer>
+	<form.screenRecords>
+		<ScreenRecord identifier="coa" fields="cmpy_code,acct_code,desc_text,start_year_num,start_period_num,end_year_num,end_period_num,group_code,analy_req_flag,analy_prompt_text,qty_flag,uom_code,type_ind,tax_code,oper_date"/>
+		<ScreenRecord identifier="tax" fields="desc_text"/>
+		<ScreenRecord identifier="FormOnly" fields="oper_date,formonly.oper_timestamp"/>
+    </form.screenRecords>
+</form>

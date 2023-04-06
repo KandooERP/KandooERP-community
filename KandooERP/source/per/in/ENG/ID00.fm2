@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?><form xmlns="http://namespaces.querix.com/2015/fglForms">
+	<form.rootContainer>
+		<GridPanel classNames="fcls_rootContainer" fieldTable="" horizontalAlignment="Left" identifier="rootContainer" verticalAlignment="Top">
+			<GridPanel.gridRowDefinitions>
+				<GridRowDefinition gridLengthValue=""/>
+				<GridRowDefinition gridLengthValue=""/>
+				<GridRowDefinition gridLengthValue=""/>
+			</GridPanel.gridRowDefinitions>
+			<GridPanel.gridColumnDefinitions>
+				<GridColumnDefinition gridLengthValue="100%"/>
+			</GridPanel.gridColumnDefinitions>
+			<GridPanel classNames="fcls_title_cnt" fieldTable="formonly" gridItemLocation="0,0,1,1" identifier="cntTitle" verticalAlignment="Top" visible="true">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="100%"/>
+					<GridColumnDefinition gridLengthValue=""/>
+				</GridPanel.gridColumnDefinitions>
+				<Label classNames="fcls_title_lb" fieldTable="formonly" gridItemLocation="0,0,1,1" identifier="header_text" isDynamic="true" text="ID0 - Stock Re-order Reports" visible="true"/>
+				<Label classNames="fcls_title_lb" fieldTable="" gridItemLocation="1,0,1,1" identifier="lbFormName" isDynamic="true" text="IB00" visible="true"/>
+			</GridPanel>
+			<GridPanel classNames="fcls_detail_cnt,fcls_data_cnt,fcls_align_left" fieldTable="formonly" gridItemLocation="0,1,1,1" horizontalAlignment="Left" identifier="cntDetail1" verticalAlignment="Top" visible="true">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue="100%"/>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue=""/>
+				</GridPanel.gridColumnDefinitions>
+				<ListBox fieldTable="" gridItemLocation="0,0,1,1" horizontalAlignment="Stretch" identifier="list_menuchoice" minSize="400,400" verticalAlignment="Stretch" visible="true">
+
+
+					<ListBoxItem identifier="menuChoice_AB1" text="ID1 - Replenish by Warehouse Report">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="ID1"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+
+					<ListBoxItem identifier="menuChoice_AB2" text="ID2 - Over-Stock by Warehouse Report">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="ID2"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+
+					<ListBoxItem identifier="menuChoice_AB3" text="ID3 - Replenish by Product Report">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="ID3"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+
+					<ListBoxItem identifier="menuChoice_AB4" text="ID4 - Over-Stock by Product Report">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="ID4"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+
+					<ListBoxItem identifier="menuChoice_AB5" text="ID6 - Generate Requisitions">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="ID6"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+
+					<ListBoxItem identifier="menuChoice_ABA" text="ID7 - Recommended Re-order Report">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="ID7"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+
+					<ListBoxItem identifier="menuChoice_ABB" text="ID8 - Stock Replenishment Report">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="ID8"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+
+	
+
+					<ListBox.onMouseDoubleClick>
+						<ActionEventHandler actionName="DoubleClickItem"/>
+					</ListBox.onMouseDoubleClick>
+				</ListBox>
+				<StackPanel fieldTable="" gridItemLocation="0,1,1,1" horizontalAlignment="Right" identifier="c2" visible="true">
+					<TextField classNames="fcls_data_widget,fcls_align_left,fcls_length_05qch" fieldTable="" identifier="tf_menuChoice" visible="true"/>
+					<Button classNames="fcls_button_2" fieldTable="" identifier="btCancel" text="Cancel" visible="true">
+						<Button.onInvoke>
+							<ActionEventHandler actionName="CANCEL"/>
+						</Button.onInvoke>
+					</Button>
+					<Button classNames="fcls_button_2" fieldTable="" identifier="btAccept" text="OK" visible="true">
+						<Button.onInvoke>
+							<ActionEventHandler actionName="ACCEPT"/>
+						</Button.onInvoke>
+					</Button>
+					<Button classNames="fcls_button_2" fieldTable="" identifier="btHelp" text="Help" visible="true">
+						<Button.onInvoke>
+							<ActionEventHandler actionName="WEB-HELP"/>
+						</Button.onInvoke>
+					</Button>
+				</StackPanel>
+			</GridPanel>
+			<GridPanel classNames="fcls_statusbar_cnt" fieldTable="formonly" gridItemLocation="0,2,1,1" identifier="cntStatusBar" verticalAlignment="Bottom" visible="true">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="100%"/>
+				</GridPanel.gridColumnDefinitions>
+				<Label classNames="fcls_sblabel" fieldTable="formonly" gridItemLocation="0,0,1,1" identifier="lbInfo1" isDynamic="true" text="" visible="true"/>
+				<Label classNames="fcls_sblabel" fieldTable="formonly" gridItemLocation="0,1,1,1" identifier="lbInfo2" isDynamic="true" text="" visible="true"/>
+			</GridPanel>
+		</GridPanel>
+	</form.rootContainer>
+	<form.screenRecords>
+		<ScreenRecord fields="menuChoice,inpMenuChoice" identifier="FORMONLY"/>
+	</form.screenRecords>
+</form>

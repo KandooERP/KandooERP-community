@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?><form xmlns="http://namespaces.querix.com/2015/fglForms">
+	<form.rootContainer>
+		<GridPanel classNames="fcls_rootContainer" fieldTable="" horizontalAlignment="Stretch" identifier="rootContainer" verticalAlignment="Stretch">
+			<GridPanel.gridRowDefinitions>
+				<GridRowDefinition gridLengthValue=""/>
+				<GridRowDefinition gridLengthValue="100%"/>
+				<GridRowDefinition gridLengthValue=""/>
+			</GridPanel.gridRowDefinitions>
+			<GridPanel.gridColumnDefinitions>
+				<GridColumnDefinition gridLengthValue="100%"/>
+			</GridPanel.gridColumnDefinitions>
+			<GridPanel classNames="fcls_title_cnt" fieldTable="formonly" gridItemLocation="0,0,1,1" identifier="cntTitle" verticalAlignment="Top" visible="true">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="100%"/>
+					<GridColumnDefinition gridLengthValue=""/>
+				</GridPanel.gridColumnDefinitions>
+				<Label classNames="fcls_title_lb" fieldTable="formonly" gridItemLocation="0,0,1,1" identifier="header_text" isDynamic="true" text="Country Setup" visible="true"/>
+				<Label classNames="fcls_title_lb" fieldTable="" gridItemLocation="1,0,1,1" identifier="lbFormName" isDynamic="true" text="G193" visible="true"/>
+			</GridPanel>
+			<Table fieldTable="" gridItemLocation="0,1,1,1" horizontalAlignment="Stretch" identifier="sr_country" verticalAlignment="Stretch" visible="true">
+				<TableColumn fieldTable="" identifier="tc_country_code" resizable="true" text="Code" visible="true">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="20%" gridMaxLength="10rem" gridMinLength="5rem"/>
+					</TableColumn.columnLength>
+					<TextField fieldTable="" gridItemLocation="1,1,1,1" identifier="country_code" preferredSize="20qch," visible="true"/>
+				</TableColumn>
+				<TableColumn fieldTable="" identifier="tc_country_text" resizable="true" text="Country" visible="true">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="40%" gridMaxLength="30rem" gridMinLength="30rem"/>
+					</TableColumn.columnLength>
+					<TextField fieldTable="" gridItemLocation="1,2,1,1" identifier="country_text" preferredSize="20qch," visible="true"/>
+				</TableColumn>
+				<TableColumn fieldTable="" identifier="tc_language_code" resizable="true" text="Language Code" visible="true">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="40%" gridMaxLength="30rem" gridMinLength="30rem"/>
+					</TableColumn.columnLength>
+					<ComboBox classNames="list-show-text-value,field-show-text" editable="true" fieldTable="" gridItemLocation="1,3,1,1" identifier="language_code" preferredSize="20qch," visible="true"/>
+				</TableColumn>
+			</Table>
+			<GridPanel classNames="fcls_statusbar_cnt" fieldTable="formonly" gridItemLocation="0,2,1,1" identifier="cntStatusBar" verticalAlignment="Top" visible="true">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="100%"/>
+				</GridPanel.gridColumnDefinitions>
+				<Label classNames="fcls_sblabel" fieldTable="formonly" gridItemLocation="0,0,1,1" identifier="lbInfo1" isDynamic="true" text="" visible="true"/>
+				<Label classNames="fcls_sblabel" fieldTable="formonly" gridItemLocation="0,1,1,1" identifier="lbInfo2" isDynamic="true" text="" visible="true"/>
+			</GridPanel>
+		</GridPanel>
+	</form.rootContainer>
+	<form.screenRecords>
+		<ScreenRecord fields="country_code,country_text,language_code" identifier="FORMONLY"/>
+		<ScreenRecord fields="country_code,country_text,language_code" identifier="sr_country"/>
+	</form.screenRecords>
+</form>

@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?><form xmlns="http://namespaces.querix.com/2015/fglForms">
+	<form.rootContainer>
+		<GridPanel classNames="fcls_rootContainer" fieldTable="" horizontalAlignment="Stretch" identifier="rootContainer" preferredSize="140qch,25qch" verticalAlignment="Stretch">
+			<GridPanel.gridRowDefinitions>
+				<GridRowDefinition gridLengthValue=""/>
+				<GridRowDefinition gridLengthValue="100%"/>
+				<GridRowDefinition gridLengthValue=""/>
+			</GridPanel.gridRowDefinitions>
+			<GridPanel.gridColumnDefinitions>
+				<GridColumnDefinition gridLengthValue="100%"/>
+			</GridPanel.gridColumnDefinitions>
+
+			<GridPanel classNames="fcls_title_cnt" fieldTable="formonly" gridItemLocation="0,0,1,1" identifier="cntTitle" verticalAlignment="Top" visible="true">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="100%"/>
+					<GridColumnDefinition gridLengthValue=""/>
+				</GridPanel.gridColumnDefinitions>
+				<Label classNames="fcls_title_lb" fieldTable="formonly" gridItemLocation="0,0,1,1" identifier="header_text" isDynamic="true" text="Sales Area Statistics Information" visible="true"/>
+				<Label classNames="fcls_title_lb" fieldTable="" gridItemLocation="1,0,1,1" identifier="lbFormName" isDynamic="true" text="E243" visible="true"/>
+			</GridPanel>
+			<Table fieldTable="" gridItemLocation="0,1,1,1" identifier="sr_salearea" preferredSize="68qch,14qch" rowCount="14">
+				<TableColumn fieldTable="" identifier="tc_scroll_flag">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="2rem" gridMaxLength="2rem" gridMinLength="2rem"/>
+					</TableColumn.columnLength>
+					<CheckBox dataType="Char,,,," fieldTable="formonly" identifier="scroll_flag">
+						<CheckBox.checkedValue>
+							<StringLiteral stringValue="*"/>
+						</CheckBox.checkedValue>
+						<CheckBox.uncheckedValue>
+							<NullLiteral/>
+						</CheckBox.uncheckedValue>
+					</CheckBox>
+				</TableColumn>
+				<TableColumn fieldTable="" identifier="tc_area_code" text="Area">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="15%" gridMaxLength="10rem"/>
+					</TableColumn.columnLength>
+					<TextField comment=" Enter sales area code selection criteria " dataType="Char,,,,5" fieldTable="salearea" identifier="area_code" toCase="Up" toolTip=" Enter sales area code selection criteria "/>
+				</TableColumn>
+				<TableColumn fieldTable="" identifier="tc_desc_text" text="Description">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="30%" gridMaxLength="30rem"/>
+					</TableColumn.columnLength>
+					<TextField comment=" Enter sales area name or description selection criteria " dataType="VarChar,,,0,14" fieldTable="salearea" identifier="desc_text" noEntry="true" toolTip=" Enter sales area name or description selection criteria "/>
+				</TableColumn>
+				<TableColumn fieldTable="" identifier="tc_maingrp_code" text="Main Grp">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="15%" gridMaxLength="8rem"/>
+					</TableColumn.columnLength>
+					<TextField comment=" Enter product main group code selection criteria " dataType="Char,,,,3" fieldTable="product" identifier="maingrp_code" noEntry="true" toCase="Up" toolTip=" Enter product main group code selection criteria "/>
+				</TableColumn>
+				<TableColumn fieldTable="" identifier="tc_prodgrp_code" text="Prod Grp">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="15%" gridMaxLength="8rem"/>
+					</TableColumn.columnLength>
+					<TextField comment=" Enter product group code selection criteria " dataType="Char,,,,3" fieldTable="product" identifier="prodgrp_code" noEntry="true" toCase="Up" toolTip=" Enter product group code selection criteria "/>
+				</TableColumn>
+				<TableColumn fieldTable="" identifier="tc_part_code" text="Product">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="15%" gridMaxLength="10rem"/>
+					</TableColumn.columnLength>
+					<TextField comment=" Enter product code selection criteria " dataType="Char,,,,15" fieldTable="product" identifier="part_code" noEntry="true" toCase="Up" toolTip=" Enter product code selection criteria "/>
+				</TableColumn>
+				<TableColumn fieldTable="" identifier="tc_stat_flag" text="S">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="5%" gridMaxLength="2rem" gridMinLength="2rem"/>
+					</TableColumn.columnLength>
+					<TextField dataType="Char,,,," fieldTable="formonly" identifier="stat_flag" noEntry="true"/>
+				</TableColumn>
+			</Table>
+			<GridPanel classNames="fcls_statusbar_cnt" fieldTable="formonly" gridItemLocation="0,2,1,1" identifier="cntStatusBar" verticalAlignment="Bottom" visible="true">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="100%"/>
+				</GridPanel.gridColumnDefinitions>
+				<Label classNames="fcls_sblabel" fieldTable="formonly" gridItemLocation="0,0,1,1" identifier="lbInfo1" isDynamic="true" text="" visible="true"/>
+				<Label classNames="fcls_sblabel" fieldTable="formonly" gridItemLocation="0,1,1,1" identifier="lbInfo2" isDynamic="true" text="" visible="true"/>
+			</GridPanel>
+		</GridPanel>
+	</form.rootContainer>
+	<form.screenRecords>
+		<ScreenRecord fields="formonly.scroll_flag,salearea.area_code,salearea.desc_text,product.maingrp_code,product.prodgrp_code,product.part_code,formonly.stat_flag" identifier="sr_salearea"/>
+		<ScreenRecord fields="formonly.scroll_flag,formonly.stat_flag" identifier="formonly"/>
+		<ScreenRecord fields="product.maingrp_code,product.prodgrp_code,product.part_code" identifier="product"/>
+		<ScreenRecord fields="salearea.area_code,salearea.desc_text" identifier="salearea"/>
+	</form.screenRecords>
+</form>

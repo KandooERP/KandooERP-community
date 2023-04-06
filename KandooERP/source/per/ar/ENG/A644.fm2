@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form xmlns="http://namespaces.querix.com/2015/fglForms">
+	<form.rootContainer>
+		<GridPanel classNames="fcls_rootContainer" verticalAlignment="Top" horizontalAlignment="Left" fieldTable="" identifier="rootContainer">
+			<GridPanel.gridRowDefinitions>
+				<GridRowDefinition gridLengthValue=""/>
+				<GridRowDefinition gridLengthValue=""/>
+				<GridRowDefinition gridLengthValue=""/>
+				<GridRowDefinition gridLengthValue=""/>
+				<GridRowDefinition gridLengthValue=""/>
+				<GridRowDefinition gridLengthValue=""/>
+			</GridPanel.gridRowDefinitions>
+			<GridPanel.gridColumnDefinitions>
+				<GridColumnDefinition gridLengthValue="100%"/>
+			</GridPanel.gridColumnDefinitions>
+			<GridPanel classNames="fcls_title_cnt" visible="true" verticalAlignment="Top" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="cntTitle">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="100%"/>
+					<GridColumnDefinition gridLengthValue=""/>
+				</GridPanel.gridColumnDefinitions>
+				<Label isDynamic="true" text="Service Fee Generation" classNames="fcls_title_lb" visible="true" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="header_text"/>
+				<Label isDynamic="true" text="A644" classNames="fcls_title_lb" visible="true" gridItemLocation="1,0,1,1" fieldTable="" identifier="lbFormName"/>
+			</GridPanel>
+			<GridPanel classNames="fcls_detail_cnt,fcls_data_cnt,fcls_align_left" visible="true" verticalAlignment="Top" horizontalAlignment="Left" gridItemLocation="0,1,1,1" fieldTable="" identifier="cntDetail1">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="" gridMinLength="10rem"/>
+					<GridColumnDefinition gridLengthValue=""/>
+				</GridPanel.gridColumnDefinitions>
+				<Label isDynamic="true" text="Aging Date" classNames="fcls_fieldlabel" visible="true" gridItemLocation="0,0,1,1" fieldTable="" identifier="lb139"/>
+				<Calendar dataType="Date,,,," classNames="fcls_data_widget,fcls_align_left,fcls_length_10qch" preferredSize="11qch,1qch" toolTip=" Date from which customer balances will be aged" gridItemLocation="1,0,1,1" fieldTable="formonly" comment=" Date from which customer balances will be aged" identifier="age_date"/>
+				<Label isDynamic="true" text="Last Aging" classNames="fcls_fieldlabel" visible="true" gridItemLocation="0,1,1,1" fieldTable="" identifier="lb156"/>
+				<Calendar dataType="Date,,,," classNames="fcls_data_widget,fcls_align_left,fcls_length_10qch" preferredSize="11qch,1qch" toolTip=" The date AR Aging was last run" gridItemLocation="1,1,1,1" fieldTable="arparms" comment=" The date AR Aging was last run" identifier="cust_age_date"/>
+				<Label isDynamic="true" text="Last Fee Run" classNames="fcls_fieldlabel" visible="true" gridItemLocation="0,2,1,1" fieldTable="" identifier="lb157"/>
+				<Calendar dataType="Date,,,," classNames="fcls_data_widget,fcls_align_left,fcls_length_10qch" preferredSize="11qch,1qch" toolTip=" Date this program was last run" gridItemLocation="1,2,1,1" fieldTable="arparmext" comment=" Date this program was last run" identifier="last_int_date"/>
+			</GridPanel>
+			<GroupBox title="Fee/Interest" classNames="fcls_detail_gb_cnt" visible="true" verticalAlignment="Stretch" horizontalAlignment="Stretch" gridItemLocation="0,2,1,1" fieldTable="formonly" identifier="cntDetail2GroupBox">
+				<GridPanel classNames="fcls_detail_gb_cnt_sub,fcls_detail_cnt_sub,fcls_data_cnt,fcls_align_left" visible="true" verticalAlignment="Top" horizontalAlignment="Left" fieldTable="formonly" identifier="cntDetail2Sub">
+					<GridPanel.gridRowDefinitions>
+						<GridRowDefinition gridLengthValue=""/>
+						<GridRowDefinition gridLengthValue=""/>
+						<GridRowDefinition gridLengthValue=""/>
+						<GridRowDefinition gridLengthValue=""/>
+						<GridRowDefinition gridLengthValue=""/>
+						<GridRowDefinition gridLengthValue=""/>
+						<GridRowDefinition gridLengthValue=""/>
+					</GridPanel.gridRowDefinitions>
+					<GridPanel.gridColumnDefinitions>
+						<GridColumnDefinition gridLengthValue="" gridMinLength="10rem"/>
+						<GridColumnDefinition gridLengthValue=""/>
+						<GridColumnDefinition gridLengthValue=""/>
+						<GridColumnDefinition gridLengthValue=""/>
+					</GridPanel.gridColumnDefinitions>
+					<Label isDynamic="true" text="Service Fee" classNames="fcls_fieldlabel" visible="true" gridItemLocation="0,0,1,1" fieldTable="" identifier="lb91"/>
+					<TextField dataType="Decimal,,,2,16" classNames="fcls_data_widget,fcls_align_left,fcls_length_15qch" preferredSize="11qch,1qch" toolTip=" Flat service fee to be applied to selected customers" gridItemLocation="1,0,1,1" fieldTable="formonly" comment=" Flat service fee to be applied to selected customers" identifier="service_fee"/>
+					<Label isDynamic="true" text="Balance" classNames="fcls_columnlabel_rev_cell,fcls_align_hstretch" visible="true" gridItemLocation="1,1,3,1" fieldTable="formonly" identifier="lb64"/>
+					<Label isDynamic="true" text="Current" classNames="fcls_fieldlabel" visible="true" gridItemLocation="0,2,1,1" fieldTable="formonly" identifier="lb46"/>
+					<TextField dataType="Decimal,,,2,16" classNames="fcls_data_widget,fcls_align_left,fcls_length_15qch" preferredSize="14qch,1qch" toolTip=" Charge fee if customer current balance exceeds this amount" gridItemLocation="1,2,1,1" fieldTable="formonly" comment=" Charge fee if customer current balance exceeds this amount" identifier="current_amt"/>
+					<Label isDynamic="true" text="%" classNames="fcls_fieldlabel" visible="true" gridItemLocation="2,2,1,1" fieldTable="" identifier="lb93"/>
+					<TextField dataType="Decimal,,,2,16" classNames="fcls_data_widget,fcls_align_left,fcls_length_10qch" preferredSize="7qch,1qch" toolTip=" Charge percentage if customer current balance exceeds this amount" gridItemLocation="3,2,1,1" fieldTable="formonly" comment=" Charge percentage if customer current balance exceeds this amount" identifier="current_per"/>
+					<Label isDynamic="true" text="1-30 Days" classNames="fcls_fieldlabel" visible="true" gridItemLocation="0,3,1,1" fieldTable="formonly" identifier="lb44"/>
+					<TextField dataType="Decimal,,,2,16" classNames="fcls_data_widget,fcls_align_left,fcls_length_15qch" preferredSize="14qch,1qch" toolTip=" Charge fee if customer 1 -30 Days balance exceeds this amount" gridItemLocation="1,3,1,1" fieldTable="formonly" comment=" Charge fee if customer 1 -30 Days balance exceeds this amount" identifier="over1_amt"/>
+					<Label isDynamic="true" text="%" classNames="fcls_fieldlabel" visible="true" gridItemLocation="2,3,1,1" fieldTable="" identifier="lb94"/>
+					<TextField dataType="Decimal,,,2,16" classNames="fcls_data_widget,fcls_align_left,fcls_length_10qch" preferredSize="7qch,1qch" toolTip=" Charge percentage if customer 1 -30 Days balance exceeds this amount" gridItemLocation="3,3,1,1" fieldTable="formonly" comment=" Charge percentage if customer 1 -30 Days balance exceeds this amount" identifier="over1_per"/>
+					<Label isDynamic="true" text="31-60 Days" classNames="fcls_fieldlabel" visible="true" gridItemLocation="0,4,1,1" fieldTable="" identifier="lb89"/>
+					<TextField dataType="Decimal,,,2,16" classNames="fcls_data_widget,fcls_align_left,fcls_length_15qch" preferredSize="14qch,1qch" toolTip=" Charge fee if customer 31-60 Days balance exceeds this amount" gridItemLocation="1,4,1,1" fieldTable="formonly" comment=" Charge fee if customer 31-60 Days balance exceeds this amount" identifier="over30_amt"/>
+					<Label isDynamic="true" text="%" classNames="fcls_fieldlabel" visible="true" gridItemLocation="2,4,1,1" fieldTable="" identifier="lb95"/>
+					<TextField dataType="Decimal,,,2,16" classNames="fcls_data_widget,fcls_align_left,fcls_length_10qch" preferredSize="7qch,1qch" toolTip=" Charge percentage if customer 31-60 Days balance exceeds this amount" gridItemLocation="3,4,1,1" fieldTable="formonly" comment=" Charge percentage if customer 31-60 Days balance exceeds this amount" identifier="over30_per"/>
+					<Label isDynamic="true" text="61-90 Days" classNames="fcls_fieldlabel" visible="true" gridItemLocation="0,5,1,1" fieldTable="" identifier="lb113"/>
+					<TextField dataType="Decimal,,,2,16" classNames="fcls_data_widget,fcls_align_left,fcls_length_15qch" preferredSize="14qch,1qch" toolTip=" Charge fee if customer 61-90 Days balance exceeds this amount" gridItemLocation="1,5,1,1" fieldTable="formonly" comment=" Charge fee if customer 61-90 Days balance exceeds this amount" identifier="over60_amt"/>
+					<Label isDynamic="true" text="%" classNames="fcls_fieldlabel" visible="true" gridItemLocation="2,5,1,1" fieldTable="" identifier="lb114"/>
+					<TextField dataType="Decimal,,,2,16" classNames="fcls_data_widget,fcls_align_left,fcls_length_10qch" preferredSize="7qch,1qch" toolTip=" Charge percentage if customer 61-90 Days balance exceeds this amount" gridItemLocation="3,5,1,1" fieldTable="formonly" comment=" Charge percentage if customer 61-90 Days balance exceeds this amount" identifier="over60_per"/>
+					<Label isDynamic="true" text="90+ Days" classNames="fcls_fieldlabel" visible="true" gridItemLocation="0,6,1,1" fieldTable="" identifier="lb154"/>
+					<TextField dataType="Decimal,,,2,16" classNames="fcls_data_widget,fcls_align_left,fcls_length_15qch" preferredSize="14qch,1qch" toolTip=" Charge fee if customer 90 Plus Days balance exceeds this amount" gridItemLocation="1,6,1,1" fieldTable="formonly" comment=" Charge fee if customer 90 Plus Days balance exceeds this amount" identifier="over90_amt"/>
+					<Label isDynamic="true" text="%" classNames="fcls_fieldlabel" visible="true" gridItemLocation="2,6,1,1" fieldTable="" identifier="lb153"/>
+					<TextField dataType="Decimal,,,2,16" classNames="fcls_data_widget,fcls_align_left,fcls_length_10qch" preferredSize="7qch,1qch" toolTip=" Charge percentage if customer 90 Plus Days balance exceeds this amount" gridItemLocation="3,6,1,1" fieldTable="formonly" comment=" Charge percentage if customer 90 Plus Days balance exceeds this amount" identifier="over90_per"/>
+				</GridPanel>
+			</GroupBox>
+			<GridPanel classNames="fcls_detail_cnt" visible="true" verticalAlignment="Top" gridItemLocation="0,3,1,1" fieldTable="formonly" identifier="cntDetail3">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="50%"/>
+					<GridColumnDefinition gridLengthValue="50%"/>
+				</GridPanel.gridColumnDefinitions>
+				<GroupBox title="Transaction Details" classNames="fcls_detail_gb_cnt" visible="true" verticalAlignment="Stretch" horizontalAlignment="Stretch" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="cntDetail3GroupBoxLeft">
+					<GridPanel classNames="fcls_detail_gb_cnt_sub,fcls_detail_cnt_sub,fcls_data_cnt,fcls_align_left" visible="true" verticalAlignment="Top" horizontalAlignment="Left" fieldTable="formonly" identifier="cntDetail3GBSubGpLeft">
+						<GridPanel.gridRowDefinitions>
+							<GridRowDefinition gridLengthValue=""/>
+							<GridRowDefinition gridLengthValue=""/>
+							<GridRowDefinition gridLengthValue=""/>
+							<GridRowDefinition gridLengthValue=""/>
+						</GridPanel.gridRowDefinitions>
+						<GridPanel.gridColumnDefinitions>
+							<GridColumnDefinition gridLengthValue="" gridMinLength="10rem"/>
+							<GridColumnDefinition gridLengthValue=""/>
+						</GridPanel.gridColumnDefinitions>
+						<Label isDynamic="true" text="Date" classNames="fcls_fieldlabel" visible="true" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="lb47x"/>
+						<Calendar dataType="Date,,,," classNames="fcls_data_widget,fcls_align_left,fcls_length_10qch" preferredSize="11qch,1qch" toolTip=" The transaction date to appear on the interest charge entry" gridItemLocation="1,0,1,1" fieldTable="invoicehead" comment=" The transaction date to appear on the interest charge entry" identifier="inv_date"/>
+						<Label isDynamic="true" text="Description" classNames="fcls_fieldlabel" visible="true" gridItemLocation="0,1,1,1" fieldTable="formonly" identifier="lb46x"/>
+						<TextField dataType="Char,,,,40" classNames="fcls_data_widget,fcls_align_left,fcls_length_30qch" preferredSize="31qch,1qch" toolTip=" Description to appear on invoice" gridItemLocation="1,1,1,1" fieldTable="invoicedetl" comment=" Description to appear on invoice" identifier="line_text"/>
+						<Label isDynamic="true" text="Comments" classNames="fcls_fieldlabel" visible="true" gridItemLocation="0,2,1,1" fieldTable="formonly" identifier="lb44x"/>
+						<TextField dataType="Char,,,,30" classNames="fcls_data_widget,fcls_align_left,fcls_length_30qch" preferredSize="25qch,1qch" toolTip=" Comments on transaction" gridItemLocation="1,2,1,1" fieldTable="invoicehead" comment=" Comments on transaction" identifier="com1_text"/>
+						<TextField dataType="Char,,,,30" classNames="fcls_data_widget,fcls_align_left,fcls_length_30qch" preferredSize="25qch,1qch" toolTip=" Comments on transaction" gridItemLocation="1,3,1,1" fieldTable="invoicehead" comment=" Comments on transaction" identifier="com2_text"/>
+					</GridPanel>
+				</GroupBox>
+				<GroupBox title="GL Integration" classNames="fcls_detail_gb_cnt" visible="true" verticalAlignment="Stretch" horizontalAlignment="Stretch" gridItemLocation="1,0,1,1" fieldTable="" identifier="cntDetail3GroupBoxRight">
+					<GridPanel classNames="fcls_detail_gb_cnt_sub,fcls_detail_cnt_sub,fcls_data_cnt,fcls_align_left" visible="true" verticalAlignment="Top" horizontalAlignment="Left" fieldTable="" identifier="cntDetail3GBSubGpRight">
+						<GridPanel.gridRowDefinitions>
+							<GridRowDefinition gridLengthValue=""/>
+							<GridRowDefinition gridLengthValue=""/>
+							<GridRowDefinition gridLengthValue=""/>
+						</GridPanel.gridRowDefinitions>
+						<GridPanel.gridColumnDefinitions>
+							<GridColumnDefinition gridLengthValue="" gridMinLength="10rem"/>
+							<GridColumnDefinition gridLengthValue=""/>
+							<GridColumnDefinition gridLengthValue=""/>
+						</GridPanel.gridColumnDefinitions>
+						<Label isDynamic="true" text="Fiscal Year" classNames="fcls_fieldlabel" visible="true" gridItemLocation="0,0,1,1" fieldTable="" identifier="lb167x"/>
+						<ComboBox dataType="SmallInt,,,," classNames="fcls_data_widget,fcls_align_left,fcls_length_10qch" preferredSize="5qch,1qch" toolTip=" The fiscal year of this transaction" gridItemLocation="1,0,1,1" fieldTable="invoicehead" comment=" The fiscal year of this transaction" identifier="year_num"/>
+						<Label isDynamic="true" text="Period" classNames="fcls_fieldlabel" visible="true" gridItemLocation="0,1,1,1" fieldTable="" identifier="lb168x"/>
+						<ComboBox dataType="SmallInt,,,," classNames="fcls_data_widget,fcls_align_left,fcls_length_10qch" preferredSize="4qch,1qch" toolTip=" The fiscal period of this transaction" gridItemLocation="1,1,1,1" fieldTable="invoicehead" comment=" The fiscal period of this transaction" identifier="period_num"/>
+						<Label isDynamic="true" text="Account" classNames="fcls_fieldlabel" visible="true" gridItemLocation="0,2,1,1" fieldTable="" identifier="lb169x"/>
+						<ComboBox toCase="Up" dataType="Char,,,,18" classNames="fcls_data_widget,fcls_align_left,fcls_length_20qch" preferredSize="19qch,1qch" toolTip=" Service fee income G/L Account (W)" gridItemLocation="1,2,1,1" fieldTable="arparmext" comment=" Service fee income G/L Account (W)" identifier="int_acct_code"/>
+					</GridPanel>
+				</GroupBox>
+			</GridPanel>
+			<GroupBox title="Selection Criteria" classNames="fcls_detail_gb_cnt" visible="true" verticalAlignment="Stretch" horizontalAlignment="Stretch" gridItemLocation="0,4,1,1" fieldTable="formonly" identifier="cntDetail4GroupBox">
+				<GridPanel classNames="fcls_detail_gb_cnt_sub,fcls_detail_cnt_sub,fcls_data_cnt,fcls_align_left" visible="true" verticalAlignment="Top" horizontalAlignment="Left" fieldTable="formonly" identifier="cntDetail2GBSubGpLeft">
+					<GridPanel.gridRowDefinitions>
+						<GridRowDefinition gridLengthValue=""/>
+						<GridRowDefinition gridLengthValue=""/>
+					</GridPanel.gridRowDefinitions>
+					<GridPanel.gridColumnDefinitions>
+						<GridColumnDefinition gridLengthValue="" gridMinLength="10rem"/>
+						<GridColumnDefinition gridLengthValue=""/>
+						<GridColumnDefinition gridLengthValue=""/>
+					</GridPanel.gridColumnDefinitions>
+					<Label isDynamic="true" text="Customer Type" classNames="fcls_fieldlabel" visible="true" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="lb47y"/>
+					<ComboBox toCase="Up" dataType="Char,,,,3" classNames="fcls_data_widget,fcls_align_left,fcls_length_20qch" preferredSize="5qch,1qch" toolTip=" The customer type code selection criteria" gridItemLocation="1,0,1,1" fieldTable="customer" comment=" The customer type code selection criteria" identifier="type_code"/>
+					<Label isDynamic="true" text="Customer Code" classNames="fcls_fieldlabel" visible="true" gridItemLocation="0,1,1,1" fieldTable="formonly" identifier="lb46y"/>
+					<ComboBox toCase="Up" dataType="Char,,,,8" classNames="fcls_data_widget,fcls_align_left,fcls_length_20qch" preferredSize="9qch,1qch" toolTip=" The customer code selection criteria" gridItemLocation="1,1,1,1" fieldTable="customer" comment=" The customer code selection criteria" identifier="cust_code"/>
+					<TextField dataType="Char,,,,30" classNames="fcls_data_widget,fcls_align_left,fcls_length_40qch" preferredSize="37qch,1qch" toolTip=" The customers name selection criteria" gridItemLocation="2,1,1,1" fieldTable="customer" comment=" The customers name selection criteria" identifier="name_text"/>
+				</GridPanel>
+			</GroupBox>
+			<GridPanel classNames="fcls_statusbar_cnt" visible="true" verticalAlignment="Top" gridItemLocation="0,5,1,1" fieldTable="formonly" identifier="cntStatusBar">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="100%"/>
+				</GridPanel.gridColumnDefinitions>
+				<Label isDynamic="true" text="" classNames="fcls_sblabel" visible="true" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="lbInfo1"/>
+				<Label isDynamic="true" text="" classNames="fcls_sblabel" visible="true" gridItemLocation="0,1,1,1" fieldTable="formonly" identifier="lbInfo2"/>
+			</GridPanel>
+		</GridPanel>
+	</form.rootContainer>
+	<form.screenRecords>
+		<ScreenRecord identifier="arparmext" fields="last_int_date,int_acct_code"/>
+		<ScreenRecord identifier="arparms" fields="cust_age_date"/>
+		<ScreenRecord identifier="customer" fields="type_code,cust_code,name_text"/>
+		<ScreenRecord identifier="formonly" fields="age_date,service_fee,current_amt,current_per,over1_amt,over1_per,over30_amt,over30_per,over60_amt,over60_per,over90_amt,over90_per"/>
+		<ScreenRecord identifier="invoicedetl" fields="line_text"/>
+		<ScreenRecord identifier="invoicehead" fields="inv_date,com1_text,com2_text,year_num,period_num"/>
+	</form.screenRecords>
+</form>
+

@@ -1,0 +1,51 @@
+{
+###########################################################################
+# This program is free software; you can redistribute it and/or modify it
+# under the terms of the GNU General Public License as published by the
+# Free Software Foundation; either version 2 of the License, or (at your
+# option) any later version.
+#
+# This program is distributed in the hope that it will be useful, but
+# WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+# General Public License for more details.
+#
+# You should have received a copy of the GNU General Public License along
+# with this program; if not, write to the Free Software Foundation, Inc.,
+# 59 Temple Place, Suite 330, Boston, MA 02111-1307 USA
+#
+###########################################################################
+
+	 $Id: M135.per,v 1.2 2003/11/19 22:22:59 afalout Exp $
+}
+
+
+database kandoodb
+
+screen
+{
+              Material Requirements Plan Generation          M135  
+\g------------------------------------------------------------------\g
+
+ MRP Number    [f000    ]
+ MPS Number    [f002           ]
+ Description   [f001                          ]
+
+ Include Scrap and Yield %                              [b]
+
+}
+
+tables
+mrp
+
+attributes
+f000 = mrp.plan_code, upshift,
+comments = " A code used to uniquely identify a plan";
+f001 = mrp.desc_text, comments = " A description for this plan";
+f002 = formonly.schedule_code type char, upshift,
+comments = " The code of the schedule to generate the plan from (W)";
+b = formonly.scrap_ind type char, upshift, include = ("S","Y","B","N"),
+comments = " S = Scrap, Y = Yield, B = Both, N = None";
+
+instructions
+delimiters "  "

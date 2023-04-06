@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<fglBuildTarget xmlns="http://namespaces.querix.com/lyciaide/target" name="lib_tool_R_PU" type="fgl-library">
+
+  <sources type="fgl">
+    <file location="4gl/common/glob_GLOBALS_constant.4gl"/>
+    <file location="4gl/lib_tool/lib_too_r_pu_table.4gl"/>
+    <file location="4gl/pu/R_PU_GLOBALS.4gl"/>
+    <file location="4gl/pu/lib_tool_r_pu_init.4gl"/>
+    <file location="4gl/common/glob_GLOBALS.4gl"/>
+    <file location="4gl/common/glob_GLOBALS_userDataTypes.4gl"/>
+  </sources>
+
+</fglBuildTarget>

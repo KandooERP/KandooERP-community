@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<fglBuildTarget xmlns="http://namespaces.querix.com/lyciaide/target" name="AE0" type="fgl-program">
+
+  <libraries>
+    <library name="lib_report" dynamic="false" location=""/>
+    <library name="lib_report_ar" dynamic="false" location=""/>
+    <library name="lib_tool_A_AR_db" dynamic="false" location=""/>
+    <library name="lib_tool_A_AR_new" dynamic="false" location=""/>
+    <library name="lib_tool_G_GL_new" dynamic="false" location=""/>
+    <library name="lib_tool_common" dynamic="false" location=""/>
+    <library name="lib_tool_db_common" dynamic="false" location=""/>
+  </libraries>
+
+  <sources type="fgl">
+    <file location="4gl/ar/AE2.4gl"/>
+    <file location="4gl/ar/AE4.4gl"/>
+    <file location="4gl/ar/A_AR_GLOBALS.4gl"/>
+    <file location="4gl/ar/AED_GLOBALS.4gl"/>
+    <file location="4gl/ar/AE6.4gl"/>
+    <file location="4gl/ar/AEE_GLOBALS.4gl"/>
+    <file location="4gl/common/seg_con.4gl"/>
+    <file location="4gl/common/time_frame.4gl"/>
+    <file location="4gl/common/glob_GLOBALS.4gl"/>
+    <file location="4gl/ar/AE8.4gl"/>
+    <file location="4gl/ar/AEC.4gl"/>
+    <file location="4gl/ar/AEE.4gl"/>
+    <file location="4gl/common/conv_curr.4gl"/>
+    <file location="4gl/common/vperfunc.4gl"/>
+    <file location="4gl/ar/AE1.4gl"/>
+    <file location="4gl/ar/AE3.4gl"/>
+    <file location="4gl/ar/AE7.4gl"/>
+    <file location="4gl/common/glob_GLOBALS_report.4gl"/>
+    <file location="4gl/ar/AED.4gl"/>
+    <file location="4gl/ar/AE9.4gl"/>
+    <file location="4gl/ar/AEF.4gl"/>
+    <file location="4gl/ar/AE0.4gl"/>
+  </sources>
+
+  <sources type="form">
+    <file location="per/utility/ENG/U156.fm2"/>
+    <file location="per/utility/ENG/U526.fm2"/>
+    <file location="per/utility/ENG/U137.fm2"/>
+    <file location="per/utility/ENG/U505.fm2"/>
+    <file location="per/utility/ENG/U162.fm2"/>
+    <file location="per/ar/ENG/A105.fm2"/>
+    <file location="per/ar/ENG/A177.fm2"/>
+    <file location="per/ar/ENG/AE00.fm2"/>
+  </sources>
+
+  <mediaFiles>
+    <file client="true" location="AE0.qxtheme" type="gui-theme-file"/>
+    <file client="true" location="AE0.css" type="other"/>
+  </mediaFiles>
+
+  <buildConfiguration name="development">
+    <additions>
+    </additions>
+    <exclusions>
+    </exclusions>
+  </buildConfiguration>
+
+</fglBuildTarget>

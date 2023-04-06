@@ -1,0 +1,69 @@
+{
+###########################################################################
+# This program is free software; you can redistribute it and/or modify it
+# under the terms of the GNU General Public License as published by the
+# Free Software Foundation; either version 2 of the License, or (at your
+# option) any later version.
+#
+# This program is distributed in the hope that it will be useful, but
+# WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+# General Public License for more details.
+#
+# You should have received a copy of the GNU General Public License along
+# with this program; if not, write to the Free Software Foundation, Inc.,
+# 59 Temple Place, Suite 330, Boston, MA 02111-1307 USA
+#
+###########################################################################
+
+	 $Id: M119.per,v 1.1 2003/05/20 23:53:06 tpavlek Exp $
+}
+
+
+database kandoodb
+
+screen
+{
+                           Work Centre[f000       ]                    M119
+\g----------------------------------------------------------------------------\g
+ Work Centre   Description                   Process    Quantity Time  UOM
+    Code                                      Type               Unit
+\g----------------------------------------------------------------------------\g
+ [f001      ] [f002                          ] [a] [f003        ] [b] [f004]
+ [f001      ] [f002                          ] [a] [f003        ] [b] [f004]
+ [f001      ] [f002                          ] [a] [f003        ] [b] [f004]
+ [f001      ] [f002                          ] [a] [f003        ] [b] [f004]
+ [f001      ] [f002                          ] [a] [f003        ] [b] [f004]
+ [f001      ] [f002                          ] [a] [f003        ] [b] [f004]
+ [f001      ] [f002                          ] [a] [f003        ] [b] [f004]
+ [f001      ] [f002                          ] [a] [f003        ] [b] [f004]
+ [f001      ] [f002                          ] [a] [f003        ] [b] [f004]
+ [f001      ] [f002                          ] [a] [f003        ] [b] [f004]
+}
+
+tables
+workcentre
+
+attributes
+f000 = formonly.heading_text type char;
+f001 = workcentre.work_centre_code, upshift,
+comments = " The unique code for a work centre";
+f002 = workcentre.desc_text,upshift, comments = " Description of a work centre";
+a    = workcentre.processing_ind, upshift,
+comments = " Q = Quantity per time unit, T = Time quantity per unit";
+f003 = workcentre.time_qty,
+comments = " Processing quantity for a work centre";
+b    = workcentre.time_unit_ind, upshift,
+comments = " D = Days, H = Hours, M = Minutes";
+f004 = workcentre.unit_uom_code, upshift,
+comments = " The processing unit of measure at a work centre";
+
+instructions
+delimiters "  "
+
+screen record sr_centre[10] (work_centre_code,
+                             desc_text,
+                             processing_ind,
+                             time_qty,
+                             time_unit_ind,
+                             unit_uom_code)

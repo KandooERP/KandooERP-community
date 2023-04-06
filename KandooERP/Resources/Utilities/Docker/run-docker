@@ -1,0 +1,1 @@
+#docker run -td --name kandoodb --privileged -v ~/.kandoodb:/opt/ibm/data -p 9088:9088 -e SIZE=custom -e LICENSE=accept ibmcom/informix-developer-database:latest

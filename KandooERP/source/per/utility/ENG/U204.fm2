@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form xmlns="http://namespaces.querix.com/2015/fglForms">
+	<form.rootContainer>
+		<GridPanel classNames="fcls_rootContainer" verticalAlignment="Stretch" horizontalAlignment="Stretch" fieldTable="" identifier="rootContainer">
+			<GridPanel.gridRowDefinitions>
+				<GridRowDefinition gridLengthValue=""/>
+				<GridRowDefinition gridLengthValue="100%"/>
+				<GridRowDefinition gridLengthValue=""/>
+			</GridPanel.gridRowDefinitions>
+			<GridPanel.gridColumnDefinitions>
+				<GridColumnDefinition gridLengthValue="100%"/>
+			</GridPanel.gridColumnDefinitions>
+			<GridPanel classNames="fcls_title_cnt" visible="true" verticalAlignment="Top" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="cntTitle">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="100%"/>
+					<GridColumnDefinition gridLengthValue=""/>
+				</GridPanel.gridColumnDefinitions>
+				<Label isDynamic="true" text="System Locking" classNames="fcls_title_lb" visible="true" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="header_text"/>
+				<Label isDynamic="true" text="U204" classNames="fcls_title_lb" visible="true" gridItemLocation="1,0,1,1" fieldTable="" identifier="lbFormName"/>
+			</GridPanel>
+			<Table rowCount="15" preferredSize="41qch,15qch" gridItemLocation="0,1,1,1" fieldTable="" identifier="sr_syslocks">
+				<TableColumn fieldTable="" identifier="scroll_flag">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="2rem" gridMaxLength="2rem" gridMinLength="2rem"/>
+					</TableColumn.columnLength>
+					<CheckBox dataType="Char,,,," fieldTable="formonly" identifier="scroll_flag">
+						<CheckBox.checkedValue>
+							<StringLiteral stringValue="*"/>
+						</CheckBox.checkedValue>
+						<CheckBox.uncheckedValue>
+							<NullLiteral/>
+						</CheckBox.uncheckedValue>
+					</CheckBox>
+				</TableColumn>
+				<TableColumn text="Module" fieldTable="" identifier="module_code">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="10rem" gridMaxLength="10rem" gridMinLength="10rem"/>
+					</TableColumn.columnLength>
+					<TextField toCase="Up" dataType="Char,,,,2" toolTip="Modules: A/E/F/G/H/I/J/K/L/M/N/P/Q/R/S/U/W" fieldTable="syslocks" comment="Modules: A/E/F/G/H/I/J/K/L/M/N/P/Q/R/S/U/W" identifier="module_code">
+						<TextField.includes>
+							<ValueInclude>
+								<ValueInclude.value>
+									<StringLiteral stringValue="A"/>
+								</ValueInclude.value>
+							</ValueInclude>
+							<ValueInclude>
+								<ValueInclude.value>
+									<StringLiteral stringValue="E"/>
+								</ValueInclude.value>
+							</ValueInclude>
+							<ValueInclude>
+								<ValueInclude.value>
+									<StringLiteral stringValue="F"/>
+								</ValueInclude.value>
+							</ValueInclude>
+							<ValueInclude>
+								<ValueInclude.value>
+									<StringLiteral stringValue="G"/>
+								</ValueInclude.value>
+							</ValueInclude>
+							<ValueInclude>
+								<ValueInclude.value>
+									<StringLiteral stringValue="H"/>
+								</ValueInclude.value>
+							</ValueInclude>
+							<ValueInclude>
+								<ValueInclude.value>
+									<StringLiteral stringValue="I"/>
+								</ValueInclude.value>
+							</ValueInclude>
+							<ValueInclude>
+								<ValueInclude.value>
+									<StringLiteral stringValue="J"/>
+								</ValueInclude.value>
+							</ValueInclude>
+							<ValueInclude>
+								<ValueInclude.value>
+									<StringLiteral stringValue="K"/>
+								</ValueInclude.value>
+							</ValueInclude>
+							<ValueInclude>
+								<ValueInclude.value>
+									<StringLiteral stringValue="L"/>
+								</ValueInclude.value>
+							</ValueInclude>
+							<ValueInclude>
+								<ValueInclude.value>
+									<StringLiteral stringValue="M"/>
+								</ValueInclude.value>
+							</ValueInclude>
+							<ValueInclude>
+								<ValueInclude.value>
+									<StringLiteral stringValue="N"/>
+								</ValueInclude.value>
+							</ValueInclude>
+							<ValueInclude>
+								<ValueInclude.value>
+									<StringLiteral stringValue="P"/>
+								</ValueInclude.value>
+							</ValueInclude>
+							<ValueInclude>
+								<ValueInclude.value>
+									<StringLiteral stringValue="Q"/>
+								</ValueInclude.value>
+							</ValueInclude>
+							<ValueInclude>
+								<ValueInclude.value>
+									<StringLiteral stringValue="R"/>
+								</ValueInclude.value>
+							</ValueInclude>
+							<ValueInclude>
+								<ValueInclude.value>
+									<StringLiteral stringValue="S"/>
+								</ValueInclude.value>
+							</ValueInclude>
+							<ValueInclude>
+								<ValueInclude.value>
+									<StringLiteral stringValue="U"/>
+								</ValueInclude.value>
+							</ValueInclude>
+							<ValueInclude>
+								<ValueInclude.value>
+									<StringLiteral stringValue="W"/>
+								</ValueInclude.value>
+							</ValueInclude>
+							<ValueInclude>
+								<ValueInclude.value>
+									<StringLiteral stringValue=""/>
+								</ValueInclude.value>
+							</ValueInclude>
+						</TextField.includes>
+					</TextField>
+				</TableColumn>
+				<TableColumn text="Program" fieldTable="" identifier="program_name_text">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="30rem" gridMaxLength="30rem" gridMinLength="30rem"/>
+					</TableColumn.columnLength>
+					<TextField dataType="Char,,,,20" toolTip=" Program name with no extension" fieldTable="syslocks" comment=" Program name with no extension" identifier="program_name_text"/>
+				</TableColumn>
+				<TableColumn text="Retrys" fieldTable="" identifier="retry_num">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="10rem" gridMaxLength="10rem" gridMinLength="10rem"/>
+					</TableColumn.columnLength>
+					<TextField dataType="SmallInt,,,," toolTip=" Number of times to retry after lock" fieldTable="syslocks" comment=" Number of times to retry after lock" identifier="retry_num"/>
+				</TableColumn>
+			</Table>
+			<GridPanel classNames="fcls_statusbar_cnt" visible="true" verticalAlignment="Top" gridItemLocation="0,2,1,1" fieldTable="formonly" identifier="cntStatusBar">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="100%"/>
+				</GridPanel.gridColumnDefinitions>
+				<Label isDynamic="true" text="" classNames="fcls_sblabel" visible="true" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="lbInfo1"/>
+				<Label isDynamic="true" text="" classNames="fcls_sblabel" visible="true" gridItemLocation="0,1,1,1" fieldTable="formonly" identifier="lbInfo2"/>
+			</GridPanel>
+		</GridPanel>
+	</form.rootContainer>
+	<form.screenRecords>
+		<ScreenRecord identifier="sr_syslocks" fields="scroll_flag,module_code,program_name_text,retry_num" elements="15"/>
+		<ScreenRecord identifier="formonly" fields="scroll_flag"/>
+		<ScreenRecord identifier="syslocks" fields="module_code,program_name_text,retry_num"/>
+	</form.screenRecords>
+</form>
+

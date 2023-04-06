@@ -1,0 +1,85 @@
+{
+###########################################################################
+# This program is free software; you can redistribute it and/or modify it
+# under the terms of the GNU General Public License as published by the
+# Free Software Foundation; either version 2 of the License, or (at your
+# option) any later version.
+#
+# This program is distributed in the hope that it will be useful, but
+# WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+# General Public License for more details.
+#
+# You should have received a copy of the GNU General Public License along
+# with this program; if not, write to the Free Software Foundation, Inc.,
+# 59 Temple Place, Suite 330, Boston, MA 02111-1307 USA
+#
+###########################################################################
+
+	 $Id: M175.per,v 1.2 2003/11/19 22:23:01 afalout Exp $
+}
+
+
+database kandoodb
+
+screen
+{
+                       Shop Order By-Product Receipt                   M175
+\g----------------------------------------------------------------------------\g
+ Shop Order Number   [f001      ]         Suffix Number   [f002 ]
+ Product             [f003           ]   [f004                          ]
+\g----------------------------------------------------------------------------\g
+   By-Product          Required Qty   Receipted to Date  Rejected to Date
+           Qty to Receipt     Qty to Reject         Warehouse    UOM
+\g----------------------------------------------------------------------------\g
+  [f005          ]    [f006        ]    [f007        ]    [f008        ]
+  [a]       [f009        ]    [f010        ]          [b  ]     [f011]  [c]
+  [f005          ]    [f006        ]    [f007        ]    [f008        ]
+  [a]       [f009        ]    [f010        ]          [b  ]     [f011]  [c]
+  [f005          ]    [f006        ]    [f007        ]    [f008        ]
+  [a]       [f009        ]    [f010        ]          [b  ]     [f011]  [c]
+  [f005          ]    [f006        ]    [f007        ]    [f008        ]
+  [a]       [f009        ]    [f010        ]          [b  ]     [f011]  [c]
+  [f005          ]    [f006        ]    [f007        ]    [f008        ]
+  [a]       [f009        ]    [f010        ]          [b  ]     [f011]  [c]
+
+}
+
+tables
+shopordhead
+product
+prodledg
+shoporddetl
+
+attributes
+f001 = shopordhead.shop_order_num;
+f002 = shopordhead.suffix_num;
+f003 = shopordhead.part_code;
+f004 = product.desc_text;
+f005 = shoporddetl.part_code, noentry;
+f006 = shoporddetl.required_qty, noentry;
+f007 = shoporddetl.receipted_qty, noentry;
+f008 = shoporddetl.rejected_qty, noentry;
+a    = formonly.remain_qty type float, noentry, invisible;
+f009 = formonly.receipt_qty type float,
+comments = " Quantity of the by-product to be receipted";
+f010 = formonly.reject_qty type float,
+comments = " Quantity of the by-product to be rejected";
+b    = shoporddetl.issue_ware_code, upshift,
+comments = " Warehouse at which the by-product is to be receipted into";
+f011 = shoporddetl.uom_code, noentry;
+c    = shoporddetl.sequence_num, noentry, invisible;
+
+instructions
+delimiters "  "
+
+screen record sr_bpreceipt[5] (shoporddetl.part_code,
+                               required_qty,
+                               receipted_qty,
+                               rejected_qty,
+                               remain_qty,
+                               receipt_qty,
+                               reject_qty,
+                               issue_ware_code,
+                               uom_code,
+                               sequence_num)

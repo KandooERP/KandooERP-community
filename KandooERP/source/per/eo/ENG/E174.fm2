@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form xmlns="http://namespaces.querix.com/2015/fglForms">
+	<form.rootContainer>
+		<GridPanel classNames="fcls_rootContainer" verticalAlignment="Stretch" horizontalAlignment="Stretch" fieldTable="" identifier="rootContainer">
+			<GridPanel.gridRowDefinitions>
+				<GridRowDefinition gridLengthValue=""/>
+				<GridRowDefinition gridLengthValue=""/>
+				<GridRowDefinition gridLengthValue="100%"/>
+				<GridRowDefinition gridLengthValue=""/>
+				<GridRowDefinition gridLengthValue=""/>
+			</GridPanel.gridRowDefinitions>
+			<GridPanel.gridColumnDefinitions>
+				<GridColumnDefinition gridLengthValue="100%"/>
+			</GridPanel.gridColumnDefinitions>
+			<GridPanel classNames="fcls_title_cnt" visible="true" verticalAlignment="Top" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="cntTitle">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="100%"/>
+					<GridColumnDefinition gridLengthValue=""/>
+				</GridPanel.gridColumnDefinitions>
+				<Label isDynamic="true" text="Product Serial Codes" classNames="fcls_title_lb" visible="true" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="header_text"/>
+				<Label isDynamic="true" text="E174" classNames="fcls_title_lb" visible="true" gridItemLocation="1,0,1,1" fieldTable="" identifier="lbFormName"/>
+			</GridPanel>
+			<GridPanel classNames="fcls_detail_cnt,fcls_data_cnt,fcls_align_left" visible="true" verticalAlignment="Top" horizontalAlignment="Left" gridItemLocation="0,1,1,1" fieldTable="formonly" identifier="cntDetail1">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="" gridMinLength="10rem"/>
+					<GridColumnDefinition gridLengthValue=""/>
+				</GridPanel.gridColumnDefinitions>
+				<Label isDynamic="true" text="Customer" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="lb57"/>
+				<ComboBox toCase="Up" noEntry="true" dataType="Char,,,,8" preferredSize="9qch,1qch" fieldTable="orderhead" identifier="cust_code" gridItemLocation="1,0,1,1" classNames="fcls_data_widget,fcls_align_left,fcls_length_30qch"/>
+				<TextField noEntry="true" dataType="Char,,,,30" preferredSize="29qch,1qch" fieldTable="customer" identifier="name_text" gridItemLocation="1,1,1,1" classNames="fcls_data_widget,fcls_align_left,fcls_length_30qch"/>
+				<Label isDynamic="true" text="Pick Number" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,2,1,1" fieldTable="" identifier="lb73"/>
+				<TextField noEntry="true" dataType="Integer,,,," preferredSize="9qch,1qch" fieldTable="pickhead" identifier="pick_num" gridItemLocation="1,2,1,1" classNames="fcls_data_widget,fcls_align_left,fcls_length_10qch"/>
+			</GridPanel>
+			<Table rowCount="5" preferredSize="73qch,5qch" fieldTable="" identifier="sr_serial_prod" gridItemLocation="0,2,1,1">
+				<TableColumn fieldTable="" identifier="tc_scroll_flag">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="2rem" gridMinLength="2rem" gridMaxLength="2rem"/>
+					</TableColumn.columnLength>
+					<CheckBox dataType="Char,,,," fieldTable="formonly" identifier="scroll_flag">
+						<CheckBox.checkedValue>
+							<StringLiteral stringValue="*"/>
+						</CheckBox.checkedValue>
+						<CheckBox.uncheckedValue>
+							<NullLiteral/>
+						</CheckBox.uncheckedValue>
+					</CheckBox>
+				</TableColumn>
+				<TableColumn fieldTable="" identifier="tc_order_num" text="Order No.">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="10rem" gridMaxLength="10rem" gridMinLength="10rem"/>
+					</TableColumn.columnLength>
+					<TextField noEntry="true" dataType="Integer,,,," fieldTable="orderhead" identifier="order_num"/>
+				</TableColumn>
+				<TableColumn fieldTable="" identifier="tc_order_date" text="Date">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="10rem" gridMaxLength="10rem" gridMinLength="10rem"/>
+					</TableColumn.columnLength>
+					<Calendar noEntry="true" dataType="Date,,,," fieldTable="orderhead" identifier="order_date"/>
+				</TableColumn>
+				<TableColumn fieldTable="" identifier="tc_line_num" text="Line">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="10rem" gridMaxLength="10rem" gridMinLength="10rem"/>
+					</TableColumn.columnLength>
+					<TextField noEntry="true" dataType="SmallInt,,,," fieldTable="orderdetl" identifier="line_num"/>
+				</TableColumn>
+				<TableColumn fieldTable="" identifier="tc_part_code" text="Product Code">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="10rem" gridMaxLength="10rem" gridMinLength="10rem"/>
+					</TableColumn.columnLength>
+					<TextField noEntry="true" dataType="Char,,,,15" fieldTable="product" identifier="part_code"/>
+				</TableColumn>
+				<TableColumn fieldTable="" identifier="tc_picked_qty" text="Picked">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="10rem" gridMaxLength="10rem" gridMinLength="10rem"/>
+					</TableColumn.columnLength>
+					<TextField noEntry="true" dataType="Float,,,," fieldTable="orderdetl" identifier="picked_qty"/>
+				</TableColumn>
+				<TableColumn fieldTable="" identifier="tc_serial_qty" text="Serial Qty">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="10rem" gridMaxLength="10rem" gridMinLength="10rem"/>
+					</TableColumn.columnLength>
+					<TextField dataType="Char,,,," toolTip=" Enter quantity of this line to be invoiced " fieldTable="formonly" comment=" Enter quantity of this line to be invoiced " identifier="serial_qty"/>
+				</TableColumn>
+				<TableColumn resizable="true" visible="true" identifier="tc_lbEOL">
+					<Label isDynamic="true" visible="true" identifier="lbEOL"/>
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="100%"/>
+					</TableColumn.columnLength>
+				</TableColumn>
+			</Table>
+			<GroupBox title="Description" classNames="fcls_detail_gb_cnt" visible="true" verticalAlignment="Stretch" horizontalAlignment="Stretch" gridItemLocation="0,3,1,1" fieldTable="" identifier="cntDetail6GroupBox">
+				<GridPanel classNames="fcls_detail_gb_cnt_sub,fcls_detail_cnt_sub,fcls_data_cnt" visible="true" verticalAlignment="Top" horizontalAlignment="Stretch" fieldTable="" identifier="cntDetail6Sub">
+					<GridPanel.gridRowDefinitions>
+						<GridRowDefinition gridLengthValue=""/>
+						<GridRowDefinition gridLengthValue=""/>
+						<GridRowDefinition gridLengthValue=""/>
+					</GridPanel.gridRowDefinitions>
+					<GridPanel.gridColumnDefinitions>
+						<GridColumnDefinition gridLengthValue=""/>
+					</GridPanel.gridColumnDefinitions>
+					<TextField noEntry="true" dataType="Char,,,," preferredSize="31qch,1qch" fieldTable="formonly" identifier="prod_desc_text" gridItemLocation="0,0,1,1" classNames="fcls_data_widget,fcls_align_hstretch"/>
+					<TextField noEntry="true" dataType="Char,,,," preferredSize="31qch,1qch" fieldTable="formonly" identifier="prod_desc2_text" gridItemLocation="0,1,1,1" classNames="fcls_data_widget,fcls_align_hstretch"/>
+					<TextField noEntry="true" dataType="Char,,,,40" preferredSize="41qch,1qch" fieldTable="orderdetl" identifier="desc_text" gridItemLocation="0,2,1,1" classNames="fcls_data_widget,fcls_align_hstretch"/>
+				</GridPanel>
+			</GroupBox>
+			<GridPanel classNames="fcls_statusbar_cnt" visible="true" verticalAlignment="Top" gridItemLocation="0,4,1,1" fieldTable="formonly" identifier="cntStatusBar">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="100%"/>
+				</GridPanel.gridColumnDefinitions>
+				<Label isDynamic="true" text="" classNames="fcls_sblabel" visible="true" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="lbInfo1"/>
+				<Label isDynamic="true" text="" classNames="fcls_sblabel" visible="true" gridItemLocation="0,1,1,1" fieldTable="formonly" identifier="lbInfo2"/>
+			</GridPanel>
+		</GridPanel>
+	</form.rootContainer>
+	<form.screenRecords>
+		<ScreenRecord identifier="sr_serial_prod" fields="formonly.scroll_flag,orderhead.order_num,orderhead.order_date,orderdetl.line_num,product.part_code,orderdetl.picked_qty,formonly.serial_qty" elements="5"/>
+		<ScreenRecord identifier="customer" fields="customer.name_text"/>
+		<ScreenRecord identifier="formonly" fields="formonly.scroll_flag,formonly.serial_qty,formonly.prod_desc_text,formonly.prod_desc2_text"/>
+		<ScreenRecord identifier="orderdetl" fields="orderdetl.line_num,orderdetl.desc_text,orderdetl.picked_qty"/>
+		<ScreenRecord identifier="orderhead" fields="orderhead.order_num,orderhead.order_date,orderhead.cust_code"/>
+		<ScreenRecord identifier="pickhead" fields="pickhead.pick_num"/>
+		<ScreenRecord identifier="product" fields="product.part_code"/>
+	</form.screenRecords>
+</form>
+

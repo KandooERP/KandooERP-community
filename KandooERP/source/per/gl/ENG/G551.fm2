@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form xmlns="http://namespaces.querix.com/2015/fglForms">
+	<form.rootContainer>
+		<GridPanel classNames="fcls_rootContainer" verticalAlignment="Top" horizontalAlignment="Left" fieldTable="" identifier="rootContainer">
+			<GridPanel.gridRowDefinitions>
+				<GridRowDefinition gridLengthValue=""/>
+				<GridRowDefinition gridLengthValue=""/>
+				<GridRowDefinition gridLengthValue=""/>
+				<GridRowDefinition gridLengthValue=""/>
+				<GridRowDefinition gridLengthValue=""/>
+				<GridRowDefinition gridLengthValue=""/>
+			</GridPanel.gridRowDefinitions>
+			<GridPanel.gridColumnDefinitions>
+				<GridColumnDefinition gridLengthValue="100%"/>
+			</GridPanel.gridColumnDefinitions>
+			<GridPanel classNames="fcls_title_cnt" visible="true" verticalAlignment="Top" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="cntTitle">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="100%"/>
+					<GridColumnDefinition gridLengthValue=""/>
+				</GridPanel.gridColumnDefinitions>
+				<Label isDynamic="true" text="Financial Work Sheet Selection" classNames="fcls_title_lb" visible="true" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="header_text"/>
+				<Label isDynamic="true" text="G551" classNames="fcls_title_lb" visible="true" gridItemLocation="1,0,1,1" fieldTable="" identifier="lbFormName"/>
+			</GridPanel>
+			<GridPanel classNames="fcls_detail_cnt,fcls_data_cnt,fcls_align_left" visible="true" verticalAlignment="Top" horizontalAlignment="Left" gridItemLocation="0,1,1,1" fieldTable="formonly" identifier="cntDetail1">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="" gridMinLength="10rem"/>
+					<GridColumnDefinition gridLengthValue=""/>
+				</GridPanel.gridColumnDefinitions>
+				<Label isDynamic="true" text="Report Type" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="lb57"/>
+				<RadioGroup orientation="Vertical" classNames="fcls_data_widget,fcls_align_left,fcls_length_20qch" visible="true" gridItemLocation="1,0,1,1" fieldTable="" identifier="report_type">
+					<Radio title="Report Closing Balance for period" identifier="report_type_1">
+						<Radio.value>
+							<IntegerLiteral integerValue="1"/>
+						</Radio.value>
+					</Radio>
+					<Radio title="Report YTD debits and credits" identifier="report_type_2">
+						<Radio.value>
+							<IntegerLiteral integerValue="2"/>
+						</Radio.value>
+					</Radio>
+				</RadioGroup>
+			</GridPanel>
+			<GroupBox title="Segments" classNames="fcls_detail_gb_cnt,fcls_detail_cnt,,fcls_align_hstretch" visible="true" verticalAlignment="Top" gridItemLocation="0,3,1,1" fieldTable="formonly" identifier="cntDetail2GroupBox">
+				<GridPanel classNames="fcls_detail_gb_cnt_sub,fcls_detail_cnt_sub,fcls_data_cnt,fcls_align_left" visible="true" verticalAlignment="Top" horizontalAlignment="Left" fieldTable="formonly" identifier="cntDetail2GrBoxSub">
+					<GridPanel.gridRowDefinitions>
+						<GridRowDefinition gridLengthValue=""/>
+						<GridRowDefinition gridLengthValue=""/>
+						<GridRowDefinition gridLengthValue=""/>
+					</GridPanel.gridRowDefinitions>
+					<GridPanel.gridColumnDefinitions>
+						<GridColumnDefinition gridLengthValue="" gridMinLength="10rem"/>
+						<GridColumnDefinition gridLengthValue=""/>
+						<GridColumnDefinition gridLengthValue=""/>
+					</GridPanel.gridColumnDefinitions>
+					<Label isDynamic="true" text="Level 1 Start" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="lb47"/>
+					<TextField dataType="SmallInt,,,," classNames="fcls_data_widget,fcls_align_left,fcls_length_05qch" preferredSize="3qch,1qch" toolTip=" Start number of segment for level 1 totals" gridItemLocation="1,0,1,1" comment=" Start number of segment for level 1 totals" fieldTable="formonly" identifier="start_num_1"/>
+					<TextField noEntry="true" dataType="Char,,,,20" classNames="fcls_data_widget,fcls_align_left,fcls_length_30qch" preferredSize="31qch,1qch" gridItemLocation="2,0,1,1" fieldTable="formonly" identifier="desc_text_1"/>
+					<Label isDynamic="true" text="Level 2 Start" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,1,1,1" fieldTable="formonly" identifier="lb46"/>
+					<TextField dataType="SmallInt,,,," classNames="fcls_data_widget,fcls_align_left,fcls_length_05qch" preferredSize="3qch,1qch" toolTip=" Start number of segment for level 2 totals" gridItemLocation="1,1,1,1" comment=" Start number of segment for level 2 totals" fieldTable="formonly" identifier="start_num_2"/>
+					<TextField noEntry="true" dataType="Char,,,,20" classNames="fcls_data_widget,fcls_align_left,fcls_length_30qch" preferredSize="31qch,1qch" gridItemLocation="2,1,1,1" fieldTable="formonly" identifier="desc_text_2"/>
+					<Label isDynamic="true" text="Level 3 Start" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,2,1,1" fieldTable="formonly" identifier="lb44"/>
+					<TextField dataType="SmallInt,,,," classNames="fcls_data_widget,fcls_align_left,fcls_length_05qch" preferredSize="3qch,1qch" toolTip=" Start number of segment for level 3 totals" gridItemLocation="1,2,1,1" comment=" Start number of segment for level 3 totals" fieldTable="formonly" identifier="start_num_3"/>
+					<TextField noEntry="true" dataType="Char,,,,20" classNames="fcls_data_widget,fcls_align_left,fcls_length_30qch" preferredSize="31qch,1qch" gridItemLocation="2,2,1,1" fieldTable="formonly" identifier="desc_text_3"/>
+				</GridPanel>
+			</GroupBox>
+			<GroupBox title="Fiscal" classNames="fcls_detail_gb_cnt,fcls_detail_cnt,,fcls_align_hstretch" visible="true" gridItemLocation="0,4,1,1" fieldTable="formonly" identifier="cntDetail3GroupBox">
+				<GridPanel classNames="fcls_detail_gb_cnt_sub,fcls_detail_cnt_sub,fcls_data_cnt,fcls_align_left" visible="true" verticalAlignment="Top" horizontalAlignment="Left" fieldTable="formonly" identifier="cntDetail3GrBoxSub">
+					<GridPanel.gridRowDefinitions>
+						<GridRowDefinition gridLengthValue=""/>
+						<GridRowDefinition gridLengthValue=""/>
+					</GridPanel.gridRowDefinitions>
+					<GridPanel.gridColumnDefinitions>
+						<GridColumnDefinition gridLengthValue="" gridMinLength="10rem"/>
+						<GridColumnDefinition gridLengthValue=""/>
+					</GridPanel.gridColumnDefinitions>
+					<Label isDynamic="true" text="Fiscal Year" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="lb48"/>
+					<ComboBox dataType="SmallInt,,,," classNames="fcls_data_widget,fcls_align_left,fcls_length_05qch" preferredSize="5qch,1qch" toolTip=" The financial year for the Work Sheet" gridItemLocation="1,0,1,1" comment=" The financial year for the Work Sheet" fieldTable="formonly" identifier="year_num"/>
+					<Label isDynamic="true" text="Fiscal Period" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,1,1,1" fieldTable="formonly" identifier="lb49"/>
+					<ComboBox dataType="SmallInt,,,," classNames="fcls_data_widget,fcls_align_left,fcls_length_05qch" preferredSize="5qch,1qch" toolTip=" The financial period for the Work Sheet" gridItemLocation="1,1,1,1" comment=" The financial period for the Work Sheet" fieldTable="formonly" identifier="period_num"/>
+				</GridPanel>
+			</GroupBox>
+			<GridPanel classNames="fcls_statusbar_cnt" visible="true" verticalAlignment="Top" gridItemLocation="0,5,1,1" fieldTable="formonly" identifier="cntStatusBar">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="100%"/>
+				</GridPanel.gridColumnDefinitions>
+				<Label isDynamic="true" text="" classNames="fcls_sblabel" visible="true" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="lbInfo1"/>
+				<Label isDynamic="true" text="" classNames="fcls_sblabel" visible="true" gridItemLocation="0,1,1,1" fieldTable="formonly" identifier="lbInfo2"/>
+			</GridPanel>
+		</GridPanel>
+	</form.rootContainer>
+	<form.screenRecords>
+		<ScreenRecord identifier="formonly" fields="year_num,period_num,start_num_1,desc_text_1,start_num_2,desc_text_2,start_num_3,desc_text_3,report_type"/>
+	</form.screenRecords>
+</form>
+

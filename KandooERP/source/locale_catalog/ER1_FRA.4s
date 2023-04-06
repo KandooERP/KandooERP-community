@@ -1,0 +1,17 @@
+ER1_FRA {
+Currency Code { "Code devise" }
+Customer { "Client" }
+Date { "Date" }
+Description { "Description" }
+Enter the warehouse code { "Saisir le code entrepôt" }
+ID { "ID" }
+Language Code { "Code langue" }
+Length { "Longueur" }
+Name { "Nom" }
+Order Date { "Date de Commande" }
+Order Number { "Numéro de commande" }
+Password { "Mot de passe" }
+Sales Condition { "Condition de vente" }
+Salesperson { "Vendeur" }
+Warehouse { "Dépôt" }
+}

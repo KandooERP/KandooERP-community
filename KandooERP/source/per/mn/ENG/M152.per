@@ -1,0 +1,57 @@
+{
+###########################################################################
+# This program is free software; you can redistribute it and/or modify it
+# under the terms of the GNU General Public License as published by the
+# Free Software Foundation; either version 2 of the License, or (at your
+# option) any later version.
+#
+# This program is distributed in the hope that it will be useful, but
+# WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+# General Public License for more details.
+#
+# You should have received a copy of the GNU General Public License along
+# with this program; if not, write to the Free Software Foundation, Inc.,
+# 59 Temple Place, Suite 330, Boston, MA 02111-1307 USA
+#
+###########################################################################
+
+	 $Id: M152.per,v 1.2 2003/11/19 22:23:00 afalout Exp $
+}
+
+
+database kandoodb
+
+screen
+{
+                   Production Schedule              M152
+\g---------------------------------------------------------\g
+ Shop Order Number  [f001      ]
+ Suffix Number      [f002 ]
+ Product            [f003           ]
+ Order Quantity     [f004      ]
+ Unit Of Measure    [f005]
+ Start Date         [f006      ]
+ Due Date           [f007      ]
+
+}
+
+tables
+shopordhead
+
+attributes
+f001 = shopordhead.shop_order_num, comments = " Shop order number";
+f002 = shopordhead.suffix_num, comments = " Shop order suffix number";
+f003 = shopordhead.part_code, upshift,
+comments = " Product to be produced for the shop order";
+f004 = shopordhead.order_qty,
+comments = " Quantity of the product to be produced";
+f005 = shopordhead.uom_code, upshift,
+comments = " Unit of measure for the shop order product";
+f006 = shopordhead.start_date,
+comments = " Date when the shop order is due to start production";
+f007 = shopordhead.end_date,
+comments = " Date when the shop order is due to be completed";
+
+instructions
+delimiters "  "

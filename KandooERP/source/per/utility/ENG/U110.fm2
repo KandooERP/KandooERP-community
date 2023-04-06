@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?><form xmlns="http://namespaces.querix.com/2015/fglForms">
+	<form.rootContainer>
+		<GridPanel classNames="fcls_rootContainer" fieldTable="" horizontalAlignment="Left" identifier="rootContainer" verticalAlignment="Top">
+			<GridPanel.gridRowDefinitions>
+				<GridRowDefinition gridLengthValue=""/>
+				<GridRowDefinition gridLengthValue=""/>
+				<GridRowDefinition gridLengthValue=""/>
+			</GridPanel.gridRowDefinitions>
+			<GridPanel.gridColumnDefinitions>
+				<GridColumnDefinition gridLengthValue="100%"/>
+			</GridPanel.gridColumnDefinitions>
+			<GridPanel classNames="fcls_title_cnt" fieldTable="formonly" gridItemLocation="0,0,1,1" identifier="cntTitle" verticalAlignment="Top" visible="true">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="100%"/>
+					<GridColumnDefinition gridLengthValue=""/>
+				</GridPanel.gridColumnDefinitions>
+				<Label classNames="fcls_title_lb" fieldTable="formonly" gridItemLocation="0,0,1,1" identifier="header_text" isDynamic="true" text="Street Maintenance" visible="true"/>
+				<Label classNames="fcls_title_lb" fieldTable="" gridItemLocation="1,0,1,1" identifier="lbFormName" isDynamic="true" text="U110" visible="true"/>
+			</GridPanel>
+			<GridPanel classNames="fcls_detail_cnt,fcls_data_cnt,fcls_align_left" fieldTable="formonly" gridItemLocation="0,1,1,1" horizontalAlignment="Left" identifier="cntDetail1" verticalAlignment="Top" visible="true">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="" gridMinLength="10rem"/>
+					<GridColumnDefinition gridLengthValue=""/>
+				</GridPanel.gridColumnDefinitions>
+				<TextField classNames="fcls_data_widget,fcls_align_left,fcls_length_50qch" comment=" Name of the Street" dataType="Char,,,,50" fieldTable="street" gridItemLocation="1,0,1,1" identifier="street_text" preferredSize="51qch,1qch" toCase="Up" toolTip=" Name of the Street"/>
+				<TextField classNames="fcls_data_widget,fcls_align_left,fcls_length_10qch" comment=" The type of Street" dataType="Char,,,,10" fieldTable="street" gridItemLocation="1,1,1,1" identifier="st_type_text" preferredSize="11qch,1qch" toCase="Up" toolTip=" The type of Street"/>
+				<ComboBox classNames="list-show-text-value,field-show-text,fcls_data_widget,fcls_align_left,fcls_length_50qch" comment=" The Suburb this Street belongs to (W)" dataType="Char,,,,50" fieldTable="suburb" gridItemLocation="1,2,1,1" identifier="suburb_text" preferredSize="51qch,1qch" toCase="Up" toolTip=" The Suburb this Street belongs to (W)"/>
+				<Label classNames="fcls_fieldlabel,fcls_align_left" fieldTable="" gridItemLocation="0,3,1,1" identifier="lb_postCode" isDynamic="true" text="Post Code" visible="true"/>
+				<TextField classNames="fcls_data_widget,fcls_align_left,fcls_length_10qch" dataType="Char,,,,10" fieldTable="suburb" gridItemLocation="1,3,1,1" identifier="post_code" noEntry="true" preferredSize="11qch,1qch"/>
+				<Label classNames="fcls_fieldlabel,fcls_align_left" fieldTable="" gridItemLocation="0,0,1,1" identifier="lb51" isDynamic="true" text="Street Name" visible="true"/>
+				<Label classNames="fcls_fieldlabel,fcls_align_left" fieldTable="" gridItemLocation="0,1,1,1" identifier="lb52" isDynamic="true" text="Type" visible="true"/>
+				<Label classNames="fcls_fieldlabel,fcls_align_left" fieldTable="" gridItemLocation="0,2,1,1" identifier="lb66" isDynamic="true" text="Suburb" visible="true"/>
+				<Label classNames="fcls_fieldlabel,fcls_align_left" fieldTable="" gridItemLocation="0,4,1,1" identifier="lb133" isDynamic="true" text="Map Number" visible="true"/>
+				<TextField classNames="fcls_data_widget,fcls_align_left,fcls_length_10qch" comment=" The Map in which this Street/Suburb combination can be located" dataType="Char,,,,4" fieldTable="street" gridItemLocation="1,4,1,1" identifier="map_number" preferredSize="5qch,1qch" toolTip=" The Map in which this Street/Suburb combination can be located"/>
+				<Label classNames="fcls_fieldlabel,fcls_align_left" fieldTable="" gridItemLocation="0,5,1,1" identifier="lb134" isDynamic="true" text="Map Reference" visible="true"/>
+				<TextField classNames="fcls_data_widget,fcls_align_left,fcls_length_10qch" comment=" The Map Coordinates this Street/Suburb combination can be located" dataType="Char,,,,10" fieldTable="street" gridItemLocation="1,5,1,1" identifier="ref_text" preferredSize="11qch,1qch" toCase="Up" toolTip=" The Map Coordinates this Street/Suburb combination can be located"/>
+				<Label classNames="fcls_fieldlabel,fcls_align_left" fieldTable="" gridItemLocation="0,6,1,1" identifier="lb135" isDynamic="true" text="Map Source" visible="true"/>
+				<ComboBox classNames="fcls_data_widget,fcls_align_left,fcls_length_10qch" comment=" Map Source: N = N/A, 1=Melway/Sydway, 2=UBD, 3=Gregory's" dataType="Char,,,,1" fieldTable="street" gridItemLocation="1,6,1,1" identifier="source_ind" preferredSize="2qch,1qch" toolTip=" Map Source: 1=Melway/Sydway, 2=UBD, 3=Gregory's">
+					<ComboBoxItem text="N/A">
+						<ComboBoxItem.value>
+							<StringLiteral stringValue="N"/>
+						</ComboBoxItem.value>
+					</ComboBoxItem>
+					<ComboBoxItem text="1">
+						<ComboBoxItem.value>
+							<StringLiteral stringValue="1"/>
+						</ComboBoxItem.value>
+					</ComboBoxItem>
+					<ComboBoxItem text="2">
+						<ComboBoxItem.value>
+							<StringLiteral stringValue="2"/>
+						</ComboBoxItem.value>
+					</ComboBoxItem>
+					<ComboBoxItem text="3">
+						<ComboBoxItem.value>
+							<StringLiteral stringValue="3"/>
+						</ComboBoxItem.value>
+					</ComboBoxItem>
+				</ComboBox>
+			</GridPanel>
+			<GridPanel classNames="fcls_statusbar_cnt" fieldTable="formonly" gridItemLocation="0,2,1,1" identifier="cntStatusBar" verticalAlignment="Top" visible="true">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="100%"/>
+				</GridPanel.gridColumnDefinitions>
+				<Label classNames="fcls_sblabel" fieldTable="formonly" gridItemLocation="0,0,1,1" identifier="lbInfo1" isDynamic="true" text="" visible="true"/>
+				<Label classNames="fcls_sblabel" fieldTable="formonly" gridItemLocation="0,1,1,1" identifier="lbInfo2" isDynamic="true" text="" visible="true"/>
+			</GridPanel>
+		</GridPanel>
+	</form.rootContainer>
+	<form.screenRecords>
+		<ScreenRecord fields="street_text,st_type_text,map_number,ref_text,source_ind" identifier="street"/>
+		<ScreenRecord fields="suburb_text,post_code" identifier="suburb"/>
+	</form.screenRecords>
+</form>

@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form xmlns="http://namespaces.querix.com/2015/fglForms">
+	<form.rootContainer>
+		<GridPanel classNames="fcls_rootContainer" preferredSize="," verticalAlignment="Top" horizontalAlignment="Left" fieldTable="" identifier="rootContainer">
+			<GridPanel.gridRowDefinitions>
+				<GridRowDefinition gridLengthValue=""/>
+				<GridRowDefinition gridLengthValue=""/>
+				<GridRowDefinition gridLengthValue=""/>
+				<GridRowDefinition gridLengthValue=""/>
+			</GridPanel.gridRowDefinitions>
+			<GridPanel.gridColumnDefinitions>
+				<GridColumnDefinition gridLengthValue="100%"/>
+			</GridPanel.gridColumnDefinitions>
+			<GridPanel classNames="fcls_title_cnt" visible="true" verticalAlignment="Top" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="cntTitle">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="100%"/>
+					<GridColumnDefinition gridLengthValue=""/>
+				</GridPanel.gridColumnDefinitions>
+				<Label isDynamic="true" text="Product Transaction Purge Confirmation" classNames="fcls_title_lb" visible="true" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="header_text"/>
+				<Label isDynamic="true" text="I662" classNames="fcls_title_lb" visible="true" gridItemLocation="1,0,1,1" fieldTable="" identifier="lbFormName"/>
+			</GridPanel>
+			<GridPanel classNames="fcls_detail_cnt,fcls_data_cnt,fcls_align_left" visible="true" verticalAlignment="Top" horizontalAlignment="Left" gridItemLocation="0,1,1,1" fieldTable="formonly" identifier="cntDetail1">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="" gridMinLength="10rem"/>
+				</GridPanel.gridColumnDefinitions>
+				<Label allowNewlines="true" text="  WARNING:  This process will physically remove transaction&#13;&#10;  records for products meeting the entered criteria.  This&#13;&#10;  process can only be reversed by doing a restoration of the&#13;&#10;  entire database from back-up.  Please confirm that the&#13;&#10;  following steps have been completed and indicate that the&#13;&#10;  deletion process may be commenced.&#13;&#10;  If you do not wish to proceed with the deletion, press CANCEL." classNames="fcls_fieldlabel,fcls_align_left" gridItemLocation="0,0,1,1" fieldTable="" identifier="label1"/>
+			</GridPanel>
+			<GridPanel classNames="fcls_detail_cnt,fcls_data_cnt,fcls_align_left" visible="true" verticalAlignment="Top" horizontalAlignment="Left" gridItemLocation="0,2,1,1" fieldTable="formonly" identifier="cntDetail2">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue=""/>
+				</GridPanel.gridColumnDefinitions>
+				<CheckBox dataType="Char,,,," preferredSize="2qch,1qch" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="backup_flag" title="Has a backup been completed?">
+					<CheckBox.checkedValue>
+						<StringLiteral stringValue="Y"/>
+					</CheckBox.checkedValue>
+					<CheckBox.uncheckedValue>
+						<StringLiteral stringValue="N"/>
+					</CheckBox.uncheckedValue>
+				</CheckBox>
+				<CheckBox dataType="Char,,,," preferredSize="2qch,1qch" gridItemLocation="0,1,1,1" fieldTable="formonly" identifier="update_flag" title="Has there been any data update since backup?">
+					<CheckBox.checkedValue>
+						<StringLiteral stringValue="Y"/>
+					</CheckBox.checkedValue>
+					<CheckBox.uncheckedValue>
+						<StringLiteral stringValue="N"/>
+					</CheckBox.uncheckedValue>
+				</CheckBox>
+				<CheckBox dataType="Char,,,," preferredSize="2qch,1qch" gridItemLocation="0,2,1,1" fieldTable="formonly" identifier="user_flag" title="Are you the only user logged in?">
+					<CheckBox.checkedValue>
+						<StringLiteral stringValue="Y"/>
+					</CheckBox.checkedValue>
+					<CheckBox.uncheckedValue>
+						<StringLiteral stringValue="N"/>
+					</CheckBox.uncheckedValue>
+				</CheckBox>
+				<CheckBox dataType="Char,,,," preferredSize="2qch,1qch" gridItemLocation="0,3,1,1" fieldTable="formonly" identifier="auth_flag" title="Do you authorise commencment of the deletion?">
+					<CheckBox.checkedValue>
+						<StringLiteral stringValue="Y"/>
+					</CheckBox.checkedValue>
+					<CheckBox.uncheckedValue>
+						<StringLiteral stringValue="N"/>
+					</CheckBox.uncheckedValue>
+				</CheckBox>
+			</GridPanel>
+			<GridPanel classNames="fcls_statusbar_cnt" visible="true" verticalAlignment="Top" gridItemLocation="0,3,1,1" fieldTable="formonly" identifier="cntStatusBar">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="100%"/>
+				</GridPanel.gridColumnDefinitions>
+				<Label isDynamic="true" text="" classNames="fcls_sblabel" visible="true" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="lbInfo1"/>
+				<Label isDynamic="true" text="" classNames="fcls_sblabel" visible="true" gridItemLocation="0,1,1,1" fieldTable="formonly" identifier="lbInfo2"/>
+			</GridPanel>
+		</GridPanel>
+	</form.rootContainer>
+	<form.screenRecords>
+		<ScreenRecord identifier="formonly" fields="formonly.backup_flag,formonly.update_flag,formonly.user_flag,formonly.auth_flag"/>
+	</form.screenRecords>
+</form>

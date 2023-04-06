@@ -1,0 +1,178 @@
+####################################
+# Step 1 - Location / Localisation
+####################################
+Language: ENG
+Country: United Kingdom
+Bank Acc Format: IBAN
+Currency: GBP
+(should all be the default settings already)
+> Click Next
+
+####################################
+# Step 2 - GL Initial Parameter
+####################################
+Org. Structure: Single Organisation
+Industry Type: Computer Hardware
+Fiscal Tax Periods: Quarter Yearly
+Start Date: 1st January 2018   (or should we use today ?) 
+(except industry type -  They should all be the default settings already)
+>Click Next
+
+
+
+####################################
+# Step 3 - Company Details
+####################################
+CompanyCode: MA
+Company Name: Maia Associates
+Country: United Kingdom
+Country Code: GB
+Bank Acc Format: IBAN
+Language: ENG
+Currency: GBP
+CRN: CRN-1234567
+ABN: <leave empty>
+UK_VAT: GB1234567890
+teletext: <empty>
+Address1: Kandoo House
+Address2: 10 Downing Street
+City: London
+State Code: LDN
+Post Code: SW1A 2AL
+Tel: +44 20 7946 0870
+Fax: +44 20 7946 0871
+
+>Click Next
+
+###################################
+# Step 4 - Enable Modules:  
+#################################
+>press the "Select All" option from the toolbar 
+>Click NEXT
+
+###################################
+# Step 5 - Admin User Account:  
+#################################
+Login Name: Admin
+User Name: Kandoo Administrator
+Password: 1234
+Email: admin@kandooerp.org
+>Click Next
+
+###################################
+# Step 6 - Initial/First Bank Account Setup:  
+#################################
+Account Ref Code: HSBC-01
+IBAN: GB29NWBK60161331926819
+Description: HSBC main checking account
+Account Type: CHE
+Currency: GBP
+GL Account: 1200
+-----------------
+BIC: MIDLGB2169B 
+Description: 8 Canada Square, London 
+Post Code: E14 5HQ
+Inhouse Bank Ref: HSBC-LON
+>Click Next
+
+###################################
+# Step 7 - AP-Accounts Payable Configuration/Parameters:  
+#################################
+>Click Next
+
+###################################
+# Step 8 - AR-Accounts Receivable Configuration/Parameters:  
+#################################
+>Click Next
+
+
+###################################
+# Step 9 - Load Default Lookup/List Data: 
+#################################
+>Click Next
+
+************************************
+Setup is now ready do store all data in your database
+Do you want to start the installation?
+************************************
+>Click Yes button
+
+###################################
+# Step 10 - Run Sub-Setup Modules: 
+#################################
+>Click Next
+
+
+
+
+
+
+
+
+######################################################################################################
+######################################################################################################
+######################################################################################################
+OLD
+######################################################################################################
+######################################################################################################
+######################################################################################################
+
+
+####################################
+# Step 3 - Company Details
+####################################
+CompanyCode: QU
+Company Name: Querix (UK) Ltd
+Country: United Kingdom
+Country Code: GB
+Bank Acc Format: IBAN
+Language: ENG
+Currency: GBP
+CRN: CRN-1234567
+ABN: <empty>
+UK_VAT: GB1234567890
+teletext: <empty>
+Address1: Querix House
+Address2: 50 The Avenue
+City: Southampton
+State Code: HAM
+Post Code: SO17 1XQ
+Tel: +44 2380 385180
+Fax: +44 2380 399685
+>Click Next
+################################
+Setup
+Company: 
+GZC Company Scan  (create and edit company)
+
+U11 - set Default company for current user
+U12 - User Scan   (create, edit, assign permission, assign company(is) to user
+
+GZ2 - Journal Entries (lookup)
+Note: you need to setup at least these 5 journals
+General Journal
+Recurring Journal
+Cashbook Journal
+Accrual Journal
+Accrual Rev Journal
+
+
+Clearing Account
+
+
+GZ8 - Currency Code
+at least your own base currency
+
+
+
+GZP - 
+
+
+Jobs:
+
+
+Check Out:
+LET glob_title_desc = pr_menu_code[1,3]," - ",pr_menu3.name_text  #This looks like program name and description is available as a global variable
+
+Info:
+glob_callingprog = Current program name i.e. A11

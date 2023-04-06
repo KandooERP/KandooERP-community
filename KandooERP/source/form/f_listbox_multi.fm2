@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form xmlns="http://namespaces.querix.com/2015/fglForms" title="New Form 1">
+	<form.rootContainer>
+		<GridPanel preferredSize="300,300" visible="true" fieldTable="formonly" identifier="rootContainer">
+			<GridPanel.gridRowDefinitions>
+				<GridRowDefinition gridLengthValue=""/>
+				<GridRowDefinition/>
+			</GridPanel.gridRowDefinitions>
+			<GridPanel.gridColumnDefinitions>
+				<GridColumnDefinition gridLengthValue=""/>
+				<GridColumnDefinition gridLengthValue=""/>
+				<GridColumnDefinition gridLengthValue=""/>
+			</GridPanel.gridColumnDefinitions>
+			<TextField visible="true" identifier="col2" gridItemLocation="1,0,1,1"/>
+			<ListBox enableMultiSelection="true" visible="true" gridItemLocation="0,1,1,1" fieldTable="formonly" identifier="listbox_array">
+				<ListBoxItem text="value1"/>
+				<ListBoxItem text="value2"/>
+				<ListBoxItem text="value3"/>
+				<ListBoxItem text="value4"/>
+				<ListBoxItem text="value5"/>
+			</ListBox>
+			<TextField visible="true" identifier="col1" gridItemLocation="0,0,1,1"/>
+		</GridPanel>
+	</form.rootContainer>
+	<form.screenRecords>
+		<ScreenRecord identifier="FormOnly" fields="f1"/>
+	</form.screenRecords>
+</form>

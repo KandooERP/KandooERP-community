@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<fglBuildTarget xmlns="http://namespaces.querix.com/lyciaide/target" name="GZC" type="fgl-program">
+
+  <libraries>
+    <library name="lib_tool_G_GL_db" dynamic="false" location=""/>
+    <library name="lib_tool_G_GL_new" dynamic="false" location=""/>
+    <library name="lib_tool_U_UT_new" dynamic="false" location=""/>
+    <library name="lib_tool_common" dynamic="false" location=""/>
+    <library name="lib_tool_db_common" dynamic="false" location=""/>
+  </libraries>
+
+  <sources type="fgl">
+    <file location="4gl/common/glob_GLOBALS_constant.4gl"/>
+    <file location="4gl/gl/G_GL_GLOBALS.4gl"/>
+    <file location="4gl/common/currwind.4gl"/>
+    <file location="4gl/common/abnfunc.4gl"/>
+    <file location="4gl/setup/lib_db_setup_groupinfo.4gl"/>
+    <file location="4gl/setup/lib_db_setup_coa.4gl"/>
+    <file location="4gl/setup/lib_db_setup_GLOBALS.4gl"/>
+    <file location="4gl/gl/GZC_original.4gl"/>
+    <file location="4gl/setup/lib_db_setup_tax.4gl"/>
+    <file location="4gl/common/ctrywind.4gl"/>
+    <file location="4gl/common/langwind.4gl"/>
+    <file location="4gl/common/glob_GLOBALS.4gl"/>
+    <file location="4gl/common/glob_GLOBALS_userDataTypes.4gl"/>
+    <file location="4gl/gl/GZC.4gl"/>
+    <file location="4gl/setup/lib_db_setup_coa_2.4gl"/>
+    <file location="4gl/setup/lib_db_setup_holdpay.4gl"/>
+    <file location="4gl/lib_tool_db/lib_tool_db_rmsparm.4gl"/>
+    <file location="4gl/setup/lib_db_setup_journal.4gl"/>
+  </sources>
+
+  <sources type="form">
+    <file location="per/utility/ENG/U156.fm2"/>
+    <file location="per/setup/setup_bank_account.fm2"/>
+    <file location="per/setup/setup_company.fm2"/>
+    <file location="per/gl/ENG/G130.fm2"/>
+    <file location="per/setup/setup_sub_modules.fm2"/>
+    <file location="per/setup/setupTableSelector.fm2"/>
+    <file location="per/setup/db_groupinfo_input.fm2"/>
+    <file location="per/setup/qxt_maxuser_install.fm2"/>
+    <file location="per/gl/ENG/G130_original.fm2"/>
+    <file location="per/setup/setup_module.fm2"/>
+    <file location="per/gl/ENG/U526_l2.fm2"/>
+    <file location="per/utility/ENG/U526.fm2"/>
+    <file location="per/setup/qxt_company_install.fm2"/>
+    <file location="per/gl/ENG/G131.fm2"/>
+    <file location="per/setup/setup_template.fm2"/>
+    <file location="per/setup/setup_transaction_nextnumber.fm2"/>
+    <file location="per/setup/qxt_general_ledger.fm2"/>
+    <file location="per/setup/setup_gl_config.fm2"/>
+    <file location="per/setup/lib_db_data_import_01.fm2"/>
+    <file location="per/setup/db_all_table.fm2"/>
+    <file location="per/setup/db_coa_input.fm2"/>
+    <file location="per/setup/setup_ar_parameter.fm2"/>
+    <file location="per/gl/ENG/G214.fm2"/>
+    <file location="per/utility/ENG/U131.fm2"/>
+    <file location="per/gl/ENG/G132.fm2"/>
+    <file location="per/setup/setup_publish.fm2"/>
+    <file location="per/setup/qxt_module_choice.fm2"/>
+    <file location="per/setup/setup_location.fm2"/>
+    <file location="per/setup/setup_lookup_data.fm2"/>
+    <file location="per/setup/setup_admin.fm2"/>
+    <file location="per/utility/ENG/U162.fm2"/>
+    <file location="per/setup/setup_ap_parameter.fm2"/>
+    <file location="per/setup/qxt_language_country.fm2"/>
+    <file location="per/setup/qxt_lookupDataSelection.fm2"/>
+  </sources>
+
+  <mediaFiles>
+    <file client="true" location="unl/coa-FR.unl" type="text"/>
+    <file client="true" location="GZC.css" type="other"/>
+    <file client="true" location="unl/coa-GB.unl" type="text"/>
+    <file client="true" location="GZC.qxtheme" type="gui-theme-file"/>
+  </mediaFiles>
+
+  <buildConfiguration name="development">
+    <additions>
+    </additions>
+    <exclusions>
+      <sources type="fgl">
+        <file location="4gl/gl/GZC_original.4gl"/>
+      </sources>
+
+      <sources type="form">
+        <file location="per/gl/ENG/U526_l2.fm2"/>
+      </sources>
+
+    </exclusions>
+  </buildConfiguration>
+
+</fglBuildTarget>

@@ -1,0 +1,35 @@
+AAT_FRA {
++1-30 Days Overdue { "+ 1-30 jours de retard" }
++31-60 Days Overdue { "31 à 60 jours de retard" }
++61-90 Days Overdue { "+61 -90 jours de retard" }
++90+Days Overdue { "90+ J. retard de paiement" }
+= Balance { "= Solde" }
+Account Status { "Situation du Compte" }
+Aging Date { "Date de vieillissement" }
+City { "Ville" }
+Contact { "Contact" }
+Country { "Pays" }
+Currency { "Devise" }
+Current { "Actuel" }
+Customer { "Client" }
+Customer Type { "Type de Client" }
+Date { "Date" }
+Enter customer code selection criteria { "Entrer les critères de sélection du code client" }
+Enter sales 'On-Hold' code selection criteria { "Saisir les critères de sélection du code "En attente" des ventes" }
+Enter sales territory selection criteria { "Saisir les critères de sélection du territoire de vente" }
+Enter salesperson code selection criteria { "Saisir les critères de sélection du code vendeur" }
+Fax { "Fax" }
+Hold Sales { "Ventes à livrer" }
+ID { "ID" }
+Language Code { "Code langue" }
+Name { "Nom" }
+Other Info { "Autres informations" }
+Phone { "Téléphone" }
+Post Code { "Code Postal" }
+Salesperson { "Vendeur" }
+Territory { "Territoire" }
+The account balance between 61 and 90 Days Overdue { "Le solde du compte avec retard entre 61 et 90 jours" }
+The account balance more than 90 Days Overdue { "Le solde du compte avec retard de plus de 90 jours" }
+Title { "Titre" }
+actToolbarManager { "actToolbarManager" }
+}

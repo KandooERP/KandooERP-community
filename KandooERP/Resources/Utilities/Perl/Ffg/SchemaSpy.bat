@@ -1,0 +1,1 @@
+java -jar "C:\Tools\SchemaSpy\schemaSpy.jar" -dp "C:\Program Files (x86)\AGS\common\drivers\informix\jdbc\jdbc.3.70.jc1\ifxjdbc.jar" -t informix -db %1 -host 192.168.1.30:8050 -port 8050 -u informix -p Kerdual28! -server production_tcp -o %2 -meta c:\temp\maxdev.metadata.xml

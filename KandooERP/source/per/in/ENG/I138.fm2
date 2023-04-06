@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?><form xmlns="http://namespaces.querix.com/2015/fglForms">
+	<form.rootContainer>
+		<GridPanel classNames="fcls_rootContainer" fieldTable="" horizontalAlignment="Stretch" identifier="rootContainer" preferredSize="," verticalAlignment="Stretch">
+			<GridPanel.gridRowDefinitions>
+				<GridRowDefinition gridLengthValue=""/>
+				<GridRowDefinition gridLengthValue=""/>
+				<GridRowDefinition gridLengthValue="100%"/>
+				<GridRowDefinition gridLengthValue=""/>
+			</GridPanel.gridRowDefinitions>
+			<GridPanel.gridColumnDefinitions>
+				<GridColumnDefinition gridLengthValue="100%"/>
+			</GridPanel.gridColumnDefinitions>
+			<GridPanel classNames="fcls_title_cnt" fieldTable="formonly" gridItemLocation="0,0,1,1" identifier="cntTitle" verticalAlignment="Top" visible="true">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="100%"/>
+					<GridColumnDefinition gridLengthValue=""/>
+				</GridPanel.gridColumnDefinitions>
+				<Label classNames="fcls_title_lb" fieldTable="formonly" gridItemLocation="0,0,1,1" identifier="header_text" isDynamic="true" text="Company Price Update" visible="true"/>
+				<Label classNames="fcls_title_lb" fieldTable="" gridItemLocation="1,0,1,1" identifier="lbFormName" isDynamic="true" text="I138" visible="true"/>
+			</GridPanel>
+			<GridPanel classNames="fcls_detail_cnt,fcls_data_cnt,fcls_align_left" fieldTable="formonly" gridItemLocation="0,1,1,1" horizontalAlignment="Left" identifier="cntDetail1" verticalAlignment="Top" visible="true">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="" gridMinLength="10rem"/>
+					<GridColumnDefinition gridLengthValue=""/>
+				</GridPanel.gridColumnDefinitions>
+				<ComboBox classNames="fcls_data_widget,fcls_align_left,fcls_length_30qch" comment=" Enter master warehouse from which to maintain cost &amp; price attributes - (W)" dataType="Char,,,," fieldTable="formonly" gridItemLocation="1,0,1,1" identifier="pr_mast_code" preferredSize="4qch,1qch" toCase="Up" toolTip=" Enter master warehouse from which to maintain cost &amp; price attributes - (W)"/>
+				<Label classNames="fcls_fieldlabel,fcls_align_left" fieldTable="" gridItemLocation="0,0,1,1" identifier="lb51" isDynamic="true" text="Master Warehouse" visible="true"/>
+				<TextField classNames="fcls_data_widget,fcls_align_left,fcls_length_30qch" dataType="Char,,,," fieldTable="formonly" gridItemLocation="1,1,1,1" identifier="pr_desc_text" noEntry="true" preferredSize="31qch,1qch"/>
+			</GridPanel>
+			<Table fieldTable="" gridItemLocation="0,2,1,1" identifier="sr_warehouse" preferredSize="74qch,12qch" rowCount="12">
+				<TableColumn fieldTable="" identifier="tc_scroll_flag">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="2rem" gridMaxLength="2rem" gridMinLength="2rem"/>
+					</TableColumn.columnLength>
+					<CheckBox dataType="Char,,,," fieldTable="formonly" identifier="scroll_flag">
+						<CheckBox.checkedValue>
+							<StringLiteral stringValue="*"/>
+						</CheckBox.checkedValue>
+						<CheckBox.uncheckedValue>
+							<NullLiteral/>
+						</CheckBox.uncheckedValue>
+					</CheckBox>
+				</TableColumn>
+				<TableColumn fieldTable="" identifier="tc_ware_code" text="Warehouse Code">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="10rem" gridMaxLength="10rem" gridMinLength="10rem"/>
+					</TableColumn.columnLength>
+					<TextField comment=" Warehouse code" dataType="Char,,,,3" fieldTable="warehouse" identifier="ware_code" toCase="Up" toolTip=" Warehouse code"/>
+				</TableColumn>
+				<TableColumn fieldTable="" identifier="tc_desc_text" text="Description">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="30rem" gridMaxLength="30rem" gridMinLength="30rem"/>
+					</TableColumn.columnLength>
+					<TextField comment=" Name or description of warehouse location" dataType="Char,,,,30" fieldTable="warehouse" identifier="desc_text" toolTip=" Name or description of warehouse location"/>
+				</TableColumn>
+				<TableColumn fieldTable="" identifier="tc_contact_text" text="Contact person">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="10rem" gridMaxLength="10rem" gridMinLength="10rem"/>
+					</TableColumn.columnLength>
+					<TextField comment=" Name or title of warehouse main contact" dataType="Char,,,,40" fieldTable="warehouse" identifier="contact_text" toolTip=" Name or title of warehouse main contact"/>
+				</TableColumn>
+				<TableColumn fieldTable="" identifier="tc_tele_text" text="Telephone">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="10rem" gridMaxLength="10rem" gridMinLength="10rem"/>
+					</TableColumn.columnLength>
+					<TextField comment=" Telephone number of the warehouse or contact person" dataType="Char,,,,20" fieldTable="warehouse" identifier="tele_text" toolTip=" Telephone number of the warehouse or contact person"/>
+				</TableColumn>
+				<TableColumn text="MobilePhone" resizable="true" visible="true" identifier="tc_f52">
+					<TextField visible="true" identifier="mobile_phone" fieldTable="warehouse"/>
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="10rem" gridMaxLength="10rem" gridMinLength="10rem"/>
+					</TableColumn.columnLength>
+				</TableColumn>
+				<TableColumn text="email" resizable="true" visible="true" identifier="tc_f53">
+					<TextField visible="true" identifier="email" fieldTable="warehouse"/>
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="45rem" gridMaxLength="45rem" gridMinLength="45rem"/>
+					</TableColumn.columnLength>
+				</TableColumn>
+				<TableColumn fieldTable="" identifier="tc_upd_flag" text="Update">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="100%"/>
+					</TableColumn.columnLength>
+					<CheckBox dataType="Char,,,," fieldTable="formonly" identifier="upd_flag" noEntry="true">
+						<CheckBox.checkedValue>
+							<StringLiteral stringValue="Y"/>
+						</CheckBox.checkedValue>
+						<CheckBox.uncheckedValue>
+							<StringLiteral stringValue="N"/>
+						</CheckBox.uncheckedValue>
+					</CheckBox>
+				</TableColumn>
+			</Table>
+			<GridPanel classNames="fcls_statusbar_cnt" fieldTable="formonly" gridItemLocation="0,3,1,1" identifier="cntStatusBar" verticalAlignment="Top" visible="true">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="100%"/>
+				</GridPanel.gridColumnDefinitions>
+				<Label classNames="fcls_sblabel" fieldTable="formonly" gridItemLocation="0,0,1,1" identifier="lbInfo1" isDynamic="true" text="" visible="true"/>
+				<Label classNames="fcls_sblabel" fieldTable="formonly" gridItemLocation="0,1,1,1" identifier="lbInfo2" isDynamic="true" text="" visible="true"/>
+			</GridPanel>
+		</GridPanel>
+	</form.rootContainer>
+	<form.screenRecords>
+		<ScreenRecord fields="formonly.scroll_flag,warehouse.ware_code,warehouse.desc_text,warehouse.contact_text,warehouse.tele_text,warehouse.mobile_phone,warehouse.email,formonly.upd_flag" identifier="sr_warehouse"/>
+		<ScreenRecord fields="formonly.pr_mast_code,formonly.pr_desc_text,formonly.scroll_flag,formonly.upd_flag" identifier="formonly"/>
+		<ScreenRecord fields="warehouse.ware_code,warehouse.desc_text,warehouse.contact_text,warehouse.tele_text" identifier="warehouse"/>
+	</form.screenRecords>
+</form>

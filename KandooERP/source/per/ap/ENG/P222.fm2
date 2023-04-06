@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form xmlns="http://namespaces.querix.com/2015/fglForms">
+	<form.rootContainer>
+		<GridPanel classNames="fcls_rootContainer" verticalAlignment="Top" horizontalAlignment="Left" fieldTable="" identifier="rootContainer">
+			<GridPanel.gridRowDefinitions>
+				<GridRowDefinition>
+					<GridRowDefinition.gridLength>
+						<GridLength gridLengthValue=""/>
+					</GridRowDefinition.gridLength>
+				</GridRowDefinition>
+				<GridRowDefinition>
+					<GridRowDefinition.gridLength>
+						<GridLength gridLengthValue=""/>
+					</GridRowDefinition.gridLength>
+				</GridRowDefinition>
+				<GridRowDefinition>
+					<GridRowDefinition.gridLength>
+						<GridLength gridLengthValue=""/>
+					</GridRowDefinition.gridLength>
+				</GridRowDefinition>
+			</GridPanel.gridRowDefinitions>
+			<GridPanel.gridColumnDefinitions>
+				<GridColumnDefinition>
+					<GridColumnDefinition.gridLength>
+						<GridLength gridLengthValue="100%"/>
+					</GridColumnDefinition.gridLength>
+				</GridColumnDefinition>
+			</GridPanel.gridColumnDefinitions>
+			<GridPanel classNames="fcls_title_cnt" visible="true" verticalAlignment="Top" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="cntTitle">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition>
+						<GridRowDefinition.gridLength>
+							<GridLength gridLengthValue=""/>
+						</GridRowDefinition.gridLength>
+					</GridRowDefinition>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition>
+						<GridColumnDefinition.gridLength>
+							<GridLength gridLengthValue="100%"/>
+						</GridColumnDefinition.gridLength>
+					</GridColumnDefinition>
+					<GridColumnDefinition>
+						<GridColumnDefinition.gridLength>
+							<GridLength gridLengthValue=""/>
+						</GridColumnDefinition.gridLength>
+					</GridColumnDefinition>
+				</GridPanel.gridColumnDefinitions>
+				<Label isDynamic="true" text="Automatic Debit Application" classNames="fcls_title_lb" visible="true" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="header_text"/>
+				<Label isDynamic="true" text="P222" classNames="fcls_title_lb" visible="true" gridItemLocation="1,0,1,1" fieldTable="" identifier="lbFormName"/>
+			</GridPanel>
+			<GridPanel classNames="fcls_detail_cnt,fcls_data_cnt,fcls_align_left" visible="true" verticalAlignment="Top" horizontalAlignment="Left" gridItemLocation="0,1,1,1" fieldTable="formonly" identifier="cntDetail1">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition>
+						<GridRowDefinition.gridLength>
+							<GridLength gridLengthValue=""/>
+						</GridRowDefinition.gridLength>
+					</GridRowDefinition>
+					<GridRowDefinition>
+						<GridRowDefinition.gridLength>
+							<GridLength gridLengthValue=""/>
+						</GridRowDefinition.gridLength>
+					</GridRowDefinition>
+					<GridRowDefinition>
+						<GridRowDefinition.gridLength>
+							<GridLength gridLengthValue=""/>
+						</GridRowDefinition.gridLength>
+					</GridRowDefinition>
+					<GridRowDefinition>
+						<GridRowDefinition.gridLength>
+							<GridLength gridLengthValue=""/>
+						</GridRowDefinition.gridLength>
+					</GridRowDefinition>
+					<GridRowDefinition>
+						<GridRowDefinition.gridLength>
+							<GridLength gridLengthValue="1rem"/>
+						</GridRowDefinition.gridLength>
+					</GridRowDefinition>
+					<GridRowDefinition>
+						<GridRowDefinition.gridLength>
+							<GridLength gridLengthValue=""/>
+						</GridRowDefinition.gridLength>
+					</GridRowDefinition>
+					<GridRowDefinition>
+						<GridRowDefinition.gridLength>
+							<GridLength gridLengthValue=""/>
+						</GridRowDefinition.gridLength>
+					</GridRowDefinition>
+					<GridRowDefinition>
+						<GridRowDefinition.gridLength>
+							<GridLength gridLengthValue=""/>
+						</GridRowDefinition.gridLength>
+					</GridRowDefinition>
+					<GridRowDefinition>
+						<GridRowDefinition.gridLength>
+							<GridLength gridLengthValue="1rem"/>
+						</GridRowDefinition.gridLength>
+					</GridRowDefinition>
+					<GridRowDefinition>
+						<GridRowDefinition.gridLength>
+							<GridLength gridLengthValue=""/>
+						</GridRowDefinition.gridLength>
+					</GridRowDefinition>
+					<GridRowDefinition>
+						<GridRowDefinition.gridLength>
+							<GridLength gridLengthValue=""/>
+						</GridRowDefinition.gridLength>
+					</GridRowDefinition>
+					<GridRowDefinition>
+						<GridRowDefinition.gridLength>
+							<GridLength gridLengthValue=""/>
+						</GridRowDefinition.gridLength>
+					</GridRowDefinition>
+					<GridRowDefinition>
+						<GridRowDefinition.gridLength>
+							<GridLength gridLengthValue=""/>
+						</GridRowDefinition.gridLength>
+					</GridRowDefinition>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition>
+						<GridColumnDefinition.gridLength>
+							<GridLength gridLengthValue="10rem"/>
+						</GridColumnDefinition.gridLength>
+					</GridColumnDefinition>
+					<GridColumnDefinition>
+						<GridColumnDefinition.gridLength>
+							<GridLength gridLengthValue=""/>
+						</GridColumnDefinition.gridLength>
+					</GridColumnDefinition>
+				</GridPanel.gridColumnDefinitions>
+				<Label text="Vendor Code" gridItemLocation="0,0,1,1" fieldTable="" identifier="label3" classNames="fcls_fieldlabel,fcls_align_left"/>
+				<ComboBox toCase="Up" dataType="Char,,,,8" preferredSize="9qch,1qch" toolTip=" Vendor code to participate in the automatic matching process" gridItemLocation="1,0,1,1" fieldTable="vendor" comment=" Vendor code to participate in the automatic matching process" identifier="vend_code" classNames="fcls_data_widget,fcls_align_left,fcls_length_10qch"/>
+				<Label text="Vendor Name" gridItemLocation="0,1,1,1" fieldTable="" identifier="label4" classNames="fcls_fieldlabel,fcls_align_left"/>
+				<TextField dataType="Char,,,,30" preferredSize="31qch,1qch" toolTip=" Name of vendor participating in the matching process" gridItemLocation="1,1,1,1" fieldTable="vendor" comment=" Name of vendor participating in the matching process" identifier="name_text" classNames="fcls_data_widget,fcls_align_left,fcls_length_30qch"/>
+				<Label text="Vendor Type" gridItemLocation="0,2,1,1" fieldTable="" identifier="label5" classNames="fcls_fieldlabel,fcls_align_left"/>
+				<ComboBox toCase="Up" dataType="Char,,,,3" preferredSize="4qch,1qch" toolTip=" Specific vendor type to be processed" gridItemLocation="1,2,1,1" fieldTable="vendor" comment=" Specific vendor type to be processed" identifier="type_code" classNames="fcls_data_widget,fcls_align_left,fcls_length_10qch"/>
+				<Label text="Currency Code" gridItemLocation="0,3,1,1" fieldTable="" identifier="label6" classNames="fcls_fieldlabel,fcls_align_left"/>
+				<ComboBox toCase="Up" dataType="Char,,,,3" preferredSize="4qch,1qch" toolTip=" Specific currency to be processed" gridItemLocation="1,3,1,1" fieldTable="vendor" comment=" Specific currency to be processed" identifier="currency_code" classNames="fcls_data_widget,fcls_align_left,fcls_length_10qch"/>
+				<Label text="Debit Number" gridItemLocation="0,5,1,1" fieldTable="" identifier="label7" classNames="fcls_fieldlabel,fcls_align_left"/>
+				<TextField toCase="Up" dataType="Integer,,,," preferredSize="9qch,1qch" toolTip=" Specific debit number to be processed" gridItemLocation="1,5,1,1" fieldTable="debithead" comment=" Specific debit number to be processed" identifier="debit_num" classNames="fcls_data_widget,fcls_align_left,fcls_length_10qch"/>
+				<Label text="Debit Date" gridItemLocation="0,6,1,1" fieldTable="" identifier="label8" classNames="fcls_fieldlabel,fcls_align_left"/>
+				<Calendar format="dd/mm/yyyy" dataType="Date,,,," preferredSize="11qch,1qch" toolTip=" Specific voucher date to be processed" gridItemLocation="1,6,1,1" fieldTable="debithead" comment=" Specific voucher date to be processed" identifier="debit_date" classNames="fcls_data_widget,fcls_align_left,fcls_length_10qch"/>
+				<Label text="Debit Reference" gridItemLocation="0,7,1,1" fieldTable="" identifier="label9" classNames="fcls_fieldlabel,fcls_align_left"/>
+				<TextField dataType="Char,,,,20" preferredSize="20qch,1qch" toolTip=" Vendor reference to be used in document reference processing" gridItemLocation="1,7,1,1" fieldTable="debithead" comment=" Vendor reference to be used in document reference processing" identifier="debit_text" classNames="fcls_data_widget,fcls_align_left,fcls_length_30qch"/>
+				<Label text="Voucher Number" gridItemLocation="0,9,1,1" fieldTable="" identifier="label10" classNames="fcls_fieldlabel,fcls_align_left"/>
+				<TextField toCase="Up" dataType="Integer,,,," preferredSize="9qch,1qch" toolTip=" Specific voucher number to be processed" gridItemLocation="1,9,1,1" fieldTable="voucher" comment=" Specific voucher number to be processed" identifier="vouch_code" classNames="fcls_data_widget,fcls_align_left,fcls_length_10qch"/>
+				<Label text="Voucher Date" gridItemLocation="0,10,1,1" fieldTable="" identifier="label11" classNames="fcls_fieldlabel,fcls_align_left"/>
+				<Calendar format="dd/mm/yyyy" dataType="Date,,,," preferredSize="11qch,1qch" toolTip=" Specific voucher date to be processed" gridItemLocation="1,10,1,1" fieldTable="voucher" comment=" Specific voucher date to be processed" identifier="vouch_date" classNames="fcls_data_widget,fcls_align_left,fcls_length_10qch"/>
+				<Label text="Voucher Term Code" gridItemLocation="0,11,1,1" fieldTable="" identifier="label12" classNames="fcls_fieldlabel,fcls_align_left"/>
+				<ComboBox toCase="Up" dataType="Char,,,,3" preferredSize="4qch,1qch" toolTip=" Specific voucher term code to be processed" gridItemLocation="1,11,1,1" fieldTable="voucher" comment=" Specific voucher term code to be processed" identifier="term_code" classNames="fcls_data_widget,fcls_align_left,fcls_length_10qch"/>
+			</GridPanel>
+			<GridPanel classNames="fcls_statusbar_cnt" visible="true" verticalAlignment="Bottom" gridItemLocation="0,2,1,1" fieldTable="formonly" identifier="cntStatusBar">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition>
+						<GridRowDefinition.gridLength>
+							<GridLength gridLengthValue=""/>
+						</GridRowDefinition.gridLength>
+					</GridRowDefinition>
+					<GridRowDefinition>
+						<GridRowDefinition.gridLength>
+							<GridLength gridLengthValue=""/>
+						</GridRowDefinition.gridLength>
+					</GridRowDefinition>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition>
+						<GridColumnDefinition.gridLength>
+							<GridLength gridLengthValue="100%"/>
+						</GridColumnDefinition.gridLength>
+					</GridColumnDefinition>
+				</GridPanel.gridColumnDefinitions>
+				<Label isDynamic="true" text="" classNames="fcls_sblabel" visible="true" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="lbInfo1"/>
+				<Label isDynamic="true" text="" classNames="fcls_sblabel" visible="true" gridItemLocation="0,1,1,1" fieldTable="formonly" identifier="lbInfo2"/>
+			</GridPanel>
+		</GridPanel>
+	</form.rootContainer>
+	<form.screenRecords>
+		<ScreenRecord identifier="debithead" fields="debithead.debit_num,debithead.debit_date,debithead.debit_text"/>
+		<ScreenRecord identifier="vendor" fields="vendor.vend_code,vendor.name_text,vendor.type_code,vendor.currency_code"/>
+		<ScreenRecord identifier="voucher" fields="voucher.vouch_code,voucher.vouch_date,voucher.term_code"/>
+	</form.screenRecords>
+</form>
+

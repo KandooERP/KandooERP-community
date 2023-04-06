@@ -1,0 +1,244 @@
+P34k_FRA {
+- Contra Amount { "Montant de la contre-écriture" }
+- Tax Amount { "Montant de la T.V.A." }
+-Y- or -N- if cheque has been processed through the posting program { "-Y- ou -N- si le chèque a été processé par le programme de compt" }
+0 - Not applicable, 1 - cents, 2 - rounded down, 3 - rounded up { "0 - Sans objet, 1 - centime, 2 - arrondi vers le bas, 3 - arrondi vers le haut" }
+Account { "Compte" }
+Account number used by bank { "Numéro de compte utilisé par la banque" }
+Account quantity Unit Of Measure { "Quantité en unités de mesure" }
+Accounting period to be used for posting purposes { "Période comptable à utiliser à des fins de comptabilisation" }
+Accounting period you wish this debit to be posted to { "Période comptable à laquelle vous souhaitez que ce débit soit im" }
+Accounting year to be used for posting purposes { "Année comptable à utiliser aux fins de comptabilisation" }
+Acct No. { "Numéro de compte" }
+Activity { "Activité" }
+Activity Code { "Code Activité" }
+Activity code of job to which distribute voucher - (W) { "Code d'activité du JOB à distribuer dans la facture" }
+Actual amount distributed to this debit { "Montant réel réparti sur ce débit" }
+Additional comments line { "Ligne de commentaires supplémentaire" }
+Additional comments line for recording information about this debit { "Ligne de commentaires supplémentaire pour enregistrer des inform" }
+Additional comments lines for cheque information, if needed { "Lignes de commentaires supplémentaires pour les informations de " }
+Address { "Adresse" }
+Amount { "Montant" }
+Amount Owing { "Montant dû" }
+Amount Taken { "Montant prélevé" }
+Amount of discount available on this remittance { "Montant de la remise disponible sur ce versement" }
+Amounts { "Montants" }
+Analysis { "Analytique" }
+Analysis information { "Information analytique" }
+Applied Amount { "Montant appliqué" }
+Applied to Vouchers { "Appliqué aux factures fournisseur" }
+BIC { "BIC" }
+Bank Account Number { "Numéro de compte bancaire" }
+Bank Code { "Code Banque" }
+Bank Code of bank to be inquired on { "Code de la banque interrogée" }
+Bank statement line number where  the cheque was reconciled { "Numéro de ligne du relevé bancaire où le chèque a été lettré" }
+Bank statement transaction date on which the payment was presented { "Date de la transaction du relevé bancaire à laquelle le paiement" }
+Batch Number { "Numéro de lot" }
+Charge { "Facturation" }
+Cheque Date { "Date du chèque" }
+Cheque Gross Amount { "Montant Brut du chèque" }
+Cheque Net Amount { "Montant Net du chèque" }
+Cheque Number { "Numéro de chèque" }
+City { "Ville" }
+Closed { "Clôturé" }
+Code { "Code" }
+Comments { "Commentaires" }
+Cost { "Coût" }
+Country { "Pays" }
+Currency { "Devise" }
+Current date cheque was entered into the system { "Date à laquelle le chèque a été saisi" }
+Date { "Date" }
+Date Paid { "Date de paiement" }
+Date Presented { "Date de présentation" }
+Date used for recording cheque information in the appropriate ledgers { "Date utilisée pour enregistrer les informations du chèque dans l" }
+Debit { "Débit" }
+Debit Distribution { "Répartition  du débit" }
+Debit Header { "Entête du débit" }
+Debit No { "Débit N°" }
+Debit Number { "Numéro de débit" }
+Debit Totals: { "Totaux débit" }
+Description { "Description" }
+Description Text { "Description" }
+Description of transaction - CTRL-N for Notes { "Description de la transaction" }
+Descriptions { "Descriptions" }
+Discount { "Remise" }
+Discount Info { "Infos remise" }
+Discount Taken { "Remise obtenue" }
+Discount available by taking advantage of terms { "Remise disponible en profitant des conditions" }
+Discounts Taken { "Remises accordées" }
+Dist. Amt { "Mont. Distrib." }
+Dist.Amount { "Montant réparti" }
+Dist.Amt { "Mont. Distrib." }
+Distributed { "Distribué" }
+Distribution amount of the transaction { "Montant de la répartition de la transaction" }
+Distributions { "Distributions" }
+Due Date { "Date d'échéance" }
+EFT Payment { "Paiement électronique" }
+Employee sign-on or initials of person entering document { "Login de l'utilisateur faisant la saisie" }
+Entry Date { "Date d'entrée" }
+Entry Info { "Informations sur l'entrée" }
+Entry Person { "Personne ayant saisi l'info" }
+Entry date of this debit into the system { "Date de saisie de ce débit dans le système" }
+Exchange Rate { "Taux de Change" }
+Exchange rate { "Taux de change" }
+Exit { "Quitter" }
+Filter { "Filtrer" }
+Full name or description of vendor { "Nom complet ou description du fournisseur" }
+G-General, A-Chrg Thru Sale, P-Purch Ord, J-Dist to Job, S-Shipment, W-Order { "G_Général, A imputer à Ventes, P Bon de commande, J imputer à se" }
+G-General, A-Chrg Thru Sale, P-Purch Ord, J-Dist to Job, S-Shipment, W-Order { "G_Général, A imputer à Ventes, P Bon de commande, J imputer à service, S livraison, W commande" }
+GL Account { "Compte de Compta Générale" }
+GL Integration { "Intégration Grand Livre" }
+General Ledger Account Number (W) { "Compte de Comptabilité Générale" }
+Hold Pay Code { "Code retenue de paiement" }
+Hold Pay code if on hold (W) { "Code retenue de paiement le cas échéant (W)" }
+ID { "ID" }
+Identifies any receipt of item referencing this transaction { "Identifie tout reçu ou document référençant cette transaction" }
+If posted the journal number of that post { "Si clôturé, le numéro de journal de cette clôture" }
+Indicator if posting process has been utilized, -Y- or -N- { "Indicateur si le process de clôturé a été lancé ( O/N)" }
+Invoice Date { "Date de facturation" }
+Invoice Number { "Numéro de facture" }
+Job { "JOB" }
+Job Code { "Code JOB" }
+Job Management AP Distribution { "Distribution du JOB dans compta fournisseurs" }
+Journal Number { "Numéro de Journal" }
+Language Code { "Code langue" }
+Line { "Ligne" }
+Line Info { "Infos ligne" }
+Line No { "Ligne N°" }
+Line Number { "Numéro de ligne" }
+Line Total { "Total Ligne" }
+Method { "Méthode" }
+Method: (1) auto/manual cheques, (3) EFT payments { "Méthode: (1) chèque auto/manuel, (3) paiements EFT" }
+Mode { "Mode" }
+Name { "Nom" }
+Name of bank to be inquired on { "Nom de la banque interrogée" }
+Name of person performing entry { "Nom de la personne effectuant la saisie" }
+Net cheque amount after tax and contra { "Montant total du chèque" }
+New Label { "Références bancaires" }
+Notes { "Notes" }
+Number { "Numéro" }
+Number assigned to this debit { "Numéro attribué à ce débit" }
+Number to uniquely identify and reference this debit { "Numéro unique d'identification de ce débit" }
+Order { "Commande" }
+Other Info { "Autres informations" }
+P.O. Number { "Numéro B.C." }
+Paid { "Payé" }
+Password { "Mot de passe" }
+Payee { "Bénéficiaire" }
+Payee Details { "Détails du bénéficiaire" }
+Payee bank account BIC number (Bank/State/Branch) (W) { "Code BIC  du compte bancaire du bénéficiaire" }
+Payee bank account number { "Numéro de compte bancaire du bénéficiaire" }
+Payee name or description { "Nom du bénéficiaire" }
+Payment Information { "Information sur le paiement" }
+Payment Method { "Mode de paiement" }
+Payment Number { "Numéro de paiement" }
+Payment method indicator, 1 = Cheque, 3 = EFT { "Indicateur du mode de paiement, 1 = Chèque, 3 = Paiement electronique" }
+Payments { "Paiements" }
+Period { "Période" }
+Possible Discount { "Remise possible" }
+Post Code { "Code Postal" }
+Post Period { "Période de clôture" }
+Post Year { "Année de clôture" }
+Posted { "Publié" }
+Qty { "Qté" }
+Quantity { "Quantité" }
+Receipt Reference { "Référence du reçu" }
+Received { "Reçu" }
+Received Quantity { "Quantité reçue" }
+Reconciliation { "Lettrage" }
+Resource { "Ressource" }
+Resource Code { "Code Ressource" }
+Sheet No { "Folio N°" }
+State/County { "Région" }
+Statement sheet number on which the cheque was reconciled { "Numéro de la feuille de relevé sur laquelle le chèque a été lett" }
+Statistical quantity of the transaction { "Quantité statistique de la transaction" }
+Tax { "T.V.A." }
+Tax % { "% T.V.A." }
+Tax Code { "Code T.V.A." }
+Tax Ind/Poss PPT { "Indicateur T.V.A" }
+Term Code { "Code Conditions" }
+The Amount Distributed to expense accounts { "Montant distribué aux comptes de dépenses" }
+The Amount of this voucher already Paid { "Montant déjà payé de ce bon" }
+The City { "La ville" }
+The Date after which Discount is no longer applicable { "La date après laquelle la réduction n'est plus applicable" }
+The Date the voucher was Paid { "La date à laquelle le bon a été payé" }
+The General Ledger account applicable to this transaction (W) { "Le compte de compta générale application à cette transaction" }
+The General Ledger account applicable to this transaction (W) { "Le compte de comta générale application à cette transaction" }
+The State/Province { "La région" }
+The Year Number of the transaction { "Année fiscale de la transaction" }
+The accounting period to which this voucher is to be posted { "La période comptable à laquelle ce bon doit être enregistré" }
+The accounting year to which this voucher is to be posted { "L'année comptable à laquelle ce bon doit être publié" }
+The actual Date of the Invoice { "Date réelle de la facture" }
+The amount of Discount Taken on this voucher { "Le montant de la réduction prise sur ce bon" }
+The batch number of the debit { "Le numéro de folio du débit" }
+The batch number of the voucher { "Numéro de folio de la facture" }
+The contra amount of this cheque { "Montant de contre-écriture de ce chèque" }
+The country name { "Nom du pays" }
+The currency conversion rate for this debit { "Le taux de change de la devise de ce débit" }
+The currency conversion rate for this voucher { "Le taux de conversion de la devise pour ce bon" }
+The currency used for this vendor { "Devise utilisée pour ce fournisseur" }
+The currency used for this vendor { "Devise utilisée pour ces fournisseurs" }
+The date payment is actually due { "La date à laquelle le paiement est effectivement dû" }
+The date this voucher was entered into the system { "La date d'entrée de ce bon dans le système" }
+The discount amount used (taken) on this remittance { "Le montant de la remise prélevé sur cette remise" }
+The first address line { "La première ligne d'adresse" }
+The given date of vendor credit memo { "La date donnée de l'avoir fournisseur" }
+The name/initials of the person who entered voucher { "Nom/initiales de la personne qui a saisi le bon" }
+The post code { "Le code postal" }
+The second address line { "La deuxième ligne d'adresse" }
+The specific cheque or EFT number already entered in the system { "Le chèque ou le numéro de virmt électronique spécifique déjà entré dans le système" }
+The system assigned Number for this Voucher { "Numéro de bon attribué par le système" }
+The tax amount of this cheque { "Le montant de la T.V.A de ce chèque" }
+The third address line { "La troisième ligne d'adresse" }
+The total amount applied to a particular remittance(s) { "Le montant total appliqué à un ou plusieurs paiements" }
+The total amount supplied on this voucher { "Le montant total fourni sur ce bon" }
+The unit tax amount associated with this transaction { "Le montant de T.V.A. unitaire associé à cette transaction" }
+The vendor Name { "Nom du Fournisseur" }
+The vouchers tax code { "Code de taxe des bons d'achat" }
+The vouchers terms { "Conditions des bons" }
+The withholding tax indicator for this invoice { "Code de T.V.A déductible pour cette facture" }
+Title { "Titre" }
+Total { "Total" }
+Total Amt { "Montant Total" }
+Total amount applied to this debit { "Montant total appliqué à ce débit" }
+Total amount of debit { "Montant total du débit" }
+Total cheque amount including tax and contra { "Montant total du chèque incluant T.V.A et montant H.T." }
+Totals { "Totaux" }
+Trans { "Trans" }
+Transaction Info { "Infos sur la transaction" }
+Transfers { "Transferts" }
+Type { "Type" }
+UOM { "UDM" }
+Unique ID for this Vendor { "Identifiant unique pour ce fournisseur" }
+Unique Vendor ID { "ID unique du fournisseur" }
+Unit { "Unité" }
+Unit Cost { "Coût unitaire" }
+Unit Price { "Prix Unitaire" }
+Unit Tax { "T.V.A unité" }
+Unit and Cost { "Unité et coût" }
+Unit charge rate of resource in Base Currency { "Taux de charge unitaire de la ressource en devise de base" }
+Unit cost of resource to be distributed to { "Coût unitaire de la ressource à distribuer" }
+Used to record any pertinent information about the cheque { "Utilisé pour enregistrer toute information pertinente sur le chè" }
+Used to record pertinent information about this debit { "Utilisé pour enregistrer des informations pertinentes sur ce débit" }
+Used to record pertinent information about this voucher { "Utilisé pour enregistrer des informations pertinentes sur cette " }
+Var. { "Var." }
+Vendor { "Fournisseur" }
+Vendor Code { "Code Fournisseur" }
+Vendor Code assigned to this vendor { "Code fournisseur attribué à ce fournisseur" }
+Vendor Invoice Info { "Informations facture fournisseur" }
+Vendor Invoice Number that originated voucher { "Numéro de la facture fournisseur ayant généré le bon" }
+Vendor Reference { "Références du fournisseur" }
+Vendor credit number, if applicable { "Numéro de crédit du fournisseur, le cas échéant" }
+Voucher { "Facture" }
+Voucher Amounts { "Montants de la facture" }
+Voucher Distribution { "Répartition de la facture" }
+Voucher Inquiry { "Demande de facture fournisseur" }
+Voucher Number { "Numéro de Facture" }
+Voucher Total { "Total Facture" }
+Voucher Totals { "Totaux facture" }
+Whether or not this voucher has been Posted { "Si ce bon a été émis ou non" }
+Withholding Tax Code { "Code T.V.A déductible" }
+Withholding Tax Percentage { "Pourcentage de T.V.A. déductible" }
+Year { "Année" }
+actToolbarManager { "actToolbarManager" }
+}

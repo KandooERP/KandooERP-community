@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form xmlns="http://namespaces.querix.com/2015/fglForms">
+	<form.rootContainer>
+		<GridPanel classNames="fcls_rootContainer" verticalAlignment="Stretch" horizontalAlignment="Stretch" fieldTable="" identifier="rootContainer">
+			<GridPanel.gridRowDefinitions>
+				<GridRowDefinition gridLengthValue=""/>
+				<GridRowDefinition gridLengthValue="100%"/>
+				<GridRowDefinition gridLengthValue=""/>
+			</GridPanel.gridRowDefinitions>
+			<GridPanel.gridColumnDefinitions>
+				<GridColumnDefinition gridLengthValue="100%"/>
+			</GridPanel.gridColumnDefinitions>
+			<GridPanel classNames="fcls_title_cnt" visible="true" verticalAlignment="Top" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="cntTitle">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="100%"/>
+					<GridColumnDefinition gridLengthValue=""/>
+				</GridPanel.gridColumnDefinitions>
+				<Label isDynamic="true" text="Account Ledger Scan" classNames="fcls_title_lb" visible="true" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="header_text"/>
+				<Label isDynamic="true" text="G101" classNames="fcls_title_lb" visible="true" gridItemLocation="1,0,1,1" fieldTable="" identifier="lbFormName"/>
+			</GridPanel>
+			<Table rowCount="14" location="0qch,2qch" preferredSize="74qch,16qch" gridItemLocation="0,1,1,1" fieldTable="" identifier="sr_account">
+				<TableColumn fieldTable="" identifier="a">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="2rem" gridMaxLength="2rem" gridMinLength="2rem"/>
+					</TableColumn.columnLength>
+					<CheckBox dataType="Char,,,," fieldTable="formonly" identifier="scroll_flag">
+						<CheckBox.checkedValue>
+							<StringLiteral stringValue="*"/>
+						</CheckBox.checkedValue>
+						<CheckBox.uncheckedValue>
+							<NullLiteral/>
+						</CheckBox.uncheckedValue>
+					</CheckBox>
+				</TableColumn>
+
+				<TableColumn text="Company ID" fieldTable="" identifier="d0">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="25%" gridMaxLength="30rem" gridMinLength="15rem"/>
+					</TableColumn.columnLength>
+						<ComboBox editable="true" dataType="Char,,,,2" toolTip="Enter the two digit company code you wish to begin this scan process" fieldTable="account" comment="Enter the two digit company code you wish to begin this scan process" identifier="cmpy_code" classNames="list-show-text,field-show-text"/>
+					
+
+				</TableColumn>
+
+				<TableColumn text="Account ID" fieldTable="" identifier="f000">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="25%" gridMaxLength="15rem" gridMinLength="5rem"/>
+					</TableColumn.columnLength>
+					<ComboBox editable="true" dataType="Char,,,,18" toolTip="Enter the account number to begin the ledger scan " fieldTable="account" comment="Enter the account number to begin the ledger scan " identifier="acct_code" classNames="list-show-value-text,field-show-value"/>
+				</TableColumn>
+
+				<TableColumn text="Year" fieldTable="" identifier="f1" textAlignment="Left,Default">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="10%" gridMaxLength="10rem" gridMinLength="5rem"/>
+					</TableColumn.columnLength>
+					<ComboBox editable="true" dataType="SmallInt,,,," toolTip="Identifies the year of this account ledger&apos;s summary totals" fieldTable="account" comment="Identifies the year of this account ledger&apos;s summary totals" identifier="year_num"/>
+				</TableColumn>
+				<TableColumn text="Description" fieldTable="" identifier="f002">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="30%" gridMaxLength="30rem" gridMinLength="15rem"/>
+					</TableColumn.columnLength>
+					<TextField dataType="Char,,,,40" toolTip="Description of this account" fieldTable="coa" comment="Description of this account" identifier="desc_text"/>
+				</TableColumn>
+				<TableColumn text="Balance" fieldTable="" identifier="f005">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="10%" gridMaxLength="10rem" gridMinLength="5rem"/>
+					</TableColumn.columnLength>
+					<TextField noEntry="true" dataType="Char,,,," fieldTable="formonly" identifier="bal_amt"/>
+				</TableColumn>
+
+			</Table>
+			<GridPanel classNames="fcls_statusbar_cnt" visible="true" verticalAlignment="Top" gridItemLocation="0,2,1,1" fieldTable="formonly" identifier="cntStatusBar">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="100%"/>
+				</GridPanel.gridColumnDefinitions>
+				<Label isDynamic="true" text="" classNames="fcls_sblabel" visible="true" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="lbInfo1"/>
+				<Label isDynamic="true" text="" classNames="fcls_sblabel" visible="true" gridItemLocation="0,1,1,1" fieldTable="formonly" identifier="lbInfo2"/>
+			</GridPanel>
+		</GridPanel>
+	</form.rootContainer>
+	<form.screenRecords>
+		<ScreenRecord identifier="sr_account" fields="scroll_flag,cmpy_code,acct_code,year_num,desc_text,bal_amt" elements="14"/>
+		<ScreenRecord identifier="account" fields="cmpy_code,acct_code,year_num"/>
+		<ScreenRecord identifier="coa" fields="desc_text"/>
+		<ScreenRecord identifier="formonly" fields="scroll_flag,bal_amt"/>
+	</form.screenRecords>
+</form>
+

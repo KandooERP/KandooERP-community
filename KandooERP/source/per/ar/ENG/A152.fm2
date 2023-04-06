@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form xmlns="http://namespaces.querix.com/2015/fglForms">
+	<form.rootContainer>
+		<GridPanel classNames="fcls_rootContainer" verticalAlignment="Stretch" horizontalAlignment="Stretch" fieldTable="" identifier="rootContainer">
+			<GridPanel.gridRowDefinitions>
+				<GridRowDefinition gridLengthValue=""/>
+				<GridRowDefinition gridLengthValue=""/>
+				<GridRowDefinition gridLengthValue=""/>
+				<GridRowDefinition gridLengthValue="100%"/>
+				<GridRowDefinition gridLengthValue=""/>
+			</GridPanel.gridRowDefinitions>
+			<GridPanel.gridColumnDefinitions>
+				<GridColumnDefinition gridLengthValue="100%"/>
+			</GridPanel.gridColumnDefinitions>
+			<GridPanel classNames="fcls_title_cnt" visible="true" verticalAlignment="Top" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="cntTitle">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="100%"/>
+					<GridColumnDefinition gridLengthValue=""/>
+				</GridPanel.gridColumnDefinitions>
+				<Label isDynamic="true" text="Cash Applications" classNames="fcls_title_lb" visible="true" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="header_text"/>
+				<Label isDynamic="true" text="A152" classNames="fcls_title_lb" visible="true" gridItemLocation="1,0,1,1" fieldTable="" identifier="lbFormName"/>
+			</GridPanel>
+			<GroupBox title="Customer" classNames="fcls_detail_gb_cnt" visible="true" gridItemLocation="0,1,1,1" fieldTable="" identifier="cntDetail1GroupBox">
+				<GridPanel classNames="fcls_detail_gb_cnt_sub,fcls_detail_cnt_sub,fcls_data_cnt,fcls_align_left" visible="true" verticalAlignment="Top" horizontalAlignment="Left" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="cntDetail1Sub">
+					<GridPanel.gridRowDefinitions>
+						<GridRowDefinition gridLengthValue=""/>
+						<GridRowDefinition gridLengthValue=""/>
+					</GridPanel.gridRowDefinitions>
+					<GridPanel.gridColumnDefinitions>
+						<GridColumnDefinition gridLengthValue="" gridMinLength="11rem"/>
+						<GridColumnDefinition gridLengthValue=""/>
+						<GridColumnDefinition gridLengthValue=""/>
+					</GridPanel.gridColumnDefinitions>
+					<Label text="Customer Code" gridItemLocation="0,0,1,1" fieldTable="" identifier="label3"/>
+					<ComboBox toCase="Up" dataType="Char,,,,8" classNames="field-show-value,list-show-value-text,fcls_data_widget,fcls_align_left,fcls_length_10qch" preferredSize="9qch,1qch" toolTip="Customer Code (W)" gridItemLocation="1,0,1,1" fieldTable="cashreceipt" comment="Customer Code (W)" identifier="cust_code"/>
+					<TextField dataType="Char,,,,30" classNames="fcls_data_widget,fcls_align_left,fcls_length_30qch" preferredSize="31qch,1qch" toolTip="Customer name or description" gridItemLocation="2,0,1,1" fieldTable="customer" comment="Customer name or description" identifier="name_text" collapsed="false"/>
+					<Label text="Cash Receipt Number" gridItemLocation="0,1,1,1" fieldTable="" identifier="label4"/>
+					<TextField dataType="Integer,,,," classNames="fcls_data_widget,fcls_align_left,fcls_length_10qch" preferredSize="9qch,1qch" toolTip="Cash Receipt Number as assigned by the system" gridItemLocation="1,1,1,1" fieldTable="cashreceipt" comment="Cash Receipt Number as assigned by the system" identifier="cash_num"/>
+				</GridPanel>
+			</GroupBox>
+			<GroupBox title="Amounts" classNames="fcls_detail_gb_cnt" visible="true" verticalAlignment="Top" gridItemLocation="0,2,1,1" fieldTable="formonly" identifier="cntDetail2GroupBox">
+				<GridPanel classNames="fcls_detail_gb_cnt_sub,fcls_detail_cnt_sub,fcls_data_cnt,fcls_align_left" visible="true" verticalAlignment="Top" horizontalAlignment="Left" fieldTable="formonly" identifier="cntDetail2Sub">
+					<GridPanel.gridRowDefinitions>
+						<GridRowDefinition gridLengthValue=""/>
+						<GridRowDefinition gridLengthValue=""/>
+						<GridRowDefinition gridLengthValue=""/>
+						<GridRowDefinition gridLengthValue=""/>
+					</GridPanel.gridRowDefinitions>
+					<GridPanel.gridColumnDefinitions>
+						<GridColumnDefinition gridLengthValue="" gridMinLength="11rem"/>
+						<GridColumnDefinition gridLengthValue=""/>
+					</GridPanel.gridColumnDefinitions>
+					<Label text="Currency" gridItemLocation="0,0,1,1" fieldTable="" identifier="label5"/>
+					<ComboBox toCase="Up" dataType="Char,,,,3" classNames="list-show-value-text,field-show-value,fcls_data_widget,fcls_align_left,fcls_length_10qch" preferredSize="4qch,1qch" toolTip="Currency in which this customer deals " gridItemLocation="1,0,1,1" fieldTable="customer" comment="Currency in which this customer deals " identifier="currency_code"/>
+					<Label text="Received" gridItemLocation="0,1,1,1" fieldTable="" identifier="label6"/>
+					<TextField dataType="Decimal,,,2,16" classNames="fcls_data_widget,fcls_align_left,fcls_length_10qch" preferredSize="12qch,1qch" toolTip="Total Amount received on this cash receipt" gridItemLocation="1,1,1,1" fieldTable="cashreceipt" comment="Total Amount received on this cash receipt" identifier="cash_amt"/>
+					<Label text="Receipt Date" gridItemLocation="0,2,1,1" fieldTable="" identifier="label7"/>
+					<TextField dataType="Date,,,," classNames="fcls_data_widget,fcls_align_left,fcls_length_10qch" preferredSize="11qch,1qch" toolTip="Date of cash receipt" gridItemLocation="1,2,1,1" fieldTable="cashreceipt" comment="Date of cash receipt" identifier="cash_date"/>
+					<Label text="Applied to Invoices" gridItemLocation="0,3,1,1" fieldTable="" identifier="label8"/>
+					<TextField dataType="Decimal,,,2,16" classNames="fcls_data_widget,fcls_align_left,fcls_length_10qch" preferredSize="12qch,1qch" toolTip="The amount of cash receipt you desire to be applied" gridItemLocation="1,3,1,1" fieldTable="cashreceipt" comment="The amount of cash receipt you desire to be applied" identifier="applied_amt"/>
+				</GridPanel>
+			</GroupBox>
+			<Table rowCount="5" preferredSize="70qch,5qch" verticalAlignment="Stretch" horizontalAlignment="Stretch" gridItemLocation="0,3,1,1" fieldTable="" identifier="sr_invoicepay">
+				<TableColumn text="App. Number" fieldTable="" identifier="f016">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="16.6%" gridMaxLength="15rem" gridMinLength="5rem"/>
+					</TableColumn.columnLength>
+					<TextField dataType="Integer,,,," toolTip="Line number associated with the specific cash application"  fieldTable="invoicepay" comment="Line number associated with the specific cash application" identifier="appl_num"/>
+				</TableColumn>
+				<TableColumn text="Invoice Number" fieldTable="" identifier="f018">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="16.6%" gridMaxLength="15rem" gridMinLength="5rem"/>
+					</TableColumn.columnLength>
+					<TextField dataType="Integer,,,," toolTip="Enter Invoice Number you wish payment be applied to"  fieldTable="invoicepay" comment="Enter Invoice Number you wish payment be applied to" identifier="inv_num"/>
+				</TableColumn>
+				<TableColumn text="Paym. Number" fieldTable="" identifier="f019">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="16.6%" gridMaxLength="15rem" gridMinLength="5rem"/>
+					</TableColumn.columnLength>
+					<TextField dataType="Integer,,,," toolTip="Numerical sequence of payments made to this invoice"  fieldTable="invoicepay" comment="Numerical sequence of payments made to this invoice" identifier="apply_num"/>
+				</TableColumn>
+				<TableColumn text="Date Applied" fieldTable="" identifier="f017">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="16.6%" gridMaxLength="15rem" gridMinLength="5rem"/>
+					</TableColumn.columnLength>
+					<TextField dataType="Date,,,," toolTip="Date cash application is being made to this invoice"  fieldTable="invoicepay" comment="Date cash application is being made to this invoice" identifier="pay_date"/>
+				</TableColumn>
+				<TableColumn text="Amount Applied" fieldTable="" identifier="f020">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="16.6%" gridMaxLength="15rem" gridMinLength="5rem"/>
+					</TableColumn.columnLength>
+					<TextField dataType="Decimal,,,2,16" toolTip="Actual amount you wish to be applied to this invoice"  fieldTable="invoicepay" comment="Actual amount you wish to be applied to this invoice" identifier="pay_amt"/>
+				</TableColumn>
+				<TableColumn text="Discount Given" fieldTable="" identifier="f021">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="16.6%" gridMaxLength="15rem" gridMinLength="5rem"/>
+					</TableColumn.columnLength>
+					<TextField dataType="Decimal,,,2,16" toolTip="Dollar amount, if given, for discount to this invoice"  fieldTable="invoicepay" comment="Dollar amount, if given, for discount to this invoice" identifier="disc_amt"/>
+				</TableColumn>
+			</Table>
+			<GridPanel classNames="fcls_statusbar_cnt" visible="true" verticalAlignment="Bottom" gridItemLocation="0,4,1,1" fieldTable="formonly" identifier="cntStatusBar">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="100%"/>
+				</GridPanel.gridColumnDefinitions>
+				<Label isDynamic="true" text="" classNames="fcls_sblabel" visible="true" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="lbInfo1"/>
+				<Label isDynamic="true" text="" classNames="fcls_sblabel" visible="true" gridItemLocation="0,1,1,1" fieldTable="formonly" identifier="lbInfo2"/>
+			</GridPanel>
+		</GridPanel>
+	</form.rootContainer>
+	<form.screenRecords>
+		<ScreenRecord identifier="sr_invoicepay" fields="appl_num,inv_num,apply_num,pay_date,pay_amt,disc_amt" elements="5"/>
+		<ScreenRecord identifier="cashreceipt" fields="cust_code,cash_num,cash_amt,cash_date,applied_amt"/>
+		<ScreenRecord identifier="customer" fields="currency_code,name_text"/>
+		<ScreenRecord identifier="invoicepay" fields="appl_num,inv_num,apply_num,pay_date,pay_amt,disc_amt"/>
+	</form.screenRecords>
+</form>
+

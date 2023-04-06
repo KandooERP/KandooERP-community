@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form xmlns="http://namespaces.querix.com/2015/fglForms">
+	<form.rootContainer>
+		<GridPanel classNames="fcls_rootContainer" verticalAlignment="Top" horizontalAlignment="Left" fieldTable="" identifier="rootContainer">
+			<GridPanel.gridRowDefinitions>
+				<GridRowDefinition gridLengthValue=""/>
+				<GridRowDefinition gridLengthValue=""/>
+				<GridRowDefinition gridLengthValue=""/>
+			</GridPanel.gridRowDefinitions>
+			<GridPanel.gridColumnDefinitions>
+				<GridColumnDefinition gridLengthValue="100%"/>
+			</GridPanel.gridColumnDefinitions>
+			<GridPanel classNames="fcls_title_cnt" visible="true" verticalAlignment="Top" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="cntTitle">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="100%"/>
+					<GridColumnDefinition gridLengthValue=""/>
+				</GridPanel.gridColumnDefinitions>
+				<Label isDynamic="true" text="EV - Customer Reports Sub-system" classNames="fcls_title_lb" visible="true" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="header_text"/>
+				<Label isDynamic="true" text="EV" classNames="fcls_title_lb" visible="true" gridItemLocation="1,0,1,1" fieldTable="" identifier="lbFormName"/>
+			</GridPanel>
+			<GridPanel classNames="fcls_detail_cnt,fcls_data_cnt,fcls_align_left" visible="true" verticalAlignment="Top" horizontalAlignment="Left" gridItemLocation="0,1,1,1" fieldTable="formonly" identifier="cntDetail1">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue="100%"/>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue=""/>
+				</GridPanel.gridColumnDefinitions>
+				<ListBox minSize="400,400" visible="true" verticalAlignment="Stretch" horizontalAlignment="Stretch" gridItemLocation="0,0,1,1" fieldTable="" identifier="menuChoice">
+
+
+					<ListBoxItem text="Customer Yearly Turnover Report (EV1)" identifier="menuChoice_EV1">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="EV1"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+
+					<ListBoxItem text="Yearly Turnover by Territory Report (EV2)" identifier="menuChoice_EV2">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="EV2"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+
+					<ListBoxItem text="Yearly Turnover by Area Report (EV3)" identifier="menuChoice_EV3">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="EV3"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+
+					<ListBoxItem text="Yearly Turnover by Salesperson Report (EV4)" identifier="menuChoice_EV4">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="EV4"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					
+					<ListBoxItem text="Inventory Turnover by Customer Report (EV5)" identifier="menuChoice_EV5">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="EV5"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+
+					<ListBoxItem text="Top Customers by Rank Report (EV6)" identifier="menuChoice_EV6">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="EV6"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+
+					<ListBox.onMouseDoubleClick>
+						<ActionEventHandler actionName="DoubleClickItem"/>
+					</ListBox.onMouseDoubleClick>
+				</ListBox>
+				<StackPanel visible="true" horizontalAlignment="Right" gridItemLocation="0,1,1,1" fieldTable="" identifier="c2">
+					<TextField classNames="fcls_data_widget,fcls_align_left,fcls_length_05qch" visible="true" fieldTable="" identifier="inpMenuChoice"/>
+					<Button text="Cancel" classNames="fcls_button_2" visible="true" fieldTable="" identifier="btCancel">
+						<Button.onInvoke>
+							<ActionEventHandler actionName="CANCEL"/>
+						</Button.onInvoke>
+					</Button>
+					<Button text="OK" classNames="fcls_button_2" visible="true" fieldTable="" identifier="btAccept">
+						<Button.onInvoke>
+							<ActionEventHandler actionName="ACCEPT"/>
+						</Button.onInvoke>
+					</Button>
+					<Button text="Help" classNames="fcls_button_2" visible="true" fieldTable="" identifier="btHelp">
+						<Button.onInvoke>
+							<ActionEventHandler actionName="WEB-HELP"/>
+						</Button.onInvoke>
+					</Button>
+				</StackPanel>
+			</GridPanel>
+			<GridPanel classNames="fcls_statusbar_cnt" visible="true" verticalAlignment="Bottom" gridItemLocation="0,2,1,1" fieldTable="formonly" identifier="cntStatusBar">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="100%"/>
+				</GridPanel.gridColumnDefinitions>
+				<Label isDynamic="true" text="" classNames="fcls_sblabel" visible="true" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="lbInfo1"/>
+				<Label isDynamic="true" text="" classNames="fcls_sblabel" visible="true" gridItemLocation="0,1,1,1" fieldTable="formonly" identifier="lbInfo2"/>
+			</GridPanel>
+		</GridPanel>
+	</form.rootContainer>
+	<form.screenRecords>
+		<ScreenRecord identifier="FORMONLY" fields="menuChoice,inpMenuChoice"/>
+	</form.screenRecords>
+</form>

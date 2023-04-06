@@ -1,0 +1,80 @@
+{
+###########################################################################
+# This program is free software; you can redistribute it and/or modify it
+# under the terms of the GNU General Public License as published by the
+# Free Software Foundation; either version 2 of the License, or (at your
+# option) any later version.
+#
+# This program is distributed in the hope that it will be useful, but
+# WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+# General Public License for more details.
+#
+# You should have received a copy of the GNU General Public License along
+# with this program; if not, write to the Free Software Foundation, Inc.,
+# 59 Temple Place, Suite 330, Boston, MA 02111-1307 USA
+#
+###########################################################################
+
+	 $Id: M110.per,v 1.2 2003/11/19 22:22:59 afalout Exp $
+}
+
+
+database kandoodb
+
+screen
+{
+                            Work Centre Details                        M110
+\g----------------------------------------------------------------------------\g
+ Work Centre Code  [f001           ]
+
+ Operation Desc
+[f002                                                                      ]
+
+ Capacity          [f003        ][f004            ]
+ Variable Unit Cost[f005             ]Variable Unit Price[f006             ]
+ Fixed Cost        [f007             ]Fixed Price        [f008             ]
+
+ Operation Factor  [f009     ]        Overlap Percentage [f010   ]
+
+ Effectivity Start Date[f011      ]   Effectivity End Date[f012      ]
+
+[f013                |f014                ]
+[f015                |f016                ]
+[f017                |f018                ] [a]
+
+}
+
+tables
+bor
+mnparms
+
+attributes
+f001 = bor.work_centre_code, upshift,
+comments = " Unique code for a Work Centre (W)";
+f002 = bor.desc_text,
+comments = " Description of the Work Centre, CTRL-N for Notes";
+f003 = formonly.time_qty type float;
+f004 = formonly.capacity_text type char;
+f005 = formonly.variable_cost type decimal;
+f006 = formonly.variable_price type decimal;
+f007 = formonly.fixed_cost type decimal;
+f008 = formonly.fixed_price type decimal;
+f009 = bor.oper_factor_amt,
+comments = " Number of Work Centre units per parent product";
+f010 = bor.overlap_per, comments =
+" Percentage of completeness at which the next Work Centre can begin";
+f011 = bor.start_date,
+comments = " Date the Work Centre becomes effective for Shop Orders & Planning";
+f012 = bor.end_date, comments =
+" Date the Work Centre ceases to be effective for Shop Orders & Planning";
+f013 = mnparms.ref1_text;
+f014 = bor.user1_text, comments = " User defined field";
+f015 = mnparms.ref2_text;
+f016 = bor.user2_text, comments = " User defined field";
+f017 = mnparms.ref3_text;
+f018 = bor.user3_text, comments = " User defined field";
+a    = formonly.dummy, noentry;
+
+instructions
+delimiters "  "

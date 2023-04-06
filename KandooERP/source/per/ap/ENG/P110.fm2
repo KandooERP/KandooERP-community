@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form xmlns="http://namespaces.querix.com/2015/fglForms">
+	<form.rootContainer>
+		<GridPanel classNames="fcls_rootContainer" verticalAlignment="Stretch" horizontalAlignment="Stretch" fieldTable="" identifier="rootContainer">
+			<GridPanel.gridRowDefinitions>
+				<GridRowDefinition gridLengthValue=""/>
+				<GridRowDefinition gridLengthValue=""/>
+				<GridRowDefinition gridLengthValue="100%"/>
+				<GridRowDefinition gridLengthValue=""/>
+			</GridPanel.gridRowDefinitions>
+			<GridPanel.gridColumnDefinitions>
+				<GridColumnDefinition gridLengthValue="100%"/>
+			</GridPanel.gridColumnDefinitions>
+			<GridPanel classNames="fcls_title_cnt" visible="true" verticalAlignment="Top" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="cntTitle">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="100%"/>
+					<GridColumnDefinition gridLengthValue=""/>
+				</GridPanel.gridColumnDefinitions>
+				<Label isDynamic="true" text="Vendor Notes" classNames="fcls_title_lb" visible="true" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="header_text"/>
+				<Label isDynamic="true" text="P110" classNames="fcls_title_lb" visible="true" gridItemLocation="1,0,1,1" fieldTable="" identifier="lbFormName"/>
+			</GridPanel>
+			<GridPanel classNames="fcls_detail_cnt,fcls_data_cnt" visible="true" verticalAlignment="Top" horizontalAlignment="Left" gridItemLocation="0,1,1,1" fieldTable="formonly" identifier="cntDetail1">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="" gridMinLength="10rem"/>
+					<GridColumnDefinition gridLengthValue=""/>
+					<GridColumnDefinition gridLengthValue=""/>
+					<GridColumnDefinition gridLengthValue=""/>
+				</GridPanel.gridColumnDefinitions>
+				<StackPanel visible="true" identifier="c4" gridItemLocation="1,0,1,1">
+					<ComboBox dataType="Char,,,,8" classNames="list-show-value-text,field-show-value,fcls_data_widget,fcls_align_left,fcls_length_10qch" preferredSize="25qch,1qch" toolTip="Enter unique Vendor Code you wish to enter notes (W)" comment="Enter unique Vendor Code you wish to enter notes (W)" fieldTable="vendornote" identifier="vend_code" editable="true"/>
+					<Button visible="true" fieldTable="" identifier="btLookup">
+					<Button.image>
+						<Image imageUrl="{context}/public/querix/icon/svg/24/ic_search_24px.svg"/>
+					</Button.image>
+					<Button.onInvoke>
+						<ActionEventHandler actionName="Lookup"/>
+					</Button.onInvoke>
+				</Button>
+				</StackPanel>
+				<Label isDynamic="true" text="Vendor Name" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,1,1,1" fieldTable="" identifier="lb67"/>
+				<TextField noEntry="true" dataType="Char,,,,30" classNames="fcls_data_widget,fcls_align_left,fcls_length_20qch" preferredSize="10qch,1qch" toolTip="Full name or description of vendor" gridItemLocation="1,1,1,1" comment="Full name or description of vendor" fieldTable="vendor" identifier="name_text"/>
+				<TextField dataType="Char,,,,20" classNames="fcls_data_widget,fcls_align_left,fcls_length_20qch" preferredSize="21qch,1qch" toolTip="Identifies person or departmentment in charge of billing for vendor" gridItemLocation="1,2,1,1" comment="Identifies person or departmentment in charge of billing for vendor" fieldTable="vendor" identifier="contact_text"/>
+				<TextField noEntry="true" dataType="Char,,,,20" classNames="fcls_data_widget,fcls_align_left,fcls_length_20qch" preferredSize="14qch,1qch" toolTip="Telephone number of contact at vendor office" gridItemLocation="1,3,1,1" comment="Telephone number of contact at vendor office" fieldTable="vendor" identifier="tele_text"/>
+				<Label isDynamic="true" text="Vendor Code" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,0,1,1" fieldTable="" identifier="lb51"/>
+				<Label isDynamic="true" text="Contact" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,2,1,1" fieldTable="" identifier="lb52"/>
+				<Label isDynamic="true" text="Phone" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,3,1,1" fieldTable="" identifier="lb66"/>
+			</GridPanel>
+			<Table rowCount="10" preferredSize="72qch,12qch" verticalAlignment="Stretch" horizontalAlignment="Stretch" gridItemLocation="0,2,1,1" fieldTable="" identifier="sr_vendornote" rowHeight="4">
+				<TableColumn text="Date" fieldTable="" identifier="f001">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="10rem" gridMinLength="10rem" gridMaxLength="10rem"/>
+					</TableColumn.columnLength>
+					<TextField dataType="Date,,,," toolTip="Date each vendor note is entered into the system" comment="Date each vendor note is entered into the system" fieldTable="vendornote" identifier="note_date"/>
+				</TableColumn>
+				<TableColumn text="Note" fieldTable="" identifier="f003">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="100%"/>
+					</TableColumn.columnLength>
+					<TextArea dataType="Char,,,,60" toolTip="Special comments or information pertaining to this vendor" comment="Special comments or information pertaining to this vendor" fieldTable="vendornote" identifier="note_text"/>
+				</TableColumn>
+			</Table>
+			<GridPanel classNames="fcls_statusbar_cnt" visible="true" verticalAlignment="Top" gridItemLocation="0,3,1,1" fieldTable="formonly" identifier="cntStatusBar">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="100%"/>
+				</GridPanel.gridColumnDefinitions>
+				<Label isDynamic="true" text="" classNames="fcls_sblabel" visible="true" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="lbInfo1"/>
+				<Label isDynamic="true" text="" classNames="fcls_sblabel" visible="true" gridItemLocation="0,1,1,1" fieldTable="formonly" identifier="lbInfo2"/>
+			</GridPanel>
+		</GridPanel>
+	</form.rootContainer>
+	<form.screenRecords>
+		<ScreenRecord identifier="sr_vendornote" fields="vendornote.note_date,vendornote.note_text"/>
+		<ScreenRecord identifier="vendor" fields="name_text,contact_text,tele_text"/>
+		<ScreenRecord identifier="vendornote" fields="vend_code,note_date,note_text"/>
+		<ScreenRecord identifier="FormOnly"/>
+	</form.screenRecords>
+</form>
+

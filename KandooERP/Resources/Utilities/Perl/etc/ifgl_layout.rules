@@ -1,0 +1,279 @@
+# Parameters determining special behaviors
+# definition of constant variables
+# indent with tabs or spaces
+$indent_block="	"     # tab	
+# leave comments where they are or indent them full left
+# Do not indent just after function/main/report declaration
+#$DoNotIndentAfterFunction=1
+$IndentCommentsFullLeft=0
+# special blocks that require special indentation rules
+$FunctionBlocksInit="^\s*(MAIN)\b|^\s*(FUNCTION)\b|^\s*(REPORT)\b|^\s*(GLOBALS)"
+$FunctionBlocksEnd="^\s*END\s+(MAIN)|^\s*END\s+(FUNCTION)|^\s*END\s+(REPORT)|^\s*END\s+(GLOBALS)"
+
+$StructureBlocksInit="^\s*(IF)\s+.*\bTHEN\b|^\s*(FOREACH)\s+|^\s*(WHILE)\b|^\s*(FOR)\b.*=.*TO\b|.*\b(THEN)\b|\s*(RECORD)\s*[#\{\n]"
+$StructureBlocksEnd="^\s*END\s+(IF)\b|^\s*END\s+(FOREACH)\b|^\s*END\s+(WHILE)\b|^\s*END\s+(FOR)\b|^\s*END\s+(RECORD)\b|^\s*END\s+(RECORD)\s*,"
+
+$SpecialBlocksInit="^\s*(INPUT)\s+ARRAY\b|^\s*(INPUT)\b|^\s*(DISPLAY)\s+ARRAY\b|^\s*(DIALOG)\b|^\s*(MENU)\b|^\s*(CONSTRUCT)\b|^\s*(CASE)\b"
+$SpecialBlocksEvents="^\s*(BEFORE\s+\w+)|^\s*(AFTER\s+\w+)|^\s*(ON\s+KEY)\b|^\s*(COMMAND\s+KEY)\b|^\s*(COMMAND)\b|^\s*(ON\s+ACTION)\b|^\s*(WHEN)[\s\(]|^\s*(OTHERWISE)\b"
+$SpecialBlocksEnd="^\s*(END\s+INPUT)|^\s*(END\s+DISPLAY)|^\s*(END\s+MENU)|^\s*(END\s+CONSTRUCT)|^\s*(END\s+CASE|^\s*(END\s+DIALOG))"
+
+$TransactionBlocksInit="^\s*BEGIN\b"
+$TransactionBlocksEnd="^\s*COMMIT\b"
+
+$ReportBlocksInit="^\s*(FORMAT)\b|^\s*(OUTPUT)\s*\n"
+$ReportBlocksEvents="^\s*(BEFORE\s+GROUP\s)|^\s*(AFTER\s+GROUP\s)|^\s*(ON\s+\w+\s+ROW)\b|^\s*(FIRST\s+PAGE\s+HEADER)\b|^\s*(PAGE\s+HEADER)\b"
+#$ReportBlocksEnd="^\s*(FORMAT)\b|^\s*(OUTPUT)\s*\n|^\s*(END\s+REPORT)"
+$ReportBlocksEnd="^\s*(FORMAT)\b|^\s*(OUTPUT)\s*\n"
+
+$ListBlocksInit="^\s*OPTIONS|^\s*SELECT\b|^\s*WHERE\b|^\s+ORDER BY\b|^\s*GROUP BY\b|^\s*HAVING\b"
+$ListBlocksTerminator=
+# understand four j's syntax ( not really effective...)
+$UseFourJs=1
+$IndentLeftFJSInit=0
+# definition of indentation behaviour for each 4GL WORD
+# contains 3 fields, separated by a tab
+#field #1: 4GL word
+#field #2: = behaviour ahead of word detection ( =: do not indent, + indent to right before the word, - indent to left before word
+#field #3: = behaviour after word detection ( =: do not indent, + indent to right before the word, - indent to left before word
+#Ex: WHILE: '=' means write WHILE without indenting, '+'' means indent to right all the lines after this line
+# the end of the WHILE block is handled by the 'END WHILE' more below, where '-' means indent to the left before writing this line, and '=' means keep the next lines at same level.
+WITHOUT DEFAULTS	=	=
+WITH
+WHILE\(	=	+
+WHILE	=	+
+WHERE	=	=
+WHENEVER SQLERROR	=	=
+WHENEVER ERROR	=	=
+WHEN	=	+
+VALIDATE	=	=
+USING	=	=
+UPDATE STATISTICS	=	=
+UPDATE	=	=
+UNLOCK TABLE	=	=
+UNLOAD TO	=	=
+THEN	=	+	
+START REPORT	=	=
+START DATABASE	=	=
+SQL	=	=
+SLEEP	=	=
+SKIP	=	=
+SHOW	=	=
+SET OPTIMIZATION	=	=
+SET LOG	=	=
+SET LOCK MODE	=	=
+SET ISOLATION	=	=
+SET EXPLAIN	=	=
+SET CONSTRAINTS	=	=
+SELECT	=	=
+SCROLL	=	=
+RUN	=	=
+ROWS,	=	=
+ROWS	=	=
+ROW	=	=
+ROLLFORWARD DATABASE	=	=
+#ROLLBACK WORK	<	=
+ROLLBACK WORK	=	=
+REVOKE	=	=
+RETURNING	=	=
+RETURN	=	=
+REPORT	0	+	REPORT\s+\w+
+REPAIR TABLE	=	=
+RENAME TABLE	=	=
+RENAME COLUMN	=	=
+RENAME	=	=
+RECOVER TABLE	=	=
+RECORD	=	+
+PUT	=	=
+PROMPT	=	=
+PRINT	=	=
+PREPARE	=	=
+PAGE HEADER	=	+
+FIRST PAGE HEADER	=	+
+PAGE TRAILER	=	+
+BEFORE GROUP OF	=	+
+AFTER GROUP OF	=	+
+PAUSE	=	=
+OUTPUT TO REPORT	=	=
+OUTPUT	0	+	\s*OUTPUT\s*\Z
+ON ACTION 	-	+
+ON LAST ROW	-	+
+ON FIRST ROW	-	+
+ON EVERY ROW	-	+
+OR	=	=
+OTHERWISE	-	+
+ORDER BY	=	=
+OPTIONS	=	=
+OPEN WINDOW	=	=
+OPEN FORM	=	=
+ON KEY(	-	+
+ON KEY	-	+
+NEXT	=	=
+NEED	=	=
+MESSAGE	=	=
+MENU	=	=
+MAIN	0	+
+LOCK TABLE	=	=
+LOCATE	=	=
+LOAD	=	=
+LINES	=	=
+LET	=	=
+LABEL	=	=
+KEY(	=	=
+KEY	=	=
+INTO	=	=
+INSERT
+INSERT	=	=
+INPUT BY NAME	=	=
+INPUT ARRAY	=	=
+INITIALIZE	=	=
+IS NULL	=	=
+IS NOT NULL	=	=
+NULL	=	=
+IF	=	=	IF\s*.*THEN
+HIDE	=	=
+HOLD	=	=
+GRANT	=	=
+GOTO	=	=
+GO	=	=
+GLOBALS	=	=
+FUNCTION	0	+	FUNCTION\s+\w+
+FROM	=	=
+FREE	=	=
+FOREACH	=	+
+FORMAT	0	+	\A\s*FORMAT\s*\Z
+FOR	=	+	FOR\s+\w+\s*\=
+FLUSH	=	=
+FINISH REPORT	=	=
+FINISH	=	=
+FETCH	=	=
+EXIT WHILE	=	=
+EXIT MENU	=	=
+EXIT FOR	=	=
+EXECUTE	=	=
+ERROR	=	=
+END WHILE	-	=
+END REPORT	0	=
+END RECORD	-	=
+END RECORD,	-	=
+END MENU	-	=
+END MAIN	0	=
+END INPUT	-	=
+END IF	-	=
+END FUNCTION	0	=
+END FOREACH	-	=
+END FOR	-	=
+END CONSTRUCT	-	=
+END CASE	-	=
+ELSE	-	+
+DROP VIEW	=	=
+DROP TABLE	=	=
+DROP SYNONYM	=	=
+DROP INDEX	=	=
+DROP DATABASE	=	=
+DROP AUDIT	=	=
+DISPLAY FORM	=	= 
+DISPLAY BY NAME	=	=
+DISPLAY ARRAY	=	= 
+DISPLAY	=	=
+DISCONNECT	=	=
+DELETE	=	=
+DEFINE	=	=
+LIKE	=	=
+DEFER	=	=
+DECLARE	=	=
+DATABASE	=	= 
+DATABASE	=	=
+CURRENT WINDOW	=	=
+CURRENT	=	=
+CURSOR	=	=
+CREATE VIEW	=	=
+CREATE TABLE	=	=
+CREATE SYNONYM	=	=
+CREATE INDEX	=	=
+CREATE DATABASE	=	=
+CREATE AUDIT	=	=
+CREATE	=	=
+CONTINUE FOREACH	=	=
+CONTINUE FOR	=	=
+CONTINUE	=	=
+CONSTRUCT BY NAME	=	=
+CONSTRUCT	=	=
+CONNECT	=	=
+#COMMIT WORK	<	=
+COMMIT WORK	=	=
+COMMAND KEY	-	+
+COMMAND	-	+
+COLUMNS	=	=
+CLOSE WINDOW	=	=
+CLOSE FORM	=	=
+CLOSE DATABASE	=	=
+CLEAR	=	=
+CHECK TABLE	=	=
+CASE	=	+
+CANCEL	=	=
+CALL	=	=
+BEGIN WORK	<	=
+BEFORE ROW	-	+
+BEFORE FIELD	-	+
+#BEFORE CONSTRUCT	-	+
+BEFORE CONSTRUCT	+	+
+DYNAMIC ARRAY	=	=
+BEFORE	=	=
+ARRAY	=	=
+AND	=	=
+ALTER TABLE	=	=
+ALTER INDEX	=	=
+ALTER	=	=
+AFTER ROW	-	+
+AFTER INPUT	-	+
+#AFTER FIELD	-	+
+AFTER FIELD	-	=
+AFTER CONSTRUCT	-	+
+CHAR	=	=
+SERIAL	=	=
+SERIAL8	=	=
+BIGSERIAL	=	=
+INTEGER	=	=
+BIGINT	=	=
+INT8	=	=
+SMALLINT	=	=
+FLOAT	=	=
+MONEY	=	=
+BLOB	=	=
+DATE	=	=
+DATETIME	=	=
+DECIMAL	=	=
+STRING	=	=
+DOUBLE	=	=
+FLOAT	=	=
+INTERVAL	=	=
+NUMERIC	=	=
+REAL	=	=
+BYTE	=	=
+SMALLFLOAT	=	=
+SERIAL,	=	=
+SERIAL8,	=	=
+BIGSERIAL,	=	=
+VARCHAR	=	=
+LVARCHAR	=	=
+INTEGER,	=	=
+BIGINT,	=	=
+INT8,	=	=
+BIGINT,	=	=
+SMALLINT,	=	=
+FLOAT,	=	=
+MONEY,	=	=
+BLOB,	=	=
+DATE,	=	=
+DECIMAL,	=	=
+DOUBLE,	=	=
+FLOAT,	=	=
+INTERVAL	=	=
+NUMERIC,	=	=
+REAL,	=	=
+BYTE,	=	=
+SMALLFLOAT,	=	=
+NVARCHAR	=	=
+VARCHAR	=	=
+LVARCHAR	=	=
+VALUES	=	=

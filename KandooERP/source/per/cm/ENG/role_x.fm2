@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form xmlns="http://namespaces.querix.com/2015/fglForms">
+	<form.rootContainer>
+		<CoordPanel preferredSize="40qch,6qch" fieldTable="" identifier="coord1">
+			<Label text="Code" location="8qch,1qch" preferredSize="4qch,1qch" fieldTable="" identifier="label1"/>
+			<TextField noEntry="true" reverse="true" dataType="Integer,,,," location="18qch,1qch" preferredSize="7qch,1qch" fieldTable="role" identifier="role_code"/>
+			<Label text="Class" location="8qch,2qch" preferredSize="5qch,1qch" fieldTable="" identifier="label2"/>
+			<TextField toCase="Up" required="true" dataType="Char,,,,20" location="18qch,2qch" preferredSize="21qch,1qch" toolTip="Class to which this role belongs (F10=L&amp;P)" fieldTable="role" comment="Class to which this role belongs (F10=L&amp;P)" identifier="class_name"/>
+			<Label text="Role name" location="8qch,3qch" preferredSize="9qch,1qch" fieldTable="" identifier="label3"/>
+			<TextField toCase="Up" reverse="true" dataType="Char,,,,20" location="18qch,3qch" preferredSize="21qch,1qch" toolTip="Enter the name/description for the code" fieldTable="role" comment="Enter the name/description for the code" identifier="role_name"/>
+			<Label text="Inverted" location="8qch,4qch" preferredSize="8qch,1qch" fieldTable="" identifier="label4"/>
+			<TextField toCase="Up" dataType="Char,,,,20" location="18qch,4qch" preferredSize="21qch,1qch" toolTip="Inverted direction role name (father/son), if exist" fieldTable="role" comment="Inverted direction role name (father/son), if exist" identifier="role_name_invert"/>
+		</CoordPanel>
+	</form.rootContainer>
+	<form.screenRecords>
+		<ScreenRecord identifier="S_code" fields="role_code,class_name,role_name,role_name_invert"/>
+		<ScreenRecord identifier="role" fields="role_code,class_name,role_name,role_name_invert"/>
+	</form.screenRecords>
+</form>
+

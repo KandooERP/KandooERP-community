@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form xmlns="http://namespaces.querix.com/2015/fglForms">
+	<form.rootContainer>
+		<GridPanel classNames="fcls_rootContainer" verticalAlignment="Stretch" horizontalAlignment="Stretch" fieldTable="" identifier="rootContainer">
+			<GridPanel.gridRowDefinitions>
+				<GridRowDefinition gridLengthValue=""/>
+				<GridRowDefinition gridLengthValue=""/>
+				<GridRowDefinition gridLengthValue="100%"/>
+				<GridRowDefinition gridLengthValue=""/>
+			</GridPanel.gridRowDefinitions>
+			<GridPanel.gridColumnDefinitions>
+				<GridColumnDefinition gridLengthValue="100%"/>
+			</GridPanel.gridColumnDefinitions>
+			<GridPanel classNames="fcls_title_cnt" visible="true" verticalAlignment="Top" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="cntTitle">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="100%"/>
+					<GridColumnDefinition gridLengthValue=""/>
+				</GridPanel.gridColumnDefinitions>
+				<Label isDynamic="true" text="Tariff Verification Breakdown" classNames="fcls_title_lb" visible="true" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="header_text"/>
+				<Label isDynamic="true" text="L138" classNames="fcls_title_lb" visible="true" gridItemLocation="1,0,1,1" fieldTable="" identifier="lbFormName"/>
+			</GridPanel>
+			<GridPanel classNames="fcls_detail_cnt,fcls_data_cnt,fcls_align_left" visible="true" verticalAlignment="Top" horizontalAlignment="Left" gridItemLocation="0,1,1,1" fieldTable="formonly" identifier="cntDetail1">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="" gridMinLength="10rem"/>
+					<GridColumnDefinition gridLengthValue=""/>
+				</GridPanel.gridColumnDefinitions>
+				<TextField dataType="Char,,,,12" preferredSize="13qch,1qch" toolTip=" Tariff Code " fieldTable="tariff" comment=" Tariff Code " identifier="tariff_code" gridItemLocation="1,0,1,1" classNames="fcls_data_widget,fcls_align_left,fcls_length_20qch"/>
+				<TextField noEntry="true" dataType="Decimal,,,2,16" preferredSize="30qch,1qch" toolTip=" Sum of duty against this tariff code" fieldTable="shiphead" comment=" Sum of duty against this tariff code" identifier="duty_ent_amt" gridItemLocation="1,1,1,1" classNames="fcls_data_widget,fcls_align_left,fcls_length_20qch"/>
+				<TextField noEntry="true" dataType="Char,,,,30" preferredSize="13qch,1qch" toolTip="Tariff code description" fieldTable="tariff" comment="Tariff code description" identifier="desc_text" gridItemLocation="1,2,1,1" classNames="fcls_data_widget,fcls_align_left,fcls_length_20qch"/>
+				<TextField noEntry="true" dataType="Decimal,,,3,6" preferredSize="7qch,1qch" toolTip=" Duty rate applicable to this Tariff code" fieldTable="tariff" comment=" Duty rate applicable to this Tariff code" identifier="duty_per" gridItemLocation="1,3,1,1" classNames="fcls_data_widget,fcls_align_left,fcls_length_20qch"/>
+				<Label isDynamic="true" text="Currency" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,4,1,1" fieldTable="" identifier="lb67"/>
+				<TextField toCase="Up" noEntry="true" dataType="Char,,,,3" preferredSize="4qch,1qch" toolTip=" Currency of shipment" fieldTable="currency" comment=" Currency of shipment" identifier="currency_code" gridItemLocation="1,4,1,1" classNames="fcls_data_widget,fcls_align_left,fcls_length_20qch"/>
+				<Label isDynamic="true" text="Tariff Code" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,0,1,1" fieldTable="" identifier="lb51"/>
+				<Label isDynamic="true" text="Total Duty" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,2,1,1" fieldTable="" identifier="lb52"/>
+				<Label isDynamic="true" text="Tariff Rate %" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,3,1,1" fieldTable="" identifier="lb66"/>
+			</GridPanel>
+			<Table rowCount="8" preferredSize="75qch,8qch" fieldTable="" identifier="sr_detail" gridItemLocation="0,2,1,1">
+				<TableColumn fieldTable="" identifier="tc_line_num" text="Line#">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="10rem" gridMaxLength="10rem" gridMinLength="10rem"/>
+					</TableColumn.columnLength>
+					<TextField dataType="SmallInt,,,," toolTip=" Line number within this shipment" fieldTable="shipdetl" comment=" Line number within this shipment" identifier="line_num"/>
+				</TableColumn>
+				<TableColumn fieldTable="" identifier="tc_part_code" text="Product Code">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="10rem" gridMaxLength="10rem" gridMinLength="10rem"/>
+					</TableColumn.columnLength>
+					<TextField toCase="Up" noEntry="true" dataType="Char,,,,15" toolTip=" Product Code for this shipment line" fieldTable="shipdetl" comment=" Product Code for this shipment line" identifier="part_code"/>
+				</TableColumn>
+				<TableColumn fieldTable="" identifier="tc_ship_inv_qty" text="Quantity">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="10rem" gridMaxLength="10rem" gridMinLength="10rem"/>
+					</TableColumn.columnLength>
+					<TextField noEntry="true" dataType="Float,,,," toolTip=" Quantity of this product " fieldTable="shipdetl" comment=" Quantity of this product " identifier="ship_inv_qty"/>
+				</TableColumn>
+				<TableColumn fieldTable="" identifier="tc_fob_unit_ent_amt" text="Unit">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="10rem" gridMaxLength="10rem" gridMinLength="10rem"/>
+					</TableColumn.columnLength>
+					<TextField noEntry="true" dataType="Decimal,,,4,16" toolTip=" Unit FOB in currency of shipment" fieldTable="shipdetl" comment=" Unit FOB in currency of shipment" identifier="fob_unit_ent_amt"/>
+				</TableColumn>
+				<TableColumn fieldTable="" identifier="tc_fob_inv_cost_amt" text="FOB Base">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="10rem" gridMaxLength="10rem" gridMinLength="10rem"/>
+					</TableColumn.columnLength>
+					<TextField noEntry="true" dataType="Decimal,,,2,16" toolTip=" Unit FOB amount in Base currency" fieldTable="shiphead" comment=" Unit FOB amount in Base currency" identifier="fob_inv_cost_amt"/>
+				</TableColumn>
+				<TableColumn fieldTable="" identifier="tc_duty_unit_ent_amt" text="Total Duty">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="10rem" gridMaxLength="10rem" gridMinLength="10rem"/>
+					</TableColumn.columnLength>
+					<TextField noEntry="true" dataType="Decimal,,,4,16" toolTip=" Unit duty applicable for this line" fieldTable="shipdetl" comment=" Unit duty applicable for this line" identifier="duty_unit_ent_amt"/>
+				</TableColumn>
+				<TableColumn fieldTable="" identifier="tc_duty_rate_per" text="Tariff Rate%">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="10rem" gridMaxLength="10rem" gridMinLength="10rem"/>
+					</TableColumn.columnLength>
+					<TextField noEntry="true" dataType="Decimal,,,3,6" toolTip=" Duty rate applicable to this line" fieldTable="shipdetl" comment=" Duty rate applicable to this line" identifier="duty_rate_per"/>
+				</TableColumn>
+				<TableColumn resizable="true" visible="true" identifier="tc_lbEOL">
+					<Label isDynamic="true" visible="true" identifier="lbEOL"/>
+					<TableColumn.columnLength>
+						<GridLength/>
+					</TableColumn.columnLength>
+				</TableColumn>
+			</Table>
+			<GridPanel classNames="fcls_statusbar_cnt" visible="true" verticalAlignment="Top" gridItemLocation="0,3,1,1" fieldTable="formonly" identifier="cntStatusBar">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="100%"/>
+				</GridPanel.gridColumnDefinitions>
+				<Label isDynamic="true" text="" classNames="fcls_sblabel" visible="true" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="lbInfo1"/>
+				<Label isDynamic="true" text="" classNames="fcls_sblabel" visible="true" gridItemLocation="0,1,1,1" fieldTable="formonly" identifier="lbInfo2"/>
+			</GridPanel>
+		</GridPanel>
+	</form.rootContainer>
+	<form.screenRecords>
+		<ScreenRecord identifier="sr_detail" fields="shipdetl.line_num,shipdetl.part_code,shipdetl.ship_inv_qty,shipdetl.fob_unit_ent_amt,shiphead.fob_inv_cost_amt,shipdetl.duty_unit_ent_amt,shipdetl.duty_rate_per" elements="8"/>
+		<ScreenRecord identifier="currency" fields="currency.currency_code"/>
+		<ScreenRecord identifier="shipdetl" fields="shipdetl.ship_inv_qty,shipdetl.fob_unit_ent_amt,shipdetl.duty_unit_ent_amt,shipdetl.duty_rate_per,shipdetl.line_num,shipdetl.part_code"/>
+		<ScreenRecord identifier="shiphead" fields="shiphead.duty_ent_amt,shiphead.fob_inv_cost_amt"/>
+		<ScreenRecord identifier="tariff" fields="tariff.tariff_code,tariff.desc_text,tariff.duty_per"/>
+	</form.screenRecords>
+</form>
+

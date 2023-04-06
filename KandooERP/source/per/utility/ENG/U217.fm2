@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?><form xmlns="http://namespaces.querix.com/2015/fglForms">
+	<form.rootContainer>
+		<GridPanel classNames="fcls_rootContainer" fieldTable="" horizontalAlignment="Left" identifier="rootContainer" verticalAlignment="Top">
+			<GridPanel.gridRowDefinitions>
+				<GridRowDefinition gridLengthValue=""/>
+				<GridRowDefinition gridLengthValue=""/>
+				<GridRowDefinition gridLengthValue=""/>
+				<GridRowDefinition gridLengthValue=""/>
+			</GridPanel.gridRowDefinitions>
+			<GridPanel.gridColumnDefinitions>
+				<GridColumnDefinition gridLengthValue="100%"/>
+			</GridPanel.gridColumnDefinitions>
+			<GridPanel classNames="fcls_title_cnt" fieldTable="formonly" gridItemLocation="0,0,1,1" identifier="cntTitle" verticalAlignment="Top" visible="true">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="100%"/>
+					<GridColumnDefinition gridLengthValue=""/>
+				</GridPanel.gridColumnDefinitions>
+				<Label classNames="fcls_title_lb" fieldTable="formonly" gridItemLocation="0,0,1,1" identifier="header_text" isDynamic="true" text="Statistics Interval Generation" visible="true"/>
+				<Label classNames="fcls_title_lb" fieldTable="" gridItemLocation="1,0,1,1" identifier="lbFormName" isDynamic="true" text="U217" visible="true"/>
+			</GridPanel>
+			<GridPanel classNames="fcls_detail_cnt,fcls_data_cnt,fcls_align_left" fieldTable="formonly" gridItemLocation="0,1,1,1" horizontalAlignment="Left" identifier="cntDetail1" verticalAlignment="Top" visible="true">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="" gridMinLength="10rem"/>
+					<GridColumnDefinition gridLengthValue=""/>
+					<GridColumnDefinition gridLengthValue=""/>
+				</GridPanel.gridColumnDefinitions>
+				<ComboBox classNames="fcls_data_widget,fcls_align_left,fcls_length_10qch" dataType="SmallInt,,,," fieldTable="statint" gridItemLocation="1,0,1,1" identifier="year_num" noEntry="true" preferredSize="5qch,1qch"/>
+				<TextField classNames="fcls_data_widget,fcls_align_left,fcls_length_10qch" comment=" Enter interval type code - (W) " dataType="Char,,,,3" fieldTable="statint" gridItemLocation="1,1,1,1" identifier="type_code" preferredSize="4qch,1qch" toCase="Up" toolTip=" Enter interval type code - (W) "/>
+				<TextField classNames="fcls_data_widget,fcls_align_left,fcls_length_30qch" dataType="Char,,,,30" fieldTable="stattype" gridItemLocation="2,1,1,1" identifier="type_text" noEntry="true" preferredSize="31qch,1qch"/>
+				<Label classNames="fcls_fieldlabel,fcls_align_left" fieldTable="" gridItemLocation="0,0,1,1" identifier="lb51" isDynamic="true" text="Year" visible="true"/>
+				<Label classNames="fcls_fieldlabel,fcls_align_left" fieldTable="" gridItemLocation="0,1,1,1" identifier="lb52" isDynamic="true" text="Type" visible="true"/>
+			</GridPanel>
+			<GridPanel classNames="fcls_detail_cnt,fcls_data_cnt,fcls_align_left" fieldTable="formonly" gridItemLocation="0,2,1,1" identifier="cntDetail2" verticalAlignment="Top" visible="true">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue=""/>
+					<GridColumnDefinition gridLengthValue=""/>
+				</GridPanel.gridColumnDefinitions>
+				<Calendar classNames="fcls_data_widget,fcls_align_left,fcls_length_10qch" comment=" Enter starting date of generation range " dataType="Date,,,," fieldTable="statint" gridItemLocation="1,0,1,1" identifier="start_date" preferredSize="11qch,1qch" toolTip=" Enter starting date of generation range "/>
+				<Calendar classNames="fcls_data_widget,fcls_align_left,fcls_length_10qch" comment=" Enter end date of generation range " dataType="Date,,,," fieldTable="statint" gridItemLocation="1,1,1,1" identifier="end_date" preferredSize="11qch,1qch" toolTip=" Enter end date of generation range "/>
+				<TextField classNames="fcls_data_widget,fcls_align_left,fcls_length_10qch" comment=" Enter number of intervals to generate " dataType="SmallInt,,,," fieldTable="formonly" gridItemLocation="1,2,1,1" identifier="int_cnt" preferredSize="4qch,1qch" toolTip=" Enter number of intervals to generate "/>
+				<Label classNames="fcls_fieldlabel,fcls_align_left" fieldTable="formonly" gridItemLocation="0,0,1,1" identifier="lb36" isDynamic="true" text="Generate Intervals Starting" visible="true"/>
+				<Label classNames="fcls_data_widget,fcls_align_left,fcls_length_10qch" fieldTable="formonly" gridItemLocation="0,1,1,1" horizontalAlignment="Right" identifier="lb37" isDynamic="true" text="Ending" visible="true"/>
+				<Label classNames="fcls_fieldlabel,fcls_align_left" fieldTable="formonly" gridItemLocation="0,2,1,1" identifier="lb38" isDynamic="true" text="Number of Intervals to Generate" visible="true"/>
+			</GridPanel>
+			<GridPanel classNames="fcls_statusbar_cnt" fieldTable="formonly" gridItemLocation="0,3,1,1" identifier="cntStatusBar" verticalAlignment="Top" visible="true">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="100%"/>
+				</GridPanel.gridColumnDefinitions>
+				<Label classNames="fcls_sblabel" fieldTable="formonly" gridItemLocation="0,0,1,1" identifier="lbInfo1" isDynamic="true" text="" visible="true"/>
+				<Label classNames="fcls_sblabel" fieldTable="formonly" gridItemLocation="0,1,1,1" identifier="lbInfo2" isDynamic="true" text="" visible="true"/>
+			</GridPanel>
+		</GridPanel>
+	</form.rootContainer>
+	<form.screenRecords>
+		<ScreenRecord fields="int_cnt" identifier="formonly"/>
+		<ScreenRecord fields="year_num,type_code,start_date,end_date" identifier="statint"/>
+		<ScreenRecord fields="type_text" identifier="stattype"/>
+	</form.screenRecords>
+</form>

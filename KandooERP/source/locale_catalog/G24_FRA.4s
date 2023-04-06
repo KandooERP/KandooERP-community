@@ -1,0 +1,36 @@
+G24_FRA {
+/ { "/" }
+Account { "Compte" }
+Account quantity Unit Of Measure { "Quantité en unités de mesure" }
+Amount { "Montant" }
+Analysis information { "Information analytique" }
+Comments { "Commentaires" }
+Credit { "Crédit" }
+Credit Amt { "Montant Crédit" }
+Credits { "Credits" }
+Currency { "Devise" }
+Date { "Date" }
+Debit { "Débit" }
+Description { "Description" }
+Description of transaction - CTRL-N for Notes { "Description de la transaction" }
+Entry Info { "Informations sur l'entrée" }
+Exchange Rate { "Taux de Change" }
+FILTER { "Premier" }
+ID { "ID" }
+Journal { "Journal" }
+Language Code { "Code langue" }
+Line { "Ligne" }
+Name { "Nom" }
+Period { "Période" }
+Person { "Personne" }
+Posted { "Publié" }
+Quantity { "Quantité" }
+REFRESH { "ACTUALISER" }
+Reference { "Référence" }
+Source Number { "Numéro de source" }
+Statistical quantity of the transaction { "Quantité statistique de la transaction" }
+The General Ledger account applicable to this transaction (W) { "Le compte de comta générale application à cette transaction" }
+UOM { "UDM" }
+Year { "Année" }
+actToolbarManager { "actToolbarManager" }
+}

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<fglBuildTarget xmlns="http://namespaces.querix.com/lyciaide/target" name="UT5_copy_cmpy_data" type="fgl-program">
+
+  <libraries>
+    <library name="lib_tool_U_UT_db" dynamic="false" location=""/>
+    <library name="lib_tool_U_UT_new" dynamic="false" location=""/>
+    <library name="lib_tool_common" dynamic="false" location=""/>
+    <library name="lib_tool_db_common" dynamic="false" location=""/>
+  </libraries>
+
+  <sources type="fgl">
+    <file location="4gl/utility/UT5_copy_cmpy_data.4gl"/>
+  </sources>
+
+  <sources type="form">
+    <file location="per/utility/ENG/U997.fm2"/>
+  </sources>
+
+</fglBuildTarget>

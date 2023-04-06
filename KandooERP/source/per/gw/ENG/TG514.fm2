@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form xmlns="http://namespaces.querix.com/2015/fglForms">
+	<form.rootContainer>
+		<GridPanel classNames="fcls_rootContainer" verticalAlignment="Top" horizontalAlignment="Left" fieldTable="" identifier="rootContainer">
+			<GridPanel.gridRowDefinitions>
+				<GridRowDefinition gridLengthValue=""/>
+				<GridRowDefinition gridLengthValue=""/>
+				<GridRowDefinition gridLengthValue=""/>
+			</GridPanel.gridRowDefinitions>
+			<GridPanel.gridColumnDefinitions>
+				<GridColumnDefinition gridLengthValue="100%"/>
+			</GridPanel.gridColumnDefinitions>
+			<GridPanel classNames="fcls_title_cnt" visible="true" verticalAlignment="Top" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="cntTitle">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="100%"/>
+					<GridColumnDefinition gridLengthValue=""/>
+				</GridPanel.gridColumnDefinitions>
+				<Label isDynamic="true" text="Time Item Type" classNames="fcls_title_lb" visible="true" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="header_text"/>
+				<Label isDynamic="true" text="G514" classNames="fcls_title_lb" visible="true" gridItemLocation="1,0,1,1" fieldTable="" identifier="lbFormName"/>
+			</GridPanel>
+			<GridPanel classNames="fcls_detail_cnt,fcls_data_cnt,fcls_align_left" visible="true" verticalAlignment="Top" horizontalAlignment="Left" gridItemLocation="0,1,1,1" fieldTable="formonly" identifier="cntDetail1">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="" gridMinLength="10rem"/>
+					<GridColumnDefinition gridLengthValue=""/>
+					<GridColumnDefinition gridLengthValue="" gridMinLength="10rem"/>
+					<GridColumnDefinition gridLengthValue=""/>
+				</GridPanel.gridColumnDefinitions>
+				<TextField noEntry="true" dataType="Char,,,,5" preferredSize="6qch,1qch" fieldTable="colitem" identifier="col_item" gridItemLocation="1,0,3,1" classNames="fcls_data_widget,fcls_align_hstretch"/>
+				<TextField noEntry="true" dataType="Char,,,,35" preferredSize="36qch,1qch" fieldTable="mrwitem" identifier="item_desc" gridItemLocation="1,1,3,1" classNames="fcls_data_widget,fcls_align_hstretch"/>
+				<ComboBox dataType="SmallInt,,,," preferredSize="5qch,1qch" fieldTable="colitemdetl" identifier="year_num" gridItemLocation="1,2,1,1" classNames="fcls_data_widget,fcls_align_left,fcls_length_10qch"/>
+				<TextField toCase="Up" dataType="Char,,,,1" preferredSize="2qch,1qch" fieldTable="colitemdetl" identifier="year_type" gridItemLocation="3,2,1,1" classNames="fcls_data_widget,fcls_align_left,fcls_length_10qch"/>
+				<Label isDynamic="true" text="Period number" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,3,1,1" fieldTable="" identifier="lb67"/>
+				<TextField dataType="SmallInt,,,," preferredSize="5qch,1qch" fieldTable="colitemdetl" identifier="period_num" gridItemLocation="1,3,1,1" classNames="fcls_data_widget,fcls_align_left,fcls_length_10qch"/>
+				<Label isDynamic="true" text="Period type" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="2,3,1,1" fieldTable="" identifier="lb65"/>
+				<Label isDynamic="true" text="Year number" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,2,1,1" fieldTable="" identifier="lb66"/>
+				<Label isDynamic="true" text="Year type" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="2,2,1,1" fieldTable="" identifier="lb55"/>
+				<TextField toCase="Up" dataType="Char,,,,1" preferredSize="2qch,1qch" fieldTable="colitemdetl" identifier="period_type" gridItemLocation="3,3,1,1" classNames="fcls_data_widget,fcls_align_left,fcls_length_10qch"/>
+			</GridPanel>
+			<GridPanel classNames="fcls_statusbar_cnt" visible="true" verticalAlignment="Bottom" gridItemLocation="0,2,1,1" fieldTable="formonly" identifier="cntStatusBar">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="100%"/>
+				</GridPanel.gridColumnDefinitions>
+				<Label isDynamic="true" text="" classNames="fcls_sblabel" visible="true" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="lbInfo1"/>
+				<Label isDynamic="true" text="" classNames="fcls_sblabel" visible="true" gridItemLocation="0,1,1,1" fieldTable="formonly" identifier="lbInfo2"/>
+			</GridPanel>
+		</GridPanel>
+	</form.rootContainer>
+	<form.screenRecords>
+		<ScreenRecord identifier="colitem" fields="colitem.col_item"/>
+		<ScreenRecord identifier="colitemdetl" fields="colitemdetl.year_num,colitemdetl.year_type,colitemdetl.period_num,colitemdetl.period_type"/>
+		<ScreenRecord identifier="mrwitem" fields="mrwitem.item_desc"/>
+	</form.screenRecords>
+</form>
+

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<fglBuildTarget xmlns="http://namespaces.querix.com/lyciaide/target" name="U1C__auth_currencies" type="fgl-program">
+
+  <libraries>
+    <library name="lib_tool_U_UT_new" dynamic="false" location=""/>
+    <library name="lib_tool_common" dynamic="false" location=""/>
+    <library name="lib_tool_db_common" dynamic="false" location=""/>
+  </libraries>
+
+  <sources type="fgl">
+    <file location="4gl/U1C__auth_currencies_chl.4gl"/>
+    <file location="4gl/U1C__auth_currencies_prn.4gl"/>
+  </sources>
+
+  <sources type="form">
+    <file location="per/gl/ENG/G952.fm2"/>
+  </sources>
+
+</fglBuildTarget>

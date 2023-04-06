@@ -1,0 +1,71 @@
+P47_FRA {
++1-30 Days Overdue { "+ 1-30 jours de retard" }
++31-60 Days Overdue { "31 à 60 jours de retard" }
++61-90 Days Overdue { "+61 -90 jours de retard" }
++90+Days Overdue { "90+ J. retard de paiement" }
+0 - Not applicable, 1 - cents, 2 - rounded down, 3 - rounded up { "0 - Sans objet, 1 - centime, 2 - arrondi vers le bas, 3 - arrondi vers le haut" }
+=Balance { "= Solde" }
+A Valid Code for this part of the chart { "Un code valid pour cette partie du numéro de compte" }
+Account { "Compte" }
+Account Status { "Situation du Compte" }
+Account Verifier { "Vérificateur de compte" }
+Account code to identify this account { "Numéro de compte identifiant ce client" }
+Amount Applied { "Montant Appliqué" }
+Bank { "Banque" }
+Bank Account { "Compte bancaire" }
+Bank Code { "Code Banque" }
+Bank currency { "Devise de la Banque" }
+Chart of Accounts { "Plan Comptable" }
+Cheque Date { "Date du chèque" }
+Cheque Number { "Numéro de chèque" }
+Code { "Code" }
+Comments { "Commentaires" }
+Currency exchange rate for this transaction { "Taux de change pour cette transaction" }
+Current { "Actuel" }
+Date { "Date" }
+Dates { "Dates" }
+Description { "Description" }
+Entry Info { "Informations sur l'entrée" }
+Exchange Rate { "Taux de Change" }
+FILTER { "Premier" }
+Field Description { "Description du champ" }
+Filter { "Filtrer" }
+Flex Codes { "Flex Codes" }
+GL Account { "Compte de Compta Générale" }
+GL Integration { "Intégration Grand Livre" }
+ID { "ID" }
+Indicates the date of last debit from this vendor { "Indique la date du dernier débit de ce fournisseur" }
+Indicates the date of last purchase raised for this vendor { "Indique la date du dernier achat effectué chez ce fournisseur" }
+Indicates the date of last voucher from this vendor { "Indique la date de la dernière facture de ce fournisseur" }
+Indicates the date of the most recent payment made to this vendor { "Indique la date du dernier paiement effectué à ce fournisseur" }
+LOOKUP { "RECHERCHER" }
+Language Code { "Code langue" }
+Last Debit { "Dernier débit" }
+Last Payment { "Dernier paiement" }
+Last Purchase { "Dernier achat" }
+Last Voucher { "Dernière facture" }
+Length { "Longueur" }
+Length of the Code { "Longueur Numéro de compte" }
+Name { "Nom" }
+Period { "Période" }
+Person { "Personne" }
+Posted { "Publié" }
+Start Pos. { "Positions Départ" }
+Start position of the Code { "Position de départ du code" }
+Status { "Statut" }
+The (1-30 day) account balance with this vendor { "Le solde du compte (1-30 jours) chez ce fournisseur" }
+The (31-60 day) account balance with this vendor { "Le solde du compte (31-60 jours) chez ce fournisseur" }
+The (61-90 day) account balance with this vendor { "Le solde du compte (61-90 jours) chez ce fournisseur" }
+The (90+ days) account balance with this vendor { "Solde du compte à 90+ J chez ce fournisseur" }
+The Description of the Account { "Description du compte" }
+The balance with this vendor { "Solde chez ce fournisseur" }
+The current balance being maintained by this vendor { "Le solde actuel maintenu par ce fournisseur" }
+The description for this code { "L'intitulé de ce code" }
+The valid flex segment { "Le segment Flex valide" }
+Title of this field in the GL { "Titre de ce champ en Compta géné" }
+Type { "Type" }
+Vendor { "Fournisseur" }
+Vendor Code { "Code Fournisseur" }
+Withholding Tax rate { "Pourcentage de retenue à la source" }
+actToolbarManager { "actToolbarManager" }
+}

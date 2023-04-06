@@ -1,0 +1,755 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form xmlns="http://namespaces.querix.com/2015/fglForms">
+	<form.rootContainer>
+		<GridPanel classNames="fcls_rootContainer" verticalAlignment="Stretch" horizontalAlignment="Stretch" fieldTable="" identifier="rootContainer">
+			<GridPanel.gridRowDefinitions>
+				<GridRowDefinition gridLengthValue=""/>
+				<GridRowDefinition gridLengthValue="100%"/>
+				<GridRowDefinition gridLengthValue=""/>
+			</GridPanel.gridRowDefinitions>
+			<GridPanel.gridColumnDefinitions>
+				<GridColumnDefinition gridLengthValue="100%"/>
+			</GridPanel.gridColumnDefinitions>
+			<GridPanel classNames="fcls_title_cnt" visible="true" verticalAlignment="Top" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="cntTitle">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="100%"/>
+					<GridColumnDefinition gridLengthValue=""/>
+				</GridPanel.gridColumnDefinitions>
+				<Label isDynamic="true" text="Header-Text" classNames="fcls_title_lb" visible="true" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="header_text"/>
+				<Label isDynamic="true" text="_master_D1_1Gp_01b" classNames="fcls_title_lb" visible="true" gridItemLocation="1,0,1,1" fieldTable="" identifier="lbFormName"/>
+			</GridPanel>
+			<GridPanel classNames="fcls_detail_cnt,fcls_data_cnt,fcls_align_left" visible="true" verticalAlignment="Top" horizontalAlignment="Left" gridItemLocation="0,1,1,1" fieldTable="formonly" identifier="cntDetail1">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue="" gridMinLength="100%"/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="" gridMinLength="100%"/>
+				</GridPanel.gridColumnDefinitions>
+				<ListBox minSize="60rem,20rem" visible="true" verticalAlignment="Stretch" horizontalAlignment="Stretch" gridItemLocation="0,0,1,1" fieldTable="" identifier="formName">
+
+					<ListBoxItem text="J100 - Job Addition" identifier="formName_J100">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="J100"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+
+					<ListBoxItem text="J101 - Job Description" identifier="formName_J101">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="J101"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+
+					<ListBoxItem text="J103 - Billing Details" identifier="formName_J103">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="J103"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+
+					<ListBoxItem text="J104 - Activity Addition" identifier="formName_J104">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="J104"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+
+					<ListBoxItem text="J105 - Activity Detail" identifier="formName_J105">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="J105"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+
+					<ListBoxItem text="J106 - Job Addition" identifier="formName_J106">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="J100"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+
+					<ListBoxItem text="J107 - Job Edit" identifier="formName_J107">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="J107"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+
+					<ListBoxItem text="J109 - Activity Description" identifier="formName_J109">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="J109"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+
+					<ListBoxItem text="J110 - Responsibility Codes" identifier="formName_J110">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="J110"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+
+					<ListBoxItem text="J111 - Job Scan" identifier="formName_J111">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="J111"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+
+					<ListBoxItem text="J112 - Job Units" identifier="formName_J112">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="J112"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+
+					<ListBoxItem text="J113 - Job Management Parameters" identifier="formName_J113">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="J113"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+
+					<ListBoxItem text="J116 - Activity Edit" identifier="formName_J116">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="J116"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+
+					<ListBoxItem text="J117 - Scan Job Ledger" identifier="formName_J117">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="J117"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+
+					<ListBoxItem text="J118 - Scan Activities" identifier="formName_J118">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="J118"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+
+					<ListBoxItem text="J119 - Job Variations" identifier="formName_J119">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="J119"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+
+					<ListBoxItem text="J120 - Job Management Resource" identifier="formName_J120">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="J120"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+
+					<ListBoxItem text="J121 - Resource Scan" identifier="formName_J121">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="J121"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					
+					<ListBoxItem text="J121a - Resource Scan" identifier="formName_J121a">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="J121a"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+
+
+					<ListBoxItem text="J122 - Resource Allocation Inquiry" identifier="formName_J122">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="J122"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+
+					<ListBoxItem text="J123 - Job Adjustments" identifier="formName_J13">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="J123"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+
+					<ListBoxItem text="J125 - Inquiry" identifier="formName_J125">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="J125"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+
+					<ListBoxItem text="J127c - Job Invoicing" identifier="formName_J127c">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="J127c"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+
+					<ListBoxItem text="J128 - Invoice Details" identifier="formName_J128">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="J128"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+
+					<ListBoxItem text="J129 - Invoice Summary" identifier="formName_J129">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="J129"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					
+					<ListBoxItem text="J130 - Cost Plus Markup" identifier="formName_J130">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="J130"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					
+					<ListBoxItem text="J131 - Job Inquiry" identifier="formName_J131">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="J131"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					
+					<ListBoxItem text="J133 - Scan Job Ledger" identifier="formName_J133">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="J133"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					
+					<ListBoxItem text="J134 - Resource Allocation" identifier="formName_J134">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="J134"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					
+					<ListBoxItem text="J135 - Adjust Costing and Billing Rates" identifier="formName_J135">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="J135"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					
+					<ListBoxItem text="J136 - Job" identifier="formName_J136">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="J136"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					
+					<ListBoxItem text="J137 - Payroll Posting Information" identifier="formName_J137">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="J137"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					
+					<ListBoxItem text="J139 - Timesheet Entry" identifier="formName_J139">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="J139"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					
+					<ListBoxItem text="J140 - Timesheet Date Summary" identifier="formName_J140">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="J140"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					
+					<ListBoxItem text="J141 - Timesheet Activity Summary" identifier="formName_J141">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="J141"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					
+					<ListBoxItem text="J142 - Person Scan" identifier="formName_J142">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="J142"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					
+					<ListBoxItem text="J143 - Timesheet Scan" identifier="formName_J143">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="J143"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					
+					<ListBoxItem text="J144 - Person Entry" identifier="formName_J144">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="J144"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					
+					<ListBoxItem text="J147 - Job Management AP Distribution" identifier="formName_J147">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="J147"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					
+					<ListBoxItem text="J148 - Job Management Line Distribution" identifier="formName_J148">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="J148"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					
+					<ListBoxItem text="J149 - Activity Transaction Selection" identifier="formName_J149">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="J149"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					
+					<ListBoxItem text="J151 - Resource Report Selection" identifier="formName_J151">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="J151"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					
+					<ListBoxItem text="J152 - Job Management Product Issue" identifier="formName_J152">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="J152"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					
+					<ListBoxItem text="J152a - Job Management Product Issue Inquiry" identifier="formName_J152a">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="J152a"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					
+					<ListBoxItem text="J154 - Invoice Line Item Transactions" identifier="formName_J154">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="J154"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					
+					<ListBoxItem text="J154a - Invoice Line Item Transactions" identifier="formName_J154a">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="J154a"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					
+					<ListBoxItem text="J155 - Invoice Transaction Detail" identifier="formName_J155">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="J155"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					
+					<ListBoxItem text="J156 - Job Imaging" identifier="formName_J156">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="J156"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					
+					<ListBoxItem text="J157 - Activity Image" identifier="formName_J157">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="J157"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					
+					<ListBoxItem text="J158 - Activity Imaging" identifier="formName_J158">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="J158"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					
+					<ListBoxItem text="J159 - Scan Resource Billing" identifier="formName_J159">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="J159"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					
+					<ListBoxItem text="J160 - Activity Detail" identifier="formName_J160">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="J160"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					
+					<ListBoxItem text="J163 - Estimated Completion Date Range" identifier="formName_J163">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="J163"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					
+					<ListBoxItem text="J164 - Job" identifier="formName_J164">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="J164"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					
+					<ListBoxItem text="J165 - Reporting Period" identifier="formName_J165">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="J165"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					
+					<ListBoxItem text="J166 - Imaged Activity has the same Code as an Existing Activity" identifier="formName_J166">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="J166"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					
+					<ListBoxItem text="J167 - Job Type Scan" identifier="formName_J167">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="J167"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					
+					<ListBoxItem text="J168 - Job Types" identifier="formName_J168">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="J168"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					
+					<ListBoxItem text="J169 - Job Management Invoicing" identifier="formName_J169">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="J169"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					
+					<ListBoxItem text="J170 - Job Summary" identifier="formName_J170">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="J170"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					
+					<ListBoxItem text="J171 - Activity Detail" identifier="formName_J171">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="J171"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					
+					<ListBoxItem text="J172 - Activity Accrual Entry" identifier="formName_J172">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="J172"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					
+					<ListBoxItem text="J173 - Notes" identifier="formName_J173">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="J173"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					
+					<ListBoxItem text="J176 - Timesheet Details" identifier="formName_J176">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="J176"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					
+					<ListBoxItem text="J177 - Job Management Purchase Order Lines" identifier="formName_J177">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="J177"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					
+					<ListBoxItem text="J177a - Job and Inventory Combination Purchase Order Lines" identifier="formName_J177a">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="J177a"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					
+					<ListBoxItem text="J178 - Job Inquiry" identifier="formName_J178">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="J178"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					
+					<ListBoxItem text="J179 - Activity Transaction Selection" identifier="formName_J179">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="J179"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					
+					<ListBoxItem text="J183 - JM Credit" identifier="formName_J183">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="J183"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					
+					<ListBoxItem text="J184 - User Prompts" identifier="formName_J184">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="J184"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					
+					<ListBoxItem text="J186 - Departments Scan" identifier="formName_J6">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="J186"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					
+					<ListBoxItem text="J187 - Activity Transaction Selection" identifier="formName_J187">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="J187"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					
+					<ListBoxItem text="J188 - Resource Allocation Selection" identifier="formName_J188">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="J188"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					
+					<ListBoxItem text="J189 - Timesheet Entry" identifier="formName_J189">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="J189"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					
+					<ListBoxItem text="J190 - Timesheet Entry" identifier="formName_J190">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="J190"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					
+					<ListBoxItem text="J191 - Departments Scan" identifier="formName_J191">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="J191"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					
+					<ListBoxItem text="J192 - Timesheet Person Scan" identifier="formName_J192">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="J192"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					
+					<ListBoxItem text="J193 - Task Period Maintenance" identifier="formName_J193">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="J193"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					
+					<ListBoxItem text="J194 - Task Period Inquiry" identifier="formName_J194">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="J194"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					
+					<ListBoxItem text="J195 - Contract User Prompts" identifier="formName_J195">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="J195"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					
+					<ListBoxItem text="J196 - Adjust Resource Allocation Mode identifier"    identifier ="formName_J196">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="J196"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					
+					<ListBoxItem text="J197 - Resource Budget" identifier="formName_J197">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="J197"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					
+					<ListBoxItem text="J198 - Resource Budget" identifier="formName_J198">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="J198"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					
+					<ListBoxItem text="J199 - Resource Groups" identifier="formName_J199">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="J199"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					
+					<ListBoxItem text="J200 - Credit" identifier="formName_J200">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="J200"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					
+					<ListBoxItem text="J202 - Job Inquiry" identifier="formName_J202">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="J202"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					
+					<ListBoxItem text="J203 - Accrual Reversal" identifier="formName_J203">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="J203"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					
+					<ListBoxItem text="J204 - Accrual Reversal" identifier="formName_J204">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="J204"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					
+					<ListBoxItem text="J205 - Transaction Date Selection" identifier="formName_J205">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="J205"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					
+					<ListBoxItem text="J210 - Responsibility Codes" identifier="formName_J210">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="J210"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					
+					<ListBoxItem text="J212 - Hourly Rate Maintenance" identifier="formName_J212">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="J212"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					
+					<ListBoxItem text="J213 - Actual To Target hours" identifier="formName_J213">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="J213"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					
+					<ListBoxItem text="J214 - Missing/Incomplete Timesheets" identifier="formName_J214">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="J214"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					
+					<ListBoxItem text="J215 - Chargeable Hours Report" identifier="formName_J215">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="J215"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					
+
+					<ListBoxItem text="J301 - Cost Transfer" identifier="formName_J301">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="J301"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+
+					<ListBoxItem text="J302 - Cost Transfers" identifier="formName_J302">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="J302"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+
+					<ListBoxItem text="J306 - Job Profitability" identifier="formName_J306">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="J306"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+
+					<ListBoxItem text="J310 - Comments Entry" identifier="formName_J310">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="J310"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+
+					<ListBoxItem text="J311 - Timesheet Comments" identifier="formName_J311">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="J311"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+
+					<ListBoxItem text="J314 - WIP Reconciliation Report" identifier="formName_J314">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="J314"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+
+					<ListBoxItem text="J315 - Posting Timesheet Scan" identifier="formName_J315">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="J315"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+
+					<ListBoxItem text="J317 - Update Activity Status" identifier="formName_J317">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="J317"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+
+					<ListBoxItem text="J318 - Job Inquiry" identifier="formName_J318">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="J318"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+
+					<ListBoxItem text="J319 - Activity Transaction Selection" identifier="formName_J319">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="J319"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+
+					<ListBoxItem text="J320 - Job Cost Report" identifier="formName_J320">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="J320"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+
+					<ListBoxItem text="J321 - Credit Transaction Detail" identifier="formName_J321">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="J321"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+
+					<ListBoxItem text="J665 - Job Management Credit Note Edit" identifier="formName_J665">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="J665"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+
+					<ListBoxItem text="J666 - Edit Credit Lines" identifier="formName_J666">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="J666"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+
+					<ListBoxItem text="JA00 - Contract Header" identifier="formName_JA00">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="JA00"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+
+					<ListBoxItem text="JA03 - Contract Line Details" identifier="formName_JA03">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="JA03"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+
+					<ListBoxItem text="JA04 - Contract Line Details" identifier="formName_JA04">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="JA04"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+
+					<ListBoxItem text="JA05 - Cost Transfer" identifier="formName_JA05">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="JA05"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+
+					<ListBoxItem text="JA11 - Tentative Invoices" identifier="formName_JA11">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="JA11"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+
+					<ListBoxItem text="JA12 - Automatic Billing Parameters" identifier="formName_JA12">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="JA12"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+
+					<ListBoxItem text="JA14 - Replace Tentative Invoices" identifier="formName_JA14">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="JA14"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+
+					<ListBoxItem text="JA15 - Invoice Information" identifier="formName_JA15">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="JA15"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+
+
+	
+					<ListBox.onMouseDoubleClick>
+						<ActionEventHandler actionName="ViewForm"/>
+					</ListBox.onMouseDoubleClick>
+				</ListBox>
+			</GridPanel>
+			<GridPanel classNames="fcls_statusbar_cnt" visible="true" verticalAlignment="Bottom" gridItemLocation="0,2,1,1" fieldTable="formonly" identifier="cntStatusBar">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="100%"/>
+				</GridPanel.gridColumnDefinitions>
+				<Label isDynamic="true" text="" classNames="fcls_sblabel" visible="true" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="lbInfo1"/>
+				<Label isDynamic="true" text="" classNames="fcls_sblabel" visible="true" gridItemLocation="0,1,1,1" fieldTable="formonly" identifier="lbInfo2"/>
+			</GridPanel>
+		</GridPanel>
+	</form.rootContainer>
+	<form.screenRecords>
+		<ScreenRecord identifier="FORMONLY" fields="f151"/>
+	</form.screenRecords>
+</form>
+

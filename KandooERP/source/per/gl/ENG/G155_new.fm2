@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form xmlns="http://namespaces.querix.com/2015/fglForms">
+	<form.rootContainer>
+		<GridPanel classNames="fcls_rootContainer" verticalAlignment="Stretch" horizontalAlignment="Stretch" fieldTable="" identifier="rootContainer">
+			<GridPanel.gridRowDefinitions>
+				<GridRowDefinition gridLengthValue=""/>
+				<GridRowDefinition gridLengthValue="" gridMinLength="44"/>
+				<GridRowDefinition gridLengthValue="100%"/>
+				<GridRowDefinition gridLengthValue=""/>
+			</GridPanel.gridRowDefinitions>
+			<GridPanel.gridColumnDefinitions>
+				<GridColumnDefinition gridLengthValue="1202"/>
+			</GridPanel.gridColumnDefinitions>
+			<GridPanel classNames="fcls_title_cnt" visible="true" verticalAlignment="Top" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="cntTitle">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="30%"/>
+					<GridColumnDefinition gridLengthValue="10%"/>
+					<GridColumnDefinition gridLengthValue="30%"/>
+					<GridColumnDefinition gridLengthValue="30%"/>
+				</GridPanel.gridColumnDefinitions>
+				<Label isDynamic="true" text="GL Posting" classNames="fcls_title_lb" visible="true" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="header_text"/>
+				<Label text="New Label" isDynamic="true" visible="true" identifier="hdr_cmpy_code" gridItemLocation="1,0,1,1"/>
+				<Label text="New Label" isDynamic="true" visible="true" identifier="hdr_cmpy_name" gridItemLocation="2,0,1,1"/>
+				<Label isDynamic="true" text="G159" classNames="fcls_title_lb" visible="true" gridItemLocation="3,0,1,1" fieldTable="" identifier="lbFormName" horizontalAlignment="Right"/>
+			</GridPanel>
+			<GridPanel visible="true" identifier="c7" gridItemLocation="0,1,1,1">
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue=""/>
+					<GridColumnDefinition/>
+					<GridColumnDefinition gridLengthValue=""/>
+					<GridColumnDefinition gridLengthValue=""/>
+					<GridColumnDefinition gridLengthValue=""/>
+				</GridPanel.gridColumnDefinitions>
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<Label text="Number of batches ready for posting" isDynamic="true" visible="true" identifier="lb3" gridItemLocation="0,0,1,1" classNames="fcls_fieldlabel,fcls_align_left"/>
+				<TextField visible="true" identifier="batch_count" gridItemLocation="1,0,1,1" classNames="fcls_data_widget,fcls_align_left,fcls_length_10qch"/>
+				<RadioGroup orientation="Vertical" visible="true" identifier="do_in_one_transaction" gridItemLocation="2,0,1,1">
+					<Radio title="Commit AllTogether" identifier="f7_1">
+						<Radio.value>
+							<IntegerLiteral integerValue="1"/>
+						</Radio.value>
+					</Radio>
+					<Radio title="Commit Per Batch" identifier="do_in_one_transaction_2">
+						<Radio.value>
+							<IntegerLiteral integerValue="0"/>
+						</Radio.value>
+					</Radio>
+				</RadioGroup>
+				<Label text="Number of batches not ready for posting" isDynamic="true" visible="true" identifier="lb4" gridItemLocation="3,0,1,1"/>
+				<TextField visible="true" identifier="not_ready_nbr" gridItemLocation="4,0,1,1" text="not_ready_batch_num" fieldTable="formonly"/>
+			</GridPanel>
+			<Table rowCount="13" preferredSize="90qch,13qch" gridItemLocation="0,2,1,1" fieldTable="" identifier="sr_period">
+				<TableColumn text="Post ?" resizable="true" visible="true" identifier="tc_f7">
+					<CheckBox title="" visible="true" notNull="true" identifier="do_post" fieldTable="formonly" enable="true">
+						<CheckBox.checkedValue>
+							<IntegerLiteral integerValue="1"/>
+						</CheckBox.checkedValue>
+						<CheckBox.uncheckedValue>
+							<IntegerLiteral integerValue="0"/>
+						</CheckBox.uncheckedValue>
+					</CheckBox>
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="4%"/>
+					</TableColumn.columnLength>
+				</TableColumn>
+				<TableColumn text="Year" fieldTable="" identifier="f003">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="12%" gridMaxLength="5rem" gridMinLength="5rem"/>
+					</TableColumn.columnLength>
+					<ComboBox editable="false" dataType="SmallInt,,,," toolTip=" The year of the batch" comment=" The year of the batch" fieldTable="batchhead" identifier="year_num" classNames="list-show-text,field-show-text"/>
+				</TableColumn>
+				<TableColumn text="Period" fieldTable="" identifier="f4">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="10%" gridMaxLength="10rem" gridMinLength="5rem"/>
+					</TableColumn.columnLength>
+					<ComboBox dataType="SmallInt,,,," toolTip=" The period number of the batch" comment=" The period number of the batch" fieldTable="batchhead" identifier="period_num" classNames="list-show-text,field-show-text" editable="true"/>
+				</TableColumn>
+				<TableColumn text="Journal Code" fieldTable="" identifier="f00" textAlignment="Left,Default">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="8%" gridMaxLength="15rem" gridMinLength="5rem"/>
+					</TableColumn.columnLength>
+					<ComboBox editable="true" toCase="Up" dataType="Char,,,,3" toolTip=" The Journal Code of the batch " comment=" The Journal Code of the batch " fieldTable="batchhead" identifier="jour_code" classNames="list-show-text,field-show-text" horizontalAlignment="Left" textAlignment="Left,Default"/>
+				</TableColumn>
+				<TableColumn text="Journal Num" fieldTable="" identifier="f001">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="8%" gridMaxLength="" gridMinLength=""/>
+					</TableColumn.columnLength>
+					<TextField dataType="Integer,,,," toolTip=" The batch number associated with the batch" comment=" The batch number associated with the batch" fieldTable="batchhead" identifier="jour_num" classNames="list-show-text-value,field-show-value" textAlignment="Right,Default"/>
+				</TableColumn>
+				<TableColumn text="Journal Date" resizable="true" visible="true" identifier="tc_f6">
+					<TextField visible="true" identifier="jour_date" fieldTable="batchhead">
+					</TextField>
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="12%"/>
+					</TableColumn.columnLength>
+				</TableColumn>
+				<TableColumn text="Status" resizable="true" visible="true" identifier="tc_f6">
+					<TextField visible="true" identifier="jour_status"/>
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="15%"/>
+					</TableColumn.columnLength>
+				</TableColumn>
+				<TableColumn text="Credit" resizable="true" visible="true" identifier="tc_f4">
+					<TextField visible="true" identifier="credit_amt" fieldTable="batchhead"/>
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="15%"/>
+					</TableColumn.columnLength>
+				</TableColumn>
+				<TableColumn text="Debit" resizable="true" visible="true" identifier="tc_f5">
+					<TextField visible="true" identifier="debit_amt" fieldTable="batchhead"/>
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="15%"/>
+					</TableColumn.columnLength>
+				</TableColumn>
+				<TableColumn text="Description" resizable="true" visible="true" identifier="tc_f6">
+					<TextField visible="true" identifier="com1_text" fieldTable="batchhead"/>
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="25%"/>
+					</TableColumn.columnLength>
+				</TableColumn>
+				<TableColumn text="First date" resizable="true" visible="true" identifier="tc_f7">
+					<TextField visible="true" identifier="first_date" fieldTable="formonly"/>
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="12%"/>
+					</TableColumn.columnLength>
+				</TableColumn>
+				<TableColumn text="Last Date" resizable="true" visible="true" identifier="tc_f8">
+					<TextField visible="true" identifier="last_date" fieldTable="formonly"/>
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="12%"/>
+					</TableColumn.columnLength>
+				</TableColumn>
+				<TableColumn text="Entries #" resizable="true" visible="true" identifier="tc_f9">
+					<TextField visible="true" identifier="entries_number" fieldTable="formonly"/>
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="6%"/>
+					</TableColumn.columnLength>
+				</TableColumn>
+			</Table>
+			<GridPanel classNames="fcls_statusbar_cnt" visible="true" verticalAlignment="Top" gridItemLocation="0,3,1,1" fieldTable="formonly" identifier="cntStatusBar">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="100%"/>
+				</GridPanel.gridColumnDefinitions>
+				<Label isDynamic="true" text="" classNames="fcls_sblabel" visible="true" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="lbInfo1"/>
+				<Label isDynamic="true" text="" classNames="fcls_sblabel" visible="true" gridItemLocation="0,1,1,1" fieldTable="formonly" identifier="lbInfo2"/>
+			</GridPanel>
+		</GridPanel>
+	</form.rootContainer>
+	<form.screenRecords>
+		<ScreenRecord identifier="sr_period" fields="formonly.do_post,batchhead.year_num,batchhead.period_num,batchhead.jour_code,batchhead.jour_num,batchhead.jour_date,jour_status,batchhead.credit_amt,batchhead.debit_amt,batchhead.com1_text,formonly.first_date,formonly.last_date,formonly.entries_number"/>
+		<ScreenRecord identifier="batchhead" fields="jour_code,year_num,period_num"/>
+		<ScreenRecord identifier="FormOnly" fields="min_jour_num,.max_jour_num,do_post"/>
+	</form.screenRecords>
+</form>
+

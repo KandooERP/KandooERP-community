@@ -1,0 +1,6 @@
+our $DatabaseName="rfe";
+our $DBVENDOR="informix";						# DB style of the application ( = Lycia DB Driver)
+our $FFGDATADIR=sprintf "I:/Users/BeGooden-IT/git/IIUG-RFE/Resources/Documentation/DBschema-SchemaSpy";	# Directory where database schema file is located
+our $FFGSIGNDIR="E:/Users/BeGooden-IT/Lycia/ffg/signatures";# Directory where the signatures files are located ( logical map of source code)
+our $FFGLOGDIR="E:/Users/BeGooden-IT/Lycia/ffg/log";#  Directory where the log files are located ( logical map of source code)
+our $Language="ENU"								# Language for standard messages and menus

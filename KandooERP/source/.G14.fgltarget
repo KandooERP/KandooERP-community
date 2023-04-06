@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<fglBuildTarget xmlns="http://namespaces.querix.com/lyciaide/target" name="G14" type="fgl-program">
+
+  <libraries>
+    <library name="lib_tool_G_GL_db" dynamic="false" location=""/>
+    <library name="lib_tool_G_GL_new" dynamic="false" location=""/>
+    <library name="lib_tool_I_IN_db" dynamic="false" location=""/>
+    <library name="lib_tool_I_IN_new" dynamic="false" location=""/>
+    <library name="lib_tool_J_JM_new" dynamic="false" location=""/>
+    <library name="lib_tool_N_RE_new" dynamic="false" location=""/>
+    <library name="lib_tool_P_AP_new" dynamic="false" location=""/>
+    <library name="lib_tool_R_PU_new" dynamic="false" location=""/>
+    <library name="lib_tool_U_UT_new" dynamic="false" location=""/>
+    <library name="lib_tool_W_WO_new" dynamic="false" location=""/>
+    <library name="lib_tool_common" dynamic="false" location=""/>
+    <library name="lib_tool_db_common" dynamic="false" location=""/>
+  </libraries>
+
+  <sources type="fgl">
+    <file location="4gl/common/ac_form.4gl"/>
+    <file location="4gl/common/pinvwind.4gl"/>
+    <file location="4gl/common/po_dssfunc.4gl"/>
+    <file location="4gl/common/prpdwind.4gl"/>
+    <file location="4gl/common/conv_rate.4gl"/>
+    <file location="4gl/common/acctwind.4gl"/>
+    <file location="4gl/common/ckhdwind.4gl"/>
+    <file location="4gl/common/acsdwind.4gl"/>
+    <file location="4gl/common/ckapwind.4gl"/>
+    <file location="4gl/common/popswind.4gl"/>
+    <file location="4gl/common/vodiwind.4gl"/>
+    <file location="4gl/common/costlwind.4gl"/>
+    <file location="4gl/common/cabchkfunc.4gl"/>
+    <file location="4gl/common/prrcwind.4gl"/>
+    <file location="4gl/common/cabdetlwind.4gl"/>
+    <file location="4gl/common/reqwind.4gl"/>
+    <file location="4gl/common/dmdiwind.4gl"/>
+    <file location="4gl/gl/G_GL_GLOBALS.4gl"/>
+    <file location="4gl/common/pcustwind.4gl"/>
+    <file location="4gl/common/wlocnwin.4gl"/>
+    <file location="4gl/common/glob_GLOBALS.4gl"/>
+    <file location="4gl/common/glob_GLOBALS_userDataTypes.4gl"/>
+    <file location="4gl/common/psepwind.4gl"/>
+    <file location="4gl/common/prgdwind.4gl"/>
+    <file location="4gl/common/prmowind.4gl"/>
+    <file location="4gl/common/vopawind.4gl"/>
+    <file location="4gl/common/note_disp.4gl"/>
+    <file location="4gl/common/prsswind.4gl"/>
+    <file location="4gl/common/pohdwind.4gl"/>
+    <file location="4gl/common/schedfunc.4gl"/>
+    <file location="4gl/common/acddwind.4gl"/>
+    <file location="4gl/common/stvawind.4gl"/>
+    <file location="4gl/common/warewind.4gl"/>
+    <file location="4gl/common/prelawind.4gl"/>
+    <file location="4gl/common/josdwind.4gl"/>
+    <file location="4gl/common/vperfunc.4gl"/>
+    <file location="4gl/common/poauwind.4gl"/>
+    <file location="4gl/common/notewind.4gl"/>
+    <file location="4gl/common/pistwind.4gl"/>
+    <file location="4gl/common/vospwind.4gl"/>
+    <file location="4gl/common/glob_GLOBALS_constant.4gl"/>
+    <file location="4gl/common/prsitwind.4gl"/>
+    <file location="4gl/common/pooswind.4gl"/>
+    <file location="4gl/common/wtaxwind.4gl"/>
+    <file location="4gl/common/dmhdwind.4gl"/>
+    <file location="4gl/gl/G14.4gl"/>
+    <file location="4gl/common/prldwind.4gl"/>
+    <file location="4gl/common/reqfunc.4gl"/>
+    <file location="4gl/common/pohiwind.4gl"/>
+    <file location="4gl/common/prodmwind.4gl"/>
+    <file location="4gl/common/partwind.4gl"/>
+    <file location="4gl/common/pinfowind.4gl"/>
+    <file location="4gl/common/secuuser.4gl"/>
+    <file location="4gl/common/podewind.4gl"/>
+    <file location="4gl/common/vohdwind.4gl"/>
+    <file location="4gl/common/postwind.4gl"/>
+    <file location="4gl/ap/P41f.4gl"/>
+  </sources>
+
+  <sources type="form">
+    <file location="per/utility/ENG/U156.fm2"/>
+    <file location="per/pu/ENG/R140.fm2"/>
+    <file location="per/jm/ENG/J147.fm2"/>
+    <file location="per/in/ENG/I105a.fm2"/>
+    <file location="per/in/ENG/I112.fm2"/>
+    <file location="per/in/ENG/I185.fm2"/>
+    <file location="per/in/ENG/I211.fm2"/>
+    <file location="per/ap/ENG/P112.fm2"/>
+    <file location="per/re/ENG/N109.fm2"/>
+    <file location="per/gl/ENG/G146.fm2"/>
+    <file location="per/re/ENG/N110.fm2"/>
+    <file location="per/in/ENG/I703.fm2"/>
+    <file location="per/pu/ENG/R106.fm2"/>
+    <file location="per/ap/ENG/P169.fm2"/>
+    <file location="per/ap/ENG/P170.fm2"/>
+    <file location="per/gl/ENG/G123.fm2"/>
+    <file location="per/in/ENG/I615.fm2"/>
+    <file location="per/in/ENG/I105.fm2"/>
+    <file location="per/jm/ENG/J177.fm2"/>
+    <file location="per/in/ENG/I702.fm2"/>
+    <file location="per/gl/ENG/G103.fm2"/>
+    <file location="per/re/ENG/N135.fm2"/>
+    <file location="per/pu/ENG/R105.fm2"/>
+    <file location="per/in/ENG/I146.fm2"/>
+    <file location="per/pu/ENG/R607.fm2"/>
+    <file location="per/in/ENG/I183.fm2"/>
+    <file location="per/in/ENG/I600.fm2"/>
+    <file location="per/ap/ENG/P515.fm2"/>
+    <file location="per/in/ENG/I701.fm2"/>
+    <file location="per/gl/ENG/G104.fm2"/>
+    <file location="per/pu/ENG/R143.fm2"/>
+    <file location="per/in/ENG/I184.fm2"/>
+    <file location="per/in/ENG/I635.fm2"/>
+    <file location="per/re/ENG/N108.fm2"/>
+    <file location="per/utility/ENG/U136.fm2"/>
+    <file location="per/ap/ENG/P132.fm2"/>
+    <file location="per/gl/ENG/G129.fm2"/>
+    <file location="per/ap/ENG/P120.fm2"/>
+    <file location="per/pu/ENG/R107.fm2"/>
+    <file location="per/re/ENG/N130.fm2"/>
+    <file location="per/pu/ENG/R144.fm2"/>
+    <file location="per/gl/ENG/G112.fm2"/>
+    <file location="per/in/ENG/I163.fm2"/>
+    <file location="per/in/ENG/I614.fm2"/>
+    <file location="per/in/ENG/I663.fm2"/>
+    <file location="per/utility/ENG/U526.fm2"/>
+    <file location="per/pu/ENG/R116.fm2"/>
+    <file location="per/in/ENG/I500.fm2"/>
+    <file location="per/in/ENG/I682.fm2"/>
+    <file location="per/gl/ENG/G147.fm2"/>
+    <file location="per/in/ENG/I684.fm2"/>
+    <file location="per/re/ENG/N111.fm2"/>
+    <file location="per/in/ENG/I109.fm2"/>
+    <file location="per/pu/ENG/R146.fm2"/>
+    <file location="per/in/ENG/I114.fm2"/>
+    <file location="per/re/ENG/N107.fm2"/>
+    <file location="per/jm/ENG/J177a.fm2"/>
+    <file location="per/gl/ENG/G114.fm2"/>
+    <file location="per/utility/ENG/U162.fm2"/>
+    <file location="per/jm/ENG/J148.fm2"/>
+    <file location="per/in/ENG/I101.fm2"/>
+    <file location="per/in/ENG/I611.fm2"/>
+  </sources>
+
+  <mediaFiles>
+    <file client="true" location="G14.qxtheme" type="gui-theme-file"/>
+    <file client="true" location="G14.css" type="other"/>
+  </mediaFiles>
+
+</fglBuildTarget>

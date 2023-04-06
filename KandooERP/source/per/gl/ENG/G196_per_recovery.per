@@ -1,0 +1,78 @@
+{
+###########################################################################
+# This program is free software; you can redistribute it and/or modify it
+# under the terms of the GNU General Public License as published by the
+# Free Software Foundation; either version 2 of the License, or (at your
+# option) any later version.
+#
+# This program is distributed in the hope that it will be useful, but
+# WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+# General Public License for more details.
+#
+# You should have received a copy of the GNU General Public License along
+# with this program; if not, write to the Free Software Foundation, Inc.,
+# 59 Temple Place, Suite 330, Boston, MA 02111-1307 USA
+#
+###########################################################################
+
+	 $Id: G196.per,v 1.4 2003/11/19 22:22:35 afalout Exp $
+}
+
+
+database kandoodb
+
+screen
+{
+                                Account                              G196
+\g-------------------------------------------------------------------------\g
+Company          [a1]               [d001                               ]
+Account Code     [f000              |h001                          ]
+Year             [f1  ]
+Currency         [c2 ] [d002                          ]
+\g--------------------\g Base Currency [c3 ]\g---------------------------------\g
+Opening Balance  [f018           ]   YTD Debit Amount   [f015           ]
+Current Balance  [f017           ]   YTD Credit Amount  [f016           ]
+\g------------------\g Foreign Currency [c1 ]\g--------------------------------\g
+Opening Balance  [f011           ]   YTD Debit Amount   [f013           ]
+Current Balance  [f012           ]   YTD Credit Amount  [f014           ]
+
+\g-------------------------------------------------------------------------\g
+}
+end
+tables
+account
+accountcur
+coa
+company
+currency
+glparms
+attributes
+a1 = account.cmpy_code, upshift, comments =
+  "Enter the two digit Company ID for this account detail";
+d001 = company.name_text, noentry; 
+f000 = account.acct_code, upshift, comments =
+ "Identifies the account code of this GL account ";
+h001 = coa.desc_text, noentry;
+f1 = account.year_num,   comments =
+ "Identifies the year of this account summary totals";
+c2 = formonly.currency_code, upshift, comments =
+ "The currency for the account";
+d002 = currency.desc_text, noentry;
+c3 = glparms.base_currency_code, noentry;
+f018 = accountcur.base_open_amt, noentry;
+f017 = accountcur.base_bal_amt, noentry;
+f015 = accountcur.base_debit_amt, noentry;
+f016 = accountcur.base_credit_amt, noentry;
+c1 = accountcur.currency_code, noentry;
+f011 = accountcur.open_amt, noentry;
+f012 = accountcur.bal_amt, noentry;
+f013 = accountcur.debit_amt, noentry;
+f014 = accountcur.credit_amt, noentry;
+end
+instructions
+delimiters " "
+
+
+
+

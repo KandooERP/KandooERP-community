@@ -1,0 +1,71 @@
+{
+###########################################################################
+# This program is free software; you can redistribute it and/or modify it
+# under the terms of the GNU General Public License as published by the
+# Free Software Foundation; either version 2 of the License, or (at your
+# option) any later version.
+#
+# This program is distributed in the hope that it will be useful, but
+# WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+# General Public License for more details.
+#
+# You should have received a copy of the GNU General Public License along
+# with this program; if not, write to the Free Software Foundation, Inc.,
+# 59 Temple Place, Suite 330, Boston, MA 02111-1307 USA
+#
+###########################################################################
+
+	 $Id: M173.per,v 1.1 2003/05/20 23:53:06 tpavlek Exp $
+}
+
+
+database kandoodb
+
+screen
+{
+                             Shop Order Receipt                        M173
+\g----------------------------------------------------------------------------\g
+ Product          SO Number  Suffix   Due Date  Required Qty  Receipted Qty
+\g----------------------------------------------------------------------------\g
+[f001           |f002      ] [f003 ][f004      |f005        ] [f006        ]
+[f001           |f002      ] [f003 ][f004      |f005        ] [f006        ]
+[f001           |f002      ] [f003 ][f004      |f005        ] [f006        ]
+[f001           |f002      ] [f003 ][f004      |f005        ] [f006        ]
+[f001           |f002      ] [f003 ][f004      |f005        ] [f006        ]
+[f001           |f002      ] [f003 ][f004      |f005        ] [f006        ]
+[f001           |f002      ] [f003 ][f004      |f005        ] [f006        ]
+[f001           |f002      ] [f003 ][f004      |f005        ] [f006        ]
+[f001           |f002      ] [f003 ][f004      |f005        ] [f006        ]
+[f001           |f002      ] [f003 ][f004      |f005        ] [f006        ]
+[f001           |f002      ] [f003 ][f004      |f005        ] [f006        ]
+[f001           |f002      ] [f003 ][f004      |f005        ] [f006        ]
+[f001           |f002      ] [f003 ][f004      |f005        ] [f006        ]
+[f001           |f002      ] [f003 ][f004      |f005        ] [f006        ]
+
+}
+
+tables
+shopordhead
+
+attributes
+f001 = shopordhead.part_code, upshift,
+comments = " Product code of a product being produced for a shop order";
+f002 = shopordhead.shop_order_num, comments = " Unique shop order number";
+f003 = shopordhead.suffix_num, comments = " Unique suffix number";
+f004 = shopordhead.end_date,
+comments = " Date when manufacturing ends for a shop order";
+f005 = shopordhead.order_qty,
+comments = " The quantity of a product produced for a shop order";
+f006 = shopordhead.receipted_qty,
+comments = " The quantity of a product receipted from a shop order so far";
+
+instructions
+delimiters "  "
+
+screen record sr_shopordhead[14] (part_code,
+                                  shop_order_num,
+                                  suffix_num,
+                                  end_date,
+                                  order_qty,
+                                  receipted_qty)

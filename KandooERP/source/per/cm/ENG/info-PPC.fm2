@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form xmlns="http://namespaces.querix.com/2015/fglForms">
+	<form.rootContainer>
+		<CoordPanel preferredSize="46qch,5qch" fieldTable="" identifier="coord1">
+			<TextField dataType="Char,,,," location="0qch,0qch" preferredSize="15qch,1qch" fieldTable="formonly" identifier="info_line"/>
+			<TextField dataType="Char,,,," location="15qch,0qch" preferredSize="15qch,1qch" fieldTable="formonly" identifier="info_line"/>
+			<ScrollBar orientation="Vertical" location="45qch,0qch" preferredSize="1.5qch,5qch" fieldTable="" identifier="s_info"/>
+			<TextField dataType="Char,,,," location="0qch,1qch" preferredSize="15qch,1qch" fieldTable="formonly" identifier="info_line"/>
+			<TextField dataType="Char,,,," location="15qch,1qch" preferredSize="15qch,1qch" fieldTable="formonly" identifier="info_line"/>
+			<TextField dataType="Char,,,," location="0qch,2qch" preferredSize="15qch,1qch" fieldTable="formonly" identifier="info_line"/>
+			<TextField dataType="Char,,,," location="15qch,2qch" preferredSize="15qch,1qch" fieldTable="formonly" identifier="info_line"/>
+			<TextField dataType="Char,,,," location="0qch,3qch" preferredSize="15qch,1qch" fieldTable="formonly" identifier="info_line"/>
+			<TextField dataType="Char,,,," location="15qch,3qch" preferredSize="15qch,1qch" fieldTable="formonly" identifier="info_line"/>
+			<TextField dataType="Char,,,," location="0qch,4qch" preferredSize="15qch,1qch" fieldTable="formonly" identifier="info_line"/>
+			<TextField dataType="Char,,,," location="15qch,4qch" preferredSize="15qch,1qch" fieldTable="formonly" identifier="info_line"/>
+			<TextField dataType="Char,,,," location="30qch,4qch" preferredSize="15qch,1qch" fieldTable="formonly" identifier="info_line"/>
+		</CoordPanel>
+	</form.rootContainer>
+	<form.screenRecords>
+		<ScreenRecord identifier="s_info" fields="info_line" elements="11"/>
+		<ScreenRecord identifier="formonly" fields="info_line"/>
+	</form.screenRecords>
+</form>
+

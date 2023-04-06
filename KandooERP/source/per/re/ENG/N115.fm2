@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form xmlns="http://namespaces.querix.com/2015/fglForms">
+	<form.rootContainer>
+		<GridPanel classNames="fcls_rootContainer" preferredSize="140qch,25qch" verticalAlignment="Stretch" horizontalAlignment="Stretch" fieldTable="" identifier="rootContainer">
+			<GridPanel.gridRowDefinitions>
+				<GridRowDefinition gridLengthValue=""/>
+				<GridRowDefinition gridLengthValue="100%"/>
+				<GridRowDefinition gridLengthValue=""/>
+			</GridPanel.gridRowDefinitions>
+			<GridPanel.gridColumnDefinitions>
+				<GridColumnDefinition gridLengthValue="100%"/>
+			</GridPanel.gridColumnDefinitions>
+			<GridPanel classNames="fcls_title_cnt" visible="true" verticalAlignment="Top" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="cntTitle">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="100%"/>
+					<GridColumnDefinition gridLengthValue=""/>
+				</GridPanel.gridColumnDefinitions>
+				<Label isDynamic="true" text="Internal Requisition Scan" classNames="fcls_title_lb" visible="true" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="header_text"/>
+				<Label isDynamic="true" text="N115" classNames="fcls_title_lb" visible="true" gridItemLocation="1,0,1,1" fieldTable="" identifier="lbFormName"/>
+			</GridPanel>
+			<Table rowCount="14" preferredSize="73qch,14qch" fieldTable="" identifier="sr_reqhead" gridItemLocation="0,1,1,1">
+				<TableColumn fieldTable="" identifier="tc_scroll_flag">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="2rem" gridMaxLength="2rem" gridMinLength="2rem"/>
+					</TableColumn.columnLength>
+					<CheckBox dataType="Char,,,," fieldTable="formonly" identifier="scroll_flag">
+						<CheckBox.checkedValue>
+							<StringLiteral stringValue="*"/>
+						</CheckBox.checkedValue>
+						<CheckBox.uncheckedValue>
+							<NullLiteral/>
+						</CheckBox.uncheckedValue>
+					</CheckBox>
+				</TableColumn>
+				<TableColumn fieldTable="" identifier="tc_req_num" text="Req No.">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="10rem" gridMaxLength="10rem" gridMinLength="10rem"/>
+					</TableColumn.columnLength>
+					<TextField dataType="Integer,,,," toolTip=" Requisition Number " fieldTable="reqhead" comment=" Requisition Number " identifier="req_num"/>
+				</TableColumn>
+				<TableColumn fieldTable="" identifier="tc_person_code" text="Person">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="10rem" gridMaxLength="10rem" gridMinLength="10rem"/>
+					</TableColumn.columnLength>
+					<TextField toCase="Down" dataType="Char,,,,8" toolTip=" Enter Unique Person Code " fieldTable="reqhead" comment=" Enter Unique Person Code " identifier="person_code"/>
+				</TableColumn>
+				<TableColumn fieldTable="" identifier="tc_name_text" text="Name">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="10rem" gridMaxLength="10rem" gridMinLength="10rem"/>
+					</TableColumn.columnLength>
+					<TextField dataType="Char,,,,40" toolTip=" Enter Person&apos;s Name to whom requisition relates " fieldTable="reqperson" comment=" Enter Person&apos;s Name to whom requisition relates " identifier="name_text"/>
+				</TableColumn>
+				<TableColumn fieldTable="" identifier="tc_stock_ind" text="Type">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="10rem" gridMaxLength="10rem" gridMinLength="10rem"/>
+					</TableColumn.columnLength>
+					<TextField toCase="Up" dataType="SmallInt,,,," toolTip=" Enter Requisition Type - (1) Stocked Items - (2) Direct receipt " fieldTable="reqhead" comment=" Enter Requisition Type - (1) Stocked Items - (2) Direct receipt " identifier="stock_ind"/>
+				</TableColumn>
+				<TableColumn fieldTable="" identifier="tc_req_date" text="Date">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="10rem" gridMaxLength="10rem" gridMinLength="10rem"/>
+					</TableColumn.columnLength>
+					<Calendar format="dd/mm/yyyy" dataType="Date,,,," toolTip=" Enter Date of this Requisition " fieldTable="reqhead" comment=" Enter Date of this Requisition " identifier="req_date"/>
+				</TableColumn>
+				<TableColumn fieldTable="" identifier="tc_ware_code" text="Ware">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="10rem" gridMaxLength="10rem" gridMinLength="10rem"/>
+					</TableColumn.columnLength>
+					<TextField toCase="Up" dataType="Char,,,,3" toolTip=" Warehouse of this Requisition " fieldTable="reqhead" comment=" Warehouse of this Requisition " identifier="ware_code"/>
+				</TableColumn>
+				<TableColumn fieldTable="" identifier="tc_total_sales_amt" text="Tot Amt">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="10rem" gridMaxLength="10rem" gridMinLength="10rem"/>
+					</TableColumn.columnLength>
+					<TextField dataType="Decimal,,,2,12" toolTip=" Total Amount of this Requisition " fieldTable="reqhead" comment=" Total Amount of this Requisition " identifier="total_sales_amt"/>
+				</TableColumn>
+				<TableColumn fieldTable="" identifier="tc_status_ind" text="Status">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="10rem" gridMaxLength="10rem" gridMinLength="10rem"/>
+					</TableColumn.columnLength>
+					<TextField dataType="SmallInt,,,," toolTip=" Req.Status -(0)On Hold -(1)Authorised -(2)Partial Delivered -(9)Complete" fieldTable="reqhead" comment=" Req.Status -(0)On Hold -(1)Authorised -(2)Partial Delivered -(9)Complete" identifier="status_ind"/>
+				</TableColumn>
+				<TableColumn resizable="true" visible="true" identifier="tc_lbEOL">
+					<Label isDynamic="true" visible="true" identifier="lbEOL"/>
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="100"/>
+					</TableColumn.columnLength>
+				</TableColumn>
+			</Table>
+			<GridPanel classNames="fcls_statusbar_cnt" visible="true" verticalAlignment="Bottom" gridItemLocation="0,2,1,1" fieldTable="formonly" identifier="cntStatusBar">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="100%"/>
+				</GridPanel.gridColumnDefinitions>
+				<Label isDynamic="true" text="" classNames="fcls_sblabel" visible="true" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="lbInfo1"/>
+				<Label isDynamic="true" text="" classNames="fcls_sblabel" visible="true" gridItemLocation="0,1,1,1" fieldTable="formonly" identifier="lbInfo2"/>
+			</GridPanel>
+		</GridPanel>
+	</form.rootContainer>
+	<form.screenRecords>
+		<ScreenRecord identifier="sr_reqhead" fields="formonly.scroll_flag,reqhead.req_num,reqhead.person_code,reqperson.name_text,reqhead.stock_ind,reqhead.req_date,reqhead.ware_code,reqhead.total_sales_amt,reqhead.status_ind" elements="14"/>
+		<ScreenRecord identifier="formonly" fields="formonly.scroll_flag"/>
+		<ScreenRecord identifier="reqhead" fields="reqhead.req_num,reqhead.person_code,reqhead.stock_ind,reqhead.req_date,reqhead.ware_code,reqhead.total_sales_amt,reqhead.status_ind"/>
+		<ScreenRecord identifier="reqperson" fields="reqperson.name_text"/>
+	</form.screenRecords>
+</form>
+

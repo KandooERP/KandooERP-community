@@ -1,0 +1,52 @@
+{
+###########################################################################
+# This program is free software; you can redistribute it and/or modify it
+# under the terms of the GNU General Public License as published by the
+# Free Software Foundation; either version 2 of the License, or (at your
+# option) any later version.
+#
+# This program is distributed in the hope that it will be useful, but
+# WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+# General Public License for more details.
+#
+# You should have received a copy of the GNU General Public License along
+# with this program; if not, write to the Free Software Foundation, Inc.,
+# 59 Temple Place, Suite 330, Boston, MA 02111-1307 USA
+#
+###########################################################################
+
+	 $Id: M121.per,v 1.2 2003/11/19 22:22:59 afalout Exp $
+}
+
+
+database kandoodb
+
+screen
+{
+                  Unit Of Measure Conversion Maintenance             M121
+\g--------------------------------------------------------------------------\g
+ From Unit Of Measure  [f000]  [f003                          ]
+ To Unit Of Measure    [f001]  [f004                          ]
+
+ Multiplier            [f002           ]
+
+}
+
+tables
+uomconvert
+
+attributes
+f000 = uomconvert.from_uom_code, upshift,
+comments = " The code of the unit of measure being converted from (W)";
+f001 = uomconvert.to_uom_code, upshift,
+comments = " The code of the unit of measure beign converted to (W)";
+f002 = uomconvert.multiplier_qty,
+comments = " The multiplier needed to do the conversion.";
+f003 = formonly.from_description type char, noentry,
+comments = " The name of the unit of measure being converted from";
+f004 = formonly.to_description type char, noentry,
+comments = " The name of the unit of measure being converted to";
+
+instructions
+delimiters "  "

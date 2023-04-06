@@ -1,0 +1,56 @@
+{
+###########################################################################
+# This program is free software; you can redistribute it and/or modify it
+# under the terms of the GNU General Public License as published by the
+# Free Software Foundation; either version 2 of the License, or (at your
+# option) any later version.
+#
+# This program is distributed in the hope that it will be useful, but
+# WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+# General Public License for more details.
+#
+# You should have received a copy of the GNU General Public License along
+# with this program; if not, write to the Free Software Foundation, Inc.,
+# 59 Temple Place, Suite 330, Boston, MA 02111-1307 USA
+#
+###########################################################################
+
+	 $Id: mail_date.per,v 1.4 2003/11/19 22:22:28 afalout Exp $
+}
+
+database kandoodb
+screen size 24 by 80
+{
+Mailing Name   [f000                ]
+Scheduled date [f001      ]
+User prepared  [f002    ]
+Date prepared  [f003      ]
+Date completed [f004      ]
+}
+end
+
+tables
+mailing_dates
+
+attributes
+f000 = formonly.mailing_name, required, upshift, reverse,comments=
+	"Mailing list name that will be executed (F10=L&P)";
+f001 = mailing_dates.mail_date, required,comments=
+	"Date that this mailing will be executed";
+f002 = mailing_dates.user_id_prepared,downshift,comments=
+	"User that last entered/changed this entry";
+f003 = mailing_dates.date_prepared,comments=
+	"Date when this mailing was prepared";
+f004 = mailing_dates.date_completed,comments=
+	"Date this entry was completed";
+end
+
+instructions
+
+DELIMITERS "  ";
+SCREEN RECORD s_mailing_dates (mailing_name through date_completed)
+
+
+
+end

@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?><form xmlns="http://namespaces.querix.com/2015/fglForms">
+	<form.rootContainer>
+		<GridPanel classNames="fcls_rootContainer" fieldTable="" horizontalAlignment="Left" identifier="rootContainer" verticalAlignment="Top">
+			<GridPanel.gridRowDefinitions>
+				<GridRowDefinition gridLengthValue=""/>
+				<GridRowDefinition gridLengthValue=""/>
+				<GridRowDefinition gridLengthValue=""/>
+				<GridRowDefinition gridLengthValue=""/>
+			</GridPanel.gridRowDefinitions>
+			<GridPanel.gridColumnDefinitions>
+				<GridColumnDefinition gridLengthValue="100%"/>
+			</GridPanel.gridColumnDefinitions>
+			<GridPanel classNames="fcls_title_cnt" fieldTable="formonly" gridItemLocation="0,0,1,1" identifier="cntTitle" verticalAlignment="Top" visible="true">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="100%"/>
+					<GridColumnDefinition gridLengthValue=""/>
+				</GridPanel.gridColumnDefinitions>
+				<Label classNames="fcls_title_lb" fieldTable="formonly" gridItemLocation="0,0,1,1" identifier="header_text" isDynamic="true" text="Street Copy" visible="true"/>
+				<Label classNames="fcls_title_lb" fieldTable="" gridItemLocation="1,0,1,1" identifier="lbFormName" isDynamic="true" text="U208" visible="true"/>
+			</GridPanel>
+			<GroupBox classNames="fcls_detail_gb_cnt" fieldTable="" gridItemLocation="0,1,1,1" horizontalAlignment="Stretch" identifier="cntDetail1GroupBox" title="From" verticalAlignment="Stretch" visible="true">
+				<GridPanel classNames="fcls_detail_gb_cnt_sub,fcls_detail_cnt_sub,fcls_data_cnt,fcls_align_left" fieldTable="formonly" gridItemLocation="0,0,1,1" horizontalAlignment="Left" identifier="cntDetail1Sub" verticalAlignment="Top" visible="true">
+					<GridPanel.gridRowDefinitions>
+						<GridRowDefinition gridLengthValue=""/>
+						<GridRowDefinition gridLengthValue=""/>
+						<GridRowDefinition gridLengthValue=""/>
+					</GridPanel.gridRowDefinitions>
+					<GridPanel.gridColumnDefinitions>
+						<GridColumnDefinition gridLengthValue="" gridMinLength="10rem"/>
+						<GridColumnDefinition gridLengthValue=""/>
+					</GridPanel.gridColumnDefinitions>
+					<Label classNames="fcls_fieldlabel,fcls_align_left" fieldTable="formonly" gridItemLocation="0,0,1,1" identifier="lb57" isDynamic="true" text="Suburb" visible="true"/>
+					<TextField classNames="fcls_data_widget,fcls_align_left,fcls_length_50qch" dataType="Char,,,," fieldTable="formonly" gridItemLocation="1,0,1,1" identifier="suburb_text" noEntry="true" preferredSize="51qch,1qch"/>
+					<Label classNames="fcls_fieldlabel,fcls_align_left" fieldTable="" gridItemLocation="0,1,1,1" identifier="lb_state" isDynamic="true" text="State/County" visible="true"/>
+					<TextField classNames="fcls_data_widget,fcls_align_left,fcls_length_20qch" dataType="Char,,,,20" fieldTable="formonly" gridItemLocation="1,1,1,1" identifier="state_code" noEntry="true" preferredSize="7qch,1qch"/>
+					<Label classNames="fcls_fieldlabel,fcls_align_left" fieldTable="" gridItemLocation="0,2,1,1" identifier="lb_postCode" isDynamic="true" text="Post Code" visible="true"/>
+					<TextField classNames="fcls_data_widget,fcls_align_left,fcls_length_20qch" dataType="Char,,,," fieldTable="formonly" gridItemLocation="1,2,1,1" identifier="post_code" noEntry="true" preferredSize="11qch,1qch"/>
+				</GridPanel>
+			</GroupBox>
+			<GroupBox classNames="fcls_detail_gb_cnt" fieldTable="formonly" gridItemLocation="0,2,1,1" horizontalAlignment="Stretch" identifier="cntDetail2GroupBox" title="To" verticalAlignment="Stretch" visible="true">
+				<GridPanel classNames="fcls_detail_gb_cnt_sub,fcls_detail_cnt_sub,fcls_data_cnt,fcls_align_left" fieldTable="formonly" horizontalAlignment="Left" identifier="cntDetail2Sub" verticalAlignment="Top" visible="true">
+					<GridPanel.gridRowDefinitions>
+						<GridRowDefinition gridLengthValue=""/>
+						<GridRowDefinition gridLengthValue=""/>
+						<GridRowDefinition gridLengthValue=""/>
+					</GridPanel.gridRowDefinitions>
+					<GridPanel.gridColumnDefinitions>
+						<GridColumnDefinition gridLengthValue="" gridMinLength="10rem"/>
+						<GridColumnDefinition gridLengthValue="" gridMinLength=""/>
+					</GridPanel.gridColumnDefinitions>
+					<Label classNames="fcls_fieldlabel,fcls_align_left" fieldTable="formonly" gridItemLocation="0,0,1,1" identifier="lb47" isDynamic="true" text="Suburb" visible="true"/>
+					<ComboBox classNames="list-show-text-value,field-show-text,fcls_data_widget,fcls_align_left,fcls_length_50qch" comment=" The suburb to which the street(s) should be copied (W)" dataType="Char,,,,50" fieldTable="suburb" gridItemLocation="1,0,1,1" identifier="suburb_text" preferredSize="51qch,1qch" toCase="Up" toolTip=" The suburb to which the street(s) should be copied (W)"/>
+					<Label classNames="fcls_fieldlabel,fcls_align_left" fieldTable="formonly" gridItemLocation="0,1,1,1" identifier="lb_state2" isDynamic="true" text="State/County" visible="true"/>
+					<TextField classNames="fcls_data_widget,fcls_align_left,fcls_length_20qch" comment=" The state where the suburb is located" dataType="Char,,,,20" fieldTable="suburb" gridItemLocation="1,1,1,1" identifier="state_code" preferredSize="7qch,1qch" toolTip=" The state where the suburb is located"/>
+					<Label classNames="fcls_fieldlabel,fcls_align_left" fieldTable="formonly" gridItemLocation="0,2,1,1" identifier="lb44" isDynamic="true" text="Post Code" visible="true"/>
+					<TextField classNames="fcls_data_widget,fcls_align_left,fcls_length_20qch" comment=" The post code of the suburb" dataType="Char,,,,10" fieldTable="suburb" gridItemLocation="1,2,1,1" identifier="post_code" preferredSize="11qch,1qch" toolTip=" The post code of the suburb"/>
+				</GridPanel>
+			</GroupBox>
+			<GridPanel classNames="fcls_statusbar_cnt" fieldTable="formonly" gridItemLocation="0,3,1,1" identifier="cntStatusBar" verticalAlignment="Top" visible="true">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="100%"/>
+				</GridPanel.gridColumnDefinitions>
+				<Label classNames="fcls_sblabel" fieldTable="formonly" gridItemLocation="0,0,1,1" identifier="lbInfo1" isDynamic="true" text="" visible="true"/>
+				<Label classNames="fcls_sblabel" fieldTable="formonly" gridItemLocation="0,1,1,1" identifier="lbInfo2" isDynamic="true" text="" visible="true"/>
+			</GridPanel>
+		</GridPanel>
+	</form.rootContainer>
+	<form.screenRecords>
+		<ScreenRecord fields="suburb_text,state_code,post_code" identifier="formonly"/>
+		<ScreenRecord fields="suburb_text,state_code,post_code" identifier="suburb"/>
+	</form.screenRecords>
+</form>

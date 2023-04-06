@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form xmlns="http://namespaces.querix.com/2015/fglForms">
+	<form.rootContainer>
+		<GridPanel classNames="fcls_rootContainer" verticalAlignment="Stretch" horizontalAlignment="Stretch" fieldTable="" identifier="rootContainer">
+			<GridPanel.gridRowDefinitions>
+				<GridRowDefinition gridLengthValue=""/>
+				<GridRowDefinition gridLengthValue=""/>
+				<GridRowDefinition gridLengthValue="100%"/>
+				<GridRowDefinition gridLengthValue=""/>
+			</GridPanel.gridRowDefinitions>
+			<GridPanel.gridColumnDefinitions>
+				<GridColumnDefinition gridLengthValue="100%"/>
+			</GridPanel.gridColumnDefinitions>
+			<GridPanel classNames="fcls_title_cnt" visible="true" verticalAlignment="Top" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="cntTitle">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="100%"/>
+					<GridColumnDefinition gridLengthValue=""/>
+				</GridPanel.gridColumnDefinitions>
+				<Label isDynamic="true" text="Account Transaction Codes" classNames="fcls_title_lb" visible="true" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="header_text"/>
+				<Label isDynamic="true" text="G539" classNames="fcls_title_lb" visible="true" gridItemLocation="1,0,1,1" fieldTable="" identifier="lbFormName"/>
+			</GridPanel>
+			<GridPanel classNames="fcls_detail_cnt,fcls_data_cnt,fcls_align_left" visible="true" verticalAlignment="Top" horizontalAlignment="Left" gridItemLocation="0,1,1,1" fieldTable="formonly" identifier="cntDetail1">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="10rem"/>
+					<GridColumnDefinition gridLengthValue=""/>
+					<GridColumnDefinition gridLengthValue=""/>
+				</GridPanel.gridColumnDefinitions>
+				<TextField noEntry="true" dataType="Char,,,,8" classNames="fcls_data_widget,fcls_align_left,fcls_length_10qch" gridItemLocation="1,0,1,1" fieldTable="banktype" identifier="type_code"/>
+				<TextField noEntry="true" dataType="Char,,,,40" classNames="fcls_data_widget,fcls_align_left,fcls_length_40qch" gridItemLocation="2,0,1,1" fieldTable="banktype" identifier="type_text"/>
+				<Label isDynamic="true" text="Bank Type" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,0,1,1" fieldTable="" identifier="lb51"/>
+			</GridPanel>
+			<Table rowCount="10" preferredSize="80qch,10qch" gridItemLocation="0,2,1,1" fieldTable="" identifier="sr_banktypedetl">
+				<TableColumn text="Trans Code" fieldTable="" identifier="d001">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="15rem"/>
+					</TableColumn.columnLength>
+					<TextField toCase="Up" dataType="Char,,,,10" toolTip=" Account transaction code used by this bank in statements" comment=" Account transaction code used by this bank in statements" fieldTable="banktypedetl" identifier="bank_ref_code" notNull="true"/>
+				</TableColumn>
+				<TableColumn text="Description" fieldTable="" identifier="d002">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="15rem"/>
+					</TableColumn.columnLength>
+					<TextField dataType="Char,,,,30" toolTip=" G/L Account description" comment=" G/L Account description" fieldTable="banktypedetl" identifier="desc_text" notNull="true"/>
+				</TableColumn>
+				<TableColumn text="Cash Book Code" fieldTable="" identifier="a">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="15rem"/>
+					</TableColumn.columnLength>
+					<TextField toCase="Up" dataType="Char,,,,3" toolTip=" Cash Book code to which this account transaction is allocated" comment=" Cash Book code to which this account transaction is allocated" fieldTable="banktypedetl" identifier="max_ref_code" notNull="true"/>
+				</TableColumn>
+				<TableColumn text="Statement DR/CR" fieldTable="" identifier="b">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="100%"/>
+					</TableColumn.columnLength>
+					<ComboBox toCase="Up" dataType="Char,,,,2" toolTip=" Enter (DR) for debit transaction entries, (CR) for credit entries" comment=" Enter (DR) for debit transaction entries, (CR) for credit entries" fieldTable="banktypedetl" identifier="cr_dr_ind" notNull="true">
+						<ComboBoxItem text="DR">
+							<ComboBoxItem.value>
+								<StringLiteral stringValue="DR"/>
+							</ComboBoxItem.value>
+						</ComboBoxItem>
+						<ComboBoxItem text="CR">
+							<ComboBoxItem.value>
+								<StringLiteral stringValue="CR"/>
+							</ComboBoxItem.value>
+						</ComboBoxItem>
+					</ComboBox>
+				</TableColumn>
+			</Table>
+			<GridPanel classNames="fcls_statusbar_cnt" visible="true" verticalAlignment="Top" gridItemLocation="0,3,1,1" fieldTable="formonly" identifier="cntStatusBar">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="100%"/>
+				</GridPanel.gridColumnDefinitions>
+				<Label isDynamic="true" text="" classNames="fcls_sblabel" visible="true" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="lbInfo1"/>
+				<Label isDynamic="true" text="" classNames="fcls_sblabel" visible="true" gridItemLocation="0,1,1,1" fieldTable="formonly" identifier="lbInfo2"/>
+			</GridPanel>
+		</GridPanel>
+	</form.rootContainer>
+	<form.screenRecords>
+		<ScreenRecord identifier="sr_banktypedetl" fields="bank_ref_code,desc_text,max_ref_code,cr_dr_ind"/>
+		<ScreenRecord identifier="banktype" fields="type_code,type_text"/>
+		<ScreenRecord identifier="banktypedetl" fields="bank_ref_code,desc_text,max_ref_code,cr_dr_ind"/>
+	</form.screenRecords>
+</form>
+

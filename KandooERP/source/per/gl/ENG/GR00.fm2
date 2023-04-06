@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form xmlns="http://namespaces.querix.com/2015/fglForms">
+	<form.rootContainer>
+		<GridPanel classNames="fcls_rootContainer" verticalAlignment="Top" horizontalAlignment="Left" fieldTable="" identifier="rootContainer">
+			<GridPanel.gridRowDefinitions>
+				<GridRowDefinition gridLengthValue=""/>
+				<GridRowDefinition gridLengthValue=""/>
+				<GridRowDefinition gridLengthValue=""/>
+			</GridPanel.gridRowDefinitions>
+			<GridPanel.gridColumnDefinitions>
+				<GridColumnDefinition gridLengthValue="100%"/>
+			</GridPanel.gridColumnDefinitions>
+			<GridPanel classNames="fcls_title_cnt" visible="true" verticalAlignment="Top" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="cntTitle">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="100%"/>
+					<GridColumnDefinition gridLengthValue=""/>
+				</GridPanel.gridColumnDefinitions>
+				<Label isDynamic="true" text="GR - General Ledger Reports" classNames="fcls_title_lb" visible="true" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="header_text"/>
+				<Label isDynamic="true" text="GR00" classNames="fcls_title_lb" visible="true" gridItemLocation="1,0,1,1" fieldTable="" identifier="lbFormName"/>
+			</GridPanel>
+			<GridPanel classNames="fcls_detail_cnt,fcls_data_cnt,fcls_align_left" visible="true" verticalAlignment="Top" horizontalAlignment="Left" gridItemLocation="0,1,1,1" fieldTable="formonly" identifier="cntDetail1">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue="100%"/>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue=""/>
+				</GridPanel.gridColumnDefinitions>
+				<ListBox minSize="400,400" visible="true" verticalAlignment="Stretch" horizontalAlignment="Stretch" gridItemLocation="0,0,1,1" fieldTable="" identifier="menuChoice">
+
+
+					<ListBoxItem text="Chart of Accounts Report (GR1)" identifier="menuChoice_GR1">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="GR1"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+
+					<ListBoxItem text="Report Instructions List (GR2)" identifier="menuChoice_GR2">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="GR2"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+
+					<ListBoxItem text="Segment Codes Report (GR3)" identifier="menuChoice_GR3">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="GR3"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+
+					<ListBoxItem text="Journal Codes List (GR4)" identifier="menuChoice_GR4">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="GR4"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+
+					<ListBoxItem text="Group Codes List (GR9)" identifier="menuChoice_GR9">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="GR9"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+
+					<ListBoxItem text="Trial Balance Report (GRA)" identifier="menuChoice_GRA">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="GRA"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+
+					<ListBoxItem text="Accounts Receivable Reconciliation Report (GRC)" identifier="menuChoice_GRC">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="GRC"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+
+					<ListBoxItem text="Accounts Payable Reconciliation Report (GRD)" identifier="menuChoice_GRD">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="GRD"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+
+					<ListBoxItem text="Trial Balance Pre-Close Report (GRF)" identifier="menuChoice_GRF">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="GRF"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+
+					<ListBoxItem text="Summary Trial Balance Report (GRG)" identifier="menuChoice_GRG">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="GRG"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					
+					<ListBoxItem text="Potential Exchange Variances Report (GRH)" identifier="menuChoice_GRH">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="GRH"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					
+					<ListBoxItem text="Multi-Ledger Relationships List (GRI)" identifier="menuChoice_GRI">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="GRI"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					
+					<ListBoxItem text="Consolidated Reporting Codes List (GRJ)" identifier="menuChoice_GRJ">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="GRJ"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+
+					<ListBoxItem text="Consolidated Summary Trial Balance Report (GRK)" identifier="menuChoice_GRK">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="GRK"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+
+					<ListBoxItem text="Approved Funds Account Details Report (GRL)" identifier="menuChoice_GRL">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="GRL"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+										
+	
+
+					<ListBox.onMouseDoubleClick>
+						<ActionEventHandler actionName="DoubleClickItem"/>
+					</ListBox.onMouseDoubleClick>
+				</ListBox>
+				<StackPanel visible="true" horizontalAlignment="Right" gridItemLocation="0,1,1,1" fieldTable="" identifier="c2">
+					<TextField classNames="fcls_data_widget,fcls_align_left,fcls_length_05qch" visible="true" fieldTable="" identifier="inpMenuChoice"/>
+					<Button text="Cancel" classNames="fcls_button_2" visible="true" fieldTable="" identifier="btCancel">
+						<Button.onInvoke>
+							<ActionEventHandler actionName="CANCEL"/>
+						</Button.onInvoke>
+					</Button>
+					<Button text="OK" classNames="fcls_button_2" visible="true" fieldTable="" identifier="btAccept">
+						<Button.onInvoke>
+							<ActionEventHandler actionName="ACCEPT"/>
+						</Button.onInvoke>
+					</Button>
+					<Button text="Help" classNames="fcls_button_2" visible="true" fieldTable="" identifier="btHelp">
+						<Button.onInvoke>
+							<ActionEventHandler actionName="WEB-HELP"/>
+						</Button.onInvoke>
+					</Button>
+				</StackPanel>
+			</GridPanel>
+			<GridPanel classNames="fcls_statusbar_cnt" visible="true" verticalAlignment="Bottom" gridItemLocation="0,2,1,1" fieldTable="formonly" identifier="cntStatusBar">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="100%"/>
+				</GridPanel.gridColumnDefinitions>
+				<Label isDynamic="true" text="" classNames="fcls_sblabel" visible="true" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="lbInfo1"/>
+				<Label isDynamic="true" text="" classNames="fcls_sblabel" visible="true" gridItemLocation="0,1,1,1" fieldTable="formonly" identifier="lbInfo2"/>
+			</GridPanel>
+		</GridPanel>
+	</form.rootContainer>
+	<form.screenRecords>
+		<ScreenRecord identifier="FORMONLY" fields="menuChoice,inpMenuChoice"/>
+	</form.screenRecords>
+</form>
+

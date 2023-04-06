@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form xmlns="http://namespaces.querix.com/2015/fglForms">
+	<form.rootContainer>
+		<GridPanel classNames="fcls_rootContainer" verticalAlignment="Top" horizontalAlignment="Left" fieldTable="" identifier="rootContainer">
+			<GridPanel.gridRowDefinitions>
+				<GridRowDefinition gridLengthValue=""/>
+				<GridRowDefinition gridLengthValue=""/>
+				<GridRowDefinition gridLengthValue=""/>
+			</GridPanel.gridRowDefinitions>
+			<GridPanel.gridColumnDefinitions>
+				<GridColumnDefinition gridLengthValue="100%"/>
+			</GridPanel.gridColumnDefinitions>
+			<GridPanel classNames="fcls_title_cnt" visible="true" verticalAlignment="Top" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="cntTitle">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="100%"/>
+					<GridColumnDefinition gridLengthValue=""/>
+				</GridPanel.gridColumnDefinitions>
+				<Label isDynamic="true" text="Audit Trail" classNames="fcls_title_lb" visible="true" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="header_text"/>
+				<Label isDynamic="true" text="A187" classNames="fcls_title_lb" visible="true" gridItemLocation="1,0,1,1" fieldTable="" identifier="lbFormName"/>
+			</GridPanel>
+			<GridPanel classNames="fcls_detail_cnt,fcls_data_cnt,fcls_align_left" visible="true" verticalAlignment="Top" horizontalAlignment="Left" gridItemLocation="0,1,1,1" fieldTable="formonly" identifier="cntDetail1">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="" gridMinLength="10rem"/>
+					<GridColumnDefinition gridLengthValue=""/>
+				</GridPanel.gridColumnDefinitions>
+				<Calendar noEntry="true" dataType="Date,,,," classNames="fcls_data_widget,fcls_align_left,fcls_length_20qch" preferredSize="11qch,1qch" toolTip=" Enter transaction date selection criteria " gridItemLocation="1,0,1,1" fieldTable="araudit" comment=" Enter transaction date selection criteria " identifier="tran_date"/>
+				<ComboBox toCase="Up" dataType="Char,,,,8" classNames="list-show-value-text,field-show-value,fcls_data_widget,fcls_align_left,fcls_length_20qch" preferredSize="9qch,1qch" toolTip=" Enter customer code selection criteria " gridItemLocation="1,1,1,1" fieldTable="araudit" comment=" Enter customer code selection criteria " identifier="cust_code"/>
+				<TextField dataType="Integer,,,," classNames="fcls_data_widget,fcls_align_left,fcls_length_20qch" preferredSize="5qch,1qch" toolTip=" The numerical sequence of this transaction" gridItemLocation="1,2,1,1" fieldTable="araudit" comment=" The numerical sequence of this transaction" identifier="seq_num"/>
+				<Label isDynamic="true" text="Trans Type" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,3,1,1" fieldTable="" identifier="lb67"/>
+				<ComboBox toCase="Up" dataType="Char,,,,2" classNames="fcls_data_widget,fcls_align_left,fcls_length_20qch" preferredSize="4qch,1qch" toolTip=" Transaction Type (CA) Receipts - (IN) Invoices - (CR) Credits" gridItemLocation="1,3,1,1" fieldTable="araudit" comment=" Transaction Type (CA) Receipts - (IN) Invoices - (CR) Credits" identifier="tran_type_ind"/>
+				<Label isDynamic="true" text="Transaction Date" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,0,1,1" fieldTable="" identifier="lb51"/>
+				<Label isDynamic="true" text="Customer Code" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,1,1,1" fieldTable="" identifier="lb52"/>
+				<Label isDynamic="true" text="Seq Number" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,2,1,1" fieldTable="" identifier="lb66"/>
+				<Label isDynamic="true" text="Document No" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,4,1,1" fieldTable="" identifier="lb133"/>
+				<TextField dataType="Integer,,,," classNames="fcls_data_widget,fcls_align_left,fcls_length_20qch" preferredSize="9qch,1qch" toolTip=" Transaction document number (Invoice number)" gridItemLocation="1,4,1,1" fieldTable="araudit" comment=" Transaction document number (Invoice number)" identifier="source_num"/>
+				<Label isDynamic="true" text="Description" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,5,1,1" fieldTable="" identifier="lb135"/>
+				<TextField dataType="Char,,,,15" classNames="fcls_data_widget,fcls_align_left,fcls_length_20qch" preferredSize="16qch,1qch" toolTip=" Description or name of this transaction activity" gridItemLocation="1,5,1,1" fieldTable="araudit" comment=" Description or name of this transaction activity" identifier="tran_text"/>
+				<Label isDynamic="true" text="Currency" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,6,1,1" fieldTable="" identifier="lb136"/>
+				<ComboBox toCase="Up" dataType="Char,,,,3" classNames="fcls_data_widget,fcls_align_left,fcls_length_20qch" preferredSize="4qch,1qch" toolTip=" Currency in which this customer operates" gridItemLocation="1,6,1,1" fieldTable="customer" comment=" Currency in which this customer operates" identifier="currency_code"/>
+				<Label isDynamic="true" text="Amount" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,7,1,1" fieldTable="" identifier="lb137"/>
+				<TextField dataType="Decimal,,,2,16" classNames="fcls_data_widget,fcls_align_left,fcls_length_20qch" preferredSize="12qch,1qch" toolTip=" Total dollar Amount of this transaction" gridItemLocation="1,7,1,1" fieldTable="araudit" comment=" Total dollar Amount of this transaction" identifier="tran_amt"/>
+				<Label isDynamic="true" text="Fiscal Year" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,8,1,1" fieldTable="" identifier="lb138"/>
+				<ComboBox dataType="SmallInt,,,," classNames="fcls_data_widget,fcls_align_left,fcls_length_20qch" preferredSize="5qch,1qch" toolTip=" Enter fiscal year required to review audit trail" gridItemLocation="1,8,1,1" fieldTable="araudit" comment=" Enter fiscal year required to review audit trail" identifier="year_num"/>
+				<Label isDynamic="true" text="Fiscal Period" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,9,1,1" fieldTable="" identifier="lb131"/>
+				<ComboBox dataType="SmallInt,,,," classNames="fcls_data_widget,fcls_align_left,fcls_length_20qch" preferredSize="4qch,1qch" toolTip=" Enter fiscal period required to review audit trail" gridItemLocation="1,9,1,1" fieldTable="araudit" comment=" Enter fiscal period required to review audit trail" identifier="period_num"/>
+			</GridPanel>
+			<GridPanel classNames="fcls_statusbar_cnt" visible="true" verticalAlignment="Top" gridItemLocation="0,2,1,1" fieldTable="formonly" identifier="cntStatusBar">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="100%"/>
+				</GridPanel.gridColumnDefinitions>
+				<Label isDynamic="true" text="" classNames="fcls_sblabel" visible="true" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="lbInfo1"/>
+				<Label isDynamic="true" text="" classNames="fcls_sblabel" visible="true" gridItemLocation="0,1,1,1" fieldTable="formonly" identifier="lbInfo2"/>
+			</GridPanel>
+		</GridPanel>
+	</form.rootContainer>
+	<form.screenRecords>
+		<ScreenRecord identifier="araudit" fields="tran_date,cust_code,seq_num,tran_type_ind,source_num,tran_text,tran_amt,year_num,period_num"/>
+		<ScreenRecord identifier="customer" fields="currency_code"/>
+	</form.screenRecords>
+</form>
+

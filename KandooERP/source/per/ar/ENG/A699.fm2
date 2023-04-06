@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form xmlns="http://namespaces.querix.com/2015/fglForms">
+	<form.rootContainer>
+		<GridPanel classNames="fcls_rootContainer" verticalAlignment="Stretch" horizontalAlignment="Stretch" fieldTable="" identifier="rootContainer">
+			<GridPanel.gridRowDefinitions>
+				<GridRowDefinition gridLengthValue=""/>
+				<GridRowDefinition gridLengthValue=""/>
+				<GridRowDefinition gridLengthValue="100%"/>
+				<GridRowDefinition gridLengthValue=""/>
+			</GridPanel.gridRowDefinitions>
+			<GridPanel.gridColumnDefinitions>
+				<GridColumnDefinition gridLengthValue="100%"/>
+			</GridPanel.gridColumnDefinitions>
+			<GridPanel classNames="fcls_title_cnt" visible="true" verticalAlignment="Top" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="cntTitle">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="100%"/>
+					<GridColumnDefinition gridLengthValue=""/>
+				</GridPanel.gridColumnDefinitions>
+				<Label isDynamic="true" text="Customer Parts List (was a missing Form)" classNames="fcls_title_lb" visible="true" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="header_text"/>
+				<Label isDynamic="true" text="A699" classNames="fcls_title_lb" visible="true" gridItemLocation="1,0,1,1" fieldTable="" identifier="lbFormName"/>
+			</GridPanel>
+			<GridPanel visible="true" identifier="c156" gridItemLocation="0,1,1,1" horizontalAlignment="Left" verticalAlignment="Top">
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="" gridMinLength="10rem"/>
+					<GridColumnDefinition gridLengthValue=""/>
+					<GridColumnDefinition gridLengthValue=""/>
+				</GridPanel.gridColumnDefinitions>
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<Label text="Customer Id" isDynamic="true" visible="true" identifier="lb3" gridItemLocation="0,0,1,1" classNames="fcls_fieldlabel,fcls_align_left"/>
+				<ComboBox visible="true" identifier="cust_code" gridItemLocation="1,0,1,1" classNames="list-show-value-text,field-show-value,fcls_data_widget,fcls_align_left,fcls_length_10qch" fieldTable="customer"/>
+				<TextField visible="true" identifier="name_text" classNames="fcls_data_widget,fcls_align_left,fcls_length_30qch" gridItemLocation="2,0,1,1" fieldTable="customer"/>
+				<Label text="Customer Part" isDynamic="true" visible="true" identifier="lb6" gridItemLocation="0,1,1,1" classNames="fcls_fieldlabel,fcls_align_left"/>
+				<TextField visible="true" identifier="custpart_codeX" gridItemLocation="1,1,1,1" fieldTable="customerpart" classNames="fcls_data_widget,fcls_align_left,fcls_length_10qch"/>
+			</GridPanel>
+			<Table classNames="fcls_table_cnt" preferredSize="50qch,12qch" visible="true" verticalAlignment="Stretch" horizontalAlignment="Stretch" gridItemLocation="0,2,1,1" fieldTable="" identifier="sr_customerpart">
+				<TableColumn resizable="true" visible="true" fieldTable="" identifier="tc_f152">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="2rem" gridMaxLength="2rem" gridMinLength="2rem"/>
+					</TableColumn.columnLength>
+					<CheckBox dataType="Char,,,," fieldTable="formonly" identifier="scroll_flag">
+						<CheckBox.checkedValue>
+							<StringLiteral stringValue="*"/>
+						</CheckBox.checkedValue>
+						<CheckBox.uncheckedValue>
+							<NullLiteral/>
+						</CheckBox.uncheckedValue>
+					</CheckBox>
+				</TableColumn>
+				<TableColumn text="Cust Part ID" resizable="true" visible="true" fieldTable="" identifier="tc_f153">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="15rem" gridMaxLength="15rem" gridMinLength="15rem"/>
+					</TableColumn.columnLength>
+					<TextField visible="true" fieldTable="customerpart" identifier="custpart_code"/>
+				</TableColumn>
+				<TableColumn text="Description" resizable="true" visible="true" fieldTable="" identifier="tc_f154">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="30rem" gridMaxLength="30rem" gridMinLength="30rem"/>
+					</TableColumn.columnLength>
+					<TextField visible="true" fieldTable="product" identifier="desc_text"/>
+				</TableColumn>
+				<TableColumn text="Part ID" resizable="true" visible="true" fieldTable="" identifier="tc_f155">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="15rem" gridMaxLength="15rem" gridMinLength="15rem"/>
+					</TableColumn.columnLength>
+					<TextField visible="true" fieldTable="customerpart" identifier="part_code"/>
+				</TableColumn>
+				<TableColumn resizable="true" visible="true" fieldTable="" identifier="tc_lbEOL">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="100%"/>
+					</TableColumn.columnLength>
+					<Label isDynamic="true" visible="true" fieldTable="" identifier="lbEOL"/>
+				</TableColumn>
+			</Table>
+			
+			<GridPanel classNames="fcls_statusbar_cnt" visible="true" verticalAlignment="Bottom" gridItemLocation="0,3,1,1" fieldTable="formonly" identifier="cntStatusBar">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="100%"/>
+				</GridPanel.gridColumnDefinitions>
+				<Label isDynamic="true" text="" classNames="fcls_sblabel" visible="true" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="lbInfo1"/>
+				<Label isDynamic="true" text="" classNames="fcls_sblabel" visible="true" gridItemLocation="0,1,1,1" fieldTable="formonly" identifier="lbInfo2"/>
+			</GridPanel>
+		</GridPanel>
+		
+	</form.rootContainer>
+	<form.screenRecords>
+		<ScreenRecord identifier="FORMONLY" fields="customer.cust_code,customer.name_text,custpart_codeX,customerpart.custpart_code,custpart_code"/>
+		<ScreenRecord identifier="sr_customerpart" fields="scroll_flag,customerpart.custpart_code,product.desc_text,customerpart.part_code"/>
+	</form.screenRecords>
+</form>
+
+
+

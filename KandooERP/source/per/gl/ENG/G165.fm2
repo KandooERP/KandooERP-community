@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form xmlns="http://namespaces.querix.com/2015/fglForms">
+	<form.rootContainer>
+		<GridPanel classNames="fcls_rootContainer" verticalAlignment="Top" horizontalAlignment="Left" fieldTable="" identifier="rootContainer">
+			<GridPanel.gridRowDefinitions>
+				<GridRowDefinition gridLengthValue=""/>
+				<GridRowDefinition gridLengthValue=""/>
+				<GridRowDefinition gridLengthValue="100%"/>
+				<GridRowDefinition gridLengthValue=""/>
+			</GridPanel.gridRowDefinitions>
+			<GridPanel.gridColumnDefinitions>
+				<GridColumnDefinition gridLengthValue="100%"/>
+			</GridPanel.gridColumnDefinitions>
+			<GridPanel classNames="fcls_title_cnt" visible="true" verticalAlignment="Top" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="cntTitle">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="100%"/>
+					<GridColumnDefinition gridLengthValue=""/>
+				</GridPanel.gridColumnDefinitions>
+				<Label isDynamic="true" text="Subsidiary Verify" classNames="fcls_title_lb" visible="true" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="header_text"/>
+				<Label isDynamic="true" text="G165" classNames="fcls_title_lb" visible="true" gridItemLocation="1,0,1,1" fieldTable="" identifier="lbFormName"/>
+			</GridPanel>
+			<GridPanel classNames="fcls_detail_cnt,fcls_data_cnt,fcls_align_left" visible="true" verticalAlignment="Top" horizontalAlignment="Left" gridItemLocation="0,1,1,1" fieldTable="formonly" identifier="cntDetail1">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="" gridMinLength="10rem"/>
+					<GridColumnDefinition gridLengthValue=""/>
+				</GridPanel.gridColumnDefinitions>
+				<ComboBox editable="true" dataType="Char,,,," classNames="fcls_data_widget,fcls_align_left,fcls_length_10qch" preferredSize="12qch,1qch" toolTip=" The year of the reconciliation" gridItemLocation="1,0,1,1" comment=" The year of the reconciliation" fieldTable="formonly" identifier="year_numb"/>
+				<ComboBox editable="true" dataType="Char,,,," classNames="fcls_data_widget,fcls_align_left,fcls_length_10qch" preferredSize="12qch,1qch" toolTip=" The period of the reconciliation" gridItemLocation="1,1,1,1" comment=" The period of the reconciliation" fieldTable="formonly" identifier="period_numb"/>
+				<Label isDynamic="true" text="Year" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,0,1,1" fieldTable="" identifier="lb51"/>
+				<Label isDynamic="true" text="Period" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,1,1,1" fieldTable="" identifier="lb52"/>
+			</GridPanel>
+			<GridPanel classNames="fcls_detail_cnt,fcls_data_cnt,fcls_align_left" visible="true" verticalAlignment="Top" horizontalAlignment="Left" gridItemLocation="0,2,1,1" fieldTable="" identifier="cntDetail2">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue="" gridMinLength="22"/>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="" gridMinLength="10rem"/>
+					<GridColumnDefinition gridLengthValue=""/>
+				</GridPanel.gridColumnDefinitions>
+				<Table rowHeight="1qch" rowCount="6" preferredSize="66qch,7qch" minSize="66qch,7qch" gridItemLocation="1,0,1,8" fieldTable="" identifier="sc_sub">
+					<TableColumn text="Posted Amount" fieldTable="" identifier="f010">
+						<TableColumn.columnLength>
+							<GridLength gridLengthValue="25.7576%"/>
+						</TableColumn.columnLength>
+						<TextField dataType="Char,,,," fieldTable="formonly" identifier="totaller1"/>
+					</TableColumn>
+					<TableColumn text="Positive" fieldTable="" identifier="f011">
+						<TableColumn.columnLength>
+							<GridLength gridLengthValue="25.7576%"/>
+						</TableColumn.columnLength>
+						<TextField dataType="Char,,,," fieldTable="formonly" identifier="totaller2"/>
+					</TableColumn>
+					<TableColumn text="Negative" fieldTable="" identifier="f012">
+						<TableColumn.columnLength>
+							<GridLength gridLengthValue="25.7576%"/>
+						</TableColumn.columnLength>
+						<TextField dataType="Char,,,," fieldTable="formonly" identifier="totaller3"/>
+					</TableColumn>
+					<TableColumn text="Nett" fieldTable="" identifier="f013">
+						<TableColumn.columnLength>
+							<GridLength gridLengthValue="22.7273%"/>
+						</TableColumn.columnLength>
+						<TextField dataType="Char,,,," fieldTable="formonly" identifier="totaller4"/>
+					</TableColumn>
+				</Table>
+				<Label text="Posted Amount" gridItemLocation="0,1,1,1" fieldTable="" identifier="label5"/>
+				<Label text="Invoices" gridItemLocation="0,2,1,1" fieldTable="" identifier="label9"/>
+				<Label text="Credits" gridItemLocation="0,3,1,1" fieldTable="" identifier="label10"/>
+				<Label text="Cash" gridItemLocation="0,4,1,1" fieldTable="" identifier="label11"/>
+				<Label text="Vouchers" gridItemLocation="0,5,1,1" fieldTable="" identifier="label12"/>
+				<Label text="Debits" gridItemLocation="0,6,1,1" fieldTable="" identifier="label13"/>
+				<Label text="Cheques" gridItemLocation="0,7,1,1" fieldTable="" identifier="label14"/>
+			</GridPanel>
+			<GridPanel classNames="fcls_statusbar_cnt" visible="true" verticalAlignment="Top" gridItemLocation="0,3,1,1" fieldTable="formonly" identifier="cntStatusBar">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="100%"/>
+				</GridPanel.gridColumnDefinitions>
+				<Label isDynamic="true" text="" classNames="fcls_sblabel" visible="true" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="lbInfo1"/>
+				<Label isDynamic="true" text="" classNames="fcls_sblabel" visible="true" gridItemLocation="0,1,1,1" fieldTable="formonly" identifier="lbInfo2"/>
+			</GridPanel>
+		</GridPanel>
+	</form.rootContainer>
+	<form.screenRecords>
+		<ScreenRecord identifier="sc_sub" fields="totaller1,totaller2,totaller3,totaller4"/>
+		<ScreenRecord identifier="formonly" fields="year_numb,period_numb,totaller3,totaller1,totaller2,totaller4"/>
+	</form.screenRecords>
+</form>
+

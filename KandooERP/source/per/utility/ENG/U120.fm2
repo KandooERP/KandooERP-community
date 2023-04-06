@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?><form xmlns="http://namespaces.querix.com/2015/fglForms">
+	<form.rootContainer>
+		<GridPanel classNames="fcls_rootContainer" fieldTable="" horizontalAlignment="Stretch" identifier="rootContainer" verticalAlignment="Stretch">
+			<GridPanel.gridRowDefinitions>
+				<GridRowDefinition gridLengthValue=""/>
+				<GridRowDefinition gridLengthValue="100%"/>
+				<GridRowDefinition gridLengthValue=""/>
+			</GridPanel.gridRowDefinitions>
+			<GridPanel.gridColumnDefinitions>
+				<GridColumnDefinition gridLengthValue="100%"/>
+			</GridPanel.gridColumnDefinitions>
+			<GridPanel classNames="fcls_title_cnt" fieldTable="formonly" gridItemLocation="0,0,1,1" identifier="cntTitle" verticalAlignment="Top" visible="true">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="100%"/>
+					<GridColumnDefinition gridLengthValue=""/>
+				</GridPanel.gridColumnDefinitions>
+				<Label classNames="fcls_title_lb" fieldTable="formonly" gridItemLocation="0,0,1,1" identifier="header_text" isDynamic="true" text="Suburb Maintenance" visible="true"/>
+				<Label classNames="fcls_title_lb" fieldTable="" gridItemLocation="1,0,1,1" identifier="lbFormName" isDynamic="true" text="U120" visible="true"/>
+			</GridPanel>
+			<Table fieldTable="" gridItemLocation="0,1,1,1" identifier="sr_suburb" preferredSize="71qch,12qch" rowCount="12">
+				<TableColumn fieldTable="" identifier="tc_scroll_flag">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="2rem" gridMaxLength="2rem" gridMinLength="2rem"/>
+					</TableColumn.columnLength>
+					<CheckBox dataType="Char,,,," fieldTable="formonly" identifier="scroll_flag">
+						<CheckBox.checkedValue>
+							<StringLiteral stringValue="*"/>
+						</CheckBox.checkedValue>
+						<CheckBox.uncheckedValue>
+							<NullLiteral/>
+						</CheckBox.uncheckedValue>
+					</CheckBox>
+				</TableColumn>
+				<TableColumn fieldTable="" identifier="tc_suburb_text" text="Suburb">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="50%" gridMaxLength="40rem" gridMinLength="20rem"/>
+					</TableColumn.columnLength>
+					<TextField comment=" Name of this Suburb" dataType="Char,,,,50" fieldTable="suburb" identifier="suburb_text" toCase="Up" toolTip=" Name of this Suburb"/>
+				</TableColumn>
+				<TableColumn fieldTable="" identifier="tc_state" text="State">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="25%" gridMaxLength="15rem" gridMinLength="10rem"/>
+					</TableColumn.columnLength>
+					<TextField comment=" State in which suburb resides" dataType="Char,,,,20" fieldTable="suburb" identifier="state_code" toCase="Up" toolTip=" State in which suburb resides"/>
+				</TableColumn>
+				<TableColumn fieldTable="" identifier="tc_post_code" text="Post Code">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="25%" gridMaxLength="15rem" gridMinLength="10rem"/>
+					</TableColumn.columnLength>
+					<TextField comment=" Post Code of Suburb" dataType="Char,,,,10" fieldTable="suburb" identifier="post_code" toolTip=" Post Code of Suburb"/>
+				</TableColumn>
+			</Table>
+			<GridPanel classNames="fcls_statusbar_cnt" fieldTable="formonly" gridItemLocation="0,2,1,1" identifier="cntStatusBar" verticalAlignment="Top" visible="true">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="100%"/>
+				</GridPanel.gridColumnDefinitions>
+				<Label classNames="fcls_sblabel" fieldTable="formonly" gridItemLocation="0,0,1,1" identifier="lbInfo1" isDynamic="true" text="" visible="true"/>
+				<Label classNames="fcls_sblabel" fieldTable="formonly" gridItemLocation="0,1,1,1" identifier="lbInfo2" isDynamic="true" text="" visible="true"/>
+			</GridPanel>
+		</GridPanel>
+	</form.rootContainer>
+	<form.screenRecords>
+		<ScreenRecord elements="12" fields="formonly.scroll_flag,suburb.suburb_text,suburb.state_code,suburb.post_code" identifier="sr_suburb"/>
+		<ScreenRecord fields="scroll_flag" identifier="formonly"/>
+		<ScreenRecord fields="suburb_text,state_code,post_code" identifier="suburb"/>
+	</form.screenRecords>
+</form>

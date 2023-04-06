@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form xmlns="http://namespaces.querix.com/2015/fglForms">
+	<form.rootContainer>
+		<GridPanel classNames="fcls_rootContainer" preferredSize="," verticalAlignment="Stretch" horizontalAlignment="Left" fieldTable="" identifier="rootContainer">
+			<GridPanel.gridRowDefinitions>
+				<GridRowDefinition gridLengthValue=""/>
+				<GridRowDefinition gridLengthValue=""/>
+				<GridRowDefinition gridLengthValue=""/>
+				<GridRowDefinition gridLengthValue=""/>
+				<GridRowDefinition gridLengthValue=""/>
+				<GridRowDefinition gridLengthValue=""/>
+				<GridRowDefinition gridLengthValue="100%"/>
+				<GridRowDefinition gridLengthValue=""/>
+				<GridRowDefinition gridLengthValue=""/>
+				<GridRowDefinition gridLengthValue=""/>
+				<GridRowDefinition gridLengthValue=""/>
+				<GridRowDefinition gridLengthValue=""/>
+			</GridPanel.gridRowDefinitions>
+			<GridPanel.gridColumnDefinitions>
+				<GridColumnDefinition gridLengthValue="100%"/>
+			</GridPanel.gridColumnDefinitions>
+			<GridPanel classNames="fcls_title_cnt" visible="true" verticalAlignment="Top" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="cntTitle">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="100%"/>
+					<GridColumnDefinition gridLengthValue=""/>
+				</GridPanel.gridColumnDefinitions>
+				<Label isDynamic="true" text="Journal Disbursement Maintenance" classNames="fcls_title_lb" visible="true" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="header_text"/>
+				<Label isDynamic="true" text="G458" classNames="fcls_title_lb" visible="true" gridItemLocation="1,0,1,1" fieldTable="" identifier="lbFormName"/>
+			</GridPanel>
+			<GridPanel classNames="fcls_detail_cnt,fcls_data_cnt,fcls_align_left" visible="true" verticalAlignment="Top" horizontalAlignment="Left" gridItemLocation="0,1,1,1" fieldTable="formonly" identifier="cntDetail1">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="" gridMinLength="10rem"/>
+					<GridColumnDefinition gridLengthValue=""/>
+				</GridPanel.gridColumnDefinitions>
+				<TextField toCase="Up" dataType="Char,,,,8" classNames="fcls_data_widget,fcls_align_left,fcls_length_20qch" location="17qch,2qch" preferredSize="9qch,1qch" toolTip=" journal disbursement code (Unique Reference)" gridItemLocation="1,0,1,1" comment=" journal disbursement code (Unique Reference)" fieldTable="disbhead" identifier="disb_code"/>
+				<ComboBox toCase="Up" dataType="Char,,,,1" classNames="fcls_data_widget,fcls_align_left,fcls_length_20qch" location="51qch,2qch" preferredSize="15qch,1qch" toolTip=" Disbursement Type: -(1)Closing Bal. -(2)Period Movement -(3)Trans.Amount" gridItemLocation="1,1,1,1" comment=" Disbursement Type: -(1)Closing Bal. -(2)Period Movement -(3)Trans.Amount" fieldTable="disbhead" identifier="type_ind"/>
+				<TextField dataType="Char,,,,30" classNames="fcls_data_widget,fcls_align_left,fcls_length_20qch" location="17qch,3qch" preferredSize="31qch,1qch" toolTip=" Enter disbursement structure description " gridItemLocation="1,2,1,1" comment=" Enter disbursement structure description " fieldTable="disbhead" identifier="desc_text"/>
+				<Label isDynamic="true" text="Group" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,3,1,1" fieldTable="" identifier="lb67"/>
+				<ComboBox dataType="Char,,,,8" classNames="fcls_data_widget,fcls_align_left,fcls_length_20qch" location="17qch,4qch" preferredSize="9qch,1qch" toolTip=" Disbursement group - Optional label for identfying group disbursements " gridItemLocation="1,3,1,1" comment=" Disbursement group - Optional label for identfying group disbursements " fieldTable="disbhead" identifier="group_code"/>
+				<Label isDynamic="true" text="Disb.Code" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,0,1,1" fieldTable="" identifier="lb51"/>
+				<Label isDynamic="true" text="Type" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,1,1,1" fieldTable="" identifier="lb52"/>
+				<Label isDynamic="true" text="Description" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,2,1,1" fieldTable="" identifier="lb66"/>
+			</GridPanel>
+			<GridPanel classNames="fcls_detail_cnt,fcls_data_cnt,fcls_align_left" visible="true" verticalAlignment="Top" gridItemLocation="0,2,1,1" fieldTable="formonly" identifier="cntDetail2">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="" gridMinLength="10rem"/>
+					<GridColumnDefinition gridLengthValue=""/>
+					<GridColumnDefinition gridLengthValue="100%"/>
+				</GridPanel.gridColumnDefinitions>
+				<Label isDynamic="true" text="Source Account" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="lb42"/>
+				<ComboBox toCase="Up" dataType="Char,,,,18" classNames="field-show-value,list-show-value-text,fcls_data_widget,fcls_align_left,fcls_length_20qch" location="16qch,6qch" preferredSize="19qch,1qch" toolTip=" Enter source G/L Account to disburse.  -(W) " gridItemLocation="1,0,1,1" comment=" Enter source G/L Account to disburse.  -(W) " fieldTable="disbhead" identifier="acct_code"/>
+				<ComboBox toCase="Up" dataType="Char,,,,3" classNames="field-show-value,list-show-value-text,fcls_data_widget,fcls_align_left,fcls_length_20qch" location="16qch,7qch" preferredSize="19qch,1qch" toolTip=" Enter Disbursement Journal Code. -(W) " gridItemLocation="1,1,1,1" comment=" Enter Disbursement Journal Code. -(W) " fieldTable="disbhead" identifier="jour_code"/>
+				<TextField noEntry="true" dataType="Char,,,,40" classNames="fcls_data_widget,fcls_align_left,fcls_length_30qch" location="35qch,7qch" preferredSize="15qch,1qch" gridItemLocation="2,1,1,1" fieldTable="journal" identifier="desc_text"/>
+				<Label isDynamic="true" text="Journal Code" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,1,1,1" fieldTable="formonly" identifier="lb36"/>
+			</GridPanel>
+			<GridPanel classNames="fcls_detail_cnt,fcls_data_cnt,fcls_align_left" visible="true" gridItemLocation="0,3,1,1" fieldTable="" identifier="cntDetail3">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="" gridMinLength="10rem"/>
+					<GridColumnDefinition gridLengthValue=""/>
+					<GridColumnDefinition gridLengthValue=""/>
+				</GridPanel.gridColumnDefinitions>
+				<ComboBox toCase="Up" dataType="Char,,,,1" classNames="field-show-text,list-show-value-text,fcls_data_widget,fcls_align_left,fcls_length_20qch" location="51qch,6qch" preferredSize="12qch,1qch" toolTip=" Credits/Debits - (1) Credit Amounts Only (2) Debit Amounts Only (3) Both" gridItemLocation="1,0,1,1" comment=" Credits/Debits - (1) Credit Amounts Only (2) Debit Amounts Only (3) Both" fieldTable="disbhead" identifier="dr_cr_ind"/>
+				<ComboBox editable="true" toCase="Up" dataType="Char,,,,4" classNames="fcls_data_widget,fcls_align_left,fcls_length_20qch" location="57qch,8qch" preferredSize="15qch,1qch" toolTip=" Enter disbursement quantity unit of measure. -(W) " gridItemLocation="1,1,1,1" comment=" Enter disbursement quantity unit of measure. -(W) " fieldTable="disbhead" identifier="uom_code"/>
+				<TextField dataType="Decimal,,,3,15" classNames="fcls_data_widget,fcls_align_left,fcls_length_10qch" location="72qch,8qch" preferredSize="10qch,1qch" toolTip=" Enter total quantity to be included in this journal disbursement. " gridItemLocation="2,1,1,1" comment=" Enter total quantity to be included in this journal disbursement. " fieldTable="disbhead" identifier="total_qty"/>
+				<TextField noEntry="true" dataType="Decimal,,,3,15" classNames="fcls_data_widget,fcls_align_left,fcls_length_20qch" location="61qch,9qch" preferredSize="14qch,1qch" gridItemLocation="1,2,1,1" fieldTable="disbhead" identifier="disb_qty"/>
+				<Label isDynamic="true" text="Credit/Debit" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,0,1,1" fieldTable="" identifier="lb44"/>
+				<Label isDynamic="true" text="Total" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,1,1,1" fieldTable="" identifier="lb45"/>
+				<Label isDynamic="true" text="Disbursed" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,2,1,1" fieldTable="" identifier="lb46"/>
+			</GridPanel>
+			<GridPanel classNames="fcls_detail_cnt,fcls_data_cnt,fcls_align_hstretch" visible="true" horizontalAlignment="Stretch" gridItemLocation="0,5,1,1" fieldTable="" identifier="cntDetail4">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue=""/>
+					<GridColumnDefinition gridLengthValue="100%"/>
+				</GridPanel.gridColumnDefinitions>
+				<Label isDynamic="true" text="Disbursed" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,0,1,1" fieldTable="" identifier="lb77"/>
+				<TextArea dataType="Char,,,,80" classNames="fcls_data_widget,fcls_align_hstretch" location="9qch,8qch" preferredSize="41qch,2qch" toolTip=" Enter comments against this disbursment structure " gridItemLocation="1,0,1,1" comment=" Enter comments against this disbursment structure " fieldTable="disbhead" identifier="com1_text"/>
+			</GridPanel>
+			<Table rowCount="6" preferredSize="74qch,6qch" verticalAlignment="Stretch" horizontalAlignment="Stretch" gridItemLocation="0,6,1,1" fieldTable="" identifier="sr_disbdetl">
+				<TableColumn fieldTable="" identifier="c">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="2rem" gridMaxLength="2rem" gridMinLength="2rem"/>
+					</TableColumn.columnLength>
+					<CheckBox dataType="Char,,,," fieldTable="formonly" identifier="scroll_flag">
+						<CheckBox.checkedValue>
+							<StringLiteral stringValue="*"/>
+						</CheckBox.checkedValue>
+						<CheckBox.uncheckedValue>
+							<NullLiteral/>
+						</CheckBox.uncheckedValue>
+					</CheckBox>
+				</TableColumn>
+				<TableColumn text="Account" fieldTable="" identifier="f09">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="15rem" gridMaxLength="15rem" gridMinLength="15rem"/>
+					</TableColumn.columnLength>
+					<ComboBox toCase="Up" dataType="Char,,,,18" toolTip=" Enter target G/L Account for this disbursement. -(W) " comment=" Enter target G/L Account for this disbursement. -(W) " fieldTable="disbdetl" identifier="acct_code" classNames="field-show-value,list-show-value-text,fcls_data_widget,fcls_align_left,fcls_length_15qch"/>
+				</TableColumn>
+				<TableColumn text="Description" fieldTable="" identifier="f10">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="30rem" gridMaxLength="30rem" gridMinLength="30rem"/>
+					</TableColumn.columnLength>
+					<TextField dataType="Char,,,,40" toolTip=" Enter disbursement line description. " comment=" Enter disbursement line description. " fieldTable="disbdetl" identifier="desc_text"/>
+				</TableColumn>
+				<TableColumn text="Analysis" fieldTable="" identifier="f11">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="15rem"/>
+					</TableColumn.columnLength>
+					<TextField dataType="Char,,,,16" toolTip=" Enter disbursement line analysis. " comment=" Enter disbursement line analysis. " fieldTable="disbdetl" identifier="analysis_text"/>
+				</TableColumn>
+				<TableColumn text="Quantity" fieldTable="" identifier="f12">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="15rem"/>
+					</TableColumn.columnLength>
+					<TextField dataType="Decimal,,,3,15" toolTip=" Enter disbursement line quantity. " comment=" Enter disbursement line quantity. " fieldTable="disbdetl" identifier="disb_qty"/>
+				</TableColumn>
+			</Table>
+			<GridPanel classNames="fcls_statusbar_cnt" visible="true" verticalAlignment="Top" gridItemLocation="0,7,1,1" fieldTable="formonly" identifier="cntStatusBar">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="100%"/>
+				</GridPanel.gridColumnDefinitions>
+				<Label isDynamic="true" text="" classNames="fcls_sblabel" visible="true" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="lbInfo1"/>
+				<Label isDynamic="true" text="" classNames="fcls_sblabel" visible="true" gridItemLocation="0,1,1,1" fieldTable="formonly" identifier="lbInfo2"/>
+			</GridPanel>
+		</GridPanel>
+	</form.rootContainer>
+	<form.screenRecords>
+		<ScreenRecord identifier="sr_disbdetl" fields="formonly.scroll_flag,disbdetl.acct_code,disbdetl.desc_text,disbdetl.analysis_text,disbdetl.disb_qty"/>
+		<ScreenRecord identifier="disbdetl" fields="disbdetl.acct_code,disbdetl.desc_text,disbdetl.analysis_text,disbdetl.disb_qty"/>
+		<ScreenRecord identifier="disbhead" fields="disb_code,desc_text,group_code,type_ind,acct_code,dr_cr_ind,jour_code,com1_text,uom_code,total_qty,disb_qty"/>
+		<ScreenRecord identifier="formonly" fields="scroll_flag"/>
+		<ScreenRecord identifier="journal" fields="desc_text"/>
+	</form.screenRecords>
+</form>
+

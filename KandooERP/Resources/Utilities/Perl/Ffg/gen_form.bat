@@ -1,0 +1,5 @@
+perl ffg.pl -database leres -project BegoodenLIMS_Lycia  -formtable parametre  -formgen f_myparam -formtemplate CoordPanelStandardForm.ftplt -formmaxwi 70  ' generate one form with NO lookup
+perl ffg.pl -database leres -project BegoodenLIMS_Lycia  -formtable parametre  -formgen f_myparam -formtemplate CoordPanelStandardForm.ftplt -formlookup    ' generate one form with lookup CoordPanel
+perl ffg.pl -database leres -project BegoodenLIMS_Lycia  -formtable parametre  -formgen f_myparam -formtemplate GridPanelStandardForm.ftplt -formlookup    ' generate one form with lookup GridPanel
+perl ffg.pl -database leres -project BegoodenLIMS_Lycia  -formtable produit,norme,defparam  -formtemplate CoordPanelStandaloneForm.ftplt -formmaxwi 70 # generate series of forms for n tables
+perl ffg.pl -database leres -project BegoodenLIMS_Lycia  -formtable produit -formtemplate GridPanelArrayForm.ftplt -exclude sfamp,typep -arrayelem 10 # generate array form on product excluding sfmap,typep fields

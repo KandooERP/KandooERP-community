@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form xmlns="http://namespaces.querix.com/2015/fglForms">
+	<form.rootContainer>
+		<GridPanel classNames="fcls_rootContainer" verticalAlignment="Stretch" fieldTable="" identifier="rootContainer">
+			<GridPanel.gridRowDefinitions>
+				<GridRowDefinition gridLengthValue=""/>
+				<GridRowDefinition gridLengthValue="100%"/>
+				<GridRowDefinition gridLengthValue=""/>
+			</GridPanel.gridRowDefinitions>
+			<GridPanel.gridColumnDefinitions>
+				<GridColumnDefinition gridLengthValue="100%"/>
+			</GridPanel.gridColumnDefinitions>
+			<GridPanel classNames="fcls_title_cnt" visible="true" verticalAlignment="Top" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="cntTitle">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="100%"/>
+					<GridColumnDefinition gridLengthValue=""/>
+				</GridPanel.gridColumnDefinitions>
+				<Label isDynamic="true" text="Tax Code" classNames="fcls_title_lb" visible="true" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="header_text"/>
+				<Label isDynamic="true" text="G559" classNames="fcls_title_lb" visible="true" gridItemLocation="1,0,1,1" fieldTable="" identifier="lbFormName"/>
+			</GridPanel>
+			<Table classNames="fcls_table_cnt" preferredSize="80qch,15qch" minSize="600,400" visible="true" gridItemLocation="0,1,1,1" fieldTable="" identifier="sr_tax">
+				<TableColumn text="" resizable="true" visible="true" fieldTable="" identifier="tc_scroll_flag">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="2rem" gridMaxLength="2rem" gridMinLength="2rem"/>
+					</TableColumn.columnLength>
+					<CheckBox visible="true" fieldTable="" identifier="scroll_flag">
+						<CheckBox.checkedValue>
+							<StringLiteral stringValue="*"/>
+						</CheckBox.checkedValue>
+						<CheckBox.uncheckedValue>
+							<NullLiteral/>
+						</CheckBox.uncheckedValue>
+					</CheckBox>
+				</TableColumn>
+				<TableColumn text="Tax Code" resizable="true" visible="true" fieldTable="" identifier="tc_tax_code">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="15%" gridMinLength="5rem" gridMaxLength="10rem"/>
+					</TableColumn.columnLength>
+					<TextField visible="true" fieldTable="" identifier="tax_code"/>
+				</TableColumn>
+				<TableColumn text="Description" resizable="true" visible="true" fieldTable="" identifier="tc_desc_text">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="55%" gridMaxLength="30rem" gridMinLength="15rem"/>
+					</TableColumn.columnLength>
+					<TextField visible="true" fieldTable="" identifier="desc_text"/>
+				</TableColumn>
+				<TableColumn text="Calc-M" resizable="true" visible="true" fieldTable="" identifier="tc_calc_method_flag">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="15%" gridMaxLength="10rem" gridMinLength="5rem"/>
+					</TableColumn.columnLength>
+					<TextField visible="true" fieldTable="" identifier="calc_method_flag"/>
+				</TableColumn>
+				<TableColumn text="Tax %" resizable="true" visible="true" fieldTable="" identifier="tc_tax_per">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="15%" gridMaxLength="10rem" gridMinLength="5rem"/>
+					</TableColumn.columnLength>
+					<TextField visible="true" fieldTable="" identifier="tax_per"/>
+				</TableColumn>
+			</Table>
+			<GridPanel classNames="fcls_statusbar_cnt" visible="true" verticalAlignment="Top" gridItemLocation="0,2,1,1" fieldTable="formonly" identifier="cntStatusBar">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="100%"/>
+				</GridPanel.gridColumnDefinitions>
+				<Label isDynamic="true" text="" classNames="fcls_sblabel" visible="true" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="lbInfo1"/>
+				<Label isDynamic="true" text="" classNames="fcls_sblabel" visible="true" gridItemLocation="0,1,1,1" fieldTable="formonly" identifier="lbInfo2"/>
+			</GridPanel>
+		</GridPanel>
+	</form.rootContainer>
+	<form.screenRecords>
+		<ScreenRecord identifier="FORMONLY" fields=""/>
+		<ScreenRecord identifier="sr_tax" fields="scroll_flag,tax_code,desc_text,calc_method_flag,tax_per"/>
+		<ScreenRecord identifier="sr_tax_no_scroll_flag" fields="tax_code,desc_text,calc_method_flag,tax_per"/>
+		
+	</form.screenRecords>
+</form>
+

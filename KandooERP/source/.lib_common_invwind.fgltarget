@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<fglBuildTarget xmlns="http://namespaces.querix.com/lyciaide/target" name="lib_common_invwind" type="fgl-library">
+
+  <sources type="fgl">
+    <file location="4gl/common/credfunc.4gl"/>
+    <file location="4gl/common/ientwind.4gl"/>
+    <file location="4gl/common/centwind.4gl"/>
+    <file location="4gl/common/glob_GLOBALS_constant.4gl"/>
+    <file location="4gl/common/invqwind.4gl"/>
+    <file location="4gl/common/glob_GLOBALS.4gl"/>
+    <file location="4gl/common/glob_GLOBALS_userDataTypes.4gl"/>
+    <file location="4gl/common/crhdwind.4gl"/>
+    <file location="4gl/common/invdfunc.4gl"/>
+    <file location="4gl/common/creddetl.4gl"/>
+    <file location="4gl/common/ishpwind.4gl"/>
+    <file location="4gl/common/cacdwind.4gl"/>
+    <file location="4gl/common/invowind.4gl"/>
+    <file location="4gl/common/inhdwind.4gl"/>
+    <file location="4gl/common/instwind.4gl"/>
+    <file location="4gl/common/cashwind.4gl"/>
+    <file location="4gl/common/unapp_pay.4gl"/>
+  </sources>
+
+  <sources type="form">
+    <file location="per/ar/ENG/A134.fm2"/>
+    <file location="per/ar/ENG/A681.fm2"/>
+    <file location="per/ar/ENG/A213.fm2"/>
+    <file location="per/utility/ENG/U999.fm2"/>
+    <file location="per/ar/ENG/A118.fm2"/>
+    <file location="per/ar/ENG/A167.fm2"/>
+    <file location="per/ar/ENG/A131.fm2"/>
+    <file location="per/ar/ENG/A145.fm2"/>
+    <file location="per/ar/ENG/A121.fm2"/>
+    <file location="per/ar/ENG/A631.fm2"/>
+    <file location="per/ar/ENG/A214.fm2"/>
+    <file location="per/ar/ENG/A139.fm2"/>
+    <file location="per/ar/ENG/A664.fm2"/>
+    <file location="per/ar/ENG/A630.fm2"/>
+    <file location="per/ar/ENG/A144.fm2"/>
+    <file location="per/ar/ENG/A136.fm2"/>
+    <file location="per/ar/ENG/A148.fm2"/>
+    <file location="per/ar/ENG/A128.fm2"/>
+    <file location="per/ar/ENG/A104.fm2"/>
+    <file location="per/ar/ENG/A212.fm2"/>
+    <file location="per/ar/ENG/A152.fm2"/>
+    <file location="per/ar/ENG/A142.fm2"/>
+    <file location="per/ar/ENG/A132.fm2"/>
+  </sources>
+
+
+</fglBuildTarget>

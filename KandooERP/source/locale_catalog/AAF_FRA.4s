@@ -1,0 +1,39 @@
+AAF_FRA {
++1-30 Days Overdue { "+ 1-30 jours de retard" }
++31-60 Days Overdue { "31 à 60 jours de retard" }
++61-90 Days Overdue { "+61 -90 jours de retard" }
+= Balance { "= Solde" }
+Account Status { "Situation du Compte" }
+Address { "Adresse" }
+Available Credit { "Crédit disponible" }
+City { "Ville" }
+Comments { "Commentaires" }
+Country { "Pays" }
+Credit Limit { "Limite de Crédit" }
+Currency { "Devise" }
+Current { "Actuel" }
+Customer Code { "Code Client" }
+Customer Type { "Type de Client" }
+Date { "Date" }
+Enter customer code selection criteria { "Entrer les critères de sélection du code client" }
+Enter sales 'On-Hold' code selection criteria { "Saisir les critères de sélection du code "En attente" des ventes" }
+Enter sales territory selection criteria { "Saisir les critères de sélection du territoire de vente" }
+Enter salesperson code selection criteria { "Saisir les critères de sélection du code vendeur" }
+Entered { "Saisie" }
+Hold Sales { "Ventes à livrer" }
+ID { "ID" }
+Language Code { "Code langue" }
+Name { "Nom" }
+Other Info { "Autres informations" }
+Phone { "Téléphone" }
+Sales Condition { "Condition de vente" }
+Salesperson { "Vendeur" }
+State/County { "Région" }
+Territory { "Territoire" }
+The account balance between 61 and 90 Days Overdue { "Le solde du compte avec retard entre 61 et 90 jours" }
+The account balance more than 90 Days Overdue { "Le solde du compte avec retard de plus de 90 jours" }
+Title { "Titre" }
+Value added tax registration number { "Code T.V.A. intracommunautaire" }
+Vat Reg No { "N° T.V.A. intracommunautaire" }
+actToolbarManager { "actToolbarManager" }
+}

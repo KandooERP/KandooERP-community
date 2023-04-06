@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form xmlns="http://namespaces.querix.com/2015/fglForms">
+	<form.rootContainer>
+		<GridPanel classNames="fcls_rootContainer" verticalAlignment="Top" horizontalAlignment="Left" fieldTable="" identifier="rootContainer" preferredSize="35rem,25rem">
+			<GridPanel.gridRowDefinitions>
+				<GridRowDefinition gridLengthValue=""/>
+				<GridRowDefinition gridLengthValue=""/>
+				<GridRowDefinition gridLengthValue=""/>
+				<GridRowDefinition gridLengthValue=""/>
+			</GridPanel.gridRowDefinitions>
+			<GridPanel.gridColumnDefinitions>
+				<GridColumnDefinition gridLengthValue="100%"/>
+			</GridPanel.gridColumnDefinitions>
+			<GridPanel classNames="fcls_title_cnt" visible="true" verticalAlignment="Top" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="cntTitle">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="100%"/>
+					<GridColumnDefinition gridLengthValue=""/>
+				</GridPanel.gridColumnDefinitions>
+				<Label isDynamic="true" text="Cash Flow Analysis" classNames="fcls_title_lb" visible="true" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="header_text"/>
+				<Label isDynamic="true" text="A953 - AR3 - Transaction Queries" classNames="fcls_title_lb" visible="true" gridItemLocation="1,0,1,1" fieldTable="" identifier="lbFormName"/>
+			</GridPanel>
+			<Label text="Primary Cash Flow Priority" isDynamic="true" visible="true" identifier="lbCashFlowPriority" gridItemLocation="0,1,1,1"/>
+			<GridPanel classNames="fcls_detail_cnt,fcls_data_cnt" visible="true" verticalAlignment="Stretch" horizontalAlignment="Stretch" gridItemLocation="0,2,1,1" fieldTable="formonly" identifier="cntDetail1">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue="100%"/>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="100%" gridMinLength="10rem"/>
+				</GridPanel.gridColumnDefinitions>
+				<Label text="Define the order by selecting two out of three items (DoubleClick)." isDynamic="true" visible="true" identifier="lb3" gridItemLocation="0,0,1,1" classNames="fcls_font_description"/>
+				<ListBox visible="true" identifier="ord1" gridItemLocation="0,1,1,1" horizontalAlignment="Stretch" verticalAlignment="Stretch">
+
+					<ListBoxItem text="Promised Date (FROM collection calls)" identifier="ord1_1">
+						<ListBoxItem.value>
+							<IntegerLiteral integerValue="1"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+
+					<ListBoxItem text="Historical Analysis (FROM previous payments)" identifier="ord1_2">
+						<ListBoxItem.value>
+							<IntegerLiteral integerValue="2"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+
+					<ListBoxItem text="Due Date (FROM invoice)" identifier="ord1_3">
+						<ListBoxItem.value>
+							<IntegerLiteral integerValue="3"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					<ListBox.onMouseDoubleClick>
+						<ActionEventHandler type="actioneventhandler" actionName="ACCEPT"/>
+					</ListBox.onMouseDoubleClick>
+
+
+				</ListBox>
+				<Label isDynamic="true" visible="true" identifier="lbPrimaryPriority" gridItemLocation="0,2,1,1"/>
+				<Label isDynamic="true" visible="true" identifier="lbSecondaryPriority" gridItemLocation="0,3,1,1"/>
+			</GridPanel>
+			<GridPanel classNames="fcls_statusbar_cnt" visible="true" verticalAlignment="Top" gridItemLocation="0,3,1,1" fieldTable="formonly" identifier="cntStatusBar">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="100%"/>
+				</GridPanel.gridColumnDefinitions>
+				<Label isDynamic="true" text="" classNames="fcls_sblabel" visible="true" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="lbInfo1"/>
+				<Label isDynamic="true" text="" classNames="fcls_sblabel" visible="true" gridItemLocation="0,1,1,1" fieldTable="formonly" identifier="lbInfo2"/>
+			</GridPanel>
+		</GridPanel>
+	</form.rootContainer>
+	<form.screenRecords>
+		<ScreenRecord identifier="FORMONLY" fields="ord1"/>
+	</form.screenRecords>
+</form>
+

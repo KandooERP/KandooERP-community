@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form xmlns="http://namespaces.querix.com/2015/fglForms">
+	<form.rootContainer>
+		<CoordPanel preferredSize="73qch,6qch" fieldTable="" identifier="coord1">
+			<Label text="Credit Card type" location="0qch,0qch" preferredSize="16qch,1qch" fieldTable="" identifier="label1"/>
+			<TextField toCase="Up" required="true" dataType="Char,,,,20" location="21qch,0qch" preferredSize="12qch,1qch" toolTip="Type of the card (F10 for L&amp;P)" fieldTable="cc_type" comment="Type of the card (F10 for L&amp;P)" identifier="cc_type_name"/>
+			<Label text="Card Role" location="36qch,0qch" preferredSize="9qch,1qch" fieldTable="" identifier="label2"/>
+			<TextField toCase="Up" required="true" dataType="Char,,,," location="46qch,0qch" preferredSize="26qch,1qch" toolTip="Role of this card (F10 for L&amp;P)" fieldTable="formonly" comment="Role of this card (F10 for L&amp;P)" identifier="cc_role_name"/>
+			<Label text="Credit Card number" location="0qch,1qch" preferredSize="18qch,1qch" fieldTable="" identifier="label3"/>
+			<TextField required="true" dataType="Char,,,,20" location="21qch,1qch" preferredSize="21qch,1qch" toolTip="Credit card number" fieldTable="credit_card" comment="Credit card number" identifier="cc_no"/>
+			<Label text="Card expiration date" location="0qch,2qch" preferredSize="20qch,1qch" fieldTable="" identifier="label4"/>
+			<TextField required="true" dataType="Date,,,," location="21qch,2qch" preferredSize="11qch,1qch" toolTip="Date of this card expiration" fieldTable="credit_card" comment="Date of this card expiration" identifier="cc_expire"/>
+			<Label text="Valid from" location="0qch,4qch" preferredSize="10qch,1qch" fieldTable="" identifier="label5"/>
+			<TextField required="true" dataType="Date,,,," location="19qch,4qch" preferredSize="11qch,1qch" toolTip="Date from which this information is valid" fieldTable="credit_card" comment="Date from which this information is valid" identifier="valid_from"/>
+			<Label text="Valid to" location="0qch,5qch" preferredSize="8qch,1qch" fieldTable="" identifier="label6"/>
+			<TextField dataType="Date,,,," location="19qch,5qch" preferredSize="11qch,1qch" toolTip="Date from which this information is not valid" fieldTable="credit_card" comment="Date from which this information is not valid" identifier="valid_to"/>
+		</CoordPanel>
+	</form.rootContainer>
+	<form.screenRecords>
+		<ScreenRecord identifier="s_cc" fields="cc_type_name,cc_role_name,cc_no,cc_expire,valid_from,valid_to"/>
+		<ScreenRecord identifier="cc_type" fields="cc_type_name"/>
+		<ScreenRecord identifier="credit_card" fields="cc_no,cc_expire,valid_from,valid_to"/>
+		<ScreenRecord identifier="formonly" fields="cc_role_name"/>
+	</form.screenRecords>
+</form>
+

@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form xmlns="http://namespaces.querix.com/2015/fglForms">
+	<form.rootContainer>
+		<GridPanel classNames="fcls_rootContainer" verticalAlignment="Stretch" horizontalAlignment="Stretch" fieldTable="" identifier="rootContainer">
+			<GridPanel.gridRowDefinitions>
+				<GridRowDefinition gridLengthValue=""/>
+				<GridRowDefinition gridLengthValue=""/>
+				<GridRowDefinition gridLengthValue="100%"/>
+				<GridRowDefinition gridLengthValue=""/>
+			</GridPanel.gridRowDefinitions>
+			<GridPanel.gridColumnDefinitions>
+				<GridColumnDefinition gridLengthValue="100%"/>
+			</GridPanel.gridColumnDefinitions>
+			<GridPanel classNames="fcls_title_cnt" visible="true" verticalAlignment="Top" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="cntTitle">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="100%"/>
+					<GridColumnDefinition gridLengthValue=""/>
+				</GridPanel.gridColumnDefinitions>
+				<Label isDynamic="true" text="Customer Card Details (missing form)" classNames="fcls_title_lb" visible="true" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="header_text"/>
+				<Label isDynamic="true" text="A233" classNames="fcls_title_lb" visible="true" gridItemLocation="1,0,1,1" fieldTable="" identifier="lbFormName"/>
+			</GridPanel>
+			<GridPanel classNames="fcls_detail_cnt,fcls_data_cnt,fcls_align_left" visible="true" verticalAlignment="Top" horizontalAlignment="Left" fieldTable="formonly" identifier="cntDetail1" gridItemLocation="0,1,1,1">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="" gridMinLength="10rem"/>
+					<GridColumnDefinition gridLengthValue=""/>
+					<GridColumnDefinition gridLengthValue=""/>
+				</GridPanel.gridColumnDefinitions>
+				<ComboBox dataType="Char,,,," preferredSize="4qch,1qch" gridItemLocation="1,0,1,1" fieldTable="customer" identifier="cust_code" classNames="list-show-value-text,field-show-value,fcls_data_widget,fcls_align_left,fcls_length_10qch"/>
+				<TextField dataType="Char,,,," preferredSize="38qch,1qch" fieldTable="customer" identifier="name_text" classNames="fcls_data_widget,fcls_align_left,fcls_length_30qch" gridItemLocation="2,0,1,1"/>
+				<Label isDynamic="true" text="Customer" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,0,1,1" fieldTable="" identifier="lb51"/>
+			</GridPanel>
+			<Table rowCount="10" preferredSize="103qch,10qch" gridItemLocation="0,2,1,1" fieldTable="" identifier="sr_custcard">
+				<TableColumn text="Card Number" fieldTable="" identifier="tc_cust_code">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="15%" gridMinLength="6rem" gridMaxLength="10rem"/>
+					</TableColumn.columnLength>
+					<TextField dataType="Char,,,,8" fieldTable="custcard" identifier="card_code"/>
+				</TableColumn>
+				<TableColumn text="Name" fieldTable="" identifier="tc_name_text">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="40%" gridMinLength="15rem" gridMaxLength="30rem"/>
+					</TableColumn.columnLength>
+					<TextField dataType="Char,,,,30" fieldTable="custcard" identifier="card_text"/>
+				</TableColumn>
+				<TableColumn text="Issued" fieldTable="" identifier="tc_cred_limit_amt">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="15%" gridMinLength="6rem" gridMaxLength="10rem"/>
+					</TableColumn.columnLength>
+					<TextField dataType="Decimal,,,2,16" fieldTable="custcard" identifier="issue_date"/>
+				</TableColumn>
+				<TableColumn text="Expired" fieldTable="" identifier="tc_curr_amt">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="15%" gridMinLength="6rem" gridMaxLength="10rem"/>
+					</TableColumn.columnLength>
+					<TextField dataType="Decimal,,,2,16" fieldTable="custcard" identifier="expiry_date"/>
+				</TableColumn>
+				<TableColumn text="Hold Code" fieldTable="" identifier="tc_over1_amt">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="15%" gridMinLength="6rem" gridMaxLength="10rem"/>
+					</TableColumn.columnLength>
+					<TextField dataType="Decimal,,,2,16" fieldTable="custcard" identifier="hold_code"/>
+				</TableColumn>
+			</Table>
+			<GridPanel classNames="fcls_statusbar_cnt" visible="true" verticalAlignment="Top" gridItemLocation="0,3,1,1" fieldTable="formonly" identifier="cntStatusBar">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="100%"/>
+				</GridPanel.gridColumnDefinitions>
+				<Label isDynamic="true" text="" classNames="fcls_sblabel" visible="true" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="lbInfo1"/>
+				<Label isDynamic="true" text="" classNames="fcls_sblabel" visible="true" gridItemLocation="0,1,1,1" fieldTable="formonly" identifier="lbInfo2"/>
+			</GridPanel>
+		</GridPanel>
+	</form.rootContainer>
+	<form.screenRecords>
+		<ScreenRecord identifier="sr_custcard" fields="custcard.card_code,custcard.card_text,custcard.issue_date,custcard.expiry_date,custcard.hold_code" elements="12"/>
+	</form.screenRecords>
+</form>
+

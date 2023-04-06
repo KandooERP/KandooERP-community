@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form xmlns="http://namespaces.querix.com/2015/fglForms">
+	<form.rootContainer>
+		<GridPanel classNames="fcls_rootContainer" verticalAlignment="Top" horizontalAlignment="Left" fieldTable="" identifier="rootContainer">
+			<GridPanel.gridRowDefinitions>
+				<GridRowDefinition gridLengthValue=""/>
+				<GridRowDefinition gridLengthValue=""/>
+				<GridRowDefinition gridLengthValue=""/>
+			</GridPanel.gridRowDefinitions>
+			<GridPanel.gridColumnDefinitions>
+				<GridColumnDefinition gridLengthValue="100%"/>
+			</GridPanel.gridColumnDefinitions>
+			<GridPanel classNames="fcls_title_cnt" visible="true" verticalAlignment="Top" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="cntTitle">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="100%"/>
+					<GridColumnDefinition gridLengthValue=""/>
+				</GridPanel.gridColumnDefinitions>
+				<Label isDynamic="true" text="Transaction Details" classNames="fcls_title_lb" visible="true" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="header_text"/>
+				<Label isDynamic="true" text="F143" classNames="fcls_title_lb" visible="true" gridItemLocation="1,0,1,1" fieldTable="" identifier="lbFormName"/>
+			</GridPanel>
+			<GridPanel classNames="fcls_detail_cnt,fcls_data_cnt,fcls_align_left" visible="true" verticalAlignment="Top" horizontalAlignment="Left" gridItemLocation="0,1,1,1" fieldTable="formonly" identifier="cntDetail1">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="" gridMinLength="10rem"/>
+					<GridColumnDefinition gridLengthValue=""/>
+					<GridColumnDefinition gridLengthValue=""/>
+					<GridColumnDefinition gridLengthValue=""/>
+				</GridPanel.gridColumnDefinitions>
+				<Label text="Asset Code" classNames="fcls_fieldlabel,fcls_align_left" gridItemLocation="0,0,1,1" fieldTable="" identifier="label1"/>
+				<TextField dataType="Char,,,,10" preferredSize="11qch,1qch" toolTip=" The asset code" fieldTable="faaudit" comment=" The asset code" identifier="asset_code" gridItemLocation="1,0,1,1" classNames="fcls_data_widget,fcls_align_left,fcls_length_20qch"/>
+				<TextField toCase="Up" dataType="Char,,,,2" preferredSize="3qch,1qch" toolTip=" The book code" fieldTable="faaudit" comment=" The book code" identifier="book_code" gridItemLocation="3,0,1,1" classNames="fcls_data_widget,fcls_align_left,fcls_length_20qch"/>
+				<TextField dataType="Char,,,,10" preferredSize="11qch,1qch" toolTip=" The add on asset code" fieldTable="faaudit" comment=" The add on asset code" identifier="add_on_code" gridItemLocation="1,1,1,1" classNames="fcls_data_widget,fcls_align_left,fcls_length_20qch"/>
+				<TextField dataType="SmallInt,,,," preferredSize="5qch,1qch" toolTip=" The financial year number" fieldTable="faaudit" comment=" The financial year number" identifier="year_num" gridItemLocation="1,2,1,1" classNames="fcls_data_widget,fcls_align_left,fcls_length_20qch"/>
+				<TextField toCase="Up" dataType="Char,,,,3" preferredSize="4qch,1qch" toolTip=" The asset category code" fieldTable="faaudit" comment=" The asset category code" identifier="facat_code" gridItemLocation="3,2,1,1" classNames="fcls_data_widget,fcls_align_left,fcls_length_20qch"/>
+				<TextField dataType="SmallInt,,,," preferredSize="5qch,1qch" toolTip=" The financial period number" fieldTable="faaudit" comment=" The financial period number" identifier="period_num" gridItemLocation="1,3,1,1" classNames="fcls_data_widget,fcls_align_left,fcls_length_20qch"/>
+				<TextField toCase="Up" dataType="Char,,,,10" preferredSize="11qch,1qch" toolTip=" The asset location code" fieldTable="faaudit" comment=" The asset location code" identifier="location_code" gridItemLocation="3,3,1,1" classNames="fcls_data_widget,fcls_align_left,fcls_length_20qch"/>
+				<Label isDynamic="true" text="Reponsibility" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="2,4,1,1" fieldTable="" identifier="lb65"/>
+				<Label isDynamic="true" text="Book Code" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="2,0,1,1" fieldTable="" identifier="lb49"/>
+				<Label isDynamic="true" text="Add on Asset" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,1,1,1" fieldTable="" identifier="lb51"/>
+				<Label isDynamic="true" text="Year Number" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,2,1,1" fieldTable="" identifier="lb52"/>
+				<Label isDynamic="true" text="Category Code" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="2,2,1,1" fieldTable="" identifier="lb54"/>
+				<Label isDynamic="true" text="Period Number" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,3,1,1" fieldTable="" identifier="lb66"/>
+				<Label isDynamic="true" text="Location Code" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="2,3,1,1" fieldTable="" identifier="lb55"/>
+				<TextField toCase="Up" dataType="Char,,,,18" preferredSize="19qch,1qch" toolTip=" The asset responsibility code" fieldTable="faaudit" comment=" The asset responsibility code" identifier="faresp_code" gridItemLocation="3,4,1,1" classNames="fcls_data_widget,fcls_align_left,fcls_length_20qch"/>
+				<Label isDynamic="true" text="Batch Number" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,5,1,1" fieldTable="" identifier="lb133"/>
+				<TextField dataType="Integer,,,," preferredSize="9qch,1qch" fieldTable="faaudit" identifier="batch_num" gridItemLocation="1,5,1,1" classNames="fcls_data_widget,fcls_align_left,fcls_length_20qch"/>
+				<Label isDynamic="true" text="Batch Line Num" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,6,1,1" fieldTable="" identifier="lb134"/>
+				<TextField dataType="Integer,,,," preferredSize="9qch,1qch" fieldTable="faaudit" identifier="batch_line_num" gridItemLocation="1,6,1,1" classNames="fcls_data_widget,fcls_align_left,fcls_length_20qch"/>
+				<Label isDynamic="true" text="Trans Ind" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,7,1,1" fieldTable="" identifier="lb135"/>
+				<TextField dataType="Char,,,,1" preferredSize="2qch,1qch" fieldTable="faaudit" identifier="trans_ind" gridItemLocation="1,7,1,1" classNames="fcls_data_widget,fcls_align_left,fcls_length_20qch"/>
+				<TextField dataType="Char,,,," preferredSize="21qch,1qch" fieldTable="formonly" identifier="line_stat" gridItemLocation="2,7,2,1"/>
+				<Label isDynamic="true" text="Description" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,8,1,1" fieldTable="" identifier="lb136"/>
+				<TextField dataType="Char,,,,30" toolTip=" The batch line description" fieldTable="faaudit" comment=" The batch line description" identifier="desc_text" gridItemLocation="1,8,3,1" classNames="fcls_data_widget,fcls_align_hstretch"/>
+				<Label isDynamic="true" text="Trans Amount" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,9,1,1" fieldTable="" identifier="lb137"/>
+				<TextField dataType="Decimal,,,2,16" preferredSize="15qch,1qch" toolTip=" The depreciable cost of the asset" fieldTable="faaudit" comment=" The depreciable cost of the asset" identifier="asset_amt" gridItemLocation="1,9,1,1" classNames="fcls_data_widget,fcls_align_left,fcls_length_20qch"/>
+				<Label isDynamic="true" text="Entry Date" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="2,9,1,1" fieldTable="" identifier="lb143"/>
+				<Calendar format="dd/mm/yyyy" dataType="Date,,,," preferredSize="11qch,1qch" fieldTable="faaudit" identifier="entry_date" gridItemLocation="3,9,1,1"/>
+				<Label isDynamic="true" text="Depr Amount" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,10,1,1" fieldTable="" identifier="lb138"/>
+				<TextField dataType="Decimal,,,2,16" preferredSize="15qch,1qch" toolTip=" The assets accumulated depreciation" fieldTable="faaudit" comment=" The assets accumulated depreciation" identifier="depr_amt" gridItemLocation="1,10,1,1" classNames="fcls_data_widget,fcls_align_left,fcls_length_20qch"/>
+				<Label isDynamic="true" text="Entry text" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="2,10,1,1" fieldTable="" identifier="lb144"/>
+				<TextField dataType="Char,,,,8" preferredSize="9qch,1qch" fieldTable="faaudit" identifier="entry_text" gridItemLocation="3,10,1,1" classNames="fcls_data_widget,fcls_align_left,fcls_length_20qch"/>
+				<Label isDynamic="true" text="Net Book Value" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,11,1,1" fieldTable="" identifier="lb153"/>
+				<TextField dataType="Decimal,,,2,16" preferredSize="15qch,1qch" toolTip=" The assets net book value" fieldTable="faaudit" comment=" The assets net book value" identifier="net_book_val_amt" gridItemLocation="1,11,1,1" classNames="fcls_data_widget,fcls_align_left,fcls_length_20qch"/>
+			</GridPanel>
+			<GridPanel classNames="fcls_statusbar_cnt" visible="true" verticalAlignment="Bottom" gridItemLocation="0,2,1,1" fieldTable="formonly" identifier="cntStatusBar">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="100%"/>
+				</GridPanel.gridColumnDefinitions>
+				<Label isDynamic="true" text="" classNames="fcls_sblabel" visible="true" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="lbInfo1"/>
+				<Label isDynamic="true" text="" classNames="fcls_sblabel" visible="true" gridItemLocation="0,1,1,1" fieldTable="formonly" identifier="lbInfo2"/>
+			</GridPanel>
+		</GridPanel>
+	</form.rootContainer>
+	<form.screenRecords>
+		<ScreenRecord identifier="faaudit" fields="faaudit.asset_code,faaudit.add_on_code,faaudit.book_code,faaudit.year_num,faaudit.period_num,faaudit.location_code,faaudit.facat_code,faaudit.faresp_code,faaudit.batch_num,faaudit.batch_line_num,faaudit.trans_ind,faaudit.desc_text,faaudit.asset_amt,faaudit.depr_amt,faaudit.entry_text,faaudit.entry_date,faaudit.net_book_val_amt"/>
+		<ScreenRecord identifier="formonly" fields="formonly.line_stat"/>
+	</form.screenRecords>
+</form>
+

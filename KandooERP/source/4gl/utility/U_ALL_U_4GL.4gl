@@ -1,0 +1,3 @@
+MAIN 
+	DISPLAY "dummy" 
+END MAIN 

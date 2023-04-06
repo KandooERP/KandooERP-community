@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form xmlns="http://namespaces.querix.com/2015/fglForms">
+	<form.rootContainer>
+		<GridPanel classNames="fcls_rootContainer" verticalAlignment="Top" horizontalAlignment="Left" fieldTable="" identifier="rootContainer">
+			<GridPanel.gridRowDefinitions>
+				<GridRowDefinition gridLengthValue=""/>
+				<GridRowDefinition gridLengthValue=""/>
+				<GridRowDefinition gridLengthValue=""/>
+				<GridRowDefinition gridLengthValue=""/>
+				<GridRowDefinition gridLengthValue=""/>
+			</GridPanel.gridRowDefinitions>
+			<GridPanel.gridColumnDefinitions>
+				<GridColumnDefinition gridLengthValue="100%"/>
+			</GridPanel.gridColumnDefinitions>
+			<GridPanel classNames="fcls_title_cnt" visible="true" verticalAlignment="Top" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="cntTitle">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="100%"/>
+					<GridColumnDefinition gridLengthValue=""/>
+				</GridPanel.gridColumnDefinitions>
+				<Label isDynamic="true" text="Order Import Parameters" classNames="fcls_title_lb" visible="true" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="header_text"/>
+				<Label isDynamic="true" text="E449" classNames="fcls_title_lb" visible="true" gridItemLocation="1,0,1,1" fieldTable="" identifier="lbFormName"/>
+			</GridPanel>
+			<GridPanel classNames="fcls_detail_cnt,fcls_data_cnt" visible="true" verticalAlignment="Top" horizontalAlignment="Left" gridItemLocation="0,1,1,1" fieldTable="formonly" identifier="cntDetail1">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue=""/>
+					<GridColumnDefinition gridLengthValue=""/>
+					<GridColumnDefinition gridLengthValue=""/>
+					<GridColumnDefinition gridLengthValue=""/>
+					<GridColumnDefinition gridLengthValue=""/>
+				</GridPanel.gridColumnDefinitions>
+				<Label isDynamic="true" text="Last Load" classNames="fcls_fieldlabel,fcls_columnlabel_rev_cell,fcls_align_hstretch" visible="true" gridItemLocation="2,0,3,1" fieldTable="" identifier="lb79" horizontalAlignment="Stretch"/>
+				<Label isDynamic="true" text="Load Description" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,1,2,1" fieldTable="formonly" identifier="lb57"/>
+				<Label isDynamic="true" text="Sequence" classNames="fcls_fieldlabel,fcls_align_left" visible="true" fieldTable="" identifier="lb81" gridItemLocation="2,1,1,1"/>
+				<Label isDynamic="true" text="Date" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="3,1,1,1" fieldTable="" identifier="lb137"/>
+				<Label isDynamic="true" text="Loaded" classNames="fcls_fieldlabel,fcls_align_left" visible="true" fieldTable="formonly" identifier="lb61" gridItemLocation="4,1,1,1"/>
+				<TextField toCase="Up" dataType="Char,,,,3" preferredSize="4qch,1qch" toolTip=" Enter Load Indicator" comment=" Enter Load Indicator" fieldTable="loadparms" identifier="load_ind" gridItemLocation="0,2,1,1" classNames="fcls_data_widget,fcls_length_05qch"/>
+				<TextField dataType="VarChar,,,0,14" preferredSize="30qch,1qch" toolTip=" Brief description of Load Indicator" comment=" Brief description of Load Indicator" fieldTable="loadparms" identifier="desc_text" gridItemLocation="1,2,1,1" classNames="fcls_data_widget,fcls_length_30qch"/>
+				<TextField dataType="Integer,,,," preferredSize="6qch,1qch" fieldTable="loadparms" identifier="seq_num" gridItemLocation="2,2,1,1" classNames="fcls_data_widget,fcls_length_10qch"/>
+				<Calendar dataType="Date,,,," preferredSize="11qch,1qch" fieldTable="loadparms" identifier="load_date" gridItemLocation="3,2,1,1" classNames="fcls_data_widget,fcls_length_10qch"/>
+				<TextField dataType="Integer,,,," preferredSize="9qch,1qch" fieldTable="loadparms" identifier="load_num" gridItemLocation="4,2,1,1" classNames="fcls_data_widget,fcls_length_10qch"/>
+			</GridPanel>
+			<GroupBox title="File" classNames="fcls_detail_gb_cnt" visible="true" verticalAlignment="Stretch" horizontalAlignment="Stretch" gridItemLocation="0,2,1,1" fieldTable="formonly" identifier="cntDetail2GroupBox">
+				<GridPanel classNames="fcls_detail_gb_cnt_sub,fcls_detail_cnt_sub,fcls_data_cnt" visible="true" verticalAlignment="Top" horizontalAlignment="Left" fieldTable="formonly" identifier="cntDetail2Sub">
+					<GridPanel.gridRowDefinitions>
+						<GridRowDefinition gridLengthValue=""/>
+						<GridRowDefinition gridLengthValue=""/>
+					</GridPanel.gridRowDefinitions>
+					<GridPanel.gridColumnDefinitions>
+						<GridColumnDefinition gridLengthValue="" gridMinLength="10rem"/>
+						<GridColumnDefinition gridLengthValue=""/>
+						<GridColumnDefinition gridLengthValue=""/>
+						<GridColumnDefinition gridLengthValue=""/>
+					</GridPanel.gridColumnDefinitions>
+					<Label isDynamic="true" text="OS File Name" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="lb47"/>
+					<TextField dataType="VarChar,,,0,4" preferredSize="21qch,1qch" toolTip=" Enter full name of interface load file" comment=" Enter full name of interface load file" fieldTable="loadparms" identifier="file_text" gridItemLocation="1,0,1,1" classNames="fcls_data_widget,fcls_length_30qch"/>
+					<Label isDynamic="true" text="Format No" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="2,0,1,1" fieldTable="" identifier="lb142"/>
+					<TextField dataType="Char,,,,2" preferredSize="2qch,1qch" toolTip=" Enter Invoice Load Routine indicator" comment=" Enter Invoice Load Routine indicator" fieldTable="loadparms" identifier="format_ind" gridItemLocation="3,0,1,1" classNames="fcls_data_widget,fcls_length_05qch"/>
+					<Label isDynamic="true" text="OS Path Name" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,1,1,1" fieldTable="formonly" identifier="lb46"/>
+					<TextField dataType="VarChar,,,0,12" preferredSize="41qch,1qch" toolTip=" Enter full UNIX path of interface load file" comment=" Enter full UNIX path of interface load file" fieldTable="loadparms" identifier="path_text" gridItemLocation="1,1,1,1" classNames="fcls_data_widget,fcls_length_30qch"/>
+				</GridPanel>
+			</GroupBox>
+			<GroupBox title="Load information" classNames="fcls_detail_gb_cnt" visible="true" verticalAlignment="Stretch" horizontalAlignment="Stretch" gridItemLocation="0,3,1,1" fieldTable="" identifier="cntDetail5GroupBox">
+				<GridPanel classNames="fcls_detail_gb_cnt_sub,fcls_detail_cnt_sub,fcls_data_cnt" visible="true" verticalAlignment="Top" horizontalAlignment="Left" fieldTable="" identifier="cntDetail5Sub">
+					<GridPanel.gridRowDefinitions>
+						<GridRowDefinition gridLengthValue=""/>
+						<GridRowDefinition gridLengthValue=""/>
+						<GridRowDefinition gridLengthValue=""/>
+						<GridRowDefinition gridLengthValue=""/>
+					</GridPanel.gridRowDefinitions>
+					<GridPanel.gridColumnDefinitions>
+						<GridColumnDefinition gridLengthValue="" gridMinLength="10rem"/>
+						<GridColumnDefinition gridLengthValue=""/>
+						<GridColumnDefinition gridLengthValue=""/>
+						<GridColumnDefinition gridLengthValue=""/>
+					</GridPanel.gridColumnDefinitions>
+					<Label isDynamic="true" text="Prompt" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="1,0,1,1" fieldTable="" identifier="lb124"/>
+					<Label isDynamic="true" text="Entry Reqd" classNames="fcls_fieldlabel,fcls_align_left" visible="true" fieldTable="" identifier="lb126" gridItemLocation="3,0,1,1"/>
+					<Label isDynamic="true" text="Reference 1" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,1,1,1" fieldTable="" identifier="lb128"/>
+					<TextField dataType="VarChar,,,0,15" preferredSize="16qch,1qch" toolTip=" First Prompt during import" comment=" First Prompt during import" fieldTable="loadparms" identifier="prmpt1_text" gridItemLocation="1,1,1,1" classNames="fcls_data_widget,fcls_length_20qch"/>
+					<TextField dataType="VarChar,,,0,4" preferredSize="21qch,1qch" toolTip=" First Default Value required during import" comment=" First Default Value required during import" fieldTable="loadparms" identifier="ref1_text" gridItemLocation="2,1,1,1" classNames="fcls_data_widget,fcls_length_20qch"/>
+					<TextField toCase="Up" dataType="Char,,,,1" preferredSize="2qch,1qch" toolTip=" Entry required during Load. (Y/N)?" comment=" Entry required during Load. (Y/N)?" fieldTable="loadparms" identifier="entry1_flag" gridItemLocation="3,1,1,1" classNames="fcls_data_widget,fcls_length_05qch">
+				<TextField.includes>
+					<ValueInclude>
+						<ValueInclude.value>
+							<StringLiteral stringValue="Y"/>
+						</ValueInclude.value>
+					</ValueInclude>
+					<ValueInclude>
+						<ValueInclude.value>
+							<StringLiteral stringValue="N"/>
+						</ValueInclude.value>
+					</ValueInclude>
+				</TextField.includes>
+			</TextField>
+					<Label isDynamic="true" text="Reference 2" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,2,1,1" fieldTable="" identifier="lb129"/>
+					<Label isDynamic="true" text="Default Value" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="2,0,1,1" fieldTable="" identifier="lb125"/>
+					<TextField dataType="VarChar,,,0,15" preferredSize="16qch,1qch" toolTip=" Second Prompt during import" comment=" Second Prompt during import" fieldTable="loadparms" identifier="prmpt2_text" gridItemLocation="1,2,1,1" classNames="fcls_data_widget,fcls_length_20qch"/>
+					<TextField dataType="VarChar,,,0,4" preferredSize="21qch,1qch" toolTip=" Second Default Value required during import" comment=" Second Default Value required during import" fieldTable="loadparms" identifier="ref2_text" gridItemLocation="2,2,1,1" classNames="fcls_data_widget,fcls_length_20qch"/>
+					<TextField toCase="Up" dataType="Char,,,,1" preferredSize="2qch,1qch" toolTip=" Entry required during Load. (Y/N)?" comment=" Entry required during Load. (Y/N)?" fieldTable="loadparms" identifier="entry2_flag" gridItemLocation="3,2,1,1" classNames="fcls_data_widget,fcls_length_05qch">
+				<TextField.includes>
+					<ValueInclude>
+						<ValueInclude.value>
+							<StringLiteral stringValue="Y"/>
+						</ValueInclude.value>
+					</ValueInclude>
+					<ValueInclude>
+						<ValueInclude.value>
+							<StringLiteral stringValue="N"/>
+						</ValueInclude.value>
+					</ValueInclude>
+				</TextField.includes>
+			</TextField>
+					<Label isDynamic="true" text="Reference 3" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,3,1,1" fieldTable="" identifier="lb130"/>
+					<TextField dataType="VarChar,,,0,15" preferredSize="16qch,1qch" toolTip=" Third Prompt during import" comment=" Third Prompt during import" fieldTable="loadparms" identifier="prmpt3_text" gridItemLocation="1,3,1,1" classNames="fcls_data_widget,fcls_length_20qch"/>
+					<TextField dataType="VarChar,,,0,4" preferredSize="21qch,1qch" toolTip=" Third Default Value required during import" comment=" Third Default Value required during import" fieldTable="loadparms" identifier="ref3_text" gridItemLocation="2,3,1,1" classNames="fcls_data_widget,fcls_length_20qch"/>
+					<TextField toCase="Up" dataType="Char,,,,1" preferredSize="2qch,1qch" toolTip=" Entry required during Load. (Y/N)?" comment=" Entry required during Load. (Y/N)?" fieldTable="loadparms" identifier="entry3_flag" gridItemLocation="3,3,1,1" classNames="fcls_data_widget,fcls_length_05qch">
+				<TextField.includes>
+					<ValueInclude>
+						<ValueInclude.value>
+							<StringLiteral stringValue="Y"/>
+						</ValueInclude.value>
+					</ValueInclude>
+					<ValueInclude>
+						<ValueInclude.value>
+							<StringLiteral stringValue="N"/>
+						</ValueInclude.value>
+					</ValueInclude>
+				</TextField.includes>
+			</TextField>
+				</GridPanel>
+			</GroupBox>
+			<GridPanel classNames="fcls_statusbar_cnt" visible="true" verticalAlignment="Top" gridItemLocation="0,4,1,1" fieldTable="formonly" identifier="cntStatusBar">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="100%"/>
+				</GridPanel.gridColumnDefinitions>
+				<Label isDynamic="true" text="" classNames="fcls_sblabel" visible="true" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="lbInfo1"/>
+				<Label isDynamic="true" text="" classNames="fcls_sblabel" visible="true" gridItemLocation="0,1,1,1" fieldTable="formonly" identifier="lbInfo2"/>
+			</GridPanel>
+		</GridPanel>
+	</form.rootContainer>
+	<form.screenRecords>
+		<ScreenRecord identifier="loadparms" fields="loadparms.load_ind,loadparms.seq_num,loadparms.load_date,loadparms.load_num,loadparms.desc_text,loadparms.file_text,loadparms.path_text,loadparms.prmpt1_text,loadparms.prmpt2_text,loadparms.prmpt3_text,loadparms.ref1_text,loadparms.ref2_text,loadparms.ref3_text,loadparms.entry1_flag,loadparms.entry2_flag,loadparms.entry3_flag,loadparms.format_ind"/>
+		<ScreenRecord identifier="FormOnly"/>
+	</form.screenRecords>
+</form>
+

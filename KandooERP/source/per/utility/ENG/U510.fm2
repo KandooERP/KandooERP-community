@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="UTF-8"?><form xmlns="http://namespaces.querix.com/2015/fglForms">
+	<form.rootContainer>
+		<GridPanel classNames="fcls_rootContainer" fieldTable="" horizontalAlignment="Left" identifier="rootContainer" verticalAlignment="Top">
+			<GridPanel.gridRowDefinitions>
+				<GridRowDefinition gridLengthValue=""/>
+				<GridRowDefinition gridLengthValue=""/>
+				<GridRowDefinition gridLengthValue=""/>
+				<GridRowDefinition gridLengthValue=""/>
+				<GridRowDefinition gridLengthValue=""/>
+			</GridPanel.gridRowDefinitions>
+			<GridPanel.gridColumnDefinitions>
+				<GridColumnDefinition gridLengthValue="100%"/>
+			</GridPanel.gridColumnDefinitions>
+			<GridPanel classNames="fcls_title_cnt" fieldTable="formonly" gridItemLocation="0,0,1,1" identifier="cntTitle" verticalAlignment="Top" visible="true">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="100%"/>
+					<GridColumnDefinition gridLengthValue=""/>
+				</GridPanel.gridColumnDefinitions>
+				<Label classNames="fcls_title_lb" fieldTable="formonly" gridItemLocation="0,0,1,1" identifier="header_text" isDynamic="true" text="Report Options" visible="true"/>
+				<Label classNames="fcls_title_lb" fieldTable="" gridItemLocation="1,0,1,1" identifier="lbFormName" isDynamic="true" text="U510" visible="true"/>
+			</GridPanel>
+			<GridPanel classNames="fcls_detail_cnt,fcls_data_cnt,fcls_align_hstretch" fieldTable="" gridItemLocation="0,1,1,1" horizontalAlignment="Stretch" identifier="cntDetail1" verticalAlignment="Top" visible="true">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="" gridMinLength="10rem"/>
+					<GridColumnDefinition gridLengthValue="100%"/>
+				</GridPanel.gridColumnDefinitions>
+				<Label classNames="fcls_fieldlabel,fcls_align_left" fieldTable="" gridItemLocation="0,0,1,1" identifier="lb139" isDynamic="true" text="Title" visible="true"/>
+				<TextField classNames="fcls_data_widget,fcls_align_hstretch" comment=" Enter report title " dataType="Char,,,,60" fieldTable="rmsreps" gridItemLocation="1,0,1,1" identifier="report_text" preferredSize="61qch,1qch" toolTip=" Enter report title "/>
+			</GridPanel>
+			<GridPanel classNames="fcls_detail_cnt" fieldTable="formonly" gridItemLocation="0,2,1,1" identifier="cntDetail2" verticalAlignment="Top" visible="true">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="50%"/>
+					<GridColumnDefinition gridLengthValue="50%"/>
+				</GridPanel.gridColumnDefinitions>
+				<GroupBox classNames="fcls_detail_gb_cnt" fieldTable="formonly" gridItemLocation="0,0,1,1" horizontalAlignment="Stretch" identifier="cntDetail2GroupBoxLeft" title="This Execution" verticalAlignment="Stretch" visible="true">
+					<GridPanel classNames="fcls_detail_gb_cnt_sub" fieldTable="formonly" horizontalAlignment="Left" identifier="cntDetail2GBSubGpLeft" verticalAlignment="Top" visible="true">
+						<GridPanel.gridRowDefinitions>
+							<GridRowDefinition gridLengthValue=""/>
+							<GridRowDefinition gridLengthValue=""/>
+							<GridRowDefinition gridLengthValue=""/>
+							<GridRowDefinition gridLengthValue=""/>
+							<GridRowDefinition gridLengthValue=""/>
+							<GridRowDefinition gridLengthValue=""/>
+						</GridPanel.gridRowDefinitions>
+						<GridPanel.gridColumnDefinitions>
+							<GridColumnDefinition gridLengthValue="" gridMinLength="10rem"/>
+							<GridColumnDefinition gridLengthValue=""/>
+							<GridColumnDefinition gridLengthValue=""/>
+						</GridPanel.gridColumnDefinitions>
+						<Label classNames="fcls_fieldlabel,fcls_align_left" fieldTable="" gridItemLocation="0,0,1,1" identifier="lb91" isDynamic="true" text="Execution Mode" visible="true"/>
+						<ComboBox classNames="fcls_data_widget,fcls_align_left,fcls_length_15qch" comment=" Execution Mode. - (1) Interactive - (2) Unattended" dataType="Char,,,,1" fieldTable="kandooreport" gridItemLocation="1,0,1,1" identifier="exec_ind" location="18qch,4qch" preferredSize="12qch,1qch" toolTip=" Execution Mode. - (1) Interactive - (2) Unattended"/>
+						<TextField classNames="fcls_data_widget,fcls_align_left,fcls_length_20qch"  dataType="Char,,,," fieldTable="formonly" gridItemLocation="2,0,1,1" identifier="exec_text" location="30qch,4qch" noEntry="true" preferredSize="11qch,1qch"/>
+						<Label classNames="fcls_fieldlabel,fcls_align_left" fieldTable="formonly" gridItemLocation="0,1,1,1" identifier="lb47" isDynamic="true" text="Scheduled Date" visible="true"/>
+						<Calendar classNames="fcls_data_widget,fcls_align_left,fcls_length_15qch" comment=" Scheduled report execution date " dataType="Date,,,," fieldTable="rmsreps" gridItemLocation="1,1,1,1" identifier="report_date" location="18qch,5qch" preferredSize="11qch,1qch" toolTip=" Scheduled report execution date "/>
+						<Label classNames="fcls_fieldlabel,fcls_align_left" fieldTable="formonly" gridItemLocation="0,2,1,1" identifier="lb46" isDynamic="true" text="Scheduled Time" visible="true"/>
+						<TextField classNames="fcls_data_widget,fcls_align_left,fcls_length_15qch" comment=" Scheduled report execution time - HH:MM format eg. 22:10" dataType="Char,,,,8" fieldTable="rmsreps" gridItemLocation="1,2,1,1" identifier="report_time" location="18qch,6qch" preferredSize="6qch,1qch" textPicture="##:##" toCase="Up" toolTip=" Scheduled report execution time - HH:MM format eg. 22:10"/>
+						<CheckBox classNames="fcls_data_widget,fcls_align_h_stretch" comment=" Print report selection criteria -(Y)es -(N)o " dataType="Char,,,,1" fieldTable="rmsreps" gridItemLocation="0,3,2,1" identifier="sel_flag" location="18qch,7qch" preferredSize="2qch,1qch" title="Print Criteria" toolTip=" Print report selection criteria -(Y)es -(N)o ">
+							<CheckBox.defaultValue>
+								<StringLiteral stringValue="N"/>
+							</CheckBox.defaultValue>
+							<CheckBox.checkedValue>
+								<StringLiteral stringValue="Y"/>
+							</CheckBox.checkedValue>
+							<CheckBox.uncheckedValue>
+								<StringLiteral stringValue="N"/>
+							</CheckBox.uncheckedValue>
+						</CheckBox>
+						<CheckBox classNames="fcls_data_widget,fcls_align_h_stretch" comment=" Automatically print report after execution -(Y)es -(N)o " dataType="Char,,,,1" fieldTable="rmsreps" gridItemLocation="0,4,2,1" identifier="printnow_flag" location="18qch,8qch" preferredSize="2qch,1qch" title="Local Print (with Preview)" toolTip=" Automatically print report after execution -(Y)es -(N)o ">
+							<CheckBox.defaultValue>
+								<StringLiteral stringValue="N"/>
+							</CheckBox.defaultValue>
+							<CheckBox.checkedValue>
+								<StringLiteral stringValue="Y"/>
+							</CheckBox.checkedValue>
+							<CheckBox.uncheckedValue>
+								<StringLiteral stringValue="N"/>
+							</CheckBox.uncheckedValue>
+						</CheckBox>
+						<Label classNames="fcls_fieldlabel,fcls_align_left" gridItemLocation="0,5,1,1" identifier="lb185" isDynamic="true" text="Printer" visible="true"/>
+						<TextField classNames="fcls_data_widget,fcls_align_left,fcls_length_15qch" dataType="Char,,,,20" fieldTable="rmsreps" gridItemLocation="1,5,1,1" identifier="dest_print_text" location="18qch,9qch" noEntry="true" preferredSize="21qch,1qch"/>
+					</GridPanel>
+				</GroupBox>
+				<GroupBox classNames="fcls_detail_gb_cnt" fieldTable="" gridItemLocation="1,0,1,1" horizontalAlignment="Stretch" identifier="cntDetail2GroupBoxRight" title="Previous Execution" verticalAlignment="Stretch" visible="true">
+					<GridPanel classNames="fcls_detail_gb_cnt_sub" fieldTable="" horizontalAlignment="Left" identifier="cntDetail2GBSubGpRight" verticalAlignment="Top" visible="true">
+						<GridPanel.gridRowDefinitions>
+							<GridRowDefinition gridLengthValue=""/>
+							<GridRowDefinition gridLengthValue=""/>
+							<GridRowDefinition gridLengthValue=""/>
+							<GridRowDefinition gridLengthValue=""/>
+						</GridPanel.gridRowDefinitions>
+						<GridPanel.gridColumnDefinitions>
+							<GridColumnDefinition gridLengthValue="" gridMinLength="10rem"/>
+							<GridColumnDefinition gridLengthValue=""/>
+						</GridPanel.gridColumnDefinitions>
+						<Label classNames="fcls_fieldlabel,fcls_align_left" fieldTable="" gridItemLocation="0,0,1,1" identifier="lb167" isDynamic="true" text="Report Number" visible="true"/>
+						<TextField classNames="fcls_data_widget,fcls_align_left,fcls_length_15qch" dataType="Integer,,,," fieldTable="kandooreport" gridItemLocation="1,0,1,1" identifier="l_report_code" location="57qch,4qch" noEntry="true" preferredSize="9qch,1qch"/>
+						<Label classNames="fcls_fieldlabel,fcls_align_left" fieldTable="" gridItemLocation="0,1,1,1" identifier="lb168" isDynamic="true" text="Create Date" visible="true"/>
+						<Calendar classNames="fcls_data_widget,fcls_align_left,fcls_length_15qch" dataType="Date,,,," fieldTable="kandooreport" gridItemLocation="1,1,1,1" identifier="l_report_date" location="57qch,5qch" noEntry="true" preferredSize="11qch,1qch"/>
+						<Label classNames="fcls_fieldlabel,fcls_align_left" fieldTable="" gridItemLocation="0,2,1,1" identifier="lb169" isDynamic="true" text="Create Time" visible="true"/>
+						<TextField classNames="fcls_data_widget,fcls_align_left,fcls_length_15qch" dataType="Char,,,,5" fieldTable="kandooreport" gridItemLocation="1,2,1,1" identifier="l_report_time" location="57qch,6qch" noEntry="true" preferredSize="6qch,1qch"/>
+						<Label classNames="fcls_fieldlabel,fcls_align_left" fieldTable="" gridItemLocation="0,3,1,1" identifier="lb170" isDynamic="true" text="Report Owner" visible="true"/>
+						<TextField classNames="fcls_data_widget,fcls_align_left,fcls_length_15qch" dataType="Char,,,,8" fieldTable="kandooreport" gridItemLocation="1,3,1,1" identifier="l_entry_code" location="57qch,7qch" noEntry="true" preferredSize="9qch,1qch"/>
+					</GridPanel>
+				</GroupBox>
+			</GridPanel>
+			<GridPanel classNames="fcls_detail_cnt,fcls_data_cnt,,fcls_align_left" fieldTable="formonly" gridItemLocation="0,3,1,1" horizontalAlignment="Left" identifier="cntDetail3" verticalAlignment="Top" visible="true">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="" gridMinLength="10rem"/>
+					<GridColumnDefinition gridLengthValue=""/>
+					<GridColumnDefinition gridLengthValue="" gridMinLength="10rem"/>
+					<GridColumnDefinition gridLengthValue=""/>
+				</GridPanel.gridColumnDefinitions>
+				<Label classNames="fcls_fieldlabel,fcls_align_left" fieldTable="formonly" gridItemLocation="0,0,1,1" identifier="lb48" isDynamic="true" text="Menu Path" visible="true"/>
+				<TextField classNames="fcls_data_widget,fcls_align_left,fcls_length_15qch" dataType="Char,,,,10" fieldTable="rmsreps" gridItemLocation="1,0,1,1" identifier="report_pgm_text" location="18qch,11qch" noEntry="true" preferredSize="4qch,1qch"/>
+				<Label classNames="fcls_fieldlabel,fcls_align_left" fieldTable="" gridItemLocation="2,0,1,1" identifier="lb182" isDynamic="true" text="Page Length" visible="true"/>
+				<TextField classNames="fcls_data_widget,fcls_align_left,fcls_length_15qch" dataType="SmallInt,,,," fieldTable="rmsreps" gridItemLocation="3,0,1,1" identifier="page_length_num" location="57qch,11qch" noEntry="true" preferredSize="4qch,1qch"/>
+				<CheckBox classNames="fcls_data_widget,fcls_align_left,fcls_length_10qch" dataType="Char,,,,1" fieldTable="kandooreport" gridItemLocation="0,1,2,1" identifier="exec_flag" location="18qch,12qch" noEntry="true" preferredSize="2qch,1qch" title="Allow Unattended">
+					<CheckBox.checkedValue>
+						<StringLiteral stringValue="Y"/>
+					</CheckBox.checkedValue>
+					<CheckBox.uncheckedValue>
+						<StringLiteral stringValue="N"/>
+					</CheckBox.uncheckedValue>
+				</CheckBox>
+				<Label classNames="fcls_fieldlabel,fcls_align_left" fieldTable="" gridItemLocation="2,1,1,1" identifier="lb184" isDynamic="true" text="Width" visible="true"/>
+				<TextField classNames="fcls_data_widget,fcls_align_left,fcls_length_15qch" dataType="SmallInt,,,," fieldTable="rmsreps" gridItemLocation="3,1,1,1" identifier="report_width_num" location="57qch,12qch" noEntry="true" preferredSize="4qch,1qch"/>
+				<CheckBox gridItemLocation="0,2,2,1" identifier="background_process" notNull="true" title="Process in background (without waiting)" visible="true">
+					<CheckBox.uncheckedValue>
+						<BooleanLiteral/>
+					</CheckBox.uncheckedValue>
+					<CheckBox.checkedValue>
+						<BooleanLiteral booleanValue="true"/>
+					</CheckBox.checkedValue>
+				</CheckBox>
+			</GridPanel>
+			<GridPanel classNames="fcls_statusbar_cnt" fieldTable="formonly" gridItemLocation="0,4,1,1" identifier="cntStatusBar" verticalAlignment="Top" visible="true">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="100%"/>
+				</GridPanel.gridColumnDefinitions>
+				<Label classNames="fcls_sblabel" fieldTable="formonly" gridItemLocation="0,0,1,1" identifier="lbInfo1" isDynamic="true" text="" visible="true"/>
+				<Label classNames="fcls_sblabel" fieldTable="formonly" gridItemLocation="0,1,1,1" identifier="lbInfo2" isDynamic="true" text="" visible="true"/>
+			</GridPanel>
+		</GridPanel>
+	</form.rootContainer>
+	<form.screenRecords>
+		<ScreenRecord fields="exec_text" identifier="formonly"/>
+		<ScreenRecord fields="exec_ind,exec_flag,l_report_code,l_report_date,l_report_time,l_entry_code" identifier="kandooreport"/>
+		<ScreenRecord fields="report_text,sel_flag,printnow_flag,report_date,report_time,report_pgm_text,page_length_num,report_width_num,dest_print_text" identifier="rmsreps"/>
+	</form.screenRecords>
+</form>

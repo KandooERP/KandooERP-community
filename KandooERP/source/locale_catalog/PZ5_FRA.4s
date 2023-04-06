@@ -1,0 +1,45 @@
+PZ5_FRA {
+0 - Not applicable, 1 - cents, 2 - rounded down, 3 - rounded up { "0 - Sans objet, 1 - centime, 2 - arrondi vers le bas, 3 - arrondi vers le haut" }
+A Valid Code for this part of the chart { "Un code valid pour cette partie du numéro de compte" }
+A brief description of the vendor type { "Une brève description du type de fournisseur" }
+AP Control { "Contrôle Compta Fournisseurs" }
+Account { "Compte" }
+Account Verifier { "Vérificateur de compte" }
+Account code to identify this account { "Numéro de compte identifiant ce client" }
+Accounts Payable Control account (W) { "Compte de centralisation Compta Fournisseurs" }
+Chart of Accounts { "Plan Comptable" }
+Code { "Code" }
+Date { "Date" }
+Description { "Description" }
+Discount { "Remise" }
+Discount taken account (W) { "Compte CG remise obtenue" }
+Exchange { "Taux de change" }
+Exchange Variance account (W) { "Compte écarts de change" }
+FILTER { "Premier" }
+Field Description { "Description du champ" }
+Filter { "Filtrer" }
+Flex Codes { "Flex Codes" }
+Freight { "Fret" }
+Freight charged in account (W) { "Compte facturation du fret" }
+ID { "ID" }
+LOOKUP { "RECHERCHER" }
+Language Code { "Code langue" }
+Length { "Longueur" }
+Length of the Code { "Longueur Numéro de compte" }
+Name { "Nom" }
+Start Pos. { "Positions Départ" }
+Start position of the Code { "Position de départ du code" }
+Tax { "T.V.A." }
+Tax Vendor   (receiving withholding tax) { "Organisme de collecte de T.V.A" }
+Tax paid account (W) { "Compte de T.V.A déductible" }
+The Description of the Account { "Description du compte" }
+The Vendor Type Code { "Le code de type de fournisseur" }
+The description for this code { "L'intitulé de ce code" }
+The valid flex segment { "Le segment Flex valide" }
+Title of this field in the GL { "Titre de ce champ en Compta géné" }
+Type { "Type" }
+Vendor Code to whom tax is paid { "Code organisme collecteur de la T.V.A" }
+Vendor Type { "Type de Fournisseur" }
+Withholding Tax Indicator { "Indicateur de retenue de T.V.A" }
+actToolbarManager { "actToolbarManager" }
+}

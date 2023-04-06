@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form xmlns="http://namespaces.querix.com/2015/fglForms">
+	<form.rootContainer>
+		<GridPanel classNames="fcls_rootContainer" verticalAlignment="Top" horizontalAlignment="Left" fieldTable="" identifier="rootContainer">
+			<GridPanel.gridRowDefinitions>
+				<GridRowDefinition gridLengthValue=""/>
+				<GridRowDefinition gridLengthValue=""/>
+				<GridRowDefinition gridLengthValue=""/>
+				<GridRowDefinition gridLengthValue=""/>
+				<GridRowDefinition gridLengthValue=""/>
+				<GridRowDefinition gridLengthValue=""/>
+			</GridPanel.gridRowDefinitions>
+			<GridPanel.gridColumnDefinitions>
+				<GridColumnDefinition gridLengthValue="100%"/>
+			</GridPanel.gridColumnDefinitions>
+			<GridPanel classNames="fcls_title_cnt" visible="true" verticalAlignment="Top" horizontalAlignment="Stretch" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="cntTitle">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="100%"/>
+					<GridColumnDefinition gridLengthValue=""/>
+				</GridPanel.gridColumnDefinitions>
+				<Label isDynamic="true" text="Purchase Order Information" classNames="fcls_title_lb" visible="true" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="header_text"/>
+				<Label isDynamic="true" text="R605" classNames="fcls_title_lb" visible="true" gridItemLocation="1,0,1,1" fieldTable="" identifier="lbFormName"/>
+			</GridPanel>
+			<GridPanel classNames="fcls_detail_cnt,fcls_data_cnt,fcls_align_left" visible="true" verticalAlignment="Top" horizontalAlignment="Left" gridItemLocation="0,1,1,1" fieldTable="formonly" identifier="cntDetail1">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="" gridMinLength="10rem"/>
+					<GridColumnDefinition gridLengthValue=""/>
+				</GridPanel.gridColumnDefinitions>
+				<Label isDynamic="true" text="Vendor Code" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="lb57"/>
+				<ComboBox toCase="Up" dataType="Char,,,,8" preferredSize="9qch,1qch" toolTip=" The Vendor Code to be used for this purchase" fieldTable="purchhead" comment=" The Vendor Code to be used for this purchase" identifier="vend_code" gridItemLocation="1,0,1,1" classNames="fcls_data_widget,fcls_align_left,fcls_length_30qch"/>
+				<TextField noEntry="true" dataType="Char,,,,30" preferredSize="41qch,1qch" toolTip=" The name of the vendor " fieldTable="vendor" comment=" The name of the vendor " identifier="name_text" gridItemLocation="1,1,1,1" classNames="fcls_data_widget,fcls_align_left,fcls_length_30qch"/>
+				<Label isDynamic="true" text="Order Number" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,2,1,1" fieldTable="" identifier="lb73"/>
+				<TextField dataType="Integer,,,," preferredSize="9qch,1qch" toolTip=" The number of this purchase order" fieldTable="purchhead" comment=" The number of this purchase order" identifier="order_num" gridItemLocation="1,2,1,1" classNames="fcls_data_widget,fcls_align_left,fcls_length_30qch"/>
+				<Label isDynamic="true" text="Variation Number" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,3,1,1" fieldTable="" identifier="lb76"/>
+				<TextField dataType="SmallInt,,,," preferredSize="5qch,1qch" toolTip=" The variation number of this purchase order" fieldTable="purchhead" comment=" The variation number of this purchase order" identifier="var_num" gridItemLocation="1,3,1,1" classNames="fcls_data_widget,fcls_align_left,fcls_length_30qch"/>
+				<Label isDynamic="true" text="Currency" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,4,1,1" fieldTable="" identifier="lb77"/>
+				<ComboBox toCase="Up" dataType="Char,,,,3" preferredSize="4qch,1qch" toolTip=" The currency code of this purchase order" fieldTable="purchhead" comment=" The currency code of this purchase order" identifier="curr_code" gridItemLocation="1,4,1,1" classNames="fcls_data_widget,fcls_align_left,fcls_length_30qch"/>
+				<Label isDynamic="true" text="Vendor Ref" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,5,1,1" fieldTable="" identifier="lb111"/>
+				<TextField dataType="Char,,,,15" preferredSize="16qch,1qch" toolTip=" Vendor reference information to this purchase order " fieldTable="purchhead" comment=" Vendor reference information to this purchase order " identifier="order_text" gridItemLocation="1,5,1,1" classNames="fcls_data_widget,fcls_align_left,fcls_length_30qch"/>
+				<Label isDynamic="true" text="Contact" classNames="fcls_fieldlabel,fcls_align_left" visible="true" fieldTable="" identifier="lb141" gridItemLocation="0,6,1,1"/>
+				<TextField dataType="Char,,,,50" preferredSize="51qch,1qch" toolTip=" The vendor&apos;s salesperson or contact person for this purchase order" fieldTable="purchhead" comment=" The vendor&apos;s salesperson or contact person for this purchase order" identifier="salesperson_text" gridItemLocation="1,6,1,1" classNames="fcls_data_widget,fcls_align_left,fcls_length_30qch"/>
+			</GridPanel>
+			<GroupBox title="Order Info" classNames="fcls_detail_gb_cnt" visible="true" verticalAlignment="Stretch" horizontalAlignment="Stretch" gridItemLocation="0,2,1,1" fieldTable="formonly" identifier="cntDetail2GroupBox">
+				<GridPanel classNames="fcls_detail_gb_cnt_sub,fcls_detail_cnt_sub,fcls_data_cnt,fcls_align_left" visible="true" verticalAlignment="Top" horizontalAlignment="Left" fieldTable="formonly" identifier="cntDetail2Sub">
+					<GridPanel.gridRowDefinitions>
+						<GridRowDefinition gridLengthValue=""/>
+						<GridRowDefinition gridLengthValue=""/>
+						<GridRowDefinition gridLengthValue=""/>
+						<GridRowDefinition gridLengthValue=""/>
+						<GridRowDefinition gridLengthValue=""/>
+						<GridRowDefinition gridLengthValue=""/>
+						<GridRowDefinition gridLengthValue=""/>
+						<GridRowDefinition gridLengthValue=""/>
+						<GridRowDefinition gridLengthValue=""/>
+					</GridPanel.gridRowDefinitions>
+					<GridPanel.gridColumnDefinitions>
+						<GridColumnDefinition gridLengthValue="" gridMinLength="10rem"/>
+						<GridColumnDefinition gridLengthValue=""/>
+					</GridPanel.gridColumnDefinitions>
+					<Label isDynamic="true" text="Warehouse" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="lb47"/>
+					<TextField toCase="Up" dataType="Char,,,,3" preferredSize="4qch,1qch" toolTip=" The warehouse to which these goods should be delivered" fieldTable="purchhead" comment=" The warehouse to which these goods should be delivered" identifier="ware_code" gridItemLocation="1,0,1,1" classNames="fcls_data_widget,fcls_align_left,fcls_length_30qch"/>
+					<TextField dataType="Char,,,,30" preferredSize="31qch,1qch" toolTip=" The name of the warehouse " fieldTable="warehouse" comment=" The name of the warehouse " identifier="desc_text" gridItemLocation="1,1,1,1" classNames="fcls_data_widget,fcls_align_left,fcls_length_30qch"/>
+					<Label isDynamic="true" text="Status" classNames="fcls_fieldlabel,fcls_align_left" visible="true" fieldTable="formonly" identifier="lb46" gridItemLocation="0,3,1,1"/>
+					<RadioGroup visible="true" identifier="status_ind" gridItemLocation="1,3,1,1">
+
+						<Radio title="Outstanding" identifier="status_ind_O">
+							<Radio.value>
+								<StringLiteral stringValue="O"/>
+							</Radio.value>
+						</Radio>
+						<Radio title="Partial" identifier="status_ind_P">
+							<Radio.value>
+								<StringLiteral stringValue="P"/>
+							</Radio.value>
+						</Radio>
+						<Radio title="Complete" identifier="status_ind_C">
+							<Radio.value>
+								<StringLiteral stringValue="C"/>
+							</Radio.value>
+						</Radio>
+
+					</RadioGroup>
+					<CheckBox toCase="Up" dataType="Char,,,,1" preferredSize="2qch,1qch" toolTip=" Has the order been printed (y/n)? " fieldTable="purchhead" comment=" Has the order been printed (y/n)? " identifier="printed_flag" gridItemLocation="1,4,1,1" title="Printed" classNames="fcls_data_widget,fcls_align_left,fcls_length_30qch">
+						<CheckBox.checkedValue>
+							<StringLiteral stringValue="Y"/>
+						</CheckBox.checkedValue>
+						<CheckBox.uncheckedValue>
+							<StringLiteral stringValue="N"/>
+						</CheckBox.uncheckedValue>
+					</CheckBox>
+					<CheckBox toCase="Up" dataType="Char,,,,1" preferredSize="2qch,1qch" toolTip=" Has the order been confirmed " fieldTable="purchhead" comment=" Has the order been confirmed " identifier="confirm_ind" gridItemLocation="1,5,1,1" title="Confirmed" classNames="fcls_data_widget,fcls_align_left,fcls_length_30qch">
+						<CheckBox.checkedValue>
+							<StringLiteral stringValue="Y"/>
+						</CheckBox.checkedValue>
+						<CheckBox.uncheckedValue>
+							<StringLiteral stringValue="N"/>
+						</CheckBox.uncheckedValue>
+					</CheckBox>
+					<TextField dataType="Char,,,,30" preferredSize="32qch,1qch" toolTip=" The confirmation notes " fieldTable="purchhead" comment=" The confirmation notes " identifier="confirm_text" gridItemLocation="1,6,1,1" classNames="fcls_data_widget,fcls_align_left,fcls_length_30qch"/>
+					<Label isDynamic="true" text="Authority" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,7,1,1" fieldTable="" identifier="lb89"/>
+					<TextField toCase="Up" dataType="Char,,,,5" preferredSize="6qch,1qch" toolTip=" Any authorisation information for this P.O." fieldTable="purchhead" comment=" Any authorisation information for this P.O." identifier="authorise_code" gridItemLocation="1,7,1,1" classNames="fcls_data_widget,fcls_align_left,fcls_length_30qch"/>
+					<Label isDynamic="true" text="Entry Person" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,8,1,1" fieldTable="" identifier="lb113"/>
+					<TextField dataType="Char,,,,8" preferredSize="9qch,1qch" toolTip=" The person who entered this purchase order" fieldTable="purchhead" comment=" The person who entered this purchase order" identifier="enter_code" gridItemLocation="1,8,1,1" classNames="fcls_data_widget,fcls_align_left,fcls_length_30qch"/>
+				</GridPanel>
+			</GroupBox>
+			<GroupBox title="Order Dates" classNames="fcls_detail_gb_cnt" visible="true" verticalAlignment="Stretch" horizontalAlignment="Stretch" gridItemLocation="0,3,1,1" fieldTable="formonly" identifier="cntDetail3GroupBox">
+				<GridPanel classNames="fcls_detail_gb_cnt_sub,fcls_detail_cnt_sub,fcls_data_cnt,fcls_align_left" visible="true" verticalAlignment="Top" horizontalAlignment="Left" fieldTable="formonly" identifier="cntDetail3Sub">
+					<GridPanel.gridRowDefinitions>
+						<GridRowDefinition gridLengthValue=""/>
+						<GridRowDefinition gridLengthValue=""/>
+						<GridRowDefinition gridLengthValue=""/>
+						<GridRowDefinition gridLengthValue=""/>
+						<GridRowDefinition gridLengthValue=""/>
+					</GridPanel.gridRowDefinitions>
+					<GridPanel.gridColumnDefinitions>
+						<GridColumnDefinition gridLengthValue="" gridMinLength="10rem"/>
+						<GridColumnDefinition gridLengthValue=""/>
+					</GridPanel.gridColumnDefinitions>
+					<Label isDynamic="true" text="Purchase Order" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="lb48"/>
+					<Calendar format="dd/mm/yyyy" dataType="Date,,,," preferredSize="11qch,1qch" toolTip=" The date this order was raised" fieldTable="purchhead" comment=" The date this order was raised" identifier="order_date" gridItemLocation="1,0,1,1" classNames="fcls_data_widget,fcls_align_left,fcls_length_30qch"/>
+					<Label isDynamic="true" text="Delivery Due" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,1,1,1" fieldTable="formonly" identifier="lb49"/>
+					<Calendar format="dd/mm/yyyy" dataType="Date,,,," preferredSize="11qch,1qch" toolTip=" The date delivery of this order is due" fieldTable="purchhead" comment=" The date delivery of this order is due" identifier="due_date" gridItemLocation="1,1,1,1" classNames="fcls_data_widget,fcls_align_left,fcls_length_30qch"/>
+					<Label isDynamic="true" text="Confirmed" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,2,1,1" fieldTable="formonly" identifier="lb63"/>
+					<Calendar format="dd/mm/yyyy" dataType="Date,,,," preferredSize="11qch,1qch" toolTip=" The confirmation date of this order " fieldTable="purchhead" comment=" The confirmation date of this order " identifier="confirm_date" gridItemLocation="1,2,1,1" classNames="fcls_data_widget,fcls_align_left,fcls_length_30qch"/>
+					<Label isDynamic="true" text="Cancelled" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,3,1,1" fieldTable="" identifier="lb101"/>
+					<Calendar format="dd/mm/yyyy" dataType="Date,,,," preferredSize="11qch,1qch" toolTip=" The cancellation date of this order if goods are not shipped" fieldTable="purchhead" comment=" The cancellation date of this order if goods are not shipped" identifier="cancel_date" gridItemLocation="1,3,1,1" classNames="fcls_data_widget,fcls_align_left,fcls_length_30qch"/>
+					<Label isDynamic="true" text="Entered" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,4,1,1" fieldTable="" identifier="lb102"/>
+					<Calendar format="dd/mm/yyyy" dataType="Date,,,," preferredSize="11qch,1qch" toolTip=" The entry date of the purchase order" fieldTable="purchhead" comment=" The entry date of the purchase order" identifier="entry_date" gridItemLocation="1,4,1,1" classNames="fcls_data_widget,fcls_align_left,fcls_length_30qch"/>
+				</GridPanel>
+			</GroupBox>
+			<GroupBox title="Line Details" classNames="fcls_detail_gb_cnt" visible="true" verticalAlignment="Stretch" horizontalAlignment="Stretch" gridItemLocation="0,4,1,1" fieldTable="" identifier="cntDetail4GroupBox">
+				<GridPanel classNames="fcls_detail_gb_cnt_sub,fcls_detail_cnt_sub,fcls_data_cnt,fcls_align_left" visible="true" verticalAlignment="Top" horizontalAlignment="Left" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="cntDetail4Sub">
+					<GridPanel.gridRowDefinitions>
+						<GridRowDefinition gridLengthValue=""/>
+						<GridRowDefinition gridLengthValue=""/>
+						<GridRowDefinition gridLengthValue=""/>
+						<GridRowDefinition gridLengthValue=""/>
+						<GridRowDefinition gridLengthValue=""/>
+						<GridRowDefinition gridLengthValue=""/>
+						<GridRowDefinition gridLengthValue=""/>
+						<GridRowDefinition gridLengthValue=""/>
+						<GridRowDefinition gridLengthValue=""/>
+					</GridPanel.gridRowDefinitions>
+					<GridPanel.gridColumnDefinitions>
+						<GridColumnDefinition gridLengthValue="" gridMinLength="10rem"/>
+						<GridColumnDefinition gridLengthValue=""/>
+					</GridPanel.gridColumnDefinitions>
+					<Label isDynamic="true" text="Line Type" classNames="fcls_fieldlabel,fcls_align_left" visible="true" fieldTable="" identifier="lb115" gridItemLocation="0,1,1,1"/>
+					<RadioGroup visible="true" identifier="type_ind" gridItemLocation="1,1,1,1">
+
+						<Radio title="General Management" identifier="type_ind_G">
+							<Radio.value>
+								<StringLiteral stringValue="G"/>
+							</Radio.value>
+						</Radio>
+						<Radio title="Inventory Management" identifier="type_ind_I">
+							<Radio.value>
+								<StringLiteral stringValue="I"/>
+							</Radio.value>
+						</Radio>
+						<Radio title="Job Management" identifier="type_ind_J">
+							<Radio.value>
+								<StringLiteral stringValue="J"/>
+							</Radio.value>
+						</Radio>
+
+					</RadioGroup>
+					<Label isDynamic="true" text="Reference" classNames="fcls_fieldlabel,fcls_align_left" visible="true" fieldTable="" identifier="lb152" gridItemLocation="0,2,1,1"/>
+					<TextField dataType="Char,,,,25" preferredSize="27qch,1qch" toolTip=" The reference text of the purchase order" fieldTable="purchdetl" comment=" The reference text of the purchase order" identifier="ref_text" gridItemLocation="1,2,1,1" classNames="fcls_data_widget,fcls_align_left,fcls_length_30qch"/>
+					<Label isDynamic="true" text="Vendor Ref" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,3,1,1" fieldTable="" identifier="lb116"/>
+					<TextField dataType="Char,,,,30" preferredSize="31qch,1qch" toolTip="The vendor refence of the purchase order" fieldTable="purchdetl" comment="The vendor refence of the purchase order" identifier="oem_text" gridItemLocation="1,3,1,1" classNames="fcls_data_widget,fcls_align_left,fcls_length_30qch"/>
+					<Label isDynamic="true" text="Job Code" classNames="fcls_fieldlabel,fcls_align_left" visible="true" fieldTable="" identifier="lb153" gridItemLocation="0,4,1,1"/>
+					<TextField toCase="Up" dataType="Char,,,,8" preferredSize="9qch,1qch" toolTip=" The job code of the purchase order" fieldTable="purchdetl" comment=" The job code of the purchase order" identifier="job_code" gridItemLocation="1,4,1,1" classNames="fcls_data_widget,fcls_align_left,fcls_length_30qch"/>
+					<Label isDynamic="true" text="Activity" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,5,1,1" fieldTable="" identifier="lb120"/>
+					<TextField toCase="Up" dataType="Char,,,,8" preferredSize="9qch,1qch" toolTip=" The activity code of the purchase order" fieldTable="purchdetl" comment=" The activity code of the purchase order" identifier="activity_code" gridItemLocation="1,5,1,1" classNames="fcls_data_widget,fcls_align_left,fcls_length_30qch"/>
+					<Label isDynamic="true" text="GL G/L Account" classNames="fcls_fieldlabel,fcls_align_left" visible="true" fieldTable="" identifier="lb154" gridItemLocation="0,6,1,1"/>
+					<ComboBox toCase="Up" dataType="Char,,,,18" preferredSize="21qch,1qch" toolTip=" The G/L Account of the purchase order" fieldTable="purchdetl" comment=" The G/L Account of the purchase order" identifier="acct_code" gridItemLocation="1,6,1,1" classNames="fcls_data_widget,fcls_align_left,fcls_length_30qch"/>
+					<Label isDynamic="true" text="List Price" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,7,1,1" fieldTable="" identifier="lb121"/>
+					<TextField dataType="Decimal,,,4,16" preferredSize="16qch,1qch" toolTip=" The list cost amount of the purchase order" fieldTable="purchdetl" comment=" The list cost amount of the purchase order" identifier="list_cost_amt" gridItemLocation="1,7,1,1" classNames="fcls_data_widget,fcls_align_left,fcls_length_30qch"/>
+					<Label isDynamic="true" text="Discount" classNames="fcls_fieldlabel,fcls_align_left" visible="true" fieldTable="" identifier="lb155" gridItemLocation="0,8,1,1"/>
+					<TextField dataType="Decimal,,,3,6" preferredSize="7qch,1qch" toolTip="The discount percentage of the purchase order" fieldTable="purchdetl" comment="The discount percentage of the purchase order" identifier="disc_per" gridItemLocation="1,8,1,1" classNames="fcls_data_widget,fcls_align_left,fcls_length_30qch"/>
+				</GridPanel>
+			</GroupBox>
+			<GridPanel classNames="fcls_statusbar_cnt" visible="true" verticalAlignment="Bottom" horizontalAlignment="Stretch" gridItemLocation="0,5,1,1" fieldTable="formonly" identifier="cntStatusBar">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="100%"/>
+				</GridPanel.gridColumnDefinitions>
+				<Label isDynamic="true" text="" classNames="fcls_sblabel" visible="true" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="lbInfo1"/>
+				<Label isDynamic="true" text="" classNames="fcls_sblabel" visible="true" gridItemLocation="0,1,1,1" fieldTable="formonly" identifier="lbInfo2"/>
+			</GridPanel>
+		</GridPanel>
+	</form.rootContainer>
+	<form.screenRecords>
+		<ScreenRecord identifier="purchdetl" fields="purchdetl.type_ind,purchdetl.oem_text,purchdetl.job_code,purchdetl.acct_code,purchdetl.list_cost_amt,purchdetl.ref_text,purchdetl.activity_code,purchdetl.disc_per"/>
+		<ScreenRecord identifier="purchhead" fields="purchhead.vend_code,purchhead.order_num,purchhead.order_text,purchhead.salesperson_text,purchhead.var_num,purchhead.curr_code,purchhead.ware_code,purchhead.status_ind,purchhead.printed_flag,purchhead.confirm_ind,purchhead.confirm_text,purchhead.authorise_code,purchhead.enter_code,purchhead.order_date,purchhead.due_date,purchhead.confirm_date,purchhead.cancel_date,purchhead.entry_date"/>
+		<ScreenRecord identifier="vendor" fields="vendor.name_text"/>
+		<ScreenRecord identifier="warehouse" fields="warehouse.desc_text"/>
+		<ScreenRecord identifier="FormOnly" fields="type_ind"/>
+	</form.screenRecords>
+</form>
+

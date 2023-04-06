@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form xmlns="http://namespaces.querix.com/2015/fglForms">
+	<form.rootContainer>
+		<GridPanel fieldTable="" identifier="grid1">
+			<GridPanel.gridRowDefinitions>
+				<GridRowDefinition gridLengthValue="8.3%"/>
+				<GridRowDefinition gridLengthValue="8.3%"/>
+				<GridRowDefinition gridLengthValue="8.3%"/>
+				<GridRowDefinition gridLengthValue="8.3%"/>
+				<GridRowDefinition gridLengthValue="8.3%"/>
+				<GridRowDefinition gridLengthValue="8.3%"/>
+				<GridRowDefinition gridLengthValue="8.3%"/>
+				<GridRowDefinition gridLengthValue="8.3%"/>
+				<GridRowDefinition gridLengthValue="8.3%"/>
+				<GridRowDefinition gridLengthValue="8.3%"/>
+				<GridRowDefinition gridLengthValue="8.3%"/>
+				<GridRowDefinition gridLengthValue="8.3%"/>
+			</GridPanel.gridRowDefinitions>
+			<GridPanel.gridColumnDefinitions>
+				<GridColumnDefinition gridLengthValue="5.5%"/>
+				<GridColumnDefinition gridLengthValue="4.1%"/>
+				<GridColumnDefinition gridLengthValue="1.4%"/>
+				<GridColumnDefinition gridLengthValue="5.5%"/>
+				<GridColumnDefinition gridLengthValue="4.1%"/>
+				<GridColumnDefinition gridLengthValue="2.7%"/>
+				<GridColumnDefinition gridLengthValue="2.7%"/>
+				<GridColumnDefinition gridLengthValue="1.4%"/>
+				<GridColumnDefinition gridLengthValue="1.4%"/>
+				<GridColumnDefinition gridLengthValue="1.4%"/>
+				<GridColumnDefinition gridLengthValue="1.4%"/>
+				<GridColumnDefinition gridLengthValue="12.3%"/>
+				<GridColumnDefinition gridLengthValue="1.4%"/>
+				<GridColumnDefinition gridLengthValue="1.4%"/>
+				<GridColumnDefinition gridLengthValue="1.4%"/>
+				<GridColumnDefinition gridLengthValue="1.4%"/>
+				<GridColumnDefinition gridLengthValue="1.4%"/>
+				<GridColumnDefinition gridLengthValue="2.7%"/>
+				<GridColumnDefinition gridLengthValue="1.4%"/>
+				<GridColumnDefinition gridLengthValue="17.8%"/>
+				<GridColumnDefinition gridLengthValue="1.4%"/>
+				<GridColumnDefinition gridLengthValue="2.7%"/>
+				<GridColumnDefinition gridLengthValue="15.1%"/>
+				<GridColumnDefinition gridLengthValue="2.7%"/>
+				<GridColumnDefinition gridLengthValue="4.1%"/>
+				<GridColumnDefinition gridLengthValue="1.4%"/>
+			</GridPanel.gridColumnDefinitions>
+			<Label text="Account" gridItemLocation="12,0,6,1" fieldTable="" identifier="label1"/>
+			<Label text="G196" gridItemLocation="24,0,2,1" fieldTable="" identifier="label2"/>
+			<Label text="Company" gridItemLocation="0,2,2,1" fieldTable="" identifier="label3"/>
+			<TextField toCase="Up" dataType="Char,,,,2" preferredSize="3qch,1qch" toolTip="Enter the two digit Company ID for this account detail" gridItemLocation="6,2,2,1" comment="Enter the two digit Company ID for this account detail" fieldTable="account" identifier="cmpy_code"/>
+			<TextField noEntry="true" dataType="VarChar,,,0,8" preferredSize="36qch,1qch" gridItemLocation="16,2,9,1" fieldTable="company" identifier="name_text"/>
+			<Label text="G/L Account" gridItemLocation="0,3,4,1" fieldTable="" identifier="label4"/>
+			<TextField toCase="Up" dataType="Char,,,,18" preferredSize="19qch,1qch" toolTip="Identifies the G/L Account of this GL account " gridItemLocation="6,3,10,1" comment="Identifies the G/L Account of this GL account " fieldTable="account" identifier="acct_code"/>
+			<TextField noEntry="true" dataType="VarChar,,,0,8" preferredSize="31qch,1qch" gridItemLocation="16,3,7,1" fieldTable="coa" identifier="desc_text"/>
+			<Label text="Year" gridItemLocation="0,4,1,1" fieldTable="" identifier="label5"/>
+			<TextField dataType="SmallInt,,,," preferredSize="5qch,1qch" toolTip="Identifies the year of this account summary totals" gridItemLocation="6,4,4,1" comment="Identifies the year of this account summary totals" fieldTable="account" identifier="year_num"/>
+			<Label text="Currency" gridItemLocation="0,5,3,1" fieldTable="" identifier="label6"/>
+			<TextField toCase="Up" dataType="Char,,,," preferredSize="4qch,1qch" toolTip="The currency for the account" gridItemLocation="6,5,3,1" comment="The currency for the account" fieldTable="formonly" identifier="currency_code"/>
+			<TextField noEntry="true" dataType="VarChar,,,0,14" preferredSize="31qch,1qch" gridItemLocation="11,5,10,1" fieldTable="currency" identifier="desc_text"/>
+			<Label text="Base Currency" gridItemLocation="9,6,5,1" fieldTable="" identifier="label7"/>
+			<TextField noEntry="true" dataType="Char,,,,3" preferredSize="4qch,1qch" gridItemLocation="15,6,3,1" fieldTable="glparms" identifier="base_currency_code"/>
+			<Label text="Opening Balance" gridItemLocation="0,7,5,1" fieldTable="" identifier="label8"/>
+			<TextField noEntry="true" dataType="Decimal,,,2,16" preferredSize="16qch,1qch" gridItemLocation="6,7,7,1" fieldTable="accountcur" identifier="base_open_amt"/>
+			<Label text="YTD Debit Amount" gridItemLocation="17,7,3,1" fieldTable="" identifier="label9"/>
+			<TextField noEntry="true" dataType="Decimal,,,2,16" preferredSize="16qch,1qch" gridItemLocation="22,7,3,1" fieldTable="accountcur" identifier="base_debit_amt"/>
+			<Label text="Current Balance" gridItemLocation="0,8,5,1" fieldTable="" identifier="label10"/>
+			<TextField noEntry="true" dataType="Decimal,,,2,16" preferredSize="16qch,1qch" gridItemLocation="6,8,7,1" fieldTable="accountcur" identifier="base_bal_amt"/>
+			<Label text="YTD Credit Amount" gridItemLocation="17,8,4,1" fieldTable="" identifier="label11"/>
+			<TextField noEntry="true" dataType="Decimal,,,2,16" preferredSize="16qch,1qch" gridItemLocation="22,8,3,1" fieldTable="accountcur" identifier="base_credit_amt"/>
+			<Label text="Foreign Currency" gridItemLocation="7,9,8,1" fieldTable="" identifier="label12"/>
+			<TextField noEntry="true" dataType="Char,,,,3" preferredSize="4qch,1qch" gridItemLocation="16,9,3,1" fieldTable="accountcur" identifier="currency_code"/>
+			<Label text="Opening Balance" gridItemLocation="0,10,5,1" fieldTable="" identifier="label13"/>
+			<TextField noEntry="true" dataType="Decimal,,,2,16" preferredSize="16qch,1qch" gridItemLocation="6,10,7,1" fieldTable="accountcur" identifier="open_amt"/>
+			<Label text="YTD Debit Amount" gridItemLocation="17,10,3,1" fieldTable="" identifier="label14"/>
+			<TextField noEntry="true" dataType="Decimal,,,2,16" preferredSize="16qch,1qch" gridItemLocation="22,10,3,1" fieldTable="accountcur" identifier="debit_amt"/>
+			<Label text="Current Balance" gridItemLocation="0,11,5,1" fieldTable="" identifier="label15"/>
+			<TextField noEntry="true" dataType="Decimal,,,2,16" preferredSize="16qch,1qch" gridItemLocation="6,11,7,1" fieldTable="accountcur" identifier="bal_amt"/>
+			<Label text="YTD Credit Amount" gridItemLocation="17,11,4,1" fieldTable="" identifier="label16"/>
+			<TextField noEntry="true" dataType="Decimal,,,2,16" preferredSize="16qch,1qch" gridItemLocation="22,11,3,1" fieldTable="accountcur" identifier="credit_amt"/>
+		</GridPanel>
+	</form.rootContainer>
+	<form.screenRecords>
+		<ScreenRecord identifier="account" fields="account.cmpy_code,account.acct_code,account.year_num"/>
+		<ScreenRecord identifier="accountcur" fields="accountcur.base_open_amt,accountcur.base_bal_amt,accountcur.base_debit_amt,accountcur.base_credit_amt,accountcur.currency_code,accountcur.open_amt,accountcur.bal_amt,accountcur.debit_amt,accountcur.credit_amt"/>
+		<ScreenRecord identifier="coa" fields="coa.desc_text"/>
+		<ScreenRecord identifier="company" fields="company.name_text"/>
+		<ScreenRecord identifier="currency" fields="currency.desc_text"/>
+		<ScreenRecord identifier="formonly" fields="formonly.currency_code"/>
+		<ScreenRecord identifier="glparms" fields="glparms.base_currency_code"/>
+	</form.screenRecords>
+</form>
+

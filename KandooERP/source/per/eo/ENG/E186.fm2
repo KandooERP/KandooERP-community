@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form xmlns="http://namespaces.querix.com/2015/fglForms">
+	<form.rootContainer>
+		<GridPanel classNames="fcls_rootContainer" preferredSize="," verticalAlignment="Stretch" horizontalAlignment="Stretch" fieldTable="" identifier="rootContainer">
+			<GridPanel.gridRowDefinitions>
+				<GridRowDefinition gridLengthValue=""/>
+				<GridRowDefinition gridLengthValue=""/>
+				<GridRowDefinition gridLengthValue="100%"/>
+				<GridRowDefinition gridLengthValue=""/>
+				<GridRowDefinition gridLengthValue=""/>
+			</GridPanel.gridRowDefinitions>
+			<GridPanel.gridColumnDefinitions>
+				<GridColumnDefinition gridLengthValue="100%"/>
+			</GridPanel.gridColumnDefinitions>
+			<GridPanel classNames="fcls_title_cnt" visible="true" verticalAlignment="Top" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="cntTitle">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="100%"/>
+					<GridColumnDefinition gridLengthValue=""/>
+				</GridPanel.gridColumnDefinitions>
+				<Label isDynamic="true" text="Salesperson Monthly Sales" classNames="fcls_title_lb" visible="true" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="header_text"/>
+				<Label isDynamic="true" text="E186" classNames="fcls_title_lb" visible="true" gridItemLocation="1,0,1,1" fieldTable="" identifier="lbFormName"/>
+			</GridPanel>
+			<GridPanel classNames="fcls_detail_cnt,,fcls_align_left" visible="true" verticalAlignment="Top" horizontalAlignment="Left" gridItemLocation="0,1,1,1" fieldTable="formonly" identifier="cntDetail1">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="" gridMinLength="10rem"/>
+					<GridColumnDefinition gridLengthValue=""/>
+				</GridPanel.gridColumnDefinitions>
+				<ComboBox toCase="Up" noEntry="true" dataType="Char,,,,8" preferredSize="9qch,1qch" fieldTable="salesperson" identifier="sale_code" gridItemLocation="1,0,1,1" classNames="fcls_data_widget,fcls_align_left,fcls_length_30qch"/>
+				<TextField noEntry="true" dataType="Char,,,,30" preferredSize="31qch,1qch" fieldTable="salesperson" identifier="name_text" gridItemLocation="1,1,1,1" classNames="fcls_data_widget,fcls_align_left,fcls_length_30qch"/>
+				<TextField noEntry="true" dataType="SmallInt,,,," preferredSize="5qch,1qch" fieldTable="statparms" identifier="year_num" gridItemLocation="1,2,1,1" classNames="fcls_data_widget,fcls_align_left,fcls_length_10qch"/>
+				<Label isDynamic="true" text="Salesperson" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,0,1,1" fieldTable="" identifier="lb51"/>
+				<Label isDynamic="true" text="Year:" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,2,1,1" fieldTable="" identifier="lb52"/>
+			</GridPanel>
+			<Table rowCount="12" preferredSize="75qch,12qch" fieldTable="" identifier="sr_statsper" gridItemLocation="0,2,1,1">
+				<TableColumn fieldTable="" identifier="tc_scroll_flag">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="2rem" gridMaxLength="2rem" gridMinLength="2rem"/>
+					</TableColumn.columnLength>
+					<CheckBox dataType="Char,,,," fieldTable="formonly" identifier="scroll_flag">
+						<CheckBox.checkedValue>
+							<StringLiteral stringValue="*"/>
+						</CheckBox.checkedValue>
+						<CheckBox.uncheckedValue>
+							<NullLiteral/>
+						</CheckBox.uncheckedValue>
+					</CheckBox>
+				</TableColumn>
+				<TableColumn fieldTable="" identifier="tc_int_text" text="Month">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="10rem" gridMaxLength="10rem" gridMinLength="10rem"/>
+					</TableColumn.columnLength>
+					<TextField toCase="Up" dataType="Char,,,,10" fieldTable="statint" identifier="int_text"/>
+				</TableColumn>
+				<TableColumn fieldTable="" identifier="tc_grs_amt" text="Gross Amt">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="10rem" gridMaxLength="10rem" gridMinLength="10rem"/>
+					</TableColumn.columnLength>
+					<TextField format="---------&amp;" noEntry="true" dataType="Decimal,,,2,16" fieldTable="statsper" identifier="grs_amt"/>
+				</TableColumn>
+				<TableColumn fieldTable="" identifier="tc_net_amt" text="Nett Amt">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="10rem" gridMaxLength="10rem" gridMinLength="10rem"/>
+					</TableColumn.columnLength>
+					<TextField format="---------&amp;" noEntry="true" dataType="Decimal,,,2,16" fieldTable="statsper" identifier="net_amt"/>
+				</TableColumn>
+				<TableColumn fieldTable="" identifier="tc_disc_per" text="Disc%">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="10rem" gridMaxLength="10rem" gridMinLength="10rem"/>
+					</TableColumn.columnLength>
+					<TextField format="---&amp;.&amp;" noEntry="true" dataType="Float,,,," fieldTable="formonly" identifier="disc_per"/>
+				</TableColumn>
+				<TableColumn fieldTable="" identifier="tc_orders_num" text="Orders">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="10rem" gridMaxLength="10rem" gridMinLength="10rem"/>
+					</TableColumn.columnLength>
+					<TextField format="----&amp;" noEntry="true" dataType="Integer,,,," fieldTable="statsper" identifier="orders_num"/>
+				</TableColumn>
+				<TableColumn fieldTable="" identifier="tc_credits_num" text="Credits">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="10rem" gridMaxLength="10rem" gridMinLength="10rem"/>
+					</TableColumn.columnLength>
+					<TextField format="----&amp;" noEntry="true" dataType="Integer,,,," fieldTable="statsper" identifier="credits_num"/>
+				</TableColumn>
+				<TableColumn fieldTable="" identifier="tc_net_cred_amt" text="Credit Amt">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="10rem" gridMaxLength="10rem" gridMinLength="10rem"/>
+					</TableColumn.columnLength>
+					<TextField format="---------&amp;" noEntry="true" dataType="Decimal,,,2,16" fieldTable="statsper" identifier="net_cred_amt"/>
+				</TableColumn>
+				<TableColumn fieldTable="" identifier="tc_avg_ord_val" text="Avg. Order">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="10rem" gridMaxLength="10rem" gridMinLength="10rem"/>
+					</TableColumn.columnLength>
+					<TextField format="---------&amp;" noEntry="true" dataType="Decimal,,,2,16" fieldTable="formonly" identifier="avg_ord_val"/>
+				</TableColumn>
+				<TableColumn  resizable="true" visible="true" identifier="tc_lbEOL">
+					<Label  isDynamic="true" visible="true" identifier="lbEOL"/>
+					<TableColumn.columnLength>
+						<GridLength/>
+					</TableColumn.columnLength>
+				</TableColumn>
+			</Table>
+			<GridPanel classNames="fcls_detail_cnt" visible="true" verticalAlignment="Top" horizontalAlignment="Stretch" gridItemLocation="0,3,1,1" fieldTable="formonly" identifier="cntDetail2">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue="" gridMinLength="1rem"/>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="11rem" gridMinLength="11rem" gridMaxLength="11rem"/>
+					<GridColumnDefinition gridLengthValue="100%"/>
+				</GridPanel.gridColumnDefinitions>
+				<Table rowCount="2" preferredSize="63qch,3qch" fieldTable="" identifier="sr_stattotal" gridItemLocation="1,0,1,3" rowHeight="1rem" horizontalAlignment="Stretch" verticalAlignment="Top">
+				<TableColumn fieldTable="" identifier="tc_tot_grs_amt" text="Gross Amt">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="10rem" gridMaxLength="10rem" gridMinLength="10rem"/>
+					</TableColumn.columnLength>
+					<TextField format="---------&amp;" noEntry="true" dataType="Decimal,,,2,16" fieldTable="formonly" identifier="tot_grs_amt"/>
+				</TableColumn>
+				<TableColumn fieldTable="" identifier="tc_tot_net_amt" text="Nett Amt">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="10rem" gridMaxLength="10rem" gridMinLength="10rem"/>
+					</TableColumn.columnLength>
+					<TextField format="---------&amp;" noEntry="true" dataType="Decimal,,,2,16" fieldTable="formonly" identifier="tot_net_amt"/>
+				</TableColumn>
+				<TableColumn fieldTable="" identifier="tc_tot_disc_per" text="Disc%">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="10rem" gridMaxLength="10rem" gridMinLength="10rem"/>
+					</TableColumn.columnLength>
+					<TextField format="---&amp;.&amp;" noEntry="true" dataType="Float,,,," fieldTable="formonly" identifier="tot_disc_per"/>
+				</TableColumn>
+				<TableColumn fieldTable="" identifier="tc_tot_orders_num" text="Orders">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="10rem" gridMaxLength="10rem" gridMinLength="10rem"/>
+					</TableColumn.columnLength>
+					<TextField format="----&amp;" noEntry="true" dataType="Integer,,,," fieldTable="formonly" identifier="tot_orders_num"/>
+				</TableColumn>
+				<TableColumn fieldTable="" identifier="tc_tot_credits_num" text="Credits">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="10rem" gridMaxLength="10rem" gridMinLength="10rem"/>
+					</TableColumn.columnLength>
+					<TextField format="----&amp;" noEntry="true" dataType="Integer,,,," fieldTable="formonly" identifier="tot_credits_num"/>
+				</TableColumn>
+				<TableColumn fieldTable="" identifier="tc_tot_net_cred_amt" text="Credit Amt.">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="10rem" gridMaxLength="10rem" gridMinLength="10rem"/>
+					</TableColumn.columnLength>
+					<TextField format="---------&amp;" noEntry="true" dataType="Decimal,,,2,16" fieldTable="formonly" identifier="tot_net_cred_amt"/>
+				</TableColumn>
+				<TableColumn fieldTable="" identifier="tc_tot_avg_ord_val" text="Avg. Order">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="10rem" gridMaxLength="10rem" gridMinLength="10rem"/>
+					</TableColumn.columnLength>
+					<TextField format="---------&amp;" noEntry="true" dataType="Decimal,,,2,16" fieldTable="formonly" identifier="tot_avg_ord_val"/>
+				</TableColumn>
+				<TableColumn  resizable="true" visible="true" identifier="tc_lbEOL">
+					<Label  isDynamic="true" visible="true" identifier="lbEOL"/>
+					<TableColumn.columnLength>
+						<GridLength/>
+					</TableColumn.columnLength>
+				</TableColumn>
+			</Table>
+				<Label isDynamic="true" text="Y.T.D :" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,2,1,1" fieldTable="" identifier="lb152"/>
+				<Label isDynamic="true" text="Total :" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,1,1,1" fieldTable="formonly" identifier="lb37"/>
+			</GridPanel>
+			<GridPanel classNames="fcls_statusbar_cnt" visible="true" verticalAlignment="Top" gridItemLocation="0,4,1,1" fieldTable="formonly" identifier="cntStatusBar">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="100%"/>
+				</GridPanel.gridColumnDefinitions>
+				<Label isDynamic="true" text="" classNames="fcls_sblabel" visible="true" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="lbInfo1"/>
+				<Label isDynamic="true" text="" classNames="fcls_sblabel" visible="true" gridItemLocation="0,1,1,1" fieldTable="formonly" identifier="lbInfo2"/>
+			</GridPanel>
+		</GridPanel>
+	</form.rootContainer>
+	<form.screenRecords>
+		<ScreenRecord identifier="sr_statsper" fields="formonly.scroll_flag,statint.int_text,statsper.grs_amt,statsper.net_amt,formonly.disc_per,statsper.orders_num,statsper.credits_num,statsper.net_cred_amt,formonly.avg_ord_val" elements="12"/>
+		<ScreenRecord identifier="sr_stattotal" fields="formonly.tot_grs_amt,formonly.tot_net_amt,formonly.tot_disc_per,formonly.tot_orders_num,formonly.tot_credits_num,formonly.tot_net_cred_amt,formonly.tot_avg_ord_val" elements="2"/>
+		<ScreenRecord identifier="formonly" fields="formonly.scroll_flag,formonly.disc_per,formonly.avg_ord_val,formonly.tot_grs_amt,formonly.tot_net_amt,formonly.tot_disc_per,formonly.tot_orders_num,formonly.tot_credits_num,formonly.tot_net_cred_amt,formonly.tot_avg_ord_val"/>
+		<ScreenRecord identifier="salesperson" fields="salesperson.sale_code,salesperson.name_text"/>
+		<ScreenRecord identifier="statint" fields="statint.int_text"/>
+		<ScreenRecord identifier="statparms" fields="statparms.year_num"/>
+		<ScreenRecord identifier="statsper" fields="statsper.grs_amt,statsper.net_amt,statsper.orders_num,statsper.credits_num,statsper.net_cred_amt"/>
+	</form.screenRecords>
+</form>
+

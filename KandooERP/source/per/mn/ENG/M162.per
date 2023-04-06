@@ -1,0 +1,66 @@
+{
+###########################################################################
+# This program is free software; you can redistribute it and/or modify it
+# under the terms of the GNU General Public License as published by the
+# Free Software Foundation; either version 2 of the License, or (at your
+# option) any later version.
+#
+# This program is distributed in the hope that it will be useful, but
+# WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+# General Public License for more details.
+#
+# You should have received a copy of the GNU General Public License along
+# with this program; if not, write to the Free Software Foundation, Inc.,
+# 59 Temple Place, Suite 330, Boston, MA 02111-1307 USA
+#
+###########################################################################
+
+	 $Id: M162.per,v 1.2 2003/11/19 22:23:00 afalout Exp $
+}
+
+
+database kandoodb
+
+screen
+{
+
+                    Bill of Resource Where Used Inquiry                M162 
+\g----------------------------------------------------------------------------\g
+ Type  [a]  Product/Workcentre  [f001           ]
+\g----------------------------------------------------------------------------\g
+ Type  Parent             Description                              Quantity
+\g----------------------------------------------------------------------------\g
+ [b]  [f002           ]  [f003                          ] [f004            ]
+ [b]  [f002           ]  [f003                          ] [f004            ]
+ [b]  [f002           ]  [f003                          ] [f004            ]
+ [b]  [f002           ]  [f003                          ] [f004            ]
+ [b]  [f002           ]  [f003                          ] [f004            ]
+ [b]  [f002           ]  [f003                          ] [f004            ]
+ [b]  [f002           ]  [f003                          ] [f004            ]
+ [b]  [f002           ]  [f003                          ] [f004            ]
+ [b]  [f002           ]  [f003                          ] [f004            ]
+ [b]  [f002           ]  [f003                          ] [f004            ]    
+
+}
+
+tables
+bor
+
+attributes
+a    = formonly.type type char, include = ("W","P"), upshift,
+comments = " P = Product, W = Work Centre";
+f001 = formonly.select_text, upshift,
+comments = " Product code or Work Centre code (W)";
+b    = bor.type_ind;
+f002 = bor.parent_part_code;
+f003 = formonly.parent_description;
+f004 = bor.required_qty;
+
+instructions
+delimiters "  "
+
+screen record sr_bor[10](type_ind,
+                         parent_part_code,
+                         parent_description,
+                         required_qty)

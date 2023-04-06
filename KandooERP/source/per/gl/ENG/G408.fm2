@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form xmlns="http://namespaces.querix.com/2015/fglForms">
+	<form.rootContainer>
+		<GridPanel classNames="fcls_rootContainer" verticalAlignment="Top" horizontalAlignment="Left" fieldTable="" identifier="rootContainer">
+			<GridPanel.gridRowDefinitions>
+				<GridRowDefinition gridLengthValue=""/>
+				<GridRowDefinition gridLengthValue=""/>
+				<GridRowDefinition gridLengthValue=""/>
+				<GridRowDefinition gridLengthValue=""/>
+				<GridRowDefinition gridLengthValue=""/>
+			</GridPanel.gridRowDefinitions>
+			<GridPanel.gridColumnDefinitions>
+				<GridColumnDefinition gridLengthValue="100%"/>
+			</GridPanel.gridColumnDefinitions>
+			<GridPanel classNames="fcls_title_cnt" visible="true" verticalAlignment="Top" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="cntTitle">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="100%"/>
+					<GridColumnDefinition gridLengthValue=""/>
+				</GridPanel.gridColumnDefinitions>
+				<Label isDynamic="true" text="Bank Statement Entry &amp; Reconciliation" classNames="fcls_title_lb" visible="true" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="header_text"/>
+				<Label isDynamic="true" text="G408" classNames="fcls_title_lb" visible="true" gridItemLocation="1,0,1,1" fieldTable="" identifier="lbFormName"/>
+			</GridPanel>
+			<GridPanel classNames="fcls_detail_cnt,fcls_data_cnt,fcls_align_left" visible="true" verticalAlignment="Top" horizontalAlignment="Left" gridItemLocation="0,1,1,1" fieldTable="formonly" identifier="cntDetail1">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="" gridMinLength="10rem"/>
+					<GridColumnDefinition gridLengthValue=""/>
+				</GridPanel.gridColumnDefinitions>
+				<Label isDynamic="true" text="Bank Code" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="lb_bank_code"/>
+				<ComboBox dataType="Char,,,,9" classNames="list-show-value-text,field-show-value,fcls_data_widget,fcls_align_left,fcls_length_10qch" location="15qch,2qch" preferredSize="30qch,1qch" toolTip=" Bank Identification (W)" gridItemLocation="1,0,1,1" comment=" Bank Identification (W)" fieldTable="bank" identifier="bank_code"/>
+				<Label visible="true" identifier="lb_bank_name" gridItemLocation="0,1,1,1" isDynamic="true" classNames="fcls_fieldlabel,fcls_align_left" fieldTable="" text="Bank Name"/>
+				<TextField noEntry="true" dataType="Char,,,,40" classNames="fcls_data_widget,fcls_align_left,fcls_length_30qch" location="15qch,3qch" preferredSize="41qch,1qch" gridItemLocation="1,1,1,1" fieldTable="bank" identifier="name_acct_text"/>
+				<Label isDynamic="true" text="IBAN" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,2,1,1" fieldTable="" identifier="lb_IBAN"/>
+				<TextField classNames="fcls_data_widget,fcls_align_left,fcls_length_30qch" location="15qch,4qch" preferredSize="41qch,1qch" gridItemLocation="1,2,1,1" fieldTable="bank" identifier="iban"/>
+				<Label visible="true" identifier="lb_BIC" gridItemLocation="0,3,1,1" isDynamic="true" classNames="fcls_fieldlabel,fcls_align_left" text="BIC"/>
+				<TextField visible="true" identifier="bic_code" gridItemLocation="1,3,1,1" classNames="fcls_data_widget,fcls_align_left,fcls_length_30qch" fieldTable="bank"/>
+			</GridPanel>
+			<GroupBox title="New Statement Info" classNames="fcls_detail_gb_cnt,fcls_detail_cnt,,fcls_align_hstretch" visible="true" verticalAlignment="Top" gridItemLocation="0,3,1,1" fieldTable="formonly" identifier="cntDetail2GroupBox">
+				<GridPanel classNames="fcls_detail_gb_cnt_sub,fcls_detail_cnt_sub,fcls_data_cnt,fcls_align_left" visible="true" verticalAlignment="Top" horizontalAlignment="Left" fieldTable="formonly" identifier="cntDetail2GrBoxSub">
+					<GridPanel.gridRowDefinitions>
+						<GridRowDefinition gridLengthValue=""/>
+						<GridRowDefinition gridLengthValue=""/>
+						<GridRowDefinition gridLengthValue=""/>
+						<GridRowDefinition gridLengthValue=""/>
+						<GridRowDefinition gridLengthValue=""/>
+						<GridRowDefinition gridLengthValue=""/>
+					</GridPanel.gridRowDefinitions>
+					<GridPanel.gridColumnDefinitions>
+						<GridColumnDefinition gridLengthValue="" gridMinLength="10rem"/>
+						<GridColumnDefinition gridLengthValue=""/>
+					</GridPanel.gridColumnDefinitions>
+					<Label isDynamic="true" text="Sheet Number" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="lb47"/>
+					<TextField dataType="SmallInt,,,," classNames="fcls_data_widget,fcls_align_left,fcls_length_15qch" location="22qch,6qch" preferredSize="6qch,1qch" toolTip=" Bank Statement Page Number " gridItemLocation="1,0,1,1" comment=" Bank Statement Page Number " fieldTable="bank" identifier="sheet_num"/>
+					<Label isDynamic="true" text="Statement Date" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,1,1,1" fieldTable="formonly" identifier="lb46"/>
+					<Calendar dataType="Date,,,," classNames="fcls_data_widget,fcls_align_left,fcls_length_15qch" location="22qch,7qch" preferredSize="11qch,1qch" toolTip=" Bank Statement Date" gridItemLocation="1,1,1,1" comment=" Bank Statement Date" fieldTable="bankstatement" identifier="tran_date"/>
+					<Label isDynamic="true" text="Statement Type" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,2,1,1" fieldTable="" identifier="lb93"/>
+					<ComboBox noEntry="true" dataType="Char,,,," classNames="fcls_data_widget,fcls_align_left,fcls_length_15qch" location="38qch,7qch" preferredSize="15qch,1qch" gridItemLocation="1,2,1,1" fieldTable="formonly" identifier="stmt_type"/>
+					<Label isDynamic="true" text="Opening Balance" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,3,1,1" fieldTable="formonly" identifier="lb44"/>
+					<TextField dataType="Decimal,,,2,16" classNames="fcls_data_widget,fcls_align_left,fcls_length_15qch" location="22qch,8qch" preferredSize="16qch,1qch" toolTip=" Opening Balance of this Bank Statement " gridItemLocation="1,3,1,1" comment=" Opening Balance of this Bank Statement " fieldTable="bank" identifier="state_bal_amt"/>
+					<Label isDynamic="true" text="Closing Balance" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,4,1,1" fieldTable="" identifier="lb89"/>
+					<TextField dataType="Decimal,,,2,16" classNames="fcls_data_widget,fcls_align_left,fcls_length_15qch" location="22qch,9qch" preferredSize="16qch,1qch" toolTip=" Closing Balance of this Bank Statement" gridItemLocation="1,4,1,1" comment=" Closing Balance of this Bank Statement" fieldTable="bankstatement" identifier="tran_amt"/>
+					<Label isDynamic="true" text="Next Statement Date" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,5,1,1" fieldTable="" identifier="lb113"/>
+					<Calendar dataType="Date,,,," classNames="fcls_data_widget,fcls_align_left,fcls_length_15qch" location="22qch,10qch" preferredSize="11qch,1qch" toolTip=" Date of the next statement to be issued" gridItemLocation="1,5,1,1" comment=" Date of the next statement to be issued" fieldTable="formonly" identifier="next_date"/>
+				</GridPanel>
+			</GroupBox>
+			<GridPanel classNames="fcls_statusbar_cnt" visible="true" verticalAlignment="Top" gridItemLocation="0,4,1,1" fieldTable="formonly" identifier="cntStatusBar">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="100%"/>
+				</GridPanel.gridColumnDefinitions>
+				<Label isDynamic="true" text="" classNames="fcls_sblabel" visible="true" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="lbInfo1"/>
+				<Label isDynamic="true" text="" classNames="fcls_sblabel" visible="true" gridItemLocation="0,1,1,1" fieldTable="formonly" identifier="lbInfo2"/>
+			</GridPanel>
+		</GridPanel>
+	</form.rootContainer>
+	<form.screenRecords>
+		<ScreenRecord identifier="bank" fields="bank_code,name_acct_text,iban,state_bal_amt,sheet_num"/>
+		<ScreenRecord identifier="bankstatement" fields="tran_amt,tran_date"/>
+		<ScreenRecord identifier="formonly" fields="next_date,stmt_type"/>
+	</form.screenRecords>
+</form>
+

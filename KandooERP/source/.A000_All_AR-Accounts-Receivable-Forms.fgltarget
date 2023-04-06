@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<fglBuildTarget xmlns="http://namespaces.querix.com/lyciaide/target" name="A000_All_AR-Accounts-Receivable-Forms" type="fgl-program">
+
+  <libraries>
+    <library name="lib_tool_A_AR_db" dynamic="false" location=""/>
+    <library name="lib_tool_A_AR_new" dynamic="false" location=""/>
+    <library name="lib_tool_U_UT_new" dynamic="false" location=""/>
+    <library name="lib_tool_common" dynamic="false" location=""/>
+    <library name="lib_tool_db_common" dynamic="false" location=""/>
+  </libraries>
+
+  <sources type="fgl">
+    <file location="4gl/querix/A000_All_AR-Accounts-Receivable-Forms.4gl"/>
+  </sources>
+
+  <sources type="form">
+    <file location="per/ar/ENG/A114.fm2"/>
+    <file location="per/ar/ENG/A612.fm2"/>
+    <file location="per/ar/ENG/A661.fm2"/>
+    <file location="per/ar/ENG/A163.fm2"/>
+    <file location="per/ar/ENG/A636.fm2"/>
+    <file location="per/ar/ENG/A138.fm2"/>
+    <file location="per/ar/ENG/A187.fm2"/>
+    <file location="per/ar/ENG/A685.fm2"/>
+    <file location="per/ar/ENG/A655.fm2"/>
+    <file location="per/ar/ENG/A631.fm2"/>
+    <file location="per/ar/ENG/A680.fm2"/>
+    <file location="per/ar/ENG/A679.fm2"/>
+    <file location="per/ar/ENG/A120.fm2"/>
+    <file location="per/ar/ENG/A119.fm2"/>
+    <file location="per/ar/ENG/A666.fm2"/>
+    <file location="per/ar/ENG/A144.fm2"/>
+    <file location="per/ar/ENG/A691.fm2"/>
+    <file location="per/ar/ENG/A205a.fm2"/>
+    <file location="per/ar/ENG/A235.fm2"/>
+    <file location="per/ar/ENG/A203.fm2"/>
+    <file location="per/ar/ENG/A606.fm2"/>
+    <file location="per/ar/ENG/AR00.fm2"/>
+    <file location="per/ar/ENG/A182.fm2"/>
+    <file location="per/ar/ENG/A647.fm2"/>
+    <file location="per/ar/ENG/A103.fm2"/>
+    <file location="per/ar/ENG/A672.fm2"/>
+    <file location="per/ar/ENG/A176.fm2"/>
+    <file location="per/ar/ENG/A216.fm2"/>
+    <file location="per/ar/ENG/A620.fm2"/>
+    <file location="per/ar/ENG/A706.fm2"/>
+    <file location="per/ar/ENG/A122.fm2"/>
+    <file location="per/ar/ENG/A677.fm2"/>
+    <file location="per/ar/ENG/A131.fm2"/>
+    <file location="per/ar/ENG/A229.fm2"/>
+    <file location="per/ar/ENG/A149.fm2"/>
+    <file location="per/ar/ENG/A200.fm2"/>
+    <file location="per/ar/ENG/A174.fm2"/>
+    <file location="per/ar/ENG/A224.fm2"/>
+    <file location="per/ar/ENG/A674.fm2"/>
+    <file location="per/ar/ENG/A214.fm2"/>
+    <file location="per/ar/ENG/A649.fm2"/>
+    <file location="per/ar/ENG/A650.fm2"/>
+    <file location="per/ar/ENG/A610.fm2"/>
+    <file location="per/ar/ENG/A211.fm2"/>
+    <file location="per/ar/ENG/A701.fm2"/>
+    <file location="per/ar/ENG/A638.fm2"/>
+    <file location="per/ar/ENG/A227.fm2"/>
+    <file location="per/ar/ENG/A663.fm2"/>
+    <file location="per/ar/ENG/A108.fm2"/>
+    <file location="per/ar/ENG/A133.fm2"/>
+    <file location="per/ar/ENG/A623.fm2"/>
+    <file location="per/ar/ENG/A051h.fm2"/>
+    <file location="per/ar/ENG/A213.fm2"/>
+    <file location="per/ar/ENG/A621.fm2"/>
+    <file location="per/ar/ENG/A111.fm2"/>
+    <file location="per/ar/ENG/AS0.fm2"/>
+    <file location="per/ar/ENG/A219.fm2"/>
+    <file location="per/ar/ENG/A669.fm2"/>
+    <file location="per/ar/ENG/A645.fm2"/>
+    <file location="per/ar/ENG/A135.fm2"/>
+    <file location="per/ar/ENG/A137a.fm2"/>
+    <file location="per/ar/ENG/A952.fm2"/>
+    <file location="per/ar/ENG/A615.fm2"/>
+    <file location="per/ar/ENG/A154.fm2"/>
+    <file location="per/ar/ENG/A639.fm2"/>
+    <file location="per/ar/ENG/A688.fm2"/>
+    <file location="per/ar/ENG/A178.fm2"/>
+    <file location="per/ar/ENG/A124.fm2"/>
+    <file location="per/ar/ENG/A161.fm2"/>
+    <file location="per/ar/ENG/A671.fm2"/>
+    <file location="per/ar/ENG/A104.fm2"/>
+    <file location="per/ar/ENG/A699.fm2"/>
+    <file location="per/ar/ENG/A189.fm2"/>
+    <file location="per/ar/ENG/A970.fm2"/>
+    <file location="per/ar/ENG/A202.fm2"/>
+    <file location="per/ar/ENG/A652.fm2"/>
+    <file location="per/ar/ENG/A619.fm2"/>
+    <file location="per/ar/ENG/A208.fm2"/>
+    <file location="per/ar/ENG/A656.fm2"/>
+    <file location="per/ar/ENG/A632.fm2"/>
+    <file location="per/ar/ENG/A221.fm2"/>
+    <file location="per/ar/ENG/AC00.fm2"/>
+    <file location="per/ar/ENG/A628.fm2"/>
+    <file location="per/ar/ENG/A604.fm2"/>
+    <file location="per/ar/ENG/A217.fm2"/>
+    <file location="per/ar/ENG/A167.fm2"/>
+    <file location="per/ar/ENG/A641.fm2"/>
+    <file location="per/ar/ENG/A230.fm2"/>
+    <file location="per/ar/ENG/A150.fm2"/>
+    <file location="per/ar/ENG/A115.fm2"/>
+    <file location="per/ar/ENG/A139.fm2"/>
+    <file location="per/ar/ENG/A922.fm2"/>
+    <file location="per/ar/ENG/A206.fm2"/>
+    <file location="per/ar/ENG/A193.fm2"/>
+    <file location="per/ar/ENG/A100.fm2"/>
+    <file location="per/ar/ENG/A695.fm2"/>
+    <file location="per/ar/ENG/A2S.fm2"/>
+    <file location="per/ar/ENG/A658.fm2"/>
+    <file location="per/ar/ENG/A602.fm2"/>
+    <file location="per/ar/ENG/A128.fm2"/>
+    <file location="per/ar/ENG/A165.fm2"/>
+    <file location="per/ar/ENG/A643.fm2"/>
+    <file location="per/ar/ENG/A232.fm2"/>
+    <file location="per/ar/ENG/A113.fm2"/>
+    <file location="per/ar/ENG/A2Sa.fm2"/>
+    <file location="per/ar/ENG/A152.fm2"/>
+    <file location="per/ar/ENG/A920.fm2"/>
+    <file location="per/ar/ENG/A191.fm2"/>
+    <file location="per/ar/ENG/A801.fm2"/>
+    <file location="per/ar/ENG/A617.fm2"/>
+    <file location="per/ar/ENG/A624.fm2"/>
+    <file location="per/ar/ENG/A102.fm2"/>
+    <file location="per/ar/ENG/A600.fm2"/>
+    <file location="per/ar/ENG/A673.fm2"/>
+    <file location="per/ar/ENG/A151.fm2"/>
+    <file location="per/ar/ENG/A145.fm2"/>
+    <file location="per/ar/ENG/A121.fm2"/>
+    <file location="per/ar/ENG/A209.fm2"/>
+    <file location="per/ar/ENG/A210.fm2"/>
+    <file location="per/ar/ENG/A234.fm2"/>
+    <file location="per/ar/ENG/A000_All_AR-Accounts-Receivable-Forms.fm2"/>
+    <file location="per/ar/ENG/A204.fm2"/>
+    <file location="per/ar/ENG/A630.fm2"/>
+    <file location="per/ar/ENG/A629.fm2"/>
+    <file location="per/ar/ENG/A605.fm2"/>
+    <file location="per/ar/ENG/A654.fm2"/>
+    <file location="per/ar/ENG/A223.fm2"/>
+    <file location="per/ar/ENG/A215.fm2"/>
+    <file location="per/ar/ENG/A692.fm2"/>
+    <file location="per/ar/ENG/A667.fm2"/>
+    <file location="per/ar/ENG/A950.fm2"/>
+    <file location="per/ar/ENG/A707.fm2"/>
+    <file location="per/ar/ENG/A137.fm2"/>
+    <file location="per/ar/ENG/AD0.fm2"/>
+    <file location="per/ar/ENG/A613.fm2"/>
+    <file location="per/ar/ENG/A162.fm2"/>
+    <file location="per/ar/ENG/A686.fm2"/>
+    <file location="per/ar/ENG/A109.fm2"/>
+    <file location="per/ar/ENG/A158.fm2"/>
+    <file location="per/ar/ENG/A134.fm2"/>
+    <file location="per/ar/ENG/A183.fm2"/>
+    <file location="per/ar/ENG/A953.fm2"/>
+    <file location="per/ar/ENG/A118.fm2"/>
+    <file location="per/ar/ENG/A665.fm2"/>
+    <file location="per/ar/ENG/A620S.fm2"/>
+    <file location="per/ar/ENG/A143.fm2"/>
+    <file location="per/ar/ENG/A690.fm2"/>
+    <file location="per/ar/ENG/A689.fm2"/>
+    <file location="per/ar/ENG/A611.fm2"/>
+    <file location="per/ar/ENG/A660.fm2"/>
+    <file location="per/ar/ENG/A635.fm2"/>
+    <file location="per/ar/ENG/A700.fm2"/>
+    <file location="per/ar/ENG/A188.fm2"/>
+    <file location="per/ar/ENG/A678.fm2"/>
+    <file location="per/ar/ENG/A704.fm2"/>
+    <file location="per/ar/ENG/A622.fm2"/>
+    <file location="per/ar/ENG/A148.fm2"/>
+    <file location="per/ar/ENG/A675.fm2"/>
+    <file location="per/ar/ENG/A147.fm2"/>
+    <file location="per/ar/ENG/A915.fm2"/>
+    <file location="per/ar/ENG/A637.fm2"/>
+    <file location="per/ar/ENG/A212.fm2"/>
+    <file location="per/ar/ENG/A226.fm2"/>
+    <file location="per/ar/ENG/A662.fm2"/>
+    <file location="per/ar/ENG/A132.fm2"/>
+    <file location="per/ar/ENG/A209_construct.fm2"/>
+    <file location="per/ar/ENG/A107.fm2"/>
+    <file location="per/ar/ENG/A201.fm2"/>
+    <file location="per/ar/ENG/A705.fm2"/>
+    <file location="per/ar/ENG/A159.fm2"/>
+    <file location="per/ar/ENG/A160.fm2"/>
+    <file location="per/ar/ENG/A670.fm2"/>
+    <file location="per/ar/ENG/A694.fm2"/>
+    <file location="per/ar/ENG/A105.fm2"/>
+    <file location="per/ar/ENG/A664.fm2"/>
+    <file location="per/ar/ENG/A640.fm2"/>
+    <file location="per/ar/ENG/A218.fm2"/>
+    <file location="per/ar/ENG/A136.fm2"/>
+    <file location="per/ar/ENG/A951.fm2"/>
+    <file location="per/ar/ENG/A651.fm2"/>
+    <file location="per/ar/ENG/A116.fm2"/>
+    <file location="per/ar/ENG/A614.fm2"/>
+    <file location="per/ar/ENG/A177.fm2"/>
+    <file location="per/ar/ENG/A687.fm2"/>
+    <file location="per/ar/ENG/A633.fm2"/>
+    <file location="per/ar/ENG/A123.fm2"/>
+    <file location="per/ar/ENG/A2Sw.fm2"/>
+    <file location="per/ar/ENG/A142.fm2"/>
+    <file location="per/ar/ENG/A627.fm2"/>
+    <file location="per/ar/ENG/A607.fm2"/>
+    <file location="per/ar/ENG/A668.fm2"/>
+    <file location="per/ar/ENG/A644.fm2"/>
+    <file location="per/ar/ENG/A681.fm2"/>
+    <file location="per/ar/ENG/A233.fm2"/>
+    <file location="per/ar/ENG/A616.fm2"/>
+    <file location="per/ar/ENG/A653.fm2"/>
+    <file location="per/ar/ENG/A923.fm2"/>
+    <file location="per/ar/ENG/A101.fm2"/>
+    <file location="per/ar/ENG/A31_w.fm2"/>
+    <file location="per/ar/ENG/A659.fm2"/>
+    <file location="per/ar/ENG/A125.fm2"/>
+    <file location="per/ar/ENG/A601.fm2"/>
+    <file location="per/ar/ENG/A164.fm2"/>
+    <file location="per/ar/ENG/A140.fm2"/>
+    <file location="per/ar/ENG/A698.fm2"/>
+    <file location="per/ar/ENG/A168.fm2"/>
+    <file location="per/ar/ENG/A231.fm2"/>
+    <file location="per/ar/ENG/A112.fm2"/>
+    <file location="per/ar/ENG/A683.fm2"/>
+    <file location="per/ar/ENG/A153.fm2"/>
+    <file location="per/ar/ENG/A190.fm2"/>
+    <file location="per/ar/ENG/AE00.fm2"/>
+    <file location="per/ar/ENG/A192.fm2"/>
+    <file location="per/ar/ENG/A618.fm2"/>
+    <file location="per/ar/ENG/A207.fm2"/>
+    <file location="per/ar/ENG/A657.fm2"/>
+    <file location="per/ar/ENG/A127.fm2"/>
+    <file location="per/ar/ENG/A696.fm2"/>
+    <file location="per/ar/ENG/A603.fm2"/>
+    <file location="per/ar/ENG/A642.fm2"/>
+  </sources>
+
+  <mediaFiles>
+    <file client="true" location="A000_All_AR-Accounts-Receivable-Forms.qxtheme" type="gui-theme-file"/>
+    <file client="true" location="A000_All_AR-Accounts-Receivable-Forms.css" type="other"/>
+  </mediaFiles>
+
+  <buildConfiguration name="development">
+    <additions>
+    </additions>
+    <exclusions>
+    </exclusions>
+  </buildConfiguration>
+
+</fglBuildTarget>

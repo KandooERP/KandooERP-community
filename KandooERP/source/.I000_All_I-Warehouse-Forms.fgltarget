@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<fglBuildTarget xmlns="http://namespaces.querix.com/lyciaide/target" name="I000_All_I-Warehouse-Forms" type="fgl-program">
+
+  <libraries>
+    <library name= "lib_tool_common" dynamic="false" location=""/>
+    <library name="lib_tool_I_IN_new" dynamic="false" location=""/>
+    <library name="lib_tool_I_IN_db" dynamic="false" location=""/>
+   </libraries>
+
+  <sources type="fgl">
+    <file location="4gl/in/I000_All_I-Warehouse-Forms.4gl"/>
+  </sources>
+
+  <sources type="form">
+    <file location="per/in/ENG/I127.fm2"/>
+    <file location="per/in/ENG/I625.fm2"/>
+    <file location="per/in/ENG/I170a.fm2"/>
+    <file location="per/in/ENG/I601.fm2"/>
+    <file location="per/in/ENG/I674.fm2"/>
+    <file location="per/in/ENG/I152.fm2"/>
+    <file location="per/in/ENG/I649.fm2"/>
+    <file location="per/in/ENG/I650.fm2"/>
+    <file location="per/in/ENG/I211.fm2"/>
+    <file location="per/in/ENG/I108.fm2"/>
+    <file location="per/in/ENG/I703.fm2"/>
+    <file location="per/in/ENG/I133.fm2"/>
+    <file location="per/in/ENG/I182.fm2"/>
+    <file location="per/in/ENG/I224.fm2"/>
+    <file location="per/in/ENG/I620.fm2"/>
+    <file location="per/in/ENG/I668.fm2"/>
+    <file location="per/in/ENG/I146.fm2"/>
+    <file location="per/in/ENG/I693.fm2"/>
+    <file location="per/in/ENG/I171.fm2"/>
+    <file location="per/in/ENG/I000-View-I-IN-Forms.fm2"/>
+    <file location="per/in/ENG/I661.fm2"/>
+    <file location="per/in/ENG/I259.fm2"/>
+    <file location="per/in/ENG/I636.fm2"/>
+    <file location="per/in/ENG/I165.fm2"/>
+    <file location="per/in/ENG/I169a.fm2"/>
+    <file location="per/in/ENG/I205.fm2"/>
+    <file location="per/in/ENG/I655.fm2"/>
+    <file location="per/in/ENG/I101_l2_duplicate.fm2"/>
+    <file location="per/in/ENG/I680.fm2"/>
+    <file location="per/in/ENG/I119.fm2"/>
+    <file location="per/in/ENG/I617.fm2"/>
+    <file location="per/in/ENG/I168.fm2"/>
+    <file location="per/in/ENG/I687.fm2"/>
+    <file location="per/in/ENG/I633.fm2"/>
+    <file location="per/in/ENG/I608.fm2"/>
+    <file location="per/in/ENG/I682.fm2"/>
+    <file location="per/in/ENG/I222.fm2"/>
+    <file location="per/in/ENG/I657.fm2"/>
+    <file location="per/in/ENG/I647.fm2"/>
+    <file location="per/in/ENG/I672.fm2"/>
+    <file location="per/in/ENG/I129.fm2"/>
+    <file location="per/in/ENG/I619.fm2"/>
+    <file location="per/in/ENG/I208.fm2"/>
+    <file location="per/in/ENG/I644.fm2"/>
+    <file location="per/in/ENG/I114.fm2"/>
+    <file location="per/in/ENG/I260.fm2"/>
+    <file location="per/in/ENG/I141.fm2"/>
+    <file location="per/in/ENG/I116.fm2"/>
+    <file location="per/in/ENG/I119a.fm2"/>
+    <file location="per/in/ENG/I606.fm2"/>
+    <file location="per/in/ENG/I155.fm2"/>
+    <file location="per/in/ENG/I631.fm2"/>
+    <file location="per/in/ENG/I180.fm2"/>
+    <file location="per/in/ENG/I101.fm2"/>
+    <file location="per/in/ENG/I226.fm2"/>
+    <file location="per/in/ENG/I202.fm2"/>
+    <file location="per/in/ENG/I105a.fm2"/>
+    <file location="per/in/ENG/I609.fm2"/>
+    <file location="per/in/ENG/I646.fm2"/>
+    <file location="per/in/ENG/I100.fm2"/>
+    <file location="per/in/ENG/I622.fm2"/>
+    <file location="per/in/ENG/I185.fm2"/>
+    <file location="per/in/ENG/I161.fm2"/>
+    <file location="per/in/ENG/I658.fm2"/>
+    <file location="per/in/ENG/I148.fm2"/>
+    <file location="per/in/ENG/I801_warehouse_selector_cb.fm2"/>
+    <file location="per/in/ENG/I628.fm2"/>
+    <file location="per/in/ENG/I604.fm2"/>
+    <file location="per/in/ENG/I167.fm2"/>
+    <file location="per/in/ENG/I256.fm2"/>
+    <file location="per/in/ENG/I615.fm2"/>
+    <file location="per/in/ENG/I105.fm2"/>
+    <file location="per/in/ENG/I178.fm2"/>
+    <file location="per/in/ENG/I676.fm2"/>
+    <file location="per/in/ENG/I603_query.fm2"/>
+    <file location="per/in/ENG/I131.fm2"/>
+    <file location="per/in/ENG/I689.fm2"/>
+    <file location="per/in/ENG/I111.fm2"/>
+    <file location="per/in/ENG/I669.fm2"/>
+    <file location="per/in/ENG/I159.fm2"/>
+    <file location="per/in/ENG/I150.fm2"/>
+    <file location="per/in/ENG/I635.fm2"/>
+    <file location="per/in/ENG/I120.fm2"/>
+    <file location="per/in/ENG/I678.fm2"/>
+    <file location="per/in/ENG/I704.fm2"/>
+    <file location="per/in/ENG/I654.fm2"/>
+    <file location="per/in/ENG/I163.fm2"/>
+    <file location="per/in/ENG/I213.fm2"/>
+    <file location="per/in/ENG/I663.fm2"/>
+    <file location="per/in/ENG/I172.fm2"/>
+    <file location="per/in/ENG/I137.fm2"/>
+    <file location="per/in/ENG/I174.fm2"/>
+    <file location="per/in/ENG/I652.fm2"/>
+    <file location="per/in/ENG/I639.fm2"/>
+    <file location="per/in/ENG/I109.fm2"/>
+    <file location="per/in/ENG/I706.fm2"/>
+    <file location="per/in/ENG/I122.fm2"/>
+    <file location="per/in/ENG/I624.fm2"/>
+    <file location="per/in/ENG/I626.fm2"/>
+    <file location="per/in/ENG/I189.fm2"/>
+    <file location="per/in/ENG/I215.fm2"/>
+    <file location="per/in/ENG/I254.fm2"/>
+    <file location="per/in/ENG/I611.fm2"/>
+    <file location="per/in/ENG/I135.fm2"/>
+    <file location="per/in/ENG/I200.fm2"/>
+    <file location="per/in/ENG/I637.fm2"/>
+    <file location="per/in/ENG/I613.fm2"/>
+    <file location="per/in/ENG/I164.fm2"/>
+    <file location="per/in/ENG/I140.fm2"/>
+    <file location="per/in/ENG/I662.fm2"/>
+    <file location="per/in/ENG/I139.fm2"/>
+    <file location="per/in/ENG/I188.fm2"/>
+    <file location="per/in/ENG/I223.fm2"/>
+    <file location="per/in/ENG/I217.fm2"/>
+    <file location="per/in/ENG/I643.fm2"/>
+    <file location="per/in/ENG/I618.fm2"/>
+    <file location="per/in/ENG/I702.fm2"/>
+    <file location="per/in/ENG/I204.fm2"/>
+    <file location="per/in/ENG/I110.fm2"/>
+    <file location="per/in/ENG/I158.fm2"/>
+    <file location="per/in/ENG/I656.fm2"/>
+    <file location="per/in/ENG/I183.fm2"/>
+    <file location="per/in/ENG/I681.fm2"/>
+    <file location="per/in/ENG/I600.fm2"/>
+    <file location="per/in/ENG/I602.fm2"/>
+    <file location="per/in/ENG/I126.fm2"/>
+    <file location="per/in/ENG/I675.fm2"/>
+    <file location="per/in/ENG/I145.fm2"/>
+    <file location="per/in/ENG/I170.fm2"/>
+    <file location="per/in/ENG/I258.fm2"/>
+    <file location="per/in/ENG/I630.fm2"/>
+    <file location="per/in/ENG/I605.fm2"/>
+    <file location="per/in/ENG/I181.fm2"/>
+    <file location="per/in/ENG/I206.fm2"/>
+    <file location="per/in/ENG/I673.fm2"/>
+    <file location="per/in/ENG/I648.fm2"/>
+    <file location="per/in/ENG/I104.fm2"/>
+    <file location="per/in/ENG/I500.fm2"/>
+    <file location="per/in/ENG/I684.fm2"/>
+    <file location="per/in/ENG/I261.fm2"/>
+    <file location="per/in/ENG/I142.fm2"/>
+    <file location="per/in/ENG/I607.fm2"/>
+    <file location="per/in/ENG/I632.fm2"/>
+    <file location="per/in/ENG/I102.fm2"/>
+    <file location="per/in/ENG/I220.fm2"/>
+    <file location="per/in/ENG/I670.fm2"/>
+    <file location="per/in/ENG/I209.fm2"/>
+    <file location="per/in/ENG/I645.fm2"/>
+    <file location="per/in/ENG/I214.fm2"/>
+    <file location="per/in/ENG/I136.fm2"/>
+    <file location="per/in/ENG/I634.fm2"/>
+    <file location="per/in/ENG/I610.fm2"/>
+    <file location="per/in/ENG/I112.fm2"/>
+    <file location="per/in/ENG/I683.fm2"/>
+    <file location="per/in/ENG/I173.fm2"/>
+    <file location="per/in/ENG/I671.fm2"/>
+    <file location="per/in/ENG/I677.fm2"/>
+    <file location="per/in/ENG/I653.fm2"/>
+    <file location="per/in/ENG/I143.fm2"/>
+    <file location="per/in/ENG/I207.fm2"/>
+    <file location="per/in/ENG/I186.fm2"/>
+    <file location="per/in/ENG/I603.fm2"/>
+    <file location="per/in/ENG/I640.fm2"/>
+    <file location="per/in/ENG/I130.fm2"/>
+    <file location="per/in/ENG/I688.fm2"/>
+    <file location="per/in/ENG/I257.fm2"/>
+    <file location="per/in/ENG/I701.fm2"/>
+    <file location="per/in/ENG/I225.fm2"/>
+    <file location="per/in/ENG/I106.fm2"/>
+    <file location="per/in/ENG/I616.fm2"/>
+    <file location="per/in/ENG/I179.fm2"/>
+    <file location="per/in/ENG/I621.fm2"/>
+    <file location="per/in/ENG/I184.fm2"/>
+    <file location="per/in/ENG/I125.fm2"/>
+    <file location="per/in/ENG/I132.fm2"/>
+    <file location="per/in/ENG/I629.fm2"/>
+    <file location="per/in/ENG/I138.fm2"/>
+    <file location="per/in/ENG/I638.fm2"/>
+    <file location="per/in/ENG/I614.fm2"/>
+    <file location="per/in/ENG/I177.fm2"/>
+    <file location="per/in/ENG/I203.fm2"/>
+    <file location="per/in/ENG/I123.fm2"/>
+    <file location="per/in/ENG/I707.fm2"/>
+    <file location="per/in/ENG/I147.fm2"/>
+    <file location="per/in/ENG/I623.fm2"/>
+    <file location="per/in/ENG/I162.fm2"/>
+    <file location="per/in/ENG/I664.fm2"/>
+    <file location="per/in/ENG/I627.fm2"/>
+    <file location="per/in/ENG/I216.fm2"/>
+    <file location="per/in/ENG/I162a.fm2"/>
+    <file location="per/in/ENG/I134.fm2"/>
+    <file location="per/in/ENG/I612.fm2"/>
+    <file location="per/in/ENG/I201.fm2"/>
+    <file location="per/in/ENG/I651.fm2"/>
+    <file location="per/in/ENG/I175.fm2"/>
+    <file location="per/in/ENG/I705.fm2"/>
+    <file location="per/in/ENG/I679.fm2"/>
+    <file location="per/in/ENG/I160.fm2"/>
+  </sources>
+
+  <mediaFiles>
+    <file client="true" location="I000_All_I-Warehouse-Forms.css" type="other"/>
+    <file client="true" location="I000_All_I-Warehouse-Forms.qxtheme" type="gui-theme-file"/>
+  </mediaFiles>
+
+  <buildConfiguration name="development">
+    <additions>
+    </additions>
+    <exclusions>
+      <sources type="fgl">
+        <file location="4gl/in/I000_All_I-Warehouse-Forms.4gl"/>
+      </sources>
+
+      <sources type="form">
+        <file location="per/in/ENG/I000-View-I-IN-Forms.fm2"/>
+      </sources>
+
+    </exclusions>
+  </buildConfiguration>
+
+</fglBuildTarget>

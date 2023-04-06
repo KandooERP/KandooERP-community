@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<fglBuildTarget xmlns="http://namespaces.querix.com/lyciaide/target" name="W000_W-Forms" type="fgl-program">
+
+  <libraries>
+    <library name="lib_tool" dynamic="false" location=""/>
+    <library name="lib_tool_W_WO" dynamic="false" location=""/>
+    <library name="lib_tool_W_WO_db" dynamic="false" location=""/>
+    <library name="lib_tool_windecoration" dynamic="false" location=""/>
+  </libraries>
+
+  <sources type="fgl">
+    <file location="4gl/common/glob_GLOBALS_constant.4gl"/>
+    <file location="4gl/wo/W_WO_GLOBALS.4gl"/>
+    <file location="4gl/querix/W000_W-Forms.4gl"/>
+    <file location="4gl/common/glob_GLOBALS.4gl"/>
+    <file location="4gl/common/glob_GLOBALS_userDataTypes.4gl"/>
+  </sources>
+
+  <sources type="form">
+    <file location="per/wo/W282.fm2"/>
+    <file location="per/wo/W261_l2.fm2"/>
+    <file location="per/wo/W102.fm2"/>
+    <file location="per/wo/W118.fm2"/>
+    <file location="per/wo/W154_l2.fm2"/>
+    <file location="per/wo/W121.fm2"/>
+    <file location="per/wo/W103.fm2"/>
+    <file location="per/wo/W261.fm2"/>
+    <file location="per/wo/W154.fm2"/>
+    <file location="per/wo/W117.fm2"/>
+    <file location="per/wo/W000_W-Forms.fm2"/>
+    <file location="per/wo/W120.fm2"/>
+    <file location="per/wo/W119.fm2"/>
+    <file location="per/wo/W339.fm2"/>
+  </sources>
+
+  <mediaFiles>
+    <file client="true" location="W000_W-Forms.qxtheme" type="gui-theme-file"/>
+    <file client="true" location="W000_W-Forms.css" type="other"/>
+  </mediaFiles>
+
+  <buildConfiguration name="development">
+    <additions>
+    </additions>
+    <exclusions>
+      <sources type="form">
+        <file location="per/wo/W102.fm2"/>
+      </sources>
+
+    </exclusions>
+  </buildConfiguration>
+
+</fglBuildTarget>

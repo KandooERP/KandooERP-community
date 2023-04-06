@@ -1,0 +1,114 @@
+L64_FRA {
++31-60 Days Overdue { "31 à 60 jours de retard" }
++61-90 Days Overdue { "+61 -90 jours de retard" }
++90+Days Overdue { "90+ J. retard de paiement" }
+= Balance { "= Solde" }
+A Valid Code for this part of the chart { "Un code valid pour cette partie du numéro de compte" }
+Account { "Compte" }
+Account Code { "Code Compte" }
+Account Status { "Situation du Compte" }
+Account Verifier { "Vérificateur de compte" }
+Account code to identify this account { "Numéro de compte identifiant ce client" }
+Additional comments line, if needed { "Commentaires supplémentaires, si nécessaire" }
+Addr { "Adresse" }
+Amounts { "Montants" }
+Available Credit { "Crédit disponible" }
+Back Order { "Commande en cours" }
+Chart of Accounts { "Plan Comptable" }
+City { "Ville" }
+Code { "Code" }
+Comments { "Commentaires" }
+Country { "Pays" }
+Credit Date { "Date de crédit" }
+Credit Limit { "Limite de Crédit" }
+Currency { "Devise" }
+Currency in which this customer deals { "Devise avec laquelle ce client traite" }
+Current { "Actuel" }
+Customer Code { "Code Client" }
+Customer Name { "Nom du client" }
+Customer name or description { "Nom ou description du client" }
+Date { "Date" }
+Desc { "Description" }
+Description { "Description" }
+Description of this product { "Description de ce produit" }
+Enter the Shipment Code you wish to begin the scan process at { "Saisir le code d’expédition pour lequel vous souhaitez commencer le processus de numérisation." }
+Entry Person { "Personne ayant saisi l'info" }
+Exchange Rate { "Taux de Change" }
+FILTER { "Premier" }
+Field Description { "Description du champ" }
+Filter { "Filtrer" }
+Flex Codes { "Flex Codes" }
+Freight { "Fret" }
+Handling { "Manutention" }
+Header-Text { "En-tête" }
+Hold { "Retenir" }
+ID { "ID" }
+Indicates the type of shipment { "Indique le type d'expédition" }
+Invoice Number { "Numéro de facture" }
+LOOKUP { "RECHERCHER" }
+Label or description of Tax Code { "Étiquette ou description du code taxe" }
+Label or description of this tax code { "Étiquette ou description de ce code taxe" }
+Language Code { "Code langue" }
+Length { "Longueur" }
+Length of the Code { "Longueur Numéro de compte" }
+Line Total { "Total Ligne" }
+Line Total including Tax { "Total ligne incluant les taxes" }
+List Price { "Prix Liste" }
+NOTES { "NOTES" }
+Name { "Nom" }
+Number { "Numéro" }
+OEM { "OEM" }
+Order Date { "Date de Commande" }
+Order Number { "Numéro de commande" }
+Other Info { "Autres informations" }
+Period Number { "Numéro de Période" }
+Person { "Personne" }
+Possible Discount { "Remise possible" }
+Post Code { "Code Postal" }
+Post Period { "Période de clôture" }
+Post Year { "Année de clôture" }
+Price Level { "Niveau de prix" }
+Price used for the customer: C)ost, L)ist or 1-9 Price Level { "Prix utilisé pour le client: C) Coût, L) Liste ou 1-9 Niveau de prix" }
+Product { "Produit" }
+Product Code { "Code Produit" }
+Product Scan { "Exploration de produits" }
+Qty { "Qté" }
+Quantity { "Quantité" }
+REFRESH { "ACTUALISER" }
+Reserved { "Réservé" }
+Revision { "Révision" }
+Sales Tax { "Taxe de vente" }
+Sales Tax calculated by tax codes { "Taxe de vente calculée par codes de taxe" }
+Salesperson { "Vendeur" }
+Shipment status { "Situation de l'expédition" }
+Start Pos. { "Positions Départ" }
+Start position of the Code { "Position de départ du code" }
+State/County { "Région" }
+Status { "Statut" }
+Status of this shipment (W) { "Statut de cette expédition (W)" }
+Stocking { "Stockage" }
+Tariff Code { "Code tarifaire" }
+Tax { "T.V.A." }
+Tax Code { "Code T.V.A." }
+The Description of the Account { "Description du compte" }
+The Product Code assigned to the product { "le code attribué à ce produit" }
+The Product Code from inventory { "Le code produit de l'inventaire" }
+The Product Code from inventory (W) { "Code produit de l'inventaire (W)" }
+The code given by the original equipment manufacturer (OEM) { "Le code donné par le fabricant de l'équipement d'origine (OEM)." }
+The description for this code { "L'intitulé de ce code" }
+The reference number { "Numéro de référence" }
+The valid flex segment { "Le segment Flex valide" }
+Title of this field in the GL { "Titre de ce champ en Compta géné" }
+Total { "Total" }
+Total Amount { "Montant Total" }
+Total Cost { "Coût total" }
+Totals { "Totaux" }
+Type { "Type" }
+Unique Customer Code (W) { "Code client unique (W)" }
+Unit Price { "Prix Unitaire" }
+Unit of Measure { "Unité de mesure" }
+Warehouse { "Dépôt" }
+Warehouse Code { "Code Dépôt" }
+Year Number { "Numéro d'Année" }
+actToolbarManager { "actToolbarManager" }
+}

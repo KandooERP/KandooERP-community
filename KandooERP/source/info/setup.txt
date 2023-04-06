@@ -1,0 +1,79 @@
+Prequisit / Before You do anything (default installation)
+
+U1M - Country
+U1L - Language
+
+
+#################
+
+Setup Order / New installation
+
+GZC - Create Company
+GZ3 - Create GL-Flexible-Structure-Code
+GZ1 - Chart of Accounts
+
+--BANK Account
+1. Bank Types -> GZT
+2. Bank Account -> GZ6
+
+U12 - User: User/Company Setup  #GL Setup must run before user setup  because of MASK
+
+
+
+Change Setup
+
+U11 - Company: Change User to new company
+
+
+
+
+#Unknown
+U14 - Error Log Print Facility
+U17 - Memo Facility
+
+GZ2 - Journal Types
+
+UN3 - Transfer Notes
+
+UR1 - Report Parameter Maintenance
+
+URP - Device Configuration
+URS-Report File Management
+
+################
+required for company setup
+
+         IF pr_company.country_code is not null THEN
+            SELECT * into pr_country.* FROM country
+             WHERE country_code = pr_company.country_code
+            IF status = notfound THEN
+               LET msgresp = kandoomsg("U",9105,"")
+               #9105 RECORD not found; Try Window.
+               NEXT FIELD country_code
+            END IF
+            DISPLAY pr_country.country_text TO country.country_text
+           
+         END IF
+         IF pr_company.curr_code is null THEN
+            LET msgresp = kandoomsg("U",9102,"")
+            #9102 Value must be entered
+            NEXT FIELD curr_code
+         END IF
+         SELECT * into pr_currency.* FROM currency
+            WHERE currency_code = pr_company.curr_code
+         IF status = notfound THEN
+            LET msgresp = kandoomsg("U",9105,"")
+            #9105 RECORD not found; Try Window.
+            NEXT FIELD curr_code
+         END IF
+         IF pr_company.language_code is not null THEN
+            SELECT * into pr_language.* FROM language
+             WHERE language_code = pr_company.language_code
+            IF status = notfound THEN
+               LET msgresp = kandoomsg("U",9105,"")
+               #9105 RECORD not found; Try Window.
+               NEXT FIELD language_code
+            END IF
+            DISPLAY pr_language.language_text TO language.language_text
+            
+         END IF

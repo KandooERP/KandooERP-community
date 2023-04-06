@@ -1,0 +1,81 @@
+{
+###########################################################################
+# This program is free software; you can redistribute it and/or modify it
+# under the terms of the GNU General Public License as published by the
+# Free Software Foundation; either version 2 of the License, or (at your
+# option) any later version.
+#
+# This program is distributed in the hope that it will be useful, but
+# WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+# General Public License for more details.
+#
+# You should have received a copy of the GNU General Public License along
+# with this program; if not, write to the Free Software Foundation, Inc.,
+# 59 Temple Place, Suite 330, Boston, MA 02111-1307 USA
+#
+###########################################################################
+
+	 $Id: M163.per,v 1.2 2003/11/19 22:23:01 afalout Exp $
+}
+
+
+database kandoodb
+
+screen
+{
+                     Bill of Resource Indented Inquiry                 M163
+\g----------------------------------------------------------------------------\g
+ Product  [f001           ]Cost Type  [d] Quantity  [f002      ] UOM  [f003]
+ No. of Components  [f004] Unit Cost[f005      ] Total Cost[f006           ]
+\g----------------------------------------------------------------------------\g
+ Type  Lvl ---------- Product ---------- UOM     Quantity              Cost
+\g----------------------------------------------------------------------------\g
+[a|b|c|a1][f007                         |f008][f009      |f010             ]
+[a|b|c|a1][f007                         |f008][f009      |f010             ]
+[a|b|c|a1][f007                         |f008][f009      |f010             ]
+[a|b|c|a1][f007                         |f008][f009      |f010             ]
+[a|b|c|a1][f007                         |f008][f009      |f010             ]
+[a|b|c|a1][f007                         |f008][f009      |f010             ]
+[a|b|c|a1][f007                         |f008][f009      |f010             ]
+[a|b|c|a1][f007                         |f008][f009      |f010             ]
+[a|b|c|a1][f007                         |f008][f009      |f010             ]
+[a|b|c|a1][f007                         |f008][f009      |f010             ]
+ 
+[f011                                                                      ]
+}
+
+tables
+bor
+
+attributes
+f001 = bor.parent_part_code, upshift,
+comments = " Code of a parent product for a bill of resource (W)";
+d    = formonly.cost_type type char, include = ("C","S","L","W"), upshift,
+comments = " W = Weighted, S = Standard, L = Latest, C = COGS";
+f002 = formonly.quantity, comments = " Number of product to query";
+f003 = formonly.uom;
+f004 = formonly.noofcomp;
+f005 = formonly.unitcost type float, format = "#######.##";
+f006 = formonly.totlcost type float, format = "############.##";
+f011 = formonly.desc_text;
+a    = bor.type_ind, noentry;
+b    = formonly.char_type;
+c    = formonly.dumb_char;
+a1   = formonly.indent_factor, noentry;
+f007 = formonly.part_code, noentry;
+f008 = formonly.uom_code, noentry;
+f009 = bor.required_qty, noentry;
+f010 = bor.cost_amt, noentry;
+
+instructions
+delimiters "  "
+
+screen record sr_bor_child[10] (bor.type_ind,
+                                formonly.char_type,
+                                formonly.dumb_char,
+                                formonly.indent_factor,
+                                formonly.part_code,
+                                formonly.uom_code,
+                                bor.required_qty,
+                                bor.cost_amt)

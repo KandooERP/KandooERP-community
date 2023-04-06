@@ -1,0 +1,222 @@
+99|AP|MS|Default Description Mode|N|
+99|AP|PS|Auto Cheque Print Menu|N|
+99|AP|PT|Tiered Settlement Discount|N|
+99|AP|TP|Tentative Payment to show Disc|N|
+99|AP|VA|Validate Usual GL Account|N|
+99|AP|VO|Voucher Entry Mode|N|
+99|AP|VY|Vendor Year to Date Totals|N|
+99|AR|01|Settlement Discount Override|N|
+99|AR|CN|Automatic Customer Numbers|N|
+99|AR|CP|Customer Reporting Code|N|
+99|AR|DT|Collection Calls Date Prompt|N|
+99|AR|PT|Tiered Settlement Discount|N|
+99|EO|01|Automatic Delivery Cycle|N|
+99|GL|GL|Default Account in General Jou|N|
+99|GL|MS|Default Description Mode|N|
+99|IN|FS|Flex Product Structure|N|
+99|IN|PA|Product Adjustment Type|N|
+99|IN|SC|Update Supplier Cost|N|
+99|JM|02|Job Management in Job Edit|N|
+99|JM|03|Job Management in Job Addition|N|
+99|JM|04|Job Management in Activity Add|N|
+99|PU|GR|Receipt > P.O. Quantity|N|
+99|QE|01|Individual Quotation Printing|N|
+99|AP|DA|Voucher Distribution|N|
+99|WO|TA|Separate Order Type GL-Account|N|
+99|AR|AG|Report Monthly Aging (Past)|N|
+99|AR|IS|Invoice Wizzard Style|N|
+99|AR|CA|Report Credit Aging (Past)|N|
+99|AR|RO|Report Sort Y=name,cust,date (|N|
+99|AP|DO|Voucher Payment Order|1|
+DE|AP|PS|Auto Cheque Print Menu|N|
+DE|AP|PT|Tiered Settlement Discount|N|
+DE|AP|TP|Tentative Payment to show Disc|N|
+DE|AP|VA|Validate Usual GL Account|N|
+DE|AP|VI|Duplicate Vendor Invoice Numbe|N|
+DE|AP|VO|Voucher Entry Mode|N|
+DE|AP|VY|Vendor Year to Date Totals|N|
+DE|AR|01|Settlement Discount Override|N|
+DE|AR|CN|Automatic Customer Numbers|N|
+DE|AR|CP|Customer Reporting Code|N|
+DE|AR|DT|Collection Calls Date Prompt|N|
+DE|AR|PT|Tiered Settlement Discount|N|
+DE|GL|GL|Default Account in General Jou|N|
+DE|GL|MS|Default Description Mode|N|
+DE|IN|PA|Product Adjustment Type|N|
+DE|IN|SC|Update Supplier Cost|N|
+DE|JM|02|Job Management in Job Edit|N|
+DE|JM|03|Job Management in Job Addition|N|
+DE|JM|04|Job Management in Activity Add|N|
+DE|PU|GR|Receipt > P.O. Quantity|Y|
+DE|QE|01|Individual Quotation Printing|N|
+DE|AP|DA|Voucher Distribution|N|
+DE|WO|TA|Separate Order Type GL-Account|N|
+DE|AR|AG|Report Monthly Aging (Past)|N|
+DE|AR|IS|Invoice Wizzard Style|N|
+DE|AR|CA|Report Credit Aging (Past)|N|
+DE|AR|RO|Report Sort Y=name,cust,date (|N|
+DE|AR|GI|Customer Groups|Y|
+DE|AP|DO|Voucher Payment Order|Y|
+TT|AR|CN|Automatic Customer Numbers|N|
+TT|AR|CP|Customer Reporting Code|N|
+DE|IN|FS|Flex Product Structure|N|
+TT|AR|DT|Collection Calls Date Prompt|N|
+DE|EO|BA|EO - Backordering enabled|N|
+TT|AP|MS|Default Description Mode|N|
+TT|AP|PS|Auto Cheque Print Menu|N|
+TT|AP|PT|Tiered Settlement Discount|N|
+TT|AP|TP|Tentative Payment to show Disc|N|
+TT|AP|VA|Validate Usual GL Account|N|
+TT|AP|VO|Voucher Entry Mode|N|
+TT|AP|VY|Vendor Year to Date Totals|N|
+TT|AR|01|Settlement Discount Override|N|
+TT|JM|04|Job Management in Activity Add|N|
+TT|PU|GR|Receipt > P.O. Quantity|N|
+TT|QE|01|Individual Quotation Printing|N|
+TT|AP|DA|Voucher Distribution|N|
+TT|WO|TA|Separate Order Type GL-Account|N|
+TT|AR|AG|Report Monthly Aging (Past)|N|
+TT|AR|IS|Invoice Wizzard Style|N|
+TT|AR|CA|Report Credit Aging (Past)|N|
+TT|AR|RO|Report Sort Y=name,cust,date (|N|
+TT|AP|DO|Voucher Payment Order|1|
+TT|AR|GI|Enable Customer Company Groups|Y|
+TT|GW|D1|Report - Multi Language Report Template (Kandooreport)|N|
+TT|GW|D2|Report - Show RMS Report Dialog|N|
+99|AR|GI|Enable Customer Company Groups|Y|
+TT|AP|VI|Validate Vendor Invoice Code (Voucher)|Y|
+99|GW|D1|Report - Multi Language Report Template (Kandooreport)|N|
+99|GW|D2|Report - Show RMS Report Dialog|N|
+99|AP|VI|Validate Vendor Invoice Code (Voucher)|Y|
+DE|EO|01|Automatic Delivery Cycle|Y|
+TT|AR|PT|Tiered Settlement Discount|N|
+TT|EO|01|Automatic Delivery Cycle|N|
+TT|GL|GL|Default Account in General Jou|N|
+TT|GL|MS|Default Description Mode|N|
+TT|IN|FS|Flex Product Structure|N|
+TT|IN|PA|Product Adjustment Type|N|
+TT|IN|SC|Update Supplier Cost|N|
+TT|JM|02|Job Management in Job Edit|N|
+TT|JM|03|Job Management in Job Addition|N|
+DE|GW|D1|Report - Multi Language Report Template (Kandooreport)|Y|
+99|EO|DE|SO - Sales Ordering enabled(Needs investigating)|0|
+99|AR|AC|AR - Apply Credit Automatically|N|
+DE|AP|MS|Default Description Mode|Y|
+FR|AP|PS|Auto Cheque Print Menu|N|
+DE|EO|SO|Operator is Sales Order Owner|Y|
+FR|AP|PT|Tiered Settlement Discount|N|
+FR|AP|TP|Tentative Payment to show Disc|N|
+FR|AP|VA|Validate Usual GL Account|N|
+FR|AP|VI|Duplicate Vendor Invoice Numbe|Y|
+FR|AP|VO|Voucher Entry Mode|N|
+FR|AP|VY|Vendor Year to Date Totals|N|
+FR|AR|01|Settlement Discount Override|N|
+FR|AR|CN|Automatic Customer Numbers|N|
+FR|AR|CP|Customer Reporting Code|N|
+FR|AR|DT|Collection Calls Date Prompt|N|
+FR|AR|PT|Tiered Settlement Discount|N|
+FR|GL|GL|Default Account in General Jou|N|
+FR|GL|MS|Default Description Mode|N|
+FR|IN|PA|Product Adjustment Type|N|
+FR|IN|SC|Update Supplier Cost|N|
+FR|JM|02|Job Management in Job Edit|N|
+FR|JM|03|Job Management in Job Addition|N|
+FR|JM|04|Job Management in Activity Add|N|
+FR|PU|GR|Receipt > P.O. Quantity|Y|
+FR|QE|01|Individual Quotation Printing|N|
+FR|AP|DA|Voucher Distribution|Y|
+FR|WO|TA|Separate Order Type GL-Account|N|
+FR|AR|AG|Report Monthly Aging (Past)|N|
+FR|AR|IS|Invoice Wizzard Style|N|
+FR|AR|CA|Report Credit Aging (Past)|N|
+FR|AR|RO|Report Sort Y=name,cust,date (|N|
+FR|AR|GI|Customer Groups|Y|
+FR|AP|DO|Voucher Payment Order|Y|
+FR|IN|FS|Flex Product Structure|N|
+FR|EO|BA|EO - Backordering enabled|N|
+FR|EO|01|Automatic Delivery Cycle|Y|
+FR|GW|D1|Report - Multi Language Report Template (Kandooreport)|N|
+FR|AP|MS|Default Description Mode|Y|
+FR|EO|SO|Operator is Sales Order Owner|Y|
+FR|EO|NP|Picking List: Include items without product (part code)|Y|
+FR|GW|DV|Anydesk enabled|N|
+DE|EO|NP|Picking List: Include items without product (part code)|Y|
+DE|AR|TT||Y|
+99|EO|SO|Operator is Sales Order Owner|Y|
+FR|TT|TE|Test|Y|
+FR|AR|IQ|Allow 0 Quantity in invoice line (none-warehouse parts)|N|
+BS|AP|MS|Default Description Mode|N|
+BS|AP|PS|Auto Cheque Print Menu|N|
+BS|AP|PT|Tiered Settlement Discount|N|
+BS|AP|TP|Tentative Payment to show Disc|N|
+BS|AP|VA|Validate Usual GL Account|N|
+BS|AP|VO|Voucher Entry Mode|N|
+BS|AP|VY|Vendor Year to Date Totals|N|
+BS|AR|01|Settlement Discount Override|N|
+BS|AR|CN|Automatic Customer Numbers|N|
+BS|AR|CP|Customer Reporting Code|N|
+BS|AR|DT|Collection Calls Date Prompt|N|
+BS|AR|PT|Tiered Settlement Discount|N|
+BS|EO|01|Automatic Delivery Cycle|N|
+BS|GL|GL|Default Account in General Jou|N|
+BS|GL|MS|Default Description Mode|N|
+BS|IN|FS|Flex Product Structure|N|
+BS|IN|PA|Product Adjustment Type|N|
+BS|IN|SC|Update Supplier Cost|N|
+BS|JM|02|Job Management in Job Edit|N|
+BS|JM|03|Job Management in Job Addition|N|
+BS|JM|04|Job Management in Activity Add|N|
+BS|PU|GR|Receipt > P.O. Quantity|N|
+BS|QE|01|Individual Quotation Printing|N|
+BS|AP|DA|Voucher Distribution|N|
+BS|WO|TA|Separate Order Type GL-Account|N|
+BS|AR|AG|Report Monthly Aging (Past)|N|
+BS|AR|IS|Invoice Wizzard Style|N|
+BS|AR|CA|Report Credit Aging (Past)|N|
+BS|AR|RO|Report Sort Y=name,cust,date (|N|
+BS|AP|DO|Voucher Payment Order|1|
+BS|AR|GI|Enable Customer Company Groups|Y|
+BS|GW|D1|Report - Multi Language Report Template (Kandooreport)|N|
+BS|GW|D2|Report - Show RMS Report Dialog|N|
+BS|AP|VI|Validate Vendor Invoice Code (Voucher)|Y|
+BS|EO|DE|SO - Sales Ordering enabled(Needs investigating)|0|
+BS|AR|AC|AR - Apply Credit Automatically|N|
+BS|EO|SO|Operator is Sales Order Owner|Y|
+TD|AP|MS|Default Description Mode|N|
+TD|AP|PS|Auto Cheque Print Menu|N|
+TD|AP|PT|Tiered Settlement Discount|N|
+TD|AP|TP|Tentative Payment to show Disc|N|
+TD|AP|VA|Validate Usual GL Account|N|
+TD|AP|VO|Voucher Entry Mode|N|
+TD|AP|VY|Vendor Year to Date Totals|N|
+TD|AR|01|Settlement Discount Override|N|
+TD|AR|CN|Automatic Customer Numbers|N|
+TD|AR|CP|Customer Reporting Code|N|
+TD|AR|DT|Collection Calls Date Prompt|N|
+TD|AR|PT|Tiered Settlement Discount|N|
+TD|EO|01|Automatic Delivery Cycle|N|
+TD|GL|GL|Default Account in General Jou|N|
+TD|GL|MS|Default Description Mode|N|
+TD|IN|FS|Flex Product Structure|N|
+TD|IN|PA|Product Adjustment Type|N|
+TD|IN|SC|Update Supplier Cost|N|
+TD|JM|02|Job Management in Job Edit|N|
+TD|JM|03|Job Management in Job Addition|N|
+TD|JM|04|Job Management in Activity Add|N|
+TD|PU|GR|Receipt > P.O. Quantity|N|
+TD|QE|01|Individual Quotation Printing|N|
+TD|AP|DA|Voucher Distribution|N|
+TD|WO|TA|Separate Order Type GL-Account|N|
+TD|AR|AG|Report Monthly Aging (Past)|N|
+TD|AR|IS|Invoice Wizzard Style|N|
+TD|AR|CA|Report Credit Aging (Past)|N|
+TD|AR|RO|Report Sort Y=name,cust,date (|N|
+TD|AP|DO|Voucher Payment Order|1|
+TD|AR|GI|Enable Customer Company Groups|Y|
+TD|GW|D1|Report - Multi Language Report Template (Kandooreport)|N|
+TD|GW|D2|Report - Show RMS Report Dialog|N|
+TD|AP|VI|Validate Vendor Invoice Code (Voucher)|Y|
+TD|EO|DE|SO - Sales Ordering enabled(Needs investigating)|0|
+TD|AR|AC|AR - Apply Credit Automatically|N|
+TD|EO|SO|Operator is Sales Order Owner|Y|
+FR|AR|AC|TBA|Y|

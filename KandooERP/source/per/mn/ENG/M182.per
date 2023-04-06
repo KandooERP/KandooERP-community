@@ -1,0 +1,73 @@
+{
+###########################################################################
+# This program is free software; you can redistribute it and/or modify it
+# under the terms of the GNU General Public License as published by the
+# Free Software Foundation; either version 2 of the License, or (at your
+# option) any later version.
+#
+# This program is distributed in the hope that it will be useful, but
+# WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+# General Public License for more details.
+#
+# You should have received a copy of the GNU General Public License along
+# with this program; if not, write to the Free Software Foundation, Inc.,
+# 59 Temple Place, Suite 330, Boston, MA 02111-1307 USA
+#
+###########################################################################
+
+	 $Id: M182.per,v 1.1 2003/05/20 23:53:06 tpavlek Exp $
+}
+
+
+database kandoodb
+
+screen
+{
+                          Work In Progress Receipt                     M182
+\g----------------------------------------------------------------------------\g
+  Work Centre   SO Number   Suffix   Product           Status   Due Date
+\g----------------------------------------------------------------------------\g
+ [f001      ] [f002      |a][f003 ] [f004           ]   [b]    [f005      ]
+ [f001      ] [f002      |a][f003 ] [f004           ]   [b]    [f005      ]
+ [f001      ] [f002      |a][f003 ] [f004           ]   [b]    [f005      ]
+ [f001      ] [f002      |a][f003 ] [f004           ]   [b]    [f005      ]
+ [f001      ] [f002      |a][f003 ] [f004           ]   [b]    [f005      ]
+ [f001      ] [f002      |a][f003 ] [f004           ]   [b]    [f005      ]
+ [f001      ] [f002      |a][f003 ] [f004           ]   [b]    [f005      ]
+ [f001      ] [f002      |a][f003 ] [f004           ]   [b]    [f005      ]
+ [f001      ] [f002      |a][f003 ] [f004           ]   [b]    [f005      ]
+ [f001      ] [f002      |a][f003 ] [f004           ]   [b]    [f005      ]
+ [f001      ] [f002      |a][f003 ] [f004           ]   [b]    [f005      ]
+ [f001      ] [f002      |a][f003 ] [f004           ]   [b]    [f005      ]
+ [f001      ] [f002      |a][f003 ] [f004           ]   [b]    [f005      ]
+ [f001      ] [f002      |a][f003 ] [f004           ]   [b]    [f005      ]
+
+}
+
+tables
+shoporddetl
+shopordhead
+
+attributes
+f001 = shoporddetl.work_centre_code, upshift,
+comments = " Code for a work centre on a shop order";
+f002 = shopordhead.shop_order_num, comments = " Unique shop order number";
+a    = shoporddetl.sequence_num, invisible;
+f003 = shopordhead.suffix_num, comments = " Unique suffix number";
+f004 = shopordhead.part_code, upshift,
+comments = " Product code of a product being produced for a shop order";
+b    = shopordhead.status_ind, upshift, comments = " H = Held, R = Released";
+f005 = shopordhead.end_date,
+comments = " Date when manufacturing ends for a shop order";
+
+instructions
+delimiters "  "
+
+screen record sr_shoporddetl[14] (work_centre_code,
+                                  shop_order_num,
+                                  sequence_num,
+                                  suffix_num,
+                                  part_code,
+                                  status_ind,
+                                  end_date)

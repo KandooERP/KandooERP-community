@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form xmlns="http://namespaces.querix.com/2015/fglForms">
+	<form.rootContainer>
+		<GridPanel classNames="fcls_rootContainer" verticalAlignment="Stretch" horizontalAlignment="Stretch" fieldTable="" identifier="rootContainer">
+			<GridPanel.gridRowDefinitions>
+				<GridRowDefinition gridLengthValue=""/>
+				<GridRowDefinition gridLengthValue=""/>
+				<GridRowDefinition gridLengthValue="100%"/>
+				<GridRowDefinition gridLengthValue=""/>
+			</GridPanel.gridRowDefinitions>
+			<GridPanel.gridColumnDefinitions>
+				<GridColumnDefinition gridLengthValue="100%"/>
+			</GridPanel.gridColumnDefinitions>
+			<GridPanel classNames="fcls_title_cnt" visible="true" verticalAlignment="Top" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="cntTitle">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="100%"/>
+					<GridColumnDefinition gridLengthValue=""/>
+				</GridPanel.gridColumnDefinitions>
+				<Label isDynamic="true" text="Product Flexible Structure" classNames="fcls_title_lb" visible="true" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="header_text"/>
+				<Label isDynamic="true" text="I622" classNames="fcls_title_lb" visible="true" gridItemLocation="1,0,1,1" fieldTable="" identifier="lbFormName"/>
+			</GridPanel>
+			<GridPanel classNames="fcls_detail_cnt,fcls_data_cnt" visible="true" verticalAlignment="Top" horizontalAlignment="Stretch" gridItemLocation="0,1,1,1" fieldTable="formonly" identifier="cntDetail1">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="100%"/>
+				</GridPanel.gridColumnDefinitions>
+				<TextField toCase="Up" noEntry="true" dataType="Char,,,," classNames="fcls_data_widget,fcls_align_hstretch" preferredSize="40qch,1qch" horizontalAlignment="Stretch" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="class_desc"/>
+			</GridPanel>
+			<Table rowCount="10" preferredSize="70qch,10qch" gridItemLocation="0,2,1,1" fieldTable="" identifier="sr_prodstructure">
+				<TableColumn text="Seq Num" fieldTable="" identifier="tc_seq_num">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="5rem" gridMaxLength="5rem" gridMinLength="5rem"/>
+					</TableColumn.columnLength>
+					<TextField dataType="SmallInt,,,," toolTip=" Sequence number that identifies this Segment of the structure" fieldTable="prodstructure" comment=" Sequence number that identifies this Segment of the structure" identifier="seq_num" noEntry="true" notNull="true"/>
+				</TableColumn>
+				<TableColumn text="Start Pos" fieldTable="" identifier="tc_start_num">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="10rem" gridMaxLength="10rem" gridMinLength="10rem"/>
+					</TableColumn.columnLength>
+					<TextField dataType="SmallInt,,,," toolTip=" Flexible Segment starting position" fieldTable="prodstructure" comment=" Flexible Segment starting position" identifier="start_num" notNull="true"/>
+				</TableColumn>
+				<TableColumn text="Length" fieldTable="" identifier="tc_length">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="5rem" gridMaxLength="5rem" gridMinLength="5rem"/>
+					</TableColumn.columnLength>
+					<TextField dataType="SmallInt,,,," toolTip=" Length of the Flexible Segment, in characters" fieldTable="prodstructure" comment=" Length of the Flexible Segment, in characters" identifier="length" notNull="true"/>
+				</TableColumn>
+				<TableColumn text="Description" fieldTable="" identifier="tc_desc_text">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="15rem" gridMaxLength="15rem" gridMinLength="15rem"/>
+					</TableColumn.columnLength>
+					<TextField dataType="Char,,,,30" toolTip=" A short description of the Flexible Segment" fieldTable="prodstructure" comment=" A short description of the Flexible Segment" identifier="desc_text" notNull="true"/>
+				</TableColumn>
+				<TableColumn text="Type" fieldTable="" identifier="tc_type_ind">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="15rem" gridMaxLength="15rem" gridMinLength="10rem"/>
+					</TableColumn.columnLength>
+					<ComboBox toCase="Up" dataType="Char,,,,1" toolTip=" Type Indicator: F)iller, S)tructure, H)orizontal or V)ertical" fieldTable="prodstructure" comment=" Type Indicator: F)iller, S)tructure, H)orizontal or V)ertical" identifier="type_ind" classNames="list-show-value-text,field-show-text" editable="false" notNull="true">
+						<ComboBoxItem text="Filler">
+							<ComboBoxItem.value>
+								<StringLiteral stringValue="F"/>
+							</ComboBoxItem.value>
+						</ComboBoxItem>
+						<ComboBoxItem text="Structure">
+							<ComboBoxItem.value>
+								<StringLiteral stringValue="S"/>
+							</ComboBoxItem.value>
+						</ComboBoxItem>
+						<ComboBoxItem text="H ????">
+							<ComboBoxItem.value>
+								<StringLiteral stringValue="H"/>
+							</ComboBoxItem.value>
+						</ComboBoxItem>
+						<ComboBoxItem text="V ????">
+							<ComboBoxItem.value>
+								<StringLiteral stringValue="V"/>
+							</ComboBoxItem.value>
+						</ComboBoxItem>
+					</ComboBox>
+				</TableColumn>
+				<TableColumn text="Valid" fieldTable="" identifier="tc_valid_flag">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="100%"/>
+					</TableColumn.columnLength>
+					<CheckBox dataType="Char,,,,1" toolTip=" Flag to enable validation" fieldTable="prodstructure" comment=" Flag to enable validation" identifier="valid_flag" notNull="true">
+						<CheckBox.checkedValue>
+							<StringLiteral stringValue="Y"/>
+						</CheckBox.checkedValue>
+						<CheckBox.uncheckedValue>
+							<StringLiteral stringValue="N"/>
+						</CheckBox.uncheckedValue>
+					</CheckBox>
+				</TableColumn>
+			</Table>
+			<GridPanel classNames="fcls_statusbar_cnt" visible="true" verticalAlignment="Top" gridItemLocation="0,3,1,1" fieldTable="formonly" identifier="cntStatusBar">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="100%"/>
+				</GridPanel.gridColumnDefinitions>
+				<Label isDynamic="true" text="" classNames="fcls_sblabel" visible="true" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="lbInfo1"/>
+				<Label isDynamic="true" text="" classNames="fcls_sblabel" visible="true" gridItemLocation="0,1,1,1" fieldTable="formonly" identifier="lbInfo2"/>
+			</GridPanel>
+		</GridPanel>
+	</form.rootContainer>
+	<form.screenRecords>
+		<ScreenRecord identifier="sr_prodstructure" fields="prodstructure.seq_num,prodstructure.start_num,prodstructure.length,prodstructure.desc_text,prodstructure.type_ind,prodstructure.valid_flag" elements="10"/>
+		<ScreenRecord identifier="formonly" fields="class_desc"/>
+		<ScreenRecord identifier="prodstructure" fields="seq_num,start_num,length,desc_text,type_ind,valid_flag"/>
+	</form.screenRecords>
+</form>
+

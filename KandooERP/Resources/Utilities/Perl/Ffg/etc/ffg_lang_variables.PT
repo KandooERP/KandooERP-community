@@ -1,0 +1,54 @@
+our $qgenname="Nome generico do projecto";
+our $qformname="Nome do form do ecran principal";
+our $formnexist="Form inexistente $form.per";
+our $rdatabasename="A base de dados e ";
+our $qmsttblname="Nome da tabela principal ";
+our $qdywhelpf="Deseja gerar o ficheiro de ajuda ? (S/N) " ;
+our $qdtltable="Nome da tabela detail";
+our $qdscrrec="Nome do screen record detail";
+
+# Nome de opcoes de Menu
+our $query="Questionar";
+our $next="Seguinte";
+our $previous="Precedente";
+our $insert="Inserir";
+our $update="Alterar";
+our $delete="Remover";
+our $f_exit="Fim";
+our $quit="Desistir" ;
+our $arredit="Alterar Matriz";
+our $presstab="Premir a tecla TAB";
+
+# mensagem
+our $dbsnoavl="A base de dados nao esta disponivel";
+our $thereisanerror="Ha um erro numero ";
+our $confmsg="Confirmar";
+our $yes="Sim";
+our $no="Nao";
+our $cancel="Abandonar";
+our $query_com="Fazer uma selecao com criterios";
+our $next_com="Avancar ao registo seguinte";
+our $previous_com="Retroceder ao registo precedente";
+our $insert_com="Inserir um novo registo";
+our $update_com="Alterar o registo seleccionado";
+our $delete_com="Remover o registo seleccionado";
+our $quit_com="Sair da aplicacao";
+our $noexist=" nao existe ";
+our $exists=" ja existe ";
+our $islock="Esta bloqueado ";
+our $lastrow="Ultimo registo na lista ";
+our $firstrow="Primeiro registo na lista ";
+our $select_first="Faz favor fazer uma seleccao ";
+our $unreachable="Este registo nao esta accessivel ";
+our $correct="correcto";
+our $failed="falhado";
+our $Successful="concluido com sucesso" ;
+our $norows_selected="Nao ha registos correspondentes";
+our $CancelCom="Cancelar com a tecla ";
+our $indication="Validar:$accept Abandonar $interrupt";
+our $input_criteria="Faz favor introduzir os criterios";
+our $Oneatleast="Minimo um criterio";
+our $globselect="Seleccionar tudo ? ";
+our $zoomlist="Lista de ";
+our $zchoice="Para escolher ";
+our $arrayempty="Nao ha registos neste ARRAY";

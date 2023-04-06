@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form xmlns="http://namespaces.querix.com/2015/fglForms">
+	<form.rootContainer>
+		<GridPanel classNames="fcls_rootContainer" verticalAlignment="Top" horizontalAlignment="Left" fieldTable="" identifier="rootContainer">
+			<GridPanel.gridRowDefinitions>
+				<GridRowDefinition gridLengthValue=""/>
+				<GridRowDefinition gridLengthValue=""/>
+				<GridRowDefinition gridLengthValue=""/>
+				<GridRowDefinition gridLengthValue=""/>
+				<GridRowDefinition gridLengthValue=""/>
+				<GridRowDefinition gridLengthValue=""/>
+			</GridPanel.gridRowDefinitions>
+			<GridPanel.gridColumnDefinitions>
+				<GridColumnDefinition gridLengthValue="100%"/>
+			</GridPanel.gridColumnDefinitions>
+			<GridPanel classNames="fcls_title_cnt" visible="true" verticalAlignment="Top" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="cntTitle">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="100%"/>
+					<GridColumnDefinition gridLengthValue=""/>
+				</GridPanel.gridColumnDefinitions>
+				<Label isDynamic="true" text="Credit Shipment Inquiry" classNames="fcls_title_lb" visible="true" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="header_text"/>
+				<Label isDynamic="true" text="L164" classNames="fcls_title_lb" visible="true" gridItemLocation="1,0,1,1" fieldTable="" identifier="lbFormName"/>
+			</GridPanel>
+			<GridPanel classNames="fcls_detail_cnt,fcls_data_cnt,fcls_align_left" visible="true" verticalAlignment="Top" horizontalAlignment="Left" gridItemLocation="0,1,1,1" fieldTable="" identifier="cntDetail1">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="" gridMinLength="10rem"/>
+					<GridColumnDefinition gridLengthValue=""/>
+				</GridPanel.gridColumnDefinitions>
+				<Label isDynamic="true" text="Customer Code" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,0,1,1" fieldTable="" identifier="lb139"/>
+				<ComboBox toCase="Up" dataType="Char,,,,8" preferredSize="9qch,1qch" toolTip="Unique vendor Code" fieldTable="shiphead" comment="Unique vendor Code" identifier="vend_code" gridItemLocation="1,0,1,1" classNames="fcls_data_widget,fcls_align_left,fcls_length_20qch"/>
+				<Label isDynamic="true" text="Name" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,1,1,1" fieldTable="" identifier="lb156"/>
+				<TextField dataType="Char,,,,30" preferredSize="31qch,1qch" toolTip="Customer name or description" fieldTable="customer" comment="Customer name or description" identifier="name_text" gridItemLocation="1,1,1,1" classNames="fcls_data_widget,fcls_align_left,fcls_length_20qch"/>
+				<Label isDynamic="true" text="Shipment Code" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,2,1,1" fieldTable="" identifier="lb157"/>
+				<TextField dataType="Char,,,,8" preferredSize="9qch,1qch" toolTip="Shipment Id, unique code used to identify the shipment" fieldTable="shiphead" comment="Shipment Id, unique code used to identify the shipment" identifier="ship_code" gridItemLocation="1,2,1,1" classNames="fcls_data_widget,fcls_align_left,fcls_length_20qch"/>
+			</GridPanel>
+			<GroupBox title="Group 2" classNames="fcls_detail_gb_cnt" visible="true" verticalAlignment="Stretch" horizontalAlignment="Stretch" gridItemLocation="0,2,1,1" fieldTable="formonly" identifier="cntDetail2GroupBox">
+				<GridPanel classNames="fcls_detail_gb_cnt_sub,fcls_data_cnt,fcls_align_left" visible="true" verticalAlignment="Top" horizontalAlignment="Left" fieldTable="formonly" identifier="cntDetail2GBSubGp">
+					<GridPanel.gridRowDefinitions>
+						<GridRowDefinition gridLengthValue=""/>
+						<GridRowDefinition gridLengthValue=""/>
+						<GridRowDefinition gridLengthValue=""/>
+						<GridRowDefinition gridLengthValue=""/>
+						<GridRowDefinition gridLengthValue=""/>
+					</GridPanel.gridRowDefinitions>
+					<GridPanel.gridColumnDefinitions>
+						<GridColumnDefinition gridLengthValue="" gridMinLength="10rem"/>
+						<GridColumnDefinition gridLengthValue=""/>
+					</GridPanel.gridColumnDefinitions>
+					<Label isDynamic="true" text="Shipment Type" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="lb47"/>
+					<TextField toCase="Up" dataType="Char,,,,2" preferredSize="3qch,1qch" toolTip="Code used to identify the type of shipment" fieldTable="shiphead" comment="Code used to identify the type of shipment" identifier="ship_type_code" gridItemLocation="1,0,1,1" classNames="fcls_data_widget,fcls_align_left,fcls_length_20qch"/>
+					<Label isDynamic="true" text="E.T.A" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,1,1,1" fieldTable="formonly" identifier="lb46"/>
+					<Calendar format="dd/mm/yyyy" dataType="Date,,,," preferredSize="11qch,1qch" toolTip="Estimated time of arrival of this shipment" fieldTable="shiphead" comment="Estimated time of arrival of this shipment" identifier="eta_curr_date" gridItemLocation="1,1,1,1" classNames="fcls_data_widget,fcls_align_left,fcls_length_20qch"/>
+					<Label isDynamic="true" text="Warehouse" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,2,1,1" fieldTable="formonly" identifier="lb44"/>
+					<ComboBox toCase="Up" dataType="Char,,,,3" preferredSize="4qch,1qch" toolTip="Warehouse goods are to be shipped to" fieldTable="shiphead" comment="Warehouse goods are to be shipped to" identifier="ware_code" gridItemLocation="1,2,1,1" classNames="fcls_data_widget,fcls_align_left,fcls_length_20qch"/>
+					<Label isDynamic="true" text="Status" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,3,1,1" fieldTable="" identifier="lb89"/>
+					<TextField toCase="Up" dataType="Char,,,,2" preferredSize="3qch,1qch" toolTip="Status of the shipment" fieldTable="shiphead" comment="Status of the shipment" identifier="ship_status_code" gridItemLocation="1,3,1,1" classNames="fcls_data_widget,fcls_align_left,fcls_length_20qch"/>
+					<Label isDynamic="true" text="Currency" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,4,1,1" fieldTable="" identifier="lb113"/>
+					<ComboBox toCase="Up" dataType="Char,,,,3" preferredSize="4qch,1qch" toolTip="Currency in which the goods are to be invoiced" fieldTable="shiphead" comment="Currency in which the goods are to be invoiced" identifier="curr_code" gridItemLocation="1,4,1,1" classNames="fcls_data_widget,fcls_align_left,fcls_length_20qch"/>
+				</GridPanel>
+			</GroupBox>
+			<GroupBox title="Group 3" classNames="fcls_detail_gb_cnt" visible="true" verticalAlignment="Stretch" horizontalAlignment="Stretch" gridItemLocation="0,3,1,1" fieldTable="formonly" identifier="cntDetail3GroupBox">
+				<GridPanel classNames="fcls_detail_gb_cnt_sub,fcls_data_cnt,fcls_align_left" visible="true" verticalAlignment="Top" horizontalAlignment="Left" fieldTable="formonly" identifier="cntDetail3GBSubGpLeft">
+					<GridPanel.gridRowDefinitions>
+						<GridRowDefinition gridLengthValue=""/>
+						<GridRowDefinition gridLengthValue=""/>
+						<GridRowDefinition gridLengthValue=""/>
+					</GridPanel.gridRowDefinitions>
+					<GridPanel.gridColumnDefinitions>
+						<GridColumnDefinition gridLengthValue="" gridMinLength="10rem"/>
+						<GridColumnDefinition gridLengthValue=""/>
+					</GridPanel.gridColumnDefinitions>
+					<Label isDynamic="true" text="Credit Amount" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="lb48"/>
+					<TextField dataType="Decimal,,,2,16" preferredSize="13qch,1qch" toolTip="Total amount that will be credited to customer" fieldTable="shiphead" comment="Total amount that will be credited to customer" identifier="total_amt" gridItemLocation="1,0,1,1"/>
+					<Label isDynamic="true" text="FOB Cost" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,1,1,1" fieldTable="formonly" identifier="lb49"/>
+					<TextField dataType="Decimal,,,2,16" preferredSize="13qch,1qch" toolTip="Total Unit FOB Cost entered for all line items" fieldTable="shiphead" comment="Total Unit FOB Cost entered for all line items" identifier="fob_ent_cost_amt" gridItemLocation="1,1,1,1"/>
+					<Label isDynamic="true" text="Tax" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,2,1,1" fieldTable="formonly" identifier="lb63"/>
+					<TextField dataType="Decimal,,,2,16" preferredSize="13qch,1qch" toolTip="Total duty for all line items" fieldTable="shiphead" comment="Total duty for all line items" identifier="duty_ent_amt" gridItemLocation="1,2,1,1"/>
+				</GridPanel>
+			</GroupBox>
+			<GroupBox title="Group 4" classNames="fcls_detail_gb_cnt" visible="true" verticalAlignment="Stretch" horizontalAlignment="Stretch" gridItemLocation="0,4,1,1" fieldTable="" identifier="cntDetail4GroupBox">
+				<GridPanel classNames="fcls_detail_gb_cnt_sub,fcls_data_cnt" visible="true" verticalAlignment="Top" horizontalAlignment="Stretch" gridItemLocation="0,5,1,1" fieldTable="formonly" identifier="cntDetail4">
+					<GridPanel.gridRowDefinitions>
+						<GridRowDefinition gridLengthValue=""/>
+						<GridRowDefinition gridLengthValue=""/>
+						<GridRowDefinition gridLengthValue=""/>
+						<GridRowDefinition gridLengthValue=""/>
+						<GridRowDefinition gridLengthValue=""/>
+						<GridRowDefinition gridLengthValue=""/>
+					</GridPanel.gridRowDefinitions>
+					<GridPanel.gridColumnDefinitions>
+						<GridColumnDefinition gridLengthValue="" gridMinLength="10rem"/>
+						<GridColumnDefinition gridLengthValue="100%"/>
+					</GridPanel.gridColumnDefinitions>
+					<Label isDynamic="true" text="Entry Person" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="lb68"/>
+					<ComboBox dataType="Char,,,,8" preferredSize="9qch,1qch" toolTip="Name or Initials of the person who entered the shipment" fieldTable="shiphead" comment="Name or Initials of the person who entered the shipment" identifier="entry_code" gridItemLocation="1,0,1,1" classNames="fcls_data_widget,fcls_align_left,fcls_length_20qch"/>
+					<Label isDynamic="true" text="Entry Date" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,1,1,1" fieldTable="" identifier="lb115"/>
+					<Calendar format="dd/mm/yyyy" dataType="Date,,,," preferredSize="11qch,1qch" toolTip="Date the shipment was entered into the system" fieldTable="shiphead" comment="Date the shipment was entered into the system" identifier="entry_date" gridItemLocation="1,1,1,1" classNames="fcls_data_widget,fcls_align_left,fcls_length_20qch"/>
+					<Label isDynamic="true" text="Comment" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,2,1,1" fieldTable="" identifier="lb116"/>
+					<TextField dataType="Char,,,,20" preferredSize="31qch,1qch" toolTip="Used to record miscellaneous information about this shipment" fieldTable="shiphead" comment="Used to record miscellaneous information about this shipment" identifier="com1_text" gridItemLocation="1,2,1,1" classNames="fcls_data_widget,fcls_align_left,fcls_length_40qch" horizontalAlignment="Stretch"/>
+					<TextField dataType="Char,,,,20" preferredSize="31qch,1qch" toolTip="A second line for adding miscellaneous information about this shipment" fieldTable="shiphead" comment="A second line for adding miscellaneous information about this shipment" identifier="com2_text" gridItemLocation="1,3,1,1" classNames="fcls_data_widget,fcls_align_left,fcls_length_40qch" horizontalAlignment="Stretch"/>
+					<Label isDynamic="true" text="Rev Number" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,4,1,1" fieldTable="" identifier="lb120"/>
+					<TextField dataType="SmallInt,,,," preferredSize="6qch,1qch" toolTip="A numerical sequence of revisions made against this shipment" fieldTable="shiphead" comment="A numerical sequence of revisions made against this shipment" identifier="rev_num" gridItemLocation="1,4,1,1" classNames="fcls_data_widget,fcls_align_left,fcls_length_20qch"/>
+					<Label isDynamic="true" text="Rev Date" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,5,1,1" fieldTable="" identifier="lb121"/>
+					<Calendar format="dd/mm/yyyy" dataType="Date,,,," preferredSize="11qch,1qch" toolTip="If changes are made to this shipment, the system displays the date of revision" fieldTable="shiphead" comment="If changes are made to this shipment, the system displays the date of revision" identifier="rev_date" gridItemLocation="1,5,1,1" classNames="fcls_data_widget,fcls_align_left,fcls_length_20qch"/>
+				</GridPanel>
+			</GroupBox>
+			<GridPanel classNames="fcls_statusbar_cnt" visible="true" verticalAlignment="Bottom" gridItemLocation="0,5,1,1" fieldTable="formonly" identifier="cntStatusBar">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="100%"/>
+				</GridPanel.gridColumnDefinitions>
+				<Label isDynamic="true" text="" classNames="fcls_sblabel" visible="true" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="lbInfo1"/>
+				<Label isDynamic="true" text="" classNames="fcls_sblabel" visible="true" gridItemLocation="0,1,1,1" fieldTable="formonly" identifier="lbInfo2"/>
+			</GridPanel>
+		</GridPanel>
+	</form.rootContainer>
+	<form.screenRecords>
+		<ScreenRecord identifier="customer" fields="customer.name_text"/>
+		<ScreenRecord identifier="shiphead" fields="shiphead.total_amt,shiphead.vend_code,shiphead.ship_code,shiphead.ship_type_code,shiphead.eta_curr_date,shiphead.curr_code,shiphead.ship_status_code,shiphead.ware_code,shiphead.fob_ent_cost_amt,shiphead.duty_ent_amt,shiphead.entry_code,shiphead.entry_date,shiphead.com1_text,shiphead.rev_num,shiphead.com2_text,shiphead.rev_date"/>
+	</form.screenRecords>
+</form>
+

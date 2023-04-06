@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<fglBuildTarget xmlns="http://namespaces.querix.com/lyciaide/target" name="JA9" type="fgl-program">
+
+  <libraries>
+    <library name="lib_tool_A_AR_new" dynamic="false" location=""/>
+    <library name="lib_tool_J_JM_db" dynamic="false" location=""/>
+    <library name="lib_tool_J_JM_new" dynamic="false" location=""/>
+    <library name="lib_tool_U_UT_new" dynamic="false" location=""/>
+    <library name="lib_tool_common" dynamic="false" location=""/>
+    <library name="lib_tool_db_common" dynamic="false" location=""/>
+  </libraries>
+
+  <sources type="fgl">
+    <file location="4gl/common/duedate.4gl"/>
+    <file location="4gl/common/salesfunc.4gl"/>
+    <file location="4gl/lib_tool_db/lib_tool_db_arparms.4gl"/>
+    <file location="4gl/common/glob_GLOBALS_constant.4gl"/>
+    <file location="4gl/common/trans_num.4gl"/>
+    <file location="4gl/jm/J_JM_GLOBALS.4gl"/>
+    <file location="4gl/jm/JA9.4gl"/>
+    <file location="4gl/common/conv_rate.4gl"/>
+    <file location="4gl/common/glob_GLOBALS.4gl"/>
+    <file location="4gl/common/glob_GLOBALS_userDataTypes.4gl"/>
+  </sources>
+
+  <sources type="form">
+    <file location="per/utility/ENG/U156.fm2"/>
+    <file location="per/jm/ENG/JA11.fm2"/>
+    <file location="per/utility/ENG/U526.fm2"/>
+    <file location="per/utility/ENG/U162.fm2"/>
+    <file location="per/ar/ENG/A203.fm2"/>
+  </sources>
+
+</fglBuildTarget>

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<fglBuildTarget xmlns="http://namespaces.querix.com/lyciaide/target" name="KZ2" type="fgl-program">
+
+  <libraries>
+    <library name="lib_common_pinq_wind" dynamic="false" location=""/>
+    <library name="lib_tool_I_IN_db" dynamic="false" location=""/>
+    <library name="lib_tool_I_IN_new" dynamic="false" location=""/>
+    <library name="lib_tool_K_SS_new" dynamic="false" location=""/>
+    <library name="lib_tool_L_LC_new" dynamic="false" location=""/>
+    <library name="lib_tool_U_UT_new" dynamic="false" location=""/>
+    <library name="lib_tool_W_WO_new" dynamic="false" location=""/>
+    <library name="lib_tool_common" dynamic="false" location=""/>
+    <library name="lib_tool_db_common" dynamic="false" location=""/>
+  </libraries>
+
+  <sources type="fgl">
+    <file location="4gl/common/glob_GLOBALS_constant.4gl"/>
+    <file location="4gl/common/subywind.4gl"/>
+    <file location="4gl/ss/KZ2.4gl"/>
+    <file location="4gl/common/itemwind.4gl"/>
+    <file location="4gl/common/glob_GLOBALS.4gl"/>
+    <file location="4gl/common/glob_GLOBALS_userDataTypes.4gl"/>
+    <file location="4gl/common/subpwind.4gl"/>
+    <file location="4gl/ss/K_SS_GLOBALS.4gl"/>
+  </sources>
+
+  <sources type="form">
+    <file location="per/utility/ENG/U156.fm2"/>
+    <file location="per/ss/ENG/K151.fm2"/>
+    <file location="per/in/ENG/I104.fm2"/>
+    <file location="per/utility/ENG/U526.fm2"/>
+    <file location="per/utility/ENG/U162.fm2"/>
+    <file location="per/ss/ENG/K145.fm2"/>
+    <file location="per/ss/ENG/K147.fm2"/>
+    <file location="per/ss/ENG/K148.fm2"/>
+    <file location="per/ss/ENG/K149.fm2"/>
+    <file location="per/ss/ENG/K150.fm2"/>
+  </sources>
+
+  <mediaFiles>
+    <file client="true" location="KZ2.qxtheme" type="gui-theme-file"/>
+    <file client="true" location="KZ2.css" type="other"/>
+  </mediaFiles>
+
+</fglBuildTarget>

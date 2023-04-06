@@ -1,0 +1,92 @@
+LS2_FRA {
+% { "%" }
+(L)ist Price (S)tandard Cost (W)eighted Cost (A)ctual Cost (F)oreign Cost { "(L)Prix liste (S)Coût standard (W)Coût pondéré (A)Coût réel (F)Coût en devises)" }
+- Reserved for Sale { "- Reserved for Sale" }
+A Valid Code for this part of the chart { "Un code valid pour cette partie du numéro de compte" }
+Account { "Compte" }
+Account Verifier { "Vérificateur de compte" }
+Account code to identify this account { "Numéro de compte identifiant ce client" }
+Back Order { "Commande en cours" }
+Balance { "Solde" }
+Chart of Accounts { "Plan Comptable" }
+Code { "Code" }
+Code used to identify the type of shipment { "Code utilisé pour identifier le type d'expédition" }
+Cost { "Coût" }
+Currency { "Devise" }
+Current { "Actuel" }
+Customer Code { "Code Client" }
+Date { "Date" }
+Dates { "Dates" }
+Desc { "Description" }
+Description { "Description" }
+Description of the product { "Description du produit" }
+Description of warehouse { "Description de l'entrepôt" }
+E.T.A { "Date Estimée de livraison" }
+Enter a Unique Transaction Number { "Saisir un numéro unique de transaction" }
+Enter the Shipment Code you wish to begin the scan process at { "Saisir le code d’expédition pour lequel vous souhaitez commencer le processus de numérisation." }
+Entered { "Saisie" }
+Exchange Rate { "Taux de Change" }
+FILTER { "Premier" }
+Field Description { "Description du champ" }
+Filter { "Filtrer" }
+Flex Codes { "Flex Codes" }
+Full name or description of warehouse location { "Nom complet ou description de l'emplacement de l'entrepôt" }
+Goods { "Marchandises" }
+Group 2 { "Groupe 2" }
+Group 3 { "Groupe 3" }
+Group 4 { "Groupe 4" }
+ID { "ID" }
+Indicates the date of the product transaction (activity) { "Indique la date de la transaction du produit (activité)" }
+Indicates the type of shipment { "Indique le type d'expédition" }
+Inventory Class { "Classe d'inventaire" }
+LOOKUP { "RECHERCHER" }
+Language Code { "Code langue" }
+Length { "Longueur" }
+Length of the Code { "Longueur Numéro de compte" }
+Line { "Ligne" }
+Name { "Nom" }
+No { "Non" }
+OEM Code { "Code OEM" }
+Other { "Autre" }
+Period { "Période" }
+Price { "Price" }
+Product { "Produit" }
+Product Category { "Catégorie Produit" }
+Product Code { "Code Produit" }
+Purchasing { "Achat" }
+Quantity { "Quantité" }
+REFRESH { "ACTUALISER" }
+Sales { "Ventes" }
+Second line of description of the product { "Deuxième ligne de description du produit" }
+Shipment Code { "Code d'expédition" }
+Shipment Code, unique code used to identify a shipment { "Code d'expédition, code unique utilisé pour identifier une expédition" }
+Shipment status { "Situation de l'expédition" }
+Source { "Source" }
+Start Pos. { "Positions Départ" }
+Start position of the Code { "Position de départ du code" }
+Status { "Statut" }
+Status of this shipment (W) { "Statut de cette expédition (W)" }
+Stocking { "Stockage" }
+Target { "Cible" }
+Tariff Code { "Code tarifaire" }
+Tax { "T.V.A." }
+The Description of the Account { "Description du compte" }
+The Product code to begin this inquiry (W) { "Le code de produit pour commencer cette enquête (W)" }
+The description for this code { "L'intitulé de ce code" }
+The valid flex segment { "Le segment Flex valide" }
+The warehouse code for this product activity (W) { "Le code entrepôt pour cette activité de produit (W)" }
+Title { "Titre" }
+Title of this field in the GL { "Titre de ce champ en Compta géné" }
+Total { "Total" }
+Transaction Number Entry { "Saisie du numéro de transaction" }
+Type { "Type" }
+Unit Cost { "Coût unitaire" }
+Unit Price { "Prix Unitaire" }
+Usual Vendor { "Fournisseur habituel" }
+Vendor Code { "Code Fournisseur" }
+Vendor name or description { "Nom ou description du fournisseur" }
+Warehouse { "Dépôt" }
+Warehouse Code { "Code Dépôt" }
+Year { "Année" }
+actToolbarManager { "actToolbarManager" }
+}

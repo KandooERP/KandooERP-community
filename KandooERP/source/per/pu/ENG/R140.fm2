@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form xmlns="http://namespaces.querix.com/2015/fglForms">
+	<form.rootContainer>
+		<GridPanel classNames="fcls_rootContainer" verticalAlignment="Top" horizontalAlignment="Left" fieldTable="" identifier="rootContainer">
+			<GridPanel.gridRowDefinitions>
+				<GridRowDefinition gridLengthValue=""/>
+				<GridRowDefinition gridLengthValue=""/>
+				<GridRowDefinition gridLengthValue=""/>
+				<GridRowDefinition gridLengthValue=""/>
+				<GridRowDefinition gridLengthValue=""/>
+				<GridRowDefinition gridLengthValue=""/>
+				<GridRowDefinition gridLengthValue=""/>
+			</GridPanel.gridRowDefinitions>
+			<GridPanel.gridColumnDefinitions>
+				<GridColumnDefinition gridLengthValue="100%"/>
+			</GridPanel.gridColumnDefinitions>
+			<GridPanel classNames="fcls_title_cnt" visible="true" verticalAlignment="Top" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="cntTitle">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="100%"/>
+					<GridColumnDefinition gridLengthValue=""/>
+				</GridPanel.gridColumnDefinitions>
+				<Label isDynamic="true" text="P.O. Audit Detail" classNames="fcls_title_lb" visible="true" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="header_text"/>
+				<Label isDynamic="true" text="R140" classNames="fcls_title_lb" visible="true" gridItemLocation="1,0,1,1" fieldTable="" identifier="lbFormName"/>
+			</GridPanel>
+			<GridPanel classNames="fcls_detail_cnt,fcls_data_cnt,fcls_align_left" visible="true" verticalAlignment="Top" horizontalAlignment="Left" gridItemLocation="0,1,1,1" fieldTable="formonly" identifier="cntDetail1">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="" gridMinLength="10rem"/>
+					<GridColumnDefinition gridLengthValue=""/>
+				</GridPanel.gridColumnDefinitions>
+				<Label isDynamic="true" text="Vendor Code" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="lb57"/>
+				<ComboBox dataType="Char,,,,8" classNames="fcls_data_widget,fcls_align_left,fcls_length_25qch" location="19qch,1qch" preferredSize="25qch,1qch" toolTip=" The Vendor Code associated with this P.O." gridItemLocation="1,0,1,1" fieldTable="poaudit" comment=" The Vendor Code associated with this P.O." identifier="vend_code"/>
+				<TextField dataType="Char,,,,30" classNames="fcls_data_widget,fcls_align_left,fcls_length_25qch" preferredSize="15qch,1qch" toolTip=" The Vendors Name " fieldTable="vendor" comment=" The Vendors Name " identifier="name_text" gridItemLocation="1,1,1,1"/>
+				<Label isDynamic="true" text="P.O. Number" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,2,1,1" fieldTable="" identifier="lb73"/>
+				<TextField dataType="Integer,,,," classNames="fcls_data_widget,fcls_align_left,fcls_length_10qch" location="19qch,2qch" preferredSize="12qch,1qch" toolTip=" The P.O. number assigned by the system" gridItemLocation="1,2,1,1" fieldTable="poaudit" comment=" The P.O. number assigned by the system" identifier="po_num"/>
+				<Label isDynamic="true" text="Line Number" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,3,1,1" fieldTable="" identifier="lb76"/>
+				<TextField dataType="SmallInt,,,," classNames="fcls_data_widget,fcls_align_left,fcls_length_10qch" location="54qch,2qch" preferredSize="7qch,1qch" toolTip=" The line number of the Purchase Order" gridItemLocation="1,3,1,1" fieldTable="poaudit" comment=" The line number of the Purchase Order" identifier="line_num"/>
+			</GridPanel>
+			<GroupBox title="Transaction Info" classNames="fcls_detail_gb_cnt" visible="true" verticalAlignment="Top" gridItemLocation="0,2,1,1" fieldTable="formonly" identifier="cntDetail2GroupBox">
+				<GridPanel classNames="fcls_detail_gb_cnt_sub,fcls_detail_cnt_sub,fcls_data_cnt,fcls_align_left" visible="true" verticalAlignment="Top" horizontalAlignment="Left" fieldTable="formonly" identifier="cntDetail2Sub">
+					<GridPanel.gridRowDefinitions>
+						<GridRowDefinition gridLengthValue=""/>
+						<GridRowDefinition gridLengthValue=""/>
+						<GridRowDefinition gridLengthValue=""/>
+						<GridRowDefinition gridLengthValue=""/>
+						<GridRowDefinition gridLengthValue=""/>
+					</GridPanel.gridRowDefinitions>
+					<GridPanel.gridColumnDefinitions>
+						<GridColumnDefinition gridLengthValue="" gridMinLength="10rem"/>
+						<GridColumnDefinition gridLengthValue=""/>
+						<GridColumnDefinition gridLengthValue="" gridMinLength="10rem"/>
+						<GridColumnDefinition gridLengthValue=""/>
+					</GridPanel.gridColumnDefinitions>
+					<Label isDynamic="true" text="Code" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="lb47"/>
+					<ComboBox dataType="Char,,,,2" classNames="fcls_data_widget,fcls_align_left,fcls_length_20qch" location="19qch,4qch" preferredSize="15qch,1qch" toolTip="Type of transaction AA=Add Line,GR=Goods Receipt,VO=voucher etc" gridItemLocation="1,0,1,1" fieldTable="poaudit" comment="Type of transaction AA=Add Line,GR=Goods Receipt,VO=voucher etc" identifier="tran_code"/>
+					<Label isDynamic="true" text="Number" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="2,0,1,1" fieldTable="" identifier="lb92"/>
+					<TextField dataType="Integer,,,," classNames="fcls_data_widget,fcls_align_left,fcls_length_10qch" location="54qch,4qch" preferredSize="12qch,1qch" toolTip=" The transaction number associated with this transaction" gridItemLocation="3,0,1,1" fieldTable="poaudit" comment=" The transaction number associated with this transaction" identifier="tran_num"/>
+					<Label isDynamic="true" text="Sequence No" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,1,1,1" fieldTable="formonly" identifier="lb46"/>
+					<TextField dataType="SmallInt,,,," classNames="fcls_data_widget,fcls_align_left,fcls_length_20qch" location="19qch,5qch" preferredSize="7qch,1qch" toolTip=" The sequence number of this transaction, within this line" gridItemLocation="1,1,1,1" fieldTable="poaudit" comment=" The sequence number of this transaction, within this line" identifier="seq_num"/>
+					<Label isDynamic="true" text="Entry Date" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,2,1,1" fieldTable="formonly" identifier="lb44"/>
+					<Calendar dataType="Date,,,," classNames="fcls_data_widget,fcls_align_left,fcls_length_10qch" location="19qch,6qch" preferredSize="11qch,1qch" toolTip=" The date this transaction occurred" gridItemLocation="1,2,1,1" fieldTable="poaudit" comment=" The date this transaction occurred" identifier="entry_date"/>
+					<Label isDynamic="true" text="Entry Person" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="2,2,1,1" fieldTable="" identifier="lb94"/>
+					<TextField dataType="Char,,,,8" classNames="fcls_data_widget,fcls_align_left,fcls_length_10qch" location="54qch,6qch" preferredSize="9qch,1qch" toolTip=" The person who initiated this transaction" gridItemLocation="3,2,1,1" fieldTable="poaudit" comment=" The person who initiated this transaction" identifier="entry_code"/>
+					<Label isDynamic="true" text="Originally Auth" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,3,1,1" fieldTable="" identifier="lb89"/>
+					<CheckBox toCase="Up" dataType="Char,,,,1" classNames="fcls_data_widget,fcls_align_left,fcls_length_01qch" location="19qch,7qch" preferredSize="2qch,1qch" toolTip=" Was this transaction originally authorised" gridItemLocation="1,3,1,1" fieldTable="poaudit" comment=" Was this transaction originally authorised" identifier="orig_auth_flag"/>
+					<CheckBox toCase="Up" dataType="Char,,,,1" classNames="fcls_data_widget,fcls_align_left" location="54qch,7qch" toolTip=" Is this transaction now authorised" gridItemLocation="3,3,1,1" fieldTable="poaudit" comment=" Is this transaction now authorised" identifier="now_auth_flag" title="Now Auth">
+						<CheckBox.checkedValue>
+							<StringLiteral stringValue="Y"/>
+						</CheckBox.checkedValue>
+						<CheckBox.uncheckedValue>
+							<StringLiteral stringValue="N"/>
+						</CheckBox.uncheckedValue>
+					</CheckBox>
+					<Label isDynamic="true" text="Description" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,4,1,1" fieldTable="" identifier="lb113"/>
+					<TextField dataType="Char,,,,40" classNames="fcls_data_widget,fcls_align_left,fcls_length_40qch" location="19qch,8qch" preferredSize="41qch,1qch" toolTip=" Any description associated with this transaction" gridItemLocation="1,4,3,1" fieldTable="poaudit" comment=" Any description associated with this transaction" identifier="desc_text"/>
+				</GridPanel>
+			</GroupBox>
+			<GroupBox title="Quantities" classNames="fcls_detail_gb_cnt" visible="true" gridItemLocation="0,3,1,1" fieldTable="formonly" identifier="cntDetail3GroupBox">
+				<GridPanel classNames="fcls_detail_gb_cnt_sub,fcls_detail_cnt_sub,fcls_data_cnt,fcls_align_left" visible="true" verticalAlignment="Top" horizontalAlignment="Left" fieldTable="formonly" identifier="cntDetail3Sub">
+					<GridPanel.gridRowDefinitions>
+						<GridRowDefinition gridLengthValue=""/>
+						<GridRowDefinition gridLengthValue=""/>
+					</GridPanel.gridRowDefinitions>
+					<GridPanel.gridColumnDefinitions>
+						<GridColumnDefinition gridLengthValue="" gridMinLength="10rem"/>
+						<GridColumnDefinition gridLengthValue=""/>
+						<GridColumnDefinition gridLengthValue="" gridMinLength="10rem"/>
+						<GridColumnDefinition gridLengthValue=""/>
+					</GridPanel.gridColumnDefinitions>
+					<Label isDynamic="true" text="Order" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="lb48"/>
+					<TextField dataType="Float,,,," classNames="fcls_data_widget,fcls_align_left,fcls_length_15qch" location="19qch,10qch" preferredSize="13qch,1qch" toolTip=" The order quantity associated with this transaction" gridItemLocation="1,0,1,1" fieldTable="poaudit" comment=" The order quantity associated with this transaction" identifier="order_qty"/>
+					<Label isDynamic="true" text="Received" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="2,0,1,1" fieldTable="" identifier="lb104"/>
+					<TextField dataType="Float,,,," classNames="fcls_data_widget,fcls_align_left,fcls_length_15qch" location="54qch,10qch" preferredSize="13qch,1qch" toolTip=" The goods receipt quantity associated with this transaction" gridItemLocation="3,0,1,1" fieldTable="poaudit" comment=" The goods receipt quantity associated with this transaction" identifier="received_qty"/>
+					<Label isDynamic="true" text="Voucher" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,1,1,1" fieldTable="formonly" identifier="lb49"/>
+					<TextField dataType="Float,,,," classNames="fcls_data_widget,fcls_align_left,fcls_length_15qch" location="19qch,11qch" preferredSize="13qch,1qch" toolTip=" The voucher quantity associated with this transaction" gridItemLocation="1,1,1,1" fieldTable="poaudit" comment=" The voucher quantity associated with this transaction" identifier="voucher_qty"/>
+				</GridPanel>
+			</GroupBox>
+			<GroupBox title="Amounts" classNames="fcls_detail_gb_cnt" visible="true" gridItemLocation="0,4,1,1" fieldTable="" identifier="cntDetail4GroupBox">
+				<GridPanel classNames="fcls_detail_gb_cnt_sub,fcls_detail_cnt_sub,fcls_data_cnt,fcls_align_left" visible="true" verticalAlignment="Top" horizontalAlignment="Left" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="cntDetail4Sub">
+					<GridPanel.gridRowDefinitions>
+						<GridRowDefinition gridLengthValue=""/>
+						<GridRowDefinition gridLengthValue=""/>
+						<GridRowDefinition gridLengthValue=""/>
+						<GridRowDefinition gridLengthValue=""/>
+					</GridPanel.gridRowDefinitions>
+					<GridPanel.gridColumnDefinitions>
+						<GridColumnDefinition gridLengthValue="" gridMinLength="10rem"/>
+						<GridColumnDefinition gridLengthValue=""/>
+						<GridColumnDefinition gridLengthValue="" gridMinLength="10rem"/>
+						<GridColumnDefinition gridLengthValue=""/>
+					</GridPanel.gridColumnDefinitions>
+					<Label isDynamic="true" text="Unit Cost" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,0,1,1" fieldTable="" identifier="lb115"/>
+					<TextField dataType="Decimal,,,4,16" classNames="fcls_data_widget,fcls_align_left,fcls_length_15qch" location="19qch,13qch" preferredSize="14qch,1qch" toolTip=" The unit cost amount associated with this transaction" gridItemLocation="1,0,1,1" fieldTable="poaudit" comment=" The unit cost amount associated with this transaction" identifier="unit_cost_amt"/>
+					<Label isDynamic="true" text="Extended Cost" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="2,0,1,1" fieldTable="" identifier="lb121"/>
+					<TextField dataType="Decimal,,,4,16" classNames="fcls_data_widget,fcls_align_left,fcls_length_15qch" location="54qch,13qch" preferredSize="14qch,1qch" toolTip=" The extended cost amount associated with this transaction" gridItemLocation="3,0,1,1" fieldTable="poaudit" comment=" The extended cost amount associated with this transaction" identifier="ext_cost_amt"/>
+					<Label isDynamic="true" text="Unit Tax" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,1,1,1" fieldTable="" identifier="lb116"/>
+					<TextField dataType="Decimal,,,4,16" classNames="fcls_data_widget,fcls_align_left,fcls_length_15qch" location="19qch,14qch" preferredSize="14qch,1qch" toolTip=" The unit tax amount associated with this transaction" gridItemLocation="1,1,1,1" fieldTable="poaudit" comment=" The unit tax amount associated with this transaction" identifier="unit_tax_amt"/>
+					<Label isDynamic="true" text="Extended Tax" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="2,1,1,1" fieldTable="" identifier="lb117"/>
+					<TextField dataType="Decimal,,,2,16" classNames="fcls_data_widget,fcls_align_left,fcls_length_15qch" location="54qch,14qch" preferredSize="14qch,1qch" toolTip=" The extended tax amount associated with this transaction" gridItemLocation="3,1,1,1" fieldTable="poaudit" comment=" The extended tax amount associated with this transaction" identifier="ext_tax_amt"/>
+					<Label isDynamic="true" text="Line Total" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,2,1,1" fieldTable="" identifier="lb120"/>
+					<TextField dataType="Decimal,,,2,16" classNames="fcls_data_widget,fcls_align_left,fcls_length_15qch" location="19qch,15qch" preferredSize="16qch,1qch" toolTip=" The line total amount associated with this transaction" gridItemLocation="1,2,1,1" fieldTable="poaudit" comment=" The line total amount associated with this transaction" identifier="line_total_amt"/>
+				</GridPanel>
+			</GroupBox>
+			<GroupBox title="GL Integration" classNames="fcls_detail_gb_cnt" visible="true" gridItemLocation="0,5,1,1" fieldTable="" identifier="cntDetail5GroupBox">
+				<GridPanel classNames="fcls_detail_gb_cnt_sub,fcls_detail_cnt_sub,fcls_data_cnt,fcls_align_left" visible="true" verticalAlignment="Top" horizontalAlignment="Left" fieldTable="" identifier="cntDetail5Sub">
+					<GridPanel.gridRowDefinitions>
+						<GridRowDefinition gridLengthValue=""/>
+						<GridRowDefinition gridLengthValue=""/>
+					</GridPanel.gridRowDefinitions>
+					<GridPanel.gridColumnDefinitions>
+						<GridColumnDefinition gridLengthValue="" gridMinLength="10rem"/>
+						<GridColumnDefinition gridLengthValue=""/>
+						<GridColumnDefinition gridLengthValue="" gridMinLength="10rem"/>
+						<GridColumnDefinition gridLengthValue=""/>
+					</GridPanel.gridColumnDefinitions>
+					<CheckBox dataType="Char,,,,1" classNames="fcls_data_widget,fcls_align_left" location="19qch,17qch" notNull="true" toolTip=" Has this transaction been posted to the GL" gridItemLocation="1,0,1,1" fieldTable="poaudit" comment=" Has this transaction been posted to the GL" identifier="posted_flag" title="Posted">
+						<CheckBox.defaultValue>
+							<StringLiteral stringValue="N"/>
+						</CheckBox.defaultValue>
+						<CheckBox.checkedValue>
+							<StringLiteral stringValue="Y"/>
+						</CheckBox.checkedValue>
+						<CheckBox.uncheckedValue>
+							<StringLiteral stringValue="N"/>
+						</CheckBox.uncheckedValue>
+					</CheckBox>
+					<Label isDynamic="true" text="Year" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="2,0,1,1" fieldTable="" identifier="lb71"/>
+					<ComboBox dataType="SmallInt,,,," classNames="fcls_data_widget,fcls_align_left,fcls_length_15qch" location="54qch,17qch" preferredSize="7qch,1qch" toolTip=" The fiscal year number associated with this transaction" gridItemLocation="3,0,1,1" fieldTable="poaudit" comment=" The fiscal year number associated with this transaction" identifier="year_num"/>
+					<Label isDynamic="true" text="Journal Number" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,1,1,1" fieldTable="" identifier="lb129"/>
+					<ComboBox dataType="Integer,,,," classNames="fcls_data_widget,fcls_align_left,fcls_length_15qch" location="15qch,18qch" preferredSize="20qch,1qch" toolTip=" If posted the journal number associated with this transaction" gridItemLocation="1,1,1,1" fieldTable="poaudit" comment=" If posted the journal number associated with this transaction" identifier="jour_num"/>
+					<Label isDynamic="true" text="Period" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="2,1,1,1" fieldTable="" identifier="lb124"/>
+					<ComboBox dataType="SmallInt,,,," classNames="fcls_data_widget,fcls_align_left,fcls_length_15qch" location="54qch,18qch" preferredSize="7qch,1qch" toolTip=" The fiscal period number associated with this transaction" gridItemLocation="3,1,1,1" fieldTable="poaudit" comment=" The fiscal period number associated with this transaction" identifier="period_num"/>
+				</GridPanel>
+			</GroupBox>
+			<GridPanel classNames="fcls_statusbar_cnt" visible="true" verticalAlignment="Top" gridItemLocation="0,6,1,1" fieldTable="formonly" identifier="cntStatusBar">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="100%"/>
+				</GridPanel.gridColumnDefinitions>
+				<Label isDynamic="true" text="" classNames="fcls_sblabel" visible="true" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="lbInfo1"/>
+				<Label isDynamic="true" text="" classNames="fcls_sblabel" visible="true" gridItemLocation="0,1,1,1" fieldTable="formonly" identifier="lbInfo2"/>
+			</GridPanel>
+		</GridPanel>
+	</form.rootContainer>
+	<form.screenRecords>
+		<ScreenRecord identifier="poaudit" fields="vend_code,po_num,line_num,tran_code,tran_num,seq_num,entry_date,entry_code,orig_auth_flag,now_auth_flag,order_qty,received_qty,voucher_qty,desc_text,unit_cost_amt,ext_cost_amt,unit_tax_amt,ext_tax_amt,line_total_amt,posted_flag,jour_num,year_num,period_num"/>
+		<ScreenRecord identifier="vendor" fields="name_text"/>
+		<ScreenRecord identifier="FormOnly"/>
+	</form.screenRecords>
+</form>
+

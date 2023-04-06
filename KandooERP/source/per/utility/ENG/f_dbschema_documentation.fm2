@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="UTF-8"?><form xmlns="http://namespaces.querix.com/2015/fglForms" title="f_dbschema_documentation">
+	<form.rootContainer>
+		<GridPanel classNames="fcls_rootContainer" fieldTable="" horizontalAlignment="Stretch" identifier="rootContainer" verticalAlignment="Top">
+			<GridPanel.gridRowDefinitions>
+				<GridRowDefinition gridLengthValue=""/>
+				<GridRowDefinition/>
+				<GridRowDefinition gridLengthValue="100%"/>
+				<GridRowDefinition/>
+			</GridPanel.gridRowDefinitions>
+			<GridPanel.gridColumnDefinitions>
+				<GridColumnDefinition gridLengthValue="100%"/>
+			</GridPanel.gridColumnDefinitions>
+			<GridPanel classNames="fcls_title_cnt" fieldTable="formonly" gridItemLocation="0,0,1,1" horizontalAlignment="Stretch" identifier="cntTitle" verticalAlignment="Top" visible="true">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue=""/>
+					<GridColumnDefinition gridLengthValue=""/>
+				</GridPanel.gridColumnDefinitions>
+				<Label classNames="fcls_title_lb" fieldTable="formonly" gridItemLocation="0,0,1,1" identifier="header_text" isDynamic="true" text="Data Management for tables and columns documentation" visible="true"/>
+				<Label classNames="fcls_title_lb" fieldTable="" gridItemLocation="1,0,1,1" identifier="lbFormName" isDynamic="true" text="f_dbschema_documentation" visible="true"/>
+			</GridPanel>
+			<GridPanel gridItemLocation="0,1,1,1" identifier="TableDoc" visible="true">
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridMinLength="10rem"/>
+					<GridColumnDefinition gridLengthValue="100%"/>
+				</GridPanel.gridColumnDefinitions>
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue="29"/>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue="351"/>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition/>
+					<GridRowDefinition gridLengthValue="13" gridMinLength="44"/>
+				</GridPanel.gridRowDefinitions>
+				<Label classNames="fcls_columnlabel_rev_cell,fcls_align_hstretch" gridItemLocation="1,0,1,1" horizontalAlignment="Center" identifier="lb13" isDynamic="true" text="Table Information" visible="true"/>
+				<Label gridItemLocation="0,1,1,1" identifier="lb4" isDynamic="true" text="Table Name" visible="true"/>
+				<TextField fieldTable="table_documentation" gridItemLocation="1,1,1,1" identifier="tabname" visible="true"/>
+				<Label gridItemLocation="0,4,1,1" identifier="lb15" isDynamic="true" text="Table used in BM" visible="true"/>
+				<ListBox editable="false" enable="true" enableMultiSelection="true" gridItemLocation="1,4,1,1" identifier="usage_bmlist" visible="true" horizontalAlignment="Left" preferredSize="20rem,">
+					<ListBoxItem text="ALL - All Business Modules">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="ALL"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					<ListBoxItem text="AP - Account Payable">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="AP"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					<ListBoxItem text="AR - Account Receivable">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="AR"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					<ListBoxItem text="CM">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="CM"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					<ListBoxItem text="EO - Order Management">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="EO"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					<ListBoxItem text="FA - Fixed Assets">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="FA"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					<ListBoxItem text="GL - General Ledger">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="GL"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					<ListBoxItem text="GW">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="GW"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					<ListBoxItem text="IN - Inventory Management">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="IN"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					<ListBoxItem text="JM - Job Management">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="JM"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					<ListBoxItem text="LC">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="LC"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					<ListBoxItem text="MN">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="MN"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					<ListBoxItem text="PU - Purchase Orders Mngmt">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="PU"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					<ListBoxItem text="QE - Quotes Management">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="QE"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					<ListBoxItem text="RE">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="RE"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					<ListBoxItem text="SR - Service Request">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="SR"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					<ListBoxItem text="SS - Subscription">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="SS"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					<ListBoxItem text="UTILITY - Setup Management">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="UT"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					<ListBoxItem text="WO">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="WO"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					<ListBoxItem text="Setup Group 1">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="SU1"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					<ListBoxItem text="Setup Group 2">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="SU2"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					<ListBoxItem text="Setup Group 3">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="SU3"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+				</ListBox>
+				<Label gridItemLocation="0,6,1,1" identifier="lb10" isDynamic="true" text="Documentation" visible="true"/>
+				<TextField enable="true" fieldTable="table_documentation" gridItemLocation="1,6,1,1" identifier="documentation" visible="true"/>
+				<Label gridItemLocation="0,7,1,1" identifier="lb12" isDynamic="true" text="Last modification" visible="true"/>
+				<TextField fieldTable="table_documentation" gridItemLocation="1,7,1,1" identifier="mtime" visible="true"/>
+				<Label gridItemLocation="0,8,1,1" identifier="lb14" isDynamic="true" text="Rows Number" visible="true"/>
+				<TextField dataType="Integer,,,," fieldTable="formonly" gridItemLocation="1,8,1,1" identifier="nrows" invisibleValue="false" noEntry="true" textAlignment="Left,Default" visible="true"/>
+				<Label gridItemLocation="0,2,1,1" identifier="lb8" isDynamic="true" text="language Code" visible="true"/>
+				<TextField enable="true" fieldTable="table_documentation" gridItemLocation="1,2,1,1" identifier="language_code" visible="true">
+					<TextField.displaymodes>
+						<DisplayMode/>
+					</TextField.displaymodes>
+				</TextField>
+				<ComboBox editable="true" fieldTable="table_documentation" gridItemLocation="1,5,1,1" identifier="tabtype" toCase="Up" visible="true">
+					<ComboBoxItem text="GENSETUP">
+						<ComboBoxItem.value>
+							<StringLiteral stringValue="GENSETUP"/>
+						</ComboBoxItem.value>
+					</ComboBoxItem>
+					<ComboBoxItem text="CMPYSETUP">
+						<ComboBoxItem.value>
+							<StringLiteral stringValue="CMPYSETUP"/>
+						</ComboBoxItem.value>
+					</ComboBoxItem>
+					<ComboBoxItem text="BMPARAM">
+						<ComboBoxItem.value>
+							<StringLiteral stringValue="BMPARAM"/>
+						</ComboBoxItem.value>
+					</ComboBoxItem>
+					<ComboBoxItem text="BMDATA">
+						<ComboBoxItem.value>
+							<StringLiteral stringValue="BMDATA"/>
+						</ComboBoxItem.value>
+					</ComboBoxItem>
+				</ComboBox>
+				<Label gridItemLocation="0,5,1,1" identifier="lb6" isDynamic="true" text="Table Type" visible="true"/>
+				
+			</GridPanel>
+			
+				<Table gridItemLocation="0,2,1,1" horizontalAlignment="Stretch" identifier="sr_columndoc" minSize="60rem,30rem" verticalAlignment="Stretch" visible="true">
+					<TableColumn identifier="tc_colname" resizable="true" text="Column Name" visible="true">
+						<TextField fieldTable="column_documentation" identifier="colname" visible="true"/>
+						<TableColumn.columnLength>
+							<GridLength gridLengthValue="15%" gridMaxLength="20rem" gridMinLength="10rem"/>
+						</TableColumn.columnLength>
+					</TableColumn>
+					
+					<TableColumn identifier="tc_data_type" resizable="true" text="Data Type" visible="true">
+						<TextField dataType="Char,,,,16" fieldTable="formonly" identifier="data_type" noEntry="true" visible="true"/>
+						<TableColumn.columnLength>
+							<GridLength gridLengthValue="15%" gridMaxLength="20rem" gridMinLength="10rem"/>
+						</TableColumn.columnLength>
+					</TableColumn>
+					
+					<TableColumn identifier="tc_documentation" resizable="true" text="Column Documentation" visible="true">
+						<TextField fieldTable="column_documentation" identifier="col_documentation" visible="true"/>
+						<TableColumn.columnLength>
+							<GridLength gridLengthValue="55%" gridMinLength="30rem"/>
+						</TableColumn.columnLength>
+					</TableColumn>
+					
+					<TableColumn identifier="tc_mtime" resizable="true" text="Last modification" visible="true">
+						<TextField fieldTable="column_documentation" identifier="mtime" visible="true"/>
+						<TableColumn.columnLength>
+							<GridLength gridLengthValue="15%" gridMaxLength="15rem" gridMinLength="10rem"/>
+						</TableColumn.columnLength>
+					</TableColumn>
+				</Table>
+
+			<GridPanel classNames="fcls_statusbar_cnt" fieldTable="formonly" gridItemLocation="0,3,1,1" identifier="cntStatusBar" verticalAlignment="Top" visible="true">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="100%"/>
+				</GridPanel.gridColumnDefinitions>
+				<Label classNames="fcls_sblabel" fieldTable="formonly" gridItemLocation="0,0,1,1" identifier="lbInfo1" isDynamic="true" text="" visible="true"/>
+				<Label classNames="fcls_sblabel" fieldTable="formonly" gridItemLocation="0,1,1,1" identifier="lbInfo2" isDynamic="true" text="" visible="true"/>
+			</GridPanel>
+		</GridPanel>
+	</form.rootContainer>
+	<form.screenRecords> 
+		<ScreenRecord elements="4" fields="column_documentation.colname,formonly.data_type,column_documentation.col_documentation,column_documentation.mtime" identifier="sr_columndoc"/>
+		<ScreenRecord fields="table_documentation.tabname,table_documentation.tabtype,table_documentation.language_code,table_documentation.documentation,table_documentation.mtime" identifier="table_documentation"/>
+		<ScreenRecord fields="column_documentation.colname,column_documentation.col_documentation,column_documentation.mtime" identifier="column_documentation"/>
+		<ScreenRecord fields="nrows" identifier="FormOnly"/>
+	</form.screenRecords>
+</form>

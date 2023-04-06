@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<fglBuildTarget xmlns="http://namespaces.querix.com/lyciaide/target" name="K000_All_K_SS-Subscription-Management-Forms" type="fgl-program">
+
+  <libraries>
+    <library name="lib_tool_common" dynamic="false" location=""/>
+    <library name="lib_tool_K_SS_new" dynamic="false" location=""/>
+    <library name="lib_tool_K_SS_db" dynamic="false" location=""/>
+       </libraries>
+
+  <sources type="fgl">
+    <file location="4gl/ss/K000_All_K_SS-Subscription-Management-Forms.4gl"/>
+  </sources>
+
+  <sources type="form">
+    <file location="per/ss/ENG/K140.fm2"/>
+    <file location="per/ss/ENG/K152.fm2"/>
+    <file location="per/ss/ENG/K127.fm2"/>
+    <file location="per/ss/ENG/K139.fm2"/>
+    <file location="per/ss/ENG/K144.fm2"/>
+    <file location="per/ss/ENG/K156.fm2"/>
+    <file location="per/ss/ENG/K132.fm2"/>
+    <file location="per/ss/ENG/K148.fm2"/>
+    <file location="per/ss/ENG/K136.fm2"/>
+    <file location="per/ss/ENG/K151.fm2"/>
+    <file location="per/ss/ENG/K141.fm2"/>
+    <file location="per/ss/ENG/K131.fm2"/>
+    <file location="per/ss/ENG/K155.fm2"/>
+    <file location="per/ss/ENG/K145.fm2"/>
+    <file location="per/ss/ENG/K135.fm2"/>
+    <file location="per/ss/ENG/K111.fm2"/>
+    <file location="per/ss/ENG/K159.fm2"/>
+    <file location="per/ss/ENG/K160.fm2"/>
+    <file location="per/ss/ENG/K149.fm2"/>
+    <file location="per/ss/ENG/K150.fm2"/>
+    <file location="per/ss/ENG/K129.fm2"/>
+    <file location="per/ss/ENG/K130.fm2"/>
+    <file location="per/ss/ENG/K154.fm2"/>
+    <file location="per/ss/ENG/K142.fm2"/>
+    <file location="per/ss/ENG/K134.fm2"/>
+    <file location="per/ss/ENG/K146.fm2"/>
+    <file location="per/ss/ENG/K158.fm2"/>
+    <file location="per/ss/ENG/K000_All_K_SS-Subscription-Management-Forms.fm2"/>
+    <file location="per/ss/ENG/K138.fm2"/>
+    <file location="per/ss/ENG/K126.fm2"/>
+    <file location="per/ss/ENG/K128.fm2"/>
+    <file location="per/ss/ENG/K153.fm2"/>
+    <file location="per/ss/ENG/K143.fm2"/>
+    <file location="per/ss/ENG/K157.fm2"/>
+    <file location="per/ss/ENG/K133.fm2"/>
+    <file location="per/ss/ENG/K147.fm2"/>
+    <file location="per/ss/ENG/K137.fm2"/>
+  </sources>
+
+  <mediaFiles>
+    <file client="true" location="K000_All_K_SS-Subscription-Management-Forms.css" type="other"/>
+    <file client="true" location="K000_All_K_SS-Subscription-Management-Forms.qxtheme" type="gui-theme-file"/>
+  </mediaFiles>
+
+  <buildConfiguration name="development">
+    <additions>
+    </additions>
+    <exclusions>
+    </exclusions>
+  </buildConfiguration>
+
+</fglBuildTarget>

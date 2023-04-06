@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?><form xmlns="http://namespaces.querix.com/2015/fglForms">
+	<form.rootContainer>
+		<GridPanel classNames="fcls_rootContainer" fieldTable="" horizontalAlignment="Stretch" identifier="rootContainer" verticalAlignment="Stretch">
+			<GridPanel.gridRowDefinitions>
+				<GridRowDefinition gridLengthValue=""/>
+				<GridRowDefinition gridLengthValue=""/>
+				<GridRowDefinition gridLengthValue="100%"/>
+				<GridRowDefinition gridLengthValue=""/>
+			</GridPanel.gridRowDefinitions>
+			<GridPanel.gridColumnDefinitions>
+				<GridColumnDefinition gridLengthValue="100%"/>
+			</GridPanel.gridColumnDefinitions>
+			<GridPanel classNames="fcls_title_cnt" fieldTable="formonly" gridItemLocation="0,0,1,1" identifier="cntTitle" verticalAlignment="Top" visible="true">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="100%"/>
+					<GridColumnDefinition gridLengthValue=""/>
+				</GridPanel.gridColumnDefinitions>
+				<Label classNames="fcls_title_lb" fieldTable="formonly" gridItemLocation="0,0,1,1" identifier="header_text" isDynamic="true" text="Statistics Interval Information" visible="true"/>
+				<Label classNames="fcls_title_lb" fieldTable="" gridItemLocation="1,0,1,1" identifier="lbFormName" isDynamic="true" text="U215" visible="true"/>
+			</GridPanel>
+			<GridPanel classNames="fcls_detail_cnt,fcls_data_cnt,fcls_align_left" fieldTable="formonly" gridItemLocation="0,1,1,1" horizontalAlignment="Left" identifier="cntDetail1" verticalAlignment="Top" visible="true">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="" gridMinLength="10rem"/>
+					<GridColumnDefinition gridLengthValue=""/>
+					<GridColumnDefinition gridLengthValue=""/>
+				</GridPanel.gridColumnDefinitions>
+				<TextField comment=" Enter year interval number " dataType="SmallInt,,,," fieldTable="statint" gridItemLocation="1,0,1,1" identifier="year_num" preferredSize="5qch,1qch" toolTip=" Enter year interval number " classNames="fcls_length_05qch,fcls_data_widget,fcls_align_left" textAlignment="Left,Default"/>
+				<Label classNames="fcls_fieldlabel,fcls_align_left" fieldTable="" gridItemLocation="0,0,1,1" identifier="lb51" isDynamic="true" text="Year" visible="true"/>
+				<GridPanel visible="true" identifier="c2" gridItemLocation="2,0,1,1" horizontalAlignment="Left" verticalAlignment="Top" minSize=",1rem">
+					<GridPanel.gridColumnDefinitions>
+						<GridColumnDefinition gridLengthValue="3rem"/>
+						<GridColumnDefinition gridLengthValue="3rem"/>
+					</GridPanel.gridColumnDefinitions>
+					<GridPanel.gridRowDefinitions>
+						<GridRowDefinition gridLengthValue="50%"/>
+						<GridRowDefinition gridLengthValue="50%"/>
+					</GridPanel.gridRowDefinitions>
+					<Button text="+" visible="true" identifier="btYearUp" gridItemLocation="0,0,1,1" preferredSize="2rem,0.5rem" minSize="2rem,1rem" maxSize="2rem,0.5rem">
+						<Button.onInvoke>
+							<ActionEventHandler actionName="YEAR+1"/>
+						</Button.onInvoke>
+					</Button>
+					<Button visible="true" identifier="btSetYear" gridItemLocation="1,0,1,2" classNames="fcls_button_edit">
+						<Button.onInvoke>
+							<ActionEventHandler actionName="SET YEAR"/>
+						</Button.onInvoke>
+					</Button>
+					<Button text="-" visible="true" identifier="btYearDown" gridItemLocation="0,1,1,1" preferredSize="2rem,0.5rem" minSize="2rem,1rem" maxSize="2rem,0.5rem">
+						<Button.onInvoke>
+							<ActionEventHandler actionName="YEAR-1"/>
+						</Button.onInvoke>
+					</Button>
+				</GridPanel>
+			</GridPanel>
+			<Table fieldTable="" gridItemLocation="0,2,1,1" identifier="sr_statint" preferredSize="74qch,13qch" rowCount="13">
+				<TableColumn fieldTable="" identifier="tc_scroll_flag">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="2rem" gridMaxLength="2rem" gridMinLength="2rem"/>
+					</TableColumn.columnLength>
+					<CheckBox dataType="Char,,,," fieldTable="formonly" identifier="scroll_flag">
+						<CheckBox.checkedValue>
+							<StringLiteral stringValue="*"/>
+						</CheckBox.checkedValue>
+						<CheckBox.uncheckedValue>
+							<NullLiteral/>
+						</CheckBox.uncheckedValue>
+					</CheckBox>
+				</TableColumn>
+				<TableColumn fieldTable="" identifier="tc_type_code" text="Type">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="5rem" gridMaxLength="5rem" gridMinLength="5rem"/>
+					</TableColumn.columnLength>
+					<TextField comment=" Type of statistic interval " dataType="Char,,,,3" fieldTable="statint" identifier="type_code" toCase="Up" toolTip=" Type of statistic interval "/>
+				</TableColumn>
+				<TableColumn fieldTable="" identifier="tc_int_num" text="Interval">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="5rem" gridMaxLength="5rem" gridMinLength="5rem"/>
+					</TableColumn.columnLength>
+					<TextField comment=" Sequential number of interval for this year " dataType="SmallInt,,,," fieldTable="statint" identifier="int_num" toolTip=" Sequential number of interval for this year "/>
+				</TableColumn>
+				<TableColumn fieldTable="" identifier="tc_int_text" text="Reference">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="20rem" gridMaxLength="20rem" gridMinLength="20rem"/>
+					</TableColumn.columnLength>
+					<TextField comment=" Reference text used to identify an interval " dataType="Char,,,,10" fieldTable="statint" identifier="int_text" toolTip=" Reference text used to identify an interval "/>
+				</TableColumn>
+				<TableColumn fieldTable="" identifier="tc_start_date" text="Start Date">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="7em" gridMaxLength="10rem" gridMinLength="5rem"/>
+					</TableColumn.columnLength>
+					<TextField comment=" Starting date of interval " dataType="Date,,,," fieldTable="statint" identifier="start_date" toolTip=" Starting date of interval "/>
+				</TableColumn>
+				<TableColumn fieldTable="" identifier="tc_end_date" text="End Date">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="7rem" gridMaxLength="10rem" gridMinLength="5rem"/>
+					</TableColumn.columnLength>
+					<TextField comment=" Ending date of interval " dataType="Date,,,," fieldTable="statint" identifier="end_date" toolTip=" Ending date of interval "/>
+				</TableColumn>
+				<TableColumn fieldTable="" identifier="tc_days_num" text="No. Days">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="5rem" gridMaxLength="5rem" gridMinLength="5rem"/>
+					</TableColumn.columnLength>
+					<TextField dataType="Char,,,," fieldTable="formonly" identifier="days_num" noEntry="true"/>
+				</TableColumn>
+				<TableColumn fieldTable="" identifier="tc_salesdays_num" text="Sale Days">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="5rem" gridMaxLength="5rem" gridMinLength="5rem"/>
+					</TableColumn.columnLength>
+					<TextField comment="Number of selling days within interval " dataType="SmallInt,,,," fieldTable="statint" identifier="salesdays_num" toolTip="Number of selling days within interval "/>
+				</TableColumn>
+			</Table>
+			<GridPanel classNames="fcls_statusbar_cnt" fieldTable="formonly" gridItemLocation="0,3,1,1" identifier="cntStatusBar" verticalAlignment="Top" visible="true">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="100%"/>
+				</GridPanel.gridColumnDefinitions>
+				<Label classNames="fcls_sblabel" fieldTable="formonly" gridItemLocation="0,0,1,1" identifier="lbInfo1" isDynamic="true" text="" visible="true"/>
+				<Label classNames="fcls_sblabel" fieldTable="formonly" gridItemLocation="0,1,1,1" identifier="lbInfo2" isDynamic="true" text="" visible="true"/>
+			</GridPanel>
+		</GridPanel>
+	</form.rootContainer>
+	<form.screenRecords>
+		<ScreenRecord elements="13" fields="formonly.scroll_flag,statint.type_code,statint.int_num,statint.int_text,statint.start_date,statint.end_date,formonly.days_num,statint.salesdays_num" identifier="sr_statint"/>
+		<ScreenRecord fields="scroll_flag,days_num" identifier="formonly"/>
+		<ScreenRecord fields="year_num,type_code,int_num,int_text,start_date,end_date,salesdays_num" identifier="statint"/>
+	</form.screenRecords>
+</form>

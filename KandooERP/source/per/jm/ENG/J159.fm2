@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form xmlns="http://namespaces.querix.com/2015/fglForms">
+	<form.rootContainer>
+		<GridPanel classNames="fcls_rootContainer" verticalAlignment="Stretch" horizontalAlignment="Stretch" fieldTable="" identifier="rootContainer">
+			<GridPanel.gridRowDefinitions>
+				<GridRowDefinition gridLengthValue=""/>
+				<GridRowDefinition gridLengthValue=""/>
+				<GridRowDefinition gridLengthValue="100%"/>
+				<GridRowDefinition gridLengthValue=""/>
+			</GridPanel.gridRowDefinitions>
+			<GridPanel.gridColumnDefinitions>
+				<GridColumnDefinition gridLengthValue="100%"/>
+			</GridPanel.gridColumnDefinitions>
+			<GridPanel classNames="fcls_title_cnt" visible="true" verticalAlignment="Top" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="cntTitle">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="100%"/>
+					<GridColumnDefinition gridLengthValue=""/>
+				</GridPanel.gridColumnDefinitions>
+				<Label isDynamic="true" text="Scan Resource Billing" classNames="fcls_title_lb" visible="true" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="header_text"/>
+				<Label isDynamic="true" text="J159" classNames="fcls_title_lb" visible="true" gridItemLocation="1,0,1,1" fieldTable="" identifier="lbFormName"/>
+			</GridPanel>
+			<GridPanel classNames="fcls_detail_cnt,fcls_data_cnt" visible="true" verticalAlignment="Top" horizontalAlignment="Left" gridItemLocation="0,1,1,1" fieldTable="formonly" identifier="cntDetail1">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="" gridMinLength="10rem"/>
+					<GridColumnDefinition gridLengthValue=""/>
+					<GridColumnDefinition gridLengthValue=""/>
+				</GridPanel.gridColumnDefinitions>
+				<TextField toCase="Up" dataType="Char,,,,8" preferredSize="13qch,1qch" toolTip="Enter required Job Code (W)" comment="Enter required Job Code (W)" fieldTable="resbill" identifier="job_code" gridItemLocation="1,0,1,1" classNames="fcls_data_widget,fcls_length_05qch"/>
+				<TextField dataType="Char,,,,30" preferredSize="31qch,1qch" fieldTable="job" identifier="title_text" gridItemLocation="2,0,1,1" classNames="fcls_data_widget,fcls_length_30qch"/>
+				<TextField toCase="Up" dataType="Char,,,,8" preferredSize="9qch,1qch" toolTip=" Enter required Activity Code (W)" comment=" Enter required Activity Code (W)" fieldTable="resbill" identifier="activity_code" gridItemLocation="1,1,1,1" classNames="fcls_data_widget,fcls_length_05qch"/>
+				<TextField dataType="Char,,,,30" preferredSize="31qch,1qch" fieldTable="activity" identifier="title_text" gridItemLocation="2,1,1,1" classNames="fcls_data_widget,fcls_length_30qch"/>
+				<TextField dataType="Integer,,,," preferredSize="6qch,1qch" toolTip=" Enter required Variation Number (W)" comment=" Enter required Variation Number (W)" fieldTable="resbill" identifier="var_code" gridItemLocation="1,2,1,1" classNames="fcls_data_widget,fcls_length_05qch"/>
+				<Label isDynamic="true" text="Customer Code" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,3,1,1" fieldTable="" identifier="lb67"/>
+				<TextField dataType="Char,,,,8" preferredSize="9qch,1qch" fieldTable="customer" identifier="cust_code" gridItemLocation="1,3,1,1" classNames="fcls_data_widget,fcls_length_05qch"/>
+				<TextField dataType="Char,,,,30" preferredSize="31qch,1qch" fieldTable="customer" identifier="name_text" gridItemLocation="2,3,1,1" classNames="fcls_data_widget,fcls_length_30qch"/>
+				<Label isDynamic="true" text="Job Code" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,0,1,1" fieldTable="" identifier="lb51"/>
+				<Label isDynamic="true" text="Activity" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,1,1,1" fieldTable="" identifier="lb52"/>
+				<Label isDynamic="true" text="Var&apos;n" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,2,1,1" fieldTable="" identifier="lb66"/>
+			</GridPanel>
+			<Table rowCount="8" preferredSize="74qch,8qch" fieldTable="" identifier="sr_resbill" gridItemLocation="0,2,1,1">
+				<TableColumn fieldTable="" identifier="tc_seq_num" text="Seq">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="5.4%" gridMaxLength="5rem"/>
+					</TableColumn.columnLength>
+					<TextField dataType="Integer,,,," toolTip=" The sequence of the transaction" comment=" The sequence of the transaction" fieldTable="resbill" identifier="seq_num"/>
+				</TableColumn>
+				<TableColumn fieldTable="" identifier="tc_tran_date" text="Date">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="14.9%" gridMaxLength="10rem"/>
+					</TableColumn.columnLength>
+					<Calendar format="dd/mm/yyyy" dataType="Date,,,," toolTip=" The date the transaction was taken" comment=" The date the transaction was taken" fieldTable="resbill" identifier="tran_date"/>
+				</TableColumn>
+				<TableColumn fieldTable="" identifier="tc_tran_type" text="Transaction">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="2.7%" gridMaxLength="5rem"/>
+					</TableColumn.columnLength>
+					<TextField noEntry="true" dataType="Char,,,," fieldTable="formonly" identifier="tran_type"/>
+				</TableColumn>
+				<TableColumn fieldTable="" identifier="tc_inv_num" text="Invoice">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="12.2%" gridMaxLength="10rem"/>
+					</TableColumn.columnLength>
+					<TextField dataType="Integer,,,," toolTip=" The unique number that identifies the transaction " comment=" The unique number that identifies the transaction " fieldTable="resbill" identifier="inv_num"/>
+				</TableColumn>
+				<TableColumn fieldTable="" identifier="tc_desc_text" text="Description">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="50.0%" gridMaxLength="50rem"/>
+					</TableColumn.columnLength>
+					<TextField dataType="Char,,,,40" toolTip=" The description attached to the transaction" comment=" The description attached to the transaction" fieldTable="resbill" identifier="desc_text"/>
+				</TableColumn>
+				<TableColumn fieldTable="" identifier="tc_apply_amt" text="Charge Amt">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="14.9%" gridMaxLength="10rem"/>
+					</TableColumn.columnLength>
+					<TextField dataType="Decimal,,,2,16" toolTip=" The amount of the transaction " comment=" The amount of the transaction " fieldTable="resbill" identifier="apply_amt"/>
+				</TableColumn>
+			</Table>
+			<GridPanel classNames="fcls_statusbar_cnt" visible="true" verticalAlignment="Top" gridItemLocation="0,3,1,1" fieldTable="formonly" identifier="cntStatusBar">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="100%"/>
+				</GridPanel.gridColumnDefinitions>
+				<Label isDynamic="true" text="" classNames="fcls_sblabel" visible="true" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="lbInfo1"/>
+				<Label isDynamic="true" text="" classNames="fcls_sblabel" visible="true" gridItemLocation="0,1,1,1" fieldTable="formonly" identifier="lbInfo2"/>
+			</GridPanel>
+		</GridPanel>
+	</form.rootContainer>
+	<form.screenRecords>
+		<ScreenRecord identifier="sr_resbill" fields="resbill.seq_num,resbill.tran_date,formonly.tran_type,resbill.inv_num,resbill.desc_text,resbill.apply_amt"/>
+		<ScreenRecord identifier="activity" fields="activity.title_text"/>
+		<ScreenRecord identifier="customer" fields="customer.cust_code,customer.name_text"/>
+		<ScreenRecord identifier="formonly" fields="formonly.tran_type"/>
+		<ScreenRecord identifier="job" fields="job.title_text"/>
+		<ScreenRecord identifier="resbill" fields="resbill.job_code,resbill.var_code,resbill.activity_code,resbill.seq_num,resbill.tran_date,resbill.inv_num,resbill.desc_text,resbill.apply_amt"/>
+	</form.screenRecords>
+</form>
+

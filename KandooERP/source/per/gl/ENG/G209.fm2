@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form xmlns="http://namespaces.querix.com/2015/fglForms">
+	<form.rootContainer>
+		<GridPanel classNames="fcls_rootContainer" verticalAlignment="Stretch" horizontalAlignment="Stretch" fieldTable="" identifier="rootContainer">
+			<GridPanel.gridRowDefinitions>
+				<GridRowDefinition>
+					<GridRowDefinition.gridLength>
+						<GridLength gridLengthValue=""/>
+					</GridRowDefinition.gridLength>
+				</GridRowDefinition>
+				<GridRowDefinition>
+					<GridRowDefinition.gridLength>
+						<GridLength gridLengthValue=""/>
+					</GridRowDefinition.gridLength>
+				</GridRowDefinition>
+				<GridRowDefinition>
+					<GridRowDefinition.gridLength>
+						<GridLength gridLengthValue="100%"/>
+					</GridRowDefinition.gridLength>
+				</GridRowDefinition>
+				<GridRowDefinition>
+					<GridRowDefinition.gridLength>
+						<GridLength gridLengthValue=""/>
+					</GridRowDefinition.gridLength>
+				</GridRowDefinition>
+			</GridPanel.gridRowDefinitions>
+			<GridPanel.gridColumnDefinitions>
+				<GridColumnDefinition>
+					<GridColumnDefinition.gridLength>
+						<GridLength gridLengthValue="100%"/>
+					</GridColumnDefinition.gridLength>
+				</GridColumnDefinition>
+			</GridPanel.gridColumnDefinitions>
+			<GridPanel classNames="fcls_title_cnt" visible="true" verticalAlignment="Top" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="cntTitle">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition>
+						<GridRowDefinition.gridLength>
+							<GridLength gridLengthValue=""/>
+						</GridRowDefinition.gridLength>
+					</GridRowDefinition>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition>
+						<GridColumnDefinition.gridLength>
+							<GridLength gridLengthValue="100%"/>
+						</GridColumnDefinition.gridLength>
+					</GridColumnDefinition>
+					<GridColumnDefinition>
+						<GridColumnDefinition.gridLength>
+							<GridLength gridLengthValue=""/>
+						</GridColumnDefinition.gridLength>
+					</GridColumnDefinition>
+				</GridPanel.gridColumnDefinitions>
+				<Label isDynamic="true" text="GL Summary Segment Definition" classNames="fcls_title_lb" visible="true" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="header_text"/>
+				<Label isDynamic="true" text="G209" classNames="fcls_title_lb" visible="true" gridItemLocation="1,0,1,1" fieldTable="" identifier="lbFormName"/>
+			</GridPanel>
+			<GridPanel classNames="fcls_detail_cnt,fcls_data_cnt,,fcls_align_hstretch" visible="true" verticalAlignment="Top" horizontalAlignment="Left" gridItemLocation="0,1,1,1" fieldTable="formonly" identifier="cntDetail1">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition>
+						<GridRowDefinition.gridLength>
+							<GridLength gridLengthValue=""/>
+						</GridRowDefinition.gridLength>
+					</GridRowDefinition>
+					<GridRowDefinition>
+						<GridRowDefinition.gridLength>
+							<GridLength gridLengthValue=""/>
+						</GridRowDefinition.gridLength>
+					</GridRowDefinition>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition>
+						<GridColumnDefinition.gridLength>
+							<GridLength gridLengthValue="" gridMinLength="10rem"/>
+						</GridColumnDefinition.gridLength>
+					</GridColumnDefinition>
+					<GridColumnDefinition>
+						<GridColumnDefinition.gridLength>
+							<GridLength gridLengthValue=""/>
+						</GridColumnDefinition.gridLength>
+					</GridColumnDefinition>
+					<GridColumnDefinition>
+						<GridColumnDefinition.gridLength>
+							<GridLength gridLengthValue=""/>
+						</GridColumnDefinition.gridLength>
+					</GridColumnDefinition>
+				</GridPanel.gridColumnDefinitions>
+				<TextField dataType="SmallInt,,,," classNames="fcls_data_widget,fcls_align_left,fcls_length_10qch" location="16qch,2qch" preferredSize="3qch,1qch" toolTip=" Starting position of Division Segment" gridItemLocation="1,0,1,1" fieldTable="glsumdiv" comment=" Starting position of Division Segment" identifier="start_num"/>
+				<TextField noEntry="true" dataType="Char,,,," classNames="fcls_data_widget,fcls_align_left,fcls_length_20qch" location="21qch,2qch" preferredSize="22qch,1qch" gridItemLocation="2,0,1,1" fieldTable="formonly" identifier="div_desc_text"/>
+				<ComboBox dataType="Char,,,,1" classNames="fcls_data_widget,fcls_align_left,fcls_length_10qch" location="57qch,2qch" preferredSize="10qch,1qch" toolTip=" Reporting Level - 1 = Detailed, 2 = Detailed and Summary " gridItemLocation="1,1,1,1" fieldTable="glsumdiv" comment=" Reporting Level - 1 = Detailed, 2 = Detailed and Summary " identifier="report_level_ind"/>
+				<Label isDynamic="true" text="Segment Start" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,0,1,1" fieldTable="" identifier="lb51"/>
+				<Label isDynamic="true" text="Print Level" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,1,1,1" fieldTable="" identifier="lb52"/>
+			</GridPanel>
+			<Table rowCount="9" location="0qch,4qch" preferredSize="67qch,12qch" gridItemLocation="0,2,1,1" fieldTable="" identifier="sr_glsumdiv">
+				<TableColumn text="Col" fieldTable="" identifier="c">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="2rem"/>
+					</TableColumn.columnLength>
+					<TextField dataType="SmallInt,,,," notNull="true" toolTip=" Column number in which these divisions will print" fieldTable="formonly" comment=" Column number in which these divisions will print" identifier="col_num"/>
+				</TableColumn>
+				<TableColumn text="Description" fieldTable="" identifier="d000">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="20rem"/>
+					</TableColumn.columnLength>
+					<TextField dataType="Char,,,,10" toolTip="Column Description for the report" fieldTable="glsumdiv" comment="Column Description for the report" identifier="desc_text"/>
+				</TableColumn>
+				<TableColumn text="Seg. 1" fieldTable="" identifier="f001">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="5rem"/>
+					</TableColumn.columnLength>
+					<TextField dataType="Char,,,,4" toolTip=" First of nine divisions that may print in this column (W)" fieldTable="glsumdiv" comment=" First of nine divisions that may print in this column (W)" identifier="div1_code"/>
+				</TableColumn>
+				<TableColumn text="Seg. 2" fieldTable="" identifier="f002">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="5rem"/>
+					</TableColumn.columnLength>
+					<TextField dataType="Char,,,,4" toolTip=" Second of nine divisions that may print in this column (W)" fieldTable="glsumdiv" comment=" Second of nine divisions that may print in this column (W)" identifier="div2_code"/>
+				</TableColumn>
+				<TableColumn text="Seg. 3" fieldTable="" identifier="f003">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="5rem"/>
+					</TableColumn.columnLength>
+					<TextField dataType="Char,,,,4" toolTip=" Third of nine divisions that may print in this column (W)" fieldTable="glsumdiv" comment=" Third of nine divisions that may print in this column (W)" identifier="div3_code"/>
+				</TableColumn>
+				<TableColumn text="Seg. 4" fieldTable="" identifier="f004">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="5rem"/>
+					</TableColumn.columnLength>
+					<TextField dataType="Char,,,,4" toolTip=" Fourth of nine divisions that may print in this column (W)" fieldTable="glsumdiv" comment=" Fourth of nine divisions that may print in this column (W)" identifier="div4_code"/>
+				</TableColumn>
+				<TableColumn text="Seg. 5" fieldTable="" identifier="f005">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="5rem"/>
+					</TableColumn.columnLength>
+					<TextField dataType="Char,,,,4" toolTip=" Fifth of nine divisions that may print in this column (W)" fieldTable="glsumdiv" comment=" Fifth of nine divisions that may print in this column (W)" identifier="div5_code"/>
+				</TableColumn>
+				<TableColumn text="Seg. 6" fieldTable="" identifier="f006">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="5rem"/>
+					</TableColumn.columnLength>
+					<TextField dataType="Char,,,,4" toolTip=" Sixth of nine divisions that may print in this column (W)" fieldTable="glsumdiv" comment=" Sixth of nine divisions that may print in this column (W)" identifier="div6_code"/>
+				</TableColumn>
+				<TableColumn text="Seg. 7" fieldTable="" identifier="f007">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="5rem"/>
+					</TableColumn.columnLength>
+					<TextField dataType="Char,,,,4" toolTip=" Seventh of nine divisions that may print in this column (W)" fieldTable="glsumdiv" comment=" Seventh of nine divisions that may print in this column (W)" identifier="div7_code"/>
+				</TableColumn>
+				<TableColumn text="Seg. 8" fieldTable="" identifier="f008">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="5rem"/>
+					</TableColumn.columnLength>
+					<TextField dataType="Char,,,,4" toolTip=" Eighth of nine divisions that may print in this column (W)" fieldTable="glsumdiv" comment=" Eighth of nine divisions that may print in this column (W)" identifier="div8_code"/>
+				</TableColumn>
+				<TableColumn text="Seg. 9" fieldTable="" identifier="f009">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="8.62069%"/>
+					</TableColumn.columnLength>
+					<TextField dataType="Char,,,,4" toolTip=" Ninth of nine divisions that may print in this column (W)" fieldTable="glsumdiv" comment=" Ninth of nine divisions that may print in this column (W)" identifier="div9_code"/>
+				</TableColumn>
+			</Table>
+			<GridPanel classNames="fcls_statusbar_cnt" visible="true" verticalAlignment="Top" gridItemLocation="0,3,1,1" fieldTable="formonly" identifier="cntStatusBar">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition>
+						<GridRowDefinition.gridLength>
+							<GridLength gridLengthValue=""/>
+						</GridRowDefinition.gridLength>
+					</GridRowDefinition>
+					<GridRowDefinition>
+						<GridRowDefinition.gridLength>
+							<GridLength gridLengthValue=""/>
+						</GridRowDefinition.gridLength>
+					</GridRowDefinition>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition>
+						<GridColumnDefinition.gridLength>
+							<GridLength gridLengthValue="100%"/>
+						</GridColumnDefinition.gridLength>
+					</GridColumnDefinition>
+				</GridPanel.gridColumnDefinitions>
+				<Label isDynamic="true" text="" classNames="fcls_sblabel" visible="true" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="lbInfo1"/>
+				<Label isDynamic="true" text="" classNames="fcls_sblabel" visible="true" gridItemLocation="0,1,1,1" fieldTable="formonly" identifier="lbInfo2"/>
+			</GridPanel>
+		</GridPanel>
+	</form.rootContainer>
+	<form.screenRecords>
+		<ScreenRecord identifier="sr_glsumdiv" fields="col_num,desc_text,div1_code,div2_code,div3_code,div4_code,div5_code,div6_code,div7_code,div8_code,div9_code" elements="9"/>
+		<ScreenRecord identifier="formonly" fields="div_desc_text,col_num"/>
+		<ScreenRecord identifier="glsumdiv" fields="start_num,report_level_ind,desc_text,div1_code,div2_code,div3_code,div4_code,div5_code,div6_code,div7_code,div8_code,div9_code"/>
+	</form.screenRecords>
+</form>
+

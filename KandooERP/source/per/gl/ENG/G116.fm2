@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form xmlns="http://namespaces.querix.com/2015/fglForms">
+	<form.rootContainer>
+		<GridPanel classNames="fcls_rootContainer" verticalAlignment="Stretch" horizontalAlignment="Stretch" fieldTable="" identifier="rootContainer">
+			<GridPanel.gridRowDefinitions>
+				<GridRowDefinition gridLengthValue=""/>
+				<GridRowDefinition gridLengthValue=""/>
+				<GridRowDefinition gridLengthValue="100%"/>
+				<GridRowDefinition gridLengthValue=""/>
+			</GridPanel.gridRowDefinitions>
+			<GridPanel.gridColumnDefinitions>
+				<GridColumnDefinition gridLengthValue="100%"/>
+			</GridPanel.gridColumnDefinitions>
+			<GridPanel classNames="fcls_title_cnt" visible="true" verticalAlignment="Top" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="cntTitle">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="100%"/>
+					<GridColumnDefinition gridLengthValue=""/>
+				</GridPanel.gridColumnDefinitions>
+				<Label isDynamic="true" text="COA Chart of Accounts Lookup" classNames="fcls_title_lb" visible="true" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="header_text"/>
+				<Label isDynamic="true" text="G116" classNames="fcls_title_lb" visible="true" gridItemLocation="1,0,1,1" fieldTable="" identifier="lbFormName"/>
+			</GridPanel>
+			<GridPanel classNames="fcls_detail_cnt,fcls_data_cnt,fcls_align_left" visible="true" verticalAlignment="Top" horizontalAlignment="Left" gridItemLocation="0,1,1,1" fieldTable="formonly" identifier="cntDetail1">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue=""/>
+					<GridColumnDefinition gridLengthValue=""/>
+					<GridColumnDefinition gridLengthValue=""/>
+					<GridColumnDefinition gridLengthValue=""/>
+					<GridColumnDefinition gridLengthValue=""/>
+				</GridPanel.gridColumnDefinitions>
+				<Label isDynamic="true" text="Filter" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,0,1,1" fieldTable="" identifier="lb66"/>
+				<Button classNames="fcls_button_clear" visible="true" horizontalAlignment="Left" textAlignment="Left," gridItemLocation="1,0,1,1" fieldTable="" identifier="bt75">
+					<Button.onInvoke>
+						<ActionEventHandler actionName="clearFilter_all"/>
+					</Button.onInvoke>
+				</Button>
+				<Label isDynamic="true" text="Search" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="2,0,1,1" fieldTable="" identifier="lb67"/>
+				<TextField classNames="fcls_data_widget,fcls_align_left,fcls_length_20qch" visible="true" gridItemLocation="3,0,1,1" fieldTable="" identifier="filter_any_field">
+					<TextField.onTouched>
+						<ActionEventHandler actionName="UPDATE-FILTER"/>
+					</TextField.onTouched>
+				</TextField>
+				<Button classNames="fcls_button_clear" visible="true" textAlignment="Left," gridItemLocation="4,0,1,1" fieldTable="" identifier="bt71">
+					<Button.onInvoke>
+						<ActionEventHandler actionName="clearFilter_acct_code"/>
+					</Button.onInvoke>
+				</Button>
+				<Label isDynamic="true" text="Group Code" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="2,1,1,1" fieldTable="" identifier="lb69"/>
+				<ComboBox classNames="fcls_data_widget,fcls_align_left,fcls_length_20qch" visible="true" gridItemLocation="3,1,1,1" fieldTable="" identifier="filter_group_code" editable="true">
+					<ComboBox.onTouched>
+						<ActionEventHandler actionName="UPDATE-FILTER"/>
+					</ComboBox.onTouched>
+				</ComboBox>
+				<Button classNames="fcls_button_clear" visible="true" gridItemLocation="4,1,1,1" fieldTable="" identifier="bt72">
+					<Button.onInvoke>
+						<ActionEventHandler actionName="clearFilter_group_code"/>
+					</Button.onInvoke>
+				</Button>
+			</GridPanel>
+			<Table classNames="fcls_table_cnt" visible="true" verticalAlignment="Stretch" horizontalAlignment="Stretch" gridItemLocation="0,2,1,1" fieldTable="" identifier="scCoaList">
+				<TableColumn text="COA Code" resizable="true" visible="true" fieldTable="" identifier="tc_f153">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="120"/>
+					</TableColumn.columnLength>
+					<TextField visible="true" fieldTable="coa" identifier="acct_code"/>
+				</TableColumn>
+				<TableColumn text="COA Description" resizable="true" visible="true" fieldTable="" identifier="tc_f154">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="350" gridMaxLength="400"/>
+					</TableColumn.columnLength>
+					<TextField visible="true" fieldTable="coa" identifier="desc_text"/>
+				</TableColumn>
+				<TableColumn text="Group Code" resizable="true" visible="true" fieldTable="" identifier="tc_f155">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="100%"/>
+					</TableColumn.columnLength>
+					<ComboBox visible="true" fieldTable="coa" identifier="group_code"/>
+				</TableColumn>
+			</Table>
+			<GridPanel classNames="fcls_statusbar_cnt" visible="true" verticalAlignment="Top" gridItemLocation="0,3,1,1" fieldTable="formonly" identifier="cntStatusBar">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="100%"/>
+				</GridPanel.gridColumnDefinitions>
+				<Label isDynamic="true" text="" classNames="fcls_sblabel" visible="true" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="lbInfo1"/>
+				<Label isDynamic="true" text="" classNames="fcls_sblabel" visible="true" gridItemLocation="0,1,1,1" fieldTable="formonly" identifier="lbInfo2"/>
+			</GridPanel>
+		</GridPanel>
+	</form.rootContainer>
+	<form.screenRecords>
+		<ScreenRecord identifier="FORMONLY" fields="f157,f158,f159,f160"/>
+		<ScreenRecord identifier="scCoaList" fields="coa.acct_code,coa.desc_text,coa.group_code"/>
+	</form.screenRecords>
+</form>
+

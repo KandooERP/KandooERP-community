@@ -1,0 +1,63 @@
+{
+###########################################################################
+# This program is free software; you can redistribute it and/or modify it
+# under the terms of the GNU General Public License as published by the
+# Free Software Foundation; either version 2 of the License, or (at your
+# option) any later version.
+#
+# This program is distributed in the hope that it will be useful, but
+# WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+# General Public License for more details.
+#
+# You should have received a copy of the GNU General Public License along
+# with this program; if not, write to the Free Software Foundation, Inc.,
+# 59 Temple Place, Suite 330, Boston, MA 02111-1307 USA
+#
+###########################################################################
+
+	 $Id: cm_com.per,v 1.1 2003/05/03 08:09:30 afalout Exp $
+}
+
+database kandoodb
+screen size 24 by 80
+{
+Ent[f002      ]by[f003       ]Mod[f004      ]by[f005       ]cl[f006      ]
+[f001                                                                   ]
+[f001                                                                   ]
+[f001                                                                   ]
+[f001                                                                   ]
+[f001                                                                   ]
+[f001                                                                   ]
+[f001                                                                   ]
+[f001                                                                   ]
+[f001                                                                   ]
+}
+end
+
+tables
+comment,
+contact_comment
+
+attributes
+f002 = contact_comment.date_entered, comments=
+	"Date the comment was entered";
+f003 = contact_comment.user_id_entered, comments=
+	"User that entered the comment";
+f004 = contact_comment.date_modified, comments=
+	"Date the comment was last modified";
+f005 = contact_comment.user_id_modified, comments=
+	"User that entered the last changes";
+f006 = contact_comment.date_closed, comments=
+	"Date the comment was resolved/closed";
+f001 = comment.comment_text, autonext, comments=
+	"Enter the comment text";
+end
+
+
+INSTRUCTIONS
+
+DELIMITERS "  ";
+SCREEN RECORD s_comment_text[9] (comment_text)
+screen record s_comment (date_entered through date_closed)
+

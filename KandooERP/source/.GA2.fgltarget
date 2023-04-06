@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<fglBuildTarget xmlns="http://namespaces.querix.com/lyciaide/target" name="GA2" type="fgl-program">
+
+  <libraries>
+    <library name="lib_report" dynamic="false" location=""/>
+    <library name= "lib_tool_common" dynamic="false" location=""/>
+    <library name= "lib_tool_G_GL_new" dynamic="false" location=""/>
+    <library name="lib_tool_G_GL_db" dynamic="false" location=""/>
+    <library name= "lib_tool_db_common" dynamic="false" location=""/>
+   </libraries>
+
+  <sources type="fgl">
+    <file location="4gl/gl/GA2.4gl"/>
+    <file location="4gl/common/glob_GLOBALS_constant.4gl"/>
+    <file location="4gl/gl/GA2_main.4gl"/>
+    <file location="4gl/gl/G_GL_GLOBALS.4gl"/>
+    <file location="4gl/common/seg_con.4gl"/>
+  </sources>
+
+  <sources type="form">
+    <file location="per/gl/ENG/G105.fm2"/>
+  </sources>
+
+  <mediaFiles>
+    <file client="true" location="GA2.qxtheme" type="gui-theme-file"/>
+    <file client="true" location="GA2.css" type="other"/>
+  </mediaFiles>
+
+</fglBuildTarget>

@@ -1,0 +1,72 @@
+database ${DatabaseName}
+FUNCTION ${LkUpPickListFct}${PLTable}(xpos,ypos)
+DEFINE idx,choice,xpos,ypos INTEGER
+DEFINE ${ArrCurrVar},scrline INTEGER
+DEFINE ${PLWPrefix}${PrmryKeyPrefix}_array ARRAY[${PLArraySize}] OF RECORD
+	<Script:define_table_columns ($SRCHANDLE,${PLTable},"pkey","record","pky","    "):Script>
+END RECORD
+DEFINE ${PLWPrefix}attr_array ARRAY[${PLArraySize}] OF RECORD
+	<Script:define_form_fields($SRCHANDLE,$MainForm,$PLTable,"all","false","","\t\t")  :Script>
+END RECORD
+DEFINE ${PLWPrefix}attr RECORD
+	<Script:define_form_fields($SRCHANDLE,$MainForm,$PLTable,"all","false","","\t\t")  :Script>
+END RECORD
+
+OPEN WINDOW ${PLWPrefix}${PLTable} at xpos,ypos
+WITH FORM "${MainForm}" ATTRIBUTES(border)
+options 
+	accept key ${PLWAcceptKey},
+	form line ${PLWLine}
+
+MESSAGE "${PLMessage}:${PLWAcceptKey}" 
+SET ISOLATION TO DIRTY READ
+
+INITIALIZE ${PLWPrefix}${PrmryKeyPrefix}_array[1].* TO NULL
+INITIALIZE ${PLWPrefix}attr_array[1].* TO NULL
+FOR idx=2 to 100
+   LET ${PLWPrefix}${PrmryKeyPrefix}_array[idx].* = ${PLWPrefix}${PrmryKeyPrefix}_array[1].*
+   LET ${PLWPrefix}attr_array[idx].* = ${PLWPrefix}attr_array[1].*
+END FOR
+
+DECLARE crs_pl_${PLTable} CURSOR FOR
+SELECT <Script:print_form_fields ($SRCHANDLE,$MainForm,$PLTable,".*","attr","false","","         ","flat"):Script>,
+	<Script:print_table_columns($SRCHANDLE,${PLTable},"","","pkey","","","flat"):Script>
+FROM ${PLTable}
+ORDER BY 1
+
+LET idx=1
+FOREACH crs_pl_${PLTable} INTO ${PLWPrefix}attr_array[idx].*,${PLWPrefix}${PrmryKeyPrefix}_array[idx].*
+   LET idx=idx + 1
+   IF idx > 100 THEN
+      EXIT FOREACH
+   END IF
+END FOREACH
+
+LET idx=idx - 1
+CALL set_count(idx)
+
+INPUT ARRAY ${PLWPrefix}attr_array WITHOUT DEFAULTS
+FROM ${ScreenRecordName}.*
+BEFORE ROW
+   LET ${ArrCurrVar}=arr_curr()
+   LET scrline=scr_line()
+   LET ${PLWPrefix}attr.* = ${PLWPrefix}attr_array[${ArrCurrVar}].*
+   DISPLAY ${PLWPrefix}attr_array[${ArrCurrVar}].* TO ${ScreenRecordName}[scrline].*
+      ATTRIBUTE (reverse)
+AFTER ROW
+   LET ${ArrCurrVar}=arr_curr()
+   LET scrline=scr_line()
+   LET ${PLWPrefix}attr_array[${ArrCurrVar}].* = ${PLWPrefix}attr.*
+   DISPLAY ${PLWPrefix}attr_array[${ArrCurrVar}].* TO ${ScreenRecordName}[scrline].*
+      ATTRIBUTE (normal)
+AFTER INPUT
+   IF int_flag THEN
+      LET int_flag = false
+	     CONTINUE INPUT
+   END IF
+END INPUT
+CLOSE WINDOW ${PLWPrefix}${PLTable}
+SET ISOLATION TO COMMITTED READ
+options accept key ESCAPE
+RETURN <Script:print_table_columns($SRCHANDLE,${PLTable},"","","pkey","","${PLWPrefix}${PrmryKeyPrefix}_array[${ArrCurrVar}]","flat"); :Script>
+END FUNCTION

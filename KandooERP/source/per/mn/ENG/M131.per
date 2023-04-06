@@ -1,0 +1,73 @@
+{
+###########################################################################
+# This program is free software; you can redistribute it and/or modify it
+# under the terms of the GNU General Public License as published by the
+# Free Software Foundation; either version 2 of the License, or (at your
+# option) any later version.
+#
+# This program is distributed in the hope that it will be useful, but
+# WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+# General Public License for more details.
+#
+# You should have received a copy of the GNU General Public License along
+# with this program; if not, write to the Free Software Foundation, Inc.,
+# 59 Temple Place, Suite 330, Boston, MA 02111-1307 USA
+#
+###########################################################################
+
+	 $Id: M131.per,v 1.2 2003/11/19 22:22:59 afalout Exp $
+}
+
+
+database kandoodb
+
+screen
+{
+                           Forecast Maintenance                        M131
+\g----------------------------------------------------------------------------\g
+ Product Code     [f001           ]   [f002                          ]
+\g----------------------------------------------------------------------------\g
+   Start            Due              UOM    Forecast        Forecast           
+   Date             Date                    Quantity          No.              
+\g----------------------------------------------------------------------------\g
+  [f003      ]     [f004      ]     [f06]  [f005         ]  [f007    ]
+  [f003      ]     [f004      ]     [f06]  [f005         ]  [f007    ]
+  [f003      ]     [f004      ]     [f06]  [f005         ]  [f007    ]
+  [f003      ]     [f004      ]     [f06]  [f005         ]  [f007    ]
+  [f003      ]     [f004      ]     [f06]  [f005         ]  [f007    ]
+  [f003      ]     [f004      ]     [f06]  [f005         ]  [f007    ]
+  [f003      ]     [f004      ]     [f06]  [f005         ]  [f007    ]
+  [f003      ]     [f004      ]     [f06]  [f005         ]  [f007    ]
+  [f003      ]     [f004      ]     [f06]  [f005         ]  [f007    ]
+  [f003      ]     [f004      ]     [f06]  [f005         ]  [f007    ]
+
+}
+
+tables
+bor
+product
+mnparms
+prodmfg
+prodstatus
+shopordhead
+shoporddetl
+
+attributes
+f001 = shopordhead.part_code, upshift,
+comments = " Product code for the Forecast (W)";
+f002 = product.desc_text, noentry;
+f003 = shopordhead.start_date, comments = " Proposed commencement date";
+f004 = shopordhead.end_date, comments = " Proposed completion date";
+f005 = shopordhead.order_qty, comments = " Forecasted quantity" ;
+f06 = shopordhead.uom_code, noentry;
+f007 = shopordhead.shop_order_num, noentry;
+
+instructions
+delimiters "  "
+
+screen record sr_forecast[10] (shopordhead.start_date,
+                               shopordhead.end_date,
+                               shopordhead.uom_code,
+					           shopordhead.order_qty,
+                               shopordhead.shop_order_num)

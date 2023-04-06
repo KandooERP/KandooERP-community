@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="UTF-8"?><form xmlns="http://namespaces.querix.com/2015/fglForms">
+	<form.rootContainer>
+		<GridPanel classNames="fcls_rootContainer" fieldTable="" horizontalAlignment="Stretch" identifier="rootContainer" preferredSize="80qch,25qch" verticalAlignment="Stretch">
+			<GridPanel.gridRowDefinitions>
+				<GridRowDefinition gridLengthValue=""/>
+				<GridRowDefinition gridLengthValue=""/>
+				<GridRowDefinition gridLengthValue="100%"/>
+				<GridRowDefinition gridLengthValue=""/>
+			</GridPanel.gridRowDefinitions>
+			<GridPanel.gridColumnDefinitions>
+				<GridColumnDefinition gridLengthValue="100%"/>
+			</GridPanel.gridColumnDefinitions>
+			<GridPanel classNames="fcls_title_cnt" fieldTable="formonly" gridItemLocation="0,0,1,1" identifier="cntTitle" verticalAlignment="Top" visible="true">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="100%"/>
+					<GridColumnDefinition gridLengthValue=""/>
+				</GridPanel.gridColumnDefinitions>
+				<Label classNames="fcls_title_lb" fieldTable="formonly" gridItemLocation="0,0,1,1" identifier="header_text" isDynamic="true" text="Manage toolbar buttons" visible="true"/>
+				<Label classNames="fcls_title_lb" fieldTable="" gridItemLocation="1,0,1,1" identifier="lbFormName" isDynamic="true" text="_qxt_toolbar2_manager_template.fm2" visible="true"/>
+			</GridPanel>
+			<GridPanel classNames="fcls_detail_cnt,fcls_data_cnt,fcls_align_hstretch" fieldTable="formonly" gridItemLocation="0,1,1,1" horizontalAlignment="Stretch" identifier="cntDetail" verticalAlignment="Top" visible="true">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="15%"/>
+				</GridPanel.gridColumnDefinitions>
+				<ComboBox classNames="fcls_data_widget,fcls_align_left,fcls_length_20qch" editable="true" fieldTable="formonly" gridItemLocation="0,0,1,1" identifier="tb_module_id" visible="true"/>
+				<ComboBox classNames="fcls_data_widget,fcls_align_left,fcls_length_20qch" editable="true" fieldTable="" gridItemLocation="0,1,1,1" identifier="tb_menu_id" visible="true"/>
+			</GridPanel>
+			<Table classNames="fcls_align_hstretch" fieldTable="formonly" gridItemLocation="0,2,1,1" horizontalAlignment="Stretch" identifier="qxt_toolbar" minSize="60qch,10qch" preferredSize="80qch,16qch" verticalAlignment="Stretch" visible="true">
+				<TableColumn fieldTable="" identifier="tc_check" resizable="true" text="Use" visible="true">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="50"/>
+					</TableColumn.columnLength>
+					<CheckBox fieldTable="" identifier="tb_check" notNull="true" visible="true">
+						<CheckBox.defaultValue>
+							<IntegerLiteral/>
+						</CheckBox.defaultValue>
+						<CheckBox.checkedValue>
+							<IntegerLiteral integerValue="1"/>
+						</CheckBox.checkedValue>
+						<CheckBox.uncheckedValue>
+							<IntegerLiteral/>
+						</CheckBox.uncheckedValue>
+					</CheckBox>
+				</TableColumn>
+				<TableColumn fieldTable="qxt_toolbar" identifier="tc_tb_action" resizable="true" text="Action/Key" visible="true">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="19%"/>
+					</TableColumn.columnLength>
+					<TextField dataType="VarChar,,,," fieldTable="formonly" identifier="tb_action" noEntry="true" visible="true"/>
+				</TableColumn>
+				<TableColumn fieldTable="qxt_toolbar" identifier="tc_tb_label" resizable="true" text="Label" visible="true">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="14%"/>
+					</TableColumn.columnLength>
+					<TextField dataType="VarChar,,,," fieldTable="qxt_toolbar" identifier="tb_label" noEntry="true" visible="true"/>
+				</TableColumn>
+				<TableColumn fieldTable="qxt_toolbar" identifier="tc_tb_icon" resizable="true" text="Icon" visible="true">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="20%"/>
+					</TableColumn.columnLength>
+					<TextField dataType="VarChar,,,," fieldTable="qxt_toolbar" identifier="tb_icon" noEntry="true" visible="true"/>
+				</TableColumn>
+				<TableColumn fieldTable="qxt_toolbar" identifier="tc_tb_position" resizable="true" text="Pos" visible="true">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="6%"/>
+					</TableColumn.columnLength>
+					<Spinner dataType="SmallInt,,,," fieldTable="qxt_toolbar" identifier="tb_position" maxValue="10000" noEntry="true" step="1" visible="true"/>
+				</TableColumn>
+				<TableColumn fieldTable="qxt_toolbar" horizontalAlignment="Center" identifier="tc_tb_static" resizable="true" text="Static" textAlignment="Center," visible="true">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="5%"/>
+					</TableColumn.columnLength>
+					<CheckBox dataType="Boolean,,,," fieldTable="qxt_toolbar" horizontalAlignment="Center" identifier="tb_static" noEntry="true" notNull="true" textAlignment="Center,Center" visible="true">
+						<CheckBox.checkedValue>
+							<IntegerLiteral integerValue="1"/>
+						</CheckBox.checkedValue>
+						<CheckBox.uncheckedValue>
+							<IntegerLiteral/>
+						</CheckBox.uncheckedValue>
+					</CheckBox>
+				</TableColumn>
+				<TableColumn fieldTable="" identifier="tc_tb_tooltip" resizable="true" text="Tooltip" visible="true">
+					<TableColumn.columnLength>
+						<GridLength/>
+					</TableColumn.columnLength>
+					<TextField fieldTable="" identifier="tb_tooltip" noEntry="true" visible="true"/>
+				</TableColumn>
+				<TableColumn fieldTable="qxt_toolbar" horizontalAlignment="Center" identifier="tc_tb_type" resizable="true" text="I/D" textAlignment="Center," visible="true">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="6%"/>
+					</TableColumn.columnLength>
+					<CheckBox dataType="Boolean,,,," fieldTable="qxt_toolbar" horizontalAlignment="Center" identifier="tb_type" noEntry="true" notNull="true" textAlignment="Center," visible="true">
+						<CheckBox.checkedValue>
+							<IntegerLiteral integerValue="1"/>
+						</CheckBox.checkedValue>
+						<CheckBox.uncheckedValue>
+							<IntegerLiteral/>
+						</CheckBox.uncheckedValue>
+					</CheckBox>
+				</TableColumn>
+				<TableColumn fieldTable="qxt_toolbar" horizontalAlignment="Center" identifier="tc_tb_scope" resizable="true" text="Glob-Scope" textAlignment="Center," visible="true">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="6%"/>
+					</TableColumn.columnLength>
+					<CheckBox dataType="Boolean,,,," fieldTable="qxt_toolbar" horizontalAlignment="Center" identifier="tb_scope" noEntry="true" notNull="true" textAlignment="Center," visible="true">
+						<CheckBox.checkedValue>
+							<IntegerLiteral integerValue="1"/>
+						</CheckBox.checkedValue>
+						<CheckBox.uncheckedValue>
+							<IntegerLiteral/>
+						</CheckBox.uncheckedValue>
+					</CheckBox>
+				</TableColumn>
+				<TableColumn fieldTable="formonly" horizontalAlignment="Center" identifier="tc_tb_hide" resizable="true" text="Hide" textAlignment="Center," visible="true">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="6%"/>
+					</TableColumn.columnLength>
+					<CheckBox dataType="Boolean,,,," fieldTable="qxt_toolbar" horizontalAlignment="Center" identifier="tb_hide" noEntry="true" notNull="true" textAlignment="Center," visible="true">
+						<CheckBox.checkedValue>
+							<IntegerLiteral integerValue="1"/>
+						</CheckBox.checkedValue>
+						<CheckBox.uncheckedValue>
+							<IntegerLiteral/>
+						</CheckBox.uncheckedValue>
+					</CheckBox>
+				</TableColumn>
+				<TableColumn fieldTable="" identifier="tc_f3" resizable="true" text="Key" visible="true">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="4%"/>
+					</TableColumn.columnLength>
+					<TextField fieldTable="" identifier="tb_key" text="Key" visible="true"/>
+				</TableColumn>
+				<TableColumn fieldTable="qxt_toolbar" identifier="tc_tb_category" resizable="true" text="Category" visible="true">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="10%" gridMinLength="80"/>
+					</TableColumn.columnLength>
+					<TextField dataType="VarChar,,,," fieldTable="qxt_toolbar" identifier="tb_category" visible="true"/>
+				</TableColumn>
+			</Table>
+			<GridPanel classNames="fcls_statusbar_cnt" fieldTable="formonly" gridItemLocation="0,3,1,1" identifier="cntStatusBar" visible="true">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="100%"/>
+				</GridPanel.gridColumnDefinitions>
+				<Label fieldTable="formonly" gridItemLocation="0,0,1,1" identifier="lbInfo1" isDynamic="true" text="" visible="true"/>
+				<Label fieldTable="formonly" gridItemLocation="0,1,1,1" identifier="lbInfo2" isDynamic="true" text="" visible="true"/>
+			</GridPanel>
+		</GridPanel>
+	</form.rootContainer>
+	<form.screenRecords>
+		<ScreenRecord fields="" identifier="FORMONLY"/>
+		<ScreenRecord fields="tb_check,tb_action,tb_label,tb_icon,tb_position,tb_static,tb_tooltip,tb_type,tb_scope,tb_hide,tb_key,tb_category" identifier="qxt_toolbar_sc"/>
+		<ScreenRecord fields="tb_key" identifier="qxt_toolbar"/>
+	</form.screenRecords>
+</form>

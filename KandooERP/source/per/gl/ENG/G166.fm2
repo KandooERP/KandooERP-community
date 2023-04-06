@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form xmlns="http://namespaces.querix.com/2015/fglForms">
+	<form.rootContainer>
+		<GridPanel classNames="fcls_rootContainer" verticalAlignment="Stretch" horizontalAlignment="Stretch" fieldTable="" identifier="rootContainer">
+			<GridPanel.gridRowDefinitions>
+				<GridRowDefinition gridLengthValue=""/>
+				<GridRowDefinition gridLengthValue=""/>
+				<GridRowDefinition gridLengthValue="100%"/>
+				<GridRowDefinition gridLengthValue=""/>
+			</GridPanel.gridRowDefinitions>
+			<GridPanel.gridColumnDefinitions>
+				<GridColumnDefinition gridLengthValue="100%"/>
+			</GridPanel.gridColumnDefinitions>
+			<GridPanel classNames="fcls_title_cnt" visible="true" verticalAlignment="Top" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="cntTitle">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="100%"/>
+					<GridColumnDefinition gridLengthValue=""/>
+				</GridPanel.gridColumnDefinitions>
+				<Label isDynamic="true" text="Cashbook Audit Trail" classNames="fcls_title_lb" visible="true" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="header_text"/>
+				<Label isDynamic="true" text="G166" classNames="fcls_title_lb" visible="true" gridItemLocation="1,0,1,1" fieldTable="" identifier="lbFormName"/>
+			</GridPanel>
+			<GridPanel classNames="fcls_detail_cnt,,fcls_align_left" visible="true" verticalAlignment="Top" horizontalAlignment="Left" gridItemLocation="0,1,1,1" fieldTable="formonly" identifier="cntDetail1">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="" gridMinLength="10rem"/>
+					<GridColumnDefinition gridLengthValue=""/>
+				</GridPanel.gridColumnDefinitions>
+				<Calendar dataType="Date,,,," classNames="fcls_data_widget,fcls_align_left,fcls_length_10qch" location="19qch,1qch" preferredSize="11qch,1qch" toolTip="Enter Start Date required to review audit trail" gridItemLocation="1,0,1,1" comment="Enter Start Date required to review audit trail" fieldTable="formonly" identifier="start_date"/>
+				<Calendar dataType="Date,,,," classNames="fcls_data_widget,fcls_align_left,fcls_length_10qch" location="19qch,2qch" preferredSize="11qch,1qch" toolTip="Enter End Date required to review audit trail" gridItemLocation="1,1,1,1" comment="Enter End Date required to review audit trail" fieldTable="formonly" identifier="end_date"/>
+				<Label isDynamic="true" text="Start Date" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,0,1,1" fieldTable="" identifier="lb51"/>
+				<Label isDynamic="true" text="End Date" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,1,1,1" fieldTable="" identifier="lb52"/>
+			</GridPanel>
+			<Table rowCount="10" preferredSize="68qch,12qch" verticalAlignment="Stretch" horizontalAlignment="Stretch" gridItemLocation="0,2,1,1" fieldTable="" identifier="sr_cbaudit">
+				<TableColumn text="Date" fieldTable="" identifier="f098">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="15%" gridMaxLength="15rem" gridMinLength="5rem"/>
+					</TableColumn.columnLength>
+					<Calendar dataType="Date,,,," toolTip="Enter Start Date required to review audit trail" comment="Enter Start Date required to review audit trail" fieldTable="cbaudit" identifier="tran_date"/>
+				</TableColumn>
+				<TableColumn text="Trans Type" fieldTable="" identifier="a0">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="15%" gridMaxLength="15rem" gridMinLength="5rem"/>
+					</TableColumn.columnLength>
+					<ComboBox editable="true" toCase="Up" dataType="Char,,,,2" toolTip="Two digit code to identify the Type of Transaction, (CA, IN, CR)" comment="Two digit code to identify the Type of Transaction, (CA, IN, CR)" fieldTable="cbaudit" identifier="tran_type_ind"/>
+				</TableColumn>
+				<TableColumn text="Document No" fieldTable="" identifier="f004">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="15%" gridMaxLength="15rem" gridMinLength="5rem"/>
+					</TableColumn.columnLength>
+					<TextField dataType="Integer,,,," fieldTable="cbaudit" identifier="source_num"/>
+				</TableColumn>
+				<TableColumn text="Description" fieldTable="" identifier="f005">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="25%" gridMaxLength="30rem" gridMinLength="10rem"/>
+					</TableColumn.columnLength>
+					<TextField dataType="Char,,,,15" toolTip="Description or name of this transaction activity" comment="Description or name of this transaction activity" fieldTable="cbaudit" identifier="tran_text"/>
+				</TableColumn>
+				<TableColumn text="Amount" fieldTable="" identifier="f006">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="15%" gridMaxLength="15rem" gridMinLength="5rem"/>
+					</TableColumn.columnLength>
+					<TextField dataType="Decimal,,,2,16" toolTip="Total dollar Amount of this transaction" comment="Total dollar Amount of this transaction" fieldTable="cbaudit" identifier="tran_amt"/>
+				</TableColumn>
+				<TableColumn text="Entered By" fieldTable="" identifier="f007">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="15%" gridMaxLength="20rem" gridMinLength="10rem"/>
+					</TableColumn.columnLength>
+					<ComboBox editable="true" dataType="Char,,,,8" fieldTable="cbaudit" identifier="entry_code"/>
+				</TableColumn>
+			</Table>
+			<GridPanel classNames="fcls_statusbar_cnt" visible="true" verticalAlignment="Top" gridItemLocation="0,3,1,1" fieldTable="formonly" identifier="cntStatusBar">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="100%"/>
+				</GridPanel.gridColumnDefinitions>
+				<Label isDynamic="true" text="" classNames="fcls_sblabel" visible="true" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="lbInfo1"/>
+				<Label isDynamic="true" text="" classNames="fcls_sblabel" visible="true" gridItemLocation="0,1,1,1" fieldTable="formonly" identifier="lbInfo2"/>
+			</GridPanel>
+		</GridPanel>
+	</form.rootContainer>
+	<form.screenRecords>
+		<ScreenRecord identifier="sr_cbaudit" fields="tran_date,tran_type_ind,source_num,tran_text,tran_amt,entry_code"/>
+		<ScreenRecord identifier="cbaudit" fields="tran_date,tran_type_ind,source_num,tran_text,tran_amt,entry_code"/>
+		<ScreenRecord identifier="formonly" fields="start_date,end_date"/>
+	</form.screenRecords>
+</form>
+

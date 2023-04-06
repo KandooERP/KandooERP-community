@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form xmlns="http://namespaces.querix.com/2015/fglForms">
+	<form.rootContainer>
+		<GridPanel classNames="fcls_rootContainer" verticalAlignment="Top" horizontalAlignment="Left" fieldTable="" identifier="rootContainer">
+			<GridPanel.gridRowDefinitions>
+				<GridRowDefinition gridLengthValue=""/>
+				<GridRowDefinition gridLengthValue=""/>
+				<GridRowDefinition gridLengthValue=""/>
+				<GridRowDefinition gridLengthValue=""/>
+				<GridRowDefinition gridLengthValue=""/>
+			</GridPanel.gridRowDefinitions>
+			<GridPanel.gridColumnDefinitions>
+				<GridColumnDefinition gridLengthValue="100%"/>
+			</GridPanel.gridColumnDefinitions>
+			<GridPanel classNames="fcls_title_cnt" visible="true" verticalAlignment="Top" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="cntTitle">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="100%"/>
+					<GridColumnDefinition gridLengthValue=""/>
+				</GridPanel.gridColumnDefinitions>
+				<Label isDynamic="true" text="Subscription Product Details" classNames="fcls_title_lb" visible="true" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="header_text"/>
+				<Label isDynamic="true" text="K150" classNames="fcls_title_lb" visible="true" gridItemLocation="1,0,1,1" fieldTable="" identifier="lbFormName"/>
+			</GridPanel>
+			<GridPanel classNames="fcls_detail_cnt,fcls_data_cnt,fcls_align_left" visible="true" verticalAlignment="Top" horizontalAlignment="Left" gridItemLocation="0,1,1,1" fieldTable="formonly" identifier="cntDetail1">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="" gridMinLength="10rem"/>
+					<GridColumnDefinition gridLengthValue=""/>
+				</GridPanel.gridColumnDefinitions>
+				<Label isDynamic="true" text="Product" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="lb57"/>
+				<ComboBox toCase="Up" dataType="Char,,,,15" preferredSize="16qch,1qch" toolTip=" Product Code for this subscription (W) " fieldTable="subproduct" comment=" Product Code for this subscription (W) " identifier="part_code" gridItemLocation="1,0,1,1" classNames="fcls_data_widget,fcls_align_left,fcls_length_30qch"/>
+				<Label isDynamic="true" text="Description" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,1,1,1" fieldTable="" identifier="lb73"/>
+				<TextField dataType="Char,,,,40" preferredSize="41qch,1qch" toolTip=" Description of this subscription " fieldTable="subproduct" comment=" Description of this subscription " identifier="desc_text" gridItemLocation="1,1,1,1" classNames="fcls_data_widget,fcls_align_left,fcls_length_30qch"/>
+				<Label isDynamic="true" text="Warehouse" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,2,1,1" fieldTable="" identifier="lb76"/>
+				<ComboBox toCase="Up" dataType="Char,,,,3" preferredSize="4qch,1qch" toolTip=" Warehouse to obtain product information from" fieldTable="subproduct" comment=" Warehouse to obtain product information from" identifier="ware_code" gridItemLocation="1,2,1,1" classNames="fcls_data_widget,fcls_align_left,fcls_length_30qch"/>
+				<TextField dataType="Char,,,,30" preferredSize="31qch,1qch" toolTip=" Description of warehouse " fieldTable="warehouse" comment=" Description of warehouse " identifier="desc_text" gridItemLocation="1,3,1,1" classNames="fcls_data_widget,fcls_align_left,fcls_length_30qch"/>
+			</GridPanel>
+			<GroupBox title="Group 2" classNames="fcls_detail_gb_cnt,fcls_align_hstretch" visible="true" verticalAlignment="Stretch" horizontalAlignment="Stretch" gridItemLocation="0,2,1,1" fieldTable="formonly" identifier="cntDetail2GroupBox">
+				<GridPanel classNames="fcls_detail_gb_cnt_sub,fcls_detail_cnt_sub,fcls_data_cnt,fcls_align_left" visible="true" verticalAlignment="Top" horizontalAlignment="Left" fieldTable="formonly" identifier="cntDetail2GrBoxSub">
+					<GridPanel.gridRowDefinitions>
+						<GridRowDefinition gridLengthValue=""/>
+						<GridRowDefinition gridLengthValue=""/>
+						<GridRowDefinition gridLengthValue=""/>
+					</GridPanel.gridRowDefinitions>
+					<GridPanel.gridColumnDefinitions>
+						<GridColumnDefinition gridLengthValue="" gridMinLength="10rem"/>
+						<GridColumnDefinition gridLengthValue=""/>
+					</GridPanel.gridColumnDefinitions>
+					<Label isDynamic="true" text="Type" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="lb47"/>
+					<TextField toCase="Up" dataType="Char,,,,3" preferredSize="4qch,1qch" toolTip=" Code identifying the type of subscription (W)" fieldTable="subproduct" comment=" Code identifying the type of subscription (W)" identifier="type_code" gridItemLocation="1,0,1,1" classNames="fcls_data_widget,fcls_align_left,fcls_length_30qch"/>
+					<TextField dataType="Char,,,,40" preferredSize="31qch,1qch" toolTip=" Description of this subscription type " fieldTable="substype" comment=" Description of this subscription type " identifier="desc_text" gridItemLocation="1,1,1,1" classNames="fcls_data_widget,fcls_align_left,fcls_length_30qch"/>
+					<Label isDynamic="true" text="Issue" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,2,1,1" fieldTable="formonly" identifier="lb46"/>
+					<RadioGroup visible="true" identifier="linetype_ind" gridItemLocation="1,2,1,1" classNames="fcls_data_widget,fcls_align_hstretch">
+						<Radio title="Scheduled" identifier="linetype_ind_1">
+							<Radio.value>
+								<IntegerLiteral integerValue="1"/>
+							</Radio.value>
+						</Radio>
+						<Radio title="On Demand" identifier="linetype_ind_2">
+							<Radio.value>
+								<IntegerLiteral integerValue="2"/>
+							</Radio.value>
+						</Radio>
+					</RadioGroup>
+				</GridPanel>
+			</GroupBox>
+			<GroupBox title="Comments" classNames="fcls_detail_gb_cnt,fcls_align_hstretch" visible="true" verticalAlignment="Stretch" horizontalAlignment="Stretch" gridItemLocation="0,3,1,1" fieldTable="formonly" identifier="cntDetail3GroupBox">
+				<GridPanel classNames="fcls_detail_gb_cnt_sub,fcls_detail_cnt_sub,fcls_data_cnt" visible="true" verticalAlignment="Top" horizontalAlignment="Stretch" fieldTable="formonly" identifier="cntDetail3GrBoxSub">
+					<GridPanel.gridRowDefinitions>
+						<GridRowDefinition gridLengthValue=""/>
+						<GridRowDefinition gridLengthValue=""/>
+					</GridPanel.gridRowDefinitions>
+					<GridPanel.gridColumnDefinitions>
+						<GridColumnDefinition gridLengthValue="100%"/>
+					</GridPanel.gridColumnDefinitions>
+					<TextField dataType="Char,,,,40" preferredSize="41qch,1qch" toolTip=" Free form comments about this subscription " fieldTable="subproduct" comment=" Free form comments about this subscription " identifier="comm1_text" gridItemLocation="0,0,1,1"/>
+					<TextField dataType="Char,,,,40" preferredSize="41qch,1qch" toolTip=" More free form comments about this subscription " fieldTable="subproduct" comment=" More free form comments about this subscription " identifier="comm2_text" gridItemLocation="0,1,1,1"/>
+				</GridPanel>
+			</GroupBox>
+			<GridPanel classNames="fcls_statusbar_cnt" visible="true" verticalAlignment="Bottom" gridItemLocation="0,4,1,1" fieldTable="formonly" identifier="cntStatusBar">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="100%"/>
+				</GridPanel.gridColumnDefinitions>
+				<Label isDynamic="true" text="" classNames="fcls_sblabel" visible="true" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="lbInfo1"/>
+				<Label isDynamic="true" text="" classNames="fcls_sblabel" visible="true" gridItemLocation="0,1,1,1" fieldTable="formonly" identifier="lbInfo2"/>
+			</GridPanel>
+		</GridPanel>
+	</form.rootContainer>
+	<form.screenRecords>
+		<ScreenRecord identifier="subproduct" fields="subproduct.linetype_ind,subproduct.part_code,subproduct.desc_text,subproduct.type_code,subproduct.ware_code,subproduct.comm1_text,subproduct.comm2_text"/>
+		<ScreenRecord identifier="substype" fields="substype.desc_text"/>
+		<ScreenRecord identifier="warehouse" fields="warehouse.desc_text"/>
+		<ScreenRecord identifier="FormOnly" fields="linetype_ind"/>
+	</form.screenRecords>
+</form>
+

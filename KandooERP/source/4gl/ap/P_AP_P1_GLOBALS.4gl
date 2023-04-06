@@ -1,0 +1,3 @@
+GLOBALS 
+	DEFINE glob_err_flag SMALLINT 
+END GLOBALS 

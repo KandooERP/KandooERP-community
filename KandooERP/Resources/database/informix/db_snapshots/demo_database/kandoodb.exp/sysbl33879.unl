@@ -1,0 +1,21 @@
+0|unknown|<any>|
+1|error|<code>-<locale>|
+2|aggregate|<name>(<type>)|
+3|cast|<from_type>-><to_type>|
+4|operator|<name>|
+5|function|<name> (<arg1>[, <arg2>] ... [, <arg20>])|
+6|procedure|<name> (<arg1>[, <arg2>] ... [, <arg20>])|
+7|type|<name>|
+8|table|<name>|
+9|access method|<name>|
+10|DataBlade module|<name>|
+11|database|<name>|
+12|operator class|<name>|
+13|index|<name>|
+14|trigger|<name>|
+15|interface|<name>|
+16|script|<file name>|
+64|privilege|<name>|
+69|privilege-function|<name> (<arg1>[, <arg2>] ... [, <arg20>])|
+70|privilege-procedure|<name> (<arg1>[, <arg2>] ... [, <arg20>])|
+71|privilege-type|<name>|

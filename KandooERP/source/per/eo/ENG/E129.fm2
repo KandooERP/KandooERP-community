@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form xmlns="http://namespaces.querix.com/2015/fglForms">
+	<form.rootContainer>
+		<GridPanel classNames="fcls_rootContainer" verticalAlignment="Top" horizontalAlignment="Left" fieldTable="" identifier="rootContainer">
+			<GridPanel.gridRowDefinitions>
+				<GridRowDefinition gridLengthValue=""/>
+				<GridRowDefinition gridLengthValue=""/>
+				<GridRowDefinition gridLengthValue=""/>
+				<GridRowDefinition gridLengthValue=""/>
+				<GridRowDefinition gridLengthValue=""/>
+				<GridRowDefinition gridLengthValue=""/>
+				<GridRowDefinition gridLengthValue=""/>
+			</GridPanel.gridRowDefinitions>
+			<GridPanel.gridColumnDefinitions>
+				<GridColumnDefinition gridLengthValue="100%"/>
+			</GridPanel.gridColumnDefinitions>
+			<GridPanel classNames="fcls_title_cnt" visible="true" verticalAlignment="Top" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="cntTitle">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="100%"/>
+					<GridColumnDefinition gridLengthValue=""/>
+				</GridPanel.gridColumnDefinitions>
+				<Label isDynamic="true" text="Special Offer Details" classNames="fcls_title_lb" visible="true" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="header_text"/>
+				<Label isDynamic="true" text="E129" classNames="fcls_title_lb" visible="true" gridItemLocation="1,0,1,1" fieldTable="" identifier="lbFormName"/>
+			</GridPanel>
+			<GridPanel classNames="fcls_detail_cnt,fcls_data_cnt,fcls_align_left" visible="true" verticalAlignment="Top" horizontalAlignment="Left" gridItemLocation="0,1,1,1" fieldTable="formonly" identifier="cntDetail1">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="" gridMinLength="10rem"/>
+					<GridColumnDefinition gridLengthValue=""/>
+				</GridPanel.gridColumnDefinitions>
+				<Label isDynamic="true" text="Special Offer No" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="lb57"/>
+				<ComboBox toCase="Up" dataType="Char,,,,3" preferredSize="4qch,1qch" fieldTable="offersale" identifier="offer_code" gridItemLocation="1,0,1,1" classNames="fcls_data_widget,fcls_align_left,fcls_length_30qch"/>
+				<TextField dataType="Char,,,,30" preferredSize="33qch,1qch" fieldTable="offersale" identifier="desc_text" gridItemLocation="1,1,1,1" classNames="fcls_data_widget,fcls_align_left,fcls_length_30qch"/>
+			</GridPanel>
+			<GroupBox title="Dates" classNames="fcls_detail_gb_cnt" visible="true" verticalAlignment="Stretch" horizontalAlignment="Stretch" gridItemLocation="0,2,1,1" fieldTable="formonly" identifier="cntDetail2GroupBox">
+				<GridPanel classNames="fcls_detail_gb_cnt_sub,fcls_detail_cnt_sub,fcls_data_cnt,fcls_align_left" visible="true" verticalAlignment="Top" horizontalAlignment="Left" fieldTable="formonly" identifier="cntDetail2Sub">
+					<GridPanel.gridRowDefinitions>
+						<GridRowDefinition gridLengthValue=""/>
+						<GridRowDefinition gridLengthValue=""/>
+					</GridPanel.gridRowDefinitions>
+					<GridPanel.gridColumnDefinitions>
+						<GridColumnDefinition gridLengthValue="" gridMinLength="10rem"/>
+						<GridColumnDefinition gridLengthValue=""/>
+					</GridPanel.gridColumnDefinitions>
+					<Label isDynamic="true" text="Start Date" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="lb47"/>
+					<Calendar dataType="Date,,,," preferredSize="11qch,1qch" fieldTable="offersale" identifier="start_date" gridItemLocation="1,0,1,1" classNames="fcls_data_widget,fcls_align_left,fcls_length_10qch"/>
+					<Label isDynamic="true" text="Finish Date" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,1,1,1" fieldTable="formonly" identifier="lb46"/>
+					<Calendar dataType="Date,,,," preferredSize="11qch,1qch" fieldTable="offersale" identifier="end_date" gridItemLocation="1,1,1,1" classNames="fcls_data_widget,fcls_align_left,fcls_length_10qch"/>
+				</GridPanel>
+			</GroupBox>
+			<GroupBox title="Bonus &amp; Discounts" classNames="fcls_detail_gb_cnt" visible="true" verticalAlignment="Stretch" horizontalAlignment="Stretch" gridItemLocation="0,3,1,1" fieldTable="formonly" identifier="cntDetail3GroupBox">
+				<GridPanel classNames="fcls_detail_gb_cnt_sub,fcls_detail_cnt_sub,fcls_data_cnt,fcls_align_left" visible="true" verticalAlignment="Top" horizontalAlignment="Left" fieldTable="formonly" identifier="cntDetail3Sub">
+					<GridPanel.gridRowDefinitions>
+						<GridRowDefinition gridLengthValue=""/>
+						<GridRowDefinition gridLengthValue=""/>
+						<GridRowDefinition gridLengthValue=""/>
+						<GridRowDefinition gridLengthValue=""/>
+					</GridPanel.gridRowDefinitions>
+					<GridPanel.gridColumnDefinitions>
+						<GridColumnDefinition gridLengthValue="" gridMinLength="10rem"/>
+						<GridColumnDefinition gridLengthValue=""/>
+					</GridPanel.gridColumnDefinitions>
+					<Label isDynamic="true" text="Bonus Check %" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,0,1,1" fieldTable="" identifier="lb103"/>
+					<TextField dataType="Decimal,,,2,5" preferredSize="13qch,1qch" fieldTable="offersale" identifier="bonus_check_per" gridItemLocation="1,0,1,1" classNames="fcls_data_widget,fcls_align_left,fcls_length_10qch"/>
+					<Label isDynamic="true" text="Bonus Check Amt" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,1,1,1" fieldTable="formonly" identifier="lb48"/>
+					<TextField dataType="Decimal,,,2,16" preferredSize="13qch,1qch" fieldTable="offersale" identifier="bonus_check_amt" gridItemLocation="1,1,1,1" classNames="fcls_data_widget,fcls_align_left,fcls_length_10qch"/>
+					<Label isDynamic="true" text="Discount Check %" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,2,1,1" fieldTable="formonly" identifier="lb49"/>
+					<TextField toCase="Up" dataType="Decimal,,,2,5" preferredSize="8qch,1qch" fieldTable="offersale" identifier="disc_check_per" gridItemLocation="1,2,1,1" classNames="fcls_data_widget,fcls_align_left,fcls_length_10qch"/>
+					<Label isDynamic="true" text="Discount Percent" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,3,1,1" fieldTable="formonly" identifier="lb63"/>
+					<TextField toCase="Up" dataType="Decimal,,,2,5" preferredSize="8qch,1qch" fieldTable="offersale" identifier="disc_per" gridItemLocation="1,3,1,1" classNames="fcls_data_widget,fcls_align_left,fcls_length_10qch"/>
+				</GridPanel>
+			</GroupBox>
+			<GroupBox title="Flags &amp; Indicators" classNames="fcls_detail_gb_cnt" visible="true" verticalAlignment="Stretch" horizontalAlignment="Stretch" gridItemLocation="0,4,1,1" fieldTable="" identifier="cntDetail4GroupBox">
+				<GridPanel classNames="fcls_detail_gb_cnt_sub,fcls_detail_cnt_sub,fcls_data_cnt,fcls_align_left" visible="true" verticalAlignment="Top" horizontalAlignment="Left" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="cntDetail4Sub">
+					<GridPanel.gridRowDefinitions>
+						<GridRowDefinition gridLengthValue=""/>
+						<GridRowDefinition gridLengthValue=""/>
+						<GridRowDefinition gridLengthValue=""/>
+						<GridRowDefinition gridLengthValue=""/>
+						<GridRowDefinition gridLengthValue=""/>
+						<GridRowDefinition gridLengthValue=""/>
+					</GridPanel.gridRowDefinitions>
+					<GridPanel.gridColumnDefinitions>
+						<GridColumnDefinition gridLengthValue="" gridMinLength="10rem"/>
+						<GridColumnDefinition gridLengthValue=""/>
+					</GridPanel.gridColumnDefinitions>
+					<Label isDynamic="true" text="Check Rule" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="lb68"/>
+					<ComboBox toCase="Up" dataType="Char,,,,1" preferredSize="2qch,1qch" fieldTable="offersale" identifier="checkrule_ind" gridItemLocation="1,0,1,1" classNames="fcls_data_widget,fcls_align_left,fcls_length_30qch">
+				<ComboBox.includes>
+					<RangeInclude>
+						<RangeInclude.fromValue>
+							<StringLiteral stringValue="1"/>
+						</RangeInclude.fromValue>
+						<RangeInclude.toValue>
+							<StringLiteral stringValue="5"/>
+						</RangeInclude.toValue>
+					</RangeInclude>
+				</ComboBox.includes>
+			</ComboBox>
+					<Label isDynamic="true" text="Discount Rule" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,1,1,1" fieldTable="" identifier="lb115"/>
+					<ComboBox toCase="Up" dataType="Char,,,,1" preferredSize="2qch,1qch" fieldTable="offersale" identifier="disc_rule_ind" gridItemLocation="1,1,1,1" classNames="fcls_data_widget,fcls_align_left,fcls_length_30qch">
+				<ComboBox.includes>
+					<RangeInclude>
+						<RangeInclude.fromValue>
+							<StringLiteral stringValue="1"/>
+						</RangeInclude.fromValue>
+						<RangeInclude.toValue>
+							<StringLiteral stringValue="3"/>
+						</RangeInclude.toValue>
+					</RangeInclude>
+				</ComboBox.includes>
+			</ComboBox>
+					<Label isDynamic="true" text="Check Type" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,2,1,1" fieldTable="" identifier="lb116"/>
+					<ComboBox toCase="Up" dataType="Char,,,,1" preferredSize="2qch,1qch" fieldTable="offersale" identifier="checktype_ind" gridItemLocation="1,2,1,1" classNames="fcls_data_widget,fcls_align_left,fcls_length_30qch">
+				<ComboBox.includes>
+					<ValueInclude>
+						<ValueInclude.value>
+							<StringLiteral stringValue="1"/>
+						</ValueInclude.value>
+					</ValueInclude>
+					<ValueInclude>
+						<ValueInclude.value>
+							<StringLiteral stringValue="2"/>
+						</ValueInclude.value>
+					</ValueInclude>
+				</ComboBox.includes>
+				<ComboBoxItem text="1" identifier="checktype_ind_1">
+					<ComboBoxItem.value>
+						<IntegerLiteral integerValue="1"/>
+					</ComboBoxItem.value>
+				</ComboBoxItem>
+				<ComboBoxItem text="2" identifier="checktype_ind_2">
+					<ComboBoxItem.value>
+						<IntegerLiteral integerValue="1"/>
+					</ComboBoxItem.value>
+				</ComboBoxItem>
+			</ComboBox>
+					<CheckBox toCase="Up" dataType="Char,,,,1" preferredSize="2qch,1qch" fieldTable="offersale" identifier="prodline_disc_flag" title="Product Line Discounts" gridItemLocation="0,3,2,1">
+						<CheckBox.checkedValue>
+							<StringLiteral stringValue="Y"/>
+						</CheckBox.checkedValue>
+						<CheckBox.uncheckedValue>
+							<StringLiteral stringValue="N"/>
+						</CheckBox.uncheckedValue>
+					</CheckBox>
+					<CheckBox toCase="Up" dataType="Char,,,,1" preferredSize="2qch,1qch" fieldTable="offersale" identifier="grp_disc_flag" title="Group Discount Allocation" gridItemLocation="0,4,2,1">
+						<CheckBox.checkedValue>
+							<StringLiteral stringValue="Y"/>
+						</CheckBox.checkedValue>
+						<CheckBox.uncheckedValue>
+							<StringLiteral stringValue="N"/>
+						</CheckBox.uncheckedValue>
+					</CheckBox>
+					<CheckBox toCase="Up" dataType="Char,,,,1" preferredSize="2qch,1qch" fieldTable="offersale" identifier="auto_prod_flag" title="Automatic Insert Products" gridItemLocation="0,5,2,1">
+						<CheckBox.checkedValue>
+							<StringLiteral stringValue="Y"/>
+						</CheckBox.checkedValue>
+						<CheckBox.uncheckedValue>
+							<StringLiteral stringValue="N"/>
+						</CheckBox.uncheckedValue>
+					</CheckBox>
+				</GridPanel>
+			</GroupBox>
+			<GroupBox title="Minimum Amounts" classNames="fcls_detail_gb_cnt" visible="true" verticalAlignment="Stretch" horizontalAlignment="Stretch" gridItemLocation="0,5,1,1" fieldTable="" identifier="cntDetail5GroupBox">
+				<GridPanel classNames="fcls_detail_gb_cnt_sub,fcls_detail_cnt_sub,fcls_data_cnt,fcls_align_left" visible="true" verticalAlignment="Top" horizontalAlignment="Left" fieldTable="" identifier="cntDetail5Sub">
+					<GridPanel.gridRowDefinitions>
+						<GridRowDefinition gridLengthValue=""/>
+						<GridRowDefinition gridLengthValue=""/>
+					</GridPanel.gridRowDefinitions>
+					<GridPanel.gridColumnDefinitions>
+						<GridColumnDefinition gridLengthValue="" gridMinLength="10rem"/>
+						<GridColumnDefinition gridLengthValue=""/>
+					</GridPanel.gridColumnDefinitions>
+					<Label isDynamic="true" text="Minimum Sold Amount" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,0,1,1" fieldTable="" identifier="lb128"/>
+					<TextField toCase="Up" dataType="Decimal,,,2,16" preferredSize="13qch,1qch" fieldTable="offersale" identifier="min_sold_amt" gridItemLocation="1,0,1,1" classNames="fcls_data_widget,fcls_align_left,fcls_length_10qch"/>
+					<Label isDynamic="true" text="Minimum Order Amount" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,1,1,1" fieldTable="" identifier="lb129"/>
+					<TextField toCase="Up" dataType="Decimal,,,2,16" preferredSize="13qch,1qch" fieldTable="offersale" identifier="min_order_amt" gridItemLocation="1,1,1,1" classNames="fcls_data_widget,fcls_align_left,fcls_length_10qch"/>
+				</GridPanel>
+			</GroupBox>
+			<GridPanel classNames="fcls_statusbar_cnt" visible="true" verticalAlignment="Top" gridItemLocation="0,6,1,1" fieldTable="formonly" identifier="cntStatusBar">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="100%"/>
+				</GridPanel.gridColumnDefinitions>
+				<Label isDynamic="true" text="" classNames="fcls_sblabel" visible="true" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="lbInfo1"/>
+				<Label isDynamic="true" text="" classNames="fcls_sblabel" visible="true" gridItemLocation="0,1,1,1" fieldTable="formonly" identifier="lbInfo2"/>
+			</GridPanel>
+		</GridPanel>
+	</form.rootContainer>
+	<form.screenRecords>
+		<ScreenRecord identifier="offersale" fields="offersale.offer_code,offersale.desc_text,offersale.start_date,offersale.end_date,offersale.bonus_check_per,offersale.bonus_check_amt,offersale.disc_check_per,offersale.disc_per,offersale.checkrule_ind,offersale.disc_rule_ind,offersale.checktype_ind,offersale.auto_prod_flag,offersale.prodline_disc_flag,offersale.grp_disc_flag,offersale.min_sold_amt,offersale.min_order_amt"/>
+	</form.screenRecords>
+</form>
+

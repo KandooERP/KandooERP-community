@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<fglBuildTarget xmlns="http://namespaces.querix.com/lyciaide/target" name="z_delete_question_form_trnslt_manager" type="fgl-program">
+
+  <sources type="fgl">
+    <file location="4gl/utility/form_trnslt_manager.4gl"/>
+    <file location="4gl/utility/UT4_frm_obj_translate.4gl"/>
+  </sources>
+
+  <sources type="form">
+    <file location="per/utility/ENG/U805_translate_widgets.fm2"/>
+  </sources>
+
+  <mediaFiles>
+    <file client="true" location="form_trnslt_manager.css" type="other"/>
+  </mediaFiles>
+
+  <buildConfiguration name="development">
+    <additions>
+    </additions>
+    <exclusions>
+      <sources type="fgl">
+        <file location="4gl/utility/UT4_frm_obj_translate.4gl"/>
+      </sources>
+
+      <sources type="form">
+        <file location="per/utility/ENG/U805_translate_widgets.fm2"/>
+      </sources>
+
+    </exclusions>
+  </buildConfiguration>
+
+</fglBuildTarget>

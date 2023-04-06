@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form xmlns="http://namespaces.querix.com/2015/fglForms">
+	<form.rootContainer>
+		<GridPanel classNames="fcls_rootContainer" verticalAlignment="Stretch" horizontalAlignment="Stretch" fieldTable="" identifier="rootContainer">
+			<GridPanel.gridRowDefinitions>
+				<GridRowDefinition gridLengthValue=""/>
+				<GridRowDefinition gridLengthValue=""/>
+				<GridRowDefinition gridLengthValue="100%"/>
+				<GridRowDefinition gridLengthValue=""/>
+			</GridPanel.gridRowDefinitions>
+			<GridPanel.gridColumnDefinitions>
+				<GridColumnDefinition gridLengthValue="100%"/>
+			</GridPanel.gridColumnDefinitions>
+			<GridPanel classNames="fcls_title_cnt" visible="true" verticalAlignment="Top" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="cntTitle">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="100%"/>
+					<GridColumnDefinition gridLengthValue=""/>
+				</GridPanel.gridColumnDefinitions>
+				<Label isDynamic="true" text="Product Scan" classNames="fcls_title_lb" visible="true" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="header_text"/>
+				<Label isDynamic="true" text="W282" classNames="fcls_title_lb" visible="true" gridItemLocation="1,0,1,1" fieldTable="" identifier="lbFormName"/>
+			</GridPanel>
+			<GridPanel visible="true" gridItemLocation="0,1,1,1" fieldTable="" identifier="c153">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue=""/>
+				</GridPanel.gridColumnDefinitions>
+				<TextField visible="true" gridItemLocation="0,0,1,1" fieldTable="" identifier="desc2_text"/>
+			</GridPanel>
+			<Table classNames="fcls_table_cnt" preferredSize="60qch,12qch" visible="true" verticalAlignment="Stretch" horizontalAlignment="Stretch" gridItemLocation="0,2,1,1" fieldTable="" identifier="sr_product">
+				<TableColumn text="" resizable="true" visible="true" fieldTable="" identifier="tc_f152">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="2rem" gridMaxLength="2rem" gridMinLength="2rem"/>
+					</TableColumn.columnLength>
+					<CheckBox visible="true" fieldTable="" identifier="scroll_flag">
+						<CheckBox.checkedValue>
+							<StringLiteral stringValue="*"/>
+						</CheckBox.checkedValue>
+						<CheckBox.uncheckedValue>
+							<NullLiteral/>
+						</CheckBox.uncheckedValue>
+					</CheckBox>
+				</TableColumn>
+				<TableColumn text="Part Code" resizable="true" visible="true" fieldTable="" identifier="tc_part_code">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="20%" gridMaxLength="20rem" gridMinLength="10rem"/>
+					</TableColumn.columnLength>
+					<TextField visible="true" fieldTable="" identifier="part_code"/>
+				</TableColumn>
+				<TableColumn text="Description" resizable="true" visible="true" fieldTable="" identifier="tc_f154">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="60%" gridMaxLength="40rem" gridMinLength="20rem"/>
+					</TableColumn.columnLength>
+					<TextField visible="true" fieldTable="" identifier="desc_text"/>
+				</TableColumn>
+				<TableColumn text="Product Group" resizable="true" visible="true" fieldTable="" identifier="tc_f155">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="20%" gridMaxLength="20rem" gridMinLength="10rem"/>
+					</TableColumn.columnLength>
+					<TextField visible="true" fieldTable="" identifier="prodgrp_code"/>
+				</TableColumn>
+				<TableColumn text="Main Group" resizable="true" visible="true" fieldTable="" identifier="tc_f157">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="20%" gridMaxLength="20rem" gridMinLength="10rem"/>
+					</TableColumn.columnLength>
+					<TextField visible="true" fieldTable="" identifier="maingrp_code"/>
+				</TableColumn>
+			</Table>
+			<GridPanel classNames="fcls_statusbar_cnt" visible="true" verticalAlignment="Top" gridItemLocation="0,3,1,1" fieldTable="formonly" identifier="cntStatusBar">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="100%"/>
+				</GridPanel.gridColumnDefinitions>
+				<Label isDynamic="true" text="" classNames="fcls_sblabel" visible="true" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="lbInfo1"/>
+				<Label isDynamic="true" text="" classNames="fcls_sblabel" visible="true" gridItemLocation="0,1,1,1" fieldTable="formonly" identifier="lbInfo2"/>
+			</GridPanel>
+		</GridPanel>
+	</form.rootContainer>
+	<form.screenRecords>
+		<ScreenRecord identifier="FORMONLY" fields="desc2_text"/>
+		<ScreenRecord identifier="sr_product" fields="scroll_flag,part_code,desc_text,prodgrp_code,maingrp_code"/>
+		<ScreenRecord identifier="sr_product_bak" fields="scroll_flag,part_code,desc_text,prodgrp_code,maingrp_code"/>		
+	</form.screenRecords>
+</form>
+

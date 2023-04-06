@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form xmlns="http://namespaces.querix.com/2015/fglForms">
+	<form.rootContainer>
+		<GridPanel classNames="fcls_rootContainer" verticalAlignment="Top" horizontalAlignment="Left" fieldTable="" identifier="rootContainer">
+			<GridPanel.gridRowDefinitions>
+				<GridRowDefinition gridLengthValue=""/>
+				<GridRowDefinition gridLengthValue=""/>
+				<GridRowDefinition gridLengthValue=""/>
+			</GridPanel.gridRowDefinitions>
+			<GridPanel.gridColumnDefinitions>
+				<GridColumnDefinition gridLengthValue="100%"/>
+			</GridPanel.gridColumnDefinitions>
+			<GridPanel classNames="fcls_title_cnt" visible="true" verticalAlignment="Top" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="cntTitle">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="100%"/>
+					<GridColumnDefinition gridLengthValue=""/>
+				</GridPanel.gridColumnDefinitions>
+				<Label isDynamic="true" text="Quotation Detail" classNames="fcls_title_lb" visible="true" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="header_text"/>
+				<Label isDynamic="true" text="Q124" classNames="fcls_title_lb" visible="true" gridItemLocation="1,0,1,1" fieldTable="" identifier="lbFormName"/>
+			</GridPanel>
+			<GridPanel classNames="fcls_detail_cnt,fcls_data_cnt" visible="true" verticalAlignment="Top" horizontalAlignment="Left" gridItemLocation="0,1,1,1" fieldTable="formonly" identifier="cntDetail1">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="" gridMinLength="10rem"/>
+					<GridColumnDefinition gridLengthValue=""/>
+				</GridPanel.gridColumnDefinitions>
+				<Label text="Customer" classNames="fcls_fieldlabel,fcls_align_left" gridItemLocation="0,0,1,1" fieldTable="" identifier="label1"/>
+				<TextField toCase="Up" dataType="Char,,,,8" preferredSize="9qch,1qch" toolTip=" Enter the code that identifies the customer who raised the quote" comment=" Enter the code that identifies the customer who raised the quote" fieldTable="quotedetl" identifier="cust_code" gridItemLocation="1,0,1,1" classNames="fcls_data_widget,fcls_length_20qch"/>
+				<TextField dataType="Char,,,,30" preferredSize="31qch,1qch" toolTip=" Enter the customer name or description" comment=" Enter the customer name or description" fieldTable="customer" identifier="name_text" gridItemLocation="1,1,1,1" classNames="fcls_data_widget,fcls_length_20qch"/>
+				<TextField dataType="Integer,,,," preferredSize="9qch,1qch" toolTip=" Enter unique number that identifies a quote" comment=" Enter unique number that identifies a quote" fieldTable="quotehead" identifier="order_num" gridItemLocation="1,2,1,1" classNames="fcls_data_widget,fcls_length_20qch"/>
+				<Calendar format="dd/mm/yyyy" dataType="Date,,,," preferredSize="11qch,1qch" toolTip=" Enter the date the quote was given to the customer" comment=" Enter the date the quote was given to the customer" fieldTable="quotehead" identifier="quote_date" gridItemLocation="1,3,1,1" classNames="fcls_data_widget,fcls_length_20qch"/>
+				<Label isDynamic="true" text="Valid Date" classNames="fcls_fieldlabel,fcls_align_left" visible="true" fieldTable="" identifier="lb48" gridItemLocation="0,4,1,1"/>
+				<Calendar format="dd/mm/yyyy" dataType="Date,,,," preferredSize="11qch,1qch" toolTip=" Enter the date that the quote is valid to" comment=" Enter the date that the quote is valid to" fieldTable="quotehead" identifier="valid_date" gridItemLocation="1,4,1,1" classNames="fcls_data_widget,fcls_length_20qch"/>
+				<Label isDynamic="true" text="Inv. Ref." classNames="fcls_fieldlabel,fcls_align_left" visible="true" fieldTable="" identifier="lb55" gridItemLocation="0,5,1,1"/>
+				<TextField noEntry="true" dataType="Char,,,,16" preferredSize="17qch,1qch" fieldTable="arparms" identifier="inv_ref1_text" gridItemLocation="1,5,1,1" classNames="fcls_data_widget,fcls_length_20qch"/>
+				<TextField dataType="Char,,,,20" preferredSize="21qch,1qch" toolTip=" Enter the reference number" comment=" Enter the reference number" fieldTable="quotehead" identifier="ord_text" gridItemLocation="1,6,1,1" classNames="fcls_data_widget,fcls_length_20qch"/>
+				<TextField toCase="Up" dataType="Char,,,,3" preferredSize="4qch,1qch" toolTip=" Enter the currency in which the quote was made" comment=" Enter the currency in which the quote was made" fieldTable="quotehead" identifier="currency_code" gridItemLocation="1,7,1,1" classNames="fcls_data_widget,fcls_length_20qch"/>
+				<Label isDynamic="true" text="Warehouse" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,8,1,1" fieldTable="" identifier="lb67"/>
+				<TextField toCase="Up" dataType="Char,,,,3" preferredSize="4qch,1qch" toolTip=" Enter the ware code the products will be delivered from" comment=" Enter the ware code the products will be delivered from" fieldTable="quotehead" identifier="ware_code" gridItemLocation="1,8,1,1" classNames="fcls_data_widget,fcls_length_20qch"/>
+				<Label isDynamic="true" text="Quote Number" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,2,1,1" fieldTable="" identifier="lb51"/>
+				<Label isDynamic="true" text="Quote Date" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,3,1,1" fieldTable="" identifier="lb52"/>
+				<Label isDynamic="true" text="Currency" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,7,1,1" fieldTable="" identifier="lb66"/>
+				<Label isDynamic="true" text="Status" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,9,1,1" fieldTable="" identifier="lb133"/>
+				<TextField toCase="Up" dataType="Char,,,,1" preferredSize="2qch,1qch" toolTip=" Quote Status: U) New - C) Approved - X) Being Editted - D) Cancelled " comment=" Quote Status: U) New - C) Approved - X) Being Editted - D) Cancelled " fieldTable="quotehead" identifier="status_ind" gridItemLocation="1,9,1,1" classNames="fcls_data_widget,fcls_length_20qch"/>
+				<Label isDynamic="true" text="Product" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,10,1,1" fieldTable="" identifier="lb134"/>
+				<TextField toCase="Up" dataType="Char,,,,15" preferredSize="16qch,1qch" toolTip=" The product ordered on this quote line" comment=" The product ordered on this quote line" fieldTable="quotedetl" identifier="part_code" gridItemLocation="1,10,1,1" classNames="fcls_data_widget,fcls_length_20qch"/>
+				<Label isDynamic="true" text="Description" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,11,1,1" fieldTable="" identifier="lb135"/>
+				<TextField dataType="Char,,,,40" preferredSize="41qch,1qch" toolTip=" The description text for this quotation line" comment=" The description text for this quotation line" fieldTable="quotedetl" identifier="desc_text" gridItemLocation="1,11,1,1" classNames="fcls_data_widget,fcls_length_20qch"/>
+				<Label isDynamic="true" text="Offer" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,12,1,1" fieldTable="" identifier="lb136"/>
+				<TextField toCase="Up" dataType="Char,,,,3" preferredSize="4qch,1qch" toolTip=" The special offer which this line is a part of" comment=" The special offer which this line is a part of" fieldTable="quotedetl" identifier="offer_code" gridItemLocation="1,12,1,1" classNames="fcls_data_widget,fcls_length_20qch"/>
+				<Label isDynamic="true" text="Quantity" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,13,1,1" fieldTable="" identifier="lb137"/>
+				<TextField dataType="Float,,,," preferredSize="9qch,1qch" toolTip=" The amount of product ordered on this line" comment=" The amount of product ordered on this line" fieldTable="quotedetl" identifier="sold_qty" gridItemLocation="1,13,1,1" classNames="fcls_data_widget,fcls_length_20qch"/>
+				<Label isDynamic="true" text="Bonus" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,14,1,1" fieldTable="" identifier="lb138"/>
+				<TextField dataType="Float,,,," preferredSize="9qch,1qch" toolTip=" The amount of product given to customer as a bonus" comment=" The amount of product given to customer as a bonus" fieldTable="quotedetl" identifier="bonus_qty" gridItemLocation="1,14,1,1" classNames="fcls_data_widget,fcls_length_20qch"/>
+				<Label isDynamic="true" text="Discount %" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,15,1,1" fieldTable="" identifier="lb153"/>
+				<TextField dataType="Decimal,,,3,6" preferredSize="6qch,1qch" toolTip=" The discount percentage given to customer" comment=" The discount percentage given to customer" fieldTable="quotedetl" identifier="disc_per" gridItemLocation="1,15,1,1" classNames="fcls_data_widget,fcls_length_20qch"/>
+				<Label isDynamic="true" text="Sell Price" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,16,1,1" fieldTable="" identifier="lb154"/>
+				<TextField dataType="Decimal,,,4,16" preferredSize="11qch,1qch" toolTip=" The price per unit of the product ordered" comment=" The price per unit of the product ordered" fieldTable="quotedetl" identifier="unit_price_amt" gridItemLocation="1,16,1,1" classNames="fcls_data_widget,fcls_length_20qch"/>
+				<Label isDynamic="true" text="Margin" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,17,1,1" fieldTable="" identifier="lb156"/>
+				<TextField dataType="Char,,,,1" preferredSize="2qch,1qch" toolTip=" Asterisk will be placed if quote is out of discount limits" comment=" Asterisk will be placed if quote is out of discount limits" fieldTable="quotedetl" identifier="margin_ind" gridItemLocation="1,17,1,1" classNames="fcls_data_widget,fcls_length_20qch"/>
+				<Label isDynamic="true" text="Entry Person" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,18,1,1" fieldTable="" identifier="lb157"/>
+				<TextField dataType="Char,,,,8" preferredSize="9qch,1qch" toolTip=" The code of the user who entered the quote" comment=" The code of the user who entered the quote" fieldTable="quotehead" identifier="entry_code" gridItemLocation="1,18,1,1" classNames="fcls_data_widget,fcls_length_20qch"/>
+				<Label isDynamic="true" text="Entry Date" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,19,1,1" fieldTable="" identifier="lb158"/>
+				<Calendar format="dd/mm/yyyy" dataType="Date,,,," preferredSize="9qch,1qch" toolTip=" The date the quote was entered into the system" comment=" The date the quote was entered into the system" fieldTable="quotehead" identifier="entry_date" gridItemLocation="1,19,1,1" classNames="fcls_data_widget,fcls_length_20qch"/>
+				<Label isDynamic="true" text="Approval Person" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,20,1,1" fieldTable="" identifier="lb155"/>
+				<TextField dataType="Char,,,,8" preferredSize="9qch,1qch" toolTip=" The code of the person who approved this quote" comment=" The code of the person who approved this quote" fieldTable="quotehead" identifier="approved_by" gridItemLocation="1,20,1,1" classNames="fcls_data_widget,fcls_length_20qch"/>
+				<Label isDynamic="true" text="Approval Date" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,21,1,1" fieldTable="" identifier="lb152"/>
+				<Calendar format="dd/mm/yyyy" dataType="Date,,,," preferredSize="9qch,1qch" toolTip=" The date the quote was approved " comment=" The date the quote was approved " fieldTable="quotehead" identifier="approved_date" gridItemLocation="1,21,1,1" classNames="fcls_data_widget,fcls_length_20qch"/>
+			</GridPanel>
+			<GridPanel classNames="fcls_statusbar_cnt" visible="true" verticalAlignment="Bottom" gridItemLocation="0,2,1,1" fieldTable="formonly" identifier="cntStatusBar">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="100%"/>
+				</GridPanel.gridColumnDefinitions>
+				<Label isDynamic="true" text="" classNames="fcls_sblabel" visible="true" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="lbInfo1"/>
+				<Label isDynamic="true" text="" classNames="fcls_sblabel" visible="true" gridItemLocation="0,1,1,1" fieldTable="formonly" identifier="lbInfo2"/>
+			</GridPanel>
+		</GridPanel>
+	</form.rootContainer>
+	<form.screenRecords>
+		<ScreenRecord identifier="arparms" fields="arparms.inv_ref1_text"/>
+		<ScreenRecord identifier="customer" fields="customer.name_text"/>
+		<ScreenRecord identifier="quotedetl" fields="quotedetl.cust_code,quotedetl.part_code,quotedetl.desc_text,quotedetl.offer_code,quotedetl.sold_qty,quotedetl.bonus_qty,quotedetl.disc_per,quotedetl.unit_price_amt,quotedetl.margin_ind"/>
+		<ScreenRecord identifier="quotehead" fields="quotehead.order_num,quotehead.quote_date,quotehead.valid_date,quotehead.ord_text,quotehead.currency_code,quotehead.ware_code,quotehead.status_ind,quotehead.entry_code,quotehead.entry_date,quotehead.approved_by,quotehead.approved_date"/>
+	</form.screenRecords>
+</form>
+

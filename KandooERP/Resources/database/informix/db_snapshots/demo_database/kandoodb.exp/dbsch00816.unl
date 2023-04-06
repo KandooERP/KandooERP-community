@@ -1,0 +1,1002 @@
+20190413-absmodule-createpkconstraint|informix|this script creates a primary key constraint from a unique index|createpkconstra|none|absmodule|13/04/2019||2019-04-30 23:00:00|OK|kandoodb|257|
+20190413-accounthist-createpkconstraint|informix|this script creates a primary key constraint from a unique index|createpkconstra|none|accounthist|13/04/2019||2019-04-30 23:00:00|OK|kandoodb|258|
+20190413-accountledger-createpkconstraint|informix|this script creates a primary key constraint from a unique index|createpkconstra|none|accountledger|13/04/2019||2019-04-30 23:00:00|OK|kandoodb|259|
+20190413-acctxlate-createpkconstraint|informix|this script creates a primary key constraint from a unique index|createpkconstra|none|acctxlate|13/04/2019||2019-04-30 23:00:00|OK|kandoodb|260|
+20190413-accumulator-createpkconstraint|informix|this script creates a primary key constraint from a unique index|createpkconstra|none|accumulator|13/04/2019||2019-04-30 23:00:00|OK|kandoodb|261|
+20190413-action-createpkconstraint|informix|this script creates a primary key constraint from a unique index|createpkconstra|none|action|13/04/2019||2019-04-30 23:00:00|OK|kandoodb|513|
+20190413-activity-createpkconstraint|informix|this script creates a primary key constraint from a unique index|createpkconstra|none|activity|13/04/2019||2019-04-30 23:00:00|OK|kandoodb|514|
+20190413-addcharge-createpkconstraint|informix|this script creates a primary key constraint from a unique index|createpkconstra|none|addcharge|13/04/2019||2019-04-30 23:00:00|OK|kandoodb|515|
+20190413-address-createpkconstraint|informix|this script creates a primary key constraint from a unique index|createpkconstra|none|address|13/04/2019||2019-04-30 23:00:00|OK|kandoodb|516|
+20190413-age_group-createpkconstraint|informix|this script creates a primary key constraint from a unique index|createpkconstra|none|age_group|13/04/2019||2019-04-30 23:00:00|OK|kandoodb|517|
+20190413-appeal-createpkconstraint|informix|this script creates a primary key constraint from a unique index|createpkconstra|none|appeal|13/04/2019||2019-04-30 23:00:00|OK|kandoodb|769|
+20190413-ar1384head-createpkconstraint|informix|this script creates a primary key constraint from a unique index|createpkconstra|none|ar1384head|13/04/2019||2019-04-30 23:00:00|OK|kandoodb|770|
+20190413-asp-createpkconstraint|informix|this script creates a primary key constraint from a unique index|createpkconstra|none|asp|13/04/2019||2019-04-30 23:00:00|OK|kandoodb|771|
+20190413-assets-createpkconstraint|informix|this script creates a primary key constraint from a unique index|createpkconstra|none|assets|13/04/2019||2019-04-30 23:00:00|OK|kandoodb|772|
+20190413-backorder-createpkconstraint|informix|this script creates a primary key constraint from a unique index|createpkconstra|none|backorder|13/04/2019||2019-04-30 23:00:00|OK|kandoodb|773|
+20190413-backreas-createpkconstraint|informix|this script creates a primary key constraint from a unique index|createpkconstra|none|backreas|13/04/2019||2019-04-30 23:00:00|OK|kandoodb|1025|
+20190413-bankdraft-createpkconstraint|informix|this script creates a primary key constraint from a unique index|createpkconstra|none|bankdraft|13/04/2019||2019-04-30 23:00:00|OK|kandoodb|1026|
+20190413-banking-createpkconstraint|informix|this script creates a primary key constraint from a unique index|createpkconstra|none|banking|13/04/2019||2019-04-30 23:00:00|OK|kandoodb|1027|
+20190413-bankstatement-createpkconstraint|informix|this script creates a primary key constraint from a unique index|createpkconstra|none|bankstatement|13/04/2019||2019-04-30 23:00:00|OK|kandoodb|1028|
+20190413-bank_acc-createpkconstraint|informix|this script creates a primary key constraint from a unique index|createpkconstra|none|bank_acc|13/04/2019||2019-04-30 23:00:00|OK|kandoodb|1029|
+20190413-batchdetl-createpkconstraint|informix|this script creates a primary key constraint from a unique index|createpkconstra|none|batchdetl|13/04/2019||2019-04-30 23:00:00|OK|kandoodb|1281|
+20190413-batchhead-createpkconstraint|informix|this script creates a primary key constraint from a unique index|createpkconstra|none|batchhead|13/04/2019||2019-04-30 23:00:00|OK|kandoodb|1282|
+20190413-bestsells-createpkconstraint|informix|this script creates a primary key constraint from a unique index|createpkconstra|none|bestsells|13/04/2019||2019-04-30 23:00:00|OK|kandoodb|1283|
+20190413-binding-createpkconstraint|informix|this script creates a primary key constraint from a unique index|createpkconstra|none|binding|13/04/2019||2019-04-30 23:00:00|OK|kandoodb|1284|
+20190413-bin_code-createpkconstraint|informix|this script creates a primary key constraint from a unique index|createpkconstra|none|bin_code|13/04/2019||2019-04-30 23:00:00|OK|kandoodb|1285|
+20190413-bsgoodguys-createpkconstraint|informix|this script creates a primary key constraint from a unique index|createpkconstra|none|bsgoodguys|13/04/2019||2019-04-30 23:00:00|OK|kandoodb|1537|
+20190413-budget-createpkconstraint|informix|this script creates a primary key constraint from a unique index|createpkconstra|none|budget|13/04/2019||2019-04-30 23:00:00|OK|kandoodb|1538|
+20190413-calchead-createpkconstraint|informix|this script creates a primary key constraint from a unique index|createpkconstra|none|calchead|13/04/2019||2019-04-30 23:00:00|OK|kandoodb|1539|
+20190413-calcline-createpkconstraint|informix|this script creates a primary key constraint from a unique index|createpkconstra|none|calcline|13/04/2019||2019-04-30 23:00:00|OK|kandoodb|1540|
+20190413-cancelreas-createpkconstraint|informix|this script creates a primary key constraint from a unique index|createpkconstra|none|cancelreas|13/04/2019||2019-04-30 23:00:00|OK|kandoodb|1541|
+20190413-carriercost-createpkconstraint|informix|this script creates a primary key constraint from a unique index|createpkconstra|none|carriercost|13/04/2019||2019-04-30 23:00:00|OK|kandoodb|1793|
+20190413-cartrates-createpkconstraint|informix|this script creates a primary key constraint from a unique index|createpkconstra|none|cartrates|13/04/2019||2019-04-30 23:00:00|OK|kandoodb|1794|
+20190413-cashrcphdr-createpkconstraint|informix|this script creates a primary key constraint from a unique index|createpkconstra|none|cashrcphdr|13/04/2019||2019-04-30 23:00:00|OK|kandoodb|1795|
+20190413-cc_type-createpkconstraint|informix|this script creates a primary key constraint from a unique index|createpkconstra|none|cc_type|13/04/2019||2019-04-30 23:00:00|OK|kandoodb|1796|
+20190413-cmdprogram-createpkconstraint|informix|this script creates a primary key constraint from a unique index|createpkconstra|none|cmdprogram|13/04/2019||2019-04-30 23:00:00|OK|kandoodb|1797|
+20190413-cmdstandard-createpkconstraint|informix|this script creates a primary key constraint from a unique index|createpkconstra|none|cmdstandard|13/04/2019||2019-04-30 23:00:00|OK|kandoodb|2049|
+20190413-colaccum-createpkconstraint|informix|this script creates a primary key constraint from a unique index|createpkconstra|none|colaccum|13/04/2019||2019-04-30 23:00:00|OK|kandoodb|2050|
+20190413-colitem-createpkconstraint|informix|this script creates a primary key constraint from a unique index|createpkconstra|none|colitem|13/04/2019||2019-04-30 23:00:00|OK|kandoodb|2051|
+20190413-colitemcolid-createpkconstraint|informix|this script creates a primary key constraint from a unique index|createpkconstra|none|colitemcolid|13/04/2019||2019-04-30 23:00:00|OK|kandoodb|2052|
+20190413-colitemdetl-createpkconstraint|informix|this script creates a primary key constraint from a unique index|createpkconstra|none|colitemdetl|13/04/2019||2019-04-30 23:00:00|OK|kandoodb|2053|
+20190413-colitemval-createpkconstraint|informix|this script creates a primary key constraint from a unique index|createpkconstra|none|colitemval|13/04/2019||2019-04-30 23:00:00|OK|kandoodb|2305|
+20190413-comment-createpkconstraint|informix|this script creates a primary key constraint from a unique index|createpkconstra|none|comment|13/04/2019||2019-04-30 23:00:00|OK|kandoodb|2306|
+20190413-consoldetl-createpkconstraint|informix|this script creates a primary key constraint from a unique index|createpkconstra|none|consoldetl|13/04/2019||2019-04-30 23:00:00|OK|kandoodb|2307|
+20190413-consolhead-createpkconstraint|informix|this script creates a primary key constraint from a unique index|createpkconstra|none|consolhead|13/04/2019||2019-04-30 23:00:00|OK|kandoodb|2308|
+20190413-contact_address-createpkconstraint|informix|this script creates a primary key constraint from a unique index|createpkconstra|none|contact_address|13/04/2019||2019-04-30 23:00:00|OK|kandoodb|2309|
+20190413-contact_bank_acc-createpkconstraint|informix|this script creates a primary key constraint from a unique index|createpkconstra|none|contact_bank_acc|13/04/2019||2019-04-30 23:00:00|OK|kandoodb|2561|
+20190413-contact_cc-createpkconstraint|informix|this script creates a primary key constraint from a unique index|createpkconstra|none|contact_cc|13/04/2019||2019-04-30 23:00:00|OK|kandoodb|2562|
+20190413-contact_comment-createpkconstraint|informix|this script creates a primary key constraint from a unique index|createpkconstra|none|contact_comment|13/04/2019||2019-04-30 23:00:00|OK|kandoodb|2563|
+20190413-contact_mailing-createpkconstraint|informix|this script creates a primary key constraint from a unique index|createpkconstra|none|contact_mailing|13/04/2019||2019-04-30 23:00:00|OK|kandoodb|2564|
+20190413-contact_phone-createpkconstraint|informix|this script creates a primary key constraint from a unique index|createpkconstra|none|contact_phone|13/04/2019||2019-04-30 23:00:00|OK|kandoodb|2565|
+20190413-contact_relation-createpkconstraint|informix|this script creates a primary key constraint from a unique index|createpkconstra|none|contact_relation|13/04/2019||2019-04-30 23:00:00|OK|kandoodb|2817|
+20190413-contact_role-createpkconstraint|informix|this script creates a primary key constraint from a unique index|createpkconstra|none|contact_role|13/04/2019||2019-04-30 23:00:00|OK|kandoodb|2818|
+20190413-contractdate-createpkconstraint|informix|this script creates a primary key constraint from a unique index|createpkconstra|none|contractdate|13/04/2019||2019-04-30 23:00:00|OK|kandoodb|2819|
+20190413-contractdetl-createpkconstraint|informix|this script creates a primary key constraint from a unique index|createpkconstra|none|contractdetl|13/04/2019||2019-04-30 23:00:00|OK|kandoodb|2820|
+20190413-contracthead-createpkconstraint|informix|this script creates a primary key constraint from a unique index|createpkconstra|none|contracthead|13/04/2019||2019-04-30 23:00:00|OK|kandoodb|2821|
+20190413-cont_91-createpkconstraint|informix|this script creates a primary key constraint from a unique index|createpkconstra|none|cont_91|13/04/2019||2019-04-30 23:00:00|OK|kandoodb|3073|
+20190413-cont_amt-createpkconstraint|informix|this script creates a primary key constraint from a unique index|createpkconstra|none|cont_amt|13/04/2019||2019-04-30 23:00:00|OK|kandoodb|3074|
+20190413-cont_head-createpkconstraint|informix|this script creates a primary key constraint from a unique index|createpkconstra|none|cont_head|13/04/2019||2019-04-30 23:00:00|OK|kandoodb|3075|
+20190413-cont_line-createpkconstraint|informix|this script creates a primary key constraint from a unique index|createpkconstra|none|cont_line|13/04/2019||2019-04-30 23:00:00|OK|kandoodb|3076|
+20190413-cont_mail-createpkconstraint|informix|this script creates a primary key constraint from a unique index|createpkconstra|none|cont_mail|13/04/2019||2019-04-30 23:00:00|OK|kandoodb|3077|
+20190413-cont_stats-createpkconstraint|informix|this script creates a primary key constraint from a unique index|createpkconstra|none|cont_stats|13/04/2019||2019-04-30 23:00:00|OK|kandoodb|3329|
+20190413-credheadaddr-createpkconstraint|informix|this script creates a primary key constraint from a unique index|createpkconstra|none|credheadaddr|13/04/2019||2019-04-30 23:00:00|OK|kandoodb|3330|
+20190413-creditdetl-createpkconstraint|informix|this script creates a primary key constraint from a unique index|createpkconstra|none|creditdetl|13/04/2019||2019-04-30 23:00:00|OK|kandoodb|3331|
+20190413-credithead-createpkconstraint|informix|this script creates a primary key constraint from a unique index|createpkconstra|none|credithead|13/04/2019||2019-04-30 23:00:00|OK|kandoodb|3332|
+20190413-creditheadext-createpkconstraint|informix|this script creates a primary key constraint from a unique index|createpkconstra|none|creditheadext|13/04/2019||2019-04-30 23:00:00|OK|kandoodb|3333|
+20190413-creditrates-createpkconstraint|informix|this script creates a primary key constraint from a unique index|createpkconstra|none|creditrates|13/04/2019||2019-04-30 23:00:00|OK|kandoodb|3585|
+20190413-credit_card-createpkconstraint|informix|this script creates a primary key constraint from a unique index|createpkconstra|none|credit_card|13/04/2019||2019-04-30 23:00:00|OK|kandoodb|3586|
+20190413-csfcodes-createpkconstraint|informix|this script creates a primary key constraint from a unique index|createpkconstra|none|csfcodes|13/04/2019||2019-04-30 23:00:00|OK|kandoodb|3587|
+20190413-csfhead-createpkconstraint|informix|this script creates a primary key constraint from a unique index|createpkconstra|none|csfhead|13/04/2019||2019-04-30 23:00:00|OK|kandoodb|3588|
+20190413-csfnote-createpkconstraint|informix|this script creates a primary key constraint from a unique index|createpkconstra|none|csfnote|13/04/2019||2019-04-30 23:00:00|OK|kandoodb|3589|
+20190413-custcard-createpkconstraint|informix|this script creates a primary key constraint from a unique index|createpkconstra|none|custcard|13/04/2019||2019-04-30 23:00:00|OK|kandoodb|3841|
+20190413-custdocket-createpkconstraint|informix|this script creates a primary key constraint from a unique index|createpkconstra|none|custdocket|13/04/2019||2019-04-30 23:00:00|OK|kandoodb|3842|
+20190413-customerhist-createpkconstraint|informix|this script creates a primary key constraint from a unique index|createpkconstra|none|customerhist|13/04/2019||2019-04-30 23:00:00|OK|kandoodb|3843|
+20190413-custpallet-createpkconstraint|informix|this script creates a primary key constraint from a unique index|createpkconstra|none|custpallet|13/04/2019||2019-04-30 23:00:00|OK|kandoodb|3844|
+20190413-dangercarry-createpkconstraint|informix|this script creates a primary key constraint from a unique index|createpkconstra|none|dangercarry|13/04/2019||2019-04-30 23:00:00|OK|kandoodb|3845|
+20190413-dangerclass-createpkconstraint|informix|this script creates a primary key constraint from a unique index|createpkconstra|none|dangerclass|13/04/2019||2019-04-30 23:00:00|OK|kandoodb|4097|
+20190413-dangerline-createpkconstraint|informix|this script creates a primary key constraint from a unique index|createpkconstra|none|dangerline|13/04/2019||2019-04-30 23:00:00|OK|kandoodb|4098|
+20190413-debitdist-createpkconstraint|informix|this script creates a primary key constraint from a unique index|createpkconstra|none|debitdist|13/04/2019||2019-04-30 23:00:00|OK|kandoodb|4099|
+20190413-deldetl-createpkconstraint|informix|this script creates a primary key constraint from a unique index|createpkconstra|none|deldetl|13/04/2019||2019-04-30 23:00:00|OK|kandoodb|4100|
+20190413-delhead-createpkconstraint|informix|this script creates a primary key constraint from a unique index|createpkconstra|none|delhead|13/04/2019||2019-04-30 23:00:00|OK|kandoodb|4101|
+20190413-delinst-createpkconstraint|informix|this script creates a primary key constraint from a unique index|createpkconstra|none|delinst|13/04/2019||2019-04-30 23:00:00|OK|kandoodb|4353|
+20190413-delivdetl-createpkconstraint|informix|this script creates a primary key constraint from a unique index|createpkconstra|none|delivdetl|13/04/2019||2019-04-30 23:00:00|OK|kandoodb|4354|
+20190413-delivhead-createpkconstraint|informix|this script creates a primary key constraint from a unique index|createpkconstra|none|delivhead|13/04/2019||2019-04-30 23:00:00|OK|kandoodb|4355|
+20190413-delivmsg-createpkconstraint|informix|this script creates a primary key constraint from a unique index|createpkconstra|none|delivmsg|13/04/2019||2019-04-30 23:00:00|OK|kandoodb|4356|
+20190413-denomination-createpkconstraint|informix|this script creates a primary key constraint from a unique index|createpkconstra|none|denomination|13/04/2019||2019-04-30 23:00:00|OK|kandoodb|4357|
+20190413-department-createpkconstraint|informix|this script creates a primary key constraint from a unique index|createpkconstra|none|department|13/04/2019||2019-04-30 23:00:00|OK|kandoodb|4609|
+20190413-deposit-createpkconstraint|informix|this script creates a primary key constraint from a unique index|createpkconstra|none|deposit|13/04/2019||2019-04-30 23:00:00|OK|kandoodb|4610|
+20190413-depositor-createpkconstraint|informix|this script creates a primary key constraint from a unique index|createpkconstra|none|depositor|13/04/2019||2019-04-30 23:00:00|OK|kandoodb|4611|
+20190413-deprdetl-createpkconstraint|informix|this script creates a primary key constraint from a unique index|createpkconstra|none|deprdetl|13/04/2019||2019-04-30 23:00:00|OK|kandoodb|4612|
+20190413-deprhead-createpkconstraint|informix|this script creates a primary key constraint from a unique index|createpkconstra|none|deprhead|13/04/2019||2019-04-30 23:00:00|OK|kandoodb|4613|
+20190413-descline-createpkconstraint|informix|this script creates a primary key constraint from a unique index|createpkconstra|none|descline|13/04/2019||2019-04-30 23:00:00|OK|kandoodb|4865|
+20190413-despatchdetl-createpkconstraint|informix|this script creates a primary key constraint from a unique index|createpkconstra|none|despatchdetl|13/04/2019||2019-04-30 23:00:00|OK|kandoodb|4866|
+20190413-despatchhead-createpkconstraint|informix|this script creates a primary key constraint from a unique index|createpkconstra|none|despatchhead|13/04/2019||2019-04-30 23:00:00|OK|kandoodb|4867|
+20190413-device_type-createpkconstraint|informix|this script creates a primary key constraint from a unique index|createpkconstra|none|device_type|13/04/2019||2019-04-30 23:00:00|OK|kandoodb|4868|
+20190413-disposition-createpkconstraint|informix|this script creates a primary key constraint from a unique index|createpkconstra|none|disposition|13/04/2019||2019-04-30 23:00:00|OK|kandoodb|4869|
+20190413-disp_stats-createpkconstraint|informix|this script creates a primary key constraint from a unique index|createpkconstra|none|disp_stats|13/04/2019||2019-04-30 23:00:00|OK|kandoodb|5121|
+20190413-distsper-createpkconstraint|informix|this script creates a primary key constraint from a unique index|createpkconstra|none|distsper|13/04/2019||2019-04-30 23:00:00|OK|kandoodb|5122|
+20190413-distterr-createpkconstraint|informix|this script creates a primary key constraint from a unique index|createpkconstra|none|distterr|13/04/2019||2019-04-30 23:00:00|OK|kandoodb|5123|
+20190413-driver-createpkconstraint|informix|this script creates a primary key constraint from a unique index|createpkconstra|none|driver|13/04/2019||2019-04-30 23:00:00|OK|kandoodb|5124|
+20190413-driverledger-createpkconstraint|informix|this script creates a primary key constraint from a unique index|createpkconstra|none|driverledger|13/04/2019||2019-04-30 23:00:00|OK|kandoodb|5125|
+20190413-drivernote-createpkconstraint|informix|this script creates a primary key constraint from a unique index|createpkconstra|none|drivernote|13/04/2019||2019-04-30 23:00:00|OK|kandoodb|5377|
+20190413-drivertype-createpkconstraint|informix|this script creates a primary key constraint from a unique index|createpkconstra|none|drivertype|13/04/2019||2019-04-30 23:00:00|OK|kandoodb|5378|
+20190413-entitydesc-createpkconstraint|informix|this script creates a primary key constraint from a unique index|createpkconstra|none|entitydesc|13/04/2019||2019-04-30 23:00:00|OK|kandoodb|5379|
+20190413-entitydesc1-createpkconstraint|informix|this script creates a primary key constraint from a unique index|createpkconstra|none|entitydesc1|13/04/2019||2019-04-30 23:00:00|OK|kandoodb|5380|
+20190413-entityid-createpkconstraint|informix|this script creates a primary key constraint from a unique index|createpkconstra|none|entityid|13/04/2019||2019-04-30 23:00:00|OK|kandoodb|5381|
+20190413-entityxref-createpkconstraint|informix|this script creates a primary key constraint from a unique index|createpkconstra|none|entityxref|13/04/2019||2019-04-30 23:00:00|OK|kandoodb|5633|
+20190413-expdetl-createpkconstraint|informix|this script creates a primary key constraint from a unique index|createpkconstra|none|expdetl|13/04/2019||2019-04-30 23:00:00|OK|kandoodb|5634|
+20190413-exphead-createpkconstraint|informix|this script creates a primary key constraint from a unique index|createpkconstra|none|exphead|13/04/2019||2019-04-30 23:00:00|OK|kandoodb|5635|
+20190413-exthead-createpkconstraint|informix|this script creates a primary key constraint from a unique index|createpkconstra|none|exthead|13/04/2019||2019-04-30 23:00:00|OK|kandoodb|5636|
+20190413-extline-createpkconstraint|informix|this script creates a primary key constraint from a unique index|createpkconstra|none|extline|13/04/2019||2019-04-30 23:00:00|OK|kandoodb|5637|
+20190413-extrarates-createpkconstraint|informix|this script creates a primary key constraint from a unique index|createpkconstra|none|extrarates|13/04/2019||2019-04-30 23:00:00|OK|kandoodb|5889|
+20190413-extrastext-createpkconstraint|informix|this script creates a primary key constraint from a unique index|createpkconstra|none|extrastext|13/04/2019||2019-04-30 23:00:00|OK|kandoodb|5890|
+20190413-faauth-createpkconstraint|informix|this script creates a primary key constraint from a unique index|createpkconstra|none|faauth|13/04/2019||2019-04-30 23:00:00|OK|kandoodb|5891|
+20190413-fabatch-createpkconstraint|informix|this script creates a primary key constraint from a unique index|createpkconstra|none|fabatch|13/04/2019||2019-04-30 23:00:00|OK|kandoodb|5892|
+20190413-fabook-createpkconstraint|informix|this script creates a primary key constraint from a unique index|createpkconstra|none|fabook|13/04/2019||2019-04-30 23:00:00|OK|kandoodb|5893|
+20190413-fabookdep-createpkconstraint|informix|this script creates a primary key constraint from a unique index|createpkconstra|none|fabookdep|13/04/2019||2019-04-30 23:00:00|OK|kandoodb|6145|
+20190413-facat-createpkconstraint|informix|this script creates a primary key constraint from a unique index|createpkconstra|none|facat|13/04/2019||2019-04-30 23:00:00|OK|kandoodb|6146|
+20190413-fadepmethod-createpkconstraint|informix|this script creates a primary key constraint from a unique index|createpkconstra|none|fadepmethod|13/04/2019||2019-04-30 23:00:00|OK|kandoodb|6147|
+20190413-fainsure-createpkconstraint|informix|this script creates a primary key constraint from a unique index|createpkconstra|none|fainsure|13/04/2019||2019-04-30 23:00:00|OK|kandoodb|6148|
+20190413-falease-createpkconstraint|informix|this script creates a primary key constraint from a unique index|createpkconstra|none|falease|13/04/2019||2019-04-30 23:00:00|OK|kandoodb|6149|
+20190413-falocation-createpkconstraint|informix|this script creates a primary key constraint from a unique index|createpkconstra|none|falocation|13/04/2019||2019-04-30 23:00:00|OK|kandoodb|6401|
+20190413-famast-createpkconstraint|informix|this script creates a primary key constraint from a unique index|createpkconstra|none|famast|13/04/2019||2019-04-30 23:00:00|OK|kandoodb|6402|
+20190413-faparms-createpkconstraint|informix|this script creates a primary key constraint from a unique index|createpkconstra|none|faparms|13/04/2019||2019-04-30 23:00:00|OK|kandoodb|6403|
+20190413-faperiod-createpkconstraint|informix|this script creates a primary key constraint from a unique index|createpkconstra|none|faperiod|13/04/2019||2019-04-30 23:00:00|OK|kandoodb|6404|
+20190413-faresp-createpkconstraint|informix|this script creates a primary key constraint from a unique index|createpkconstra|none|faresp|13/04/2019||2019-04-30 23:00:00|OK|kandoodb|6405|
+20190413-fastatus-createpkconstraint|informix|this script creates a primary key constraint from a unique index|createpkconstra|none|fastatus|13/04/2019||2019-04-30 23:00:00|OK|kandoodb|6657|
+20190413-glasset-createpkconstraint|informix|this script creates a primary key constraint from a unique index|createpkconstra|none|glasset|13/04/2019||2019-04-30 23:00:00|OK|kandoodb|6658|
+20190413-glline-createpkconstraint|informix|this script creates a primary key constraint from a unique index|createpkconstra|none|glline|13/04/2019||2019-04-30 23:00:00|OK|kandoodb|6659|
+20190413-gllinedetl-createpkconstraint|informix|this script creates a primary key constraint from a unique index|createpkconstra|none|gllinedetl|13/04/2019||2019-04-30 23:00:00|OK|kandoodb|6660|
+20190413-glsumblock-createpkconstraint|informix|this script creates a primary key constraint from a unique index|createpkconstra|none|glsumblock|13/04/2019||2019-04-30 23:00:00|OK|kandoodb|6661|
+20190413-glsummary-createpkconstraint|informix|this script creates a primary key constraint from a unique index|createpkconstra|none|glsummary|13/04/2019||2019-04-30 23:00:00|OK|kandoodb|6913|
+20190413-ibtdetl-createpkconstraint|informix|this script creates a primary key constraint from a unique index|createpkconstra|none|ibtdetl|13/04/2019||2019-04-30 23:00:00|OK|kandoodb|6914|
+20190413-ibthead-createpkconstraint|informix|this script creates a primary key constraint from a unique index|createpkconstra|none|ibthead|13/04/2019||2019-04-30 23:00:00|OK|kandoodb|6915|
+20190413-ibtload-createpkconstraint|informix|this script creates a primary key constraint from a unique index|createpkconstra|none|ibtload|13/04/2019||2019-04-30 23:00:00|OK|kandoodb|6916|
+20190413-inproduction-createpkconstraint|informix|this script creates a primary key constraint from a unique index|createpkconstra|none|inproduction|13/04/2019||2019-04-30 23:00:00|OK|kandoodb|6917|
+20190413-introduction-createpkconstraint|informix|this script creates a primary key constraint from a unique index|createpkconstra|none|introduction|13/04/2019||2019-04-30 23:00:00|OK|kandoodb|7169|
+20190413-invheadext-createpkconstraint|informix|this script creates a primary key constraint from a unique index|createpkconstra|none|invheadext|13/04/2019||2019-04-30 23:00:00|OK|kandoodb|7170|
+20190413-invinst-createpkconstraint|informix|this script creates a primary key constraint from a unique index|createpkconstra|none|invinst|13/04/2019||2019-04-30 23:00:00|OK|kandoodb|7171|
+20190413-invrates-createpkconstraint|informix|this script creates a primary key constraint from a unique index|createpkconstra|none|invrates|13/04/2019||2019-04-30 23:00:00|OK|kandoodb|7172|
+20190413-invstory-createpkconstraint|informix|this script creates a primary key constraint from a unique index|createpkconstra|none|invstory|13/04/2019||2019-04-30 23:00:00|OK|kandoodb|7173|
+20190413-itemattr-createpkconstraint|informix|this script creates a primary key constraint from a unique index|createpkconstra|none|itemattr|13/04/2019||2019-04-30 23:00:00|OK|kandoodb|7425|
+20190413-item_master-createpkconstraint|informix|this script creates a primary key constraint from a unique index|createpkconstra|none|item_master|13/04/2019||2019-04-30 23:00:00|OK|kandoodb|7426|
+20190413-jmj_customer-createpkconstraint|informix|this script creates a primary key constraint from a unique index|createpkconstra|none|jmj_customer|13/04/2019||2019-04-30 23:00:00|OK|kandoodb|7427|
+20190413-jmj_impresttran-createpkconstraint|informix|this script creates a primary key constraint from a unique index|createpkconstra|none|jmj_impresttran|13/04/2019||2019-04-30 23:00:00|OK|kandoodb|7428|
+20190413-jmresource-createpkconstraint|informix|this script creates a primary key constraint from a unique index|createpkconstra|none|jmresource|13/04/2019||2019-04-30 23:00:00|OK|kandoodb|7429|
+20190413-job-createpkconstraint|informix|this script creates a primary key constraint from a unique index|createpkconstra|none|job|13/04/2019||2019-04-30 23:00:00|OK|kandoodb|7681|
+20190413-jobledger-createpkconstraint|informix|this script creates a primary key constraint from a unique index|createpkconstra|none|jobledger|13/04/2019||2019-04-30 23:00:00|OK|kandoodb|7682|
+20190413-jobtype-createpkconstraint|informix|this script creates a primary key constraint from a unique index|createpkconstra|none|jobtype|13/04/2019||2019-04-30 23:00:00|OK|kandoodb|7683|
+20190413-jobvars-createpkconstraint|informix|this script creates a primary key constraint from a unique index|createpkconstra|none|jobvars|13/04/2019||2019-04-30 23:00:00|OK|kandoodb|7684|
+20190413-jrb_movement-createpkconstraint|informix|this script creates a primary key constraint from a unique index|createpkconstra|none|jrb_movement|13/04/2019||2019-04-30 23:00:00|OK|kandoodb|7685|
+20190413-kandooinfo-createpkconstraint|informix|this script creates a primary key constraint from a unique index|createpkconstra|none|kandooinfo|13/04/2019||2019-04-30 23:00:00|OK|kandoodb|7937|
+20190413-kandoomask-createpkconstraint|informix|this script creates a primary key constraint from a unique index|createpkconstra|none|kandoomask|13/04/2019||2019-04-30 23:00:00|OK|kandoodb|7938|
+20190413-kandoomemoline-createpkconstraint|informix|this script creates a primary key constraint from a unique index|createpkconstra|none|kandoomemoline|13/04/2019||2019-04-30 23:00:00|OK|kandoodb|7939|
+20190413-kandoomenu-createpkconstraint|informix|this script creates a primary key constraint from a unique index|createpkconstra|none|kandoomenu|13/04/2019||2019-04-30 23:00:00|OK|kandoodb|7940|
+20190413-kandoooption-createpkconstraint|informix|this script creates a primary key constraint from a unique index|createpkconstra|none|kandoooption|13/04/2019||2019-04-30 23:00:00|OK|kandoodb|7941|
+20190413-labour-createpkconstraint|informix|this script creates a primary key constraint from a unique index|createpkconstra|none|labour|13/04/2019||2019-04-30 23:00:00|OK|kandoodb|8193|
+20190413-labouralloc-createpkconstraint|informix|this script creates a primary key constraint from a unique index|createpkconstra|none|labouralloc|13/04/2019||2019-04-30 23:00:00|OK|kandoodb|8194|
+20190413-labourates-createpkconstraint|informix|this script creates a primary key constraint from a unique index|createpkconstra|none|labourates|13/04/2019||2019-04-30 23:00:00|OK|kandoodb|8195|
+20190413-labourdetl-createpkconstraint|informix|this script creates a primary key constraint from a unique index|createpkconstra|none|labourdetl|13/04/2019||2019-04-30 23:00:00|OK|kandoodb|8196|
+20190413-labourextras-createpkconstraint|informix|this script creates a primary key constraint from a unique index|createpkconstra|none|labourextras|13/04/2019||2019-04-30 23:00:00|OK|kandoodb|8197|
+20190413-labourhead-createpkconstraint|informix|this script creates a primary key constraint from a unique index|createpkconstra|none|labourhead|13/04/2019||2019-04-30 23:00:00|OK|kandoodb|8449|
+20190413-labourline-createpkconstraint|informix|this script creates a primary key constraint from a unique index|createpkconstra|none|labourline|13/04/2019||2019-04-30 23:00:00|OK|kandoodb|8450|
+20190413-labournote-createpkconstraint|informix|this script creates a primary key constraint from a unique index|createpkconstra|none|labournote|13/04/2019||2019-04-30 23:00:00|OK|kandoodb|8451|
+20190413-labourpays-createpkconstraint|informix|this script creates a primary key constraint from a unique index|createpkconstra|none|labourpays|13/04/2019||2019-04-30 23:00:00|OK|kandoodb|8452|
+20190413-ledgerreln-createpkconstraint|informix|this script creates a primary key constraint from a unique index|createpkconstra|none|ledgerreln|13/04/2019||2019-04-30 23:00:00|OK|kandoodb|8453|
+20190413-loadhead-createpkconstraint|informix|this script creates a primary key constraint from a unique index|createpkconstra|none|loadhead|13/04/2019||2019-04-30 23:00:00|OK|kandoodb|8705|
+20190413-loadinst-createpkconstraint|informix|this script creates a primary key constraint from a unique index|createpkconstra|none|loadinst|13/04/2019||2019-04-30 23:00:00|OK|kandoodb|8706|
+20190413-loadline-createpkconstraint|informix|this script creates a primary key constraint from a unique index|createpkconstra|none|loadline|13/04/2019||2019-04-30 23:00:00|OK|kandoodb|8707|
+20190413-mailing_dates-createpkconstraint|informix|this script creates a primary key constraint from a unique index|createpkconstra|none|mailing_dates|13/04/2019||2019-04-30 23:00:00|OK|kandoodb|8708|
+20190413-mailing_role-createpkconstraint|informix|this script creates a primary key constraint from a unique index|createpkconstra|none|mailing_role|13/04/2019||2019-04-30 23:00:00|OK|kandoodb|8709|
+20190413-mail_disc-createpkconstraint|informix|this script creates a primary key constraint from a unique index|createpkconstra|none|mail_disc|13/04/2019||2019-04-30 23:00:00|OK|kandoodb|8961|
+20190413-manners-createpkconstraint|informix|this script creates a primary key constraint from a unique index|createpkconstra|none|manners|13/04/2019||2019-04-30 23:00:00|OK|kandoodb|8962|
+20190413-mbparms-createpkconstraint|informix|this script creates a primary key constraint from a unique index|createpkconstra|none|mbparms|13/04/2019||2019-04-30 23:00:00|OK|kandoodb|8963|
+20190413-menu1-createpkconstraint|informix|this script creates a primary key constraint from a unique index|createpkconstra|none|menu1|13/04/2019||2019-04-30 23:00:00|OK|kandoodb|8964|
+20190413-menu2-createpkconstraint|informix|this script creates a primary key constraint from a unique index|createpkconstra|none|menu2|13/04/2019||2019-04-30 23:00:00|OK|kandoodb|8965|
+20190413-menunames-createpkconstraint|informix|this script creates a primary key constraint from a unique index|createpkconstra|none|menunames|13/04/2019||2019-04-30 23:00:00|OK|kandoodb|9217|
+20190413-menupath-createpkconstraint|informix|this script creates a primary key constraint from a unique index|createpkconstra|none|menupath|13/04/2019||2019-04-30 23:00:00|OK|kandoodb|9218|
+20190413-mmdr-createpkconstraint|informix|this script creates a primary key constraint from a unique index|createpkconstra|none|mmdr|13/04/2019||2019-04-30 23:00:00|OK|kandoodb|9219|
+20190413-mrwitem-createpkconstraint|informix|this script creates a primary key constraint from a unique index|createpkconstra|none|mrwitem|13/04/2019||2019-04-30 23:00:00|OK|kandoodb|9220|
+20190413-notes-createpkconstraint|informix|this script creates a primary key constraint from a unique index|createpkconstra|none|notes|13/04/2019||2019-04-30 23:00:00|OK|kandoodb|9221|
+20190413-offersale-createpkconstraint|informix|this script creates a primary key constraint from a unique index|createpkconstra|none|offersale|13/04/2019||2019-04-30 23:00:00|OK|kandoodb|9473|
+20190413-ordcallfwd-createpkconstraint|informix|this script creates a primary key constraint from a unique index|createpkconstra|none|ordcallfwd|13/04/2019||2019-04-30 23:00:00|OK|kandoodb|9474|
+20190413-orderaccounts-createpkconstraint|informix|this script creates a primary key constraint from a unique index|createpkconstra|none|orderaccounts|13/04/2019||2019-04-30 23:00:00|OK|kandoodb|9475|
+20190413-orderdetl-createpkconstraint|informix|this script creates a primary key constraint from a unique index|createpkconstra|none|orderdetl|13/04/2019||2019-04-30 23:00:00|OK|kandoodb|9476|
+20190413-orderhead-createpkconstraint|informix|this script creates a primary key constraint from a unique index|createpkconstra|none|orderhead|13/04/2019||2019-04-30 23:00:00|OK|kandoodb|9477|
+20190413-orderinst-createpkconstraint|informix|this script creates a primary key constraint from a unique index|createpkconstra|none|orderinst|13/04/2019||2019-04-30 23:00:00|OK|kandoodb|9729|
+20190413-orderledg-createpkconstraint|informix|this script creates a primary key constraint from a unique index|createpkconstra|none|orderledg|13/04/2019||2019-04-30 23:00:00|OK|kandoodb|9730|
+20190413-orderline-createpkconstraint|informix|this script creates a primary key constraint from a unique index|createpkconstra|none|orderline|13/04/2019||2019-04-30 23:00:00|OK|kandoodb|9731|
+20190413-ordernote-createpkconstraint|informix|this script creates a primary key constraint from a unique index|createpkconstra|none|ordernote|13/04/2019||2019-04-30 23:00:00|OK|kandoodb|9732|
+20190413-orderoffer-createpkconstraint|informix|this script creates a primary key constraint from a unique index|createpkconstra|none|orderoffer|13/04/2019||2019-04-30 23:00:00|OK|kandoodb|9733|
+20190413-orderterr-createpkconstraint|informix|this script creates a primary key constraint from a unique index|createpkconstra|none|orderterr|13/04/2019||2019-04-30 23:00:00|OK|kandoodb|9985|
+20190413-ordhead-createpkconstraint|informix|this script creates a primary key constraint from a unique index|createpkconstra|none|ordhead|13/04/2019||2019-04-30 23:00:00|OK|kandoodb|9986|
+20190413-ordlinerate-createpkconstraint|informix|this script creates a primary key constraint from a unique index|createpkconstra|none|ordlinerate|13/04/2019||2019-04-30 23:00:00|OK|kandoodb|9987|
+20190413-ordohstat-createpkconstraint|informix|this script creates a primary key constraint from a unique index|createpkconstra|none|ordohstat|13/04/2019||2019-04-30 23:00:00|OK|kandoodb|9988|
+20190413-ordquotext-createpkconstraint|informix|this script creates a primary key constraint from a unique index|createpkconstra|none|ordquotext|13/04/2019||2019-04-30 23:00:00|OK|kandoodb|9989|
+20190413-ordrates-createpkconstraint|informix|this script creates a primary key constraint from a unique index|createpkconstra|none|ordrates|13/04/2019||2019-04-30 23:00:00|OK|kandoodb|10241|
+20190413-pallet-createpkconstraint|informix|this script creates a primary key constraint from a unique index|createpkconstra|none|pallet|13/04/2019||2019-04-30 23:00:00|OK|kandoodb|10242|
+20190413-penddetl-createpkconstraint|informix|this script creates a primary key constraint from a unique index|createpkconstra|none|penddetl|13/04/2019||2019-04-30 23:00:00|OK|kandoodb|10243|
+20190413-pendhead-createpkconstraint|informix|this script creates a primary key constraint from a unique index|createpkconstra|none|pendhead|13/04/2019||2019-04-30 23:00:00|OK|kandoodb|10244|
+20190413-person-createpkconstraint|informix|this script creates a primary key constraint from a unique index|createpkconstra|none|person|13/04/2019||2019-04-30 23:00:00|OK|kandoodb|10245|
+20190413-phone-createpkconstraint|informix|this script creates a primary key constraint from a unique index|createpkconstra|none|phone|13/04/2019||2019-04-30 23:00:00|OK|kandoodb|10497|
+20190413-pickdetl-createpkconstraint|informix|this script creates a primary key constraint from a unique index|createpkconstra|none|pickdetl|13/04/2019||2019-04-30 23:00:00|OK|kandoodb|10498|
+20190413-pickhead-createpkconstraint|informix|this script creates a primary key constraint from a unique index|createpkconstra|none|pickhead|13/04/2019||2019-04-30 23:00:00|OK|kandoodb|10499|
+20190413-port_config-createpkconstraint|informix|this script creates a primary key constraint from a unique index|createpkconstra|none|port_config|13/04/2019||2019-04-30 23:00:00|OK|kandoodb|10500|
+20190413-posbarcode-createpkconstraint|informix|this script creates a primary key constraint from a unique index|createpkconstra|none|posbarcode|13/04/2019||2019-04-30 23:00:00|OK|kandoodb|10501|
+20190413-poscacust-createpkconstraint|informix|this script creates a primary key constraint from a unique index|createpkconstra|none|poscacust|13/04/2019||2019-04-30 23:00:00|OK|kandoodb|10753|
+20190413-poscashdrw-createpkconstraint|informix|this script creates a primary key constraint from a unique index|createpkconstra|none|poscashdrw|13/04/2019||2019-04-30 23:00:00|OK|kandoodb|10754|
+20190413-poscdraw-createpkconstraint|informix|this script creates a primary key constraint from a unique index|createpkconstra|none|poscdraw|13/04/2019||2019-04-30 23:00:00|OK|kandoodb|10755|
+20190413-poscustprice-createpkconstraint|informix|this script creates a primary key constraint from a unique index|createpkconstra|none|poscustprice|13/04/2019||2019-04-30 23:00:00|OK|kandoodb|10756|
+20190413-posdatport-createpkconstraint|informix|this script creates a primary key constraint from a unique index|createpkconstra|none|posdatport|13/04/2019||2019-04-30 23:00:00|OK|kandoodb|10757|
+20190413-posdatswtch-createpkconstraint|informix|this script creates a primary key constraint from a unique index|createpkconstra|none|posdatswtch|13/04/2019||2019-04-30 23:00:00|OK|kandoodb|11009|
+20190413-posdebtmess-createpkconstraint|informix|this script creates a primary key constraint from a unique index|createpkconstra|none|posdebtmess|13/04/2019||2019-04-30 23:00:00|OK|kandoodb|11010|
+20190413-posdocoffers-createpkconstraint|informix|this script creates a primary key constraint from a unique index|createpkconstra|none|posdocoffers|13/04/2019||2019-04-30 23:00:00|OK|kandoodb|11011|
+20190413-poslocation-createpkconstraint|informix|this script creates a primary key constraint from a unique index|createpkconstra|none|poslocation|13/04/2019||2019-04-30 23:00:00|OK|kandoodb|11012|
+20190413-posmatprice-createpkconstraint|informix|this script creates a primary key constraint from a unique index|createpkconstra|none|posmatprice|13/04/2019||2019-04-30 23:00:00|OK|kandoodb|11013|
+20190413-posmesstext-createpkconstraint|informix|this script creates a primary key constraint from a unique index|createpkconstra|none|posmesstext|13/04/2019||2019-04-30 23:00:00|OK|kandoodb|11265|
+20190413-pospmnts-createpkconstraint|informix|this script creates a primary key constraint from a unique index|createpkconstra|none|pospmnts|13/04/2019||2019-04-30 23:00:00|OK|kandoodb|11266|
+20190413-pospmnttype-createpkconstraint|informix|this script creates a primary key constraint from a unique index|createpkconstra|none|pospmnttype|13/04/2019||2019-04-30 23:00:00|OK|kandoodb|11267|
+20190413-posprinter-createpkconstraint|informix|this script creates a primary key constraint from a unique index|createpkconstra|none|posprinter|13/04/2019||2019-04-30 23:00:00|OK|kandoodb|11268|
+20190413-posscrpad-createpkconstraint|informix|this script creates a primary key constraint from a unique index|createpkconstra|none|posscrpad|13/04/2019||2019-04-30 23:00:00|OK|kandoodb|11269|
+20190413-posscruom-createpkconstraint|informix|this script creates a primary key constraint from a unique index|createpkconstra|none|posscruom|13/04/2019||2019-04-30 23:00:00|OK|kandoodb|11521|
+20190413-posspoffdef-createpkconstraint|informix|this script creates a primary key constraint from a unique index|createpkconstra|none|posspoffdef|13/04/2019||2019-04-30 23:00:00|OK|kandoodb|11522|
+20190413-possysmess-createpkconstraint|informix|this script creates a primary key constraint from a unique index|createpkconstra|none|possysmess|13/04/2019||2019-04-30 23:00:00|OK|kandoodb|11523|
+20190413-postasset-createpkconstraint|informix|this script creates a primary key constraint from a unique index|createpkconstra|none|postasset|13/04/2019||2019-04-30 23:00:00|OK|kandoodb|11524|
+20190413-postcashrcpt-createpkconstraint|informix|this script creates a primary key constraint from a unique index|createpkconstra|none|postcashrcpt|13/04/2019||2019-04-30 23:00:00|OK|kandoodb|11525|
+20190413-postcode-createpkconstraint|informix|this script creates a primary key constraint from a unique index|createpkconstra|none|postcode|13/04/2019||2019-04-30 23:00:00|OK|kandoodb|11777|
+20190413-postcredhead-createpkconstraint|informix|this script creates a primary key constraint from a unique index|createpkconstra|none|postcredhead|13/04/2019||2019-04-30 23:00:00|OK|kandoodb|11778|
+20190413-postcredit-createpkconstraint|informix|this script creates a primary key constraint from a unique index|createpkconstra|none|postcredit|13/04/2019||2019-04-30 23:00:00|OK|kandoodb|11779|
+20190413-postdebit-createpkconstraint|informix|this script creates a primary key constraint from a unique index|createpkconstra|none|postdebit|13/04/2019||2019-04-30 23:00:00|OK|kandoodb|11780|
+20190413-postdebithead-createpkconstraint|informix|this script creates a primary key constraint from a unique index|createpkconstra|none|postdebithead|13/04/2019||2019-04-30 23:00:00|OK|kandoodb|11781|
+20190413-posterminal-createpkconstraint|informix|this script creates a primary key constraint from a unique index|createpkconstra|none|posterminal|13/04/2019||2019-04-30 23:00:00|OK|kandoodb|12033|
+20190413-postfabatch-createpkconstraint|informix|this script creates a primary key constraint from a unique index|createpkconstra|none|postfabatch|13/04/2019||2019-04-30 23:00:00|OK|kandoodb|12034|
+20190413-postinventory-createpkconstraint|informix|this script creates a primary key constraint from a unique index|createpkconstra|none|postinventory|13/04/2019||2019-04-30 23:00:00|OK|kandoodb|12035|
+20190413-postinvhead-createpkconstraint|informix|this script creates a primary key constraint from a unique index|createpkconstra|none|postinvhead|13/04/2019||2019-04-30 23:00:00|OK|kandoodb|12036|
+20190413-postinvoice-createpkconstraint|informix|this script creates a primary key constraint from a unique index|createpkconstra|none|postinvoice|13/04/2019||2019-04-30 23:00:00|OK|kandoodb|12037|
+20190413-postpayment-createpkconstraint|informix|this script creates a primary key constraint from a unique index|createpkconstra|none|postpayment|13/04/2019||2019-04-30 23:00:00|OK|kandoodb|12289|
+20190413-postprodledg-createpkconstraint|informix|this script creates a primary key constraint from a unique index|createpkconstra|none|postprodledg|13/04/2019||2019-04-30 23:00:00|OK|kandoodb|12290|
+20190413-postrandetl-createpkconstraint|informix|this script creates a primary key constraint from a unique index|createpkconstra|none|postrandetl|13/04/2019||2019-04-30 23:00:00|OK|kandoodb|12291|
+20190413-postranhead-createpkconstraint|informix|this script creates a primary key constraint from a unique index|createpkconstra|none|postranhead|13/04/2019||2019-04-30 23:00:00|OK|kandoodb|12292|
+20190413-postreceipt-createpkconstraint|informix|this script creates a primary key constraint from a unique index|createpkconstra|none|postreceipt|13/04/2019||2019-04-30 23:00:00|OK|kandoodb|12293|
+20190413-poststatus-createpkconstraint|informix|this script creates a primary key constraint from a unique index|createpkconstra|none|poststatus|13/04/2019||2019-04-30 23:00:00|OK|kandoodb|12545|
+20190413-postvouch-createpkconstraint|informix|this script creates a primary key constraint from a unique index|createpkconstra|none|postvouch|13/04/2019||2019-04-30 23:00:00|OK|kandoodb|12546|
+20190413-postvoucher-createpkconstraint|informix|this script creates a primary key constraint from a unique index|createpkconstra|none|postvoucher|13/04/2019||2019-04-30 23:00:00|OK|kandoodb|12547|
+20190413-posudfdata-createpkconstraint|informix|this script creates a primary key constraint from a unique index|createpkconstra|none|posudfdata|13/04/2019||2019-04-30 23:00:00|OK|kandoodb|12548|
+20190413-posvaldev-createpkconstraint|informix|this script creates a primary key constraint from a unique index|createpkconstra|none|posvaldev|13/04/2019||2019-04-30 23:00:00|OK|kandoodb|12549|
+20190413-print_size-createpkconstraint|informix|this script creates a primary key constraint from a unique index|createpkconstra|none|print_size|13/04/2019||2019-04-30 23:00:00|OK|kandoodb|12801|
+20190413-procdetl-createpkconstraint|informix|this script creates a primary key constraint from a unique index|createpkconstra|none|procdetl|13/04/2019||2019-04-30 23:00:00|OK|kandoodb|12802|
+20190413-prochead-createpkconstraint|informix|this script creates a primary key constraint from a unique index|createpkconstra|none|prochead|13/04/2019||2019-04-30 23:00:00|OK|kandoodb|12803|
+20190413-proddanger-createpkconstraint|informix|this script creates a primary key constraint from a unique index|createpkconstra|none|proddanger|13/04/2019||2019-04-30 23:00:00|OK|kandoodb|12804|
+20190413-prodflex-createpkconstraint|informix|this script creates a primary key constraint from a unique index|createpkconstra|none|prodflex|13/04/2019||2019-04-30 23:00:00|OK|kandoodb|12805|
+20190413-prodgrp-createpkconstraint|informix|this script creates a primary key constraint from a unique index|createpkconstra|none|prodgrp|13/04/2019||2019-04-30 23:00:00|OK|kandoodb|13057|
+20190413-prodhist-createpkconstraint|informix|this script creates a primary key constraint from a unique index|createpkconstra|none|prodhist|13/04/2019||2019-04-30 23:00:00|OK|kandoodb|13058|
+20190413-prodnote-createpkconstraint|informix|this script creates a primary key constraint from a unique index|createpkconstra|none|prodnote|13/04/2019||2019-04-30 23:00:00|OK|kandoodb|13059|
+20190413-prodquote-createpkconstraint|informix|this script creates a primary key constraint from a unique index|createpkconstra|none|prodquote|13/04/2019||2019-04-30 23:00:00|OK|kandoodb|13060|
+20190413-prodstructure-createpkconstraint|informix|this script creates a primary key constraint from a unique index|createpkconstra|none|prodstructure|13/04/2019||2019-04-30 23:00:00|OK|kandoodb|13061|
+20190413-prodsurcharge-createpkconstraint|informix|this script creates a primary key constraint from a unique index|createpkconstra|none|prodsurcharge|13/04/2019||2019-04-30 23:00:00|OK|kandoodb|13313|
+20190413-productapn-createpkconstraint|informix|this script creates a primary key constraint from a unique index|createpkconstra|none|productapn|13/04/2019||2019-04-30 23:00:00|OK|kandoodb|13314|
+20190413-productkey-createpkconstraint|informix|this script creates a primary key constraint from a unique index|createpkconstra|none|productkey|13/04/2019||2019-04-30 23:00:00|OK|kandoodb|13315|
+20190413-purchhead-createpkconstraint|informix|this script creates a primary key constraint from a unique index|createpkconstra|none|purchhead|13/04/2019||2019-04-30 23:00:00|OK|kandoodb|13316|
+20190413-purchrcphdr-createpkconstraint|informix|this script creates a primary key constraint from a unique index|createpkconstra|none|purchrcphdr|13/04/2019||2019-04-30 23:00:00|OK|kandoodb|13317|
+20190413-quadrant-createpkconstraint|informix|this script creates a primary key constraint from a unique index|createpkconstra|none|quadrant|13/04/2019||2019-04-30 23:00:00|OK|kandoodb|13569|
+20190413-quotedetl-createpkconstraint|informix|this script creates a primary key constraint from a unique index|createpkconstra|none|quotedetl|13/04/2019||2019-04-30 23:00:00|OK|kandoodb|13570|
+20190413-quotelabour-createpkconstraint|informix|this script creates a primary key constraint from a unique index|createpkconstra|none|quotelabour|13/04/2019||2019-04-30 23:00:00|OK|kandoodb|13571|
+20190413-quotelead-createpkconstraint|informix|this script creates a primary key constraint from a unique index|createpkconstra|none|quotelead|13/04/2019||2019-04-30 23:00:00|OK|kandoodb|13572|
+20190413-quoteline-createpkconstraint|informix|this script creates a primary key constraint from a unique index|createpkconstra|none|quoteline|13/04/2019||2019-04-30 23:00:00|OK|kandoodb|13573|
+20190413-quotelinerate-createpkconstraint|informix|this script creates a primary key constraint from a unique index|createpkconstra|none|quotelinerate|13/04/2019||2019-04-30 23:00:00|OK|kandoodb|13825|
+20190413-quotenote-createpkconstraint|informix|this script creates a primary key constraint from a unique index|createpkconstra|none|quotenote|13/04/2019||2019-04-30 23:00:00|OK|kandoodb|13826|
+20190413-qx_attributes_translation-createpkconst|informix|this script creates a primary key constraint from a unique index|createpkconstra|none|qx_attributes_translation|13/04/2019||2019-04-30 23:00:00|OK|kandoodb|13827|
+20190413-qx_form_attributes-createpkconstraint|informix|this script creates a primary key constraint from a unique index|createpkconstra|none|qx_form_attributes|13/04/2019||2019-04-30 23:00:00|OK|kandoodb|13828|
+20190413-rate-createpkconstraint|informix|this script creates a primary key constraint from a unique index|createpkconstra|none|rate|13/04/2019||2019-04-30 23:00:00|OK|kandoodb|13829|
+20190413-recurdetl-createpkconstraint|informix|this script creates a primary key constraint from a unique index|createpkconstra|none|recurdetl|13/04/2019||2019-04-30 23:00:00|OK|kandoodb|14081|
+20190413-region-createpkconstraint|informix|this script creates a primary key constraint from a unique index|createpkconstra|none|region|13/04/2019||2019-04-30 23:00:00|OK|kandoodb|14082|
+20190413-reportdetl-createpkconstraint|informix|this script creates a primary key constraint from a unique index|createpkconstra|none|reportdetl|13/04/2019||2019-04-30 23:00:00|OK|kandoodb|14083|
+20190413-reqaudit-createpkconstraint|informix|this script creates a primary key constraint from a unique index|createpkconstra|none|reqaudit|13/04/2019||2019-04-30 23:00:00|OK|kandoodb|14084|
+20190413-reqbackord-createpkconstraint|informix|this script creates a primary key constraint from a unique index|createpkconstra|none|reqbackord|13/04/2019||2019-04-30 23:00:00|OK|kandoodb|14085|
+20190413-reqdetl-createpkconstraint|informix|this script creates a primary key constraint from a unique index|createpkconstra|none|reqdetl|13/04/2019||2019-04-30 23:00:00|OK|kandoodb|14337|
+20190413-reqhead-createpkconstraint|informix|this script creates a primary key constraint from a unique index|createpkconstra|none|reqhead|13/04/2019||2019-04-30 23:00:00|OK|kandoodb|14338|
+20190413-reqparms-createpkconstraint|informix|this script creates a primary key constraint from a unique index|createpkconstra|none|reqparms|13/04/2019||2019-04-30 23:00:00|OK|kandoodb|14339|
+20190413-reqperson-createpkconstraint|informix|this script creates a primary key constraint from a unique index|createpkconstra|none|reqperson|13/04/2019||2019-04-30 23:00:00|OK|kandoodb|14340|
+20190413-resbdgt-createpkconstraint|informix|this script creates a primary key constraint from a unique index|createpkconstra|none|resbdgt|13/04/2019||2019-04-30 23:00:00|OK|kandoodb|14341|
+20190413-resgrp-createpkconstraint|informix|this script creates a primary key constraint from a unique index|createpkconstra|none|resgrp|13/04/2019||2019-04-30 23:00:00|OK|kandoodb|14593|
+20190413-responsible-createpkconstraint|informix|this script creates a primary key constraint from a unique index|createpkconstra|none|responsible|13/04/2019||2019-04-30 23:00:00|OK|kandoodb|14594|
+20190413-rndcode-createpkconstraint|informix|this script creates a primary key constraint from a unique index|createpkconstra|none|rndcode|13/04/2019||2019-04-30 23:00:00|OK|kandoodb|14595|
+20190413-role-createpkconstraint|informix|this script creates a primary key constraint from a unique index|createpkconstra|none|role|13/04/2019||2019-04-30 23:00:00|OK|kandoodb|14596|
+20190413-rptargs-createpkconstraint|informix|this script creates a primary key constraint from a unique index|createpkconstra|none|rptargs|13/04/2019||2019-04-30 23:00:00|OK|kandoodb|14597|
+20190413-rptcol-createpkconstraint|informix|this script creates a primary key constraint from a unique index|createpkconstra|none|rptcol|13/04/2019||2019-04-30 23:00:00|OK|kandoodb|14849|
+20190413-rptcolaa-createpkconstraint|informix|this script creates a primary key constraint from a unique index|createpkconstra|none|rptcolaa|13/04/2019||2019-04-30 23:00:00|OK|kandoodb|14850|
+20190413-rptcoldesc-createpkconstraint|informix|this script creates a primary key constraint from a unique index|createpkconstra|none|rptcoldesc|13/04/2019||2019-04-30 23:00:00|OK|kandoodb|14851|
+20190413-rpthead-createpkconstraint|informix|this script creates a primary key constraint from a unique index|createpkconstra|none|rpthead|13/04/2019||2019-04-30 23:00:00|OK|kandoodb|14852|
+20190413-rpthead_group-createpkconstraint|informix|this script creates a primary key constraint from a unique index|createpkconstra|none|rpthead_group|13/04/2019||2019-04-30 23:00:00|OK|kandoodb|14853|
+20190413-rptline-createpkconstraint|informix|this script creates a primary key constraint from a unique index|createpkconstra|none|rptline|13/04/2019||2019-04-30 23:00:00|OK|kandoodb|15105|
+20190413-rptlinegrp-createpkconstraint|informix|this script creates a primary key constraint from a unique index|createpkconstra|none|rptlinegrp|13/04/2019||2019-04-30 23:00:00|OK|kandoodb|15106|
+20190413-rptpos-createpkconstraint|informix|this script creates a primary key constraint from a unique index|createpkconstra|none|rptpos|13/04/2019||2019-04-30 23:00:00|OK|kandoodb|15107|
+20190413-rpttype-createpkconstraint|informix|this script creates a primary key constraint from a unique index|createpkconstra|none|rpttype|13/04/2019||2019-04-30 23:00:00|OK|kandoodb|15108|
+20190413-salesanly-createpkconstraint|informix|this script creates a primary key constraint from a unique index|createpkconstra|none|salesanly|13/04/2019||2019-04-30 23:00:00|OK|kandoodb|15109|
+20190413-saleshistory-createpkconstraint|informix|this script creates a primary key constraint from a unique index|createpkconstra|none|saleshistory|13/04/2019||2019-04-30 23:00:00|OK|kandoodb|15361|
+20190413-salestrans-createpkconstraint|informix|this script creates a primary key constraint from a unique index|createpkconstra|none|salestrans|13/04/2019||2019-04-30 23:00:00|OK|kandoodb|15362|
+20190413-salestrct-createpkconstraint|informix|this script creates a primary key constraint from a unique index|createpkconstra|none|salestrct|13/04/2019||2019-04-30 23:00:00|OK|kandoodb|15363|
+20190413-saveline-createpkconstraint|informix|this script creates a primary key constraint from a unique index|createpkconstra|none|saveline|13/04/2019||2019-04-30 23:00:00|OK|kandoodb|15364|
+20190413-script_category-createpkconstraint|informix|this script creates a primary key constraint from a unique index|createpkconstra|none|script_category|13/04/2019||2019-04-30 23:00:00|OK|kandoodb|15365|
+20190413-script_pub-createpkconstraint|informix|this script creates a primary key constraint from a unique index|createpkconstra|none|script_pub|13/04/2019||2019-04-30 23:00:00|OK|kandoodb|15617|
+20190413-script_trans-createpkconstraint|informix|this script creates a primary key constraint from a unique index|createpkconstra|none|script_trans|13/04/2019||2019-04-30 23:00:00|OK|kandoodb|15618|
+20190413-segline-createpkconstraint|informix|this script creates a primary key constraint from a unique index|createpkconstra|none|segline|13/04/2019||2019-04-30 23:00:00|OK|kandoodb|15619|
+20190413-serialinfo-createpkconstraint|informix|this script creates a primary key constraint from a unique index|createpkconstra|none|serialinfo|13/04/2019||2019-04-30 23:00:00|OK|kandoodb|15620|
+20190413-shipcost-createpkconstraint|informix|this script creates a primary key constraint from a unique index|createpkconstra|none|shipcost|13/04/2019||2019-04-30 23:00:00|OK|kandoodb|15621|
+20190413-shipcosttype-createpkconstraint|informix|this script creates a primary key constraint from a unique index|createpkconstra|none|shipcosttype|13/04/2019||2019-04-30 23:00:00|OK|kandoodb|15873|
+20190413-shipdebit-createpkconstraint|informix|this script creates a primary key constraint from a unique index|createpkconstra|none|shipdebit|13/04/2019||2019-04-30 23:00:00|OK|kandoodb|15874|
+20190413-shipdetl-createpkconstraint|informix|this script creates a primary key constraint from a unique index|createpkconstra|none|shipdetl|13/04/2019||2019-04-30 23:00:00|OK|kandoodb|15875|
+20190413-shipdist-createpkconstraint|informix|this script creates a primary key constraint from a unique index|createpkconstra|none|shipdist|13/04/2019||2019-04-30 23:00:00|OK|kandoodb|15876|
+20190413-shiphead-createpkconstraint|informix|this script creates a primary key constraint from a unique index|createpkconstra|none|shiphead|13/04/2019||2019-04-30 23:00:00|OK|kandoodb|15877|
+20190413-shipnote-createpkconstraint|informix|this script creates a primary key constraint from a unique index|createpkconstra|none|shipnote|13/04/2019||2019-04-30 23:00:00|OK|kandoodb|16129|
+20190413-shiprec-createpkconstraint|informix|this script creates a primary key constraint from a unique index|createpkconstra|none|shiprec|13/04/2019||2019-04-30 23:00:00|OK|kandoodb|16130|
+20190413-shipstatus-createpkconstraint|informix|this script creates a primary key constraint from a unique index|createpkconstra|none|shipstatus|13/04/2019||2019-04-30 23:00:00|OK|kandoodb|16131|
+20190413-shiptype-createpkconstraint|informix|this script creates a primary key constraint from a unique index|createpkconstra|none|shiptype|13/04/2019||2019-04-30 23:00:00|OK|kandoodb|16132|
+20190413-shop_orddetl-createpkconstraint|informix|this script creates a primary key constraint from a unique index|createpkconstra|none|shop_orddetl|13/04/2019||2019-04-30 23:00:00|OK|kandoodb|16133|
+20190413-signcode-createpkconstraint|informix|this script creates a primary key constraint from a unique index|createpkconstra|none|signcode|13/04/2019||2019-04-30 23:00:00|OK|kandoodb|16385|
+20190413-smparms-createpkconstraint|informix|this script creates a primary key constraint from a unique index|createpkconstra|none|smparms|13/04/2019||2019-04-30 23:00:00|OK|kandoodb|16386|
+20190413-source-createpkconstraint|informix|this script creates a primary key constraint from a unique index|createpkconstra|none|source|13/04/2019||2019-04-30 23:00:00|OK|kandoodb|16387|
+20190413-sourcemodule-createpkconstraint|informix|this script creates a primary key constraint from a unique index|createpkconstra|none|sourcemodule|13/04/2019||2019-04-30 23:00:00|OK|kandoodb|16388|
+20190413-statcond-createpkconstraint|informix|this script creates a primary key constraint from a unique index|createpkconstra|none|statcond|13/04/2019||2019-04-30 23:00:00|OK|kandoodb|16389|
+20190413-statcust-createpkconstraint|informix|this script creates a primary key constraint from a unique index|createpkconstra|none|statcust|13/04/2019||2019-04-30 23:00:00|OK|kandoodb|16641|
+20190413-statint-createpkconstraint|informix|this script creates a primary key constraint from a unique index|createpkconstra|none|statint|13/04/2019||2019-04-30 23:00:00|OK|kandoodb|16642|
+20190413-statoffer-createpkconstraint|informix|this script creates a primary key constraint from a unique index|createpkconstra|none|statoffer|13/04/2019||2019-04-30 23:00:00|OK|kandoodb|16643|
+20190413-statprod-createpkconstraint|informix|this script creates a primary key constraint from a unique index|createpkconstra|none|statprod|13/04/2019||2019-04-30 23:00:00|OK|kandoodb|16644|
+20190413-statsper-createpkconstraint|informix|this script creates a primary key constraint from a unique index|createpkconstra|none|statsper|13/04/2019||2019-04-30 23:00:00|OK|kandoodb|16645|
+20190413-stattarget-createpkconstraint|informix|this script creates a primary key constraint from a unique index|createpkconstra|none|stattarget|13/04/2019||2019-04-30 23:00:00|OK|kandoodb|16897|
+20190413-statterr-createpkconstraint|informix|this script creates a primary key constraint from a unique index|createpkconstra|none|statterr|13/04/2019||2019-04-30 23:00:00|OK|kandoodb|16898|
+20190413-stattype-createpkconstraint|informix|this script creates a primary key constraint from a unique index|createpkconstra|none|stattype|13/04/2019||2019-04-30 23:00:00|OK|kandoodb|16899|
+20190413-statware-createpkconstraint|informix|this script creates a primary key constraint from a unique index|createpkconstra|none|statware|13/04/2019||2019-04-30 23:00:00|OK|kandoodb|16900|
+20190413-stktake-createpkconstraint|informix|this script creates a primary key constraint from a unique index|createpkconstra|none|stktake|13/04/2019||2019-04-30 23:00:00|OK|kandoodb|16901|
+20190413-street-createpkconstraint|informix|this script creates a primary key constraint from a unique index|createpkconstra|none|street|13/04/2019||2019-04-30 23:00:00|OK|kandoodb|17153|
+20190413-subdates-createpkconstraint|informix|this script creates a primary key constraint from a unique index|createpkconstra|none|subdates|13/04/2019||2019-04-30 23:00:00|OK|kandoodb|17154|
+20190413-subhead-createpkconstraint|informix|this script creates a primary key constraint from a unique index|createpkconstra|none|subhead|13/04/2019||2019-04-30 23:00:00|OK|kandoodb|17155|
+20190413-subissues-createpkconstraint|informix|this script creates a primary key constraint from a unique index|createpkconstra|none|subissues|13/04/2019||2019-04-30 23:00:00|OK|kandoodb|17156|
+20190413-subproduct-createpkconstraint|informix|this script creates a primary key constraint from a unique index|createpkconstra|none|subproduct|13/04/2019||2019-04-30 23:00:00|OK|kandoodb|17157|
+20190413-substype-createpkconstraint|informix|this script creates a primary key constraint from a unique index|createpkconstra|none|substype|13/04/2019||2019-04-30 23:00:00|OK|kandoodb|17409|
+20190413-suburb-createpkconstraint|informix|this script creates a primary key constraint from a unique index|createpkconstra|none|suburb|13/04/2019||2019-04-30 23:00:00|OK|kandoodb|17410|
+20190413-suburbarea-createpkconstraint|informix|this script creates a primary key constraint from a unique index|createpkconstra|none|suburbarea|13/04/2019||2019-04-30 23:00:00|OK|kandoodb|17411|
+20190413-supply-createpkconstraint|informix|this script creates a primary key constraint from a unique index|createpkconstra|none|supply|13/04/2019||2019-04-30 23:00:00|OK|kandoodb|17412|
+20190413-syscolumnext-createpkconstraint|informix|this script creates a primary key constraint from a unique index|createpkconstra|none|syscolumnext|13/04/2019||2019-04-30 23:00:00|OK|kandoodb|17413|
+20190413-systableext-createpkconstraint|informix|this script creates a primary key constraint from a unique index|createpkconstra|none|systableext|13/04/2019||2019-04-30 23:00:00|OK|kandoodb|17665|
+20190413-tariff-createpkconstraint|informix|this script creates a primary key constraint from a unique index|createpkconstra|none|tariff|13/04/2019||2019-04-30 23:00:00|OK|kandoodb|17666|
+20190413-taskperiod-createpkconstraint|informix|this script creates a primary key constraint from a unique index|createpkconstra|none|taskperiod|13/04/2019||2019-04-30 23:00:00|OK|kandoodb|17667|
+20190413-temp_code-createpkconstraint|informix|this script creates a primary key constraint from a unique index|createpkconstra|none|temp_code|13/04/2019||2019-04-30 23:00:00|OK|kandoodb|17668|
+20190413-tentarbal-createpkconstraint|informix|this script creates a primary key constraint from a unique index|createpkconstra|none|tentarbal|13/04/2019||2019-04-30 23:00:00|OK|kandoodb|17669|
+20190413-tenthead-createpkconstraint|informix|this script creates a primary key constraint from a unique index|createpkconstra|none|tenthead|13/04/2019||2019-04-30 23:00:00|OK|kandoodb|17921|
+20190413-tentinvdetl-createpkconstraint|informix|this script creates a primary key constraint from a unique index|createpkconstra|none|tentinvdetl|13/04/2019||2019-04-30 23:00:00|OK|kandoodb|17922|
+20190413-tentinvhead-createpkconstraint|informix|this script creates a primary key constraint from a unique index|createpkconstra|none|tentinvhead|13/04/2019||2019-04-30 23:00:00|OK|kandoodb|17923|
+20190413-tentpays-createpkconstraint|informix|this script creates a primary key constraint from a unique index|createpkconstra|none|tentpays|13/04/2019||2019-04-30 23:00:00|OK|kandoodb|17924|
+20190413-tentrefund-createpkconstraint|informix|this script creates a primary key constraint from a unique index|createpkconstra|none|tentrefund|13/04/2019||2019-04-30 23:00:00|OK|kandoodb|17925|
+20190413-termdetl-createpkconstraint|informix|this script creates a primary key constraint from a unique index|createpkconstra|none|termdetl|13/04/2019||2019-04-30 23:00:00|OK|kandoodb|18177|
+20190413-time_restrict-createpkconstraint|informix|this script creates a primary key constraint from a unique index|createpkconstra|none|time_restrict|13/04/2019||2019-04-30 23:00:00|OK|kandoodb|18178|
+20190413-tp_ects_int-createpkconstraint|informix|this script creates a primary key constraint from a unique index|createpkconstra|none|tp_ects_int|13/04/2019||2019-04-30 23:00:00|OK|kandoodb|18179|
+20190413-tranadjtype-createpkconstraint|informix|this script creates a primary key constraint from a unique index|createpkconstra|none|tranadjtype|13/04/2019||2019-04-30 23:00:00|OK|kandoodb|18180|
+20190413-transpextras-createpkconstraint|informix|this script creates a primary key constraint from a unique index|createpkconstra|none|transpextras|13/04/2019||2019-04-30 23:00:00|OK|kandoodb|18181|
+20190413-transprates-createpkconstraint|informix|this script creates a primary key constraint from a unique index|createpkconstra|none|transprates|13/04/2019||2019-04-30 23:00:00|OK|kandoodb|18433|
+20190413-ts_detail-createpkconstraint|informix|this script creates a primary key constraint from a unique index|createpkconstra|none|ts_detail|13/04/2019||2019-04-30 23:00:00|OK|kandoodb|18434|
+20190413-txtline-createpkconstraint|informix|this script creates a primary key constraint from a unique index|createpkconstra|none|txtline|13/04/2019||2019-04-30 23:00:00|OK|kandoodb|18435|
+20190413-txttype-createpkconstraint|informix|this script creates a primary key constraint from a unique index|createpkconstra|none|txttype|13/04/2019||2019-04-30 23:00:00|OK|kandoodb|18436|
+20190413-uomconv-createpkconstraint|informix|this script creates a primary key constraint from a unique index|createpkconstra|none|uomconv|13/04/2019||2019-04-30 23:00:00|OK|kandoodb|18437|
+20190413-uom_convert-createpkconstraint|informix|this script creates a primary key constraint from a unique index|createpkconstra|none|uom_convert|13/04/2019||2019-04-30 23:00:00|OK|kandoodb|18689|
+20190413-vehicle-createpkconstraint|informix|this script creates a primary key constraint from a unique index|createpkconstra|none|vehicle|13/04/2019||2019-04-30 23:00:00|OK|kandoodb|18690|
+20190413-vehicletype-createpkconstraint|informix|this script creates a primary key constraint from a unique index|createpkconstra|none|vehicletype|13/04/2019||2019-04-30 23:00:00|OK|kandoodb|18691|
+20190413-vendorhist-createpkconstraint|informix|this script creates a primary key constraint from a unique index|createpkconstra|none|vendorhist|13/04/2019||2019-04-30 23:00:00|OK|kandoodb|18692|
+20190413-vendorinvs-createpkconstraint|informix|this script creates a primary key constraint from a unique index|createpkconstra|none|vendorinvs|13/04/2019||2019-04-30 23:00:00|OK|kandoodb|18693|
+20190413-vendornote-createpkconstraint|informix|this script creates a primary key constraint from a unique index|createpkconstra|none|vendornote|13/04/2019||2019-04-30 23:00:00|OK|kandoodb|18945|
+20190413-version-createpkconstraint|informix|this script creates a primary key constraint from a unique index|createpkconstra|none|version|13/04/2019||2019-04-30 23:00:00|OK|kandoodb|18946|
+20190413-voucher-createpkconstraint|informix|this script creates a primary key constraint from a unique index|createpkconstra|none|voucher|13/04/2019||2019-04-30 23:00:00|OK|kandoodb|18947|
+20190413-voucherdist-createpkconstraint|informix|this script creates a primary key constraint from a unique index|createpkconstra|none|voucherdist|13/04/2019||2019-04-30 23:00:00|OK|kandoodb|18948|
+20190413-vouchernote-createpkconstraint|informix|this script creates a primary key constraint from a unique index|createpkconstra|none|vouchernote|13/04/2019||2019-04-30 23:00:00|OK|kandoodb|18949|
+20190413-voucherpays-createpkconstraint|informix|this script creates a primary key constraint from a unique index|createpkconstra|none|voucherpays|13/04/2019||2019-04-30 23:00:00|OK|kandoodb|19201|
+20190413-work_center-createpkconstraint|informix|this script creates a primary key constraint from a unique index|createpkconstra|none|work_center|13/04/2019||2019-04-30 23:00:00|OK|kandoodb|19202|
+20190413-wwwparms-createpkconstraint|informix|this script creates a primary key constraint from a unique index|createpkconstra|none|wwwparms|13/04/2019||2019-04-30 23:00:00|OK|kandoodb|19203|
+20190415-qxt_menu_tables-datload|informix|this script handles changes in the menu items|datload|none|qxt_menu_item_txt,qxt_menu_item|15/04/2019||2019-04-30 23:00:00|OK|kandoodb|19204|
+20190416-vendor-crttbl|informix|this script creates the table vendor with all necessary nchar columns|crttbl|none|vendor|16/04/2019||2019-04-30 23:00:00|OK|kandoodb|19205|
+20190501.001-translation-crttbl|informix|this script create the tables necessary for messages and forms translation|crttbl|none|form_attributes,attributes_translation|01/05/2019||2019-05-31 23:00:00|OK|kandoodb|19457|
+20190506-customer-createpkconstraint|informix|this script creates a primary key constraint from a unique index|createpkconstra|none|customer|06/05/2019||2019-05-31 23:00:00|OK|kandoodb|19458|
+20190507-apparms-createpkconstraint|informix|this script creates a primary key constraint from a unique index|createpkconstra|none|apparms|07/05/2019||2019-05-31 23:00:00|OK|kandoodb|19459|
+20190507-bank-createpkconstraint|informix|this script creates a primary key constraint from a unique index|createpkconstra|none|bank|07/05/2019||2019-05-31 23:00:00|OK|kandoodb|19460|
+20190507-cheque-createpkconstraint|informix|this script creates a primary key constraint from a unique index|createpkconstra|none|cheque|07/05/2019||2019-05-31 23:00:00|OK|kandoodb|19461|
+20190507-coa-createpkconstraint|informix|this script creates a primary key constraint from a unique index|createpkconstra|none|coa|07/05/2019||2019-05-31 23:00:00|OK|kandoodb|19713|
+20190507-company-createpkconstraint|informix|this script creates a primary key constraint from a unique index|createpkconstra|none|company|07/05/2019||2019-05-31 23:00:00|OK|kandoodb|19714|
+20190507-contractor-createpkconstraint|informix|this script creates a primary key constraint from a unique index|createpkconstra|none|contractor|07/05/2019||2019-05-31 23:00:00|OK|kandoodb|19715|
+20190507-currency-createpkconstraint|informix|this script creates a primary key constraint from a unique index|createpkconstra|none|currency|07/05/2019||2019-05-31 23:00:00|OK|kandoodb|19716|
+20190507-debithead-createpkconstraint|informix|this script creates a primary key constraint from a unique index|createpkconstra|none|debithead|07/05/2019||2019-05-31 23:00:00|OK|kandoodb|19717|
+20190507-glparms-createpkconstraint|informix|this script creates a primary key constraint from a unique index|createpkconstra|none|glparms|07/05/2019||2019-05-31 23:00:00|OK|kandoodb|19969|
+20190507-holdpay-createpkconstraint|informix|this script creates a primary key constraint from a unique index|createpkconstra|none|holdpay|07/05/2019||2019-05-31 23:00:00|OK|kandoodb|19970|
+20190507-invoicehead-createpkconstraint|informix|this script creates a primary key constraint from a unique index|createpkconstra|none|invoicehead|07/05/2019||2019-05-31 23:00:00|OK|kandoodb|19971|
+20190507-journal-createpkconstraint|informix|this script creates a primary key constraint from a unique index|createpkconstra|none|journal|07/05/2019||2019-05-31 23:00:00|OK|kandoodb|19972|
+20190507-period-createpkconstraint|informix|this script creates a primary key constraint from a unique index|createpkconstra|none|period|07/05/2019||2019-05-31 23:00:00|OK|kandoodb|19973|
+20190507-recurhead-createpkconstraint|informix|this script creates a primary key constraint from a unique index|createpkconstra|none|recurhead|07/05/2019||2019-05-31 23:00:00|OK|kandoodb|20225|
+20190507-tax-createpkconstraint|informix|this script creates a primary key constraint from a unique index|createpkconstra|none|tax|07/05/2019||2019-05-31 23:00:00|OK|kandoodb|20226|
+20190507-term-createpkconstraint|informix|this script creates a primary key constraint from a unique index|createpkconstra|none|term|07/05/2019||2019-05-31 23:00:00|OK|kandoodb|20227|
+20190507-vendorgrp-createpkconstraint|informix|this script creates a primary key constraint from a unique index|createpkconstra|none|vendorgrp|07/05/2019||2019-05-31 23:00:00|OK|kandoodb|20228|
+20190507-vendortype-createpkconstraint|informix|this script creates a primary key constraint from a unique index|createpkconstra|none|vendortype|07/05/2019||2019-05-31 23:00:00|OK|kandoodb|20229|
+20190507-vouchpayee-createpkconstraint|informix|this script creates a primary key constraint from a unique index|createpkconstra|none|vouchpayee|07/05/2019||2019-05-31 23:00:00|OK|kandoodb|20481|
+20190508-bic-createpkconstraint|informix|this script remove implicit primary key constraint, create a unique index then P|createpkconstra|none|bic|08/05/2019||2019-05-31 23:00:00|OK|kandoodb|20482|
+20190508-ingroup-createpkconstraint|informix|this script remove implicit primary key constraint, create a unique index then P|createpkconstra|none|ingroup|08/05/2019||2019-05-31 23:00:00|OK|kandoodb|20483|
+20190508-poaudit-createpkconstraint|informix|this script remove implicit primary key constraint, create a unique index then P|createpkconstra|none|poaudit|08/05/2019||2019-05-31 23:00:00|OK|kandoodb|20484|
+20190508-prodledg-createpkconstraint|informix|this script remove implicit primary key constraint, create a unique index then P|createpkconstra|none|prodledg|08/05/2019||2019-05-31 23:00:00|OK|kandoodb|20485|
+20200317.000-mobile_email-dependencies|informix|This script is the dependency for mobile-email alter tables 20200317.001-mobile_|dependencies|none|many tables|17/03/2020||2020-09-14 15:30:31|OK|kandoodb|20737|
+20190508-purchdetl-createpkconstraint|informix|this script remove implicit primary key constraint, create a unique index then P|createpkconstra|none|purchdetl|08/05/2019||2019-05-31 23:00:00|OK|kandoodb|20738|
+20190508-salesperson-createpkconstraint|informix|this script remove implicit primary key constraint, create a unique index then P|createpkconstra|none|salesperson|08/05/2019||2019-05-31 23:00:00|OK|kandoodb|20739|
+20190508-service_request-createpkconstraint|informix|this script remove implicit primary key constraint, create a unique index then P|createpkconstra|none|service_request|08/05/2019||2019-05-31 23:00:00|OK|kandoodb|20740|
+20190508-sr_documents-createpkconstraint|informix|this script remove implicit primary key constraint, create a unique index then P|createpkconstra|none|sr_documents|08/05/2019||2019-05-31 23:00:00|OK|kandoodb|20741|
+20190508-sr_events-createpkconstraint|informix|this script remove implicit primary key constraint, create a unique index then P|createpkconstra|none|sr_events|08/05/2019||2019-05-31 23:00:00|OK|kandoodb|20993|
+20190508-structure-createpkconstraint|informix|this script remove implicit primary key constraint, create a unique index then P|createpkconstra|none|structure|08/05/2019||2019-05-31 23:00:00|OK|kandoodb|20994|
+20190508-uom-createpkconstraint|informix|this script remove implicit primary key constraint, create a unique index then P|createpkconstra|none|uom|08/05/2019||2019-05-31 23:00:00|OK|kandoodb|20995|
+20190509-arparms-createpkconstraint|informix|this script remove implicit primary key constraint, create a unique index then P|createpkconstra|none|arparms|09/05/2019||2019-05-31 23:00:00|OK|kandoodb|20996|
+20190509-banktype-createpkconstraint|informix|this script remove implicit primary key constraint, create a unique index then P|createpkconstra|none|banktype|09/05/2019||2019-05-31 23:00:00|OK|kandoodb|20997|
+20190509-carrier-createpkconstraint|informix|this script remove implicit primary key constraint, create a unique index then P|createpkconstra|none|carrier|09/05/2019||2019-05-31 23:00:00|OK|kandoodb|21249|
+20190509-cashreceipt-createpkconstraint|informix|this script remove implicit primary key constraint, create a unique index then P|createpkconstra|none|cashreceipt|09/05/2019||2019-05-31 23:00:00|OK|kandoodb|21250|
+20190509-category-createpkconstraint|informix|this script remove implicit primary key constraint, create a unique index then P|createpkconstra|none|category|09/05/2019||2019-05-31 23:00:00|OK|kandoodb|21251|
+20190509-class-createpkconstraint|informix|this script remove implicit primary key constraint, create a unique index then P|createpkconstra|none|class|09/05/2019||2019-05-31 23:00:00|OK|kandoodb|21252|
+20190509-configuration-createpkconstraint|informix|this script remove implicit primary key constraint, create a unique index then P|createpkconstra|none|configuration|09/05/2019||2019-05-31 23:00:00|OK|kandoodb|21253|
+20190509-customership-createpkconstraint|informix|this script remove implicit primary key constraint, create a unique index then P|createpkconstra|none|customership|09/05/2019||2019-05-31 23:00:00|OK|kandoodb|21505|
+20190509-disbhead-createpkconstraint|informix|this script remove implicit primary key constraint, create a unique index then P|createpkconstra|none|disbhead|09/05/2019||2019-05-31 23:00:00|OK|kandoodb|21506|
+20190509-faaudit-createpkconstraint|informix|this script remove implicit primary key constraint, create a unique index then P|createpkconstra|none|faaudit|09/05/2019||2019-05-31 23:00:00|OK|kandoodb|21507|
+20190509-invoidedetl-createpkconstraint|informix|this script remove implicit primary key constraint, create a unique index then P|createpkconstra|none|invoicedetl|09/05/2019||2019-05-31 23:00:00|OK|kandoodb|21508|
+20190509-kithead-createpkconstraint|informix|this script remove implicit primary key constraint, create a unique index then P|createpkconstra|none|kithead|09/05/2019||2019-05-31 23:00:00|OK|kandoodb|21509|
+20190509-maingrp-createpkconstraint|informix|this script remove implicit primary key constraint, create a unique index then P|createpkconstra|none|maingrp|09/05/2019||2019-05-31 23:00:00|OK|kandoodb|21761|
+20190509-product-createpkconstraint|informix|this script remove implicit primary key constraint, create a unique index then P|createpkconstra|none|product|09/05/2019||2019-05-31 23:00:00|OK|kandoodb|21762|
+20190509-quotehead-createpkconstraint|informix|this script creates a primary key constraint from a unique index|createpkconstra|none|quotehead|09/05/2019||2019-05-31 23:00:00|OK|kandoodb|21763|
+20190509-salearea-createpkconstraint|informix|this script remove implicit primary key constraint, create a unique index then P|createpkconstra|none|salearea|09/05/2019||2019-05-31 23:00:00|OK|kandoodb|21764|
+20190509-salesmgr-createpkconstraint|informix|this script remove implicit primary key constraint, create a unique index then P|createpkconstra|none|salesmgr|09/05/2019||2019-05-31 23:00:00|OK|kandoodb|21765|
+20190509-statparms-createpkconstraint|informix|this script remove implicit primary key constraint, create a unique index then P|createpkconstra|none|statparms|09/05/2019||2019-05-31 23:00:00|OK|kandoodb|22017|
+20190509-stktakedetl-createpkconstraint|informix|this script remove implicit primary key constraint, create a unique index then P|createpkconstra|none|stktakedetl|09/05/2019||2019-05-31 23:00:00|OK|kandoodb|22018|
+20190509-territory-createpkconstraint|informix|this script remove implicit primary key constraint, create a unique index then P|createpkconstra|none|territory|09/05/2019||2019-05-31 23:00:00|OK|kandoodb|22019|
+20190510-validflex-createpkconstraint|informix|this script remove implicit primary key constraint, create a unique index then P|createpkconstra|none|validflex|10/05/2019||2019-05-31 23:00:00|OK|kandoodb|22020|
+20190510-workcentre-createpkconstraint|informix|this script remove implicit primary key constraint, create a unique index then P|createpkconstra|none|workcentre|10/05/2019||2019-05-31 23:00:00|OK|kandoodb|22021|
+20190511-bankdetails-createpkconstraint|informix|this script remove implicit primary key constraint, create a unique index then P|createpkconstra|none|bankdetails|11/05/2019||2019-05-31 23:00:00|OK|kandoodb|22273|
+20190511-country-createpkconstraint|informix|this script remove implicit primary key constraint, create a unique index then P|createpkconstra|none|country|11/05/2019||2019-05-31 23:00:00|OK|kandoodb|22274|
+20190511-credreas-createpkconstraint|informix|this script remove implicit primary key constraint, create a unique index then P|createpkconstra|none|credreas|11/05/2019||2019-05-31 23:00:00|OK|kandoodb|22275|
+20190511-customertype-createpkconstraint|informix|this script remove implicit primary key constraint, create a unique index then P|createpkconstra|none|customertype|11/05/2019||2019-05-31 23:00:00|OK|kandoodb|22276|
+20190511-custstmnt-createpkconstraint|informix|this script remove implicit primary key constraint, create a unique index then P|createpkconstra|none|custstmnt|11/05/2019||2019-05-31 23:00:00|OK|kandoodb|22277|
+20190511-inparms-createpkconstraint|informix|this script remove implicit primary key constraint, create a unique index then P|createpkconstra|none|inparms|11/05/2019||2019-05-31 23:00:00|OK|kandoodb|22529|
+20190511-invoicepay-createpkconstraint|informix|this script remove implicit primary key constraint, create a unique index then P|createpkconstra|none|invoicepay|11/05/2019||2019-05-31 23:00:00|OK|kandoodb|22530|
+20190511-labelhead-createpkconstraint|informix|this script remove implicit primary key constraint, create a unique index then P|createpkconstra|none|labelhead|11/05/2019||2019-05-31 23:00:00|OK|kandoodb|22531|
+20190511-language-createpkconstraint|informix|this script remove implicit primary key constraint, create a unique index then P|createpkconstra|none|language|11/05/2019||2019-05-31 23:00:00|OK|kandoodb|22532|
+20190511-loadparms-renconstraint|informix|this script remove implicit primary key constraint, create a unique index then P|renconstraint|none|loadparms|11/05/2019||2019-05-31 23:00:00|OK|kandoodb|22533|
+20190511-mps-createpkconstraint|informix|this script remove implicit primary key constraint, create a unique index then P|createpkconstra|none|mps|11/05/2019||2019-05-31 23:00:00|OK|kandoodb|22785|
+20190511-mrp-createpkconstraint|informix|this script remove implicit primary key constraint, create a unique index then P|createpkconstra|none|mrp|11/05/2019||2019-05-31 23:00:00|OK|kandoodb|22786|
+20190511-offerauto-createpkconstraint|informix|this script remove implicit primary key constraint, create a unique index then P|createpkconstra|none|offerauto|11/05/2019||2019-05-31 23:00:00|OK|kandoodb|22787|
+20190511-pricing-createpkconstraint|informix|this script remove implicit primary key constraint, create a unique index then P|createpkconstra|none|pricing|11/05/2019||2019-05-31 23:00:00|OK|kandoodb|22788|
+20190511-printcodes-createpkconstraint|informix|this script remove implicit primary key constraint, create a unique index then P|createpkconstra|none|printcodes|11/05/2019||2019-05-31 23:00:00|OK|kandoodb|22789|
+20190511-proddept-createpkconstraint|informix|this script remove implicit primary key constraint, create a unique index then P|createpkconstra|none|proddept|11/05/2019||2019-05-31 23:00:00|OK|kandoodb|23041|
+20190511-prodmfg-createpkconstraint|informix|this script remove implicit primary key constraint, create a unique index then P|createpkconstra|none|prodmfg|11/05/2019||2019-05-31 23:00:00|OK|kandoodb|23042|
+20190511-prodstatlog-createpkconstraint|informix|this script remove implicit primary key constraint, create a unique index then P|createpkconstra|none|prodstatlog|11/05/2019||2019-05-31 23:00:00|OK|kandoodb|23043|
+20190511-qxt_menu_item-renconstraint|informix|this script remove implicit primary key constraint, create a unique index then P|renconstraint|none|qxt_menu_item|11/05/2019||2019-05-31 23:00:00|OK|kandoodb|23044|
+20190511-qxt_menu_list-renconstraint|informix|this script remove implicit primary key constraint, create a unique index then P|renconstraint|none|qxt_menu_list|11/05/2019||2019-05-31 23:00:00|OK|kandoodb|23045|
+20190511-rptcolgrp-createpkconstraint|informix|this script remove implicit primary key constraint, create a unique index then P|createpkconstra|none|rptcolgrp|11/05/2019||2019-05-31 23:00:00|OK|kandoodb|23297|
+20190511-stnd_grp-createpkconstraint|informix|this script remove implicit primary key constraint, create a unique index then P|createpkconstra|none|stnd_grp|11/05/2019||2019-05-31 23:00:00|OK|kandoodb|23298|
+20190511-subcustomer-createpkconstraint|informix|this script remove implicit primary key constraint, create a unique index then P|createpkconstra|none|subcustomer|11/05/2019||2019-05-31 23:00:00|OK|kandoodb|23299|
+20190511-vendor-renconstraint|informix|this script remove implicit primary key constraint, create a unique index then P|renconstraint|none|vendor|11/05/2019||2019-05-31 23:00:00|OK|kandoodb|23300|
+20190512-waregrp-createpkconstraint|informix|this script remove implicit primary key constraint, create a unique index then P|createpkconstra|none|waregrp|12/05/2019||2019-05-31 23:00:00|OK|kandoodb|23301|
+20190513-accountcur-createpkconstraint|informix|this script remove implicit primary key constraint, create a unique index then P|createpkconstra|none|accountcur|13/05/2019||2019-05-31 23:00:00|OK|kandoodb|23553|
+20190513-acctgrp-createpkconstraint|informix|this script remove implicit primary key constraint, create a unique index then P|createpkconstra|none|acctgrp|13/05/2019||2019-05-31 23:00:00|OK|kandoodb|23554|
+20190513-conddisc-createpkconstraint|informix|this script remove implicit primary key constraint, create a unique index then P|createpkconstra|none|conddisc|13/05/2019||2019-05-31 23:00:00|OK|kandoodb|23555|
+20190513-customerpart-createpkconstraint|informix|this script remove implicit primary key constraint, create a unique index then P|createpkconstra|none|customerpart|13/05/2019||2019-05-31 23:00:00|OK|kandoodb|23556|
+20190513-fundsapproved-createpkconstraint|informix|this script remove implicit primary key constraint, create a unique index then P|createpkconstra|none|fundsapproved|13/05/2019||2019-05-31 23:00:00|OK|kandoodb|23557|
+20190513-groupinfo-createpkconstraint|informix|this script remove implicit primary key constraint, create a unique index then P|createpkconstra|none|groupinfo|13/05/2019||2019-05-31 23:00:00|OK|kandoodb|23809|
+20190513-jmj_debttype-createpkconstraint|informix|this script remove implicit primary key constraint, create a unique index then P|createpkconstra|none|jmj_debttype|13/05/2019||2019-05-31 23:00:00|OK|kandoodb|23810|
+20190513-kitdetl-createpkconstraint|informix|this script remove implicit primary key constraint, create a unique index then P|createpkconstra|none|kitdetl|13/05/2019||2019-05-31 23:00:00|OK|kandoodb|23811|
+20190513-mfgdept-createpkconstraint|informix|this script remove implicit primary key constraint, create a unique index then P|createpkconstra|none|mfgdept|13/05/2019||2019-05-31 23:00:00|OK|kandoodb|23812|
+20190513-qpparms-createpkconstraint|informix|this script remove implicit primary key constraint, create a unique index then P|createpkconstra|none|qpparms|13/05/2019||2019-05-31 23:00:00|OK|kandoodb|23813|
+20190513-rate_exchange-createpkconstraint|informix|this script remove implicit primary key constraint, create a unique index then P|createpkconstra|none|rate_exchange|13/05/2019||2019-05-31 23:00:00|OK|kandoodb|24065|
+20190513-tentbankhead-createpkconstraint|informix|this script remove implicit primary key constraint, create a unique index then P|createpkconstra|none|tentbankhead|13/05/2019||2019-05-31 23:00:00|OK|kandoodb|24066|
+20190513-userref-createpkconstraint|informix|this script remove implicit primary key constraint, create a unique index then P|createpkconstra|none|userref|13/05/2019||2019-05-31 23:00:00|OK|kandoodb|24067|
+20190517-qxt_menu_tables-datload|informix|this script handles changes in the menu items|datload|none|qxt_menu_item_txt,qxt_menu_item|17/05/2019||2019-05-31 23:00:00|OK|kandoodb|24068|
+20190609-table_documentation-crttbl|informix|this script creates 2 generic new tables whose purpose is to manage database dri|crttbl|none|qx_table_comments,column_documentation,table_documentation|09/06/2019||2019-06-30 23:00:00|OK|kandoodb|24069|
+20190702-state-crttbl|informix|this script creates the table state and insert initial data from France and Ukra|crttbl|none|state|02/07/2019||2019-07-31 23:00:00|OK|kandoodb|24321|
+20190709-warehouse-createpkconstraint|informix|this script remove implicit primary key constraint, create a unique index then P|createpkconstra|none|warehouse|09/07/2019||2019-07-31 23:00:00|OK|kandoodb|24322|
+20190710-location-00createpkconstraint|informix|this script creates a unique index and a primary key constraint on location|00createpkconst|none|location|10/07/2019||2019-07-31 23:00:00|OK|kandoodb|24323|
+20190710-location-01createfkconstraints|informix|this script creates foreign keys in location|01createfkconst|none|location|10/07/2019||2019-07-31 23:00:00|OK|kandoodb|24324|
+20190722-cheque-alttbl|informix|this script fixes datatype of vend_code and related|alttbl|none|cheque|22/07/2019||2019-07-31 23:00:00|OK|kandoodb|24325|
+20190722-company-alttbl|informix|this script alters data type of  abn_text|alttbl|none|company|22/07/2019||2019-07-31 23:00:00|OK|kandoodb|24577|
+20190722-contractor-alttbl|informix|this script fixes datatype of vend_code and related|alttbl|none|contractor|22/07/2019||2019-07-31 23:00:00|OK|kandoodb|24578|
+20190722-customer-alttbl|informix|this script alters data type of  abn_text|alttbl|none|customer|22/07/2019||2019-07-31 23:00:00|OK|kandoodb|24579|
+20190722-debithead-alttbl|informix|this script fixes datatype of vend_code and related|alttbl|none|debithead|22/07/2019||2019-07-31 23:00:00|OK|kandoodb|24580|
+20190722-qxt_menu_tables-datload|informix|this script handles changes in the menu items|datload|none|qxt_menu_item_txt,qxt_menu_item|22/07/2019||2019-07-31 23:00:00|OK|kandoodb|24581|
+20190722-recurhead-alttbl|informix|this script fixes datatype of vend_code and related|alttbl|none|recurhead|22/07/2019||2019-07-31 23:00:00|OK|kandoodb|24833|
+20190722-vendor-alttbl|informix|this script alters data type of  abn_text|alttbl|none|vendor|22/07/2019||2019-07-31 23:00:00|OK|kandoodb|24834|
+20190722-vendorgrp-alttbl|informix|this script fixes datatype of vend_code and related|alttbl|none|vendorgrp|22/07/2019||2019-07-31 23:00:00|OK|kandoodb|24835|
+20190722-vendortype-alttbl|informix|this script fixes datatype of vend_code and related|alttbl|none|vendortype|22/07/2019||2019-07-31 23:00:00|OK|kandoodb|24836|
+20190723-apparams-alttbl|informix|this script aligns datatypes for acct_code in all kandoodb|alttbl|none|apparms|23/07/2019||2019-07-31 23:00:00|OK|kandoodb|24837|
+20190723-araudit-alttbl|informix|this script aligns datatypes for acct_code in all kandoodb|alttbl|none|araudit|23/07/2019||2019-07-31 23:00:00|OK|kandoodb|25089|
+20190723-arparms-alttbl|informix|this script aligns datatypes for acct_code in all kandoodb|alttbl|none|arparms|23/07/2019||2019-07-31 23:00:00|OK|kandoodb|25090|
+20190723-bank-alttbl|informix|this script aligns datatypes for acct_code in all kandoodb|alttbl|none|bank|23/07/2019||2019-07-31 23:00:00|OK|kandoodb|25091|
+20190723-bestsells-alttbl|informix|this script aligns datatypes for acct_code in all kandoodb|alttbl|none|bestsells|23/07/2019||2019-07-31 23:00:00|OK|kandoodb|25092|
+20190723-cartage-alttbl|informix|this script aligns datatypes for acct_code in all kandoodb|alttbl|none|cartage|23/07/2019||2019-07-31 23:00:00|OK|kandoodb|25093|
+20190723-cashflow-alttbl|informix|this script aligns datatypes for acct_code in all kandoodb|alttbl|none|cashflow|23/07/2019||2019-07-31 23:00:00|OK|kandoodb|25345|
+20190723-cashreceipt-alttbl|informix|this script aligns datatypes for acct_code in all kandoodb|alttbl|none|cashreceipt|23/07/2019||2019-07-31 23:00:00|OK|kandoodb|25346|
+20190723-cheque-alttbl|informix|this script aligns datatypes for acct_code in all kandoodb|alttbl|none|cheque|23/07/2019||2019-07-31 23:00:00|OK|kandoodb|25347|
+20190723-credheadaddr-alttbl|informix|this script aligns datatypes for acct_code in all kandoodb|alttbl|none|credheadaddr|23/07/2019||2019-07-31 23:00:00|OK|kandoodb|25348|
+20190723-custoffer-alttbl|informix|this script aligns datatypes for acct_code in all kandoodb|alttbl|none|custoffer|23/07/2019||2019-07-31 23:00:00|OK|kandoodb|25349|
+20190723-customer-alttbl|informix|this script aligns datatypes for acct_code in all kandoodb|alttbl|none|customer|23/07/2019||2019-07-31 23:00:00|OK|kandoodb|25601|
+20190723-customeraudit-alttbl|informix|this script aligns datatypes for acct_code in all kandoodb|alttbl|none|customeraudit|23/07/2019||2019-07-31 23:00:00|OK|kandoodb|25602|
+20190723-customernote-alttbl|informix|this script aligns datatypes for acct_code in all kandoodb|alttbl|none|customernote|23/07/2019||2019-07-31 23:00:00|OK|kandoodb|25603|
+20190723-customerpart-alttbl|informix|this script aligns datatypes for acct_code in all kandoodb|alttbl|none|customerpart|23/07/2019||2019-07-31 23:00:00|OK|kandoodb|25604|
+20190723-customership-alttbl|informix|this script aligns datatypes for acct_code in all kandoodb|alttbl|none|customership|23/07/2019||2019-07-31 23:00:00|OK|kandoodb|25605|
+20190723-customertype-alttbl|informix|this script aligns datatypes for acct_code in all kandoodb|alttbl|none|customertype|23/07/2019||2019-07-31 23:00:00|OK|kandoodb|25857|
+20190723-fundaudit-alttbl|informix|this script aligns datatypes for acct_code in all kandoodb|alttbl|none|fundaudit|23/07/2019||2019-07-31 23:00:00|OK|kandoodb|25858|
+20190723-fundsapproved-alttbl|informix|this script aligns datatypes for acct_code in all kandoodb|alttbl|none|fundsapproved|23/07/2019||2019-07-31 23:00:00|OK|kandoodb|25859|
+20190723-huho-alttbl|informix|this script aligns datatypes for acct_code in all kandoodb|alttbl|none|huho|23/07/2019||2019-07-31 23:00:00|OK|kandoodb|25860|
+20190723-ibtdetl-alttbl|informix|this script aligns datatypes for acct_code in all kandoodb|alttbl|none|ibtdetl|23/07/2019||2019-07-31 23:00:00|OK|kandoodb|25861|
+20190723-ibthead-alttbl|informix|this script aligns datatypes for acct_code in all kandoodb|alttbl|none|ibthead|23/07/2019||2019-07-31 23:00:00|OK|kandoodb|26113|
+20190723-invoicehead-alttbl|informix|this script aligns datatypes for acct_code in all kandoodb|alttbl|none|invoicehead|23/07/2019||2019-07-31 23:00:00|OK|kandoodb|26114|
+20190723-invoicepay-alttbl|informix|this script aligns datatypes for acct_code in all kandoodb|alttbl|none|invoicepay|23/07/2019||2019-07-31 23:00:00|OK|kandoodb|26115|
+20190723-kandooprofile-alttbl|informix|this script aligns datatypes for acct_code in all kandoodb|alttbl|none|kandooprofile|23/07/2019||2019-07-31 23:00:00|OK|kandoodb|26116|
+20190723-location-alttbl|informix|this script aligns datatypes for acct_code in all kandoodb|alttbl|none|location|23/07/2019||2019-07-31 23:00:00|OK|kandoodb|26117|
+20190723-mtopvmst-alttbl|informix|this script aligns datatypes for acct_code in all kandoodb|alttbl|none|mtopvmst|23/07/2019||2019-07-31 23:00:00|OK|kandoodb|26369|
+20190723-postinvhead-alttbl|informix|this script aligns datatypes for acct_code in all kandoodb|alttbl|none|postinvhead|23/07/2019||2019-07-31 23:00:00|OK|kandoodb|26370|
+20190723-postranhead-alttbl|informix|this script aligns datatypes for acct_code in all kandoodb|alttbl|none|postranhead|23/07/2019||2019-07-31 23:00:00|OK|kandoodb|26371|
+20190723-prodledg-alttbl|informix|this script aligns datatypes for acct_code in all kandoodb|alttbl|none|prodledg|23/07/2019||2019-07-31 23:00:00|OK|kandoodb|26372|
+20190723-quoteline-alttbl|informix|this script aligns datatypes for acct_code in all kandoodb|alttbl|none|ibthead|23/07/2019||2019-07-31 23:00:00|OK|kandoodb|26373|
+20190723-stnd_custgrp-alttbl|informix|this script aligns datatypes for acct_code in all kandoodb|alttbl|none|stnd_custgrp|23/07/2019||2019-07-31 23:00:00|OK|kandoodb|26625|
+20190723-tentbankdetl-alttbl|informix|this script aligns datatypes for acct_code in all kandoodb|alttbl|none|tentbankdetl|23/07/2019||2019-07-31 23:00:00|OK|kandoodb|26626|
+20190723-territory-alttbl|informix|this script aligns datatypes for acct_code in all kandoodb|alttbl|none|territory|23/07/2019||2019-07-31 23:00:00|OK|kandoodb|26627|
+20190723-tp_ects_int-alttbl|informix|this script aligns datatypes for acct_code in all kandoodb|alttbl|none|tp_ects_int|23/07/2019||2019-07-31 23:00:00|OK|kandoodb|26628|
+20190723-vendor-alttbl|informix|this script aligns datatypes for acct_code in all kandoodb|alttbl|none|vendor|23/07/2019||2019-07-31 23:00:00|OK|kandoodb|26629|
+20190723-vendoraudit-alttbl|informix|this script aligns datatypes for acct_code in all kandoodb|alttbl|none|vendoraudit|23/07/2019||2019-07-31 23:00:00|OK|kandoodb|26881|
+20190723-vouchpayee-alttbl|informix|this script aligns datatypes for acct_code in all kandoodb|alttbl|none|vouchpayee|23/07/2019||2019-07-31 23:00:00|OK|kandoodb|26882|
+20190724-address-alttbl|informix|this script aligns datatypes for acct_code in all kandoodb|alttbl|none|address|24/07/2019||2019-07-31 23:00:00|OK|kandoodb|26883|
+20190724-apparms-alttbl|informix|this script aligns datatypes for acct_code in all kandoodb|alttbl|none|apparms|24/07/2019||2019-07-31 23:00:00|OK|kandoodb|26884|
+20190724-araudit-alttbl|informix|this script aligns datatypes for acct_code in all kandoodb|alttbl|none|araudit|24/07/2019||2019-07-31 23:00:00|OK|kandoodb|26885|
+20190724-arparmext-alttbl|informix|this script fixes datatype of vend_code and related|alttbl|none|arparmext|24/07/2019||2019-07-31 23:00:00|OK|kandoodb|27137|
+20190724-bestsells-alttbl|informix|this script aligns datatypes for acct_code in all kandoodb|alttbl|none|bestsells|24/07/2019||2019-07-31 23:00:00|OK|kandoodb|27138|
+20190724-bic-alttbl|informix|this script aligns datatypes for acct_code in all kandoodb|alttbl|none|bic|24/07/2019||2019-07-31 23:00:00|OK|kandoodb|27139|
+20190724-bin_code-alttbl|informix|this script aligns datatypes for acct_code in all kandoodb|alttbl|none|bin_code|24/07/2019||2019-07-31 23:00:00|OK|kandoodb|27140|
+20190724-carrier-alttbl|informix|this script aligns datatypes for acct_code in all kandoodb|alttbl|none|carrier|24/07/2019||2019-07-31 23:00:00|OK|kandoodb|27141|
+20190724-category-alttbl|informix|this script aligns datatypes for acct_code in all kandoodb|alttbl|none|category|24/07/2019||2019-07-31 23:00:00|OK|kandoodb|27393|
+20190724-customerpart-alttbl|informix|this script aligns datatypes for acct_code in all kandoodb|alttbl|none|customerpart|24/07/2019||2019-07-31 23:00:00|OK|kandoodb|27394|
+20190724-glparms-alttbl|informix|this script aligns datatypes for acct_code in all kandoodb|alttbl|none|glparms|24/07/2019||2019-07-31 23:00:00|OK|kandoodb|27395|
+20190724-invoicedetl-alttbl|informix|this script aligns datatypes for acct_code in all kandoodb|alttbl|none|invoicedetl|24/07/2019||2019-07-31 23:00:00|OK|kandoodb|27396|
+20190724-jmj_trantype-alttbl|informix|this script aligns datatypes for acct_code in all kandoodb|alttbl|none|jmj_trantype|24/07/2019||2019-07-31 23:00:00|OK|kandoodb|27397|
+20190724-kandoomodule-alttbl|informix|this script aligns datatypes for acct_code in all kandoodb|alttbl|none|kandoomodule|24/07/2019||2019-07-31 23:00:00|OK|kandoodb|27649|
+20190724-mmdr-alttbl|informix|this script aligns datatypes for acct_code in all kandoodb|alttbl|none|mmdr|24/07/2019||2019-07-31 23:00:00|OK|kandoodb|27650|
+20190724-nextnumber-alttbl|informix|this script aligns datatypes for acct_code in all kandoodb|alttbl|none|nextnumber|24/07/2019||2019-07-31 23:00:00|OK|kandoodb|27651|
+20190724-orderhead-alttbl|informix|this script aligns datatypes for acct_code in all kandoodb|alttbl|none|ordhead|24/07/2019||2019-07-31 23:00:00|OK|kandoodb|27652|
+20190724-posstation-alttbl|informix|this script aligns datatypes for acct_code in all kandoodb|alttbl|none|posstation|24/07/2019||2019-07-31 23:00:00|OK|kandoodb|27653|
+20190724-pricing-alttbl|informix|this script aligns datatypes for acct_code in all kandoodb|alttbl|none|pricing|24/07/2019||2019-07-31 23:00:00|OK|kandoodb|27905|
+20190724-prodadjtype-alttbl|informix|this script aligns datatypes for acct_code in all kandoodb|alttbl|none|prodadjtype|24/07/2019||2019-07-31 23:00:00|OK|kandoodb|27906|
+20190724-proddisc-alttbl|informix|this script aligns datatypes for acct_code in all kandoodb|alttbl|none|proddisc|24/07/2019||2019-07-31 23:00:00|OK|kandoodb|27907|
+20190724-prodflex-alttbl|informix|this script aligns datatypes for acct_code in all kandoodb|alttbl|none|prodflex|24/07/2019||2019-07-31 23:00:00|OK|kandoodb|27908|
+20190724-prodleg-alttbl|informix|this script aligns datatypes for acct_code in all kandoodb|alttbl|none|prodledg|24/07/2019||2019-07-31 23:00:00|OK|kandoodb|27909|
+20190724-prodstatus-alttbl|informix|this script aligns datatypes for acct_code in all kandoodb|alttbl|none|prodstatus|24/07/2019||2019-07-31 23:00:00|OK|kandoodb|28161|
+20190724-product-alttbl|informix|this script aligns datatypes for acct_code in all kandoodb|alttbl|none|product|24/07/2019||2019-07-31 23:00:00|OK|kandoodb|28162|
+20190724-recurhead-alttbl|informix|this script aligns datatypes for acct_code in all kandoodb|alttbl|none|recurhead|24/07/2019||2019-07-31 23:00:00|OK|kandoodb|28163|
+20190724-rep_stock-alttbl|informix|this script aligns datatypes for acct_code in all kandoodb|alttbl|none|rep_stock|24/07/2019||2019-07-31 23:00:00|OK|kandoodb|28164|
+20190724-resbill-alttbl|informix|this script aligns datatypes for acct_code in all kandoodb|alttbl|none|resbill|24/07/2019||2019-07-31 23:00:00|OK|kandoodb|28165|
+20190724-salesmgr-alttbl|informix|this script aligns datatypes for acct_code in all kandoodb|alttbl|none|salesmgr|24/07/2019||2019-07-31 23:00:00|OK|kandoodb|28417|
+20190724-salesperson-alttbl|informix|this script aligns datatypes for acct_code in all kandoodb|alttbl|none|salesperson|24/07/2019||2019-07-31 23:00:00|OK|kandoodb|28418|
+20190724-specialprice-alttbl|informix|this script aligns datatypes for acct_code in all kandoodb|alttbl|none|specialprice|24/07/2019||2019-07-31 23:00:00|OK|kandoodb|28419|
+20190724-vendortype-alttbl|informix|this script aligns datatypes for acct_code in all kandoodb|alttbl|none|vendortype|24/07/2019||2019-07-31 23:00:00|OK|kandoodb|28420|
+20190724-warehouse-alttbl|informix|this script aligns datatypes for acct_code in all kandoodb|alttbl|none|warehouse|24/07/2019||2019-07-31 23:00:00|OK|kandoodb|28421|
+20190810-attributes_translation-alttbl|informix|this script renames some columns of attributes_translation|alttbl|none|attributes_translation|10/08/2019||2019-08-31 23:00:00|OK|kandoodb|28673|
+20190810-attributes_translation-cridx|informix|this script create indexes on attributes_translation|cridx|none|attributes_translation|10/08/2019||2019-08-31 23:00:00|OK|kandoodb|28674|
+20190810-form_attributes-alttbl|informix|this script extends the size of the widget_id column|alttbl|none|form_attributes|10/08/2019||2019-08-31 23:00:00|OK|kandoodb|28675|
+20190810-qxt_menu_item_txt-cridx|informix|this script create indexes on qxt_menu_item_txt|cridx|none|qxt_menu_item_txt|10/08/2019||2019-08-31 23:00:00|OK|kandoodb|28676|
+20190819-kandoouser_table-update|informix|this script modifies the table kandoouser|update|none|kandoouser|19/08/2019||2019-08-31 23:00:00|OK|kandoodb|28677|
+20190820-cartarea-createfkconstraint|informix|this script create indexes and constraints on cartarea|createfkconstra|none|cartarea|20/08/2019||2019-08-31 23:00:00|OK|kandoodb|28929|
+20190820-cartarea-createpkconstraint|informix|this script create indexes and constraints on cartarea|createpkconstra|none|cartarea|20/08/2019||2019-08-31 23:00:00|OK|kandoodb|28930|
+20190820-table_documentation-alttbl|informix|this script renames some columns of table_documentation|alttbl|none|table_documentation,column_documentation|20/08/2019||2019-08-31 23:00:00|OK|kandoodb|28931|
+20190821.000-dbschema_fix-alttbl|informix|this script change fix_apply_date to timestamp|alttbl|none|dbschema_fix|21/08/2019||2019-08-31 23:00:00|OK|kandoodb|28932|
+20190821.001-manytables-alttbl|informix|this script modifies all encountered address fields to  nvarchar(60)|alttbl|none|carrier company credheadaddr customer customeraudit customership invoicehead jmj_impresttran labourer location mmdr mtopvmst ordquotext poscacust postinvhead postranhead reqperson salesperson tentinvhead vendor vendoraudit vouchpayee warehouse|21/08/2019||2019-08-31 23:00:00|OK|kandoodb|28933|
+20190821.002-forms_attribute-datload|informix|this script loads translation data|datload|none|form_attributes,attributes_translation|21/08/2019||2019-08-31 23:00:00|OK|kandoodb|29185|
+20190822-customernote-alttbl|informix|this script alter the notes field to nchar 260|alttbl|none|customernote|22/08/2019||2019-08-31 23:00:00|OK|kandoodb|29186|
+20190822-vendornote-alttbl|informix|this script makes changes in vendornote (more modern schema)|alttbl|none|vendornote|22/08/2019||2019-08-31 23:00:00|OK|kandoodb|29187|
+20190822-vendornote-crtidx|informix|this script makes changes in vendornote (more modern schema)|crtidx|none|vendornote|22/08/2019||2019-08-31 23:00:00|OK|kandoodb|29188|
+20190822-vendortype-alttbl|informix|this script changes the size of type_text|alttbl|none|vendortype|22/08/2019||2019-08-31 23:00:00|OK|kandoodb|29189|
+20190823-customer-alttbl|informix|this script adds columns iban and bic to customer|alttbl|none|customer|23/08/2019||2019-08-31 23:00:00|OK|kandoodb|29441|
+20190823-vendor-alttbl|informix|this script adds columns iban and bic to vendor|alttbl|none|vendor|23/08/2019||2019-08-31 23:00:00|OK|kandoodb|29442|
+20190904-vendorgrp-alttbl|informix|this script re-create primary key for vendorgrp table|alttbl|none|vendorgrp|04/09/2019||2019-09-30 23:00:00|OK|kandoodb|29443|
+20190914-state-datload|informix|this script insert data from Germany|datload|none|state|14/09/2019||2019-09-30 23:00:00|OK|kandoodb|29444|
+20190915-kandoouser-alttbl|informix|this script adds column country_code to the kandoouser table|alttbl|none|kandoouser|15/09/2019||2019-09-30 23:00:00|OK|kandoodb|29445|
+20190915-rmsparm-createpkconstaint|informix|this script emulates safely the constraint for 1 to 1 relationship|createpkconstai|none|rmsparm|15/09/2019||2019-09-30 23:00:00|OK|kandoodb|29697|
+20190915-state-datload|informix|this script insert istate data from spain|datload|none|state|15/09/2019||2019-09-30 23:00:00|OK|kandoodb|29698|
+20190916-kandoooption-datload|informix|this script insert data for default-templated company number '99'|datload|none|kandoooption|16/09/2019||2019-09-30 23:00:00|OK|kandoodb|29699|
+20190924-credreas-alttbl|informix|this script re-create primary key for credreas table|alttbl|none|credreas|24/09/2019||2019-09-30 23:00:00|OK|kandoodb|29700|
+20190929-account-createfkconstraint|informix|this script create indexes and constraints on account|createfkconstra|none|account|29/09/2019||2019-09-30 23:00:00|OK|kandoodb|29701|
+20190929-accountcur-createfkconstraint|informix|this script create indexes and constraints on accountcur|createfkconstra|none|accountcur|29/09/2019||2019-09-30 23:00:00|OK|kandoodb|29953|
+20190929-coa-createfkconstraint|informix|this script create indexes and constraints on coa|createfkconstra|none|coa|29/09/2019||2019-09-30 23:00:00|OK|kandoodb|29954|
+20190929.001-batchdetl-createfkconstraint|informix|this script create indexes and constraints on batchdetl|createfkconstra|none|batchdetl|29/09/2019||2019-09-30 23:00:00|OK|kandoodb|29955|
+20191001-accounthist-createfkconstraint|informix|this script create indexes and constraints on accounthist|createfkconstra|none|accounthist|01/10/2019||2019-10-31 23:00:00|OK|kandoodb|29956|
+20191001-accounthistcur-createfkconstraint|informix|this script create indexes and constraints on accounthistcur|createfkconstra|none|accounthistcur|01/10/2019||2019-10-31 23:00:00|OK|kandoodb|29957|
+20191001.000-accountcur-createpkconstraint|informix|this script create a PK constraints on accountcur|createpkconstra|none|accountcur|01/10/2019||2019-10-31 23:00:00|OK|kandoodb|30209|
+20191004-coa_table-update|informix|This script modifies data in the table coa.|update|none|coa|04/10/2019||2019-10-31 23:00:00|OK|kandoodb|30210|
+20191016-rndcode-datload|informix|This script populates the 'rndcode' table with data|datload|none|rndcode|16/10/2019||2020-01-06 19:09:26|OK|kandoodb|30211|
+20191016-rptpos-datload|informix|This script populates the 'rptpos' table with data|datload|none|rptpos|16/10/2019||2020-01-06 19:09:26|OK|kandoodb|30212|
+20191016-rpttype-datload|informix|This script populates the 'rpttype' table with data|datload|none|rpttype|16/10/2019||2020-01-06 19:09:26|OK|kandoodb|30213|
+20191016-signcode-datload|informix|This script populates the 'signcode' table with data|datload|none|signcode|16/10/2019||2020-01-06 19:09:26|OK|kandoodb|30465|
+20191020-t_batchdetl-crttbl|informix|this script creates the t_batchdetl table which now becomes a permanent table|crttbl|none|t_batchdetl|20/10/2019||2020-01-06 19:09:26|OK|kandoodb|30466|
+20191031-accountledger-createckconstraint|informix|this script creates check constraints on accountledger|createckconstra|none|accountledger|31/10/2019||2020-01-06 19:09:26|OK|kandoodb|30467|
+20191031.000-batchdetl-createckconstraint|informix|this script creates check constraints on batchdetl|createckconstra|none|batchdetl|31/10/2019||2020-01-06 19:09:26|OK|kandoodb|30468|
+20191031.001-batchdetl-createckconstraint|informix|this script creates more check constraints on batchdetl|createckconstra|none|batchdetl|31/10/2019||2020-01-06 19:09:26|OK|kandoodb|30469|
+20191114-condsale-createpkconstraint|informix|this script create a PK constraints on condsale|createpkconstra|none|condsale|14/11/2019||2020-01-06 19:09:26|OK|kandoodb|30721|
+20191128-customertype-alttbl|informix|this script re-create primary key for customertype table|alttbl|none|customertype|28/11/2019||2020-01-06 19:09:26|OK|kandoodb|30722|
+20191203-state-datload|informix|this script load Great Britain counties data|datload|none|state|03/12/2019||2020-01-06 19:09:26|OK|kandoodb|30723|
+20191204-state-datload|informix|this script load Canada provinces data|datload|none|state|04/12/2019||2020-01-06 19:09:26|OK|kandoodb|30724|
+20191205-column_documentation-alttbl|informix|this script re-create primary key for customertype table|alttbl|none|customertype|05/12/2019||2020-01-06 19:09:26|OK|kandoodb|30725|
+20191210-t_bachdelt-alttbl|informix|this script adds the column program_id for unicity purpose|alttbl|none|t_batchdetl|10/12/2019||2020-01-06 19:09:27|OK|kandoodb|30977|
+20191204-dbschema_x-alttbl|informix|this script adds database name as foreign key in dbschema_fix + creates PK and F|alttbl|none|dbschema_properties,dbschema_fix|04/12/2019||2020-01-06 19:09:26|OK|kandoodb|30978|
+20191205-customertype-createpkconstraint|informix|this script re-create primary key for customertype table|createpkconstra|none|customertype|05/12/2019||2020-01-29 19:56:58|OK|kandoodb|30979|
+20200113-qxt_menu_tables-datload|informix|this script handles changes in the menu items|datload|none|qxt_menu_item_txt,qxt_menu_item|13/01/2020||2020-01-29 19:56:58|OK|kandoodb|30980|
+20200120-qxt_menu_tables-datload|informix|this script handles changes in the menu items|datload|none|qxt_menu_item_txt,qxt_menu_item|20/01/2020||2020-01-29 19:56:58|OK|kandoodb|30981|
+20200121-accounthistcur-createpkconstraint|informix|this script creates primary key for accounthistcur table|createpkconstra|none|accounthistcur|21/01/2020||2020-02-27 18:29:04|OK|kandoodb|31233|
+20200121-kandoouser-createpkconstraint|informix|this script creates primary key for kandoouser table|createpkconstra|none|kandoouser|21/01/2020||2020-02-27 18:29:04|OK|kandoodb|31234|
+20200210-invoicepay-modifypkconstraint|informix|this script modifies primary key for invoicepay table|modifypkconstra|none|invoicepay|10/02/2020||2020-02-27 18:29:05|OK|kandoodb|31235|
+20200211-invoicepay-createfkconstraint|informix|this script create foreign key for invoicepay table|createfkconstra|none|invoicepay|11/02/2020||2020-03-10 17:10:07|OK|kandoodb|31236|
+20200211.002-invoicedetl-createfkconstraint|informix|this script create foreign key for invoicedetl table|createfkconstra|none|invoicedetl|11/02/2020||2020-03-10 17:10:07|OK|kandoodb|31237|
+20200304-qxt_menu_tables-datload|informix|this script handles changes in the menu items|datload|none|qxt_menu_item_txt,qxt_menu_item|04/03/2020||2020-03-10 17:10:08|OK|kandoodb|31489|
+20200321-vendornote-alttbl|informix|this script makes changes in vendornote (more modern schema)|alttbl|none|vendornote|21/03/2020||2020-03-27 19:11:49|OK|kandoodb|31490|
+20200321.001-invrates-createfkconstraint|informix|this script creates a foreign key constraint from invrates to invoicedetl|createfkconstra|none|invrates|21/03/2020||2020-03-29 13:23:06|OK|kandoodb|31491|
+20200321.002-invstory-createfkconstraint|informix|this script creates a foreign key constraint from invstory to invoicehead|createfkconstra|none|invstory|21/03/2020||2020-03-29 13:23:06|OK|kandoodb|31492|
+20200321.003-invheadext-createfkconstraint|informix|this script creates a foreign key constraint from invheadext to invoicehead|createfkconstra|none|invheadext|21/03/2020||2020-03-29 13:23:06|OK|kandoodb|31493|
+20200321.004-invinst-createfkconstraint|informix|this script creates a foreign key constraint from postinvhead to invoicehead|createfkconstra|none|postinvhead|21/03/2020||2020-03-29 17:01:49|OK|kandoodb|31745|
+20200321.005-postinvhead-createfkconstraint|informix|this script creates a foreign key constraint from invinst to invoicehead|createfkconstra|none|invinst|21/03/2020||2020-03-29 17:01:49|OK|kandoodb|31746|
+20200321.006-postinvoice-createfkconstraint|informix|this script creates a foreign key constraint from postinvoice to invoicehead|createfkconstra|none|postinvoice|21/03/2020||2020-03-29 17:01:50|OK|kandoodb|31747|
+20200321.007-tentinvhead-createfkconstraint|informix|this script creates a foreign key constraint from tentinvhead to invoicehead|createfkconstra|none|tentinvhead|21/03/2020||2020-03-29 17:01:50|OK|kandoodb|31748|
+20200321.008-tentinvdetl-createfkconstraint|informix|this script creates a foreign key constraint from tentinvdetl to invoicehead|createfkconstra|none|tentinvdetl|21/03/2020||2020-03-29 17:01:50|OK|kandoodb|31749|
+20200305-kandoooption-datload|informix|this script load data into kandoooption|datload|none|kandoooption|05/03/2020||2020-03-24 19:19:02|OK|kandoodb|32001|
+20200312-qxt_menu_tables-datload|informix|this script handles changes in the menu items|datload|none|qxt_menu_item_txt,qxt_menu_item|12/03/2020||2020-03-24 19:19:03|OK|kandoodb|32002|
+20200315-customership-alttbl|informix|this script changes the fields country_text to country_code (nchar(3)|alttbl|20200314-country_text-dependencies|customership|15/03/2020||2020-10-07 18:57:44|OK|kandoodb|32003|
+20200315.001-country_text-alttbl|informix|this script changes the fields country_text to country_code (nchar(3)|alttbl|20200314-country_text-dependencies|tentinvhead,mtopvmst,postranhead,postinvhead,quotehead,arparms,tentsubhead,customeraudit,company,invoicehead,vendor,customership,vendoraudit,vouchpayee,jmj_impresttran,subhead,orderhead,customer,purchhead|15/03/2020||2020-10-07 18:57:53|OK|kandoodb|32004|
+20200315.002-country_text-createfkconstraint|informix|this script changes the fields country_text to country_code (nchar(3)|createfkconstra|20200314-country_text-dependencies|tentinvhead,mtopvmst,postranhead,postinvhead,quotehead,arparms,tentsubhead,customeraudit,company,invoicehead,vendor,customership,vendoraudit,vouchpayee,jmj_impresttran,subhead,orderhead,customer,purchhead|15/03/2020||2020-10-07 19:15:36|OK|kandoodb|32257|
+20200316-vendorinvs-modifpkconstraint|informix|this script creates a primary key constraint from a unique index|modifpkconstrai|none|vendorinvs|16/03/2020||2020-03-24 19:19:03|OK|kandoodb|32258|
+20200317.001-mobile_email-alttbl|informix|this script add the fields mobile_phone and email to relevant tables|alttbl|20200317.000-mobile_email-alttbl|cfwdaudit,company,customer,customeraudit,customership,delivhead,invoicehead,jmj_impresttran,labourer,location,mtopvmst,ordcallfwd,orderaudit,orderhead,ordhead,ordquote,ordquotext,poscacust,postinvhead,postranhead,purchhead,quotehead,salesperson,subhead|17/03/2020||2020-09-14 15:30:32|OK|kandoodb|32259|
+20200317.002-mobile_email-alttbl|informix|this script add the fields mobile_phone and email to relevant tables|alttbl|20200317.000-mobile_email-alttbl|supervisor,tentinvhead,tentsubhead,vendor,vendoraudit,warehouse|17/03/2020||2020-09-14 15:30:33|OK|kandoodb|32513|
+20200320-abn_text_to_vat_text-alttbl|informix|this script renames the field abn_text to vat_text (V.A.T) and extends to nchar(|alttbl|20200319-abn_text-dependencies|company,customeraudit,customer,vendoraudit,vendor|20/03/2020||2020-10-07 19:20:16|OK|kandoodb|32514|
+20100101-condsale-createpkconstraint|informix|this script remove implicit primary key constraint, create a unique index then P|createpkconstra|none|condsale|01/01/2010||2010-01-31 23:00:00|OK|kandoodb|32515|
+20100101-holdreas-createpkconstraint|informix|this script remove implicit primary key constraint, create a unique index then P|createpkconstra|none|holdreas|01/01/2010||2010-01-31 23:00:00|OK|kandoodb|32516|
+20180403-dbschema_properties-alttbl|informix|this script alters the table dbschema_fix to keep last patch successful and fail|alttbl|none|dbschema_fix|03/04/2018||2018-04-30 23:00:00|OK|kandoodb|32769|
+20180714-dbschema_xxx-crttbl|informix|this script re-initializes the tables dbschema_fix and dbschema_properties|crttbl|none|dbschema_fix,dbschema_properties|14/07/2018||2018-07-31 23:00:00|OK|kandoodb|32770|
+20180922-contact_address-alttbl|informix|this script creates creates a new column on contact_address|alttbl|none|contact_address|22/09/2018||2018-09-30 23:00:00|OK|kandoodb|32771|
+20180930-manytables-alttbl|informix|this script modifies many columns to set nvarchar, so "national" contents can be|alttbl|none|all tables that have xxx_text columns|30/09/2018||2018-09-30 23:00:00|OK|kandoodb|32772|
+20181105-qxt_tb_icon-drptbl|informix|this script drops the qxt_tb_icon table, which is not used in lycia3|drptbl|none|qxt_tb_icon|05/11/2018||2018-11-30 23:00:00|OK|kandoodb|32773|
+20181109-customernote_nchar-alttbl|informix|this script alter the notes field to nchar|alttbl|none|customernote|09/11/2018||2018-11-30 23:00:00|OK|kandoodb|33025|
+20181126-qxt_menu_item-datload|informix|this script updates the contents of the qxt_menu_item table|datload|none|qxt_menu_item|26/11/2018||2018-11-30 23:00:00|OK|kandoodb|33026|
+20181218-qxt_menu_item_txt-datload|informix|this script resets the contents of the qxt_menu_item_txt table|datload|none|qxt_menu_item_txt|18/12/2018||2018-12-31 23:00:00|OK|kandoodb|33027|
+20181221-qxt_toolbar-datload|informix|this script resets the contents of the qxt_toolbar table|datload|none|qxt_toolbar|21/12/2018||2018-12-31 23:00:00|OK|kandoodb|33028|
+20190205-qxt_menu_tables-datload|informix|this script handles changes in the menu items|datload|none|qxt_group_access,qxt_menu_item_txt,qxt_menu_item|05/02/2019||2019-02-28 23:00:00|OK|kandoodb|33029|
+20190214-qxt_menu_tables-datload|informix|this script handles changes in the menu items|datload|none|qxt_group_access,qxt_menu_item_txt,qxt_menu_item|14/02/2019||2019-02-28 23:00:00|OK|kandoodb|33281|
+20190222-qxt_menu_tables-datload|informix|this script handles changes in the menu items|datload|none|qxt_group_access,qxt_menu_item_txt,qxt_menu_item|22/02/2019||2019-02-28 23:00:00|OK|kandoodb|33282|
+20190322-apparms-datload|informix|full reorganization of kandoo menus, changing chars to Nchars|datload|none|apparms|22/03/2019||2019-03-31 23:00:00|OK|kandoodb|33283|
+20190322-araudit-datload|informix|full reorganization of kandoo menus, changing chars to Nchars|datload|none|araudit|22/03/2019||2019-03-31 23:00:00|OK|kandoodb|33284|
+20190322-arparmext-datload|informix|full reorganization of kandoo menus, changing chars to Nchars|datload|none|arparmext|22/03/2019||2019-03-31 23:00:00|OK|kandoodb|33537|
+20190322-arparms-datload|informix|full reorganization of kandoo menus, changing chars to Nchars|datload|none|arparms|22/03/2019||2019-03-31 23:00:00|OK|kandoodb|33538|
+20190322-bank-datload|informix|full reorganization of kandoo menus, changing chars to Nchars|datload|none|bank|22/03/2019||2019-03-31 23:00:00|OK|kandoodb|33539|
+20190322-banktype-datload|informix|full reorganization of kandoo menus, changing chars to Nchars|datload|none|banktype|22/03/2019||2019-03-31 23:00:00|OK|kandoodb|33540|
+20190322-banktypedetl-datload|informix|full reorganization of kandoo menus, changing chars to Nchars|datload|none|banktypedetl|22/03/2019||2019-03-31 23:00:00|OK|kandoodb|33541|
+20190322-bic-datload|informix|full reorganization of kandoo menus, changing chars to Nchars|datload|none|bic|22/03/2019||2019-03-31 23:00:00|OK|kandoodb|33793|
+20190322-carrier-datload|informix|full reorganization of kandoo menus, changing chars to Nchars|datload|none|carrier|22/03/2019||2019-03-31 23:00:00|OK|kandoodb|33794|
+20190322-cartage-datload|informix|full reorganization of kandoo menus, changing chars to Nchars|datload|none|cartage|22/03/2019||2019-03-31 23:00:00|OK|kandoodb|33795|
+20190322-cartarea-datload|informix|full reorganization of kandoo menus, changing chars to Nchars|datload|none|cartarea|22/03/2019||2019-03-31 23:00:00|OK|kandoodb|33796|
+20190322-cashreceipt-datload|informix|full reorganization of kandoo menus, changing chars to Nchars|datload|none|cashreceipt|22/03/2019||2019-03-31 23:00:00|OK|kandoodb|33797|
+20190322-category-datload|informix|full reorganization of kandoo menus, changing chars to Nchars|datload|none|category|22/03/2019||2019-03-31 23:00:00|OK|kandoodb|34049|
+20190322-cheque-datload|informix|full reorganization of kandoo menus, changing chars to Nchars|datload|none|cheque|22/03/2019||2019-03-31 23:00:00|OK|kandoodb|34050|
+20190322-class-datload|informix|full reorganization of kandoo menus, changing chars to Nchars|datload|none|class|22/03/2019||2019-03-31 23:00:00|OK|kandoodb|34051|
+20190322-clipboard-datload|informix|full reorganization of kandoo menus, changing chars to Nchars|datload|none|clipboard|22/03/2019||2019-03-31 23:00:00|OK|kandoodb|34052|
+20190322-coa-datload|informix|full reorganization of kandoo menus, changing chars to Nchars|datload|none|coa|22/03/2019||2019-03-31 23:00:00|OK|kandoodb|34053|
+20190322-company-datload|informix|full reorganization of kandoo menus, changing chars to Nchars|datload|none|company|22/03/2019||2019-03-31 23:00:00|OK|kandoodb|34305|
+20190322-conddisc-datload|informix|full reorganization of kandoo menus, changing chars to Nchars|datload|none|conddisc|22/03/2019||2019-03-31 23:00:00|OK|kandoodb|34306|
+20190322-condsale-datload|informix|full reorganization of kandoo menus, changing chars to Nchars|datload|none|condsale|22/03/2019||2019-03-31 23:00:00|OK|kandoodb|34307|
+20190322-contractor-datload|informix|full reorganization of kandoo menus, changing chars to Nchars|datload|none|contractor|22/03/2019||2019-03-31 23:00:00|OK|kandoodb|34308|
+20190322-country-datload|informix|full reorganization of kandoo menus, changing chars to Nchars|datload|none|country|22/03/2019||2019-03-31 23:00:00|OK|kandoodb|34309|
+20190322-credreas-datload|informix|full reorganization of kandoo menus, changing chars to Nchars|datload|none|credreas|22/03/2019||2019-03-31 23:00:00|OK|kandoodb|34561|
+20190322-currency-datload|informix|full reorganization of kandoo menus, changing chars to Nchars|datload|none|currency|22/03/2019||2019-03-31 23:00:00|OK|kandoodb|34562|
+20190322-custoff-datload|informix|full reorganization of kandoo menus, changing chars to Nchars|datload|none|custoffer|22/03/2019||2019-03-31 23:00:00|OK|kandoodb|34563|
+20190322-customer-datload|informix|full reorganization of kandoo menus, changing chars to Nchars|datload|none|customer|22/03/2019||2019-03-31 23:00:00|OK|kandoodb|34564|
+20190322-customernote-datload|informix|full reorganization of kandoo menus, changing chars to Nchars|datload|none|customernote|22/03/2019||2019-03-31 23:00:00|OK|kandoodb|34565|
+20190322-customerpart-datload|informix|full reorganization of kandoo menus, changing chars to Nchars|datload|none|customerpart|22/03/2019||2019-03-31 23:00:00|OK|kandoodb|34817|
+20190322-customership-datload|informix|full reorganization of kandoo menus, changing chars to Nchars|datload|none|customership|22/03/2019||2019-03-31 23:00:00|OK|kandoodb|34818|
+20190322-customertype-datload|informix|full reorganization of kandoo menus, changing chars to Nchars|datload|none|customertype|22/03/2019||2019-03-31 23:00:00|OK|kandoodb|34819|
+20190322-debithead-datload|informix|full reorganization of kandoo menus, changing chars to Nchars|datload|none|debithead|22/03/2019||2019-03-31 23:00:00|OK|kandoodb|34820|
+20190322-fundaudit-datload|informix|full reorganization of kandoo menus, changing chars to Nchars|datload|none|fundaudit|22/03/2019||2019-03-31 23:00:00|OK|kandoodb|34821|
+20190322-fundsapproved-datload|informix|full reorganization of kandoo menus, changing chars to Nchars|datload|none|fundsapproved|22/03/2019||2019-03-31 23:00:00|OK|kandoodb|35073|
+20190322-glparms-datload|informix|full reorganization of kandoo menus, changing chars to Nchars|datload|none|glparms|22/03/2019||2019-03-31 23:00:00|OK|kandoodb|35074|
+20190322-grant_deny_access-datload|informix|full reorganization of kandoo menus, changing chars to Nchars|datload|none|grant_deny_access|22/03/2019||2019-03-31 23:00:00|OK|kandoodb|35075|
+20190322-groupinfo-datload|informix|full reorganization of kandoo menus, changing chars to Nchars|datload|none|groupinfo|22/03/2019||2019-03-31 23:00:00|OK|kandoodb|35076|
+20190322-holdpay-datload|informix|full reorganization of kandoo menus, changing chars to Nchars|datload|none|holdpay|22/03/2019||2019-03-31 23:00:00|OK|kandoodb|35077|
+20190322-holdreas-datload|informix|full reorganization of kandoo menus, changing chars to Nchars|datload|none|holdreas|22/03/2019||2019-03-31 23:00:00|OK|kandoodb|35329|
+20190322-htmlparms-datload|informix|full reorganization of kandoo menus, changing chars to Nchars|datload|none|htmlparms|22/03/2019||2019-03-31 23:00:00|OK|kandoodb|35330|
+20190322-huho-datload|informix|full reorganization of kandoo menus, changing chars to Nchars|datload|none|huho|22/03/2019||2019-03-31 23:00:00|OK|kandoodb|35331|
+20190322-ingroup-datload|informix|full reorganization of kandoo menus, changing chars to Nchars|datload|none|ingroup|22/03/2019||2019-03-31 23:00:00|OK|kandoodb|35332|
+20190322-inparms-datload|informix|full reorganization of kandoo menus, changing chars to Nchars|datload|none|inparms|22/03/2019||2019-03-31 23:00:00|OK|kandoodb|35333|
+20190322-invoicedetl-datload|informix|full reorganization of kandoo menus, changing chars to Nchars|datload|none|invoicedetl|22/03/2019||2019-03-31 23:00:00|OK|kandoodb|35585|
+20190322-invoicehead-datload|informix|full reorganization of kandoo menus, changing chars to Nchars|datload|none|invoicehead|22/03/2019||2019-03-31 23:00:00|OK|kandoodb|35586|
+20190322-invoicepay-datload|informix|full reorganization of kandoo menus, changing chars to Nchars|datload|none|invoicepay|22/03/2019||2019-03-31 23:00:00|OK|kandoodb|35587|
+20190322-ipparms-datload|informix|full reorganization of kandoo menus, changing chars to Nchars|datload|none|ipparms|22/03/2019||2019-03-31 23:00:00|OK|kandoodb|35588|
+20190322-jmj_debttype-datload|informix|full reorganization of kandoo menus, changing chars to Nchars|datload|none|jmj_debttype|22/03/2019||2019-03-31 23:00:00|OK|kandoodb|35589|
+20190322-jmj_trantype-datload|informix|full reorganization of kandoo menus, changing chars to Nchars|datload|none|jmj_trantype|22/03/2019||2019-03-31 23:00:00|OK|kandoodb|35841|
+20190322-journal-datload|informix|full reorganization of kandoo menus, changing chars to Nchars|datload|none|journal|22/03/2019||2019-03-31 23:00:00|OK|kandoodb|35842|
+20190322-kandooinfo-datload|informix|full reorganization of kandoo menus, changing chars to Nchars|datload|none|cartage|22/03/2019||2019-03-31 23:00:00|OK|kandoodb|35843|
+20190322-kandoomodule-datload|informix|full reorganization of kandoo menus, changing chars to Nchars|datload|none|kandoomodule|22/03/2019||2019-03-31 23:00:00|OK|kandoodb|35844|
+20190322-kandoomsg-datload|informix|full reorganization of kandoo menus, changing chars to Nchars|datload|none|kandoomsg|22/03/2019||2019-03-31 23:00:00|OK|kandoodb|35845|
+20190322-kandooprofile-datload|informix|full reorganization of kandoo menus, changing chars to Nchars|datload|none|kandooprofile|22/03/2019||2019-03-31 23:00:00|OK|kandoodb|36097|
+20190322-kandooreport-datload|informix|full reorganization of kandoo menus, changing chars to Nchars|datload|none|kandooreport|22/03/2019||2019-03-31 23:00:00|OK|kandoodb|36098|
+20190322-kandoouser-datload|informix|full reorganization of kandoo menus, changing chars to Nchars|datload|none|kandoouser|22/03/2019||2019-03-31 23:00:00|OK|kandoodb|36099|
+20190322-kandoousercmpy-datload|informix|full reorganization of kandoo menus, changing chars to Nchars|datload|none|kandoousercmpy|22/03/2019||2019-03-31 23:00:00|OK|kandoodb|36100|
+20190322-kandooword-datload|informix|full reorganization of kandoo menus, changing chars to Nchars|datload|none|kandooword|22/03/2019||2019-03-31 23:00:00|OK|kandoodb|36101|
+20190322-labeldetl-datload|informix|full reorganization of kandoo menus, changing chars to Nchars|datload|none|labeldetl|22/03/2019||2019-03-31 23:00:00|OK|kandoodb|36353|
+20190322-labelhead-datload|informix|full reorganization of kandoo menus, changing chars to Nchars|datload|none|labelhead|22/03/2019||2019-03-31 23:00:00|OK|kandoodb|36354|
+20190322-langstr_aus-datload|informix|full reorganization of kandoo menus, changing chars to Nchars|datload|none|langstr_aus|22/03/2019||2019-03-31 23:00:00|OK|kandoodb|36355|
+20190322-langstr_gb-datload|informix|full reorganization of kandoo menus, changing chars to Nchars|datload|none|langstr_aus|22/03/2019||2019-03-31 23:00:00|OK|kandoodb|36356|
+20190322-language-datload|informix|full reorganization of kandoo menus, changing chars to Nchars|datload|none|language|22/03/2019||2019-03-31 23:00:00|OK|kandoodb|36357|
+20190322-loadparms-datload|informix|full reorganization of kandoo menus, changing chars to Nchars|datload|none|loadparms|22/03/2019||2019-03-31 23:00:00|OK|kandoodb|36609|
+20190322-location-datload|informix|full reorganization of kandoo menus, changing chars to Nchars|datload|none|location|22/03/2019||2019-03-31 23:00:00|OK|kandoodb|36610|
+20190322-maingrp-datload|informix|full reorganization of kandoo menus, changing chars to Nchars|datload|none|maingrp|22/03/2019||2019-03-31 23:00:00|OK|kandoodb|36611|
+20190322-menu_group_access-datload|informix|full reorganization of kandoo menus, changing chars to Nchars|datload|none|menu_group_access|22/03/2019||2019-03-31 23:00:00|OK|kandoodb|36612|
+20190322-nextnumber-datload|informix|full reorganization of kandoo menus, changing chars to Nchars|datload|none|nextnumber|22/03/2019||2019-03-31 23:00:00|OK|kandoodb|36613|
+20190322-opparms-datload|informix|full reorganization of kandoo menus, changing chars to Nchars|datload|none|opparms|22/03/2019||2019-03-31 23:00:00|OK|kandoodb|36865|
+20190322-period-datload|informix|full reorganization of kandoo menus, changing chars to Nchars|datload|none|period|22/03/2019||2019-03-31 23:00:00|OK|kandoodb|36866|
+20190322-posstation-datload|informix|full reorganization of kandoo menus, changing chars to Nchars|datload|none|posstation|22/03/2019||2019-03-31 23:00:00|OK|kandoodb|36867|
+20190322-pricing-datload|informix|full reorganization of kandoo menus, changing chars to Nchars|datload|none|pricing|22/03/2019||2019-03-31 23:00:00|OK|kandoodb|36868|
+20190322-printcodes-datload|informix|full reorganization of kandoo menus, changing chars to Nchars|datload|none|printcodes|22/03/2019||2019-03-31 23:00:00|OK|kandoodb|36869|
+20190322-prodadjtype-datload|informix|full reorganization of kandoo menus, changing chars to Nchars|datload|none|prodadjtype|22/03/2019||2019-03-31 23:00:00|OK|kandoodb|37121|
+20190322-proddept-datload|informix|full reorganization of kandoo menus, changing chars to Nchars|datload|none|proddept|22/03/2019||2019-03-31 23:00:00|OK|kandoodb|37122|
+20190322-proddisc-datload|informix|full reorganization of kandoo menus, changing chars to Nchars|datload|none|proddisc|22/03/2019||2019-03-31 23:00:00|OK|kandoodb|37123|
+20190322-prodgrp-datload|informix|full reorganization of kandoo menus, changing chars to Nchars|datload|none|tax|22/03/2019||2019-03-31 23:00:00|OK|kandoodb|37124|
+20190322-prodledg-datload|informix|full reorganization of kandoo menus, changing chars to Nchars|datload|none|prodledg|22/03/2019||2019-03-31 23:00:00|OK|kandoodb|37125|
+20190322-prodstatus-datload|informix|full reorganization of kandoo menus, changing chars to Nchars|datload|none|prodstatus|22/03/2019||2019-03-31 23:00:00|OK|kandoodb|37377|
+20190322-product-datload|informix|full reorganization of kandoo menus, changing chars to Nchars|datload|none|product|22/03/2019||2019-03-31 23:00:00|OK|kandoodb|37378|
+20190322-purchtype-datload|informix|full reorganization of kandoo menus, changing chars to Nchars|datload|none|purchtype|22/03/2019||2019-03-31 23:00:00|OK|kandoodb|37379|
+20190322-qpparms-datload|informix|full reorganization of kandoo menus, changing chars to Nchars|datload|none|qpparms|22/03/2019||2019-03-31 23:00:00|OK|kandoodb|37380|
+20190322-qxt_group_access-drptbl|informix|we renamed this table to menu_group_access - also with nchar data types|drptbl|none|qxt_group_access|22/03/2019||2019-03-31 23:00:00|OK|kandoodb|37381|
+20190322-qxt_help_fragment-datload|informix|full reorganization of kandoo menus, changing chars to Nchars|datload|none|qxt_help_fragment|22/03/2019||2019-03-31 23:00:00|OK|kandoodb|37633|
+20190322-qxt_help_page-datload|informix|full reorganization of kandoo menus, changing chars to Nchars|datload|none|qxt_help_page|22/03/2019||2019-03-31 23:00:00|OK|kandoodb|37634|
+20190322-qxt_log_login-datload|informix|full reorganization of kandoo menus, changing chars to Nchars|datload|none|qxt_log_login|22/03/2019||2019-03-31 23:00:00|OK|kandoodb|37635|
+20190322-qxt_log_run-datload|informix|full reorganization of kandoo menus, changing chars to Nchars|datload|none|qxt_log_run|22/03/2019||2019-03-31 23:00:00|OK|kandoodb|37636|
+20190322-qxt_menu_item_txt-datload|informix|full reorganization of kandoo menus, changing chars to Nchars|datload|none|qxt_menu_item_txt|22/03/2019||2019-03-31 23:00:00|OK|kandoodb|37637|
+20190322-qxt_menu_list-datload|informix|full reorganization of kandoo menus, changing chars to Nchars|datload|none|qxt_menu_list|22/03/2019||2019-03-31 23:00:00|OK|kandoodb|37889|
+20190322-qxt_run_arg-datload|informix|full reorganization of kandoo menus, changing chars to Nchars|datload|none|qxt_run_arg|22/03/2019||2019-03-31 23:00:00|OK|kandoodb|37890|
+20190322-qxt_run_path-datload|informix|full reorganization of kandoo menus, changing chars to Nchars|datload|none|qxt_run_path|22/03/2019||2019-03-31 23:00:00|OK|kandoodb|37891|
+20190322-qxt_tb_icon-drptbl|informix|drop table qxt_tb_icon|drptbl|none|qxt_tb_icon|22/03/2019||2019-03-31 23:00:00|OK|kandoodb|37892|
+20190322-qxt_toolbar-datload|informix|full reorganization of kandoo menus, changing chars to Nchars|datload|none|qxt_toolbar|22/03/2019||2019-03-31 23:00:00|OK|kandoodb|37893|
+20190322-qxt_user-drptbl|informix|drop table qxt_user|drptbl|none|qxt_user|22/03/2019||2019-03-31 23:00:00|OK|kandoodb|38145|
+20190322-qxt_user_group-datload|informix|full reorganization of kandoo menus, changing chars to Nchars|datload|none|qxt_user_group|22/03/2019||2019-03-31 23:00:00|OK|kandoodb|38146|
+20190322-rate_exchange-datload|informix|full reorganization of kandoo menus, changing chars to Nchars|datload|none|rate_exchange|22/03/2019||2019-03-31 23:00:00|OK|kandoodb|38147|
+20190322-recurhead-datload|informix|full reorganization of kandoo menus, changing chars to Nchars|datload|none|recurhead|22/03/2019||2019-03-31 23:00:00|OK|kandoodb|38148|
+20190322-rmsparm-datload|informix|full reorganization of kandoo menus, changing chars to Nchars|datload|none|rmsparm|22/03/2019||2019-03-31 23:00:00|OK|kandoodb|38149|
+20190322-rmsreps-datload|informix|full reorganization of kandoo menus, changing chars to Nchars|datload|none|rmsreps|22/03/2019||2019-03-31 23:00:00|OK|kandoodb|38401|
+20190322-salearea-datload|informix|full reorganization of kandoo menus, changing chars to Nchars|datload|none|salearea|22/03/2019||2019-03-31 23:00:00|OK|kandoodb|38402|
+20190322-salesperson-datload|informix|full reorganization of kandoo menus, changing chars to Nchars|datload|none|salesperson|22/03/2019||2019-03-31 23:00:00|OK|kandoodb|38403|
+20190322-stateinfo-datload|informix|full reorganization of kandoo menus, changing chars to Nchars|datload|none|stateinfo|22/03/2019||2019-03-31 23:00:00|OK|kandoodb|38404|
+20190322-stnd_custgrp-datload|informix|full reorganization of kandoo menus, changing chars to Nchars|datload|none|stnd_custgrp|22/03/2019||2019-03-31 23:00:00|OK|kandoodb|38405|
+20190322-stnd_grp-datload|informix|full reorganization of kandoo menus, changing chars to Nchars|datload|none|stnd_grp|22/03/2019||2019-03-31 23:00:00|OK|kandoodb|38657|
+20190322-structure-datload|informix|full reorganization of kandoo menus, changing chars to Nchars|datload|none|structure|22/03/2019||2019-03-31 23:00:00|OK|kandoodb|38658|
+20190322-tax-datload|informix|full reorganization of kandoo menus, changing chars to Nchars|datload|none|langstr_aus|22/03/2019||2019-03-31 23:00:00|OK|kandoodb|38659|
+20190322-tentbankdetl-datload|informix|full reorganization of kandoo menus, changing chars to Nchars|datload|none|tentbankdetl|22/03/2019||2019-03-31 23:00:00|OK|kandoodb|38660|
+20190322-tentbankhead-datload|informix|full reorganization of kandoo menus, changing chars to Nchars|datload|none|salesmgr|22/03/2019||2019-03-31 23:00:00|OK|kandoodb|38661|
+20190322-term-datload|informix|full reorganization of kandoo menus, changing chars to Nchars|datload|none|term|22/03/2019||2019-03-31 23:00:00|OK|kandoodb|38913|
+20190322-territory-datload|informix|full reorganization of kandoo menus, changing chars to Nchars|datload|none|territory|22/03/2019||2019-03-31 23:00:00|OK|kandoodb|38914|
+20190322-transptype-datload|informix|full reorganization of kandoo menus, changing chars to Nchars|datload|none|transptype|22/03/2019||2019-03-31 23:00:00|OK|kandoodb|38915|
+20190322-uom-datload|informix|full reorganization of kandoo menus, changing chars to Nchars|datload|none|uom|22/03/2019||2019-03-31 23:00:00|OK|kandoodb|38916|
+20190322-userlimits-datload|informix|full reorganization of kandoo menus, changing chars to Nchars|datload|none|userlimits|22/03/2019||2019-03-31 23:00:00|OK|kandoodb|38917|
+20190322-userlocn-datload|informix|full reorganization of kandoo menus, changing chars to Nchars|datload|none|userlocn|22/03/2019||2019-03-31 23:00:00|OK|kandoodb|39169|
+20190322-usermsg-datload|informix|full reorganization of kandoo menus, changing chars to Nchars|datload|none|userlocn|22/03/2019||2019-03-31 23:00:00|OK|kandoodb|39170|
+20190322-user_cmpy-datload|informix|full reorganization of kandoo menus, changing chars to Nchars|datload|none|user_cmpy|22/03/2019||2019-03-31 23:00:00|OK|kandoodb|39171|
+20190322-vendor-datload|informix|full reorganization of kandoo menus, changing chars to Nchars|datload|none|vendor|22/03/2019||2019-03-31 23:00:00|OK|kandoodb|39172|
+20190322-vendorgrp-datload|informix|full reorganization of kandoo menus, changing chars to Nchars|datload|none|vendorgrp|22/03/2019||2019-03-31 23:00:00|OK|kandoodb|39173|
+20190322-vendortype-datload|informix|full reorganization of kandoo menus, changing chars to Nchars|datload|none|vendortype|22/03/2019||2019-03-31 23:00:00|OK|kandoodb|39425|
+20190322-waregrp-datload|informix|full reorganization of kandoo menus, changing chars to Nchars|datload|none|waregrp|22/03/2019||2019-03-31 23:00:00|OK|kandoodb|39426|
+20190322-warehouse-datload|informix|full reorganization of kandoo menus, changing chars to Nchars|datload|none|warehouse|22/03/2019||2019-03-31 23:00:00|OK|kandoodb|39427|
+20190331-qxt_language-datload|informix|full reorganization of kandoo menus, changing chars to Nchars|datload|none|qxt_language|31/03/2019||2019-03-31 23:00:00|OK|kandoodb|39428|
+20190401-qxt_menu_tables-datload|informix|this script handles changes in the menu items|datload|none|qxt_menu_item_txt,qxt_menu_item|01/04/2019||2019-04-30 23:00:00|OK|kandoodb|39429|
+20190402-dangerclass-datload|informix|changing chars to Nchars|datload|none|dangerclass|02/04/2019||2019-04-30 23:00:00|OK|kandoodb|39681|
+20190402-proddanger-datload|informix|changing chars to Nchars|datload|none|proddanger|02/04/2019||2019-04-30 23:00:00|OK|kandoodb|39682|
+20190406.001-stateinfo-crtidx|informix|this script creates a unique index on the stateinfo table|crtidx|none|stateinfo|06/04/2019||2019-04-30 23:00:00|OK|kandoodb|39683|
+20190407-kandoouser-datupdate|informix|this script set language_code for AnBl|datupdate|none|language_code|07/04/2019||2019-04-30 23:00:00|OK|kandoodb|39684|
+20190407-menu_group_access-datload|informix|this script handles changes in the menu items|datload|none|menu_group_access|07/04/2019||2019-04-30 23:00:00|OK|kandoodb|39685|
+20200322.000-language-datload|informix|this script reloads the language table with some additional details|datload|none|language|22/03/2020||2020-04-05 17:49:54|OK|kandoodb|39937|
+20200322.001-kandoouser-createfkconstraint|informix|this script creates a foreign key constraint from kandoouser to language|createfkconstra|none|kandoouser|22/03/2020||2020-04-05 17:49:54|OK|kandoodb|39938|
+20200325.002-ipparms-createpkconstraint|informix|this script create primary key for ipparms table|createpkconstra|none|ipparms|25/03/2020||2020-04-05 17:05:25|OK|kandoodb|39939|
+20200325.003-jmparms-createpkconstraint|informix|this script create primary key for jmparms table|createpkconstra|none|jmparms|25/03/2020||2020-04-05 17:05:25|OK|kandoodb|39940|
+20200325.004-mnparms-createpkconstraint|informix|this script create primary key for mnparms table|createpkconstra|none|mnparms|25/03/2020||2020-04-05 17:05:26|OK|kandoodb|39941|
+20200325.005-opparms-createpkconstraint|informix|this script create primary key for opparms table|createpkconstra|none|opparms|25/03/2020||2020-04-05 17:05:26|OK|kandoodb|40193|
+20200325.006-payparms-createpkconstraint|informix|this script create primary key for payparms table|createpkconstra|none|payparms|25/03/2020||2020-04-05 17:05:26|OK|kandoodb|40194|
+20200325.007-puparms-createpkconstraint|informix|this script create primary key for puparms table|createpkconstra|none|puparms|25/03/2020||2020-04-05 17:05:26|OK|kandoodb|40195|
+20200325.008-ssparms-createpkconstraint|informix|this script create primary key for ssparms table|createpkconstra|none|ssparms|25/03/2020||2020-04-05 17:05:26|OK|kandoodb|40196|
+20200325.009-stnd_parms-createpkconstraint|informix|this script create primary key for stnd_parms table|createpkconstra|none|stnd_parms|25/03/2020||2020-04-05 17:05:27|OK|kandoodb|40197|
+20200325.010-kandoooptions-datload|informix|this script loads additional data to kandoooption|datload|none|kandoooption|25/03/2020||2020-04-05 17:05:27|OK|kandoodb|40449|
+20200402-qxt_toolbar_table-datload|informix|this script handles changes in the ToolBar of GZL programm|datload|none|qxt_toolbar|02/04/2020||2020-04-05 17:05:27|OK|kandoodb|40450|
+20200403-qxt_toolbar_table-datload|informix|this script handles changes in the ToolBar of GZL programm|datload|none|qxt_toolbar|03/04/2020||2020-04-05 17:05:27|OK|kandoodb|40451|
+20200411-company-datload|informix|this script creates the company cmpy_code = 99 Test|datload|none|company|11/04/2020||2020-05-15 19:09:36|OK|kandoodb|40452|
+20200412.001-kandoooption-createfkconstraint|informix|this script creates a foreign key constraint from kandoooption to company|createfkconstra|none|kandoooption|12/04/2020||2020-05-16 11:58:42|OK|kandoodb|40453|
+20200414.001-kandoooptions-datload|informix|this script loads additional data to kandoooption|datload|none|kandoooption|14/04/2020||2020-05-15 19:09:36|OK|kandoodb|40705|
+20200415.002-kandoooptions-datload|informix|this script loads additional data to kandoooption|datload|none|kandoooption|15/04/2020||2020-05-15 19:09:36|OK|kandoodb|40706|
+20200415.003-kandoooptions-datload|informix|this script loads additional data to kandoooption|datload|none|kandoooption|15/04/2020||2020-05-31 10:31:41|OK|kandoodb|40707|
+20200422-qxt_menu_tables-datload|informix|this script handles changes in the menu items|datload|none|qxt_menu_item_txt,qxt_menu_item,qxt_run_arg|22/04/2020||2020-05-15 19:10:18|OK|kandoodb|40708|
+20200423-qxt_menu_tables-datload|informix|this script handles changes in the menu items|datload|none|qxt_menu_item_txt,qxt_menu_item,qxt_run_arg|23/04/2020||2020-05-15 19:10:59|OK|kandoodb|40709|
+20200428-kandooreport-createpkconstraint|informix|this script create primary key for kandooreport table|createpkconstra|none|kandooreport|28/04/2020||2020-05-16 12:31:59|OK|kandoodb|40961|
+20200505-qxt_menu_tables-datload|informix|this script handles changes in the menu items|datload|none|qxt_menu_item_txt,qxt_menu_item,qxt_run_arg|05/05/2020||2020-05-15 19:11:41|OK|kandoodb|40962|
+20200506-qxt_menu_tables-datload|informix|this script handles changes in the menu items|datload|none|qxt_menu_item_txt,qxt_menu_item|06/05/2020||2020-05-15 19:12:22|OK|kandoodb|40963|
+20200507-table_documentation-alttbl|informix|this script add list of Business Modules to table_documentation|alttbl|none|table_documentation|07/05/2020||2020-05-15 19:12:23|OK|kandoodb|40964|
+20190413-quotehead-createpkconstraint|informix|this script creates a primary key constraint from a unique index|createpkconstra|n/a|quotehead|13/04/2019||2019-05-10 00:00:00|OK|kandoodb|40965|
+20190508-warehouse-createpkconstraint|informix|this script remove implicit primary key constraint, create a unique index then P|createpkconstra|\ |warehouse|08/05/2019||2019-05-24 00:00:00|OK|kandoodb|41217|
+20190509-shoporddetl-createpkconstraint|informix|this script remove implicit primary key constraint, create a unique index then P|createpkconstra|\ |shoporddetl|09/05/2019||2019-05-24 00:00:00|OK|kandoodb|41218|
+20190509-shopordhead-createpkconstraint|informix|this script remove implicit primary key constraint, create a unique index then P|createpkconstra|\ |shopordhead|09/05/2019||2019-05-24 00:00:00|OK|kandoodb|41219|
+20190510-subcustomer-createpkconstraint|informix|this script remove implicit primary key constraint, create a unique index then P|createpkconstra|\ |subcustomer|10/05/2019||2019-05-24 00:00:00|OK|kandoodb|41220|
+20190525-alltables-charToNchar.pl|informix|this script is a global modif of all CHAR types to NCHAR type|charToNchar|\ |all|25/05/2019||2019-08-16 00:00:00|OK|kandoodb|41221|
+20190724-waregrp-alttbl|informix|this script aligns datatypes for acct_code in all kandoodb|alttbl|put here any .unl file if the script loads data, any other script if required|waregrp|24/07/2019||2019-08-16 00:00:00|OK|kandoodb|41473|
+20190821-forms_attribute-datload|informix|this script loads translation data|datload|none|form_attributes,attributes_translation|21/08/2019||2019-09-16 16:18:44|OK|kandoodb|41474|
+20200114-qxt_menu_item_txt-crfk|informix|this script create foreign key on qxt_menu_item_txt|crfk|none|qxt_menu_item_txt|14/01/2020||2020-01-20 18:34:50|OK|kandoodb|41475|
+20200305-invoicehead-createfkconstraint|informix|this script create foreign key for invoicehead table|createfkconstra|none|invoicehead|05/03/2020||2020-05-17 14:32:19|OKF|kandoodb|41476|
+20191031.002-batchhead-createckconstraint|informix|this script creates more check constraints on batchhead|createckconstra|none|batchhead|31/10/2019||2020-05-17 20:14:49|OKF|kandoodb|41729|
+20200515.001-batchhead-createfkconstraint|informix|this script creates a foreign key constraint from batchhead to company|createfkconstra|none|batchhead|15/05/2020||2020-05-18 15:58:52|OK|kandoodb|41730|
+20200515.002-customer-createfkconstraint|informix|this script creates a foreign key constraint from customer to company|createfkconstra|none|customer|15/05/2020||2020-05-18 16:10:46|OK|kandoodb|41731|
+20200515.003-vendor-createfkconstraint|informix|this script creates a foreign key constraint from vendor to company|createfkconstra|none|vendor|15/05/2020||2020-05-18 16:10:46|OK|kandoodb|41732|
+20200515.004-product-createfkconstraint|informix|this script creates a foreign key constraint from customer to company|createfkconstra|none|customer|15/05/2020||2020-05-18 16:16:29|OK|kandoodb|41733|
+20200515.005-voucher-createfkconstraint|informix|this script creates a foreign key constraint from voucher to vendor|createfkconstra|none|voucher|15/05/2020||2020-05-18 20:36:20|OK|kandoodb|41985|
+20200516.001-kandoooptions-datload|informix|this script loads additional data to kandoooption|datload|none|kandoooption|16/05/2020||2020-05-31 10:31:41|OK|kandoodb|41986|
+20200516.002-kandoooptions-datload|informix|this script loads additional data to kandoooption|datload|none|kandoooption|16/05/2020||2020-05-31 10:31:41|OK|kandoodb|41987|
+20200516.003-kandoooptions-datload|informix|this script loads additional data to kandoooption|datload|none|kandoooption|16/05/2020||2020-05-31 10:31:42|OK|kandoodb|41988|
+20200516.004-kandoooptions-datload|informix|this script loads additional data to kandoooption|datload|none|kandoooption|16/05/2020||2020-05-31 10:35:21|OK|kandoodb|41989|
+20200516.005-kandoooptions-datload|informix|this script loads additional data to kandoooption|datload|none|kandoooption|16/05/2020||2020-05-31 10:16:56|OK|kandoodb|42241|
+20200518.000-notables-crroles|informix|this script creates roles for security|crroles|none|all|18/05/2020||2020-05-25 16:31:19|OK|kandoodb|42242|
+20200518.001-allmodules-grantperm|informix|this script creates roles for security|grantperm|none|all|18/05/2020||2020-06-03 09:39:17|OK|kandoodb|42243|
+20200518.002-allmodules-grantperm|informix|this script creates roles for security|grantperm|none|all|18/05/2020||2020-05-25 16:34:58|OK|kandoodb|42244|
+20200519.002-rmsreps-createpkconstraint|informix|this script adds columns to rmsreps|createpkconstra|none|rmsreps|19/05/2020||2020-05-25 16:34:58|OK|kandoodb|42245|
+20200519.003-rmsreps-alttbl|informix|this script create primary key for rmsreps table|alttbl|none|rmsreps|19/05/2020||2020-05-25 16:34:59|OK|kandoodb|42497|
+20200404-kandoooption-alttbl|informix|this script modifies the size of feature_text column|alttbl|none|kandoooption|04/04/2020||2020-05-30 16:51:47|OK|kandoodb|42498|
+20200516.006-kandoooptions-droppatch|informix|this script drops to patches|droppatch|none|kandoooption|16/05/2020||2020-05-30 16:51:51|OK|kandoodb|42499|
+20200520.003-rmsreps-alttbl|informix|this script modifies the order of some columns|alttbl|none|rmsreps|20/05/2020||2020-05-30 16:51:52|OK|kandoodb|42500|
+20200520.004-rmsreps-alttbl|informix|this script re creates totally the rmsreps table|alttbl|none|rmsreps|20/05/2020||2020-05-30 16:51:52|OK|kandoodb|42501|
+20200521.001-product-createfkconstraint|informix|this script creates the foreign key from product to warehouse|createfkconstra|none|product|21/05/2020||2020-05-30 16:51:53|OK|kandoodb|42753|
+20200522.002-prodstatus-createfkconstraint|informix|this script creates the foreign key from prodstatus to product|createfkconstra|none|prodstatus|22/05/2020||2020-05-30 16:51:53|OK|kandoodb|42754|
+20200522.003-prodstatus-createfkconstraint|informix|this script creates the foreign key from prodstatus to warehouse|createfkconstra|none|prodstatus|22/05/2020||2020-05-30 16:51:54|OK|kandoodb|42755|
+20200522.004-warehouse-createfkconstraint|informix|this script creates the foreign key from warehouse to company|createfkconstra|none|warehouse|22/05/2020||2020-05-30 16:51:54|OK|kandoodb|42756|
+20200522.005-invoicedetl-createfkconstraint|informix|this script creates the foreign key from invoicedetl to coa|createfkconstra|none|invoicedetl|22/05/2020||2020-05-30 16:51:54|OK|kandoodb|42757|
+20200522.006-batchhead-createfkconstraint|informix|this script creates the foreign key from batchhead to journal|createfkconstra|none|batchhead|22/05/2020||2020-05-30 16:51:55|OK|kandoodb|43009|
+20200522.007-journal-createfkconstraint|informix|this script creates the foreign key from journal to company|createfkconstra|none|journal|22/05/2020||2020-05-30 16:51:55|OK|kandoodb|43010|
+20200525-kandoomsg-createpkconstraint|informix|this script create primary key for kandoomsg table|createpkconstra|none|kandoomsg|25/05/2020||2020-06-03 09:07:51|OK|kandoodb|43011|
+20200526-kandooreport-alttbl|informix|this script modifies the length of menupath_text|alttbl|none|kandooreport|26/05/2020||2020-06-03 09:07:52|OK|kandoodb|43012|
+20200526-manytables-grantperm|informix|this script modifies the length of menupath_text|grantperm|none|kandooreport|26/05/2020||2020-06-03 09:33:05|OK|kandoodb|43013|
+20200526.002-manytables-grantperm|informix|this script refines permissions on some databases and tables|grantperm|none|kandooreport|26/05/2020||2020-06-07 13:58:16|OK|kandoodb|43265|
+20200526.003-prodledg-createpkconstraint|informix|this script create foreign key for prodledg table|createpkconstra|none|prodledg|26/05/2020||2020-06-07 14:13:42|OK|kandoodb|43266|
+20200526.004-prodledg-createfkconstraint|informix|this script create foreign key for prodledg table to prodstatus|createfkconstra|none|prodledg|26/05/2020||2020-06-07 14:16:31|OK|kandoodb|43267|
+20200526.005-prodledg-createfkconstraint|informix|this script create foreign key for prodledg table to account|createfkconstra|none|prodledg|26/05/2020||2020-06-07 13:58:16|OK|kandoodb|43268|
+20200527.001-kandoouser-createfkconstraint|informix|this script create foreign key for kandoouser table to company|createfkconstra|none|kandoouser|27/05/2020||2020-06-07 14:18:35|OK|kandoodb|43269|
+20200528.001-postinvoice-createfkconstraint|informix|this script creates a foreign key constraint from postinvoice to coa|createfkconstra|none|postinvoice|28/05/2020||2020-06-07 13:58:17|OK|kandoodb|43521|
+20200528.001-voucher-createpkconstraint|informix|this script creates a primary key for voucher|createpkconstra|none|voucher|28/05/2020||2020-06-07 13:58:17|OK|kandoodb|43522|
+20200528.003-voucherdist-createfkconstraint|informix|this script creates a foreign key constraint from voucherdist to voucher|createfkconstra|none|voucherdist|28/05/2020||2020-06-07 13:58:18|OK|kandoodb|43523|
+20200528.004-voucherdist-createfkconstraint|informix|this script creates a foreign key constraint from voucherdist to coa|createfkconstra|none|voucherdist|28/05/2020||2020-06-07 13:58:18|OK|kandoodb|43524|
+20190508-prodstatus-createpkconstraint|informix|this script remove implicit primary key constraint, create a unique index then P|createpkconstra|none|prodstatus|08/05/2019||2020-06-07 14:13:21|OKF|kandoodb|43525|
+20200609-qxt_menu_tables-datload|informix|this script handles changes in the menu items|datload|none|qxt_menu_item_txt,qxt_menu_item|09/06/2020||2020-06-11 16:43:26|OK|kandoodb|43777|
+20200530.001-kandoousercmpy-createfkconstraint|informix|this script creates a 1 to many relationship from kandoousercmpy to kandoouser|createfkconstra|none|kandoouser,kandoousercmpy|30/05/2020||2020-06-21 12:34:18|OK|kandoodb|43778|
+20200530.002-prodadjtype-createpkconstraint|informix|this script creates a primary key for prodadjtype|createpkconstra|none|prodadjtype|30/05/2020||2020-06-21 12:34:19|OK|kandoodb|43779|
+20200530.003-prodadjtype-createfkconstraint|informix|this script creates a foreign key for prodadjtype to account|createfkconstra|none|prodadjtype|30/05/2020||2020-06-21 12:34:19|OK|kandoodb|43780|
+20200601.001-ibthead-createfkconstraint|informix|this script creates 2 foreign keys for ibthead to warehouse|createfkconstra|none|ibthead|01/06/2020||2020-06-21 12:34:20|OK|kandoodb|43781|
+20200601.002-ibtdetl-createfkconstraint|informix|this script creates a foreign key for ibtdetl to product|createfkconstra|none|ibtdetl|01/06/2020||2020-06-21 12:34:20|OK|kandoodb|44033|
+20200601.003-ibtdetl-createfkconstraint|informix|this script creates a foreign key for ibtdetl to ibthead|createfkconstra|none|ibtdetl|01/06/2020||2020-06-21 12:34:20|OK|kandoodb|44034|
+20200602.001-warehouse-createfkconstraint|informix|this script creates the foreign key from warehouse to cartarea|createfkconstra|none|warehouse|02/06/2020||2020-06-22 16:13:31|OK|kandoodb|44035|
+20200621-banktypedetl-createpkfkconstraint|informix|this script creates primary key for banktypedetl table and foreign key from bank|createpkfkconst|none|banktypedetl|||2020-07-02 14:29:31|OK|kandoodb|44036|
+20200621-qxt_toolbar-datchange|informix|this script handles changes in the ToolBar of GZT programm|datchange|none|qxt_toolbar|||2020-07-02 14:29:34|OK|kandoodb|44037|
+20200623-holdreas-createpkconstraint|informix|this script creates primary key for holdreas table|createpkconstra|none|holdreas|||2020-07-02 14:29:34|OK|kandoodb|44289|
+20200703-kandooreport-alttbl|informix|this script modifies tables kandooreport and rmsreps for Kandoo Report Framework|alttbl|none|kandooreport, rmsreps|07/03/2020||2020-07-02 14:29:36|OK|kandoodb|44290|
+20200603.001-suburb-createpkconstraint|informix|this script create primary key for suburb table|createpkconstra|none|suburb|03/06/2020||2020-07-20 22:12:10|OK|kandoodb|44291|
+20200621.001-banktypedetl-createpkconstraint|informix|this script creates primary key for banktypedetl table|createpkconstra|none|banktypedetl|21/06/2020||2020-07-20 22:04:52|OK|kandoodb|44292|
+20200621.002-banktypedetl-createfkconstraint|informix|this script creates a foreign key from banktypedetl to banktype|createfkconstra|none|banktypedetl|21/06/2020||2020-07-20 22:04:52|OK|kandoodb|44293|
+20200624.001-coatemplate-crttbl|informix|this script creates the new tables for chart of account template|crttbl|none|coatemplthead,coatempltdetl|24/06/2020||2020-07-23 20:07:58|OK|kandoodb|44545|
+20200624.002-coatemplate-datload|informix|this script loads data to coatempltdetl|datload|none|coatempltdetl|24/06/2020||2020-07-23 20:08:16|OK|kandoodb|44546|
+20200624.003-coatemplate-datload|informix|this script loads data to coatempltdetl|datload|none|coatempltdetl|24/06/2020||2020-07-23 20:08:34|OK|kandoodb|44547|
+20200625.001-coa-alttbl|informix|this script creates add new columns to coa to fit with non hard coded coa struct|alttbl|20200624-coatemplate-dependencies|coa|25/06/2020||2020-07-21 12:54:50|OK|kandoodb|44548|
+20200626.001-coa-createfkconstraint|informix|this script creates a foreign key from coa to groupinfo|createfkconstra|none|groupinfo,coa|26/06/2020||2020-07-21 12:50:12|OK|kandoodb|44549|
+20200708-kandoooption-datload|informix|this script loads data to kandoooption|datload|none|kandoooption|08/07/2020||2020-08-05 12:59:55|OK|kandoodb|44801|
+20200627.001-period-createfkconstraint|informix|this script creates a foreign key from period to company|createfkconstra|none|company,period|27/06/2020||2020-07-20 22:04:53|OK|kandoodb|44802|
+20200628.001-accountledger-createfkconstraints|informix|this script creates a foreign key from accountledger to period and drops fk_acco|createfkconstra|none|period,accountledger,account,coa|28/06/2020||2020-07-20 22:04:53|OK|kandoodb|44803|
+20200628.002-accounthist-createfkconstraints|informix|this script creates a foreign key from accounthist to period and replaces fk_acc|createfkconstra|none|period,accounthist,account,coa|28/06/2020||2020-07-20 22:04:54|OK|kandoodb|44804|
+20200628.003-bankstatement-createfkconstraints|informix|this script creates a foreign key from bankstatement to period and replaces fk_b|createfkconstra|none|period,bankstatement,account,coa|28/06/2020||2020-07-20 22:04:54|OK|kandoodb|44805|
+20200628.004-driverledger-createfkconstraints|informix|this script creates a foreign key from driverledger to period and replaces fk_dr|createfkconstra|none|period,driverledger,account|28/06/2020||2020-07-20 22:04:55|OK|kandoodb|45057|
+20200628.005-postpurchase-createfkconstraints|informix|this script creates a foreign key from postpurchase to period and replaces fk_po|createfkconstra|none|period,postpurchase,account|28/06/2020||2020-07-20 22:04:55|OK|kandoodb|45058|
+20200628.006-prodledg-createfkconstraints|informix|this script creates a foreign key from prodledg to period and replaces fk_prodle|createfkconstra|none|period,prodledg,account|28/06/2020||2020-07-20 22:04:56|OK|kandoodb|45059|
+20200629.001-prodinfo-createpkconstraint|informix|this script creates primary key for banktypedetl table|createpkconstra|none|banktypedetl|29/06/2020||2020-07-20 22:04:56|OK|kandoodb|45060|
+20200629.002-prodinfo-createfkconstraint|informix|this script creates foreign key for prodinfo table to product|createfkconstra|none|prodinfo,product|29/06/2020||2020-07-20 22:04:56|OK|kandoodb|45061|
+20200629.003-userlimits-createpkconstraint|informix|this script creates primary key for userlimits table|createpkconstra|none|userlimits|29/06/2020||2020-07-21 06:35:50|OK|kandoodb|45313|
+20200629.004-userlimits-createfkconstraint|informix|this script creates foreign key for userlimits table to kandoouser|createfkconstra|none|userlimits,kandoouser|29/06/2020||2020-07-20 22:04:56|OK|kandoodb|45314|
+20200702-qxt_toolbar-datchange|informix|this script handles changes in the ToolBar of PZ5 programm|datchange|none|qxt_toolbar|02/07/2020||2020-07-20 22:04:56|OK|kandoodb|45315|
+20200709.001-validflex-createfkconstraint|informix|this script creates a foreign key from validflex to groupinfo|createfkconstra|none|groupinfo,validflex|09/07/2020||2020-08-02 10:29:20|OK|kandoodb|45316|
+20200624.004-coatemplate-datload|informix|this script loads data to coatempltdetl|datload|none|coatempltdetl|24/06/2020||2020-08-05 12:52:25|OK|kandoodb|45317|
+20200715-language-datload|informix|this script loads data to language|datload|none|language|15/07/2020||2020-08-05 12:52:29|OK|kandoodb|45569|
+20200720-kandooreport-alttbl|informix|this script modifies table kandooreport for Kandoo Report Framework, add PK and|alttbl|none|kandooreport|||2020-08-12 12:00:00|OK|kandoodb|45570|
+20200728-kandooreport-alttbl|informix|this script modifies tables kandooreport and rmsreps for Kandoo Report Framework|alttbl|none|kandooreport, rmsreps|||2020-08-28 05:10:33|OK|kandoodb|45571|
+20200823-qxt_menu_tables-datload|informix|this script handles changes in the menu items|datload|none|qxt_menu_item_txt,qxt_menu_item|||2020-08-28 05:12:42|OK|kandoodb|45572|
+20200812.000-coa-dependencies|informix|this script adds columns to coa|dependencies|none|coa|12/08/2020||2020-09-07 11:08:10|OKF|kandoodb|45573|
+20200813.001-coa-alttbl|informix|this script adds columns to coa|alttbl|20200812.000-coa-dependencies|coa|13/08/2020||2020-09-07 13:26:53|OKF|kandoodb|45825|
+20200813.002-coatempltdetl-alttbl|informix|this script adds columns to coatempltdetl|alttbl|none|coatempltdetl|13/08/2020||2020-09-07 14:20:31|OKF|kandoodb|45826|
+20200814.002-coatemplate-datload|informix|this script loads data to coatempltdetl, new version|datload|none|coatempltdetl|14/08/2020||2020-09-07 14:21:13|OKF|kandoodb|45827|
+20200814.003-coatemplate-datload|informix|this script loads data to coatempltdetl|datload|none|coatempltdetl|14/08/2020||2020-09-07 14:22:52|OKF|kandoodb|45828|
+20200816.001-prodledg-alttbl|informix|this script adds explicit adj_type_code to prodledg|alttbl|none|prodledg|16/08/2020||2020-09-07 17:54:15|OKF|kandoodb|45829|
+20200319.000-abn_text-dependencies|informix|This script is the dependency for 20200416.001-company-alttbl,20200416.002-manyt|dependencies|none|many tables|19/03/2020||2020-09-14 15:30:33|OK|kandoodb|46081|
+20200320.001-abn_text_to_vat_text-alttbl|informix|this script renames the field abn_text to vat_code (V.A.T) and extends to nchar(|alttbl|20200319.000-abn_text-dependencies|company,customeraudit,customer,vendoraudit,vendor|20/03/2020||2020-09-14 15:30:34|OK|kandoodb|46082|
+20200717.001-prodsurcharge-createfkconstraints|informix|this script creates a foreign key from prodsurcharge to product and replaces fk_|createfkconstra|none|prodsurcharge,product|17/07/2020||2020-09-14 15:30:34|OK|kandoodb|46083|
+20200814.004-coatemplate-datload|informix|this script loads data to coatempltdetl|datload|none|coatempltdetl|14/08/2020||2020-09-14 15:30:56|OK|kandoodb|46084|
+20200817.001-acn_text_to_registration_num-alttbl|informix|this script renames the field acn_text to registration_num|alttbl|20200817.000-acn_text-dependencies|company,customeraudit,customer,vendoraudit,vendor|17/08/2020||2020-10-07 18:58:13|OK|kandoodb|46337|
+20200901-prodledg-alttbl|informix|this script renames prodledg.adj_type_code to source_code|alttbl|none|prodledg|01/09/2020||2020-10-04 11:51:56|OK|kandoodb|46338|
+20200901-qxt_menu_tables-datload|informix|this script handles changes in the menu items|datload|none|qxt_menu_item_txt,qxt_menu_item|01/09/2020||2020-10-04 11:52:40|OK|kandoodb|46339|
+20200909-qxt_menu_tables-datload|informix|this script handles changes in the menu items|datload|none|qxt_menu_item_txt,qxt_menu_item|09/09/2020||2020-10-04 11:53:23|OK|kandoodb|46340|
+20200921-qxt_menu_tables-datload|informix|this script handles changes in the menu items|datload|none|qxt_menu_item_txt,qxt_menu_item|21/09/2020||2020-10-04 11:54:08|OK|kandoodb|46593|
+20200927-qxt_menu_tables-datload|informix|this script handles changes in the menu items|datload|none|qxt_menu_item_txt,qxt_menu_item|27/09/2020||2020-10-04 11:54:52|OK|kandoodb|46594|
+20200314-country_text-dependencies|informix|This script is the dependency for mobile-email alter 20200315.002-country_text-c|dependencies|none|many tables|||2020-10-07 18:57:42|OK|kandoodb|46595|
+20200817.000-acn_text-dependencies|informix|This script is the dependency for mobile-email alter 20200817.001-acn_text_to_re|dependencies|none|many tables|||2020-10-07 18:58:11|OK|kandoodb|46596|
+20200928.001-product-createfkconstraint|informix|this script creates foreign key for product table to category|createfkconstra|none|product,category|||2020-10-28 01:54:14|OK|kandoodb|46597|
+20200928.002-product-createfkconstraint|informix|this script creates foreign key for product table to class|createfkconstra|none|product,class|||2020-10-28 01:54:17|OK|kandoodb|46849|
+20200928.003-product-createfkconstraint|informix|this script creates foreign key for product table to maingrp|createfkconstra|none|product,maingrp|||2020-10-28 01:54:19|OK|kandoodb|46850|
+20200928.004-product-createfkconstraint|informix|this script creates foreign key for product table to prodgrp|createfkconstra|none|product,prodgrp|||2020-10-28 01:54:21|OK|kandoodb|46851|
+20200928.005-prodgrp-createfkconstraint|informix|this script creates foreign key for prodgrp table to maingrp|createfkconstra|none|prodgrp,maingrp|||2020-10-28 01:54:24|OK|kandoodb|46852|
+20201024-qxt_menu_tables-datload|informix|this script handles changes in the menu items|datload|none|qxt_menu_item_txt,qxt_menu_item,qxt_run_arg|||2020-10-28 01:56:44|OK|kandoodb|46853|
+20201027-qxt_toolbar-datchange|informix|this script handles changes in the ToolBar of AZH programm|datchange|none|qxt_toolbar|||2020-10-28 01:56:48|OK|kandoodb|47105|
+20201001.001-cashreceipt_notnull-createckconstra|informix|this script creates not null constraints on cashreceipt|createckconstra|N/A|cashreceipt|10/01/2020||2020-11-04 03:27:08|OK|kandoodb|47106|
+20201001.002-cashreceipt_amt-createckconstraint|informix|this script creates check constraints on cashreceipt|createckconstra|N/A|cashreceipt|10/01/2020||2020-11-04 03:35:52|OK|kandoodb|47107|
+20201001.003-cashreceipt-createfkconstraint|informix|this script creates foreign keys constraints on cashreceipt|createfkconstra|N/A|cashreceipt|10/01/2020||2020-11-04 03:43:08|OK|kandoodb|47108|
+20201004.001-qxt_menu_tables-alttbl|informix|this script adds a mb_level column in qxt_menu_item, which contains the level or|alttbl|N/A|qxt_menu_item|10/04/2020||2020-11-04 03:58:56|OK|kandoodb|47109|
+20201004.003-prodgrp-alttbl|informix|this script extends column prodgrp_code to nchar(6) and adds dept_code (subdept_|alttbl|N/A|prodgrp|10/04/2020||2020-11-04 02:51:36|OK|kandoodb|47361|
+20201004.004-prodgrp-createpkconstraint|informix|this script redefines the primary key constraint from a unique index|createpkconstra|N/A|prodgrp|10/04/2020||2020-11-04 04:16:54|OK|kandoodb|47362|
+20201004.005-maingrp-createpkconstraint|informix|this script redefines the primary key constraint from a unique index|createpkconstra|N/A|maingrp|10/04/2020||2020-11-04 02:51:38|OK|kandoodb|47363|
+20201004.006-proddept-createpkconstraint|informix|this script redefines the primary key constraint from a unique index|createpkconstra|N/A|proddept|10/04/2020||2020-11-04 02:51:39|OK|kandoodb|47364|
+20201004.007-proddept-createfkconstraint|informix|this script set a constraints from proddept to company|createfkconstra|N/A|proddept|10/04/2020||2020-11-04 02:51:39|OK|kandoodb|47365|
+20201004.008-maingrp-createfkconstraint|informix|this script set a constraints from maingrp to proddept|createfkconstra|N/A|maingrp|10/04/2020||2020-11-04 02:51:40|OK|kandoodb|47617|
+20201004.009-prodgrp-createfkconstraint|informix|this script set a constraints from prodgrp to maingrp|createfkconstra|N/A|prodgrp|10/04/2020||2020-11-04 02:51:40|OK|kandoodb|47618|
+20201004.010-product-alttbl|informix|this script adds departement code to product and drops the constraint fk_product|alttbl|N/A|product|10/04/2020||2020-11-04 02:51:41|OK|kandoodb|47619|
+20201004.011-product-createfkconstraint|informix|this script reorganizes fk constraints from product|createfkconstra|none|product|10/04/2020||2020-11-04 04:16:55|OK|kandoodb|47620|
+20201005.001-proddept-datload|informix|this script loads data for the proddept table|datload|N/A|proddept|10/05/2020||2020-11-04 02:51:43|OK|kandoodb|47621|
+20201005.002-maingrp-datload|informix|this script loads data for the maingrp table|datload|N/A|maingrp|10/05/2020||2020-11-04 02:51:52|OK|kandoodb|47873|
+20201005.003-prodgrp-datload|informix|this script loads data for the prodgrp table|datload|N/A|prodgrp|10/05/2020||2020-11-04 02:52:14|OK|kandoodb|47874|
+20201005.004-class-datload|informix|this script loads data for the class table|datload|N/A|class|10/05/2020||2020-11-04 02:52:15|OK|kandoodb|47875|
+20201005.005-category-datload|informix|this script loads data for the class table|datload|N/A|class|10/05/2020||2020-11-04 02:52:16|OK|kandoodb|47876|
+20201005.015-product-datload|informix|this script loads data for the product table|datload|N/A|product|10/05/2020||2020-11-04 04:27:39|OK|kandoodb|47877|
+20201103-qxt_menu_tables-datload|informix|this script handles changes in the menu items|datload|N/A|qxt_menu_item_txt,qxt_menu_item|11/03/2020||2020-11-04 02:54:33|OK|kandoodb|48129|
+20201004.002-qxt_menu_tables-alttbl|informix|this script updates the new mb_level colum in current data|alttbl|20201004.001-qxt_menu_tables-alttbl|qxt_menu_item|10/04/2020||2020-11-04 03:58:57|OK|kandoodb|48130|
+20200930.001-many_tables-alttbl|informix|this script gives cross database data type consistency  for sign_on_code|alttbl|N/A|clipboard,grant_deny_access,htmlparms,kandoouser,qxt_log_login,qxt_log_run,userlocn,user_cmpy,userlimits|30/09/2020||2020-11-04 04:27:34|OK|kandoodb|48131|
+20201028-qxt_menu_tables-datload|informix|this script handles changes in the menu items|datload|N/A|qxt_menu_item_txt,qxt_menu_item|28/10/2020||2020-11-04 04:44:48|OK|kandoodb|48132|
+20201102.000-product-cleandata|informix|this script cleans the product data and related (all foreign keys)|cleandata|N/A|category,class,proddept,maingrp,prodgrp,product|02/11/2020||2020-11-05 19:55:50|OK|kandoodb|48385|
+20201102.003-product-datload|informix|this script loads the new products for the RET (retail) class|datload|N/A|category,class,proddept,maingrp,prodgrp,product|02/11/2020||2020-11-05 19:56:03|OK|kandoodb|48386|
+20201102.004-kandoooptions-datload|informix|this script loads additional data to kandoooption|datload|N/A|kandoooption|02/11/2020||2020-11-05 19:56:03|OK|kandoodb|48387|
+20201103.001-kandoooptions-datload|informix|this script loads additional data to kandoooption|datload|N/A|kandoooption|03/11/2020||2020-11-05 19:56:03|OK|kandoodb|48388|
+20201105-dbschema_fix_log-crttbl|informix|this script create the dbschema_fix_log and dbschema_fix_errors tables|crttbl|N/A|dbschema_fix_log,dbschema_fix_errors|05/11/2020||2020-11-10 10:09:50|OK|kandoodb|48389|
+20201106.001-creditheadext-alttbl|informix|this script renames a column in the table creditheadext|alttbl|N/A|creditheadext|06/11/2020||2020-11-11 19:28:40|OK|kandoodb|48390|
+20201107.001-cartarea-datload|informix|this script loads the new products for cartarea|datload|N/A|cartarea|07/11/2020||2020-11-16 16:51:14|OK|kandoodb|48391|
+20201107.002-warehouse-alttbl|informix|this script extends the map location size|alttbl|N/A|warehouse|07/11/2020||2020-11-16 16:51:14|OK|kandoodb|48392|
+20201107.003-warehouse-datload|informix|this script loads the new products for warehouse|datload|N/A|warehouse|07/11/2020||2020-11-16 16:51:15|OK|kandoodb|48393|
+20201107.004-prodstatus-datload|informix|this script loads the new products for prodstatus|datload|N/A|prodstatus|07/11/2020||2020-11-16 16:51:15|OK|kandoodb|48394|
+20201109.001-prodinfo-createpkconstraint|informix|this script redefines the primary key constraint by adding one column|createpkconstra|N/A|prodinfo|09/11/2020||2020-11-25 12:39:50|OK|kandoodb|48395|
+20201119-qxt_menu_tables-datload|informix|this script handles changes in the menu items|datload|N/A|qxt_menu_item_txt,qxt_menu_item|19/11/2020||2020-11-25 12:35:40|OK|kandoodb|48396|
+20201120.003-company-alttbl|informix|this script creates 1 new column to the company table|alttbl|N/A|company|20/11/2020||2020-12-09 05:29:17|OK|kandoodb|48397|
+20201122.001-kandoooptions-datload|informix|this script loads additional data to kandoooption|datload|N/A|kandoooption|22/11/2020||2020-12-09 05:29:18|OK|kandoodb|48398|
+20201123-kandoomsg-datload|informix|this script handles loads new messages in kandoomsg|datload|N/A|kandoomsg|23/11/2020||2020-12-09 05:29:19|OK|kandoodb|48399|
+20201206-qxt_menu_tables-datload|informix|this script handles changes in the menu items|datload|N/A|qxt_menu_item_txt,qxt_menu_item|06/12/2020||2020-12-09 05:31:52|OK|kandoodb|48400|
+20201207.001-invheadext-alttbl|informix|this script extends the map location size|alttbl|N/A|invheadext, creditheadext|07/12/2020||2020-12-09 07:05:29|OK|kandoodb|48401|
+20201208.001-category-alttbl|informix|this script gives some consistency to category columns related to coa|alttbl|N/A|category|08/12/2020||2020-12-13 11:20:31|OK|kandoodb|48402|
+20201208.002-category-createfkconstraint|informix|this script add foreign keys on category|createfkconstra|N/A|category,coa|08/12/2020||2020-12-30 18:55:43|OK|kandoodb|48403|
+20201209.001-batchhead-dropckconstraint|informix|this script drops a too restrictive constraint on batchead|dropckconstrain|N/A|batchhead |09/12/2020||2020-12-17 13:58:48|OK|kandoodb|48404|
+20201209.002-batchhead-createSPL|informix|this script creates a stored procedure that checks debit_amnt and credit_amnt ar|createSPL|N/A|batchhead |09/12/2020||2020-12-20 11:07:33|OK|kandoodb|48407|
+20201209.003-batchhead-createUPDtrigger|informix|this script   create a conditional trigger on update "batchhead.post_flag=Y" and|createUPDtrigge|20201209.001-batchhead-dropckconstraint|batchhead |09/12/2020||2020-12-20 11:07:33|OK|kandoodb|48408|
+20201209.000-batchhead-createSPL|informix|this script creates a stored procedure that checks debit_amnt and credit_amnt ar|createSPL|N/A|batchhead |09/12/2020||2020-12-28 13:33:09|OK|kandoodb|48409|
+20201215.001-list_of_batches_to_post-crttbl|informix|this script creates a table that will manage list of batches to post during a ba|crttbl|N/A|list_of_batches_to_post |15/12/2020||2020-12-28 13:38:54|OK|kandoodb|48410|
+20201216.001-period-crtidx|informix|this script creates a new index on period|crtidx|N/A|period |16/12/2020||2020-12-30 11:55:38|OK|kandoodb|48412|
+20201216.002-period-alttbl|informix|this script adds the financial_yearname column in period 'means the name of the|alttbl|N/A|period |16/12/2020||2020-12-30 12:04:52|OK|kandoodb|48413|
+20201224.001-accounthistcur-grant|informix|this script grants permissions to accounthistcurcur|grant|N/A|accounthistcurcur |24/12/2020||2021-01-14 18:20:04|OK|kandoodb|48414|
+20201226.001-customertype-createfkconstraint|informix|this script add foreign keys on customertype|createfkconstra|N/A|customertype,coa|26/12/2020||2021-01-14 18:43:18|OK|kandoodb|48415|
+20201227.001-apparms-alttbl|informix|this script fixes pay_acct_code data types|alttbl|N/A|apparms|27/12/2020||2021-01-19 09:33:37|OK|kandoodb|48416|
+20201227.002-apparms-createfkconstraint|informix|this script foreign keys on apparms to coa|createfkconstra|N/A|apparms,coa|27/12/2020|||KO|kandoodb|48417|
+20201227.003-vendortype-createfkconstraint|informix|this script foreign keys on vendortype to coa|createfkconstra|N/A|vendortype,coa|27/12/2020|||KO|kandoodb|48418|
+20201228.001-vat_code-alttbl|informix|this script set all vat_code to CHAR(14)|alttbl|N/A|vendoraudit,vendor,company,customer,customeraudit|28/12/2020||2021-01-30 10:23:28|OK|kandoodb|48419|
+20201229.000-vendorinvs-alttbl|informix|this script adds the column year_num to vendoinvs for unicity purpose|alttbl|N/A|vendorinvs|29/12/2020||2021-01-19 15:52:52|OK|kandoodb|48420|
+20201229.001-vendorinvs-createpkyconstraint|informix|this script creates a primary key for vendorinvs|createpkyconstr|N/A|vendorinvs|29/12/2020||2021-01-19 16:10:34|OK|kandoodb|48421|
+20201229.002-vendorinvs-createfkyconstraint|informix|this script creates a foreign key for vendorinvs to voucher ( 1 to 1 relationshi|createfkyconstr|N/A|vendorinvs,voucher|29/12/2020||2021-01-19 15:52:53|OK|kandoodb|48422|
+20201229.003-voucher-createindex|informix|this script creates a foreign key for vendorinvs to voucher ( 1 to 1 relationshi|createindex|N/A|vendorinvs,voucher|29/12/2020||2021-01-19 16:44:36|OK|kandoodb|48423|
+20210120-qxt_menu_tables-datload|informix|this script handles changes in the menu items|datload|N/A|qxt_menu_item_txt,qxt_menu_item|20/01/2021||2021-01-21 05:13:09|OK|kandoodb|48424|
+20210122-qxt_toolbar-alttbl|informix|this script adds the tb_place column in qxt_toolbar means place where toolbar bu|alttbl|N/A|qxt_toolbar |22/01/2021||2021-01-22 07:02:05|OK|kandoodb|48425|
+20201230.001-contractor-createfkyconstraint|informix|this script creates a foreign key for contractor|createfkyconstr|N/A|contractor|30/12/2020||2021-01-30 10:10:07|OK|kandoodb|48426|
+20210102.001-poststatus-alttbl|informix|this script alters the type of poststatus to RAW because it needs to be maintain|alttbl|N/A|poststatus|02/01/2021||2021-01-30 10:23:28|OK|kandoodb|48427|
+20210102.002-invoicehead-createckconstraint|informix|this script add a check constraint to invoicehead|createckconstra|N/A|invoicehead|02/01/2021||2021-01-30 10:18:25|OK|kandoodb|48428|
+20210127-country-datchg|informix|this script makes changes in data of country table|datchg|N/A|country|27/01/2021||2021-02-05 12:16:15|OK|kandoodb|48429|
+20210128-ts_creditdetl-crttbl|informix|this script create the ts_creditdetl table as a static table , which is replacin|crttbl|N/A|ts_creditdetl|28/01/2021||2021-02-05 12:16:15|OK|kandoodb|48430|
+20210209-qxt_menu_tables-datload|informix|this script handles changes in the menu items|datload|N/A|qxt_menu_item_txt,qxt_menu_item|09/02/2021||2021-02-12 17:31:38|OK|kandoodb|48431|
+20210130-currency_for_company-crttbl|informix|this script create the used_currency table which manages which currencies|crttbl|N/A|used_currency|30/01/2021||2021-02-15 18:22:55|OK|kandoodb|48432|
+20210218-qxt_menu_tables-datload|informix|this script handles changes in the menu items|datload|N/A|qxt_menu_item_txt,qxt_menu_item|18/02/2021||2021-02-18 19:54:38|OK|kandoodb|48433|
+20210225-application_strings-crttbl|informix|this script creates the 2 tables in charge of the new strings translation|crttbl|N/A|application_strings,strings_translation|25/02/2021||2021-02-28 19:20:43|OK|kandoodb|48434|
+20210226-qxt_menu_tables-datload|informix|this script handles changes in the menu items|datload|N/A|qxt_menu_item_txt,qxt_menu_item|26/02/2021||2021-03-08 08:42:44|OK|kandoodb|48435|
+20210228.001-arparms-createfkconstraint|informix|this script foreign keys on arparms to coa|createfkconstra|N/A|arparms,coa|28/02/2021||2021-03-08 08:53:01|OK|kandoodb|48436|
+20210228.002-glparms-createfkconstraint|informix|this script foreign keys on glparms to coa|createfkconstra|N/A|glparms,coa|28/02/2021||2021-03-08 11:48:45|OK|kandoodb|48437|
+20210301.001-increment_numbers-crttbl|informix|this script create the table that will manage incrementing numbers such as invoi|crttbl|N/A|increment_numbers|01/03/2021||2021-03-08 10:26:04|OK|kandoodb|48438|
+20210228.003-puparms-createfkconstraint|informix|this script foreign keys on puparms to coa|createfkconstra|N/A|puparms,coa|28/02/2021||2021-03-08 11:24:47|OK|kandoodb|48439|
+20210228.004-jmparms-createfkconstraint|informix|this script foreign keys on jmparms to coa|createfkconstra|N/A|jmparms,coa|28/02/2021||2021-03-08 11:07:10|OK|kandoodb|48440|
+20210302.001-programs-crttbl|informix|this script create the table programs and objects that contains objects to trans|crttbl|N/A|increment_numbers|02/03/2021||2021-03-09 17:42:11|OK|kandoodb|48441|
+20210304-application_strings-alttbl|informix|this script adds country_code to strings translation and its primary key|alttbl|N/A|application_strings,strings_translation|04/03/2021||2021-03-10 05:55:47|OK|kandoodb|48442|
+20210316-qxt_menu_tables-datload|informix|this script handles changes in the menu items|datload|N/A|qxt_menu_item_txt,qxt_menu_item|16/03/2021||2021-03-16 17:14:05|OK|kandoodb|48443|
+20210319-qxt_menu_tables-datload|informix|this script handles changes in the menu items|datload|N/A|qxt_menu_item_txt,qxt_menu_item|19/03/2021||2021-03-23 16:59:47|OK|kandoodb|48444|
+20210330-arparmext-createpkconstraint|informix|this script creates a primary key for arparmext|createpkconstra|N/A|arparmext|30/03/2021||2021-04-01 12:15:27|OK|kandoodb|48445|
+20210331-used_currency-createfkconstraint|informix|this script creates a foreign key for used_currency to copany|createfkconstra|N/A|used_currency|31/03/2021||2021-04-01 12:19:19|OK|kandoodb|48446|
+20210331.001-used_currency-createpkconstraint|informix|this script creates a primary key for used_currency + adds columns|createpkconstra|N/A|used_currency|31/03/2021||2021-04-04 09:21:29|OK|kandoodb|48447|
+20210414-qxt_menu_tables-datload|informix|this script handles changes in the menu items|datload|N/A|qxt_menu_item_txt,qxt_menu_item|14/04/2021||2021-05-06 08:28:06|OK|kandoodb|48448|
+20210420.001-glparms-createfkconstraint|informix|this script foreign keys on glparms to journal|createfkconstra|N/A|glparms,journal|20/04/2021||2021-05-06 08:28:09|OK|kandoodb|48449|
+20210420.002-glparms-createfkconstraint|informix|this script foreign keys on glparms to used_currency|createfkconstra|N/A|glparms,used_currency|20/04/2021|||KO|kandoodb|48450|
+20210501.001-invoicehead-createfkconstraint|informix|this script foreign keys on invoicehead to orderhead|createfkconstra|N/A|invoicehead,orderhead|01/05/2021|||KO|kandoodb|48451|
+20210501.002-invoicehead-createfkconstraint|informix|this script foreign keys on invoicehead to coa|createfkconstra|N/A|invoicehead,coa|01/05/2021|||KO|kandoodb|48452|
+20210501.003-invoicehead-createfkconstraint|informix|this script foreign keys on invoicehead to kandoouser|createfkconstra|N/A|invoicehead,kandoouser|01/05/2021|||KO|kandoodb|48453|
+20210501.004-invoicehead-createfkconstraint|informix|this script foreign keys on invoicehead to job|createfkconstra|N/A|invoicehead,job|01/05/2021||2021-05-06 08:28:11|OK|kandoodb|48454|
+20210501.005-invoicehead-createfkconstraint|informix|this script foreign keys on invoicehead to period|createfkconstra|N/A|invoicehead,period|01/05/2021|||KO|kandoodb|48455|
+20210501.006-invoicedetl-createfkconstraint|informix|this script foreign keys on invoicedetl to tax|createfkconstra|N/A|invoicedetl,tax|01/05/2021||2021-05-06 08:28:12|OK|kandoodb|48456|
+20210501.007-invoicedetl-createfkconstraint|informix|this script foreign keys on invoicedetl to prodstatus|createfkconstra|N/A|invoicedetl,prodstatus|01/05/2021||2021-05-06 08:28:13|OK|kandoodb|48457|
+20210501.008-invoicedetl-createfkconstraint|informix|this script foreign keys on invoicedetl to coa|createfkconstra|N/A|invoicedetl,coa|01/05/2021||2021-05-06 09:29:05|DEL|kandoodb|48458|

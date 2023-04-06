@@ -1,0 +1,67 @@
+{
+###########################################################################
+# This program is free software; you can redistribute it and/or modify it
+# under the terms of the GNU General Public License as published by the
+# Free Software Foundation; either version 2 of the License, or (at your
+# option) any later version.
+#
+# This program is distributed in the hope that it will be useful, but
+# WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+# General Public License for more details.
+#
+# You should have received a copy of the GNU General Public License along
+# with this program; if not, write to the Free Software Foundation, Inc.,
+# 59 Temple Place, Suite 330, Boston, MA 02111-1307 USA
+#
+###########################################################################
+
+	 $Id: M165.per,v 1.1 2003/05/20 23:53:06 tpavlek Exp $
+}
+
+
+database kandoodb
+
+screen
+{
+                          Shop Order Lookup                     M165
+\g---------------------------------------------------------------------\g
+  SO Number SO Suffix Type Status     Product               Quantity
+\g---------------------------------------------------------------------\g
+[f001      ] [f002 ]  [a]   [b]  [f003           ][f004             ]
+[f001      ] [f002 ]  [a]   [b]  [f003           ][f004             ]
+[f001      ] [f002 ]  [a]   [b]  [f003           ][f004             ]
+[f001      ] [f002 ]  [a]   [b]  [f003           ][f004             ]
+[f001      ] [f002 ]  [a]   [b]  [f003           ][f004             ]
+[f001      ] [f002 ]  [a]   [b]  [f003           ][f004             ]
+[f001      ] [f002 ]  [a]   [b]  [f003           ][f004             ]
+[f001      ] [f002 ]  [a]   [b]  [f003           ][f004             ]
+[f001      ] [f002 ]  [a]   [b]  [f003           ][f004             ]
+[f001      ] [f002 ]  [a]   [b]  [f003           ][f004             ]
+
+}
+
+tables
+shopordhead
+
+attributes
+f001 = shopordhead.shop_order_num, comments = " Unique shop order number";
+f002 = shopordhead.suffix_num, comments = " Shop order suffix number";
+a    = shopordhead.order_type_ind, upshift,
+comments = " O = Normal shop order, S = Originates from a sales order";
+b    = shopordhead.status_ind, upshift,
+comments = " H = Held, R = Released, C = Closed";
+f003 = shopordhead.part_code, upshift,
+comments = " Code of the product being manufactured for the shop order";
+f004 = shopordhead.order_qty,
+comments = " Quantity of the product being manufactured";
+
+instructions
+delimiters "  "
+
+screen record sr_shopordhead[10] (shop_order_num,
+                                  suffix_num,
+                                  order_type_ind,
+                                  status_ind,
+                                  part_code,
+                                  order_qty)

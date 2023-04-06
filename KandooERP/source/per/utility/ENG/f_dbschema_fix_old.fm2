@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form xmlns="http://namespaces.querix.com/2015/fglForms">
+	<form.rootContainer>
+		<GridPanel preferredSize="837.0,678.0" visible="true" fieldTable="" identifier="rootContainer">
+			<GridPanel.gridRowDefinitions>
+				<GridRowDefinition gridLengthValue="42"/>
+				<GridRowDefinition gridLengthValue=""/>
+				<GridRowDefinition gridLengthValue=""/>
+				<GridRowDefinition gridLengthValue=""/>
+				<GridRowDefinition gridLengthValue="29"/>
+				<GridRowDefinition gridLengthValue="138"/>
+				<GridRowDefinition gridLengthValue="75"/>
+				<GridRowDefinition gridLengthValue=""/>
+				<GridRowDefinition gridLengthValue=""/>
+				<GridRowDefinition gridLengthValue=""/>
+			</GridPanel.gridRowDefinitions>
+			<GridPanel.gridColumnDefinitions>
+				<GridColumnDefinition gridLengthValue="143.0"/>
+				<GridColumnDefinition gridLengthValue="603"/>
+				<GridColumnDefinition gridLengthValue=""/>
+			</GridPanel.gridColumnDefinitions>
+			<GridPanel visible="true" fieldTable="" identifier="c1" gridItemLocation="1,0,1,1">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue=""/>
+				</GridPanel.gridColumnDefinitions>
+				<Label isDynamic="true" text="KandooERP database fix manager" visible="true" verticalAlignment="Center" horizontalAlignment="Center" gridItemLocation="0,0,1,1" fieldTable="" identifier="lb20">
+					<Label.font>
+						<Font family="@Arial Unicode MS" fontSize="18"/>
+					</Label.font>
+				</Label>
+			</GridPanel>
+			<Label isDynamic="true" text="Fix Id" visible="true" gridItemLocation="0,1,1,1" fieldTable="" identifier="lb3"/>
+			<TextField text="fix_name" visible="true" gridItemLocation="1,1,1,1" fieldTable="dbschema_fix" identifier="fix_name"/>
+			<Label isDynamic="true" text="DB Vendor" visible="true" gridItemLocation="0,2,1,1" fieldTable="" identifier="lb5"/>
+			<ComboBox visible="true" gridItemLocation="1,2,1,1" fieldTable="dbschema_fix" identifier="fix_dbvendor"/>
+			<ComboBox visible="true" fieldTable="dbschema_fix" identifier="fix_type" gridItemLocation="2,2,1,1"/>
+			<Label isDynamic="true" text="Abstract" visible="true" fieldTable="" identifier="lb9" gridItemLocation="0,3,1,1"/>
+			<TextField visible="true" fieldTable="dbschema_fix" identifier="fix_abstract" gridItemLocation="1,3,1,1"/>
+			<Label isDynamic="true" text="Dependencies" visible="true" gridItemLocation="0,5,1,1" fieldTable="" identifier="lb14"/>
+			<TextArea visible="true" gridItemLocation="1,5,1,1" fieldTable="dbschema_fix" identifier="fix_dependencies"/>
+			<Label isDynamic="true" text="Tables list" visible="true" gridItemLocation="0,6,1,1" fieldTable="" identifier="lb16"/>
+			<TextArea visible="true" gridItemLocation="1,6,1,1" fieldTable="dbschema_fix" identifier="fix_tableslist"/>
+			<Label text="Creation Date&#9;" isDynamic="true" visible="true" identifier="lb24" gridItemLocation="0,7,1,1"/>
+			<TextField visible="true" identifier="fix_create_date" gridItemLocation="1,7,1,1" fieldTable="dbschema_fix"/>
+			<Label text="Git Commit" isDynamic="true" visible="true" identifier="lb26" gridItemLocation="0,9,1,1"/>
+			<TextField visible="true" identifier="git_commit_hash" gridItemLocation="1,9,1,1" fieldTable="dbschema_fix"/>
+			<Label isDynamic="true" text="Apply Date" visible="true" fieldTable="" identifier="lb7" gridItemLocation="0,8,1,1"/>
+			<TextField text="fix_apply_date" visible="true" fieldTable="dbschema_fix" identifier="fix_apply_date" gridItemLocation="1,8,1,1"/>
+		</GridPanel>
+	</form.rootContainer>
+	<form.screenRecords>
+		<ScreenRecord identifier="dbschema_fix" fields="fix_name,fix_dbvendor,dbschema_fix.fix_apply_date,fix_abstract,fix_dependencies,fix_tableslist,fix_request_date,fix_apply_date,fix_type,git_commit_hash"/>
+	</form.screenRecords>
+</form>
+

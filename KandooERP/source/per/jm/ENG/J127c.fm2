@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form xmlns="http://namespaces.querix.com/2015/fglForms">
+	<form.rootContainer>
+		<GridPanel classNames="fcls_rootContainer" verticalAlignment="Stretch" horizontalAlignment="Left" fieldTable="" identifier="rootContainer">
+			<GridPanel.gridRowDefinitions>
+				<GridRowDefinition gridLengthValue=""/>
+				<GridRowDefinition gridLengthValue=""/>
+				<GridRowDefinition gridLengthValue="100%" gridMinLength="15rem"/>
+				<GridRowDefinition gridLengthValue=""/>
+				<GridRowDefinition gridLengthValue=""/>
+				<GridRowDefinition gridLengthValue=""/>
+				<GridRowDefinition gridLengthValue=""/>
+				<GridRowDefinition gridLengthValue=""/>
+			</GridPanel.gridRowDefinitions>
+			<GridPanel.gridColumnDefinitions>
+				<GridColumnDefinition gridLengthValue="100%"/>
+			</GridPanel.gridColumnDefinitions>
+			<GridPanel classNames="fcls_title_cnt" visible="true" verticalAlignment="Top" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="cntTitle">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="100%"/>
+					<GridColumnDefinition gridLengthValue=""/>
+				</GridPanel.gridColumnDefinitions>
+				<Label isDynamic="true" text="Job Invoicing" classNames="fcls_title_lb" visible="true" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="header_text"/>
+				<Label isDynamic="true" text="J127c" classNames="fcls_title_lb" visible="true" gridItemLocation="1,0,1,1" fieldTable="" identifier="lbFormName"/>
+			</GridPanel>
+			<GridPanel classNames="fcls_detail_cnt,fcls_data_cnt" visible="true" verticalAlignment="Top" horizontalAlignment="Left" gridItemLocation="0,1,1,1" fieldTable="formonly" identifier="cntDetail1">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="10rem"/>
+					<GridColumnDefinition gridLengthValue=""/>
+					<GridColumnDefinition gridLengthValue=""/>
+				</GridPanel.gridColumnDefinitions>
+				<Label isDynamic="true" text="Job" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="lb57"/>
+				<TextField toCase="Up" dataType="Char,,,,8" preferredSize="13qch,1qch" fieldTable="activity" identifier="job_code" gridItemLocation="1,0,1,1" classNames="fcls_data_widget,fcls_length_15qch"/>
+				<TextField dataType="Char,,,,30" preferredSize="31qch,1qch" fieldTable="job" identifier="title_text" gridItemLocation="2,0,1,1" classNames="fcls_data_widget,fcls_length_15qch"/>
+				<Label isDynamic="true" text="Customer" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,1,1,1" fieldTable="" identifier="lb73"/>
+				<TextField dataType="Char,,,,8" preferredSize="9qch,1qch" fieldTable="job" identifier="cust_code" gridItemLocation="1,1,1,1" classNames="fcls_data_widget,fcls_length_15qch"/>
+				<TextField noEntry="true" dataType="Char,,,,30" preferredSize="31qch,1qch" fieldTable="customer" identifier="name_text" gridItemLocation="2,1,1,1" classNames="fcls_data_widget,fcls_length_15qch"/>
+			</GridPanel>
+			<Table rowCount="5" preferredSize="75qch,5qch" fieldTable="" identifier="sr_activity" gridItemLocation="0,2,1,1">
+				<TableColumn fieldTable="" identifier="tc_invoice_flag">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="2rem" gridMaxLength="2rem" gridMinLength="2rem"/>
+					</TableColumn.columnLength>
+					<TextField dataType="Char,,,," toolTip=" Description for Invoice - CTRL N for Notes" comment=" Description for Invoice - CTRL N for Notes" fieldTable="formonly" identifier="invoice_flag"/>
+				</TableColumn>
+				<TableColumn fieldTable="" identifier="tc_title_text" text="Activity">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="40.0%" gridMaxLength="30rem" gridMinLength="15rem"/>
+					</TableColumn.columnLength>
+					<TextField dataType="Char,,,,30" fieldTable="activity" identifier="title_text"/>
+				</TableColumn>
+				<TableColumn fieldTable="" identifier="tc_this_bill_amt" text="Bill Qty">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="20.0%" gridMaxLength="15rem" gridMinLength="5rem"/>
+					</TableColumn.columnLength>
+					<TextField dataType="Decimal,,,2,10" fieldTable="formonly" identifier="this_bill_amt"/>
+				</TableColumn>
+				<TableColumn fieldTable="" identifier="tc_this_bill_qty" text="Bill Amount">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="18.7%" gridMaxLength="15rem" gridMinLength="5rem"/>
+					</TableColumn.columnLength>
+					<TextField dataType="Decimal,,,2,10" fieldTable="formonly" identifier="this_bill_qty"/>
+				</TableColumn>
+				<TableColumn fieldTable="" identifier="tc_this_cos_amt" text="Cost Amount">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="18.7%" gridMaxLength="15rem" gridMinLength="5rem"/>
+					</TableColumn.columnLength>
+					<TextField dataType="Decimal,,,2,10" fieldTable="formonly" identifier="this_cos_amt"/>
+				</TableColumn>
+			</Table>
+			<GroupBox title="Group 1" classNames="fcls_detail_gb_cnt" visible="true" gridItemLocation="0,3,1,1" fieldTable="" identifier="cntDetail1GroupBox">
+				<GridPanel classNames="fcls_detail_gb_cnt_sub,fcls_detail_cnt_sub,fcls_data_cnt" visible="true" verticalAlignment="Top" horizontalAlignment="Left" fieldTable="formonly" identifier="cntDetail1Sub">
+					<GridPanel.gridRowDefinitions>
+						<GridRowDefinition gridLengthValue=""/>
+						<GridRowDefinition gridLengthValue=""/>
+						<GridRowDefinition gridLengthValue=""/>
+						<GridRowDefinition gridLengthValue=""/>
+					</GridPanel.gridRowDefinitions>
+					<GridPanel.gridColumnDefinitions>
+						<GridColumnDefinition gridLengthValue="10rem"/>
+						<GridColumnDefinition gridLengthValue=""/>
+					</GridPanel.gridColumnDefinitions>
+					<Label isDynamic="true" text="Variation" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="lb57"/>
+					<TextField dataType="SmallInt,,,," preferredSize="8qch,1qch" toolTip=" Enter Variation Code" comment=" Enter Variation Code" fieldTable="activity" identifier="var_code" gridItemLocation="1,0,1,1" classNames="fcls_data_widget,fcls_length_20qch"/>
+					<Label isDynamic="true" text="Activity" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,1,1,1" fieldTable="" identifier="lb73"/>
+					<TextField toCase="Up" dataType="Char,,,,8" preferredSize="9qch,1qch" toolTip=" Enter Activity Code" comment=" Enter Activity Code" fieldTable="activity" identifier="activity_code" gridItemLocation="1,1,1,1" classNames="fcls_data_widget,fcls_length_20qch"/>
+					<Label isDynamic="true" text="% Comp" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,2,1,1" fieldTable="" identifier="lb76"/>
+					<TextField noEntry="true" dataType="Float,,,," preferredSize="7qch,1qch" fieldTable="activity" identifier="est_comp_per" gridItemLocation="1,2,1,1" classNames="fcls_data_widget,fcls_length_20qch"/>
+					<Label isDynamic="true" text="Billing" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,3,1,1" fieldTable="" identifier="lb77"/>
+					<TextField noEntry="true" dataType="Char,,,," preferredSize="12qch,1qch" fieldTable="formonly" identifier="bill_text" gridItemLocation="1,3,1,1" classNames="fcls_data_widget,fcls_length_20qch"/>
+				</GridPanel>
+			</GroupBox>
+			<GroupBox title="Line Detail" classNames="fcls_detail_gb_cnt" visible="true" verticalAlignment="Top" gridItemLocation="0,4,1,1" fieldTable="formonly" identifier="cntDetail2GroupBox">
+				<GridPanel classNames="fcls_detail_gb_cnt_sub,fcls_detail_cnt_sub,fcls_data_cnt" visible="true" verticalAlignment="Top" horizontalAlignment="Left" fieldTable="formonly" identifier="cntDetail2Sub">
+					<GridPanel.gridRowDefinitions>
+						<GridRowDefinition gridLengthValue=""/>
+						<GridRowDefinition gridLengthValue=""/>
+						<GridRowDefinition gridLengthValue=""/>
+					</GridPanel.gridRowDefinitions>
+					<GridPanel.gridColumnDefinitions>
+						<GridColumnDefinition gridLengthValue="10rem"/>
+						<GridColumnDefinition gridLengthValue=""/>
+						<GridColumnDefinition gridLengthValue=""/>
+						<GridColumnDefinition gridLengthValue=""/>
+					</GridPanel.gridColumnDefinitions>
+					<Label isDynamic="true" text="Estimate" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="1,0,1,1" fieldTable="formonly" identifier="lb64"/>
+					<Label isDynamic="true" text="To Date" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="2,0,1,1" fieldTable="formonly" identifier="lb65"/>
+					<Label isDynamic="true" text="Amount Cost" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,1,1,1" fieldTable="formonly" identifier="lb47"/>
+					<Label isDynamic="true" text="Cumulative" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="3,0,1,1" fieldTable="" identifier="lb85"/>
+					<TextField dataType="Decimal,,,2,16" preferredSize="15qch,1qch" fieldTable="activity" identifier="est_cost_amt" gridItemLocation="1,1,1,1" classNames="fcls_data_widget,fcls_length_15qch"/>
+					<TextField dataType="Decimal,,,2,16" preferredSize="15qch,1qch" fieldTable="activity" identifier="act_cost_amt" gridItemLocation="2,1,1,1" classNames="fcls_data_widget,fcls_length_15qch"/>
+					<Label isDynamic="true" text="Billed" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,2,1,1" fieldTable="formonly" identifier="lb46"/>
+					<TextField dataType="Decimal,,,2,16" preferredSize="15qch,1qch" fieldTable="activity" identifier="est_bill_amt" gridItemLocation="1,2,1,1" classNames="fcls_data_widget,fcls_length_15qch"/>
+					<TextField dataType="Decimal,,,2,16" preferredSize="15qch,1qch" fieldTable="activity" identifier="act_bill_amt" gridItemLocation="2,2,1,1" classNames="fcls_data_widget,fcls_length_15qch"/>
+					<TextField dataType="Decimal,,,2,10" preferredSize="15qch,1qch" fieldTable="formonly" identifier="tot_bill_amt" gridItemLocation="3,2,1,1" classNames="fcls_data_widget,fcls_length_15qch"/>
+				</GridPanel>
+			</GroupBox>
+			<GroupBox title="Charges/Cost" classNames="fcls_detail_gb_cnt" visible="true" gridItemLocation="0,5,1,1" fieldTable="formonly" identifier="cntDetail3GroupBox">
+				<GridPanel classNames="fcls_detail_gb_cnt_sub,fcls_detail_cnt_sub,fcls_data_cnt" visible="true" verticalAlignment="Top" horizontalAlignment="Left" fieldTable="formonly" identifier="cntDetail3Sub">
+					<GridPanel.gridRowDefinitions>
+						<GridRowDefinition gridLengthValue=""/>
+						<GridRowDefinition gridLengthValue=""/>
+					</GridPanel.gridRowDefinitions>
+					<GridPanel.gridColumnDefinitions>
+						<GridColumnDefinition gridLengthValue=""/>
+						<GridColumnDefinition gridLengthValue=""/>
+						<GridColumnDefinition gridLengthValue=""/>
+					</GridPanel.gridColumnDefinitions>
+					<Label isDynamic="true" text="Charges Accumulated" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="lb48"/>
+					<TextField dataType="Decimal,,,2,16" preferredSize="15qch,1qch" fieldTable="activity" identifier="post_revenue_amt" gridItemLocation="1,0,1,1" classNames="fcls_data_widget,fcls_length_15qch"/>
+					<Label isDynamic="true" text="Cost of Sales" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,1,1,1" fieldTable="formonly" identifier="lb49"/>
+					<TextField noEntry="true" dataType="Decimal,,,2,16" preferredSize="15qch,1qch" fieldTable="activity" identifier="post_cost_amt" gridItemLocation="1,1,1,1" classNames="fcls_data_widget,fcls_length_15qch"/>
+					<TextField dataType="Decimal,,,2,10" preferredSize="15qch,1qch" fieldTable="formonly" identifier="tot_cos_amt" gridItemLocation="2,1,1,1" classNames="fcls_data_widget,fcls_length_15qch"/>
+				</GridPanel>
+			</GroupBox>
+			<GroupBox title="Usage" classNames="fcls_detail_gb_cnt" visible="true" gridItemLocation="0,6,1,1" fieldTable="" identifier="cntDetail6GroupBox">
+				<GridPanel classNames="fcls_detail_gb_cnt_sub,fcls_detail_cnt_sub,fcls_data_cnt" visible="true" verticalAlignment="Top" horizontalAlignment="Left" fieldTable="" identifier="cntDetail6Sub">
+					<GridPanel.gridRowDefinitions>
+						<GridRowDefinition gridLengthValue=""/>
+						<GridRowDefinition gridLengthValue=""/>
+					</GridPanel.gridRowDefinitions>
+					<GridPanel.gridColumnDefinitions>
+						<GridColumnDefinition gridLengthValue="" gridMinLength="10rem"/>
+						<GridColumnDefinition gridLengthValue=""/>
+						<GridColumnDefinition gridLengthValue=""/>
+						<GridColumnDefinition gridLengthValue=""/>
+						<GridColumnDefinition gridLengthValue=""/>
+					</GridPanel.gridColumnDefinitions>
+					<Label isDynamic="true" text="Usage" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,0,1,1" fieldTable="" identifier="lb134"/>
+					<TextField noEntry="true" dataType="Char,,,,3" preferredSize="4qch,1qch" fieldTable="activity" identifier="unit_code" gridItemLocation="1,0,1,1" classNames="fcls_data_widget,fcls_length_15qch"/>
+					<TextField dataType="Float,,,," preferredSize="15qch,1qch" fieldTable="activity" identifier="est_cost_qty" gridItemLocation="2,0,1,1" classNames="fcls_data_widget,fcls_length_15qch"/>
+					<TextField dataType="Float,,,," preferredSize="15qch,1qch" fieldTable="activity" identifier="act_cost_qty" gridItemLocation="3,0,1,1" classNames="fcls_data_widget,fcls_length_15qch"/>
+					<Label isDynamic="true" text="Billed" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,1,1,1" fieldTable="" identifier="lb135"/>
+					<TextField dataType="Float,,,," preferredSize="15qch,1qch" fieldTable="activity" identifier="est_bill_qty" gridItemLocation="2,1,1,1" classNames="fcls_data_widget,fcls_length_15qch"/>
+					<TextField dataType="Float,,,," preferredSize="15qch,1qch" fieldTable="activity" identifier="act_bill_qty" gridItemLocation="3,1,1,1" classNames="fcls_data_widget,fcls_length_15qch"/>
+					<TextField dataType="Decimal,,,2,10" preferredSize="15qch,1qch" fieldTable="formonly" identifier="tot_bill_qty" gridItemLocation="4,1,1,1" classNames="fcls_data_widget,fcls_length_15qch"/>
+				</GridPanel>
+			</GroupBox>
+			<GridPanel classNames="fcls_statusbar_cnt" visible="true" verticalAlignment="Top" gridItemLocation="0,7,1,1" fieldTable="formonly" identifier="cntStatusBar">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="100%"/>
+				</GridPanel.gridColumnDefinitions>
+				<Label isDynamic="true" text="" classNames="fcls_sblabel" visible="true" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="lbInfo1"/>
+				<Label isDynamic="true" text="" classNames="fcls_sblabel" visible="true" gridItemLocation="0,1,1,1" fieldTable="formonly" identifier="lbInfo2"/>
+			</GridPanel>
+
+		</GridPanel>
+	</form.rootContainer>
+	<form.screenRecords>
+		<ScreenRecord identifier="sr_activity" fields="formonly.invoice_flag,activity.title_text,formonly.this_bill_amt,formonly.this_bill_qty,formonly.this_cos_amt"/>
+		<ScreenRecord identifier="activity" fields="activity.job_code,activity.title_text,activity.activity_code,activity.var_code,activity.est_comp_per,activity.est_cost_amt,activity.act_cost_amt,activity.est_bill_amt,activity.act_bill_amt,activity.post_revenue_amt,activity.post_cost_amt,activity.unit_code,activity.est_cost_qty,activity.act_cost_qty,activity.est_bill_qty,activity.act_bill_qty"/>
+		<ScreenRecord identifier="customer" fields="customer.name_text"/>
+		<ScreenRecord identifier="formonly" fields="formonly.invoice_flag,formonly.this_bill_amt,formonly.this_bill_qty,formonly.this_cos_amt,formonly.bill_text,formonly.tot_bill_amt,formonly.tot_cos_amt,formonly.tot_bill_qty"/>
+		<ScreenRecord identifier="job" fields="job.title_text,job.cust_code"/>
+	</form.screenRecords>
+</form>
+

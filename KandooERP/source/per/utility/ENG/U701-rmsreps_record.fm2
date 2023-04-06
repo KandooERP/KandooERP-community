@@ -1,0 +1,284 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form xmlns="http://namespaces.querix.com/2015/fglForms">
+	<form.rootContainer>
+		<GridPanel classNames="fcls_rootContainer" verticalAlignment="Top" horizontalAlignment="Left" fieldTable="" identifier="rootContainer">
+			<GridPanel.gridRowDefinitions>
+				<GridRowDefinition gridLengthValue=""/>
+				<GridRowDefinition gridLengthValue=""/>
+				<GridRowDefinition gridLengthValue=""/>
+			</GridPanel.gridRowDefinitions>
+			<GridPanel.gridColumnDefinitions>
+				<GridColumnDefinition gridLengthValue="100%"/>
+			</GridPanel.gridColumnDefinitions>
+			<GridPanel classNames="fcls_title_cnt" visible="true" verticalAlignment="Top" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="cntTitle">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="100%"/>
+					<GridColumnDefinition gridLengthValue=""/>
+				</GridPanel.gridColumnDefinitions>
+				<Label isDynamic="true" text="FOR DEVELOPERS ONLY - Table rmsreps record data" classNames="fcls_title_lb" visible="true" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="header_text"/>
+				<Label isDynamic="true" text="U701-rmsreps_record.fm2" classNames="fcls_title_lb" visible="true" gridItemLocation="1,0,1,1" fieldTable="" identifier="lbFormName"/>
+			</GridPanel>
+			<GridPanel classNames="fcls_detail_cnt,fcls_data_cnt" visible="true" verticalAlignment="Top" horizontalAlignment="Left" gridItemLocation="0,1,1,1" fieldTable="formonly" identifier="cntDetail1">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="" gridMinLength="10rem"/>
+					<GridColumnDefinition gridLengthValue=""/>
+					<GridColumnDefinition gridLengthValue=""/>
+					<GridColumnDefinition gridLengthValue=""/>
+					<GridColumnDefinition gridLengthValue=""/>
+					<GridColumnDefinition gridLengthValue=""/>
+					<GridColumnDefinition gridLengthValue=""/>
+					<GridColumnDefinition gridLengthValue=""/>
+				</GridPanel.gridColumnDefinitions>
+				<Label text="top_margin" isDynamic="true" visible="true" identifier="lb303" gridItemLocation="6,1,1,1"/>
+				<TextField visible="true" identifier="top_margin" gridItemLocation="7,1,1,1"/>
+				<Label text="entry_type" isDynamic="true" visible="true" identifier="lb321" gridItemLocation="0,2,1,1"/>
+				<TextField visible="true" identifier="entry_type" gridItemLocation="1,2,1,1"/>
+				<TextField visible="true" identifier="copy_num" gridItemLocation="5,3,1,1" classNames="fcls_data_widget,fcls_align_left,fcls_length_20qch"/>
+				<Label text="bottom_margin" isDynamic="true" visible="true" identifier="lb304" gridItemLocation="6,3,1,1"/>
+				<TextField visible="true" identifier="bottom_margin" gridItemLocation="7,3,1,1"/>
+				<Label text="rmsdialog_flag" isDynamic="true" visible="true" identifier="lb301" gridItemLocation="0,4,1,1"/>
+				<TextField visible="true" identifier="rmsdialog_flag" gridItemLocation="1,4,1,1"/>
+				<Label text="report_engine" isDynamic="true" visible="true" identifier="lb320" gridItemLocation="2,4,1,1"/>
+				<TextField visible="true" identifier="report_engine" gridItemLocation="3,4,1,1"/>
+				<Label text="left_margin" isDynamic="true" visible="true" identifier="lb305" gridItemLocation="6,4,1,1"/>
+				<TextField visible="true" identifier="left_margin" gridItemLocation="7,4,1,1"/>
+				<TextField visible="true" identifier="comp_ind" gridItemLocation="5,5,1,1" classNames="fcls_data_widget,fcls_align_left,fcls_length_20qch"/>
+				<Label text="right_margin" isDynamic="true" visible="true" identifier="lb306" gridItemLocation="6,5,1,1"/>
+				<TextField visible="true" identifier="right_margin" gridItemLocation="7,5,1,1"/>
+				<TextField visible="true" identifier="status_text" gridItemLocation="1,6,1,1" classNames="fcls_data_widget,fcls_align_left,fcls_length_20qch"/>
+				<TextField visible="true" identifier="start_page" gridItemLocation="5,6,1,1" classNames="fcls_data_widget,fcls_align_left,fcls_length_20qch"/>
+				<TextField visible="true" identifier="ref1_per" gridItemLocation="7,6,1,1"/>
+				<Label isDynamic="true" text="entry_code" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,7,1,1" fieldTable="" identifier="lb67"/>
+				<TextField visible="true" identifier="entry_code" gridItemLocation="1,7,1,1" classNames="fcls_data_widget,fcls_align_left,fcls_length_20qch"/>
+				<Label isDynamic="true" text="print_page" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="4,7,1,1" fieldTable="" identifier="lb65"/>
+				<Label isDynamic="true" text="copy_num" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="4,3,1,1" fieldTable="" identifier="lb53"/>
+				<Label isDynamic="true" text="comp_ind" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="4,5,1,1" fieldTable="" identifier="lb54"/>
+				<Label isDynamic="true" text="status_text" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,6,1,1" fieldTable="" identifier="lb66"/>
+				<Label isDynamic="true" text="start_page" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="4,6,1,1" fieldTable="" identifier="lb55"/>
+				<TextField visible="true" identifier="print_page" gridItemLocation="5,7,1,1" classNames="fcls_data_widget,fcls_align_left,fcls_length_20qch"/>
+				<TextField visible="true" identifier="ref2_per" gridItemLocation="7,7,1,1"/>
+				<Label isDynamic="true" text="security_ind" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,8,1,1" fieldTable="" identifier="lb133"/>
+				<TextField visible="true" identifier="security_ind" gridItemLocation="1,8,1,1" classNames="fcls_data_widget,fcls_align_left,fcls_length_20qch"/>
+				<Label isDynamic="true" text="align_ind" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="4,8,1,1" fieldTable="" identifier="lb139"/>
+				<TextField visible="true" identifier="align_ind" gridItemLocation="5,8,1,1" classNames="fcls_data_widget,fcls_align_left,fcls_length_20qch"/>
+				<TextField visible="true" identifier="ref3_per" gridItemLocation="7,8,1,1"/>
+				<Label isDynamic="true" text="report_date" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,9,1,1" fieldTable="" identifier="lb134"/>
+				<TextField visible="true" identifier="report_date" gridItemLocation="1,9,1,1" classNames="fcls_data_widget,fcls_align_left,fcls_length_20qch"/>
+				<Label text="sel_order" isDynamic="true" visible="true" identifier="lb286" gridItemLocation="4,9,1,1"/>
+				<TextField visible="true" identifier="sel_order" gridItemLocation="5,9,1,1"/>
+				<TextField visible="true" identifier="ref4_per" gridItemLocation="7,9,1,1"/>
+				<Label isDynamic="true" text="report_pgm_text" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,10,1,1" fieldTable="" identifier="lb135"/>
+				<TextField visible="true" identifier="report_pgm_text" gridItemLocation="1,10,1,1" classNames="fcls_data_widget,fcls_align_left,fcls_length_20qch"/>
+				<TextField visible="true" identifier="ref5_per" gridItemLocation="7,10,1,1"/>
+				<Label isDynamic="true" text="report_time" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,11,1,1" fieldTable="" identifier="lb136"/>
+				<TextField visible="true" identifier="report_time" gridItemLocation="1,11,1,1" classNames="fcls_data_widget,fcls_align_left,fcls_length_20qch"/>
+				<TextField visible="true" identifier="ref6_per" gridItemLocation="7,11,1,1"/>
+				<Label text="ref1_factor" isDynamic="true" visible="true" identifier="lb287" gridItemLocation="0,12,1,1"/>
+				<TextField visible="true" identifier="ref1_factor" gridItemLocation="1,12,1,1"/>
+				<Label isDynamic="true" text="ref1_text" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="4,12,1,1" fieldTable="" identifier="lb143"/>
+				<Label text="ref1_amt" isDynamic="true" visible="true" identifier="lb259" gridItemLocation="6,12,1,1"/>
+				<TextField visible="true" identifier="ref1_amt" gridItemLocation="7,12,1,1"/>
+				<Label text="ref2_factor" isDynamic="true" visible="true" identifier="lb288" gridItemLocation="0,13,1,1"/>
+				<TextField visible="true" identifier="ref2_factor" gridItemLocation="1,13,1,1"/>
+				<Label isDynamic="true" text="ref2_text" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="4,13,1,1" fieldTable="" identifier="lb144"/>
+				<TextField visible="true" identifier="ref2_text" gridItemLocation="5,13,1,1"/>
+				<Label text="ref2_amt" isDynamic="true" visible="true" identifier="lb260" gridItemLocation="6,13,1,1"/>
+				<TextField visible="true" identifier="ref2_amt" gridItemLocation="7,13,1,1"/>
+				<Label text="ref3_factor" isDynamic="true" visible="true" identifier="lb289" gridItemLocation="0,14,1,1"/>
+				<TextField visible="true" identifier="ref3_factor" gridItemLocation="1,14,1,1"/>
+				<Label text="ref3_text" isDynamic="true" visible="true" identifier="lb277" gridItemLocation="4,14,1,1"/>
+				<TextField visible="true" identifier="ref3_text" gridItemLocation="5,14,1,1"/>
+				<Label text="ref3_amt" isDynamic="true" visible="true" identifier="lb261" gridItemLocation="6,14,1,1"/>
+				<TextField visible="true" identifier="ref3_amt" gridItemLocation="7,14,1,1"/>
+				<Label text="ref4_factor" isDynamic="true" visible="true" identifier="lb290" gridItemLocation="0,15,1,1"/>
+				<TextField visible="true" identifier="ref4_factor" gridItemLocation="1,15,1,1"/>
+				<Label text="ref4_text" isDynamic="true" visible="true" identifier="lb278" gridItemLocation="4,15,1,1"/>
+				<TextField visible="true" identifier="ref4_text" gridItemLocation="5,15,1,1"/>
+				<Label text="ref4_amt" isDynamic="true" visible="true" identifier="lb262" gridItemLocation="6,15,1,1"/>
+				<TextField visible="true" identifier="ref4_amt" gridItemLocation="7,15,1,1"/>
+				<Label text="ref5_factor" isDynamic="true" visible="true" identifier="lb291" gridItemLocation="0,16,1,1"/>
+				<TextField visible="true" identifier="ref5_factor" gridItemLocation="1,16,1,1"/>
+				<TextField visible="true" identifier="ref5_date" gridItemLocation="3,16,1,1"/>
+				<Label text="ref5_text" isDynamic="true" visible="true" identifier="lb279" gridItemLocation="4,16,1,1"/>
+				<TextField visible="true" identifier="ref5_text" gridItemLocation="5,16,1,1"/>
+				<Label text="ref5_amt" isDynamic="true" visible="true" identifier="lb263" gridItemLocation="6,16,1,1"/>
+				<TextField visible="true" identifier="ref5_amt" gridItemLocation="7,16,1,1"/>
+				<Label isDynamic="true" text="sel_text" classNames="fcls_fieldlabel,fcls_align_left" visible="true" fieldTable="" identifier="lb158" gridItemLocation="2,0,1,1"/>
+				<TextField visible="true" identifier="sel_text" gridItemLocation="3,0,5,1" classNames="fcls_data_widget,fcls_align_left,fcls_length_20qch"/>
+				<Label isDynamic="true" text="sel_flag" classNames="fcls_fieldlabel,fcls_align_left" visible="true" fieldTable="" identifier="lb155" gridItemLocation="2,3,1,1"/>
+				<TextField visible="true" identifier="sel_flag" gridItemLocation="3,3,1,1" classNames="fcls_data_widget,fcls_align_left,fcls_length_20qch"/>
+				<Label isDynamic="true" text="file_text" classNames="fcls_fieldlabel,fcls_align_left" visible="true" fieldTable="" identifier="lb152" gridItemLocation="2,5,1,1"/>
+				<TextField visible="true" identifier="file_text" gridItemLocation="3,5,1,1" classNames="fcls_data_widget,fcls_align_left,fcls_length_20qch"/>
+				<Label isDynamic="true" text="report_func_text" classNames="fcls_fieldlabel,fcls_align_left" visible="true" fieldTable="" identifier="lb164" gridItemLocation="2,9,1,1"/>
+				<Label isDynamic="true" text="ref1_date" classNames="fcls_fieldlabel,fcls_align_left" visible="true" fieldTable="" identifier="lb148" gridItemLocation="2,12,1,1"/>
+				<Label isDynamic="true" text="ref2_date" classNames="fcls_fieldlabel,fcls_align_left" visible="true" fieldTable="" identifier="lb168" gridItemLocation="2,13,1,1"/>
+				<Label isDynamic="true" text="ref3_date" classNames="fcls_fieldlabel,fcls_align_left" visible="true" fieldTable="" identifier="lb149" gridItemLocation="2,14,1,1"/>
+				<Label isDynamic="true" text="ref4_date" classNames="fcls_fieldlabel,fcls_align_left" visible="true" fieldTable="" identifier="lb150" gridItemLocation="2,15,1,1"/>
+				<Label isDynamic="true" text="ref5_date" classNames="fcls_fieldlabel,fcls_align_left" visible="true" fieldTable="" identifier="lb167" gridItemLocation="2,16,1,1"/>
+				<Label text="ref6_factor" isDynamic="true" visible="true" identifier="lb292" gridItemLocation="0,17,1,1"/>
+				<TextField visible="true" identifier="ref6_factor" gridItemLocation="1,17,1,1"/>
+				<Label isDynamic="true" text="ref6_date" classNames="fcls_fieldlabel,fcls_align_left" visible="true" fieldTable="" identifier="lb169" gridItemLocation="2,17,1,1"/>
+				<TextField visible="true" identifier="ref6_date" gridItemLocation="3,17,1,1"/>
+				<Label text="ref6_text" isDynamic="true" visible="true" identifier="lb208" gridItemLocation="4,17,1,1"/>
+				<TextField visible="true" identifier="ref6_text" gridItemLocation="5,17,1,1"/>
+				<Label text="ref6_amt" isDynamic="true" visible="true" identifier="lb264" gridItemLocation="6,17,1,1"/>
+				<TextField visible="true" identifier="ref6_amt" gridItemLocation="7,17,1,1"/>
+				<Label text="sel_option1" isDynamic="true" visible="true" identifier="lb209" gridItemLocation="0,18,1,1"/>
+				<TextField visible="true" identifier="sel_option1" gridItemLocation="1,18,1,1"/>
+				<Label text="ref1_code" isDynamic="true" visible="true" identifier="lb222" gridItemLocation="2,18,1,1"/>
+				<TextField visible="true" identifier="ref1_code" gridItemLocation="3,18,1,1"/>
+				<Label text="ref1_num" isDynamic="true" visible="true" identifier="lb228" gridItemLocation="4,18,1,1"/>
+				<Label text="ref1_ind" isDynamic="true" visible="true" identifier="lb246" gridItemLocation="6,18,1,1"/>
+				<Label text="sel_option2" isDynamic="true" visible="true" identifier="lb210" gridItemLocation="0,19,1,1"/>
+				<TextField visible="true" identifier="sel_option2" gridItemLocation="1,19,1,1"/>
+				<Label text="ref2_code" isDynamic="true" visible="true" identifier="lb223" gridItemLocation="2,19,1,1"/>
+				<Label text="ref2_num" isDynamic="true" visible="true" identifier="lb229" gridItemLocation="4,19,1,1"/>
+				<Label text="ref2_ind" isDynamic="true" visible="true" identifier="lb247" gridItemLocation="6,19,1,1"/>
+				<Label text="sel_option3" isDynamic="true" visible="true" identifier="lb213" gridItemLocation="0,20,1,1"/>
+				<TextField visible="true" identifier="sel_option3" gridItemLocation="1,20,1,1"/>
+				<Label text="ref3_code" isDynamic="true" visible="true" identifier="lb224" gridItemLocation="2,20,1,1"/>
+				<Label text="ref3_num" isDynamic="true" visible="true" identifier="lb230" gridItemLocation="4,20,1,1"/>
+				<Label text="ref3_ind" isDynamic="true" visible="true" identifier="lb248" gridItemLocation="6,20,1,1"/>
+				<Label text="sel_option4" isDynamic="true" visible="true" identifier="lb215" gridItemLocation="0,21,1,1"/>
+				<TextField visible="true" identifier="sel_option4" gridItemLocation="1,21,1,1"/>
+				<Label text="ref4_code" isDynamic="true" visible="true" identifier="lb225" gridItemLocation="2,21,1,1"/>
+				<Label text="ref4_num" isDynamic="true" visible="true" identifier="lb231" gridItemLocation="4,21,1,1"/>
+				<Label text="ref4_ind" isDynamic="true" visible="true" identifier="lb249" gridItemLocation="6,21,1,1"/>
+				<Label text="sel_option5" isDynamic="true" visible="true" identifier="lb214" gridItemLocation="0,22,1,1"/>
+				<TextField visible="true" identifier="sel_option5" gridItemLocation="1,22,1,1"/>
+				<Label text="ref5_code" isDynamic="true" visible="true" identifier="lb226" gridItemLocation="2,22,1,1"/>
+				<TextField visible="true" identifier="ref5_code" gridItemLocation="3,22,1,1"/>
+				<Label text="ref5_num" isDynamic="true" visible="true" identifier="lb232" gridItemLocation="4,22,1,1"/>
+				<TextField visible="true" identifier="ref5_num" gridItemLocation="5,22,1,1"/>
+				<Label text="ref5_ind" isDynamic="true" visible="true" identifier="lb250" gridItemLocation="6,22,1,1"/>
+				<TextField visible="true" identifier="ref5_ind" gridItemLocation="7,22,1,1"/>
+				<Label text="sel_option6" isDynamic="true" visible="true" identifier="lb212" gridItemLocation="0,23,1,1"/>
+				<TextField visible="true" identifier="sel_option6" gridItemLocation="1,23,1,1"/>
+				<Label text="ref6_code" isDynamic="true" visible="true" identifier="lb227" gridItemLocation="2,23,1,1"/>
+				<TextField visible="true" identifier="ref6_code" gridItemLocation="3,23,1,1"/>
+				<Label text="ref6_num" isDynamic="true" visible="true" identifier="lb233" gridItemLocation="4,23,1,1"/>
+				<TextField visible="true" identifier="ref6_num" gridItemLocation="5,23,1,1"/>
+				<Label text="ref6_ind" isDynamic="true" visible="true" identifier="lb251" gridItemLocation="6,23,1,1"/>
+				<TextField visible="true" identifier="ref2_code" classNames="fcls_data_widget,fcls_align_left,fcls_length_20qch" gridItemLocation="3,19,1,1"/>
+				<TextField visible="true" identifier="ref3_code" classNames="fcls_data_widget,fcls_align_left,fcls_length_20qch" gridItemLocation="3,20,1,1"/>
+				<TextField visible="true" identifier="ref4_code" classNames="fcls_data_widget,fcls_align_left,fcls_length_20qch" gridItemLocation="3,21,1,1"/>
+				<TextField visible="true" identifier="ref1_num" classNames="fcls_data_widget,fcls_align_left,fcls_length_20qch" gridItemLocation="5,18,1,1"/>
+				<TextField visible="true" identifier="ref2_num" classNames="fcls_data_widget,fcls_align_left,fcls_length_20qch" gridItemLocation="5,19,1,1"/>
+				<TextField visible="true" identifier="ref3_num" classNames="fcls_data_widget,fcls_align_left,fcls_length_20qch" gridItemLocation="5,20,1,1"/>
+				<TextField visible="true" identifier="ref4_num" classNames="fcls_data_widget,fcls_align_left,fcls_length_20qch" gridItemLocation="5,21,1,1"/>
+				<TextField visible="true" identifier="ref1_ind" classNames="fcls_data_widget,fcls_align_left,fcls_length_20qch" gridItemLocation="7,18,1,1"/>
+				<TextField visible="true" identifier="ref2_ind" classNames="fcls_data_widget,fcls_align_left,fcls_length_20qch" gridItemLocation="7,19,1,1"/>
+				<TextField visible="true" identifier="ref3_ind" classNames="fcls_data_widget,fcls_align_left,fcls_length_20qch" gridItemLocation="7,20,1,1"/>
+				<TextField visible="true" identifier="ref4_ind" classNames="fcls_data_widget,fcls_align_left,fcls_length_20qch" gridItemLocation="7,21,1,1"/>
+				<TextField visible="true" identifier="ref6_ind" gridItemLocation="7,23,1,1"/>
+				<TextField visible="true" identifier="ref3_date" classNames="fcls_data_widget,fcls_align_left,fcls_length_20qch" gridItemLocation="3,14,1,1"/>
+				<TextField visible="true" identifier="ref4_date" classNames="fcls_data_widget,fcls_align_left,fcls_length_20qch" gridItemLocation="3,15,1,1"/>
+				<TextField visible="true" identifier="ref2_date" classNames="fcls_data_widget,fcls_align_left,fcls_length_20qch" gridItemLocation="3,13,1,1"/>
+				<TextField visible="true" identifier="ref1_date" classNames="fcls_data_widget,fcls_align_left,fcls_length_20qch" gridItemLocation="3,12,1,1"/>
+				<Label isDynamic="true" text="ref1_per" classNames="fcls_fieldlabel,fcls_align_left" visible="true" fieldTable="" identifier="lb140" gridItemLocation="6,6,1,1"/>
+				<Label isDynamic="true" text="ref2_per" classNames="fcls_fieldlabel,fcls_align_left" visible="true" fieldTable="" identifier="lb141" gridItemLocation="6,7,1,1"/>
+				<Label isDynamic="true" text="ref3_per" classNames="fcls_fieldlabel,fcls_align_left" visible="true" fieldTable="" identifier="lb142" gridItemLocation="6,8,1,1"/>
+				<Label isDynamic="true" text="ref4_per" classNames="fcls_fieldlabel,fcls_align_left" visible="true" fieldTable="" identifier="lb174" gridItemLocation="6,9,1,1"/>
+				<Label isDynamic="true" text="ref5_per" classNames="fcls_fieldlabel,fcls_align_left" visible="true" fieldTable="" identifier="lb171" gridItemLocation="6,10,1,1"/>
+				<Label isDynamic="true" text="ref6_per" classNames="fcls_fieldlabel,fcls_align_left" visible="true" fieldTable="" identifier="lb165" gridItemLocation="6,11,1,1"/>
+				<Label isDynamic="true" text="sub_dest" classNames="fcls_fieldlabel,fcls_align_left" visible="true" fieldTable="" identifier="lb159" gridItemLocation="2,6,1,1"/>
+				<TextField visible="true" identifier="sub_dest" classNames="fcls_data_widget,fcls_align_left,fcls_length_20qch" gridItemLocation="3,6,1,1"/>
+				<Label isDynamic="true" text="printonce_flag" classNames="fcls_fieldlabel,fcls_align_left" visible="true" fieldTable="" identifier="lb160" gridItemLocation="2,7,1,1"/>
+				<TextField visible="true" identifier="printonce_flag" classNames="fcls_data_widget,fcls_align_left,fcls_length_20qch" gridItemLocation="3,7,1,1"/>
+				<Label text="report_modid_text" isDynamic="true" visible="true" identifier="lb206" gridItemLocation="2,8,1,1"/>
+				<TextField visible="true" identifier="report_modid_text" gridItemLocation="3,8,1,1"/>
+				<TextField visible="true" identifier="report_func_text" gridItemLocation="3,9,1,1"/>
+				<TextField visible="true" identifier="ref1_text" classNames="fcls_data_widget,fcls_align_left,fcls_length_20qch" gridItemLocation="5,12,1,1"/>
+				<Label isDynamic="true" text="dest_print_text" classNames="fcls_fieldlabel,fcls_align_left" visible="true" fieldTable="" identifier="lb154" gridItemLocation="2,10,1,1"/>
+				<Label isDynamic="true" text="page_num" classNames="fcls_fieldlabel,fcls_align_left" visible="true" fieldTable="" identifier="lb153" gridItemLocation="2,11,1,1"/>
+				<TextField visible="true" identifier="page_num" classNames="fcls_data_widget,fcls_align_left,fcls_length_20qch" gridItemLocation="3,10,1,1"/>
+				<TextField visible="true" identifier="dest_print_text" classNames="fcls_data_widget,fcls_align_left,fcls_length_20qch" gridItemLocation="3,11,1,1"/>
+				<Label isDynamic="true" text="report_width_num" classNames="fcls_fieldlabel,fcls_align_left" visible="true" fieldTable="" identifier="lb137" gridItemLocation="4,10,1,1"/>
+				<Label isDynamic="true" text="page_length_num" classNames="fcls_fieldlabel,fcls_align_left" visible="true" fieldTable="" identifier="lb138" gridItemLocation="4,11,1,1"/>
+				<TextField visible="true" identifier="report_width_num" classNames="fcls_data_widget,fcls_align_left,fcls_length_20qch" gridItemLocation="5,10,1,1"/>
+				<TextField visible="true" identifier="page_length_num" classNames="fcls_data_widget,fcls_align_left,fcls_length_20qch" gridItemLocation="5,11,1,1"/>
+				<Label isDynamic="true" text="printnow_flag" classNames="fcls_fieldlabel,fcls_align_left" visible="true" fieldTable="" identifier="lb49" gridItemLocation="4,1,1,1"/>
+				<TextField visible="true" identifier="printnow_flag" classNames="fcls_data_widget,fcls_align_left,fcls_length_20qch" gridItemLocation="5,1,1,1"/>
+				<TextField visible="true" identifier="cmpy_code" classNames="fcls_data_widget,fcls_align_left,fcls_length_20qch" gridItemLocation="1,1,1,1"/>
+				<TextField visible="true" identifier="report_code" classNames="fcls_data_widget,fcls_align_left,fcls_length_20qch" gridItemLocation="1,0,1,1"/>
+				<Label text="cmpy_code" classNames="fcls_fieldlabel,fcls_align_left" fieldTable="" identifier="label1" gridItemLocation="0,1,1,1"/>
+				<Label isDynamic="true" text="report_code" classNames="fcls_fieldlabel,fcls_align_left" visible="true" fieldTable="" identifier="lb51" gridItemLocation="0,0,1,1"/>
+				<Label isDynamic="true" text="report_text" classNames="fcls_fieldlabel,fcls_align_left" visible="true" fieldTable="" identifier="lb52" gridItemLocation="2,1,1,1"/>
+				<Label isDynamic="true" text="exec_ind" classNames="fcls_fieldlabel,fcls_align_left" visible="true" fieldTable="" identifier="lb157" gridItemLocation="0,3,1,1"/>
+				<TextField visible="true" identifier="report_text" classNames="fcls_data_widget,fcls_align_left,fcls_length_20qch" gridItemLocation="3,1,1,1"/>
+				<TextField visible="true" identifier="exec_ind" classNames="fcls_data_widget,fcls_align_left,fcls_length_20qch" gridItemLocation="1,3,1,1"/>
+				<Label isDynamic="true" text="status_ind" classNames="fcls_fieldlabel,fcls_align_left" visible="true" fieldTable="" identifier="lb156" gridItemLocation="0,5,1,1"/>
+				<TextField visible="true" identifier="status_ind" classNames="fcls_data_widget,fcls_align_left,fcls_length_20qch" gridItemLocation="1,5,1,1"/>
+				<Label text="titleedit_flag" isDynamic="true" visible="true" identifier="lb299" gridItemLocation="4,4,1,1"/>
+				<TextField visible="true" identifier="titleedit_flag" gridItemLocation="5,4,1,1"/>
+				<Label text="col_pos_1" isDynamic="true" visible="true" identifier="lb311" gridItemLocation="0,24,1,1"/>
+				<TextField visible="true" identifier="col_pos_1" gridItemLocation="1,24,1,1"/>
+				<Label text="col_pos_6" isDynamic="true" visible="true" identifier="lb316" gridItemLocation="2,24,1,1"/>
+				<TextField visible="true" identifier="col_pos_6" gridItemLocation="3,24,1,1"/>
+				<Label text="col_pos_2" isDynamic="true" visible="true" identifier="lb315" gridItemLocation="0,25,1,1"/>
+				<TextField visible="true" identifier="col_pos_2" gridItemLocation="1,25,1,1"/>
+				<Label text="col_pos_7" isDynamic="true" visible="true" identifier="lb317" gridItemLocation="2,25,1,1"/>
+				<TextField visible="true" identifier="col_pos_7" gridItemLocation="3,25,1,1"/>
+				<Label text="col_pos_3" isDynamic="true" visible="true" identifier="lb314" gridItemLocation="0,26,1,1"/>
+				<TextField visible="true" identifier="col_pos_3" gridItemLocation="1,26,1,1"/>
+				<Label text="col_pos_8" isDynamic="true" visible="true" identifier="lb318" gridItemLocation="2,26,1,1"/>
+				<TextField visible="true" identifier="col_pos_8" gridItemLocation="3,26,1,1"/>
+				<Label text="col_pos_4" isDynamic="true" visible="true" identifier="lb313" gridItemLocation="0,27,1,1"/>
+				<TextField visible="true" identifier="col_pos_4" gridItemLocation="1,27,1,1"/>
+				<Label text="col_pos_9" isDynamic="true" visible="true" identifier="lb319" gridItemLocation="2,27,1,1"/>
+				<TextField visible="true" identifier="col_pos_9" gridItemLocation="3,27,1,1"/>
+				<Label text="col_pos_5" isDynamic="true" visible="true" identifier="lb312" gridItemLocation="0,28,1,1"/>
+				<TextField visible="true" identifier="col_pos_5" gridItemLocation="1,28,1,1"/>
+			</GridPanel>
+			<GridPanel classNames="fcls_statusbar_cnt" visible="true" verticalAlignment="Bottom" gridItemLocation="0,2,1,1" fieldTable="formonly" identifier="cntStatusBar">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="100%"/>
+				</GridPanel.gridColumnDefinitions>
+				<Label isDynamic="true" text="" classNames="fcls_sblabel" visible="true" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="lbInfo1"/>
+				<Label isDynamic="true" text="" classNames="fcls_sblabel" visible="true" gridItemLocation="0,1,1,1" fieldTable="formonly" identifier="lbInfo2"/>
+			</GridPanel>
+		</GridPanel>
+	</form.rootContainer>
+	<form.screenRecords>
+		<ScreenRecord identifier="FORMONLY" fields=""/>
+	</form.screenRecords>
+</form>
+

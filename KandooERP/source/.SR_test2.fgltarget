@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<fglBuildTarget xmlns="http://namespaces.querix.com/lyciaide/target" name="SR_test2" type="fgl-program">
+
+  <libraries>
+    <library name="lib_tool" dynamic="false" location=""/>
+    <library name="lib_tool_db" dynamic="false" location=""/>
+    <library name="lib_tool_windecoration" dynamic="false" location=""/>
+  </libraries>
+
+  <sources type="form">
+    <file location="per/sr/f_contact.fm2"/>
+  </sources>
+
+  <mediaFiles>
+    <file client="true" location="SR_test2.qxtheme" type="gui-theme-file"/>
+    <file client="true" location="SR_test2.css" type="other"/>
+  </mediaFiles>
+
+</fglBuildTarget>

@@ -1,0 +1,151 @@
+P15_FRA {
+% { "%" }
++1-30 Days Overdue { "+ 1-30 jours de retard" }
++31-60 Days Overdue { "31 à 60 jours de retard" }
++61-90 Days Overdue { "+61 -90 jours de retard" }
++91+ n  Days Overdue { "Retarde de paiement 91+ jours" }
+- Balance { "Solde" }
+- On Order { "Sur Commande" }
+= Available Credit { "= Crédit Disponible" }
+= Balance { "= Solde" }
+A Valid Code for this part of the chart { "Un code valid pour cette partie du numéro de compte" }
+A second line for customer address { "2ème ligne d'adresse client" }
+ACCEPT { "VALIDER" }
+Accept Backorders { "Accept. commandes en attente" }
+Account { "Compte" }
+Account Code { "Code Compte" }
+Account Info { "Informations sur le compte" }
+Account Status { "Situation du Compte" }
+Account Verifier { "Vérificateur de compte" }
+Account code to identify this account { "Numéro de compte identifiant ce client" }
+Addr { "Adresse" }
+Address { "Adresse" }
+Available Credit { "Crédit disponible" }
+Average Days Credit { "NOmbre moyen de jours de crédit" }
+Bank Code { "Code Banque" }
+Cancel { "Annuler" }
+Chart of Accounts { "Plan Comptable" }
+City { "Ville" }
+Code { "Code" }
+Code representing the Country of this Customer { "Code pays de ce client" }
+Contact { "Contact" }
+Contact Info { "Informations du contact" }
+Contact Info { "Infos contact" }
+Contact Name { "Nom du Contact" }
+Contractor { "Sous-traitant" }
+Corporate { "Entreprise" }
+Country { "Pays" }
+Country code where Vendor located - (W) { "Code pays du fournisseur" }
+Credit { "Crédit" }
+Credit Limit { "Limite de Crédit" }
+Currency { "Devise" }
+Currency of all vendor transactions - (W) { "Devise de toutes les transactions du fournisseur - (W)" }
+Current { "Actuel" }
+Customer { "Client" }
+Customer Code { "Code Client" }
+Customer Details { "Détails client" }
+Customer Scan { "Exploration client" }
+Customer Type { "Type de Client" }
+Customer type code { "Code type de client" }
+Date { "Date" }
+Debit Note { "Note de débit" }
+Description { "Description" }
+Does the vendors price include tax? (Y)es or (N)o. { "Le prix du fournisseurs inclut-il la T.V.A ? (O)ui ou (N)on" }
+Enter the purchasing group code which vendor belongs - (W) { "Entrez le code du groupement d'achat auquel appartient le fournisseur - (W)" }
+Expense Type { "Type de dépense" }
+Extension { "Numéro de poste" }
+FILTER { "Premier" }
+Fax { "Fax" }
+Field Description { "Description du champ" }
+Filter { "Filtrer" }
+Flex Codes { "Flex Codes" }
+Full Name or description of customer { "Nom complet ou description du client" }
+GL Account { "Compte de Compta Générale" }
+Highest Balance { "Solde Maximum" }
+History Info { "Informations sur l'historique" }
+Hold Payment { "Retenue de paiement" }
+Hold payment code used to prevent vendor payments  - (W) { "Code retenue de paiement pour empêcher les paiements à ce fourni" }
+ID { "ID" }
+Invoice Variance { "Ecart de facturation" }
+LOOKUP { "RECHERCHER" }
+Language Code { "Code langue" }
+Last Payment { "Dernier paiement" }
+Length { "Longueur" }
+Length of the Code { "Longueur Numéro de compte" }
+LookupCoa { "RechercherPCG" }
+Maximum permitted Invoice/Purchase Order variance amount { "Montant maximal autorisé de l'écart entre la facture et le bon de commande" }
+Maximum permitted Invoice/Purchase Order variance percent { "Pourcentage d'écart maximal autorisé entre facture et bon de com" }
+Member of Group { "Membre du groupe" }
+Minimum Order Amount { "Montant minimum de commande" }
+Minimum Purchase Order Amount (zero denotes no limit) { "Montant minimum du bon de commande (zéro: aucune limite)" }
+Name { "Nom" }
+Name of accounts contact person for the customer { "Nom de la personne de contact pour le compte du client" }
+Name of vendor account contact { "Nom du contact fournisseur" }
+Normal expense account for crediting purchases from this vendor - (W) { "Compte de charges habituel pour créditer les achats à ce fournis" }
+PO Code { "Code Bon de commande" }
+Payment { "Paiement" }
+Payment Term code which this vendor has granted for payments - (W) { "Code délai de paiement autorisé par le fournisseur" }
+Phone { "Téléphone" }
+Phone Extension { "Numéro de poste" }
+Post Code { "Code Postal" }
+Postal code of customer { "Code postal du client" }
+Postal code of mailing address { "Code Postal" }
+Purchase { "Achat" }
+Purchase Order { "Bon de commande" }
+Purchase Order Type { "Type de bon de commande" }
+Purchasing Group { "Groupement d'achat" }
+Purchasing Information { "Information sur l'achat" }
+REFRESH { "ACTUALISER" }
+Salesperson { "Vendeur" }
+Salesperson resonsible for the customer { "Nom du commercial responsable pour ce client" }
+Save { "Enregistrer" }
+Start Pos. { "Positions Départ" }
+Start position of the Code { "Position de départ du code" }
+State { "Etat" }
+State (province) for mailing address { "Région pour l''adresse postale" }
+State/Province { "Région" }
+Tax Claim Code { "Code Collecte TVA" }
+Tax Code { "Code T.V.A." }
+Tax Code of percentage to be reclaimed in sales tax - (W) { "Code TVA Collectée sur Ventes" }
+Tax Inclusive Pricing { "Prix T.V.A incluse (T.T.C)" }
+Tax code applicable to the customer { "Code T.V.A applicable à ce client" }
+Telephone { "Telephone" }
+Term Code { "Code Cond. Paiement" }
+Term Code { "Code Conditions" }
+The Description of the Account { "Description du compte" }
+The account code assigned to our account on the vendors system { "Notre numéro de compte dans le système du fournisseur" }
+The address of the customer { "L'adresse du client" }
+The credit limit extended by this vendor { "La limite de crédit augmentée par le fournisseur" }
+The customer city { "La ville du client" }
+The customer code of the corporate debtor the customer is attached to { "Le code client de la société débitrice à laquelle le client est rattaché." }
+The description for this code { "L'intitulé de ce code" }
+The telephone number of the customer { "Numéro de téléphone du client" }
+The type of vendor - (W) { "Type de fournisseur -(W)" }
+The valid flex segment { "Le segment Flex valide" }
+Title of this field in the GL { "Titre de ce champ en Compta géné" }
+Total Purchases { "Total Achats" }
+Trading terms applicable to the customer { "Conditions de paiement applicables à ce client" }
+Type { "Type" }
+Type of Purchase Order this vendor is to utilise - (W) { "Type de bon de commande que ce fournisseur doit utiliser - (W)" }
+Unique vendor account code to be used to referencing this vendor { "Code de compte fournisseur unique à utiliser pour référencer ce " }
+Usual method for dissecting expenses: A=AR, G=GL, J=JM, P=PU, S=LC { "méthode habituelle pour segmenter les charges: A=AR, G=GL, J=JM," }
+Value added tax registration number { "Code T.V.A. intracommunautaire" }
+Value added tax registration number. Required for claiming GST credits { "Numéro de T.V.A. intracommunautaire" }
+Value added tax registration number. Required for claiming GST credits. { "Code T.V.A intracommunautaire" }
+Vat Reg No { "N° T.V.A. intracommunautaire" }
+Vat Reg No { "N° TVA Intra-CEE" }
+Vendor { "Fournisseur" }
+Vendor Credit { "Crédit Fournisseur" }
+Vendor Information { "Informations Fournisseur" }
+Vendor Name or description as it will appear on cheques etc { "Nom ou description du fournisseur tel qu'il apparaîtra sur les c" }
+Vendor Recorded Since { "Fournisseur enregistré depuis" }
+Vendor Type { "Type de Fournisseur" }
+Vendor phone number { "Numéro de téléphone du fournisseur" }
+Vendor remittance mailing address (line 1) { "Adresse postale de remise du fournisseur (ligne 1)" }
+Vendor remittance mailing address (line 2) { "Adresse postale de remise du fournisseur (ligne 2)" }
+Vendor remittance mailing address (line 3) { "Adresse postale de remise du fournisseur (ligne 3)" }
+Vendor remittance mailing address (line 4) { "Adresse postale de remise du fournisseur (ligne 4)" }
+Vendors Fax number { "Numéro de fax du fournisseur" }
+Voucher { "Facture" }
+actToolbarManager { "actToolbarManager" }
+}

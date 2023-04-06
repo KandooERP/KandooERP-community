@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form xmlns="http://namespaces.querix.com/2015/fglForms">
+	<form.rootContainer>
+		<CoordPanel preferredSize="66qch,10qch" fieldTable="" identifier="coord1">
+			<Label text="Line 1" location="0qch,0qch" preferredSize="6qch,1qch" fieldTable="" identifier="label1"/>
+			<TextField dataType="Char,,,,20" location="11qch,0qch" preferredSize="21qch,1qch" toolTip="Address line 1 (and E-mail address)" fieldTable="address" comment="Address line 1 (and E-mail address)" identifier="line1"/>
+			<Label text="Role" location="34qch,0qch" preferredSize="4qch,1qch" fieldTable="" identifier="label2"/>
+			<TextField dataType="Char,,,," location="39qch,0qch" preferredSize="26qch,1qch" toolTip="Address role name (F10 for L&amp;P)" fieldTable="formonly" comment="Address role name (F10 for L&amp;P)" identifier="addr_role_name"/>
+			<Label text="Line 2" location="0qch,1qch" preferredSize="6qch,1qch" fieldTable="" identifier="label3"/>
+			<TextField dataType="Char,,,,20" location="11qch,1qch" preferredSize="21qch,1qch" toolTip="Address line 2" fieldTable="address" comment="Address line 2" identifier="line2"/>
+			<Label text="Street" location="0qch,2qch" preferredSize="6qch,1qch" fieldTable="" identifier="label4"/>
+			<TextField dataType="Char,,,,40" location="11qch,2qch" preferredSize="41qch,1qch" toolTip="Street name" fieldTable="address" comment="Street name" identifier="street"/>
+			<Label text="Suburb" location="0qch,3qch" preferredSize="6qch,1qch" fieldTable="" identifier="label5"/>
+			<TextField dataType="Char,,,,20" location="11qch,3qch" preferredSize="21qch,1qch" toolTip="Suburb name" fieldTable="address" comment="Suburb name" identifier="suburb"/>
+			<Label text="City" location="0qch,4qch" preferredSize="4qch,1qch" fieldTable="" identifier="label6"/>
+			<TextField required="true" dataType="Char,,,,40" location="11qch,4qch" preferredSize="41qch,1qch" toolTip="City name" fieldTable="address" comment="City name" identifier="city"/>
+			<Label text="Region" location="0qch,5qch" preferredSize="6qch,1qch" fieldTable="" identifier="label7"/>
+			<TextField dataType="Char,,,,20" location="11qch,5qch" preferredSize="21qch,1qch" toolTip="Region name" fieldTable="address" comment="Region name" identifier="region"/>
+			<Label text="Post Code" location="34qch,5qch" preferredSize="9qch,1qch" fieldTable="" identifier="lb_postCode"/>
+			<TextField dataType="Char,,,,20" location="44qch,5qch" preferredSize="21qch,1qch" toolTip="Post code" fieldTable="address" comment="Post code" identifier="post_code"/>
+			<Label text="Country" location="0qch,6qch" preferredSize="7qch,1qch" fieldTable="" identifier="label9"/>
+			<TextField dataType="Char,,,,20" location="11qch,6qch" preferredSize="21qch,1qch" toolTip="Country name" fieldTable="address" comment="Country name" identifier="country"/>
+			<Label text="User 1" location="0qch,7qch" preferredSize="6qch,1qch" fieldTable="" identifier="label10"/>
+			<TextField dataType="Char,,,,20" location="11qch,7qch" preferredSize="21qch,1qch" toolTip="User defined field 1" fieldTable="address" comment="User defined field 1" identifier="user_defined1"/>
+			<Label text="User 2" location="34qch,7qch" preferredSize="6qch,1qch" fieldTable="" identifier="label11"/>
+			<TextField dataType="Char,,,,20" location="41qch,7qch" preferredSize="21qch,1qch" toolTip="User defined field 2" fieldTable="address" comment="User defined field 2" identifier="user_defined2"/>
+			<Label text="User 3" location="0qch,8qch" preferredSize="6qch,1qch" fieldTable="" identifier="label12"/>
+			<TextField dataType="Char,,,,20" location="11qch,8qch" preferredSize="21qch,1qch" toolTip="User defined field 3" fieldTable="address" comment="User defined field 3" identifier="user_defined3"/>
+			<Label text="User 4" location="34qch,8qch" preferredSize="6qch,1qch" fieldTable="" identifier="label13"/>
+			<TextField dataType="Char,,,,20" location="41qch,8qch" preferredSize="21qch,1qch" toolTip="User defined field 4" fieldTable="address" comment="User defined field 4" identifier="user_defined4"/>
+			<Label text="Valid from" location="0qch,9qch" preferredSize="10qch,1qch" fieldTable="" identifier="label14"/>
+			<TextField dataType="Date,,,," location="11qch,9qch" preferredSize="11qch,1qch" toolTip="Address valid from date" fieldTable="address" comment="Address valid from date" identifier="valid_from"/>
+			<Label text="Valid to" location="43qch,9qch" preferredSize="8qch,1qch" fieldTable="" identifier="label15"/>
+			<TextField dataType="Date,,,," location="51qch,9qch" preferredSize="11qch,1qch" toolTip="Address valid to date" fieldTable="address" comment="Address valid to date" identifier="valid_to"/>
+		</CoordPanel>
+	</form.rootContainer>
+	<form.screenRecords>
+		<ScreenRecord identifier="s_address" fields="line1,addr_role_name,line2,street,suburb,city,region,post_code,country,user_defined1,user_defined2,user_defined3,user_defined4,valid_from,valid_to"/>
+		<ScreenRecord identifier="address" fields="line1,line2,street,suburb,city,region,post_code,country,user_defined1,user_defined2,user_defined3,user_defined4,valid_from,valid_to"/>
+		<ScreenRecord identifier="formonly" fields="addr_role_name"/>
+	</form.screenRecords>
+</form>
+

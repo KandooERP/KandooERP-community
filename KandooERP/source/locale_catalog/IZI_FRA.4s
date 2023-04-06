@@ -1,0 +1,16 @@
+IZI_FRA {
+Date { "Date" }
+Description { "Description" }
+Enter Load Indicator { "Saisir l'indicateur de charge" }
+Enter full UNIX path of interface load file { "Entrez le chemin UNIX complet du fichier de chargement d'interface" }
+Enter full name of interface load file { "Saisir le nom complet du fichier de chargement d'interface" }
+Entry required during Load. (Y/N)? { "Entrée requise pendant le chargement:(O/N)?" }
+ID { "ID" }
+Language Code { "Code langue" }
+Name { "Nom" }
+Prompt { "Invite" }
+Reference { "Référence" }
+Third Prompt during import { "Troisième invite lors de l'importation" }
+Type { "Type" }
+UNIX Path Name { "Nom de chemin UNIX" }
+}

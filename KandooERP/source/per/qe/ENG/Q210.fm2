@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form xmlns="http://namespaces.querix.com/2015/fglForms">
+	<form.rootContainer>
+		<GridPanel classNames="fcls_rootContainer" verticalAlignment="Stretch" horizontalAlignment="Stretch" fieldTable="" identifier="rootContainer">
+			<GridPanel.gridRowDefinitions>
+				<GridRowDefinition gridLengthValue=""/>
+				<GridRowDefinition gridLengthValue=""/>
+				<GridRowDefinition gridLengthValue="100%"/>
+				<GridRowDefinition gridLengthValue=""/>
+			</GridPanel.gridRowDefinitions>
+			<GridPanel.gridColumnDefinitions>
+				<GridColumnDefinition gridLengthValue="100%"/>
+			</GridPanel.gridColumnDefinitions>
+			
+			
+			<GridPanel classNames="fcls_title_cnt" visible="true" verticalAlignment="Top" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="cntTitle">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="100%"/>
+					<GridColumnDefinition gridLengthValue=""/>
+				</GridPanel.gridColumnDefinitions>
+				<Label isDynamic="true" text="Quotation Entry" classNames="fcls_title_lb" visible="true" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="header_text"/>
+				<Label isDynamic="true" text="Q210" classNames="fcls_title_lb" visible="true" gridItemLocation="1,0,1,1" fieldTable="" identifier="lbFormName"/>
+			</GridPanel>
+			
+			
+			<GridPanel classNames="fcls_detail_cnt,fcls_data_cnt" visible="true" verticalAlignment="Top" horizontalAlignment="Left" gridItemLocation="0,1,1,1" fieldTable="formonly" identifier="cntDetail1">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="" gridMinLength="10rem"/>
+					<GridColumnDefinition gridLengthValue=""/>
+				</GridPanel.gridColumnDefinitions>
+				<Label isDynamic="true" text="Name" classNames="fcls_fieldlabel,fcls_align_left" visible="true" fieldTable="" identifier="lb53" gridItemLocation="0,0,1,1"/>
+				<TextField visible="true" identifier="name_text" gridItemLocation="1,0,1,1" dataType="Char,,,,30" fieldTable="customer" noEntry="true" preferredSize="31qch,1qch" classNames="fcls_data_widget,fcls_length_20qch"/>
+				<TextField visible="true" identifier="cond_code" gridItemLocation="1,1,1,1" dataType="Char,,,,3" fieldTable="quotehead" noEntry="true" toCase="Up" preferredSize="4qch,1qch" classNames="fcls_data_widget,fcls_length_20qch"/>
+				<TextField visible="true" identifier="desc_text" gridItemLocation="1,2,1,1" dataType="Char,,,,30" fieldTable="condsale" noEntry="true" preferredSize="21qch,1qch" classNames="fcls_data_widget,fcls_length_20qch"/>
+				<Label isDynamic="true" text="Sales Condition" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,1,1,1" fieldTable="" identifier="lb51"/>
+			</GridPanel>
+			<Table rowCount="12" preferredSize="73qch,12qch" fieldTable="" identifier="sr_quotehead" gridItemLocation="0,2,1,1">
+				<TableColumn fieldTable="" identifier="tc_scroll_flag">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="2rem" gridMaxLength="2rem" gridMinLength="2rem"/>
+					</TableColumn.columnLength>
+					<CheckBox dataType="Char,,,," fieldTable="formonly" identifier="scroll_flag">
+						<CheckBox.checkedValue>
+							<StringLiteral stringValue="*"/>
+						</CheckBox.checkedValue>
+						<CheckBox.uncheckedValue>
+							<NullLiteral/>
+						</CheckBox.uncheckedValue>
+					</CheckBox>
+				</TableColumn>
+				<TableColumn fieldTable="" identifier="tc_order_num" text="Quote Number">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="15.0%" gridMaxLength="15rem" gridMinLength="10rem"/>
+					</TableColumn.columnLength>
+					<TextField dataType="Integer,,,," toolTip=" Enter sales order number selection criteria " comment=" Enter sales order number selection criteria " fieldTable="quotehead" identifier="order_num"/>
+				</TableColumn>
+				<TableColumn fieldTable="" identifier="tc_cust_code" text="Customer">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="15.0%" gridMaxLength="15rem" gridMinLength="10rem"/>
+					</TableColumn.columnLength>
+					<TextField toCase="Up" noEntry="true" dataType="Char,,,,8" toolTip=" Enter sales order customer code selection criteria " comment=" Enter sales order customer code selection criteria " fieldTable="quotehead" identifier="cust_code"/>
+				</TableColumn>
+				<TableColumn fieldTable="" identifier="tc_quote_date" text="Quote Date">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="18.3%" gridMaxLength="15rem" gridMinLength="10rem"/>
+					</TableColumn.columnLength>
+					<Calendar format="dd/mm/yyyy" dataType="Date,,,," toolTip=" Enter sales order date selection criteria " comment=" Enter sales order date selection criteria " fieldTable="quotehead" identifier="quote_date"/>
+				</TableColumn>
+				<TableColumn fieldTable="" identifier="tc_total_amt" text="Total Amount">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="20.0%" gridMaxLength="15rem" gridMinLength="10rem"/>
+					</TableColumn.columnLength>
+					<TextField dataType="Decimal,,,2,16" toolTip=" Sales Order total amount " comment=" Sales Order total amount " fieldTable="quotehead" identifier="total_amt"/>
+				</TableColumn>
+				<TableColumn fieldTable="" identifier="tc_valid_date" text="Valid Until">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="18.3%" gridMaxLength="15rem" gridMinLength="10rem"/>
+					</TableColumn.columnLength>
+					<Calendar format="dd/mm/yyyy" dataType="Date,,,," toolTip=" The date the quote is valid until" comment=" The date the quote is valid until" fieldTable="quotehead" identifier="valid_date"/>
+				</TableColumn>
+				<TableColumn fieldTable="" identifier="tc_hold_code" text="Hold">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="6.7%" gridMaxLength="15rem" gridMinLength="10rem"/>
+					</TableColumn.columnLength>
+					<TextField toCase="Up" dataType="Char,,,,3" toolTip=" Enter the sales order hold code selection criteria" comment=" Enter the sales order hold code selection criteria" fieldTable="quotehead" identifier="hold_code"/>
+				</TableColumn>
+				<TableColumn fieldTable="" identifier="tc_status_ind" text="Status">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="3.3%" gridMaxLength="15rem" gridMinLength="10rem"/>
+					</TableColumn.columnLength>
+					<TextField toCase="Up" noEntry="true" dataType="Char,,,,1" toolTip=" Quote Status: (U) New  (C) Accepted  (D) Cancelled  (X) Being Editted" comment=" Quote Status: (U) New  (C) Accepted  (D) Cancelled  (X) Being Editted" fieldTable="quotehead" identifier="status_ind"/>
+				</TableColumn>
+			</Table>
+			<GridPanel classNames="fcls_statusbar_cnt" visible="true" verticalAlignment="Top" gridItemLocation="0,3,1,1" fieldTable="formonly" identifier="cntStatusBar">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="100%"/>
+				</GridPanel.gridColumnDefinitions>
+				<Label isDynamic="true" text="" classNames="fcls_sblabel" visible="true" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="lbInfo1"/>
+				<Label isDynamic="true" text="" classNames="fcls_sblabel" visible="true" gridItemLocation="0,1,1,1" fieldTable="formonly" identifier="lbInfo2"/>
+			</GridPanel>
+		</GridPanel>
+	</form.rootContainer>
+	<form.screenRecords>
+		<ScreenRecord identifier="sr_quotehead" fields="formonly.scroll_flag,quotehead.order_num,quotehead.cust_code,quotehead.quote_date,quotehead.total_amt,quotehead.valid_date,quotehead.hold_code,quotehead.status_ind"/>
+		<ScreenRecord identifier="condsale" fields="condsale.desc_text"/>
+		<ScreenRecord identifier="customer" fields="customer.name_text"/>
+		<ScreenRecord identifier="formonly" fields="formonly.scroll_flag"/>
+		<ScreenRecord identifier="quotehead" fields="quotehead.order_num,quotehead.cust_code,quotehead.quote_date,quotehead.total_amt,quotehead.status_ind,quotehead.hold_code,quotehead.cond_code,quotehead.valid_date"/>
+	</form.screenRecords>
+</form>
+

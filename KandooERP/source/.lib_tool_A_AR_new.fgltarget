@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<fglBuildTarget xmlns="http://namespaces.querix.com/lyciaide/target" name="lib_tool_A_AR_new" type="fgl-library">
+
+  <sources type="fgl">
+    <file location="4gl/common/glob_GLOBALS_constant.4gl"/>
+    <file location="4gl/ar/lib_tool_A_AR_init_arparms.4gl"/>
+    <file location="4gl/ar/A_AR_GLOBALS.4gl"/>
+    <file location="4gl/ar/lib_tool_A_AR_glob_accessor.4gl"/>
+    <file location="4gl/lib_tool/lib_winDecoration_A.4gl"/>
+    <file location="4gl/common/glob_GLOBALS.4gl"/>
+    <file location="4gl/common/glob_GLOBALS_userDataTypes.4gl"/>
+    <file location="4gl/ar/lib_tool_A_AR_init.4gl"/>
+  </sources>
+
+</fglBuildTarget>

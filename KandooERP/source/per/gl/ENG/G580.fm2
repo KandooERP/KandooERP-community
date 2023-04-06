@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form xmlns="http://namespaces.querix.com/2015/fglForms">
+	<form.rootContainer>
+		<GridPanel classNames="fcls_rootContainer" preferredSize="," verticalAlignment="Stretch" horizontalAlignment="Stretch" fieldTable="" identifier="rootContainer">
+			<GridPanel.gridRowDefinitions>
+				<GridRowDefinition gridLengthValue=""/>
+				<GridRowDefinition gridLengthValue=""/>
+				<GridRowDefinition gridLengthValue="100%"/>
+				<GridRowDefinition gridLengthValue=""/>
+			</GridPanel.gridRowDefinitions>
+			<GridPanel.gridColumnDefinitions>
+				<GridColumnDefinition gridLengthValue="100%"/>
+			</GridPanel.gridColumnDefinitions>
+			<GridPanel classNames="fcls_title_cnt" visible="true" verticalAlignment="Top" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="cntTitle">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="100%"/>
+					<GridColumnDefinition gridLengthValue=""/>
+				</GridPanel.gridColumnDefinitions>
+				<Label isDynamic="true" text="Account Group Management" classNames="fcls_title_lb" visible="true" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="header_text"/>
+				<Label isDynamic="true" text="G580" classNames="fcls_title_lb" visible="true" gridItemLocation="1,0,1,1" fieldTable="" identifier="lbFormName"/>
+			</GridPanel>
+			<GridPanel classNames="fcls_detail_cnt,fcls_align_left" visible="true" verticalAlignment="Top" horizontalAlignment="Left" gridItemLocation="0,1,1,1" fieldTable="formonly" identifier="cntDetail1">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="" gridMinLength="10rem"/>
+					<GridColumnDefinition gridLengthValue=""/>
+					<GridColumnDefinition gridLengthValue=""/>
+				</GridPanel.gridColumnDefinitions>
+				<TextField classNames="fcls_data_widget,fcls_align_left,fcls_length_20qch" visible="true" gridItemLocation="1,0,1,1" fieldTable="" identifier="fv_where_part"/>
+				<TextField classNames="fcls_data_widget,fcls_align_left,fcls_length_20qch" visible="true" gridItemLocation="1,1,1,1" fieldTable="" identifier="group_code" toCase="Up"/>
+				<TextField classNames="fcls_data_widget,fcls_align_left,fcls_length_20qch" visible="true" gridItemLocation="1,2,1,1" fieldTable="" identifier="desc_text"/>
+				<Label text="FV Where Part" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,0,1,1" fieldTable="" identifier="lb_fv_where_part"/>
+				<Label text="Group Code" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,1,1,1" fieldTable="" identifier="lb_group_code"/>
+				<Label text="Description" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,2,1,1" fieldTable="" identifier="lb_desc_text"/>
+			</GridPanel>
+			<Table classNames="fcls_table_cnt" minSize="800,400" visible="true" gridItemLocation="0,2,1,1" fieldTable="" identifier="sa_acctgrpdetl">
+				<TableColumn text="ID" resizable="true" visible="true" fieldTable="" identifier="tc_id_num">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="5rem" gridMaxLength="5rem" gridMinLength="5rem"/>
+					</TableColumn.columnLength>
+					<TextField visible="true" fieldTable="" identifier="id_num"/>
+				</TableColumn>
+				<TableColumn text="SubID Number" resizable="true" visible="true" fieldTable="" identifier="tc_subid_num">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="10rem" gridMaxLength="10rem" gridMinLength="10rem"/>
+					</TableColumn.columnLength>
+					<TextField visible="true" fieldTable="" identifier="subid_num"/>
+				</TableColumn>
+				<TableColumn text="Selection Type" resizable="true" visible="true" fieldTable="" identifier="tc_sel_type">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="10rem" gridMaxLength="10rem" gridMinLength="10rem"/>
+					</TableColumn.columnLength>
+					<ComboBox visible="true" fieldTable="" identifier="sel_type" editable="false">
+						<ComboBoxItem text="Segment">
+							<ComboBoxItem.value>
+								<StringLiteral stringValue="S"/>
+							</ComboBoxItem.value>
+						</ComboBoxItem>
+						<ComboBoxItem text="Range">
+							<ComboBoxItem.value>
+								<StringLiteral stringValue="R"/>
+							</ComboBoxItem.value>
+						</ComboBoxItem>
+						<ComboBoxItem text="Matches">
+							<ComboBoxItem.value>
+								<StringLiteral stringValue="M"/>
+							</ComboBoxItem.value>
+						</ComboBoxItem>
+					</ComboBox>
+				</TableColumn>
+				<TableColumn text="Start Position" resizable="true" visible="true" fieldTable="" identifier="tc_start_pos">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="15rem" gridMaxLength="15rem" gridMinLength="15rem"/>
+					</TableColumn.columnLength>
+					<TextField visible="true" fieldTable="" identifier="start_pos"/>
+				</TableColumn>
+				<TableColumn text="Start Account" resizable="true" visible="true" fieldTable="" identifier="tc_start_acct">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="15rem" gridMaxLength="15rem" gridMinLength="15rem"/>
+					</TableColumn.columnLength>
+					<TextField visible="true" fieldTable="" identifier="start_acct" toCase="Up"/>
+				</TableColumn>
+				<TableColumn text="End Account" resizable="true" visible="true" fieldTable="" identifier="tc_end_acct">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="15rem" gridMaxLength="15rem" gridMinLength="15rem"/>
+					</TableColumn.columnLength>
+					<TextField visible="true" fieldTable="" identifier="end_acct" toCase="Up"/>
+				</TableColumn>
+				<TableColumn resizable="true" visible="true" fieldTable="" identifier="tc_lb3">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="100%"/>
+					</TableColumn.columnLength>
+					<Label isDynamic="true" visible="true" fieldTable="" identifier="lb3"/>
+				</TableColumn>
+			</Table>
+			<GridPanel classNames="fcls_statusbar_cnt" visible="true" verticalAlignment="Top" gridItemLocation="0,3,1,1" fieldTable="formonly" identifier="cntStatusBar">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="100%"/>
+				</GridPanel.gridColumnDefinitions>
+				<Label isDynamic="true" text="" classNames="fcls_sblabel" visible="true" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="lbInfo1"/>
+				<Label isDynamic="true" text="" classNames="fcls_sblabel" visible="true" gridItemLocation="0,1,1,1" fieldTable="formonly" identifier="lbInfo2"/>
+			</GridPanel>
+		</GridPanel>
+	</form.rootContainer>
+	<form.screenRecords>
+		<ScreenRecord identifier="FORMONLY" fields="fv_where_part,group_code,desc_text"/>
+		<ScreenRecord identifier="sa_acctgrpdetl" fields="id_num,subid_num,sel_type,start_pos,start_acct,end_acct"/>
+	</form.screenRecords>
+</form>
+

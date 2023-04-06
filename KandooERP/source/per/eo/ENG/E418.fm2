@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?><form xmlns="http://namespaces.querix.com/2015/fglForms">
+	<form.rootContainer>
+		<GridPanel classNames="fcls_rootContainer" fieldTable="" horizontalAlignment="Left" identifier="rootContainer" verticalAlignment="Top">
+			<GridPanel.gridRowDefinitions>
+				<GridRowDefinition gridLengthValue=""/>
+				<GridRowDefinition gridLengthValue=""/>
+				<GridRowDefinition gridLengthValue=""/>
+			</GridPanel.gridRowDefinitions>
+			<GridPanel.gridColumnDefinitions>
+				<GridColumnDefinition gridLengthValue="100%"/>
+			</GridPanel.gridColumnDefinitions>
+			<GridPanel classNames="fcls_title_cnt" fieldTable="formonly" gridItemLocation="0,0,1,1" identifier="cntTitle" verticalAlignment="Top" visible="true">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="100%"/>
+					<GridColumnDefinition gridLengthValue=""/>
+				</GridPanel.gridColumnDefinitions>
+				<Label classNames="fcls_title_lb" fieldTable="formonly" gridItemLocation="0,0,1,1" identifier="header_text" isDynamic="true" text="Backorder Allocation" visible="true"/>
+				<Label classNames="fcls_title_lb" fieldTable="" gridItemLocation="1,0,1,1" identifier="lbFormName" isDynamic="true" text="E418" visible="true"/>
+			</GridPanel>
+			<GridPanel classNames="fcls_detail_cnt,fcls_data_cnt" fieldTable="formonly" gridItemLocation="0,1,1,1" horizontalAlignment="Left" identifier="cntDetail1" verticalAlignment="Top" visible="true">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="10rem" gridMinLength="10rem"/>
+					<GridColumnDefinition gridLengthValue=""/>
+					<GridColumnDefinition gridLengthValue=""/>
+				</GridPanel.gridColumnDefinitions>
+				<Label visible="true" identifier="lb69" gridItemLocation="0,0,1,1" isDynamic="true" classNames="fcls_columnlabel_rev_cell,fcls_align_hstretch" text="Range:"/>
+				<Label text="From" isDynamic="true" visible="true" identifier="lb67" gridItemLocation="1,0,1,1" classNames="fcls_columnlabel_rev_cell,fcls_align_hstretch"/>
+				<Label text="To" isDynamic="true" visible="true" identifier="lb68" gridItemLocation="2,0,1,1" classNames="fcls_columnlabel_rev_cell,fcls_align_hstretch"/>
+				<ComboBox classNames="list-show-value-text,field-show-value-text,fcls_data_widget,fcls_length_25qch" comment="Product Code to start allocation (W)" dataType="Char,,,," fieldTable="formonly" gridItemLocation="1,1,1,1" identifier="start_product" preferredSize="16qch,1qch" toCase="Up" toolTip="Product Code to start allocation (W)"/>
+				<ComboBox classNames="list-show-value-text,field-show-value-text,fcls_data_widget,fcls_length_25qch" comment="Product Code to end allocation (W)" dataType="Char,,,," fieldTable="formonly" gridItemLocation="2,1,1,1" identifier="end_product" preferredSize="17qch,1qch" toCase="Up" toolTip="Product Code to end allocation (W)"/>
+				<ComboBox classNames="list-show-value-text,field-show-value-text,fcls_data_widget,fcls_length_25qch" comment="Warehouse to start allocation (W)" dataType="Char,,,," fieldTable="formonly" gridItemLocation="1,2,1,1" identifier="start_warehouse" preferredSize="4qch,1qch" toCase="Up" toolTip="Warehouse to start allocation (W)"/>
+				<ComboBox classNames="list-show-value-text,field-show-value-text,fcls_data_widget,fcls_length_25qch" comment="Warehouse to end allocation (W)" dataType="Char,,,," fieldTable="formonly" gridItemLocation="2,2,1,1" identifier="end_warehouse" preferredSize="4qch,1qch" toCase="Up" toolTip="Warehouse to end allocation (W)"/>
+				<Spinner classNames="fcls_data_widget,fcls_length_15qch" comment=" The number of days forward to allocate stock" dataType="Char,,,," fieldTable="formonly" gridItemLocation="2,3,1,1" identifier="days_forward" preferredSize="5qch,1qch" toolTip=" The number of days forward to allocate stock" maxValue="365" minValue="0" step="1"/>
+				<Label classNames="fcls_fieldlabel,fcls_align_left" fieldTable="" gridItemLocation="0,1,1,1" identifier="lb51" isDynamic="true" text="Product code" visible="true"/>
+				<Label classNames="fcls_fieldlabel,fcls_align_left" fieldTable="" gridItemLocation="0,2,1,1" identifier="lb52" isDynamic="true" text="Warehouse" visible="true"/>
+				<Label classNames="fcls_fieldlabel,fcls_align_left" fieldTable="" gridItemLocation="0,3,2,1" identifier="lb66" isDynamic="true" text="Todays orders plus how many days :" visible="true"/>
+			</GridPanel>
+			<GridPanel classNames="fcls_statusbar_cnt" fieldTable="formonly" gridItemLocation="0,2,1,1" identifier="cntStatusBar" verticalAlignment="Bottom" visible="true">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="100%"/>
+				</GridPanel.gridColumnDefinitions>
+				<Label classNames="fcls_sblabel" fieldTable="formonly" gridItemLocation="0,0,1,1" identifier="lbInfo1" isDynamic="true" text="" visible="true"/>
+				<Label classNames="fcls_sblabel" fieldTable="formonly" gridItemLocation="0,1,1,1" identifier="lbInfo2" isDynamic="true" text="" visible="true"/>
+			</GridPanel>
+		</GridPanel>
+	</form.rootContainer>
+	<form.screenRecords>
+		<ScreenRecord fields="formonly.start_product,formonly.end_product,formonly.start_warehouse,formonly.end_warehouse,formonly.days_forward" identifier="formonly"/>
+	</form.screenRecords>
+</form>

@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form xmlns="http://namespaces.querix.com/2015/fglForms">
+	<form.rootContainer>
+		<GridPanel classNames="fcls_rootContainer" verticalAlignment="Stretch" horizontalAlignment="Stretch" fieldTable="" identifier="rootContainer">
+			<GridPanel.gridRowDefinitions>
+				<GridRowDefinition gridLengthValue=""/>
+				<GridRowDefinition gridLengthValue="100%"/>
+				<GridRowDefinition gridLengthValue=""/>
+			</GridPanel.gridRowDefinitions>
+			<GridPanel.gridColumnDefinitions>
+				<GridColumnDefinition gridLengthValue="100%"/>
+			</GridPanel.gridColumnDefinitions>
+			<GridPanel classNames="fcls_title_cnt" visible="true" verticalAlignment="Top" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="cnttitle">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="100%"/>
+					<GridColumnDefinition gridLengthValue=""/>
+				</GridPanel.gridColumnDefinitions>
+				<Label isDynamic="true" text="Cheque Selection" classNames="fcls_title_lb" visible="true" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="header_text"/>
+				<Label isDynamic="true" text="G402" classNames="fcls_title_lb" visible="true" gridItemLocation="1,0,1,1" fieldTable="" identifier="lbformname"/>
+			</GridPanel>
+			<Table rowCount="6" location="0qch,2qch" preferredSize="64qch,8qch" gridItemLocation="0,1,1,1" fieldTable="" identifier="sr_cheque">
+				<TableColumn text="Cheque No." fieldTable="" identifier="f01">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="14.28%" gridMaxLength="12rem" gridMinLength="8rem"/>
+					</TableColumn.columnLength>
+					<TextField dataType="Integer,,,," toolTip=" Cheque number" comment=" Cheque number" fieldTable="cheque" identifier="cheq_code"/>
+				</TableColumn>
+				<TableColumn text="Date" fieldTable="" identifier="f02">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="14.28%" gridMaxLength="12rem" gridMinLength="8rem"/>
+					</TableColumn.columnLength>
+					<Calendar dataType="Date,,,," toolTip=" Cheque date" comment=" Cheque date" fieldTable="cheque" identifier="cheq_date"/>
+				</TableColumn>
+				<TableColumn text="Vendor" fieldTable="" identifier="f04">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="14.28%" gridMaxLength="12rem" gridMinLength="8rem"/>
+					</TableColumn.columnLength>
+					<TextField toCase="Up" dataType="Char,,,,8" toolTip=" Cheque vendor code " comment=" Cheque vendor code " fieldTable="cheque" identifier="vend_code"/>
+				</TableColumn>
+				<TableColumn text="Cheque Amount" fieldTable="" identifier="f05">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="14.28%" gridMaxLength="12rem" gridMinLength="8rem"/>
+					</TableColumn.columnLength>
+					<TextField noEntry="true" dataType="Decimal,,,2,16" fieldTable="formonly" identifier="bank_amt"/>
+				</TableColumn>
+				<TableColumn text="Cur." fieldTable="" identifier="f06">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="14.28%" gridMaxLength="12rem" gridMinLength="8rem"/>
+					</TableColumn.columnLength>
+					<TextField noEntry="true" dataType="Char,,,,3" fieldTable="formonly" identifier="bank_curr"/>
+				</TableColumn>
+				<TableColumn text="Paid Amount" fieldTable="" identifier="f07">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="14.28%" gridMaxLength="12rem" gridMinLength="8rem"/>
+					</TableColumn.columnLength>
+					<TextField dataType="Decimal,,,2,16" toolTip=" Cheque Amount in the currency of the Vendor " comment=" Cheque Amount in the currency of the Vendor " fieldTable="cheque" identifier="net_pay_amt"/>
+				</TableColumn>
+				<TableColumn text="Cur." fieldTable="" identifier="f08">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="5%" gridMaxLength="4rem" gridMinLength="2rem"/>
+					</TableColumn.columnLength>
+					<TextField dataType="Char,,,,3" toolTip=" Currency of Vendor " comment=" Currency of Vendor " fieldTable="cheque" identifier="currency_code"/>
+				</TableColumn>
+			</Table>
+			<GridPanel classNames="fcls_statusbar_cnt" visible="true" verticalAlignment="Top" gridItemLocation="0,2,1,1" fieldTable="formonly" identifier="cntStatusBar">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="100%"/>
+				</GridPanel.gridColumnDefinitions>
+				<Label isDynamic="true" text="" classNames="fcls_sblabel" visible="true" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="lbInfo1"/>
+				<Label isDynamic="true" text="" classNames="fcls_sblabel" visible="true" gridItemLocation="0,1,1,1" fieldTable="formonly" identifier="lbInfo2"/>
+			</GridPanel>
+		</GridPanel>
+	</form.rootContainer>
+	<form.screenRecords>
+		<ScreenRecord identifier="sr_cheque" fields="cheq_code,cheq_date,vend_code,bank_amt,bank_curr,net_pay_amt,currency_code"/>
+		<ScreenRecord identifier="cheque" fields="cheq_code,cheq_date,vend_code,net_pay_amt,currency_code"/>
+		<ScreenRecord identifier="formonly" fields="bank_amt,bank_curr"/>
+	</form.screenRecords>
+</form>
+

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<fglBuildTarget xmlns="http://namespaces.querix.com/lyciaide/target" name="ARB" type="fgl-program">
+
+  <libraries>
+    <library name="lib_report" dynamic="false" location=""/>
+    <library name="lib_report_ar" dynamic="false" location=""/>
+    <library name="lib_tool_common" dynamic="false" location=""/>
+    <library name="lib_tool_A_AR_new" dynamic="false" location=""/>
+    <library name="lib_tool_A_AR_db" dynamic="false" location=""/>
+    <library name="lib_tool_db_common" dynamic="false" location=""/>
+      </libraries>
+
+  <sources type="fgl">
+    <file location="4gl/common/glob_GLOBALS_constant.4gl"/>
+    <file location="4gl/ar/ARB_main.4gl"/>
+    <file location="4gl/ar/AR_common.4gl"/>
+    <file location="4gl/ar/AR_GROUP_GLOBALS.4gl"/>
+    <file location="4gl/ar/A_AR_GLOBALS.4gl"/>
+    <file location="4gl/common/jourprint.4gl"/>
+    <file location="4gl/ar/ARB.4gl"/>
+    <file location="4gl/common/glob_GLOBALS.4gl"/>
+    <file location="4gl/common/glob_GLOBALS_userDataTypes.4gl"/>
+    <file location="4gl/ar/ARB_GLOBALS.4gl"/>
+      </sources>
+
+  <mediaFiles>
+    <file client="true" location="ARB.css" type="other"/>
+    <file client="true" location="ARB.qxtheme" type="gui-theme-file"/>
+  </mediaFiles>
+
+</fglBuildTarget>

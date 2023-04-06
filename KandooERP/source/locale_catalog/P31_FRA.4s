@@ -1,0 +1,18 @@
+P31_FRA {
+Bank Code { "Code Banque" }
+Currency { "Devise" }
+Date { "Date" }
+Description { "Description" }
+FILTER { "Premier" }
+ID { "ID" }
+Language Code { "Code langue" }
+Method: (1) auto/manual cheques, (3) EFT payments { "Méthode: (1) chèque auto/manuel, (3) paiements EFT" }
+Name { "Nom" }
+Payment Method { "Mode de paiement" }
+Term Code { "Code Conditions" }
+Vendor { "Fournisseur" }
+Vendor Code { "Code Fournisseur" }
+Vendor Type { "Type de Fournisseur" }
+Voucher Number { "Numéro de Facture" }
+actToolbarManager { "actToolbarManager" }
+}

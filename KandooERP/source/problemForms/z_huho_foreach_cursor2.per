@@ -1,0 +1,87 @@
+{
+###########################################################################
+# This program is free software; you can redistribute it and/or modify it
+# under the terms of the GNU General Public License as published by the
+# Free Software Foundation; either version 2 of the License, or (at your
+# option) any later version.
+#
+# This program is distributed in the hope that it will be useful, but
+# WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+# General Public License for more details.
+#
+# You should have received a copy of the GNU General Public License along
+# with this program; if not, write to the Free Software Foundation, Inc.,
+# 59 Temple Place, Suite 330, Boston, MA 02111-1307 USA
+#
+###########################################################################
+
+	 $Id: G146.per,v 1.4 2003/11/19 22:22:34 afalout Exp $
+}
+
+
+database kandoodb
+
+screen
+{
+                          Account Details                       G146
+\g--------------------------------------------------------------------\g
+ Account Code         [f000              ]
+ Description          [f001                                    ]
+ Type                 [a]
+ Start Year Number    [f002  ]
+ Start Period Number  [f003  ]
+ End Year Number      [f004  ]
+ End Period Number    [f005  ]
+ Group Code           [f006   ][f008                           ]
+ Analysis Required    [b]
+ Analysis Prompt      [f007                ]
+ Collect Quantities   [x]
+ Unit of Measure      [m1  ] [m2                            ]
+ Tax Code             [f10]  [f10a                          ]
+\g--------------------------------------------------------------------\g
+}
+end
+tables
+coa
+groupinfo
+tax
+uom
+attributes
+f000 = coa.acct_code, upshift, comments = 
+  " The Account code to be set up";
+f001 = coa.desc_text, comments =
+ " The description of this account ";
+f002 = coa.start_year_num, comments = 
+ " The Start Year for this account";
+f003 = coa.start_period_num, comments =
+ " The Start Period for this account (i.e. opening period)" ;
+f004 = coa.end_year_num, comments =
+ " The End Year for this account";
+f005 = coa.end_period_num, comments =
+ " The End Period for this account (i.e. closing period)";
+f006 = coa.group_code, upshift, comments =
+ " The group code associated with this account (W)";
+f007 = coa.analy_prompt_text, comments =
+ " The prompt for the analysis text";
+f008 = groupinfo.desc_text, comments =
+ " The description of the group code ";
+b = coa.analy_req_flag,upshift, comments =
+ " Is analysis compulsory for this account? (Y/N) ";                        
+x = coa.qty_flag,upshift, comments =
+ " Collect Quantities against this account? (Y/N) ";                        
+m1 = coa.uom_code, upshift, comments =
+ " The Unit of measure for this account (W)";
+m2 = uom.desc_text, noentry;
+a = coa.type_ind,upshift, comments =
+ " The type A-Asset L-Liability I-Income E-Expense N-Net Worth";
+f10 = coa.tax_code, upshift, comments =
+ " Default tax code when distributing to this account (W) ";
+f10a = tax.desc_text, noentry;
+instructions
+delimiters " "
+end
+
+
+
+

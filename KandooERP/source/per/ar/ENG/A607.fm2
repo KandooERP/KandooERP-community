@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="UTF-8"?><form xmlns="http://namespaces.querix.com/2015/fglForms">
+	<form.rootContainer>
+		<GridPanel classNames="fcls_rootContainer" fieldTable="" horizontalAlignment="Left" identifier="rootContainer" verticalAlignment="Top" preferredSize="100rem,">
+			<GridPanel.gridRowDefinitions>
+				<GridRowDefinition gridLengthValue=""/>
+				<GridRowDefinition gridLengthValue=""/>
+				<GridRowDefinition gridLengthValue=""/>
+				<GridRowDefinition gridLengthValue=""/>
+			</GridPanel.gridRowDefinitions>
+			<GridPanel.gridColumnDefinitions>
+				<GridColumnDefinition gridLengthValue="100%"/>
+			</GridPanel.gridColumnDefinitions>
+			<GridPanel classNames="fcls_title_cnt" fieldTable="formonly" gridItemLocation="0,0,1,1" identifier="cntTitle" verticalAlignment="Top" visible="true">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="100%"/>
+					<GridColumnDefinition gridLengthValue=""/>
+				</GridPanel.gridColumnDefinitions>
+				<Label classNames="fcls_title_lb" fieldTable="formonly" gridItemLocation="0,0,1,1" identifier="header_text" isDynamic="true" text="Customer Parameters" visible="true"/>
+				<Label classNames="fcls_title_lb" fieldTable="" gridItemLocation="1,0,1,1" identifier="lbFormName" isDynamic="true" text="A607" visible="true"/>
+			</GridPanel>
+			<GridPanel gridItemLocation="0,1,1,1" identifier="cntGpDetail1" visible="true">
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="50%"/>
+					<GridColumnDefinition gridLengthValue="50%"/>
+				</GridPanel.gridColumnDefinitions>
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GroupBox classNames="fcls_detail_gb_cnt" fieldTable="" gridItemLocation="0,0,1,1" horizontalAlignment="Stretch" identifier="cntDetail1GroupBox" title="Pricing" verticalAlignment="Stretch" visible="true">
+				<GridPanel classNames="fcls_detail_gb_cnt_sub,fcls_detail_cnt_sub,fcls_data_cnt,fcls_align_left" fieldTable="formonly" gridItemLocation="0,0,1,1" horizontalAlignment="Left" identifier="cntDetail1Sub" verticalAlignment="Top" visible="true">
+					<GridPanel.gridRowDefinitions>
+						<GridRowDefinition gridLengthValue=""/>
+						<GridRowDefinition gridLengthValue=""/>
+					</GridPanel.gridRowDefinitions>
+					<GridPanel.gridColumnDefinitions>
+						<GridColumnDefinition gridLengthValue="" gridMinLength="10rem"/>
+						<GridColumnDefinition gridLengthValue=""/>
+						<GridColumnDefinition gridLengthValue=""/>
+					</GridPanel.gridColumnDefinitions>
+					<Label classNames="fcls_fieldlabel,fcls_align_left" fieldTable="formonly" gridItemLocation="0,0,1,1" identifier="lb57" isDynamic="true" text="Price Level" visible="true"/>
+					<ComboBox classNames="list-show-value-text,field-show-value,fcls_data_widget,fcls_align_left,fcls_length_10qch" comment=" Pricing level : - (C)ost - (L)ist - (1) -&gt; (9) Price Level" dataType="Char,,,,1" fieldTable="customer" gridItemLocation="1,0,1,1" identifier="inv_level_ind" location="22qch,2qch" preferredSize="10qch,1qch" toolTip=" Pricing level : - (C)ost - (L)ist - (1) -&gt; (9) Price Level"/>
+					<Label classNames="fcls_fieldlabel,fcls_align_left" fieldTable="" gridItemLocation="0,1,1,1" identifier="lb73" isDynamic="true" text="Sales Condition" visible="true"/>
+					<ComboBox classNames="list-show-value-text,field-show-value,fcls_data_widget,fcls_align_left,fcls_length_10qch" comment=" Sales condition code for this Customer - (W) " dataType="Char,,,,3" fieldTable="customer" gridItemLocation="1,1,1,1" identifier="cond_code" location="22qch,3qch" preferredSize="14qch,1qch" toolTip=" Sales condition code for this Customer - (W) "/>
+					<TextField  dataType="Char,,,,30" fieldTable="condsale" gridItemLocation="2,1,1,1" identifier="desc_text" location="36qch,3qch" noEntry="true" preferredSize="31qch,1qch" classNames="fcls_data_widget,fcls_align_left,fcls_length_25qch"/>
+				</GridPanel>
+			</GroupBox>
+				<GroupBox classNames="fcls_detail_gb_cnt" fieldTable="formonly" gridItemLocation="1,0,1,1" horizontalAlignment="Stretch" identifier="cntDetail2GroupBox" title="Taxation" verticalAlignment="Stretch" visible="true">
+				<GridPanel classNames="fcls_detail_gb_cnt_sub,fcls_detail_cnt_sub,fcls_data_cnt,fcls_align_left" fieldTable="formonly" horizontalAlignment="Left" identifier="cntDetail2Sub" verticalAlignment="Top" visible="true">
+					<GridPanel.gridRowDefinitions>
+						<GridRowDefinition gridLengthValue=""/>
+						<GridRowDefinition gridLengthValue=""/>
+						<GridRowDefinition gridLengthValue=""/>
+					</GridPanel.gridRowDefinitions>
+					<GridPanel.gridColumnDefinitions>
+						<GridColumnDefinition gridLengthValue="" gridMinLength="10rem"/>
+						<GridColumnDefinition gridLengthValue=""/>
+						<GridColumnDefinition gridLengthValue=""/>
+						<GridColumnDefinition gridLengthValue=""/>
+					</GridPanel.gridColumnDefinitions>
+					<Label classNames="fcls_fieldlabel,fcls_align_left" fieldTable="formonly" gridItemLocation="0,0,1,1" identifier="lb47" isDynamic="true" text="Tax Code" visible="true"/>
+					<ComboBox classNames="list-show-value-text,field-show-value-text,fcls_data_widget,fcls_align_left,fcls_length_10qch" comment=" Taxation code for this Customer - (W) " dataType="Char,,,,3" fieldTable="customer" gridItemLocation="1,0,1,1" identifier="tax_code" location="22qch,5qch" notNull="true" preferredSize="14qch,1qch" toolTip=" Taxation code for this Customer - (W) "/>
+					<Label classNames="fcls_fieldlabel,fcls_align_left" fieldTable="formonly" gridItemLocation="0,1,1,1" identifier="lb46" isDynamic="true" text="Exemption Number" visible="true"/>
+					<TextField classNames="fcls_data_widget,fcls_align_left,fcls_length_10qch" comment=" Tax exemption certificate number " dataType="Char,,,,15" fieldTable="customer" gridItemLocation="1,1,1,1" identifier="tax_num_text" location="22qch,6qch" preferredSize="16qch,1qch" toolTip=" Tax exemption certificate number "/>
+					<Label classNames="fcls_fieldlabel,fcls_align_left" fieldTable="formonly" gridItemLocation="0,2,1,1" identifier="lb44" isDynamic="true" text="Expiry Date" visible="true"/>
+					<Calendar classNames="fcls_data_widget,fcls_align_left,fcls_length_10qch" comment=" Tax exemption certificate expiration date " dataType="Date,,,," fieldTable="customer" gridItemLocation="1,2,1,1" identifier="last_mail_date" location="53qch,6qch" preferredSize="11qch,1qch" toolTip=" Tax exemption certificate expiration date "/>
+					<TextField classNames="fcls_data_widget,fcls_align_left,fcls_length_25qch" dataType="Char,,,,30" fieldTable="tax" identifier="desc_text" noEntry="true" preferredSize="31qch,1qch" gridItemLocation="2,0,1,1"/>
+				</GridPanel>
+			</GroupBox>
+			</GridPanel>
+			<GridPanel gridItemLocation="0,2,1,1" identifier="cntGpDetail2" visible="true">
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="50%"/>
+					<GridColumnDefinition gridLengthValue="50%"/>
+				</GridPanel.gridColumnDefinitions>
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GroupBox classNames="fcls_detail_gb_cnt" fieldTable="formonly" gridItemLocation="0,0,1,1" horizontalAlignment="Stretch" identifier="cntDetail3GroupBox" title="Payments" verticalAlignment="Stretch" visible="true">
+				<GridPanel classNames="fcls_detail_gb_cnt_sub,fcls_detail_cnt_sub,fcls_data_cnt,fcls_align_left" fieldTable="formonly" horizontalAlignment="Left" identifier="cntDetail3Sub" verticalAlignment="Top" visible="true">
+					<GridPanel.gridRowDefinitions>
+						<GridRowDefinition gridLengthValue=""/>
+						<GridRowDefinition gridLengthValue=""/>
+						<GridRowDefinition gridLengthValue=""/>
+					</GridPanel.gridRowDefinitions>
+					<GridPanel.gridColumnDefinitions>
+						<GridColumnDefinition gridLengthValue="" gridMinLength="10rem"/>
+						<GridColumnDefinition gridLengthValue=""/>
+						<GridColumnDefinition gridLengthValue=""/>
+					</GridPanel.gridColumnDefinitions>
+					<Label classNames="fcls_fieldlabel,fcls_align_left" fieldTable="formonly" gridItemLocation="0,0,1,1" identifier="lb48" isDynamic="true" text="Payment Method" visible="true"/>
+					<ComboBox classNames="list-show-text,field-show-list,fcls_data_widget,fcls_align_left,fcls_length_15qch" comment=" (1) Invoice (2) COD (3) Invoice/COD (4) Direct Debit (5) CBD" dataType="Char,,,,1" fieldTable="customer" gridItemLocation="1,0,2,1" identifier="pay_ind" location="22qch,8qch" preferredSize="20qch,1qch" required="true" toolTip="(1) Invoice (2) COD (3) Invoice/COD (4) Direct Debit (5) CBD"/>
+					<Label classNames="fcls_fieldlabel,fcls_align_left" fieldTable="formonly" gridItemLocation="0,1,1,1" identifier="lb49" isDynamic="true" text="Term Code" visible="true"/>
+					<ComboBox classNames="list-show-text,field-show-value,fcls_data_widget,fcls_align_left,fcls_length_15qch" comment=" Payment Terms code for this Customer - (W) " dataType="Char,,,,3" fieldTable="customer" gridItemLocation="1,1,1,1" identifier="term_code" location="22qch,9qch" preferredSize="14qch,1qch" required="true" toolTip=" Payment Terms code for this Customer - (W) "/>
+					<TextField  dataType="Char,,,,30" fieldTable="term" gridItemLocation="2,1,1,1" identifier="desc_text" location="36qch,9qch" noEntry="true" preferredSize="31qch,1qch" classNames="fcls_data_widget,fcls_align_left,fcls_length_20qch"/>
+					<Label classNames="fcls_fieldlabel,fcls_align_left" fieldTable="formonly" gridItemLocation="0,2,1,1" identifier="lb63" isDynamic="true" text="GL-Bank Acc." visible="true"/>
+					<ComboBox classNames="list-show-value-text,field-show-value,fcls_data_widget,fcls_align_left,fcls_length_15qch" comment=" Customer bank account information" dataType="Char,,,,20" fieldTable="customer" gridItemLocation="1,2,1,1" identifier="bank_acct_code" location="22qch,10qch" preferredSize="21qch,1qch" toolTip=" Customer bank account information"/>
+				</GridPanel>
+			</GroupBox>
+				<GroupBox classNames="fcls_detail_gb_cnt" fieldTable="" gridItemLocation="1,0,1,1" horizontalAlignment="Stretch" identifier="cntDetail4GroupBox" title="Sales Orders" verticalAlignment="Stretch" visible="true">
+				<GridPanel classNames="fcls_detail_gb_cnt_sub,fcls_detail_cnt_sub,fcls_data_cnt,fcls_align_left" fieldTable="formonly" gridItemLocation="0,0,1,1" horizontalAlignment="Left" identifier="cntDetail4Sub" verticalAlignment="Top" visible="true">
+					<GridPanel.gridRowDefinitions>
+						<GridRowDefinition gridLengthValue=""/>
+						<GridRowDefinition gridLengthValue=""/>
+						<GridRowDefinition gridLengthValue=""/>
+						<GridRowDefinition gridLengthValue=""/>
+						<GridRowDefinition gridLengthValue=""/>
+						<GridRowDefinition gridLengthValue=""/>
+					</GridPanel.gridRowDefinitions>
+					<GridPanel.gridColumnDefinitions>
+						<GridColumnDefinition gridLengthValue="" gridMinLength="10rem"/>
+						<GridColumnDefinition gridLengthValue=""/>
+					</GridPanel.gridColumnDefinitions>
+					<Label classNames="fcls_fieldlabel,fcls_align_left" fieldTable="" gridItemLocation="0,0,1,1" identifier="lb115" isDynamic="true" text="Invoice Address" visible="true"/>
+					<ComboBox classNames="list-show-text-value,field-show-text,fcls_data_widget,fcls_align_left,fcls_length_15qch" comment=" Invoice address : -(1) Statement -(2) Shipping " dataType="Char,,,,1" fieldTable="customer" gridItemLocation="1,0,1,1" identifier="invoice_to_ind" location="22qch,12qch" preferredSize="12qch,1qch" toolTip=" Invoice address : -(1) Statement -(2) Shipping "/>
+					<CheckBox classNames="fcls_data_widget,fcls_align_left" comment=" Customer reference number mandatory - (Y)es - (N)o " dataType="Char,,,,1" fieldTable="customer" gridItemLocation="0,1,2,1" identifier="ord_text_ind" location="22qch,13qch" notNull="true" title="Purchase Order No" toolTip=" Customer reference number mandatory - (Y)es - (N)o ">
+						<CheckBox.defaultValue>
+							<StringLiteral stringValue="Y"/>
+						</CheckBox.defaultValue>
+						<CheckBox.checkedValue>
+							<StringLiteral stringValue="Y"/>
+						</CheckBox.checkedValue>
+						<CheckBox.uncheckedValue>
+							<StringLiteral stringValue="N"/>
+						</CheckBox.uncheckedValue>
+					</CheckBox>
+					<CheckBox classNames="fcls_data_widget,fcls_align_left" comment=" Consolidate sale orders on invoice? - (Y)es - (N)o " dataType="Char,,,,1" fieldTable="customer" gridItemLocation="0,2,2,1" identifier="consolidate_flag" location="22qch,14qch" notNull="true" title="Consolidate Orders" toolTip=" Consolidate sale orders on invoice? - (Y)es - (N)o ">
+						<CheckBox.defaultValue>
+							<StringLiteral stringValue="Y"/>
+						</CheckBox.defaultValue>
+						<CheckBox.checkedValue>
+							<StringLiteral stringValue="Y"/>
+						</CheckBox.checkedValue>
+						<CheckBox.uncheckedValue>
+							<StringLiteral stringValue="N"/>
+						</CheckBox.uncheckedValue>
+					</CheckBox>
+					<CheckBox classNames="fcls_data_widget,fcls_align_left" comment=" Allow backordered sales items? - (Y)es - (N)o " dataType="Char,,,,1" fieldTable="customer" gridItemLocation="0,3,2,1" identifier="back_order_flag" notNull="true" title="Accept Backorders" toolTip=" Allow backordered sales items? - (Y)es - (N)o ">
+						<CheckBox.defaultValue>
+							<StringLiteral stringValue="Y"/>
+						</CheckBox.defaultValue>
+						<CheckBox.checkedValue>
+							<StringLiteral stringValue="Y"/>
+						</CheckBox.checkedValue>
+						<CheckBox.uncheckedValue>
+							<StringLiteral stringValue="N"/>
+						</CheckBox.uncheckedValue>
+					</CheckBox>
+					<CheckBox classNames="fcls_data_widget,fcls_align_left" fieldTable="customer" gridItemLocation="0,4,2,1" identifier="partial_ship_flag" notNull="true" title="Partial Shipment" visible="true">
+						<CheckBox.uncheckedValue>
+							<StringLiteral stringValue="N"/>
+						</CheckBox.uncheckedValue>
+						<CheckBox.checkedValue>
+							<StringLiteral stringValue="Y"/>
+						</CheckBox.checkedValue>
+					</CheckBox>
+					<CheckBox classNames="fcls_data_widget,fcls_align_left" comment=" Sales commission for customer shared? - (Y)es - (N)o " dataType="Char,,,,1" fieldTable="customer" gridItemLocation="0,5,2,1" identifier="share_flag" notNull="true" title="Sales Commission Share" toolTip=" Sales commission for customer shared? - (Y)es - (N)o ">
+						<CheckBox.defaultValue>
+							<StringLiteral stringValue="Y"/>
+						</CheckBox.defaultValue>
+						<CheckBox.checkedValue>
+							<StringLiteral stringValue="Y"/>
+						</CheckBox.checkedValue>
+						<CheckBox.uncheckedValue>
+							<StringLiteral stringValue="N"/>
+						</CheckBox.uncheckedValue>
+					</CheckBox>
+				</GridPanel>
+			</GroupBox>
+			</GridPanel>
+			<GridPanel classNames="fcls_statusbar_cnt" fieldTable="formonly" gridItemLocation="0,3,1,1" identifier="cntStatusBar" verticalAlignment="Bottom" visible="true">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="100%"/>
+				</GridPanel.gridColumnDefinitions>
+				<Label classNames="fcls_sblabel" fieldTable="formonly" gridItemLocation="0,0,1,1" identifier="lbInfo1" isDynamic="true" text="" visible="true"/>
+				<Label classNames="fcls_sblabel" fieldTable="formonly" gridItemLocation="0,1,1,1" identifier="lbInfo2" isDynamic="true" text="" visible="true"/>
+			</GridPanel>
+		</GridPanel>
+	</form.rootContainer>
+	<form.screenRecords>
+		<ScreenRecord fields="desc_text" identifier="condsale"/>
+		<ScreenRecord fields="inv_level_ind,cond_code,tax_code,tax_num_text,last_mail_date,pay_ind,term_code,bank_acct_code,invoice_to_ind,ord_text_ind,consolidate_flag,back_order_flag,partial_ship_flag,share_flag" identifier="customer"/>
+		<ScreenRecord fields="desc_text" identifier="tax"/>
+		<ScreenRecord fields="desc_text" identifier="term"/>
+		<ScreenRecord fields="customer.partial_ship_flag" identifier="FormOnly"/>
+	</form.screenRecords>
+</form>

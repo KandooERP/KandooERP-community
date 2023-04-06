@@ -1,0 +1,57 @@
+{
+###########################################################################
+# This program is free software; you can redistribute it and/or modify it
+# under the terms of the GNU General Public License as published by the
+# Free Software Foundation; either version 2 of the License, or (at your
+# option) any later version.
+#
+# This program is distributed in the hope that it will be useful, but
+# WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+# General Public License for more details.
+#
+# You should have received a copy of the GNU General Public License along
+# with this program; if not, write to the Free Software Foundation, Inc.,
+# 59 Temple Place, Suite 330, Boston, MA 02111-1307 USA
+#
+###########################################################################
+
+	 $Id: M127.per,v 1.1 2003/05/20 23:53:06 tpavlek Exp $
+}
+
+
+database kandoodb
+
+screen
+{
+           Bill of Resource Parent Lookup       M127
+\g-----------------------------------------------------\g
+   Product           Description
+\g-----------------------------------------------------\g
+  [f001           ] [f002                          ]
+  [f001           ] [f002                          ]
+  [f001           ] [f002                          ]
+  [f001           ] [f002                          ]
+  [f001           ] [f002                          ]
+  [f001           ] [f002                          ]
+  [f001           ] [f002                          ]
+  [f001           ] [f002                          ]
+  [f001           ] [f002                          ]
+  [f001           ] [f002                          ]
+}
+
+tables
+bor
+product
+
+attributes
+f001 = bor.parent_part_code, upshift,
+comments = " Product code of a parent product in the BOR";
+f002 = product.desc_text,
+comments = " Description of a parent product in the BOR";
+
+instructions
+delimiters "  "
+
+screen record sr_parent[10] (parent_part_code,
+                             desc_text)

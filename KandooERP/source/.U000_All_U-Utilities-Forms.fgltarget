@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<fglBuildTarget xmlns="http://namespaces.querix.com/lyciaide/target" name="U000_All_U-Utilities-Forms" type="fgl-program">
+
+  <libraries>
+    <library name= "lib_tool_common" dynamic="false" location=""/>
+    <library name= "lib_tool_U_UT_new" dynamic="false" location=""/>
+    <library name="lib_tool_U_UT_db" dynamic="false" location=""/>
+   </libraries>
+
+  <sources type="fgl">
+    <file location="4gl/utility/U000_All_U-Utilities-Forms.4gl"/>
+  </sources>
+
+  <sources type="form">
+    <file location="per/utility/ENG/U156.fm2"/>
+    <file location="per/utility/ENG/U503.fm2"/>
+    <file location="per/utility/ENG/U527.fm2"/>
+    <file location="per/utility/ENG/U203.fm2"/>
+    <file location="per/utility/ENG/f_templates.fm2"/>
+    <file location="per/utility/ENG/f_apply_db_patch.fm2"/>
+    <file location="per/utility/ENG/U215.fm2"/>
+    <file location="per/utility/ENG/U522.fm2"/>
+    <file location="per/utility/ENG/U210.fm2"/>
+    <file location="per/utility/ENG/U101.fm2"/>
+    <file location="per/utility/ENG/U209.fm2"/>
+    <file location="per/utility/ENG/U149.fm2"/>
+    <file location="per/utility/ENG/U150.fm2"/>
+    <file location="per/utility/ENG/U125.fm2"/>
+    <file location="per/utility/ENG/f_coa.fm2"/>
+    <file location="per/utility/ENG/myform.fm2"/>
+    <file location="per/utility/ENG/U144.fm2"/>
+    <file location="per/utility/ENG/U521.fm2"/>
+    <file location="per/utility/ENG/U120.fm2"/>
+    <file location="per/utility/ENG/U208.fm2"/>
+    <file location="per/utility/ENG/U126.fm2"/>
+    <file location="per/utility/ENG/U114.fm2"/>
+    <file location="per/utility/ENG/U151.fm2"/>
+    <file location="per/utility/ENG/U803_state_tbl_mngr.fm2"/>
+    <file location="per/utility/ENG/U131.fm2"/>
+    <file location="per/utility/ENG/U106.fm2"/>
+    <file location="per/utility/ENG/vendorLookup_filter.fm2"/>
+    <file location="per/utility/ENG/U111_CompanySelection.fm2"/>
+    <file location="per/utility/ENG/f_translate_widgets.fm2"/>
+    <file location="per/utility/ENG/U510.fm2"/>
+    <file location="per/utility/ENG/U113.fm2"/>
+    <file location="per/utility/ENG/U538.fm2"/>
+    <file location="per/utility/ENG/U504.fm2"/>
+    <file location="per/utility/ENG/UmenuWindow.fm2"/>
+    <file location="per/utility/ENG/U107.fm2"/>
+    <file location="per/utility/ENG/U511.fm2"/>
+    <file location="per/utility/ENG/U807_strings_translation.fm2"/>
+    <file location="per/utility/ENG/U211.fm2"/>
+    <file location="per/utility/ENG/U220.fm2"/>
+    <file location="per/utility/ENG/U526.fm2"/>
+    <file location="per/utility/ENG/U115.fm2"/>
+    <file location="per/utility/ENG/U105.fm2"/>
+    <file location="per/utility/ENG/U154.fm2"/>
+    <file location="per/utility/ENG/U130.fm2"/>
+    <file location="per/utility/ENG/U129.fm2"/>
+    <file location="per/utility/ENG/f_dbschema_fix.fm2"/>
+    <file location="per/utility/ENG/U158.fm2"/>
+    <file location="per/utility/ENG/U806_translate_widgets_2.fm2"/>
+    <file location="per/utility/ENG/U501.fm2"/>
+    <file location="per/utility/ENG/U102.fm2"/>
+    <file location="per/utility/ENG/U143.fm2"/>
+    <file location="per/utility/ENG/U155.fm2"/>
+    <file location="per/utility/ENG/U157.fm2"/>
+    <file location="per/utility/ENG/U500.fm2"/>
+    <file location="per/utility/ENG/U222.fm2"/>
+    <file location="per/utility/ENG/f_gridpanel.fm2"/>
+    <file location="per/utility/ENG/f_run_ffg_l2.fm2"/>
+    <file location="per/utility/ENG/U528.fm2"/>
+    <file location="per/utility/ENG/U103.fm2"/>
+    <file location="per/utility/ENG/U117.fm2"/>
+    <file location="per/utility/ENG/U142.fm2"/>
+    <file location="per/utility/ENG/U218.fm2"/>
+    <file location="per/utility/ENG/U206.fm2"/>
+    <file location="per/utility/ENG/U104.fm2"/>
+    <file location="per/utility/ENG/U999.fm2"/>
+    <file location="per/utility/ENG/U153.fm2"/>
+    <file location="per/utility/ENG/U000_All_U-Utilities-Forms.fm2"/>
+    <file location="per/utility/ENG/U116.fm2"/>
+    <file location="per/utility/ENG/U190.fm2"/>
+    <file location="per/utility/ENG/C101_status_report_lbl_val.fm2"/>
+    <file location="per/utility/ENG/U803_state.fm2"/>
+    <file location="per/utility/ENG/U520a.fm2"/>
+    <file location="per/utility/ENG/U536.fm2"/>
+    <file location="per/utility/ENG/U159.fm2"/>
+    <file location="per/utility/ENG/U200.fm2"/>
+    <file location="per/utility/ENG/f_coa_g.fm2"/>
+    <file location="per/utility/ENG/U531.fm2"/>
+    <file location="per/utility/ENG/U146.fm2"/>
+    <file location="per/utility/ENG/U525.fm2"/>
+    <file location="per/utility/ENG/U537.fm2"/>
+    <file location="per/utility/ENG/U505.fm2"/>
+    <file location="per/utility/ENG/U213.fm2"/>
+    <file location="per/utility/ENG/U805_translate_widgets.fm2"/>
+    <file location="per/utility/ENG/U205.fm2"/>
+    <file location="per/utility/ENG/U207.fm2"/>
+    <file location="per/utility/ENG/U524.fm2"/>
+    <file location="per/utility/ENG/coaLookup_filter.fm2"/>
+    <file location="per/utility/ENG/U147.fm2"/>
+    <file location="per/utility/ENG/f_history.fm2"/>
+    <file location="per/utility/ENG/U127.fm2"/>
+    <file location="per/utility/ENG/U212.fm2"/>
+    <file location="per/utility/ENG/U152.fm2"/>
+    <file location="per/utility/ENG/U801_dbschema_status.fm2"/>
+    <file location="per/utility/ENG/f_run_ffg.fm2"/>
+    <file location="per/utility/ENG/FDIssuesNbr1.fm2"/>
+    <file location="per/utility/ENG/U523.fm2"/>
+    <file location="per/utility/ENG/U535.fm2"/>
+    <file location="per/utility/ENG/U136.fm2"/>
+    <file location="per/utility/ENG/f_dbschema_fix_old.fm2"/>
+    <file location="per/utility/ENG/U112.fm2"/>
+    <file location="per/utility/ENG/U124.fm2"/>
+    <file location="per/utility/ENG/U520.fm2"/>
+    <file location="per/utility/ENG/U507.fm2"/>
+    <file location="per/utility/ENG/U108.fm2"/>
+    <file location="per/utility/ENG/U532.fm2"/>
+    <file location="per/utility/ENG/U998_old.fm2"/>
+    <file location="per/utility/ENG/U121.fm2"/>
+    <file location="per/utility/ENG/U219.fm2"/>
+    <file location="per/utility/ENG/U701-rmsreps_record.fm2"/>
+    <file location="per/utility/ENG/f_dbschema_documentation.fm2"/>
+    <file location="per/utility/ENG/U139.fm2"/>
+    <file location="per/utility/ENG/U214.fm2"/>
+    <file location="per/utility/ENG/U204.fm2"/>
+    <file location="per/utility/ENG/U110.fm2"/>
+    <file location="per/utility/ENG/U122.fm2"/>
+    <file location="per/utility/ENG/U201.fm2"/>
+    <file location="per/utility/ENG/U163.fm2"/>
+    <file location="per/utility/ENG/U138.fm2"/>
+    <file location="per/utility/ENG/U217.fm2"/>
+    <file location="per/utility/ENG/U509.fm2"/>
+    <file location="per/utility/ENG/U960-rpt-language-dialog.fm2"/>
+    <file location="per/utility/ENG/U534.fm2"/>
+    <file location="per/utility/ENG/U123.fm2"/>
+    <file location="per/utility/ENG/U998.fm2"/>
+    <file location="per/utility/ENG/U137.fm2"/>
+    <file location="per/utility/ENG/U162.fm2"/>
+    <file location="per/utility/ENG/U802_table_documentation.fm2"/>
+    <file location="per/utility/ENG/U202.fm2"/>
+    <file location="per/utility/ENG/f_dbschema_status.fm2"/>
+    <file location="per/utility/ENG/U216.fm2"/>
+  </sources>
+
+  <mediaFiles>
+    <file client="true" location="U000_All_U-Utilities-Forms.css" type="other"/>
+    <file client="true" location="U000_All_U-Utilities-Forms.qxtheme" type="gui-theme-file"/>
+  </mediaFiles>
+
+  <buildConfiguration name="development">
+    <additions>
+    </additions>
+    <exclusions>
+      <sources type="form">
+        <file location="per/utility/ENG/U701-rmsreps_record.fm2"/>
+      </sources>
+
+    </exclusions>
+  </buildConfiguration>
+
+</fglBuildTarget>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form xmlns="http://namespaces.querix.com/2015/fglForms">
+	<form.rootContainer>
+			<Table rowCount="14" fieldTable="" identifier="sr_year_num" gridItemLocation="0,0,1,2" preferredSize="300,">
+				<TableColumn text="Сhoose Fiscal Year" resizable="true" visible="true" identifier="tc_f1" textAlignment="Center,Default">
+					<TextField visible="true" identifier="year_num" horizontalAlignment="Left" invisibleValue="false" textAlignment="Center,Default"/>
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="6qch"/>
+					</TableColumn.columnLength>
+				</TableColumn>
+			</Table>
+	</form.rootContainer>
+	<form.screenRecords>
+		<ScreenRecord identifier="sr_year_num" fields="year_num" elements="14"/>
+		<ScreenRecord identifier="formonly" fields=""/>
+	</form.screenRecords>
+</form>
+

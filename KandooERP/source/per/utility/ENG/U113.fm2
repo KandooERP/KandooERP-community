@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="UTF-8"?><form xmlns="http://namespaces.querix.com/2015/fglForms">
+	<form.rootContainer>
+		<GridPanel classNames="fcls_rootContainer" fieldTable="" horizontalAlignment="Stretch" identifier="rootContainer" verticalAlignment="Stretch">
+			<GridPanel.gridRowDefinitions>
+				<GridRowDefinition gridLengthValue=""/>
+				<GridRowDefinition gridLengthValue="100%"/>
+				<GridRowDefinition gridLengthValue=""/>
+				<GridRowDefinition gridLengthValue=""/>
+				<GridRowDefinition gridLengthValue=""/>
+			</GridPanel.gridRowDefinitions>
+			<GridPanel.gridColumnDefinitions>
+				<GridColumnDefinition gridLengthValue="100%"/>
+			</GridPanel.gridColumnDefinitions>
+			<GridPanel classNames="fcls_title_cnt" fieldTable="formonly" gridItemLocation="0,0,1,1" horizontalAlignment="Stretch" identifier="cntTitle" verticalAlignment="Top" visible="true">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="100%"/>
+					<GridColumnDefinition gridLengthValue=""/>
+				</GridPanel.gridColumnDefinitions>
+				<Label classNames="fcls_title_lb" fieldTable="formonly" gridItemLocation="0,0,1,1" identifier="header_text" isDynamic="true" text="Report File Management (BETA Version)" visible="true"/>
+				<Label classNames="fcls_title_lb" fieldTable="" gridItemLocation="1,0,1,1" identifier="lbFormName" isDynamic="true" text="U113" visible="true"/>
+			</GridPanel>
+			<Table fieldTable="" gridItemLocation="0,1,1,1" horizontalAlignment="Stretch" identifier="sr_rms" location="0qch,2qch" rowCount="11" verticalAlignment="Stretch">
+				<TableColumn fieldTable="" identifier="f">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="5%" gridMaxLength="2rem" gridMinLength="2rem"/>
+					</TableColumn.columnLength>
+					<CheckBox dataType="Char,,,," fieldTable="formonly" identifier="scroll_flag">
+						<CheckBox.checkedValue>
+							<StringLiteral stringValue="*"/>
+						</CheckBox.checkedValue>
+						<CheckBox.uncheckedValue>
+							<NullLiteral/>
+						</CheckBox.uncheckedValue>
+					</CheckBox>
+				</TableColumn>
+				<TableColumn identifier="tc_f96" resizable="true" text="Module" visible="true">
+					<TextField fieldTable="rmsreps" identifier="report_pgm_text" visible="true"/>
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="5%"/>
+					</TableColumn.columnLength>
+				</TableColumn>
+				<TableColumn fieldTable="" identifier="f01" text="Description">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="40%" gridMaxLength="30rem" gridMinLength="15rem"/>
+					</TableColumn.columnLength>
+					<TextField dataType="Char,,,,60" fieldTable="rmsreps" identifier="report_text"/>
+				</TableColumn>
+				<TableColumn fieldTable="" identifier="f03" text="Date">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="10%" gridMaxLength="12rem" gridMinLength="8rem"/>
+					</TableColumn.columnLength>
+					<Calendar dataType="Date,,,," fieldTable="rmsreps" identifier="report_date" noEntry="true"/>
+				</TableColumn>
+				<TableColumn fieldTable="" identifier="f02" text="Time">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="10%" gridMaxLength="12rem" gridMinLength="8rem"/>
+					</TableColumn.columnLength>
+					<TextField dataType="Char,,,,8" fieldTable="rmsreps" identifier="report_time"/>
+				</TableColumn>
+
+				<TableColumn identifier="tc_f96" resizable="true" text="Status" visible="true">
+					<TextField fieldTable="rmsreps" identifier="status_text" visible="true"/>
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="10%" gridMaxLength="15rem" gridMinLength="10rem"/>
+					</TableColumn.columnLength>
+				</TableColumn>
+				<TableColumn  fieldTable="" identifier="a" text="Status">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="3%" gridMaxLength="6rem" gridMinLength="0"/>
+					</TableColumn.columnLength>
+					<TextField  dataType="Char,,,," fieldTable="rmsreps" identifier="status_ind" noEntry="true"/>
+				</TableColumn>
+
+				<TableColumn fieldTable="" identifier="b" text="">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="3%" gridMaxLength="6rem" gridMinLength="4rem"/>
+					</TableColumn.columnLength>
+					<TextField dataType="Char,,,," identifier="printed_ind" noEntry="true"/>
+				</TableColumn>
+
+				<TableColumn identifier="tc_f96" resizable="true" text="Report ID" visible="true">
+					<TextField fieldTable="rmsreps" identifier="report_code" visible="true"/>
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="10%" gridMaxLength="10rem" gridMinLength="10rem"/>
+					</TableColumn.columnLength>
+				</TableColumn>
+			</Table>
+			<GridPanel classNames="fcls_detail_cnt,fcls_data_cnt,fcls_align_hstretch" fieldTable="formonly" gridItemLocation="0,2,1,1" horizontalAlignment="Stretch" identifier="cntDetail1" verticalAlignment="Top" visible="true">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="100%"/>
+				</GridPanel.gridColumnDefinitions>
+				<TextField dataType="Char,,,,60" fieldTable="formonly" gridItemLocation="0,0,1,1" identifier="report_text" location="1qch,16qch" preferredSize="61qch,1qch"/>
+			</GridPanel>
+			<GridPanel classNames="fcls_detail_cnt,fcls_data_cnt,fcls_align_left,fcls_align_bottom" fieldTable="formonly" gridItemLocation="0,3,1,1" horizontalAlignment="Left" identifier="cntDetail2" verticalAlignment="Bottom" visible="true">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="" gridMinLength="10rem"/>
+					<GridColumnDefinition gridLengthValue=""/>
+					<GridColumnDefinition gridLengthValue="" gridMinLength="10rem"/>
+					<GridColumnDefinition gridLengthValue=""/>
+					<GridColumnDefinition gridLengthValue="" gridMinLength="10rem"/>
+					<GridColumnDefinition gridLengthValue=""/>
+					<GridColumnDefinition gridLengthValue="" gridMinLength="10rem"/>
+				</GridPanel.gridColumnDefinitions>
+				<ComboBox classNames="list-show-text-value,field-show-text,fcls_data_widget,fcls_align_left,fcls_length_15qch" dataType="Char,,,,8" fieldTable="rmsreps" gridItemLocation="1,0,1,1" identifier="entry_code" location="12qch,17qch" noEntry="true" preferredSize="10qch,1qch"/>
+				<TextField classNames="fcls_data_widget,fcls_align_left,fcls_length_15qch" dataType="Integer,,,," fieldTable="rmsreps" gridItemLocation="3,0,1,1" identifier="page_num" location="41qch,17qch" noEntry="true" preferredSize="6qch,1qch"/>
+				<TextField classNames="fcls_data_widget,fcls_align_left,fcls_length_15qch" dataType="Char,,,,13" fieldTable="rmsreps" gridItemLocation="5,0,1,1" identifier="status_textX" location="60qch,17qch" noEntry="true" preferredSize="14qch,1qch"/>
+				<TextField classNames="fcls_data_widget,fcls_align_left,fcls_length_15qch" dataType="Integer,,,," gridItemLocation="1,1,1,1" identifier="report_code_detail" location="12qch,18qch" noEntry="true" preferredSize="10qch,1qch"/>
+				<TextField classNames="fcls_data_widget,fcls_align_left,fcls_length_15qch" dataType="Char,,,," fieldTable="formonly" gridItemLocation="3,1,1,1" identifier="size_text" location="41qch,18qch" noEntry="true" preferredSize="7qch,1qch"/>
+				<TextField classNames="fcls_data_widget,fcls_align_left,fcls_length_15qch" dataType="Char,,,,10" gridItemLocation="5,1,1,1" identifier="detail_report_pgm_text" location="60qch,18qch" noEntry="true" preferredSize="14qch,1qch"/>
+				<Label classNames="fcls_fieldlabel,fcls_align_left" fieldTable="formonly" gridItemLocation="0,0,1,1" identifier="lb36" isDynamic="true" text="User" visible="true"/>
+				<Label classNames="fcls_fieldlabel,fcls_align_left" fieldTable="" gridItemLocation="2,0,1,1" identifier="lb60" isDynamic="true" text="Number of Pages" visible="true"/>
+				<Label classNames="fcls_fieldlabel,fcls_align_left" fieldTable="" gridItemLocation="4,0,1,1" identifier="lb85" isDynamic="true" text="StatusX" visible="true"/>
+				<Label classNames="fcls_fieldlabel,fcls_align_left" fieldTable="formonly" gridItemLocation="0,1,1,1" identifier="lb37" isDynamic="true" text="Report No" visible="true"/>
+				<Label classNames="fcls_fieldlabel,fcls_align_left" fieldTable="" gridItemLocation="2,1,1,1" identifier="lb61" isDynamic="true" text="Length/Width" visible="true"/>
+				<Label classNames="fcls_fieldlabel,fcls_align_left" fieldTable="" gridItemLocation="4,1,1,1" identifier="lb88" isDynamic="true" text="Module" visible="true"/>
+				<RadioGroup classNames="fcls_data_widget" fieldTable="" gridItemLocation="6,0,1,5" identifier="output_option" orientation="Vertical" visible="true">
+					<Radio identifier="output_option_view" title="(V)iew">
+						<Radio.value>
+							<StringLiteral stringValue="V"/>
+						</Radio.value>
+					</Radio>
+					<Radio identifier="output_option_print" title="(P)rint">
+						<Radio.value>
+							<StringLiteral stringValue="P"/>
+						</Radio.value>
+					</Radio>
+					<Radio identifier="output_option_bulk" title="(B)Bulk">
+						<Radio.value>
+							<StringLiteral stringValue="B"/>
+						</Radio.value>
+					</Radio>
+					<Radio identifier="output_option_delete" title="(D)elete">
+						<Radio.value>
+							<StringLiteral stringValue="D"/>
+						</Radio.value>
+					</Radio>
+					<Radio identifier="output_option_file" title="(F)ile">
+						<Radio.value>
+							<StringLiteral stringValue="F"/>
+						</Radio.value>
+					</Radio>
+				</RadioGroup>
+				<Label gridItemLocation="0,2,1,1" identifier="lb91" isDynamic="true" text="Delete count" visible="true"/>
+				<TextField classNames="fcls_data_widget,fcls_align_left,fcls_length_15qch" gridItemLocation="1,2,1,1" identifier="del_cnt" visible="true"/>
+				<Label gridItemLocation="0,3,1,1" identifier="lb90" isDynamic="true" text="Print count" visible="true"/>
+				<TextField classNames="fcls_data_widget,fcls_align_left,fcls_length_15qch" gridItemLocation="1,3,1,1" identifier="f93" text="print_cnt" visible="true"/>
+				<Label gridItemLocation="0,4,1,1" identifier="lb89" isDynamic="true" text="File count" visible="true"/>
+				<TextField classNames="fcls_data_widget,fcls_align_left,fcls_length_15qch" gridItemLocation="1,4,1,1" identifier="file_cnt" visible="true"/>
+				<Label gridItemLocation="0,5,1,1" identifier="lb95" isDynamic="true" text="Problems" visible="true"/>
+				<TextField classNames="fcls_data_widget,fcls_align_left,fcls_length_15qch" gridItemLocation="1,5,1,1" identifier="err_message" visible="true"/>
+			</GridPanel>
+			<GridPanel classNames="fcls_statusbar_cnt" fieldTable="formonly" gridItemLocation="0,4,1,1" horizontalAlignment="Stretch" identifier="cntStatusBar" verticalAlignment="Top" visible="true">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="100%"/>
+				</GridPanel.gridColumnDefinitions>
+				<Label classNames="fcls_sblabel" fieldTable="formonly" gridItemLocation="0,0,1,1" identifier="lbInfo1" isDynamic="true" text="" visible="true"/>
+				<Label classNames="fcls_sblabel" fieldTable="formonly" gridItemLocation="0,1,1,1" identifier="lbInfo2" isDynamic="true" text="" visible="true"/>
+			</GridPanel>
+		</GridPanel>
+	</form.rootContainer>
+	<form.screenRecords>
+		<ScreenRecord elements="11" fields="scroll_flag,rmsreps.report_pgm_text,rmsreps.report_text,rmsreps.report_date,rmsreps.report_time,rmsreps.status_text,rmsreps.status_ind,printed_ind,rmsreps.report_code" identifier="sr_rms"/>
+		<!-- <ScreenRecord identifier="formonly" fields="report_text,status_ind,printed_ind,scroll_flag,size_text,option"/> -->
+		<ScreenRecord fields="report_text,report_time,report_date,entry_code,rmsreps.report_pgm_text,report_pgm_text,report_codeX,rmsreps.report_code,report_code,page_num,rmsreps.status_text,status_text" identifier="rmsreps"/>
+	</form.screenRecords>
+</form>

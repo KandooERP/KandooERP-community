@@ -1,0 +1,172 @@
+R|3||Commitments||1|
+A|1|G|Customers||1|
+A|2|G|Invoices||1|
+A|3|G|Receipts||1|
+A|4|G|Credits||1|
+A|D|G|Credit Reports||1|
+A|R|G|AR Reports||1|
+A|S|G|Special Processes||1|
+A|A|G|Customer Reports||1|
+G|1|G|Accounts||1|
+A|B|G|Invoice Reports||1|
+A|Z|G|Setup Information||1|
+A|C|G|Receipt Reports||1|
+G|2|G|Batches||1|
+G|A|G|Account Reports||1|
+G|B|G|Batch Reports||1|
+G|R|G|GL Reports||1|
+G|S|G|Special Processes||1|
+G|Z|G|Setup Information||1|
+W|7|C|Quotations||1|
+U|N|G|System Notes Sub-system||1|
+G|C||Cash Book||1|
+Q|1||Quotation Preparation||1|
+E|1|G|Sales Orders| |1|
+U|3|G|Message Library Sub-system| |1|
+L|S||Special Processes||1|
+L|A||Reports||1|
+L|4||Goods Receipt||1|
+I|F|G|FIFO Costing||1|
+G|X|C|Invisible Menus||1|
+L|1|G|Shipment Maintenance||1|
+L|Z|G|Setup Information||1|
+W|C|C|Complaints| |1|
+P|1|G|Vendors||1|
+P|2|G|Vouchers||1|
+P|3|G|Payment Cycle||1|
+P|4|G|Manual Cheques||1|
+U|6|C|Statistic Interval Sub-system||1|
+P|A|G|Vendor Reports||1|
+P|B|G|Voucher Reports||1|
+P|C|G|Cheque/Debit Reports||1|
+P|R|G|AP Reports||1|
+P|S|G|Special Processes||1|
+P|Z|G|Setup Information||1|
+R|1|G|Purchases||1|
+R|2|G|Goods Receipt||1|
+R|A|G|Order Reports||1|
+R|S|G|Special Processes||1|
+R|Z|G|Setup Information||1|
+U|1|G|Administration Sub-system||1|
+U|2|C|Menu Control Sub-system||1|
+A|5|G|Overdue Collection||1|
+G|G|C|Group Summary Reporting||1|
+G|P||Period End||1|
+P|P|C|Period End||1|
+P|6|C|Debits||1|
+U|R||Report Management Sub-system||1|
+A|E||Sales Analysis||1|
+U|5||Street and Suburb Sub-system||1|
+Q|A||Quotation Reports||1|
+Q|Z||Setup Information||1|
+I|1|G|Products||1|
+I|2|G|Product Activity||1|
+I|3|G|Serialization||1|
+I|A|G|Product Reports||1|
+I|B|G|Warehouse Reports||1|
+I|C|G|Pricing Reports||1|
+I|R|G|Inventory Reports||1|
+I|S|G|Special Processes||1|
+I|Z|G|Setup Information||1|
+R|B| |Outstanding Reports||1|
+N|1|C|Requisition Sub-system| |1|
+N|2|C|Deliveries| |1|
+N|3|C|Order Allocation| |1|
+N|4|C|Purchase Orders| |1|
+N|P|C|Persons Information| |1|
+N|R|C|Reports| |1|
+N|Z|C|Set Up Information| |1|
+I|T|G|Stocktake| |1|
+E|5|G|Delivery Cycle| |1|
+L|6||Credit Returns||1|
+E|6|G|Special Offers| |1|
+E|Z|G|Sales Orders Set Up| |1|
+P|9||Contractors||1|
+I|D|G|Stock Re-order Reports||1|
+I|5|G|Stock Transfers||1|
+E|T|G|Salesperson Reports||1|
+E|V||Customer Reports||1|
+E|Y|G|Company Distribution||1|
+E|3||Back Order Replenishment||1|
+K|Z|G|Setup|||
+W|5|G|Export Orders||1|
+W|9|C|Weighbridge Interface||1|
+W|A|C|Order Analysis Reports||1|
+G|3||Journal Disbursements||1|
+G|W|G|Report Writer||1|
+P|7|G|Recurring Expense||1|
+W|B|C|Sales Analysis Reports||1|
+F|1|G|Asset Details||1|
+F|2|C|Batch Processing||1|
+F|4|C|Asset Inquiry||1|
+F|6|C|Financial Reports||1|
+F|8|C|Detail Reports||1|
+F|B|C|Batch Reports||1|
+F|P|C|Period End||1|
+F|Z|G|Setup Information||1|
+S|1|C|Point of Sale Invoicing||1|
+S|C|C|Cash Drawer Management||1|
+S|E|C|End of Day Reports||1|
+S|L|C|POS Listings||1|
+S|R|C|Point of Sale Reports||1|
+S|S|C|Special Processes||1|
+S|Z|C|Setup Information||1|
+W|1|C|Domestic Orders||1|
+W|2|G|Delivery Scheduling||1|
+W|3|Q|Invoicing & Receipts||1|
+W|4|C|Returns & Credits||1|
+W|S|C|Special Processes||1|
+W|T|C|Transport Setup||1|
+W|Z|C|Setup Information||1|
+W|D|C|Transport||1|
+K|1|G|Subscriptions|||
+K|4|G|Credits|||
+E|7|G|Sales Conditions||1|
+E|S|G|Special Processes||1|
+E|G|G|Company Inquiries||1|
+E|U||Inventory Reports||1|
+E|W||Sales Area Reports||1|
+E|8|G|Salesperson Detail||1|
+K|L|G|Labels|||
+K|R|G|Reports|||
+K|S|G|Special Processes|||
+A|W|D|Customer Write Off||4|
+K|A||Automatic Renewals||1|
+W|L|C|Labour Setup||1|
+W|6|C|Supply and Lay Orders||1|
+I|K|C|Product Kits/Blends||1|
+W|U||Order Amendments||1|
+W|M||Sales Analysis Inquiries||1|
+I|U||Amendment Logs||1|
+I|E||Dangerous Goods||1|
+G|L|G|User Reports||1|
+W|I|C|Price Update Cycle||1|
+E|9||Order Reports||1|
+S|P|C|Pricing||1|
+A|6|G|Bank Deposit Cycle||1|
+A|T||Special Prints Test||1|
+J|1|G|Jobs||1|
+J|2|G|Vouchers & Adjustments||1|
+J|3|G|Invoices & Receipts||1|
+J|4|G|Status||1|
+J|5|C|Activities||1|
+J|6|C|Job Variations||1|
+J|7||Resources||1|
+J|8|C|Timesheets||1|
+J|9| |Inventory Issue||1|
+J|A|G|Contracts||1|
+J|C|G|Credits| |1|
+J|R||Reports||1|
+J|S|G|Special Processes||1|
+J|Z|G|Setup Information||1|
+I|Q||Supplier Price Load - Alstom|||
+W|Q|C|Labour Reports||1|
+W|R||Order Reports||1|
+E|A|G|Customer Inquiries||9|
+E|B|G|Product Inquiries||1|
+E|C|G|Salesperson Inquiries||1|
+E|D|G|Sales Manager Inquiries||1|
+E|E|G|Sales Territory Inquiries||1|
+P|X||Special Hidden Processes||1|
+G|T|G|Tax processing Sub-system||1|
+B|B|||||

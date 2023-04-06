@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form xmlns="http://namespaces.querix.com/2015/fglForms">
+	<form.rootContainer>
+		<GridPanel classNames="fcls_rootContainer" verticalAlignment="Top" horizontalAlignment="Left" fieldTable="" identifier="rootContainer">
+			<GridPanel.gridRowDefinitions>
+				<GridRowDefinition gridLengthValue=""/>
+				<GridRowDefinition gridLengthValue=""/>
+				<GridRowDefinition gridLengthValue=""/>
+			</GridPanel.gridRowDefinitions>
+			<GridPanel.gridColumnDefinitions>
+				<GridColumnDefinition gridLengthValue="100%"/>
+			</GridPanel.gridColumnDefinitions>
+			<GridPanel classNames="fcls_title_cnt" visible="true" verticalAlignment="Top" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="cntTitle">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="100%"/>
+					<GridColumnDefinition gridLengthValue=""/>
+				</GridPanel.gridColumnDefinitions>
+				<Label isDynamic="true" text="Picking Slip Generation Selection" classNames="fcls_title_lb" visible="true" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="header_text"/>
+				<Label isDynamic="true" text="E152" classNames="fcls_title_lb" visible="true" gridItemLocation="1,0,1,1" fieldTable="" identifier="lbFormName"/>
+			</GridPanel>
+			<GridPanel classNames="fcls_detail_cnt,fcls_data_cnt,fcls_align_left" visible="true" verticalAlignment="Top" horizontalAlignment="Left" gridItemLocation="0,1,1,1" fieldTable="formonly" identifier="cntDetail1">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="" gridMinLength="10rem"/>
+					<GridColumnDefinition gridLengthValue=""/>
+					<GridColumnDefinition gridLengthValue=""/>
+					<GridColumnDefinition gridLengthValue=""/>
+				</GridPanel.gridColumnDefinitions>
+				<TextField dataType="Char,,,," preferredSize="9qch,1qch" toolTip=" First order number in selected range" fieldTable="formonly" comment=" First order number in selected range" identifier="first_order_num" gridItemLocation="3,0,1,1" classNames="fcls_data_widget,fcls_align_left,fcls_length_15qch"/>
+				<TextField dataType="Char,,,," preferredSize="9qch,1qch" toolTip=" Last order number in selected range" fieldTable="formonly" comment=" Last order number in selected range" identifier="last_order_num" gridItemLocation="3,1,1,1" classNames="fcls_data_widget,fcls_align_left,fcls_length_15qch"/>
+				<TextField toCase="Up" dataType="Char,,,," preferredSize="9qch,1qch" toolTip=" First customer in selected range (W) " fieldTable="formonly" comment=" First customer in selected range (W) " identifier="first_cust_code" gridItemLocation="3,2,1,1" classNames="fcls_data_widget,fcls_align_left,fcls_length_15qch"/>
+				<Label isDynamic="true" text="End" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="2,3,1,1" fieldTable="" identifier="lb65"/>
+				<Label isDynamic="true" text="Order number range.:" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,0,1,1" fieldTable="" identifier="lb51"/>
+				<Label isDynamic="true" text="Start" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="2,0,1,1" fieldTable="" identifier="lb53"/>
+				<Label isDynamic="true" text="End" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="2,1,1,1" fieldTable="" identifier="lb54"/>
+				<Label isDynamic="true" text="Customer code range:" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,2,1,1" fieldTable="" identifier="lb66"/>
+				<Label isDynamic="true" text="Start" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="2,2,1,1" fieldTable="" identifier="lb55"/>
+				<TextField toCase="Up" dataType="Char,,,," preferredSize="9qch,1qch" toolTip=" Last customer in selected range (W) " fieldTable="formonly" comment=" Last customer in selected range (W) " identifier="last_cust_code" gridItemLocation="3,3,1,1" classNames="fcls_data_widget,fcls_align_left,fcls_length_15qch"/>
+				<Label isDynamic="true" text="W/house code range.:" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,4,1,1" fieldTable="" identifier="lb133"/>
+				<Label isDynamic="true" text="Start" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="2,4,1,1" fieldTable="" identifier="lb139"/>
+				<TextField toCase="Up" dataType="Char,,,," preferredSize="4qch,1qch" toolTip=" First warehouse in selected range (W) " fieldTable="formonly" comment=" First warehouse in selected range (W) " identifier="first_ware_code" gridItemLocation="3,4,1,1" classNames="fcls_data_widget,fcls_align_left,fcls_length_15qch"/>
+				<Label isDynamic="true" text="End" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="2,5,1,1" fieldTable="" identifier="lb140"/>
+				<TextField toCase="Up" dataType="Char,,,," preferredSize="4qch,1qch" toolTip=" Last warehouse in selected range (W) " fieldTable="formonly" comment=" Last warehouse in selected range (W) " identifier="last_ware_code" gridItemLocation="3,5,1,1" classNames="fcls_data_widget,fcls_align_left,fcls_length_15qch"/>
+				<TextField dataType="Char,,,,16" preferredSize="17qch,1qch" fieldTable="arparms" identifier="inv_ref1_text" gridItemLocation="0,6,1,1" classNames="fcls_data_widget,fcls_align_left,fcls_length_15qch"/>
+				<Label isDynamic="true" text="Start" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="2,6,1,1" fieldTable="" identifier="lb141"/>
+				<TextField toCase="Up" dataType="Char,,,," preferredSize="20qch,1qch" toolTip=" First invoice reference in selected range " fieldTable="formonly" comment=" First invoice reference in selected range " identifier="first_ord_text" gridItemLocation="3,6,1,1" classNames="fcls_data_widget,fcls_align_left,fcls_length_15qch"/>
+				<Label isDynamic="true" text="End" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="2,7,1,1" fieldTable="" identifier="lb142"/>
+				<TextField toCase="Up" dataType="Char,,,," preferredSize="20qch,1qch" toolTip=" Last invoice reference in selected range " fieldTable="formonly" comment=" Last invoice reference in selected range " identifier="last_ord_text" gridItemLocation="3,7,1,1" classNames="fcls_data_widget,fcls_align_left,fcls_length_15qch"/>
+			</GridPanel>
+			<GridPanel classNames="fcls_statusbar_cnt" visible="true" verticalAlignment="Bottom" gridItemLocation="0,2,1,1" fieldTable="formonly" identifier="cntStatusBar">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="100%"/>
+				</GridPanel.gridColumnDefinitions>
+				<Label isDynamic="true" text="" classNames="fcls_sblabel" visible="true" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="lbInfo1"/>
+				<Label isDynamic="true" text="" classNames="fcls_sblabel" visible="true" gridItemLocation="0,1,1,1" fieldTable="formonly" identifier="lbInfo2"/>
+			</GridPanel>
+		</GridPanel>
+	</form.rootContainer>
+	<form.screenRecords>
+		<ScreenRecord identifier="arparms" fields="arparms.inv_ref1_text"/>
+		<ScreenRecord identifier="formonly" fields="formonly.first_order_num,formonly.last_order_num,formonly.first_cust_code,formonly.last_cust_code,formonly.first_ware_code,formonly.last_ware_code,formonly.first_ord_text,formonly.last_ord_text"/>
+	</form.screenRecords>
+</form>
+

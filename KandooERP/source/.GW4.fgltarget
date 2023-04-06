@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<fglBuildTarget xmlns="http://namespaces.querix.com/lyciaide/target" name="GW4" type="fgl-program">
+
+  <libraries>
+    <library name="lib_report" dynamic="false" location=""/>
+    <library name= "lib_tool_common" dynamic="false" location=""/>
+    <library name= "lib_tool_G_GL_new" dynamic="false" location=""/>
+    <library name="lib_tool_G_GL_db" dynamic="false" location=""/>
+    <library name= "lib_tool_db_common" dynamic="false" location=""/>
+   </libraries>
+
+  <sources type="fgl">
+    <file location="4gl/gl/GW4e.4gl"/>
+    <file location="4gl/common/glob_GLOBALS_constant.4gl"/>
+    <file location="4gl/gl/G_GL_GLOBALS.4gl"/>
+    <file location="4gl/common/glob_GLOBALS.4gl"/>
+    <file location="4gl/common/glob_GLOBALS_userDataTypes.4gl"/>
+    <file location="4gl/common/acctwind.4gl"/>
+    <file location="4gl/gl/GW4_GLOBALS.4gl"/>
+    <file location="4gl/gl/GW4b.4gl"/>
+    <file location="4gl/common/gitemshow.4gl"/>
+    <file location="4gl/gl/GW4d.4gl"/>
+    <file location="4gl/gl/GW4.4gl"/>
+    <file location="4gl/gl/GW4f.4gl"/>
+    <file location="4gl/common/gdltline.4gl"/>
+    <file location="4gl/gl/GW4a.4gl"/>
+    <file location="4gl/common/gundshow.4gl"/>
+    <file location="4gl/gl/GW4c.4gl"/>
+   </sources>
+
+  <sources type="form">
+    <file location="per/gl/ENG/G147.fm2"/>
+    <file location="per/gl/ENG/G524.fm2"/>
+    <file location="per/utility/ENG/U156.fm2"/>
+    <file location="per/gl/ENG/G123.fm2"/>
+    <file location="per/gl/ENG/G526.fm2"/>
+    <file location="per/utility/ENG/U136.fm2"/>
+    <file location="per/gl/ENG/G528.fm2"/>
+    <file location="per/gl/ENG/G516.fm2"/>
+    <file location="per/gl/ENG/G129.fm2"/>
+    <file location="per/utility/ENG/U505.fm2"/>
+    <file location="per/gl/ENG/G521.fm2"/>
+    <file location="per/gl/ENG/G523.fm2"/>
+    <file location="per/gl/ENG/G501.fm2"/>
+    <file location="per/gl/ENG/G525.fm2"/>
+    <file location="per/utility/ENG/U526.fm2"/>
+    <file location="per/utility/ENG/U162.fm2"/>
+    <file location="per/gl/ENG/G522.fm2"/>
+  </sources>
+
+  <mediaFiles>
+    <file client="true" location="GW4.css" type="other"/>
+    <file client="true" location="GW4.qxtheme" type="gui-theme-file"/>
+  </mediaFiles>
+
+</fglBuildTarget>

@@ -1,0 +1,8 @@
+#Import static 3 rows to this table rptpos
+
+# Desc Position
+# Three codes are available to define where in the report header the report description is to print.  These are:  
+# C  = Centred, 
+# L = Left Justified, 
+# R = Right Justified.  
+# These codes can be selected at runtime are used for validation

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<fglBuildTarget xmlns="http://namespaces.querix.com/lyciaide/target" name="TGW2" type="fgl-program">
+
+  <libraries>
+    <library name="lib_report" dynamic="false" location=""/>
+    <library name="lib_tool_G_GL_new" dynamic="false" location=""/>
+    <library name="lib_tool_T_GW_db" dynamic="false" location=""/>
+    <library name="lib_tool_T_GW_new" dynamic="false" location=""/>
+    <library name="lib_tool_common" dynamic="false" location=""/>
+    <library name="lib_tool_db_common" dynamic="false" location=""/>
+  </libraries>
+
+  <sources type="fgl">
+    <file location="4gl/common/glob_GLOBALS_constant.4gl"/>
+    <file location="4gl/common/gshowline.4gl"/>
+    <file location="4gl/gw/TGW2.4gl"/>
+    <file location="4gl/common/grndshow.4gl"/>
+    <file location="4gl/gw/TGW2_GLOBALS.4gl"/>
+    <file location="4gl/gw/TGW2b.4gl"/>
+    <file location="4gl/common/glob_GLOBALS.4gl"/>
+    <file location="4gl/gw/TGW2d.4gl"/>
+    <file location="4gl/common/glob_GLOBALS_userDataTypes.4gl"/>
+    <file location="4gl/gw/TGW2f.4gl"/>
+    <file location="4gl/common/gsignshow.4gl"/>
+    <file location="4gl/gw/T_GW_GLOBALS.4gl"/>
+    <file location="4gl/common/gposshow.4gl"/>
+    <file location="4gl/gw/TGW2a.4gl"/>
+    <file location="4gl/gw/TGW2c.4gl"/>
+    <file location="4gl/common/gshowacgrp.4gl"/>
+    <file location="4gl/gw/TGW2e.4gl"/>
+    <file location="4gl/common/gshowcol.4gl"/>
+  </sources>
+
+  <sources type="form">
+    <file location="per/utility/ENG/U156.fm2"/>
+    <file location="per/utility/ENG/U526.fm2"/>
+    <file location="per/utility/ENG/U162.fm2"/>
+    <file location="per/gw/ENG/TG500.fm2"/>
+  </sources>
+
+  <mediaFiles>
+    <file client="true" location="TGW2.qxtheme" type="gui-theme-file"/>
+    <file client="true" location="TGW2.css" type="other"/>
+  </mediaFiles>
+
+</fglBuildTarget>

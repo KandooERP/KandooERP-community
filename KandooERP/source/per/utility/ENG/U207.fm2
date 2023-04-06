@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form xmlns="http://namespaces.querix.com/2015/fglForms">
+	<form.rootContainer>
+		<GridPanel classNames="fcls_rootContainer" verticalAlignment="Stretch" horizontalAlignment="Stretch" fieldTable="" identifier="rootContainer">
+			<GridPanel.gridRowDefinitions>
+				<GridRowDefinition gridLengthValue=""/>
+				<GridRowDefinition gridLengthValue="100%"/>
+				<GridRowDefinition gridLengthValue=""/>
+			</GridPanel.gridRowDefinitions>
+			<GridPanel.gridColumnDefinitions>
+				<GridColumnDefinition gridLengthValue="100%"/>
+			</GridPanel.gridColumnDefinitions>
+			<GridPanel classNames="fcls_title_cnt" visible="true" verticalAlignment="Top" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="cntTitle">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="100%"/>
+					<GridColumnDefinition gridLengthValue=""/>
+				</GridPanel.gridColumnDefinitions>
+				<Label isDynamic="true" text="Message Verify" classNames="fcls_title_lb" visible="true" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="header_text"/>
+				<Label isDynamic="true" text="U207" classNames="fcls_title_lb" visible="true" gridItemLocation="1,0,1,1" fieldTable="" identifier="lbFormName"/>
+			</GridPanel>
+			<Table rowCount="4" preferredSize="130qch,4qch" gridItemLocation="0,1,1,1" fieldTable="" identifier="sr_kandoomsg">
+				<TableColumn text="Number" fieldTable="" identifier="source_ind">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="10rem" gridMaxLength="10rem" gridMinLength="10rem"/>
+					</TableColumn.columnLength>
+					<TextField noEntry="true" dataType="Char,,,,1" toolTip="Source indicator" fieldTable="kandoomsg" comment="Source indicator" identifier="source_ind"/>
+				</TableColumn>
+				<TableColumn text="Source" fieldTable="" identifier="msg_num">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="10rem" gridMaxLength="10rem" gridMinLength="10rem"/>
+					</TableColumn.columnLength>
+					<TextField format="&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;" noEntry="true" dataType="Integer,,,," toolTip="Message number" fieldTable="kandoomsg" comment="Message number" identifier="msg_num"/>
+				</TableColumn>
+				<TableColumn text="Action" fieldTable="" identifier="msg_ind">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="10rem" gridMaxLength="10rem" gridMinLength="10rem"/>
+					</TableColumn.columnLength>
+					<TextField noEntry="true" dataType="Char,,,,1" toolTip="Message indicator" fieldTable="kandoomsg" comment="Message indicator" identifier="msg_ind"/>
+				</TableColumn>
+				<TableColumn fieldTable="" identifier="format_ind">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="10rem" gridMaxLength="10rem" gridMinLength="10rem"/>
+					</TableColumn.columnLength>
+					<TextField noEntry="true" text="Format" dataType="Char,,,,1" toolTip="Format indicator" fieldTable="kandoomsg" comment="Format indicator" identifier="format_ind"/>
+				</TableColumn>
+				<TableColumn text="Language" fieldTable="" identifier="language_code">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="10rem" gridMaxLength="10rem" gridMinLength="10rem"/>
+					</TableColumn.columnLength>
+					<TextField noEntry="true" dataType="Char,,,,3" toolTip="Language code" fieldTable="kandoomsg" comment="Language code" identifier="language_code"/>
+				</TableColumn>
+				<TableColumn text="Message1 Text" fieldTable="" identifier="msg1_text">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="50%" gridMaxLength="" gridMinLength="10rem"/>
+					</TableColumn.columnLength>
+					<TextField noEntry="true" dataType="Char,,,,70" toolTip="Line one of the message" fieldTable="kandoomsg" comment="Line one of the message" identifier="msg1_text"/>
+				</TableColumn>
+				<TableColumn text="Message 2 Text" fieldTable="" identifier="msg2_text">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="50%" gridMaxLength="" gridMinLength="10rem"/>
+					</TableColumn.columnLength>
+					<TextField noEntry="true" dataType="Char,,,,70" toolTip="Line two of the message" fieldTable="kandoomsg" comment="Line two of the message" identifier="msg2_text"/>
+				</TableColumn>
+				<TableColumn text="Action" fieldTable="" identifier="action_flag">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="10rem" gridMaxLength="10rem" gridMinLength="10rem"/>
+					</TableColumn.columnLength>
+					<TextField toCase="Up" noEntry="true" dataType="Char,,,," toolTip="Action required : N=New, C=Change, D=Delete." fieldTable="formonly" comment="Action required : N=New, C=Change, D=Delete." identifier="action_flag">
+						<TextField.includes>
+							<ValueInclude>
+								<ValueInclude.value>
+									<StringLiteral stringValue="N"/>
+								</ValueInclude.value>
+							</ValueInclude>
+							<ValueInclude>
+								<ValueInclude.value>
+									<StringLiteral stringValue="C"/>
+								</ValueInclude.value>
+							</ValueInclude>
+							<ValueInclude>
+								<ValueInclude.value>
+									<StringLiteral stringValue="D"/>
+								</ValueInclude.value>
+							</ValueInclude>
+						</TextField.includes>
+					</TextField>
+				</TableColumn>
+				<TableColumn text="Flag" fieldTable="" identifier="include_flag">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="10rem" gridMaxLength="10rem" gridMinLength="10rem"/>
+					</TableColumn.columnLength>
+					<TextField toCase="Up" dataType="Char,,,," toolTip="Key Y to update kandoomsg option." fieldTable="formonly" comment="Key Y to update kandoomsg option." identifier="include_flag">
+						<TextField.includes>
+							<ValueInclude>
+								<ValueInclude.value>
+									<StringLiteral stringValue="Y"/>
+								</ValueInclude.value>
+							</ValueInclude>
+							<ValueInclude>
+								<ValueInclude.value>
+									<StringLiteral stringValue="N"/>
+								</ValueInclude.value>
+							</ValueInclude>
+						</TextField.includes>
+					</TextField>
+				</TableColumn>
+				<TableColumn resizable="true" visible="true" identifier="tc_lbEOL">
+					<Label isDynamic="true" visible="true" identifier="lbEOL"/>
+					<TableColumn.columnLength>
+						<GridLength/>
+					</TableColumn.columnLength>
+				</TableColumn>
+			</Table>
+			<GridPanel classNames="fcls_statusbar_cnt" visible="true" verticalAlignment="Top" gridItemLocation="0,2,1,1" fieldTable="formonly" identifier="cntStatusBar">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="100%"/>
+				</GridPanel.gridColumnDefinitions>
+				<Label isDynamic="true" text="" classNames="fcls_sblabel" visible="true" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="lbInfo1"/>
+				<Label isDynamic="true" text="" classNames="fcls_sblabel" visible="true" gridItemLocation="0,1,1,1" fieldTable="formonly" identifier="lbInfo2"/>
+			</GridPanel>
+		</GridPanel>
+	</form.rootContainer>
+	<form.screenRecords>
+		<ScreenRecord identifier="sr_kandoomsg" fields="source_ind,msg_num,msg_ind,format_ind,language_code,msg1_text,msg2_text,action_flag,include_flag" elements="4"/>
+		<ScreenRecord identifier="formonly" fields="action_flag,include_flag"/>
+		<ScreenRecord identifier="kandoomsg" fields="msg_num,source_ind,msg_ind,format_ind,language_code,msg1_text,msg2_text"/>
+	</form.screenRecords>
+</form>
+

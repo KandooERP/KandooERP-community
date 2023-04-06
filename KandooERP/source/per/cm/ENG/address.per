@@ -1,0 +1,77 @@
+{
+###########################################################################
+# This program is free software; you can redistribute it and/or modify it
+# under the terms of the GNU General Public License as published by the
+# Free Software Foundation; either version 2 of the License, or (at your
+# option) any later version.
+#
+# This program is distributed in the hope that it will be useful, but
+# WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+# General Public License for more details.
+#
+# You should have received a copy of the GNU General Public License along
+# with this program; if not, write to the Free Software Foundation, Inc.,
+# 59 Temple Place, Suite 330, Boston, MA 02111-1307 USA
+#
+###########################################################################
+
+	 $Id: address.per,v 1.3 2003/04/08 12:53:56 afalout Exp $
+}
+
+database kandoodb
+screen size 24 by 80
+{
+Line 1     [f002                ] Role [r001                     ]
+Line 2     [f003                ]
+Street     [f004                                    ]
+Suburb     [f005                ]
+City       [f006                                    ]
+Region     [f007                ] Post Code [f008                ]
+Country    [f009                ]
+User 1     [f010                ] User 2 [f011                ]
+User 3     [f012                ] User 4 [f013                ]
+Valid from [f014      ]                    Valid to[f015      ]
+}
+end
+
+tables
+address
+
+attributes
+f002 = address.line1, {upshift,} comments=
+	"Address line 1 (and E-mail address)" ;
+r001 = formonly.addr_role_name, {upshift,} comments=
+	"Address role name (F10 for L&P)";
+f003 = address.line2, {upshift,} comments=
+	"Address line 2";
+f004 = address.street, {upshift,} comments=
+	"Street name";
+f005 = address.suburb, {upshift,} comments=
+	"Suburb name" ;
+f006 = address.city, {upshift,} required, comments=
+	"City name";
+f007 = address.region, {upshift,} comments=
+	"Region name";
+f008 = address.post_code, comments=
+	"Post code";
+f009 = address.country, {upshift,} comments=
+	"Country name";
+f010 = address.user_defined1, comments=
+	"User defined field 1";
+f011 = address.user_defined2, comments=
+	"User defined field 2";
+f012 = address.user_defined3, comments=
+	"User defined field 3";
+f013 = address.user_defined4, comments=
+	"User defined field 4";
+f014 = address.valid_from,comments=
+	"Address valid from date";
+f015 = address.valid_to, comments=
+	"Address valid to date";
+end
+
+
+instructions
+delimiters "  "
+screen record s_address (line1 through valid_to)

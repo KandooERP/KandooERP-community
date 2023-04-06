@@ -1,0 +1,60 @@
+{
+###########################################################################
+# This program is free software; you can redistribute it and/or modify it
+# under the terms of the GNU General Public License as published by the
+# Free Software Foundation; either version 2 of the License, or (at your
+# option) any later version.
+#
+# This program is distributed in the hope that it will be useful, but
+# WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+# General Public License for more details.
+#
+# You should have received a copy of the GNU General Public License along
+# with this program; if not, write to the Free Software Foundation, Inc.,
+# 59 Temple Place, Suite 330, Boston, MA 02111-1307 USA
+#
+###########################################################################
+
+	 $Id: M114.per,v 1.1 2003/05/20 23:53:06 tpavlek Exp $
+}
+
+
+database kandoodb
+
+screen
+{
+                     Department Code Maintenance                 M114
+\g----------------------------------------------------------------------\g
+   Department   Description                      W.I.P. Account
+\g----------------------------------------------------------------------\g
+  [f001      ] [f002                          ] [f003              ]
+  [f001      ] [f002                          ] [f003              ]
+  [f001      ] [f002                          ] [f003              ]
+  [f001      ] [f002                          ] [f003              ]
+  [f001      ] [f002                          ] [f003              ]
+  [f001      ] [f002                          ] [f003              ]
+  [f001      ] [f002                          ] [f003              ]
+  [f001      ] [f002                          ] [f003              ]
+  [f001      ] [f002                          ] [f003              ]
+  [f001      ] [f002                          ] [f003              ]
+
+}
+
+tables
+mfgdept
+
+attributes
+f001 = mfgdept.dept_code, upshift,
+comments = " Unique code used to identify a department";
+f002 = mfgdept.desc_text,
+comments = " A description of the department";
+f003 = mfgdept.wip_acct_code, upshift,
+comments = " The work in progress account code for this department (W)";
+
+instructions
+delimiters "  "
+
+screen record sr_mfgdept[10] (dept_code,
+                              desc_text,
+                              wip_acct_code)

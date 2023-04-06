@@ -1,0 +1,27 @@
+
+database formonly
+
+screen
+{
+        User Defined Field Codes Lookup      M191
+\g--------------------------------------------------\g
+  Code  Description
+\g--------------------------------------------------\g
+  [a]  [f001                                    ]
+  [a]  [f001                                    ]
+  [a]  [f001                                    ]
+  [a]  [f001                                    ]
+  [a]  [f001                                    ]
+}
+end
+
+attributes
+a    = formonly.ref_ind   type char;
+f001 = formonly.desc_text type char;
+end
+
+instructions
+delimiters " "
+
+screen record sr_ref_ind[5] (ref_ind,
+                             desc_text)

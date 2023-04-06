@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="UTF-8"?><form xmlns="http://namespaces.querix.com/2015/fglForms">
+	<form.rootContainer>
+		<GridPanel classNames="fcls_rootContainer" fieldTable="" horizontalAlignment="Left" identifier="rootContainer" verticalAlignment="Top">
+			<GridPanel.gridRowDefinitions>
+				<GridRowDefinition gridLengthValue=""/>
+				<GridRowDefinition gridLengthValue=""/>
+				<GridRowDefinition gridLengthValue="20rem"/>
+				<GridRowDefinition gridLengthValue="20rem"/>
+			</GridPanel.gridRowDefinitions>
+			<GridPanel.gridColumnDefinitions>
+				<GridColumnDefinition gridMinLength="90rem"/>
+			</GridPanel.gridColumnDefinitions>
+			<GridPanel classNames="fcls_title_cnt" fieldTable="formonly" gridItemLocation="0,0,1,1" identifier="cntTitle" verticalAlignment="Top" visible="true">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridMinLength="" gridLengthValue="35%"/>
+					<GridColumnDefinition gridLengthValue="10%"/>
+					<GridColumnDefinition gridLengthValue="30%"/>
+					<GridColumnDefinition gridLengthValue="315"/>
+				</GridPanel.gridColumnDefinitions>
+				<Label classNames="fcls_title_lb" fieldTable="formonly" gridItemLocation="0,0,1,1" identifier="header_text" isDynamic="true" text="Generate Chart of Accounts from a given template" visible="true"/>
+				<Label text="Company Code" isDynamic="true" visible="true" identifier="hdr_cmpy_code" gridItemLocation="1,0,1,1"/>
+				<Label text="Company Name" isDynamic="true" visible="true" identifier="hdr_cmpy_name" gridItemLocation="2,0,1,1"/>
+				<Label text="G951" isDynamic="true" visible="true" identifier="lb19" gridItemLocation="3,0,1,1" horizontalAlignment="Right"/>
+			</GridPanel>
+			<GridPanel gridItemLocation="0,1,1,1" identifier="TemplateData" visible="true">
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="14%"/>
+					<GridColumnDefinition gridLengthValue="10%"/>
+					<GridColumnDefinition gridLengthValue="80%"/>
+				</GridPanel.gridColumnDefinitions>
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition/>
+					<GridRowDefinition/>
+					<GridRowDefinition/>
+					<GridRowDefinition/>
+					<GridRowDefinition/>
+				</GridPanel.gridRowDefinitions>
+				<Label gridItemLocation="0,0,1,1" identifier="Company" isDynamic="true" text="Company" visible="true"/>
+				<TextField fieldTable="company" gridItemLocation="1,0,1,1" identifier="cmpy_code" visible="true"/>
+				<TextField fieldTable="company" gridItemLocation="2,0,1,1" identifier="name_text" visible="true"/>
+				<Label gridItemLocation="0,1,1,1" identifier="lb7" isDynamic="true" text="Country" visible="true"/>
+				<ComboBox fieldTable="coatemplthead" gridItemLocation="1,1,1,1" identifier="country_code" visible="true" toCase="Up" classNames="field-show-value,list-show-text-value,fcls_data_widget,fcls_align_left,fcls_length_05qch"/>
+				<TextField fieldTable="country" gridItemLocation="2,1,1,1" identifier="country_text" visible="true"/>
+				<Label gridItemLocation="0,2,1,1" identifier="lb8" isDynamic="true" text="Language" visible="true"/>
+				<ComboBox fieldTable="coatemplthead" gridItemLocation="1,2,1,1" identifier="language_code" visible="true" toCase="Up" classNames="field-show-value,list-show-text-value,fcls_data_widget,fcls_align_left,fcls_length_05qch"/>
+				<TextField fieldTable="country" gridItemLocation="2,2,1,1" identifier="language_text" visible="true"/>
+				<Label gridItemLocation="0,3,1,1" identifier="lb9" isDynamic="true" text="Designation" visible="true"/>
+				<TextField fieldTable="coatemplthead" gridItemLocation="2,3,1,1" identifier="description" visible="true"/>
+				<Label gridItemLocation="0,4,1,1" identifier="lb16" isDynamic="true" text="Comments" visible="true"/>
+				<TextArea enable="true" fieldTable="coatemplthead" gridItemLocation="2,4,1,1" identifier="comments" visible="true"/>
+				<Label gridItemLocation="0,5,1,1" identifier="lb10" isDynamic="false" text="Char Padding" visible="true"/>
+				<TextField fieldTable="formonly" gridItemLocation="1,5,1,1" identifier="padding_char" visible="true" classNames="fcls_data_widget,fcls_align_left,fcls_length_10qch" helperText="Pad the nominal code with this char (1 char)"/>
+				<TextField enable="true" fieldTable="formonly" gridItemLocation="2,5,1,1" identifier="padding_length" visible="true" classNames="fcls_data_widget,fcls_align_left,fcls_length_10qch" helperText="input total length of the generated nominal code"/>
+				<Label gridItemLocation="0,6,1,1" identifier="lb12" isDynamic="true" text="Valid from" visible="true"/>
+				<TextField fieldTable="formonly" gridItemLocation="1,6,1,1" helperText="Please input start year number" identifier="start_year_num" visible="true"/>
+				<TextField fieldTable="formonly" gridItemLocation="2,6,1,1" identifier="start_period_num" visible="true" helperText="Please input start period number"/>
+				<Label gridItemLocation="0,7,1,1" horizontalAlignment="Center" identifier="lb15" isDynamic="true" text="Until" visible="true"/>
+				<TextField fieldTable="formonly" gridItemLocation="1,7,1,1" identifier="end_year_num" visible="true" helperText="Please input end year number"/>
+				<TextField enable="true" fieldTable="formonly" gridItemLocation="2,7,1,1" identifier="end_period_num" visible="true" helperText="Please input end period number"/>
+
+			</GridPanel>
+
+			<TreeTable columnId="id" columnParentId="parentId" enable="true" fieldTable="FORMONLY" gridItemLocation="0,2,1,1" horizontalAlignment="Stretch" identifier="tree" rowCount="35" verticalAlignment="Stretch" visible="true">
+				<TableColumn enable="true" fieldTable="FORMONLY" identifier="Account" text="description" visible="true">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="50%"/>
+					</TableColumn.columnLength>
+					<TextField dataType="Char,,,," enable="true" fieldTable="formonly" identifier="name" noEntry="true" textAlignment="," visible="true"/>
+				</TableColumn>
+				<TableColumn text="IsClass" resizable="true" visible="true" identifier="tc_f17">
+					<CheckBox title="Class?" visible="true" notNull="true" identifier="isclass" fieldTable="formonly">
+						<CheckBox.checkedValue>
+							<IntegerLiteral integerValue="1"/>
+						</CheckBox.checkedValue>
+						<CheckBox.uncheckedValue>
+							<IntegerLiteral integerValue="0"/>
+						</CheckBox.uncheckedValue>
+					</CheckBox>
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="7%"/>
+					</TableColumn.columnLength>
+				</TableColumn>
+				<TableColumn text="isnominal" resizable="true" visible="true" identifier="isnominal">
+					<CheckBox title="Code?" visible="true" notNull="true" identifier="isnominal" fieldTable="formonly">
+						<CheckBox.checkedValue>
+							<IntegerLiteral integerValue="1"/>
+						</CheckBox.checkedValue>
+						<CheckBox.uncheckedValue>
+							<IntegerLiteral integerValue="0"/>
+						</CheckBox.uncheckedValue>
+					</CheckBox>
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="7%"/>
+					</TableColumn.columnLength>
+				</TableColumn>
+				<TableColumn identifier="tc_f3" resizable="true" text="Create" visible="true">
+					<CheckBox identifier="CreateAccount" title="Create?" visible="true" fieldTable="formonly">
+						<CheckBox.checkedValue>
+							<IntegerLiteral integerValue="1"/>
+						</CheckBox.checkedValue>
+						<CheckBox.uncheckedValue>
+							<IntegerLiteral integerValue="0"/>
+						</CheckBox.uncheckedValue>
+					</CheckBox>
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="7%"/>
+					</TableColumn.columnLength>
+				</TableColumn>
+				<TableColumn enable="true" fieldTable="FORMONLY" identifier="parentId" text="ParentId" visible="false">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="6%"/>
+					</TableColumn.columnLength>
+					<TextField enable="true" fieldTable="FORMONLY" identifier="parentId" noEntry="true" visible="true"/>
+				</TableColumn>
+				<TableColumn enable="true" fieldTable="FORMONLY" identifier="id" text="Code" visible="false">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="7%"/>
+					</TableColumn.columnLength>
+					<TextField enable="true" fieldTable="formonly" identifier="id" noEntry="true" visible="true"/>
+				</TableColumn>
+				<TreeTable.onMouseDoubleClick>
+					<ActionEventHandler actionName="none"/>
+				</TreeTable.onMouseDoubleClick>
+			</TreeTable>
+			<Table visible="true" gridItemLocation="0,3,1,1" fieldTable="" identifier="errors_list">
+				<TableColumn text="Record #" resizable="true" visible="true" fieldTable="" identifier="tc_f1">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="1%"/>
+					</TableColumn.columnLength>
+					<TextField visible="true" fieldTable="" identifier="record_num"/>
+				</TableColumn>
+				<TableColumn text="Acct code from template" resizable="true" visible="true" fieldTable="" identifier="tc_f2">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="12%"/>
+					</TableColumn.columnLength>
+					<TextField visible="true" fieldTable="" identifier="templt_code"/>
+				</TableColumn>
+				<TableColumn text="Actual code" resizable="true" visible="true" fieldTable="" identifier="tc_f3">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="12%"/>
+					</TableColumn.columnLength>
+					<TextField visible="true" fieldTable="" identifier="generated_code"/>
+				</TableColumn>
+				<TableColumn text="Short Err Msg" resizable="true" visible="true" fieldTable="" identifier="tc_f6">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue=""/>
+					</TableColumn.columnLength>
+					<TextField visible="true" fieldTable="" identifier="error_shortmsg"/>
+				</TableColumn>
+				<TableColumn text="Sql Error" resizable="true" visible="true" fieldTable="" identifier="tc_f4">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="3%"/>
+					</TableColumn.columnLength>
+					<TextField visible="true" fieldTable="" identifier="error_num"/>
+				</TableColumn>
+				<TableColumn text="Error Message" resizable="true" visible="true" fieldTable="" identifier="tc_f5">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue=""/>
+					</TableColumn.columnLength>
+					<TextArea text="" visible="true" fieldTable="" identifier="error_message"/>
+				</TableColumn>
+			</Table>
+			
+			<GridPanel classNames="fcls_statusbar_cnt" fieldTable="formonly" gridItemLocation="0,4,1,1" identifier="cntStatusBar" verticalAlignment="Top" visible="true">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="100%"/>
+				</GridPanel.gridColumnDefinitions>
+				<Label classNames="fcls_sblabel" fieldTable="formonly" gridItemLocation="0,0,1,1" identifier="lbInfo1" isDynamic="true" text="" visible="true"/>
+				<Label classNames="fcls_sblabel" fieldTable="formonly" gridItemLocation="0,1,1,1" identifier="lbInfo2" isDynamic="true" text="" visible="true"/>
+			</GridPanel>
+		</GridPanel>
+
+	</form.rootContainer>
+	<form.screenRecords>
+		<ScreenRecord fields="formonly.name,formonly.isclass,formonly.isnominal,formonly.CreateAccount,formonly.parentId,formonly.id" identifier="tree"/>
+		<ScreenRecord fields="record_num,templt_code,generated_code,error_shortmsg,error_num,error_message" identifier="errors_list"/>
+		<ScreenRecord fields="name,parentId,id" identifier="formonly"/>
+	</form.screenRecords>
+</form>

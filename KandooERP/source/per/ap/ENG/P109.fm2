@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form xmlns="http://namespaces.querix.com/2015/fglForms">
+	<form.rootContainer>
+		<GridPanel classNames="fcls_rootContainer" verticalAlignment="Stretch" horizontalAlignment="Stretch" fieldTable="" identifier="rootContainer">
+			<GridPanel.gridRowDefinitions>
+				<GridRowDefinition gridLengthValue=""/>
+				<GridRowDefinition gridLengthValue=""/>
+				<GridRowDefinition gridLengthValue="100%"/>
+				<GridRowDefinition gridLengthValue=""/>
+			</GridPanel.gridRowDefinitions>
+			<GridPanel.gridColumnDefinitions>
+				<GridColumnDefinition gridLengthValue="100%"/>
+			</GridPanel.gridColumnDefinitions>
+			<GridPanel classNames="fcls_title_cnt" visible="true" verticalAlignment="Top" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="cntTitle">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="100%"/>
+					<GridColumnDefinition gridLengthValue=""/>
+				</GridPanel.gridColumnDefinitions>
+				<Label isDynamic="true" text="Audit Trail" classNames="fcls_title_lb" visible="true" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="header_text"/>
+				<Label isDynamic="true" text="P109" classNames="fcls_title_lb" visible="true" gridItemLocation="1,0,1,1" fieldTable="" identifier="lbFormName"/>
+			</GridPanel>
+			<GridPanel classNames="fcls_detail_cnt,fcls_data_cnt,fcls_align_left" visible="true" verticalAlignment="Top" horizontalAlignment="Left" gridItemLocation="0,1,1,1" fieldTable="formonly" identifier="cntDetail1">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="" gridMinLength="10rem"/>
+					<GridColumnDefinition gridLengthValue=""/>
+				</GridPanel.gridColumnDefinitions>
+				<Calendar dataType="Date,,,," classNames="fcls_data_widget,fcls_align_left,fcls_length_15qch" preferredSize="11qch,1qch" toolTip=" Start Date for review of audit trail " gridItemLocation="1,0,1,1" comment=" Start Date for review of audit trail " fieldTable="formonly" identifier="start_date"/>
+				<Calendar dataType="Date,,,," classNames="fcls_data_widget,fcls_align_left,fcls_length_15qch" preferredSize="11qch,1qch" toolTip=" End Date for review of audit trail " gridItemLocation="1,1,1,1" comment=" End Date for review of audit trail " fieldTable="formonly" identifier="end_date"/>
+				<Label isDynamic="true" text="Start Date" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,0,1,1" fieldTable="" identifier="lb51"/>
+				<Label isDynamic="true" text="End Date" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,1,1,1" fieldTable="" identifier="lb52"/>
+			</GridPanel>
+			<Table rowCount="10" preferredSize="75qch,10qch" gridItemLocation="0,2,1,1" fieldTable="" identifier="sr_apaudit">
+				<TableColumn text="Trans Date" fieldTable="" identifier="tc_tran_date">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="10rem" gridMinLength="10rem" gridMaxLength="10rem"/>
+					</TableColumn.columnLength>
+					<TextField noEntry="true" dataType="Date,,,," toolTip="Date of transaction used to create this ledger record" comment="Date of transaction used to create this ledger record" fieldTable="apaudit" identifier="tran_date"/>
+				</TableColumn>
+				<TableColumn text="Vendor Code" fieldTable="" identifier="tc_vend_code">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="10rem" gridMinLength="10rem" gridMaxLength="10rem"/>
+					</TableColumn.columnLength>
+					<ComboBox toCase="Up" dataType="Char,,,,8" toolTip="Unique Vendor ID" comment="Unique Vendor ID" fieldTable="apaudit" identifier="vend_code" classNames="list-show-value-text,field-show-value,fcls_data_widget,fcls_align_left"/>
+				</TableColumn>
+				<TableColumn text="Currency" fieldTable="" identifier="tc_currency_code">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="10rem" gridMinLength="10rem" gridMaxLength="10rem"/>
+					</TableColumn.columnLength>
+					<TextField toCase="Up" dataType="Char,,,,3" toolTip="The currency used for this vendor" comment="The currency used for this vendor" fieldTable="vendor" identifier="currency_code"/>
+				</TableColumn>
+				<TableColumn text="T-Seq" fieldTable="" identifier="tc_seq_num">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="10rem" gridMinLength="10rem" gridMaxLength="10rem"/>
+					</TableColumn.columnLength>
+					<TextField dataType="Integer,,,," toolTip="Numerical sequence whereby the transaction was entered in the system" comment="Numerical sequence whereby the transaction was entered in the system" fieldTable="apaudit" identifier="seq_num"/>
+				</TableColumn>
+				<TableColumn text="T-Type" fieldTable="" identifier="tc_trantype_ind">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="10rem" gridMinLength="10rem" gridMaxLength="10rem"/>
+					</TableColumn.columnLength>
+					<TextField toCase="Up" dataType="Char,,,,2" toolTip="CH - Cheque, DB - Debit, VO - Voucher, TF - Transfer/Partial Approval " comment="CH - Cheque, DB - Debit, VO - Voucher, TF - Transfer/Partial Approval " fieldTable="apaudit" identifier="trantype_ind">
+						<TextField.includes>
+							<ValueInclude>
+								<ValueInclude.value>
+									<StringLiteral stringValue="CH"/>
+								</ValueInclude.value>
+							</ValueInclude>
+							<ValueInclude>
+								<ValueInclude.value>
+									<StringLiteral stringValue="DB"/>
+								</ValueInclude.value>
+							</ValueInclude>
+							<ValueInclude>
+								<ValueInclude.value>
+									<StringLiteral stringValue="VO"/>
+								</ValueInclude.value>
+							</ValueInclude>
+							<ValueInclude>
+								<ValueInclude.value>
+									<StringLiteral stringValue="TF"/>
+								</ValueInclude.value>
+							</ValueInclude>
+						</TextField.includes>
+					</TextField>
+				</TableColumn>
+				<TableColumn text="T-Number" fieldTable="" identifier="tc_source_num">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="10rem" gridMinLength="10rem" gridMaxLength="10rem"/>
+					</TableColumn.columnLength>
+					<TextField dataType="Integer,,,," toolTip="Unique document or record referencing this transaction" comment="Unique document or record referencing this transaction" fieldTable="apaudit" identifier="source_num"/>
+				</TableColumn>
+				<TableColumn text="Description" fieldTable="" identifier="tc_tran_text">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="50%" gridMaxLength="40rem"/>
+					</TableColumn.columnLength>
+					<TextField dataType="Char,,,,15" toolTip="Description of the transaction activity" comment="Description of the transaction activity" fieldTable="apaudit" identifier="tran_text"/>
+				</TableColumn>
+				<TableColumn text="Amount" fieldTable="" identifier="tc_tran_amt">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="10rem" gridMinLength="10rem" gridMaxLength="10rem"/>
+					</TableColumn.columnLength>
+					<TextField dataType="Decimal,,,2,16" toolTip="Amount of the transaction used to create this ledger" comment="Amount of the transaction used to create this ledger" fieldTable="apaudit" identifier="tran_amt"/>
+				</TableColumn>
+				<TableColumn resizable="true" visible="true" fieldTable="" identifier="tc_lb53">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="50%"/>
+					</TableColumn.columnLength>
+					<Label isDynamic="true" visible="true" fieldTable="" identifier="lb53"/>
+				</TableColumn>
+			</Table>
+			<GridPanel classNames="fcls_statusbar_cnt" visible="true" verticalAlignment="Top" gridItemLocation="0,3,1,1" fieldTable="formonly" identifier="cntStatusBar">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="100%"/>
+				</GridPanel.gridColumnDefinitions>
+				<Label isDynamic="true" text="" classNames="fcls_sblabel" visible="true" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="lbInfo1"/>
+				<Label isDynamic="true" text="" classNames="fcls_sblabel" visible="true" gridItemLocation="0,1,1,1" fieldTable="formonly" identifier="lbInfo2"/>
+			</GridPanel>
+		</GridPanel>
+	</form.rootContainer>
+	<form.screenRecords>
+		<ScreenRecord identifier="sr_apaudit" fields="apaudit.tran_date,apaudit.vend_code,vendor.currency_code,apaudit.seq_num,apaudit.trantype_ind,apaudit.source_num,apaudit.tran_text,apaudit.tran_amt"/>
+		<ScreenRecord identifier="apaudit" fields="tran_date,vend_code,seq_num,trantype_ind,source_num,tran_text,tran_amt"/>
+		<ScreenRecord identifier="formonly" fields="start_date,end_date"/>
+		<ScreenRecord identifier="vendor" fields="currency_code"/>
+		<ScreenRecord identifier="filter" fields="filter.vend_code"/>
+	</form.screenRecords>
+</form>
+

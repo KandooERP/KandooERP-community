@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form xmlns="http://namespaces.querix.com/2015/fglForms">
+	<form.rootContainer>
+		<GridPanel classNames="fcls_rootContainer" preferredSize="70qch,25qch" verticalAlignment="Stretch" horizontalAlignment="Stretch" fieldTable="" identifier="rootContainer">
+			<GridPanel.gridRowDefinitions>
+				<GridRowDefinition gridLengthValue=""/>
+				<GridRowDefinition/>
+				<GridRowDefinition gridLengthValue="100%"/>
+				<GridRowDefinition gridLengthValue=""/>
+			</GridPanel.gridRowDefinitions>
+			<GridPanel.gridColumnDefinitions>
+				<GridColumnDefinition gridLengthValue="100%"/>
+			</GridPanel.gridColumnDefinitions>
+			<GridPanel classNames="fcls_title_cnt" visible="true" verticalAlignment="Top" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="cntTitle">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="100%"/>
+					<GridColumnDefinition gridLengthValue=""/>
+				</GridPanel.gridColumnDefinitions>
+				<Label isDynamic="true" text="Payment Details Scan" classNames="fcls_title_lb" visible="true" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="header_text"/>
+				<Label isDynamic="true" text="P133" classNames="fcls_title_lb" visible="true" gridItemLocation="1,0,1,1" fieldTable="" identifier="lbFormName"/>
+			</GridPanel>
+			<Table rowCount="10" preferredSize="65qch,10qch" gridItemLocation="0,2,1,1" fieldTable="" identifier="sr_cheque" minSize="50rem,15rem">
+				<TableColumn fieldTable="" identifier="tc_scroll_flag">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="4%" gridMinLength="2rem" gridMaxLength="2rem"/>
+					</TableColumn.columnLength>
+					<CheckBox dataType="Char,,,," fieldTable="formonly" identifier="scroll_flag">
+						<CheckBox.checkedValue>
+							<StringLiteral stringValue="*"/>
+						</CheckBox.checkedValue>
+						<CheckBox.uncheckedValue>
+							<NullLiteral/>
+						</CheckBox.uncheckedValue>
+					</CheckBox>
+				</TableColumn>
+				<TableColumn text="Vendor" fieldTable="" identifier="tc_vend_code">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="16%" gridMinLength="5rem" gridMaxLength="10rem"/>
+					</TableColumn.columnLength>
+					<TextField toCase="Up" dataType="Char,,,,8" toolTip=" The vendor to which the payment was made" comment=" The vendor to which the payment was made" fieldTable="cheque" identifier="vend_code"/>
+				</TableColumn>
+				<TableColumn text="Bank" fieldTable="" identifier="tc_bank_code">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="16%" gridMinLength="5rem" gridMaxLength="10rem"/>
+					</TableColumn.columnLength>
+					<TextField toCase="Up" dataType="Char,,,,9" toolTip=" The bank that received the payment" comment=" The bank that received the payment" fieldTable="cheque" identifier="bank_code"/>
+				</TableColumn>
+				<TableColumn text="Payment No" fieldTable="" identifier="tc_cheq_code">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="16%" gridMinLength="5rem" gridMaxLength="10rem"/>
+					</TableColumn.columnLength>
+					<TextField dataType="Integer,,,," toolTip=" The identifying number assigned to this payment" comment=" The identifying number assigned to this payment" fieldTable="cheque" identifier="cheq_code"/>
+				</TableColumn>
+				<TableColumn text="Net Amount" fieldTable="" identifier="tc_net_pay_amt">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="16%" gridMinLength="5rem" gridMaxLength="10rem"/>
+					</TableColumn.columnLength>
+					<TextField dataType="Decimal,,,2,16" toolTip=" Total net amount of this payment" comment=" Total net amount of this payment" fieldTable="cheque" identifier="net_pay_amt"/>
+				</TableColumn>
+				<TableColumn text="Date" fieldTable="" identifier="tc_cheq_date">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="16%" gridMinLength="5rem" gridMaxLength="10rem"/>
+					</TableColumn.columnLength>
+					<TextField dataType="Date,,,," toolTip=" Date of the payment" comment=" Date of the payment" fieldTable="cheque" identifier="cheq_date"/>
+				</TableColumn>
+				<TableColumn text="Pay Method" fieldTable="" identifier="tc_pay_meth_ind">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="16%" gridMaxLength="10rem" gridMinLength="5rem"/>
+					</TableColumn.columnLength>
+					<TextField toCase="Up" dataType="Char,,,,1" toolTip=" The payment method used by this vendor (1=Cheque, 3=EFTPOS)" comment=" The payment method used by this vendor (1=Cheque, 3=EFTPOS)" fieldTable="cheque" identifier="pay_meth_ind"/>
+				</TableColumn>
+			</Table>
+			<GridPanel classNames="fcls_detail_cnt,fcls_data_cnt,fcls_align_left" visible="true" verticalAlignment="Top" horizontalAlignment="Left" gridItemLocation="0,1,1,1" fieldTable="formonly" identifier="cntDetail1">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="" gridMinLength="10rem"/>
+					<GridColumnDefinition gridLengthValue=""/>
+					<GridColumnDefinition gridLengthValue="" gridMinLength="10rem"/>
+					<GridColumnDefinition gridLengthValue=""/>
+				</GridPanel.gridColumnDefinitions>
+				<TextField dataType="Decimal,,,2,16" classNames="fcls_data_widget,fcls_align_left,fcls_length_10qch" preferredSize="13qch,1qch" toolTip=" Total gross amount of this payment" gridItemLocation="1,0,1,1" comment=" Total gross amount of this payment" fieldTable="cheque" identifier="pay_amt"/>
+				<CheckBox title="Posted" dataType="Char,,,,1" classNames="fcls_data_widget,fcls_align_left,fcls_length_05qch" preferredSize="2qch,1qch" toolTip=" Flag that indicates if payment has been posted (Y/N)" gridItemLocation="3,0,1,1" comment=" Flag that indicates if payment has been posted (Y/N)" fieldTable="cheque" identifier="post_flag">
+					<CheckBox.checkedValue>
+						<StringLiteral stringValue="Y"/>
+					</CheckBox.checkedValue>
+					<CheckBox.uncheckedValue>
+						<StringLiteral stringValue="N"/>
+					</CheckBox.uncheckedValue>
+				</CheckBox>
+				<TextField dataType="Decimal,,,2,16" classNames="fcls_data_widget,fcls_align_left,fcls_length_10qch" preferredSize="13qch,1qch" toolTip=" Amount of payment already applied" gridItemLocation="1,1,1,1" comment=" Amount of payment already applied" fieldTable="cheque" identifier="apply_amt"/>
+				<ComboBox dataType="SmallInt,,,," classNames="fcls_data_widget,fcls_align_left,fcls_length_10qch" preferredSize="5qch,1qch" toolTip=" Indicates the year used to post this payment to the GL" gridItemLocation="3,1,1,1" comment=" Indicates the year used to post this payment to the GL" fieldTable="cheque" identifier="year_num"/>
+				<TextField dataType="Char,,,,20" classNames="fcls_data_widget,fcls_align_left,fcls_length_10qch" preferredSize="17qch,1qch" toolTip=" The vendor&apos;s reference for this payment" gridItemLocation="1,2,1,1" comment=" The vendor&apos;s reference for this payment" fieldTable="cheque" identifier="com3_text"/>
+				<ComboBox dataType="SmallInt,,,," classNames="fcls_data_widget,fcls_align_left,fcls_length_10qch" preferredSize="3qch,1qch" toolTip="Indicates the period used  to post this cheque to the GL" gridItemLocation="3,2,1,1" comment="Indicates the period used  to post this cheque to the GL" fieldTable="cheque" identifier="period_num"/>
+				<Label isDynamic="true" text="Gross Amount" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,0,1,1" fieldTable="" identifier="lb51"/>
+				<Label isDynamic="true" text="Amount Applied" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,1,1,1" fieldTable="" identifier="lb52"/>
+				<Label isDynamic="true" text="Posted Year" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="2,1,1,1" fieldTable="" identifier="lb54"/>
+				<Label isDynamic="true" text="Receipt" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,2,1,1" fieldTable="" identifier="lb66"/>
+				<Label isDynamic="true" text="Posted Period" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="2,2,1,1" fieldTable="" identifier="lb55"/>
+			</GridPanel>
+			<GridPanel classNames="fcls_statusbar_cnt" visible="true" verticalAlignment="Top" gridItemLocation="0,3,1,1" fieldTable="formonly" identifier="cntStatusBar">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="100%"/>
+				</GridPanel.gridColumnDefinitions>
+				<Label isDynamic="true" text="" classNames="fcls_sblabel" visible="true" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="lbInfo1"/>
+				<Label isDynamic="true" text="" classNames="fcls_sblabel" visible="true" gridItemLocation="0,1,1,1" fieldTable="formonly" identifier="lbInfo2"/>
+			</GridPanel>
+		</GridPanel>
+	</form.rootContainer>
+	<form.screenRecords>
+		<ScreenRecord identifier="sr_cheque" fields="formonly.scroll_flag,cheque.vend_code,cheque.bank_code,cheque.cheq_code,cheque.net_pay_amt,cheque.cheq_date,cheque.pay_meth_ind"/>
+		<ScreenRecord identifier="cheque" fields="cheque.vend_code,cheque.bank_code,cheque.cheq_code,cheque.com3_text,cheque.cheq_date,cheque.pay_meth_ind,cheque.net_pay_amt,cheque.pay_amt,cheque.apply_amt,cheque.post_flag,cheque.year_num,cheque.period_num"/>
+		<ScreenRecord identifier="formonly" fields="formonly.scroll_flag"/>
+	</form.screenRecords>
+</form>
+

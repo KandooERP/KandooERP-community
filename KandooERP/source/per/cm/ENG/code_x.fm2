@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form xmlns="http://namespaces.querix.com/2015/fglForms">
+	<form.rootContainer>
+		<CoordPanel preferredSize="72qch,5qch" fieldTable="" identifier="coord1">
+			<Label text="Code" location="18qch,0qch" preferredSize="4qch,1qch" fieldTable="" identifier="label1"/>
+			<TextField noEntry="true" reverse="true" dataType="Char,,,," location="27qch,0qch" preferredSize="7qch,1qch" fieldTable="FORMONLY" identifier="code"/>
+			<Label text="Code name / description:" location="0qch,2qch" preferredSize="24qch,1qch" fieldTable="" identifier="label2"/>
+			<TextField toCase="Up" reverse="true" dataType="Char,,,," location="0qch,3qch" preferredSize="71qch,1qch" toolTip="Enter the name/description for the code" fieldTable="FORMONLY" comment="Enter the name/description for the code" identifier="name"/>
+		</CoordPanel>
+	</form.rootContainer>
+	<form.screenRecords>
+		<ScreenRecord identifier="S_code" fields="code,name"/>
+		<ScreenRecord identifier="FORMONLY" fields="code,name"/>
+	</form.screenRecords>
+</form>
+

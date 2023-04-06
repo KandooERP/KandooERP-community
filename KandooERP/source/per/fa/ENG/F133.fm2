@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form xmlns="http://namespaces.querix.com/2015/fglForms">
+	<form.rootContainer>
+		<GridPanel classNames="fcls_rootContainer" verticalAlignment="Top" horizontalAlignment="Left" fieldTable="" identifier="rootContainer">
+			<GridPanel.gridRowDefinitions>
+				<GridRowDefinition gridLengthValue=""/>
+				<GridRowDefinition gridLengthValue=""/>
+				<GridRowDefinition gridLengthValue=""/>
+			</GridPanel.gridRowDefinitions>
+			<GridPanel.gridColumnDefinitions>
+				<GridColumnDefinition gridLengthValue="100%"/>
+			</GridPanel.gridColumnDefinitions>
+			<GridPanel classNames="fcls_title_cnt" visible="true" verticalAlignment="Top" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="cntTitle">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="100%"/>
+					<GridColumnDefinition gridLengthValue=""/>
+				</GridPanel.gridColumnDefinitions>
+				<Label isDynamic="true" text="Asset Master Details" classNames="fcls_title_lb" visible="true" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="header_text"/>
+				<Label isDynamic="true" text="F133" classNames="fcls_title_lb" visible="true" gridItemLocation="1,0,1,1" fieldTable="" identifier="lbFormName"/>
+			</GridPanel>
+			<GridPanel classNames="fcls_detail_cnt,fcls_data_cnt,fcls_align_left" visible="true" verticalAlignment="Top" horizontalAlignment="Left" gridItemLocation="0,1,1,1" fieldTable="formonly" identifier="cntDetail1">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="" gridMinLength="10rem"/>
+					<GridColumnDefinition gridLengthValue=""/>
+					<GridColumnDefinition gridLengthValue=""/>
+					<GridColumnDefinition gridLengthValue=""/>
+				</GridPanel.gridColumnDefinitions>
+				<Label text="Asset ID" classNames="fcls_fieldlabel,fcls_align_left" gridItemLocation="0,0,1,1" fieldTable="" identifier="label1"/>
+				<TextField toCase="Up" dataType="Char,,,,10" preferredSize="11qch,1qch" fieldTable="famast" identifier="asset_code" gridItemLocation="1,0,1,1" classNames="fcls_data_widget,fcls_align_left,fcls_length_20qch"/>
+				<TextField dataType="Char,,,,40" preferredSize="41qch,1qch" fieldTable="famast" identifier="desc_text" gridItemLocation="1,1,3,1" classNames="fcls_data_widget,fcls_align_hstretch"/>
+				<TextField dataType="Char,,,,10" preferredSize="11qch,1qch" fieldTable="famast" identifier="add_on_code" gridItemLocation="1,2,1,1" classNames="fcls_data_widget,fcls_align_left,fcls_length_20qch"/>
+				<TextField dataType="Char,,,,18" preferredSize="19qch,1qch" fieldTable="famast" identifier="faresp_code" gridItemLocation="3,2,1,1" classNames="fcls_data_widget,fcls_align_left,fcls_length_20qch"/>
+				<TextField dataType="Char,,,,15" preferredSize="16qch,1qch" fieldTable="famast" identifier="tag_text" gridItemLocation="1,3,1,1" classNames="fcls_data_widget,fcls_align_left,fcls_length_20qch"/>
+				<Calendar format="dd/mm/yyyy" dataType="Date,,,," preferredSize="11qch,1qch" fieldTable="famast" identifier="orig_setup_date" gridItemLocation="3,3,1,1" classNames="fcls_data_widget,fcls_align_left,fcls_length_20qch"/>
+				<Label isDynamic="true" text="Serial Number" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,4,1,1" fieldTable="" identifier="lb67"/>
+				<TextField dataType="Char,,,,30" preferredSize="31qch,1qch" fieldTable="famast" identifier="asset_serial_text" gridItemLocation="1,4,3,1" classNames="fcls_data_widget,fcls_align_hstretch"/>
+				<Label isDynamic="true" text="Description" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,1,1,1" fieldTable="" identifier="lb51"/>
+				<Label isDynamic="true" text="Add on Asset" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,2,1,1" fieldTable="" identifier="lb52"/>
+				<Label isDynamic="true" text="Responsibility" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="2,2,1,1" fieldTable="" identifier="lb54"/>
+				<Label isDynamic="true" text="Asset Tag" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,3,1,1" fieldTable="" identifier="lb66"/>
+				<Label isDynamic="true" text="Setup Date" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="2,3,1,1" fieldTable="" identifier="lb55"/>
+				<Label isDynamic="true" text="Acquisition Code" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,5,1,1" fieldTable="" identifier="lb133"/>
+				<TextField dataType="Char,,,,2" preferredSize="3qch,1qch" fieldTable="famast" identifier="acquist_code" gridItemLocation="1,5,1,1" classNames="fcls_data_widget,fcls_align_left,fcls_length_20qch"/>
+				<Label isDynamic="true" text="Acquisition Date" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="2,5,1,1" fieldTable="" identifier="lb139"/>
+				<Calendar format="dd/mm/yyyy" dataType="Date,,,," preferredSize="11qch,1qch" fieldTable="famast" identifier="acquist_date" gridItemLocation="3,5,1,1" classNames="fcls_data_widget,fcls_align_left,fcls_length_20qch"/>
+				<Label isDynamic="true" text="P/O Number" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,6,1,1" fieldTable="" identifier="lb134"/>
+				<TextField dataType="Integer,,,," preferredSize="11qch,1qch" fieldTable="famast" identifier="orig_po_num" gridItemLocation="1,6,1,1" classNames="fcls_data_widget,fcls_align_left,fcls_length_20qch"/>
+				<Label isDynamic="true" text="CGT Index" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="2,6,1,1" fieldTable="" identifier="lb140"/>
+				<TextField dataType="Decimal,,,3,6" preferredSize="8qch,1qch" fieldTable="famast" identifier="cgt_index_per" gridItemLocation="3,6,1,1" classNames="fcls_data_widget,fcls_align_left,fcls_length_20qch"/>
+				<Label isDynamic="true" text="Vendor Code" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,7,1,1" fieldTable="" identifier="lb135"/>
+				<TextField dataType="Char,,,,8" preferredSize="9qch,1qch" fieldTable="famast" identifier="vend_code" gridItemLocation="1,7,1,1" classNames="fcls_data_widget,fcls_align_left,fcls_length_20qch"/>
+				<Label isDynamic="true" text="Currency Code" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,8,1,1" fieldTable="" identifier="lb136"/>
+				<TextField dataType="Char,,,,3" preferredSize="4qch,1qch" fieldTable="famast" identifier="currency_code" gridItemLocation="1,8,1,1" classNames="fcls_data_widget,fcls_align_left,fcls_length_20qch"/>
+				<Label isDynamic="true" text="Original Cost" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="2,8,1,1" fieldTable="" identifier="lb142"/>
+				<TextField dataType="Decimal,,,2,16" preferredSize="17qch,1qch" fieldTable="famast" identifier="orig_fcost_amt" gridItemLocation="3,8,1,1" classNames="fcls_data_widget,fcls_align_left,fcls_length_20qch"/>
+				<Label isDynamic="true" text="Operate Date" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,9,1,1" fieldTable="" identifier="lb137"/>
+				<Calendar format="dd/mm/yyyy" dataType="Date,,,," preferredSize="11qch,1qch" fieldTable="famast" identifier="operate_date" gridItemLocation="1,9,1,1" classNames="fcls_data_widget,fcls_align_left,fcls_length_20qch"/>
+				<Label isDynamic="true" text="Cost (Base currency)" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="2,9,1,1" fieldTable="" identifier="lb143"/>
+				<TextField noEntry="true" dataType="Decimal,,,2,16" preferredSize="17qch,1qch" fieldTable="famast" identifier="orig_cost_amt" gridItemLocation="3,9,1,1" classNames="fcls_data_widget,fcls_align_left,fcls_length_20qch"/>
+				<Label isDynamic="true" text="Start Year No" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,10,1,1" fieldTable="" identifier="lb138"/>
+				<TextField dataType="SmallInt,,,," preferredSize="11qch,1qch" fieldTable="famast" identifier="start_year_num" gridItemLocation="1,10,1,1" classNames="fcls_data_widget,fcls_align_left,fcls_length_20qch"/>
+				<Label isDynamic="true" text="Start Period No" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="2,10,1,1" fieldTable="" identifier="lb144"/>
+				<TextField dataType="SmallInt,,,," preferredSize="10qch,1qch" fieldTable="famast" identifier="start_period_num" gridItemLocation="3,10,1,1" classNames="fcls_data_widget,fcls_align_left,fcls_length_20qch"/>
+				<Label isDynamic="true" text="User 1 Code" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,11,1,1" fieldTable="" identifier="lb153"/>
+				<TextField dataType="Char,,,,5" preferredSize="6qch,1qch" fieldTable="famast" identifier="user1_code" gridItemLocation="1,11,1,1" classNames="fcls_data_widget,fcls_align_left,fcls_length_20qch"/>
+				<Label isDynamic="true" text="User 1 Amount" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="2,11,1,1" fieldTable="" identifier="lb159"/>
+				<TextField dataType="Decimal,,,2,16" preferredSize="17qch,1qch" fieldTable="famast" identifier="user1_amt" gridItemLocation="3,11,1,1" classNames="fcls_data_widget,fcls_align_left,fcls_length_20qch"/>
+				<Label isDynamic="true" text="User 2 Code" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,12,1,1" fieldTable="" identifier="lb154"/>
+				<TextField dataType="Char,,,,10" preferredSize="11qch,1qch" fieldTable="famast" identifier="user2_code" gridItemLocation="1,12,1,1" classNames="fcls_data_widget,fcls_align_left,fcls_length_20qch"/>
+				<Label isDynamic="true" text="User 2 Amount" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="2,12,1,1" fieldTable="" identifier="lb160"/>
+				<TextField dataType="Decimal,,,2,16" preferredSize="17qch,1qch" fieldTable="famast" identifier="user2_amt" gridItemLocation="3,12,1,1" classNames="fcls_data_widget,fcls_align_left,fcls_length_20qch"/>
+				<Label isDynamic="true" text="User 3 Code" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,13,1,1" fieldTable="" identifier="lb156"/>
+				<TextField dataType="Char,,,,20" preferredSize="21qch,1qch" fieldTable="famast" identifier="user3_code" gridItemLocation="1,13,1,1" classNames="fcls_data_widget,fcls_align_left,fcls_length_20qch"/>
+				<Label isDynamic="true" text="User 3 Amount" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="2,13,1,1" fieldTable="" identifier="lb161"/>
+				<TextField dataType="Decimal,,,2,16" preferredSize="17qch,1qch" fieldTable="famast" identifier="user3_amt" gridItemLocation="3,13,1,1" classNames="fcls_data_widget,fcls_align_left,fcls_length_20qch"/>
+				<Label isDynamic="true" text="User 1 Quantity" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,14,1,1" fieldTable="" identifier="lb157"/>
+				<TextField dataType="Decimal,,,2,14" preferredSize="17qch,1qch" fieldTable="famast" identifier="user1_qty" gridItemLocation="1,14,1,1" classNames="fcls_data_widget,fcls_align_left,fcls_length_20qch"/>
+			</GridPanel>
+			<GridPanel classNames="fcls_statusbar_cnt" visible="true" verticalAlignment="Bottom" gridItemLocation="0,2,1,1" fieldTable="formonly" identifier="cntStatusBar">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="100%"/>
+				</GridPanel.gridColumnDefinitions>
+				<Label isDynamic="true" text="" classNames="fcls_sblabel" visible="true" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="lbInfo1"/>
+				<Label isDynamic="true" text="" classNames="fcls_sblabel" visible="true" gridItemLocation="0,1,1,1" fieldTable="formonly" identifier="lbInfo2"/>
+			</GridPanel>
+		</GridPanel>
+	</form.rootContainer>
+	<form.screenRecords>
+		<ScreenRecord identifier="famast" fields="famast.asset_code,famast.desc_text,famast.add_on_code,famast.faresp_code,famast.tag_text,famast.orig_setup_date,famast.asset_serial_text,famast.acquist_code,famast.acquist_date,famast.orig_po_num,famast.cgt_index_per,famast.vend_code,famast.currency_code,famast.orig_fcost_amt,famast.operate_date,famast.start_year_num,famast.orig_cost_amt,famast.start_period_num,famast.user1_code,famast.user1_amt,famast.user2_code,famast.user2_amt,famast.user3_code,famast.user3_amt,famast.user1_qty"/>
+	</form.screenRecords>
+</form>
+

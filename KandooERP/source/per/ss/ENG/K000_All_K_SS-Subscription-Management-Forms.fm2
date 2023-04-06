@@ -1,0 +1,276 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form xmlns="http://namespaces.querix.com/2015/fglForms">
+	<form.rootContainer>
+		<GridPanel classNames="fcls_rootContainer" verticalAlignment="Stretch" horizontalAlignment="Stretch" fieldTable="" identifier="rootContainer">
+			<GridPanel.gridRowDefinitions>
+				<GridRowDefinition gridLengthValue=""/>
+				<GridRowDefinition gridLengthValue="100%"/>
+				<GridRowDefinition gridLengthValue=""/>
+			</GridPanel.gridRowDefinitions>
+			<GridPanel.gridColumnDefinitions>
+				<GridColumnDefinition gridLengthValue="100%"/>
+			</GridPanel.gridColumnDefinitions>
+			<GridPanel classNames="fcls_title_cnt" visible="true" verticalAlignment="Top" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="cntTitle">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="100%"/>
+					<GridColumnDefinition gridLengthValue=""/>
+				</GridPanel.gridColumnDefinitions>
+				<Label isDynamic="true" text="Header-Text" classNames="fcls_title_lb" visible="true" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="header_text"/>
+				<Label isDynamic="true" text="_master_D1_1Gp_01b" classNames="fcls_title_lb" visible="true" gridItemLocation="1,0,1,1" fieldTable="" identifier="lbFormName"/>
+			</GridPanel>
+			<GridPanel classNames="fcls_detail_cnt,fcls_data_cnt,fcls_align_left" visible="true" verticalAlignment="Top" horizontalAlignment="Left" gridItemLocation="0,1,1,1" fieldTable="formonly" identifier="cntDetail1">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue="" gridMinLength="100%"/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="" gridMinLength="100%"/>
+				</GridPanel.gridColumnDefinitions>
+				<ListBox minSize="60rem,20rem" visible="true" verticalAlignment="Stretch" horizontalAlignment="Stretch" gridItemLocation="0,0,1,1" fieldTable="" identifier="formName">
+
+
+					<ListBoxItem text="K111 - Voyager Extraction" identifier="formName_K111">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="K111"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+
+					<ListBoxItem text="K126 - Subscriptions System Parameters" identifier="formName_K126">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="K126"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+
+					<ListBoxItem text="K127 - Subscription Information" identifier="formName_K127">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="K127"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+
+					<ListBoxItem text="K128 - Subscription Entry" identifier="formName_K128">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="K128"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+
+					<ListBoxItem text="K129 - Subscription Information" identifier="formName_K129">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="K129"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+
+					<ListBoxItem text="K130 - Subscription Items" identifier="formName_K130">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="K130"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+
+					<ListBoxItem text="K131 - Subscription Schedule" identifier="formName_K131">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="K131"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+
+					<ListBoxItem text="K132 - Subscription Summary" identifier="formName_K132">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="K132"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+
+					<ListBoxItem text="K133 - Subscription Hold" identifier="formName_K133">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="K133"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+
+					<ListBoxItem text="K134 - Cash Receipt Entry" identifier="formName_K134">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="K134"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+
+					<ListBoxItem text="K135 - Subscription Detail" identifier="formName_K135">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="K135"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+
+					<ListBoxItem text="K136 - Generate Subscription Labels" identifier="formName_K136">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="K136"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+
+					<ListBoxItem text="K137 - Subscription Scan" identifier="formName_K137">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="K137"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+
+					<ListBoxItem text="K138 - Credit Details" identifier="formName_K138">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="K138"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+
+					<ListBoxItem text="K139 - Generate Subscription Invoices" identifier="formName_K139">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="K139"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+
+
+					<ListBoxItem text="K140 - Subscription Items" identifier="formName_K140">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="K140"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+
+					<ListBoxItem text="K141 - Proposed Invoices" identifier="formName_K141">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="K141"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+
+					<ListBoxItem text="K142 - Invoice Summary" identifier="formName_K142">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="K142"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+
+					<ListBoxItem text="K143 - Corporate Subscription Entry" identifier="formName_K143">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="K143"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+
+					<ListBoxItem text="K144 - Corporate Subscription Entry" identifier="formName_K144">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="K144"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+
+					<ListBoxItem text="K145 - Subscription Issues" identifier="formName_K145">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="K145"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+
+					<ListBoxItem text="K146 - Subscription Type Maintenance" identifier="formName_K146">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="K146"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+
+					<ListBoxItem text="K147 - Subscription Products Scan" identifier="formName_K147">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="K147"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+
+					<ListBoxItem text="K148 - Subscription Type" identifier="formName_K148">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="K148"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+
+					<ListBoxItem text="K149 - Subscription Product Maintenance" identifier="formName_K149">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="K149"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+
+					<ListBoxItem text="K150 - Subscription Product Details" identifier="formName_K150">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="K150"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+
+					<ListBoxItem text="K151 - Subscription Issues Maintenance" identifier="formName_K151">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="K151"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+
+					<ListBoxItem text="K152 - Subscription Type Detail" identifier="formName_K152">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="K152"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+
+					<ListBoxItem text="K153 - Subscription Inquiry" identifier="formName_K153">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="K153"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+
+					<ListBoxItem text="K154 - Subscription Audit Inquiry" identifier="formName_K154">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="K154"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+
+					<ListBoxItem text="K155 - Warehouse Return" identifier="formName_K155">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="K155"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+
+					<ListBoxItem text="K156 - Line Items" identifier="formName_K156">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="K156"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+
+					<ListBoxItem text="K157 - Generate Automatic Renewals" identifier="formName_K157">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="K157"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+
+					<ListBoxItem text="K158 - Proposed Subscription Renewals" identifier="formName_K158">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="K158"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+
+					<ListBoxItem text="K159 - Payment Details" identifier="formName_K159">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="K159"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+
+					<ListBoxItem text="K160 - Subscription Load" identifier="formName_K160">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="K160"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+
+
+
+
+					<ListBox.onMouseDoubleClick>
+						<ActionEventHandler actionName="ViewForm"/>
+					</ListBox.onMouseDoubleClick>
+				</ListBox>
+			</GridPanel>
+			<GridPanel classNames="fcls_statusbar_cnt" visible="true" verticalAlignment="Bottom" gridItemLocation="0,2,1,1" fieldTable="formonly" identifier="cntStatusBar">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="100%"/>
+				</GridPanel.gridColumnDefinitions>
+				<Label isDynamic="true" text="" classNames="fcls_sblabel" visible="true" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="lbInfo1"/>
+				<Label isDynamic="true" text="" classNames="fcls_sblabel" visible="true" gridItemLocation="0,1,1,1" fieldTable="formonly" identifier="lbInfo2"/>
+			</GridPanel>
+		</GridPanel>
+	</form.rootContainer>
+	<form.screenRecords>
+		<ScreenRecord identifier="FORMONLY" fields="f151"/>
+	</form.screenRecords>
+</form>
+

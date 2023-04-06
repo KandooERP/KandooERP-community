@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form xmlns="http://namespaces.querix.com/2015/fglForms" title="Create Fiscal Year ">
+    <form.rootContainer>
+            <GridPanel visible="true" identifier="c1" gridItemLocation="0,1,1,1" horizontalAlignment="Stretch" preferredSize="300,100">
+                <GridPanel.gridColumnDefinitions>
+                    <GridColumnDefinition gridLengthValue="50%"/>
+                    <GridColumnDefinition gridLengthValue="50%"/>
+                </GridPanel.gridColumnDefinitions>
+                <GridPanel.gridRowDefinitions>
+                    <GridRowDefinition gridLengthValue=""/>
+                    <GridRowDefinition gridLengthValue=""/>
+                </GridPanel.gridRowDefinitions>
+                <Label text="Start date of Fiscal Year" isDynamic="true" visible="true" identifier="lb3" gridItemLocation="0,0,1,1" horizontalAlignment="Center" textAlignment="Center,Default" verticalAlignment="Center" allowNewlines="true"/>
+                <Label text="Type of Period " isDynamic="true" visible="true" identifier="lb4" gridItemLocation="1,0,1,1" horizontalAlignment="Center" textAlignment="Center,Default" verticalAlignment="Center"/>
+                <Calendar visible="true" identifier="start_date_fisc_year" gridItemLocation="0,1,1,1" verticalAlignment="Top" horizontalAlignment="Center" dataType="Date,,,," notNull="true" helperText="" comment="" preferredSize="120,"/>
+                <ComboBox visible="true" identifier="type_period" gridItemLocation="1,1,1,1" verticalAlignment="Top" horizontalAlignment="Center" notNull="true" preferredSize="80," dataType="String,,,,"/>
+            </GridPanel>  </form.rootContainer>
+</form>

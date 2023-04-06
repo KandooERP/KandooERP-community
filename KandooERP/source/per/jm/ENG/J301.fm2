@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form xmlns="http://namespaces.querix.com/2015/fglForms">
+	<form.rootContainer>
+		<GridPanel classNames="fcls_rootContainer" verticalAlignment="Stretch" horizontalAlignment="Stretch" fieldTable="" identifier="rootContainer">
+			<GridPanel.gridRowDefinitions>
+				<GridRowDefinition gridLengthValue=""/>
+				<GridRowDefinition gridLengthValue="100%"/>
+				<GridRowDefinition gridLengthValue=""/>
+			</GridPanel.gridRowDefinitions>
+			<GridPanel.gridColumnDefinitions>
+				<GridColumnDefinition gridLengthValue="100%"/>
+			</GridPanel.gridColumnDefinitions>
+
+			<GridPanel classNames="fcls_title_cnt" visible="true" verticalAlignment="Top" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="cntTitle">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="100%"/>
+					<GridColumnDefinition gridLengthValue=""/>
+				</GridPanel.gridColumnDefinitions>
+				<Label isDynamic="true" text="Cost Transfer" classNames="fcls_title_lb" visible="true" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="header_text"/>
+				<Label isDynamic="true" text="J301" classNames="fcls_title_lb" visible="true" gridItemLocation="1,0,1,1" fieldTable="" identifier="lbFormName"/>
+			</GridPanel>
+			<Table rowCount="8" preferredSize="68qch,8qch" fieldTable="" identifier="sr_job" gridItemLocation="0,1,1,1">
+				<TableColumn fieldTable="" identifier="tc_trans">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="2rem" gridMinLength="2rem" gridMaxLength="2rem"/>
+					</TableColumn.columnLength>
+					<TextField toCase="Up" dataType="Char,,,," toolTip=" Transfer costs from this job (Y/N)" comment=" Transfer costs from this job (Y/N)" fieldTable="formonly" identifier="trans">
+						<TextField.includes>
+							<ValueInclude>
+								<ValueInclude.value>
+									<StringLiteral stringValue="*"/>
+								</ValueInclude.value>
+							</ValueInclude>
+							<ValueInclude>
+								<ValueInclude.value>
+									<StringLiteral stringValue=" "/>
+								</ValueInclude.value>
+							</ValueInclude>
+						</TextField.includes>
+					</TextField>
+				</TableColumn>
+				<TableColumn fieldTable="" identifier="tc_job_code" text="Post Job">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="20.0%" gridMaxLength="20rem" gridMinLength="10rem"/>
+					</TableColumn.columnLength>
+					<TextField toCase="Up" noEntry="true" dataType="Char,,,,8" toolTip="Unique Job Code" comment="Unique Job Code" fieldTable="job" identifier="job_code"/>
+				</TableColumn>
+				<TableColumn fieldTable="" identifier="tc_title_text" text="Title">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="47.7%" gridMaxLength="40rem" gridMinLength="20rem"/>
+					</TableColumn.columnLength>
+					<TextField noEntry="true" dataType="Char,,,,30" toolTip=" Job description " comment=" Job description " fieldTable="job" identifier="title_text"/>
+				</TableColumn>
+				<TableColumn fieldTable="" identifier="tc_type_code" text="Type">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="6.2%" gridMaxLength="10rem" gridMinLength="5rem"/>
+					</TableColumn.columnLength>
+					<TextField toCase="Up" dataType="Char,,,,3" toolTip=" Job Type Code " comment=" Job Type Code " fieldTable="job" identifier="type_code"/>
+				</TableColumn>
+				<TableColumn fieldTable="" identifier="tc_bill_way_ind" text="Bill">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="3.1%" gridMaxLength="10rem" gridMinLength="5rem"/>
+					</TableColumn.columnLength>
+					<TextField toCase="Up" dataType="Char,,,,1" toolTip=" (F)ixed price, (C)ost plus, (T)ime &amp; materials " comment=" (F)ixed price, (C)ost plus, (T)ime &amp; materials " fieldTable="job" identifier="bill_way_ind"/>
+				</TableColumn>
+				<TableColumn fieldTable="" identifier="tc_internal_flag" text="Internal">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="3.1%" gridMaxLength="10rem" gridMinLength="5rem"/>
+					</TableColumn.columnLength>
+					<TextField toCase="Up" dataType="Char,,,,1" toolTip=" Internal Job (Y/N)" comment=" Internal Job (Y/N)" fieldTable="job" identifier="internal_flag"/>
+				</TableColumn>
+				<TableColumn fieldTable="" identifier="tc_cost" text="Cost">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="16.9%" gridMaxLength="10rem" gridMinLength="5rem"/>
+					</TableColumn.columnLength>
+					<TextField noEntry="true" dataType="Char,,,," fieldTable="formonly" identifier="cost"/>
+				</TableColumn>
+			</Table>
+			<GridPanel classNames="fcls_statusbar_cnt" visible="true" verticalAlignment="Bottom" gridItemLocation="0,2,1,1" fieldTable="formonly" identifier="cntStatusBar">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="100%"/>
+				</GridPanel.gridColumnDefinitions>
+				<Label isDynamic="true" text="" classNames="fcls_sblabel" visible="true" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="lbInfo1"/>
+				<Label isDynamic="true" text="" classNames="fcls_sblabel" visible="true" gridItemLocation="0,1,1,1" fieldTable="formonly" identifier="lbInfo2"/>
+			</GridPanel>
+		</GridPanel>
+	</form.rootContainer>
+	<form.screenRecords>
+		<ScreenRecord identifier="sr_job" fields="formonly.trans,job.job_code,job.title_text,job.type_code,job.bill_way_ind,job.internal_flag,formonly.cost"/>
+		<ScreenRecord identifier="formonly" fields="formonly.trans,formonly.cost"/>
+		<ScreenRecord identifier="job" fields="job.job_code,job.title_text,job.type_code,job.bill_way_ind,job.internal_flag"/>
+	</form.screenRecords>
+</form>
+

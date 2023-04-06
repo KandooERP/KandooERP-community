@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form xmlns="http://namespaces.querix.com/2015/fglForms">
+	<form.rootContainer>
+		<GridPanel classNames="fcls_rootContainer" preferredSize="140qch,25qch" verticalAlignment="Stretch" horizontalAlignment="Stretch" fieldTable="" identifier="rootContainer">
+			<GridPanel.gridRowDefinitions>
+				<GridRowDefinition gridLengthValue=""/>
+				<GridRowDefinition gridLengthValue="100%"/>
+				<GridRowDefinition gridLengthValue=""/>
+			</GridPanel.gridRowDefinitions>
+			<GridPanel.gridColumnDefinitions>
+				<GridColumnDefinition gridLengthValue="100%"/>
+			</GridPanel.gridColumnDefinitions>
+			<GridPanel classNames="fcls_title_cnt" visible="true" verticalAlignment="Top" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="cntTitle">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="100%"/>
+					<GridColumnDefinition gridLengthValue=""/>
+				</GridPanel.gridColumnDefinitions>
+				<Label isDynamic="true" text="UnstallShield program to install/update ERP Help on client PCs" classNames="fcls_title_lb" visible="true" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="header_text"/>
+				<Label isDynamic="true" text="U158" classNames="fcls_title_lb" visible="true" gridItemLocation="1,0,1,1" fieldTable="" identifier="lbFormName"/>
+			</GridPanel>
+			<Table rowCount="10" preferredSize="," verticalAlignment="Stretch" horizontalAlignment="Stretch" gridItemLocation="0,1,1,1" fieldTable="" identifier="sa_levmenu">
+				<TableColumn text="answer" fieldTable="" identifier="tc_answer">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="4.5%"/>
+					</TableColumn.columnLength>
+					<TextField toCase="Up" autonext="true" dataType="Char,,,," fieldTable="formonly" identifier="answer"/>
+				</TableColumn>
+				<TableColumn text="ID" fieldTable="" identifier="tc_l_id">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="4.5%"/>
+					</TableColumn.columnLength>
+					<TextField toCase="Up" autonext="true" dataType="Char,,,," fieldTable="formonly" identifier="l_id"/>
+				</TableColumn>
+				<TableColumn text="Name" fieldTable="" identifier="tc_l_name">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="90.9%"/>
+					</TableColumn.columnLength>
+					<TextField toCase="Up" dataType="Char,,,," fieldTable="formonly" identifier="l_name"/>
+				</TableColumn>
+			</Table>
+			<GridPanel classNames="fcls_statusbar_cnt" visible="true" verticalAlignment="Bottom" gridItemLocation="0,2,1,1" fieldTable="formonly" identifier="cntStatusBar">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="100%"/>
+				</GridPanel.gridColumnDefinitions>
+				<Label isDynamic="true" text="" classNames="fcls_sblabel" visible="true" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="lbInfo1"/>
+				<Label isDynamic="true" text="" classNames="fcls_sblabel" visible="true" gridItemLocation="0,1,1,1" fieldTable="formonly" identifier="lbInfo2"/>
+			</GridPanel>
+		</GridPanel>
+	</form.rootContainer>
+	<form.screenRecords>
+		<ScreenRecord identifier="sa_levmenu" fields="formonly.answer,formonly.l_id,formonly.l_name" elements="10"/>
+		<ScreenRecord identifier="formonly" fields="formonly.answer,formonly.l_id,formonly.l_name"/>
+	</form.screenRecords>
+</form>
+

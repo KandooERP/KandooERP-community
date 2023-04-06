@@ -1,0 +1,15 @@
+#our $SchemaSource="qx_expt"						# use qw_expt source 
+our $SchemaSource="schemaSpy";					# use schemaSpy source
+our $PerlExe="C:/Strawberry/perl/bin/perl.exe"; # Perl executable to build command from GUI ( here Strawberry Perl)
+our $MaxReplaceAttempts="10";					# maximum number of attempts for variable substitution
+our $TemplatesEditor="C:/Program Files (x86)/Notepad++/notepad++.exe";		# editor program to edit templates
+our $FFGTPLTDIR=sprintf "%s/templates",$FFGDIR;	# Directory where the template files are located
+# the following parameters may be specific to each project. 
+# in that case, create a file in the etc folder, named <LyciaProjectName>.params
+# the project specific parameters have priority on the global parameter
+our $DBVENDOR="informix";						# DB style of the application ( = Lycia DB Driver)
+our $Qx4glLocation=sprintf "%s/source/4gl",$ProjectDir;		# location of the 4gl source files , may be different for other projects
+our $QxPerLocation=sprintf "%s/source/per",$ProjectDir;		# location of the forms source files  may be different for other projects
+our $FFGDATADIR=sprintf "%s/database",$FFGDIR;	# Directory where database schema (schemaspy) file is located (avoid this location in git repository)
+our $FFGSIGNDIR=sprintf "%s/signatures",$FFGDIR;# Directory where the signatures files are located ( logical map of source code)(avoid this location in git repository)
+our $FFGLOGDIR="E:/Users/BeGooden-IT/Lycia/ffg/log"; #  Directory where the log files are located ( logical map of source code)

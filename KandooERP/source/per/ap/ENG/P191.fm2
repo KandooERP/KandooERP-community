@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form xmlns="http://namespaces.querix.com/2015/fglForms">
+	<form.rootContainer>
+		<GridPanel classNames="fcls_rootContainer" verticalAlignment="Top" horizontalAlignment="Left" fieldTable="" identifier="rootContainer">
+			<GridPanel.gridRowDefinitions>
+				<GridRowDefinition gridLengthValue=""/>
+				<GridRowDefinition gridLengthValue=""/>
+				<GridRowDefinition gridLengthValue=""/>
+				<GridRowDefinition gridLengthValue=""/>
+				<GridRowDefinition gridLengthValue=""/>
+				<GridRowDefinition gridLengthValue=""/>
+				<GridRowDefinition gridLengthValue=""/>
+			</GridPanel.gridRowDefinitions>
+			<GridPanel.gridColumnDefinitions>
+				<GridColumnDefinition gridLengthValue="100%"/>
+			</GridPanel.gridColumnDefinitions>
+			<GridPanel classNames="fcls_title_cnt" visible="true" verticalAlignment="Top" horizontalAlignment="Stretch" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="cntTitle">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="100%"/>
+					<GridColumnDefinition gridLengthValue=""/>
+				</GridPanel.gridColumnDefinitions>
+				<Label isDynamic="true" text="Recurring Voucher Maintenance" classNames="fcls_title_lb" visible="true" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="header_text"/>
+				<Label isDynamic="true" text="P191" classNames="fcls_title_lb" visible="true" gridItemLocation="1,0,1,1" fieldTable="" identifier="lbFormName"/>
+			</GridPanel>
+			<GridPanel classNames="fcls_detail_cnt,fcls_data_cnt" visible="true" verticalAlignment="Top" horizontalAlignment="Left" gridItemLocation="0,1,1,1" fieldTable="formonly" identifier="cntDetail1">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="" gridMinLength="10rem"/>
+					<GridColumnDefinition gridLengthValue=""/>
+					<GridColumnDefinition gridLengthValue=""/>
+				</GridPanel.gridColumnDefinitions>
+				<Label isDynamic="true" text="Recur. Voucher Code" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="lb57"/>
+				<TextField toCase="Up" dataType="Char,,,,8" classNames="fcls_data_widget,fcls_align_left,fcls_length_10qch" preferredSize="9qch,1qch" toolTip=" Enter recurring voucher code" gridItemLocation="1,0,1,1" fieldTable="recurhead" comment=" Enter recurring voucher code" identifier="recur_code"/>
+				<TextField dataType="Char,,,,30" classNames="fcls_data_widget,fcls_align_left,fcls_length_30qch" preferredSize="41qch,1qch" toolTip=" Enter description for this recurring voucher" fieldTable="recurhead" comment=" Enter description for this recurring voucher" identifier="desc_text" gridItemLocation="1,1,1,1"/>
+				<Label isDynamic="true" text="Vendor Code" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,2,1,1" fieldTable="" identifier="lb73"/>
+				<ComboBox toCase="Up" dataType="Char,,,,8" classNames="fcls_data_widget,fcls_align_left,fcls_length_30qch" preferredSize="9qch,1qch" toolTip=" Enter vendor code for this recurring voucher - (W)" gridItemLocation="1,2,1,1" fieldTable="recurhead" comment=" Enter vendor code for this recurring voucher - (W)" identifier="vend_code"/>
+				<TextField noEntry="true" dataType="Char,,,,30" classNames="fcls_data_widget,fcls_align_left,fcls_length_30qch" preferredSize="31qch,1qch" fieldTable="vendor" identifier="name_text" gridItemLocation="1,3,1,1" collapsed="false"/>
+			</GridPanel>
+			<GroupBox title="Recurring Voucher Info" classNames="fcls_detail_gb_cnt" visible="true" verticalAlignment="Stretch" horizontalAlignment="Stretch" gridItemLocation="0,2,1,1" fieldTable="formonly" identifier="cntDetail2GroupBox">
+				<GridPanel classNames="fcls_detail_gb_cnt_sub,fcls_detail_cnt_sub,fcls_data_cnt,fcls_align_left" visible="true" verticalAlignment="Top" horizontalAlignment="Left" fieldTable="formonly" identifier="cntDetail2Sub">
+					<GridPanel.gridRowDefinitions>
+						<GridRowDefinition gridLengthValue=""/>
+						<GridRowDefinition gridLengthValue=""/>
+						<GridRowDefinition gridLengthValue=""/>
+						<GridRowDefinition gridLengthValue=""/>
+					</GridPanel.gridRowDefinitions>
+					<GridPanel.gridColumnDefinitions>
+						<GridColumnDefinition gridLengthValue="" gridMinLength="10rem"/>
+						<GridColumnDefinition gridLengthValue=""/>
+						<GridColumnDefinition gridLengthValue="" gridMinLength="10rem"/>
+						<GridColumnDefinition gridLengthValue=""/>
+					</GridPanel.gridColumnDefinitions>
+					<Label isDynamic="true" text="Recurring Group" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="lb47"/>
+					<TextField toCase="Up" dataType="Char,,,,8" classNames="fcls_data_widget,fcls_align_left,fcls_length_25qch" preferredSize="9qch,1qch" toolTip=" Enter recurring voucher group" gridItemLocation="1,0,1,1" fieldTable="recurhead" comment=" Enter recurring voucher group" identifier="group_text"/>
+					<Label isDynamic="true" text="Next Voucher Date" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="2,0,1,1" fieldTable="" identifier="lb142"/>
+					<Calendar format="dd/mm/yyyy" dataType="Date,,,," classNames="fcls_data_widget,fcls_align_left,fcls_length_10qch" preferredSize="11qch,1qch" toolTip=" Date next voucher is to be scheduled under this recurring voucher" gridItemLocation="3,0,1,1" fieldTable="recurhead" comment=" Date next voucher is to be scheduled under this recurring voucher" identifier="next_vouch_date"/>
+					<Label isDynamic="true" text="Interval Type" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,1,1,1" fieldTable="formonly" identifier="lb46"/>
+					<StackPanel visible="true" gridItemLocation="1,1,1,1" fieldTable="" identifier="c2">
+						<ComboBox dataType="Char,,,,1" classNames="fcls_data_widget,fcls_align_left,fcls_length_25qch" preferredSize="4qch,1qch" toolTip=" Enter interval type to base vouchers upon - (W)" gridItemLocation="12,6,2,1" fieldTable="recurhead" comment=" Enter interval type to base vouchers upon - (W)" identifier="int_ind"/>
+						<TextField noEntry="true" dataType="Char,,,,70" classNames="fcls_data_widget,fcls_align_left,fcls_length_15qch" preferredSize="16qch,1qch" collapsed="false" gridItemLocation="14,6,8,1" fieldTable="kandooword" identifier="response_text"/>
+					</StackPanel>
+					<Label isDynamic="true" text="Voucher Interval" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,2,1,1" fieldTable="formonly" identifier="lb44"/>
+					<TextField dataType="SmallInt,,,," classNames="fcls_data_widget,fcls_align_left,fcls_length_25qch" preferredSize="4qch,1qch" toolTip=" Enter the no. of intervals between vouchers" gridItemLocation="1,2,1,1" fieldTable="recurhead" comment=" Enter the no. of intervals between vouchers" identifier="int_num"/>
+					<Label isDynamic="true" text="Start Date" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="2,2,1,1" fieldTable="" identifier="lb144"/>
+					<Calendar format="dd/mm/yyyy" noEntry="true" dataType="Date,,,," classNames="fcls_data_widget,fcls_align_left,fcls_length_10qch" preferredSize="11qch,1qch" gridItemLocation="3,2,1,1" fieldTable="recurhead" identifier="start_date"/>
+					<Label isDynamic="true" text="No. of Vouchers" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,3,1,1" fieldTable="" identifier="lb89"/>
+					<Spinner minValue="1" maxValue="500" dataType="SmallInt,,,," classNames="fcls_data_widget,fcls_align_left,fcls_length_25qch" preferredSize="4qch,1qch" toolTip=" Maximum no. of vouchers to be raised under this recurring voucher" gridItemLocation="1,3,1,1" fieldTable="recurhead" comment=" Maximum no. of vouchers to be raised under this recurring voucher" identifier="max_run_num"/>
+					<Label isDynamic="true" text="Finish Date" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="2,3,1,1" fieldTable="" identifier="lb145"/>
+					<Calendar format="dd/mm/yyyy" noEntry="true" dataType="Date,,,," classNames="fcls_data_widget,fcls_align_left,fcls_length_10qch" preferredSize="11qch,1qch" gridItemLocation="3,3,1,1" fieldTable="recurhead" identifier="end_date"/>
+				</GridPanel>
+			</GroupBox>
+			<GroupBox title="Vendor Invoice Info" classNames="fcls_detail_gb_cnt" visible="true" verticalAlignment="Stretch" horizontalAlignment="Stretch" gridItemLocation="0,3,1,1" fieldTable="formonly" identifier="cntDetail3GroupBox">
+				<GridPanel classNames="fcls_detail_gb_cnt_sub,fcls_detail_cnt_sub,fcls_data_cnt,fcls_align_left" visible="true" verticalAlignment="Top" horizontalAlignment="Left" fieldTable="formonly" identifier="cntDetail3Sub">
+					<GridPanel.gridRowDefinitions>
+						<GridRowDefinition gridLengthValue=""/>
+						<GridRowDefinition gridLengthValue=""/>
+					</GridPanel.gridRowDefinitions>
+					<GridPanel.gridColumnDefinitions>
+						<GridColumnDefinition gridLengthValue="" gridMinLength="10rem"/>
+						<GridColumnDefinition gridLengthValue=""/>
+						<GridColumnDefinition gridLengthValue="" gridMinLength="10rem"/>
+						<GridColumnDefinition gridLengthValue=""/>
+					</GridPanel.gridColumnDefinitions>
+					<Label isDynamic="true" text="Voucher Amount" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="lb48"/>
+					<TextField dataType="Decimal,,,2,16" classNames="fcls_data_widget,fcls_align_left,fcls_length_15qch" preferredSize="14qch,1qch" toolTip=" Enter the total value for each voucher under this recurring voucher" gridItemLocation="1,0,1,1" fieldTable="recurhead" comment=" Enter the total value for each voucher under this recurring voucher" identifier="total_amt"/>
+					<Label isDynamic="true" text="Exchange Rate" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="2,0,1,1" fieldTable="" identifier="lb147"/>
+					<TextField toCase="Up" noEntry="true" dataType="Char,,,,3" classNames="fcls_data_widget,fcls_align_left,fcls_length_15qch" preferredSize="4qch,1qch" gridItemLocation="3,0,1,1" fieldTable="recurhead" identifier="curr_code"/>
+					<Label isDynamic="true" text="Invoice No" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,1,1,1" fieldTable="formonly" identifier="lb49"/>
+					<TextField dataType="Char,,,,20" classNames="fcls_data_widget,fcls_align_left,fcls_length_15qch" preferredSize="17qch,1qch" toolTip=" Enter vendor invoice reference" gridItemLocation="1,1,1,1" fieldTable="recurhead" comment=" Enter vendor invoice reference" identifier="inv_text"/>
+					<TextField dataType="Float,,,," classNames="fcls_data_widget,fcls_align_left,fcls_length_15qch" preferredSize="9qch,1qch" toolTip=" Enter the exchange rate (leave blank to apply rate at payment generation)" gridItemLocation="3,1,1,1" fieldTable="recurhead" comment=" Enter the exchange rate (leave blank to apply rate at payment generation)" identifier="conv_qty"/>
+				</GridPanel>
+			</GroupBox>
+			<GroupBox title="Miscellaneous" classNames="fcls_detail_gb_cnt" visible="true" verticalAlignment="Stretch" horizontalAlignment="Stretch" gridItemLocation="0,4,1,1" fieldTable="" identifier="cntDetail4GroupBox">
+				<GridPanel classNames="fcls_detail_gb_cnt_sub,fcls_detail_cnt_sub,fcls_data_cnt,fcls_align_left" visible="true" verticalAlignment="Top" horizontalAlignment="Left" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="cntDetail4Sub">
+					<GridPanel.gridRowDefinitions>
+						<GridRowDefinition gridLengthValue=""/>
+						<GridRowDefinition gridLengthValue=""/>
+						<GridRowDefinition gridLengthValue=""/>
+					</GridPanel.gridRowDefinitions>
+					<GridPanel.gridColumnDefinitions>
+						<GridColumnDefinition gridLengthValue="" gridMinLength="10rem"/>
+						<GridColumnDefinition gridLengthValue=""/>
+						<GridColumnDefinition gridLengthValue=""/>
+						<GridColumnDefinition gridLengthValue="" gridMinLength="10rem"/>
+						<GridColumnDefinition gridLengthValue=""/>
+					</GridPanel.gridColumnDefinitions>
+					<Label isDynamic="true" text="Terms" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,0,1,1" fieldTable="" identifier="lb115"/>
+					<ComboBox toCase="Up" dataType="Char,,,,3" classNames="fcls_data_widget,fcls_align_left,fcls_length_30qch" preferredSize="4qch,1qch" toolTip=" Enter terms (leave blank for vendor terms) - (W)" gridItemLocation="1,0,1,1" fieldTable="recurhead" comment=" Enter terms (leave blank for vendor terms) - (W)" identifier="term_code"/>
+					<TextField noEntry="true" dataType="Char,,,,30" classNames="fcls_data_widget,fcls_align_left,fcls_length_30qch" preferredSize="29qch,1qch" gridItemLocation="2,0,1,1" fieldTable="term" identifier="desc_text" collapsed="false"/>
+					<Label isDynamic="true" text="Revision" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="3,0,1,1" fieldTable="" identifier="lb152"/>
+					<TextField noEntry="true" dataType="SmallInt,,,," classNames="fcls_data_widget,fcls_align_left,fcls_length_20qch" preferredSize="4qch,1qch" gridItemLocation="4,0,1,1" fieldTable="recurhead" identifier="rev_num"/>
+					<Label isDynamic="true" text="Payment Hold" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,1,1,1" fieldTable="" identifier="lb116"/>
+					<ComboBox toCase="Up" dataType="Char,,,,2" classNames="fcls_data_widget,fcls_align_left,fcls_length_30qch" preferredSize="4qch,1qch" toolTip=" Enter the payment hold code (leave blank for vendors hold code) - (W)" gridItemLocation="1,1,1,1" fieldTable="recurhead" comment=" Enter the payment hold code (leave blank for vendors hold code) - (W)" identifier="hold_code"/>
+					<TextField noEntry="true" dataType="Char,,,,40" classNames="fcls_data_widget,fcls_align_left,fcls_length_30qch" preferredSize="29qch,1qch" gridItemLocation="2,1,1,1" fieldTable="holdpay" identifier="hold_text" collapsed="false"/>
+					<Label isDynamic="true" text="Person" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="3,1,1,1" fieldTable="" identifier="lb153"/>
+					<ComboBox noEntry="true" dataType="Char,,,,8" classNames="fcls_data_widget,fcls_align_left,fcls_length_20qch" preferredSize="11qch,1qch" gridItemLocation="4,1,1,1" fieldTable="recurhead" identifier="rev_code"/>
+					<Label isDynamic="true" text="Taxation" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,2,1,1" fieldTable="" identifier="lb120"/>
+					<ComboBox toCase="Up" dataType="Char,,,,3" classNames="fcls_data_widget,fcls_align_left,fcls_length_30qch" preferredSize="4qch,1qch" toolTip=" Enter the taxation code (leave blank for vendors tax code) - (W)" gridItemLocation="1,2,1,1" fieldTable="recurhead" comment=" Enter the taxation code (leave blank for vendors tax code) - (W)" identifier="tax_code"/>
+					<TextField noEntry="true" dataType="Char,,,,30" classNames="fcls_data_widget,fcls_align_left,fcls_length_30qch" preferredSize="29qch,1qch" gridItemLocation="2,2,1,1" fieldTable="tax" identifier="desc_text" collapsed="false"/>
+					<Label isDynamic="true" text="Date" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="3,2,1,1" fieldTable="" identifier="lb154"/>
+					<Calendar format="dd/mm/yyyy" noEntry="true" dataType="Date,,,," classNames="fcls_data_widget,fcls_align_left,fcls_length_20qch" preferredSize="11qch,1qch" gridItemLocation="4,2,1,1" fieldTable="recurhead" identifier="rev_date"/>
+				</GridPanel>
+			</GroupBox>
+			<GroupBox title="Comments" classNames="fcls_detail_gb_cnt" visible="true" verticalAlignment="Stretch" horizontalAlignment="Stretch" gridItemLocation="0,5,1,1" fieldTable="" identifier="cntDetail5GroupBox">
+				<GridPanel classNames="fcls_detail_gb_cnt_sub,fcls_detail_cnt_sub,fcls_data_cnt,fcls_align_hstretch" visible="true" verticalAlignment="Top" horizontalAlignment="Stretch" fieldTable="" identifier="cntDetail5Sub">
+					<GridPanel.gridRowDefinitions>
+						<GridRowDefinition gridLengthValue=""/>
+					</GridPanel.gridRowDefinitions>
+					<GridPanel.gridColumnDefinitions>
+						<GridColumnDefinition gridLengthValue="100%"/>
+					</GridPanel.gridColumnDefinitions>
+					<TextField dataType="Char,,,,60" preferredSize="61qch,1qch" toolTip=" Additional comments for this recurring voucher" gridItemLocation="0,0,1,1" fieldTable="recurhead" comment=" Additional comments for this recurring voucher" identifier="com1_text"/>
+				</GridPanel>
+			</GroupBox>
+			<GridPanel classNames="fcls_statusbar_cnt" visible="true" verticalAlignment="Bottom" horizontalAlignment="Stretch" gridItemLocation="0,6,1,1" fieldTable="formonly" identifier="cntStatusBar">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="100%"/>
+				</GridPanel.gridColumnDefinitions>
+				<Label isDynamic="true" text="" classNames="fcls_sblabel" visible="true" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="lbInfo1"/>
+				<Label isDynamic="true" text="" classNames="fcls_sblabel" visible="true" gridItemLocation="0,1,1,1" fieldTable="formonly" identifier="lbInfo2"/>
+			</GridPanel>
+		</GridPanel>
+	</form.rootContainer>
+	<form.screenRecords>
+		<ScreenRecord identifier="holdpay" fields="holdpay.hold_text"/>
+		<ScreenRecord identifier="kandooword" fields="kandooword.response_text"/>
+		<ScreenRecord identifier="recurhead" fields="recurhead.recur_code,recurhead.desc_text,recurhead.vend_code,recurhead.group_text,recurhead.int_ind,recurhead.int_num,recurhead.max_run_num,recurhead.next_vouch_date,recurhead.start_date,recurhead.end_date,recurhead.total_amt,recurhead.curr_code,recurhead.conv_qty,recurhead.inv_text,recurhead.term_code,recurhead.hold_code,recurhead.tax_code,recurhead.rev_num,recurhead.rev_code,recurhead.rev_date,recurhead.com1_text"/>
+		<ScreenRecord identifier="tax" fields="tax.desc_text"/>
+		<ScreenRecord identifier="term" fields="term.desc_text"/>
+		<ScreenRecord identifier="vendor" fields="vendor.name_text"/>
+		<ScreenRecord identifier="FormOnly"/>
+	</form.screenRecords>
+</form>
+

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<fglBuildTarget xmlns="http://namespaces.querix.com/lyciaide/target" name="lib_tool_I_IN_new" type="fgl-library">
+
+  <sources type="fgl">
+    <file location="4gl/in/lib_tool_i_in_init.4gl"/>
+    <file location="4gl/in/lib_comboboxes_IN.4gl"/>
+    <file location="4gl/common/glob_GLOBALS_constant.4gl"/>
+    <file location="4gl/lib_tool/lib_winDecoration_I.4gl"/>
+    <file location="4gl/common/glob_GLOBALS.4gl"/>
+    <file location="4gl/in/I_IN_GLOBALS.4gl"/>
+    <file location="4gl/common/glob_GLOBALS_userDataTypes.4gl"/>
+  </sources>
+
+</fglBuildTarget>

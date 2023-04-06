@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?><form xmlns="http://namespaces.querix.com/2015/fglForms">
+	<form.rootContainer>
+		<GridPanel classNames="fcls_rootContainer" fieldTable="" horizontalAlignment="Stretch" identifier="rootContainer" verticalAlignment="Stretch">
+			<GridPanel.gridRowDefinitions>
+				<GridRowDefinition gridLengthValue=""/>
+				<GridRowDefinition gridLengthValue=""/>
+				<GridRowDefinition gridLengthValue="100%"/>
+				<GridRowDefinition gridLengthValue=""/>
+			</GridPanel.gridRowDefinitions>
+			<GridPanel.gridColumnDefinitions>
+				<GridColumnDefinition gridLengthValue="100%"/>
+			</GridPanel.gridColumnDefinitions>
+			
+			
+			<GridPanel classNames="fcls_title_cnt" fieldTable="formonly" gridItemLocation="0,0,1,1" identifier="cntTitle" verticalAlignment="Top" visible="true">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="100%"/>
+					<GridColumnDefinition gridLengthValue=""/>
+				</GridPanel.gridColumnDefinitions>
+				<Label classNames="fcls_title_lb" fieldTable="formonly" gridItemLocation="0,0,1,1" identifier="header_text" isDynamic="true" text="Quotation Scan" visible="true"/>
+				<Label classNames="fcls_title_lb" fieldTable="" gridItemLocation="1,0,1,1" identifier="lbFormName" isDynamic="true" text="Q101" visible="true"/>
+			</GridPanel>
+			
+			
+			<GridPanel classNames="fcls_detail_cnt,fcls_data_cnt" fieldTable="formonly" gridItemLocation="0,1,1,1" horizontalAlignment="Left" identifier="cntDetail1" verticalAlignment="Top" visible="true">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="" gridMinLength="10rem"/>
+					<GridColumnDefinition gridLengthValue=""/>
+				</GridPanel.gridColumnDefinitions>
+				<TextField classNames="fcls_data_widget,fcls_length_20qch" dataType="Char,,,,8" fieldTable="arparms" gridItemLocation="1,0,1,1" identifier="inv_ref2a_text" noEntry="true" preferredSize="9qch,1qch"/>
+				<TextField classNames="fcls_data_widget,fcls_length_20qch" dataType="Char,,,,8" fieldTable="arparms" gridItemLocation="1,1,1,1" identifier="inv_ref2b_text" noEntry="true" preferredSize="9qch,1qch"/>
+				<Label classNames="fcls_fieldlabel,fcls_align_left" fieldTable="" gridItemLocation="0,0,1,1" identifier="lb51" isDynamic="true" text="Q-Ref" visible="true"/>
+			</GridPanel>
+			<Table fieldTable="" gridItemLocation="0,2,1,1" identifier="sr_quotehead" preferredSize="75qch,14qch" rowCount="14">
+				<TableColumn fieldTable="" identifier="tc_scroll_flag">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="2rem" gridMaxLength="2rem" gridMinLength="2rem"/>
+					</TableColumn.columnLength>
+					<CheckBox dataType="Char,,,," fieldTable="formonly" identifier="scroll_flag">
+						<CheckBox.checkedValue>
+							<StringLiteral stringValue="*"/>
+						</CheckBox.checkedValue>
+						<CheckBox.uncheckedValue>
+							<NullLiteral/>
+						</CheckBox.uncheckedValue>
+					</CheckBox>
+				</TableColumn>
+				<TableColumn fieldTable="" identifier="tc_order_num" text="Quote Number">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="12.0%" gridMaxLength="12rem" gridMinLength="5rem"/>
+					</TableColumn.columnLength>
+					<TextField comment=" The number that uniquely identifies the quote within the system" dataType="Integer,,,," fieldTable="quotehead" identifier="order_num" toolTip=" The number that uniquely identifies the quote within the system"/>
+				</TableColumn>
+				<TableColumn fieldTable="" identifier="tc_cust_code" text="Customer">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="12.0%" gridMaxLength="12rem" gridMinLength="5rem"/>
+					</TableColumn.columnLength>
+					<TextField comment=" Code of customer who requested the quotation " dataType="Char,,,,8" fieldTable="quotehead" identifier="cust_code" toCase="Up" toolTip=" Code of customer who requested the quotation "/>
+				</TableColumn>
+				<TableColumn fieldTable="" identifier="tc_ord_text" text="Description">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="26.7%" gridMaxLength="30rem" gridMinLength="15rem"/>
+					</TableColumn.columnLength>
+					<TextField comment=" Indicates the reference number assigned " dataType="Char,,,,20" fieldTable="quotehead" identifier="ord_text" toolTip=" Indicates the reference number assigned "/>
+				</TableColumn>
+				<TableColumn fieldTable="" identifier="tc_quote_date" text="Q-Date">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="14.7%" gridMaxLength="12rem" gridMinLength="5rem"/>
+					</TableColumn.columnLength>
+					<Calendar comment=" The date the quote was asked for by the customer" dataType="Date,,,," fieldTable="quotehead" format="dd/mm/yyyy" identifier="quote_date" toolTip=" The date the quote was asked for by the customer"/>
+				</TableColumn>
+				<TableColumn fieldTable="" identifier="tc_valid_date" text="Valid Until">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="14.7%" gridMaxLength="12rem" gridMinLength="5rem"/>
+					</TableColumn.columnLength>
+					<Calendar comment=" Date quotation is valid until" dataType="Date,,,," fieldTable="quotehead" format="dd/mm/yyyy" identifier="valid_date" toolTip=" Date quotation is valid until"/>
+				</TableColumn>
+				<TableColumn fieldTable="" identifier="tc_total_amt" text="Total Amount">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="14.7%" gridMaxLength="12rem" gridMinLength="5rem"/>
+					</TableColumn.columnLength>
+					<TextField comment=" The total amount of the quote" dataType="Decimal,,,2,16" fieldTable="quotehead" identifier="total_amt" toolTip=" The total amount of the quote"/>
+				</TableColumn>
+				<TableColumn fieldTable="" identifier="tc_status_ind" text="Status">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="2.7%" gridMaxLength="12rem" gridMinLength="5rem"/>
+					</TableColumn.columnLength>
+					<TextField comment=" Status of the Quote: U)New  C)Approved  X)Being Edited  D)Cancelled" dataType="Char,,,,1" fieldTable="quotehead" identifier="status_ind" toolTip=" Status of the Quote: U)New  C)Approved  X)Being Edited  D)Cancelled"/>
+				</TableColumn>
+			</Table>
+			<GridPanel classNames="fcls_statusbar_cnt" fieldTable="formonly" gridItemLocation="0,3,1,1" identifier="cntStatusBar" verticalAlignment="Top" visible="true">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="100%"/>
+				</GridPanel.gridColumnDefinitions>
+				<Label classNames="fcls_sblabel" fieldTable="formonly" gridItemLocation="0,0,1,1" identifier="lbInfo1" isDynamic="true" text="" visible="true"/>
+				<Label classNames="fcls_sblabel" fieldTable="formonly" gridItemLocation="0,1,1,1" identifier="lbInfo2" isDynamic="true" text="" visible="true"/>
+			</GridPanel>
+		</GridPanel>
+	</form.rootContainer>
+	<form.screenRecords>
+		<ScreenRecord fields="formonly.scroll_flag,quotehead.order_num,quotehead.cust_code,quotehead.ord_text,quotehead.quote_date,quotehead.valid_date,quotehead.total_amt,quotehead.status_ind" identifier="sr_quotehead"/>
+		<ScreenRecord fields="arparms.inv_ref2a_text,arparms.inv_ref2b_text" identifier="arparms"/>
+		<ScreenRecord fields="formonly.scroll_flag" identifier="formonly"/>
+		<ScreenRecord fields="quotehead.order_num,quotehead.cust_code,quotehead.ord_text,quotehead.quote_date,quotehead.valid_date,quotehead.total_amt,quotehead.status_ind" identifier="quotehead"/>
+	</form.screenRecords>
+</form>

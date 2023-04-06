@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form xmlns="http://namespaces.querix.com/2015/fglForms">
+	<form.rootContainer>
+		<GridPanel classNames="fcls_rootContainer" verticalAlignment="Stretch" horizontalAlignment="Stretch" fieldTable="" identifier="rootContainer">
+			<GridPanel.gridRowDefinitions>
+				<GridRowDefinition gridLengthValue=""/>
+				<GridRowDefinition gridLengthValue=""/>
+				<GridRowDefinition gridLengthValue="100%"/>
+				<GridRowDefinition gridLengthValue=""/>
+			</GridPanel.gridRowDefinitions>
+			<GridPanel.gridColumnDefinitions>
+				<GridColumnDefinition gridLengthValue="100%"/>
+			</GridPanel.gridColumnDefinitions>
+			<GridPanel classNames="fcls_title_cnt" visible="true" verticalAlignment="Top" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="cntTitle">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="100%"/>
+					<GridColumnDefinition gridLengthValue=""/>
+				</GridPanel.gridColumnDefinitions>
+				<Label isDynamic="true" text="User Module Account Mask" classNames="fcls_title_lb" visible="true" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="header_text"/>
+				<Label isDynamic="true" text="U150" classNames="fcls_title_lb" visible="true" gridItemLocation="1,0,1,1" fieldTable="" identifier="lbFormName"/>
+			</GridPanel>
+			<GridPanel classNames="fcls_detail_cnt,,fcls_align_hstretch" visible="true" verticalAlignment="Top" horizontalAlignment="Left" gridItemLocation="0,1,1,1" fieldTable="formonly" identifier="cntDetail1">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="" gridMinLength="10rem"/>
+					<GridColumnDefinition gridLengthValue=""/>
+					<GridColumnDefinition gridLengthValue=""/>
+				</GridPanel.gridColumnDefinitions>
+				<TextField noEntry="true" dataType="Char,,,,8" preferredSize="9qch,1qch" gridItemLocation="1,0,1,1" fieldTable="kandoomask" identifier="user_code"/>
+				<TextField toCase="Up" dataType="Char,,,,1" preferredSize="2qch,1qch" toolTip="Enter Module code" gridItemLocation="1,1,1,1" fieldTable="kandoomask" comment="Enter Module code" identifier="module_code"/>
+				<TextField noEntry="true" dataType="Char,,,,30" preferredSize="31qch,1qch" gridItemLocation="2,1,1,1" fieldTable="menu1" identifier="name_text"/>
+				<Label isDynamic="true" text="User ID" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,0,1,1" fieldTable="" identifier="lb51"/>
+				<Label isDynamic="true" text="Module Code" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,1,1,1" fieldTable="" identifier="lb52"/>
+			</GridPanel>
+			<Table rowCount="8" preferredSize="32qch,8qch" gridItemLocation="0,2,1,1" fieldTable="" identifier="sr_kandoomask">
+				<TableColumn text="Del" fieldTable="" identifier="b">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="10%" gridMaxLength="5rem" gridMinLength="5rem"/>
+					</TableColumn.columnLength>
+					<CheckBox noEntry="true" dataType="Char,,,," fieldTable="formonly" identifier="delete_flag">
+						<CheckBox.checkedValue>
+							<StringLiteral stringValue="Y"/>
+						</CheckBox.checkedValue>
+						<CheckBox.uncheckedValue>
+							<StringLiteral stringValue="N"/>
+						</CheckBox.uncheckedValue>
+					</CheckBox>
+				</TableColumn>
+				<TableColumn text="Account Mask" fieldTable="" identifier="f004">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="80%" gridMaxLength="16rem" gridMinLength="16rem"/>
+					</TableColumn.columnLength>
+					<TextField toCase="Up" dataType="Char,,,,18" toolTip="Enter G/L account mask (W)" fieldTable="kandoomask" comment="Enter G/L account mask (W)" identifier="acct_mask_code"/>
+				</TableColumn>
+				<TableColumn text="Type" fieldTable="" identifier="c">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="10%" gridMaxLength="10rem" gridMinLength="10rem"/>
+					</TableColumn.columnLength>
+					<ComboBox toCase="Up" dataType="Char,,,,1" toolTip="1=Entry, 2=Access or 3=Both" fieldTable="kandoomask" comment="1=Entry, 2=Access or 3=Both" identifier="access_type_code">
+						<ComboBoxItem text="Entry">
+							<ComboBoxItem.value>
+								<IntegerLiteral integerValue="1"/>
+							</ComboBoxItem.value>
+						</ComboBoxItem>
+						<ComboBoxItem text="Acess">
+							<ComboBoxItem.value>
+								<IntegerLiteral integerValue="2"/>
+							</ComboBoxItem.value>
+						</ComboBoxItem>
+						<ComboBoxItem text="Entry and Access">
+							<ComboBoxItem.value>
+								<IntegerLiteral integerValue="3"/>
+							</ComboBoxItem.value>
+						</ComboBoxItem>
+					</ComboBox>
+				</TableColumn>
+			</Table>
+			<GridPanel classNames="fcls_statusbar_cnt" visible="true" verticalAlignment="Top" gridItemLocation="0,3,1,1" fieldTable="formonly" identifier="cntStatusBar">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="100%"/>
+				</GridPanel.gridColumnDefinitions>
+				<Label isDynamic="true" text="" classNames="fcls_sblabel" visible="true" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="lbInfo1"/>
+				<Label isDynamic="true" text="" classNames="fcls_sblabel" visible="true" gridItemLocation="0,1,1,1" fieldTable="formonly" identifier="lbInfo2"/>
+			</GridPanel>
+		</GridPanel>
+	</form.rootContainer>
+	<form.screenRecords>
+		<ScreenRecord identifier="sr_kandoomask" fields="delete_flag,acct_mask_code,access_type_code" elements="8"/>
+		<ScreenRecord identifier="formonly" fields="delete_flag"/>
+		<ScreenRecord identifier="kandoomask" fields="user_code,module_code,acct_mask_code,access_type_code"/>
+		<ScreenRecord identifier="menu1" fields="name_text"/>
+	</form.screenRecords>
+</form>
+

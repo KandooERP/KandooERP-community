@@ -1,0 +1,502 @@
+GLOBALS "../common/glob_GLOBALS.4gl" 
+
+FUNCTION windecoration_e(pwinname) 
+	DEFINE pwinname STRING 
+	DEFINE errmsg STRING 
+
+	CASE pwinname 
+	# Prog: U11
+	# User Parameters
+		WHEN "E101" --enhanced ORDER processing parameters 
+			CALL comboList_holdReasCode("so_hold_code",COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_LABEL,COMBO_VALUE_AND_LABEL,COMBO_LABEL_IS_LABEL,NULL,COMBO_NULL_NOT) 
+			CALL comboList_holdReasCode("ps_hold_code",COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_LABEL,COMBO_VALUE_AND_LABEL,COMBO_LABEL_IS_LABEL,NULL,COMBO_NULL_NOT) 
+			CALL comboList_holdReasCode("cf_hold_code",COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_LABEL,COMBO_VALUE_AND_LABEL,COMBO_LABEL_IS_LABEL,NULL,COMBO_NULL_NOT) 
+			CALL comboList_holdReasCode("cr_hold_code",COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_LABEL,COMBO_VALUE_AND_LABEL,COMBO_LABEL_IS_LABEL,NULL,COMBO_NULL_NOT) 
+			CALL comboList_holdReasCode("lim_hold_code",COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_LABEL,COMBO_VALUE_AND_LABEL,COMBO_LABEL_IS_LABEL,NULL,COMBO_NULL_NOT) 
+
+			#		WHEN "E101"	--Sales Order Information
+			#			CALL comboList_holdReasCode("hold_code",COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_LABEL,COMBO_VALUE_AND_LABEL,COMBO_LABEL_IS_LABEL,NULL,COMBO_NULL_NOT)
+
+		WHEN "E102" --session parameters 
+
+		WHEN "E103" --special offers 
+
+		WHEN "E104" --back ORDER allocation (list) 
+			#			CALL comboList_location("locn_code",COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_LABEL,COMBO_VALUE_AND_LABEL,COMBO_LABEL_IS_LABEL,NULL,COMBO_NULL_NOT)
+		WHEN "E105" --sales ORDER HOLD 
+			CALL comboList_holdReasCode("hold_code",COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_LABEL,COMBO_VALUE_AND_LABEL,COMBO_LABEL_IS_LABEL,NULL,COMBO_NULL_NOT) 
+			CALL comboList_holdReasCode("pr_cust_hold_code",COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_LABEL,COMBO_VALUE_AND_LABEL,COMBO_LABEL_IS_LABEL,NULL,COMBO_NULL_NOT) 
+
+		WHEN "E106" --product note: only a product detail VIEW 
+			#CALL comboList_productCode("part_code",COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_LABEL,COMBO_VALUE_AND_LABEL,COMBO_LABEL_IS_LABEL,NULL,COMBO_NULL_NOT)
+			#CALL comboList_productGroup("prodgrp_code",COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_LABEL,COMBO_VALUE_AND_LABEL,COMBO_LABEL_IS_LABEL,NULL,COMBO_NULL_NOT)
+			#CALL comboList_maingrp("maingrp_code",COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_LABEL,COMBO_VALUE_AND_LABEL,COMBO_LABEL_IS_LABEL,NULL,COMBO_NULL_NOT)
+
+		WHEN "E107" --sales conditions 
+
+		WHEN "E109" --sales commission sharing 
+			CALL comboList_salesPerson         ("sales_code",          COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_LABEL,COMBO_VALUE_AND_LABEL,COMBO_LABEL_IS_LABEL,NULL,COMBO_NULL_NOT)
+			CALL comboList_territory           ("territory_code",      COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_LABEL,COMBO_VALUE_AND_LABEL,COMBO_LABEL_IS_LABEL,NULL,COMBO_NULL_NOT)
+			CALL comboList_salesPerson         ("sale_code",           COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_LABEL,COMBO_VALUE_AND_LABEL,COMBO_LABEL_IS_LABEL,NULL,COMBO_NULL_NONE)
+
+		WHEN "E110" --sales orders entry 
+			CALL comboList_salesCondition("cond_code",COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_LABEL,COMBO_VALUE_AND_LABEL,COMBO_LABEL_IS_LABEL,NULL,COMBO_NULL_NOT) 
+
+		WHEN "E111" --sales ORDER information 
+			--CALL comboList_invoiceNumCustCode     ("cust_code",      			COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_LABEL,COMBO_VALUE_AND_LABEL,COMBO_LABEL_IS_LABEL,NULL,COMBO_NULL_NOT) 
+			CALL combolist_customer               ("cust_code",        			COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_LABEL,COMBO_VALUE_AND_LABEL,COMBO_LABEL_IS_LABEL,null,COMBO_NULL_NOT)
+			CALL combolist_customer      					("corp_cust_code",    		COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_LABEL,COMBO_VALUE_AND_LABEL,COMBO_LABEL_IS_LABEL,NULL,COMBO_NULL_NOT)			
+
+			CALL comboList_country                ("cust_country_code",			COMBO_FIRST_ARG_IS_LABEL,COMBO_SORT_BY_LABEL,COMBO_VALUE_AND_LABEL,COMBO_LABEL_IS_LABEL,NULL,COMBO_NULL_NOT) --pvariable,psort,psingle,phint) 
+			CALL comboList_country                ("country_code",COMBO_FIRST_ARG_IS_LABEL,COMBO_SORT_BY_LABEL,COMBO_VALUE_AND_LABEL,COMBO_LABEL_IS_LABEL,NULL,COMBO_NULL_NOT) --pvariable,psort,psingle,phint) 
+
+			CALL comboList_salesPerson            ("sales_code",       			COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_LABEL,COMBO_VALUE_AND_LABEL,COMBO_LABEL_IS_LABEL,NULL,COMBO_NULL_NOT) 
+			CALL comboList_warehouse              ("ware_code",       			COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_LABEL,COMBO_VALUE_AND_LABEL,COMBO_LABEL_IS_LABEL,NULL,COMBO_NULL_NOT) 
+			CALL comboList_warehouse              ("supp_ware_code",  			COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_LABEL,COMBO_VALUE_AND_LABEL,COMBO_LABEL_IS_LABEL,NULL,COMBO_NULL_NOT) 
+			CALL comboList_holdReasCode           ("hold_code",        			COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_LABEL,COMBO_VALUE_AND_LABEL,COMBO_LABEL_IS_LABEL,NULL,COMBO_NULL_NOT) 
+
+			--DISPLAY getlangstr("lb_state") TO lb_state 
+
+		WHEN "E112" --payment details 
+			CALL comboList_salesCondition         ("cond_code",        			COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_LABEL,COMBO_VALUE_AND_LABEL,COMBO_LABEL_IS_LABEL,NULL,COMBO_NULL_NOT) 
+			CALL comboList_termCode               ("term_code",        			COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_LABEL,COMBO_VALUE_AND_LABEL,COMBO_LABEL_IS_LABEL,NULL,COMBO_NULL_NOT) 
+			CALL comboList_tax_code               ("tax_code",        			COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_LABEL,COMBO_VALUE_AND_LABEL,COMBO_LABEL_IS_LABEL,NULL,COMBO_NULL_NOT) 
+			CALL comboList_currency               ("currency_code",         COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_LABEL,COMBO_VALUE_AND_LABEL,COMBO_LABEL_IS_LABEL,NULL,COMBO_NULL_NOT) 
+
+		WHEN "E113" --customer account status 
+			CALL comboList_currency               ("currency_code",         COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_LABEL,COMBO_VALUE_AND_LABEL,COMBO_LABEL_IS_LABEL,NULL,COMBO_NULL_NOT) 
+
+		WHEN "E114" --order line item information 
+			CALL comboList_invoiceNumCustCode     ("cust_code",             COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_LABEL,COMBO_VALUE_AND_LABEL,COMBO_LABEL_IS_LABEL,NULL,COMBO_NULL_NOT) 
+			CALL comboList_currency               ("currency_code",         COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_LABEL,COMBO_VALUE_AND_LABEL,COMBO_LABEL_IS_LABEL,NULL,COMBO_NULL_NOT) 
+			CALL comboList_tax_code               ("tax_code",              COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_LABEL,COMBO_VALUE_AND_LABEL,COMBO_LABEL_IS_LABEL,NULL,COMBO_NULL_NOT) 
+			CALL comboList_warehouse              ("ware_code",             COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_LABEL,COMBO_VALUE_AND_LABEL,COMBO_LABEL_IS_LABEL,NULL,COMBO_NULL_NOT)
+			CALL comboList_offer_code             ("offer_code",            COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_LABEL,COMBO_VALUE_AND_LABEL,COMBO_LABEL_IS_LABEL,NULL,COMBO_NULL_NONE)
+			#NOTE: Product PART_CODE combo is populated in BEFORE INPUT
+			--CALL combolist_prodstatus_productcode_in_warehouse("part_code",   glob_rec_orderhead.ware_code, COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_VALUE,COMBO_VALUE_AND_LABEL,COMBO_LABEL_IS_LABEL,NULL,COMBO_NULL_NOT) --warehouse existing products
+
+		WHEN "E115" --missing title text 
+			CALL comboList_productCode            ("part_code",             COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_LABEL,COMBO_VALUE_AND_LABEL,COMBO_LABEL_IS_LABEL,NULL,COMBO_NULL_NOT) 
+			CALL comboList_warehouse              ("ware_code",             COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_LABEL,COMBO_VALUE_AND_LABEL,COMBO_LABEL_IS_LABEL,NULL,COMBO_NULL_NOT) 
+
+		WHEN "E116" --shipping details 
+			CALL comboList_carrier                ("carrier_code",          COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_LABEL,COMBO_VALUE_AND_LABEL,COMBO_LABEL_IS_LABEL,NULL,COMBO_NULL_NOT) 
+			CALL comboList_holdReasCode           ("hold_code",             COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_LABEL,COMBO_VALUE_AND_LABEL,COMBO_LABEL_IS_LABEL,NULL,COMBO_NULL_NOT) 
+			CALL combolist_freightrate            ("freight_ind",           COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_LABEL,COMBO_VALUE_AND_LABEL,COMBO_LABEL_IS_LABEL,NULL,COMBO_NULL_NOT)
+
+		WHEN "E117" --offer 
+			CALL comboList_offer_code             ("offer_code",            COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_LABEL,COMBO_VALUE_AND_LABEL,COMBO_LABEL_IS_LABEL,NULL,COMBO_NULL_NOT) 
+
+		WHEN "E118" --required special offers (list) 
+			CALL combolist_offer_code             ("offer_code",            COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_LABEL,COMBO_VALUE_AND_LABEL,COMBO_LABEL_IS_LABEL,NULL,COMBO_NULL_NOT)
+			
+		WHEN "E119" --sales condition (list) 
+
+		WHEN "E120" --sales ORDER information 
+			CALL comboList_invoiceNumCustCode     ("cust_code",             COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_LABEL,COMBO_VALUE_AND_LABEL,COMBO_LABEL_IS_LABEL,NULL,COMBO_NULL_NOT) 
+			CALL comboList_salesPerson            ("sales_code",            COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_LABEL,COMBO_VALUE_AND_LABEL,COMBO_LABEL_IS_LABEL,NULL,COMBO_NULL_NOT) 
+			CALL comboList_warehouse              ("ware_code",             COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_LABEL,COMBO_VALUE_AND_LABEL,COMBO_LABEL_IS_LABEL,NULL,COMBO_NULL_NOT) 
+			CALL comboList_country                ("cust_country_code",     COMBO_FIRST_ARG_IS_LABEL,COMBO_SORT_BY_LABEL,COMBO_VALUE_AND_LABEL,COMBO_LABEL_IS_LABEL,NULL,COMBO_NULL_NOT) --pvariable,psort,psingle,phint) 
+			CALL comboList_country                ("country_code",          COMBO_FIRST_ARG_IS_LABEL,COMBO_SORT_BY_LABEL,COMBO_VALUE_AND_LABEL,COMBO_LABEL_IS_LABEL,NULL,COMBO_NULL_NOT) --pvariable,psort,psingle,phint) 
+
+		WHEN "E121" --special offers detail scan (list) 
+
+		WHEN "E122" --special offer maintenance 
+			CALL comboList_offer_code             ("offer_code",            COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_LABEL,COMBO_VALUE_AND_LABEL,COMBO_LABEL_IS_LABEL,NULL,COMBO_NULL_NOT) 
+			CALL comboList_checkrule              ("checkrule_ind",         COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_LABEL,COMBO_VALUE_AND_LABEL,COMBO_LABEL_IS_LABEL,NULL,COMBO_NULL_NOT) 
+			CALL comboList_discount_rule          ("disc_rule_ind",         COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_LABEL,COMBO_VALUE_AND_LABEL,COMBO_LABEL_IS_LABEL,NULL,COMBO_NULL_NOT) 
+			CALL comboList_check_type             ("checktype_ind",         COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_LABEL,COMBO_VALUE_AND_LABEL,COMBO_LABEL_IS_LABEL,NULL,COMBO_NULL_NOT) 
+
+
+		WHEN "E123" --products TO be sold 
+			CALL comboList_offer_code             ("offer_code",            COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_LABEL,COMBO_VALUE_AND_LABEL,COMBO_LABEL_IS_LABEL,NULL,COMBO_NULL_NOT) 
+			#table
+			CALL comboList_productCode            ("part_code",             COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_LABEL,COMBO_VALUE_AND_LABEL,COMBO_LABEL_IS_LABEL,NULL,COMBO_NULL_NOT) 
+			CALL comboList_productGroup           ("prodgrp_code",          COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_LABEL,COMBO_VALUE_AND_LABEL,COMBO_LABEL_IS_LABEL,NULL,COMBO_NULL_NOT) 
+			CALL comboList_maingrp                ("maingrp_code",          COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_LABEL,COMBO_VALUE_AND_LABEL,COMBO_LABEL_IS_LABEL,NULL,COMBO_NULL_NOT) 
+
+
+		WHEN "E124" --bonus products 
+			--CALL comboList_offer_code("offer_code",COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_LABEL,COMBO_VALUE_AND_LABEL,COMBO_LABEL_IS_LABEL,NULL,COMBO_NULL_NOT) 
+			#table
+			CALL comboList_productCode            ("part_code",             COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_LABEL,COMBO_VALUE_AND_LABEL,COMBO_LABEL_IS_LABEL,NULL,COMBO_NULL_ANY) 
+			CALL comboList_productGroup           ("prodgrp_code",          COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_LABEL,COMBO_VALUE_AND_LABEL,COMBO_LABEL_IS_LABEL,NULL,COMBO_NULL_ANY) 
+			CALL comboList_maingrp                ("maingrp_code",          COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_LABEL,COMBO_VALUE_AND_LABEL,COMBO_LABEL_IS_LABEL,NULL,COMBO_NULL_ANY) 
+
+		WHEN "E125" --product line discounts 
+			CALL comboList_offer_code("offer_code",COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_LABEL,COMBO_VALUE_AND_LABEL,COMBO_LABEL_IS_LABEL,NULL,COMBO_NULL_NOT) 
+			#table
+			CALL comboList_productCode("part_code",COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_LABEL,COMBO_VALUE_AND_LABEL,COMBO_LABEL_IS_LABEL,NULL,COMBO_NULL_NOT) 
+			CALL comboList_productGroup("prodgrp_code",COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_LABEL,COMBO_VALUE_AND_LABEL,COMBO_LABEL_IS_LABEL,NULL,COMBO_NULL_NOT) 
+			CALL comboList_maingrp("maingrp_code",COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_LABEL,COMBO_VALUE_AND_LABEL,COMBO_LABEL_IS_LABEL,NULL,COMBO_NULL_NOT) 
+
+		WHEN "E126" --automated product insertion 
+			CALL comboList_productCode("product.part_code",COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_LABEL,COMBO_VALUE_AND_LABEL,COMBO_LABEL_IS_LABEL,NULL,COMBO_NULL_NOT) 
+			CALL comboList_productGroup("prodgrp_code",COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_LABEL,COMBO_VALUE_AND_LABEL,COMBO_LABEL_IS_LABEL,NULL,COMBO_NULL_NOT) 
+			CALL comboList_maingrp("maingrp_code",COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_LABEL,COMBO_VALUE_AND_LABEL,COMBO_LABEL_IS_LABEL,NULL,COMBO_NULL_NOT) 
+			#table
+			CALL comboList_productCode("offerauto.part_code",COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_LABEL,COMBO_VALUE_AND_LABEL,COMBO_LABEL_IS_LABEL,NULL,COMBO_NULL_NOT) 
+
+		WHEN "E127" --automatic product line 
+			CALL comboList_productCode("part_code",COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_LABEL,COMBO_VALUE_AND_LABEL,COMBO_LABEL_IS_LABEL,NULL,COMBO_NULL_NOT) 
+
+		WHEN "E129" --special offer details 
+			CALL comboList_offer_code("offer_code",COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_LABEL,COMBO_VALUE_AND_LABEL,COMBO_LABEL_IS_LABEL,NULL,COMBO_NULL_NOT) 
+			CALL comboList_checkrule("checkrule_ind",COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_LABEL,COMBO_VALUE_AND_LABEL,COMBO_LABEL_IS_LABEL,NULL,COMBO_NULL_NOT) 
+			CALL comboList_discount_rule("disc_rule_ind",COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_LABEL,COMBO_VALUE_AND_LABEL,COMBO_LABEL_IS_LABEL,NULL,COMBO_NULL_NOT) 
+			#checktype_ind
+
+
+		WHEN "E130" --product monthly turnover 
+			CALL combolist_year_from_period("year_num",COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_LABEL,COMBO_VALUE_AND_LABEL,COMBO_LABEL_IS_LABEL_BRACE_VALUE,NULL,COMBO_NULL_NOT) --fieldname,pvariable,psort,psingle,phint) 
+			CALL comboList_productCode("part_code",COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_LABEL,COMBO_VALUE_AND_LABEL,COMBO_LABEL_IS_LABEL,NULL,COMBO_NULL_NOT) 
+			CALL comboList_productGroup("prodgrp_code",COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_LABEL,COMBO_VALUE_AND_LABEL,COMBO_LABEL_IS_LABEL,NULL,COMBO_NULL_NOT) 
+			CALL comboList_maingrp("maingrp_code",COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_LABEL,COMBO_VALUE_AND_LABEL,COMBO_LABEL_IS_LABEL,NULL,COMBO_NULL_NOT) 
+
+		WHEN "E131" --sales condition details (list) 
+
+		WHEN "E132" --sales condition details 
+			CALL comboList_salesCondition("cond_code",COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_LABEL,COMBO_VALUE_AND_LABEL,COMBO_LABEL_IS_LABEL,NULL,COMBO_NULL_NOT) 
+
+		WHEN "E133" --product line discounts 
+			CALL comboList_salesCondition("cond_code",COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_LABEL,COMBO_VALUE_AND_LABEL,COMBO_LABEL_IS_LABEL,NULL,COMBO_NULL_NOT) 
+
+		WHEN "E134" --sales conditions customers (list) 
+
+
+		WHEN "E136" --tiered discount structures (list) 
+
+
+		WHEN "E141" --carrier information 
+			#CALL comboList_carrier("carrier_code",COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_LABEL,COMBO_VALUE_AND_LABEL,COMBO_LABEL_IS_LABEL,NULL,COMBO_NULL_NOT)  ##removed - KD-355
+			CALL comboList_country("country_code", COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_LABEL,COMBO_VALUE_AND_LABEL,COMBO_LABEL_IS_LABEL,null,COMBO_NULL_NOT) 
+			CALL comboList_charging_method("charge_ind",COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_LABEL,COMBO_VALUE_AND_LABEL,COMBO_LABEL_IS_LABEL,NULL,COMBO_NULL_NOT) --fieldname,pvariable,psort,psingle,phint) 
+
+		WHEN "E142" --carrier maintenance (list) 
+
+		WHEN "E143" --carriercost new/edit 
+			CALL comboList_country           ("carriercost.country_code",COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_LABEL,COMBO_VALUE_AND_LABEL,COMBO_LABEL_IS_LABEL,NULL,COMBO_NULL_NOT) 
+
+		WHEN "E144" -- add new carrier 
+			#CALL comboList_carrier          ("carrier_code",   COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_LABEL,COMBO_VALUE_AND_LABEL,COMBO_LABEL_IS_LABEL,NULL,COMBO_NULL_NOT)  ##removed - KD-355
+			CALL comboList_country           ("country_code",   COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_LABEL,COMBO_VALUE_AND_LABEL,COMBO_LABEL_IS_LABEL,NULL,COMBO_NULL_NOT) 
+			CALL comboList_charging_method   ("charge_ind",     COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_LABEL,COMBO_VALUE_AND_LABEL,COMBO_LABEL_IS_LABEL,NULL,COMBO_NULL_NOT) --fieldname,pvariable,psort,psingle,phint) 
+
+		WHEN "E150" --warehouse picking lists (list) 
+			CALL comboList_picking_status    ("status_ind",     COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_LABEL,COMBO_VALUE_AND_LABEL,COMBO_LABEL_IS_LABEL,NULL,COMBO_NULL_NOT) 
+			CALL comboList_consigned_status  ("con_status_ind", COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_LABEL,COMBO_VALUE_AND_LABEL,COMBO_LABEL_IS_LABEL,NULL,COMBO_NULL_NOT) 
+
+		WHEN "E151" --picking list detail 
+			CALL comboList_picking_status    ("status_ind",     COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_LABEL,COMBO_VALUE_AND_LABEL,COMBO_LABEL_IS_LABEL,NULL,COMBO_NULL_NOT) 
+			CALL comboList_warehouse         ("ware_code",      COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_LABEL,COMBO_VALUE_AND_LABEL,COMBO_LABEL_IS_LABEL,NULL,COMBO_NULL_NOT) 
+			CALL comboList_invoiceNumCustCode("cust_code",      COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_LABEL,COMBO_VALUE_AND_LABEL,COMBO_LABEL_IS_LABEL,NULL,COMBO_NULL_NOT) 
+
+			CALL comboList_carrier           ("carrier_code",   COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_LABEL,COMBO_VALUE_AND_LABEL,COMBO_LABEL_IS_LABEL,NULL,COMBO_NULL_NOT) 
+			CALL comboList_picking_status    ("status_ind",     COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_LABEL,COMBO_VALUE_AND_LABEL,COMBO_LABEL_IS_LABEL,NULL,COMBO_NULL_NOT) 
+			#table
+			CALL comboList_productCode       ("part_code",      COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_LABEL,COMBO_VALUE_AND_LABEL,COMBO_LABEL_IS_LABEL,NULL,COMBO_NULL_NOT) 
+
+
+
+		WHEN "E152" --picking slip generation selection 
+			CALL comboList_warehouse         ("first_ware_code",COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_LABEL,COMBO_VALUE_AND_LABEL,COMBO_LABEL_IS_LABEL,NULL,COMBO_NULL_NOT) 
+			CALL comboList_warehouse         ("last_ware_code", COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_LABEL,COMBO_VALUE_AND_LABEL,COMBO_LABEL_IS_LABEL,NULL,COMBO_NULL_NOT) 
+
+		WHEN "E153" --sales ORDER confirmation 
+
+		WHEN "E154" --order delivery information 
+			CALL comboList_invoiceNumCustCode("cust_code",      COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_LABEL,COMBO_VALUE_AND_LABEL,COMBO_LABEL_IS_LABEL,NULL,COMBO_NULL_NOT) 
+
+		WHEN "E155" --delivery details 
+			CALL combolist_year_from_period              ("year_num",       COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_LABEL,COMBO_VALUE_AND_LABEL,COMBO_LABEL_IS_LABEL_BRACE_VALUE,NULL,COMBO_NULL_NOT) --price type --fieldname,pvariable,psort,psingle,phint) 
+			CALL comboList_period            ("period_num",      COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_LABEL,COMBO_VALUE_AND_LABEL,COMBO_LABEL_IS_LABEL_BRACE_VALUE,NULL,COMBO_NULL_NOT) --price type --fieldname,pvariable,psort,psingle,phint) 
+
+		WHEN "E156" --shipment scan (list) 
+
+		WHEN "E157" --consignment note detail 
+			CALL comboList_carrier           ("carrier_code",    COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_LABEL,COMBO_VALUE_AND_LABEL,COMBO_LABEL_IS_LABEL,NULL,COMBO_NULL_NOT) 
+			CALL comboList_warehouse         ("ware_code",       COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_LABEL,COMBO_VALUE_AND_LABEL,COMBO_LABEL_IS_LABEL,NULL,COMBO_NULL_NOT) 
+
+		WHEN "E158" --consignment note generation selection 
+			CALL comboList_warehouse         ("ware_code",       COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_LABEL,COMBO_VALUE_AND_LABEL,COMBO_LABEL_IS_LABEL,NULL,COMBO_NULL_NOT) 
+			CALL comboList_carrier           ("carrier_code",    COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_LABEL,COMBO_VALUE_AND_LABEL,COMBO_LABEL_IS_LABEL,NULL,COMBO_NULL_NOT) 
+			#CALL comboList_invoiceNumCustCode("cust_code",      COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_LABEL,COMBO_VALUE_AND_LABEL,COMBO_LABEL_IS_LABEL,NULL,COMBO_NULL_NOT) 
+			CALL combolist_customer          ("cust_code",       COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_LABEL,COMBO_VALUE_AND_LABEL,COMBO_LABEL_IS_LABEL,NULL,COMBO_NULL_NOT)
+
+		WHEN "E159" --shipping LABEL details 
+			CALL comboList_warehouse         ("ware_code",       COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_LABEL,COMBO_VALUE_AND_LABEL,COMBO_LABEL_IS_LABEL,NULL,COMBO_NULL_NOT) 
+			CALL comboList_carrier           ("carrier_code",    COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_LABEL,COMBO_VALUE_AND_LABEL,COMBO_LABEL_IS_LABEL,NULL,COMBO_NULL_NOT) 
+
+
+		WHEN "E160" --held ORDER scan 
+			CALL comboList_invoiceNumCustCode("cust_code",       COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_LABEL,COMBO_VALUE_AND_LABEL,COMBO_LABEL_IS_LABEL,NULL,COMBO_NULL_NOT) 
+			CALL comboList_holdReasCode      ("hold_code",       COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_LABEL,COMBO_VALUE_AND_LABEL,COMBO_LABEL_IS_LABEL,NULL,COMBO_NULL_NOT) 
+			CALL comboList_currency          ("currency_code",   COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_LABEL,COMBO_VALUE_AND_LABEL,COMBO_LABEL_IS_LABEL,NULL,COMBO_NULL_NOT) 
+			CALL comboList_salesPerson       ("sales_code",      COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_LABEL,COMBO_VALUE_AND_LABEL,COMBO_LABEL_IS_LABEL,NULL,COMBO_NULL_NOT) 
+			CALL comboList_salesCondition    ("cond_code",       COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_LABEL,COMBO_VALUE_AND_LABEL,COMBO_LABEL_IS_LABEL,NULL,COMBO_NULL_NOT) 
+			CALL comboList_warehouse         ("ware_code",       COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_LABEL,COMBO_VALUE_AND_LABEL,COMBO_LABEL_IS_LABEL,NULL,COMBO_NULL_NOT) 
+
+		WHEN "E161" --order amendment LOG scan (list) 
+
+		WHEN "E162" --consignment note entry 
+
+		WHEN "E163" --consignment note generation selection 
+			CALL comboList_carrier           ("carrier_code",    COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_LABEL,COMBO_VALUE_AND_LABEL,COMBO_LABEL_IS_LABEL,NULL,COMBO_NULL_NOT) 
+			CALL comboList_warehouse         ("ware_code",       COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_LABEL,COMBO_VALUE_AND_LABEL,COMBO_LABEL_IS_LABEL,NULL,COMBO_NULL_NOT) 
+			#inv_num ????
+
+
+		WHEN "E164" --salespersons commission structure maintenance (list) 
+
+
+		WHEN "E165" --sales commission structure 
+			CALL comboList_salesPerson       ("sale_code",       COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_LABEL,COMBO_VALUE_AND_LABEL,COMBO_LABEL_IS_LABEL,NULL,COMBO_NULL_NOT) 
+
+		WHEN "E166" --image sales commission structure 
+			CALL comboList_salesPerson("sale_code",COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_LABEL,COMBO_VALUE_AND_LABEL,COMBO_LABEL_IS_LABEL,NULL,COMBO_NULL_NOT) 
+
+		WHEN "E167" --salesperson commission REPORT 
+			CALL comboList_salesPerson("sale_code",COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_LABEL,COMBO_VALUE_AND_LABEL,COMBO_LABEL_IS_LABEL,NULL,COMBO_NULL_NOT) 
+			CALL comboList_territory("terri_code",COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_LABEL,COMBO_VALUE_AND_LABEL,COMBO_LABEL_IS_LABEL,NULL,COMBO_NULL_NOT) 
+			#sale_type_ind
+			CALL comboList_salesManager("mgr_code",COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_LABEL,COMBO_VALUE_AND_LABEL,COMBO_LABEL_IS_LABEL,NULL,COMBO_NULL_NOT) 
+			CALL comboList_invoiceNumCustCode("cust_code",COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_LABEL,COMBO_VALUE_AND_LABEL,COMBO_LABEL_IS_LABEL,NULL,COMBO_NULL_NOT) 
+			CALL comboList_currency("currency_code",COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_LABEL,COMBO_VALUE_AND_LABEL,COMBO_LABEL_IS_LABEL,NULL,COMBO_NULL_NOT) 
+
+		WHEN "E169" --carrier scan 
+
+		WHEN "E171" --stock RETURN detail 
+			CALL combolist_year_from_period                  ("year_num",            COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_LABEL,COMBO_VALUE_AND_LABEL,COMBO_LABEL_IS_LABEL_BRACE_VALUE,NULL,COMBO_NULL_NOT) --price type --fieldname,pvariable,psort,psingle,phint) 
+			CALL comboList_period                ("period_num",          COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_LABEL,COMBO_VALUE_AND_LABEL,COMBO_LABEL_IS_LABEL_BRACE_VALUE,NULL,COMBO_NULL_NOT) --price type --fieldname,pvariable,psort,psingle,phint) 
+
+		WHEN "E172" --automated delivery cycle monitor (list) 
+
+
+		WHEN "E173" --delivery message/error selection 
+			CALL comboList_warehouse             ("ware_code",           COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_LABEL,COMBO_VALUE_AND_LABEL,COMBO_LABEL_IS_LABEL,NULL,COMBO_NULL_NOT) 
+
+		WHEN "E174" --product SERIAL codes 
+			CALL comboList_invoiceNumCustCode    ("cust_code",           COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_LABEL,COMBO_VALUE_AND_LABEL,COMBO_LABEL_IS_LABEL,NULL,COMBO_NULL_NOT) 
+
+		WHEN "E182" --salesperson information 
+			CALL comboList_salesPerson           ("sale_code",           COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_LABEL,COMBO_VALUE_AND_LABEL,COMBO_LABEL_IS_LABEL,NULL,COMBO_NULL_NOT) 
+			CALL comboList_country               ("country_code",        COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_LABEL,COMBO_VALUE_AND_LABEL,COMBO_LABEL_IS_LABEL,NULL,COMBO_NULL_NOT) 
+			CALL comboList_language              ("language_code",       COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_LABEL,COMBO_VALUE_AND_LABEL,COMBO_LABEL_IS_LABEL,NULL,COMBO_NULL_NOT) 
+			CALL comboList_territory             ("terri_code",          COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_LABEL,COMBO_VALUE_AND_LABEL,COMBO_LABEL_IS_LABEL,NULL,COMBO_NULL_NOT) 
+			CALL comboList_salesManager          ("mgr_code",            COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_LABEL,COMBO_VALUE_AND_LABEL,COMBO_LABEL_IS_LABEL,NULL,COMBO_NULL_NOT) 
+			CALL comboList_warehouse             ("ware_code",           COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_LABEL,COMBO_VALUE_AND_LABEL,COMBO_LABEL_IS_LABEL,NULL,COMBO_NULL_NOT) 
+
+		WHEN "E183" --salesperson inquiry 
+			CALL comboList_salesPerson           ("sale_code",           COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_LABEL,COMBO_VALUE_AND_LABEL,COMBO_LABEL_IS_LABEL,NULL,COMBO_NULL_NOT) 
+
+		WHEN "E184" --salespersons STATISTICS information (list) 
+
+		WHEN "E185" --daily salesperson STATISTICS 
+
+		WHEN "E186" --salesperson monthly sales (list) 
+			CALL comboList_salesPerson           ("sale_code",           COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_LABEL,COMBO_VALUE_AND_LABEL,COMBO_LABEL_IS_LABEL,NULL,COMBO_NULL_NOT) 
+
+
+		WHEN "E187" --special offer results 
+			CALL comboList_salesPerson("sale_code",COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_LABEL,COMBO_VALUE_AND_LABEL,COMBO_LABEL_IS_LABEL,NULL,COMBO_NULL_NOT) 
+			CALL comboList_offer_code("offer_code",COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_LABEL,COMBO_VALUE_AND_LABEL,COMBO_LABEL_IS_LABEL,NULL,COMBO_NULL_NOT) 
+			CALL combolist_year_from_period("year_num",COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_LABEL,COMBO_VALUE_AND_LABEL,COMBO_LABEL_IS_LABEL_BRACE_VALUE,NULL,COMBO_NULL_NOT) --price type --fieldname,pvariable,psort,psingle,phint) 
+
+		WHEN "E188" --special offer results (list) 
+			CALL comboList_salesPerson("sale_code",COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_LABEL,COMBO_VALUE_AND_LABEL,COMBO_LABEL_IS_LABEL,NULL,COMBO_NULL_NOT) 
+			CALL combolist_year_from_period("year_num",COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_LABEL,COMBO_VALUE_AND_LABEL,COMBO_LABEL_IS_LABEL_BRACE_VALUE,NULL,COMBO_NULL_NOT) --price type --fieldname,pvariable,psort,psingle,phint) 
+
+		WHEN "E209" --statistic sales data extraction 
+			#nothing TO do
+		WHEN "E210" -- sales targets maintenance 
+			CALL comboList_stattype_type_text("type_code",COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_LABEL,COMBO_VALUE_AND_LABEL,COMBO_LABEL_IS_LABEL,NULL,COMBO_NULL_NOT) --fieldname,pvariable,psort,psingle,phint)
+		WHEN "E211" -- 
+		WHEN "E212" -- Year and Type
+			CALL comboList_stattype_type_text("type_code",COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_LABEL,COMBO_VALUE_AND_LABEL,COMBO_LABEL_IS_LABEL,NULL,COMBO_NULL_NOT) --fieldname,pvariable,psort,psingle,phint) 
+		WHEN "E213" -- 
+		WHEN "E214" -- 
+		WHEN "E215" -- 
+		WHEN "E216" -- 
+		WHEN "E217" -- 
+		WHEN "E218" -- 
+		WHEN "E219" -- 
+
+		WHEN "E220" -- 
+		WHEN "E221" -- 
+		WHEN "E223" -- 
+		WHEN "E224" -- 
+		WHEN "E225" -- 
+		WHEN "E226" -- 
+		WHEN "E227" -- 
+		WHEN "E228" -- 
+		WHEN "E229" -- 
+
+		WHEN "E230" -- 
+		WHEN "E231" -- 
+		WHEN "E232" -- 
+		WHEN "E233" -- 
+		WHEN "E234" -- 
+		WHEN "E235" -- 
+		WHEN "E236" -- 
+		WHEN "E237" -- 
+		WHEN "E238" -- 
+		WHEN "E239" -- 
+
+		WHEN "E240" -- 
+		WHEN "E241" -- 
+		WHEN "E242" -- 
+		WHEN "E243" -- 
+		WHEN "E244" -- 
+		WHEN "E245" -- 
+		WHEN "E246" -- 
+		WHEN "E247" -- 
+		WHEN "E248" -- 
+		WHEN "E249" -- 
+
+		WHEN "E250" -- 
+		WHEN "E251" -- 
+		WHEN "E252" -- 
+		WHEN "E253" -- 
+		WHEN "E254" -- 
+		WHEN "E255" -- 
+		WHEN "E256" -- 
+		WHEN "E257" -- 
+		WHEN "E258" -- 
+		WHEN "E259" -- 
+
+		WHEN "E260" -- 
+		WHEN "E261" -- 
+		WHEN "E262" -- 
+		WHEN "E263" -- 
+		WHEN "E264" -- 
+		WHEN "E265" -- 
+		WHEN "E266" -- 
+		WHEN "E267" -- 
+		WHEN "E268" -- 
+
+		WHEN "E270" -- 
+			CALL comboList_country                ("country_code",								COMBO_FIRST_ARG_IS_LABEL,COMBO_SORT_BY_LABEL,COMBO_VALUE_AND_LABEL,COMBO_LABEL_IS_LABEL,NULL,COMBO_NULL_SPACE) 
+			CALL comboList_state									("state_code",									COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_LABEL,COMBO_VALUE_AND_LABEL,COMBO_LABEL_IS_LABEL,NULL,COMBO_NULL_SPACE)
+
+		WHEN "E272" -- 
+			CALL comboList_country                ("country_code",								COMBO_FIRST_ARG_IS_LABEL,COMBO_SORT_BY_LABEL,COMBO_VALUE_AND_LABEL,COMBO_LABEL_IS_LABEL,NULL,COMBO_NULL_SPACE) 
+			CALL comboList_state									("state_code",									COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_LABEL,COMBO_VALUE_AND_LABEL,COMBO_LABEL_IS_LABEL,NULL,COMBO_NULL_SPACE)
+
+		WHEN "E274" -- 
+			CALL comboList_country                ("country_code",								COMBO_FIRST_ARG_IS_LABEL,COMBO_SORT_BY_LABEL,COMBO_VALUE_AND_LABEL,COMBO_LABEL_IS_LABEL,NULL,COMBO_NULL_SPACE) 
+			CALL comboList_state									("state_code",									COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_LABEL,COMBO_VALUE_AND_LABEL,COMBO_LABEL_IS_LABEL,NULL,COMBO_NULL_SPACE)
+
+		WHEN "E275" -- 
+			CALL comboList_country                ("country_code",								COMBO_FIRST_ARG_IS_LABEL,COMBO_SORT_BY_LABEL,COMBO_VALUE_AND_LABEL,COMBO_LABEL_IS_LABEL,NULL,COMBO_NULL_SPACE) 
+			CALL comboList_state									("state_code",									COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_LABEL,COMBO_VALUE_AND_LABEL,COMBO_LABEL_IS_LABEL,NULL,COMBO_NULL_SPACE)
+
+		WHEN "E276" -- 
+			CALL comboList_country                ("country_code",								COMBO_FIRST_ARG_IS_LABEL,COMBO_SORT_BY_LABEL,COMBO_VALUE_AND_LABEL,COMBO_LABEL_IS_LABEL,NULL,COMBO_NULL_SPACE) 
+			CALL comboList_state									("state_code",									COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_LABEL,COMBO_VALUE_AND_LABEL,COMBO_LABEL_IS_LABEL,NULL,COMBO_NULL_SPACE)
+
+		WHEN "E277" -- 
+			CALL comboList_country                ("country_code",								COMBO_FIRST_ARG_IS_LABEL,COMBO_SORT_BY_LABEL,COMBO_VALUE_AND_LABEL,COMBO_LABEL_IS_LABEL,NULL,COMBO_NULL_SPACE) 
+			CALL comboList_state									("state_code",									COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_LABEL,COMBO_VALUE_AND_LABEL,COMBO_LABEL_IS_LABEL,NULL,COMBO_NULL_SPACE)
+
+		WHEN "E278" -- 
+		WHEN "E279" -- 
+
+		WHEN "E280" -- 
+		WHEN "E281" -- 
+		WHEN "E282" -- 
+		WHEN "E283" -- 
+		WHEN "E284" -- 
+		WHEN "E285" -- 
+		WHEN "E286" -- 
+		WHEN "E287" -- 
+			CALL comboList_country                ("country_code",								COMBO_FIRST_ARG_IS_LABEL,COMBO_SORT_BY_LABEL,COMBO_VALUE_AND_LABEL,COMBO_LABEL_IS_LABEL,NULL,COMBO_NULL_SPACE) 
+			CALL comboList_state									("state_code",									COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_LABEL,COMBO_VALUE_AND_LABEL,COMBO_LABEL_IS_LABEL,NULL,COMBO_NULL_SPACE)
+
+		WHEN "E288" -- 
+			CALL comboList_country                ("country_code",								COMBO_FIRST_ARG_IS_LABEL,COMBO_SORT_BY_LABEL,COMBO_VALUE_AND_LABEL,COMBO_LABEL_IS_LABEL,NULL,COMBO_NULL_SPACE) 
+			CALL comboList_state									("state_code",									COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_LABEL,COMBO_VALUE_AND_LABEL,COMBO_LABEL_IS_LABEL,NULL,COMBO_NULL_SPACE)
+
+		WHEN "E289" -- 
+
+		WHEN "E290" -- 
+		WHEN "E291" -- 
+
+		WHEN "E292" -- 
+			CALL comboList_country                ("country_code",								COMBO_FIRST_ARG_IS_LABEL,COMBO_SORT_BY_LABEL,COMBO_VALUE_AND_LABEL,COMBO_LABEL_IS_LABEL,NULL,COMBO_NULL_SPACE) 
+			CALL comboList_state									("state_code",									COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_LABEL,COMBO_VALUE_AND_LABEL,COMBO_LABEL_IS_LABEL,NULL,COMBO_NULL_SPACE)
+
+		WHEN "E293" -- 
+		WHEN "E294" -- 
+		WHEN "E295" -- 
+
+		WHEN "E400" --
+			CALL combolist_customer							("cust_code",			COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_LABEL,COMBO_VALUE_AND_LABEL,COMBO_LABEL_IS_LABEL,NULL,COMBO_NULL_NOT)
+--		CALL comboList_invoiceNumCustCode		("cust_code",			COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_LABEL,COMBO_VALUE_AND_LABEL,COMBO_LABEL_IS_LABEL,NULL,COMBO_NULL_NOT) 
+		WHEN "E401" -- 
+		WHEN "E403" -- 
+		WHEN "E404" -- Backorder Allocation
+			CALL comboList_productCode					("part_code",			  COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_LABEL,COMBO_VALUE_AND_LABEL,COMBO_LABEL_IS_LABEL,NULL,COMBO_NULL_NOT)
+			CALL comboList_warehouse						("ware_code",			  COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_LABEL,COMBO_VALUE_AND_LABEL,COMBO_LABEL_IS_LABEL,NULL,COMBO_NULL_NOT)
+
+		WHEN "E408" -- 
+			CALL comboList_invoiceNumCustCode		("cust_code",		  	COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_LABEL,COMBO_VALUE_AND_LABEL,COMBO_LABEL_IS_LABEL,NULL,COMBO_NULL_NOT) 
+		WHEN "E416" -- Product On-Order Scan
+			CALL comboList_productCode					("part_code",		  	COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_LABEL,COMBO_VALUE_AND_LABEL,COMBO_LABEL_IS_LABEL,NULL,COMBO_NULL_NOT)
+			CALL comboList_warehouse						("ware_code",			  COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_LABEL,COMBO_VALUE_AND_LABEL,COMBO_LABEL_IS_LABEL,NULL,COMBO_NULL_NOT)
+
+		WHEN "E417" -- Backorder Allocation Release
+			CALL comboList_productCode					("bprod",					  COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_LABEL,COMBO_VALUE_AND_LABEL,COMBO_LABEL_IS_LABEL,NULL,COMBO_NULL_NOT)
+			CALL comboList_productCode					("eprod",					  COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_LABEL,COMBO_VALUE_AND_LABEL,COMBO_LABEL_IS_LABEL,NULL,COMBO_NULL_NOT)
+			CALL comboList_warehouse						("bware",					  COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_LABEL,COMBO_VALUE_AND_LABEL,COMBO_LABEL_IS_LABEL,NULL,COMBO_NULL_NOT)
+			CALL comboList_warehouse						("eware",					  COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_LABEL,COMBO_VALUE_AND_LABEL,COMBO_LABEL_IS_LABEL,NULL,COMBO_NULL_NOT)
+
+		WHEN "E418" -- Backorder Allocation
+			CALL comboList_productCode					("start_product",		COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_LABEL,COMBO_VALUE_AND_LABEL,COMBO_LABEL_IS_LABEL,NULL,COMBO_NULL_ANY)
+			CALL comboList_productCode					("end_product",			COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_LABEL,COMBO_VALUE_AND_LABEL,COMBO_LABEL_IS_LABEL,NULL,COMBO_NULL_ANY)
+			CALL comboList_warehouse						("start_warehouse",	COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_LABEL,COMBO_VALUE_AND_LABEL,COMBO_LABEL_IS_LABEL,NULL,COMBO_NULL_ANY)
+			CALL comboList_warehouse						("end_warehouse",		COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_LABEL,COMBO_VALUE_AND_LABEL,COMBO_LABEL_IS_LABEL,NULL,COMBO_NULL_ANY)
+
+		WHEN "E419" -- 
+			CALL comboList_invoiceNumCustCode		("cust_code",			  COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_LABEL,COMBO_VALUE_AND_LABEL,COMBO_LABEL_IS_LABEL,NULL,COMBO_NULL_NOT) 
+			CALL comboList_warehouse						("ware_code",			  COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_LABEL,COMBO_VALUE_AND_LABEL,COMBO_LABEL_IS_LABEL,NULL,COMBO_NULL_NOT) 
+			CALL comboList_priceLevel						("inv_level_ind",	  COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_LABEL,COMBO_VALUE_AND_LABEL,COMBO_LABEL_IS_LABEL,NULL,COMBO_NULL_NOT) 
+			CALL comboList_tax_code							("tax_code",			  COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_LABEL,COMBO_VALUE_AND_LABEL,COMBO_LABEL_IS_LABEL,NULL,COMBO_NULL_NOT) 
+
+		WHEN "E426" -- 
+		WHEN "E440" -- 
+		WHEN "E441" -- 
+		WHEN "E442" -- 
+		WHEN "E443" -- 
+
+
+		WHEN "E445" -- 
+			CALL comboList_productCode					("part_code",			COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_LABEL,COMBO_VALUE_AND_LABEL,COMBO_LABEL_IS_LABEL,NULL,COMBO_NULL_NOT) 
+			CALL comboList_class_price_level_ind("level_ind",			COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_LABEL,COMBO_VALUE_AND_LABEL,COMBO_LABEL_IS_LABEL_BRACE_VALUE,NULL,COMBO_NULL_NOT) 
+		WHEN "E446" -- 
+		WHEN "E447" -- 
+		WHEN "E448" -- 
+		WHEN "E449" -- 
+		WHEN "E450" -- 
+		WHEN "E451" -- 
+		WHEN "E452" -- 
+		WHEN "E453" -- 
+		WHEN "E454" -- 
+		WHEN "E455" -- 
+		WHEN "E456" -- 
+		WHEN "E457" -- 
+		WHEN "E458" -- 
+		WHEN "E459" -- 
+		WHEN "E460" -- 
+		WHEN "E461" -- 
+
+		WHEN "E500" --E500_back_order_allocation 
+			CALL comboList_warehouse              ("bware",        COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_LABEL,COMBO_VALUE_AND_LABEL,COMBO_LABEL_IS_LABEL,NULL,COMBO_NULL_SPACE) 
+			CALL comboList_warehouse              ("eware",        COMBO_FIRST_ARG_IS_VALUE,COMBO_SORT_BY_LABEL,COMBO_VALUE_AND_LABEL,COMBO_LABEL_IS_LABEL,NULL,COMBO_NULL_SPACE) 
+		WHEN "E900" -- Report menu E9 
+		WHEN "ET00" -- Report menu ET 
+		OTHERWISE 
+			LET errmsg = "Invalid Window name passed TO winDecoration_E(", trim(pwinname), ")" 
+			CALL fgl_winmessage("Internal 4GL Error",errMsg, "error") 
+	END CASE 
+
+END FUNCTION 

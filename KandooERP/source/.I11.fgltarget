@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<fglBuildTarget xmlns="http://namespaces.querix.com/lyciaide/target" name="I11" type="fgl-program">
+
+  <libraries>
+    <library name="lib_tool_A_AR_new" dynamic="false" location=""/>
+    <library name="lib_tool_G_GL_new" dynamic="false" location=""/>
+    <library name="lib_tool_I_IN_new" dynamic="false" location=""/>
+    <library name="lib_tool_I_IN_db" dynamic="false" location=""/>
+    <library name="lib_tool_I_IN_new" dynamic="false" location=""/>
+    <library name="lib_tool_P_AP_db" dynamic="false" location=""/>
+    <library name="lib_tool_P_AP_new" dynamic="false" location=""/>
+    <library name="lib_tool_U_UT_new" dynamic="false" location=""/>
+    <library name="lib_tool_W_WO_new" dynamic="false" location=""/>
+    <library name="lib_tool_common" dynamic="false" location=""/>
+    <library name="lib_tool_db_common" dynamic="false" location=""/>
+  </libraries>
+
+  <sources type="fgl">
+    <file location="4gl/common/ref_wind.4gl"/>
+    <file location="4gl/common/warewind.4gl"/>
+    <file location="4gl/common/msegfunc.4gl"/>
+    <file location="4gl/common/conv_curr.4gl"/>
+    <file location="4gl/common/pflexwin.4gl"/>
+    <file location="4gl/common/vendwind.4gl"/>
+    <file location="4gl/common/taxwind.4gl"/>
+    <file location="4gl/in/I11_GLOBALS.4gl"/>
+    <file location="4gl/in/I_IN_GLOBALS.4gl"/>
+    <file location="4gl/in/I_IN_product_forms_fct.4gl"/>
+    <file location="4gl/common/uomwind.4gl"/>
+    <file location="4gl/in/I11.4gl"/>
+    <file location="4gl/common/pgrpwind.4gl"/>
+    <file location="4gl/common/glob_GLOBALS_constant.4gl"/>
+    <file location="4gl/common/validstr.4gl"/>
+    <file location="4gl/in/I_IN_product_sql_fct.4gl"/>
+    <file location="4gl/common/glob_GLOBALS.4gl"/>
+    <file location="4gl/common/glob_GLOBALS_userDataTypes.4gl"/>
+    <file location="4gl/common/psepwind.4gl"/>
+    <file location="4gl/in/I11_main.4gl"/>
+    <file location="4gl/common/pclswind.4gl"/>
+    <file location="4gl/common/pcatwind.4gl"/>
+    <file location="4gl/common/dangwind.4gl"/>
+    <file location="4gl/common/itemwind.4gl"/>
+    <file location="4gl/common/pinfowind.4gl"/>
+    <file location="4gl/in/I11a.4gl"/>
+  </sources>
+
+  <sources type="form">
+    <file location="per/in/ENG/I625.fm2"/>
+    <file location="per/in/ENG/I613.fm2"/>
+    <file location="per/utility/ENG/U156.fm2"/>
+    <file location="per/in/ENG/I601.fm2"/>
+    <file location="per/in/ENG/I174.fm2"/>
+    <file location="per/in/ENG/I226.fm2"/>
+    <file location="per/in/ENG/I105.fm2"/>
+    <file location="per/in/ENG/I105a.fm2"/>
+    <file location="per/in/ENG/I656.fm2"/>
+    <file location="per/in/ENG/I136.fm2"/>
+    <file location="per/in/ENG/I600.fm2"/>
+    <file location="per/ap/ENG/P102.fm2"/>
+    <file location="per/in/ENG/I141.fm2"/>
+    <file location="per/in/ENG/I104.fm2"/>
+    <file location="per/in/ENG/I626.fm2"/>
+    <file location="per/in/ENG/I106.fm2"/>
+    <file location="per/utility/ENG/U526.fm2"/>
+    <file location="per/utility/ENG/U139.fm2"/>
+    <file location="per/in/ENG/I655.fm2"/>
+    <file location="per/utility/ENG/U162.fm2"/>
+    <file location="per/in/ENG/I500.fm2"/>
+    <file location="per/in/ENG/I611.fm2"/>
+    <file location="per/in/ENG/I137.fm2"/>
+    <file location="per/ap/ENG/P101.fm2"/>
+  </sources>
+
+  <mediaFiles>
+    <file client="true" location="I11.qxtheme" type="gui-theme-file"/>
+    <file client="true" location="I11.css" type="other"/>
+  </mediaFiles>
+
+</fglBuildTarget>

@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form xmlns="http://namespaces.querix.com/2015/fglForms">
+	<form.rootContainer>
+		<GridPanel classNames="fcls_rootContainer" verticalAlignment="Top" horizontalAlignment="Left" fieldTable="" identifier="rootContainer">
+			<GridPanel.gridRowDefinitions>
+				<GridRowDefinition gridLengthValue=""/>
+				<GridRowDefinition gridLengthValue=""/>
+				<GridRowDefinition gridLengthValue=""/>
+				<GridRowDefinition gridLengthValue=""/>
+				<GridRowDefinition gridLengthValue=""/>
+				<GridRowDefinition gridLengthValue=""/>
+			</GridPanel.gridRowDefinitions>
+			<GridPanel.gridColumnDefinitions>
+				<GridColumnDefinition gridLengthValue="100%"/>
+			</GridPanel.gridColumnDefinitions>
+			<GridPanel classNames="fcls_title_cnt" visible="true" verticalAlignment="Top" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="cntTitle">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="100%"/>
+					<GridColumnDefinition gridLengthValue=""/>
+				</GridPanel.gridColumnDefinitions>
+				<Label isDynamic="true" text="Journal Batch Information" classNames="fcls_title_lb" visible="true" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="header_text"/>
+				<Label isDynamic="true" text="G463" classNames="fcls_title_lb" visible="true" gridItemLocation="1,0,1,1" fieldTable="" identifier="lbFormName"/>
+			</GridPanel>
+			<GroupBox title="Journal" classNames="fcls_detail_gb_cnt" visible="true" gridItemLocation="0,1,1,1" fieldTable="" identifier="cntDetail1GroupBox">
+				<GridPanel classNames="fcls_detail_gb_cnt_sub,fcls_detail_cnt_sub,fcls_data_cnt,fcls_align_left" visible="true" verticalAlignment="Top" horizontalAlignment="Left" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="cntDetail1Sub">
+					<GridPanel.gridRowDefinitions>
+						<GridRowDefinition gridLengthValue=""/>
+						<GridRowDefinition gridLengthValue=""/>
+					</GridPanel.gridRowDefinitions>
+					<GridPanel.gridColumnDefinitions>
+						<GridColumnDefinition gridLengthValue="" gridMinLength="10rem"/>
+						<GridColumnDefinition gridLengthValue=""/>
+						<GridColumnDefinition gridLengthValue=""/>
+					</GridPanel.gridColumnDefinitions>
+					<Label isDynamic="true" text="Journal" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="lb57"/>
+					<ComboBox editable="true" dataType="Char,,,,3" classNames="list-show-text-value,field-show-value,fcls_data_widget,fcls_align_left,fcls_length_10qch" preferredSize="14qch,1qch" toolTip=" Journal code of this batch - (W) " gridItemLocation="1,0,1,1" fieldTable="batchhead" comment=" Journal code of this batch - (W) " identifier="jour_code"/>
+					<TextField noEntry="true" dataType="Char,,,,40" preferredSize="31qch,1qch" collapsed="false" gridItemLocation="2,0,1,1" fieldTable="journal" identifier="desc_text" classNames="fcls_length_30qch,fcls_data_widget,fcls_align_left" horizontalAlignment="Left"/>
+					<Label text="Batch" location="58qch,2qch" preferredSize="5qch,1qch" gridItemLocation="0,1,1,1" fieldTable="" identifier="label4"/>
+					<ComboBox dataType="Integer,,,," classNames="fcls_data_widget,fcls_align_left,fcls_length_10qch" preferredSize="9qch,1qch" toolTip=" Batch number of this Journal" gridItemLocation="1,1,1,1" fieldTable="batchhead" comment=" Batch number of this Journal" identifier="jour_num" horizontalAlignment="Left"/>
+				</GridPanel>
+			</GroupBox>
+			<GroupBox title="Post Info" classNames="fcls_detail_gb_cnt" visible="true" verticalAlignment="Top" gridItemLocation="0,2,1,1" fieldTable="formonly" identifier="cntDetail2GroupBox">
+				<GridPanel classNames="fcls_detail_gb_cnt_sub,fcls_detail_cnt_sub,fcls_data_cnt,fcls_align_left" visible="true" verticalAlignment="Top" horizontalAlignment="Left" fieldTable="formonly" identifier="cntDetail2Sub">
+					<GridPanel.gridRowDefinitions>
+						<GridRowDefinition gridLengthValue=""/>
+						<GridRowDefinition gridLengthValue=""/>
+						<GridRowDefinition gridLengthValue=""/>
+						<GridRowDefinition gridLengthValue=""/>
+						<GridRowDefinition gridLengthValue=""/>
+						<GridRowDefinition gridLengthValue=""/>
+					</GridPanel.gridRowDefinitions>
+					<GridPanel.gridColumnDefinitions>
+						<GridColumnDefinition gridLengthValue="" gridMinLength="10rem"/>
+						<GridColumnDefinition gridLengthValue=""/>
+						<GridColumnDefinition gridLengthValue=""/>
+					</GridPanel.gridColumnDefinitions>
+					<Label isDynamic="true" text="Year" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,0,1,1" fieldTable="" identifier="lb91"/>
+					<ComboBox dataType="SmallInt,,,," classNames="list-show-label,field-show-label,fcls_length_15qch,fcls_data_widget,fcls_align_left" preferredSize="5qch,1qch" toolTip=" Fiscal accounting year in which batch is to be posted" gridItemLocation="1,0,1,1" fieldTable="batchhead" comment=" Fiscal accounting year in which batch is to be posted" identifier="year_num"/>
+					<Label text="Period" location="2qch,6qch" preferredSize="6qch,1qch" gridItemLocation="0,1,1,1" fieldTable="" identifier="label8"/>
+					<ComboBox dataType="SmallInt,,,," classNames="list-show-label,field-show-label,fcls_length_15qch,fcls_data_widget,fcls_align_left" preferredSize="4qch,1qch" toolTip=" Fiscal accounting period in which batch is to be posted" gridItemLocation="1,1,1,1" fieldTable="batchhead" comment=" Fiscal accounting period in which batch is to be posted" identifier="period_num"/>
+					<Label isDynamic="true" text="Currency" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,2,1,1" fieldTable="formonly" identifier="lb47"/>
+					<ComboBox dataType="Char,,,,3" classNames="list-show-text-value,field-show-value,fcls_length_15qch,fcls_data_widget,fcls_align_left" preferredSize="14qch,1qch" toolTip=" Currency of amounts entered in the journal - (W)" gridItemLocation="1,2,1,1" fieldTable="batchhead" comment=" Currency of amounts entered in the journal - (W)" identifier="currency_code"/>
+					<TextField noEntry="true" dataType="Char,,,,30" classNames="fcls_data_widget,fcls_align_left,fcls_length_15qch" preferredSize="21qch,1qch" fieldTable="currency" identifier="desc_text" gridItemLocation="1,3,1,1"/>
+					<Label isDynamic="true" text="Rate type" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,4,1,1" fieldTable="formonly" identifier="lb46"/>
+					<ComboBox toCase="Up" dataType="Char,,,,1" classNames="list-show-text-value,field-show-text,fcls_length_10qch,fcls_data_widget,fcls_align_left" preferredSize="2qch,1qch" toolTip=" Enter Exchange Type -(B) Buy rate -(S) Sell rate -(U) Budget rate" gridItemLocation="1,4,1,1" fieldTable="batchhead" comment=" Enter Exchange Type -(B) Buy rate -(S) Sell rate -(U) Budget rate" identifier="rate_type_ind" horizontalAlignment="Left">
+					</ComboBox>
+					<TextField dataType="Float,,,," classNames="fcls_length_10qch,fcls_data_widget,fcls_align_left" preferredSize="9qch,1qch" toolTip=" Currency Exchange rate to be applied to this journal" fieldTable="batchhead" comment=" Currency Exchange rate to be applied to this journal" identifier="conv_qty" gridItemLocation="1,5,1,1" horizontalAlignment="Left"/>
+				</GridPanel>
+			</GroupBox>
+			<GroupBox title="Control Totals" classNames="fcls_detail_gb_cnt" visible="true" gridItemLocation="0,3,1,1" fieldTable="formonly" identifier="cntDetail3GroupBox">
+				<GridPanel classNames="fcls_detail_gb_cnt_sub,fcls_detail_cnt_sub,fcls_data_cnt,fcls_align_left" visible="true" verticalAlignment="Top" horizontalAlignment="Left" fieldTable="formonly" identifier="cntDetail3Sub">
+					<GridPanel.gridRowDefinitions>
+						<GridRowDefinition gridLengthValue=""/>
+						<GridRowDefinition gridLengthValue=""/>
+						<GridRowDefinition gridLengthValue=""/>
+					</GridPanel.gridRowDefinitions>
+					<GridPanel.gridColumnDefinitions>
+						<GridColumnDefinition gridLengthValue="" gridMinLength="10rem"/>
+						<GridColumnDefinition gridLengthValue=""/>
+						<GridColumnDefinition gridLengthValue="" gridMinLength="10rem"/>
+						<GridColumnDefinition gridLengthValue=""/>
+					</GridPanel.gridColumnDefinitions>
+					<Label isDynamic="true" text="Quantity" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="lb48"/>
+					<TextField dataType="Float,,,," classNames="fcls_length_10qch,fcls_data_widget,fcls_align_left" preferredSize="15qch,1qch" toolTip=" Control total quantity for this journal batch" gridItemLocation="1,0,1,1" fieldTable="batchhead" comment=" Control total quantity for this journal batch" identifier="control_qty" horizontalAlignment="Left"/>
+					<Label isDynamic="true" text="Quantity" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="2,0,1,1" fieldTable="" identifier="lb104"/>
+					<TextField noEntry="true" dataType="Float,,,," classNames="fcls_length_10qch,fcls_data_widget,fcls_align_left" preferredSize="15qch,1qch" gridItemLocation="3,0,1,1" fieldTable="batchhead" identifier="stats_qty" horizontalAlignment="Left"/>
+					<Label isDynamic="true" text="Amount" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,1,1,1" fieldTable="formonly" identifier="lb49"/>
+					<TextField dataType="Decimal,,,2,16" classNames="fcls_length_10qch,fcls_data_widget,fcls_align_left" preferredSize="16qch,1qch" toolTip=" Control total amount for this journal batch" gridItemLocation="1,1,1,1" fieldTable="batchhead" comment=" Control total amount for this journal batch" identifier="control_amt" horizontalAlignment="Left"/>
+					<Label isDynamic="true" text="Debits" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="2,1,1,1" fieldTable="" identifier="lb105"/>
+					<TextField noEntry="true" dataType="Decimal,,,2,16" classNames="fcls_length_10qch,fcls_data_widget,fcls_align_left" preferredSize="16qch,1qch" gridItemLocation="3,1,1,1" fieldTable="batchhead" identifier="for_debit_amt" horizontalAlignment="Left"/>
+					<Label isDynamic="true" text="Credits" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="2,2,1,1" fieldTable="" identifier="lb106"/>
+					<TextField noEntry="true" dataType="Decimal,,,2,16" classNames="fcls_length_10qch,fcls_data_widget,fcls_align_left" preferredSize="16qch,1qch" gridItemLocation="3,2,1,1" fieldTable="batchhead" identifier="for_credit_amt" horizontalAlignment="Left"/>
+				</GridPanel>
+			</GroupBox>
+			<GroupBox title="Comments &amp; Miscellaneous" classNames="fcls_detail_gb_cnt" visible="true" gridItemLocation="0,4,1,1" fieldTable="" identifier="cntDetail4GroupBox">
+				<GridPanel classNames="fcls_detail_gb_cnt_sub,fcls_detail_cnt_sub,fcls_data_cnt" visible="true" verticalAlignment="Top" horizontalAlignment="Stretch" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="cntDetail4Sub">
+					<GridPanel.gridRowDefinitions>
+						<GridRowDefinition gridLengthValue=""/>
+						<GridRowDefinition gridLengthValue=""/>
+						<GridRowDefinition gridLengthValue=""/>
+						<GridRowDefinition gridLengthValue=""/>
+					</GridPanel.gridRowDefinitions>
+					<GridPanel.gridColumnDefinitions>
+						<GridColumnDefinition gridLengthValue="" gridMinLength="10rem"/>
+						<GridColumnDefinition gridLengthValue="100%"/>
+					</GridPanel.gridColumnDefinitions>
+					<TextField dataType="Char,,,,40" classNames="fcls_data_widget,fcls_align_hstretch" preferredSize="41qch,1qch" toolTip=" Enter comments for this batch (line 1)" gridItemLocation="0,0,2,1" fieldTable="batchhead" comment=" Enter comments for this batch (line 1)" identifier="com1_text"/>
+					<TextField dataType="Char,,,,40" classNames="fcls_data_widget,fcls_align_hstretch" preferredSize="41qch,1qch" toolTip=" Enter comments for this batch (line 2)" gridItemLocation="0,1,2,1" fieldTable="batchhead" comment=" Enter comments for this batch (line 2)" identifier="com2_text"/>
+					<Label isDynamic="true" text="Person" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,2,1,1" fieldTable="" identifier="lb120"/>
+					<ComboBox noEntry="true" dataType="Char,,,,8" classNames="fcls_data_widget,fcls_align_left,fcls_length_20qch" preferredSize="11qch,1qch" gridItemLocation="1,2,1,1" fieldTable="batchhead" identifier="entry_code"/>
+					<Label isDynamic="true" text="Date" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,3,1,1" fieldTable="" identifier="lb121"/>
+					<Calendar noEntry="true" dataType="Date,,,," classNames="fcls_data_widget,fcls_align_left,fcls_length_10qch" location="62qch,15qch" preferredSize="11qch,1qch" gridItemLocation="1,3,1,1" fieldTable="batchhead" identifier="jour_date"/>
+				</GridPanel>
+			</GroupBox>
+			<GridPanel classNames="fcls_statusbar_cnt" visible="true" verticalAlignment="Top" gridItemLocation="0,5,1,1" fieldTable="formonly" identifier="cntStatusBar">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="100%"/>
+				</GridPanel.gridColumnDefinitions>
+				<Label isDynamic="true" text="" classNames="fcls_sblabel" visible="true" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="lbInfo1"/>
+				<Label isDynamic="true" text="" classNames="fcls_sblabel" visible="true" gridItemLocation="0,1,1,1" fieldTable="formonly" identifier="lbInfo2"/>
+			</GridPanel>
+		</GridPanel>
+	</form.rootContainer>
+	<form.screenRecords>
+		<ScreenRecord identifier="batchhead" fields="jour_code,batchhead.jour_num,year_num,period_num,currency_code,rate_type_ind,conv_qty,control_amt,for_debit_amt,for_credit_amt,entry_code,jour_date,com1_text,com2_text,control_qty,stats_qty"/>
+		<ScreenRecord identifier="currency" fields="desc_text"/>
+		<ScreenRecord identifier="journal" fields="desc_text"/>
+	</form.screenRecords>
+</form>
+

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form xmlns="http://namespaces.querix.com/2015/fglForms" title="${FormTitle}">
+	<form.rootContainer>
+		<GridPanel identifier="rootContainer" visible="true" horizontalAlignment="Left" verticalAlignment="Top">
+			<GridPanel.gridColumnDefinitions>
+				<RepeatBlock:ColumnsNum
+				<GridColumnDefinition>
+					<GridColumnDefinition.gridLength>
+						<GridLength gridLengthType="Percent" gridLengthValue="${GridLength}"/>
+					</GridColumnDefinition.gridLength>
+				</GridColumnDefinition>
+				:RepeatBlock>
+            </GridPanel.gridColumnDefinitions>
+			<GridPanel.gridRowDefinitions>
+			<RepeatBlock:RowsNum
+				<GridRowDefinition>
+					<GridRowDefinition.gridLength>
+						<GridLength gridLengthType="Auto"/>
+					</GridRowDefinition.gridLength>
+				</GridRowDefinition>
+			:RepeatBlock>
+			</GridPanel.gridRowDefinitions>
+			<Script: bld_form_textfields($FORMHANDLE,${FormTableName},${ArrayElements}) :Script>
+        </GridPanel> 
+    </form.rootContainer>
+    <form.screenRecords>
+        <Script: bld_form_screenrecords($FORMHANDLE) :Script>
+    </form.screenRecords>
+</form>

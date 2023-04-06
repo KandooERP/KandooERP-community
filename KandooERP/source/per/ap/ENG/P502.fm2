@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form xmlns="http://namespaces.querix.com/2015/fglForms">
+	<form.rootContainer>
+		<GridPanel classNames="fcls_rootContainer" verticalAlignment="Top" horizontalAlignment="Left" fieldTable="" identifier="rootContainer">
+			<GridPanel.gridRowDefinitions>
+				<GridRowDefinition>
+					<GridRowDefinition.gridLength>
+						<GridLength gridLengthValue=""/>
+					</GridRowDefinition.gridLength>
+				</GridRowDefinition>
+				<GridRowDefinition>
+					<GridRowDefinition.gridLength>
+						<GridLength gridLengthValue=""/>
+					</GridRowDefinition.gridLength>
+				</GridRowDefinition>
+				<GridRowDefinition>
+					<GridRowDefinition.gridLength>
+						<GridLength gridLengthValue=""/>
+					</GridRowDefinition.gridLength>
+				</GridRowDefinition>
+			</GridPanel.gridRowDefinitions>
+			<GridPanel.gridColumnDefinitions>
+				<GridColumnDefinition>
+					<GridColumnDefinition.gridLength>
+						<GridLength gridLengthValue="100%"/>
+					</GridColumnDefinition.gridLength>
+				</GridColumnDefinition>
+			</GridPanel.gridColumnDefinitions>
+			<GridPanel classNames="fcls_title_cnt" visible="true" verticalAlignment="Top" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="cntTitle">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition>
+						<GridRowDefinition.gridLength>
+							<GridLength gridLengthValue=""/>
+						</GridRowDefinition.gridLength>
+					</GridRowDefinition>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition>
+						<GridColumnDefinition.gridLength>
+							<GridLength gridLengthValue="100%"/>
+						</GridColumnDefinition.gridLength>
+					</GridColumnDefinition>
+					<GridColumnDefinition>
+						<GridColumnDefinition.gridLength>
+							<GridLength gridLengthValue=""/>
+						</GridColumnDefinition.gridLength>
+					</GridColumnDefinition>
+				</GridPanel.gridColumnDefinitions>
+				<Label isDynamic="true" text="EFT Payments" classNames="fcls_title_lb" visible="true" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="header_text"/>
+				<Label isDynamic="true" text="P502" classNames="fcls_title_lb" visible="true" gridItemLocation="1,0,1,1" fieldTable="" identifier="lbFormName"/>
+			</GridPanel>
+			<GridPanel classNames="fcls_detail_cnt,fcls_data_cnt,fcls_align_left" visible="true" verticalAlignment="Top" horizontalAlignment="Left" gridItemLocation="0,1,1,1" fieldTable="formonly" identifier="cntDetail1">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition>
+						<GridRowDefinition.gridLength>
+							<GridLength gridLengthValue=""/>
+						</GridRowDefinition.gridLength>
+					</GridRowDefinition>
+					<GridRowDefinition>
+						<GridRowDefinition.gridLength>
+							<GridLength gridLengthValue=""/>
+						</GridRowDefinition.gridLength>
+					</GridRowDefinition>
+					<GridRowDefinition>
+						<GridRowDefinition.gridLength>
+							<GridLength gridLengthValue=""/>
+						</GridRowDefinition.gridLength>
+					</GridRowDefinition>
+					<GridRowDefinition>
+						<GridRowDefinition.gridLength>
+							<GridLength gridLengthValue=""/>
+						</GridRowDefinition.gridLength>
+					</GridRowDefinition>
+					<GridRowDefinition>
+						<GridRowDefinition.gridLength>
+							<GridLength gridLengthValue=""/>
+						</GridRowDefinition.gridLength>
+					</GridRowDefinition>
+					<GridRowDefinition>
+						<GridRowDefinition.gridLength>
+							<GridLength gridLengthValue=""/>
+						</GridRowDefinition.gridLength>
+					</GridRowDefinition>
+					<GridRowDefinition>
+						<GridRowDefinition.gridLength>
+							<GridLength gridLengthValue=""/>
+						</GridRowDefinition.gridLength>
+					</GridRowDefinition>
+					<GridRowDefinition>
+						<GridRowDefinition.gridLength>
+							<GridLength gridLengthValue=""/>
+						</GridRowDefinition.gridLength>
+					</GridRowDefinition>
+					<GridRowDefinition>
+						<GridRowDefinition.gridLength>
+							<GridLength gridLengthValue=""/>
+						</GridRowDefinition.gridLength>
+					</GridRowDefinition>
+					<GridRowDefinition>
+						<GridRowDefinition.gridLength>
+							<GridLength gridLengthValue=""/>
+						</GridRowDefinition.gridLength>
+					</GridRowDefinition>
+					<GridRowDefinition>
+						<GridRowDefinition.gridLength>
+							<GridLength gridLengthValue=""/>
+						</GridRowDefinition.gridLength>
+					</GridRowDefinition>
+					<GridRowDefinition>
+						<GridRowDefinition.gridLength>
+							<GridLength gridLengthValue=""/>
+						</GridRowDefinition.gridLength>
+					</GridRowDefinition>
+					<GridRowDefinition>
+						<GridRowDefinition.gridLength>
+							<GridLength gridLengthValue=""/>
+						</GridRowDefinition.gridLength>
+					</GridRowDefinition>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition>
+						<GridColumnDefinition.gridLength>
+							<GridLength gridLengthValue="10rem"/>
+						</GridColumnDefinition.gridLength>
+					</GridColumnDefinition>
+					<GridColumnDefinition>
+						<GridColumnDefinition.gridLength>
+							<GridLength gridLengthValue=""/>
+						</GridColumnDefinition.gridLength>
+					</GridColumnDefinition>
+				</GridPanel.gridColumnDefinitions>
+				<Label text="Processing run no" gridItemLocation="0,0,1,1" fieldTable="" identifier="label3" classNames="fcls_fieldlabel,fcls_align_left"/>
+				<TextField dataType="Integer,,,," preferredSize="9qch,1qch" toolTip=" EFT Processing run number " gridItemLocation="1,0,1,1" fieldTable="cheque" comment=" EFT Processing run number " identifier="eft_run_num" classNames="fcls_data_widget,fcls_align_left,fcls_length_20qch"/>
+				<Label text="Bank Code" gridItemLocation="0,1,1,1" fieldTable="" identifier="label4" classNames="fcls_fieldlabel,fcls_align_left"/>
+				<ComboBox toCase="Up" dataType="Char,,,,9" preferredSize="10qch,1qch" toolTip=" Bank Code that EFT&apos;s were drawn from" gridItemLocation="1,1,1,1" fieldTable="cheque" comment=" Bank Code that EFT&apos;s were drawn from" identifier="bank_code" classNames="fcls_data_widget,fcls_align_left,fcls_length_20qch"/>
+				<Label text="Vendor Code" gridItemLocation="0,2,1,1" fieldTable="" identifier="label5" classNames="fcls_fieldlabel,fcls_align_left"/>
+				<ComboBox toCase="Up" dataType="Char,,,,8" preferredSize="9qch,1qch" toolTip=" Unique Vendor ID" gridItemLocation="1,2,1,1" fieldTable="cheque" comment=" Unique Vendor ID" identifier="vend_code" classNames="fcls_data_widget,fcls_align_left,fcls_length_20qch"/>
+				<Label text="Payment Number" gridItemLocation="0,3,1,1" fieldTable="" identifier="label6" classNames="fcls_fieldlabel,fcls_align_left"/>
+				<TextField dataType="Integer,,,," preferredSize="10qch,1qch" toolTip=" The specific payment number already entered in the system" gridItemLocation="1,3,1,1" fieldTable="cheque" comment=" The specific payment number already entered in the system" identifier="cheq_code" classNames="fcls_data_widget,fcls_align_left,fcls_length_20qch"/>
+				<Label text="Payment Date" gridItemLocation="0,4,1,1" fieldTable="" identifier="label7" classNames="fcls_fieldlabel,fcls_align_left"/>
+				<Calendar format="dd/mm/yyyy" dataType="Date,,,," preferredSize="11qch,1qch" toolTip=" Date used for recording payment information" gridItemLocation="1,4,1,1" fieldTable="cheque" comment=" Date used for recording payment information" identifier="cheq_date" classNames="fcls_data_widget,fcls_align_left,fcls_length_20qch"/>
+				<Label text="Entry Person" gridItemLocation="0,5,1,1" fieldTable="" identifier="label8" classNames="fcls_fieldlabel,fcls_align_left"/>
+				<ComboBox dataType="Char,,,,8" preferredSize="11qch,1qch" toolTip=" Name of person performing EFT Payment Cycle" gridItemLocation="1,5,1,1" fieldTable="cheque" comment=" Name of person performing EFT Payment Cycle" identifier="entry_code" classNames="fcls_data_widget,fcls_align_left,fcls_length_20qch"/>
+				<Label text="Entry Date" gridItemLocation="0,6,1,1" fieldTable="" identifier="label9" classNames="fcls_fieldlabel,fcls_align_left"/>
+				<Calendar format="dd/mm/yyyy" dataType="Date,,,," preferredSize="11qch,1qch" toolTip=" Processing date when payments were raised" gridItemLocation="1,6,1,1" fieldTable="cheque" comment=" Processing date when payments were raised" identifier="entry_date" classNames="fcls_data_widget,fcls_align_left,fcls_length_20qch"/>
+				<Label text="Posting Year" gridItemLocation="0,7,1,1" fieldTable="" identifier="label10" classNames="fcls_fieldlabel,fcls_align_left"/>
+				<ComboBox dataType="SmallInt,,,," preferredSize="5qch,1qch" toolTip=" Accounting year to be used for posting purposes" gridItemLocation="1,7,1,1" fieldTable="cheque" comment=" Accounting year to be used for posting purposes" identifier="year_num" classNames="fcls_data_widget,fcls_align_left,fcls_length_20qch"/>
+				<Label text="Posting Period" gridItemLocation="0,8,1,1" fieldTable="" identifier="label11" classNames="fcls_fieldlabel,fcls_align_left"/>
+				<ComboBox dataType="SmallInt,,,," preferredSize="4qch,1qch" toolTip=" Accounting period to be used for posting purposes" gridItemLocation="1,8,1,1" fieldTable="cheque" comment=" Accounting period to be used for posting purposes" identifier="period_num" classNames="fcls_data_widget,fcls_align_left,fcls_length_20qch"/>
+				<Label text="Gross Amount" gridItemLocation="0,9,1,1" fieldTable="" identifier="label12" classNames="fcls_fieldlabel,fcls_align_left"/>
+				<TextField dataType="Decimal,,,2,16" preferredSize="14qch,1qch" toolTip=" Total payment amount payable to invoices" gridItemLocation="1,9,1,1" fieldTable="cheque" comment=" Total payment amount payable to invoices" identifier="pay_amt" classNames="fcls_data_widget,fcls_align_left,fcls_length_20qch"/>
+				<Label text="Tax Amount" gridItemLocation="0,10,1,1" fieldTable="" identifier="label13" classNames="fcls_fieldlabel,fcls_align_left"/>
+				<TextField dataType="Decimal,,,2,16" preferredSize="14qch,1qch" toolTip=" The tax amount of this cheque" gridItemLocation="1,10,1,1" fieldTable="cheque" comment=" The tax amount of this cheque" identifier="tax_amt" classNames="fcls_data_widget,fcls_align_left,fcls_length_20qch"/>
+				<Label text="Contra Amount" gridItemLocation="0,11,2,1" fieldTable="" identifier="label14" classNames="fcls_fieldlabel,fcls_align_left"/>
+				<TextField dataType="Decimal,,,2,16" preferredSize="14qch,1qch" toolTip=" The contra amount of this cheque" gridItemLocation="1,11,1,1" fieldTable="cheque" comment=" The contra amount of this cheque" identifier="contra_amt" classNames="fcls_data_widget,fcls_align_left,fcls_length_20qch"/>
+				<Label text="Net Amount" gridItemLocation="0,12,2,1" fieldTable="" identifier="label15" classNames="fcls_fieldlabel,fcls_align_left"/>
+				<TextField dataType="Decimal,,,2,16" preferredSize="14qch,1qch" toolTip=" Total payment amount payable to vendor" gridItemLocation="1,12,1,1" fieldTable="cheque" comment=" Total payment amount payable to vendor" identifier="net_pay_amt" classNames="fcls_data_widget,fcls_align_left,fcls_length_20qch"/>
+			</GridPanel>
+			<GridPanel classNames="fcls_statusbar_cnt" visible="true" verticalAlignment="Bottom" gridItemLocation="0,2,1,1" fieldTable="formonly" identifier="cntStatusBar">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition>
+						<GridRowDefinition.gridLength>
+							<GridLength gridLengthValue=""/>
+						</GridRowDefinition.gridLength>
+					</GridRowDefinition>
+					<GridRowDefinition>
+						<GridRowDefinition.gridLength>
+							<GridLength gridLengthValue=""/>
+						</GridRowDefinition.gridLength>
+					</GridRowDefinition>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition>
+						<GridColumnDefinition.gridLength>
+							<GridLength gridLengthValue="100%"/>
+						</GridColumnDefinition.gridLength>
+					</GridColumnDefinition>
+				</GridPanel.gridColumnDefinitions>
+				<Label isDynamic="true" text="" classNames="fcls_sblabel" visible="true" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="lbInfo1"/>
+				<Label isDynamic="true" text="" classNames="fcls_sblabel" visible="true" gridItemLocation="0,1,1,1" fieldTable="formonly" identifier="lbInfo2"/>
+			</GridPanel>
+		</GridPanel>
+	</form.rootContainer>
+	<form.screenRecords>
+		<ScreenRecord identifier="cheque" fields="cheque.eft_run_num,cheque.bank_code,cheque.vend_code,cheque.cheq_code,cheque.cheq_date,cheque.entry_code,cheque.entry_date,cheque.year_num,cheque.period_num,cheque.pay_amt,cheque.tax_amt,cheque.contra_amt,cheque.net_pay_amt"/>
+	</form.screenRecords>
+</form>
+

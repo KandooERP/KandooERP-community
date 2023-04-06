@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8"?><form xmlns="http://namespaces.querix.com/2015/fglForms" title="">
+	<form.rootContainer>
+		<GridPanel classNames="fcls_rootContainer" fieldTable="" horizontalAlignment="Stretch" identifier="rootContainer" verticalAlignment="Top">
+			<GridPanel.gridRowDefinitions>
+				<GridRowDefinition gridLengthValue=""/>
+				<GridRowDefinition/>
+				<GridRowDefinition gridLengthValue="100%"/>
+				<GridRowDefinition/>
+			</GridPanel.gridRowDefinitions>
+			<GridPanel.gridColumnDefinitions>
+				<GridColumnDefinition gridLengthValue="100%"/>
+			</GridPanel.gridColumnDefinitions>
+			<GridPanel classNames="fcls_title_cnt" fieldTable="formonly" gridItemLocation="0,0,1,1" horizontalAlignment="Stretch" identifier="cntTitle" verticalAlignment="Top" visible="true">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="28%"/>
+					<GridColumnDefinition gridLengthValue="5%"/>
+					<GridColumnDefinition gridLengthValue="27%"/>
+					<GridColumnDefinition gridLengthValue="39%"/>
+				</GridPanel.gridColumnDefinitions>
+				<Label classNames="fcls_title_lb" fieldTable="formonly" gridItemLocation="0,0,1,1" identifier="header_text" isDynamic="true" text="Copy Data from one company to another company" visible="true"/>
+				<Label text="Cmpy Code" isDynamic="true" visible="true" identifier="hdr_cmpy_code" gridItemLocation="1,0,1,1"/>
+				<Label text="Cmpy Name" isDynamic="true" visible="true" identifier="hdr_cmpy_name" gridItemLocation="2,0,1,1"/>
+				<Label classNames="fcls_title_lb" fieldTable="" gridItemLocation="3,0,1,1" identifier="lbFormName" isDynamic="true" text="U997" visible="true" horizontalAlignment="Right"/>
+			</GridPanel>
+			<GridPanel gridItemLocation="0,1,1,1" identifier="InputData" visible="true">
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridMinLength="10rem"/>
+					<GridColumnDefinition gridLengthValue="15%"/>
+					<GridColumnDefinition gridLengthValue=""/>
+				</GridPanel.gridColumnDefinitions>
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue="29"/>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition/>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue="13" gridMinLength="44"/>
+				</GridPanel.gridRowDefinitions>
+				<Label classNames="fcls_columnlabel_rev_cell,fcls_align_hstretch" gridItemLocation="1,0,1,1" horizontalAlignment="Center" identifier="lb13" isDynamic="true" text="Table Information" visible="true"/>
+				<Label gridItemLocation="0,1,1,1" identifier="lb4" isDynamic="true" text="Source Company" visible="true"/>
+				<ComboBox visible="true" identifier="src_cmpy_code" gridItemLocation="1,1,1,1">
+					<ComboBoxItem text="value1">
+						<ComboBoxItem.value>
+							<StringLiteral stringValue="value_1"/>
+						</ComboBoxItem.value>
+					</ComboBoxItem>
+				</ComboBox>
+				<TextField visible="true" identifier="src_cmpy_name" gridItemLocation="2,1,1,1" noEntry="true"/>
+				<ComboBox visible="true" identifier="trg_cmpy_code" gridItemLocation="1,2,1,1">
+					<ComboBoxItem text="value1">
+						<ComboBoxItem.value>
+							<StringLiteral stringValue="value_1"/>
+						</ComboBoxItem.value>
+					</ComboBoxItem>
+				</ComboBox>
+				<TextField visible="true" identifier="trg_cmpy_name" gridItemLocation="2,2,1,1" noEntry="true"/>
+				<Label gridItemLocation="0,4,1,1" identifier="lb15" isDynamic="true" text="BM where table is used" visible="true"/>
+				<TextField visible="true" identifier="bm_list" gridItemLocation="1,4,1,1"/>
+				<Label gridItemLocation="0,2,1,1" identifier="lb8" isDynamic="true" text="Target Company" visible="true"/>
+				<Label text="Transaction Mode" isDynamic="true" visible="true" identifier="lb21" gridItemLocation="0,5,1,1"/>
+				<RadioGroup orientation="Vertical" visible="true" identifier="xaction_mode" gridItemLocation="1,5,1,1">
+					<Radio title="1 Global Transaction" identifier="f20_1">
+						<Radio.value>
+							<StringLiteral stringValue="G"/>
+						</Radio.value>
+					</Radio>
+					<Radio title="1 Transaction/Table" identifier="xaction_mode_2">
+						<Radio.value>
+							<StringLiteral stringValue="T"/>
+						</Radio.value>
+					</Radio>
+					<Radio title="1 Transaction/row" identifier="xaction_mode_2">
+						<Radio.value>
+							<StringLiteral stringValue="R"/>
+						</Radio.value>
+					</Radio>
+				</RadioGroup>
+				
+			</GridPanel>
+			
+				<Table gridItemLocation="0,2,1,1" horizontalAlignment="Stretch" identifier="sr_tables_list" minSize="60rem,30rem" verticalAlignment="Stretch" visible="true">
+					<TableColumn text="Exec Order" visible="true" identifier="tc_f17">
+						<TextField visible="true" identifier="ord_num"/>
+						<TableColumn.columnLength>
+							<GridLength/>
+						</TableColumn.columnLength>
+					</TableColumn>
+					<TableColumn identifier="tc_colname" resizable="true" text="Table Name" visible="true">
+						<TextField fieldTable="table_documentation" identifier="tabname" visible="true"/>
+						<TableColumn.columnLength>
+							<GridLength gridLengthValue="15%" gridMaxLength="20rem" gridMinLength="10rem"/>
+						</TableColumn.columnLength>
+					</TableColumn>
+					<TableColumn text="Copy Data" resizable="true" visible="true" identifier="tc_f16">
+						<CheckBox title="" visible="true" notNull="true" identifier="do_copy" fieldTable="formonly">
+							<CheckBox.checkedValue>
+								<IntegerLiteral integerValue="1"/>
+							</CheckBox.checkedValue>
+							<CheckBox.uncheckedValue>
+								<IntegerLiteral integerValue="0"/>
+							</CheckBox.uncheckedValue>
+						</CheckBox>
+						<TableColumn.columnLength>
+							<GridLength/>
+						</TableColumn.columnLength>
+					</TableColumn>
+					
+					<TableColumn identifier="tc_documentation" resizable="true" text="Table Documentation" visible="true">
+						<TextField fieldTable="table_documentation" identifier="documentation" visible="true" noEntry="true"/>
+						<TableColumn.columnLength>
+							<GridLength gridLengthValue="35%" gridMinLength="30rem"/>
+						</TableColumn.columnLength>
+					</TableColumn>
+					
+					<TableColumn identifier="tc_mtime" resizable="true" text="Source Rows #" visible="true">
+						<TextField fieldTable="formonly" identifier="nb_rows_src" visible="true" noEntry="true"/>
+						<TableColumn.columnLength>
+							<GridLength gridLengthValue="15%" gridMaxLength="15rem" gridMinLength="10rem"/>
+						</TableColumn.columnLength>
+					</TableColumn>
+					<TableColumn text="Target Rows #" resizable="true" visible="true" identifier="tc_f18">
+						<TextField visible="true" identifier="nb_rows_trg"/>
+						<TableColumn.columnLength>
+							<GridLength/>
+						</TableColumn.columnLength>
+					</TableColumn>
+					<TableColumn text="Oper Status" resizable="true" visible="true" identifier="tc_f19">
+						<TextField visible="true" identifier="op_status"/>
+						<TableColumn.columnLength>
+							<GridLength/>
+						</TableColumn.columnLength>
+					</TableColumn>
+				</Table>
+
+			<GridPanel classNames="fcls_statusbar_cnt" fieldTable="formonly" gridItemLocation="0,3,1,1" identifier="cntStatusBar" verticalAlignment="Top" visible="true">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="100%"/>
+				</GridPanel.gridColumnDefinitions>
+				<Label classNames="fcls_sblabel" fieldTable="formonly" gridItemLocation="0,0,1,1" identifier="lbInfo1" isDynamic="true" text="" visible="true"/>
+				<Label classNames="fcls_sblabel" fieldTable="formonly" gridItemLocation="0,1,1,1" identifier="lbInfo2" isDynamic="true" text="" visible="true"/>
+			</GridPanel>
+		</GridPanel>
+	</form.rootContainer>
+	<form.screenRecords> 
+		<ScreenRecord elements="4" fields="ord_num,tabname,do_copy,documentation,nb_rows_src,nb_rows_trg,op_status" identifier="sr_tables_list"/>
+		<ScreenRecord fields="tabname,documentation" identifier="table_documentation"/>
+		<ScreenRecord fields="docopy,nrows" identifier="FormOnly"/>
+	</form.screenRecords>
+</form>

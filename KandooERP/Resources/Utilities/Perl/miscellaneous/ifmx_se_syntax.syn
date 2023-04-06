@@ -1,0 +1,17 @@
+:regexp=\bcreate database\b
+:regexp=\bdrop database\b
+:regexp=\bCHECK TABLE\s+
+:regexp=\bCREATE AUDIT\s+
+:regexp=\bDROP AUDIT\s+
+:regexp=\bRECOVER TABLE\s+
+:regexp=\bREPAIR TABLE\s+
+:regexp=\bROLLFORWARD DATABASE\s+
+:regexp=\bSTART DATABASE\s+
+:regexp=\bSET TRANSACTION\s+
+:regexp=\bLOCK TABLE\s+
+:regexp=\bSYSTABLES\b
+:regexp=\bSYSCOLUMNS\b
+:regexp=\bSYSINDEXES\b
+:regexp=\bSYSSYNTABLES\b
+:regexp=\bSYSSYNTABLES\b
+:regexp=\bSYSAUDIT\b

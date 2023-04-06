@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form xmlns="http://namespaces.querix.com/2015/fglForms">
+	<form.rootContainer>
+		<GridPanel classNames="fcls_rootContainer" verticalAlignment="Top" horizontalAlignment="Left" fieldTable="" identifier="rootContainer">
+			<GridPanel.gridRowDefinitions>
+				<GridRowDefinition gridLengthValue=""/>
+				<GridRowDefinition gridLengthValue=""/>
+				<GridRowDefinition gridLengthValue=""/>
+				<GridRowDefinition gridLengthValue=""/>
+				<GridRowDefinition gridLengthValue=""/>
+			</GridPanel.gridRowDefinitions>
+			<GridPanel.gridColumnDefinitions>
+				<GridColumnDefinition gridLengthValue="100%"/>
+			</GridPanel.gridColumnDefinitions>
+			<GridPanel classNames="fcls_title_cnt" visible="true" verticalAlignment="Top" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="cntTitle">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="100%"/>
+					<GridColumnDefinition gridLengthValue=""/>
+				</GridPanel.gridColumnDefinitions>
+				<Label isDynamic="true" text="Sales Commissions" classNames="fcls_title_lb" visible="true" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="header_text"/>
+				<Label isDynamic="true" text="A188" classNames="fcls_title_lb" visible="true" gridItemLocation="1,0,1,1" fieldTable="" identifier="lbFormName"/>
+			</GridPanel>
+			<GroupBox title="Salesperson" classNames="fcls_detail_gb_cnt" visible="true" gridItemLocation="0,1,1,1" fieldTable="" identifier="cntDetail1GroupBox">
+				<GridPanel classNames="fcls_detail_gb_cnt_sub,fcls_detail_cnt_sub,fcls_data_cnt,fcls_align_left" visible="true" verticalAlignment="Top" horizontalAlignment="Left" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="cntDetail1Sub">
+					<GridPanel.gridRowDefinitions>
+						<GridRowDefinition gridLengthValue=""/>
+						<GridRowDefinition gridLengthValue=""/>
+						<GridRowDefinition gridLengthValue=""/>
+					</GridPanel.gridRowDefinitions>
+					<GridPanel.gridColumnDefinitions>
+						<GridColumnDefinition gridLengthValue="" gridMinLength="12rem"/>
+						<GridColumnDefinition gridLengthValue=""/>
+					</GridPanel.gridColumnDefinitions>
+					<CheckBox toCase="Up" dataType="Char,,,," classNames="fcls_data_widget,fcls_align_left,fcls_length_20qch" preferredSize="2qch,1qch" toolTip="All salespeople or a specific selection" gridItemLocation="0,0,2,1" fieldTable="formonly" comment="All salespeople or a specific selection" identifier="sales_sel" title="Salespeople Selection">
+						<CheckBox.checkedValue>
+							<StringLiteral stringValue="S"/>
+						</CheckBox.checkedValue>
+						<CheckBox.uncheckedValue>
+							<StringLiteral stringValue="A"/>
+						</CheckBox.uncheckedValue>
+					</CheckBox>
+					<Label isDynamic="true" text="Beginning" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,1,1,1" fieldTable="" identifier="lb73"/>
+					<TextField toCase="Up" dataType="Char,,,," classNames="fcls_data_widget,fcls_align_left,fcls_length_20qch" preferredSize="4qch,1qch" toolTip="Salesperson to begin selection" gridItemLocation="1,1,1,1" fieldTable="formonly" comment="Salesperson to begin selection" identifier="bsale"/>
+					<Label isDynamic="true" text="Ending" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,2,1,1" fieldTable="" identifier="lb76"/>
+					<TextField toCase="Up" dataType="Char,,,," classNames="fcls_data_widget,fcls_align_left,fcls_length_20qch" preferredSize="4qch,1qch" toolTip="Salesperson to end selection" gridItemLocation="1,2,1,1" fieldTable="formonly" comment="Salesperson to end selection" identifier="esale"/>
+				</GridPanel>
+			</GroupBox>
+			<GroupBox title="Transaction Date" classNames="fcls_detail_gb_cnt" visible="true" verticalAlignment="Top" gridItemLocation="0,2,1,1" fieldTable="formonly" identifier="cntDetail2GroupBox">
+				<GridPanel classNames="fcls_detail_gb_cnt_sub,fcls_detail_cnt_sub,fcls_data_cnt,fcls_align_left" visible="true" verticalAlignment="Top" horizontalAlignment="Left" fieldTable="formonly" identifier="cntDetail2Sub">
+					<GridPanel.gridRowDefinitions>
+						<GridRowDefinition gridLengthValue=""/>
+						<GridRowDefinition gridLengthValue=""/>
+						<GridRowDefinition gridLengthValue=""/>
+					</GridPanel.gridRowDefinitions>
+					<GridPanel.gridColumnDefinitions>
+						<GridColumnDefinition gridLengthValue="" gridMinLength="12rem"/>
+						<GridColumnDefinition gridLengthValue=""/>
+					</GridPanel.gridColumnDefinitions>
+					<CheckBox toCase="Up" dataType="Char,,,," classNames="fcls_data_widget,fcls_align_left,fcls_length_20qch" preferredSize="2qch,1qch" toolTip="All transaction dates or a specific selection" gridItemLocation="0,0,2,1" fieldTable="formonly" comment="All transaction dates or a specific selection" identifier="date_sel" title="Transaction Selection">
+						<CheckBox.uncheckedValue>
+							<StringLiteral stringValue="A"/>
+						</CheckBox.uncheckedValue>
+						<CheckBox.checkedValue>
+							<StringLiteral stringValue="S"/>
+						</CheckBox.checkedValue>
+					</CheckBox>
+					<Label isDynamic="true" text="Beginning" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,1,1,1" fieldTable="formonly" identifier="lb46"/>
+					<Calendar dataType="Char,,,," classNames="fcls_data_widget,fcls_align_left,fcls_length_20qch" preferredSize="11qch,1qch" toolTip="Transaction date to begin selection" gridItemLocation="1,1,1,1" fieldTable="formonly" comment="Transaction date to begin selection" identifier="bdate"/>
+					<Label isDynamic="true" text="Ending" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,2,1,1" fieldTable="formonly" identifier="lb44"/>
+					<Calendar dataType="Char,,,," classNames="fcls_data_widget,fcls_align_left,fcls_length_20qch" preferredSize="11qch,1qch" toolTip="Transaction date to end selection" gridItemLocation="1,2,1,1" fieldTable="formonly" comment="Transaction date to end selection" identifier="edate"/>
+				</GridPanel>
+			</GroupBox>
+			<GroupBox title="Customer" classNames="fcls_detail_gb_cnt" visible="true" gridItemLocation="0,3,1,1" fieldTable="formonly" identifier="cntDetail3GroupBox">
+				<GridPanel classNames="fcls_detail_gb_cnt_sub,fcls_detail_cnt_sub,fcls_data_cnt,fcls_align_left" visible="true" verticalAlignment="Top" horizontalAlignment="Left" fieldTable="formonly" identifier="cntDetail3Sub">
+					<GridPanel.gridRowDefinitions>
+						<GridRowDefinition gridLengthValue=""/>
+						<GridRowDefinition gridLengthValue=""/>
+						<GridRowDefinition gridLengthValue=""/>
+					</GridPanel.gridRowDefinitions>
+					<GridPanel.gridColumnDefinitions>
+						<GridColumnDefinition gridLengthValue="" gridMinLength="12rem"/>
+						<GridColumnDefinition gridLengthValue=""/>
+					</GridPanel.gridColumnDefinitions>
+					<CheckBox toCase="Up" dataType="Char,,,," classNames="fcls_data_widget,fcls_align_left,fcls_length_20qch" preferredSize="2qch,1qch" toolTip="All customers or a specific selection" gridItemLocation="0,0,2,1" fieldTable="formonly" comment="All customers or a specific selection" identifier="cust_sel" title="Customer Selection">
+						<CheckBox.uncheckedValue>
+							<StringLiteral stringValue="A"/>
+						</CheckBox.uncheckedValue>
+						<CheckBox.checkedValue>
+							<StringLiteral stringValue="S"/>
+						</CheckBox.checkedValue>
+					</CheckBox>
+					<Label isDynamic="true" text="Beginning" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,1,1,1" fieldTable="formonly" identifier="lb49"/>
+					<TextField toCase="Up" dataType="Char,,,," classNames="fcls_data_widget,fcls_align_left,fcls_length_20qch" preferredSize="9qch,1qch" toolTip="Customer to begin selection" gridItemLocation="1,1,1,1" fieldTable="formonly" comment="Customer to begin selection" identifier="bcust"/>
+					<Label isDynamic="true" text="Ending" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,2,1,1" fieldTable="formonly" identifier="lb63"/>
+					<TextField toCase="Up" dataType="Char,,,," classNames="fcls_data_widget,fcls_align_left,fcls_length_20qch" preferredSize="9qch,1qch" toolTip="Customer to end selection" gridItemLocation="1,2,1,1" fieldTable="formonly" comment="Customer to end selection" identifier="ecust"/>
+				</GridPanel>
+			</GroupBox>
+			<GridPanel classNames="fcls_statusbar_cnt" visible="true" verticalAlignment="Top" gridItemLocation="0,4,1,1" fieldTable="formonly" identifier="cntStatusBar">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="100%"/>
+				</GridPanel.gridColumnDefinitions>
+				<Label isDynamic="true" text="" classNames="fcls_sblabel" visible="true" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="lbInfo1"/>
+				<Label isDynamic="true" text="" classNames="fcls_sblabel" visible="true" gridItemLocation="0,1,1,1" fieldTable="formonly" identifier="lbInfo2"/>
+			</GridPanel>
+		</GridPanel>
+	</form.rootContainer>
+	<form.screenRecords>
+		<ScreenRecord identifier="formonly" fields="sales_sel,bsale,esale,date_sel,bdate,edate,cust_sel,bcust,ecust"/>
+	</form.screenRecords>
+</form>
+

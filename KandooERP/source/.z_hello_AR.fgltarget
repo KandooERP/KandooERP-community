@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<fglBuildTarget xmlns="http://namespaces.querix.com/lyciaide/target" name="z_hello_AR" type="fgl-program">
+
+  <libraries>
+    <library name="lib_tool" dynamic="false" location=""/>
+    <library name="lib_tool_A_AR" dynamic="false" location=""/>
+    <library name="lib_tool_db" dynamic="false" location=""/>
+    <library name="lib_tool_windecoration" dynamic="false" location=""/>
+  </libraries>
+
+  <sources type="fgl">
+    <file location="4gl/querix/z_hello_AR.4gl"/>
+  </sources>
+
+  <sources type="form">
+    <file location="per/querix/z_hello_AR.fm2"/>
+  </sources>
+
+  <mediaFiles>
+    <file client="true" location="z_hello_AR.css" type="other"/>
+    <file client="true" location="z_hello_AR.qxtheme" type="gui-theme-file"/>
+  </mediaFiles>
+
+</fglBuildTarget>

@@ -1,0 +1,67 @@
+#Questions au depart
+our $QProjName="Nom du projet Lycia";
+our $QProgName="Nom du programme Lycia";
+our $QModName="Nom du module Lycia";
+our $QDatabaseName="Nom de la base de donnees";
+our $QFormName="Nom de la forme d ecran principal";
+our $Formnexist="Form inexistante ";
+our $Rdatabasename="La base de donnes est ";
+our $Qmsttblname="Nom de la table principale ";
+our $Qdtltable="Nom de la table detail";
+our $Qdscrrec="Nom du screen record detail";
+our $Qdywhelpf="Desirez-vous generer le fichier d aide ? (O/N)" ;
+
+# Options du menu
+our $Query="Interroger";
+our $Next="Suivant";
+our $Previous="Precedent";
+our $Insert="Creer";
+our $Update="Modifier";
+our $Delete="Effacer";
+our $F_exit="Fin";
+our $Quit="Quitter" ;
+our $Presstab="Appuyez sur la touche TAB";
+our $Arredit="Modifier le tableau";
+
+# Nom des touches
+our $InterruptKey="Control-c";
+
+# Messages
+our $Dbsnoavl="base de donnees non disponible";
+our $Thereisanerror="Il y a une erreur Numero: ";
+our $DbNotAvailable="La base de donnees est indisponible";
+our $ConfMsg="Confirmer";
+our $PLMessage = "Choisissez une ligne " ;
+our $Yes="Oui";
+our $YesChar=substr $Yes,0,1
+our $No="Non";
+our $NoChar=substr $No,0,1;
+our $Cancel="Annuler";
+our $CancelChar=substr $Cancel,0,1;
+our $CancelCom="Annulation:taper ";
+our $QueryCom="Effectuer une selection avec criteres";
+our $NextCom="Afficher l enregistrement suivant";
+our $PreviousCom="Afficher l enregistrement precedent";
+our $InsertCom="Creer un enregistrement nouveau";
+our $UpdateCom="Modifier l enregistrement affiche";
+our $DeleteCom="Supprimer l enregistrement affiche";
+our $QuitCom="Sortir de l'application";
+our $Noexist=" n existe pas";
+our $Exists=" existe deja";
+our $Islock="Est verouille ";
+our $NorowsSelected="Il n y a pas de rangees correspondantes";
+our $Lastrow="Dernier enregistrement de la liste";
+our $FirstRow="Premier enregistrement de la liste";
+our $SelectAllRows="Selection de tous les enregistrements, etes-vous sur?";
+our $SelectFirst="Veuillez effectuer une selection prealable";
+our $Unreachable="Cette rangee n est pas accessible";
+our $Oneatleast="Saisissez au minimum un critere";
+our $OKtoContinue="Tapez OK pour continuer";
+our $Successful="conclu avec succes";
+our $Correct="correct";
+our $Failed="echoue";
+our $Indication="Valider:$accept Abandonner $interrupt";
+our $InputCriteria="Veuillez introduire vos criteres";
+our $Zoomlist="Liste des ";
+our $Zchoice="Pour choisir ";
+our $Arrayempty="Il n y a pas d enregistrement dans ce tableau";

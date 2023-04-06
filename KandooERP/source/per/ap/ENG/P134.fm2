@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form xmlns="http://namespaces.querix.com/2015/fglForms">
+	<form.rootContainer>
+		<GridPanel classNames="fcls_rootContainer" verticalAlignment="Stretch" horizontalAlignment="Stretch" fieldTable="" identifier="rootContainer">
+			<GridPanel.gridRowDefinitions>
+				<GridRowDefinition gridLengthValue=""/>
+				<GridRowDefinition gridLengthValue="100%"/>
+				<GridRowDefinition gridLengthValue=""/>
+			</GridPanel.gridRowDefinitions>
+			<GridPanel.gridColumnDefinitions>
+				<GridColumnDefinition gridLengthValue="100%"/>
+			</GridPanel.gridColumnDefinitions>
+			<GridPanel classNames="fcls_title_cnt" visible="true" verticalAlignment="Top" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="cntTitle">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="100%"/>
+					<GridColumnDefinition gridLengthValue=""/>
+				</GridPanel.gridColumnDefinitions>
+				<Label isDynamic="true" text="Cheque by Number" classNames="fcls_title_lb" visible="true" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="header_text"/>
+				<Label isDynamic="true" text="P134" classNames="fcls_title_lb" visible="true" gridItemLocation="1,0,1,1" fieldTable="" identifier="lbFormName"/>
+			</GridPanel>
+			<Table rowCount="12" preferredSize="72qch,12qch" gridItemLocation="0,1,1,1" fieldTable="" identifier="sr_cheque">
+				<TableColumn text="Cheque Number" fieldTable="" identifier="tc_cheq_code">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="10rem" gridMinLength="10rem" gridMaxLength="10rem"/>
+					</TableColumn.columnLength>
+					<TextField dataType="Integer,,,," toolTip=" Enter beginning cheque number to be scanned" comment=" Enter beginning cheque number to be scanned" fieldTable="cheque" identifier="cheq_code"/>
+				</TableColumn>
+				<TableColumn text="Vendor Name" fieldTable="" identifier="tc_name_text">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="10rem" gridMinLength="10rem" gridMaxLength="10rem"/>
+					</TableColumn.columnLength>
+					<TextField dataType="Char,,,,30" toolTip=" Vendors name " comment=" Vendors name " fieldTable="vendor" identifier="name_text"/>
+				</TableColumn>
+				<TableColumn text="Cheque Date" fieldTable="" identifier="tc_cheq_date">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="10rem" gridMinLength="10rem" gridMaxLength="10rem"/>
+					</TableColumn.columnLength>
+					<TextField noEntry="true" dataType="Date,,,," toolTip=" Date cheque was entered into the system" comment=" Date cheque was entered into the system" fieldTable="cheque" identifier="cheq_date"/>
+				</TableColumn>
+				<TableColumn text="Gross Amount" fieldTable="" identifier="tc_pay_amt">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="10rem" gridMinLength="10rem" gridMaxLength="10rem"/>
+					</TableColumn.columnLength>
+					<TextField noEntry="true" dataType="Decimal,,,2,16" toolTip=" Total amount of specified cheque" comment=" Total amount of specified cheque" fieldTable="cheque" identifier="pay_amt"/>
+				</TableColumn>
+				<TableColumn text="Pay M." fieldTable="" identifier="tc_pay_meth_ind">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="10rem" gridMinLength="10rem" gridMaxLength="10rem"/>
+					</TableColumn.columnLength>
+					<TextField dataType="Char,,,,1" toolTip=" Method: (1) auto/manual cheques, (3) EFT payments " comment=" Method: (1) auto/manual cheques, (3) EFT payments " fieldTable="cheque" identifier="pay_meth_ind"/>
+				</TableColumn>
+				<TableColumn text="Post" fieldTable="" identifier="tc_post_flag">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="3rem" gridMinLength="3rem" gridMaxLength="3rem"/>
+					</TableColumn.columnLength>
+					<CheckBox noEntry="true" dataType="Char,,,,1" toolTip=" Y or N if cheque has been posted to the GL " horizontalAlignment="Left" comment=" Y or N if cheque has been posted to the GL " fieldTable="cheque" identifier="post_flag">
+						<CheckBox.checkedValue>
+							<StringLiteral stringValue="Y"/>
+						</CheckBox.checkedValue>
+						<CheckBox.uncheckedValue>
+							<StringLiteral stringValue="N"/>
+						</CheckBox.uncheckedValue>
+					</CheckBox>
+				</TableColumn>
+			</Table>
+			<GridPanel classNames="fcls_statusbar_cnt" visible="true" verticalAlignment="Top" gridItemLocation="0,2,1,1" fieldTable="formonly" identifier="cntStatusBar">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="100%"/>
+				</GridPanel.gridColumnDefinitions>
+				<Label isDynamic="true" text="" classNames="fcls_sblabel" visible="true" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="lbInfo1"/>
+				<Label isDynamic="true" text="" classNames="fcls_sblabel" visible="true" gridItemLocation="0,1,1,1" fieldTable="formonly" identifier="lbInfo2"/>
+			</GridPanel>
+		</GridPanel>
+	</form.rootContainer>
+	<form.screenRecords>
+		<ScreenRecord identifier="sr_cheque" fields="cheque.cheq_code,vendor.name_text,cheque.cheq_date,cheque.pay_amt,cheque.pay_meth_ind,cheque.post_flag"/>
+		<ScreenRecord identifier="cheque" fields="cheque.cheq_code,cheque.cheq_date,cheque.pay_amt,cheque.pay_meth_ind,cheque.post_flag"/>
+		<ScreenRecord identifier="vendor" fields="vendor.name_text"/>
+	</form.screenRecords>
+</form>
+

@@ -1,0 +1,56 @@
+PS1_FRA {
+A second address line if needed { "Une deuxième ligne d'adresse si nécessaire" }
+A third address line if needed { "Une troisième ligne d'adresse si nécessaire" }
+Account Code { "Numéro de Compte" }
+Account Info { "Informations sur le compte" }
+Accounts contact { "Contact du compte" }
+Address { "Adresse" }
+Aging Date { "Date de vieillissement" }
+City { "Ville" }
+Code representing the country where Vendor located { "Code représentant le pays où se trouve le vendeur" }
+Code representing the language of this Vendor { "Code langue du fournisseur" }
+Contact Info { "Informations du contact" }
+Contact Name { "Nom du contact" }
+Country { "Pays" }
+Country in which vendor is located { "Pays où se trouve le fournisseur" }
+Currency for calculating exchange rates { "Devise pour calculer les taux de change" }
+Date { "Date" }
+Description of the currency { "Description de cette devise" }
+Description of these terms { "Description de ces conditions de paiement" }
+Description of this vendor type { "Description de ce type de fournisseur" }
+Extension for billing contact { "Numéro de poste pour le contact facturation" }
+Fax { "Fax" }
+ID { "ID" }
+Language { "Langue" }
+Language Code { "Code langue" }
+Mailing address for vouchers and cheques { "Adresse postale pour les factures fournisseur et les chèques" }
+Name { "Nom" }
+Phone { "Téléphone" }
+Phone Number for vendor { "Numéro de téléphone du fournisseur" }
+Postcode { "Code Postal" }
+Postcode for mailing address { "Code postal pour adresse postale" }
+Postcode for mailing address { "Zipcode pour adresse postale" }
+State for mailing address { "Région de l'adresse postale" }
+State/County { "Région" }
+Tax Claim Code { "Code T.V.A. collectée" }
+Tax Code of percentage to be reclaimed in sales tax { "Code de la T.V.A sur ventes récupérable" }
+Tax Number { "Numéro T.V.A" }
+Tax Number { "Numéro de Taxe" }
+Term Code { "Code Conditions de paiement" }
+Term Code which this vendor has granted for payments { "Code délai de paiement accordé par le fournisseur" }
+The Code assigned to our account on the vendors system { "Le code attribué à notre compte dans le système des fournisseurs" }
+The Vendors Tax ID { "L'identifiant fiscal du fournisseur (SIRET)" }
+The type of vendor { "Le type de fournisseur" }
+The vendors Fax number { "Numéero de fax du fournisseur" }
+Unique ID which will be used whenever referencing this vendor { "Identifiant unique utilisé pour ce fournisseur" }
+Vendor { "Fournisseur" }
+Vendor Bank Acct { "Compte Bancaire fournisseur" }
+Vendor Currency { "Devise fournisseur" }
+Vendor Header { "Entête du fournisseur" }
+Vendor Name or description as it will appear on cheques etc { "Nom du fournisseur ou description apparaissant sur chèques etc" }
+Vendor Type { "Type de Fournisseur" }
+Vendor is Subcontractor { "Le fournisseur est un sous-traîtant" }
+Vendor's bank account code { "Numéro de code du fournisseur" }
+Y if this Vendor is a Subcontractor (i.e. PPS/Retention) { "O si ce fournisseur est un sous-traitant" }
+actToolbarManager { "actToolbarManager" }
+}

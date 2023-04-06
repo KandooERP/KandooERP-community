@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?><form xmlns="http://namespaces.querix.com/2015/fglForms">
+	<form.rootContainer>
+		<GridPanel classNames="fcls_rootContainer" fieldTable="" horizontalAlignment="Stretch" identifier="rootContainer" preferredSize="," verticalAlignment="Stretch">
+			<GridPanel.gridRowDefinitions>
+				<GridRowDefinition gridLengthValue=""/>
+				<GridRowDefinition gridLengthValue=""/>
+				<GridRowDefinition gridLengthValue="100%"/>
+				<GridRowDefinition gridLengthValue=""/>
+			</GridPanel.gridRowDefinitions>
+			<GridPanel.gridColumnDefinitions>
+				<GridColumnDefinition gridLengthValue="100%"/>
+			</GridPanel.gridColumnDefinitions>
+			<GridPanel classNames="fcls_title_cnt" fieldTable="formonly" gridItemLocation="0,0,1,1" identifier="cntTitle" verticalAlignment="Top" visible="true">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="100%"/>
+					<GridColumnDefinition gridLengthValue=""/>
+				</GridPanel.gridColumnDefinitions>
+				<Label classNames="fcls_title_lb" fieldTable="formonly" gridItemLocation="0,0,1,1" identifier="header_text" isDynamic="true" text="Product Surcharge" visible="true"/>
+				<Label classNames="fcls_title_lb" fieldTable="" gridItemLocation="1,0,1,1" identifier="lbFormName" isDynamic="true" text="I639" visible="true"/>
+			</GridPanel>
+			<GridPanel classNames="fcls_detail_cnt,fcls_data_cnt,fcls_align_left" fieldTable="formonly" gridItemLocation="0,1,1,1" horizontalAlignment="Left" identifier="cntDetail1" verticalAlignment="Top" visible="true">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="" gridMinLength="10rem"/>
+					<GridColumnDefinition gridLengthValue=""/>
+				</GridPanel.gridColumnDefinitions>
+				<RadioGroup fieldTable="" gridItemLocation="1,0,1,1" identifier="pr_prod_list" notNull="true" orientation="Vertical" visible="true">
+					<Radio identifier="pr_prod_list_1" title="List only products with surcharge">
+						<Radio.value>
+							<IntegerLiteral integerValue="1"/>
+						</Radio.value>
+					</Radio>
+					<Radio identifier="pr_prod_list_2" title="List all products">
+						<Radio.value>
+							<IntegerLiteral integerValue="2"/>
+						</Radio.value>
+					</Radio>
+				</RadioGroup>
+				<Label classNames="fcls_fieldlabel,fcls_align_left" fieldTable="" gridItemLocation="0,0,1,1" identifier="lb51" isDynamic="true" text="Product Listing" visible="true"/>
+			</GridPanel>
+			<Table fieldTable="" gridItemLocation="0,2,1,1" identifier="sr_product" preferredSize="62qch,11qch" rowCount="11">
+				<TableColumn fieldTable="" identifier="tc_part_code" text="Product">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="20rem" gridMaxLength="20rem" gridMinLength="20rem"/>
+					</TableColumn.columnLength>
+					<TextField comment=" Enter product code selection criteria" dataType="Char,,,,15" fieldTable="product" identifier="part_code" toCase="Up" toolTip=" Enter product code selection criteria"/>
+				</TableColumn>
+				<TableColumn fieldTable="" identifier="tc_desc_text" text="Description">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="30rem" gridMaxLength="30rem" gridMinLength="30rem"/>
+					</TableColumn.columnLength>
+					<TextField comment=" Description of this product " dataType="Char,,,,36" fieldTable="product" identifier="desc_text" toolTip=" Description of this product "/>
+				</TableColumn>
+				<TableColumn fieldTable="" identifier="tc_prodgrp_code" text="Product Group">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="10rem" gridMaxLength="10rem" gridMinLength="10rem"/>
+					</TableColumn.columnLength>
+					<TextField comment=" Enter product group selection criteria" dataType="Char,,,,3" fieldTable="product" identifier="prodgrp_code" toCase="Up" toolTip=" Enter product group selection criteria"/>
+				</TableColumn>
+				<TableColumn fieldTable="" identifier="tc_maingrp_code" text="Main Product Group">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="10rem" gridMaxLength="10rem" gridMinLength="10rem"/>
+					</TableColumn.columnLength>
+					<TextField comment=" Enter main product group selection criteria" dataType="Char,,,,3" fieldTable="product" identifier="maingrp_code" toCase="Up" toolTip=" Enter main product group selection criteria"/>
+				</TableColumn>
+				<TableColumn fieldTable="" identifier="tc_lbEOL" resizable="true" visible="true">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="100%"/>
+					</TableColumn.columnLength>
+					<Label fieldTable="" identifier="lbEOL" isDynamic="true" visible="true"/>
+				</TableColumn>
+			</Table>
+			<GridPanel classNames="fcls_statusbar_cnt" fieldTable="formonly" gridItemLocation="0,3,1,1" identifier="cntStatusBar" verticalAlignment="Top" visible="true">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="100%"/>
+				</GridPanel.gridColumnDefinitions>
+				<Label classNames="fcls_sblabel" fieldTable="formonly" gridItemLocation="0,0,1,1" identifier="lbInfo1" isDynamic="true" text="" visible="true"/>
+				<Label classNames="fcls_sblabel" fieldTable="formonly" gridItemLocation="0,1,1,1" identifier="lbInfo2" isDynamic="true" text="" visible="true"/>
+			</GridPanel>
+		</GridPanel>
+	</form.rootContainer>
+	<form.screenRecords>
+		<ScreenRecord elements="11" fields="product.part_code,product.desc_text,product.prodgrp_code,product.maingrp_code" identifier="sr_product"/>
+		<ScreenRecord fields="formonly.pr_prod_list,rb_group" identifier="formonly"/>
+		<ScreenRecord fields="product.part_code,product.desc_text,product.prodgrp_code,product.maingrp_code" identifier="product"/>
+	</form.screenRecords>
+</form>

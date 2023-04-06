@@ -1,0 +1,37 @@
+GZC_FRA {
+ACCEPT { "VALIDER" }
+Account { "Compte" }
+Address { "Adresse" }
+BIC { "BIC" }
+Bank Account { "Compte bancaire" }
+City { "Ville" }
+Comments { "Commentaires" }
+Company { "Société" }
+Company Code { "Code Société" }
+Country { "Pays" }
+Country Code { "Code Pays" }
+Currency { "Devise" }
+Date { "Date" }
+Description { "Description" }
+Discounts Taken { "Remises accordées" }
+Exit { "Quitter" }
+FILTER { "Premier" }
+Fax { "Fax" }
+GL Account { "Compte de Compta Générale" }
+ID { "ID" }
+Journal { "Journal" }
+LOOKUP { "RECHERCHER" }
+Language { "Langue" }
+Language Code { "Code langue" }
+Name { "Nom" }
+New Label { "Références bancaires" }
+Other { "Autre" }
+Password { "Mot de passe" }
+Phone { "Téléphone" }
+Post Code { "Code Postal" }
+Start Date { "Date de Début" }
+State/County { "Région" }
+Telephone { "Telephone" }
+Vat Reg No { "N° T.V.A. intracommunautaire" }
+actToolbarManager { "actToolbarManager" }
+}

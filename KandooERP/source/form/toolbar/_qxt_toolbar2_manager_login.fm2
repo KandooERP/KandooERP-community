@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form xmlns="http://namespaces.querix.com/2015/fglForms">
+	<form.rootContainer>
+		<GridPanel classNames="fcls_rootContainer" preferredSize="40qch,8qch" verticalAlignment="Top" horizontalAlignment="Left" fieldTable="" identifier="rootContainer">
+			<GridPanel.gridRowDefinitions>
+				<GridRowDefinition gridLengthValue=""/>
+				<GridRowDefinition gridLengthValue=""/>
+				<GridRowDefinition gridLengthValue=""/>
+			</GridPanel.gridRowDefinitions>
+			<GridPanel.gridColumnDefinitions>
+				<GridColumnDefinition gridLengthValue="100%"/>
+			</GridPanel.gridColumnDefinitions>
+			<GridPanel classNames="fcls_title_cnt" visible="true" verticalAlignment="Top" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="cntTitle">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="100%"/>
+					<GridColumnDefinition gridLengthValue=""/>
+				</GridPanel.gridColumnDefinitions>
+				<Label isDynamic="true" text="Login" classNames="fcls_title_lb" visible="true" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="header_text"/>
+				<Label isDynamic="true" text="_qxt_toolbar2_manager_login" classNames="fcls_title_lb" visible="true" gridItemLocation="1,0,1,1" fieldTable="" identifier="lbFormName"/>
+			</GridPanel>
+			<GridPanel classNames="fcls_detail_cnt,fcls_data_cnt,fcls_align_left" visible="true" verticalAlignment="Top" horizontalAlignment="Left" gridItemLocation="0,1,1,1" fieldTable="formonly" identifier="cntDetail1">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridMinLength="10rem"/>
+					<GridColumnDefinition gridLengthValue=""/>
+				</GridPanel.gridColumnDefinitions>
+				<Label text="Project ID" classNames="fcls_fieldlabel,fcls_align_left" gridItemLocation="0,0,1,1" fieldTable="" identifier="label1"/>
+				<Label isDynamic="true" text="User" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,1,1,1" fieldTable="" identifier="lb48"/>
+				<TextField classNames="fcls_data_widget,fcls_align_left,fcls_length_20qch" visible="true" gridItemLocation="1,0,1,1" fieldTable="FORMONLY" identifier="filterProjectName"/>
+				<ComboBox classNames="fcls_data_widget,fcls_align_left,fcls_length_20qch" visible="true" gridItemLocation="1,1,1,1" fieldTable="FORMONLY" identifier="glCurrentUser">
+					<ComboBoxItem text="Eric Vercelletto" identifier="glCurrentUser_1">
+						<ComboBoxItem.value>
+							<StringLiteral stringValue="ErVe"/>
+						</ComboBoxItem.value>
+					</ComboBoxItem>
+					<ComboBoxItem text="Hubert Hölzl" identifier="glCurrentUser_2">
+						<ComboBoxItem.value>
+							<StringLiteral stringValue="HuHo"/>
+						</ComboBoxItem.value>
+					</ComboBoxItem>
+					<ComboBoxItem text="Spokey Wheeler" identifier="glCurrentUser_3">
+						<ComboBoxItem.value>
+							<StringLiteral stringValue="SpWh"/>
+						</ComboBoxItem.value>
+					</ComboBoxItem>
+					<ComboBoxItem text="Gertjan Thomasse" identifier="glCurrentUser_4">
+						<ComboBoxItem.value>
+							<StringLiteral stringValue="GeTh"/>
+						</ComboBoxItem.value>
+					</ComboBoxItem>
+					<ComboBoxItem text="Alex Bondar" identifier="glCurrentUser_5">
+						<ComboBoxItem.value>
+							<StringLiteral stringValue="AlBo"/>
+						</ComboBoxItem.value>
+					</ComboBoxItem>										
+					<ComboBoxItem text="Anna Bliznetsova" identifier="glCurrentUser_6">
+						<ComboBoxItem.value>
+							<StringLiteral stringValue="AnBl"/>
+						</ComboBoxItem.value>
+					</ComboBoxItem>		
+					<ComboBoxItem text="Adrian Adams" identifier="glCurrentUser_7">
+						<ComboBoxItem.value>
+							<StringLiteral stringValue="AlAf"/>
+						</ComboBoxItem.value>
+					</ComboBoxItem>
+					<ComboBoxItem text="Martin Anderson" identifier="glCurrentUser_8">
+						<ComboBoxItem.value>
+							<StringLiteral stringValue="MeAf"/>
+						</ComboBoxItem.value>
+					</ComboBoxItem>
+					<ComboBoxItem text="Alexander Chubar" identifier="glCurrentUser_9">
+						<ComboBoxItem.value>
+							<StringLiteral stringValue="AlCh"/>
+						</ComboBoxItem.value>
+					</ComboBoxItem>
+					<ComboBoxItem text="Alexey Printsevsky" identifier="glCurrentUser_10">
+						<ComboBoxItem.value>
+							<StringLiteral stringValue="AlPr"/>
+						</ComboBoxItem.value>
+					</ComboBoxItem>
+					<ComboBoxItem text="Vitaliy Aktora" identifier="glCurrentUser_11">
+						<ComboBoxItem.value>
+							<StringLiteral stringValue="ViAk"/>
+						</ComboBoxItem.value>
+					</ComboBoxItem>
+					<ComboBoxItem text="Elton Swanka" identifier="glCurrentUser_12">
+						<ComboBoxItem.value>
+							<StringLiteral stringValue="ElSv"/>
+						</ComboBoxItem.value>
+					</ComboBoxItem>										
+					<ComboBoxItem text="Guest 1" identifier="glCurrentUser_13">
+						<ComboBoxItem.value>
+							<StringLiteral stringValue="GU01"/>
+						</ComboBoxItem.value>
+					</ComboBoxItem>
+
+				</ComboBox>
+			</GridPanel>
+			<GridPanel classNames="fcls_statusbar_cnt" visible="true" verticalAlignment="Bottom" gridItemLocation="0,2,1,1" fieldTable="formonly" identifier="cntStatusBar">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="100%"/>
+				</GridPanel.gridColumnDefinitions>
+				<Label isDynamic="true" text="" classNames="fcls_sblabel" visible="true" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="lbInfo1"/>
+				<Label isDynamic="true" text="" classNames="fcls_sblabel" visible="true" gridItemLocation="0,1,1,1" fieldTable="formonly" identifier="lbInfo2"/>
+			</GridPanel>
+		</GridPanel>
+	</form.rootContainer>
+	<form.screenRecords>
+		<ScreenRecord identifier="FORMONLY" fields=""/>
+	</form.screenRecords>
+</form>
+

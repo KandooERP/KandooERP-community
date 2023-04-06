@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<fglBuildTarget xmlns="http://namespaces.querix.com/lyciaide/target" name="lib_tool_G_GL_db" type="fgl-library">
+
+  <sources type="fgl">
+    <file location="4gl/lib_tool_db/lib_tool_db_credreas.4gl"/>
+    <file location="4gl/lib_tool_db/lib_tool_db_coa.4gl"/>
+    <file location="4gl/common/glob_GLOBALS_constant.4gl"/>
+    <file location="4gl/lib_tool_db/lib_tool_db_batchhead_journal.4gl"/>
+    <file location="4gl/lib_tool_db/lib_tool_db_tax.4gl"/>
+    <file location="4gl/lib_tool_db/lib_tool_db_fundsapproved.4gl"/>
+    <file location="4gl/lib_tool_db/lib_tool_db_period.4gl"/>
+    <file location="4gl/lib_tool_db/lib_tool_db_cheque.4gl"/>
+    <file location="4gl/lib_tool_db/lib_tool_db_batchdetl.4gl"/>
+    <file location="4gl/common/glob_GLOBALS.4gl"/>
+    <file location="4gl/common/glob_GLOBALS_userDataTypes.4gl"/>
+    <file location="4gl/lib_tool_db/lib_tool_db_termdetl.4gl"/>
+    <file location="4gl/common/glob_DATABASE.4gl"/>
+    <file location="4gl/lib_tool_db/lib_tool_db_credithead.4gl"/>
+    <file location="4gl/lib_tool_db/lib_tool_db_holdpay.4gl"/>
+    <file location="4gl/lib_tool_db/lib_tool_db_term.4gl"/>
+    <file location="4gl/lib_tool_db/lib_tool_db_holdreas.4gl"/>
+    <file location="4gl/lib_tool_db/lib_tool_db_glparms.4gl"/>
+    <file location="4gl/lib_tool_db/lib_tool_db_bank.4gl"/>
+    <file location="4gl/lib_tool_db/lib_tool_db_bic.4gl"/>
+  </sources>
+
+  <buildConfiguration name="development">
+    <additions>
+    </additions>
+    <exclusions>
+      <sources type="fgl">
+        <file location="4gl/lib_tool_db/lib_tool_db_coa.4gl"/>
+        <file location="4gl/lib_tool_db/lib_tool_db_credreas.4gl"/>
+        <file location="4gl/lib_tool_db/lib_tool_db_tax.4gl"/>
+        <file location="4gl/lib_tool_db/lib_tool_db_fundsapproved.4gl"/>
+        <file location="4gl/lib_tool_db/lib_tool_db_period.4gl"/>
+        <file location="4gl/lib_tool_db/lib_tool_db_cheque.4gl"/>
+        <file location="4gl/lib_tool_db/lib_tool_db_termdetl.4gl"/>
+        <file location="4gl/lib_tool_db/lib_tool_db_credithead.4gl"/>
+        <file location="4gl/lib_tool_db/lib_tool_db_holdpay.4gl"/>
+        <file location="4gl/lib_tool_db/lib_tool_db_holdreas.4gl"/>
+        <file location="4gl/lib_tool_db/lib_tool_db_term.4gl"/>
+        <file location="4gl/lib_tool_db/lib_tool_db_glparms.4gl"/>
+        <file location="4gl/lib_tool_db/lib_tool_db_bank.4gl"/>
+        <file location="4gl/lib_tool_db/lib_tool_db_bic.4gl"/>
+      </sources>
+
+    </exclusions>
+  </buildConfiguration>
+
+</fglBuildTarget>

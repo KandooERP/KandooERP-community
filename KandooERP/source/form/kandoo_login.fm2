@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form xmlns="http://namespaces.querix.com/2015/fglForms">
+	<form.rootContainer>
+		<GridPanel classNames="fcls_rootContainer" visible="true" verticalAlignment="Center" horizontalAlignment="Center" fieldTable="formonly" identifier="rootContainer">
+			<GridPanel.gridRowDefinitions>
+				<GridRowDefinition gridLengthValue=""/>
+				<GridRowDefinition gridLengthValue=""/>
+				<GridRowDefinition gridLengthValue=""/>
+				<GridRowDefinition gridLengthValue="" gridMinLength="200"/>
+				<GridRowDefinition gridLengthValue=""/>
+			</GridPanel.gridRowDefinitions>
+			<GridPanel.gridColumnDefinitions>
+				<GridColumnDefinition gridLengthValue="100%"/>
+			</GridPanel.gridColumnDefinitions>
+			<GridPanel classNames="fcls_title_cnt" visible="true" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="cntTitle">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue=""/>
+				</GridPanel.gridColumnDefinitions>
+				<Label text="KandooERP V1.0 Login" classNames="fcls_title_lb" minSize="200," textAlignment="Center,Center" gridItemLocation="0,0,1,1" fieldTable="" identifier="header_text"/>
+			</GridPanel>
+			<GridPanel classNames="fcls_detail_cnt" visible="true" verticalAlignment="Top" gridItemLocation="0,1,1,1" fieldTable="formonly" identifier="cntDetail1">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue=""/>
+					<GridColumnDefinition gridLengthValue="70%"/>
+				</GridPanel.gridColumnDefinitions>
+				<Label text="  Username:" classNames="fcls_fieldlabel" verticalAlignment="Stretch" horizontalAlignment="Stretch" gridItemLocation="0,0,1,1" fieldTable="" identifier="label2"/>
+				<TextField maxLength="20" dataType="Char,,,," visible="true" verticalAlignment="Stretch" horizontalAlignment="Stretch" gridItemLocation="1,0,1,1" fieldTable="users" identifier="username" classNames="fcls_data_widget,fcls_align_hstretch"/>
+				<Label text="  Password:" classNames="fcls_fieldlabel" verticalAlignment="Stretch" horizontalAlignment="Stretch" gridItemLocation="0,1,1,1" fieldTable="" identifier="label3"/>
+				<TextField isPasswordMask="true" maxLength="20" dataType="Char,,,," visible="true" verticalAlignment="Stretch" horizontalAlignment="Stretch" gridItemLocation="1,1,1,1" fieldTable="users" identifier="password" classNames="fcls_data_widget,fcls_align_hstretch"/>
+				<ComboBox notNull="true" visible="true" gridItemLocation="0,2,2,1" fieldTable="" identifier="GL_LANG" classNames="fcls_data_widget,fcls_align_hstretch" collapsed="true" />
+			</GridPanel>
+			<GridPanel visible="true" identifier="cntLazyLogin" gridItemLocation="0,2,1,1" classNames="fcls_title_cnt">
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue=""/>
+				</GridPanel.gridColumnDefinitions>
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<Label text="Lazy Login - will be removed later" isDynamic="true" visible="true" identifier="lb31" gridItemLocation="0,0,1,1" classNames="fcls_title_lb"/>
+			</GridPanel>
+			<ListBox visible="true" identifier="listBoxUser" gridItemLocation="0,3,1,1" classNames="fcls_data_widget,fcls_align_hstretch" minSize="30rem,15rem">
+				<ListBoxItem text="HuHo - Hubert Hölzl">
+					<ListBoxItem.value>
+						<StringLiteral stringValue="HuHo"/>
+					</ListBoxItem.value>
+				</ListBoxItem>
+				<ListBoxItem text="AnBl - Anna Bliznetsova">
+					<ListBoxItem.value>
+						<StringLiteral stringValue="AnBl"/>
+					</ListBoxItem.value>
+				</ListBoxItem>
+				<ListBoxItem text="Anna - Anna Bliznetsova">
+					<ListBoxItem.value>
+						<StringLiteral stringValue="Anna"/>
+					</ListBoxItem.value>
+				</ListBoxItem>
+				<ListBoxItem text="ErVe - Eric Vercelletto">
+					<ListBoxItem.value>
+						<StringLiteral stringValue="ErVe"/>
+					</ListBoxItem.value>
+				</ListBoxItem>
+				<ListBoxItem text="AlCh - Alexander Chubar">
+					<ListBoxItem.value>
+						<StringLiteral stringValue="AlCh"/>
+					</ListBoxItem.value>
+				</ListBoxItem>
+				<ListBoxItem text="AlBo - Alex Bondar">
+					<ListBoxItem.value>
+						<StringLiteral stringValue="AlBo"/>
+					</ListBoxItem.value>
+				</ListBoxItem>
+				<ListBoxItem text="AqFa - Aqeelah Faariez">
+					<ListBoxItem.value>
+						<StringLiteral stringValue="AqFa"/>
+					</ListBoxItem.value>
+				</ListBoxItem>
+				<ListBoxItem text="ChAd - Charith Adhikari">
+					<ListBoxItem.value>
+						<StringLiteral stringValue="ChAd"/>
+					</ListBoxItem.value>
+				</ListBoxItem>
+				<ListBoxItem text="sonali - Sonali">
+					<ListBoxItem.value>
+						<StringLiteral stringValue="sonali"/>
+					</ListBoxItem.value>
+				</ListBoxItem>
+				<ListBoxItem text="ChFo - Christian Fouasse">
+					<ListBoxItem.value>
+						<StringLiteral stringValue="ChFo"/>
+					</ListBoxItem.value>
+				</ListBoxItem>
+				<ListBoxItem text="SpWh - Spokey Wheeler">
+					<ListBoxItem.value>
+						<StringLiteral stringValue="SpWh"/>
+					</ListBoxItem.value>
+				</ListBoxItem>
+				<ListBoxItem text="GeTh - Gertjan Thomasse">
+					<ListBoxItem.value>
+						<StringLiteral stringValue="GeTh"/>
+					</ListBoxItem.value>
+				</ListBoxItem>
+
+			
+				<ListBoxItem text="JoSm - John Smith">
+					<ListBoxItem.value>
+						<StringLiteral stringValue="JoSm"/>
+					</ListBoxItem.value>
+				</ListBoxItem>
+				<ListBoxItem text="BrWi - Brian Williams">
+					<ListBoxItem.value>
+						<StringLiteral stringValue="BrWi"/>
+					</ListBoxItem.value>
+				</ListBoxItem>
+				<ListBoxItem text="MiBa - Mike Banger">
+					<ListBoxItem.value>
+						<StringLiteral stringValue="MiBa"/>
+					</ListBoxItem.value>
+				</ListBoxItem>
+				<ListBoxItem text="AlAf - Adrian Adams">
+					<ListBoxItem.value>
+						<StringLiteral stringValue="AlAf"/>
+					</ListBoxItem.value>
+				</ListBoxItem>
+				<ListBoxItem text="MeAf-Martin Anderson">
+					<ListBoxItem.value>
+						<StringLiteral stringValue="MeAf"/>
+					</ListBoxItem.value>
+				</ListBoxItem>
+				<ListBoxItem text="AlPr - Alexa Princess">
+					<ListBoxItem.value>
+						<StringLiteral stringValue="AlPr"/>
+					</ListBoxItem.value>
+				</ListBoxItem>
+				<ListBoxItem text="ElSv - Elton Swanka">
+					<ListBoxItem.value>
+						<StringLiteral stringValue="ElSv"/>
+					</ListBoxItem.value>
+				</ListBoxItem>
+				<ListBoxItem text="ViAk - Vitaliy Aktora">
+					<ListBoxItem.value>
+						<StringLiteral stringValue="ViAk"/>
+					</ListBoxItem.value>
+				</ListBoxItem>
+				<ListBoxItem text="NiTo - Nima Toores">
+					<ListBoxItem.value>
+						<StringLiteral stringValue="NiTo"/>
+					</ListBoxItem.value>
+				</ListBoxItem>
+
+				<ListBoxItem text="Guest - Guest">
+					<ListBoxItem.value>
+						<StringLiteral stringValue="Guest"/>
+					</ListBoxItem.value>
+				</ListBoxItem>
+
+				<ListBox.onValueChanged>
+					<ActionEventHandler type="actioneventhandler" actionName="actLazyLogin"/>
+				</ListBox.onValueChanged>
+
+				<ListBox.onMouseDoubleClick>
+					<BatchEventHandler type="batcheventhandler">
+							<ActionEventHandler type="actioneventhandler" actionName="actLazyLogin"/>
+							<ActionEventHandler type="actioneventhandler" actionName="ACCEPT"/>							
+					</BatchEventHandler>
+				</ListBox.onMouseDoubleClick>
+
+			</ListBox>
+			<GridPanel classNames="fcls_detail_cnt" visible="true" verticalAlignment="Top" gridItemLocation="0,4,1,1" fieldTable="formonly" identifier="cntDetail2">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="50%"/>
+					<GridColumnDefinition gridLengthValue="50%"/>
+				</GridPanel.gridColumnDefinitions>
+				<Button text="OK" visible="true" verticalAlignment="Stretch" horizontalAlignment="Stretch" gridItemLocation="0,0,1,1" fieldTable="" identifier="fb_ok">
+					<Button.onInvoke>
+						<ActionEventHandler actionName="Accept"/>
+					</Button.onInvoke>
+				</Button>
+				<Button text="Cancel" visible="true" verticalAlignment="Stretch" horizontalAlignment="Stretch" gridItemLocation="1,0,1,1" fieldTable="" identifier="fb_cancel">
+					<Button.onInvoke>
+						<ActionEventHandler actionName="CANCEL"/>
+					</Button.onInvoke>
+				</Button>
+			</GridPanel>
+		</GridPanel>
+	</form.rootContainer>
+	<form.screenRecords>
+		<ScreenRecord identifier="formonly" fields="fb_cancel,fb_ok,f5,f7,f9,f11,f13,f23,f24,f31"/>
+		<ScreenRecord identifier="users" fields="username,password"/>
+	</form.screenRecords>
+</form>
+

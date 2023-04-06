@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?><form xmlns="http://namespaces.querix.com/2015/fglForms">
+	<form.rootContainer>
+		<GridPanel classNames="fcls_rootContainer" fieldTable="" horizontalAlignment="Stretch" identifier="rootContainer" verticalAlignment="Stretch">
+			<GridPanel.gridRowDefinitions>
+				<GridRowDefinition gridLengthValue=""/>
+				<GridRowDefinition gridLengthValue=""/>
+				<GridRowDefinition gridLengthValue="100%"/>
+				<GridRowDefinition gridLengthValue=""/>
+			</GridPanel.gridRowDefinitions>
+			<GridPanel.gridColumnDefinitions>
+				<GridColumnDefinition gridLengthValue="100%"/>
+			</GridPanel.gridColumnDefinitions>
+			<GridPanel classNames="fcls_title_cnt" fieldTable="formonly" gridItemLocation="0,0,1,1" identifier="cntTitle" verticalAlignment="Top" visible="true">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="100%"/>
+					<GridColumnDefinition gridLengthValue=""/>
+				</GridPanel.gridColumnDefinitions>
+				<Label classNames="fcls_title_lb" fieldTable="formonly" gridItemLocation="0,0,1,1" identifier="header_text" isDynamic="true" text="User Special Authority" visible="true"/>
+				<Label classNames="fcls_title_lb" fieldTable="" gridItemLocation="1,0,1,1" identifier="lbFormName" isDynamic="true" text="U152" visible="true"/>
+			</GridPanel>
+			<GridPanel classNames="fcls_detail_cnt,fcls_data_cnt,fcls_align_left" fieldTable="formonly" gridItemLocation="0,1,1,1" horizontalAlignment="Left" identifier="cntDetail1" verticalAlignment="Top" visible="true">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue=""/>
+					<GridColumnDefinition gridLengthValue=""/>
+					<GridColumnDefinition gridLengthValue=""/>
+				</GridPanel.gridColumnDefinitions>
+				<TextField classNames="fcls_data_widget,fcls_align_left,fcls_length_10qch" dataType="Char,,,,8" fieldTable="kandoouser" gridItemLocation="1,0,1,1" identifier="sign_on_code" noEntry="true" preferredSize="9qch,1qch"/>
+				<TextField classNames="fcls_data_widget,fcls_align_left,fcls_length_30qch" dataType="Char,,,,40" fieldTable="kandoouser" gridItemLocation="2,0,1,1" identifier="name_text" noEntry="true" preferredSize="29qch,1qch"/>
+				<TextField classNames="fcls_data_widget,fcls_align_left,fcls_length_10qch" dataType="Char,,,,1" fieldTable="kandoouser" gridItemLocation="1,1,1,1" identifier="security_ind" noEntry="true" preferredSize="2qch,1qch"/>
+				<TextField classNames="fcls_data_widget,fcls_align_left,fcls_length_10qch" dataType="Char,,,,2" fieldTable="company" gridItemLocation="1,2,1,1" identifier="cmpy_code" noEntry="true" preferredSize="3qch,1qch"/>
+				<TextField classNames="fcls_data_widget,fcls_align_left,fcls_length_30qch" dataType="Char,,,," fieldTable="company" gridItemLocation="2,2,1,1" identifier="name_text" noEntry="true" preferredSize="31qch,1qch"/>
+				<Label classNames="fcls_fieldlabel,fcls_align_left" fieldTable="" gridItemLocation="0,0,1,1" identifier="lb51" isDynamic="true" text="User ID" visible="true"/>
+				<Label classNames="fcls_fieldlabel,fcls_align_left" fieldTable="" gridItemLocation="0,1,1,1" identifier="lb52" isDynamic="true" text="Security Level" visible="true"/>
+				<Label classNames="fcls_fieldlabel,fcls_align_left" fieldTable="" gridItemLocation="0,2,1,1" identifier="lb66" isDynamic="true" text="Company" visible="true"/>
+			</GridPanel>
+			<Table fieldTable="" gridItemLocation="0,2,1,1" identifier="sr_access_priv" minSize="50qch,8qch" preferredSize="50qch,8qch" rowCount="8">
+				<TableColumn fieldTable="" identifier="b" text="Delete">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="8rem" gridMaxLength="8rem" gridMinLength="8rem"/>
+					</TableColumn.columnLength>
+					<CheckBox dataType="Char,,,," fieldTable="formonly" horizontalAlignment="Center" identifier="delete_flag" noEntry="true">
+						<CheckBox.checkedValue>
+							<StringLiteral stringValue="Y"/>
+						</CheckBox.checkedValue>
+						<CheckBox.uncheckedValue>
+							<StringLiteral stringValue="N"/>
+						</CheckBox.uncheckedValue>
+					</CheckBox>
+				</TableColumn>
+				<TableColumn fieldTable="" identifier="c" text="Grant/Deny">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="8rem" gridMaxLength="8rem" gridMinLength="8rem"/>
+					</TableColumn.columnLength>
+					<CheckBox comment=" Extra grants or denials (G/D) on menu-entry" dataType="Char,,,," fieldTable="formonly" horizontalAlignment="Center" identifier="grant_deny_flag" toCase="Up" toolTip=" Extra grants or denials (G/D) on menu-entry">
+						<CheckBox.checkedValue>
+							<StringLiteral stringValue="D"/>
+						</CheckBox.checkedValue>
+						<CheckBox.uncheckedValue>
+							<StringLiteral stringValue="G"/>
+						</CheckBox.uncheckedValue>
+					</CheckBox>
+				</TableColumn>
+				<TableColumn fieldTable="" identifier="d" text="Menu Path">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="60%" gridMaxLength="30rem" gridMinLength="15rem"/>
+					</TableColumn.columnLength>
+					<TextField comment=" Enter menu path " dataType="Char,,,," fieldTable="formonly" identifier="path_code" toCase="Up" toolTip=" Enter menu path "/>
+				</TableColumn>
+				<TableColumn fieldTable="" identifier="e" text="Sec. Lev. Module">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="20%" gridMaxLength="10rem" gridMinLength="5rem"/>
+					</TableColumn.columnLength>
+					<TextField dataType="Char,,,," fieldTable="formonly" identifier="security_module_ind" noEntry="true"/>
+				</TableColumn>
+				<TableColumn fieldTable="" identifier="f" text="Sec. Lev. Program">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="20%" gridMaxLength="10rem" gridMinLength="5rem"/>
+					</TableColumn.columnLength>
+					<TextField dataType="Char,,,," fieldTable="formonly" identifier="security_prog_ind" noEntry="true"/>
+				</TableColumn>
+			</Table>
+			<GridPanel classNames="fcls_statusbar_cnt" fieldTable="formonly" gridItemLocation="0,3,1,1" identifier="cntStatusBar" verticalAlignment="Top" visible="true">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="100%"/>
+				</GridPanel.gridColumnDefinitions>
+				<Label classNames="fcls_sblabel" fieldTable="formonly" gridItemLocation="0,0,1,1" identifier="lbInfo1" isDynamic="true" text="" visible="true"/>
+				<Label classNames="fcls_sblabel" fieldTable="formonly" gridItemLocation="0,1,1,1" identifier="lbInfo2" isDynamic="true" text="" visible="true"/>
+			</GridPanel>
+		</GridPanel>
+	</form.rootContainer>
+	<form.screenRecords>
+		<ScreenRecord elements="8" fields="delete_flag,grant_deny_flag,path_code,security_module_ind,security_prog_ind" identifier="sr_access_priv"/>
+		<ScreenRecord fields="cmpy_code" identifier="company"/>
+		<ScreenRecord fields="delete_flag,grant_deny_flag,path_code,security_module_ind,security_prog_ind,name_text" identifier="formonly"/>
+		<ScreenRecord fields="sign_on_code,name_text,security_ind" identifier="kandoouser"/>
+	</form.screenRecords>
+</form>

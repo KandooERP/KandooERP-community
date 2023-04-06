@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form xmlns="http://namespaces.querix.com/2015/fglForms">
+	<form.rootContainer>
+		<GridPanel classNames="fcls_rootContainer" verticalAlignment="Top" horizontalAlignment="Left" fieldTable="" identifier="rootContainer">
+			<GridPanel.gridRowDefinitions>
+				<GridRowDefinition gridLengthValue=""/>
+				<GridRowDefinition gridLengthValue=""/>
+				<GridRowDefinition gridLengthValue=""/>
+			</GridPanel.gridRowDefinitions>
+			<GridPanel.gridColumnDefinitions>
+				<GridColumnDefinition gridLengthValue="100%"/>
+			</GridPanel.gridColumnDefinitions>
+			<GridPanel classNames="fcls_title_cnt" visible="true" verticalAlignment="Top" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="cntTitle">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="100%"/>
+					<GridColumnDefinition gridLengthValue=""/>
+				</GridPanel.gridColumnDefinitions>
+				<Label isDynamic="true" text="User Parameters" classNames="fcls_title_lb" visible="true" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="header_text"/>
+				<Label isDynamic="true" text="U101" classNames="fcls_title_lb" visible="true" gridItemLocation="1,0,1,1" fieldTable="" identifier="lbFormName"/>
+			</GridPanel>
+			<GridPanel classNames="fcls_detail_cnt,fcls_data_cnt,fcls_align_left" visible="true" verticalAlignment="Top" horizontalAlignment="Left" gridItemLocation="0,1,1,1" fieldTable="formonly" identifier="cntDetail1">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="" gridMinLength="10rem"/>
+					<GridColumnDefinition gridLengthValue=""/>
+					<GridColumnDefinition gridLengthValue=""/>
+				</GridPanel.gridColumnDefinitions>
+				<Label text="User Code (sign_on_code)" isDynamic="true" visible="true" identifier="lb139" gridItemLocation="0,0,1,1"/>
+				<TextField dataType="Char,,,,8" classNames="fcls_data_widget,fcls_align_left,fcls_length_40qch" preferredSize="15qch,1qch" toolTip=" Login Assigned to User" fieldTable="kandoouser" comment=" Login Assigned to User" identifier="sign_on_code" required="true" gridItemLocation="1,0,1,1"/>
+				<Label text="User login name" classNames="fcls_fieldlabel,fcls_align_left" gridItemLocation="0,2,1,1" fieldTable="" identifier="label1"/>
+				<TextField visible="true" identifier="login_name" fieldTable="kandoouser" required="true" gridItemLocation="1,2,1,1"/>
+				<Label isDynamic="true" text="Last signed in" visible="true" gridItemLocation="0,3,1,1" fieldTable="" identifier="lb138"/>
+				<TextField noEntry="true" dataType="Date,,,," classNames="fcls_data_widget,fcls_align_left,fcls_length_40qch" preferredSize="11qch,1qch" gridItemLocation="1,3,1,1" fieldTable="kandoouser" identifier="sign_on_date"/>
+				<TextField dataType="Char,,,,40" classNames="fcls_data_widget,fcls_align_left,fcls_length_40qch" preferredSize="32qch,1qch" toolTip=" The full name of the user" gridItemLocation="1,4,1,1" fieldTable="kandoouser" comment=" The full name of the user" identifier="name_text" required="true"/>
+				<ComboBox dataType="Char,,,,1" classNames="fcls_data_widget,fcls_align_left,fcls_length_40qch"  preferredSize="15qch,1qch" toolTip=" The security level of the user from 1-9, A-Z &amp; a-z " gridItemLocation="1,5,1,1" fieldTable="kandoouser" comment=" The security level of the user from 1-9, A-Z &amp; a-z " identifier="security_ind" required="true"/>
+				<ComboBox dataType="Char,,,,1" classNames="fcls_data_widget,fcls_align_left,fcls_length_40qch"  preferredSize="15qch,1qch" toolTip=" Enter 0 - Logout, 1 - Password required, 2 - No password required" gridItemLocation="1,6,1,1" fieldTable="kandoouser" comment=" Enter 0 - Logout, 1 - Password required, 2 - No password required" identifier="passwd_ind" required="true"/>
+				<Label isDynamic="true" text="Password" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,7,1,1" fieldTable="" identifier="lb67"/>
+				<TextField dataType="Char,,,,8" classNames="fcls_data_widget,fcls_align_left,fcls_length_40qch"  preferredSize="9qch,1qch" toolTip=" The password for programs and/or cheque printing" gridItemLocation="1,7,1,1" fieldTable="kandoouser" comment=" The password for programs and/or cheque printing" identifier="password_text" required="true" isPasswordMask="true" verify="true"/>
+				<Label isDynamic="true" text="Name" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,4,1,1" fieldTable="" identifier="lb51"/>
+				<Label isDynamic="true" text="Authority Level" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,5,1,1" fieldTable="" identifier="lb52"/>
+				<Label isDynamic="true" text="Enable Logon Password" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,6,1,1" fieldTable="" identifier="lb66"/>
+				<Label isDynamic="true" text="Group Code" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,8,1,1" fieldTable="" identifier="lb48"/>
+				<TextField toCase="Up" dataType="Char,,,,1" classNames="fcls_data_widget,fcls_align_left,fcls_length_40qch"  preferredSize="2qch,1qch" toolTip=" The code assigned to authorised cheque signatories" gridItemLocation="1,8,1,1" fieldTable="kandoouser" comment=" The code assigned to authorised cheque signatories" identifier="group_code" required="true"/>
+				<Label isDynamic="true" text="Signature file" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,9,1,1" fieldTable="" identifier="lb131"/>
+				<TextField dataType="Char,,,,20" classNames="fcls_data_widget,fcls_align_left,fcls_length_40qch"  preferredSize="21qch,1qch" toolTip=" The name of the UNIX file where text or signature is stored" gridItemLocation="1,9,1,1" fieldTable="kandoouser" comment=" The name of the UNIX file where text or signature is stored" identifier="signature_text"/>
+				<Label isDynamic="true" text="Company" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,10,1,1" fieldTable="" identifier="lb130"/>
+				<ComboBox toCase="Up" dataType="Char,,,,2" classNames="fcls_data_widget,fcls_align_left,fcls_length_40qch" preferredSize="25qch,1qch" toolTip=" The company assigned to this login" gridItemLocation="1,10,1,1" fieldTable="kandoouser" comment=" The company assigned to this login" identifier="cmpy_code" required="true"/>
+				<TextField dataType="Char,,,,30"  preferredSize="20qch,1qch" visible="false" toolTip=" The full name of this user&apos;s current company" gridItemLocation="2,10,1,1" fieldTable="company" comment=" The full name of this user&apos;s current company" identifier="name_text" classNames="fcls_data_widget,fcls_align_left,fcls_length_30qch"/>
+				<Label isDynamic="true" text="Profile" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,11,1,1" fieldTable="" identifier="lb129"/>
+				<ComboBox toCase="Up" noEntry="true" dataType="Char,,,,3" classNames="fcls_data_widget,fcls_align_left,fcls_length_40qch"  preferredSize="15qch,1qch" toolTip=" The user&apos;s profile" gridItemLocation="1,11,1,1" fieldTable="kandoouser" comment=" The user&apos;s profile" identifier="profile_code" />
+				<TextField dataType="Char,,,,30"  preferredSize="25qch,1qch" visible="false" toolTip=" The description of the user&apos;s profile" gridItemLocation="2,11,1,1" fieldTable="kandooprofile" comment=" The description of the user&apos;s profile" identifier="profile_text" classNames="fcls_data_widget,fcls_align_left,fcls_length_30qch"/>
+				<Label isDynamic="true" text="Language" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,12,1,1" fieldTable="" identifier="lb81"/>
+				<ComboBox toCase="Up" dataType="Char,,,,3" classNames="list-show-text-value,field-show-value-text,fcls_data_widget,fcls_align_left,fcls_length_40qch" preferredSize="15qch,1qch" toolTip=" The language for this User " gridItemLocation="1,12,1,1" fieldTable="kandoouser" comment=" The language for this User " identifier="language_code" required="true"/>
+				<TextField dataType="Char,,,,20" preferredSize="21qch,1qch" visible="false" toolTip=" The full name of the user&apos;s language" gridItemLocation="2,12,1,1" fieldTable="language" comment=" The full name of the user&apos;s language" identifier="language_text" classNames="fcls_data_widget,fcls_align_left,fcls_length_30qch"/>
+				<Label text="Country" isDynamic="true" visible="true" identifier="lb_country" gridItemLocation="0,13,1,1"/>
+				<ComboBox visible="true" identifier="country_code" gridItemLocation="1,13,1,1" required="true"/>
+				<Label isDynamic="true" text="Memo Priority" visible="true" gridItemLocation="0,14,1,1" fieldTable="" identifier="lb132"/>
+				<ComboBox dataType="Char,,,,1" classNames="fcls_data_widget,fcls_align_left,fcls_length_40qch" preferredSize="15qch,1qch" toolTip=" Priority: 0 = Important/Urgent,  1 = memo" gridItemLocation="1,14,1,1" fieldTable="kandoouser" comment=" Priority: 0 = Important/Urgent,  1 = memo" identifier="memo_pri_ind"/>
+				<Label isDynamic="true" text="Access Mode" visible="true" gridItemLocation="0,15,1,1" fieldTable="" identifier="lb133"/>
+				<ComboBox dataType="Char,,,,1" classNames="fcls_data_widget,fcls_align_left,fcls_length_40qch" preferredSize="15qch,1qch" toolTip=" The access mode: 1=Normal, 2=Trace or 3=No Access " gridItemLocation="1,15,1,1" fieldTable="kandoouser" comment=" The access mode: 1=Normal, 2=Trace or 3=No Access " identifier="access_ind" required="true" editable="true"/>
+				<Label isDynamic="true" text="Default Printer" visible="true" gridItemLocation="0,16,1,1" fieldTable="" identifier="lb134"/>
+				<ComboBox dataType="Char,,,,20" classNames="fcls_data_widget,fcls_align_left,fcls_length_40qch"  preferredSize="30qch,1qch" toolTip=" The Default Printer for this User (W)" gridItemLocation="1,16,1,1" fieldTable="kandoouser" comment=" The Default Printer for this User (W)" identifier="print_text"/>
+				<Label isDynamic="true" text="Account Mask" visible="true" gridItemLocation="0,17,1,1" fieldTable="" identifier="lb135"/>
+				<TextField dataType="Char,,,,18" classNames="fcls_data_widget,fcls_align_left,fcls_length_40qch" preferredSize="19qch,1qch" gridItemLocation="1,17,1,1" fieldTable="kandoouser" identifier="acct_mask_code" required="true" labelText="" comment="Limit the access to GL for a specific user i.e. branch or division 01-001-????" helperText="Limit the access to GL for a specific user i.e. branch or division 01-001-????"/>
+
+				<Label isDynamic="true" text="Email" visible="true" gridItemLocation="0,18,1,1" fieldTable="" identifier="lb136"/>
+				<TextField dataType="Char,,,,60" classNames="fcls_data_widget,fcls_align_left,fcls_length_40qch"  preferredSize="51qch,1qch" toolTip=" The Email Address of this users " gridItemLocation="1,18,1,1" fieldTable="kandoouser" comment=" The Email Address of this users " identifier="email" required="true"/>
+
+
+				<Label identifier="lb_user_role_code"  text="User role (future)" visible="true" gridItemLocation="0,19,1,1" fieldTable="" isDynamic="true"/>
+				<ComboBox identifier="user_role_code" dataType="Char,,,,60" toolTip=" The role of this users " gridItemLocation="1,19,1,1" fieldTable="kandoouser" comment=" The role of this users " required="true" classNames="fcls_data_widget,fcls_align_left,fcls_length_40qch"  preferredSize="51qch,1qch" >
+					<ComboBoxItem text="Normal User">
+						<ComboBoxItem.value>
+							<StringLiteral stringValue="U"/>
+						</ComboBoxItem.value>
+					</ComboBoxItem>
+					<ComboBoxItem text="Module Configurator">
+						<ComboBoxItem.value>
+							<StringLiteral stringValue="M"/>
+						</ComboBoxItem.value>
+					</ComboBoxItem>
+					<ComboBoxItem text="Administrator">
+						<ComboBoxItem.value>
+							<StringLiteral stringValue="A"/>
+						</ComboBoxItem.value>
+					</ComboBoxItem>
+
+
+
+				</ComboBox>
+
+
+
+				<Label identifier="lb_cheque_group_code"  text="Cheque Group Code (future)" visible="true" gridItemLocation="0,20,1,1" fieldTable="" isDynamic="true"/>
+				<TextField identifier="cheque_group_code" dataType="Char,,,,60" toolTip=" The cheque group code of this users " gridItemLocation="1,20,1,1" fieldTable="kandoouser" comment=" The cheque group code of this users " required="true" classNames="fcls_data_widget,fcls_align_left,fcls_length_40qch"  preferredSize="51qch,1qch" />
+
+
+				<Label identifier="lb_pwChDate"  text="Last PassWord Change (future)" visible="true" gridItemLocation="0,21,1,1" fieldTable="" isDynamic="true"/>
+				<TextField identifier="pwChDate" dataType="Char,,,,60" toolTip="The last time the user changed the password" gridItemLocation="1,21,1,1" fieldTable="kandoouser" comment="The last time the user changed the password" required="true" classNames="fcls_data_widget,fcls_align_left,fcls_length_40qch"  preferredSize="51qch,1qch" />
+
+
+				<Label identifier="lb_pwChange"  text="Change password (future)" visible="true" gridItemLocation="0,22,1,1" fieldTable="" isDynamic="true"/>
+				<TextField identifier="pwChange" dataType="Char,,,,60" toolTip="Force password change or never" gridItemLocation="1,22,1,1" fieldTable="kandoouser" comment="Force password change or never" required="true" classNames="fcls_data_widget,fcls_align_left,fcls_length_40qch"  preferredSize="51qch,1qch" />
+
+			</GridPanel>
+			<GridPanel classNames="fcls_statusbar_cnt" visible="true" verticalAlignment="Top" gridItemLocation="0,2,1,1" fieldTable="formonly" identifier="cntStatusBar">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="100%"/>
+				</GridPanel.gridColumnDefinitions>
+				<Label isDynamic="true" text="" classNames="fcls_sblabel" visible="true" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="lbInfo1"/>
+				<Label isDynamic="true" text="" classNames="fcls_sblabel" visible="true" gridItemLocation="0,1,1,1" fieldTable="formonly" identifier="lbInfo2"/>
+			</GridPanel>
+		</GridPanel>
+	</form.rootContainer>
+	<form.screenRecords>
+		<ScreenRecord identifier="company" fields="name_text"/>
+		<ScreenRecord identifier="language" fields="language_text"/>
+		<ScreenRecord identifier="kandooprofile" fields="profile_text"/>
+		<ScreenRecord identifier="kandoouser" fields="sign_on_code,sign_on_date,name_text,security_ind,passwd_ind,password_text,group_code,signature_text,cmpy_code,profile_code,language_code,access_ind,print_text,acct_mask_code,email,memo_pri_ind,user_role_code,cheque_group_code,pwChDate,pwChange"/>
+		<ScreenRecord identifier="FormOnly" fields="login_name,country_code,f140,lb_country"/>
+	</form.screenRecords>
+</form>
+

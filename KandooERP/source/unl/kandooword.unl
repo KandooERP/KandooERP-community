@@ -1,0 +1,530 @@
+ENG|0|reqhead.stock_ind|Warehouse|
+ENG|001|Reversing previous fabatch|Reversing previous fabatch|
+ENG|002|Fabatch select for insert|Fabatch select for insert|
+ENG|003|Fixed Assets - GL Batch Creation|Fixed Assets - GL Batch Creation|
+ENG|004|Fabatch foreach for insert|Fabatch foreach for insert|
+ENG|005|FGL - fabatch post flag set|FGL - fabatch post flag set|
+ENG|006|Completed insert into postfabatch|Completed insert into postfabatch|
+ENG|007|No Fixed Assets batches|No Fixed Assets batches found to prepare for GL.|
+ENG|008|No Fixed Assets batches|Batches are : Not posted to asset|
+ENG|009|No Fixed Assets batches|or don't exist or already posted - see F28|
+ENG|010|Preparing FA batches|Preparing FA batches|
+ENG|011|FA Batch Number :|FA Batch Number :|
+ENG|012|Processing - Year :|Processing - Year :|
+ENG|013| Period :| Period :|
+ENG|014|Line Number     :|Line Number     :|
+ENG|015|Cannot find record for book :|Cannot find record for book :|
+ENG|016|GL accounts not set up|GL accounts not set up for Book :|
+ENG|017| Cat :| Cat :|
+ENG|018| Loc :| Loc :|
+ENG|019|Commenced update of jour_num|Commenced update of jour_num in fabatch|
+ENG|020|Commenced delete from postfabatch|Commenced delete from postfabatch|
+ENG|021|Delete from postfabatch|Delete from postfabatch|
+ENG|022|Commenced insert into postfabatch|Commenced insert into postfabatch|
+ENG|023|Fabatch lock for insert|Fabatch lock for insert|
+ENG|024|FGL - Insert into postfabatch|FGL - Insert into postfabatch|
+ENG|025|Posting Resources & Timesheets|Posting Resources & Timesheets|
+ENG|026|Commenced jobledger post|Commenced jobledger post|
+ENG|027|Reversing previous jobledger|Reversing previous jobledger|
+ENG|028|Commenced insert into postjobledger|Commenced insert into postjobledger|
+ENG|029|Jobledger select for insert|Jobledger select for insert|
+ENG|030|JS1 - Insert into Postjobledger|JS1 - Insert into Postjobledger|
+ENG|031|JS1 - Jobledger post flag set|JS1 - Jobledger post flag set|
+ENG|032|Completed RE post|Completed RE post|
+ENG|033|Completed TS post|Completed TS post|
+ENG|034|Completed adjustment post|Completed adjustment post|
+ENG|035|Completed VO post|Completed VO post|
+ENG|036|Completed PU post|Completed PU post|
+ENG|037|Completed IS post|Completed IS post|
+ENG|038|Update of posted flag (RES)|Update of posted flag (RES)|
+ENG|039|Update of posted flag (ADJ)|Update of posted flag (ADJ)|
+ENG|040|Commenced delete from postjobledger|Commenced delete from postjobledger|
+ENG|041|Job Management post|Job Management post completed correctly|
+ENG|042|Completed insert into postjobledger|Completed insert into postjobledger|
+ENG|043|Menu|Menu|
+ENG|044|Page|Page|
+ENG|045|END OF REPORT|END OF REPORT|
+ENG|046|Selection Criteria:|Selection Criteria:|
+ENG|047|P-i-c-k-i-n-g L-i-s-t|P-i-c-k-i-n-g L-i-s-t|
+ENG|048|Serial Number:|Serial Number:|
+ENG|049|Insurance/Handling:|Insurance/Handling:|
+ENG|050|Freight:|Freight:|
+ENG|051|Sales Tax:|Sales Tax:|
+ENG|052|Comments:|Comments:|
+ENG|054|Completed DB Post|Completed DB Post|
+ENG|1| Batch in Balance| Batch in Balance|
+ENG|1|Aging From :|Aging From :|
+ENG|1|All Customers|All Types and Customers selected|
+ENG|1|All Products|All Category and Products selected|
+ENG|1|All Salespersons|All Territory and Sales persons|
+ENG|1|All Warehouses|All Warehouses|
+ENG|1|All values in base currency|All values in base currency|
+ENG|1|Analysis|Analysis|
+ENG|1|Company|Company|
+ENG|1|Copy a Report|Copy a Report (ASCII/TAB format)|
+ENG|1|Currency :|Currency :|
+ENG|1|Customer|Customer|
+ENG|1|Customer Code :|Customer Code :|
+ENG|1|Customer Sales Analysis report|Customer type - Base currency|
+ENG|1|Date :|Date :|
+ENG|1|Detailed|Detailed|
+ENG|1|File|File|
+ENG|1|Grand Totals in Base Currency:|Grand Totals in Base Currency:|
+ENG|1|Line No.|Line No.|
+ENG|1|Main Group|Main Group|
+ENG|1|Maximise Company Logon|Company Logon|
+ENG|1|National|National|
+ENG|1|Not fully Receipted|Not fully Receipted|
+ENG|1|P3A|Y|
+ENG|1|Product|Product|
+ENG|1|Product Group|Product Group|
+ENG|1|Product Sales Analysis Report|Product Category - Base currency|
+ENG|1|Purchase Order|Purchase Order|
+ENG|1|Sales Analysis Graph|Customer Sales Analysis|
+ENG|1|Sales Area|Sales Area|
+ENG|1|Sales Condition|Sales Condition|
+ENG|1|Sales Manager|Sales Manager|
+ENG|1|Sales Territory|Sales Territory|
+ENG|1|Salesperson|Salesperson|
+ENG|1|Salesperson Sales Analysis Report|Sales Territory - Base currency|
+ENG|1|Special Offer|Special Offer|
+ENG|1|Summary|Summary|
+ENG|1|Transaction Rate|Transaction Rate|
+ENG|1|Vendor :|Vendor :|
+ENG|1|activity.cost_alloc_flag|% of Estimate|
+ENG|1|addwind|W11 - Order Entry|
+ENG|1|anumwind|Credits|
+ENG|1|areawind|Monthly Turnover|
+ENG|1|bank.bank_code|A.N.Z.|
+ENG|1|batchhead.desc_ind|ACCOUNT|
+ENG|1|cinqwind|General Details|
+ENG|1|cistwind|General Details|
+ENG|1|costtype|Cost Type|
+ENG|1|creddetl|General Details|
+ENG|1|credithead.cred_ind|Credit Note|
+ENG|1|customer.cust_code|Customer|
+ENG|1|debithead.desc_ind|ACCOUNT|
+ENG|1|dokwind|General Details|
+ENG|1|inparms.barcode_type|EAN13|
+ENG|1|invoicehead.inv_ind|Invoice|
+ENG|1|invoicehead.inv_num|Invoice|
+ENG|1|invqwind|General Details|
+ENG|1|jmparms.cost_alloc_ind|% of Estimate|
+ENG|1|jmresource|Resource|
+ENG|1|job|Job|
+ENG|1|mbordwin|General Details|
+ENG|1|mgrwind|Monthly Turnover|
+ENG|1|ordhead.cust_code|Customer|
+ENG|1|ordhead.order_num|Order No.|
+ENG|1|ordquote|Line Information|
+ENG|1|ordwind|General Details|
+ENG|1|pinqwind|General Details|
+ENG|1|pistwind|General Details|
+ENG|1|pordwind|Header|
+ENG|1|prodinfo.info_ind|Document|
+ENG|1|purchdetl.line_num|Line No.|
+ENG|1|purchhead.order_num|Order No.|
+ENG|1|qaddwind|Quotation Entry|
+ENG|1|recurhead.int_ind|Daily|
+ENG|1|reqhead.stock_ind|Stocked Item|
+ENG|1|reqwind|Delivery Address|
+ENG|1|resgrp.res_type_ind|Materials|
+ENG|1|rmsreps.exec_ind|Interactive|
+ENG|1|rmsreps.status_text|To be printed|
+ENG|1|shipment|Shipment|
+ENG|1|sperwind|General Details|
+ENG|1|stattarget.bdgt_type_ind|Sales Area|
+ENG|1|term.day_date_ind|Due Sunday|
+ENG|1|term.due_day_num| Last Sunday (0) of next month, Next Sunday after (1-999) days|
+ENG|1|terrwind|Monthly Turnover|
+ENG|1|vendor.pay_meth_ind|Cheque Payment (Auto)|
+ENG|1|vinwind|General Details|
+ENG|1|voucher.desc_ind|ACCOUNT|
+ENG|10|orderlog.event_text|## Enter Order|
+ENG|12|orderlog.event_text|## Cancel Order|
+ENG|2|Customer Sales Analysis report|Customer type - Foreign currency|
+ENG|2|Product Sales Analysis Report|Product Category / Product - Base Currency|
+ENG|2|Sales Analysis Graph|Product Sales Analysis|
+ENG|2|Salesperson Sales Analysis Report|Sales Territory / Sales person - Base currency|
+ENG|2|activity.cost_alloc_flag|% + Bal of Actuals @ 100%|
+ENG|2|addwind|W18 - Straight Through Sales|
+ENG|2|anumwind|Invoices|
+ENG|2|areawind|Number of Customers|
+ENG|2|bank.bank_code|Bank of Australia|
+ENG|2|batchhead.desc_ind|DEFAULT|
+ENG|2|cinqwind|Shipping Addresses|
+ENG|2|cistwind|Monthly Turnover|
+ENG|2|creddetl|Entry Info|
+ENG|2|credithead.cred_ind|Credit Note|
+ENG|2|debithead.desc_ind|DEFAULT|
+ENG|2|dokwind|Line Items|
+ENG|2|invoicehead.inv_ind|Order Invoice|
+ENG|2|invqwind|Entry Info|
+ENG|2|jmparms.cost_alloc_ind|% + Bal of Actuals @ 100%|
+ENG|2|kandoomsg|Any Key to Continue|
+ENG|2|mbordwin|Job Address|
+ENG|2|mgrwind|Salesperson Targets|
+ENG|2|ordquote|Pallets|
+ENG|2|ordwind|Reporting Codes|
+ENG|2|pinqwind|Purchasing Info|
+ENG|2|pistwind|Turnover Statistics|
+ENG|2|pordwind|Lines|
+ENG|2|prodinfo.info_ind|Picture|
+ENG|2|recurhead.int_ind|Weekly|
+ENG|2|reqhead.stock_ind|Direct Receipt|
+ENG|2|reqwind|Line Items|
+ENG|2|resgrp.res_type_ind|Labour|
+ENG|2|rmsreps.exec_ind|Unattended|
+ENG|2|rmsreps.status_text|Sent To Print|
+ENG|2|sperwind|Daily Sales Figures|
+ENG|2|stattarget.bdgt_type_ind|Territory|
+ENG|2|term.day_date_ind|Due Monday|
+ENG|2|term.due_day_num| Last Monday (0) of next month, Next Monday after (1-999) days|
+ENG|2|terrwind|Monthly Distribution|
+ENG|2|vendor.pay_meth_ind|Cheque Payment (Manual)|
+ENG|2|vinwind|Credit Status|
+ENG|2|voucher.desc_ind|DEFAULT|
+ENG|20|orderlog.event_text|## Edit Order|
+ENG|21|orderlog.event_text|sales condition|
+ENG|22|orderlog.event_text|salesperson|
+ENG|23|orderlog.event_text|sales territory|
+ENG|24|orderlog.event_text|freight amount|
+ENG|25|orderlog.event_text|handling amount|
+ENG|26|orderlog.event_text|hold code|
+ENG|27|orderlog.event_text|## Release Hold|
+ENG|28|orderlog.event_text|## Place 'On-Hold'|
+ENG|3|Customer Sales Analysis report|Customer type / Customer - Base Currency|
+ENG|3|Product Sales Analysis Report|Product Category / Product / Warehouse - Base currency|
+ENG|3|Sales Analysis Graph|Sales Person Analysis|
+ENG|3|Salesperson Sales Analysis Report|Sales Territory / Sales Person / Customer - Base Currency|
+ENG|3|activity.cost_alloc_flag|% of Actuals|
+ENG|3|addwind|W61 - S&L Order Entry|
+ENG|3|anumwind|Receipts|
+ENG|3|areawind|Monthly Distribution|
+ENG|3|bank.bank_code|Citibank|
+ENG|3|batchhead.desc_ind|HOLD|
+ENG|3|cinqwind|Credit Status|
+ENG|3|cistwind|Inventory Yearly Turnover|
+ENG|3|creddetl|Line Items|
+ENG|3|credithead.cred_ind|JM Credit|
+ENG|3|debithead.desc_ind|VENDOR NAME|
+ENG|3|dokwind|Driver Payments|
+ENG|3|invoicehead.inv_ind|JM Invoice|
+ENG|3|invqwind|Line Items|
+ENG|3|jmparms.cost_alloc_ind|% of Actuals|
+ENG|3|mbordwin|Additional Information|
+ENG|3|mgrwind|Monthly Distribution|
+ENG|3|ordquote|Additional Charges|
+ENG|3|ordwind|Line Information|
+ENG|3|pinqwind|Pricing Info|
+ENG|3|pistwind|Items Bought & Sold|
+ENG|3|pordwind|Delivery|
+ENG|3|prodinfo.info_ind|Specification|
+ENG|3|recurhead.int_ind|Fortnightly|
+ENG|3|reqwind|Line Status|
+ENG|3|resgrp.res_type_ind|Subcontractor|
+ENG|3|rmsreps.exec_ind|Process Setup|
+ENG|3|rmsreps.status_text|Delete|
+ENG|3|sperwind|Monthly Sales Figures|
+ENG|3|stattarget.bdgt_type_ind|Sales Mngr|
+ENG|3|term.day_date_ind|Due Tuesday|
+ENG|3|term.due_day_num| Last Tuesday (0) of next month, Next Tuesday after (1-999) days|
+ENG|3|vendor.pay_meth_ind|EFT Payment|
+ENG|3|vinwind|History|
+ENG|3|voucher.desc_ind|VENDOR NAME|
+ENG|30|orderlog.event_text|## Release BackOrd|
+ENG|4|Customer Sales Analysis report|Customer type / Customer - Foreign Currency|
+ENG|4|activity.cost_alloc_flag|Actuals to date|
+ENG|4|addwind|W68 - S&L Straigh Through Sales|
+ENG|4|anumwind|Contracts|
+ENG|4|areawind|Profit Figures|
+ENG|4|bank.bank_code|Commonwealth Bank|
+ENG|4|cinqwind|Invoices|
+ENG|4|cistwind|Inventory Monthly Turnover|
+ENG|4|creddetl|Customer Notes|
+ENG|4|credithead.cred_ind|Adjustment|
+ENG|4|dokwind|Order Detail|
+ENG|4|invoicehead.inv_ind|Adjustment|
+ENG|4|invqwind|Customer Notes|
+ENG|4|jmparms.cost_alloc_ind|Actuals to date|
+ENG|4|mbordwin|Order Lines|
+ENG|4|mgrwind|Profit Figures|
+ENG|4|ordquote|Notes|
+ENG|4|ordwind|Call Forwards|
+ENG|4|pinqwind|Stock Status|
+ENG|4|pistwind|Customer Monthly Turnover|
+ENG|4|prodinfo.info_ind|URL|
+ENG|4|recurhead.int_ind|Calendar Month|
+ENG|4|reqwind|Notes|
+ENG|4|resgrp.res_type_ind|Plant|
+ENG|4|rmsreps.exec_ind|Display Only|
+ENG|4|sperwind|Monthly Turnover|
+ENG|4|stattarget.bdgt_type_ind|Salesperson|
+ENG|4|term.day_date_ind|Due Wednesday|
+ENG|4|term.due_day_num| Last Wednesday (0) of next month, Next Wednesday after (1-999) days|
+ENG|4|vendor.pay_meth_ind|Direct Debit|
+ENG|4|vinwind|Ledger|
+ENG|40|orderlog.event_text|## Picklist Gen(A)|
+ENG|45|orderlog.event_text|## Picklist Gen(M)|
+ENG|5|Customer Sales Analysis report|Customer type / Customer / Product - Base Currency|
+ENG|5|activity.cost_alloc_flag|Zero|
+ENG|5|addwind|W51 - Export Orders|
+ENG|5|anumwind|Batches|
+ENG|5|bank.bank_code|N.A.B.|
+ENG|5|cinqwind|Sales Orders|
+ENG|5|cistwind|Profit Figures|
+ENG|5|creddetl|Orders|
+ENG|5|credithead.cred_ind|Trade-in|
+ENG|5|dokwind|Invoice Detail|
+ENG|5|invoicehead.inv_ind|Pre-delivery|
+ENG|5|invqwind|Orders|
+ENG|5|jmparms.cost_alloc_ind|Zero|
+ENG|5|mbordwin|Order Status|
+ENG|5|ordquote|Labour Items|
+ENG|5|ordwind|Order Notes|
+ENG|5|pinqwind|Product Ledger|
+ENG|5|pistwind|Profit Figures|
+ENG|5|reqwind|General Details|
+ENG|5|resgrp.res_type_ind|Other|
+ENG|5|sperwind|Weekly Sales Vs Target|
+ENG|5|stattarget.bdgt_type_ind|Condition|
+ENG|5|term.day_date_ind|Due Thursday|
+ENG|5|term.due_day_num| Last Thursday (0) of next month, Next Thursday after (1-999) days|
+ENG|5|vinwind|Subcontractors|
+ENG|50|orderlog.event_text|## Reject Deliv(A)|
+ENG|501|ALL COMPONENTS AVAILABLE|ALL COMPONENTS AVAILABLE|
+ENG|55|orderlog.event_text|## Reject Deliv(M)|
+ENG|6|Customer Sales Analysis report|Customer type / Customer / Product - Foreign currency|
+ENG|6|anumwind|Jobs|
+ENG|6|bank.bank_code|State Bank|
+ENG|6|cinqwind|Customer Notes|
+ENG|6|creddetl|Applications|
+ENG|6|credithead.cred_ind|Credit Note|
+ENG|6|dokwind|Credit Detail|
+ENG|6|invoicehead.inv_ind|Invoice|
+ENG|6|invqwind|Payments|
+ENG|6|mbordwin|Call Forwards|
+ENG|6|ordquote|Quotation Inquiry|
+ENG|6|ordwind|Delivery Instructions|
+ENG|6|pinqwind|Product Notes|
+ENG|6|recurhead.int_ind|Payment Terms|
+ENG|6|sperwind|Monthly Sales Vs Target|
+ENG|6|stattarget.bdgt_type_ind|Spec.Offer|
+ENG|6|term.day_date_ind|Due Friday|
+ENG|6|term.due_day_num| Last Friday (0) of next month, Next Friday after (1-999) days|
+ENG|6|vinwind|Outstanding Vouchers|
+ENG|60|orderlog.event_text|## Credit Ret'n(A)|
+ENG|65|orderlog.event_text|## Credit Ret'n(M)|
+ENG|7|anumwind|Customers|
+ENG|7|bank.bank_code|Westpac|
+ENG|7|cinqwind|Account Ledger|
+ENG|7|creddetl|Shipping Info|
+ENG|7|dokwind|Transfer Detail|
+ENG|7|invoicehead.inv_ind|Subs Invoice|
+ENG|7|invqwind|Shipping Info|
+ENG|7|mbordwin|Delivery Details|
+ENG|7|ordquote|Print Quotation|
+ENG|7|ordwind|Pallets|
+ENG|7|pinqwind|Stocking Info|
+ENG|7|recurhead.int_ind|Quarterly|
+ENG|7|sperwind|Special Offers|
+ENG|7|term.day_date_ind|Due Saturday|
+ENG|7|term.due_day_num| Last Saturday (0) of next month, Next Saturday after (1-999) days|
+ENG|7|vinwind|Payment Details|
+ENG|70|orderlog.event_text|## Invoice Conf(A)|
+ENG|75|orderlog.event_text|## Invoice Conf(M)|
+ENG|8|anumwind|Subscriptions|
+ENG|8|cinqwind|Customer Parameters|
+ENG|8|creddetl|Story|
+ENG|8|invoicehead.inv_ind|Refund Payment|
+ENG|8|invqwind|Story|
+ENG|8|mbordwin|Delivery Instructions|
+ENG|8|ordwind|Hold Order|
+ENG|8|pinqwind|Product Statistics|
+ENG|8|recurhead.int_ind|Yearly|
+ENG|8|sperwind|Monthly Distribution|
+ENG|8|vinwind|Purchase Details|
+ENG|80|orderlog.event_text|## PreDeliv Inv(A)|
+ENG|85|orderlog.event_text|## PreDeliv Inv(M)|
+ENG|9|anumwind|Orders|
+ENG|9|cinqwind|Reporting Codes|
+ENG|9|creddetl|Other Info|
+ENG|9|invoicehead.inv_ind|Invoice|
+ENG|9|invqwind|Other Info|
+ENG|9|mbordwin|Reporting Codes|
+ENG|9|ordwind|Order Inquiry|
+ENG|9|pinqwind|Reporting Codes|
+ENG|9|sperwind|Profit Figures|
+ENG|90|orderlog.event_text|## Edit Delivery|
+ENG|A|anumwind|Loads|
+ENG|A|cinqwind|Sales Statistics|
+ENG|A|jmresource.allocation_ind|All Values; ie. Quantity, Costs and Charges|
+ENG|A|mbordwin|Pallets|
+ENG|A|ordwind|Cash Receipts|
+ENG|A|pinqwind|Back Orders|
+ENG|A|sperwind|Commission Details|
+ENG|B|anumwind|Deliveries|
+ENG|B|cinqwind|Pallet Balances|
+ENG|B|jmresource.allocation_ind|Charges and Costs only.  Do not Invoice Quantity|
+ENG|B|mbordwin|Additional Charges|
+ENG|B|ordwind|Print Order|
+ENG|B|pinqwind|Purchase Orders|
+ENG|B|sperwind|Sales Structures|
+ENG|BAT|nextnumber.tran_type_ind|Batch Number|
+ENG|C|activity.bill_way_ind|Cost Plus % Markup|
+ENG|C|anumwind|Transport|
+ENG|C|cashreceipt.cash_type_ind|Cash Payment|
+ENG|C|cinqwind|Pallets Details|
+ENG|C|credithead.cred_ind|Contra Credit|
+ENG|C|invoicehead.inv_ind|Contra Invoice|
+ENG|C|jmresource.allocation_ind|Costs only; Do not Invoice Charges or Quantity|
+ENG|C|job.bill_way_ind|Cost Plus % Markup|
+ENG|C|mbordwin|Order Notes|
+ENG|C|ordwind|Labour Lines|
+ENG|C|pinqwind|Stock Transfer|
+ENG|C|term.day_date_ind|Due end next month or month after|
+ENG|C|term.due_day_num| Cut-off day (1-31) in Month, (0) 60 Day Terms|
+ENG|CA|glordwind|Cartage Account|
+ENG|CA|nextnumber.tran_type_ind|Cashreceipt Number|
+ENG|CAP|fundsapproved.fund_type_ind|Capital Items|
+ENG|COG|glordwind|Cost of Goods Sold Account|
+ENG|CON|nextnumber.tran_type_ind|Contract Number|
+ENG|CR|nextnumber.tran_type_ind|Credit Note Number|
+ENG|CUS|nextnumber.tran_type_ind|Customer Code|
+ENG|D|cinqwind|Corporate Balances|
+ENG|D|invoicehead.inv_ind|Contract Invoice|
+ENG|D|mbordwin|Cash Receipts|
+ENG|D|ordwind|Labour Allocation|
+ENG|D|pinqwind|Production Schedules|
+ENG|D|tax.calc_method_flag|Dictated by $TAX on product|
+ENG|D|term.day_date_ind|Due in specified number of Days|
+ENG|D|term.due_day_num| Number of days (0 - 999) to pay|
+ENG|DLV|nextnumber.tran_type_ind|Delivery No.|
+ENG|E|cashreceipt.cash_type_ind|Direct Payment|
+ENG|E|cinqwind|Customer Cards|
+ENG|E|mbordwin|Audit Trail|
+ENG|E|pinqwind|Supersession|
+ENG|E|tax.calc_method_flag|Export Sale Tax Exempt|
+ENG|F|activity.bill_way_ind|Fixed Cost Job|
+ENG|F|cinqwind|Corporate Invoices|
+ENG|F|job.bill_way_ind|Fixed Cost Job|
+ENG|F|mbordwin|Containers|
+ENG|F|pinqwind|Alternates|
+ENG|FA|glordwind|Freight Account|
+ENG|FOA|glordwind|Freight Out Account|
+ENG|G|cinqwind|Billing|
+ENG|G|mbordwin|Labour Allocations|
+ENG|G|pinqwind|Companions|
+ENG|H|mbordwin|Labour Line Allocations|
+ENG|H|pinqwind|Product History|
+ENG|H|tax.calc_method_flag|Withholding Tax|
+ENG|I|mbordwin|Delivery Dockets|
+ENG|I|pinqwind|Product Information|
+ENG|I|tax.calc_method_flag|Price/Cost is Inclusive of Tax|
+ENG|ICO|glordwind|Thru-Sales Internal Expense Account|
+ENG|IN|ISU| |
+ENG|IN|nextnumber.tran_type_ind|Invoice Number|
+ENG|IRA|glordwind|Thru-Sales Internal Revenue Account|
+ENG|J|pinqwind|Cost Ledgers|
+ENG|JOB|nextnumber.tran_type_ind|Job Number|
+ENG|K|pinqwind|Product Margins|
+ENG|L|cost_type|Last Cost|
+ENG|L|invoicehead.inv_ind|Invoice|
+ENG|LNO|nextnumber.tran_type_ind|Load Number|
+ENG|M|tax.calc_method_flag|Importation Purchase(See 'P')|
+ENG|M01|No BOR was added|No Bill of Resource was added|
+ENG|M02|BOR added|BOR added sucessfully|
+ENG|M03|Config Add|Configuration added sucessfully|
+ENG|M04|No config Add|No Configuration was added|
+ENG|M05|ALL COMPONENTS AVAILABLE|ALL COMPONENTS AVAILABLE|
+ENG|M06|Creating BOR|Creating Bill of Resource...|
+ENG|M07|Held|Held|
+ENG|M08|Released|Released|
+ENG|M09|Closed|Closed|
+ENG|M10|Weighted|Weighted Average|
+ENG|M11|FIFO|FIFO|
+ENG|M12|Standard|Standard|
+ENG|M13|Latest|Latest|
+ENG|M14|INSTRUCTION|INSTRUCTION|
+ENG|M15|COST|COST|
+ENG|M16|Work Centre|Work Centre|
+ENG|M17|SET UP|SET UP|
+ENG|M18|per|per|
+ENG|M19|day|day|
+ENG|M20|hour|hour|
+ENG|M21|minute|minute|
+ENG|M22|days|days|
+ENG|M23|hours|hours|
+ENG|M24|minutes|minutes|
+ENG|M25|Generic|Generic|
+ENG|M26|Manufactured|Manufactured|
+ENG|M27|Phantom|Phantom|
+ENG|M28|Raw Material|Raw Material|
+ENG|M29|No so added|No shop order was added|
+ENG|M30|so num|Shop order number|
+ENG|M31|Added Success|Added Successfully|
+ENG|M32|more so|more shop order(s) to be added for|
+ENG|M33|configurable|configurable|
+ENG|M34|product|product|
+ENG|N|jmresource.allocation_ind|None; Do not invoice Charges, Costs or Quantity|
+ENG|N|tax.calc_method_flag|Tax Calculated at each line|
+ENG|O|cashreceipt.cash_type_ind|Payment|
+ENG|O|cinqwind|Open Items|
+ENG|ORD|nextnumber.tran_type_ind|Order Number|
+ENG|P|cashreceipt.cash_type_ind|Credit Card|
+ENG|P|cinqwind|Customer Products|
+ENG|P|invoicehead.inv_ind|Voucher distribution invoice|
+ENG|P|pinvwind|Customer Products|
+ENG|P|prodstatus.replenish_ind|Purchase Order|
+ENG|P|tax.calc_method_flag|Dictated by % rate of product|
+ENG|P1P|fundsapproved.fund_type_ind|Budget 1 Period - Open to Buy|
+ENG|P1T|fundsapproved.fund_type_ind|Budget 1 Year to Date - Open to Buy|
+ENG|P1Y|fundsapproved.fund_type_ind|Budget 1 Year - Open to Buy|
+ENG|P2P|fundsapproved.fund_type_ind|Budget 2 Period - Open to Buy|
+ENG|P2T|fundsapproved.fund_type_ind|Budget 2 Year to Date - Open to Buy|
+ENG|P2Y|fundsapproved.fund_type_ind|Budget 2 Year - Open to Buy|
+ENG|P3P|fundsapproved.fund_type_ind|Budget 3 Period - Open to Buy|
+ENG|P3T|fundsapproved.fund_type_ind|Budget 3 Year to Date - Open to Buy|
+ENG|P3Y|fundsapproved.fund_type_ind|Budget 3 Year - Open to Buy|
+ENG|P4P|fundsapproved.fund_type_ind|Budget 4 Period - Open to Buy|
+ENG|P4T|fundsapproved.fund_type_ind|Budget 4 Year to Date - Open to Buy|
+ENG|P4Y|fundsapproved.fund_type_ind|Budget 4 Year - Open to Buy|
+ENG|P5P|fundsapproved.fund_type_ind|Budget 5 Period - Open to Buy|
+ENG|P5T|fundsapproved.fund_type_ind|Budget 5 Year to Date - Open to Buy|
+ENG|P5Y|fundsapproved.fund_type_ind|Budget 5 Year - Open to Buy|
+ENG|P6P|fundsapproved.fund_type_ind|Budget 6 Period - Open to Buy|
+ENG|P6T|fundsapproved.fund_type_ind|Budget 6 Year to Date - Open to Buy|
+ENG|P6Y|fundsapproved.fund_type_ind|Budget 6 Year - Open to Buy|
+ENG|Q|cashreceipt.cash_type_ind|Chq Payment|
+ENG|Q|jmresource.allocation_ind|Quantity Only; Do not Invoice Charges or Costs|
+ENG|R|activity.bill_way_ind|Recurring|
+ENG|R|cashreceipt.cash_type_ind|Reversal|
+ENG|R|jmresource.allocation_ind|Charges Only; Do not invoice Costs or Quantity|
+ENG|R|job.bill_way_ind|Recurring|
+ENG|RA|glordwind|Revenue Account|
+ENG|S|cost_type|Standard Cost|
+ENG|S|invoicehead.inv_ind|Invoice|
+ENG|S|ordwind|Schedule Deliveries|
+ENG|S|pinqwind|Serial Items|
+ENG|S|prodstatus.replenish_ind|Stock Transfer|
+ENG|SA|glordwind|Sales Account|
+ENG|SS|nextnumber.tran_type_ind|Subscription Number|
+ENG|T|activity.bill_way_ind|Time and Materials|
+ENG|T|job.bill_way_ind|Time and Materials|
+ENG|T|pinqwind|Barcodes|
+ENG|T|tax.calc_method_flag|Flat Tansaction Total|
+ENG|T|term.day_date_ind|Due specific date next month|
+ENG|T|term.due_day_num| Specific day (1 - 31) in Month|
+ENG|TRN|nextnumber.tran_type_ind|Transport No|
+ENG|V|pinqwind|Stock Valuation|
+ENG|W|cost_type|Weighted Average Cost|
+ENG|W|tax.calc_method_flag|Wholesale Tax|
+ENG|W|term.day_date_ind|Due nearest weekday of Next Month|
+ENG|W|term.due_day_num| Nominal day (1 - 31) in Month|
+ENG|X|credithead.cred_ind|Quick Credit|
+ENG|X|invoicehead.inv_ind|Quick Invoice|
+ENG|X|ordwind|Containers|
+ENG|X|tax.calc_method_flag|Exempt|
+ENG|inh|window|Open Window|
+NL|043|Menu|Menu|
+NL|044|Page|Bladzijde|

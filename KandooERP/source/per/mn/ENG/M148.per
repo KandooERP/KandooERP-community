@@ -1,0 +1,54 @@
+{
+###########################################################################
+# This program is free software; you can redistribute it and/or modify it
+# under the terms of the GNU General Public License as published by the
+# Free Software Foundation; either version 2 of the License, or (at your
+# option) any later version.
+#
+# This program is distributed in the hope that it will be useful, but
+# WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+# General Public License for more details.
+#
+# You should have received a copy of the GNU General Public License along
+# with this program; if not, write to the Free Software Foundation, Inc.,
+# 59 Temple Place, Suite 330, Boston, MA 02111-1307 USA
+#
+###########################################################################
+
+	 $Id: M148.per,v 1.2 2003/11/19 22:23:00 afalout Exp $
+}
+
+
+database kandoodb
+
+screen
+{
+                  Recommended Orders             M148
+\g------------------------------------------------------\g
+
+ Product Code               [f000           ]
+ Plan Number                [b2    ]
+ Start Date                 [d1      ]
+ Due Date                   [d2      ]
+ Generated from (S/M)       [c]
+
+}
+end
+
+tables
+mpsdemand
+
+attributes
+f000 = mpsdemand.part_code, upshift,
+comments = " Product code of up to 15 characters";
+b2 = mpsdemand.plan_code, comments = " MPS plan number or sales order number";
+d1 = mpsdemand.start_date,
+comments = " Proposed commencement date for the shop order";
+d2 = mpsdemand.due_date,
+comments = " Proposed completion date for the shop order";
+c = formonly.rec_type type char, upshift, comments = " S = Sales, M = MPS/MRP";
+end
+
+instructions
+delimiters " "

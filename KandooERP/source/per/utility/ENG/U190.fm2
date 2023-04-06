@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form xmlns="http://namespaces.querix.com/2015/fglForms">
+	<form.rootContainer>
+		<GridPanel classNames="fcls_rootContainer" verticalAlignment="Top" horizontalAlignment="Left" fieldTable="" identifier="rootContainer">
+			<GridPanel.gridRowDefinitions>
+				<GridRowDefinition gridLengthValue=""/>
+				<GridRowDefinition gridLengthValue=""/>
+				<GridRowDefinition gridLengthValue=""/>
+			</GridPanel.gridRowDefinitions>
+			<GridPanel.gridColumnDefinitions>
+				<GridColumnDefinition gridLengthValue="100%"/>
+			</GridPanel.gridColumnDefinitions>
+			<GridPanel classNames="fcls_title_cnt" visible="true" verticalAlignment="Top" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="cntTitle">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="100%"/>
+					<GridColumnDefinition gridLengthValue=""/>
+				</GridPanel.gridColumnDefinitions>
+				<Label isDynamic="true" text="DATABASE SCHEMA COMPARISON" classNames="fcls_title_lb" visible="true" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="header_text"/>
+				<Label isDynamic="true" text="U190" classNames="fcls_title_lb" visible="true" gridItemLocation="1,0,1,1" fieldTable="" identifier="lbFormName"/>
+			</GridPanel>
+			<GridPanel classNames="fcls_detail_cnt,fcls_data_cnt,fcls_align_left" visible="true" verticalAlignment="Top" horizontalAlignment="Left" gridItemLocation="0,1,1,1" fieldTable="formonly" identifier="cntDetail1">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue="" gridMinLength="15"/>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue="" gridMinLength="15"/>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue=""/>
+					<GridColumnDefinition gridLengthValue=""/>
+				</GridPanel.gridColumnDefinitions>
+				<Label text="User ID:" gridItemLocation="0,0,1,1" fieldTable="" identifier="label3"/>
+				<TextField dataType="Char,,,," classNames="fcls_data_widget,fcls_align_left,fcls_length_60qch" preferredSize="33qch,1qch" toolTip=" Current User Login." gridItemLocation="1,0,1,1" fieldTable="formonly" comment=" Current User Login." identifier="user_name">
+					<TextField.displayModes>
+						<DisplayMode appearance="cyan"/>
+					</TextField.displayModes>
+				</TextField>
+				<Label text="Server Name:" gridItemLocation="0,1,1,1" fieldTable="" identifier="label4"/>
+				<TextField dataType="Char,,,," classNames="fcls_data_widget,fcls_align_left,fcls_length_60qch" preferredSize="33qch,1qch" toolTip=" Name of Database Server." gridItemLocation="1,1,1,1" fieldTable="formonly" comment=" Name of Database Server." identifier="site_name">
+					<TextField.displayModes>
+						<DisplayMode appearance="cyan"/>
+					</TextField.displayModes>
+				</TextField>
+				<Label text="Database Name:" gridItemLocation="0,2,1,1" fieldTable="" identifier="label5"/>
+				<TextField dataType="Char,,,," classNames="fcls_data_widget,fcls_align_left,fcls_length_60qch" preferredSize="33qch,1qch" toolTip=" Name of Database to compare." gridItemLocation="1,2,1,1" fieldTable="formonly" comment=" Name of Database to compare." identifier="db_name">
+					<TextField.displayModes>
+						<DisplayMode appearance="cyan"/>
+					</TextField.displayModes>
+				</TextField>
+				<Label text="Table Selection:" gridItemLocation="0,3,1,1" fieldTable="" identifier="label6"/>
+				<TextField dataType="Char,,,," classNames="fcls_data_widget,fcls_align_left,fcls_length_60qch" preferredSize="33qch,1qch" toolTip=" Selection of Tables to compare (* = All)." gridItemLocation="1,3,1,1" fieldTable="formonly" comment=" Selection of Tables to compare (* = All)." identifier="tb_name">
+					<TextField.displayModes>
+						<DisplayMode appearance="cyan"/>
+					</TextField.displayModes>
+				</TextField>
+				<Label text="ONLINE Server?" gridItemLocation="0,5,1,1" fieldTable="" identifier="label7"/>
+				<TextField toCase="Up" required="true" dataType="Char,,,," classNames="fcls_data_widget,fcls_align_left,fcls_length_60qch" preferredSize="2qch,1qch" toolTip=" Is database engine type ONLINE (Y) or SE (N)?" gridItemLocation="1,5,1,1" fieldTable="formonly" comment=" Is database engine type ONLINE (Y) or SE (N)?" identifier="online_sw">
+					<TextField.includes>
+						<ValueInclude>
+							<ValueInclude.value>
+								<StringLiteral stringValue="Y"/>
+							</ValueInclude.value>
+						</ValueInclude>
+						<ValueInclude>
+							<ValueInclude.value>
+								<StringLiteral stringValue="N"/>
+							</ValueInclude.value>
+						</ValueInclude>
+					</TextField.includes>
+					<TextField.displayModes>
+						<DisplayMode appearance="cyan"/>
+					</TextField.displayModes>
+				</TextField>
+				<Label text="Compare Permissions?" gridItemLocation="0,6,1,1" fieldTable="" identifier="label8"/>
+				<TextField toCase="Up" required="true" dataType="Char,,,," classNames="fcls_data_widget,fcls_align_left,fcls_length_60qch" preferredSize="2qch,1qch" toolTip=" Compare PERMISSION settings (Y/N)?" gridItemLocation="1,6,1,1" fieldTable="formonly" comment=" Compare PERMISSION settings (Y/N)?" identifier="auth_sw">
+					<TextField.includes>
+						<ValueInclude>
+							<ValueInclude.value>
+								<StringLiteral stringValue="Y"/>
+							</ValueInclude.value>
+						</ValueInclude>
+						<ValueInclude>
+							<ValueInclude.value>
+								<StringLiteral stringValue="N"/>
+							</ValueInclude.value>
+						</ValueInclude>
+					</TextField.includes>
+					<TextField.displayModes>
+						<DisplayMode appearance="cyan"/>
+					</TextField.displayModes>
+				</TextField>
+				<Label text="Compare Users?" gridItemLocation="0,7,1,1" fieldTable="" identifier="label9"/>
+				<TextField toCase="Up" required="true" dataType="Char,,,," classNames="fcls_data_widget,fcls_align_left,fcls_length_60qch" preferredSize="2qch,1qch" toolTip=" Compare USER settings (Y/N)?" gridItemLocation="1,7,1,1" fieldTable="formonly" comment=" Compare USER settings (Y/N)?" identifier="user_sw">
+					<TextField.includes>
+						<ValueInclude>
+							<ValueInclude.value>
+								<StringLiteral stringValue="Y"/>
+							</ValueInclude.value>
+						</ValueInclude>
+						<ValueInclude>
+							<ValueInclude.value>
+								<StringLiteral stringValue="N"/>
+							</ValueInclude.value>
+						</ValueInclude>
+					</TextField.includes>
+					<TextField.displayModes>
+						<DisplayMode appearance="cyan"/>
+					</TextField.displayModes>
+				</TextField>
+				<Label text="Compare Constraints?" gridItemLocation="0,8,1,1" fieldTable="" identifier="label10"/>
+				<TextField toCase="Up" required="true" dataType="Char,,,," classNames="fcls_data_widget,fcls_align_left,fcls_length_60qch" preferredSize="2qch,1qch" toolTip=" Compare CONSTRAINT settings (Y/N)?" gridItemLocation="1,8,1,1" fieldTable="formonly" comment=" Compare CONSTRAINT settings (Y/N)?" identifier="const_sw">
+					<TextField.includes>
+						<ValueInclude>
+							<ValueInclude.value>
+								<StringLiteral stringValue="Y"/>
+							</ValueInclude.value>
+						</ValueInclude>
+						<ValueInclude>
+							<ValueInclude.value>
+								<StringLiteral stringValue="N"/>
+							</ValueInclude.value>
+						</ValueInclude>
+					</TextField.includes>
+					<TextField.displayModes>
+						<DisplayMode appearance="cyan"/>
+					</TextField.displayModes>
+				</TextField>
+				<Label text="Compare Triggers?" gridItemLocation="0,9,1,1" fieldTable="" identifier="label11"/>
+				<TextField toCase="Up" required="true" dataType="Char,,,," classNames="fcls_data_widget,fcls_align_left,fcls_length_60qch" preferredSize="2qch,1qch" toolTip=" Compare TRIGGER settings (Y/N)?" gridItemLocation="1,9,1,1" fieldTable="formonly" comment=" Compare TRIGGER settings (Y/N)?" identifier="trig_sw">
+					<TextField.includes>
+						<ValueInclude>
+							<ValueInclude.value>
+								<StringLiteral stringValue="Y"/>
+							</ValueInclude.value>
+						</ValueInclude>
+						<ValueInclude>
+							<ValueInclude.value>
+								<StringLiteral stringValue="N"/>
+							</ValueInclude.value>
+						</ValueInclude>
+					</TextField.includes>
+					<TextField.displayModes>
+						<DisplayMode appearance="cyan"/>
+					</TextField.displayModes>
+				</TextField>
+				<Label text="Compare SPL?" gridItemLocation="0,10,1,1" fieldTable="" identifier="label12"/>
+				<TextField toCase="Up" required="true" dataType="Char,,,," classNames="fcls_data_widget,fcls_align_left,fcls_length_60qch" preferredSize="2qch,1qch" toolTip=" Compare STORED PROCEDURE settings (Y/N)?" gridItemLocation="1,10,1,1" fieldTable="formonly" comment=" Compare STORED PROCEDURE settings (Y/N)?" identifier="spl_sw">
+					<TextField.includes>
+						<ValueInclude>
+							<ValueInclude.value>
+								<StringLiteral stringValue="Y"/>
+							</ValueInclude.value>
+						</ValueInclude>
+						<ValueInclude>
+							<ValueInclude.value>
+								<StringLiteral stringValue="N"/>
+							</ValueInclude.value>
+						</ValueInclude>
+					</TextField.includes>
+					<TextField.displayModes>
+						<DisplayMode appearance="cyan"/>
+					</TextField.displayModes>
+				</TextField>
+				<Label text="Snapshot Directory:" gridItemLocation="0,12,1,1" fieldTable="" identifier="label13"/>
+				<TextField required="true" dataType="Char,,,," classNames="fcls_data_widget,fcls_align_left,fcls_length_60qch" preferredSize="33qch,1qch" toolTip=" Name of directory containing Snapshot files." gridItemLocation="1,12,1,1" fieldTable="formonly" comment=" Name of directory containing Snapshot files." identifier="snapshot_dir">
+					<TextField.displayModes>
+						<DisplayMode appearance="cyan"/>
+					</TextField.displayModes>
+				</TextField>
+				<Label text="SQL File Path:" gridItemLocation="0,13,1,1" fieldTable="" identifier="label14"/>
+				<TextField required="true" dataType="Char,,,," classNames="fcls_data_widget,fcls_align_left,fcls_length_60qch" preferredSize="33qch,1qch" toolTip=" Name of file to contain generated SQL script." gridItemLocation="1,13,1,1" fieldTable="formonly" comment=" Name of file to contain generated SQL script." identifier="sql_filename">
+					<TextField.displayModes>
+						<DisplayMode appearance="cyan"/>
+					</TextField.displayModes>
+				</TextField>
+			</GridPanel>
+			<GridPanel classNames="fcls_statusbar_cnt" visible="true" verticalAlignment="Top" gridItemLocation="0,2,1,1" fieldTable="formonly" identifier="cntStatusBar">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="100%"/>
+				</GridPanel.gridColumnDefinitions>
+				<Label isDynamic="true" text="" classNames="fcls_sblabel" visible="true" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="lbInfo1"/>
+				<Label isDynamic="true" text="" classNames="fcls_sblabel" visible="true" gridItemLocation="0,1,1,1" fieldTable="formonly" identifier="lbInfo2"/>
+			</GridPanel>
+		</GridPanel>
+	</form.rootContainer>
+	<form.screenRecords>
+		<ScreenRecord identifier="s_rec" fields="user_name,site_name,db_name,tb_name,online_sw,auth_sw,user_sw,const_sw,trig_sw,spl_sw,snapshot_dir,sql_filename"/>
+		<ScreenRecord identifier="formonly" fields="user_name,site_name,db_name,tb_name,online_sw,auth_sw,user_sw,const_sw,trig_sw,spl_sw,snapshot_dir,sql_filename"/>
+	</form.screenRecords>
+</form>
+

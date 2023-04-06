@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<fglBuildTarget xmlns="http://namespaces.querix.com/lyciaide/target" name="N0000_All_N_RE_Forms" type="fgl-program">
+
+  <libraries>
+    <library name= "lib_tool_common" dynamic="false" location=""/>
+    <library name="lib_tool_N_RE_new" dynamic="false" location=""/>
+    <library name="lib_tool_N_RE_db" dynamic="false" location=""/>
+   </libraries>
+
+  <sources type="fgl">
+    <file location="4gl/querix/N0000_All_N_RE_Forms.4gl"/>
+  </sources>
+
+  <sources type="form">
+    <file location="per/re/ENG/N121.fm2"/>
+    <file location="per/re/ENG/N108.fm2"/>
+    <file location="per/re/ENG/N101.fm2"/>
+    <file location="per/re/ENG/N125.fm2"/>
+    <file location="per/re/ENG/N105.fm2"/>
+    <file location="per/re/ENG/N130.fm2"/>
+    <file location="per/re/ENG/N129.fm2"/>
+    <file location="per/re/ENG/N109.fm2"/>
+    <file location="per/querix/N0000_All_N_RE_Forms.fm2"/>
+    <file location="per/re/ENG/N134.fm2"/>
+    <file location="per/re/ENG/N110.fm2"/>
+    <file location="per/re/ENG/N124.fm2"/>
+    <file location="per/re/ENG/N100.fm2"/>
+    <file location="per/re/ENG/N114.fm2"/>
+    <file location="per/re/ENG/N128.fm2"/>
+    <file location="per/re/ENG/N118.fm2"/>
+    <file location="per/re/ENG/N123.fm2"/>
+    <file location="per/re/ENG/N111.fm2"/>
+    <file location="per/re/ENG/N135.fm2"/>
+    <file location="per/re/ENG/N115.fm2"/>
+    <file location="per/re/ENG/N127.fm2"/>
+    <file location="per/re/ENG/N120.fm2"/>
+    <file location="per/re/ENG/N119.fm2"/>
+    <file location="per/re/ENG/N107.fm2"/>
+    <file location="per/re/ENG/N132.fm2"/>
+    <file location="per/re/ENG/N136.fm2"/>
+    <file location="per/re/ENG/N102.fm2"/>
+    <file location="per/re/ENG/N126.fm2"/>
+    <file location="per/re/ENG/N116.fm2"/>
+    <file location="per/re/ENG/N131.fm2"/>
+  </sources>
+
+  <mediaFiles>
+    <file client="true" location="N0000_All_N_RE_Forms.css" type="other"/>
+    <file client="true" location="N0000_All_N_RE_Forms.qxtheme" type="gui-theme-file"/>
+  </mediaFiles>
+
+  <buildConfiguration name="development">
+    <additions>
+    </additions>
+    <exclusions>
+    </exclusions>
+  </buildConfiguration>
+
+</fglBuildTarget>

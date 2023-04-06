@@ -1,0 +1,26 @@
+database formonly
+
+screen
+{
+
+                         Export Filename Assignment                 M145  
+
+                      Tasks                  [f000    ].CSV
+                      Assignments            [f001    ].CSV
+                      Resources              [f002    ].CSV
+                      Dependencies           [f003    ].CSV
+
+}
+
+attributes
+f000 = formonly.tsk_filename type char, upshift,
+comments = " Name of the file to export the tasks";
+f001 = formonly.ass_filename type char, upshift,
+comments = " Name of the file to export the assignments";
+f002 = formonly.res_filename type char, upshift,
+comments = " Name of the file to export the resources";
+f003 = formonly.dep_filename type char, upshift,
+comments = " Name of the file to export the dependencies";
+
+instructions
+delimiters "[]"

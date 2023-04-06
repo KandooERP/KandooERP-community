@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<fglBuildTarget xmlns="http://namespaces.querix.com/lyciaide/target" name="SR2_cmlib" type="fgl-library">
+
+  <sources type="fgl">
+    <file location="4gl/common/glob_GLOBALS_constant.4gl"/>
+    <file location="4gl/cm/sr2_contact_cc.4gl"/>
+    <file location="4gl/cm/sr2_contact_mailing.4gl"/>
+    <file location="4gl/cm/sr2_contact_phone.4gl"/>
+    <file location="4gl/cm/sr2_contact_address.4gl"/>
+    <file location="4gl/cm/sr2_contact_comment.4gl"/>
+    <file location="4gl/common/glob_GLOBALS_userDataTypes.4gl"/>
+    <file location="4gl/cm/sr2_contact_dummy.4gl"/>
+    <file location="4gl/cm/sr2_maintain.4gl"/>
+    <file location="4gl/cm/sr2_contact.4gl"/>
+    <file location="4gl/cm/sr2_contact_role.4gl"/>
+    <file location="4gl/cm/sr2_contact_bank.4gl"/>
+    <file location="4gl/cm/sr2_contact_relation.4gl"/>
+    <file location="4gl/cm/sr2_contact_GLOBALS.4gl"/>
+    <file location="4gl/cm/sr2_contact_lib.4gl"/>
+  </sources>
+
+  <sources type="form">
+    <file location="per/cm/ENG/address.fm2"/>
+    <file location="per/cm/ENG/con1-PPC.per"/>
+    <file location="per/cm/ENG/all_relati.per"/>
+    <file location="per/cm/ENG/all_ph_rol.per"/>
+    <file location="per/cm/ENG/code_lp.per"/>
+    <file location="per/cm/ENG/bank_acc.per"/>
+    <file location="per/cm/ENG/all_per_ro.per"/>
+    <file location="per/cm/ENG/mailing_da.per"/>
+    <file location="per/cm/ENG/info.per"/>
+    <file location="per/cm/ENG/composite.per"/>
+    <file location="per/cm/ENG/all_cc_rol.per"/>
+    <file location="per/cm/ENG/mail_role.per"/>
+    <file location="per/cm/ENG/con2-PPC.per"/>
+    <file location="per/cm/ENG/all_role_s.per"/>
+    <file location="per/cm/ENG/contact1.per"/>
+    <file location="per/cm/ENG/credit_c.per"/>
+    <file location="per/cm/ENG/A654_l2.fm2"/>
+    <file location="per/cm/ENG/all_role.per"/>
+    <file location="per/cm/ENG/cm_com.per"/>
+    <file location="per/cm/ENG/contact_lp.per"/>
+    <file location="per/cm/ENG/all_ac_rol.per"/>
+    <file location="per/cm/ENG/phone.per"/>
+    <file location="per/cm/ENG/all_mailin.per"/>
+    <file location="per/cm/ENG/contact2.per"/>
+    <file location="per/cm/ENG/mail_date.per"/>
+    <file location="per/cm/ENG/code_x.per"/>
+    <file location="per/cm/ENG/role_x.per"/>
+    <file location="per/cm/ENG/grid.per"/>
+    <file location="per/cm/ENG/info-PPC.per"/>
+  </sources>
+
+  <buildConfiguration name="development">
+    <additions>
+    </additions>
+    <exclusions>
+      <sources type="fgl">
+        <file location="4gl/cm/sr2_contact_dummy.4gl"/>
+      </sources>
+
+    </exclusions>
+  </buildConfiguration>
+
+</fglBuildTarget>

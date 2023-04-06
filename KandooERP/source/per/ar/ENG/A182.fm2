@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="UTF-8"?><form xmlns="http://namespaces.querix.com/2015/fglForms">
+	<form.rootContainer>
+		<GridPanel classNames="fcls_rootContainer" fieldTable="" horizontalAlignment="Left" identifier="rootContainer" verticalAlignment="Top">
+			<GridPanel.gridRowDefinitions>
+				<GridRowDefinition gridLengthValue=""/>
+				<GridRowDefinition gridLengthValue=""/>
+				<GridRowDefinition gridLengthValue=""/>
+				<GridRowDefinition gridLengthValue=""/>
+				<GridRowDefinition gridLengthValue=""/>
+				<GridRowDefinition gridLengthValue=""/>
+			</GridPanel.gridRowDefinitions>
+			<GridPanel.gridColumnDefinitions>
+				<GridColumnDefinition gridLengthValue="100%"/>
+			</GridPanel.gridColumnDefinitions>
+			<GridPanel classNames="fcls_title_cnt" fieldTable="formonly" gridItemLocation="0,0,1,1" identifier="cntTitle" verticalAlignment="Top" visible="true">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="100%"/>
+					<GridColumnDefinition gridLengthValue=""/>
+				</GridPanel.gridColumnDefinitions>
+				<Label classNames="fcls_title_lb" fieldTable="formonly" gridItemLocation="0,0,1,1" identifier="header_text" isDynamic="true" text="Cash Receipt Entry" visible="true"/>
+				<Label classNames="fcls_title_lb" fieldTable="" gridItemLocation="1,0,1,1" identifier="lbFormName" isDynamic="true" text="A182" visible="true"/>
+			</GridPanel>
+			<GridPanel classNames="fcls_detail_cnt,fcls_data_cnt,fcls_align_left" fieldTable="" gridItemLocation="0,1,1,1" horizontalAlignment="Left" identifier="cntDetail1" verticalAlignment="Top" visible="true">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="" gridMinLength="10rem"/>
+					<GridColumnDefinition gridLengthValue=""/>
+					<GridColumnDefinition gridLengthValue=""/>
+				</GridPanel.gridColumnDefinitions>
+				<Label classNames="fcls_fieldlabel" fieldTable="" gridItemLocation="0,0,1,1" identifier="lb139" isDynamic="true" text="Customer" visible="true"/>
+				<ComboBox classNames="list-show-value-text,field-show-value,fcls_data_widget,fcls_align_left,fcls_length_10qch" comment=" Customer Code - (W)" dataType="Char,,,,8" fieldTable="cashreceipt" gridItemLocation="1,0,1,1" identifier="cust_code" preferredSize="9qch,1qch" toCase="Up" toolTip=" Customer Code - (W)">
+					<ComboBox.actions>
+						<Action accelerator1="F9,false,false,false" comment="Invoice Scan" defaultView="Yes" identifier="F9" showInContextMenu="Yes" text="Invoice Scan"/>
+					</ComboBox.actions>
+				</ComboBox>
+				<TextField classNames="fcls_data_widget,fcls_align_left,fcls_length_30qch" dataType="Char,,,,30" fieldTable="customer" gridItemLocation="2,0,1,1" identifier="name_text" noEntry="true" preferredSize="31qch,1qch"/>
+				<Label classNames="fcls_fieldlabel" fieldTable="" gridItemLocation="0,1,1,1" identifier="lb156" isDynamic="true" text="Bank Account" visible="true"/>
+				<ComboBox classNames="list-show-value-text,field-show-value,fcls_data_widget,fcls_align_left,fcls_length_10qch" comment=" Bank Code for the deposit - (W) " dataType="Char,,,,9" fieldTable="bank" gridItemLocation="1,1,1,1" identifier="bank_code" preferredSize="10qch,1qch" toCase="Up" toolTip=" Bank Code for the deposit - (W) "/>
+				<TextField classNames="fcls_data_widget,fcls_align_left,fcls_length_30qch" dataType="Char,,,,40" fieldTable="bank" gridItemLocation="2,1,1,1" identifier="name_acct_text" noEntry="true" preferredSize="41qch,1qch"/>
+				<Label classNames="fcls_fieldlabel" fieldTable="" gridItemLocation="0,2,1,1" identifier="lb_j_order_num" isDynamic="true" text="Job Order Number" visible="true"/>
+				<ComboBox classNames="list-show-value-text,field-show-value,fcls_data_widget,fcls_align_left,fcls_length_10qch" comment=" Reference text for Receipt " dataType="Integer,,,," editable="true" fieldTable="cashreceipt" gridItemLocation="1,2,1,1" identifier="order_num" preferredSize="9qch,1qch" toolTip=" Reference text for Receipt "/>
+			</GridPanel>
+			<GridPanel classNames="fcls_detail_cnt" fieldTable="formonly" gridItemLocation="0,2,1,1" identifier="cntDetail2" minSize="80rem," verticalAlignment="Top" visible="true">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="60%"/>
+					<GridColumnDefinition gridLengthValue="40%"/>
+				</GridPanel.gridColumnDefinitions>
+				<GroupBox classNames="fcls_detail_gb_cnt" fieldTable="formonly" gridItemLocation="0,0,1,1" identifier="cntDetail2GroupBoxLeft" title="Receipt Info" verticalAlignment="Top" visible="true">
+					<GridPanel classNames="fcls_detail_gb_cnt_sub,fcls_data_cnt,fcls_align_left" fieldTable="formonly" horizontalAlignment="Left" identifier="cntDetail2GBSubGpLeft" verticalAlignment="Top" visible="true">
+						<GridPanel.gridRowDefinitions>
+							<GridRowDefinition gridLengthValue=""/>
+							<GridRowDefinition gridLengthValue=""/>
+						</GridPanel.gridRowDefinitions>
+						<GridPanel.gridColumnDefinitions>
+							<GridColumnDefinition gridLengthValue="" gridMinLength="10rem"/>
+							<GridColumnDefinition gridLengthValue=""/>
+							<GridColumnDefinition gridLengthValue=""/>
+						</GridPanel.gridColumnDefinitions>
+						<Label classNames="fcls_fieldlabel" fieldTable="formonly" gridItemLocation="0,0,1,1" identifier="lb47" isDynamic="true" text="Payment Type" visible="true"/>
+						<ComboBox classNames="list-show-value-text,field-show-value,fcls_data_widget,fcls_align_left,fcls_length_10qch" comment=" Payment: C = Cash  Q = Cheque  P = Credit Card  O = Payment" dataType="Char,,,,1" fieldTable="cashreceipt" gridItemLocation="1,0,1,1" identifier="cash_type_ind" preferredSize="2qch,1qch" toCase="Up" toolTip=" Payment: C = Cash  Q = Cheque  P = Credit Card  O = Payment"/>
+						<TextField classNames="fcls_data_widget,fcls_align_left,fcls_length_20qch" dataType="Char,,,," fieldTable="formonly" gridItemLocation="2,0,1,1" identifier="reference_text" noEntry="true" preferredSize="16qch,1qch"/>
+						<Label classNames="fcls_fieldlabel" fieldTable="formonly" gridItemLocation="0,1,1,1" identifier="lb46" isDynamic="true" text="Date Received" visible="true"/>
+						<Calendar classNames="fcls_data_widget,fcls_align_left,fcls_length_10qch" comment=" Date of received payment " dataType="Date,,,," fieldTable="cashreceipt" gridItemLocation="1,1,1,1" identifier="cash_date" preferredSize="11qch,1qch" toolTip=" Date of received payment "/>
+					</GridPanel>
+				</GroupBox>
+				<GroupBox classNames="fcls_detail_gb_cnt" fieldTable="" gridItemLocation="1,0,1,1" identifier="cntDetail2GroupBoxRight" title="GL Integration" visible="true">
+					<GridPanel classNames="fcls_detail_gb_cnt_sub,fcls_data_cnt,fcls_align_left" fieldTable="" horizontalAlignment="Left" identifier="cntDetail2GBSubGpRight" verticalAlignment="Top" visible="true">
+						<GridPanel.gridRowDefinitions>
+							<GridRowDefinition gridLengthValue=""/>
+							<GridRowDefinition gridLengthValue=""/>
+							<GridRowDefinition gridLengthValue=""/>
+						</GridPanel.gridRowDefinitions>
+						<GridPanel.gridColumnDefinitions>
+							<GridColumnDefinition gridLengthValue="" gridMinLength="10rem"/>
+							<GridColumnDefinition gridLengthValue=""/>
+						</GridPanel.gridColumnDefinitions>
+						<Label classNames="fcls_fieldlabel" fieldTable="" gridItemLocation="0,0,1,1" identifier="lb167" isDynamic="true" text="Fiscal Year" visible="true"/>
+						<ComboBox classNames="list-show-value,field-show-value,fcls_data_widget,fcls_align_left,fcls_length_10qch" comment=" Fiscal year related to this cash receipt posting to the GL" dataType="SmallInt,,,," fieldTable="cashreceipt" gridItemLocation="1,0,1,1" identifier="year_num" preferredSize="5qch,1qch" toolTip=" Fiscal year related to this cash receipt posting to the GL"/>
+						<Label classNames="fcls_fieldlabel" fieldTable="" gridItemLocation="0,1,1,1" identifier="lb168" isDynamic="true" text="Period" visible="true"/>
+						<ComboBox classNames="list-show-value,field-show-value,fcls_data_widget,fcls_align_left,fcls_length_10qch" comment=" Fiscal period related to this cash receipt posting to the GL" dataType="SmallInt,,,," fieldTable="cashreceipt" gridItemLocation="1,1,1,1" identifier="period_num" preferredSize="4qch,1qch" toolTip=" Fiscal period related to this cash receipt posting to the GL"/>
+						<Label classNames="fcls_fieldlabel" fieldTable="" gridItemLocation="0,2,1,1" identifier="lb169" isDynamic="true" text="Cash Account" visible="true"/>
+						<ComboBox classNames="list-show-value-text,field-show-value,fcls_data_widget,fcls_align_left,fcls_length_10qch" dataType="Char,,,,18" fieldTable="cashreceipt" gridItemLocation="1,2,1,1" identifier="cash_acct_code" noEntry="true" preferredSize="19qch,1qch"/>
+					</GridPanel>
+				</GroupBox>
+			</GridPanel>
+			<GridPanel classNames="fcls_detail_cnt" fieldTable="formonly" gridItemLocation="0,3,1,1" identifier="cntDetail3" verticalAlignment="Top" visible="true">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="60%"/>
+					<GridColumnDefinition gridLengthValue="40%"/>
+				</GridPanel.gridColumnDefinitions>
+				<GroupBox classNames="fcls_detail_gb_cnt" fieldTable="formonly" gridItemLocation="0,0,1,1" identifier="cntDetail3GroupBoxLeft" title="Receipt Amount" verticalAlignment="Top" visible="true">
+					<GridPanel classNames="fcls_detail_gb_cnt_sub,fcls_data_cnt,fcls_align_left" fieldTable="formonly" horizontalAlignment="Left" identifier="cntDetail3GBSubGpLeft" verticalAlignment="Top" visible="true">
+						<GridPanel.gridRowDefinitions>
+							<GridRowDefinition gridLengthValue=""/>
+							<GridRowDefinition gridLengthValue=""/>
+							<GridRowDefinition gridLengthValue=""/>
+						</GridPanel.gridRowDefinitions>
+						<GridPanel.gridColumnDefinitions>
+							<GridColumnDefinition gridLengthValue="" gridMinLength="10rem"/>
+							<GridColumnDefinition gridLengthValue=""/>
+							<GridColumnDefinition gridLengthValue=""/>
+						</GridPanel.gridColumnDefinitions>
+						<Label classNames="fcls_fieldlabel" fieldTable="formonly" gridItemLocation="0,0,1,1" identifier="lb47x" isDynamic="true" text="Received Amount" visible="true"/>
+						<ComboBox classNames="list-show-value-text,field-show-value,fcls_data_widget,fcls_align_left,fcls_length_05qch" dataType="Char,,,,3" fieldTable="cashreceipt" gridItemLocation="1,0,1,1" identifier="currency_code" noEntry="true" preferredSize="4qch,1qch" toCase="Up"/>
+						<TextField classNames="fcls_data_widget,fcls_align_left,fcls_length_20qch" comment=" Total amount of payment received - (customer currency)" dataType="Decimal,,,2,16" fieldTable="cashreceipt" gridItemLocation="2,0,1,1" identifier="cash_amt" preferredSize="12qch,1qch" toolTip=" Total amount of payment received - (customer currency)"/>
+						<Label classNames="fcls_fieldlabel" fieldTable="formonly" gridItemLocation="0,1,1,1" identifier="lb46x" isDynamic="true" text="Bank Rec. Amount" visible="true"/>
+						<ComboBox classNames="list-show-value-text,field-show-value,fcls_data_widget,fcls_align_left,fcls_length_05qch" dataType="Char,,,,3" fieldTable="cashreceipt" gridItemLocation="1,1,1,1" identifier="bank_currency_code" noEntry="true" preferredSize="4qch,1qch"/>
+						<TextField classNames="fcls_data_widget,fcls_align_left,fcls_length_20qch" comment=" Total amount of payment received - (bank currency) " dataType="Char,,,," fieldTable="formonly" gridItemLocation="2,1,1,1" identifier="bank_amt" preferredSize="12qch,1qch" toolTip=" Total amount of payment received - (bank currency) "/>
+						<Label classNames="fcls_fieldlabel" fieldTable="formonly" gridItemLocation="0,2,1,1" identifier="lb44x" isDynamic="true" text="Exchange Rate" visible="true"/>
+						<TextField classNames="fcls_data_widget,fcls_align_left,fcls_length_05qch" comment=" Currency exchange rate of this payment " dataType="Float,,,," fieldTable="cashreceipt" gridItemLocation="1,2,2,1" identifier="conv_qty" preferredSize="12qch,1qch" toolTip=" Currency exchange rate of this payment "/>
+					</GridPanel>
+				</GroupBox>
+				<GroupBox classNames="fcls_detail_gb_cnt" fieldTable="" gridItemLocation="1,0,1,1" identifier="cntDetail3GroupBoxRight" title="Entry Details" visible="true">
+					<GridPanel classNames="fcls_detail_gb_cnt_sub,fcls_data_cnt,fcls_align_left" fieldTable="" horizontalAlignment="Left" identifier="cntDetail3GBSubGpRight" verticalAlignment="Top" visible="true">
+						<GridPanel.gridRowDefinitions>
+							<GridRowDefinition gridLengthValue=""/>
+							<GridRowDefinition gridLengthValue=""/>
+						</GridPanel.gridRowDefinitions>
+						<GridPanel.gridColumnDefinitions>
+							<GridColumnDefinition gridLengthValue="" gridMinLength="10rem"/>
+							<GridColumnDefinition gridLengthValue=""/>
+						</GridPanel.gridColumnDefinitions>
+						<Label classNames="fcls_fieldlabel" fieldTable="" gridItemLocation="0,0,1,1" identifier="lb167x" isDynamic="true" text="Person" visible="true"/>
+						<ComboBox classNames="list-show-text-value,field-show-value,fcls_data_widget,fcls_align_left,fcls_length_10qch" dataType="Char,,,,8" fieldTable="cashreceipt" gridItemLocation="1,0,1,1" identifier="entry_code" noEntry="true" preferredSize="11qch,1qch"/>
+						<Label classNames="fcls_fieldlabel" fieldTable="" gridItemLocation="0,1,1,1" identifier="lb168x" isDynamic="true" text="Date" visible="true"/>
+						<Calendar classNames="fcls_data_widget,fcls_align_left,fcls_length_10qch" dataType="Date,,,," fieldTable="cashreceipt" gridItemLocation="1,1,1,1" identifier="entry_date" noEntry="true" preferredSize="11qch,1qch"/>
+					</GridPanel>
+				</GroupBox>
+			</GridPanel>
+			<GroupBox classNames="fcls_detail_gb_cnt" fieldTable="formonly" gridItemLocation="0,4,1,1" identifier="cntDetail4GroupBox" title="Receipt Comments" verticalAlignment="Top" visible="true">
+				<GridPanel classNames="fcls_detail_gb_cnt_sub,fcls_data_cnt,fcls_align_hstretch" fieldTable="formonly" horizontalAlignment="Left" identifier="cntDetail4GBSubGpLeft" verticalAlignment="Top" visible="true">
+					<GridPanel.gridRowDefinitions>
+						<GridRowDefinition gridLengthValue=""/>
+						<GridRowDefinition gridLengthValue=""/>
+					</GridPanel.gridRowDefinitions>
+					<GridPanel.gridColumnDefinitions>
+						<GridColumnDefinition gridLengthValue="100%"/>
+					</GridPanel.gridColumnDefinitions>
+					<TextField classNames="fcls_data_widget,fcls_align_left,fcls_length_30qch" comment=" Additional information regarding this payment - (line 1)" dataType="Char,,,,30" fieldTable="cashreceipt" gridItemLocation="0,0,1,1" identifier="com1_text" preferredSize="31qch,1qch" toolTip=" Additional information regarding this payment - (line 1)" horizontalAlignment="Left" required="true" notNull="true"/>
+					<TextField classNames="fcls_data_widget,fcls_align_left,fcls_length_30qch" comment=" Additional information regarding this payment - (line 2)" dataType="Char,,,,30" fieldTable="cashreceipt" gridItemLocation="0,1,1,1" identifier="com2_text" preferredSize="31qch,1qch" toolTip=" Additional information regarding this payment - (line 2)" horizontalAlignment="Left"/>
+				</GridPanel>
+			</GroupBox>
+			<GridPanel classNames="fcls_statusbar_cnt" fieldTable="formonly" gridItemLocation="0,5,1,1" identifier="cntStatusBar" verticalAlignment="Top" visible="true">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="100%"/>
+				</GridPanel.gridColumnDefinitions>
+				<Label classNames="fcls_sblabel" fieldTable="formonly" gridItemLocation="0,0,1,1" identifier="lbInfo1" isDynamic="true" text="" visible="true"/>
+				<Label classNames="fcls_sblabel" fieldTable="formonly" gridItemLocation="0,1,1,1" identifier="lbInfo2" isDynamic="true" text="" visible="true"/>
+			</GridPanel>
+		</GridPanel>
+	</form.rootContainer>
+	<form.screenRecords>
+		<ScreenRecord fields="bank_code,name_acct_text" identifier="bank"/>
+		<ScreenRecord fields="currency_code,bank_currency_code,cust_code,order_num,cash_type_ind,cash_date,year_num,period_num,cash_acct_code,cash_amt,conv_qty,entry_code,entry_date,com1_text,com2_text" identifier="cashreceipt"/>
+		<ScreenRecord fields="name_text" identifier="customer"/>
+		<ScreenRecord fields="reference_text,bank_amt" identifier="formonly"/>
+	</form.screenRecords>
+</form>

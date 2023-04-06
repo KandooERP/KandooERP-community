@@ -1,0 +1,980 @@
+1|Capital accounts|FR|ENU||1||
+10|capital and reserves|FR|ENU||2||
+101|Capital|FR|ENU||3|L|
+1011|Subscribed capital uncalled|FR|ENU||X|L|
+1012|Subscribed capital called up, unpaid|FR|ENU||X|L|
+1013|Subscribed capital called up, paid|FR|ENU||X|L|
+10131|Capital not written off|FR|ENU||X|L|
+10132|Capital written off|FR|ENU||X|L|
+1018|Subscribed capital subject to particular regulations|FR|ENU||X|L|
+104|Premiums on share capital|FR|ENU||3|L|
+1041|Share premiums|FR|ENU||X|L|
+1042|Merger premiums|FR|ENU||X|L|
+1043|Contribution premiums|FR|ENU||X|L|
+1044|Premiums on conversion of bonds into shares|FR|ENU||X|L|
+1045|Equity warrants|FR|ENU||X|L|
+105|Revaluation differences|FR|ENU||3|L|
+1051|Special revaluation reserve|FR|ENU||X|L|
+1052|Voluntary revaluation difference|FR|ENU||X|L|
+1053|Revaluation reserve|FR|ENU||X|L|
+1055|Revaluation differences (other legal transactions)|FR|ENU||X|L|
+1057|Other revaluation differences in France|FR|ENU||X|L|
+1058|Other revaluation differences outside France|FR|ENU||X|L|
+106|Reserves|FR|ENU||3|L|
+1061|Legal reserve|FR|ENU||X|L|
+10611|Basic legal reserve|FR|ENU||X|L|
+10612|Net long-term capital gains|FR|ENU||X|L|
+1062|Undistributable reserves|FR|ENU||X|L|
+1063|Statutory or contractual reserves|FR|ENU||X|L|
+1064|Tax-regulated reserves|FR|ENU||X|L|
+10641|Net long-term capital gains|FR|ENU||X|L|
+10643|Reserves consequent on award of investment grants|FR|ENU||X|L|
+10648|Other tax-regulated reserves|FR|ENU||X|L|
+1068|Other reserves|FR|ENU||X|L|
+10681|Self-insurance reserve|FR|ENU||X|L|
+10688|Sundry reserves|FR|ENU||X|L|
+107|Difference on equity accounted investments|FR|ENU||X|L|
+108|Drawings account|FR|ENU||X|L|
+109|Shareholders: Subscribed capital uncalled|FR|ENU||X|A|
+11|Profit or loss carried forward (debit or credit balance)|FR|ENU||2||
+110|Profit carried forward|FR|ENU||X|L|
+119|Loss carried forward|FR|ENU||X|L|
+12|Profit or loss for the financial year|FR|ENU||2||
+120|Profit for the financial year|FR|ENU||X|L|
+129|Loss for the financial year|FR|ENU||X|L|
+13|Investment grants|FR|ENU||2|L|
+131|Equipment grants|FR|ENU||3|L|
+1311|State|FR|ENU||X|L|
+1312|Regions|FR|ENU||X|L|
+1313|Departments|FR|ENU||X|L|
+1314|Municipalities|FR|ENU||X|L|
+1315|Public authorities|FR|ENU||X|L|
+1316|Public enterprises|FR|ENU||X|L|
+1317|Enterprises and private bodies|FR|ENU||X|L|
+1318|Other|FR|ENU||X|L|
+138|Other investment grants (same allocation as for Account 131)|FR|ENU||X|L|
+139|Investment grants credited to the profit and loss account|FR|ENU||3|L|
+1391|Equipment grants|FR|ENU||X|L|
+13911|State|FR|ENU||X|L|
+13912|Regions|FR|ENU||X|L|
+13913|Departments|FR|ENU||X|L|
+13914|Municipalities|FR|ENU||X|L|
+13915|Public authorities|FR|ENU||X|L|
+13916|Public enterprises|FR|ENU||X|L|
+13917|Enterprises and private bodies|FR|ENU||X|L|
+13918|Other|FR|ENU||X|L|
+1398|Other investment grants (same allocation as for Account 1391)|FR|ENU||X|L|
+14|Tax-regulated provisions|FR|ENU||2|L|
+142|Tax-regulated provisions relating to fixed assets|FR|ENU||3|L|
+1423|Provisions for reconstitution of mining and petroleum deposits|FR|ENU||X|L|
+1424|Provisions for investment (employee profit share)|FR|ENU||X|L|
+143|Tax-regulated provisions relating to stocks|FR|ENU||3|L|
+1431|Price increase|FR|ENU||X|L|
+1432|Exchange rate fluctuations|FR|ENU||X|L|
+144|Tax-regulated provisions relating to other asset components|FR|ENU||X|L|
+145|Depreciation by derogation|FR|ENU||X|L|
+146|Special revaluation provision|FR|ENU||X|L|
+147|Capital gains reinvested|FR|ENU||X|L|
+148|Other tax-regulated provisions|FR|ENU||X|L|
+15|Provisions for liabilities and charges|FR|ENU||2|L|
+151|Provisions for liabilities|FR|ENU||3|L|
+1511|Provisions for litigation|FR|ENU||X|L|
+1512|Provisions for customer warranties|FR|ENU||X|L|
+1513|Provisions for losses on futures|FR|ENU||X|L|
+1514|Provisions for fines and penalties|FR|ENU||X|L|
+1515|Provisions for foreign exchange losses|FR|ENU||X|L|
+1518|Other provisions for liabilities|FR|ENU||X|L|
+153|Provisions for pensions and similar obligations|FR|ENU||X|L|
+155|Provisions for taxation|FR|ENU||X|L|
+156|Provisions for fixed asset renewal (concession entities)|FR|ENU||X|L|
+157|Provisions for deferred charges|FR|ENU||3|L|
+1572|Provisions for major repairs|FR|ENU||X|L|
+158|Other provisions for charges|FR|ENU||3|L|
+1582|Provisions for social security and tax charges on holiday pay|FR|ENU||X|L|
+16|Loans and similar debts payable|FR|ENU||2|L|
+161|Convertible debenture loans|FR|ENU||X|L|
+163|Other debenture loans|FR|ENU||X|L|
+164|Loans from credit institutions|FR|ENU||X|L|
+165|Deposits and sureties received|FR|ENU||3|L|
+1651|Deposits|FR|ENU||X|L|
+1655|Sureties|FR|ENU||X|L|
+166|Employee profit share|FR|ENU||3|L|
+1661|Blocked accounts|FR|ENU||X|L|
+1662|Profit share funds|FR|ENU||X|L|
+167|Loans and debts payable subject to particular conditions|FR|ENU||3|L|
+1671|Issues of non-voting shares|FR|ENU||X|L|
+1674|Advances by the state subject to conditions|FR|ENU||X|L|
+1675|Participating loans|FR|ENU||X|L|
+168|Other loans and similar debts payable|FR|ENU||3|L|
+1681|Other loans|FR|ENU||X|L|
+1685|Capitalised life annuities|FR|ENU||X|L|
+1687|Other debts payable|FR|ENU||X|L|
+1688|Accrued interest|FR|ENU||X|L|
+16881|On convertible debenture loans|FR|ENU||X|L|
+16883|On other debenture loans|FR|ENU||X|L|
+16884|On loans from credit institutions|FR|ENU||X|L|
+16885|On deposits and sureties received|FR|ENU||X|L|
+16886|On employee profit share|FR|ENU||X|L|
+16887|On loans and debts payable subject to particular conditions|FR|ENU||X|L|
+16888|On other loans and similar debts payable|FR|ENU||X|L|
+169|Debt redemption premiums|FR|ENU||X|L|
+17|Debts payable related to participating interests|FR|ENU||2|L|
+171|Debts payable related to participating interests (group)|FR|ENU||X|L|
+174|Debts payable related to participating interests (apart from group)|FR|ENU||X|L|
+178|Debts payable related to joint ventures|FR|ENU||3|L|
+1781|Principal|FR|ENU||X|L|
+1788|Accrued interest|FR|ENU||X|L|
+18|Reciprocal branch and joint venture accounts|FR|ENU||2|L|
+181|Reciprocal branch accounts|FR|ENU||X|L|
+186|Goods and services exchanged between establishments (charges)|FR|ENU||X|L|
+187|Goods and services exchanged between establishments (income)|FR|ENU||X|L|
+188|Reciprocal joint venture accounts|FR|ENU||X|L|
+2|Fixed asset accounts|FR|ENU||1|A|
+20|Intangible fixed assets|FR|ENU||2|A|
+201|Establishment costs|FR|ENU||3|A|
+2011|Incorporation costs|FR|ENU||X|A|
+2012|Start-up costs|FR|ENU||X|A|
+20121|Commercial assessment costs|FR|ENU||X|A|
+20122|Marketing costs|FR|ENU||X|A|
+2013|Capital increase and sundry transaction costs (mergers, demergers,restructurations)|FR|ENU||X|A|
+203|Research and development costs|FR|ENU||X|A|
+205|Concessions and similar rights, patents, licences, trade marks, processes, softw|FR|ENU||X|A|
+206|Lease premium|FR|ENU||X|A|
+207|Goodwill|FR|ENU||X|A|
+208|Other intangible fixed assets|FR|ENU||X|A|
+21|Tangible fixed assets|FR|ENU||2|A|
+211|Land|FR|ENU||3|A|
+2111|Undeveloped land|FR|ENU||X|A|
+2112|Serviced land|FR|ENU||X|A|
+2113|Underground and aboveground sites|FR|ENU||X|A|
+2114|Mining sites|FR|ENU||X|A|
+21141|Quarries|FR|ENU||X|A|
+2115|Developed land|FR|ENU||X|A|
+21151|Industrial property complexes (A, B...)|FR|ENU||X|A|
+21155|Administrative and commercial property complexes (A, B...)|FR|ENU||X|A|
+21158|Other property complexes|FR|ENU||X|A|
+211581|Property assigned to normal entity operations (A, B...)|FR|ENU||X|A|
+211588|Property assigned to other than entity operations (A, B...)|FR|ENU||X|A|
+2116|Suspense account for nondepreciable fixed assets revalued in 1976 (Article 6, De|FR|ENU||X|A|
+212|Site development (same allocation as for Account 211)|FR|ENU||X|A|
+213|Constructions|FR|ENU||3|A|
+2131|Buildings|FR|ENU||X|A|
+21311|Industrial property complexes (A, B...)|FR|ENU||X|A|
+21315|Administrative and commercial property complexes (A, B...)|FR|ENU||X|A|
+21318|Other property complexes|FR|ENU||X|A|
+213181|Property assigned to normal entity operations (A, B...)|FR|ENU||X|A|
+213188|Property assigned to other than normal entity operations (A, B...)|FR|ENU||X|A|
+2135|Building fixtures and fittings (same allocation as for Account 2131)|FR|ENU||X|A|
+2138|Infrastructure development|FR|ENU||X|A|
+21381|Roadways|FR|ENU||X|A|
+21382|Railways|FR|ENU||X|A|
+21383|Water channels|FR|ENU||X|A|
+21384|Dams|FR|ENU||X|A|
+21385|Airfields|FR|ENU||X|A|
+214|Constructions on third-party sites (same allocation as for Account 213)|FR|ENU||X|A|
+215|Technical installations, plant and machinery, equipment and fixtures|FR|ENU||3|A|
+2151|Specialised complex installations|FR|ENU||X|A|
+21511|On own site|FR|ENU||X|A|
+21514|On third-party site|FR|ENU||X|A|
+2153|Installations of specific nature|FR|ENU||X|A|
+21531|On own site|FR|ENU||X|A|
+21534|On third-party site|FR|ENU||X|A|
+2154|Plant and machinery|FR|ENU||X|A|
+2155|Equipment and fixtures|FR|ENU||X|A|
+2157|Fixtures and fittings for plant and machinery,equipment and fixtures|FR|ENU||X|A|
+218|Other tangible fixed assets|FR|ENU||3|A|
+2181|Sundry general fixtures and fittings|FR|ENU||X|A|
+2182|Transport equipment|FR|ENU||X|A|
+2183|Office and computing equipment|FR|ENU||X|A|
+2184|Furnishings|FR|ENU||X|A|
+2185|Livestock|FR|ENU||X|A|
+2186|Recoverable packaging|FR|ENU||X|A|
+22|Fixed assets in concession|FR|ENU||X|A|
+23|Fixed assets in progress|FR|ENU||2|A|
+231|Tangible fixed assets in progress|FR|ENU||3|A|
+2312|Land|FR|ENU||X|A|
+2313|Constructions|FR|ENU||X|A|
+2315|Technical installations, plant and machinery,equipment and fixtures|FR|ENU||X|A|
+2318|Other tangible fixed assets|FR|ENU||X|A|
+232|Intangible fixed assets in progress|FR|ENU||X|A|
+237|Payments on account on intangible fixed assets|FR|ENU||X|A|
+238|Payments on account on orders for tangible fixed assets|FR|ENU||3|A|
+2382|Land|FR|ENU||X|A|
+2383|Constructions|FR|ENU||X|A|
+2385|Technical installations, plant and machinery,equipment and fixtures|FR|ENU||X|A|
+2388|Other tangible fixed assets|FR|ENU||X|A|
+25|Shares in and receivables due from affiliated entities|FR|ENU||X|A|
+26|Participating interests and related debts receivable|FR|ENU||2|A|
+261|Long-term equity interests|FR|ENU||3|A|
+2611|Shares|FR|ENU||X|A|
+2618|Other securities|FR|ENU||X|A|
+266|Other categories of participating interest|FR|ENU||X|A|
+267|Debts receivable related to participating interests|FR|ENU||3|A|
+2671|Debts receivable related to participating interests (group)|FR|ENU||X|A|
+2674|Debts receivable related to participating interests (apart from group)|FR|ENU||X|A|
+2675|Payments representing non-capitalised contributions (call for funds)|FR|ENU||X|A|
+2676|Long-term capital advances|FR|ENU||X|A|
+2677|Other debts receivable related to participating interests|FR|ENU||X|A|
+2678|Accrued interest|FR|ENU||X|A|
+268|Debts receivable related to joint ventures|FR|ENU||3|A|
+2681|Principal|FR|ENU||X|A|
+2688|Accrued interest|FR|ENU||X|A|
+269|Unpaid instalments on unpaid long-term equity interests|FR|ENU||X|A|
+27|Other financial fixed assets|FR|ENU||2|A|
+271|Long-term investment equity securities other than portfolio long-term investment|FR|ENU||3|A|
+2711|Shares|FR|ENU||X|A|
+2718|Other securities|FR|ENU||X|A|
+272|Long-term investment debt securities|FR|ENU||3|A|
+2721|Bonds|FR|ENU||X|A|
+2722|Warrants|FR|ENU||X|A|
+273|Portfolio long-term investment securities|FR|ENU||X|A|
+274|Loans|FR|ENU||3|A|
+2741|Participating loans|FR|ENU||X|A|
+2742|Loans to partners/associates|FR|ENU||X|A|
+2743|Loans to personnel|FR|ENU||X|A|
+2748|Other loans|FR|ENU||X|A|
+275|Deposits and sureties advanced|FR|ENU||3|A|
+2751|Deposits|FR|ENU||X|A|
+2755|Sureties|FR|ENU||X|A|
+276|Other capitalised debts receivable|FR|ENU||3|A|
+2761|Sundry debts receivable|FR|ENU||X|A|
+2768|Accrued interest|FR|ENU||X|A|
+27682|Long-term investment debt securities|FR|ENU||X|A|
+27684|Loans|FR|ENU||X|A|
+27685|Deposits and sureties|FR|ENU||X|A|
+27688|On sundry debts receivable|FR|ENU||X|A|
+277|(Own shares)|FR|ENU||3|A|
+2771|Own shares|FR|ENU||X|A|
+2772|Own shares in process of cancellation|FR|ENU||X|A|
+279|Unpaid instalments on unpaid long-term investment securities|FR|ENU||X|A|
+28|Cumulative depreciation on fixed assets|FR|ENU||2|A|
+280|Depreciation on intangible fixed assets|FR|ENU||3|A|
+2801|Establishment costs (same allocation as for Account 201)|FR|ENU||X|A|
+2803|Research and development costs|FR|ENU||X|A|
+2805|Concessions and similar rights, patents, licences,software, rights and similar assets|FR|ENU||X|A|
+2807|Goodwill|FR|ENU||X|A|
+2808|Other intangible fixed assets|FR|ENU||X|A|
+281|Depreciation on tangible fixed assets|FR|ENU||3|A|
+2811|Mining sites|FR|ENU||X|A|
+2812|Site development (same allocation as for Account 212)|FR|ENU||X|A|
+2813|Constructions (same allocation as for Account 213)|FR|ENU||X|A|
+2814|Constructions on third-party site (same allocation as for Account 214)|FR|ENU||X|A|
+2815|Technical installations, plant and machinery, equipment and fixtures (same alloc|FR|ENU||X|A|
+2818|Other tangible fixed assets (same allocation as for Account 218)|FR|ENU||X|A|
+282|Depreciation on fixed assets in concession|FR|ENU||X|A|
+29|Provisions for diminution in value of fixed assets|FR|ENU||2|A|
+290|Provisions for diminution in value of intangible fixed assets|FR|ENU||3|A|
+2905|Trade marks, processes, rights and similar assets|FR|ENU||X|A|
+2906|Lease premium|FR|ENU||X|A|
+2907|Goodwill|FR|ENU||X|A|
+2908|Other intangible fixed assets|FR|ENU||X|A|
+291|Provisions for diminution in value of tangible fixed assets (same allocation as|FR|ENU||3|A|
+2911|Land (other than mining sites)|FR|ENU||X|A|
+292|Provisions for diminution in value of fixed assets in concession|FR|ENU||X|A|
+293|Provisions for diminution in value of fixed assets in progress|FR|ENU||3|A|
+2931|Tangible fixed assets in progress|FR|ENU||X|A|
+2932|Intangible fixed assets in progress|FR|ENU||X|A|
+296|Provisions for diminution in value of participating interests and related debts receivable|FR|ENU||3|A|
+2961|Long-term equity interests|FR|ENU||X|A|
+2966|Other categories of participating interests|FR|ENU||X|A|
+2967|Debts receivable related to participating interests (same allocation as for Account 267)|FR|ENU||X|A|
+2968|Debts receivable related to joint ventures (same allocation as for Account 268)|FR|ENU||X|A|
+297|Provisions for diminution in value of other financial fixed assets|FR|ENU||3|A|
+2971|Long-term investment equity securities other than portfolio long-term equity inv|FR|ENU||X|A|
+2972|Long-term investment debt securities (same allocation as for Account 272)|FR|ENU||X|A|
+2973|Portfolio long-term investment securities|FR|ENU||X|A|
+2974|Loans (same allocation as for Account 274)|FR|ENU||X|A|
+2975|Deposits and sureties advanced (same allocation as for Account 275)|FR|ENU||X|A|
+2976|Other debts receivable (same allocation as for Account 276)|FR|ENU||X|A|
+3|Stocks and work in progress accounts|FR|ENU||1|A|
+31|Raw materials (and supplies)|FR|ENU||2|A|
+311|Materials (or group) A|FR|ENU||X|A|
+312|Materials (or group) B|FR|ENU||X|A|
+317|Supplies A, B, C, ...|FR|ENU||X|A|
+32|Other consumables|FR|ENU||2|A|
+321|Consumable materials|FR|ENU||3|A|
+3211|Materials (or group) C|FR|ENU||X|A|
+3212|Materials (or group) D|FR|ENU||X|A|
+322|Consumable supplies|FR|ENU||3|A|
+3221|Fuels|FR|ENU||X|A|
+3222|Cleaning products|FR|ENU||X|A|
+3223|Workshop and factory supplies|FR|ENU||X|A|
+3224|Store supplies|FR|ENU||X|A|
+3225|Office supplies|FR|ENU||X|A|
+326|Packaging|FR|ENU||3|A|
+3261|Non-returnable packaging|FR|ENU||X|A|
+3265|Unidentifiable recoverable packaging|FR|ENU||X|A|
+3267|Mixed usage packaging|FR|ENU||X|A|
+33|Work in progress (goods)|FR|ENU||2|A|
+331|Products in progress (goods)|FR|ENU||3|A|
+3311|Products in progress P 1|FR|ENU||X|A|
+3312|Products in progress P 2|FR|ENU||X|A|
+335|Works in progress|FR|ENU||3|A|
+3351|Works in progress T 1|FR|ENU||X|A|
+3352|Works in progress T 2|FR|ENU||X|A|
+34|Work in progress (services)|FR|ENU||2|A|
+341|Project studies in progress|FR|ENU||3|A|
+3411|Project studies in progress E 1|FR|ENU||X|A|
+3412|Project studies in progress E 2|FR|ENU||X|A|
+345|Supply of services in progress|FR|ENU||3|A|
+3451|Supply of services in progress S 1|FR|ENU||X|A|
+3452|Supply of services in progress S 2|FR|ENU||X|A|
+35|Product stocks|FR|ENU||2|A|
+351|Semi-finished products|FR|ENU||3|A|
+3511|Semi-finished products (or group) A|FR|ENU||X|A|
+3512|Semi-finished products (or group) B|FR|ENU||X|A|
+355|Finished products|FR|ENU||3|A|
+3551|Finished products (or group) A|FR|ENU||X|A|
+3552|Finished products (or group) B|FR|ENU||X|A|
+358|Residual products (or recoverable materials)|FR|ENU||3|A|
+3581|Waste|FR|ENU||X|A|
+3585|Refuse|FR|ENU||X|A|
+3586|Recoverable materials|FR|ENU||X|A|
+36|(Account to be opened, as applicable, under the title, Stocks derived from fixed assets)|FR|ENU||2|A|
+37|Stocks of goods for resale|FR|ENU||2|A|
+371|Goods for resale (or group) A|FR|ENU||X|A|
+372|Goods for resale (or group) B|FR|ENU||X|A|
+38|(Where an entity maintains a perpetual inventory in its financial accounting, Account 38 m|FR|ENU||2|A|
+39|Provisions for diminution in value of stocks and work in progress|FR|ENU||2|A|
+391|Provisions for diminution in value of raw materials (and supplies)|FR|ENU||3|A|
+3911|Materials (or group) A|FR|ENU||X|A|
+3912|Materials (or group) B|FR|ENU||X|A|
+3917|Supplies A, B, C, ...|FR|ENU||X|A|
+392|Provisions for diminution in value of other consumables|FR|ENU||3|A|
+3921|Consumable materials (same allocation as for Account 321)|FR|ENU||X|A|
+3922|Consumable supplies (same allocation as for Account 322)|FR|ENU||X|A|
+3926|Packaging (same allocation as for Account 326)|FR|ENU||X|A|
+393|Provisions for diminution in value of work in progress (goods)|FR|ENU||3|A|
+3931|Products in progress (same allocation as for Account 331)|FR|ENU||X|A|
+3935|Works in progress (same allocation as for Account 335)|FR|ENU||X|A|
+394|Provisions for diminution in value of work in progress (services)|FR|ENU||3|A|
+3941|Project studies in progress (same allocation as for Account 341)|FR|ENU||X|A|
+3945|Supply of services in progress (same allocation as for Account 345)|FR|ENU||X|A|
+395|Provisions for diminution in value of product stocks|FR|ENU||3|A|
+3951|Semi-finished products (same allocation as for Account 351)|FR|ENU||X|A|
+3955|Finished products (same allocation as for Account 355)|FR|ENU||X|A|
+397|Provisions for diminution in value of stocks of goods for resale|FR|ENU||3|A|
+3971|Goods for resale (or group) A|FR|ENU||X|A|
+3972|Goods for resale (or group) B|FR|ENU||X|A|
+4|Accounts for debts receivable and payable|FR|ENU||1||
+40|Suppliers and related accounts|FR|ENU||2|L|
+400|Suppliers and related accounts|FR|ENU||3|L|
+401|Suppliers|FR|ENU||3|L|
+4011|Suppliers Purchases of goods and services|FR|ENU||X|L|
+4017|Suppliers Contract performance holdbacks|FR|ENU||X|L|
+403|Suppliers Bills payable|FR|ENU||X|L|
+404|Fixed asset suppliers|FR|ENU||3|L|
+4041|Suppliers Fixed asset purchases|FR|ENU||X|L|
+4047|Fixed asset suppliers Contract performance holdbacks|FR|ENU||X|L|
+405|Fixed asset suppliers Bills payable|FR|ENU||X|L|
+408|Suppliers Invoices outstanding|FR|ENU||3|L|
+4081|Suppliers|FR|ENU||X|L|
+4084|Fixed asset suppliers|FR|ENU||X|L|
+4088|Suppliers Accrued interest|FR|ENU||X|L|
+409|Suppliers in debit|FR|ENU||3|L|
+4091|Suppliers Payments on account on orders|FR|ENU||X|L|
+4096|Suppliers Debts receivable for returnable packaging and equipment|FR|ENU||X|L|
+4097|Suppliers Other debits|FR|ENU||X|L|
+40971|Operating suppliers|FR|ENU||X|L|
+40974|Fixed asset suppliers|FR|ENU||X|L|
+4098|Purchase rebates, discounts, allowances and other outstanding debits|FR|ENU||X|L|
+41|Customers and related accounts|FR|ENU||2|A|
+410|Customers and related accounts|FR|ENU||X|A|
+411|Customers|FR|ENU||3|A|
+4111|Customers Sales of goods and services|FR|ENU||X|A|
+4117|Customers Contract performance holdbacks|FR|ENU||X|A|
+413|Customers Bills receivable|FR|ENU||X|A|
+416|Doubtful or contested customer accounts|FR|ENU||X|A|
+417|Future debts receivable for work not yet chargeable|FR|ENU||X|A|
+418|Customers Charges not yet invoiced|FR|ENU||3|A|
+4181|Customers Invoices to be made out|FR|ENU||X|A|
+4188|Customers Accrued interest|FR|ENU||X|A|
+419|Customers in credit|FR|ENU||3|A|
+4191|Customers Payments on account received on orders|FR|ENU||X|A|
+4196|Customers Debts payable for returnable packaging and equipment|FR|ENU||X|A|
+4197|Customers Other credits|FR|ENU||X|A|
+4198|Sales rebates, discounts, allowances and other credits notyet issued|FR|ENU||X|A|
+42|Personnel and related accounts|FR|ENU||2|L|
+421|Personnel Remuneration payable|FR|ENU||X|L|
+422|Enterprise/establishment consultative committees|FR|ENU||X|L|
+424|Employee profit share|FR|ENU||3|L|
+4246|Special reserve (Art. L. 442-2, Code du travail)|FR|ENU||X|L|
+4248|Current accounts|FR|ENU||X|L|
+425|Personnel Payments on account|FR|ENU||X|L|
+426|Personnel Deposits|FR|ENU||X|L|
+427|Personnel Stoppages of payment|FR|ENU||X|L|
+428|Personnel Accrued charges payable and income receivable|FR|ENU||3|L|
+4282|Accrued charges payable for holiday pay|FR|ENU||X|L|
+4284|Accrued charges payable for employee profit share|FR|ENU||X|L|
+4286|Other accrued charges payable|FR|ENU||X|L|
+4287|Accrued income receivable|FR|ENU||X|L|
+43|Social security and other social agencies|FR|ENU||2|L|
+431|Social security|FR|ENU||X|L|
+437|Other social agencies|FR|ENU||X|L|
+438|Social agencies Accrued charges payable and income receivable|FR|ENU||3|L|
+4382|Contributions for holiday pay|FR|ENU||X|L|
+4386|Other accrued charges payable|FR|ENU||X|L|
+4387|Accrued income receivable|FR|ENU||X|L|
+44|State and other public authorities|FR|ENU||2|L|
+441|State Grants receivable|FR|ENU||3|L|
+4411|Investment grants|FR|ENU||X|L|
+4417|Operating grants|FR|ENU||X|L|
+4418|Deficit grants|FR|ENU||X|L|
+4419|Grant advances|FR|ENU||X|L|
+442|State Taxes and levies recoverable from third parties|FR|ENU||3|L|
+4424|Bondholders|FR|ENU||X|L|
+4425|Partners/associates|FR|ENU||X|L|
+443|Particular transactions with the state, public authorities,international bodies|FR|ENU||3|L|
+4431|Debts receivable from the state resulting from abolition of the rule relating to|FR|ENU||X|L|
+4438|Accrued interest on debts receivable recorded in Account 4431|FR|ENU||X|L|
+444|State Income tax|FR|ENU||X|L|
+445|State Turnover tax|FR|ENU||3|L|
+4452|Value added tax due within the European Union|FR|ENU||X|L|
+4455|Turnover tax payable|FR|ENU||X|L|
+44551|Value added tax to be disbursed|FR|ENU||X|L|
+44558|Taxes in the same category as value added tax|FR|ENU||X|L|
+4456|Turnover tax deductible|FR|ENU||X|L|
+44562|Value added tax on fixed assets|FR|ENU||X|L|
+44563|Value added tax transferred by other entities|FR|ENU||X|L|
+44566|Value added tax on other goods and services|FR|ENU||X|L|
+44567|Value added tax credit to be carried forward|FR|ENU||X|L|
+44568|Taxes in the same category as value added tax|FR|ENU||X|L|
+4457|Turnover tax collected by the entity|FR|ENU||X|L|
+44571|Value added tax collected|FR|ENU||X|L|
+44578|Taxes in the same category as value added tax|FR|ENU||X|L|
+4458|Turnover tax to be settled or in suspense|FR|ENU||X|L|
+44581|Instalments Simplified tax regime|FR|ENU||X|L|
+44582|Instalments Substituted assessment of estimated turnover|FR|ENU||X|L|
+44583|Requested reimbursement of turnover tax|FR|ENU||X|L|
+44584|Value added tax recovered in advance|FR|ENU||X|L|
+44586|Turnover tax on invoices outstanding|FR|ENU||X|L|
+44587|Turnover tax on invoices to be made out|FR|ENU||X|L|
+446|Guaranteed bonds|FR|ENU||X|L|
+447|Other taxes, levies and similar payments|FR|ENU||X|L|
+448|State Accrued charges payable and income receivable|FR|ENU||3|L|
+4482|Tax charges on holiday pay|FR|ENU||X|L|
+4486|Accrued charges payable|FR|ENU||X|L|
+4487|Accrued income receivable|FR|ENU||X|L|
+45|Group and partners/associates|FR|ENU||2||
+451|Group|FR|ENU||X|A|
+455|Partners/associates Current accounts|FR|ENU||3|A|
+4551|Principal|FR|ENU||X|A|
+4558|Accrued interest|FR|ENU||X|A|
+456|Partners/associates Capital transactions|FR|ENU||3|A|
+4561|Partners/associates Company contribution accounts|FR|ENU||X|A|
+45611|Contributions in kind|FR|ENU||X|A|
+45615|Contributions in money|FR|ENU||X|A|
+4562|Contributors Capital called up, unpaid|FR|ENU||X|A|
+45621|Shareholders Subscribed capital called up, unpaid|FR|ENU||X|A|
+45625|Partners/associates Capital called up,unpaid|FR|ENU||X|A|
+4563|Partners/associates Payments received for capital increase|FR|ENU||X|A|
+4564|Partners/associates Advance payments|FR|ENU||X|A|
+4566|Defaulting shareholders|FR|ENU||X|A|
+4567|Partners/associates Capital to be reimbursed|FR|ENU||X|A|
+457|Partners/associates Dividends payable|FR|ENU||X|L|
+458|Partners/associates Joint and Economic Interest Group transactions|FR|ENU||3|A|
+4581|Current transactions|FR|ENU||X|A|
+4588|Accrued interest|FR|ENU||X|A|
+46|Sundry debts receivable and payable|FR|ENU||2|A|
+462|Debts receivable on realisation of fixed assets|FR|ENU||X|A|
+464|Debts payable on purchases of short-term investment securities|FR|ENU||X|L|
+465|Debts receivable on realisation of short-term investment securities|FR|ENU||X|A|
+467|Other debtors or creditors|FR|ENU||X|A|
+468|Sundry Accrued charges payable and income receivable|FR|ENU||3|A|
+4686|Accrued charges payable|FR|ENU||X|L|
+4687|Accrued income receivable|FR|ENU||X|A|
+47|Provisional or suspense accounts|FR|ENU||2||
+471|Suspense account A|FR|ENU||X|A|
+472|Suspense account B|FR|ENU||X|L|
+473|Suspense account C|FR|ENU||X|L|
+474|Suspense account D|FR|ENU||X|L|
+475|Suspense account E|FR|ENU||X|L|
+476|Realisable currency exchange losses|FR|ENU||3|A|
+4761|Decrease in debts receivable|FR|ENU||X|A|
+4762|Increase in debts payable|FR|ENU||X|A|
+4768|Differences offset by foreign currency hedging|FR|ENU||X|A|
+477|Realisable currency exchange gains|FR|ENU||3|L|
+4771|Increase in debts receivable|FR|ENU||X|L|
+4772|Decrease in debts payable|FR|ENU||X|L|
+4778|Differences offset by foreign currency hedging|FR|ENU||X|L|
+478|Other provisional accounts|FR|ENU||X|A|
+48|Accrual accounts|FR|ENU||2||
+481|Charges to be allocated to more than one period|FR|ENU||3|A|
+4811|Deferred charges|FR|ENU||X|A|
+4812|Fixed asset acquisition costs|FR|ENU||X|A|
+4816|Loan issue costs|FR|ENU||X|A|
+4818|Charges to be apportioned|FR|ENU||X|A|
+486|Prepayments|FR|ENU||X|A|
+487|Deferred income|FR|ENU||X|L|
+488|Periodic allocation of charges and income|FR|ENU||3||
+4886|Charges|FR|ENU||X|A|
+4887|Income|FR|ENU||X|L|
+49|Provisions for doubtful debts|FR|ENU||2|A|
+491|Provisions for doubtful trade debts|FR|ENU||X|A|
+495|Provisions for group and partners/associates doubtful debts|FR|ENU||3|A|
+4951|Group accounts|FR|ENU||X|A|
+4955|Current accounts of partners/associates|FR|ENU||X|A|
+4958|Joint and Economic Interest Group transactions|FR|ENU||X|A|
+496|Provisions for sundry doubtful debts|FR|ENU||3|A|
+4962|Debts receivable on realisation of fixed assets|FR|ENU||X|A|
+4965|Debts receivable on realisation of short-term investment securities|FR|ENU||X|A|
+4967|Other debtor accounts|FR|ENU||X|A|
+5|Financial accounts|FR|ENU||1||
+50|Short-term investment securities|FR|ENU||2|A|
+501|Shares in affiliated entities|FR|ENU||X|A|
+502|Own shares|FR|ENU||X|A|
+503|Shares|FR|ENU||3|A|
+5031|Quoted shares|FR|ENU||X|A|
+5035|Unquoted shares|FR|ENU||X|A|
+504|Other equity securities|FR|ENU||X|A|
+505|Own bonds and warrants bought back|FR|ENU||X|A|
+506|Bonds|FR|ENU||3|A|
+5061|Quoted bonds|FR|ENU||X|A|
+5065|Unquoted bonds|FR|ENU||X|A|
+507|Treasury bills and short-term notes|FR|ENU||X|A|
+508|Other short-term investment securities and similar debts receivable|FR|ENU||3|A|
+5081|Other securities|FR|ENU||X|A|
+5082|Equity and bond warrants|FR|ENU||X|A|
+5088|Accrued interest on bonds, warrants and similar securities|FR|ENU||X|A|
+509|Unpaid instalments on unpaid short-term investment securities|FR|ENU||X|A|
+51|Banks, financial and similar institutions|FR|ENU||2|A|
+511|Financial instruments for collection|FR|ENU||3|A|
+5111|Outstanding coupons for collection|FR|ENU||X|A|
+5112|Cheques for collection|FR|ENU||X|A|
+5113|Bills for collection|FR|ENU||X|A|
+5114|Bills for discount|FR|ENU||X|A|
+512|Banks|FR|ENU||3|A|
+5121|Accounts in French francs/euros|FR|ENU||X|A|
+5124|Accounts in foreign currencies|FR|ENU||X|A|
+514|Postal cheques|FR|ENU||X|A|
+515|Treasury and public agency accounts|FR|ENU||X|A|
+516|Stockbrokers|FR|ENU||X|A|
+517|Other financial bodies|FR|ENU||X|A|
+518|Accrued interest|FR|ENU||3|A|
+5181|Accrued interest payable|FR|ENU||X|A|
+5188|Accrued interest receivable|FR|ENU||X|A|
+519|Current bank advances|FR|ENU||3|A|
+5191|Credit for assignment of commercial debts receivable|FR|ENU||X|A|
+5193|Assignment of debts receivable originating outside France|FR|ENU||X|A|
+5198|Accrued interest on current bank advances|FR|ENU||X|A|
+52|Short-term financial instruments|FR|ENU||X|A|
+53|Cash on hand|FR|ENU||2|A|
+531|Head office cash|FR|ENU||3|A|
+5311|Cash in French francs/euros|FR|ENU||X|A|
+5314|Cash in foreign currencies|FR|ENU||X|A|
+532|Cash at branch (or factory) A|FR|ENU||X|A|
+533|Cash at branch (or factory) B|FR|ENU||X|A|
+54|Expenditure authorisations and letters of credit|FR|ENU||X|A|
+58|Internal transfers|FR|ENU||X|A|
+59|Provisions for diminution in value of financial assets|FR|ENU||2|A|
+590|Provisions for diminution in value of short-term investment securities|FR|ENU||3|A|
+5903|Shares|FR|ENU||X|A|
+5904|Other equity securities|FR|ENU||X|A|
+5906|Bonds|FR|ENU||X|A|
+5908|Other short-term investment securities and similar debts receivable|FR|ENU||X|A|
+6|Accounts for charges|FR|ENU||1|E|
+60|Purchases (except 603)|FR|ENU||2|E|
+601|Inventory item purchases Raw materials (and supplies)|FR|ENU||3|E|
+6011|Materials (or group) A|FR|ENU||X|E|
+6012|Materials (or group) B|FR|ENU||X|E|
+6017|Supplies A, B, C...|FR|ENU||X|E|
+602|Inventory item purchases Other consumables|FR|ENU||3|E|
+6021|Consumable materials|FR|ENU||X|E|
+60211|Materials (or group) C|FR|ENU||X|E|
+60212|Materials (or group) D|FR|ENU||X|E|
+6022|Consumable supplies|FR|ENU||X|E|
+60221|Fuels|FR|ENU||X|E|
+60222|Maintenance products|FR|ENU||X|E|
+60223|Workshop and factory supplies|FR|ENU||X|E|
+60224|Store supplies|FR|ENU||X|E|
+60225|Office supplies|FR|ENU||X|E|
+6026|Packaging|FR|ENU||X|E|
+60261|Non-returnable packaging|FR|ENU||X|E|
+60265|Unidentifiable recoverable packaging|FR|ENU||X|E|
+60267|Mixed usage packaging|FR|ENU||X|E|
+603|Change in stocks (consumables and goods for resale)|FR|ENU||3|E|
+6031|Change in stocks of raw materials (and supplies)|FR|ENU||X|E|
+6032|Change in stocks of other consumables|FR|ENU||X|E|
+6037|Change in stocks of goods for resale|FR|ENU||X|E|
+604|Purchases of project studies and services|FR|ENU||X|A|
+605|Purchases of equipment, facilities and works|FR|ENU||X|E|
+606|Non-inventory materials and supplies|FR|ENU||3|E|
+6061|Non-inventoriable supplies (eg. water, energy)|FR|ENU||X|E|
+6063|Maintenance and minor equipment supplies|FR|ENU||X|E|
+6064|Administrative supplies|FR|ENU||X|E|
+6068|Other materials and supplies|FR|ENU||X|E|
+607|Purchases of goods for resale|FR|ENU||3|E|
+6071|Goods for resale (or group) A|FR|ENU||X|E|
+6072|Goods for resale (or group) B|FR|ENU||X|E|
+608|(Account reserved, as applicable, for recapitulation of ancillary purchase costs)|FR|ENU||X|A|
+609|Purchase rebates, discounts, allowances on:|FR|ENU||3|E|
+6091|Raw materials (and supplies)|FR|ENU||X|E|
+6092|Other inventory item consumables|FR|ENU||X|E|
+6094|Project studies and services supplied|FR|ENU||X|E|
+6095|Equipment, facilities and works|FR|ENU||X|E|
+6096|Non-inventory consumables|FR|ENU||X|E|
+6097|Goods for resale|FR|ENU||X|E|
+6098|Unallocated rebates, discounts, allowances|FR|ENU||X|E|
+61|External services|FR|ENU||2|E|
+611|General subcontracting|FR|ENU||X|E|
+612|Lease instalments|FR|ENU||3|E|
+6122|Movable property leases|FR|ENU||X|E|
+6125|Real property leases|FR|ENU||X|E|
+613|Rental|FR|ENU||3|E|
+6132|Real property rental|FR|ENU||X|E|
+6135|Movable property rental|FR|ENU||X|E|
+6136|Surchages on packaging|FR|ENU||X|E|
+614|Rental and joint ownership property costs|FR|ENU||X|E|
+615|Maintenance and repairs|FR|ENU||3|E|
+6152|On real property items|FR|ENU||X|E|
+6155|On movable property items|FR|ENU||X|E|
+6156|Maintenance|FR|ENU||X|E|
+616|Insurance premiums|FR|ENU||3|E|
+6161|Comprehensive risk|FR|ENU||X|E|
+6162|Compulsory construction loss insurance|FR|ENU||X|E|
+6163|Transport insurance|FR|ENU||X|E|
+61636|Purchases|FR|ENU||X|E|
+61637|Sales|FR|ENU||X|E|
+61638|Other items|FR|ENU||X|E|
+6164|Operating risks|FR|ENU||X|E|
+6165|Customer insolvency|FR|ENU||X|E|
+617|Project studies, surveys, assessments|FR|ENU||X|E|
+618|Sundry|FR|ENU||3|E|
+6181|General documentation|FR|ENU||X|E|
+6183|Technical documentation|FR|ENU||X|E|
+6185|Colloquium, seminar, conference costs|FR|ENU||X|E|
+619|Purchase rebates, discounts, allowances on external services|FR|ENU||X|E|
+62|Other external services|FR|ENU||2|E|
+621|Personnel external to the entity|FR|ENU||3|E|
+6211|Temporary personnel|FR|ENU||X|E|
+6214|Personnel on secondment or loan to the entity|FR|ENU||X|E|
+622|Agents remuneration and fees|FR|ENU||3|E|
+6221|Purchase commission and brokerage|FR|ENU||X|E|
+6222|Sales commission and brokerage|FR|ENU||X|E|
+6224|Payments to forwarding agents|FR|ENU||X|E|
+6225|Payments for factoring|FR|ENU||X|E|
+6226|Fees|FR|ENU||X|E|
+6227|Legal and litigation fees|FR|ENU||X|E|
+6228|Sundry|FR|ENU||X|E|
+623|Advertising, publications, public relations|FR|ENU||3|E|
+6231|Announcements and advertisements|FR|ENU||X|E|
+6232|Samples|FR|ENU||X|E|
+6233|Fairs and exhibitions|FR|ENU||X|E|
+6234|Gifts to customers|FR|ENU||X|E|
+6235|Premiums|FR|ENU||X|E|
+6236|Catalogues and printed material|FR|ENU||X|E|
+6237|Publications|FR|ENU||X|E|
+6238|Sundry (eg. tips, standard donations)|FR|ENU||X|E|
+624|Transport of goods and collective personnel transport|FR|ENU||3|E|
+6241|Freight in|FR|ENU||X|E|
+6242|Freight out|FR|ENU||X|E|
+6243|Transport between establishments or construction sites|FR|ENU||X|E|
+6244|Administrative transport|FR|ENU||X|E|
+6247|Collective transport of personnel|FR|ENU||X|E|
+6248|Sundry|FR|ENU||X|E|
+625|Business travel, missions and receptions|FR|ENU||3|E|
+6251|Journeys and business travel|FR|ENU||X|E|
+6255|Relocation costs|FR|ENU||X|E|
+6256|Missions|FR|ENU||X|E|
+6257|Receptions|FR|ENU||X|E|
+626|Postal and telecommunication costs|FR|ENU||X|E|
+627|Banking and similar services|FR|ENU||3|E|
+6271|Securities costs (purchase, sale, safe custody)|FR|ENU||X|E|
+6272|Commissions and loan issue costs|FR|ENU||X|E|
+6275|Charges on bills|FR|ENU||X|E|
+6276|Rental of safes|FR|ENU||X|E|
+6278|Other expenses and commissions on services supplied|FR|ENU||X|E|
+628|Sundry|FR|ENU||3|E|
+6281|Sundry assistance (eg. contributions)|FR|ENU||X|E|
+6284|Personnel recruitment costs|FR|ENU||X|E|
+629|Purchase rebates, discounts, allowances on other external services|FR|ENU||X|E|
+63|Taxes, levies and similar payments|FR|ENU||2|E|
+631|Taxes, levies and similar payments on wages and salaries (to the tax administration)|FR|ENU||3|E|
+6311|Tax on salaries|FR|ENU||X|E|
+6312|Apprenticeship tax|FR|ENU||X|E|
+6313|Employer participation in ongoing personnel training and development|FR|ENU||X|E|
+6314|Default contribution for compulsory investment in construction|FR|ENU||X|E|
+6318|Other|FR|ENU||X|E|
+633|Taxes, levies and similar payments on wages and salaries (to other bodies)|FR|ENU||3|E|
+6331|Transport expenditures|FR|ENU||X|E|
+63311|Business entity tax|FR|ENU||X|E|
+6332|Accommodation allowances|FR|ENU||X|E|
+6333|Employer participation in ongoing personnel training and development|FR|ENU||X|E|
+6334|Employer participation in construction projects|FR|ENU||X|E|
+6335|Discharge payments entitling exemption from apprenticeship tax|FR|ENU||X|E|
+6338|Other|FR|ENU||X|E|
+635|Other taxes, levies and similar payments (to the tax administration)|FR|ENU||3|E|
+6351|Direct taxes (except income tax)|FR|ENU||X|E|
+63512|Property taxes|FR|ENU||X|E|
+63513|Other local rates and taxes|FR|ENU||X|E|
+63514|Tax on company vehicles|FR|ENU||X|E|
+6352|Non-recoverable turnover tax|FR|ENU||X|E|
+6353|Indirect taxes|FR|ENU||X|E|
+6354|Registration and stamp duties|FR|ENU||X|E|
+63541|Transfer duty|FR|ENU||X|E|
+6358|Other duties|FR|ENU||X|E|
+637|Other taxes, levies and similar payments (to other bodies)|FR|ENU||3|E|
+6371|Social solidarity contribution chargeable to companies|FR|ENU||X|E|
+6372|Taxes collected by international public bodies|FR|ENU||X|E|
+6374|Taxes and levies due for payment outside France|FR|ENU||X|E|
+6378|Sundry taxes|FR|ENU||X|E|
+64|Personnel costs|FR|ENU||2|E|
+641|Personnel wages and salaries|FR|ENU||3|E|
+6411|Salaries, emoluments|FR|ENU||X|E|
+6412|Holiday pay|FR|ENU||X|E|
+6413|Premiums and bonuses|FR|ENU||X|E|
+6414|Allowances and sundry benefits|FR|ENU||X|E|
+6415|Family income supplement|FR|ENU||X|E|
+644|Owner remuneration|FR|ENU||X|E|
+645|Social security and provident fund contributions|FR|ENU||3|E|
+6451|Social Security Collection Office (URSSAF) contributions|FR|ENU||X|E|
+6452|Mutual organisation contributions|FR|ENU||X|E|
+6453|Pension fund contributions|FR|ENU||X|E|
+6454|Association for Industrial and Commercial Employment (ASSEDIC) contributions|FR|ENU||X|E|
+6458|Contributions to other social agencies|FR|ENU||X|E|
+646|Owner social security contributions|FR|ENU||X|E|
+647|Other welfare costs|FR|ENU||3|E|
+6471|Direct allowances|FR|ENU||X|E|
+6472|Payments to enterprise/establishment consultative committees|FR|ENU||X|E|
+6473|Payments to health and occupational safety committees|FR|ENU||X|E|
+6474|Payments to other company benefit schemes|FR|ENU||X|E|
+6475|Occupational medicine, pharmacy|FR|ENU||X|A|
+648|Other personnel costs|FR|ENU||X|E|
+65|Other current operating charges|FR|ENU||2|E|
+651|Royalties and licence fees for concessions, patents,licences, trade marks, proce|FR|ENU||3|E|
+6511|Concessions, patents, licences, trade marks, processes,software|FR|ENU||X|E|
+6516|Author and reproduction royalties|FR|ENU||X|E|
+6518|Other royalties and similar assets|FR|ENU||X|E|
+653|Directors fees|FR|ENU||X|E|
+654|Bad debts written off|FR|ENU||3|E|
+6541|Debts receivable for the financial year|FR|ENU||X|E|
+6544|Debts receivable for previous financial years|FR|ENU||X|E|
+655|Share of joint venture profit or loss|FR|ENU||3|E|
+6551|Share of profit transferred (accounts of the managing entity)|FR|ENU||X|E|
+6555|Share of loss (accounts of non-managing partners/associates)|FR|ENU||X|E|
+658|Sundry current operating charges|FR|ENU||X|E|
+66|Financial charges|FR|ENU||2|E|
+661|Interest charges|FR|ENU||3|E|
+6611|Loan and debt interest|FR|ENU||X|E|
+66116|Loans and similar debts payable|FR|ENU||X|E|
+66117|Debts payable related to participating interests|FR|ENU||X|E|
+6615|Current account and credit deposit interest|FR|ENU||X|E|
+6616|Bank and financing transaction interest (eg. discounting)|FR|ENU||X|E|
+6617|Interest on guaranteed bonds|FR|ENU||X|E|
+6618|Interest on other debts payable|FR|ENU||X|E|
+66181|Commercial debts payable|FR|ENU||X|E|
+66188|Sundry debts payable|FR|ENU||X|E|
+664|Losses on debts receivable related to participating interests|FR|ENU||X|E|
+665|Discounts allowed|FR|ENU||X|E|
+666|Exchange losses|FR|ENU||X|E|
+667|Net charges on realisation of short-term investment securities|FR|ENU||X|E|
+668|Other financial charges|FR|ENU||X|E|
+67|Extraordinary charges|FR|ENU||2|E|
+671|Extraordinary charges on operating transactions|FR|ENU||3|E|
+6711|Market penalties (and forfeits on purchases and sales)|FR|ENU||X|E|
+6712|Fines, tax and criminal penalties|FR|ENU||X|A|
+6713|Gifts and donations|FR|ENU||X|E|
+6714|Bad debts written off for the financial year|FR|ENU||X|E|
+6715|Grants awarded|FR|ENU||X|E|
+6717|Additional taxes assessed (other than income tax)|FR|ENU||X|E|
+6718|Other extraordinary operating charges|FR|ENU||X|E|
+672|(Account available to entities to record prior period charges during the financial year)|FR|ENU||3|E|
+675|Book values of realised assets|FR|ENU||3|E|
+6751|Intangible fixed assets|FR|ENU||X|E|
+6752|Tangible fixed assets|FR|ENU||X|E|
+6756|Financial fixed assets|FR|ENU||X|E|
+6758|Other asset components|FR|ENU||X|E|
+678|Other extraordinary charges|FR|ENU||3|E|
+6781|Surcharges resulting from escalation clauses|FR|ENU||X|E|
+6782|Prizes|FR|ENU||X|E|
+6783|Deficits resulting from own shares and bonds bought back by the entity|FR|ENU||X|E|
+6788|Sundry extraordinary charges|FR|ENU||X|E|
+68|Appropriations to depreciation and provisions|FR|ENU||2|E|
+681|Appropriations to depreciation and provisions Operating charges|FR|ENU||3|E|
+6811|Appropriations to depreciation on intangible and tangible fixed assets|FR|ENU||X|E|
+68111|Intangible fixed assets|FR|ENU||X|E|
+68112|Tangible fixed assets|FR|ENU||X|E|
+6812|Amortisation of deferred operating charges|FR|ENU||X|E|
+6815|Appropriations to provisions for operating liabilities and charges|FR|ENU||X|E|
+6816|Appropriations to provisions for diminution in value of intangible and tangible|FR|ENU||X|E|
+68161|Intangible fixed assets|FR|ENU||X|E|
+68162|Tangible fixed assets|FR|ENU||X|E|
+6817|Appropriations to provisions for diminution in value of current assets|FR|ENU||X|E|
+68173|Stocks and work in progress|FR|ENU||X|E|
+68174|Debts receivable|FR|ENU||X|E|
+686|Appropriations to depreciation and provisions Financial charges|FR|ENU||3|E|
+6861|Appropriations to amortisation of premiums on redemption of debt securities|FR|ENU||X|E|
+6865|Appropriations to provisions for financial liabilities and charges|FR|ENU||X|E|
+6866|Appropriations to provisions for diminution in value of financial components|FR|ENU||X|E|
+68662|Financial fixed assets|FR|ENU||X|E|
+68665|Short-term investment securities|FR|ENU||X|E|
+6868|Other appropriations|FR|ENU||X|E|
+687|Appropriations to depreciation and provisions Extraordinary charges|FR|ENU||3|E|
+6871|Appropriations to extraordinary fixed asset depreciation|FR|ENU||X|E|
+6872|Appropriations to tax-regulated provisions (fixed assets)|FR|ENU||X|E|
+68725|Depreciation by derogation|FR|ENU||X|E|
+6873|Appropriations to tax-regulated provisions (stocks)|FR|ENU||X|E|
+6874|Appropriations to other tax-regulated provisions|FR|ENU||X|E|
+6875|Appropriations to provisions for extraordinary liabilities and charges|FR|ENU||X|E|
+6876|Appropriations to provisions for extraordinary diminution in value|FR|ENU||X|E|
+69|Employee profit share Income and similar taxes|FR|ENU||2|E|
+691|Employee profit share|FR|ENU||X|E|
+695|Income tax|FR|ENU||3|E|
+6951|Income tax due in France|FR|ENU||X|E|
+6952|Additional contribution to income tax|FR|ENU||X|E|
+6954|Income tax due outside France|FR|ENU||X|E|
+696|Supplementary company tax related to profit distributions|FR|ENU||X|E|
+697|Annual company imputed tax|FR|ENU||X|E|
+698|Group tax|FR|ENU||3|E|
+6981|Group tax Charges|FR|ENU||X|E|
+6989|Group tax Income|FR|ENU||X|E|
+699|Income Carry-back of losses|FR|ENU||X|E|
+7|Income accounts|FR|ENU||1|I|
+70|Sales of manufactured products, services, goods for resale|FR|ENU||2|I|
+701|Sales of finished products|FR|ENU||3|I|
+7011|Finished products (or group) A|FR|ENU||X|I|
+7012|Finished products (or group) B|FR|ENU||X|I|
+702|Sales of semi-finished products|FR|ENU||X|I|
+703|Sales of residual products|FR|ENU||X|I|
+704|Works|FR|ENU||3|I|
+7041|Works of category (or activity) A|FR|ENU||X|I|
+7042|Works of category (or activity) B|FR|ENU||X|I|
+705|Project studies|FR|ENU||X|I|
+706|Services supplied|FR|ENU||X|I|
+707|Sales of goods for resale|FR|ENU||3|I|
+7071|Goods for resale (or group) A|FR|ENU||X|I|
+7072|Goods for resale (or group) B|FR|ENU||X|I|
+708|Income from related activities|FR|ENU||3|A|
+7081|Income from services operated in the interest of personnel|FR|ENU||X|A|
+7082|Commission and brokerage|FR|ENU||X|A|
+7083|Sundry rentals|FR|ENU||X|A|
+7084|Personnel charged out|FR|ENU||X|A|
+7085|Carriage and ancillary costs invoiced|FR|ENU||X|A|
+7086|Surplus on recovery of returnable packaging|FR|ENU||X|A|
+7087|Bonuses obtained from customers and sales premiums|FR|ENU||X|A|
+7088|Other income from ancillary activities (eg. disposal of consumables)|FR|ENU||X|A|
+709|Sales rebates, discounts, allowances granted by the entity|FR|ENU||3|I|
+7091|Sales of finished products|FR|ENU||X|I|
+7092|Sales of semi-finished products|FR|ENU||X|I|
+7094|Works|FR|ENU||X|I|
+7095|Project studies|FR|ENU||X|I|
+7096|Services supplied|FR|ENU||X|I|
+7097|Sales of goods for resale|FR|ENU||X|I|
+7098|Income from ancillary activities|FR|ENU||X|I|
+71|Change in stocks of finished products and work in progress|FR|ENU||2|I|
+713|Change in stocks (work in progress, products)|FR|ENU||3|I|
+7133|Change in work in progress (goods)|FR|ENU||X|I|
+71331|Products in progress|FR|ENU||X|I|
+71335|Works in progress|FR|ENU||X|I|
+7134|Change in work in progress (services)|FR|ENU||X|I|
+71341|Project studies in progress|FR|ENU||X|I|
+71345|Supply of services in progress|FR|ENU||X|I|
+7135|Change in product stocks|FR|ENU||X|I|
+71351|Semi-finished products|FR|ENU||X|I|
+71355|Finished products|FR|ENU||X|I|
+72|Own work capitalised|FR|ENU||2|I|
+721|Intangible fixed assets|FR|ENU||X|I|
+722|Tangible fixed assets|FR|ENU||X|A|
+73|Net period income from long-term transactions|FR|ENU||2|I|
+731|Net period income on transactions in progress (to be subdivided by transaction)|FR|ENU||X|I|
+739|Net period income on completed transactions|FR|ENU||X|I|
+74|Operating grants|FR|ENU||X|I|
+75|Other current operating income|FR|ENU||2|I|
+751|Royalties and licence fees for concessions, patents,licences, trade marks, proce|FR|ENU||3|I|
+7511|Concessions, patents, licences, trade marks, processes, software|FR|ENU||X|I|
+7516|Author and reproduction royalties|FR|ENU||X|I|
+7518|Other royalties and similar assets|FR|ENU||X|I|
+752|Revenues from buildings not allocated to professional activities|FR|ENU||X|I|
+753|Directors fees and remuneration (eg. administrators,managers)|FR|ENU||X|I|
+754|Rebates from cooperatives (resulting from surpluses)|FR|ENU||X|I|
+755|Share of joint venture profit or loss|FR|ENU||3|I|
+7551|Share of loss transferred (accounts of the managing entity)|FR|ENU||X|I|
+7555|Share of profit (accounts of non-managing partners/associates)|FR|ENU||X|I|
+758|Sundry current operating income|FR|ENU||X|I|
+76|Financial income|FR|ENU||2|I|
+761|Income from participating interests|FR|ENU||3|I|
+7611|Income from long-term equity interests|FR|ENU||X|I|
+7616|Income from other forms of participating interests|FR|ENU||X|I|
+7617|Income from debts receivable related to participating interests|FR|ENU||X|I|
+762|Income from other financial fixed assets|FR|ENU||3|I|
+7621|Income from long-term investment securities|FR|ENU||X|I|
+7626|Income from loans|FR|ENU||X|I|
+7627|Income from capitalised debts receivable|FR|ENU||X|I|
+763|Income from other debts receivable|FR|ENU||3|I|
+7631|Income from commercial debts receivable|FR|ENU||X|I|
+7638|Income from sundry debts receivable|FR|ENU||X|I|
+764|Income from short-term investment securities|FR|ENU||X|I|
+765|Discounts obtained|FR|ENU||X|I|
+766|Exchange gains|FR|ENU||X|I|
+767|Net income on realisation of short-term investment securities|FR|ENU||X|I|
+768|Other financial income|FR|ENU||X|I|
+77|Extraordinary income|FR|ENU||2|I|
+771|Extraordinary income on operating transactions|FR|ENU||3|I|
+7711|Forfeits and penalties on purchases and sales|FR|ENU||X|I|
+7713|Donations received|FR|ENU||X|I|
+7714|Collection of debts receivable written off|FR|ENU||X|I|
+7715|Deficit grants|FR|ENU||X|I|
+7717|Tax allowances other than income tax|FR|ENU||X|I|
+7718|Other extraordinary income on operating transactions|FR|ENU||X|I|
+772|(Account available to entities to record prior period income during the financial year)|FR|ENU||X|I|
+775|Income from asset realisation|FR|ENU||3|I|
+7751|Intangible fixed assets|FR|ENU||X|I|
+7752|Tangible fixed assets|FR|ENU||X|I|
+7756|Financial fixed assets|FR|ENU||X|I|
+7758|Other asset components|FR|ENU||X|I|
+777|Share of investment grants transferred to profit or loss for the financial year|FR|ENU||X|I|
+778|Other extraordinary income|FR|ENU||3|I|
+7781|Surpluses resulting from escalation clauses|FR|ENU||X|I|
+7782|Prizes|FR|ENU||X|I|
+7783|Surpluses resulting from own shares and bonds bought back by the entity|FR|ENU||X|I|
+7788|Sundry extraordinary income|FR|ENU||X|I|
+78|Depreciation and provisions written back|FR|ENU||2|I|
+781|Depreciation and provisions written back (to be entered in operating income)|FR|ENU||3|I|
+7811|Depreciation of intangible and tangible fixed assets written back|FR|ENU||X|I|
+78111|Intangible fixed assets|FR|ENU||X|I|
+78112|Tangible fixed assets|FR|ENU||X|I|
+7815|Provisions for operating liabilities and charges written back|FR|ENU||X|I|
+7816|Provisions for diminution in value of intangible and tangible fixed assets written back|FR|ENU||X|I|
+78161|Intangible fixed assets|FR|ENU||X|I|
+78162|Tangible fixed assets|FR|ENU||X|I|
+7817|Provisions for diminution in value of current assets written back|FR|ENU||X|I|
+78173|Stocks and work in progress|FR|ENU||X|I|
+78174|Debts receivable|FR|ENU||X|I|
+786|Provisions for liabilities written back (to be entered in financial income)|FR|ENU||3|I|
+7865|Provisions for financial liabilities and charges written back|FR|ENU||X|I|
+7866|Provisions for diminution in value of financial components written back|FR|ENU||X|I|
+78662|Financial fixed assets|FR|ENU||X|I|
+78665|Short-term investment securities|FR|ENU||X|I|
+787|Provisions written back (to be entered in extraordinary income)|FR|ENU||3|I|
+7872|Tax-regulated provisions written back (fixed assets)|FR|ENU||X|I|
+78725|Depreciation by derogation|FR|ENU||X|I|
+78726|Special revaluation provision|FR|ENU||X|I|
+78727|Reinvested capital gain|FR|ENU||X|I|
+7873|Tax-regulated provisions written back (stocks)|FR|ENU||X|I|
+7874|Other tax-regulated provisions written back|FR|ENU||X|I|
+7875|Provisions for extraordinary liabilities and charges written back|FR|ENU||X|I|
+7876|Provisions for extraordinary diminution in value written back|FR|ENU||X|I|
+79|Charges transferred|FR|ENU||2|I|
+791|Operating charges transferred|FR|ENU||X|I|
+796|Financial charges transferred|FR|ENU||X|I|
+797|Extraordinary charges transferred|FR|ENU||X|I|
+8|Special accounts|FR|ENU||1|N|
+80|Commitments|FR|ENU||2|N|
+801|Commitments given by entity|FR|ENU||3|N|
+8011|Guarantees, sureties, guarantees|FR|ENU||X|N|
+8014|Effets circulant sous l'endos de l'entitÃ©|FR|ENU||X|N|
+8016|Leasing fees still outstanding|FR|ENU||X|N|
+80161|Furniture leasing|FR|ENU||X|N|
+80165|Real estate leasing|FR|ENU||X|N|
+8018|Other commitments given|FR|ENU||X|N|
+802|Commitments received by the entity|FR|ENU||3|N|
+8021|Guarantees, sureties, guarantees|FR|ENU||X|N|
+8024|Discounted claims not yet due|FR|ENU||X|N|
+8026|Commitments received for use in leasing|FR|ENU||X|N|
+80261|Furniture leasing|FR|ENU||X|N|
+80265|Real estate leasing|FR|ENU||X|N|
+8028|Other commitments received|FR|ENU||X|N|
+809|Counterpart of commitments|FR|ENU||3|N|
+8091|Counterpart 801|FR|ENU||X|N|
+8092|Counterpart 802|FR|ENU||X|N|
+88|Result pending allocation|FR|ENU||2|N|

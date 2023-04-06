@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form xmlns="http://namespaces.querix.com/2015/fglForms">
+	<form.rootContainer>
+		<GridPanel classNames="fcls_rootContainer" preferredSize="," verticalAlignment="Stretch" horizontalAlignment="Stretch" fieldTable="" identifier="rootContainer">
+			<GridPanel.gridRowDefinitions>
+				<GridRowDefinition gridLengthValue=""/>
+				<GridRowDefinition gridLengthValue=""/>
+				<GridRowDefinition gridLengthValue="100%"/>
+				<GridRowDefinition gridLengthValue=""/>
+				<GridRowDefinition gridLengthValue=""/>
+			</GridPanel.gridRowDefinitions>
+			<GridPanel.gridColumnDefinitions>
+				<GridColumnDefinition gridLengthValue="100%"/>
+			</GridPanel.gridColumnDefinitions>
+			<GridPanel classNames="fcls_title_cnt" visible="true" verticalAlignment="Top" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="cntTitle">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="100%"/>
+					<GridColumnDefinition gridLengthValue=""/>
+				</GridPanel.gridColumnDefinitions>
+				<Label isDynamic="true" text="Sales Commission Sharing" classNames="fcls_title_lb" visible="true" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="header_text"/>
+				<Label isDynamic="true" text="E109" classNames="fcls_title_lb" visible="true" gridItemLocation="1,0,1,1" fieldTable="" identifier="lbFormName"/>
+			</GridPanel>
+			<GridPanel classNames="fcls_detail_cnt,,fcls_align_left" visible="true" verticalAlignment="Top" horizontalAlignment="Left" gridItemLocation="0,1,1,1" fieldTable="formonly" identifier="cntDetail1">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="" gridMinLength="10rem"/>
+					<GridColumnDefinition gridLengthValue=""/>
+				</GridPanel.gridColumnDefinitions>
+				<ComboBox toCase="Up" dataType="Char,,,,8" preferredSize="9qch,1qch" toolTip=" Salesperson responsible for this sales order - (W) " fieldTable="orderhead" comment=" Salesperson responsible for this sales order - (W) " identifier="sales_code" gridItemLocation="1,0,1,1" classNames="list-show-value-text,field-show-value,fcls_data_widget,fcls_align_left,fcls_length_20qch" editable="false"/>
+				<TextField noEntry="true" dataType="Char,,,,30" preferredSize="31qch,1qch" fieldTable="formonly" identifier="sale_text" gridItemLocation="1,1,1,1" classNames="fcls_data_widget,fcls_align_left,fcls_length_20qch"/>
+				<ComboBox toCase="Up" dataType="Char,,,,5" preferredSize="6qch,1qch" toolTip=" Sales territory applicable to this sales order - (W) " fieldTable="orderhead" comment=" Sales territory applicable to this sales order - (W) " identifier="territory_code" gridItemLocation="1,2,1,1" classNames="list-show-value-text,field-show-value,fcls_data_widget,fcls_align_left,fcls_length_20qch" editable="false"/>
+				<TextField noEntry="true" dataType="Char,,,,30" preferredSize="31qch,1qch" fieldTable="territory" identifier="desc_text" gridItemLocation="1,3,1,1" classNames="fcls_data_widget,fcls_align_left,fcls_length_20qch"/>
+				<Label isDynamic="true" text="Salesperson" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,0,1,1" fieldTable="" identifier="lb51"/>
+				<Label isDynamic="true" text="Territory" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,2,1,1" fieldTable="" identifier="lb52"/>
+			</GridPanel>
+			<Table rowCount="4" preferredSize="52qch,4qch" fieldTable="" identifier="sr_saleshare" gridItemLocation="0,2,1,1">
+				<TableColumn fieldTable="" identifier="tc_sale_code" text="Salesperson">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="20%" gridMinLength="10rem" gridMaxLength="15rem"/>
+					</TableColumn.columnLength>
+					<ComboBox toCase="Up" dataType="Char,,,,8" toolTip=" Salesperson to share commision for this order - (W) " fieldTable="saleshare" comment=" Salesperson to share commision for this order - (W) " identifier="sale_code" editable="false" classNames="list-show-value-text,field-show-value" notNull="true"/>
+				</TableColumn>
+				<TableColumn fieldTable="" identifier="tc_name_text" text="Name">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="70%" gridMaxLength="15rem" gridMinLength="30rem"/>
+					</TableColumn.columnLength>
+					<TextField noEntry="true" dataType="Char,,,,30" fieldTable="salesperson" identifier="name_text"/>
+				</TableColumn>
+				<TableColumn fieldTable="" identifier="tc_share_per" text="Share Percent">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="10%" gridMaxLength="5rem" gridMinLength="5rem"/>
+					</TableColumn.columnLength>
+					<TextField dataType="Decimal,,,1,4" toolTip=" Salesperson share of sales commision " fieldTable="saleshare" comment=" Salesperson share of sales commision " identifier="share_per" notNull="true">
+						<TextField.includes>
+							<ValueInclude>
+								<ValueInclude.value>
+									<NullLiteral/>
+								</ValueInclude.value>
+							</ValueInclude>
+							<RangeInclude>
+								<RangeInclude.fromValue>
+									<DecimalLiteral decimalValue="0.0"/>
+								</RangeInclude.fromValue>
+								<RangeInclude.toValue>
+									<DecimalLiteral decimalValue="100.0"/>
+								</RangeInclude.toValue>
+							</RangeInclude>
+						</TextField.includes>
+					</TextField>
+				</TableColumn>
+			</Table>
+			<GridPanel classNames="fcls_detail_cnt,,fcls_align_left" visible="true" verticalAlignment="Top" horizontalAlignment="Left" gridItemLocation="0,3,1,1" fieldTable="formonly" identifier="cntDetail2">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="" gridMinLength="10rem"/>
+					<GridColumnDefinition gridLengthValue=""/>
+				</GridPanel.gridColumnDefinitions>
+				<TextField noEntry="true" dataType="Decimal,,,1,4" preferredSize="6qch,1qch" toolTip=" Salesperson share of sales commision " fieldTable="formonly" comment=" Salesperson share of sales commision " identifier="total_per" gridItemLocation="1,0,1,1"/>
+				<Label isDynamic="true" text="Total:" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="lb36"/>
+			</GridPanel>
+			<GridPanel classNames="fcls_statusbar_cnt" visible="true" verticalAlignment="Top" gridItemLocation="0,4,1,1" fieldTable="formonly" identifier="cntStatusBar">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="100%"/>
+				</GridPanel.gridColumnDefinitions>
+				<Label isDynamic="true" text="" classNames="fcls_sblabel" visible="true" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="lbInfo1"/>
+				<Label isDynamic="true" text="" classNames="fcls_sblabel" visible="true" gridItemLocation="0,1,1,1" fieldTable="formonly" identifier="lbInfo2"/>
+			</GridPanel>
+		</GridPanel>
+	</form.rootContainer>
+	<form.screenRecords>
+		<ScreenRecord identifier="sr_saleshare" fields="saleshare.sale_code,salesperson.name_text,saleshare.share_per" elements="4"/>
+		<ScreenRecord identifier="formonly" fields="formonly.sale_text,formonly.total_per"/>
+		<ScreenRecord identifier="orderhead" fields="orderhead.sales_code,orderhead.territory_code"/>
+		<ScreenRecord identifier="saleshare" fields="saleshare.sale_code,saleshare.share_per"/>
+		<ScreenRecord identifier="salesperson" fields="salesperson.name_text"/>
+		<ScreenRecord identifier="territory" fields="territory.desc_text"/>
+	</form.screenRecords>
+</form>
+

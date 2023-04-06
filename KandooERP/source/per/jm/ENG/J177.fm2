@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form xmlns="http://namespaces.querix.com/2015/fglForms">
+	<form.rootContainer>
+		<GridPanel classNames="fcls_rootContainer" verticalAlignment="Top" horizontalAlignment="Left" fieldTable="" identifier="rootContainer">
+			<GridPanel.gridRowDefinitions>
+				<GridRowDefinition gridLengthValue=""/>
+				<GridRowDefinition gridLengthValue=""/>
+				<GridRowDefinition gridLengthValue=""/>
+				<GridRowDefinition gridLengthValue=""/>
+				<GridRowDefinition gridLengthValue=""/>
+				<GridRowDefinition gridLengthValue=""/>
+			</GridPanel.gridRowDefinitions>
+			<GridPanel.gridColumnDefinitions>
+				<GridColumnDefinition gridLengthValue="100%"/>
+			</GridPanel.gridColumnDefinitions>
+			<GridPanel classNames="fcls_title_cnt" visible="true" verticalAlignment="Top" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="cntTitle">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="100%"/>
+					<GridColumnDefinition gridLengthValue=""/>
+				</GridPanel.gridColumnDefinitions>
+				<Label isDynamic="true" text="Job Management Purchase Order Lines" classNames="fcls_title_lb" visible="true" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="header_text"/>
+				<Label isDynamic="true" text="J177" classNames="fcls_title_lb" visible="true" gridItemLocation="1,0,1,1" fieldTable="" identifier="lbFormName"/>
+			</GridPanel>
+			<GroupBox title="Group 1" classNames="fcls_detail_gb_cnt" visible="true" gridItemLocation="0,1,1,1" fieldTable="" identifier="cntDetail1GroupBox">
+				<GridPanel classNames="fcls_detail_gb_cnt_sub,fcls_detail_cnt_sub,fcls_data_cnt" visible="true" verticalAlignment="Top" horizontalAlignment="Left" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="cntDetail1Sub">
+					<GridPanel.gridRowDefinitions>
+						<GridRowDefinition gridLengthValue=""/>
+						<GridRowDefinition gridLengthValue=""/>
+						<GridRowDefinition gridLengthValue=""/>
+						<GridRowDefinition gridLengthValue=""/>
+						<GridRowDefinition gridLengthValue=""/>
+						<GridRowDefinition gridLengthValue=""/>
+						<GridRowDefinition gridLengthValue=""/>
+						<GridRowDefinition gridLengthValue=""/>
+						<GridRowDefinition gridLengthValue=""/>
+						<GridRowDefinition gridLengthValue=""/>
+					</GridPanel.gridRowDefinitions>
+					<GridPanel.gridColumnDefinitions>
+						<GridColumnDefinition gridLengthValue=""/>
+						<GridColumnDefinition gridLengthValue=""/>
+					</GridPanel.gridColumnDefinitions>
+					<Label isDynamic="true" text="Transaction Date" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="lb56"/>
+					<TextField dataType="Date,,,," preferredSize="11qch,1qch" toolTip=" The date of this transaction " comment=" The date of this transaction " fieldTable="poaudit" identifier="tran_date" gridItemLocation="1,0,1,1" classNames="fcls_data_widget,fcls_length_15qch"/>
+					<Label isDynamic="true" text="Resource" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,1,1,1" fieldTable="formonly" identifier="lb57"/>
+					<TextField toCase="Up" dataType="Char,,,,8" preferredSize="9qch,1qch" toolTip=" Job Management Resource code (W)" comment=" Job Management Resource code (W)" fieldTable="jmresource" identifier="res_code" gridItemLocation="1,1,1,1" classNames="fcls_data_widget,fcls_length_15qch"/>
+					<Label isDynamic="true" text="Vendor Ref" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,2,1,1" fieldTable="" identifier="lb73"/>
+					<TextField toCase="Up" dataType="Char,,,,30" preferredSize="31qch,1qch" toolTip=" Vendor Reference Information " comment=" Vendor Reference Information " fieldTable="purchdetl" identifier="oem_text" gridItemLocation="1,2,1,1" classNames="fcls_data_widget,fcls_length_15qch"/>
+					<Label isDynamic="true" text="Year/Period" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,3,1,1" fieldTable="" identifier="lb76"/>
+					<TextField dataType="SmallInt,,,," preferredSize="5qch,1qch" toolTip=" The GL year number for this transaction " comment=" The GL year number for this transaction " fieldTable="poaudit" identifier="year_num" gridItemLocation="1,3,1,1" classNames="fcls_data_widget,fcls_length_15qch"/>
+					<TextField dataType="SmallInt,,,," preferredSize="4qch,1qch" toolTip=" The GL period number for this transaction " comment=" The GL period number for this transaction " fieldTable="poaudit" identifier="period_num" gridItemLocation="1,4,1,1" classNames="fcls_data_widget,fcls_length_15qch"/>
+					<Label isDynamic="true" text="Delivery Due" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,5,1,1" fieldTable="" identifier="lb77"/>
+					<TextField dataType="Date,,,," preferredSize="11qch,1qch" toolTip=" Date delivery of this order line is due" comment=" Date delivery of this order line is due" fieldTable="purchdetl" identifier="due_date" gridItemLocation="1,5,1,1" classNames="fcls_data_widget,fcls_length_15qch"/>
+					<Label isDynamic="true" text="Note Code" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,6,1,1" fieldTable="" identifier="lb111"/>
+					<TextField noEntry="true" dataType="Char,,,,12" preferredSize="13qch,1qch" fieldTable="purchdetl" identifier="note_code" gridItemLocation="1,6,1,1" classNames="fcls_data_widget,fcls_length_15qch"/>
+					<Label isDynamic="true" text="Description" classNames="fcls_fieldlabel,fcls_align_left" visible="true" fieldTable="" identifier="lb112" gridItemLocation="0,7,1,1"/>
+					<TextField dataType="Char,,,,40" preferredSize="40qch,1qch" toolTip=" Purchase Order Line 1 Description" comment=" Purchase Order Line 1 Description" fieldTable="purchdetl" identifier="desc_text" gridItemLocation="0,8,2,1" classNames="fcls_data_widget" horizontalAlignment="Stretch"/>
+					<TextField dataType="Char,,,,40" preferredSize="40qch,1qch" toolTip=" Purchase Order Line 2 Description" comment=" Purchase Order Line 2 Description" fieldTable="purchdetl" identifier="desc2_text" gridItemLocation="0,9,2,1" classNames="fcls_data_widget" horizontalAlignment="Stretch"/>
+				</GridPanel>
+			</GroupBox>
+			<GroupBox title="Job Variation" classNames="fcls_detail_gb_cnt" visible="true" verticalAlignment="Top" gridItemLocation="0,2,1,1" fieldTable="formonly" identifier="cntDetail2GroupBox">
+				<GridPanel classNames="fcls_detail_gb_cnt_sub,fcls_detail_cnt_sub,fcls_data_cnt" visible="true" verticalAlignment="Top" horizontalAlignment="Left" fieldTable="formonly" identifier="cntDetail2Sub">
+					<GridPanel.gridRowDefinitions>
+						<GridRowDefinition gridLengthValue=""/>
+						<GridRowDefinition gridLengthValue=""/>
+						<GridRowDefinition gridLengthValue=""/>
+					</GridPanel.gridRowDefinitions>
+					<GridPanel.gridColumnDefinitions>
+						<GridColumnDefinition gridLengthValue=""/>
+						<GridColumnDefinition gridLengthValue=""/>
+						<GridColumnDefinition gridLengthValue=""/>
+					</GridPanel.gridColumnDefinitions>
+					<Label isDynamic="true" text="Job Code" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="lb47"/>
+					<TextField toCase="Up" dataType="Char,,,,8" preferredSize="13qch,1qch" toolTip=" Job Code (W)" comment=" Job Code (W)" fieldTable="purchdetl" identifier="job_code" gridItemLocation="1,0,1,1" classNames="fcls_data_widget,fcls_length_15qch"/>
+					<TextField dataType="Char,,,,30" preferredSize="31qch,1qch" fieldTable="job" identifier="title_text" gridItemLocation="2,0,1,1" classNames="fcls_data_widget,fcls_length_30qch"/>
+					<Label isDynamic="true" text="Variation" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,1,1,1" fieldTable="formonly" identifier="lb46"/>
+					<TextField dataType="SmallInt,,,," preferredSize="6qch,1qch" toolTip=" Variation Code - Assumes Initial Activity if Blank (W)" comment=" Variation Code - Assumes Initial Activity if Blank (W)" fieldTable="purchdetl" identifier="var_num" gridItemLocation="1,1,1,1" classNames="fcls_data_widget,fcls_length_15qch"/>
+					<TextField dataType="Char,,,,30" preferredSize="31qch,1qch" fieldTable="jobvars" identifier="title_text" gridItemLocation="2,1,1,1" classNames="fcls_data_widget,fcls_length_30qch"/>
+					<Label isDynamic="true" text="Activity" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,2,1,1" fieldTable="formonly" identifier="lb44"/>
+					<TextField toCase="Up" dataType="Char,,,,8" preferredSize="9qch,1qch" toolTip=" Activity Code (W)" comment=" Activity Code (W)" fieldTable="purchdetl" identifier="activity_code" gridItemLocation="1,2,1,1" classNames="fcls_data_widget,fcls_length_15qch"/>
+					<TextField dataType="Char,,,,30" preferredSize="31qch,1qch" fieldTable="activity" identifier="title_text" gridItemLocation="2,2,1,1" classNames="fcls_data_widget,fcls_length_30qch"/>
+				</GridPanel>
+			</GroupBox>
+			<GroupBox title="Unit Rates and Totals" classNames="fcls_detail_gb_cnt" visible="true" gridItemLocation="0,3,1,1" fieldTable="formonly" identifier="cntDetail3GroupBox">
+				<GridPanel classNames="fcls_detail_gb_cnt_sub,fcls_detail_cnt_sub,fcls_data_cnt" visible="true" verticalAlignment="Top" horizontalAlignment="Left" fieldTable="formonly" identifier="cntDetail3Sub">
+					<GridPanel.gridRowDefinitions>
+						<GridRowDefinition gridLengthValue=""/>
+						<GridRowDefinition gridLengthValue=""/>
+						<GridRowDefinition gridLengthValue=""/>
+						<GridRowDefinition gridLengthValue=""/>
+						<GridRowDefinition gridLengthValue=""/>
+						<GridRowDefinition gridLengthValue=""/>
+					</GridPanel.gridRowDefinitions>
+					<GridPanel.gridColumnDefinitions>
+						<GridColumnDefinition gridLengthValue=""/>
+						<GridColumnDefinition gridLengthValue=""/>
+						<GridColumnDefinition gridLengthValue=""/>
+					</GridPanel.gridColumnDefinitions>
+					<Label isDynamic="true" text="Currency" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,0,1,1" fieldTable="" identifier="lb103"/>
+					<TextField noEntry="true" dataType="Char,,,,3" preferredSize="4qch,1qch" fieldTable="purchhead" identifier="curr_code" gridItemLocation="1,0,1,1" classNames="fcls_data_widget,fcls_length_15qch"/>
+					<Label isDynamic="true" text="Quantity" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,1,1,1" fieldTable="formonly" identifier="lb48"/>
+					<TextField dataType="Float,,,," preferredSize="12qch,1qch" toolTip=" Order Line Quantity" comment=" Order Line Quantity" fieldTable="poaudit" identifier="order_qty" gridItemLocation="1,1,1,1" classNames="fcls_data_widget,fcls_length_15qch"/>
+					<TextField noEntry="true" dataType="Char,,,,3" preferredSize="4qch,1qch" fieldTable="jmresource" identifier="unit_code" gridItemLocation="2,1,1,1" classNames="fcls_data_widget,fcls_length_15qch"/>
+					<Label isDynamic="true" text="List Cost Amount" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,2,1,1" fieldTable="formonly" identifier="lb49"/>
+					<TextField format="-------&amp;.&amp;&amp;&amp;&amp;" dataType="Decimal,,,4,16" preferredSize="14qch,1qch" toolTip=" The unit list cost amount" comment=" The unit list cost amount" fieldTable="purchdetl" identifier="list_cost_amt" gridItemLocation="1,2,1,1" classNames="fcls_data_widget,fcls_length_15qch"/>
+					<TextField format="---------&amp;.&amp;&amp;&amp;&amp;" noEntry="true" dataType="Decimal,,,4,16" preferredSize="16qch,1qch" fieldTable="formonly" identifier="list_total" gridItemLocation="2,2,1,1" classNames="fcls_data_widget,fcls_length_15qch"/>
+					<Label isDynamic="true" text="Discount" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,3,1,1" fieldTable="formonly" identifier="lb63"/>
+					<TextField dataType="Decimal,,,3,6" preferredSize="7qch,1qch" toolTip=" The discount percentage to be applied" comment=" The discount percentage to be applied" fieldTable="purchdetl" identifier="disc_per" gridItemLocation="1,3,1,1" classNames="fcls_data_widget,fcls_length_15qch"/>
+					<Label isDynamic="true" text="%" classNames="fcls_fieldlabel,fcls_align_left" visible="true" fieldTable="" identifier="lb93" gridItemLocation="2,3,1,1"/>
+					<Label isDynamic="true" text="Cost Amount" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,4,1,1" fieldTable="" identifier="lb101"/>
+					<TextField noEntry="true" dataType="Decimal,,,4,12" preferredSize="14qch,1qch" fieldTable="jmresource" identifier="unit_cost_amt" gridItemLocation="1,4,1,1" classNames="fcls_data_widget,fcls_length_15qch"/>
+					<TextField dataType="Decimal,,,2,16" preferredSize="16qch,1qch" toolTip=" Total cost of this resource" comment=" Total cost of this resource" fieldTable="jobledger" identifier="trans_amt" gridItemLocation="2,4,1,1" classNames="fcls_data_widget,fcls_length_15qch"/>
+					<Label isDynamic="true" text="Charge Amount" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,5,1,1" fieldTable="" identifier="lb102"/>
+					<TextField dataType="Decimal,,,4,12" preferredSize="14qch,1qch" toolTip=" Unit Charge Rate of this Resource" comment=" Unit Charge Rate of this Resource" fieldTable="jmresource" identifier="unit_bill_amt" gridItemLocation="1,5,1,1" classNames="fcls_data_widget,fcls_length_15qch"/>
+					<TextField dataType="Decimal,,,2,16" preferredSize="16qch,1qch" toolTip=" Total charge of this resource" comment=" Total charge of this resource" fieldTable="jobledger" identifier="charge_amt" gridItemLocation="2,5,1,1" classNames="fcls_data_widget,fcls_length_15qch"/>
+				</GridPanel>
+			</GroupBox>
+			<GroupBox title="Fixed details" classNames="fcls_detail_gb_cnt" visible="true" gridItemLocation="0,4,1,1" fieldTable="" identifier="cntDetail4GroupBox">
+				<GridPanel classNames="fcls_detail_gb_cnt_sub,fcls_detail_cnt_sub,fcls_data_cnt" visible="true" verticalAlignment="Top" horizontalAlignment="Left" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="cntDetail4Sub">
+					<GridPanel.gridRowDefinitions>
+						<GridRowDefinition gridLengthValue=""/>
+						<GridRowDefinition gridLengthValue=""/>
+						<GridRowDefinition gridLengthValue=""/>
+					</GridPanel.gridRowDefinitions>
+					<GridPanel.gridColumnDefinitions>
+						<GridColumnDefinition gridLengthValue=""/>
+						<GridColumnDefinition gridLengthValue=""/>
+						<GridColumnDefinition gridLengthValue=""/>
+						<GridColumnDefinition gridLengthValue=""/>
+					</GridPanel.gridColumnDefinitions>
+					<Label isDynamic="true" text="Account" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="lb68"/>
+					<TextField noEntry="true" dataType="Char,,,,18" preferredSize="18qch,1qch" fieldTable="purchdetl" identifier="acct_code" gridItemLocation="1,0,1,1" classNames="fcls_data_widget,fcls_length_15qch"/>
+					<TextField noEntry="true" dataType="Char,,,,40" preferredSize="26qch,1qch" fieldTable="formonly" identifier="tp_desc_text" gridItemLocation="2,0,1,1" classNames="fcls_data_widget,fcls_length_30qch"/>
+					<TextField format="--------&amp;.&amp;&amp;" noEntry="true" dataType="Decimal,,,2,16" preferredSize="13qch,1qch" fieldTable="formonly" identifier="pr_available_amt" gridItemLocation="3,0,1,1" classNames="fcls_data_widget,fcls_length_15qch"/>
+					<Label isDynamic="true" text="Received Qty" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,1,1,1" fieldTable="" identifier="lb115"/>
+					<TextField dataType="Float,,,," preferredSize="13qch,1qch" toolTip=" The quantity of the goods received" comment=" The quantity of the goods received" fieldTable="poaudit" identifier="received_qty" gridItemLocation="1,1,1,1" classNames="fcls_data_widget,fcls_length_15qch"/>
+					<TextField dataType="Char,,,," preferredSize="5qch,1qch" toolTip=" The unit of measure, e.g each, dozen " comment=" The unit of measure, e.g each, dozen " fieldTable="formonly" identifier="rec_uom_code" gridItemLocation="2,1,1,1" classNames="fcls_data_widget,fcls_length_30qch"/>
+					<Label isDynamic="true" text="Voucher Qty" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,2,1,1" fieldTable="" identifier="lb116"/>
+					<TextField dataType="Float,,,," preferredSize="13qch,1qch" toolTip=" The quantity of the goods vouchered" comment=" The quantity of the goods vouchered" fieldTable="poaudit" identifier="voucher_qty" gridItemLocation="1,2,1,1" classNames="fcls_data_widget,fcls_length_15qch"/>
+					<TextField dataType="Char,,,," preferredSize="5qch,1qch" toolTip=" The unit of measure, e.g each, dozen " comment=" The unit of measure, e.g each, dozen " fieldTable="formonly" identifier="vou_uom_code" gridItemLocation="2,2,1,1" classNames="fcls_data_widget,fcls_length_30qch"/>
+				</GridPanel>
+			</GroupBox>
+			<GridPanel classNames="fcls_statusbar_cnt" visible="true" verticalAlignment="Top" gridItemLocation="0,5,1,1" fieldTable="formonly" identifier="cntStatusBar">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="100%"/>
+				</GridPanel.gridColumnDefinitions>
+				<Label isDynamic="true" text="" classNames="fcls_sblabel" visible="true" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="lbInfo1"/>
+				<Label isDynamic="true" text="" classNames="fcls_sblabel" visible="true" gridItemLocation="0,1,1,1" fieldTable="formonly" identifier="lbInfo2"/>
+			</GridPanel>
+		</GridPanel>
+	</form.rootContainer>
+	<form.screenRecords>
+		<ScreenRecord identifier="activity" fields="title_text"/>
+		<ScreenRecord identifier="formonly" fields="pr_available_amt,list_total,tp_desc_text,rec_uom_code,vou_uom_code"/>
+		<ScreenRecord identifier="jmresource" fields="res_code,unit_code,unit_cost_amt,unit_bill_amt"/>
+		<ScreenRecord identifier="job" fields="title_text"/>
+		<ScreenRecord identifier="jobledger" fields="trans_amt,charge_amt"/>
+		<ScreenRecord identifier="jobvars" fields="title_text"/>
+		<ScreenRecord identifier="poaudit" fields="year_num,period_num,tran_date,order_qty,received_qty,voucher_qty"/>
+		<ScreenRecord identifier="purchdetl" fields="oem_text,due_date,desc_text,desc2_text,job_code,var_num,activity_code,acct_code,list_cost_amt,disc_per,note_code"/>
+		<ScreenRecord identifier="purchhead" fields="curr_code"/>
+	</form.screenRecords>
+</form>
+

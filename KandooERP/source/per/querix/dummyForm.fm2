@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form xmlns="http://namespaces.querix.com/2015/fglForms">
+	<form.rootContainer>
+		<GridPanel identifier="rootContainer" visible="true" preferredSize="80qch,25qch">
+			<GridPanel.gridColumnDefinitions>
+				<GridColumnDefinition>
+					<GridColumnDefinition.gridLength>
+						<GridLength gridLengthType="Pixels" gridLengthValue="700"/>
+					</GridColumnDefinition.gridLength>
+				</GridColumnDefinition>
+			</GridPanel.gridColumnDefinitions>
+			<GridPanel.gridRowDefinitions>
+				<GridRowDefinition>
+					<GridRowDefinition.gridLength>
+						<GridLength gridLengthType="Pixels" gridLengthValue="50"/>
+					</GridRowDefinition.gridLength>
+				</GridRowDefinition>
+				<GridRowDefinition>
+					<GridRowDefinition.gridLength>
+						<GridLength gridLengthType="Pixels" gridLengthValue="100"/>
+					</GridRowDefinition.gridLength>
+				</GridRowDefinition>
+				<GridRowDefinition>
+					<GridRowDefinition.gridLength>
+						<GridLength gridLengthType="Pixels" gridLengthValue="100"/>
+					</GridRowDefinition.gridLength>
+				</GridRowDefinition>
+				<GridRowDefinition>
+					<GridRowDefinition.gridLength>
+						<GridLength gridLengthType="Pixels" gridLengthValue="50"/>
+					</GridRowDefinition.gridLength>
+				</GridRowDefinition>
+			</GridPanel.gridRowDefinitions>
+			<GridPanel visible="true" identifier="cntHeader" gridItemLocation="0,0,1,1">
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition>
+						<GridColumnDefinition.gridLength>
+							<GridLength gridLengthType="Auto" gridLengthValue="0.0"/>
+						</GridColumnDefinition.gridLength>
+					</GridColumnDefinition>
+				</GridPanel.gridColumnDefinitions>
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition>
+						<GridRowDefinition.gridLength>
+							<GridLength gridLengthType="Auto" gridLengthValue="0.0"/>
+						</GridRowDefinition.gridLength>
+					</GridRowDefinition>
+				</GridPanel.gridRowDefinitions>
+				<Label text="My Form" isDynamic="true" visible="true" identifier="lbWindowTitle" gridItemLocation="0,0,1,1"/>
+			</GridPanel>
+			<Table visible="true" identifier="Table2" gridItemLocation="0,1,1,1" rowCount="10">
+				<TableColumn text="column" resizable="true" visible="true" identifier="tc_f19">
+					<TextField visible="true" identifier="f19"/>
+					<TableColumn.columnLength>
+						<GridLength gridLengthType="Auto"/>
+					</TableColumn.columnLength>
+				</TableColumn>
+				<TableColumn text="column" resizable="true" visible="true" identifier="tc_f20">
+					<TextField visible="true" identifier="f20"/>
+					<TableColumn.columnLength>
+						<GridLength gridLengthType="Auto"/>
+					</TableColumn.columnLength>
+				</TableColumn>
+				<TableColumn text="column" resizable="true" visible="true" identifier="tc_f21">
+					<TextField visible="true" identifier="f21"/>
+					<TableColumn.columnLength>
+						<GridLength gridLengthType="Auto"/>
+					</TableColumn.columnLength>
+				</TableColumn>
+			</Table>
+			<GridPanel visible="true" identifier="c3" gridItemLocation="0,2,1,1" preferredSize="30qch,">
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition>
+						<GridColumnDefinition.gridLength>
+							<GridLength gridLengthType="Percent" gridLengthValue="50"/>
+						</GridColumnDefinition.gridLength>
+					</GridColumnDefinition>
+					<GridColumnDefinition>
+						<GridColumnDefinition.gridLength>
+							<GridLength gridLengthType="Percent" gridLengthValue="50"/>
+						</GridColumnDefinition.gridLength>
+					</GridColumnDefinition>
+				</GridPanel.gridColumnDefinitions>
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition>
+						<GridRowDefinition.gridLength>
+							<GridLength gridLengthType="Auto" gridLengthValue="0.0"/>
+						</GridRowDefinition.gridLength>
+					</GridRowDefinition>
+				</GridPanel.gridRowDefinitions>
+				<GroupBox title="Contact Details" visible="true" identifier="c5" gridItemLocation="0,0,1,1" horizontalAlignment="Stretch">
+					<GridPanel visible="true" identifier="c7">
+						<GridPanel.gridColumnDefinitions>
+							<GridColumnDefinition>
+								<GridColumnDefinition.gridLength>
+									<GridLength gridLengthType="Auto" gridLengthValue="0.0"/>
+								</GridColumnDefinition.gridLength>
+							</GridColumnDefinition>
+							<GridColumnDefinition>
+								<GridColumnDefinition.gridLength>
+									<GridLength gridLengthType="Auto" gridLengthValue="0.0"/>
+								</GridColumnDefinition.gridLength>
+							</GridColumnDefinition>
+						</GridPanel.gridColumnDefinitions>
+						<GridPanel.gridRowDefinitions>
+							<GridRowDefinition>
+								<GridRowDefinition.gridLength>
+									<GridLength gridLengthType="Auto" gridLengthValue="0.0"/>
+								</GridRowDefinition.gridLength>
+							</GridRowDefinition>
+							<GridRowDefinition>
+								<GridRowDefinition.gridLength>
+									<GridLength gridLengthType="Auto" gridLengthValue="0.0"/>
+								</GridRowDefinition.gridLength>
+							</GridRowDefinition>
+							<GridRowDefinition>
+								<GridRowDefinition.gridLength>
+									<GridLength gridLengthType="Auto" gridLengthValue="0.0"/>
+								</GridRowDefinition.gridLength>
+							</GridRowDefinition>
+							<GridRowDefinition>
+								<GridRowDefinition.gridLength>
+									<GridLength gridLengthType="Auto" gridLengthValue="0.0"/>
+								</GridRowDefinition.gridLength>
+							</GridRowDefinition>
+						</GridPanel.gridRowDefinitions>
+						<Label text="Addr" isDynamic="true" visible="true" identifier="lb3" gridItemLocation="0,0,1,1"/>
+						<TextField visible="true" identifier="address1" gridItemLocation="1,0,1,1"/>
+						<Label text="New Label" isDynamic="true" visible="true" identifier="lb4" gridItemLocation="0,1,1,1"/>
+						<TextField visible="true" identifier="address2" gridItemLocation="1,1,1,1"/>
+						<Label text="New Label" isDynamic="true" visible="true" identifier="lb5" gridItemLocation="0,2,1,1"/>
+						<TextField visible="true" identifier="address3" gridItemLocation="1,2,1,1"/>
+						<Label text="New Label" isDynamic="true" visible="true" identifier="lb6" gridItemLocation="0,3,1,1"/>
+						<TextField visible="true" identifier="f10" gridItemLocation="1,3,1,1"/>
+					</GridPanel>
+				</GroupBox>
+				<GroupBox title="Contact Properties" visible="true" identifier="c6" gridItemLocation="1,0,1,1">
+				<GridPanel visible="true" identifier="c8">
+					<GridPanel.gridColumnDefinitions>
+						<GridColumnDefinition>
+							<GridColumnDefinition.gridLength>
+								<GridLength gridLengthType="Auto" gridLengthValue="0.0"/>
+							</GridColumnDefinition.gridLength>
+						</GridColumnDefinition>
+						<GridColumnDefinition>
+							<GridColumnDefinition.gridLength>
+								<GridLength gridLengthType="Auto" gridLengthValue="0.0"/>
+							</GridColumnDefinition.gridLength>
+						</GridColumnDefinition>
+					</GridPanel.gridColumnDefinitions>
+					<GridPanel.gridRowDefinitions>
+						<GridRowDefinition>
+							<GridRowDefinition.gridLength>
+								<GridLength gridLengthType="Auto" gridLengthValue="0.0"/>
+							</GridRowDefinition.gridLength>
+						</GridRowDefinition>
+						<GridRowDefinition>
+							<GridRowDefinition.gridLength>
+								<GridLength gridLengthType="Auto" gridLengthValue="0.0"/>
+							</GridRowDefinition.gridLength>
+						</GridRowDefinition>
+						<GridRowDefinition>
+							<GridRowDefinition.gridLength>
+								<GridLength gridLengthType="Auto" gridLengthValue="0.0"/>
+							</GridRowDefinition.gridLength>
+						</GridRowDefinition>
+					</GridPanel.gridRowDefinitions>
+					<Label text="Customer Type" isDynamic="true" visible="true" identifier="lb11" gridItemLocation="0,0,1,1"/>
+					<ComboBox visible="true" identifier="custType" gridItemLocation="1,0,1,1"/>
+					<Label text="New Label" isDynamic="true" visible="true" identifier="lb12" gridItemLocation="0,1,1,1"/>
+					<TextField visible="true" identifier="f15" gridItemLocation="1,1,1,1"/>
+					<Label text="New Label" isDynamic="true" visible="true" identifier="lb13" gridItemLocation="0,2,1,1"/>
+					<TextField visible="true" identifier="f16" gridItemLocation="1,2,1,1"/>
+				</GridPanel>
+			</GroupBox>
+			</GridPanel>
+			<GridPanel visible="true" identifier="c4" gridItemLocation="0,3,1,1">
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition>
+						<GridColumnDefinition.gridLength>
+							<GridLength gridLengthType="Auto" gridLengthValue="0.0"/>
+						</GridColumnDefinition.gridLength>
+					</GridColumnDefinition>
+				</GridPanel.gridColumnDefinitions>
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition>
+						<GridRowDefinition.gridLength>
+							<GridLength gridLengthType="Auto" gridLengthValue="0.0"/>
+						</GridRowDefinition.gridLength>
+					</GridRowDefinition>
+					<GridRowDefinition>
+						<GridRowDefinition.gridLength>
+							<GridLength gridLengthType="Auto" gridLengthValue="0.0"/>
+						</GridRowDefinition.gridLength>
+					</GridRowDefinition>
+				</GridPanel.gridRowDefinitions>
+				<Label text="New Label" isDynamic="true" visible="true" identifier="lbStatusBar1" gridItemLocation="0,0,1,1"/>
+				<Label text="New Label" isDynamic="true" visible="true" identifier="lbStatusBar2" gridItemLocation="0,1,1,1"/>
+			</GridPanel>
+		</GridPanel>
+	</form.rootContainer>
+	<form.screenRecords>
+		<ScreenRecord identifier="Table2" fields="f19,f20,f21"/>
+	</form.screenRecords>
+</form>

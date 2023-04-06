@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form xmlns="http://namespaces.querix.com/2015/fglForms">
+	<form.rootContainer>
+		<GridPanel classNames="fcls_rootContainer" verticalAlignment="Stretch" horizontalAlignment="Stretch" fieldTable="" identifier="rootContainer">
+			<GridPanel.gridRowDefinitions>
+				<GridRowDefinition gridLengthValue=""/>
+				<GridRowDefinition gridLengthValue="100%"/>
+				<GridRowDefinition gridLengthValue=""/>
+				<GridRowDefinition gridLengthValue=""/>
+			</GridPanel.gridRowDefinitions>
+			<GridPanel.gridColumnDefinitions>
+				<GridColumnDefinition gridLengthValue="100%"/>
+			</GridPanel.gridColumnDefinitions>
+			<GridPanel classNames="fcls_title_cnt" visible="true" verticalAlignment="Top" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="cnttitle">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="100%"/>
+					<GridColumnDefinition gridLengthValue=""/>
+				</GridPanel.gridColumnDefinitions>
+				<Label isDynamic="true" text="Segment Prefixed Transaction Numbering" classNames="fcls_title_lb" visible="true" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="header_text"/>
+				<Label isDynamic="true" text="G190" classNames="fcls_title_lb" visible="true" gridItemLocation="1,0,1,1" fieldTable="" identifier="lbformname"/>
+			</GridPanel>
+			<GridPanel visible="true" gridItemLocation="0,1,1,1" fieldTable="" identifier="detailtables">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="25%"/>
+					<GridColumnDefinition gridLengthValue="75%"/>
+				</GridPanel.gridColumnDefinitions>
+				<Table rowCount="3" preferredSize="20qch,3qch" gridItemLocation="0,0,1,1" fieldTable="" identifier="sr_heading">
+					<TableColumn fieldTable="" identifier="f01">
+						<TableColumn.columnLength>
+							<GridLength gridLengthValue="100%"/>
+						</TableColumn.columnLength>
+						<TextField noEntry="true" dataType="Char,,,,20" fieldTable="structure" identifier="desc_text"/>
+					</TableColumn>
+				</Table>
+				<Table rowCount="4" preferredSize="69qch,4qch" gridItemLocation="1,0,1,1" fieldTable="" identifier="sr_nextnumber">
+					<TableColumn fieldTable="" identifier="f02">
+						<TableColumn.columnLength>
+							<GridLength gridLengthValue="28.0702%"/>
+						</TableColumn.columnLength>
+						<TextField toCase="Up" dataType="Char,,,,18" toolTip=" First Flex Code to be used for prefix - (W)" comment=" First Flex Code to be used for prefix - (W)" fieldTable="formonly" identifier="flex1"/>
+					</TableColumn>
+					<TableColumn fieldTable="" identifier="f03">
+						<TableColumn.columnLength>
+							<GridLength gridLengthValue="28.0702%"/>
+						</TableColumn.columnLength>
+						<TextField toCase="Up" dataType="Char,,,,18" toolTip=" Second Flex Code to be used for prefix - (W)" comment=" Second Flex Code to be used for prefix - (W)" fieldTable="formonly" identifier="flex2"/>
+					</TableColumn>
+					<TableColumn fieldTable="" identifier="f04">
+						<TableColumn.columnLength>
+							<GridLength gridLengthValue="28.0702%"/>
+						</TableColumn.columnLength>
+						<TextField toCase="Up" dataType="Char,,,,18" toolTip=" Third Flex Code to be used for prefix - (W)" comment=" Third Flex Code to be used for prefix - (W)" fieldTable="formonly" identifier="flex3"/>
+					</TableColumn>
+					<TableColumn fieldTable="" identifier="f05">
+						<TableColumn.columnLength>
+							<GridLength gridLengthValue="15.7895%"/>
+						</TableColumn.columnLength>
+						<TextField dataType="Integer,,,," toolTip=" The Next Number to be Allocated to this Prefix" comment=" The Next Number to be Allocated to this Prefix" fieldTable="nextnumber" identifier="next_num"/>
+					</TableColumn>
+				</Table>
+			</GridPanel>
+			<GridPanel classNames="fcls_detail_cnt,fcls_data_cnt,fcls_align_left" visible="true" verticalAlignment="Top" horizontalAlignment="Left" gridItemLocation="0,2,1,1" fieldTable="formonly" identifier="cntdetail1">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue=""/>
+					<GridColumnDefinition gridLengthValue=""/>
+				</GridPanel.gridColumnDefinitions>
+				<Label isDynamic="true" text="Maximum Next Number" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,0,1,1" fieldTable="" identifier="lb51"/>
+				<TextField noEntry="true" dataType="Integer,,,," location="19qch,10qch" preferredSize="9qch,1qch" gridItemLocation="1,0,1,1" fieldTable="formonly" identifier="max_num"/>
+			</GridPanel>
+			<GridPanel classNames="fcls_statusbar_cnt" visible="true" verticalAlignment="Top" gridItemLocation="0,3,1,1" fieldTable="formonly" identifier="cntstatusbar">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="100%"/>
+				</GridPanel.gridColumnDefinitions>
+				<Label isDynamic="true" text="" classNames="fcls_sblabel" visible="true" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="lbinfo1"/>
+				<Label isDynamic="true" text="" classNames="fcls_sblabel" visible="true" gridItemLocation="0,1,1,1" fieldTable="formonly" identifier="lbinfo2"/>
+			</GridPanel>
+		</GridPanel>
+	</form.rootContainer>
+	<form.screenRecords>
+		<ScreenRecord identifier="sr_heading" fields="desc_text"/>
+		<ScreenRecord identifier="sr_nextnumber" fields="flex1,flex2,flex3,next_num"/>
+		<ScreenRecord identifier="formonly" fields="flex1,flex2,flex3,max_num"/>
+		<ScreenRecord identifier="nextnumber" fields="next_num"/>
+		<ScreenRecord identifier="structure" fields="desc_text"/>
+	</form.screenRecords>
+</form>
+

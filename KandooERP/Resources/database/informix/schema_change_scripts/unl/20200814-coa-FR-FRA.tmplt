@@ -1,0 +1,988 @@
+1|Comptes de capitaux|FR|FRA||1|| |0|
+10|Capital et réserves|FR|FRA||2||1|0|
+101|Capital|FR|FRA||3|L|10|0|
+1011|Capital souscrit - non appelé|FR|FRA||4|L|101|1|
+1012|Capital souscrit - appelé, non versé|FR|FRA||4|L|101|1|
+1013|Capital souscrit - appelé, versé|FR|FRA||4|L|101|0|
+10131|Capital non amorti|FR|FRA||5|L|1013|1|
+10132|Capital amorti|FR|FRA||5|L|1013|1|
+1018|Capital souscrit soumis à des réglementations particulières|FR|FRA||4|L|101|1|
+104|Primes liées au capital social|FR|FRA||3|L|10|0|
+1041|Primes d'émission|FR|FRA||4|L|104|1|
+1042|Primes de fusion|FR|FRA||4|L|104|1|
+1043|Primes d'apport|FR|FRA||4|L|104|1|
+1044|Primes de conversion d'obligations en actions|FR|FRA||4|L|104|1|
+1045|Bons de souscription d'actions|FR|FRA||4|L|104|1|
+105|Ecarts de réévaluation|FR|FRA||3|L|10|0|
+1051|Réserve spéciale de réévaluation|FR|FRA||4|L|105|1|
+1052|Ecart de réévaluation libre|FR|FRA||4|L|105|1|
+1053|Réserve de réévaluation|FR|FRA||4|L|105|1|
+1055|Ecarts de réévaluation (autres opérations légales)|FR|FRA||4|L|105|1|
+1057|Autres écarts de réévaluation en France|FR|FRA||4|L|105|1|
+1058|Autres écarts de réévaluation à l'étranger|FR|FRA||4|L|105|1|
+106|Réserves|FR|FRA||3|L|10|0|
+1061|Réserve légale|FR|FRA||4|L|106|0|
+10611|Réserve légale de base|FR|FRA||5|L|1061|1|
+10612|Plus-values nettes à long terme|FR|FRA||5|L|1061|1|
+1062|Réserves indisponibles|FR|FRA||4|L|106|1|
+1063|Réserves statutaires ou contractuelles|FR|FRA||4|L|106|1|
+1064|Réserves réglementées|FR|FRA||4|L|106|0|
+10641|Plus-values nettes à long terme|FR|FRA||5|L|1064|1|
+10643|Réserves consécutives à l'octroi de subventions d'investissement|FR|FRA||5|L|1064|1|
+10648|Autres réserves réglementées|FR|FRA||5|L|1064|1|
+1068|Autres réserves|FR|FRA||4|L|106|0|
+10681|Réserve de propre assureur|FR|FRA||5|L|1068|1|
+10688|Réserves diverses|FR|FRA||5|L|1068|1|
+107|Ecart d'équivalence|FR|FRA||3|L|10|1|
+108|Compte de l'exploitant|FR|FRA||3|L|10|1|
+109|Actionnaires : capital souscrit - non appelé|FR|FRA||3|A|10|1|
+11|Report à nouveau|FR|FRA||2||1|0|
+110|Report à nouveau (solde créditeur)|FR|FRA||3|L|11|1|
+119|Report à nouveau (solde débiteur)|FR|FRA||3|L|11|1|
+12|Résultat de l'exercice|FR|FRA||2||1|0|
+120|Résultat de l'exercice (bénéfice)|FR|FRA||3|L|12|1|
+129|Résultat de l'exercice (perte)|FR|FRA||3|L|12|1|
+13|Subventions d'investissement|FR|FRA||2|L|1|0|
+131|Subventions d'équipement|FR|FRA||3|L|13|0|
+1311|Etat|FR|FRA||4|L|131|1|
+1312|Régions|FR|FRA||4|L|131|1|
+1313|Départements|FR|FRA||4|L|131|1|
+1314|Communes|FR|FRA||4|L|131|1|
+1315|Collectivités publiques|FR|FRA||4|L|131|1|
+1316|Entreprises publiques|FR|FRA||4|L|131|1|
+1317|Entreprises et organismes privés|FR|FRA||4|L|131|1|
+1318|Autres|FR|FRA||4|L|131|1|
+138|Autres subventions d'investissement|FR|FRA||3|L|13|1|
+139|Subventions d'investissement inscrites au compte de résultat|FR|FRA||3|L|13|0|
+1391|Subventions d'équipement|FR|FRA||4|L|139|0|
+13911|Etat|FR|FRA||5|L|1391|1|
+13912|Régions|FR|FRA||5|L|1391|1|
+13913|Départements|FR|FRA||5|L|1391|1|
+13914|Communes|FR|FRA||5|L|1391|1|
+13915|Collectivités publiques|FR|FRA||5|L|1391|1|
+13916|Entreprises publiques|FR|FRA||5|L|1391|1|
+13917|Entreprises et organismes privés|FR|FRA||5|L|1391|1|
+13918|Autres|FR|FRA||5|L|1391|1|
+1398|Autres subventions d'investissement|FR|FRA||4|L|139|1|
+14|Provisions réglementées|FR|FRA||2|L|1|0|
+142|Provisions réglementées relatives aux immobilisations|FR|FRA||3|L|14|0|
+1423|Provisions pour reconstitution des gisements miniers et pétroliers|FR|FRA||4|L|142|1|
+1424|Provisions pour investissement (participation des salariés)|FR|FRA||4|L|142|1|
+143|Provisions réglementées relatives aux stocks|FR|FRA||3|L|14|0|
+1431|Hausse des prix|FR|FRA||4|L|143|1|
+1432|Fluctuation des cours|FR|FRA||4|L|143|1|
+144|Provisions réglementées relatives aux autres éléments de l'actif|FR|FRA||3|L|14|1|
+145|Amortissements dérogatoires|FR|FRA||3|L|14|1|
+146|Provision spéciale de réévaluation|FR|FRA||3|L|14|1|
+147|Plus-values réinvesties|FR|FRA||3|L|14|1|
+148|Autres provisions réglementées|FR|FRA||3|L|14|1|
+15|Provisions|FR|FRA||2|L|1|0|
+151|Provisions pour risques|FR|FRA||3|L|15|0|
+1511|Provisions pour litiges|FR|FRA||4|L|151|1|
+1512|Provisions pour garanties données aux clients|FR|FRA||4|L|151|1|
+1513|Provisions pour pertes sur marchés à terme|FR|FRA||4|L|151|1|
+1514|Provisions pour amendes et pénalités|FR|FRA||4|L|151|1|
+1515|Provisions pour pertes de change|FR|FRA||4|L|151|1|
+1516|Provisions pour pertes sur contrats|FR|FRA||4|L|151|1|
+1518|Autres provisions pour risques|FR|FRA||4|L|151|1|
+153|Provisions pour pensions et obligations similaires|FR|FRA||3|L|15|1|
+154|Provisions pour restructurations|FR|FRA||3|L|15|1|
+155|Provisions pour impôts|FR|FRA||3|L|15|1|
+156|Provisions pour renouvellement des immobilisations (entreprises concessionnaires|FR|FRA||3|L|15|1|
+157|Provisions pour charges à répartir sur plusieurs exercices|FR|FRA||3|L|15|0|
+1572|Provisions pour gros entretien ou grandes révisions|FR|FRA||4|L|157|1|
+158|Autres provisions pour charges|FR|FRA||3|L|15|0|
+1581|Provisions pour remises en état|FR|FRA||4|L|158|1|
+1582|Provisions pour Sécurité Sociale et taxes sur congés payés|FR|FRA||4|L|158|1|
+16|Emprunts et dettes|FR|FRA||2|L|1|0|
+161|Emprunts obligataires convertibles|FR|FRA||3|L|16|1|
+163|Autres emprunts obligataires|FR|FRA||3|L|16|1|
+164|Emprunts auprès des établissements de crédit|FR|FRA||3|L|16|1|
+165|Dépôts et cautionnements reçus|FR|FRA||3|L|16|0|
+1651|Dépôts|FR|FRA||4|L|165|1|
+1655|Cautionnements|FR|FRA||4|L|165|1|
+166|Participation des salariés aux résultats|FR|FRA||3|L|16|0|
+1661|Comptes bloqués|FR|FRA||4|L|166|1|
+1662|Fonds de participation|FR|FRA||4|L|166|1|
+167|Emprunts et dettes assortis de conditions particulières|FR|FRA||3|L|16|0|
+1671|Emissions de titres participatifs|FR|FRA||4|L|167|1|
+1674|Avances conditionnées de l'Etat|FR|FRA||4|L|167|1|
+1675|Emprunts participatifs|FR|FRA||4|L|167|1|
+168|Autres emprunts et dettes assimilées|FR|FRA||3|L|16|0|
+1681|Autres emprunts|FR|FRA||4|L|168|1|
+1685|Rentes viagères capitalisées|FR|FRA||4|L|168|1|
+1687|Autres dettes|FR|FRA||4|L|168|1|
+1688|Intérêts courus|FR|FRA||4|L|168|0|
+16881|sur emprunts obligataires convertibles|FR|FRA||5|L|1688|1|
+16883|sur autres emprunts obligataires|FR|FRA||5|L|1688|1|
+16884|sur emprunts auprès des établissements de crédit|FR|FRA||5|L|1688|1|
+16885|sur dépôts et cautionnements reçus|FR|FRA||5|L|1688|1|
+16886|sur participation des salariés aux résultats|FR|FRA||5|L|1688|1|
+16887|sur emprunts et dettes assortis de conditions particulières|FR|FRA||5|L|1688|1|
+16888|sur autres emprunts et dettes assimilées|FR|FRA||5|L|1688|1|
+169|Primes de remboursement des obligations|FR|FRA||3|L|16|1|
+17|Dettes rattachées à des participations|FR|FRA||2|L|1|0|
+171|Dettes rattachées à des participations (groupe)|FR|FRA||3|L|17|1|
+174|Dettes rattachées à des participations (hors groupe)|FR|FRA||3|L|17|1|
+178|Dettes rattachées à des sociétés en participation|FR|FRA||3|L|17|0|
+1781|Principal|FR|FRA||4|L|178|1|
+1788|Intérêts courus|FR|FRA||4|L|178|1|
+18|Comptes de liaison des établissements et sociétés en participation|FR|FRA||2|L|1|0|
+181|Comptes de liaison des établissements|FR|FRA||3|L|18|1|
+186|Biens et prestations de services échangés entre établissements (charges)|FR|FRA||3|L|18|1|
+187|Biens et prestations de services échangés entre établissements (produits)|FR|FRA||3|L|18|1|
+188|Comptes de liaison des sociétés en participation|FR|FRA||3|L|18|1|
+2|Comptes d'immobilisations|FR|FRA||1|A| |0|
+20|Immobilisations incorporelles|FR|FRA||2|A|2|0|
+201|Frais d'établissement|FR|FRA||3|A|20|0|
+2011|Frais de constitution|FR|FRA||4|A|201|1|
+2012|Frais de premier établissement|FR|FRA||4|A|201|0|
+20121|Frais de prospection|FR|FRA||5|A|2012|1|
+20122|Frais de publicité|FR|FRA||5|A|2012|1|
+2013|Frais d'augmentation de capital et d'opérations|FR|FRA||4|A|201|1|
+203|Frais de recherche et de développement|FR|FRA||3|A|20|1|
+205|Concessions et droits similaires, brevets, licences, marques, procédés, logici|FR|FRA||3|A|20|1|
+206|Droit au bail|FR|FRA||3|A|20|1|
+207|Fonds commercial|FR|FRA||3|A|20|1|
+208|Autres immobilisations incorporelles|FR|FRA||3|A|20|1|
+21|Immobilisations corporelles|FR|FRA||2|A|2|0|
+211|Terrains|FR|FRA||3|A|21|0|
+2111|Terrains nus|FR|FRA||4|A|211|1|
+2112|Terrains aménagés|FR|FRA||4|A|211|1|
+2113|Sous-sols et sursols|FR|FRA||4|A|211|1|
+2114|Terrains de gisement|FR|FRA||4|A|211|0|
+21141|Carrières|FR|FRA||5|A|2114|1|
+2115|Terrains bâtis|FR|FRA||4|A|211|0|
+21151|Ensembles immobiliers industriels|FR|FRA||5|A|2115|1|
+21155|Ensembles immobiliers administratifs et commerciaux|FR|FRA||5|A|2115|1|
+21158|Autres ensembles immobiliers|FR|FRA||5|A|2115|0|
+211581|Affectés aux opérations professionnelles|FR|FRA||6|A|21158|1|
+211588|Affectés aux opérations non professionnelles|FR|FRA||6|A|21158|1|
+2116|Compte d'ordre sur immobilisations|FR|FRA||4|A|211|1|
+212|Agencements et aménagements de terrains|FR|FRA||3|A|21|1|
+213|Constructions|FR|FRA||3|A|21|0|
+2131|Bâtiments|FR|FRA||4|A|213|0|
+21311|Ensembles immobiliers industriels|FR|FRA||5|A|2131|1|
+21315|Ensembles immobiliers administratifs et commerciaux|FR|FRA||5|A|2131|1|
+21318|Autres ensembles immobiliers|FR|FRA||5|A|2131|0|
+213181|Affectés aux opérations professionnelles|FR|FRA||6|A|21318|1|
+213188|Affectés aux opérations non professionnelles|FR|FRA||6|A|21318|1|
+2135|Installations générales - agencements - aménagements des constructions|FR|FRA||4|A|213|1|
+2138|Ouvrages d'infrastructure|FR|FRA||4|A|213|0|
+21381|Voies de terre|FR|FRA||5|A|2138|1|
+21382|Voies de fer|FR|FRA||5|A|2138|1|
+21383|Voies d'eau|FR|FRA||5|A|2138|1|
+21384|Barrages|FR|FRA||5|A|2138|1|
+21385|Pistes d'aérodromes|FR|FRA||5|A|2138|1|
+214|Constructions sur sol d'autrui|FR|FRA||3|A|21|1|
+215|Installations techniques, matériels et outillage industriels|FR|FRA||3|A|21|0|
+2151|Installations complexes spécialisées|FR|FRA||4|A|215|0|
+21511|sur sol propre|FR|FRA||5|A|2151|1|
+21514|sur sol d'autrui|FR|FRA||5|A|2151|1|
+2153|Installations à caractère spécifique|FR|FRA||4|A|215|0|
+21531|sur sol propre|FR|FRA||5|A|2153|1|
+21534|sur sol d'autrui|FR|FRA||5|A|2153|1|
+2154|Matériels industriels|FR|FRA||4|A|215|1|
+2155|Outillage industriel|FR|FRA||4|A|215|1|
+2157|Agencements et aménagements des matériels et outillage industriels|FR|FRA||4|A|215|1|
+218|Autres immobilisations corporelles|FR|FRA||3|A|21|0|
+2181|Installations générales, agencements, aménagements divers|FR|FRA||4|A|218|1|
+2182|Matériel de transport|FR|FRA||4|A|218|1|
+2183|Matériel de bureau et matériel informatique|FR|FRA||4|A|218|1|
+2184|Mobilier|FR|FRA||4|A|218|1|
+2185|Cheptel|FR|FRA||4|A|218|1|
+2186|Emballages récupérables|FR|FRA||4|A|218|1|
+22|Immobilisations mises en concession|FR|FRA||2|A|2|1|
+23|Immobilisations en cours|FR|FRA||2|A|2|0|
+231|Immobilisations corporelles en cours|FR|FRA||3|A|23|0|
+2312|Terrains|FR|FRA||4|A|231|1|
+2313|Constructions|FR|FRA||4|A|231|1|
+2315|Installations techniques, matériel et outillage industriels|FR|FRA||4|A|231|1|
+2318|Autres immobilisations corporelles|FR|FRA||4|A|231|1|
+232|Immobilisations incorporelles en cours|FR|FRA||3|A|23|1|
+237|Avances et acomptes versés sur immobilisations incorporelles|FR|FRA||3|A|23|1|
+238|Avances et acomptes versés sur commandes d'immobilisations corporelles|FR|FRA||3|A|23|0|
+2382|Terrains|FR|FRA||4|A|238|1|
+2383|Constructions|FR|FRA||4|A|238|1|
+2385|Installations techniques, matériel et outillage industriels|FR|FRA||4|A|238|1|
+2388|Autres immobilisations corporelles|FR|FRA||4|A|238|1|
+25|Parts dans des entreprises liées et créances sur des entreprises liées|FR|FRA||2|A|2|1|
+26|Participations et créances rattachées à des participations|FR|FRA||2|A|2|0|
+261|Titres de participation|FR|FRA||3|A|26|0|
+2611|Actions|FR|FRA||4|A|261|1|
+2618|Autres titres|FR|FRA||4|A|261|1|
+266|Autres formes de participation|FR|FRA||3|A|26|1|
+267|Créances rattachées à des participations|FR|FRA||3|A|26|0|
+2671|Créances rattachées à des participations (groupe)|FR|FRA||4|A|267|1|
+2674|Créances rattachées à des participations (hors groupe)|FR|FRA||4|A|267|1|
+2675|Versements représentatifs d'apports non capitalisés (appel de fonds)|FR|FRA||4|A|267|1|
+2676|Avances consolidables|FR|FRA||4|A|267|1|
+2677|Autres créances rattachées à des participations|FR|FRA||4|A|267|1|
+2678|Intérêts courus|FR|FRA||4|A|267|1|
+268|Créances rattachées à des sociétés en participation|FR|FRA||3|A|26|0|
+2681|Principal|FR|FRA||4|A|268|1|
+2688|Intérêts courus|FR|FRA||4|A|268|1|
+269|Versements restant à effectuer sur titres de participation non libérés|FR|FRA||3|A|26|1|
+27|Autres immobilisations financières|FR|FRA||2|A|2|0|
+271|Titres immobilisés autres que les titres immobilisés de l'activité de portefe|FR|FRA||3|A|27|0|
+2711|Actions|FR|FRA||4|A|271|1|
+2718|Autres titres|FR|FRA||4|A|271|1|
+272|Titres immobilisés|FR|FRA||3|A|27|0|
+2721|Obligations|FR|FRA||4|A|272|1|
+2722|Bons|FR|FRA||4|A|272|1|
+273|Titres immobilisés de l'activité de portefeuille|FR|FRA||3|A|27|1|
+274|Prêts|FR|FRA||3|A|27|0|
+2741|Prêts participatifs|FR|FRA||4|A|274|1|
+2742|Prêts aux associés|FR|FRA||4|A|274|1|
+2743|Prêts au personnel|FR|FRA||4|A|274|1|
+2748|Autres prêts|FR|FRA||4|A|274|1|
+275|Dépôts et cautionnements versés|FR|FRA||3|A|27|0|
+2751|Dépôts|FR|FRA||4|A|275|1|
+2755|Cautionnements|FR|FRA||4|A|275|1|
+276|Autres créances immobilisées|FR|FRA||3|A|27|0|
+2761|Créances diverses|FR|FRA||4|A|276|1|
+2768|Intérêts courus|FR|FRA||4|A|276|0|
+27682|sur titres immobilisés|FR|FRA||5|A|2768|1|
+27684|sur prêts|FR|FRA||5|A|2768|1|
+27685|sur dépôts et cautionnements|FR|FRA||5|A|2768|1|
+27688|sur créances diverses|FR|FRA||5|A|2768|1|
+277|Actions propres ou parts propres|FR|FRA||3|A|27|0|
+2771|Actions propres ou parts propres|FR|FRA||4|A|277|1|
+2772|Actions propres ou parts propres en voie d’annulation|FR|FRA||4|A|277|1|
+279|Versements restant à effectuer sur titres immobilisés non libérés|FR|FRA||3|A|27|1|
+28|Amortissements des immobilisations|FR|FRA||2|A|2|0|
+280|Amortissements des immobilisations incorporelles|FR|FRA||3|A|28|0|
+2801|Frais d'établissement|FR|FRA||4|A|280|1|
+2803|Frais de recherche et de développement|FR|FRA||4|A|280|1|
+2805|Concessions et droits similaires, brevets, licences, logiciels, droits et valeur|FR|FRA||4|A|280|1|
+2807|Fonds commercial|FR|FRA||4|A|280|1|
+2808|Autres immobilisations incorporelles|FR|FRA||4|A|280|1|
+281|Amortissements des immobilisations corporelles|FR|FRA||3|A|28|0|
+2811|Terrains de gisement|FR|FRA||4|A|281|1|
+2812|Agencements, aménagements de terrains|FR|FRA||4|A|281|1|
+2813|Constructions (même ventilation que celle du compte 213)|FR|FRA||4|A|281|1|
+2814|Constructions sur sol d'autrui|FR|FRA||4|A|281|1|
+2815|Installations, matériel et outillage industriels|FR|FRA||4|A|281|1|
+2818|Autres immobilisations corporelles|FR|FRA||4|A|281|1|
+282|Amortissements des immobilisations mises en concession|FR|FRA||3|A|28|1|
+29|Dépréciation des immobilisations|FR|FRA||2|A|2|0|
+290|Dépréciations des immobilisations incorporelles|FR|FRA||3|A|29|0|
+2905|Marques, procédés, droits et valeurs similaires|FR|FRA||4|A|290|1|
+2906|Droit au bail|FR|FRA||4|A|290|1|
+2907|Fonds commercial|FR|FRA||4|A|290|1|
+2908|Autres immobilisations incorporelles|FR|FRA||4|A|290|1|
+291|Dépréciations des immobilisations corporelles|FR|FRA||3|A|29|0|
+2911|Terrains (autres que terrains de gisement)|FR|FRA||4|A|291|1|
+292|Dépréciations des immobilisations mises en concession|FR|FRA||3|A|29|1|
+293|Dépréciations des immobilisations en cours|FR|FRA||3|A|29|0|
+2931|Immobilisations corporelles en cours|FR|FRA||4|A|293|1|
+2932|Immobilisations incorporelles en cours|FR|FRA||4|A|293|1|
+296|Provisions pour dépréciation des participations et créances rattachées à de|FR|FRA||3|A|29|0|
+2961|Titres de participation|FR|FRA||4|A|296|1|
+2966|Autres formes de participation|FR|FRA||4|A|296|1|
+2967|Créances rattachées à des participations|FR|FRA||4|A|296|1|
+2968|Créances rattachées à des sociétés en participation|FR|FRA||4|A|296|1|
+297|Provisions pour dépréciation des autres immobilisations financières|FR|FRA||3|A|29|0|
+2971|Titres immobilisés autres que les titres immobilisés de l'activité de|FR|FRA||4|A|297|1|
+2972|Titres immobilisés - droit de créance|FR|FRA||4|A|297|1|
+2973|Titres immobilisés de l'activité de portefeuille|FR|FRA||4|A|297|1|
+2974|Prêts (même ventilation que celle du compte 274)|FR|FRA||4|A|297|1|
+2975|Dépôts et cautionnements versés|FR|FRA||4|A|297|1|
+2976|Autres créances immobilisées|FR|FRA||4|A|297|1|
+3|Comptes de stocks et en-cours|FR|FRA||1|A| |0|
+31|Matières premières (et fournitures)|FR|FRA||2|A|3|0|
+311|Matières (ou groupe) A|FR|FRA||3|A|31|1|
+312|Matières (ou groupe) B|FR|FRA||3|A|31|1|
+317|Fournitures A, B, C|FR|FRA||3|A|31|1|
+32|Autres approvisionnements|FR|FRA||2|A|3|0|
+321|Matières consommables|FR|FRA||3|A|32|0|
+3211|Matières (ou groupe) C|FR|FRA||4|A|321|1|
+3212|Matières (ou groupe) D|FR|FRA||4|A|321|1|
+322|Fournitures consommables|FR|FRA||3|A|32|0|
+3221|Combustibles|FR|FRA||4|A|322|1|
+3222|Produits d'entretien|FR|FRA||4|A|322|1|
+3223|Fournitures d'atelier et d'usine|FR|FRA||4|A|322|1|
+3224|Fournitures de magasin|FR|FRA||4|A|322|1|
+3225|Fournitures de bureau|FR|FRA||4|A|322|1|
+326|Emballages|FR|FRA||3|A|32|0|
+3261|Emballages perdus|FR|FRA||4|A|326|1|
+3265|Emballages récupérables non identifiables|FR|FRA||4|A|326|1|
+3267|Emballages à usage mixte|FR|FRA||4|A|326|1|
+33|En-cours de production de biens|FR|FRA||2|A|3|0|
+331|Produits en cours|FR|FRA||3|A|33|0|
+3311|Produits en cours P 1|FR|FRA||4|A|331|1|
+3312|Produits en cours P 2|FR|FRA||4|A|331|1|
+335|Travaux en cours|FR|FRA||3|A|33|0|
+3351|Travaux en cours T 1|FR|FRA||4|A|335|1|
+3352|Travaux en cours T 2|FR|FRA||4|A|335|1|
+34|En-cours de production de services|FR|FRA||2|A|3|0|
+341|Etudes en cours|FR|FRA||3|A|34|0|
+3411|Etudes en cours E 1|FR|FRA||4|A|341|1|
+3412|Etudes en cours E 2|FR|FRA||4|A|341|1|
+345|Prestations de services en cours|FR|FRA||3|A|34|0|
+3451|Prestations de services S 1|FR|FRA||4|A|345|1|
+3452|Prestations de services S 2|FR|FRA||4|A|345|1|
+35|Stocks de produits|FR|FRA||2|A|3|0|
+351|Produits intermédiaires|FR|FRA||3|A|35|0|
+3511|Produits intermédiaires (ou groupe) A|FR|FRA||4|A|351|1|
+3512|Produits intermédiaires (ou groupe) B|FR|FRA||4|A|351|1|
+355|Produits finis|FR|FRA||3|A|35|0|
+3551|Produits finis (ou groupe) A|FR|FRA||4|A|355|1|
+3552|Produits finis (ou groupe) B|FR|FRA||4|A|355|1|
+358|Produits résiduels (ou matières de récupération)|FR|FRA||3|A|35|0|
+3581|Déchets|FR|FRA||4|A|358|1|
+3585|Rebuts|FR|FRA||4|A|358|1|
+3586|Matières de récupération|FR|FRA||4|A|358|1|
+36|Stocks provenant d'immobilisations|FR|FRA||2|A|3|1|
+37|Stocks de marchandises|FR|FRA||2|A|3|0|
+371|Marchandises (ou groupe) A|FR|FRA||3|A|37|1|
+372|Marchandises (ou groupe) B|FR|FRA||3|A|37|1|
+38|Stocks en voie d'acheminement, mis en dépôt ou donnés en consignation|FR|FRA||2|A|3|1|
+39|Dépréciations des stocks et en-cours|FR|FRA||2|A|3|0|
+391|Provisions pour dépréciation des matières premières (et fournitures)|FR|FRA||3|A|39|0|
+3911|Matières (ou groupe A)|FR|FRA||4|A|391|1|
+3912|Matières (ou groupe B)|FR|FRA||4|A|391|1|
+3917|Fournitures A, B, C,|FR|FRA||4|A|391|1|
+392|Provisions pour dépréciation des autres approvisionnements|FR|FRA||3|A|39|0|
+3921|Matières consommables|FR|FRA||4|A|392|1|
+3922|Fournitures consommables|FR|FRA||4|A|392|1|
+3926|Emballages|FR|FRA||4|A|392|1|
+393|Provisions pour dépréciation des en-cours de production de biens|FR|FRA||3|A|39|0|
+3931|Produits en cours|FR|FRA||4|A|393|1|
+3935|Travaux en cours|FR|FRA||4|A|393|1|
+394|Provisions pour dépréciation des en-cours de production de services|FR|FRA||3|A|39|0|
+3941|Etudes en cours (même ventilation que celle du compte 341)|FR|FRA||4|A|394|1|
+3945|Prestations de services en cours|FR|FRA||4|A|394|1|
+395|Provisions pour dépréciation des stocks de produits|FR|FRA||3|A|39|0|
+3951|Produits intermédiaires|FR|FRA||4|A|395|1|
+3955|Produits finis|FR|FRA||4|A|395|1|
+397|Provisions pour dépréciation des stocks de marchandises|FR|FRA||3|A|39|0|
+3971|Marchandise (ou groupe A)|FR|FRA||4|A|397|1|
+3972|Marchandise (ou groupe B)|FR|FRA||4|A|397|1|
+4|Comptes de tiers|FR|FRA||1|| |0|
+40|Fournisseurs et comptes rattachés|FR|FRA||2|L|4|0|
+400|Fournisseurs et Comptes rattachés|FR|FRA||3|L|40|1|
+401|Fournisseurs|FR|FRA||3|L|40|0|
+4011|Fournisseurs - Achats de biens et prestations de services|FR|FRA||4|L|401|1|
+4017|Fournisseurs - Retenues de garantie|FR|FRA||4|L|401|1|
+403|Fournisseurs - Effets à payer|FR|FRA||3|L|40|1|
+404|Fournisseurs d'immobilisations|FR|FRA||3|L|40|0|
+4041|Fournisseurs - Achats d'immobilisations|FR|FRA||4|L|404|1|
+4047|Fournisseurs d'immobilisations - Retenues de garantie|FR|FRA||4|L|404|1|
+405|Fournisseurs d'immobilisations - Effets à payer|FR|FRA||3|L|40|1|
+408|Fournisseurs - Factures non parvenues|FR|FRA||3|L|40|0|
+4081|Fournisseurs|FR|FRA||4|L|408|1|
+4084|Fournisseurs d'immobilisations|FR|FRA||4|L|408|1|
+4088|Fournisseurs - Intérêts courus|FR|FRA||4|L|408|1|
+409|Fournisseurs débiteurs|FR|FRA||3|L|40|0|
+4091|Fournisseurs - Avances et acomptes versés sur commandes|FR|FRA||4|L|409|1|
+4096|Fournisseurs - Créances pour emballages et matériel à rendre|FR|FRA||4|L|409|1|
+4097|Fournisseurs - Autres avoirs|FR|FRA||4|L|409|0|
+40971|Fournisseurs d'exploitation|FR|FRA||5|L|4097|1|
+40974|Fournisseurs d'immobilisations|FR|FRA||5|L|4097|1|
+4098|Rabais, remises, ristournes à obtenir et autres avoirs non encore reçus|FR|FRA||4|L|409|1|
+41|Clients et comptes rattachés|FR|FRA||2|A|4|0|
+410|Clients et comptes rattachés|FR|FRA||3|A|41|1|
+411|Clients|FR|FRA||3|A|41|0|
+4111|Clients - Ventes de biens ou de prestations de services|FR|FRA||4|A|411|1|
+4117|Clients - Retenues de garantie|FR|FRA||4|A|411|1|
+413|Clients - Effets à recevoir|FR|FRA||3|A|41|1|
+416|Clients douteux ou litigieux|FR|FRA||3|A|41|1|
+417|Créances futures pour travaux non encore imputables|FR|FRA||3|A|41|1|
+418|Clients - Produits non encore facturés|FR|FRA||3|A|41|0|
+4181|Clients - Factures à établir|FR|FRA||4|A|418|1|
+4188|Clients - Intérêts courus|FR|FRA||4|A|418|1|
+419|Clients créditeurs|FR|FRA||3|A|41|0|
+4191|Clients - Avances et acomptes reçus sur commandes|FR|FRA||4|A|419|1|
+4196|Clients - Dettes sur emballages et matériels consignés|FR|FRA||4|A|419|1|
+4197|Clients - Autres avoirs|FR|FRA||4|A|419|1|
+4198|Rabais, remises, ristournes à accorder et autres avoirs à établir|FR|FRA||4|A|419|1|
+42|Personnel et comptes rattachés|FR|FRA||2|L|4|0|
+421|Personnel - Rémunérations dues|FR|FRA||3|L|42|1|
+422|Comités d'entreprises, d'établissement, ...|FR|FRA||3|L|42|1|
+424|Participation des salariés aux résultats|FR|FRA||3|L|42|0|
+4246|Réserve spéciale (art. L. 442-2 du code du travail)|FR|FRA||4|L|424|1|
+4248|Comptes courants|FR|FRA||4|L|424|1|
+425|Personnel - Avances et acomptes|FR|FRA||3|L|42|1|
+426|Personnel - Dépôts|FR|FRA||3|L|42|1|
+427|Personnel - Oppositions|FR|FRA||3|L|42|1|
+428|Personnel - Charges à payer et produits à recevoir|FR|FRA||3|L|42|0|
+4282|Dettes provisionnées pour congés à payer|FR|FRA||4|L|428|1|
+4284|Dettes provisionnées pour participation des salariés aux résultats|FR|FRA||4|L|428|1|
+4286|Autres charges à payer|FR|FRA||4|L|428|1|
+4287|Produits à recevoir|FR|FRA||4|L|428|1|
+43|Sécurité sociale et autres organismes sociaux|FR|FRA||2|L|4|0|
+431|Sécurité sociale|FR|FRA||3|L|43|1|
+437|Autres organismes sociaux|FR|FRA||3|L|43|1|
+438|Organismes sociaux - Charges à payer et produits à recevoir|FR|FRA||3|L|43|0|
+4382|Charges sociales sur congés à payer|FR|FRA||4|L|438|1|
+4386|Autres charges à payer|FR|FRA||4|L|438|1|
+4387|Produits à recevoir|FR|FRA||4|L|438|1|
+44|État et autres collectivités publiques|FR|FRA||2|L|4|0|
+441|État - Subventions à recevoir|FR|FRA||3|L|44|0|
+4411|Subventions d'investissement|FR|FRA||4|L|441|1|
+4417|Subventions d'exploitation|FR|FRA||4|L|441|1|
+4418|Subventions d'équilibre|FR|FRA||4|L|441|1|
+4419|Avances sur subventions|FR|FRA||4|L|441|1|
+442|Etat - Impôts et taxes recouvrables sur des tiers|FR|FRA||3|L|44|0|
+4424|Obligataires|FR|FRA||4|L|442|1|
+4425|Associés|FR|FRA||4|L|442|1|
+443|Opérations particulières avec l'Etat, les collectivités publiques, les organi|FR|FRA||3|L|44|0|
+4431|Créances sur l'Etat résultant de la suppression de la règle du décalage d'un|FR|FRA||4|L|443|1|
+4438|Intérêts courus sur créances figurant au compte 4431|FR|FRA||4|L|443|1|
+444|Etat - Impôts sur les bénéfices|FR|FRA||3|L|44|1|
+445|Etat - Taxes sur le chiffre d'affaires|FR|FRA||3|L|44|0|
+4452|T.V.A. due intracommunautaire|FR|FRA||4|L|445|1|
+4455|Taxes sur le chiffre d'affaires à décaisser|FR|FRA||4|L|445|0|
+44551|T.V.A. à décaisser|FR|FRA||5|L|4455|1|
+44558|Taxes assimilées à la T.V.A.|FR|FRA||5|L|4455|1|
+4456|Taxes sur le chiffre d'affaires déductibles|FR|FRA||4|L|445|0|
+44562|T.V.A. sur immobilisations|FR|FRA||5|L|4456|1|
+44563|T.V.A. transférée par d'autres entreprises|FR|FRA||5|L|4456|1|
+44566|T.V.A. sur autres biens et services|FR|FRA||5|L|4456|1|
+44567|Crédit de T.V.A. à reporter|FR|FRA||5|L|4456|1|
+44568|Taxes assimilées à la T.V.A.|FR|FRA||5|L|4456|1|
+4457|Taxes sur le chiffre d'affaires collectées par l'entreprise|FR|FRA||4|L|445|0|
+44571|T.V.A. collectée|FR|FRA||5|L|4457|1|
+44578|Taxes assimilées à la T.V.A.|FR|FRA||5|L|4457|1|
+4458|Taxes sur le chiffre d'affaires à régulariser ou en attente|FR|FRA||4|L|445|0|
+44581|Acomptes - Régime simplifié d'imposition|FR|FRA||5|L|4458|1|
+44582|Acomptes - Régime du forfait|FR|FRA||5|L|4458|1|
+44583|Remboursement de taxes sur le chiffre d'affaires demandé|FR|FRA||5|L|4458|1|
+44584|T.V.A. récupérée d'avance|FR|FRA||5|L|4458|1|
+44586|Taxes sur le chiffre d'affaires sur factures non parvenues|FR|FRA||5|L|4458|1|
+44587|Taxes sur le chiffre d'affaires sur factures à établir|FR|FRA||5|L|4458|1|
+446|Obligations cautionnées|FR|FRA||3|L|44|1|
+447|Autres impôts, taxes et versements assimilés|FR|FRA||3|L|44|1|
+448|Etat - Charges à payer et produits à recevoir|FR|FRA||3|L|44|0|
+4482|Charges fiscales sur congés à payer|FR|FRA||4|L|448|1|
+4486|Charges à payer|FR|FRA||4|L|448|1|
+4487|Produits à recevoir|FR|FRA||4|L|448|1|
+449|Quotas d'émission à restituer à l'Etat|FR|FRA||3|L|44|1|
+45|Groupe et associés|FR|FRA||2||4|0|
+451|Groupe|FR|FRA||3|A|45|1|
+455|Associés - Comptes courants|FR|FRA||3|A|45|0|
+4551|Principal|FR|FRA||4|A|455|1|
+4558|Intérêts courus|FR|FRA||4|A|455|1|
+456|Associés - Opérations sur le capital|FR|FRA||3|A|45|0|
+4561|Associés - Comptes d'apport en société|FR|FRA||4|A|456|0|
+45611|Apports en nature|FR|FRA||5|A|4561|1|
+45615|Apports en numéraire|FR|FRA||5|A|4561|1|
+4562|Apporteurs - Capital appelé, non versé|FR|FRA||4|A|456|0|
+45621|Actionnaires - Capital souscrit et appelé, non versé|FR|FRA||5|A|4562|1|
+45625|Associés - Capital appelé, non versé|FR|FRA||5|A|4562|1|
+4563|Associés - Versements reçus sur augmentation de capital|FR|FRA||4|A|456|1|
+4564|Associés - Versements anticipés|FR|FRA||4|A|456|1|
+4566|Actionnaires défaillants|FR|FRA||4|A|456|1|
+4567|Associés - Capital à rembourser|FR|FRA||4|A|456|1|
+457|Associés - Dividendes à payer|FR|FRA||3|L|45|1|
+458|Associés - Opérations faites en commun et en G.I.E.|FR|FRA||3|A|45|0|
+4581|Opérations courantes|FR|FRA||4|A|458|1|
+4588|Intérêts courus|FR|FRA||4|A|458|1|
+46|Débiteurs divers et créditeurs divers|FR|FRA||2|A|4|0|
+462|Créances sur cessions d'immobilisations|FR|FRA||3|A|46|1|
+464|Dettes sur acquisitions de valeurs mobilières de placement|FR|FRA||3|L|46|1|
+465|Créances sur cessions de valeurs mobilières de placement|FR|FRA||3|A|46|1|
+467|Autres comptes débiteurs ou créditeurs|FR|FRA||3|A|46|1|
+468|Divers - Charges à payer et produits à recevoir|FR|FRA||3|A|46|0|
+4686|Charges à payer|FR|FRA||4|L|468|1|
+4687|Produits à recevoir|FR|FRA||4|A|468|1|
+47|Comptes transitoires ou d'attente|FR|FRA||2||4|0|
+471|compte d'attente A|FR|FRA||3|A|47|1|
+472|compte d'attente B|FR|FRA||3|L|47|1|
+473|compte d'attente C|FR|FRA||3|L|47|1|
+474|compte d'attente D|FR|FRA||3|L|47|1|
+475|compte d'attente E|FR|FRA||3|L|47|1|
+476|Différence de conversion - Actif|FR|FRA||3|A|47|0|
+4761|Diminution des créances|FR|FRA||4|A|476|1|
+4762|Augmentation des dettes|FR|FRA||4|A|476|1|
+4768|Différences compensées par couverture de change|FR|FRA||4|A|476|1|
+477|Différences de conversion - Passif|FR|FRA||3|L|47|0|
+4771|Augmentation des créances|FR|FRA||4|L|477|1|
+4772|Diminution des dettes|FR|FRA||4|L|477|1|
+4778|Différences compensées par couverture de change|FR|FRA||4|L|477|1|
+478|Autres comptes transitoires|FR|FRA||3|A|47|1|
+48|Comptes de régularisation|FR|FRA||2||4|0|
+481|Charges à répartir sur plusieurs exercices|FR|FRA||3|A|48|0|
+4811|Charges différées|FR|FRA||4|A|481|1|
+4812|Coûts d'acquisition d'immobilisations|FR|FRA||4|A|481|1|
+4816|Frais d'émission des emprunts|FR|FRA||4|A|481|1|
+4818|Charges à répartir|FR|FRA||4|A|481|1|
+486|Charges constatées d'avance|FR|FRA||3|A|48|1|
+487|Produits constatés d'avance|FR|FRA||3|L|48|1|
+488|Comptes de répartition périodique des charges et des produits|FR|FRA||3||48|0|
+4886|Charges|FR|FRA||4|A|488|1|
+4887|Produits|FR|FRA||4|L|488|1|
+489|Quotas d'émission alloués par l'Etat|FR|FRA||3||48|1|
+49|Dépréciation des comptes de tiers|FR|FRA||2|A|4|0|
+491|Provisions pour dépréciation des comptes de clients|FR|FRA||3|A|49|1|
+495|Provisions pour dépréciation des comptes du groupe et des associés|FR|FRA||3|A|49|0|
+4951|Comptes du groupe|FR|FRA||4|A|495|1|
+4955|Comptes courants des associés|FR|FRA||4|A|495|1|
+4958|Opérations faites en commun et en G.I.E.|FR|FRA||4|A|495|1|
+496|Provisions pour dépréciation des comptes de débiteurs divers|FR|FRA||3|A|49|0|
+4962|Créances sur cessions d'immobilisations|FR|FRA||4|A|496|1|
+4965|Créances sur cessions de valeurs mobilières de placement|FR|FRA||4|A|496|1|
+4967|Autres comptes débiteurs|FR|FRA||4|A|496|1|
+5|Comptes financiers|FR|FRA||1|| |0|
+50|Valeurs mobilières de placement|FR|FRA||2|A|5|0|
+501|Parts dans des entreprises liées|FR|FRA||3|A|50|1|
+502|Actions propres|FR|FRA||3|A|50|1|
+503|Actions|FR|FRA||3|A|50|0|
+5031|Titres cotés|FR|FRA||4|A|503|1|
+5035|Titres non cotés|FR|FRA||4|A|503|1|
+504|Autres titres conférant un droit de propriété|FR|FRA||3|A|50|1|
+505|Obligations et bons émis par la société et rachetés par elle|FR|FRA||3|A|50|1|
+506|Obligations|FR|FRA||3|A|50|0|
+5061|Titres cotés|FR|FRA||4|A|506|1|
+5065|Titres non cotés|FR|FRA||4|A|506|1|
+507|Bons du Trésor et bons de caisse à court terme|FR|FRA||3|A|50|1|
+508|Autres valeurs mobilières de placement et autres créances assimilées|FR|FRA||3|A|50|0|
+5081|Autres valeurs mobilières|FR|FRA||4|A|508|1|
+5082|Bons de souscription|FR|FRA||4|A|508|1|
+5088|Intérêts courus sur obligations, bons et valeurs assimilés|FR|FRA||4|A|508|1|
+509|Versements restant à effectuer sur valeurs mobilières de placement non libér|FR|FRA||3|A|50|1|
+51|Banques, établissements financiers et assimilés|FR|FRA||2|A|5|0|
+511|Valeurs à l'encaissement|FR|FRA||3|A|51|0|
+5111|Coupons échus à l'encaissement|FR|FRA||4|A|511|1|
+5112|Chèques à encaisser|FR|FRA||4|A|511|1|
+5113|Effets à l'encaissement|FR|FRA||4|A|511|1|
+5114|Effets à l'escompte|FR|FRA||4|A|511|1|
+512|Banques|FR|FRA||3|A|51|0|
+5121|Comptes en monnaie nationale|FR|FRA||4|A|512|1|
+5124|Comptes en devises|FR|FRA||4|A|512|1|
+514|Chèques postaux|FR|FRA||3|A|51|1|
+515|" Caisses " du Trésor et des établissements publics|FR|FRA||3|A|51|1|
+516|Sociétés de bourse|FR|FRA||3|A|51|1|
+517|Autres organismes financiers|FR|FRA||3|A|51|1|
+518|Intérêts courus|FR|FRA||3|A|51|0|
+5181|Intérêts courus à payer|FR|FRA||4|A|518|1|
+5188|Intérêts courus à recevoir|FR|FRA||4|A|518|1|
+519|Concours bancaires courants|FR|FRA||3|A|51|0|
+5191|Crédit de mobilisation de créances commerciales (CMCC)|FR|FRA||4|A|519|1|
+5193|Mobilisation de créances nées à l'étranger|FR|FRA||4|A|519|1|
+5198|Intérêts courus sur concours bancaires courants|FR|FRA||4|A|519|1|
+52|Instruments de trésorerie|FR|FRA||2|A|5|1|
+53|Caisse|FR|FRA||2|A|5|0|
+531|Caisse siège social|FR|FRA||3|A|53|0|
+5311|Caisse en monnaie nationale|FR|FRA||4|A|531|1|
+5314|Caisse en devises|FR|FRA||4|A|531|1|
+532|Caisse succursale (ou usine) A|FR|FRA||3|A|53|1|
+533|Caisse succursale (ou usine) B|FR|FRA||3|A|53|1|
+54|Régies d'avances et accréditifs|FR|FRA||2|A|5|1|
+58|Virements internes|FR|FRA||2|A|5|1|
+59|Dépréciation des comptes financiers|FR|FRA||2|A|5|0|
+590|Provisions pour dépréciation des valeurs mobilières de placement|FR|FRA||3|A|59|0|
+5903|Actions|FR|FRA||4|A|590|1|
+5904|Autres titres conférant un droit de propriété|FR|FRA||4|A|590|1|
+5906|Obligations|FR|FRA||4|A|590|1|
+5908|Autres valeurs mobilières de placement et créances assimilées|FR|FRA||4|A|590|1|
+6|Comptes de charges|FR|FRA||1|E| |0|
+60|Achats (sauf 603)|FR|FRA||2|E|6|0|
+601|Achats stockés - Matières premières (et fournitures)|FR|FRA||3|E|60|0|
+6011|Matières (ou groupe) A|FR|FRA||4|E|601|1|
+6012|Matières (ou groupe) B|FR|FRA||4|E|601|1|
+6017|Fournitures A, B, C, ...|FR|FRA||4|E|601|1|
+602|Achats stockés - Autres approvisionnements|FR|FRA||3|E|60|0|
+6021|Matières consommables|FR|FRA||4|E|602|0|
+60211|Matières (ou groupe) C|FR|FRA||5|E|6021|1|
+60212|Matières (ou groupe) D|FR|FRA||5|E|6021|1|
+6022|Fournitures consommables|FR|FRA||4|E|602|0|
+60221|Combustibles|FR|FRA||5|E|6022|1|
+60222|Produits d'entretien|FR|FRA||5|E|6022|1|
+60223|Fournitures d'atelier et d'usine|FR|FRA||5|E|6022|1|
+60224|Fournitures de magasin|FR|FRA||5|E|6022|1|
+60225|Fourniture de bureau|FR|FRA||5|E|6022|1|
+6026|Emballages|FR|FRA||4|E|602|0|
+60261|Emballages perdus|FR|FRA||5|E|6026|1|
+60265|Emballages récupérables non identifiables|FR|FRA||5|E|6026|1|
+60267|Emballages à usage mixte|FR|FRA||5|E|6026|1|
+603|Variations des stocks (approvisionnements et marchandises)|FR|FRA||3|E|60|0|
+6031|Variation des stocks de matières premières (et fournitures)|FR|FRA||4|E|603|1|
+6032|Variation des stocks des autres approvisionnements|FR|FRA||4|E|603|1|
+6037|Variation des stocks de marchandises|FR|FRA||4|E|603|1|
+604|Achats d'études et prestations de services|FR|FRA||3|A|60|1|
+605|Achats de matériel, équipements et travaux|FR|FRA||3|E|60|1|
+606|Achats non stockés de matière et fournitures|FR|FRA||3|E|60|0|
+6061|Fournitures non stockables (eau, énergie)|FR|FRA||4|E|606|1|
+6063|Fournitures d'entretien et de petit équipement|FR|FRA||4|E|606|1|
+6064|Fournitures administratives|FR|FRA||4|E|606|1|
+6068|Autres matières et fournitures|FR|FRA||4|E|606|1|
+607|Achats de marchandises|FR|FRA||3|E|60|0|
+6071|Marchandise (ou groupe) A|FR|FRA||4|E|607|1|
+6072|Marchandise (ou groupe) B|FR|FRA||4|E|607|1|
+608|(Compte réservé, le cas échéant, pour le récapitulatif des frais d'achat accessoires)|FR|FRA||3|A|60|1|
+609|Rabais, remises et ristournes obtenus sur achats|FR|FRA||3|E|60|0|
+6091|de matières premières (et fournitures)|FR|FRA||4|E|609|1|
+6092|d'autres approvisionnements stockés|FR|FRA||4|E|609|1|
+6094|d'études et prestations de services|FR|FRA||4|E|609|1|
+6095|de matériel, équipements et travaux|FR|FRA||4|E|609|1|
+6096|d'approvisionnements non stockés|FR|FRA||4|E|609|1|
+6097|de marchandises|FR|FRA||4|E|609|1|
+6098|Rabais, remises et ristournes non affectés|FR|FRA||4|E|609|1|
+61|Services extérieurs|FR|FRA||2|E|6|0|
+611|Sous-traitance générale|FR|FRA||3|E|61|1|
+612|Redevances de crédit-bail|FR|FRA||3|E|61|0|
+6122|Crédit-bail mobilier|FR|FRA||4|E|612|1|
+6125|Crédit-bail immobilier|FR|FRA||4|E|612|1|
+613|Locations|FR|FRA||3|E|61|0|
+6132|Locations immobilières|FR|FRA||4|E|613|1|
+6135|Locations mobilières|FR|FRA||4|E|613|1|
+6136|Malis sur emballages|FR|FRA||4|E|613|1|
+614|Charges locatives et de copropriété|FR|FRA||3|E|61|1|
+615|Entretien et réparations|FR|FRA||3|E|61|0|
+6152|Sur biens immobiliers|FR|FRA||4|E|615|1|
+6155|Sur biens mobiliers|FR|FRA||4|E|615|1|
+6156|Maintenance|FR|FRA||4|E|615|1|
+616|Primes d'assurances|FR|FRA||3|E|61|0|
+6161|Multirisques|FR|FRA||4|E|616|1|
+6162|Assurance obligatoire dommage construction|FR|FRA||4|E|616|1|
+6163|Assurance-transport|FR|FRA||4|E|616|0|
+61636|sur achats|FR|FRA||5|E|6163|1|
+61637|sur ventes|FR|FRA||5|E|6163|1|
+61638|sur autres biens|FR|FRA||5|E|6163|1|
+6164|Risques d'exploitation|FR|FRA||4|E|616|1|
+6165|Insolvabilité clients|FR|FRA||4|E|616|1|
+617|Etudes et recherches|FR|FRA||3|E|61|1|
+618|Divers|FR|FRA||3|E|61|0|
+6181|Documentation générale|FR|FRA||4|E|618|1|
+6183|Documentation technique|FR|FRA||4|E|618|1|
+6185|Frais de colloques, séminaires, conférences|FR|FRA||4|E|618|1|
+619|Rabais, remises et ristournes obtenus sur services extérieurs|FR|FRA||3|E|61|1|
+62|Autres services extérieurs|FR|FRA||2|E|6|0|
+621|Personnel extérieur à l'entreprise|FR|FRA||3|E|62|0|
+6211|Personnel intérimaire|FR|FRA||4|E|621|1|
+6214|Personnel détaché ou prêté à l'entreprise|FR|FRA||4|E|621|1|
+622|Rémunérations d'intermédiaires et honoraires|FR|FRA||3|E|62|0|
+6221|Commissions et courtages sur achats|FR|FRA||4|E|622|1|
+6222|Commissions et courtages sur ventes|FR|FRA||4|E|622|1|
+6224|Rémunérations des transitaires|FR|FRA||4|E|622|1|
+6225|Rémunérations d'affacturage|FR|FRA||4|E|622|1|
+6226|Honoraires|FR|FRA||4|E|622|1|
+6227|Frais d'actes et de contentieux|FR|FRA||4|E|622|1|
+6228|Divers|FR|FRA||4|E|622|1|
+623|Publicité, publications, relations publiques|FR|FRA||3|E|62|0|
+6231|Annonces et insertions|FR|FRA||4|E|623|1|
+6232|Echantillons|FR|FRA||4|E|623|1|
+6233|Foires et expositions|FR|FRA||4|E|623|1|
+6234|Cadeaux à la clientèle|FR|FRA||4|E|623|1|
+6235|Primes|FR|FRA||4|E|623|1|
+6236|Catalogues et imprimés|FR|FRA||4|E|623|1|
+6237|Publications|FR|FRA||4|E|623|1|
+6238|Divers (pourboires, dont courant)|FR|FRA||4|E|623|1|
+624|Transports de biens et transports collectifs du personnel|FR|FRA||3|E|62|0|
+6241|Transports sur achats|FR|FRA||4|E|624|1|
+6242|Transports sur ventes|FR|FRA||4|E|624|1|
+6243|Transports entre établissements ou chantiers|FR|FRA||4|E|624|1|
+6244|Transports administratifs|FR|FRA||4|E|624|1|
+6247|Transports collectifs du personnel|FR|FRA||4|E|624|1|
+6248|Divers|FR|FRA||4|E|624|1|
+625|Déplacements, missions et réceptions|FR|FRA||3|E|62|0|
+6251|Voyages et déplacements|FR|FRA||4|E|625|1|
+6255|Frais de déménagement|FR|FRA||4|E|625|1|
+6256|Missions|FR|FRA||4|E|625|1|
+6257|Réceptions|FR|FRA||4|E|625|1|
+626|Frais postaux et de télécommunications|FR|FRA||3|E|62|1|
+627|Services bancaires et assimilés|FR|FRA||3|E|62|0|
+6271|Frais sur titres (achat, vente, garde)|FR|FRA||4|E|627|1|
+6272|Commissions et frais sur émission d'emprunts|FR|FRA||4|E|627|1|
+6275|Frais sur effets|FR|FRA||4|E|627|1|
+6276|Location de coffres|FR|FRA||4|E|627|1|
+6278|Autres frais et commissions sur prestations de services|FR|FRA||4|E|627|1|
+628|Divers|FR|FRA||3|E|62|0|
+6281|Concours divers (cotisations)|FR|FRA||4|E|628|1|
+6284|Frais de recrutement de personnel|FR|FRA||4|E|628|1|
+629|Rabais, remises et ristournes obtenus sur autres services extérieurs|FR|FRA||3|E|62|1|
+63|Impôts, taxes et versements assimilés|FR|FRA||2|E|6|0|
+631|Impôts, taxes et versements assimilés sur rémunérations (administrations des|FR|FRA||3|E|63|0|
+6311|Taxe sur les salaires|FR|FRA||4|E|631|1|
+6312|Taxe d'apprentissage|FR|FRA||4|E|631|1|
+6313|Participation des employeurs à la formation professionnelle continue|FR|FRA||4|E|631|1|
+6314|Cotisation pour défaut d'investissement obligatoire dans la construction|FR|FRA||4|E|631|1|
+6318|Autres|FR|FRA||4|E|631|1|
+633|Impôts, taxes et versements assimilés sur rémunérations (autres organismes)|FR|FRA||3|E|63|0|
+6331|Versement de transport|FR|FRA||4|E|633|0|
+63311|Taxe professionnelle|FR|FRA||5|E|6331|1|
+6332|Allocations logement|FR|FRA||4|E|633|1|
+6333|Participation des employeurs à la formation professionnelle continue|FR|FRA||4|E|633|1|
+6334|Participation des employeurs à l'effort de construction|FR|FRA||4|E|633|1|
+6335|Versements libératoires ouvrant droit à l'exonération de la taxe|FR|FRA||4|E|633|1|
+6338|Autres|FR|FRA||4|E|633|1|
+635|Autres impôts, taxes et versements assimilés (administrations des impôts)|FR|FRA||3|E|63|0|
+6351|Impôts directs (sauf impôts sur les bénéfices)|FR|FRA||4|E|635|0|
+63511|Taxe professionnelle|FR|FRA||5|E|6351|1|
+63512|Taxes foncières|FR|FRA||5|E|6351|1|
+63513|Autres impôts locaux|FR|FRA||5|E|6351|1|
+63514|Taxe sur les véhicules des sociétés|FR|FRA||5|E|6351|1|
+6352|Taxe sur le chiffre d'affaires non récupérables|FR|FRA||4|E|635|1|
+6353|Impôts indirects|FR|FRA||4|E|635|1|
+6354|Droits d'enregistrement et de timbre|FR|FRA||4|E|635|0|
+63541|Droits de mutation|FR|FRA||5|E|6354|1|
+6358|Autres droits|FR|FRA||4| |635|1|
+637|Autres impôts, taxes et versements assimilés (autres organismes)|FR|FRA||3|E|63|0|
+6371|Contribution sociale de solidarité à la charge des sociétés|FR|FRA||4|E|637|1|
+6372|Taxes perçues par les organismes publics internationaux|FR|FRA||4|E|637|1|
+6374|Impôts et taxes exigibles à l'étranger|FR|FRA||4|E|637|1|
+6378|Taxes diverses|FR|FRA||4|E|637|1|
+64|Charges de personnel|FR|FRA||2|E|6|0|
+641|Rémunérations du personnel|FR|FRA||3|E|64|0|
+6411|Salaires, appointements|FR|FRA||4|E|641|1|
+6412|Congés payés|FR|FRA||4|E|641|1|
+6413|Primes et gratifications|FR|FRA||4|E|641|1|
+6414|Indemnités et avantages divers|FR|FRA||4|E|641|1|
+6415|Supplément familial|FR|FRA||4|E|641|1|
+644|Rémunération du travail de l'exploitant|FR|FRA||3|E|64|1|
+645|Charges de sécurité sociale et de prévoyance|FR|FRA||3|E|64|0|
+6451|Cotisations à l'Urssaf|FR|FRA||4|E|645|1|
+6452|Cotisations aux mutuelles|FR|FRA||4|E|645|1|
+6453|Cotisations aux caisses de retraites|FR|FRA||4|E|645|1|
+6454|Cotisations aux Assedic|FR|FRA||4|E|645|1|
+6458|Cotisations aux autres organismes sociaux|FR|FRA||4|E|645|1|
+646|Cotisations sociales personnelles de l'exploitant|FR|FRA||3|E|64|1|
+647|Autres charges sociales|FR|FRA||3|E|64|0|
+6471|Prestations directes|FR|FRA||4|E|647|1|
+6472|Versements aux comités d'entreprise et d'établissement|FR|FRA||4|E|647|1|
+6473|Versements aux comités d'hygiène et de sécurité|FR|FRA||4|E|647|1|
+6474|Versements aux autres œuvres sociales|FR|FRA||4|E|647|1|
+6475|Médecine du travail, pharmacie|FR|FRA||4|A|647|1|
+648|Autres charges de personnel|FR|FRA||3|E|64|1|
+65|Autres charges de gestion courante|FR|FRA||2|E|6|0|
+651|Redevances pour concessions, brevets, licences, marques, procédés, logiciels,|FR|FRA||3|E|65|0|
+6511|Redevances pour concessions, brevets, licences, marques, procédés, logiciels|FR|FRA||4|E|651|1|
+6516|Droits d'auteur et de reproduction|FR|FRA||4|E|651|1|
+6518|Autres droits et valeurs similaires|FR|FRA||4| |651|1|
+653|Jetons de présence|FR|FRA||3|E|65|1|
+654|Pertes sur créances irrécouvrables|FR|FRA||3|E|65|0|
+6541|Créances de l'exercice|FR|FRA||4|E|654|1|
+6544|Créances des exercices antérieurs|FR|FRA||4|E|654|1|
+655|Quote-part de résultat sur opérations faites en commun|FR|FRA||3|E|65|0|
+6551|Quote-part de bénéfice transférée (comptabilité du gérant)|FR|FRA||4|E|655|1|
+6555|Quote-part de perte supportée (comptabilité des associés non gérants)|FR|FRA||4|E|655|1|
+658|Charges diverses de gestion courante|FR|FRA||3|E|65|1|
+66|Charges financières|FR|FRA||2|E|6|0|
+661|Charges d'intérêts|FR|FRA||3|E|66|0|
+6611|Intérêts des emprunts et dettes|FR|FRA||4|E|661|0|
+66116|des emprunts et dettes assimilées|FR|FRA||5|E|6611|1|
+66117|des dettes rattachées à des participations|FR|FRA||5|E|6611|1|
+6615|Intérêts des comptes courants et des dépôts créditeurs|FR|FRA||4|E|661|1|
+6616|Intérêts bancaires et sur opérations de financement (escompte,...)|FR|FRA||4|E|661|1|
+6617|Intérêts des obligations cautionnées|FR|FRA||4|E|661|1|
+6618|Intérêts des autres dettes|FR|FRA||4|E|661|0|
+66181|Intérêt des dettes commerciales|FR|FRA||5|E|6618|1|
+66188|Intérêt des dettes diverses|FR|FRA||5|E|6618|1|
+664|Pertes sur créances liées à des participations|FR|FRA||3|E|66|1|
+665|Escomptes accordés|FR|FRA||3|E|66|1|
+666|Pertes de change|FR|FRA||3|E|66|1|
+667|Charges nettes sur cessions de valeurs mobilières de placement|FR|FRA||3|E|66|1|
+668|Autres charges financières|FR|FRA||3|E|66|1|
+67|Charges exceptionnelles|FR|FRA||2|E|6|0|
+671|Charges exceptionnelles sur opérations de gestion|FR|FRA||3|E|67|0|
+6711|Pénalités sur marchés (et dédits payés sur achats et ventes)|FR|FRA||4|E|671|1|
+6712|Pénalités, amendes fiscales et pénales|FR|FRA||4|A|671|1|
+6713|Dons, libéralités|FR|FRA||4|E|671|1|
+6714|Créances devenues irrécouvrables dans l'exercice|FR|FRA||4|E|671|1|
+6715|Subventions accordées|FR|FRA||4|E|671|1|
+6717|Rappel d'impôts (autres qu'impôts sur les bénéfices)|FR|FRA||4|E|671|1|
+6718|Autres charges exceptionnelles sur opérations de gestion|FR|FRA||4|E|671|1|
+672|(Compte à la disposition des entités pour enregistrer, en cours d'exercice, le|FR|FRA||3|E|67|1|
+675|Valeurs comptables des éléments d'actif cédés|FR|FRA||3|E|67|0|
+6751|Immobilisations incorporelles|FR|FRA||4|E|675|1|
+6752|Immobilisations corporelles|FR|FRA||4|E|675|1|
+6756|Immobilisations financières|FR|FRA||4|E|675|1|
+6758|Autres éléments d'actif|FR|FRA||4|E|675|1|
+678|Autres charges exceptionnelles|FR|FRA||3|E|67|0|
+6781|Malis provenant de clauses d'indexation|FR|FRA||4|E|678|1|
+6782|Lots|FR|FRA||4|E|678|1|
+6783|Malis provenant du rachat par l'entreprise d'actions et obligations émises par|FR|FRA||4|E|678|1|
+6788|Charges exceptionnelles diverses|FR|FRA||4|E|678|1|
+68|Dotations aux amortissements et provisions|FR|FRA||2|E|6|0|
+681|Dotations aux amortissements et aux provisions - Charges d'exploitation|FR|FRA||3|E|68|0|
+6811|Dotations aux amortissements sur imm. incorporelles et corporelles|FR|FRA||4|E|681|0|
+68111|Immobilisations incorporelles|FR|FRA||5|E|6811|1|
+68112|Immobilisations corporelles|FR|FRA||5|E|6811|1|
+6812|Dotations aux amortissements des charges d'exploitation à répartir|FR|FRA||4|E|681|1|
+6815|Dotations aux provisions pour risques et charges d'exploitation|FR|FRA||4|E|681|1|
+6816|Dotations aux dépréciations des immobilisations incorporelles et corporelles|FR|FRA||4|E|681|0|
+68161|Immobilisations incorporelles|FR|FRA||5|E|6816|1|
+68162|Immobilisations corporelles|FR|FRA||5|E|6816|1|
+6817|Dotations aux provisions pour dépréciation des actifs circulants|FR|FRA||4|E|681|0|
+68173|Stocks et en-cours|FR|FRA||5|E|6817|1|
+68174|Créances|FR|FRA||5|E|6817|1|
+686|Dotations aux amortissements et aux provisions - Charges financières|FR|FRA||3|E|68|0|
+6861|Dotations aux amortissements des primes de remboursement des obligations|FR|FRA||4|E|686|1|
+6865|Dotations aux provisions pour risques et charges financiers|FR|FRA||4|E|686|1|
+6866|Dotations aux provisions pour dépréciation des éléments financiers|FR|FRA||4|E|686|0|
+68662|Immobilisations financières|FR|FRA||5|E|6866|1|
+68665|Valeurs mobilières de placement|FR|FRA||5|E|6866|1|
+6868|Autres dotations|FR|FRA||4|E|686|1|
+687|Dotations aux amortissements et aux provisions - Charges exceptionnelles|FR|FRA||3|E|68|0|
+6871|Dotations aux amortissements exceptionnels des immobilisations|FR|FRA||4|E|687|1|
+6872|Dotations aux provisions réglementées (immobilisations)|FR|FRA||4|E|687|0|
+68725|Amortissements dérogatoires|FR|FRA||5|E|6872|1|
+6873|Dotations aux provisions réglementées (stocks)|FR|FRA||4|E|687|1|
+6874|Dotations aux autres provisions réglementées|FR|FRA||4|E|687|1|
+6875|Dotations aux provisions pour risques et charges exceptionnels|FR|FRA||4|E|687|1|
+6876|Dotations aux dépréciations exceptionnelles|FR|FRA||4|E|687|1|
+69|Participation des salariés - impôts sur les bénéfices et assimilés|FR|FRA||2|E|6|0|
+691|Participation des salariés aux résultats|FR|FRA||3|E|69|1|
+695|Impôts sur les bénéfices|FR|FRA||3|E|69|0|
+6951|Impôts dus en France|FR|FRA||4|E|695|1|
+6952|Contribution additionnelle à l'impôt sur les bénéfices|FR|FRA||4|E|695|1|
+6954|Impôts dus à l'étranger|FR|FRA||4|E|695|1|
+696|Suppléments d'impôt sur les sociétés liés aux distributions|FR|FRA||3|E|69|1|
+697|Imposition forfaitaire annuelle des sociétés|FR|FRA||3|E|69|1|
+698|Intégration fiscale|FR|FRA||3|E|69|0|
+6981|Intégration fiscale - Charges|FR|FRA||4|E|698|1|
+6989|Intégration fiscale - Produits|FR|FRA||4|E|698|1|
+699|Produits - Reports en arrière des déficits|FR|FRA||3|E|69|1|
+7|Comptes de produits|FR|FRA||1|I| |0|
+70|Ventes de produits fabriqués, prestations de services, marchandises|FR|FRA||2|I|7|0|
+701|Ventes de produits finis|FR|FRA||3|I|70|0|
+7011|Produits finis (ou groupe) A|FR|FRA||4|I|701|1|
+7012|Produits finis (ou groupe) B|FR|FRA||4|I|701|1|
+702|Ventes de produits intermédiaires|FR|FRA||3|I|70|1|
+703|Ventes de produits résiduels|FR|FRA||3|I|70|1|
+704|Travaux|FR|FRA||3|I|70|0|
+7041|Travaux de catégorie (ou activité) A|FR|FRA||4|I|704|1|
+7042|Travaux de catégorie (ou activité) B|FR|FRA||4|I|704|1|
+705|Etudes|FR|FRA||3|I|70|1|
+706|Prestations de services|FR|FRA||3|I|70|1|
+707|Ventes de marchandises|FR|FRA||3|I|70|0|
+7071|Marchandises (ou groupe) A|FR|FRA||4|I|707|1|
+7072|Marchandises (ou groupe) B|FR|FRA||4|I|707|1|
+708|Produits des activités annexes|FR|FRA||3|A|70|0|
+7081|Produits des services exploités dans l'intérêt du personnel|FR|FRA||4|A|708|1|
+7082|Commissions et courtages|FR|FRA||4|A|708|1|
+7083|Locations diverses|FR|FRA||4|A|708|1|
+7084|Mise à disposition de personnel facturée|FR|FRA||4|A|708|1|
+7085|Ports et frais accessoires facturés|FR|FRA||4|A|708|1|
+7086|Bonis sur reprises d'emballages consignés|FR|FRA||4|A|708|1|
+7087|Bonifications obtenues des clients et primes sur ventes|FR|FRA||4|A|708|1|
+7088|Autres produits d'activités annexes (cessions d'approvisionnements)|FR|FRA||4|A|708|1|
+709|Rabais, remises et ristournes accordés par l'entreprise|FR|FRA||3|I|70|0|
+7091|sur ventes de produits finis|FR|FRA||4|I|709|1|
+7092|sur ventes de produits intermédiaires|FR|FRA||4|I|709|1|
+7094|sur travaux|FR|FRA||4|I|709|1|
+7095|sur études|FR|FRA||4|I|709|1|
+7096|sur prestations de services|FR|FRA||4|I|709|1|
+7097|sur ventes de marchandises|FR|FRA||4|I|709|1|
+7098|sur produits des activités annexes|FR|FRA||4|I|709|1|
+71|Production stockée (ou déstockage)|FR|FRA||2|I|7|0|
+713|Variation des stocks (en-cours de production, produits)|FR|FRA||3|I|71|0|
+7133|Variation des en-cours de production de biens|FR|FRA||4|I|713|0|
+71331|Produits en cours|FR|FRA||5|I|7133|1|
+71335|Travaux en cours|FR|FRA||5|I|7133|1|
+7134|Variation des en-cours de production de services|FR|FRA||4|I|713|0|
+71341|Etudes en cours|FR|FRA||5|I|7134|1|
+71345|Prestations de services en cours|FR|FRA||5|I|7134|1|
+7135|Variation des stocks de produits|FR|FRA||4|I|713|0|
+71351|Produits intermédiaires|FR|FRA||5|I|7135|1|
+71355|Produits finis|FR|FRA||5|I|7135|1|
+71358|Produits résiduels|FR|FRA||5|I|7135|1|
+72|Production immobilisée|FR|FRA||2|I|7|0|
+721|Immobilisations incorporelles|FR|FRA||3|I|72|1|
+722|Immobilisations corporelles|FR|FRA||3|A|72|1|
+73|Bénéfice net de la période des transactions à long terme|FR|FRA||2|I|7|0|
+731|Résultat net de la période sur transactions en cours (à subdiviser par transaction)|FR|FRA||3|I|73|1|
+739|Revenu net de la période sur les transactions terminées|FR|FRA||3|I|73|1|
+74|Subventions d'exploitation|FR|FRA||2|I|7|1|
+75|Autres produits de gestion courante|FR|FRA||2|I|7|0|
+751|Redevances pour concessions, brevets, licences, marques, procédés, logiciels,|FR|FRA||3|I|75|0|
+7511|Redevances pour concessions, brevets, licences, marques, procédés, logiciels|FR|FRA||4|I|751|1|
+7516|Droits d'auteur et de reproduction|FR|FRA||4|I|751|1|
+7518|Autres droits et valeurs similaires|FR|FRA||4|I|751|1|
+752|Revenus des immeubles non affectés à des activités professionnelles|FR|FRA||3|I|75|1|
+753|Jetons de présence et rémunérations d'administrateurs, gérants,...|FR|FRA||3|I|75|1|
+754|Ristournes perçues des coopératives (provenant des excédents)|FR|FRA||3|I|75|1|
+755|Quotes-parts de résultat sur opérations faites en commun|FR|FRA||3|I|75|0|
+7551|Quote-part de perte transférée (comptabilité du gérant)|FR|FRA||4|I|755|1|
+7555|Quote-part de bénéfice attribuée (comptabilité des associés non-gérants)|FR|FRA||4|I|755|1|
+758|Produits divers de gestion courante|FR|FRA||3|I|75|1|
+76|Produits financiers|FR|FRA||2|I|7|0|
+761|Produits de participations|FR|FRA||3|I|76|0|
+7611|Revenus des titres de participation|FR|FRA||4|I|761|1|
+7616|Revenus sur autres formes de participation|FR|FRA||4|I|761|1|
+7617|Revenus des créances rattachées à des participations|FR|FRA||4|I|761|1|
+762|Produits des autres immobilisations financières|FR|FRA||3|I|76|0|
+7621|Revenus des titres immobilisés|FR|FRA||4|I|762|1|
+7626|Revenus des prêts|FR|FRA||4|I|762|1|
+7627|Revenus des créances immobilisées|FR|FRA||4|I|762|1|
+763|Revenus des autres créances|FR|FRA||3|I|76|0|
+7631|Revenus des créances commerciales|FR|FRA||4|I|763|1|
+7638|Revenus des créances diverses|FR|FRA||4|I|763|1|
+764|Revenus des valeurs mobilières de placement|FR|FRA||3|I|76|1|
+765|Escomptes obtenus|FR|FRA||3|I|76|1|
+766|Gains de change|FR|FRA||3|I|76|1|
+767|Produits nets sur cessions de valeurs mobilières de placement|FR|FRA||3|I|76|1|
+768|Autres produits financiers|FR|FRA||3|I|76|1|
+77|Produits exceptionnels|FR|FRA||2|I|7|0|
+771|Produits exceptionnels sur opérations de gestion|FR|FRA||3|I|77|0|
+7711|Dédits et pénalités perçus sur achats et sur ventes|FR|FRA||4|I|771|1|
+7713|Libéralités reçues|FR|FRA||4|I|771|1|
+7714|Rentrées sur créances amorties|FR|FRA||4|I|771|1|
+7715|Subventions d'équilibre|FR|FRA||4|I|771|1|
+7717|Dégrèvements d'impôts autres qu'impôts sur les bénéfices|FR|FRA||4|I|771|1|
+7718|Autres produits exceptionnels sur opérations de gestion|FR|FRA||4|I|771|1|
+772|(Compte à la disposition des entités pour enregistrer, en cours d'exercice, le|FR|FRA||3|I|77|1|
+775|Produits des cessions d'éléments d'actif|FR|FRA||3|I|77|0|
+7751|Immobilisations incorporelles|FR|FRA||4|I|775|1|
+7752|Immobilisations corporelles|FR|FRA||4|I|775|1|
+7756|Immobilisations financières|FR|FRA||4|I|775|1|
+7758|Autres éléments d'actif|FR|FRA||4|I|775|1|
+777|Quote-part des subventions d'investissement virée au résultat de l'exercice|FR|FRA||3|I|77|1|
+778|Autres produits exceptionnels|FR|FRA||3|I|77|0|
+7781|Bonis provenant de clauses d'indexation|FR|FRA||4|I|778|1|
+7782|Lots|FR|FRA||4|I|778|1|
+7783|Bonus provenant du rachat par l'entreprise d'actions et d'obligations émises|FR|FRA||4|I|778|1|
+7788|Produits exceptionnels divers|FR|FRA||4|I|778|1|
+78|Reprises sur amortissements et provisions|FR|FRA||2|I|7|0|
+781|Reprises sur amortissements et provisions (à inscrire dans les produits d'explo|FR|FRA||3|I|78|0|
+7811|Reprises sur amortissements des immobilisations incorporelles et corporelles|FR|FRA||4|I|781|0|
+78111|Immobilisations incorporelles|FR|FRA||5|I|7811|1|
+78112|Immobilisations corporelles|FR|FRA||5|I|7811|1|
+7815|Reprises sur provisions pour risques et charges d'exploitation|FR|FRA||4|I|781|1|
+7816|Reprises sur dépréciations des immobilisations incorporelles et corporelles|FR|FRA||4|I|781|0|
+78161|Immobilisations incorporelles|FR|FRA||5|I|7816|1|
+78162|Immobilisations corporelles|FR|FRA||5|I|7816|1|
+7817|Reprises sur provisions pour dépréciation des actifs circulants|FR|FRA||4|I|781|0|
+78173|Stocks et en-cours|FR|FRA||5|I|7817|1|
+78174|Créances|FR|FRA||5|I|7817|1|
+786|Reprises sur provisions pour risques (à inscrire dans les produits financiers)|FR|FRA||3|I|78|0|
+7865|Reprises sur provisions pour risques et charges financiers|FR|FRA||4|I|786|1|
+7866|Reprises sur provisions pour dépréciation des éléments financiers|FR|FRA||4|I|786|0|
+78662|Immobilisations financières|FR|FRA||5|I|7866|1|
+78665|Valeurs mobilières de placements|FR|FRA||5|I|7866|1|
+787|Reprises sur provisions (à inscrire dans les produits exceptionnels)|FR|FRA||3|I|78|0|
+7872|Reprises sur provisions réglementées (immobilisations)|FR|FRA||4|I|787|0|
+78725|Amortissements dérogatoires|FR|FRA||5|I|7872|1|
+78726|Provision spéciale de réévaluation|FR|FRA||5|I|7872|1|
+78727|Plus-values réinvesties|FR|FRA||5|I|7872|1|
+7873|Reprises sur provisions réglementées (stocks)|FR|FRA||4|I|787|1|
+7874|Reprises sur autres provisions réglementées|FR|FRA||4|I|787|1|
+7875|Reprises sur provisions pour risques et charges exceptionnels|FR|FRA||4|I|787|1|
+7876|Reprises sur dépréciations exceptionnelles|FR|FRA||4|I|787|1|
+79|Transferts de charges|FR|FRA||2|I|7|0|
+791|Transferts de charges d'exploitation|FR|FRA||3|I|79|1|
+796|Transferts de charges financières|FR|FRA||3|I|79|1|
+797|Transferts de charges exceptionnelles|FR|FRA||3|I|79|1|
+8|Comptes spéciaux|FR|FRA||1|N| |0|
+80|Engagements|FR|FRA||2|N|8|0|
+801|Engagements donnés par l'entité|FR|FRA||3|N|80|0|
+8011|Avals, cautions, garanties|FR|FRA||4|N|801|1|
+8014|Effets circulant sous l'endos de l'entité|FR|FRA||4|N|801|1|
+8016|Redevances crédit-bail restant à courir|FR|FRA||4|N|801|0|
+80161|Crédit-bail mobilier|FR|FRA||5|N|8016|1|
+80165|Crédit-bail immobilier|FR|FRA||5|N|8016|1|
+8018|Autres engagements donnés|FR|FRA||4|N|801|1|
+802|Engagements reçus par l'entité|FR|FRA||3|N|80|0|
+8021|Avals, cautions, garanties|FR|FRA||4|N|802|1|
+8024|Créances escomptées non échues|FR|FRA||4|N|802|1|
+8026|Engagements reçus pour utilisation en crédit-bail|FR|FRA||4|N|802|0|
+80261|Crédit-bail mobilier|FR|FRA||5|N|8026|1|
+80265|Crédit-bail immobilier|FR|FRA||5|N|8026|1|
+8028|Autres engagements reçus|FR|FRA||4|N|802|1|
+809|Contrepartie des engagements|FR|FRA||3|N|80|0|
+8091|Contrepartie 801|FR|FRA||4|N|809|1|
+8092|Contrepartie 802|FR|FRA||4|N|809|1|
+88|Résultat en instance d'affectation|FR|FRA||2|N|8|1|
+89|Bilan|FR|FRA||2|N|8|1|

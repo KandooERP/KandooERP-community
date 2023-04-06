@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form xmlns="http://namespaces.querix.com/2015/fglForms">
+	<form.rootContainer>
+		<GridPanel classNames="fcls_rootContainer" preferredSize="1072.0,692.0" verticalAlignment="Stretch" horizontalAlignment="Stretch" fieldTable="" identifier="rootContainer">
+			<GridPanel.gridRowDefinitions>
+				<GridRowDefinition gridLengthValue=""/>
+				<GridRowDefinition gridLengthValue=""/>
+				<GridRowDefinition gridLengthValue="100%"/>
+				<GridRowDefinition gridLengthValue=""/>
+			</GridPanel.gridRowDefinitions>
+			<GridPanel.gridColumnDefinitions>
+				<GridColumnDefinition gridLengthValue="100%"/>
+			</GridPanel.gridColumnDefinitions>
+			<GridPanel classNames="fcls_title_cnt" visible="true" verticalAlignment="Top" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="cntTitle">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="100%"/>
+					<GridColumnDefinition gridLengthValue=""/>
+				</GridPanel.gridColumnDefinitions>
+				<Label isDynamic="true" text="Voucher Scan" classNames="fcls_title_lb" visible="true" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="header_text"/>
+				<Label isDynamic="true" text="P121" classNames="fcls_title_lb" visible="true" gridItemLocation="1,0,1,1" fieldTable="" identifier="lbFormName"/>
+			</GridPanel>
+			<GridPanel classNames="fcls_detail_cnt,fcls_data_cnt,fcls_align_left" visible="true" verticalAlignment="Top" horizontalAlignment="Left" gridItemLocation="0,1,1,1" fieldTable="formonly" identifier="cntDetail1">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue=""/>
+					<GridColumnDefinition gridLengthValue=""/>
+					<GridColumnDefinition gridLengthValue=""/>
+				</GridPanel.gridColumnDefinitions>
+				<TextField toCase="Up" dataType="Char,,,,8" classNames="fcls_data_widget,fcls_align_left,fcls_length_10qch" preferredSize="9qch,1qch" toolTip=" Enter Vendor code for voucher selection - (W)" gridItemLocation="1,0,1,1" comment=" Enter Vendor code for voucher selection - (W)" fieldTable="voucher" identifier="vend_code"/>
+				<TextField dataType="Char,,,,30" classNames="fcls_data_widget,fcls_align_left,fcls_length_30qch" preferredSize="31qch,1qch" toolTip=" Full name or description of vendor" gridItemLocation="2,0,1,1" comment=" Full name or description of vendor" fieldTable="vendor" identifier="name_text"/>
+				<TextField dataType="Char,,,,3" classNames="fcls_data_widget,fcls_align_left,fcls_length_10qch" preferredSize="4qch,1qch" gridItemLocation="1,1,1,1" fieldTable="vendor" identifier="currency_code"/>
+				<Label isDynamic="true" text="Vendor Code" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,0,1,1" fieldTable="" identifier="lb51"/>
+				<Label isDynamic="true" text="Currency" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,1,1,1" fieldTable="" identifier="lb52"/>
+			</GridPanel>
+			<Table rowCount="12" preferredSize="75qch,12qch" gridItemLocation="0,2,1,1" fieldTable="" identifier="sr_voucher">
+				<TableColumn fieldTable="" identifier="tc_scroll_flag">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="2rem" gridMaxLength="2rem" gridMinLength="2rem"/>
+					</TableColumn.columnLength>
+					<CheckBox dataType="Char,,,," fieldTable="formonly" identifier="scroll_flag">
+						<CheckBox.checkedValue>
+							<StringLiteral stringValue="*"/>
+						</CheckBox.checkedValue>
+						<CheckBox.uncheckedValue>
+							<NullLiteral/>
+						</CheckBox.uncheckedValue>
+					</CheckBox>
+				</TableColumn>
+				<TableColumn text="Voucher" fieldTable="" identifier="tc_vouch_code">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="12%"/>
+					</TableColumn.columnLength>
+					<TextField toCase="Up" dataType="Integer,,,," toolTip=" Voucher number to be scanned" comment=" Voucher number to be scanned" fieldTable="voucher" identifier="vouch_code"/>
+				</TableColumn>
+				<TableColumn text="Vendor Invoice" fieldTable="" identifier="tc_inv_text">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="22.6667%"/>
+					</TableColumn.columnLength>
+					<TextField toCase="Up" dataType="Char,,,,20" toolTip=" Identifies appropriate vendor invoice number" comment=" Identifies appropriate vendor invoice number" fieldTable="voucher" identifier="inv_text"/>
+				</TableColumn>
+				<TableColumn text="Date" fieldTable="" identifier="tc_vouch_date">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="14.6667%"/>
+					</TableColumn.columnLength>
+					<TextField dataType="Date,,,," toolTip=" Date of vendor invoice" comment=" Date of vendor invoice" fieldTable="voucher" identifier="vouch_date"/>
+				</TableColumn>
+				<TableColumn text="GL Year" fieldTable="" identifier="tc_year_num">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="6.66667%"/>
+					</TableColumn.columnLength>
+					<TextField dataType="SmallInt,,,," toolTip=" Accounting year which corresponds to this voucher" comment=" Accounting year which corresponds to this voucher" fieldTable="voucher" identifier="year_num"/>
+				</TableColumn>
+				<TableColumn text="GL Period" fieldTable="" identifier="tc_period_num">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="5.33333%"/>
+					</TableColumn.columnLength>
+					<TextField dataType="SmallInt,,,," toolTip=" Accounting period which corresponds to this voucher" comment=" Accounting period which corresponds to this voucher" fieldTable="voucher" identifier="period_num"/>
+				</TableColumn>
+				<TableColumn text="Posted" fieldTable="" identifier="tc_post_flag">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="3rem" gridMinLength="3rem" gridMaxLength="3rem"/>
+					</TableColumn.columnLength>
+					<CheckBox dataType="Char,,,,1" toolTip=" Transaction Posted to General Ledger. -(Y) Posted - (N) Not Posted " comment=" Transaction Posted to General Ledger. -(Y) Posted - (N) Not Posted " fieldTable="voucher" identifier="post_flag">
+						<CheckBox.checkedValue>
+							<StringLiteral stringValue="Y"/>
+						</CheckBox.checkedValue>
+						<CheckBox.uncheckedValue>
+							<StringLiteral stringValue="N"/>
+						</CheckBox.uncheckedValue>
+					</CheckBox>
+				</TableColumn>
+				<TableColumn text="Total Amt" fieldTable="" identifier="tc_total_amt">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="17.3333%"/>
+					</TableColumn.columnLength>
+					<TextField dataType="Decimal,,,2,16" toolTip="Total amount of voucher" comment="Total amount of voucher" fieldTable="voucher" identifier="total_amt"/>
+				</TableColumn>
+				<TableColumn text="Paid Amt" fieldTable="" identifier="tc_paid_amt">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="-23.8524%"/>
+					</TableColumn.columnLength>
+					<TextField dataType="Decimal,,,2,16" toolTip="Total amount paid against this voucher" comment="Total amount paid against this voucher" fieldTable="voucher" identifier="paid_amt"/>
+				</TableColumn>
+			</Table>
+			<GridPanel classNames="fcls_statusbar_cnt" visible="true" verticalAlignment="Top" gridItemLocation="0,3,1,1" fieldTable="formonly" identifier="cntStatusBar">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="100%"/>
+				</GridPanel.gridColumnDefinitions>
+				<Label isDynamic="true" text="" classNames="fcls_sblabel" visible="true" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="lbInfo1"/>
+				<Label isDynamic="true" text="" classNames="fcls_sblabel" visible="true" gridItemLocation="0,1,1,1" fieldTable="formonly" identifier="lbInfo2"/>
+			</GridPanel>
+		</GridPanel>
+	</form.rootContainer>
+	<form.screenRecords>
+		<ScreenRecord identifier="sr_voucher" fields="formonly.scroll_flag,voucher.vouch_code,voucher.inv_text,voucher.vouch_date,voucher.year_num,voucher.period_num,voucher.post_flag,voucher.total_amt,voucher.paid_amt"/>
+		<ScreenRecord identifier="formonly" fields="formonly.scroll_flag"/>
+		<ScreenRecord identifier="vendor" fields="vendor.name_text,vendor.currency_code"/>
+		<ScreenRecord identifier="voucher" fields="voucher.vend_code,voucher.vouch_code,voucher.inv_text,voucher.vouch_date,voucher.year_num,voucher.period_num,voucher.post_flag,voucher.total_amt,voucher.paid_amt"/>
+	</form.screenRecords>
+</form>
+

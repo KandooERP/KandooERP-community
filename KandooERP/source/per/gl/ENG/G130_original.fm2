@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form xmlns="http://namespaces.querix.com/2015/fglForms">
+	<form.rootContainer>
+		<GridPanel classNames="fcls_rootContainer" verticalAlignment="Stretch" horizontalAlignment="Stretch" fieldTable="" identifier="rootContainer">
+			<GridPanel.gridRowDefinitions>
+				<GridRowDefinition gridLengthValue=""/>
+				<GridRowDefinition gridLengthValue="" gridMinLength="111"/>
+				<GridRowDefinition gridLengthValue="100%"/>
+				<GridRowDefinition gridLengthValue=""/>
+			</GridPanel.gridRowDefinitions>
+			<GridPanel.gridColumnDefinitions>
+				<GridColumnDefinition gridLengthValue="100%"/>
+			</GridPanel.gridColumnDefinitions>
+			<GridPanel classNames="fcls_title_cnt" visible="true" verticalAlignment="Top" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="cntTitle">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="100%"/>
+					<GridColumnDefinition gridLengthValue=""/>
+				</GridPanel.gridColumnDefinitions>
+				<Label isDynamic="true" text="Company Scan" classNames="fcls_title_lb" visible="true" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="header_text"/>
+				<Label isDynamic="true" text="G130" classNames="fcls_title_lb" visible="true" gridItemLocation="1,0,1,1" fieldTable="" identifier="lbFormName"/>
+			</GridPanel>
+			<GridPanel visible="true" identifier="c7" gridItemLocation="0,1,1,1" classNames="fcls_align_left" horizontalAlignment="Left" verticalAlignment="Top">
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue=""/>
+					<GridColumnDefinition gridLengthValue=""/>
+					<GridColumnDefinition gridLengthValue=""/>
+				</GridPanel.gridColumnDefinitions>
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<Label text="Current User" isDynamic="true" visible="true" identifier="lb3" gridItemLocation="0,0,1,1"/>
+				<TextField visible="true" identifier="current_sign_on_code" gridItemLocation="1,0,1,1" classNames="fcls_length_10qch,fcls_data_widget,fcls_align_left"/>
+				<TextField visible="true" identifier="current_name_text" gridItemLocation="2,0,1,1" classNames="fcls_length_30qch,fcls_data_widget,fcls_align_left"/>
+				<Label text="Currently assigned company" isDynamic="true" visible="true" identifier="lb4" gridItemLocation="0,1,1,1"/>
+				<TextField visible="true" identifier="current_cmpy_code" gridItemLocation="1,1,1,1" classNames="fcls_length_10qch,fcls_data_widget,fcls_align_left"/>
+				<TextField visible="true" identifier="current_cmpy_name" gridItemLocation="2,1,1,1" classNames="fcls_length_30qch,fcls_data_widget,fcls_align_left"/>
+				<Label text="Current account mask code" isDynamic="true" visible="true" identifier="lb6" gridItemLocation="0,2,1,1"/>
+				<TextField visible="true" identifier="current_account_mask_code" gridItemLocation="1,2,2,1" classNames="fcls_length_10qch,fcls_data_widget,fcls_align_left"/>
+			</GridPanel>
+			<Table rowCount="10" location="2qch,2qch" preferredSize="71qch,12qch" gridItemLocation="0,2,1,1" fieldTable="" identifier="sr_company">
+				<TableColumn text="ID" fieldTable="" identifier="a1">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="10rem"/>
+					</TableColumn.columnLength>
+					<TextField toCase="Up" autonext="true" dataType="Char,,,,2" fieldTable="company" identifier="cmpy_code"/>
+				</TableColumn>
+				<TableColumn text="Name" fieldTable="" identifier="f000">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="30rem"/>
+					</TableColumn.columnLength>
+					<TextField dataType="Char,,,,30" fieldTable="company" identifier="name_text"/>
+				</TableColumn>
+				<TableColumn text="City" fieldTable="" identifier="f005">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="30rem"/>
+					</TableColumn.columnLength>
+					<TextField dataType="Char,,,,30" fieldTable="company" identifier="city_text"/>
+				</TableColumn>
+				<TableColumn text="Phone" fieldTable="" identifier="f006">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="100%"/>
+					</TableColumn.columnLength>
+					<TextField dataType="Char,,,,20" fieldTable="company" identifier="tele_text"/>
+				</TableColumn>
+			</Table>
+			<GridPanel classNames="fcls_statusbar_cnt" visible="true" verticalAlignment="Top" gridItemLocation="0,3,1,1" fieldTable="formonly" identifier="cntStatusBar">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="100%"/>
+				</GridPanel.gridColumnDefinitions>
+				<Label isDynamic="true" text="" classNames="fcls_sblabel" visible="true" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="lbInfo1"/>
+				<Label isDynamic="true" text="" classNames="fcls_sblabel" visible="true" gridItemLocation="0,1,1,1" fieldTable="formonly" identifier="lbInfo2"/>
+			</GridPanel>
+		</GridPanel>
+	</form.rootContainer>
+	<form.screenRecords>
+		<ScreenRecord identifier="sr_company" fields="cmpy_code,name_text,city_text,tele_text"/>
+		<ScreenRecord identifier="company" fields="cmpy_code,name_text,city_text,tele_text"/>
+		<ScreenRecord identifier="FormOnly" fields="current_sign_on_code,current_cmpy_code,current_name_text,current_cmpy_name,current_account_mask_code"/>
+	</form.screenRecords>
+</form>
+

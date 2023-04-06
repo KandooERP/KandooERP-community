@@ -1,0 +1,895 @@
+101|Capital|A|10||Y|OK|
+1011|Capital souscrit - non appelé|A|10||Y|OK|
+1012|Capital souscrit - appelé, non versé|A|10||Y|OK|
+1013|Capital souscrit - appelé, versé|A|10||Y|OK|
+10132|Capital amorti|A|10||Y|OK|
+1018|Capital souscrit soumis à des réglementations particulières|A|10||Y|OK|
+104|Primes liées au capital social|A|10||Y|OK|
+1041|Primes d'émission|A|10||Y|OK|
+1042|Primes de fusion|A|10||Y|OK|
+1043|Primes d'apport|A|10||Y|OK|
+1044|Primes de conversion d'obligations en actions|A|10||Y|OK|
+1045|Bons de souscription d'actions|A|10||Y|OK|
+105|Ecarts de réévaluation|A|10||Y|OK|
+1051|Réserve spéciale de réévaluation|A|10||Y|OK|
+1052|Ecart de réévaluation libre|A|10||Y|OK|
+1053|Réserve de réévaluation|A|10||Y|OK|
+1055|Ecarts de réévaluation (autres opérations légales)|A|10||Y|OK|
+1057|Autres écarts de réévaluation en France|A|10||Y|OK|
+1058|Autres écarts de réévaluation à l'étranger|A|10||Y|OK|
+106|Réserves|A|10||Y|OK|
+1061|Réserve légale|A|10||Y|OK|
+10612|Plus-values nettes à long terme|A|10||Y|OK|
+1062|Réserves indisponibles|A|10||Y|OK|
+1063|Réserves statutaires ou contractuelles|A|10||Y|OK|
+1064|Réserves réglementées|A|10||Y|OK|
+10643|Réserves consécutives à l'octroi de subventions d'investissement|A|10||Y|OK|
+10648|Autres réserves réglementées|A|10||Y|OK|
+1068|Autres réserves|A|10||Y|OK|
+10688|Réserves diverses|A|10||Y|OK|
+107|Ecart d'équivalence|A|10||Y|OK|
+108|Compte de l'exploitant|A|10||Y|OK|
+109|Actionnaires : capital souscrit - non appelé|A|10||Y|OK|
+110|Report à nouveau (solde créditeur)|A|11||Y|OK|
+119|Report à nouveau (solde débiteur)|A|11||Y|OK|
+120|Résultat de l'exercice (bénéfice)|A|12||Y|OK|
+129|Résultat de l'exercice (perte)|A|12||Y|OK|
+131|Subventions d'équipement|A|13||Y|OK|
+1311|Etat|A|13||Y|OK|
+1312|Régions|A|13||Y|OK|
+1313|Départements|A|13||Y|OK|
+1314|Communes|A|13||Y|OK|
+1315|Collectivités publiques|A|13||Y|OK|
+1316|Entreprises publiques|A|13||Y|OK|
+1317|Entreprises et organismes privés|A|13||Y|OK|
+1318|Autres|A|13||Y|OK|
+138|Autres subventions d'investissement|A|13||Y|OK|
+139|Subventions d'investissement inscrites au compte de résultat|A|13||Y|OK|
+1391|Subventions d'équipement|A|13||Y|OK|
+13911|Etat|A|13||Y|OK|
+13912|Régions|A|13||Y|OK|
+13913|Départements|A|13||Y|OK|
+13914|Communes |A|13||Y|OK|
+13915|Collectivités publiques|A|13||Y|OK|
+13916|Entreprises publiques|A|13||Y|OK|
+13917|Entreprises et organismes privés|A|13||Y|OK|
+13918|Autres|A|13||Y|OK|
+1398|Autres subventions d'investissement|A|13||Y|OK|
+142|Provisions réglementées relatives aux immobilisations|A|14||Y|OK|
+1423|Provisions pour reconstitution des gisements miniers et pétroliers|A|14||Y|OK|
+1424|Provisions pour investissement (participation des salariés)|A|14||Y|OK|
+143|Provisions réglementées relatives aux stocks|A|14||Y|OK|
+1431|Hausse des prix|A|14||Y|OK|
+1432|Fluctuation des cours|A|14||Y|OK|
+144|Provisions réglementées relatives aux autres éléments de l'actif|A|14||Y|OK|
+145|Amortissements dérogatoires|A|14||Y|OK|
+146|Provision spéciale de réévaluation|A|14||Y|OK|
+147|Plus-values réinvesties|A|14||Y|OK|
+148|Autres provisions réglementées|A|14||Y|OK|
+151|Provisions pour risques|A|15||Y|OK|
+1511|Provisions pour litiges|A|15||Y|OK|
+1512|Provisions pour garanties données aux clients|A|15||Y|OK|
+1513|Provisions pour pertes sur marchés à terme|A|15||Y|OK|
+1514|Provisions pour amendes et pénalités|A|15||Y|OK|
+1515|Provisions pour pertes de change|A|15||Y|OK|
+1516|Provisions pour pertes sur contrats|A|15||Y|OK|
+1518|Autres provisions pour risques|A|15||Y|OK|
+153|Provisions pour pensions et obligations similaires|A|15||Y|OK|
+154|Provisions pour restructurations|A|15||Y|OK|
+155|Provisions pour impôts|A|15||Y|OK|
+156|Provisions pour renouvellement des immobilisations (entreprises concessionnaires) |A|15||Y|OK|
+157|Provisions pour charges à répartir sur plusieurs exercices|A|15||Y|OK|
+1572|Provisions pour gros entretien ou grandes révisions|A|15||Y|OK|
+158|Autres provisions pour charges|A|15||Y|OK|
+1581|Provisions pour remises en état|A|15||Y|OK|
+161|Emprunts obligataires convertibles|A|16||Y|OK|
+163|Autres emprunts obligataires|A|16||Y|OK|
+164|Emprunts auprès des établissements de crédit|A|16||Y|OK|
+165|Dépôts et cautionnements reçus|A|16||Y|OK|
+1651|Dépôts|A|16||Y|OK|
+1655|Cautionnements|A|16||Y|OK|
+166|Participation des salariés aux résultats|A|16||Y|OK|
+1661|Comptes bloqués|A|16||Y|OK|
+1662|Fonds de participation|A|16||Y|OK|
+167|Emprunts et dettes assortis de conditions particulières|A|16||Y|OK|
+1671|Emissions de titres participatifs|A|16||Y|OK|
+1674|Avances conditionnées de l'Etat|A|16||Y|OK|
+1675|Emprunts participatifs|A|16||Y|OK|
+168|Autres emprunts et dettes assimilées|A|16||Y|OK|
+1681|Autres emprunts|A|16||Y|OK|
+1685|Rentes viagères capitalisées|A|16||Y|OK|
+1687|Autres dettes|A|16||Y|OK|
+1688|Intérêts courus|A|16||Y|OK|
+16881|sur emprunts obligataires convertibles|A|16||Y|OK|
+16883|sur autres emprunts obligataires|A|16||Y|OK|
+16884|sur emprunts auprès des établissements de crédit|A|16||Y|OK|
+16885|sur dépôts et cautionnements reçus|A|16||Y|OK|
+16886|sur participation des salariés aux résultats|A|16||Y|OK|
+16887|sur emprunts et dettes assortis de conditions particulières|A|16||Y|OK|
+16888|sur autres emprunts et dettes assimilées|A|16||Y|OK|
+169|Primes de remboursement des obligations |A|16||Y|OK|
+171|Dettes rattachées à des participations (groupe)|A|17||Y|OK|
+174|Dettes rattachées à des participations (hors groupe)|A|17||Y|OK|
+178|Dettes rattachées à des sociétés en participation|A|17||Y|OK|
+1781|Principal|A|17||Y|OK|
+1788|Intérêts courus|A|17||Y|OK|
+181|Comptes de liaison des établissements|A|18||Y|OK|
+186|Biens et prestations de services échangés entre établissements (charges)|A|18||Y|OK|
+187|Biens et prestations de services échangés entre établissements (produits)|A|18||Y|OK|
+188|Comptes de liaison des sociétés en participation |A|18||Y|OK|
+201|Frais d'établissement|L|20||Y|OK|
+2011|Frais de constitution|L|20||Y|OK|
+2012|Frais de premier établissement|L|20||Y|OK|
+20121|Frais de prospection|L|20||Y|OK|
+20122|Frais de publicité|L|20||Y|OK|
+2013|Frais d'augmentation de capital et d'opérations|L|20||Y|OK|
+203|Frais de recherche et de développement|L|20||Y|OK|
+205|Concessions et droits similaires, brevets, licences, marques, procédés, logiciels, droits|L|20||Y|OK|
+206|Droit au bail|L|20||Y|OK|
+207|Fonds commercial|L|20||Y|OK|
+208|Autres immobilisations incorporelles|L|20||Y|OK|
+211|Terrains|L|21||Y|OK|
+2111|Terrains nus|L|21||Y|OK|
+2112|Terrains aménagés|L|21||Y|OK|
+2113|Sous-sols et sursols|L|21||Y|OK|
+2114|Terrains de gisement|L|21||Y|OK|
+21141|Carrières|L|21||Y|OK|
+2115|Terrains bâtis|L|21||Y|OK|
+21151|Ensembles immobiliers industriels|L|21||Y|OK|
+21155|Ensembles immobiliers administratifs et commerciaux|L|21||Y|OK|
+21158|Autres ensembles immobiliers|L|21||Y|OK|
+211581|Affectés aux opérations professionnelles|L|21||Y|OK|
+211588|Affectés aux opérations non professionnelles|L|21||Y|OK|
+2116|Compte d'ordre sur immobilisations|L|21||Y|OK|
+212|Agencements et aménagements de terrains|L|21||Y|OK|
+213|Constructions|L|21||Y|OK|
+2131|Bâtiments |L|21||Y|OK|
+21311|Ensembles immobiliers industriels|L|21||Y|OK|
+21315|Ensembles immobiliers administratifs et commerciaux|L|21||Y|OK|
+21318|Autres ensembles immobiliers|L|21||Y|OK|
+213181|Affectés aux opérations professionnelles|L|21||Y|OK|
+213188|Affectés aux opérations non professionnelles|L|21||Y|OK|
+2135|Installations générales - agencements - aménagements des constructions|L|21||Y|OK|
+2138|Ouvrages d'infrastructure|L|21||Y|OK|
+21381|Voies de terre|L|21||Y|OK|
+21382|Voies de fer|L|21||Y|OK|
+21383|Voies d'eau|L|21||Y|OK|
+21384|Barrages|L|21||Y|OK|
+21385|Pistes d'aérodromes|L|21||Y|OK|
+214|Constructions sur sol d'autrui|L|21||Y|OK|
+215|Installations techniques, matériels et outillage industriels|L|21||Y|OK|
+2151|Installations complexes spécialisées|L|21||Y|OK|
+21511|sur sol propre|L|21||Y|OK|
+21514|sur sol d'autrui|L|21||Y|OK|
+2153|Installations à caractère spécifique|L|21||Y|OK|
+21531|sur sol propre|L|21||Y|OK|
+21534|sur sol d'autrui|L|21||Y|OK|
+2154|Matériels industriels|L|21||Y|OK|
+2155|Outillage industriel|L|21||Y|OK|
+2157|Agencements et aménagements des matériels et outillage industriels|L|21||Y|OK|
+218|Autres immobilisations corporelles|L|21||Y|OK|
+2181|Installations générales, agencements, aménagements divers|L|21||Y|OK|
+2182|Matériel de transport|L|21||Y|OK|
+2183|Matériel de bureau et matériel informatique|L|21||Y|OK|
+2184|Mobilier|L|21||Y|OK|
+2185|Cheptel|L|21||Y|OK|
+2186|Emballages récupérables|L|21||Y|OK|
+231|Immobilisations corporelles en cours|L|23||Y|OK|
+2312|Terrains|L|23||Y|OK|
+2313|Constructions|L|23||Y|OK|
+2315|Installations techniques, matériel et outillage industriels|L|23||Y|OK|
+2318|Autres immobilisations corporelles|L|23||Y|OK|
+232|Immobilisations incorporelles en cours|L|23||Y|OK|
+237|Avances et acomptes versés sur immobilisations incorporelles|L|23||Y|OK|
+238|Avances et acomptes versés sur commandes d'immobilisations corporelles|L|23||Y|OK|
+2382|Terrains|L|23||Y|OK|
+2383|Constructions|L|23||Y|OK|
+2385|Installations techniques, matériel et outillage industriels|L|23||Y|OK|
+2388|Autres immobilisations corporelles|L|23||Y|OK|
+261|Titres de participation|L|26||Y|OK|
+2611|Actions|L|26||Y|OK|
+2618|Autres titres|L|26||Y|OK|
+266|Autres formes de participation|L|26||Y|OK|
+267|Créances rattachées à des participations|L|26||Y|OK|
+2671|Créances rattachées à des participations (groupe)|L|26||Y|OK|
+2674|Créances rattachées à des participations (hors groupe)|L|26||Y|OK|
+2675|Versements représentatifs d'apports non capitalisés (appel de fonds)|L|26||Y|OK|
+2676|Avances consolidables|L|26||Y|OK|
+2677|Autres créances rattachées à des participations|L|26||Y|OK|
+2678|Intérêts courus|L|26||Y|OK|
+268|Créances rattachées à des sociétés en participation|L|26||Y|OK|
+2681|Principal|L|26||Y|OK|
+2688|Intérêts courus|L|26||Y|OK|
+269|Versements restant à effectuer sur titres de participation non libérés|L|26||Y|OK|
+271|Titres immobilisés autres que les titres immobilisés de l'activité de portefeuille|L|27||Y|OK|
+2711|Actions|L|27||Y|OK|
+2718|Autres titres|L|27||Y|OK|
+272|Titres immobilisés|L|27||Y|OK|
+2721|Obligations|L|27||Y|OK|
+2722|Bons|L|27||Y|OK|
+273|Titres immobilisés de l'activité de portefeuille|L|27||Y|OK|
+274|Prêts|L|27||Y|OK|
+2741|Prêts participatifs|L|27||Y|OK|
+2742|Prêts aux associés|L|27||Y|OK|
+2743|Prêts au personnel|L|27||Y|OK|
+2748|Autres prêts|L|27||Y|OK|
+275|Dépôts et cautionnements versés|L|27||Y|OK|
+2751|Dépôts|L|27||Y|OK|
+2755|Cautionnements|L|27||Y|OK|
+276|Autres créances immobilisées|L|27||Y|OK|
+2761|Créances diverses|L|27||Y|OK|
+2768|Intérêts courus|L|27||Y|OK|
+27682|sur titres immobilisés|L|27||Y|OK|
+27684|sur prêts|L|27||Y|OK|
+27685|sur dépôts et cautionnements|L|27||Y|OK|
+27688|sur créances diverses|L|27||Y|OK|
+277|Actions propres ou parts propres|L|27||Y|OK|
+2771|Actions propres ou parts propres|L|27||Y|OK|
+2772|Actions propres ou parts propres en voie d’annulation|L|27||Y|OK|
+279|Versements restant à effectuer sur titres immobilisés non libérés|L|27||Y|OK|
+280|Amortissements des immobilisations incorporelles|L|28||Y|OK|
+2801|Frais d'établissement|L|28||Y|OK|
+2803|Frais de recherche et de développement |L|28||Y|OK|
+2805|Concessions et droits similaires, brevets, licences, logiciels, droits et valeurs|L|28||Y|OK|
+2807|Fonds commercial|L|28||Y|OK|
+2808|Autres immobilisations incorporelles|L|28||Y|OK|
+281|Amortissements des immobilisations corporelles|L|28||Y|OK|
+2811|Terrains de gisement|L|28||Y|OK|
+2812|Agencements, aménagements de terrains|L|28||Y|OK|
+2813|Constructions (même ventilation que celle du compte 213)|L|28||Y|OK|
+2814|Constructions sur sol d'autrui|L|28||Y|OK|
+2815|Installations, matériel et outillage industriels|L|28||Y|OK|
+2818|Autres immobilisations corporelles|L|28||Y|OK|
+282|Amortissements des immobilisations mises en concession|L|28||Y|OK|
+290|Dépréciations des immobilisations incorporelles|L|29||Y|OK|
+2905|Marques, procédés, droits et valeurs similaires|L|29||Y|OK|
+2906|Droit au bail|L|29||Y|OK|
+2907|Fonds commercial|L|29||Y|OK|
+2908|Autres immobilisations incorporelles|L|29||Y|OK|
+291|Dépréciations des immobilisations corporelles|L|29||Y|OK|
+2911|Terrains (autres que terrains de gisement)|L|29||Y|OK|
+292|Dépréciations des immobilisations mises en concession|L|29||Y|OK|
+293|Dépréciations des immobilisations en cours|L|29||Y|OK|
+2931|Immobilisations corporelles en cours|L|29||Y|OK|
+2932|Immobilisations incorporelles en cours|L|29||Y|OK|
+296|Provisions pour dépréciation des participations et créances rattachées à des|L|29||Y|OK|
+2961|Titres de participation|L|29||Y|OK|
+2966|Autres formes de participation|L|29||Y|OK|
+2967|Créances rattachées à des participations|L|29||Y|OK|
+2968|Créances rattachées à des sociétés en participation|L|29||Y|OK|
+297|Provisions pour dépréciation des autres immobilisations financières |L|29||Y|OK|
+2971|Titres immobilisés autres que les titres immobilisés de l'activité de|L|29||Y|OK|
+2972|Titres immobilisés - droit de créance|L|29||Y|OK|
+2973|Titres immobilisés de l'activité de portefeuille|L|29||Y|OK|
+2974|Prêts (même ventilation que celle du compte 274)|L|29||Y|OK|
+2975|Dépôts et cautionnements versés|L|29||Y|OK|
+2976|Autres créances immobilisées|L|29||Y|OK|
+311|Matières (ou groupe) A|A|31||Y|OK|
+312|Matières (ou groupe) B|A|31||Y|OK|
+317|Fournitures A, B, C,|A|31||Y|OK|
+321|Matières consommables|A|32||Y|OK|
+3211|Matières (ou groupe) C|A|32||Y|OK|
+3212|Matières (ou groupe) D|A|32||Y|OK|
+322|Fournitures consommables|A|32||Y|OK|
+3221|Combustibles|A|32||Y|OK|
+3222|Produits d'entretien|A|32||Y|OK|
+3223|Fournitures d'atelier et d'usine|A|32||Y|OK|
+3224|Fournitures de magasin|A|32||Y|OK|
+3225|Fournitures de bureau|A|32||Y|OK|
+326|Emballages|A|32||Y|OK|
+3261|Emballages perdus|A|32||Y|OK|
+3265|Emballages récupérables non identifiables|A|32||Y|OK|
+3267|Emballages à usage mixte|A|32||Y|OK|
+331|Produits en cours|A|33||Y|OK|
+3311|Produits en cours P 1|A|33||Y|OK|
+3312|Produits en cours P 2|A|33||Y|OK|
+335|Travaux en cours|A|33||Y|OK|
+3351|Travaux en cours T 1|A|33||Y|OK|
+3352|Travaux en cours T 2|A|33||Y|OK|
+341|Etudes en cours|A|34||Y|OK|
+3411|Etudes en cours E 1|A|34||Y|OK|
+3412|Etudes en cours E 2 |A|34||Y|OK|
+345|Prestations de services en cours|A|34||Y|OK|
+3451|Prestations de services S 1|A|34||Y|OK|
+3452|Prestations de services S 2|A|34||Y|OK|
+351|Produits intermédiaires|A|35||Y|OK|
+3511|Produits intermédiaires (ou groupe) A|A|35||Y|OK|
+3512|Produits intermédiaires (ou groupe) B|A|35||Y|OK|
+355|Produits finis|A|35||Y|OK|
+3551|Produits finis (ou groupe) A|A|35||Y|OK|
+3552|Produits finis (ou groupe) B|A|35||Y|OK|
+358|Produits résiduels (ou matières de récupération)|A|35||Y|OK|
+3581|Déchets|A|35||Y|OK|
+3585|Rebuts|A|35||Y|OK|
+3586|Matières de récupération|A|35||Y|OK|
+371|Marchandises (ou groupe) A|A|37||Y|OK|
+372|Marchandises (ou groupe) B|A|37||Y|OK|
+391|Provisions pour dépréciation des matières premières (et fournitures)|A|39||Y|OK|
+3911|Matières (ou groupe A)|A|39||Y|OK|
+3912|Matières (ou groupe B)|A|39||Y|OK|
+3917|Fournitures A, B, C,|A|39||Y|OK|
+392|Provisions pour dépréciation des autres approvisionnements|A|39||Y|OK|
+3921|Matières consommables|A|39||Y|OK|
+3922|Fournitures consommables|A|39||Y|OK|
+3926|Emballages|A|39||Y|OK|
+393|Provisions pour dépréciation des en-cours de production de biens|A|39||Y|OK|
+3931|Produits en cours|A|39||Y|OK|
+3935|Travaux en cours|A|39||Y|OK|
+394|Provisions pour dépréciation des en-cours de production de services|A|39||Y|OK|
+3941|Etudes en cours (même ventilation que celle du compte 341)|A|39||Y|OK|
+3945|Prestations de services en cours|A|39||Y|OK|
+395|Provisions pour dépréciation des stocks de produits|A|39||Y|OK|
+3951|Produits intermédiaires|A|39||Y|OK|
+3955|Produits finis|A|39||Y|OK|
+397|Provisions pour dépréciation des stocks de marchandises|A|39||Y|OK|
+3971|Marchandise (ou groupe A)|A|39||Y|OK|
+3972|Marchandise (ou groupe B) |A|39||Y|OK|
+400|Fournisseurs et Comptes rattachés|?|40||Y|OK|
+401|Fournisseurs|?|40||Y|OK|
+4011|Fournisseurs - Achats de biens et prestations de services|?|40||Y|OK|
+4017|Fournisseurs - Retenues de garantie|?|40||Y|OK|
+403|Fournisseurs - Effets à payer|?|40||Y|OK|
+404|Fournisseurs d'immobilisations|?|40||Y|OK|
+4041|Fournisseurs - Achats d'immobilisations|?|40||Y|OK|
+4047|Fournisseurs d'immobilisations - Retenues de garantie|?|40||Y|OK|
+405|Fournisseurs d'immobilisations - Effets à payer|?|40||Y|OK|
+408|Fournisseurs - Factures non parvenues|?|40||Y|OK|
+4081|Fournisseurs|?|40||Y|OK|
+4084|Fournisseurs d'immobilisations|?|40||Y|OK|
+4088|Fournisseurs - Intérêts courus|?|40||Y|OK|
+409|Fournisseurs débiteurs|?|40||Y|OK|
+4091|Fournisseurs - Avances et acomptes versés sur commandes|?|40||Y|OK|
+4096|Fournisseurs - Créances pour emballages et matériel à rendre|?|40||Y|OK|
+4097|Fournisseurs - Autres avoirs|?|40||Y|OK|
+40971|Fournisseurs d'exploitation|?|40||Y|OK|
+40974|Fournisseurs d'immobilisations|?|40||Y|OK|
+4098|Rabais, remises, ristournes à obtenir et autres avoirs non encore reçus|?|40||Y|OK|
+410|Clients et comptes rattachés|?|41||Y|OK|
+411|Clients|?|41||Y|OK|
+4111|Clients - Ventes de biens ou de prestations de services|?|41||Y|OK|
+4117|Clients - Retenues de garantie|?|41||Y|OK|
+413|Clients - Effets à recevoir|?|41||Y|OK|
+416|Clients douteux ou litigieux|?|41||Y|OK|
+418|Clients - Produits non encore facturés |?|41||Y|OK|
+4181|Clients - Factures à établir|?|41||Y|OK|
+4188|Clients - Intérêts courus|?|41||Y|OK|
+419|Clients créditeurs|?|41||Y|OK|
+4191|Clients - Avances et acomptes reçus sur commandes|?|41||Y|OK|
+4196|Clients - Dettes sur emballages et matériels consignés|?|41||Y|OK|
+4197|Clients - Autres avoirs|?|41||Y|OK|
+4198|Rabais, remises, ristournes à accorder et autres avoirs à établir|?|41||Y|OK|
+421|Personnel - Rémunérations dues|?|42||Y|OK|
+422|Comités d'entreprises, d'établissement, ...|?|42||Y|OK|
+424|Participation des salariés aux résultats|?|42||Y|OK|
+4246|Réserve spéciale (art. L. 442-2 du code du travail)|?|42||Y|OK|
+4248|Comptes courants|?|42||Y|OK|
+425|Personnel - Avances et acomptes|?|42||Y|OK|
+426|Personnel - Dépôts|?|42||Y|OK|
+427|Personnel - Oppositions|?|42||Y|OK|
+428|Personnel - Charges à payer et produits à recevoir|?|42||Y|OK|
+4282|Dettes provisionnées pour congés à payer|?|42||Y|OK|
+4284|Dettes provisionnées pour participation des salariés aux résultats|?|42||Y|OK|
+4286|Autres charges à payer|?|42||Y|OK|
+4287|Produits à recevoir|?|42||Y|OK|
+431|Sécurité sociale|?|43||Y|OK|
+437|Autres organismes sociaux|?|43||Y|OK|
+438|Organismes sociaux - Charges à payer et produits à recevoir|?|43||Y|OK|
+4382|Charges sociales sur congés à payer|?|43||Y|OK|
+4386|Autres charges à payer|?|43||Y|OK|
+4387|Produits à recevoir|?|43||Y|OK|
+441|État - Subventions à recevoir|?|44||Y|OK|
+4411|Subventions d'investissement |?|44||Y|OK|
+4417|Subventions d'exploitation|?|44||Y|OK|
+4418|Subventions d'équilibre|?|44||Y|OK|
+4419|Avances sur subventions|?|44||Y|OK|
+442|Etat - Impôts et taxes recouvrables sur des tiers|?|44||Y|OK|
+4424|Obligataires|?|44||Y|OK|
+4425|Associés|?|44||Y|OK|
+443|Opérations particulières avec l'Etat, les collectivités publiques, les organismes|?|44||Y|OK|
+4431|Créances sur l'Etat résultant de la suppression de la règle du décalage d'un|?|44||Y|OK|
+4438|Intérêts courus sur créances figurant au compte 4431|?|44||Y|OK|
+444|Etat - Impôts sur les bénéfices|?|44||Y|OK|
+445|Etat - Taxes sur le chiffre d'affaires|?|44||Y|OK|
+4452|T.V.A. due intracommunautaire|?|44||Y|OK|
+4455|Taxes sur le chiffre d'affaires à décaisser|?|44||Y|OK|
+44551|T.V.A. à décaisser|?|44||Y|OK|
+44558|Taxes assimilées à la T.V.A.|?|44||Y|OK|
+4456|Taxes sur le chiffre d'affaires déductibles|?|44||Y|OK|
+44562|T.V.A. sur immobilisations|?|44||Y|OK|
+44563|T.V.A. transférée par d'autres entreprises|?|44||Y|OK|
+44566|T.V.A. sur autres biens et services|?|44||Y|OK|
+44567|Crédit de T.V.A. à reporter|?|44||Y|OK|
+44568|Taxes assimilées à la T.V.A.|?|44||Y|OK|
+4457|Taxes sur le chiffre d'affaires collectées par l'entreprise|?|44||Y|OK|
+44571|T.V.A. collectée|?|44||Y|OK|
+44578|Taxes assimilées à la T.V.A.|?|44||Y|OK|
+4458|Taxes sur le chiffre d'affaires à régulariser ou en attente|?|44||Y|OK|
+44581|Acomptes - Régime simplifié d'imposition|?|44||Y|OK|
+44582|Acomptes - Régime du forfait|?|44||Y|OK|
+44583|Remboursement de taxes sur le chiffre d'affaires demandé|?|44||Y|OK|
+44584|T.V.A. récupérée d'avance|?|44||Y|OK|
+44586|Taxes sur le chiffre d'affaires sur factures non parvenues |?|44||Y|OK|
+44587|Taxes sur le chiffre d'affaires sur factures à établir|?|44||Y|OK|
+446|Obligations cautionnées|?|44||Y|OK|
+447|Autres impôts, taxes et versements assimilés|?|44||Y|OK|
+448|Etat - Charges à payer et produits à recevoir|?|44||Y|OK|
+4482|Charges fiscales sur congés à payer|?|44||Y|OK|
+4486|Charges à payer|?|44||Y|OK|
+4487|Produits à recevoir|?|44||Y|OK|
+449|Quotas d'émission à restituer à l'Etat|?|44||Y|OK|
+451|Groupe|?|45||Y|OK|
+455|Associés - Comptes courants|?|45||Y|OK|
+4551|Principal|?|45||Y|OK|
+4558|Intérêts courus|?|45||Y|OK|
+456|Associés - Opérations sur le capital|?|45||Y|OK|
+4561|Associés - Comptes d'apport en société|?|45||Y|OK|
+45611|Apports en nature|?|45||Y|OK|
+45615|Apports en numéraire|?|45||Y|OK|
+4562|Apporteurs - Capital appelé, non versé|?|45||Y|OK|
+45621|Actionnaires - Capital souscrit et appelé, non versé|?|45||Y|OK|
+45625|Associés - Capital appelé, non versé|?|45||Y|OK|
+4563|Associés - Versements reçus sur augmentation de capital|?|45||Y|OK|
+4564|Associés - Versements anticipés|?|45||Y|OK|
+4566|Actionnaires défaillants|?|45||Y|OK|
+4567|Associés - Capital à rembourser|?|45||Y|OK|
+457|Associés - Dividendes à payer|?|45||Y|OK|
+458|Associés - Opérations faites en commun et en G.I.E.|?|45||Y|OK|
+4581|Opérations courantes|?|45||Y|OK|
+4588|Intérêts courus|?|45||Y|OK|
+462|Créances sur cessions d'immobilisations|?|46||Y|OK|
+464|Dettes sur acquisitions de valeurs mobilières de placement |?|46||Y|OK|
+465|Créances sur cessions de valeurs mobilières de placement|?|46||Y|OK|
+467|Autres comptes débiteurs ou créditeurs|?|46||Y|OK|
+468|Divers - Charges à payer et produits à recevoir|?|46||Y|OK|
+4686|Charges à payer|?|46||Y|OK|
+4687|Produits à recevoir|?|46||Y|OK|
+476|Différence de conversion - Actif|?|47||Y|OK|
+4761|Diminution des créances|?|47||Y|OK|
+4762|Augmentation des dettes|?|47||Y|OK|
+4768|Différences compensées par couverture de change|?|47||Y|OK|
+477|Différences de conversion - Passif|?|47||Y|OK|
+4771|Augmentation des créances|?|47||Y|OK|
+4772|Diminution des dettes|?|47||Y|OK|
+4778|Différences compensées par couverture de change|?|47||Y|OK|
+478|Autres comptes transitoires|?|47||Y|OK|
+481|Charges à répartir sur plusieurs exercices|?|48||Y|OK|
+4816|Frais d'émission des emprunts|?|48||Y|OK|
+486|Charges constatées d'avance|?|48||Y|OK|
+487|Produits constatés d'avance|?|48||Y|OK|
+488|Comptes de répartition périodique des charges et des produits|?|48||Y|OK|
+4886|Charges|?|48||Y|OK|
+4887|Produits|?|48||Y|OK|
+489|Quotas d'émission alloués par l'Etat|?|48||Y|OK|
+491|Provisions pour dépréciation des comptes de clients|?|49||Y|OK|
+495|Provisions pour dépréciation des comptes du groupe et des associés|?|49||Y|OK|
+4951|Comptes du groupe|?|49||Y|OK|
+4955|Comptes courants des associés|?|49||Y|OK|
+4958|Opérations faites en commun et en G.I.E. |?|49||Y|OK|
+496|Provisions pour dépréciation des comptes de débiteurs divers|?|49||Y|OK|
+4962|Créances sur cessions d'immobilisations|?|49||Y|OK|
+4965|Créances sur cessions de valeurs mobilières de placement|?|49||Y|OK|
+4967|Autres comptes débiteurs |?|49||Y|OK|
+501|Parts dans des entreprises liées|?|50||Y|OK|
+502|Actions propres|?|50||Y|OK|
+503|Actions|?|50||Y|OK|
+5031|Titres cotés|?|50||Y|OK|
+5035|Titres non cotés|?|50||Y|OK|
+504|Autres titres conférant un droit de propriété|?|50||Y|OK|
+505|Obligations et bons émis par la société et rachetés par elle|?|50||Y|OK|
+506|Obligations|?|50||Y|OK|
+5061|Titres cotés|?|50||Y|OK|
+5065|Titres non cotés|?|50||Y|OK|
+507|Bons du Trésor et bons de caisse à court terme|?|50||Y|OK|
+508|Autres valeurs mobilières de placement et autres créances assimilées|?|50||Y|OK|
+5081|Autres valeurs mobilières|?|50||Y|OK|
+5082|Bons de souscription|?|50||Y|OK|
+5088|Intérêts courus sur obligations, bons et valeurs assimilés|?|50||Y|OK|
+509|Versements restant à effectuer sur valeurs mobilières de placement non libérées|?|50||Y|OK|
+511|Valeurs à l'encaissement|?|51||Y|OK|
+5111|Coupons échus à l'encaissement|?|51||Y|OK|
+5112|Chèques à encaisser|?|51||Y|OK|
+5113|Effets à l'encaissement|?|51||Y|OK|
+5114|Effets à l'escompte|?|51||Y|OK|
+512|Banques|?|51||Y|OK|
+5121|Comptes en monnaie nationale|?|51||Y|OK|
+5124|Comptes en devises|?|51||Y|OK|
+514|Chèques postaux|?|51||Y|OK|
+515|" Caisses " du Trésor et des établissements publics|?|51||Y|OK|
+516|Sociétés de bourse |?|51||Y|OK|
+517|Autres organismes financiers|?|51||Y|OK|
+518|Intérêts courus|?|51||Y|OK|
+5181|Intérêts courus à payer|?|51||Y|OK|
+5188|Intérêts courus à recevoir|?|51||Y|OK|
+519|Concours bancaires courants|?|51||Y|OK|
+5191|Crédit de mobilisation de créances commerciales (CMCC)|?|51||Y|OK|
+5193|Mobilisation de créances nées à l'étranger|?|51||Y|OK|
+5198|Intérêts courus sur concours bancaires courants|?|51||Y|OK|
+531|Caisse siège social|?|53||Y|OK|
+5311|Caisse en monnaie nationale|?|53||Y|OK|
+5314|Caisse en devises|?|53||Y|OK|
+532|Caisse succursale (ou usine) A|?|53||Y|OK|
+533|Caisse succursale (ou usine) B|?|53||Y|OK|
+590|Provisions pour dépréciation des valeurs mobilières de placement|?|59||Y|OK|
+5903|Actions|?|59||Y|OK|
+5904|Autres titres conférant un droit de propriété|?|59||Y|OK|
+5906|Obligations|?|59||Y|OK|
+5908|Autres valeurs mobilières de placement et créances assimilées |?|59||Y|OK|
+601|Achats stockés - Matières premières (et fournitures)|E|60||Y|OK|
+6011|Matières (ou groupe) A|E|60||Y|OK|
+6012|Matières (ou groupe) B|E|60||Y|OK|
+6017|Fournitures A, B, C, ...|E|60||Y|OK|
+602|Achats stockés - Autres approvisionnements|E|60||Y|OK|
+6021|Matières consommables|E|60||Y|OK|
+60211|Matières (ou groupe) C|E|60||Y|OK|
+60212|Matières (ou groupe) D|E|60||Y|OK|
+6022|Fournitures consommables|E|60||Y|OK|
+60221|Combustibles|E|60||Y|OK|
+60222|Produits d'entretien|E|60||Y|OK|
+60223|Fournitures d'atelier et d'usine|E|60||Y|OK|
+60224|Fournitures de magasin|E|60||Y|OK|
+60225|Fourniture de bureau|E|60||Y|OK|
+6026|Emballages|E|60||Y|OK|
+60261|Emballages perdus|E|60||Y|OK|
+60265|Emballages récupérables non identifiables|E|60||Y|OK|
+60267|Emballages à usage mixte|E|60||Y|OK|
+604|Achats d'études et prestations de services|E|60||Y|OK|
+605|Achats de matériel, équipements et travaux|E|60||Y|OK|
+606|Achats non stockés de matière et fournitures|E|60||Y|OK|
+6061|Fournitures non stockables (eau, énergie)|E|60||Y|OK|
+6063|Fournitures d'entretien et de petit équipement|E|60||Y|OK|
+6064|Fournitures administratives|E|60||Y|OK|
+6068|Autres matières et fournitures|E|60||Y|OK|
+607|Achats de marchandises|E|60||Y|OK|
+6071|Marchandise (ou groupe) A|E|60||Y|OK|
+6072|Marchandise (ou groupe) B |E|60||Y|OK|
+609|Rabais, remises et ristournes obtenus sur achats|E|60||Y|OK|
+6091|de matières premières (et fournitures)|E|60||Y|OK|
+6092|d'autres approvisionnements stockés|E|60||Y|OK|
+6094|d'études et prestations de services|E|60||Y|OK|
+6095|de matériel, équipements et travaux|E|60||Y|OK|
+6096|d'approvisionnements non stockés|E|60||Y|OK|
+6097|de marchandises|E|60||Y|OK|
+6098|Rabais, remises et ristournes non affectés|E|60||Y|OK|
+603|Variations des stocks (approvisionnements et marchandises)|E|60||Y|OK|
+6031|Variation des stocks de matières premières (et fournitures)|E|60||Y|OK|
+6032|Variation des stocks des autres approvisionnements|E|60||Y|OK|
+6037|Variation des stocks de marchandises|E|60||Y|OK|
+611|Sous-traitance générale|E|61||Y|OK|
+612|Redevances de crédit-bail|E|61||Y|OK|
+6122|Crédit-bail mobilier|E|61||Y|OK|
+6125|Crédit-bail immobilier|E|61||Y|OK|
+613|Locations|E|61||Y|OK|
+6132|Locations immobilières|E|61||Y|OK|
+6135|Locations mobilières|E|61||Y|OK|
+6136|Malis sur emballages|E|61||Y|OK|
+614|Charges locatives et de copropriété|E|61||Y|OK|
+615|Entretien et réparations|E|61||Y|OK|
+6152|Sur biens immobiliers|E|61||Y|OK|
+6155|Sur biens mobiliers|E|61||Y|OK|
+6156|Maintenance|E|61||Y|OK|
+616|Primes d'assurances|E|61||Y|OK|
+6161|Multirisques|E|61||Y|OK|
+6162|Assurance obligatoire dommage construction|E|61||Y|OK|
+6163|Assurance-transport |E|61||Y|OK|
+61636|sur achats|E|61||Y|OK|
+61637|sur ventes|E|61||Y|OK|
+61638|sur autres biens|E|61||Y|OK|
+6164|Risques d'exploitation|E|61||Y|OK|
+6165|Insolvabilité clients|E|61||Y|OK|
+617|Etudes et recherches|E|61||Y|OK|
+618|Divers|E|61||Y|OK|
+6181|Documentation générale|E|61||Y|OK|
+6183|Documentation technique|E|61||Y|OK|
+6185|Frais de colloques, séminaires, conférences|E|61||Y|OK|
+619|Rabais, remises et ristournes obtenus sur services extérieurs|E|61||Y|OK|
+621|Personnel extérieur à l'entreprise|E|62||Y|OK|
+6211|Personnel intérimaire|E|62||Y|OK|
+6214|Personnel détaché ou prêté à l'entreprise|E|62||Y|OK|
+622|Rémunérations d'intermédiaires et honoraires|E|62||Y|OK|
+6221|Commissions et courtages sur achats|E|62||Y|OK|
+6222|Commissions et courtages sur ventes|E|62||Y|OK|
+6224|Rémunérations des transitaires|E|62||Y|OK|
+6225|Rémunérations d'affacturage|E|62||Y|OK|
+6226|Honoraires|E|62||Y|OK|
+6227|Frais d'actes et de contentieux|E|62||Y|OK|
+6228|Divers|E|62||Y|OK|
+623|Publicité, publications, relations publiques|E|62||Y|OK|
+6231|Annonces et insertions|E|62||Y|OK|
+6232|Echantillons|E|62||Y|OK|
+6233|Foires et expositions|E|62||Y|OK|
+6234|Cadeaux à la clientèle|E|62||Y|OK|
+6235|Primes|E|62||Y|OK|
+6236|Catalogues et imprimés|E|62||Y|OK|
+6237|Publications |E|62||Y|OK|
+6238|Divers (pourboires, dont courant)|E|62||Y|OK|
+624|Transports de biens et transports collectifs du personnel|E|62||Y|OK|
+6241|Transports sur achats|E|62||Y|OK|
+6242|Transports sur ventes|E|62||Y|OK|
+6243|Transports entre établissements ou chantiers|E|62||Y|OK|
+6244|Transports administratifs|E|62||Y|OK|
+6247|Transports collectifs du personnel|E|62||Y|OK|
+6248|Divers|E|62||Y|OK|
+625|Déplacements, missions et réceptions|E|62||Y|OK|
+6251|Voyages et déplacements|E|62||Y|OK|
+6255|Frais de déménagement|E|62||Y|OK|
+6256|Missions|E|62||Y|OK|
+6257|Réceptions|E|62||Y|OK|
+626|Frais postaux et de télécommunications|E|62||Y|OK|
+627|Services bancaires et assimilés|E|62||Y|OK|
+6271|Frais sur titres (achat, vente, garde)|E|62||Y|OK|
+6272|Commissions et frais sur émission d'emprunts|E|62||Y|OK|
+6275|Frais sur effets|E|62||Y|OK|
+6276|Location de coffres|E|62||Y|OK|
+6278|Autres frais et commissions sur prestations de services|E|62||Y|OK|
+628|Divers|E|62||Y|OK|
+6281|Concours divers (cotisations)|E|62||Y|OK|
+6284|Frais de recrutement de personnel|E|62||Y|OK|
+629|Rabais, remises et ristournes obtenus sur autres services extérieurs|E|62||Y|OK|
+631|Impôts, taxes et versements assimilés sur rémunérations (administrations des impôts)|E|63||Y|OK|
+6311|Taxe sur les salaires|E|63||Y|OK|
+6312|Taxe d'apprentissage|E|63||Y|OK|
+6313|Participation des employeurs à la formation professionnelle continue|E|63||Y|OK|
+6314|Cotisation pour défaut d'investissement obligatoire dans la construction |E|63||Y|OK|
+6318|Autres|E|63||Y|OK|
+633|Impôts, taxes et versements assimilés sur rémunérations (autres organismes)|E|63||Y|OK|
+6331|Versement de transport|E|63||Y|OK|
+6332|Allocations logement|E|63||Y|OK|
+6333|Participation des employeurs à la formation professionnelle continue|E|63||Y|OK|
+6334|Participation des employeurs à l'effort de construction|E|63||Y|OK|
+6335|Versements libératoires ouvrant droit à l'exonération de la taxe|E|63||Y|OK|
+6338|Autres|E|63||Y|OK|
+635|Autres impôts, taxes et versements assimilés (administrations des impôts)|E|63||Y|OK|
+6351|Impôts directs (sauf impôts sur les bénéfices)|E|63||Y|OK|
+63511|Taxe professionnelle|E|63||Y|OK|
+63512|Taxes foncières|E|63||Y|OK|
+63513|Autres impôts locaux|E|63||Y|OK|
+63514|Taxe sur les véhicules des sociétés|E|63||Y|OK|
+6352|Taxe sur le chiffre d'affaires non récupérables|E|63||Y|OK|
+6353|Impôts indirects|E|63||Y|OK|
+6354|Droits d'enregistrement et de timbre|E|63||Y|OK|
+63541|Droits de mutation|E|63||Y|OK|
+6358|Autres droits|E|63||Y|OK|
+637|Autres impôts, taxes et versements assimilés (autres organismes)|E|63||Y|OK|
+6371|Contribution sociale de solidarité à la charge des sociétés|E|63||Y|OK|
+6372|Taxes perçues par les organismes publics internationaux|E|63||Y|OK|
+6374|Impôts et taxes exigibles à l'étranger|E|63||Y|OK|
+6378|Taxes diverses|E|63||Y|OK|
+641|Rémunérations du personnel|E|64||Y|OK|
+6411|Salaires, appointements|E|64||Y|OK|
+6412|Congés payés|E|64||Y|OK|
+6413|Primes et gratifications|E|64||Y|OK|
+6414|Indemnités et avantages divers |E|64||Y|OK|
+6415|Supplément familial|E|64||Y|OK|
+644|Rémunération du travail de l'exploitant|E|64||Y|OK|
+645|Charges de sécurité sociale et de prévoyance|E|64||Y|OK|
+6451|Cotisations à l'Urssaf|E|64||Y|OK|
+6452|Cotisations aux mutuelles|E|64||Y|OK|
+6453|Cotisations aux caisses de retraites|E|64||Y|OK|
+6454|Cotisations aux Assedic|E|64||Y|OK|
+6458|Cotisations aux autres organismes sociaux|E|64||Y|OK|
+646|Cotisations sociales personnelles de l'exploitant|E|64||Y|OK|
+647|Autres charges sociales|E|64||Y|OK|
+6471|Prestations directes|E|64||Y|OK|
+6472|Versements aux comités d'entreprise et d'établissement|E|64||Y|OK|
+6473|Versements aux comités d'hygiène et de sécurité|E|64||Y|OK|
+6474|Versements aux autres œuvres sociales|E|64||Y|OK|
+6475|Médecine du travail, pharmacie|E|64||Y|OK|
+648|Autres charges de personnel|E|64||Y|OK|
+651|Redevances pour concessions, brevets, licences, marques, procédés, logiciels, droits et|E|65||Y|OK|
+6511|Redevances pour concessions, brevets, licences, marques, procédés, logiciels|E|65||Y|OK|
+6516|Droits d'auteur et de reproduction|E|65||Y|OK|
+6518|Autres droits et valeurs similaires|E|65||Y|OK|
+653|Jetons de présence|E|65||Y|OK|
+654|Pertes sur créances irrécouvrables|E|65||Y|OK|
+6541|Créances de l'exercice|E|65||Y|OK|
+6544|Créances des exercices antérieurs|E|65||Y|OK|
+655|Quote-part de résultat sur opérations faites en commun|E|65||Y|OK|
+6551|Quote-part de bénéfice transférée (comptabilité du gérant)|E|65||Y|OK|
+6555|Quote-part de perte supportée (comptabilité des associés non gérants)|E|65||Y|OK|
+658|Charges diverses de gestion courante|E|65||Y|OK|
+661|Charges d'intérêts|E|66||Y|OK|
+6611|Intérêts des emprunts et dettes|E|66||Y|OK|
+66116|des emprunts et dettes assimilées|E|66||Y|OK|
+66117|des dettes rattachées à des participations|E|66||Y|OK|
+6615|Intérêts des comptes courants et des dépôts créditeurs|E|66||Y|OK|
+6616|Intérêts bancaires et sur opérations de financement (escompte,...)|E|66||Y|OK|
+6617|Intérêts des obligations cautionnées|E|66||Y|OK|
+6618|Intérêts des autres dettes|E|66||Y|OK|
+66181|des dettes commerciales|E|66||Y|OK|
+66188|des dettes diverses|E|66||Y|OK|
+664|Pertes sur créances liées à des participations|E|66||Y|OK|
+665|Escomptes accordés|E|66||Y|OK|
+666|Pertes de change|E|66||Y|OK|
+667|Charges nettes sur cessions de valeurs mobilières de placement|E|66||Y|OK|
+668|Autres charges financières|E|66||Y|OK|
+671|Charges exceptionnelles sur opérations de gestion|E|67||Y|OK|
+6711|Pénalités sur marchés (et dédits payés sur achats et ventes)|E|67||Y|OK|
+6712|Pénalités, amendes fiscales et pénales|E|67||Y|OK|
+6713|Dons, libéralités|E|67||Y|OK|
+6714|Créances devenues irrécouvrables dans l'exercice|E|67||Y|OK|
+6715|Subventions accordées|E|67||Y|OK|
+6717|Rappel d'impôts (autres qu'impôts sur les bénéfices)|E|67||Y|OK|
+6718|Autres charges exceptionnelles sur opérations de gestion|E|67||Y|OK|
+672|(Compte à la disposition des entités pour enregistrer, en cours d'exercice, les charges|E|67||Y|OK|
+675|Valeurs comptables des éléments d'actif cédés|E|67||Y|OK|
+6751|Immobilisations incorporelles|E|67||Y|OK|
+6752|Immobilisations corporelles|E|67||Y|OK|
+6756|Immobilisations financières|E|67||Y|OK|
+6758|Autres éléments d'actif |E|67||Y|OK|
+678|Autres charges exceptionnelles|E|67||Y|OK|
+6781|Malis provenant de clauses d'indexation|E|67||Y|OK|
+6782|Lots|E|67||Y|OK|
+6783|Malis provenant du rachat par l'entreprise d'actions et obligations émises par|E|67||Y|OK|
+6788|Charges exceptionnelles diverses|E|67||Y|OK|
+681|Dotations aux amortissements et aux provisions - Charges d'exploitation|E|68||Y|OK|
+6811|Dotations aux amortissements sur imm. incorporelles et corporelles|E|68||Y|OK|
+68111|Immobilisations incorporelles|E|68||Y|OK|
+68112|Immobilisations corporelles|E|68||Y|OK|
+6812|Dotations aux amortissements des charges d'exploitation à répartir|E|68||Y|OK|
+6815|Dotations aux provisions pour risques et charges d'exploitation|E|68||Y|OK|
+6816|Dotations aux dépréciations des immobilisations incorporelles et corporelles|E|68||Y|OK|
+68161|Immobilisations incorporelles|E|68||Y|OK|
+68162|Immobilisations corporelles|E|68||Y|OK|
+6817|Dotations aux provisions pour dépréciation des actifs circulants|E|68||Y|OK|
+68173|Stocks et en-cours|E|68||Y|OK|
+68174|Créances|E|68||Y|OK|
+686|Dotations aux amortissements et aux provisions - Charges financières|E|68||Y|OK|
+6861|Dotations aux amortissements des primes de remboursement des obligations|E|68||Y|OK|
+6865|Dotations aux provisions pour risques et charges financiers|E|68||Y|OK|
+6866|Dotations aux provisions pour dépréciation des éléments financiers|E|68||Y|OK|
+68662|Immobilisations financières|E|68||Y|OK|
+68665|Valeurs mobilières de placement|E|68||Y|OK|
+6868|Autres dotations|E|68||Y|OK|
+687|Dotations aux amortissements et aux provisions - Charges exceptionnelles|E|68||Y|OK|
+6871|Dotations aux amortissements exceptionnels des immobilisations|E|68||Y|OK|
+6872|Dotations aux provisions réglementées (immobilisations)|E|68||Y|OK|
+68725|Amortissements dérogatoires|E|68||Y|OK|
+6873|Dotations aux provisions réglementées (stocks)|E|68||Y|OK|
+6874|Dotations aux autres provisions réglementées |E|68||Y|OK|
+6875|Dotations aux provisions pour risques et charges exceptionnels|E|68||Y|OK|
+6876|Dotations aux dépréciations exceptionnelles|E|68||Y|OK|
+691|Participation des salariés aux résultats|E|69||Y|OK|
+695|Impôts sur les bénéfices|E|69||Y|OK|
+6951|Impôts dus en France|E|69||Y|OK|
+6952|Contribution additionnelle à l'impôt sur les bénéfices|E|69||Y|OK|
+6954|Impôts dus à l'étranger|E|69||Y|OK|
+696|Suppléments d'impôt sur les sociétés liés aux distributions|E|69||Y|OK|
+697|Imposition forfaitaire annuelle des sociétés|E|69||Y|OK|
+698|Intégration fiscale|E|69||Y|OK|
+6981|Intégration fiscale - Charges|E|69||Y|OK|
+6989|Intégration fiscale - Produits|E|69||Y|OK|
+699|Produits - Reports en arrière des déficits |E|69||Y|OK|
+701|Ventes de produits finis|I|70||Y|OK|
+7011|Produits finis (ou groupe) A|I|70||Y|OK|
+7012|Produits finis (ou groupe) B|I|70||Y|OK|
+702|Ventes de produits intermédiaires|I|70||Y|OK|
+703|Ventes de produits résiduels|I|70||Y|OK|
+704|Travaux|I|70||Y|OK|
+7041|Travaux de catégorie (ou activité) A|I|70||Y|OK|
+7042|Travaux de catégorie (ou activité) B|I|70||Y|OK|
+705|Etudes|I|70||Y|OK|
+706|Prestations de services|I|70||Y|OK|
+707|Ventes de marchandises|I|70||Y|OK|
+7071|Marchandises (ou groupe) A|I|70||Y|OK|
+7072|Marchandises (ou groupe) B|I|70||Y|OK|
+708|Produits des activités annexes|I|70||Y|OK|
+7081|Produits des services exploités dans l'intérêt du personnel|I|70||Y|OK|
+7082|Commissions et courtages|I|70||Y|OK|
+7083|Locations diverses|I|70||Y|OK|
+7084|Mise à disposition de personnel facturée|I|70||Y|OK|
+7085|Ports et frais accessoires facturés|I|70||Y|OK|
+7086|Bonis sur reprises d'emballages consignés|I|70||Y|OK|
+7087|Bonifications obtenues des clients et primes sur ventes|I|70||Y|OK|
+7088|Autres produits d'activités annexes (cessions d'approvisionnements)|I|70||Y|OK|
+709|Rabais, remises et ristournes accordés par l'entreprise|I|70||Y|OK|
+7091|sur ventes de produits finis|I|70||Y|OK|
+7092|sur ventes de produits intermédiaires|I|70||Y|OK|
+7094|sur travaux|I|70||Y|OK|
+7095|sur études|I|70||Y|OK|
+7096|sur prestations de services |I|70||Y|OK|
+7097|sur ventes de marchandises|I|70||Y|OK|
+7098|sur produits des activités annexes|I|70||Y|OK|
+713|Variation des stocks (en-cours de production, produits)|I|71||Y|OK|
+7133|Variation des en-cours de production de biens|I|71||Y|OK|
+71331|Produits en cours|I|71||Y|OK|
+71335|Travaux en cours|I|71||Y|OK|
+7134|Variation des en-cours de production de services|I|71||Y|OK|
+71341|Etudes en cours|I|71||Y|OK|
+71345|Prestations de services en cours|I|71||Y|OK|
+7135|Variation des stocks de produits|I|71||Y|OK|
+71351|Produits intermédiaires|I|71||Y|OK|
+71355|Produits finis|I|71||Y|OK|
+71358|Produits résiduels|I|71||Y|OK|
+721|Immobilisations incorporelles|I|72||Y|OK|
+722|Immobilisations corporelles|I|72||Y|OK|
+751|Redevances pour concessions, brevets, licences, marques, procédés, logiciels, droits et|I|75||Y|OK|
+7511|Redevances pour concessions, brevets, licences, marques, procédés, logiciels|I|75||Y|OK|
+7516|Droits d'auteur et de reproduction|I|75||Y|OK|
+7518|Autres droits et valeurs similaires|I|75||Y|OK|
+752|Revenus des immeubles non affectés à des activités professionnelles|I|75||Y|OK|
+753|Jetons de présence et rémunérations d'administrateurs, gérants,...|I|75||Y|OK|
+754|Ristournes perçues des coopératives (provenant des excédents)|I|75||Y|OK|
+755|Quotes-parts de résultat sur opérations faites en commun|I|75||Y|OK|
+7551|Quote-part de perte transférée (comptabilité du gérant)|I|75||Y|OK|
+7555|Quote-part de bénéfice attribuée (comptabilité des associés non-gérants)|I|75||Y|OK|
+758|Produits divers de gestion courante |I|75||Y|OK|
+761|Produits de participations|I|76||Y|OK|
+7611|Revenus des titres de participation|I|76||Y|OK|
+7616|Revenus sur autres formes de participation|I|76||Y|OK|
+7617|Revenus des créances rattachées à des participations|I|76||Y|OK|
+762|Produits des autres immobilisations financières|I|76||Y|OK|
+7621|Revenus des titres immobilisés|I|76||Y|OK|
+7626|Revenus des prêts|I|76||Y|OK|
+7627|Revenus des créances immobilisées|I|76||Y|OK|
+763|Revenus des autres créances|I|76||Y|OK|
+7631|Revenus des créances commerciales|I|76||Y|OK|
+7638|Revenus des créances diverses|I|76||Y|OK|
+764|Revenus des valeurs mobilières de placement|I|76||Y|OK|
+765|Escomptes obtenus|I|76||Y|OK|
+766|Gains de change|I|76||Y|OK|
+767|Produits nets sur cessions de valeurs mobilières de placement|I|76||Y|OK|
+768|Autres produits financiers|I|76||Y|OK|
+771|Produits exceptionnels sur opérations de gestion|I|77||Y|OK|
+7711|Dédits et pénalités perçus sur achats et sur ventes|I|77||Y|OK|
+7713|Libéralités reçues|I|77||Y|OK|
+7714|Rentrées sur créances amorties|I|77||Y|OK|
+7715|Subventions d'équilibre|I|77||Y|OK|
+7717|Dégrèvements d'impôts autres qu'impôts sur les bénéfices|I|77||Y|OK|
+7718|Autres produits exceptionnels sur opérations de gestion|I|77||Y|OK|
+772|(Compte à la disposition des entités pour enregistrer, en cours d'exercice, les produits|I|77||Y|OK|
+775|Produits des cessions d'éléments d'actif|I|77||Y|OK|
+7751|Immobilisations incorporelles|I|77||Y|OK|
+7752|Immobilisations corporelles|I|77||Y|OK|
+7756|Immobilisations financières |I|77||Y|OK|
+7758|Autres éléments d'actif|I|77||Y|OK|
+777|Quote-part des subventions d'investissement virée au résultat de l'exercice|I|77||Y|OK|
+778|Autres produits exceptionnels|I|77||Y|OK|
+7781|Bonis provenant de clauses d'indexation|I|77||Y|OK|
+7782|Lots|I|77||Y|OK|
+7783|Bonis provenant du rachat par l'entreprise d'actions et d'obligations émises|I|77||Y|OK|
+7788|Produits exceptionnels divers|I|77||Y|OK|
+781|Reprises sur amortissements et provisions (à inscrire dans les produits d'exploitation)|I|78||Y|OK|
+7811|Reprises sur amortissements des immobilisations incorporelles et corporelles|I|78||Y|OK|
+78111|Immobilisations incorporelles|I|78||Y|OK|
+78112|Immobilisations corporelles|I|78||Y|OK|
+7815|Reprises sur provisions pour risques et charges d'exploitation|I|78||Y|OK|
+7816|Reprises sur dépréciations des immobilisations incorporelles et corporelles|I|78||Y|OK|
+78161|Immobilisations incorporelles|I|78||Y|OK|
+78162|Immobilisations corporelles|I|78||Y|OK|
+7817|Reprises sur provisions pour dépréciation des actifs circulants|I|78||Y|OK|
+78173|Stocks et en-cours|I|78||Y|OK|
+78174|Créances|I|78||Y|OK|
+786|Reprises sur provisions pour risques (à inscrire dans les produits financiers)|I|78||Y|OK|
+7865|Reprises sur provisions pour risques et charges financiers|I|78||Y|OK|
+7866|Reprises sur provisions pour dépréciation des éléments financiers|I|78||Y|OK|
+78662|Immobilisations financières|I|78||Y|OK|
+78665|Valeurs mobilières de placements|I|78||Y|OK|
+787|Reprises sur provisions (à inscrire dans les produits exceptionnels)|I|78||Y|OK|
+7872|Reprises sur provisions réglementées (immobilisations)|I|78||Y|OK|
+78725|Amortissements dérogatoires|I|78||Y|OK|
+78726|Provision spéciale de réévaluation|I|78||Y|OK|
+78727|Plus-values réinvesties|I|78||Y|OK|
+7873|Reprises sur provisions réglementées (stocks) |I|78||Y|OK|
+7874|Reprises sur autres provisions réglementées|I|78||Y|OK|
+7875|Reprises sur provisions pour risques et charges exceptionnels|I|78||Y|OK|
+7876|Reprises sur dépréciations exceptionnelles|I|78||Y|OK|
+791|Transferts de charges d'exploitation|I|79||Y|OK|
+796|Transferts de charges financières|I|79||Y|OK|
+797|Transferts de charges exceptionnelles |I|79||Y|OK|
+801|Engagements donnés par l'entité|L|80||Y|OK|
+8011|Avals, cautions, garanties|L|80||Y|OK|
+8014|Effets circulant sous l'endos de l'entité|L|80||Y|OK|
+8016|Redevances crédit-bail restant à courir|L|80||Y|OK|
+80161|Crédit-bail mobilier|L|80||Y|OK|
+80165|Crédit-bail immobilier|L|80||Y|OK|
+8018|Autres engagements donnés|L|80||Y|OK|
+802|Engagements reçus par l'entité|L|80||Y|OK|
+8021|Avals, cautions, garanties|L|80||Y|OK|
+8024|Créances escomptées non échues|L|80||Y|OK|
+8026|Engagements reçus pour utilisation en crédit-bail|L|80||Y|OK|
+80261|Crédit-bail mobilier|L|80||Y|OK|
+80265|Crédit-bail immobilier|L|80||Y|OK|
+8028|Autres engagements reçus|L|80||Y|OK|
+809|Contrepartie des engagements|L|80||Y|OK|
+8091|Contrepartie 801|L|80||Y|OK|
+8092|Contrepartie 802|L|80||Y|OK|

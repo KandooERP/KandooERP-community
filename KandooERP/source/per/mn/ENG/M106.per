@@ -1,0 +1,71 @@
+{
+###########################################################################
+# This program is free software; you can redistribute it and/or modify it
+# under the terms of the GNU General Public License as published by the
+# Free Software Foundation; either version 2 of the License, or (at your
+# option) any later version.
+#
+# This program is distributed in the hope that it will be useful, but
+# WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+# General Public License for more details.
+#
+# You should have received a copy of the GNU General Public License along
+# with this program; if not, write to the Free Software Foundation, Inc.,
+# 59 Temple Place, Suite 330, Boston, MA 02111-1307 USA
+#
+###########################################################################
+
+	 $Id: M106.per,v 1.2 2003/11/19 22:22:58 afalout Exp $
+}
+
+
+database kandoodb
+
+screen
+{
+                           Bill of Resource Entry                      M106
+\g----------------------------------------------------------------------------\g
+ Parent Product  [f001           ][f002                          ]UOM:[f003]
+\g----------------------------------------------------------------------------\g
+  Type   Item              Description                          Quantity  
+\g----------------------------------------------------------------------------\g
+  [a]   [f004           ] [f005                          ] [f006        ][b]
+  [a]   [f004           ] [f005                          ] [f006        ][b]
+  [a]   [f004           ] [f005                          ] [f006        ][b]
+  [a]   [f004           ] [f005                          ] [f006        ][b]
+  [a]   [f004           ] [f005                          ] [f006        ][b]
+  [a]   [f004           ] [f005                          ] [f006        ][b]
+  [a]   [f004           ] [f005                          ] [f006        ][b]
+  [a]   [f004           ] [f005                          ] [f006        ][b]
+  [a]   [f004           ] [f005                          ] [f006        ][b]
+  [a]   [f004           ] [f005                          ] [f006        ][b]
+  [a]   [f004           ] [f005                          ] [f006        ][b]
+
+}
+
+tables
+bor
+product
+prodmfg
+
+attributes
+f001 = bor.parent_part_code, upshift,
+comments = " Product code of the item to be made (W)";
+f002 = product.desc_text;
+f003 = prodmfg.man_uom_code, upshift;
+a    = bor.type_ind, upshift, comments =
+" C=Component, I=Instruction, S=Cost, W=Work Centre, U=Set Up, B=By Product";
+f004 = bor.part_code, noentry;
+f005 = formonly.desc_text type char, noentry;
+f006 = bor.required_qty, noentry;
+b    = bor.sequence_num, noentry, invisible;
+
+instructions
+delimiters "  "
+
+screen record sr_bor_child[11] (bor.type_ind,
+                                bor.part_code,
+                                formonly.desc_text,
+                                bor.required_qty,
+                                bor.sequence_num)

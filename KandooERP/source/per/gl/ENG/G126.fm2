@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form xmlns="http://namespaces.querix.com/2015/fglForms">
+	<form.rootContainer>
+		<GridPanel classNames="fcls_rootContainer" verticalAlignment="Stretch" horizontalAlignment="Stretch" fieldTable="" identifier="rootContainer">
+			<GridPanel.gridRowDefinitions>
+				<GridRowDefinition gridLengthValue=""/>
+				<GridRowDefinition gridLengthValue=""/>
+				<GridRowDefinition gridLengthValue="100%"/>
+				<GridRowDefinition gridLengthValue=""/>
+				<GridRowDefinition gridLengthValue=""/>
+			</GridPanel.gridRowDefinitions>
+			<GridPanel.gridColumnDefinitions>
+				<GridColumnDefinition gridLengthValue="100%"/>
+			</GridPanel.gridColumnDefinitions>
+			<GridPanel classNames="fcls_title_cnt" visible="true" verticalAlignment="Top" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="cntTitle">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="100%"/>
+					<GridColumnDefinition gridLengthValue=""/>
+				</GridPanel.gridColumnDefinitions>
+				<Label isDynamic="true" text="GL Flexible Structure - CHAR(18)" classNames="fcls_title_lb" visible="true" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="header_text"/>
+				<Label isDynamic="true" text="G126" classNames="fcls_title_lb" visible="true" gridItemLocation="1,0,1,1" fieldTable="" identifier="lbFormName"/>
+			</GridPanel>
+			<GroupBox title="Flexible Structure Preview" visible="true" identifier="c4" gridItemLocation="0,1,1,1">
+				<GridPanel visible="true" identifier="c5">
+					<GridPanel.gridColumnDefinitions>
+						<GridColumnDefinition gridLengthValue=""/>
+					</GridPanel.gridColumnDefinitions>
+					<GridPanel.gridRowDefinitions>
+						<GridRowDefinition gridLengthValue=""/>
+					</GridPanel.gridRowDefinitions>
+					<Label text="000000000000000000" isDynamic="true" visible="true" identifier="lb_structure_map" gridItemLocation="0,0,1,1"/>
+				</GridPanel>
+			</GroupBox>
+			<Table rowCount="10" preferredSize="62qch,12qch" gridItemLocation="0,2,1,1" fieldTable="" identifier="sr_structure">
+				<TableColumn text="Start Position" fieldTable="" identifier="f000" sorted="Asc">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="15%" gridMinLength="4rem" gridMaxLength="8rem"/>
+					</TableColumn.columnLength>
+					<TextField dataType="SmallInt,,,," toolTip=" The starting position of this field" fieldTable="structure" comment=" The starting position of this field" identifier="start_num"/>
+				</TableColumn>
+				<TableColumn text="Length" fieldTable="" identifier="f001">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="15%" gridMinLength="4rem" gridMaxLength="8rem"/>
+					</TableColumn.columnLength>
+					<TextField dataType="SmallInt,,,," toolTip=" The length of this field" fieldTable="structure" comment=" The length of this field" identifier="length_num"/>
+				</TableColumn>
+				<TableColumn text="Description" fieldTable="" identifier="f002">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="35%" gridMinLength="10rem" gridMaxLength="20rem"/>
+					</TableColumn.columnLength>
+					<TextField dataType="Char,,,,20" toolTip=" Title of this field in the GL " fieldTable="structure" comment=" Title of this field in the GL " identifier="desc_text"/>
+				</TableColumn>
+				<TableColumn text="Default Text" fieldTable="" identifier="f003">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="15%" gridMinLength="4rem" gridMaxLength="8rem"/>
+					</TableColumn.columnLength>
+					<TextField dataType="Char,,,,18" toolTip=" Default to appear on entry (e.g. - for filler)" fieldTable="structure" comment=" Default to appear on entry (e.g. - for filler)" identifier="default_text"/>
+				</TableColumn>
+				<TableColumn text="Type" fieldTable="" identifier="a">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="20%" gridMaxLength="15rem" gridMinLength="5rem"/>
+					</TableColumn.columnLength>
+					<ComboBox toCase="Up" dataType="Char,,,,1" toolTip=" Type of field, L=Ledger, F=Filler, C=Chart, S=Segment " fieldTable="structure" comment=" Type of field, L=Ledger, F=Filler, C=Chart, S=Segment " identifier="type_ind">
+						<ComboBoxItem text="Ledger" identifier="type_ind_1">
+							<ComboBoxItem.value>
+								<StringLiteral stringValue="L"/>
+							</ComboBoxItem.value>
+						</ComboBoxItem>
+						<ComboBoxItem text="Filler" identifier="type_ind_2">
+							<ComboBoxItem.value>
+								<StringLiteral stringValue="F"/>
+							</ComboBoxItem.value>
+						</ComboBoxItem>
+						<ComboBoxItem text="Chart" identifier="type_ind_3">
+							<ComboBoxItem.value>
+								<StringLiteral stringValue="C"/>
+							</ComboBoxItem.value>
+						</ComboBoxItem>
+						<ComboBoxItem text="Segment" identifier="type_ind_4">
+							<ComboBoxItem.value>
+								<StringLiteral stringValue="S"/>
+							</ComboBoxItem.value>
+						</ComboBoxItem>
+					</ComboBox>
+				</TableColumn>
+			</Table>
+			<GridPanel classNames="fcls_detail_cnt,fcls_data_cnt,fcls_align_left" visible="true" verticalAlignment="Top" horizontalAlignment="Left" gridItemLocation="0,3,1,1" fieldTable="formonly" identifier="cntDetail1">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue=""/>
+					<GridColumnDefinition gridLengthValue=""/>
+				</GridPanel.gridColumnDefinitions>
+				<Label text="NOTE:" classNames="fcls_fieldlabel,fcls_align_left" gridItemLocation="0,0,1,1" fieldTable="" identifier="label1"/>
+				<Label isDynamic="true" allowNewlines="true" text="Total lengh is 18 characters!&#13;&#10;F/Filler do also take space of the 18 characters &#13;&#10;1 CHART (not more and not less) must be specified and 1 LEDGER section can be used (optional)" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="1,0,1,1" fieldTable="" identifier="lb48"/>
+			</GridPanel>
+			<GridPanel classNames="fcls_statusbar_cnt" visible="true" verticalAlignment="Top" gridItemLocation="0,4,1,1" fieldTable="formonly" identifier="cntStatusBar">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="100%"/>
+				</GridPanel.gridColumnDefinitions>
+				<Label isDynamic="true" text="" classNames="fcls_sblabel" visible="true" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="lbInfo1"/>
+				<Label isDynamic="true" text="" classNames="fcls_sblabel" visible="true" gridItemLocation="0,1,1,1" fieldTable="formonly" identifier="lbInfo2"/>
+			</GridPanel>
+		</GridPanel>
+	</form.rootContainer>
+	<form.screenRecords>
+		<ScreenRecord identifier="sr_structure" fields="start_num,length_num,desc_text,default_text,type_ind" elements="10"/>
+		<ScreenRecord identifier="structure" fields="start_num,length_num,desc_text,default_text,type_ind"/>
+		<ScreenRecord identifier="FormOnly"/>
+	</form.screenRecords>
+</form>
+

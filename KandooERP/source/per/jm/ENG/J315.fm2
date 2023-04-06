@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form xmlns="http://namespaces.querix.com/2015/fglForms">
+	<form.rootContainer>
+		<GridPanel classNames="fcls_rootContainer" preferredSize="130qch,25qch" verticalAlignment="Stretch" horizontalAlignment="Stretch" fieldTable="" identifier="rootContainer">
+			<GridPanel.gridRowDefinitions>
+				<GridRowDefinition gridLengthValue=""/>
+				<GridRowDefinition gridLengthValue="100%"/>
+				<GridRowDefinition gridLengthValue=""/>
+				<GridRowDefinition gridLengthValue=""/>
+			</GridPanel.gridRowDefinitions>
+			<GridPanel.gridColumnDefinitions>
+				<GridColumnDefinition gridLengthValue="100%"/>
+			</GridPanel.gridColumnDefinitions>
+			<GridPanel classNames="fcls_title_cnt" visible="true" verticalAlignment="Top" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="cntTitle">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="100%"/>
+					<GridColumnDefinition gridLengthValue=""/>
+				</GridPanel.gridColumnDefinitions>
+				<Label isDynamic="true" text="Posting Timesheet Scan" classNames="fcls_title_lb" visible="true" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="header_text"/>
+				<Label isDynamic="true" text="J315" classNames="fcls_title_lb" visible="true" gridItemLocation="1,0,1,1" fieldTable="" identifier="lbFormName"/>
+			</GridPanel>
+			<Table rowCount="12" preferredSize="68qch,12qch" fieldTable="" identifier="sr_ts_head" gridItemLocation="0,1,1,1">
+				<TableColumn fieldTable="" identifier="tc_scroll_flag">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="2rem" gridMaxLength="2rem" gridMinLength="2rem"/>
+					</TableColumn.columnLength>
+					<CheckBox dataType="Char,,,," fieldTable="formonly" identifier="scroll_flag">
+						<CheckBox.checkedValue>
+							<StringLiteral stringValue="*"/>
+						</CheckBox.checkedValue>
+						<CheckBox.uncheckedValue>
+							<NullLiteral/>
+						</CheckBox.uncheckedValue>
+					</CheckBox>
+				</TableColumn>
+				<TableColumn fieldTable="" identifier="tc_person_code" text="Person">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="19.1%" gridMaxLength="15rem" gridMinLength="5rem"/>
+					</TableColumn.columnLength>
+					<TextField toCase="Up" dataType="Char,,,,8" toolTip=" The code that identifies the person the timesheet is for" comment=" The code that identifies the person the timesheet is for" fieldTable="ts_head" identifier="person_code"/>
+				</TableColumn>
+				<TableColumn fieldTable="" identifier="tc_per_end_date" text="Period End">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="23.4%" gridMaxLength="15rem" gridMinLength="5rem"/>
+					</TableColumn.columnLength>
+					<Calendar format="dd/mm/yyyy" dataType="Date,,,," toolTip=" The period end date for this timesheet entry " comment=" The period end date for this timesheet entry " fieldTable="ts_head" identifier="per_end_date"/>
+				</TableColumn>
+				<TableColumn fieldTable="" identifier="tc_ts_num" text="Sheet No.">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="21.3%" gridMaxLength="15rem" gridMinLength="5rem"/>
+					</TableColumn.columnLength>
+					<TextField dataType="Integer,,,," toolTip=" The unique number that identifies this timesheet" comment=" The unique number that identifies this timesheet" fieldTable="ts_head" identifier="ts_num"/>
+				</TableColumn>
+				<TableColumn fieldTable="" identifier="tc_dept_code" text="Department">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="10.6%" gridMaxLength="15rem" gridMinLength="5rem"/>
+					</TableColumn.columnLength>
+					<TextField toCase="Up" dataType="Char,,,,4" toolTip=" The department to which the person belongs" comment=" The department to which the person belongs" fieldTable="person" identifier="dept_code"/>
+				</TableColumn>
+				<TableColumn fieldTable="" identifier="tc_year_num" text="Year">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="10.6%" gridMaxLength="15rem" gridMinLength="5rem"/>
+					</TableColumn.columnLength>
+					<TextField dataType="SmallInt,,,," toolTip=" The year to which this timesheet will be posted" comment=" The year to which this timesheet will be posted" fieldTable="ts_head" identifier="year_num"/>
+				</TableColumn>
+				<TableColumn fieldTable="" identifier="tc_period_num" text="Period">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="6.4%" gridMaxLength="15rem" gridMinLength="5rem"/>
+					</TableColumn.columnLength>
+					<TextField dataType="SmallInt,,,," toolTip=" The preiod to which this timesheet will be posted" comment=" The preiod to which this timesheet will be posted" fieldTable="ts_head" identifier="period_num"/>
+				</TableColumn>
+				<TableColumn fieldTable="" identifier="tc_posted_flag" text="Posted">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="4.3%" gridMaxLength="15rem" gridMinLength="5rem"/>
+					</TableColumn.columnLength>
+					<TextField noEntry="true" dataType="Char,,,,1" fieldTable="ts_head" identifier="posted_flag"/>
+				</TableColumn>
+			</Table>
+			<GridPanel classNames="fcls_detail_cnt,fcls_data_cnt,fcls_align_left" visible="true" verticalAlignment="Top" horizontalAlignment="Left" gridItemLocation="0,2,1,1" fieldTable="formonly" identifier="cntDetail1">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue=""/>
+					<GridColumnDefinition gridLengthValue=""/>
+				</GridPanel.gridColumnDefinitions>
+				<TextField dataType="Char,,,,30" preferredSize="31qch,1qch" toolTip=" The name of the person" comment=" The name of the person" fieldTable="person" identifier="name_text" gridItemLocation="1,0,1,1" classNames="fcls_data_widget,fcls_length_30qch"/>
+				<Label isDynamic="true" text="Name" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,0,1,1" fieldTable="" identifier="lb51"/>
+			</GridPanel>
+			<GridPanel classNames="fcls_statusbar_cnt" visible="true" verticalAlignment="Bottom" gridItemLocation="0,3,1,1" fieldTable="formonly" identifier="cntStatusBar">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="100%"/>
+				</GridPanel.gridColumnDefinitions>
+				<Label isDynamic="true" text="" classNames="fcls_sblabel" visible="true" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="lbInfo1"/>
+				<Label isDynamic="true" text="" classNames="fcls_sblabel" visible="true" gridItemLocation="0,1,1,1" fieldTable="formonly" identifier="lbInfo2"/>
+			</GridPanel>
+		</GridPanel>
+	</form.rootContainer>
+	<form.screenRecords>
+		<ScreenRecord identifier="sr_ts_head" fields="formonly.scroll_flag,ts_head.person_code,ts_head.per_end_date,ts_head.ts_num,person.dept_code,ts_head.year_num,ts_head.period_num,ts_head.posted_flag"/>
+		<ScreenRecord identifier="formonly" fields="formonly.scroll_flag"/>
+		<ScreenRecord identifier="person" fields="person.dept_code,person.name_text"/>
+		<ScreenRecord identifier="ts_head" fields="ts_head.person_code,ts_head.per_end_date,ts_head.ts_num,ts_head.year_num,ts_head.period_num,ts_head.posted_flag"/>
+	</form.screenRecords>
+</form>
+

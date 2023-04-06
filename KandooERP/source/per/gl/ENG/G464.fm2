@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form xmlns="http://namespaces.querix.com/2015/fglForms">
+	<form.rootContainer>
+		<GridPanel classNames="fcls_rootContainer" verticalAlignment="Stretch" horizontalAlignment="Stretch" fieldTable="" identifier="rootContainer">
+			<GridPanel.gridRowDefinitions>
+				<GridRowDefinition gridLengthValue=""/>
+				<GridRowDefinition gridLengthValue="100%"/>
+				<GridRowDefinition gridLengthValue=""/>
+			</GridPanel.gridRowDefinitions>
+			<GridPanel.gridColumnDefinitions>
+				<GridColumnDefinition gridLengthValue="100%"/>
+			</GridPanel.gridColumnDefinitions>
+			<GridPanel classNames="fcls_title_cnt" visible="true" verticalAlignment="Top" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="cntTitle">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="100%"/>
+					<GridColumnDefinition gridLengthValue=""/>
+				</GridPanel.gridColumnDefinitions>
+				<Label isDynamic="true" text="Journals" classNames="fcls_title_lb" visible="true" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="header_text"/>
+				<Label isDynamic="true" text="G464" classNames="fcls_title_lb" visible="true" gridItemLocation="1,0,1,1" fieldTable="" identifier="lbFormName"/>
+			</GridPanel>
+			<Table rowCount="15" preferredSize="73qch,15qch" gridItemLocation="0,1,1,1" fieldTable="" identifier="sr_batchhead" horizontalAlignment="Stretch">
+				<TableColumn fieldTable="" identifier="a">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="4%" gridMaxLength="2rem" gridMinLength="2rem"/>
+					</TableColumn.columnLength>
+					<CheckBox dataType="Char,,,," fieldTable="formonly" identifier="scroll_flag">
+						<CheckBox.checkedValue>
+							<StringLiteral stringValue="*"/>
+						</CheckBox.checkedValue>
+						<CheckBox.uncheckedValue>
+							<NullLiteral/>
+						</CheckBox.uncheckedValue>
+					</CheckBox>
+				</TableColumn>
+				<TableColumn text="Journal" fieldTable="" identifier="f01">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="20%" gridMaxLength="20rem" gridMinLength="10rem"/>
+					</TableColumn.columnLength>
+					<ComboBox toCase="Up" dataType="Char,,,,3" toolTip=" The Journal Code of the batch " fieldTable="batchhead" comment=" The Journal Code of the batch " identifier="jour_code" classNames="list-show-text-value,field-show-value-text"/>
+				</TableColumn>
+				<TableColumn text="Batch" fieldTable="" identifier="f02">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="5%" gridMaxLength="5rem" gridMinLength="5rem"/>
+					</TableColumn.columnLength>
+					<TextField dataType="Integer,,,," toolTip=" The batch number associated with the batch" fieldTable="batchhead" comment=" The batch number associated with the batch" identifier="jour_num"/>
+				</TableColumn>
+				<TableColumn text="Date" fieldTable="" identifier="f03">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="15%" gridMaxLength="10rem" gridMinLength="5rem"/>
+					</TableColumn.columnLength>
+					<TextField dataType="Date,,,," toolTip=" The date of batch entry " fieldTable="batchhead" comment=" The date of batch entry " identifier="jour_date"/>
+				</TableColumn>
+				<TableColumn text="Year" fieldTable="" identifier="f04">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="5%" gridMaxLength="5rem" gridMinLength="5rem"/>
+					</TableColumn.columnLength>
+					<TextField dataType="SmallInt,,,," toolTip=" The fiscal year of the batch" fieldTable="batchhead" comment=" The fiscal year of the batch" identifier="year_num"/>
+				</TableColumn>
+				<TableColumn text="Period" fieldTable="" identifier="f05">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="15%" gridMaxLength="10rem" gridMinLength="5rem"/>
+					</TableColumn.columnLength>
+					<ComboBox dataType="SmallInt,,,," toolTip=" The fiscal period number of the batch" fieldTable="batchhead" comment=" The fiscal period number of the batch" identifier="period_num" classNames="list-show-text,field-show-text"/>
+				</TableColumn>
+				<TableColumn text="Debit Amt" fieldTable="" identifier="f06">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="15%" gridMaxLength="10rem" gridMinLength="5rem"/>
+					</TableColumn.columnLength>
+					<TextField dataType="Decimal,,,2,16" toolTip=" The debit amount of the batch" fieldTable="batchhead" comment=" The debit amount of the batch" identifier="for_debit_amt"/>
+				</TableColumn>
+				<TableColumn text="Credit Amt" fieldTable="" identifier="f07">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="15%" gridMaxLength="10rem" gridMinLength="5rem"/>
+					</TableColumn.columnLength>
+					<TextField dataType="Decimal,,,2,16" toolTip=" The credit amount of the batch " fieldTable="batchhead" comment=" The credit amount of the batch " identifier="for_credit_amt"/>
+				</TableColumn>
+				<TableColumn text="Cur." fieldTable="" identifier="f08">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="5%" gridMaxLength="5rem" gridMinLength="5rem"/>
+					</TableColumn.columnLength>
+					<TextField toCase="Up" dataType="Char,,,,3" toolTip=" The currency of batch amounts " fieldTable="batchhead" comment=" The currency of batch amounts " identifier="currency_code"/>
+				</TableColumn>
+				<TableColumn text="Balanced" resizable="true" visible="true" identifier="tc_f3">
+					<CheckBox visible="true" notNull="true" identifier="balanced_flag">
+						<CheckBox.checkedValue>
+							<StringLiteral stringValue="Y"/>
+						</CheckBox.checkedValue>
+						<CheckBox.uncheckedValue>
+							<StringLiteral stringValue="N"/>
+						</CheckBox.uncheckedValue>
+					</CheckBox>
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="5%" gridMaxLength="5rem" gridMinLength="5rem"/>
+					</TableColumn.columnLength>
+				</TableColumn>
+			</Table>
+			<GridPanel classNames="fcls_statusbar_cnt" visible="true" verticalAlignment="Top" gridItemLocation="0,2,1,1" fieldTable="formonly" identifier="cntStatusBar">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="100%"/>
+				</GridPanel.gridColumnDefinitions>
+				<Label isDynamic="true" text="" classNames="fcls_sblabel" visible="true" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="lbInfo1"/>
+				<Label isDynamic="true" text="" classNames="fcls_sblabel" visible="true" gridItemLocation="0,1,1,1" fieldTable="formonly" identifier="lbInfo2"/>
+			</GridPanel>
+		</GridPanel>
+	</form.rootContainer>
+	<form.screenRecords>
+		<ScreenRecord identifier="sr_batchhead" fields="scroll_flag,jour_code,jour_num,jour_date,year_num,period_num,for_debit_amt,for_credit_amt,currency_code" elements="15"/>
+		<ScreenRecord identifier="sr_batchhead_2" fields="scroll_flag,jour_code,jour_num,jour_date,year_num,period_num,for_debit_amt,for_credit_amt,currency_code,balanced_flag" elements="15"/>
+
+		<ScreenRecord identifier="batchhead" fields="jour_code,jour_num,jour_date,year_num,period_num,for_debit_amt,for_credit_amt,currency_code"/>
+		<ScreenRecord identifier="formonly" fields="scroll_flag"/>
+	</form.screenRecords>
+</form>
+

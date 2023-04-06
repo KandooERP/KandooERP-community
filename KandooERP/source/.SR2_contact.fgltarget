@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<fglBuildTarget xmlns="http://namespaces.querix.com/lyciaide/target" name="SR2_contact" type="fgl-program">
+
+  <libraries>
+    <library name="SR2_cmlib" dynamic="false" location=""/>
+    <library name="lib_security" dynamic="false" location=""/>
+    <library name="lib_tool" dynamic="false" location=""/>
+    <library name="lib_tool_db" dynamic="false" location=""/>
+    <library name="lib_tool_windecoration" dynamic="false" location=""/>
+  </libraries>
+
+  <sources type="fgl">
+    <file location="4gl/common/glob_GLOBALS_constant.4gl"/>
+    <file location="4gl/common/glob_GLOBALS.4gl"/>
+    <file location="4gl/common/glob_GLOBALS_userDataTypes.4gl"/>
+    <file location="4gl/cm/sr2_contact_main.4gl"/>
+    <file location="4gl/cm/sr2_contact_GLOBALS.4gl"/>
+  </sources>
+
+  <mediaFiles>
+    <file client="true" location="SR2_contact.qxtheme" type="gui-theme-file"/>
+    <file client="true" location="SR2_contact.css" type="other"/>
+  </mediaFiles>
+
+</fglBuildTarget>

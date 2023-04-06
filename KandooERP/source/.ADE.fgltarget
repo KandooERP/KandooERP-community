@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<fglBuildTarget xmlns="http://namespaces.querix.com/lyciaide/target" name="ADE" type="fgl-program">
+
+  <libraries>
+    <library name="lib_report" dynamic="false" location=""/>
+    <library name="lib_report_ar" dynamic="false" location=""/>
+    <library name="lib_tool_A_AR_db" dynamic="false" location=""/>
+    <library name="lib_tool_A_AR_new" dynamic="false" location=""/>
+    <library name="lib_tool_common" dynamic="false" location=""/>
+    <library name="lib_tool_db_common" dynamic="false" location=""/>
+  </libraries>
+
+  <sources type="fgl">
+    <file location="4gl/common/conv_curr.4gl"/>
+    <file location="4gl/ar/ADE.4gl"/>
+    <file location="4gl/ar/AD_GROUP_GLOBALS.4gl"/>
+    <file location="4gl/ar/A_AR_GLOBALS.4gl"/>
+    <file location="4gl/common/glob_GLOBALS.4gl"/>
+    <file location="4gl/ar/ADE_GLOBALS.4gl"/>
+    <file location="4gl/common/psepwind.4gl"/>
+    <file location="4gl/ar/ADE_main.4gl"/>
+  </sources>
+
+  <sources type="form">
+    <file location="per/utility/ENG/U156.fm2"/>
+    <file location="per/utility/ENG/U526.fm2"/>
+    <file location="per/utility/ENG/U505.fm2"/>
+    <file location="per/utility/ENG/U162.fm2"/>
+    <file location="per/ar/ENG/A215.fm2"/>
+  </sources>
+
+  <mediaFiles>
+    <file client="true" location="ADE.css" type="other"/>
+    <file client="true" location="ADE.qxtheme" type="gui-theme-file"/>
+  </mediaFiles>
+
+</fglBuildTarget>

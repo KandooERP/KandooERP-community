@@ -1,0 +1,121 @@
+P2B_FRA {
+- Contra Amount { "Montant de la contre-écriture" }
+- Tax Amount { "Montant de la T.V.A." }
+-Y- or -N- if cheque has been processed through the posting program { "-Y- ou -N- si le chèque a été processé par le programme de compt" }
+Account number used by bank { "Numéro de compte utilisé par la banque" }
+Accounting period to be used for posting purposes { "Période comptable à utiliser à des fins de comptabilisation" }
+Accounting year to be used for posting purposes { "Année comptable à utiliser aux fins de comptabilisation" }
+Additional comments line { "Ligne de commentaires supplémentaire" }
+Additional comments lines for cheque information, if needed { "Lignes de commentaires supplémentaires pour les informations de " }
+Amount Owing { "Montant dû" }
+Amount Taken { "Montant prélevé" }
+Amounts { "Montants" }
+Applied Amount { "Montant appliqué" }
+Bank Account Number { "Numéro de compte bancaire" }
+Bank Code { "Code Banque" }
+Bank Code of bank to be inquired on { "Code de la banque interrogée" }
+Bank statement line number where  the cheque was reconciled { "Numéro de ligne du relevé bancaire où le chèque a été lettré" }
+Bank statement transaction date on which the payment was presented { "Date de la transaction du relevé bancaire à laquelle le paiement" }
+Batch Number { "Numéro de lot" }
+Cheque Date { "Date du chèque" }
+Cheque Gross Amount { "Montant Brut du chèque" }
+Cheque Net Amount { "Montant Net du chèque" }
+Closed { "Clôturé" }
+Comments { "Commentaires" }
+Currency { "Devise" }
+Current date cheque was entered into the system { "Date à laquelle le chèque a été saisi" }
+Date { "Date" }
+Date Paid { "Date de paiement" }
+Date Presented { "Date de présentation" }
+Date used for recording cheque information in the appropriate ledgers { "Date utilisée pour enregistrer les informations du chèque dans l" }
+Description { "Description" }
+Discount Info { "Infos remise" }
+Discount available by taking advantage of terms { "Remise disponible en profitant des conditions" }
+Discounts Taken { "Remises accordées" }
+Distributed { "Distribué" }
+Due Date { "Date d'échéance" }
+Entry Date { "Date d'entrée" }
+Entry Info { "Informations sur l'entrée" }
+Entry Person { "Personne ayant saisi l'info" }
+Exchange Rate { "Taux de Change" }
+Exchange rate { "Taux de change" }
+Full name or description of vendor { "Nom complet ou description du fournisseur" }
+GL Account { "Compte de Compta Générale" }
+GL Integration { "Intégration Grand Livre" }
+General Ledger Account Number (W) { "Compte de Comptabilité Générale" }
+Hold Pay Code { "Code retenue de paiement" }
+Hold Pay code if on hold (W) { "Code retenue de paiement le cas échéant (W)" }
+ID { "ID" }
+Identifies any receipt of item referencing this transaction { "Identifie tout reçu ou document référençant cette transaction" }
+Invoice Date { "Date de facturation" }
+Invoice Number { "Numéro de facture" }
+LOOKUP { "RECHERCHER" }
+Language Code { "Code langue" }
+Line No { "Ligne N°" }
+Method { "Méthode" }
+Method: (1) auto/manual cheques, (3) EFT payments { "Méthode: (1) chèque auto/manuel, (3) paiements EFT" }
+Name { "Nom" }
+Name of bank to be inquired on { "Nom de la banque interrogée" }
+Name of person performing entry { "Nom de la personne effectuant la saisie" }
+Net cheque amount after tax and contra { "Montant total du chèque" }
+Other Info { "Autres informations" }
+Paid { "Payé" }
+Payment Information { "Information sur le paiement" }
+Payment Number { "Numéro de paiement" }
+Period { "Période" }
+Possible Discount { "Remise possible" }
+Post Period { "Période de clôture" }
+Post Year { "Année de clôture" }
+Posted { "Publié" }
+Receipt Reference { "Référence du reçu" }
+Reconciliation { "Lettrage" }
+Sheet No { "Folio N°" }
+Statement sheet number on which the cheque was reconciled { "Numéro de la feuille de relevé sur laquelle le chèque a été lett" }
+Tax % { "% T.V.A." }
+Tax Code { "Code T.V.A." }
+Tax Ind/Poss PPT { "Indicateur T.V.A" }
+Term Code { "Code Conditions" }
+The Amount Distributed to expense accounts { "Montant distribué aux comptes de dépenses" }
+The Amount of this voucher already Paid { "Montant déjà payé de ce bon" }
+The Date after which Discount is no longer applicable { "La date après laquelle la réduction n'est plus applicable" }
+The Date the voucher was Paid { "La date à laquelle le bon a été payé" }
+The accounting period to which this voucher is to be posted { "La période comptable à laquelle ce bon doit être enregistré" }
+The accounting year to which this voucher is to be posted { "L'année comptable à laquelle ce bon doit être publié" }
+The actual Date of the Invoice { "Date réelle de la facture" }
+The amount of Discount Taken on this voucher { "Le montant de la réduction prise sur ce bon" }
+The batch number of the voucher { "Numéro de folio de la facture" }
+The contra amount of this cheque { "Montant de contre-écriture de ce chèque" }
+The currency conversion rate for this voucher { "Le taux de conversion de la devise pour ce bon" }
+The currency used for this vendor { "Devise utilisée pour ce fournisseur" }
+The date payment is actually due { "La date à laquelle le paiement est effectivement dû" }
+The date this voucher was entered into the system { "La date d'entrée de ce bon dans le système" }
+The discount amount used (taken) on this remittance { "Le montant de la remise prélevé sur cette remise" }
+The name/initials of the person who entered voucher { "Nom/initiales de la personne qui a saisi le bon" }
+The specific cheque or EFT number already entered in the system { "Le chèque ou le numéro de virmt électronique spécifique déjà entré dans le système" }
+The system assigned Number for this Voucher { "Numéro de bon attribué par le système" }
+The tax amount of this cheque { "Le montant de la T.V.A de ce chèque" }
+The total amount applied to a particular remittance(s) { "Le montant total appliqué à un ou plusieurs paiements" }
+The total amount supplied on this voucher { "Le montant total fourni sur ce bon" }
+The vendor Name { "Nom du Fournisseur" }
+The vouchers tax code { "Code de taxe des bons d'achat" }
+The vouchers terms { "Conditions des bons" }
+The withholding tax indicator for this invoice { "Code de T.V.A déductible pour cette facture" }
+Total { "Total" }
+Total cheque amount including tax and contra { "Montant total du chèque incluant T.V.A et montant H.T." }
+Unique ID for this Vendor { "Identifiant unique pour ce fournisseur" }
+Unique Vendor ID { "ID unique du fournisseur" }
+Used to record any pertinent information about the cheque { "Utilisé pour enregistrer toute information pertinente sur le chè" }
+Used to record pertinent information about this voucher { "Utilisé pour enregistrer des informations pertinentes sur cette " }
+Vendor { "Fournisseur" }
+Vendor Code { "Code Fournisseur" }
+Vendor Invoice Info { "Informations facture fournisseur" }
+Vendor Invoice Number that originated voucher { "Numéro de la facture fournisseur ayant généré le bon" }
+Voucher Amounts { "Montants de la facture" }
+Voucher Inquiry { "Demande de facture fournisseur" }
+Voucher Number { "Numéro de Facture" }
+Whether or not this voucher has been Posted { "Si ce bon a été émis ou non" }
+Withholding Tax Code { "Code T.V.A déductible" }
+Withholding Tax Percentage { "Pourcentage de T.V.A. déductible" }
+Year { "Année" }
+actToolbarManager { "actToolbarManager" }
+}

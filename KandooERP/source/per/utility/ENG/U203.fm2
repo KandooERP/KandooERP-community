@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form xmlns="http://namespaces.querix.com/2015/fglForms">
+	<form.rootContainer>
+		<GridPanel classNames="fcls_rootContainer" verticalAlignment="Top" horizontalAlignment="Left" fieldTable="" identifier="rootContainer">
+			<GridPanel.gridRowDefinitions>
+				<GridRowDefinition gridLengthValue=""/>
+				<GridRowDefinition gridLengthValue=""/>
+				<GridRowDefinition gridLengthValue=""/>
+				<GridRowDefinition gridLengthValue=""/>
+				<GridRowDefinition gridLengthValue=""/>
+			</GridPanel.gridRowDefinitions>
+			<GridPanel.gridColumnDefinitions>
+				<GridColumnDefinition gridLengthValue="100%"/>
+			</GridPanel.gridColumnDefinitions>
+			<GridPanel classNames="fcls_title_cnt" visible="true" verticalAlignment="Top" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="cntTitle">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="100%"/>
+					<GridColumnDefinition gridLengthValue=""/>
+				</GridPanel.gridColumnDefinitions>
+				<Label isDynamic="true" text="Message Library Listing" classNames="fcls_title_lb" visible="true" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="header_text"/>
+				<Label isDynamic="true" text="U203" classNames="fcls_title_lb" visible="true" gridItemLocation="1,0,1,1" fieldTable="" identifier="lbFormName"/>
+			</GridPanel>
+			<GridPanel classNames="fcls_detail_cnt,fcls_data_cnt,fcls_align_left" visible="true" verticalAlignment="Top" horizontalAlignment="Left" gridItemLocation="0,1,1,1" fieldTable="formonly" identifier="cntDetail1">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="" gridMinLength="10rem"/>
+					<GridColumnDefinition gridLengthValue=""/>
+				</GridPanel.gridColumnDefinitions>
+				<ComboBox toCase="Up" dataType="Char,,,,3" classNames="fcls_data_widget,fcls_align_left,fcls_length_30qch" location="23qch,3qch" preferredSize="30qch,1qch" toolTip=" Enter Language of Messages. " gridItemLocation="1,0,1,1" fieldTable="kandoomsg" comment=" Enter Language of Messages. " identifier="language_code"/>
+				<ComboBox toCase="Up" dataType="Char,,,,1" classNames="fcls_data_widget,fcls_align_left,fcls_length_30qch" location="23qch,4qch" preferredSize="30qch,1qch" toolTip=" Source indicator identifying this message. " gridItemLocation="1,1,1,1" fieldTable="kandoomsg" comment=" Source indicator identifying this message. " identifier="source_ind"/>
+				<TextField toCase="Up" dataType="Integer,,,," classNames="fcls_data_widget,fcls_align_left,fcls_length_30qch" location="23qch,5qch" preferredSize="11qch,1qch" toolTip=" Message Number identifying this message. " gridItemLocation="1,2,1,1" fieldTable="kandoomsg" comment=" Message Number identifying this message. " identifier="msg_num"/>
+				<Label isDynamic="true" text="Language" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,0,1,1" fieldTable="" identifier="lb51"/>
+				<Label isDynamic="true" text="Source Indicator" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,1,1,1" fieldTable="" identifier="lb52"/>
+				<Label isDynamic="true" text="Message Number" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,2,1,1" fieldTable="" identifier="lb66"/>
+			</GridPanel>
+			<GridPanel classNames="fcls_detail_cnt,fcls_data_cnt,fcls_align_hstretch" visible="true" verticalAlignment="Top" horizontalAlignment="Stretch" gridItemLocation="0,2,1,1" fieldTable="formonly" identifier="cntDetail2">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="100%"/>
+				</GridPanel.gridColumnDefinitions>
+				<Label isDynamic="true" text="Message Text" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="lb36"/>
+				<TextField autonext="true" dataType="Char,,,,70" classNames="fcls_data_widget,fcls_align_hstretch" toolTip=" Message context. (line 1) " gridItemLocation="0,1,1,1" fieldTable="kandoomsg" comment=" Message context. (line 1) " identifier="msg1_text"/>
+				<TextField dataType="Char,,,,70" classNames="fcls_data_widget,fcls_align_hstretch" toolTip=" Message context. (line 2) " gridItemLocation="0,2,1,1" fieldTable="kandoomsg" comment=" Message context. (line 2) " identifier="msg2_text"/>
+			</GridPanel>
+			<GridPanel classNames="fcls_detail_cnt,fcls_data_cnt,fcls_align_left" visible="true" verticalAlignment="Top" horizontalAlignment="Left" gridItemLocation="0,3,1,1" fieldTable="" identifier="cntDetail3">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="" gridMinLength="10rem"/>
+					<GridColumnDefinition gridLengthValue=""/>
+				</GridPanel.gridColumnDefinitions>
+				<ComboBox toCase="Up" dataType="Char,,,,1" classNames="fcls_data_widget,fcls_align_left,fcls_length_30qch" location="23qch,11qch" preferredSize="40qch,1qch" toolTip=" Message action indicator. (1 to 9) " gridItemLocation="1,0,1,1" fieldTable="kandoomsg" comment=" Message action indicator. (1 to 9) " identifier="msg_ind"/>
+				<ComboBox toCase="Up" dataType="Char,,,,1" classNames="fcls_data_widget,fcls_align_left,fcls_length_30qch" location="23qch,12qch" preferredSize="40qch,1qch" toolTip=" Message formation indicator. (1 to 9) " gridItemLocation="1,1,1,1" fieldTable="kandoomsg" comment=" Message formation indicator. (1 to 9) " identifier="format_ind"/>
+				<TextField toCase="Up" dataType="Integer,,,," classNames="fcls_data_widget,fcls_align_left,fcls_length_30qch" location="23qch,13qch" preferredSize="11qch,1qch" toolTip=" Message help facility number.(Available for PROMPTS Only)" gridItemLocation="1,2,1,1" fieldTable="kandoomsg" comment=" Message help facility number.(Available for PROMPTS Only)" identifier="help_num"/>
+				<Label isDynamic="true" text="Message Action" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,0,1,1" fieldTable="" identifier="lb44"/>
+				<Label isDynamic="true" text="Text Format" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,1,1,1" fieldTable="" identifier="lb45"/>
+				<Label isDynamic="true" text="Help Number" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,2,1,1" fieldTable="" identifier="lb46"/>
+			</GridPanel>
+			<GridPanel classNames="fcls_statusbar_cnt" visible="true" verticalAlignment="Top" gridItemLocation="0,4,1,1" fieldTable="formonly" identifier="cntStatusBar">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="100%"/>
+				</GridPanel.gridColumnDefinitions>
+				<Label isDynamic="true" text="" classNames="fcls_sblabel" visible="true" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="lbInfo1"/>
+				<Label isDynamic="true" text="" classNames="fcls_sblabel" visible="true" gridItemLocation="0,1,1,1" fieldTable="formonly" identifier="lbInfo2"/>
+			</GridPanel>
+		</GridPanel>
+	</form.rootContainer>
+	<form.screenRecords>
+		<ScreenRecord identifier="kandoomsg" fields="language_code,source_ind,msg_num,msg1_text,msg2_text,msg_ind,format_ind,help_num"/>
+	</form.screenRecords>
+</form>
+

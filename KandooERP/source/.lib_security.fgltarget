@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<fglBuildTarget xmlns="http://namespaces.querix.com/lyciaide/target" name="lib_security" type="fgl-library">
+
+  <sources type="fgl">
+    <file location="4gl/common/glob_GLOBALS_constant.4gl"/>
+    <file location="4gl/common/dispgpfunc.4gl"/>
+    <file location="4gl/common/glob_GLOBALS_userDataTypes.4gl"/>
+  </sources>
+
+  <sources type="form">
+    <file location="per/gl/ENG/G125.fm2"/>
+    <file location="per/utility/ENG/U163.fm2"/>
+    <file location="per/ar/ENG/A601.fm2"/>
+    <file location="per/gl/ENG/G193.fm2"/>
+    <file location="per/gl/ENG/G535.fm2"/>
+  </sources>
+
+</fglBuildTarget>

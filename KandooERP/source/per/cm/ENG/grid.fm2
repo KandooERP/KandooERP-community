@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form xmlns="http://namespaces.querix.com/2015/fglForms">
+	<form.rootContainer>
+		<CoordPanel preferredSize="50qch,10qch" fieldTable="" identifier="coord1">
+			<TextField dataType="Char,,,," location="0qch,0qch" preferredSize="49qch,1qch" fieldTable="formonly" identifier="text">
+				<TextField.displayModes>
+					<DisplayMode appearance="black"/>
+				</TextField.displayModes>
+			</TextField>
+			<ScrollBar orientation="Vertical" location="49qch,0qch" preferredSize="1.5qch,10qch" fieldTable="" identifier="grid_d"/>
+			<TextField dataType="Char,,,," location="0qch,1qch" preferredSize="49qch,1qch" fieldTable="formonly" identifier="text">
+				<TextField.displayModes>
+					<DisplayMode appearance="black"/>
+				</TextField.displayModes>
+			</TextField>
+			<TextField dataType="Char,,,," location="0qch,2qch" preferredSize="49qch,1qch" fieldTable="formonly" identifier="text">
+				<TextField.displayModes>
+					<DisplayMode appearance="black"/>
+				</TextField.displayModes>
+			</TextField>
+			<TextField dataType="Char,,,," location="0qch,3qch" preferredSize="49qch,1qch" fieldTable="formonly" identifier="text">
+				<TextField.displayModes>
+					<DisplayMode appearance="black"/>
+				</TextField.displayModes>
+			</TextField>
+			<TextField dataType="Char,,,," location="0qch,4qch" preferredSize="49qch,1qch" fieldTable="formonly" identifier="text">
+				<TextField.displayModes>
+					<DisplayMode appearance="black"/>
+				</TextField.displayModes>
+			</TextField>
+			<TextField dataType="Char,,,," location="0qch,5qch" preferredSize="49qch,1qch" fieldTable="formonly" identifier="text">
+				<TextField.displayModes>
+					<DisplayMode appearance="black"/>
+				</TextField.displayModes>
+			</TextField>
+			<TextField dataType="Char,,,," location="0qch,6qch" preferredSize="49qch,1qch" fieldTable="formonly" identifier="text">
+				<TextField.displayModes>
+					<DisplayMode appearance="black"/>
+				</TextField.displayModes>
+			</TextField>
+			<TextField dataType="Char,,,," location="0qch,7qch" preferredSize="49qch,1qch" fieldTable="formonly" identifier="text">
+				<TextField.displayModes>
+					<DisplayMode appearance="black"/>
+				</TextField.displayModes>
+			</TextField>
+			<TextField dataType="Char,,,," location="0qch,8qch" preferredSize="49qch,1qch" fieldTable="formonly" identifier="text">
+				<TextField.displayModes>
+					<DisplayMode appearance="black"/>
+				</TextField.displayModes>
+			</TextField>
+			<TextField dataType="Char,,,," location="0qch,9qch" preferredSize="49qch,1qch" fieldTable="formonly" identifier="text">
+				<TextField.displayModes>
+					<DisplayMode appearance="black"/>
+				</TextField.displayModes>
+			</TextField>
+		</CoordPanel>
+	</form.rootContainer>
+	<form.screenRecords>
+		<ScreenRecord identifier="grid_d" fields="text" elements="10"/>
+		<ScreenRecord identifier="formonly" fields="text"/>
+	</form.screenRecords>
+</form>
+

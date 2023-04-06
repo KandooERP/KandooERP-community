@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form xmlns="http://namespaces.querix.com/2015/fglForms">
+	<form.rootContainer>
+		<CoordPanel preferredSize="69qch,8qch" fieldTable="" identifier="coord1">
+			<Label text="Country code" location="0qch,1qch" preferredSize="12qch,1qch" fieldTable="" identifier="label1"/>
+			<TextField textPicture="#####" required="true" dataType="Char,,,,5" location="14qch,1qch" preferredSize="6qch,1qch" toolTip="Country code, without leading zero(s), or ++" fieldTable="phone" comment="Country code, without leading zero(s), or ++" identifier="country_code">
+				<TextField.defaultValue>
+					<StringLiteral stringValue="64"/>
+				</TextField.defaultValue>
+			</TextField>
+			<Label text="Area code" location="37qch,1qch" preferredSize="9qch,1qch" fieldTable="" identifier="label2"/>
+			<TextField textPicture="#####" required="true" dataType="Char,,,,5" location="62qch,1qch" preferredSize="6qch,1qch" toolTip="Area code, without leading zero" fieldTable="phone" comment="Area code, without leading zero" identifier="area_code"/>
+			<Label text="Phone number" location="0qch,2qch" preferredSize="12qch,1qch" fieldTable="" identifier="label3"/>
+			<TextField textPicture="####################" required="true" dataType="Char,,,,20" location="14qch,2qch" preferredSize="21qch,1qch" toolTip="Phone number, WITHOUT FORMATING !" fieldTable="phone" comment="Phone number, WITHOUT FORMATING !" identifier="phone_number"/>
+			<Label text="Extension" location="37qch,2qch" preferredSize="9qch,1qch" fieldTable="" identifier="label4"/>
+			<TextField dataType="Char,,,,20" location="47qch,2qch" preferredSize="21qch,1qch" toolTip="Extension number (optional)" fieldTable="phone" comment="Extension number (optional)" identifier="extension"/>
+			<Label text="Time restriction" location="0qch,4qch" preferredSize="16qch,1qch" fieldTable="" identifier="label5"/>
+			<TextField dataType="Char,,,," location="17qch,4qch" preferredSize="12qch,1qch" toolTip="If the time of day ussage on this number is restricted (F10=L7P)" fieldTable="formonly" comment="If the time of day ussage on this number is restricted (F10=L7P)" identifier="time_restrict_name"/>
+			<Label text="Role" location="37qch,4qch" preferredSize="4qch,1qch" fieldTable="" identifier="label6"/>
+			<TextField toCase="Up" dataType="Char,,,," location="42qch,4qch" preferredSize="26qch,1qch" toolTip="Phone role name (F10 for L&amp;P)" fieldTable="formonly" comment="Phone role name (F10 for L&amp;P)" identifier="phone_role_name"/>
+			<Label text="Valid from" location="0qch,6qch" preferredSize="10qch,1qch" fieldTable="" identifier="label7"/>
+			<TextField required="true" dataType="Date,,,," location="14qch,6qch" preferredSize="11qch,1qch" toolTip="Date the number was entered/changed" fieldTable="phone" comment="Date the number was entered/changed" identifier="valid_from">
+				<TextField.defaultValue>
+					<Today/>
+				</TextField.defaultValue>
+			</TextField>
+			<Label text="Valid to" location="48qch,6qch" preferredSize="8qch,1qch" fieldTable="" identifier="label8"/>
+			<TextField dataType="Date,,,," location="57qch,6qch" preferredSize="11qch,1qch" toolTip="Date this phone number is invalid" fieldTable="phone" comment="Date this phone number is invalid" identifier="valid_to"/>
+		</CoordPanel>
+	</form.rootContainer>
+	<form.screenRecords>
+		<ScreenRecord identifier="s_phone" fields="country_code,area_code,phone_number,extension,time_restrict_name,phone_role_name,valid_from,valid_to"/>
+		<ScreenRecord identifier="formonly" fields="time_restrict_name,phone_role_name"/>
+		<ScreenRecord identifier="phone" fields="country_code,area_code,phone_number,extension,valid_from,valid_to"/>
+	</form.screenRecords>
+</form>
+

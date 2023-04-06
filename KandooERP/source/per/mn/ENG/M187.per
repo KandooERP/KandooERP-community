@@ -1,0 +1,99 @@
+{
+###########################################################################
+# This program is free software; you can redistribute it and/or modify it
+# under the terms of the GNU General Public License as published by the
+# Free Software Foundation; either version 2 of the License, or (at your
+# option) any later version.
+#
+# This program is distributed in the hope that it will be useful, but
+# WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+# General Public License for more details.
+#
+# You should have received a copy of the GNU General Public License along
+# with this program; if not, write to the Free Software Foundation, Inc.,
+# 59 Temple Place, Suite 330, Boston, MA 02111-1307 USA
+#
+###########################################################################
+
+	 $Id: M187.per,v 1.2 2003/11/19 22:23:01 afalout Exp $
+}
+
+database kandoodb
+
+screen
+{
+                           Shop Order Adjustment                       M187
+\g----------------------------------------------------------------------------\g
+ Product              [f001           ] [f002                          ]
+ Warehouse            [a  ]             [f003                          ]
+ Work Centre          [f004      ]      [f005                          ]
+\g---\g Current Stock Levels \g-------------------\g Future Stock Levels \g-----------\g
+ On Hand              [f006    ]         Available Now        [f007    ]
+ - Reserved for Sale  [f008    ]         + On Purchase Order  [f009    ]
+ - On Back Order      [f010    ]         - Forward Orders     [f011    ]
+ = Available Now      [f012    ]         = Future Available   [f013    ]
+\g---\g Transaction Info \g-------------------------------------------------------\g
+ Shop Order Number  [f014      ]         Suffix Number        [f015 ]
+ Source ID          [f016      ]         Date                 [f017      ]
+ Year               [f018]               Period               [b  ]
+ Description        [f019                ]
+                     \g----\g Manufacturing \g----\g  \g------\g Stocking \g-------\g
+ Quantity                [f020        ][f021]     [f022        ][f023]
+ Unit Cost          [f024             ][f025][f026             ][f027]
+
+}
+
+tables
+prodledg
+prodstatus
+product
+prodmfg
+warehouse
+workcentre
+shopordhead
+shoporddetl
+
+attributes
+f001 = product.part_code, upshift,
+comments = " Product code of a shop order product (W)";
+f002 = product.desc_text;
+a    = warehouse.ware_code, upshift, 
+comments = " Code for the warehouse where the product is to be returned (W)";
+f003 = warehouse.desc_text;
+f004 = shoporddetl.work_centre_code, upshift,
+comments = " Code for the work centre from which the product is returned (W)";
+f005 = workcentre.desc_text;
+f006 = prodstatus.onhand_qty;
+f007 = formonly.avail1_qty type float;
+f008 = prodstatus.reserved_qty;
+f009 = prodstatus.onord_qty;
+f010 = prodstatus.back_qty;
+f011 = prodstatus.forward_qty;
+f012 = formonly.avail_qty type float;
+f013 = formonly.availf_qty type float;
+f014 = shopordhead.shop_order_num,
+comments = " The shop order number associated with this adjustment (W)";
+f015 = shopordhead.suffix_num,
+comments = " The shop order suffix number associated with this adjustment (W)";
+f016 = prodledg.source_text,
+comments = " Source text to identify this adjustment, default = SO Adjst";
+f017 = prodledg.tran_date, comments = " Date of this shop order adjustment";
+f018 = prodledg.year_num,
+comments = " Fiscal year in which this transaction will be posted";
+b    = prodledg.period_num,
+comments = " Fiscal period in which this transaction will be posted";
+f019 = formonly.tran_desc type char,
+comments = " Description of the transaction";
+f020 = shoporddetl.issued_qty,
+comments = " Quantity of this product in manufacturing units";
+f021 = prodmfg.man_uom_code;
+f022 = prodledg.tran_qty;
+f023 = product.stock_uom_code;
+f024 = formonly.man_cost_amt type decimal;
+f025 = formonly.man_uom type char;
+f026 = prodledg.cost_amt;
+f027 = formonly.stock_uom type char;
+    
+instructions
+delimiters " "

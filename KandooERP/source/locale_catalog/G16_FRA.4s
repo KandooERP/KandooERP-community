@@ -1,0 +1,61 @@
+G16_FRA {
+/ { "/" }
+A Valid Code for this part of the chart { "Un code valid pour cette partie du numéro de compte" }
+Account { "Compte" }
+Account Code { "Code Compte" }
+Account Verifier { "Vérificateur de compte" }
+Account code to identify this account { "Numéro de compte identifiant ce client" }
+Account quantity Unit Of Measure { "Quantité en unités de mesure" }
+Actual { "Réel" }
+Amount { "Montant" }
+Analysis information { "Information analytique" }
+Batch Number { "Numéro de lot" }
+Chart of Accounts { "Plan Comptable" }
+Code { "Code" }
+Company { "Société" }
+Company Code { "Code Société" }
+Credit { "Crédit" }
+Credit Amount { "Montant du crédit" }
+Credit Amt { "Montant Crédit" }
+Credits { "Credits" }
+Currency { "Devise" }
+Current { "Actuel" }
+Date { "Date" }
+Debit { "Débit" }
+Description { "Description" }
+Description of transaction - CTRL-N for Notes { "Description de la transaction" }
+Entry Info { "Informations sur l'entrée" }
+FILTER { "Premier" }
+Field Description { "Description du champ" }
+Flex Codes { "Flex Codes" }
+ID { "ID" }
+Journal { "Journal" }
+LOOKUP { "RECHERCHER" }
+Language Code { "Code langue" }
+Length { "Longueur" }
+Length of the Code { "Longueur Numéro de compte" }
+Line { "Ligne" }
+Name { "Nom" }
+New Label { "Références bancaires" }
+Notes { "Notes" }
+Period { "Période" }
+Person { "Personne" }
+Posted { "Publié" }
+Quantity { "Quantité" }
+Reference { "Référence" }
+Sequence { "Séquence" }
+Source Number { "Numéro de source" }
+Start Pos. { "Positions Départ" }
+Start position of the Code { "Position de départ du code" }
+Statistical quantity of the transaction { "Quantité statistique de la transaction" }
+The Description of the Account { "Description du compte" }
+The General Ledger account applicable to this transaction (W) { "Le compte de comta générale application à cette transaction" }
+The description for this code { "L'intitulé de ce code" }
+The valid flex segment { "Le segment Flex valide" }
+Title of this field in the GL { "Titre de ce champ en Compta géné" }
+Transaction Date { "Date de la transaction" }
+Type { "Type" }
+UOM { "UDM" }
+Year { "Année" }
+actToolbarManager { "actToolbarManager" }
+}

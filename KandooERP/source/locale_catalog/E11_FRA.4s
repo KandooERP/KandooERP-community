@@ -1,0 +1,171 @@
+E11_FRA {
++1-30 Days Overdue { "+ 1-30 jours de retard" }
++61-90 Days Overdue { "+61 -90 jours de retard" }
++90+Days Overdue { "90+ J. retard de paiement" }
+/ { "/" }
+= Balance { "= Solde" }
+A Valid Code for this part of the chart { "Un code valid pour cette partie du numéro de compte" }
+Account { "Compte" }
+Account Code { "Code Compte" }
+Account Info { "Informations sur le compte" }
+Account Verifier { "Vérificateur de compte" }
+Account code to identify this account { "Numéro de compte identifiant ce client" }
+Addr { "Adresse" }
+Address { "Adresse" }
+Amounts { "Montants" }
+Back Order { "Commande en cours" }
+Balance { "Solde" }
+Bank Account { "Compte bancaire" }
+Bank Code { "Code Banque" }
+Carrier { "Transporteur" }
+Cash Account { "Compte Caisse" }
+Charge { "Facturation" }
+Chart of Accounts { "Plan Comptable" }
+Cheque Date { "Date du chèque" }
+City { "Ville" }
+Code { "Code" }
+Code representing the Country of this Customer { "Code pays de ce client" }
+Comments { "Commentaires" }
+Corporate { "Entreprise" }
+Cost { "Coût" }
+Country { "Pays" }
+Country Code { "Code Pays" }
+Credit { "Crédit" }
+Credit Limit { "Limite de Crédit" }
+Currency { "Devise" }
+Currency in which this customer deals { "Devise avec laquelle ce client traite" }
+Current { "Actuel" }
+Current Avail { "Actuellement dispo" }
+Customer { "Client" }
+Customer Code { "Code Client" }
+Customer Details { "Détails client" }
+Customer Invoice { "Facture Client" }
+Customer Name { "Nom du client" }
+Customer Type { "Type de Client" }
+Customer name or description { "Nom ou description du client" }
+Date { "Date" }
+Desc { "Description" }
+Description { "Description" }
+Disc% { "%Rem" }
+Discount { "Remise" }
+Discount Info { "Infos remise" }
+Due Date { "Date d'échéance" }
+Enter a Unique Transaction Number { "Saisir un numéro unique de transaction" }
+Enter order quantity for this product { "Saisir la quantité pour ce produit" }
+Entered { "Saisie" }
+Exchange Rate { "Taux de Change" }
+Expiry Date { "Date d'expiration" }
+FILTER { "Premier" }
+Fax { "Fax" }
+Field Description { "Description du champ" }
+Fiscal Year { "Exercice fiscal" }
+Flex Codes { "Flex Codes" }
+Freight { "Fret" }
+Future Avail { "Dispo à terme" }
+GL Account { "Compte de Compta Générale" }
+GL Integration { "Intégration Grand Livre" }
+Goods { "Marchandises" }
+Group 1 { "Groupe 1" }
+Group 2 { "Groupe 2" }
+Group 3 { "Groupe 3" }
+Group 4 { "Groupe 4" }
+Handling { "Manutention" }
+Handling Amount { "Montant de la manutention" }
+ID { "ID" }
+Invoice { "Facture" }
+Invoice Address { "Adresse de facturation" }
+Invoice Date { "Date de facturation" }
+Invoice No { "N° de facture" }
+Invoice Number { "Numéro de facture" }
+Journal { "Journal" }
+LOOKUP { "RECHERCHER" }
+Label or description of this tax code { "Étiquette ou description de ce code taxe" }
+Language Code { "Code langue" }
+Length { "Longueur" }
+Length of the Code { "Longueur Numéro de compte" }
+Line { "Ligne" }
+Line Total { "Total Ligne" }
+Line or total { "Ligne ou total" }
+List Price { "Prix Liste" }
+Main Group { "Groupe Principal" }
+NOTES { "NOTES" }
+Name { "Nom" }
+No { "Non" }
+Number { "Numéro" }
+Offer { "Offre" }
+Order { "Commande" }
+Order Date { "Date de Commande" }
+Order No { "N° de Commande" }
+Order Number { "Numéro de commande" }
+Order Qty { "Quantité commandée" }
+Other Info { "Autres informations" }
+Paid { "Payé" }
+Paid Amount { "Montant payé" }
+Payment: C = Cash  Q = Cheque  P = Credit Card  O = Payment { "Paiement: C = Espèces Q = Chèque P = Carte de crédit O = Paiement" }
+Period { "Période" }
+Person { "Personne" }
+Phone { "Téléphone" }
+Possible Discount { "Remise possible" }
+Post Code { "Code Postal" }
+Postcode { "Code Postal" }
+Price Level { "Niveau de prix" }
+Price used for the customer: C)ost, L)ist or 1-9 Price Level { "Prix utilisé pour le client: C) Coût, L) Liste ou 1-9 Niveau de prix" }
+Product { "Produit" }
+Product Code { "Code Produit" }
+Purchase Code { "Code d'achat" }
+Purchasing { "Achat" }
+Quantity { "Quantité" }
+REFRESH { "ACTUALISER" }
+Received Amount { "Montant reçu" }
+Reference { "Référence" }
+Reference text for Receipt { "Texte de référence pour le reçu" }
+Reserved { "Réservé" }
+Revision { "Révision" }
+Sales Tax { "Taxe de vente" }
+Salesperson { "Vendeur" }
+Salesperson Code { "Code vendeur" }
+Save { "Enregistrer" }
+Serial Number { "Numéro de série" }
+Shipping Address { "Adresse de livraison" }
+Shipping address country { "Pays d'adresse de livraison" }
+Shipping address line 1 { "Adresse de livraison ligne 1" }
+Shipping address line 2 { "Adresse de livraison ligne 2" }
+Shipping address line 3 { "Adresse de livraison ligne 3" }
+Shipping address postal code { "Code postal d'adresse de livraison" }
+Shipping address state { "Département de l'adresse de livraison" }
+Start Pos. { "Positions Départ" }
+Start position of the Code { "Position de départ du code" }
+State { "Etat" }
+State/County { "Région" }
+Status { "Statut" }
+Stock Onhand { "Stock disponible" }
+Stocking { "Stockage" }
+Tax { "T.V.A." }
+Tax Code { "Code T.V.A." }
+Taxation { "Imposition" }
+Term Code { "Code Conditions" }
+Territory { "Territoire" }
+Territory Code { "Code territoire" }
+The Description of the Account { "Description du compte" }
+The Product Code from inventory { "Le code produit de l'inventaire" }
+The Product Code from inventory (W) { "Code produit de l'inventaire (W)" }
+The customer city { "La ville du client" }
+The description for this code { "L'intitulé de ce code" }
+The reference number { "Numéro de référence" }
+The valid flex segment { "Le segment Flex valide" }
+Title of this field in the GL { "Titre de ce champ en Compta géné" }
+Total { "Total" }
+Total Amount { "Montant Total" }
+Total Cost { "Coût total" }
+Totals { "Totaux" }
+Transaction Number Entry { "Saisie du numéro de transaction" }
+Type { "Type" }
+Unique Customer Code (W) { "Code client unique (W)" }
+Unit Price { "Prix Unitaire" }
+Unit of Measure { "Unité de mesure" }
+Value added tax registration number { "Code T.V.A. intracommunautaire" }
+Vat Reg No { "N° T.V.A. intracommunautaire" }
+Warehouse { "Dépôt" }
+Warehouse Code { "Code Dépôt" }
+actToolbarManager { "actToolbarManager" }
+}

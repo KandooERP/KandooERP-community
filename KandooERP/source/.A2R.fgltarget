@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<fglBuildTarget xmlns="http://namespaces.querix.com/lyciaide/target" name="A2R" type="fgl-program">
+
+  <libraries>
+    <library name="lib_tool_A_AR_db" dynamic="false" location=""/>
+    <library name="lib_tool_A_AR_new" dynamic="false" location=""/>
+    <library name="lib_tool_G_GL_new" dynamic="false" location=""/>
+    <library name="lib_tool_P_AP_new" dynamic="false" location=""/>
+    <library name="lib_tool_U_UT_new" dynamic="false" location=""/>
+    <library name="lib_tool_common" dynamic="false" location=""/>
+    <library name="lib_tool_db_common" dynamic="false" location=""/>
+  </libraries>
+
+  <sources type="fgl">
+    <file location="4gl/common/clntwind.4gl"/>
+    <file location="4gl/common/disbwind.4gl"/>
+    <file location="4gl/common/notefunc.4gl"/>
+    <file location="4gl/common/discfunc.4gl"/>
+    <file location="4gl/ar/A2Ra.4gl"/>
+    <file location="4gl/ar/A_AR_GLOBALS.4gl"/>
+    <file location="4gl/common/conv_rate.4gl"/>
+    <file location="4gl/common/glob_GLOBALS.4gl"/>
+    <file location="4gl/common/disbfunc.4gl"/>
+    <file location="4gl/common/acctwind.4gl"/>
+    <file location="4gl/lib_tool_db/lib_tool_db_disbhead.4gl"/>
+    <file location="4gl/common/duedate.4gl"/>
+    <file location="4gl/common/vperfunc.4gl"/>
+    <file location="4gl/common/trans_num.4gl"/>
+    <file location="4gl/ar/A2_GROUP_GLOBALS.4gl"/>
+    <file location="4gl/ar/A2Rb.4gl"/>
+    <file location="4gl/common/bankwind.4gl"/>
+    <file location="4gl/ar/A2R_GLOBALS.4gl"/>
+    <file location="4gl/ar/A2R.4gl"/>
+     <file location="4gl/ar/A2R_main.4gl"/>
+  </sources>
+
+  <sources type="form">
+    <file location="per/ar/ENG/A618.fm2"/>
+    <file location="per/ar/ENG/A221.fm2"/>
+  </sources>
+
+  <mediaFiles>
+    <file client="true" location="A2R.qxtheme" type="gui-theme-file"/>
+    <file client="true" location="A2R.css" type="other"/>
+  </mediaFiles>
+
+</fglBuildTarget>

@@ -1,0 +1,10 @@
+output
+*.tar
+*.log
+*.reject
+dbexport.out
+dbimport.out
+/graph.svg
+/temp.db
+/.vscode/
+**/.history/

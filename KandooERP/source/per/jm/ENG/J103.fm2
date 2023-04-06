@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form xmlns="http://namespaces.querix.com/2015/fglForms">
+	<form.rootContainer>
+		<GridPanel classNames="fcls_rootContainer" verticalAlignment="Top" horizontalAlignment="Left" fieldTable="" identifier="rootContainer">
+			<GridPanel.gridRowDefinitions>
+				<GridRowDefinition gridLengthValue=""/>
+				<GridRowDefinition gridLengthValue=""/>
+				<GridRowDefinition gridLengthValue=""/>
+				<GridRowDefinition gridLengthValue=""/>
+			</GridPanel.gridRowDefinitions>
+			<GridPanel.gridColumnDefinitions>
+				<GridColumnDefinition gridLengthValue="100%"/>
+			</GridPanel.gridColumnDefinitions>
+			<GridPanel classNames="fcls_title_cnt" visible="true" verticalAlignment="Top" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="cntTitle">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="100%"/>
+					<GridColumnDefinition gridLengthValue=""/>
+				</GridPanel.gridColumnDefinitions>
+				<Label isDynamic="true" text="Billing Details" classNames="fcls_title_lb" visible="true" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="header_text"/>
+				<Label isDynamic="true" text="J103" classNames="fcls_title_lb" visible="true" gridItemLocation="1,0,1,1" fieldTable="" identifier="lbFormName"/>
+			</GridPanel>
+			<GridPanel classNames="fcls_detail_cnt,fcls_data_cnt" visible="true" verticalAlignment="Top" horizontalAlignment="Left" gridItemLocation="0,1,1,1" fieldTable="formonly" identifier="cntDetail1">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="" gridMinLength="10rem"/>
+					<GridColumnDefinition gridLengthValue=""/>
+					<GridColumnDefinition gridLengthValue=""/>
+				</GridPanel.gridColumnDefinitions>
+				<Label isDynamic="true" text="Method of Billing" classNames="fcls_fieldlabel" visible="true" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="lb57"/>
+				<TextField toCase="Up" dataType="Char,,,,1" preferredSize="2qch,1qch" toolTip=" Identifies the method of billing to be used on this Job (W) " comment=" Identifies the method of billing to be used on this Job (W) " fieldTable="job" identifier="bill_way_ind" gridItemLocation="1,0,1,1" classNames="fcls_data_widget,fcls_length_05qch"/>
+				<TextField noEntry="true" dataType="Char,,,," preferredSize="19qch,1qch" fieldTable="formonly" identifier="bill_way_text" gridItemLocation="2,0,1,1" classNames="fcls_data_widget,fcls_length_20qch"/>
+				<Label isDynamic="true" text="Invoice Interval" classNames="fcls_fieldlabel" visible="true" gridItemLocation="0,1,1,1" fieldTable="" identifier="lb73"/>
+				<TextField toCase="Up" dataType="Char,,,,1" preferredSize="2qch,1qch" toolTip=" Invoice Interval - (1) Daily " comment=" Invoice Interval - (1) Daily " fieldTable="job" identifier="bill_when_ind" gridItemLocation="1,1,1,1" classNames="fcls_data_widget,fcls_length_05qch"/>
+				<TextField noEntry="true" dataType="Char,,,," preferredSize="19qch,1qch" fieldTable="formonly" identifier="bill_when_text" gridItemLocation="2,1,1,1" classNames="fcls_data_widget,fcls_length_20qch"/>
+				<Label isDynamic="true" text="Invoice Issues" classNames="fcls_fieldlabel" visible="true" gridItemLocation="0,2,1,1" fieldTable="" identifier="lb76"/>
+				<TextField toCase="Up" dataType="Char,,,,1" preferredSize="2qch,1qch" toolTip=" Invoice Issue (1) Summary (2) Detailed (3) Summary/Desc (4) Detailed/Desc" comment=" Invoice Issue (1) Summary (2) Detailed (3) Summary/Desc (4) Detailed/Desc" fieldTable="job" identifier="bill_issue_ind" gridItemLocation="1,2,1,1" classNames="fcls_data_widget,fcls_length_05qch"/>
+				<TextField noEntry="true" dataType="Char,,,," preferredSize="19qch,1qch" fieldTable="formonly" identifier="bill_issue_text" gridItemLocation="2,2,1,1" classNames="fcls_data_widget,fcls_length_20qch"/>
+				<Label isDynamic="true" text="Markup Percent" classNames="fcls_fieldlabel" visible="true" gridItemLocation="0,3,1,1" fieldTable="" identifier="lb77"/>
+				<TextField dataType="Decimal,,,2,5" preferredSize="6qch,1qch" toolTip=" Enter Markup Percentage on Cost Plus Job" comment=" Enter Markup Percentage on Cost Plus Job" fieldTable="job" identifier="markup_per" gridItemLocation="1,3,1,1" classNames="fcls_data_widget,fcls_length_05qch"/>
+			</GridPanel>
+			<GroupBox title="General Ledger Accounts" classNames="fcls_detail_gb_cnt" visible="true" verticalAlignment="Stretch" horizontalAlignment="Stretch" gridItemLocation="0,2,1,1" fieldTable="formonly" identifier="cntDetail2GroupBox">
+				<GridPanel classNames="fcls_detail_gb_cnt_sub,fcls_detail_cnt_sub,fcls_data_cnt" visible="true" verticalAlignment="Top" horizontalAlignment="Left" fieldTable="formonly" identifier="cntDetail2GrBoxSub">
+					<GridPanel.gridRowDefinitions>
+						<GridRowDefinition gridLengthValue=""/>
+						<GridRowDefinition gridLengthValue=""/>
+						<GridRowDefinition gridLengthValue=""/>
+					</GridPanel.gridRowDefinitions>
+					<GridPanel.gridColumnDefinitions>
+						<GridColumnDefinition gridLengthValue="" gridMinLength="10rem"/>
+						<GridColumnDefinition gridLengthValue=""/>
+						<GridColumnDefinition gridLengthValue=""/>
+					</GridPanel.gridColumnDefinitions>
+					<Label isDynamic="true" text="Revenue" classNames="fcls_fieldlabel" visible="true" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="lb47"/>
+					<TextField noEntry="true" dataType="Char,,,,18" preferredSize="19qch,1qch" fieldTable="job" identifier="acct_code" gridItemLocation="1,0,1,1" classNames="fcls_data_widget,fcls_length_20qch"/>
+					<TextField dataType="Char,,,,40" preferredSize="41qch,1qch" fieldTable="coa" identifier="desc_text" gridItemLocation="2,0,1,1" classNames="fcls_data_widget,fcls_length_40qch"/>
+					<Label isDynamic="true" text="Default WIP" classNames="fcls_fieldlabel" visible="true" gridItemLocation="0,1,1,1" fieldTable="formonly" identifier="lb46"/>
+					<TextField noEntry="true" dataType="Char,,,,18" preferredSize="19qch,1qch" fieldTable="job" identifier="wip_acct_code" gridItemLocation="1,1,1,1" classNames="fcls_data_widget,fcls_length_20qch"/>
+					<TextField dataType="Char,,,," preferredSize="41qch,1qch" fieldTable="formonly" identifier="wip_desc_text" gridItemLocation="2,1,1,1" classNames="fcls_data_widget,fcls_length_40qch"/>
+					<Label isDynamic="true" text="Default COS" classNames="fcls_fieldlabel" visible="true" gridItemLocation="0,2,1,1" fieldTable="formonly" identifier="lb44"/>
+					<TextField noEntry="true" dataType="Char,,,,18" preferredSize="19qch,1qch" fieldTable="job" identifier="cos_acct_code" gridItemLocation="1,2,1,1" classNames="fcls_data_widget,fcls_length_20qch"/>
+					<TextField dataType="Char,,,," preferredSize="41qch,1qch" fieldTable="formonly" identifier="cos_desc_text" gridItemLocation="2,2,1,1" classNames="fcls_data_widget,fcls_length_40qch"/>
+				</GridPanel>
+			</GroupBox>
+			<GridPanel classNames="fcls_statusbar_cnt" visible="true" verticalAlignment="Top" gridItemLocation="0,3,1,1" fieldTable="formonly" identifier="cntStatusBar">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="100%"/>
+				</GridPanel.gridColumnDefinitions>
+				<Label isDynamic="true" text="" classNames="fcls_sblabel" visible="true" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="lbInfo1"/>
+				<Label isDynamic="true" text="" classNames="fcls_sblabel" visible="true" gridItemLocation="0,1,1,1" fieldTable="formonly" identifier="lbInfo2"/>
+			</GridPanel>
+		</GridPanel>
+	</form.rootContainer>
+	<form.screenRecords>
+		<ScreenRecord identifier="coa" fields="coa.desc_text"/>
+		<ScreenRecord identifier="formonly" fields="formonly.bill_way_text,formonly.bill_when_text,formonly.bill_issue_text,formonly.wip_desc_text,formonly.cos_desc_text"/>
+		<ScreenRecord identifier="job" fields="job.bill_way_ind,job.markup_per,job.bill_when_ind,job.bill_issue_ind,job.acct_code,job.wip_acct_code,job.cos_acct_code"/>
+	</form.screenRecords>
+</form>
+

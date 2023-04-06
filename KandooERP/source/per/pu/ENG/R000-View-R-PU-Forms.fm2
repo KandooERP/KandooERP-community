@@ -1,0 +1,337 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form xmlns="http://namespaces.querix.com/2015/fglForms">
+	<form.rootContainer>
+		<GridPanel classNames="fcls_rootContainer" verticalAlignment="Stretch" horizontalAlignment="Stretch" fieldTable="" identifier="rootContainer">
+			<GridPanel.gridRowDefinitions>
+				<GridRowDefinition gridLengthValue=""/>
+				<GridRowDefinition gridLengthValue="100%"/>
+				<GridRowDefinition gridLengthValue=""/>
+			</GridPanel.gridRowDefinitions>
+			<GridPanel.gridColumnDefinitions>
+				<GridColumnDefinition gridLengthValue="100%"/>
+			</GridPanel.gridColumnDefinitions>
+			<GridPanel classNames="fcls_title_cnt" visible="true" verticalAlignment="Top" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="cntTitle">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="100%"/>
+					<GridColumnDefinition gridLengthValue=""/>
+				</GridPanel.gridColumnDefinitions>
+				<Label isDynamic="true" text="Header-Text" classNames="fcls_title_lb" visible="true" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="header_text"/>
+				<Label isDynamic="true" text="_master_D1_1Gp_01b" classNames="fcls_title_lb" visible="true" gridItemLocation="1,0,1,1" fieldTable="" identifier="lbFormName"/>
+			</GridPanel>
+			<GridPanel classNames="fcls_detail_cnt,fcls_data_cnt,fcls_align_left" visible="true" verticalAlignment="Top" horizontalAlignment="Left" gridItemLocation="0,1,1,1" fieldTable="formonly" identifier="cntDetail1">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue="" gridMinLength="100%"/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="" gridMinLength="100%"/>
+				</GridPanel.gridColumnDefinitions>
+				<ListBox minSize="60rem,20rem" visible="true" verticalAlignment="Stretch" horizontalAlignment="Stretch" gridItemLocation="0,0,1,1" fieldTable="" identifier="formName">
+
+
+					<ListBoxItem text="R100 - Purchase Order Header Entry" identifier="formName_R100">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="R100"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					
+					<ListBoxItem text="R103 - Purchase Order Lines" identifier="formName_R103">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="R103"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					
+					<ListBoxItem text="R104 - Purchasing Parameters" identifier="formName_R104">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="R104"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					
+					<ListBoxItem text="R105 - P.O. Line History" identifier="formName_R105">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="R105"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					
+					<ListBoxItem text="R106 - Delivery Details" identifier="formName_R106">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="R106"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					
+					<ListBoxItem text="R107 - Purchase Order Information" identifier="formName_R107">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="R107"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+
+					
+					<ListBoxItem text="R108 - Scan Purchase Orders " identifier="formName_R108">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="R108"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					
+					<ListBoxItem text="R109 - Confirmation" identifier="formName_R109">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="R109"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					
+					<ListBoxItem text="R111 - Purchase Order Scan" identifier="formName_R111">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="R111"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+
+					
+					<ListBoxItem text="R112 - Purchase Order Receipt" identifier="formName_R112">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="R112"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					
+					<ListBoxItem text="R113 - Purchase Line Receipt" identifier="formName_R133">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="R113"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					
+					<ListBoxItem text="R114 - Line Information" identifier="formName_R114">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="R114"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					
+					<ListBoxItem text="R115 - Commitments" identifier="formName_R115">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="R115"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					
+					<ListBoxItem text="R116 - Purchase Order Status" identifier="formName_R116">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="R116"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					
+					<ListBoxItem text="R117 - Commitments" identifier="formName_R117">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="R117"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					
+					<ListBoxItem text="R119 - Goods Receipt Scan	" identifier="formName_R119">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="R119"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					
+					<ListBoxItem text="R120 - Goods Receipt By Job" identifier="formName_R120">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="R120"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					
+					<ListBoxItem text="R121 - Commitments" identifier="formName_R121">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="R121"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					
+					<ListBoxItem text="R124 - Purchase Order Details" identifier="formName_R124">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="R124"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					
+					<ListBoxItem text="R124a - Purchase Order Details" identifier="formName_R124a">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="R124a"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					
+					<ListBoxItem text="R130 - Account Ledger" identifier="formName_R130">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="R130"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					
+					<ListBoxItem text="R131 - Goods Receipt Scan " identifier="formName_R131">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="R131"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					
+					<ListBoxItem text="R137 - Goods Receipt Report" identifier="formName_R137">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="R137"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					
+					<ListBoxItem text="R139 - Purchase Order Details" identifier="formName_R139">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="R139"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					
+					<ListBoxItem text="R140 - P.O. Audit Detail" identifier="formName_R140">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="R140"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					
+					<ListBoxItem text="R143 - General Purchase Order Lines" identifier="formName_R143">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="R143"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					
+					<ListBoxItem text="R144 - Purchase Order Payment" identifier="formName_R144">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="R144"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					
+					<ListBoxItem text="R146 - Purchase Order Line Payment" identifier="formName_R146">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="R146"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					
+					<ListBoxItem text="R147 - Complete Purchase Orders" identifier="formName_R147">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="R147"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					
+					<ListBoxItem text="R150 - PU Posting" identifier="formName_R150">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="R150"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					
+					<ListBoxItem text="R151 - Goods Receipt" identifier="formName_R151">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="R151"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					
+					<ListBoxItem text="R152 - Purchase Order Inquiry" identifier="formName_R152">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="R152"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					
+					<ListBoxItem text="R155 - Purchase Order Print" identifier="formName_R155">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="R155"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					
+					<ListBoxItem text="R156 - Purchase Order Details" identifier="formName_R156">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="R156"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					
+					<ListBoxItem text="R157 - ETA Date Entry" identifier="formName_R157">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="R157"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					
+					<ListBoxItem text="R600 - Purchase Order Format Types" identifier="formName_R600">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="R600"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					
+					<ListBoxItem text="R601 - Purchase Order Format Details" identifier="formName_R601">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="R601"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					
+					<ListBoxItem text="R602 - Purchase Order Types" identifier="formName_R602">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="R602"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					
+					<ListBoxItem text="R603 - Purchase Order Maintenance" identifier="formName_R603">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="R603"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					
+					<ListBoxItem text="R604 - Purchase Order Header Edit" identifier="formName_R604">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="R604"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					
+					<ListBoxItem text="R605 - Purchase Order Information" identifier="formName_R605">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="R605"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					
+					<ListBoxItem text="R606 - Report Options" identifier="formName_R606">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="R606"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					
+					<ListBoxItem text="R607 - Purchase Order Line Inquiry" identifier="formName_R607">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="R607"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					
+					<ListBoxItem text="R608 - Product Descriptions" identifier="formName_R608">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="R608"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+
+
+
+
+
+					
+
+					<ListBoxItem text="R604	- Purchase Order Header Edit" identifier="formName_R604">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="R604"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+
+
+
+
+					<ListBox.onMouseDoubleClick>
+						<ActionEventHandler actionName="ViewForm"/>
+					</ListBox.onMouseDoubleClick>
+				</ListBox>
+			</GridPanel>
+			<GridPanel classNames="fcls_statusbar_cnt" visible="true" verticalAlignment="Bottom" gridItemLocation="0,2,1,1" fieldTable="formonly" identifier="cntStatusBar">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="100%"/>
+				</GridPanel.gridColumnDefinitions>
+				<Label isDynamic="true" text="" classNames="fcls_sblabel" visible="true" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="lbInfo1"/>
+				<Label isDynamic="true" text="" classNames="fcls_sblabel" visible="true" gridItemLocation="0,1,1,1" fieldTable="formonly" identifier="lbInfo2"/>
+			</GridPanel>
+		</GridPanel>
+	</form.rootContainer>
+	<form.screenRecords>
+		<ScreenRecord identifier="FORMONLY" fields="f151"/>
+	</form.screenRecords>
+</form>
+

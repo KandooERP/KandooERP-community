@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<fglBuildTarget xmlns="http://namespaces.querix.com/lyciaide/target" name="lib_tool_J_JM_new" type="fgl-library">
+
+  <sources type="fgl">
+    <file location="4gl/common/glob_GLOBALS_constant.4gl"/>
+    <file location="4gl/lib_tool/lib_tool_j_jm_init.4gl"/>
+    <file location="4gl/jm/J_JM_GLOBALS.4gl"/>
+    <file location="4gl/lib_tool/lib_winDecoration_J.4gl"/>
+    <file location="4gl/common/glob_GLOBALS.4gl"/>
+    <file location="4gl/common/glob_GLOBALS_userDataTypes.4gl"/>
+  </sources>
+
+</fglBuildTarget>

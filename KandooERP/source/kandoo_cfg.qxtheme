@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<StyleSheet xmlns="http://querix.com">
+  <DoStyleAction>
+    <Include IncludeFileName="{CONTEXT}/public/querix/theme/ocean/_theme_menu_launcher.qxtheme" />
+  </DoStyleAction>
+  <DoStyleAction>
+    <Include IncludeFileName="{CONTEXT}/public/querix/theme/ocean/_theme_master.qxtheme" />
+  </DoStyleAction>
+  <ElementFilter ElementName="RingArea">
+    <StyleSheet>
+      <DoStyleAction>
+        <SetProperty>
+          <PropertyPath>
+            <PropertyName>Visible</PropertyName>
+          </PropertyPath>
+        </SetProperty>
+      </DoStyleAction>
+    </StyleSheet>
+  </ElementFilter>
+</StyleSheet>

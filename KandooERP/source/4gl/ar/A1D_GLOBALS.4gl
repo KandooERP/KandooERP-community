@@ -1,0 +1,3 @@
+--GLOBALS 
+--	DEFINE err_message CHAR(60) 
+--END GLOBALS 

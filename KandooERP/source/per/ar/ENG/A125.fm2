@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form xmlns="http://namespaces.querix.com/2015/fglForms">
+	<form.rootContainer>
+		<GridPanel classNames="fcls_rootContainer" verticalAlignment="Stretch" horizontalAlignment="Stretch" fieldTable="" identifier="rootContainer">
+			<GridPanel.gridRowDefinitions>
+				<GridRowDefinition gridLengthValue=""/>
+				<GridRowDefinition gridLengthValue=""/>
+				<GridRowDefinition gridLengthValue=""/>
+				<GridRowDefinition gridLengthValue=""/>
+				<GridRowDefinition gridLengthValue="100%"/>
+				<GridRowDefinition gridLengthValue=""/>
+			</GridPanel.gridRowDefinitions>
+			<GridPanel.gridColumnDefinitions>
+				<GridColumnDefinition gridLengthValue="100%"/>
+			</GridPanel.gridColumnDefinitions>
+			<GridPanel classNames="fcls_title_cnt" visible="true" verticalAlignment="Top" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="cntTitle">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="100%"/>
+					<GridColumnDefinition gridLengthValue=""/>
+				</GridPanel.gridColumnDefinitions>
+				<Label isDynamic="true" text="Credit Application" classNames="fcls_title_lb" visible="true" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="header_text"/>
+				<Label isDynamic="true" text="A125" classNames="fcls_title_lb" visible="true" gridItemLocation="1,0,1,1" fieldTable="" identifier="lbFormName"/>
+			</GridPanel>
+			<GridPanel classNames="fcls_detail_cnt,fcls_data_cnt,fcls_align_left" visible="true" verticalAlignment="Top" horizontalAlignment="Left" gridItemLocation="0,1,1,1" fieldTable="formonly" identifier="cntDetail1">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="" gridMinLength="10rem"/>
+					<GridColumnDefinition gridLengthValue=""/>
+					<GridColumnDefinition gridLengthValue=""/>
+				</GridPanel.gridColumnDefinitions>
+				<Label isDynamic="true" text="Customer Code" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="lb57"/>
+				<ComboBox toCase="Up" dataType="Char,,,,8" preferredSize="9qch,1qch" toolTip="The Customer Code for this credit memo (W)" gridItemLocation="1,0,1,1" fieldTable="credithead" comment="The Customer Code for this credit memo (W)" identifier="cust_code" classNames="list-show-value-text,field-show-value,fcls_data_widget,fcls_align_left,fcls_length_10qch"/>
+				<TextField dataType="Char,,,,30" preferredSize="31qch,1qch" toolTip="Customer name or description" fieldTable="customer" comment="Customer name or description" identifier="name_text" classNames="fcls_data_widget,fcls_align_left,fcls_length_30qch" gridItemLocation="2,0,1,1"/>
+				<Label isDynamic="true" text="Credit Number" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,1,1,1" fieldTable="" identifier="lb73"/>
+				<TextField dataType="Integer,,,," preferredSize="9qch,1qch" toolTip="Specific Credit Number as assigned by the system" gridItemLocation="1,1,1,1" fieldTable="credithead" comment="Specific Credit Number as assigned by the system" identifier="cred_num" classNames="fcls_data_widget,fcls_align_left,fcls_length_10qch"/>
+			</GridPanel>
+			<GroupBox title="Totals" classNames="fcls_detail_gb_cnt" visible="true" verticalAlignment="Top" gridItemLocation="0,2,1,1" fieldTable="formonly" identifier="cntDetail2GroupBox">
+				<GridPanel classNames="fcls_detail_gb_cnt_sub,fcls_detail_cnt_sub,fcls_data_cnt,fcls_align_left" visible="true" verticalAlignment="Top" horizontalAlignment="Left" fieldTable="formonly" identifier="cntDetail2Sub">
+					<GridPanel.gridRowDefinitions>
+						<GridRowDefinition gridLengthValue=""/>
+						<GridRowDefinition gridLengthValue=""/>
+						<GridRowDefinition gridLengthValue=""/>
+					</GridPanel.gridRowDefinitions>
+					<GridPanel.gridColumnDefinitions>
+						<GridColumnDefinition gridLengthValue="" gridMinLength="10rem"/>
+						<GridColumnDefinition gridLengthValue=""/>
+					</GridPanel.gridColumnDefinitions>
+					<Label isDynamic="true" text="Totals" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="lb47"/>
+					<ComboBox toCase="Up" dataType="Char,,,,3" preferredSize="4qch,1qch" toolTip="Currency in which this customer deals " gridItemLocation="1,0,1,1" fieldTable="customer" comment="Currency in which this customer deals " identifier="currency_code" classNames="list-show-text-value,field-show-value,fcls_data_widget,fcls_align_left,fcls_length_10qch"/>
+					<Label isDynamic="true" text="Credit" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,1,1,1" fieldTable="formonly" identifier="lb46"/>
+					<TextField dataType="Decimal,,,2,16" preferredSize="12qch,1qch" toolTip="Total Amount of credit to be applied" gridItemLocation="1,1,1,1" fieldTable="credithead" comment="Total Amount of credit to be applied" identifier="total_amt" classNames="fcls_data_widget,fcls_align_left,fcls_length_10qch"/>
+					<Label isDynamic="true" text="Applied" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,2,1,1" fieldTable="formonly" identifier="lb44"/>
+					<TextField dataType="Decimal,,,2,16" preferredSize="12qch,1qch" toolTip="Enter the desired amount for credit application" gridItemLocation="1,2,1,1" fieldTable="credithead" comment="Enter the desired amount for credit application" identifier="appl_amt" classNames="fcls_data_widget,fcls_align_left,fcls_length_10qch"/>
+				</GridPanel>
+			</GroupBox>
+			<GroupBox title="Invoice Discount Info" classNames="fcls_detail_gb_cnt" visible="true" gridItemLocation="0,3,1,1" fieldTable="formonly" identifier="cntDetail3GroupBox">
+				<GridPanel classNames="fcls_detail_gb_cnt_sub,fcls_detail_cnt_sub,fcls_data_cnt,fcls_align_left" visible="true" verticalAlignment="Top" horizontalAlignment="Left" fieldTable="formonly" identifier="cntDetail3Sub">
+					<GridPanel.gridRowDefinitions>
+						<GridRowDefinition gridLengthValue=""/>
+						<GridRowDefinition gridLengthValue=""/>
+						<GridRowDefinition gridLengthValue=""/>
+						<GridRowDefinition gridLengthValue=""/>
+					</GridPanel.gridRowDefinitions>
+					<GridPanel.gridColumnDefinitions>
+						<GridColumnDefinition gridLengthValue="" gridMinLength="10rem"/>
+						<GridColumnDefinition gridLengthValue=""/>
+						<GridColumnDefinition gridLengthValue="" gridMinLength="10rem"/>
+						<GridColumnDefinition gridLengthValue=""/>
+					</GridPanel.gridColumnDefinitions>
+					<Label isDynamic="true" text="Invoice Due Date" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="lb48"/>
+					<TextField dataType="Date,,,," preferredSize="11qch,1qch" toolTip="Specific Due Date of this invoice" gridItemLocation="1,0,1,1" fieldTable="invoicehead" comment="Specific Due Date of this invoice" identifier="due_date" classNames="fcls_data_widget,fcls_align_left,fcls_length_15qch"/>
+					<Label isDynamic="true" text="Possible Discount" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="2,0,1,1" fieldTable="" identifier="lb104"/>
+					<TextField dataType="Decimal,,,2,16" preferredSize="12qch,1qch" toolTip="Possible Discount allowed on this invoice if paid within discount period" gridItemLocation="3,0,1,1" fieldTable="invoicehead" comment="Possible Discount allowed on this invoice if paid within discount period" identifier="disc_amt" classNames="fcls_data_widget,fcls_align_left,fcls_length_15qch"/>
+					<Label isDynamic="true" text="Discount Date" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,1,1,1" fieldTable="formonly" identifier="lb49"/>
+					<TextField dataType="Date,,,," preferredSize="11qch,1qch" toolTip="Last date that you may take advantage of any discounts on payments" gridItemLocation="1,1,1,1" fieldTable="invoicehead" comment="Last date that you may take advantage of any discounts on payments" identifier="disc_date" classNames="fcls_data_widget,fcls_align_left,fcls_length_15qch"/>
+					<Label isDynamic="true" text="Discount Date" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="2,1,1,1" fieldTable="" identifier="lb105"/>
+					<TextField dataType="Decimal,,,2,16" preferredSize="12qch,1qch" toolTip="Total amount allowed for discount purposes" gridItemLocation="3,1,1,1" fieldTable="invoicehead" comment="Total amount allowed for discount purposes" identifier="disc_taken_amt" classNames="fcls_data_widget,fcls_align_left,fcls_length_15qch"/>
+					<Label isDynamic="true" text="Invoice" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,2,1,1" fieldTable="formonly" identifier="lb63"/>
+					<TextField noEntry="true" dataType="Char,,,,8" preferredSize="9qch,1qch" gridItemLocation="1,2,1,1" fieldTable="arparms" identifier="inv_ref2a_text" classNames="fcls_data_widget,fcls_align_left,fcls_length_15qch"/>
+					<Label isDynamic="true" text="Number" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,3,1,1" fieldTable="" identifier="lb101"/>
+					<TextField noEntry="true" dataType="Char,,,,8" preferredSize="9qch,1qch" gridItemLocation="1,3,1,1" fieldTable="arparms" identifier="inv_ref2b_text" classNames="fcls_data_widget,fcls_align_left,fcls_length_15qch"/>
+				</GridPanel>
+			</GroupBox>
+			<Table rowCount="7" preferredSize="75qch,7qch" verticalAlignment="Stretch" horizontalAlignment="Stretch" gridItemLocation="0,4,1,1" fieldTable="" identifier="sr_cred" minSize="60rem,15rem">
+				<TableColumn fieldTable="" identifier="tc_scroll_flag">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="4%" gridMaxLength="2rem" gridMinLength="2rem"/>
+					</TableColumn.columnLength>
+					<CheckBox dataType="Char,,,," fieldTable="formonly" identifier="scroll_flag" noEntry="true">
+						<CheckBox.checkedValue>
+							<StringLiteral stringValue="*"/>
+						</CheckBox.checkedValue>
+						<CheckBox.uncheckedValue>
+							<NullLiteral/>
+						</CheckBox.uncheckedValue>
+					</CheckBox>
+				</TableColumn>
+				<TableColumn text="Inv Number" fieldTable="" identifier="tc_inv_num">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="16%" gridMaxLength="10rem" gridMinLength="5rem"/>
+					</TableColumn.columnLength>
+					<TextField noEntry="true" text="Number" dataType="Integer,,,," toolTip="The Invoice Number" fieldTable="invoicehead" comment="The Invoice Number" identifier="inv_num"/>
+				</TableColumn>
+				<TableColumn text="Purchase Number" fieldTable="" identifier="tc_purchase_code">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="16%" gridMaxLength="10rem" gridMinLength="5rem"/>
+					</TableColumn.columnLength>
+					<TextField noEntry="true" dataType="Char,,,,30" toolTip="The Reference Number" fieldTable="invoicehead" comment="The Reference Number" identifier="purchase_code"/>
+				</TableColumn>
+				<TableColumn text="Amount Applied" fieldTable="" identifier="tc_pay_amt">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="16%" gridMaxLength="10rem" gridMinLength="5rem"/>
+					</TableColumn.columnLength>
+					<TextField dataType="Decimal,,,2,16" toolTip="The dollar amount to be used in this credit application" fieldTable="invoicepay" comment="The dollar amount to be used in this credit application" identifier="pay_amt"/>
+				</TableColumn>
+				<TableColumn text="Dicount Given" fieldTable="" identifier="tc_disc_amt">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="16%" gridMaxLength="10rem" gridMinLength="5rem"/>
+					</TableColumn.columnLength>
+					<TextField dataType="Decimal,,,2,16" toolTip="The amount of Discount Given or extended with this credit" fieldTable="invoicepay" comment="The amount of Discount Given or extended with this credit" identifier="disc_amt"/>
+				</TableColumn>
+				<TableColumn text="Total Amt" fieldTable="" identifier="tc_total_amt">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="16%" gridMaxLength="10rem" gridMinLength="5rem"/>
+					</TableColumn.columnLength>
+					<TextField noEntry="true" dataType="Decimal,,,2,16" toolTip="Total Amount being applied as credit to this invoice" fieldTable="invoicehead" comment="Total Amount being applied as credit to this invoice" identifier="total_amt"/>
+				</TableColumn>
+				<TableColumn text="Amount Paid" fieldTable="" identifier="tc_paid_amt">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="16%" gridMaxLength="10rem" gridMinLength="5rem"/>
+					</TableColumn.columnLength>
+					<TextField noEntry="true" dataType="Decimal,,,2,16" toolTip="Total Amount Paid against this invoice" fieldTable="invoicehead" comment="Total Amount Paid against this invoice" identifier="paid_amt"/>
+				</TableColumn>
+			</Table>
+			<GridPanel classNames="fcls_statusbar_cnt" visible="true" verticalAlignment="Top" gridItemLocation="0,5,1,1" fieldTable="formonly" identifier="cntStatusBar">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="100%"/>
+				</GridPanel.gridColumnDefinitions>
+				<Label isDynamic="true" text="" classNames="fcls_sblabel" visible="true" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="lbInfo1"/>
+				<Label isDynamic="true" text="" classNames="fcls_sblabel" visible="true" gridItemLocation="0,1,1,1" fieldTable="formonly" identifier="lbInfo2"/>
+			</GridPanel>
+		</GridPanel>
+	</form.rootContainer>
+	<form.screenRecords>
+		<ScreenRecord identifier="sr_cred" fields="formonly.scroll_flag,invoicehead.inv_num,invoicehead.purchase_code,invoicepay.pay_amt,invoicepay.disc_amt,invoicehead.total_amt,invoicehead.paid_amt" elements="7"/>
+		<ScreenRecord identifier="arparms" fields="inv_ref2a_text,inv_ref2b_text"/>
+		<ScreenRecord identifier="credithead" fields="cust_code,cred_num,total_amt,appl_amt"/>
+		<ScreenRecord identifier="customer" fields="name_text,currency_code"/>
+		<ScreenRecord identifier="formonly" fields="scroll_flag"/>
+		<ScreenRecord identifier="invoicehead" fields="due_date,disc_date,disc_amt,disc_taken_amt,inv_num,purchase_code,total_amt,paid_amt"/>
+		<ScreenRecord identifier="invoicepay" fields="pay_amt,disc_amt"/>
+	</form.screenRecords>
+</form>
+

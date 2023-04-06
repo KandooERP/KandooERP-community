@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form xmlns="http://namespaces.querix.com/2015/fglForms">
+	<form.rootContainer>
+		<GridPanel classNames="fcls_rootContainer" verticalAlignment="Stretch" horizontalAlignment="Stretch" fieldTable="" identifier="rootContainer">
+			<GridPanel.gridRowDefinitions>
+				<GridRowDefinition gridLengthValue=""/>
+				<GridRowDefinition gridLengthValue=""/>
+				<GridRowDefinition gridLengthValue="100%"/>
+				<GridRowDefinition gridLengthValue=""/>
+			</GridPanel.gridRowDefinitions>
+			<GridPanel.gridColumnDefinitions>
+				<GridColumnDefinition gridLengthValue="100%"/>
+			</GridPanel.gridColumnDefinitions>
+			<GridPanel classNames="fcls_title_cnt" visible="true" verticalAlignment="Top" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="cntTitle">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="100%"/>
+					<GridColumnDefinition gridLengthValue=""/>
+				</GridPanel.gridColumnDefinitions>
+				<Label isDynamic="true" text="Account Group Maintenance" classNames="fcls_title_lb" visible="true" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="header_text"/>
+				<Label isDynamic="true" text="TG580" classNames="fcls_title_lb" visible="true" gridItemLocation="1,0,1,1" fieldTable="" identifier="lbFormName"/>
+			</GridPanel>
+			<GridPanel classNames="fcls_detail_cnt,fcls_data_cnt,fcls_align_left" visible="true" verticalAlignment="Top" horizontalAlignment="Left" gridItemLocation="0,1,1,1" fieldTable="formonly" identifier="cntDetail1">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="" gridMinLength="10rem"/>
+					<GridColumnDefinition gridLengthValue=""/>
+				</GridPanel.gridColumnDefinitions>
+				<TextField toCase="Up" dataType="Char,,,,8" preferredSize="9qch,1qch" toolTip="Unique group G/L Account" fieldTable="acctgrp" comment="Unique group G/L Account" identifier="group_code" gridItemLocation="1,0,1,1" classNames="fcls_data_widget,fcls_align_left,fcls_length_30qch">
+				<TextField.displayModes>
+					<DisplayMode appearance="cyan"/>
+				</TextField.displayModes>
+			</TextField>
+				<TextField dataType="Char,,,,30" preferredSize="31qch,1qch" toolTip="Unique group G/L Account description" fieldTable="acctgrp" comment="Unique group G/L Account description" identifier="desc_text" gridItemLocation="1,1,1,1" classNames="fcls_data_widget,fcls_align_left,fcls_length_30qch">
+				<TextField.displayModes>
+					<DisplayMode appearance="cyan"/>
+				</TextField.displayModes>
+			</TextField>
+				<Label isDynamic="true" text="Group Code:" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,0,1,1" fieldTable="" identifier="lb51"/>
+				<Label isDynamic="true" text="Description:" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,1,1,1" fieldTable="" identifier="lb52"/>
+			</GridPanel>
+			<Table rowCount="10" preferredSize="65qch,10qch" fieldTable="" identifier="sa_acctgrpdetl" gridItemLocation="0,2,1,1">
+				<TableColumn fieldTable="" identifier="tc_id_num" text="Id">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="10rem" gridMaxLength="10rem" gridMinLength="10rem"/>
+					</TableColumn.columnLength>
+					<TextField dataType="SmallInt,,,," toolTip="Unique identifier of definition - OR clause" fieldTable="acctgrpdetl" comment="Unique identifier of definition - OR clause" identifier="id_num">
+						<TextField.displayModes>
+							<DisplayMode appearance="cyan"/>
+						</TextField.displayModes>
+					</TextField>
+				</TableColumn>
+				<TableColumn fieldTable="" identifier="tc_subid_num" text="Sub Id">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="10rem" gridMaxLength="10rem" gridMinLength="10rem"/>
+					</TableColumn.columnLength>
+					<TextField toCase="Down" dataType="Char,,,,1" toolTip="Sub identifier of definition - AND clause" fieldTable="acctgrpdetl" comment="Sub identifier of definition - AND clause" identifier="subid_num">
+						<TextField.displayModes>
+							<DisplayMode appearance="cyan"/>
+						</TextField.displayModes>
+					</TextField>
+				</TableColumn>
+				<TableColumn fieldTable="" identifier="tc_sel_type" text="Sel. Type">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="10rem" gridMaxLength="10rem" gridMinLength="10rem"/>
+					</TableColumn.columnLength>
+					<ComboBox toCase="Up" dataType="Char,,,,1" toolTip="R = Range, S = Segment selection, M = Matches" fieldTable="acctgrpdetl" comment="R = Range, S = Segment selection, M = Matches" identifier="sel_type">
+						<ComboBoxItem text="Range">
+							<ComboBoxItem.value>
+								<StringLiteral stringValue="R"/>
+							</ComboBoxItem.value>
+						</ComboBoxItem>
+						<ComboBoxItem text="Segment Selection">
+							<ComboBoxItem.value>
+								<StringLiteral stringValue="S"/>
+							</ComboBoxItem.value>
+						</ComboBoxItem>
+						<ComboBoxItem text="Matches">
+							<ComboBoxItem.value>
+								<StringLiteral stringValue="M"/>
+							</ComboBoxItem.value>
+						</ComboBoxItem>
+						
+					</ComboBox>
+				</TableColumn>
+				<TableColumn fieldTable="" identifier="tc_start_pos" text="Start Pos.">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="10rem" gridMaxLength="10rem" gridMinLength="10rem"/>
+					</TableColumn.columnLength>
+					<TextField dataType="SmallInt,,,," toolTip="Start position of segment/chart (W)" fieldTable="acctgrpdetl" comment="Start position of segment/chart (W)" identifier="start_pos">
+						<TextField.displayModes>
+							<DisplayMode appearance="cyan"/>
+						</TextField.displayModes>
+					</TextField>
+				</TableColumn>
+				<TableColumn fieldTable="" identifier="tc_start_acct" text="Start clause">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="30rem" gridMaxLength="30rem" gridMinLength="30rem"/>
+					</TableColumn.columnLength>
+					<TextField toCase="Up" dataType="Char,,,,18" toolTip="Start account / selection clause" fieldTable="acctgrpdetl" comment="Start account / selection clause" identifier="start_acct">
+						<TextField.displayModes>
+							<DisplayMode appearance="cyan"/>
+						</TextField.displayModes>
+					</TextField>
+				</TableColumn>
+				<TableColumn fieldTable="" identifier="tc_end_acct" text="End clause">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="30rem" gridMaxLength="30rem" gridMinLength="30rem"/>
+					</TableColumn.columnLength>
+					<TextField toCase="Up" dataType="Char,,,,18" toolTip="End account of range" fieldTable="acctgrpdetl" comment="End account of range" identifier="end_acct">
+						<TextField.displayModes>
+							<DisplayMode appearance="cyan"/>
+						</TextField.displayModes>
+					</TextField>
+				</TableColumn>
+				<TableColumn resizable="true" visible="true" identifier="tc_lbEOL">
+					<Label isDynamic="true" visible="true" identifier="lbEOL"/>
+					<TableColumn.columnLength>
+						<GridLength/>
+					</TableColumn.columnLength>
+				</TableColumn>
+			</Table>
+			<GridPanel classNames="fcls_statusbar_cnt" visible="true" verticalAlignment="Top" gridItemLocation="0,3,1,1" fieldTable="formonly" identifier="cntStatusBar">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="100%"/>
+				</GridPanel.gridColumnDefinitions>
+				<Label isDynamic="true" text="" classNames="fcls_sblabel" visible="true" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="lbInfo1"/>
+				<Label isDynamic="true" text="" classNames="fcls_sblabel" visible="true" gridItemLocation="0,1,1,1" fieldTable="formonly" identifier="lbInfo2"/>
+			</GridPanel>
+		</GridPanel>
+	</form.rootContainer>
+	<form.screenRecords>
+		<ScreenRecord identifier="sa_acctgrpdetl" fields="acctgrpdetl.id_num,acctgrpdetl.subid_num,acctgrpdetl.sel_type,acctgrpdetl.start_pos,acctgrpdetl.start_acct,acctgrpdetl.end_acct" elements="10"/>
+		<ScreenRecord identifier="acctgrp" fields="acctgrp.group_code,acctgrp.desc_text"/>
+		<ScreenRecord identifier="acctgrpdetl" fields="acctgrpdetl.id_num,acctgrpdetl.subid_num,acctgrpdetl.sel_type,acctgrpdetl.start_pos,acctgrpdetl.start_acct,acctgrpdetl.end_acct"/>
+	</form.screenRecords>
+</form>
+

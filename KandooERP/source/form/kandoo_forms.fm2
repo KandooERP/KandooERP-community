@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form xmlns="http://namespaces.querix.com/2015/fglForms" title="Startmenu">
+	<MenuBar title="Menu bar" visible="true" identifier="c1">
+
+		<MenuCommand text="Exit" visible="true" identifier="actexit">
+			<MenuCommand.onInvoke>
+				<ActionEventHandler type="actioneventhandler" actionName="actCmdInvoke"/>
+			</MenuCommand.onInvoke>
+		</MenuCommand>
+	
+
+			<MenuCommand text="A/AR - Accounts Receivable" visible="true" identifier="A000_All_AR-Accounts-Receivable-Forms" toolTip="A/AR - Accounts Receivable Forms" >
+				<MenuCommand.onInvoke>
+					<ActionEventHandler type="actioneventhandler" actionName="actCmdInvoke"/>
+				</MenuCommand.onInvoke>
+			</MenuCommand>
+
+			<MenuCommand text="E/EO - Quotation" visible="true" identifier="E000_All_E-Sales-Order-Processing-Forms" toolTip="E/EO - Quotation Forms" >
+				<MenuCommand.onInvoke>
+					<ActionEventHandler type="actioneventhandler" actionName="actCmdInvoke"/>
+				</MenuCommand.onInvoke>
+			</MenuCommand>
+
+			<MenuCommand text="F/FA - Fixed_Assets" visible="true" identifier="F0000_All_F_FA_Forms_Fixed_Assets" toolTip="F/FA - Fixed_Assets Forms" >
+				<MenuCommand.onInvoke>
+					<ActionEventHandler type="actioneventhandler" actionName="actCmdInvoke"/>
+				</MenuCommand.onInvoke>
+			</MenuCommand>
+
+
+
+			<MenuCommand text="G/GL - General Ledger" visible="true" identifier="G-All-Forms" toolTip="G/GL - General Ledger Forms" >
+				<MenuCommand.onInvoke>
+					<ActionEventHandler type="actioneventhandler" actionName="actCmdInvoke"/>
+				</MenuCommand.onInvoke>
+			</MenuCommand>
+
+			<MenuCommand text="I/IN - Warehouse Inventory" visible="true" identifier="I000_All_I-Warehouse-Forms" toolTip="Kandoo Forms" >
+				<MenuCommand.onInvoke>
+					<ActionEventHandler type="actioneventhandler" actionName="actCmdInvoke"/>
+				</MenuCommand.onInvoke>
+			</MenuCommand>
+
+
+			<MenuCommand text="J/JM - Jobs" visible="true" identifier="J000_All_J_Forms" toolTip="J/JM - Jobs Forms" >
+				<MenuCommand.onInvoke>
+					<ActionEventHandler type="actioneventhandler" actionName="actCmdInvoke"/>
+				</MenuCommand.onInvoke>
+			</MenuCommand>
+
+			<MenuCommand text="K/SS - Subscription" visible="true" identifier="K000_All_K_SS-Subscription-Management-Forms" toolTip="K/SS - Subscription Forms" >
+				<MenuCommand.onInvoke>
+					<ActionEventHandler type="actioneventhandler" actionName="actCmdInvoke"/>
+				</MenuCommand.onInvoke>
+			</MenuCommand>
+
+			<MenuCommand text="L/LC - Shipment Landed Costing" visible="true" identifier="L000_All_L_LC-Shipment-Landed-Costing-Forms" toolTip="L/LC - Shipment Landed Costing Forms" >
+				<MenuCommand.onInvoke>
+					<ActionEventHandler type="actioneventhandler" actionName="actCmdInvoke"/>
+				</MenuCommand.onInvoke>
+			</MenuCommand>			
+
+			<MenuCommand text="N/RE - Internal Requisition" visible="true" identifier="N0000_All_N_RE_Forms" toolTip="N/RE - Internal Requisition Forms" >
+				<MenuCommand.onInvoke>
+					<ActionEventHandler type="actioneventhandler" actionName="actCmdInvoke"/>
+				</MenuCommand.onInvoke>
+			</MenuCommand>			
+
+			<MenuCommand text="P/AP - Accounts Payable" visible="true" identifier="P000_All_P-Forms" toolTip="P/AP - Accounts Payable Forms" >
+				<MenuCommand.onInvoke>
+					<ActionEventHandler type="actioneventhandler" actionName="actCmdInvoke"/>
+				</MenuCommand.onInvoke>
+			</MenuCommand>			
+
+
+			<MenuCommand text="Q/QE - Quotation" visible="true" identifier="Q000-View-Q-QE-Forms" toolTip="Q/QE - Quotation Forms" >
+				<MenuCommand.onInvoke>
+					<ActionEventHandler type="actioneventhandler" actionName="actCmdInvoke"/>
+				</MenuCommand.onInvoke>
+			</MenuCommand>
+
+			<MenuCommand text="R/PU - Purchasing" visible="true" identifier="R000-View-R-PU-Forms" toolTip="R/PU - Purchasing Forms" >
+				<MenuCommand.onInvoke>
+					<ActionEventHandler type="actioneventhandler" actionName="actCmdInvoke"/>
+				</MenuCommand.onInvoke>
+			</MenuCommand>
+
+			<MenuCommand text="SR - Service Request" visible="true" identifier="SR_0000_All_SR_Forms_Service_Request" toolTip="SR - Service Request Forms" >
+				<MenuCommand.onInvoke>
+					<ActionEventHandler type="actioneventhandler" actionName="actCmdInvoke"/>
+				</MenuCommand.onInvoke>
+			</MenuCommand>
+
+			<MenuCommand text="TG/GW - Report" visible="true" identifier="TGW000_All_GW_Forms_Print" toolTip="TG/GW - Report Forms" >
+				<MenuCommand.onInvoke>
+					<ActionEventHandler type="actioneventhandler" actionName="actCmdInvoke"/>
+				</MenuCommand.onInvoke>
+			</MenuCommand>
+
+			<MenuCommand text="U/utility - Utility" visible="true" identifier="U000_All_U-Utilities-Forms" toolTip="U/utility - Utility Forms" >
+				<MenuCommand.onInvoke>
+					<ActionEventHandler type="actioneventhandler" actionName="actCmdInvoke"/>
+				</MenuCommand.onInvoke>
+			</MenuCommand>
+
+			<MenuCommand text="W/W - Building Products" visible="true" identifier="W000_W-Forms" toolTip="W/W - Building Products" >
+				<MenuCommand.onInvoke>
+					<ActionEventHandler type="actioneventhandler" actionName="actCmdInvoke"/>
+				</MenuCommand.onInvoke>
+			</MenuCommand>
+
+
+
+		
+	</MenuBar>
+	<form.screenRecords>
+		<ScreenRecord identifier="FormOnly"/>
+	</form.screenRecords>
+</form>

@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<fglBuildTarget xmlns="http://namespaces.querix.com/lyciaide/target" name="P000_All_P-Forms" type="fgl-program">
+
+  <libraries>
+    <library name="lib_tool_P_AP_db" dynamic="false" location=""/>
+    <library name="lib_tool_P_AP_new" dynamic="false" location=""/>
+    <library name="lib_tool_common" dynamic="false" location=""/>
+  </libraries>
+
+  <sources type="fgl">
+    <file location="4gl/common/glob_GLOBALS_constant.4gl"/>
+    <file location="4gl/common/glob_GLOBALS_userDataTypes.4gl"/>
+    <file location="4gl/pu/P_All_P-Forms.4gl"/>
+  </sources>
+
+  <sources type="form">
+    <file location="per/ap/ENG/P140.fm2"/>
+    <file location="per/ap/ENG/P139.fm2"/>
+    <file location="per/ap/ENG/P115.fm2"/>
+    <file location="per/ap/ENG/P103.fm2"/>
+    <file location="per/ap/ENG/P127.fm2"/>
+    <file location="per/ap/ENG/P176.fm2"/>
+    <file location="per/ap/ENG/P164.fm2"/>
+    <file location="per/ap/ENG/P152.fm2"/>
+    <file location="per/ap/ENG/P116NZ.fm2"/>
+    <file location="per/ap/ENG/P511.fm2"/>
+    <file location="per/ap/ENG/P235.fm2"/>
+    <file location="per/ap/ENG/P229.fm2"/>
+    <file location="per/ap/ENG/P230.fm2"/>
+    <file location="per/ap/ENG/P121.fm2"/>
+    <file location="per/ap/ENG/P194.fm2"/>
+    <file location="per/ap/ENG/P170.fm2"/>
+    <file location="per/ap/ENG/P169.fm2"/>
+    <file location="per/ap/ENG/PB00.fm2"/>
+    <file location="per/ap/ENG/P116UA.fm2"/>
+    <file location="per/ap/ENG/P516.fm2"/>
+    <file location="per/ap/ENG/P236.fm2"/>
+    <file location="per/ap/ENG/P224.fm2"/>
+    <file location="per/ap/ENG/P204.fm2"/>
+    <file location="per/gl/ENG/coaLookup.fm2"/>
+    <file location="per/ap/ENG/P241.fm2"/>
+    <file location="per/ap/ENG/P110.fm2"/>
+    <file location="per/ap/ENG/P122.fm2"/>
+    <file location="per/ap/ENG/P158.fm2"/>
+    <file location="per/ap/ENG/P116AU.fm2"/>
+    <file location="per/ap/ENG/P195.fm2"/>
+    <file location="per/ap/ENG/P138.fm2"/>
+    <file location="per/ap/ENG/P104.fm2"/>
+    <file location="per/ap/ENG/P163.fm2"/>
+    <file location="per/ap/ENG/P177.fm2"/>
+    <file location="per/ap/ENG/P509.fm2"/>
+    <file location="per/ap/ENG/P157.fm2"/>
+    <file location="per/ap/ENG/P500.fm2"/>
+    <file location="per/ap/ENG/P182.fm2"/>
+    <file location="per/ap/ENG/PR0.fm2"/>
+    <file location="per/ap/ENG/P222.fm2"/>
+    <file location="per/ap/ENG/P506.fm2"/>
+    <file location="per/ap/ENG/P107.fm2"/>
+    <file location="per/ap/ENG/P132.fm2"/>
+    <file location="per/ap/ENG/P120.fm2"/>
+    <file location="per/ap/ENG/P119.fm2"/>
+    <file location="per/ap/ENG/P503.fm2"/>
+    <file location="per/ap/ENG/P225.fm2"/>
+    <file location="per/ap/ENG/P175.fm2"/>
+    <file location="per/ap/ENG/vendorLookup_4columns.fm2"/>
+    <file location="per/ap/ENG/P239.fm2"/>
+    <file location="per/ap/ENG/P240.fm2"/>
+    <file location="per/ap/ENG/P215.fm2"/>
+    <file location="per/ap/ENG/P116US.fm2"/>
+    <file location="per/ap/ENG/P135.fm2"/>
+    <file location="per/ap/ENG/P160.fm2"/>
+    <file location="per/ap/ENG/P159.fm2"/>
+    <file location="per/ap/ENG/P212.fm2"/>
+    <file location="per/ap/ENG/P200.fm2"/>
+    <file location="per/ap/ENG/P149.fm2"/>
+    <file location="per/ap/ENG/P174.fm2"/>
+    <file location="per/ap/ENG/P504.fm2"/>
+    <file location="per/ap/ENG/P228.fm2"/>
+    <file location="per/ap/ENG/P109.fm2"/>
+    <file location="per/ap/ENG/P171.fm2"/>
+    <file location="per/ap/ENG/P134.fm2"/>
+    <file location="per/ap/ENG/P146.fm2"/>
+    <file location="per/ap/ENG/P173.fm2"/>
+    <file location="per/ap/ENG/P505.fm2"/>
+    <file location="per/ap/ENG/P213.fm2"/>
+    <file location="per/ap/ENG/P227.fm2"/>
+    <file location="per/ap/ENG/P108.fm2"/>
+    <file location="per/ap/ENG/P133.fm2"/>
+    <file location="per/ap/ENG/P147.fm2"/>
+    <file location="per/ap/ENG/P226.fm2"/>
+    <file location="per/ap/ENG/P238.fm2"/>
+    <file location="per/ap/ENG/P214.fm2"/>
+    <file location="per/ap/ENG/P100.fm2"/>
+    <file location="per/ap/ENG/P109a.fm2"/>
+    <file location="per/ap/ENG/P148.fm2"/>
+    <file location="per/ap/ENG/P112.fm2"/>
+    <file location="per/ap/ENG/P124.fm2"/>
+    <file location="per/ap/ENG/A000-View-P-AP-Forms.fm2"/>
+    <file location="per/ap/ENG/P161.fm2"/>
+    <file location="per/ap/ENG/PC00.fm2"/>
+    <file location="per/ap/ENG/P176x.fm2"/>
+    <file location="per/ap/ENG/P106.fm2"/>
+    <file location="per/ap/ENG/P507.fm2"/>
+    <file location="per/ap/ENG/P179.fm2"/>
+    <file location="per/ap/ENG/P180.fm2"/>
+    <file location="per/ap/ENG/P155.fm2"/>
+    <file location="per/ap/ENG/P219.fm2"/>
+    <file location="per/ap/ENG/P502.fm2"/>
+    <file location="per/ap/ENG/P150.fm2"/>
+    <file location="per/ap/ENG/P125.fm2"/>
+    <file location="per/ap/ENG/P137.fm2"/>
+    <file location="per/ap/ENG/P117.fm2"/>
+    <file location="per/ap/ENG/vendorLookup.fm2"/>
+    <file location="per/ap/ENG/P116EU.fm2"/>
+    <file location="per/ap/ENG/P105.fm2"/>
+    <file location="per/ap/ENG/P130.fm2"/>
+    <file location="per/ap/ENG/P508.fm2"/>
+    <file location="per/ap/ENG/P178.fm2"/>
+    <file location="per/ap/ENG/P501.fm2"/>
+    <file location="per/ap/ENG/P221.fm2"/>
+    <file location="per/ap/ENG/P513.fm2"/>
+    <file location="per/ap/ENG/P197.fm2"/>
+    <file location="per/ap/ENG/P515.fm2"/>
+    <file location="per/ap/ENG/P203.fm2"/>
+    <file location="per/utility/ENG/coaLookup_filter.fm2"/>
+    <file location="per/ap/ENG/P237.fm2"/>
+    <file location="per/ap/ENG/P118.fm2"/>
+    <file location="per/ap/ENG/P143.fm2"/>
+    <file location="per/ap/ENG/P123.fm2"/>
+    <file location="per/ap/ENG/P514.fm2"/>
+    <file location="per/ap/ENG/P196.fm2"/>
+    <file location="per/ap/ENG/PA00.fm2"/>
+    <file location="per/ap/ENG/P181.fm2"/>
+    <file location="per/ap/ENG/P231.fm2"/>
+    <file location="per/ap/ENG/P193.fm2"/>
+    <file location="per/ap/ENG/P218.fm2"/>
+    <file location="per/ap/ENG/P168.fm2"/>
+    <file location="per/ap/ENG/P156.fm2"/>
+    <file location="per/ap/ENG/P147_new.fm2"/>
+    <file location="per/ap/ENG/P126.fm2"/>
+    <file location="per/ap/ENG/P102.fm2"/>
+    <file location="per/ap/ENG/P190.fm2"/>
+    <file location="per/ap/ENG/P165.fm2"/>
+    <file location="per/ap/ENG/P512.fm2"/>
+    <file location="per/ap/ENG/P111.fm2"/>
+    <file location="per/ap/ENG/P101.fm2"/>
+    <file location="per/ap/ENG/P234.fm2"/>
+    <file location="per/ap/ENG/P121_l2.fm2"/>
+    <file location="per/ap/ENG/P129.fm2"/>
+    <file location="per/ap/ENG/P166.fm2"/>
+    <file location="per/ap/ENG/P154.fm2"/>
+    <file location="per/ap/ENG/P191.fm2"/>
+    <file location="per/ap/ENG/P208.fm2"/>
+    <file location="per/ap/ENG/P233.fm2"/>
+    <file location="per/ap/ENG/P114.fm2"/>
+    <file location="per/ap/ENG/P153.fm2"/>
+    <file location="per/ap/ENG/P238_l2.fm2"/>
+    <file location="per/ap/ENG/P510.fm2"/>
+    <file location="per/ap/ENG/P167.fm2"/>
+    <file location="per/ap/ENG/P207.fm2"/>
+    <file location="per/ap/ENG/P192.fm2"/>
+    <file location="per/ap/ENG/P113.fm2"/>
+  </sources>
+
+  <mediaFiles>
+    <file client="true" location="P000_All_P-Forms.css" type="other"/>
+    <file client="true" location="P000_All_P-Forms.qxtheme" type="gui-theme-file"/>
+  </mediaFiles>
+
+  <buildConfiguration name="development">
+    <additions>
+    </additions>
+    <exclusions>
+    </exclusions>
+  </buildConfiguration>
+
+</fglBuildTarget>

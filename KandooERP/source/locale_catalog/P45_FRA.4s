@@ -1,0 +1,102 @@
+P45_FRA {
+- Contra Amount { "Montant de la contre-écriture" }
+- Tax Amount { "Montant de la T.V.A." }
+-Y- or -N- if cheque has been processed through the posting program { "-Y- ou -N- si le chèque a été processé par le programme de compt" }
+Account number used by bank { "Numéro de compte utilisé par la banque" }
+Accounting period to be used for posting purposes { "Période comptable à utiliser à des fins de comptabilisation" }
+Accounting year to be used for posting purposes { "Année comptable à utiliser aux fins de comptabilisation" }
+Acct No. { "Numéro de compte" }
+Additional comments lines for cheque information, if needed { "Lignes de commentaires supplémentaires pour les informations de " }
+Address { "Adresse" }
+Amount Applied { "Montant Appliqué" }
+Amount Paid { "Montant payé" }
+Amounts { "Montants" }
+Applied Amount { "Montant appliqué" }
+Applied to Vouchers { "Appliqué aux factures fournisseur" }
+BIC { "BIC" }
+Bank Account Number { "Numéro de compte bancaire" }
+Bank Code { "Code Banque" }
+Bank Code of bank to be inquired on { "Code de la banque interrogée" }
+Bank statement line number where  the cheque was reconciled { "Numéro de ligne du relevé bancaire où le chèque a été lettré" }
+Bank statement transaction date on which the payment was presented { "Date de la transaction du relevé bancaire à laquelle le paiement" }
+Cheque Date { "Date du chèque" }
+Cheque Gross Amount { "Montant Brut du chèque" }
+Cheque Net Amount { "Montant Net du chèque" }
+City { "Ville" }
+Closed { "Clôturé" }
+Comments { "Commentaires" }
+Country { "Pays" }
+Currency { "Devise" }
+Current date cheque was entered into the system { "Date à laquelle le chèque a été saisi" }
+Date { "Date" }
+Date Presented { "Date de présentation" }
+Date used for recording cheque information in the appropriate ledgers { "Date utilisée pour enregistrer les informations du chèque dans l" }
+Description { "Description" }
+Discount Taken { "Remise obtenue" }
+Discounts Taken { "Remises accordées" }
+EFT Payment { "Paiement électronique" }
+Entry Date { "Date d'entrée" }
+Entry Person { "Personne ayant saisi l'info" }
+Exchange rate { "Taux de change" }
+Full name or description of vendor { "Nom complet ou description du fournisseur" }
+Full name or description of vendor { "Nom complet ou description du vendeur" }
+GL Account { "Compte de Compta Générale" }
+GL Integration { "Intégration Grand Livre" }
+General Ledger Account Number (W) { "Compte de Comptabilité Générale" }
+ID { "ID" }
+Identifies any receipt of item referencing this transaction { "Identifie tout reçu ou document référençant cette transaction" }
+Language Code { "Code langue" }
+Line No { "Ligne N°" }
+Method { "Méthode" }
+Method: (1) auto/manual cheques, (3) EFT payments { "Méthode: (1) chèque auto/manuel, (3) paiements EFT" }
+Name { "Nom" }
+Name of bank to be inquired on { "Nom de la banque interrogée" }
+Name of person performing entry { "Nom de la personne effectuant la saisie" }
+Net cheque amount after tax and contra { "Montant total du chèque" }
+Other Info { "Autres informations" }
+Payee { "Bénéficiaire" }
+Payee Details { "Détails du bénéficiaire" }
+Payee bank account BIC number (Bank/State/Branch) (W) { "Code BIC  du compte bancaire du bénéficiaire" }
+Payee bank account number { "Numéro de compte bancaire du bénéficiaire" }
+Payee name or description { "Nom du bénéficiaire" }
+Payment Information { "Information sur le paiement" }
+Payment Method { "Mode de paiement" }
+Payment Number { "Numéro de paiement" }
+Payment method indicator, 1 = Cheque, 3 = EFT { "Indicateur du mode de paiement, 1 = Chèque, 3 = Paiement electronique" }
+Post Code { "Code Postal" }
+Post Period { "Période de clôture" }
+Post Year { "Année de clôture" }
+Posted { "Publié" }
+Query { "Interroger" }
+Receipt Reference { "Référence du reçu" }
+Reconciliation { "Lettrage" }
+Sheet No { "Folio N°" }
+State/County { "Région" }
+Statement sheet number on which the cheque was reconciled { "Numéro de la feuille de relevé sur laquelle le chèque a été lett" }
+Tax % { "% T.V.A." }
+Tax Code { "Code T.V.A." }
+The City { "La ville" }
+The State/Province { "La région" }
+The contra amount of this cheque { "Montant de contre-écriture de ce chèque" }
+The country name { "Nom du pays" }
+The currency used for this vendor { "Devise utilisée pour ce fournisseur" }
+The discount amount used (taken) on this remittance { "Le montant de la remise prélevé sur cette remise" }
+The first address line { "La première ligne d'adresse" }
+The post code { "Le code postal" }
+The second address line { "La deuxième ligne d'adresse" }
+The specific cheque or EFT number already entered in the system { "Le chèque ou le numéro de virmt électronique spécifique déjà entré dans le système" }
+The tax amount of this cheque { "Le montant de la T.V.A de ce chèque" }
+The third address line { "La troisième ligne d'adresse" }
+The total amount applied to a particular remittance(s) { "Le montant total appliqué à un ou plusieurs paiements" }
+Total Amount { "Montant Total" }
+Total cheque amount including tax and contra { "Montant total du chèque incluant T.V.A et montant H.T." }
+Unique Vendor ID { "ID unique du fournisseur" }
+Unique Vendor ID (W) { "ID unique du fournisseur (W)" }
+Used to record any pertinent information about the cheque { "Utilisé pour enregistrer toute information pertinente sur le chè" }
+Vendor { "Fournisseur" }
+Vendor Code { "Code Fournisseur" }
+Vendor Invoice { "Facture fournisseur" }
+Withholding Tax Code { "Code T.V.A déductible" }
+Withholding Tax Percentage { "Pourcentage de T.V.A. déductible" }
+actToolbarManager { "actToolbarManager" }
+}

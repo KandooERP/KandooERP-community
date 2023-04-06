@@ -1,0 +1,63 @@
+{
+###########################################################################
+# This program is free software; you can redistribute it and/or modify it
+# under the terms of the GNU General Public License as published by the
+# Free Software Foundation; either version 2 of the License, or (at your
+# option) any later version.
+#
+# This program is distributed in the hope that it will be useful, but
+# WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+# General Public License for more details.
+#
+# You should have received a copy of the GNU General Public License along
+# with this program; if not, write to the Free Software Foundation, Inc.,
+# 59 Temple Place, Suite 330, Boston, MA 02111-1307 USA
+#
+###########################################################################
+
+	 $Id: M134.per,v 1.2 2003/11/19 22:22:59 afalout Exp $
+}
+
+
+database kandoodb
+
+screen
+{
+                  Master Production Schedule Updates                M134   
+\g-------------------------------------------------------------------------\g
+
+ MPS Plan Number  [f000    ]
+ Description      [f001                          ]
+ End Date         [f002      ]
+
+ Use Orders or Forecasts within Demand Time Fence (O/F) [a]
+ Include Scrap and Yield %                              [b]
+ Product Group                                          [c  ]
+ Product Category                                       [d  ]
+ Product Class                                          [e       ]
+
+}
+
+tables
+mps
+
+attributes
+f000 = mps.plan_code, upshift,
+comments = " A code used to uniquely identify a schedule";
+f001 = mps.desc_text, comments = " A description for this schedule";
+f002 = formonly.end_date type date, format = "dd/mm/yyyy",
+comments = " The date to stop the schedule at";
+a = formonly.fence_ind type char, upshift, include = ("O","F"),
+comments = " Include Orders or Forecasts within Time Fence";
+b = formonly.scrap_ind type char, upshift, include = ("S","Y","B","N"),
+comments = " S = Scrap, Y = Yield, B = Both, N = None";
+c = formonly.prodgrp_code,upshift,comments =
+" Enter product group code - (W)";
+d = formonly.cat_code,upshift,comments =
+" Enter category code - (W)";
+e = formonly.class_code,upshift,comments =
+" Enter inventory class code - (W)";
+
+instructions
+delimiters "  "

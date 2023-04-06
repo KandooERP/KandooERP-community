@@ -1,0 +1,77 @@
+{
+###########################################################################
+# This program is free software; you can redistribute it and/or modify it
+# under the terms of the GNU General Public License as published by the
+# Free Software Foundation; either version 2 of the License, or (at your
+# option) any later version.
+#
+# This program is distributed in the hope that it will be useful, but
+# WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+# General Public License for more details.
+#
+# You should have received a copy of the GNU General Public License along
+# with this program; if not, write to the Free Software Foundation, Inc.,
+# 59 Temple Place, Suite 330, Boston, MA 02111-1307 USA
+#
+###########################################################################
+
+	 $Id: M164.per,v 1.2 2003/11/19 22:23:01 afalout Exp $
+}
+
+
+database kandoodb
+
+screen
+{
+                      Indented Stock Available Inquiry                 M164
+\g----------------------------------------------------------------------------\g
+ Product  [f001           ]Warehouse  [f02] Quantity  [f003    ] UOM  [f004]
+ No. of Components  [f005]Available to Make[f006    ]Stock On Hand[f007    ]
+\g----------------------------------------------------------------------------\g
+ Lvl -------- Product -------- UOM   Required     Avail   OnOrder  Shortage
+\g----------------------------------------------------------------------------\g
+[a1][f008                     |f009|f010     |f011     |f012     |f013     ]
+[a1][f008                     |f009|f010     |f011     |f012     |f013     ]
+[a1][f008                     |f009|f010     |f011     |f012     |f013     ]
+[a1][f008                     |f009|f010     |f011     |f012     |f013     ]
+[a1][f008                     |f009|f010     |f011     |f012     |f013     ]
+[a1][f008                     |f009|f010     |f011     |f012     |f013     ]
+[a1][f008                     |f009|f010     |f011     |f012     |f013     ]
+[a1][f008                     |f009|f010     |f011     |f012     |f013     ]
+[a1][f008                     |f009|f010     |f011     |f012     |f013     ]
+[a1][f008                     |f009|f010     |f011     |f012     |f013     ]
+
+}
+
+tables
+bor
+
+attributes
+f001 = bor.parent_part_code, upshift,
+comments = " Product code of a parent product for a bill of resource (W)";
+f02  = formonly.warehouse_code, upshift,
+comments = " Warehouse code or nothing for all warehouses (W)";
+f003 = formonly.quantity, comments = " Number of product to query";
+f004 = formonly.uom;
+f005 = formonly.noofcomp;
+f006 = formonly.makenow;
+f007 = formonly.makenowall;
+a1   = formonly.indent_factor;
+f008 = formonly.part_code;
+f009 = formonly.uom_code;
+f010 = formonly.required_qty type float, format = "######.##";
+f011 = formonly.avail_qty type float, format = "######.##";
+f012 = formonly.onord_qty type float, format = "######.##";
+f013 = formonly.short_qty type float, format = "######.##";
+
+instructions
+delimiters "  "
+
+screen record sr_bor_child[10] (formonly.indent_factor,
+                                formonly.part_code,
+                                formonly.uom_code,
+                                formonly.required_qty,
+                                formonly.avail_qty,
+                                formonly.onord_qty,
+                                formonly.short_qty)

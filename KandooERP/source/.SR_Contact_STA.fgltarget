@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<fglBuildTarget xmlns="http://namespaces.querix.com/lyciaide/target" name="SR_Contact_STA" type="fgl-program">
+
+  <libraries>
+    <library name="lib_tool" dynamic="false" location=""/>
+    <library name="lib_tool_db" dynamic="false" location=""/>
+    <library name="lib_tool_windecoration" dynamic="false" location=""/>
+  </libraries>
+
+  <sources type="fgl">
+    <file location="4gl/sr/sta_contact.4gl"/>
+  </sources>
+
+  <sources type="form">
+    <file location="per/sr/f_contact.fm2"/>
+  </sources>
+
+  <mediaFiles>
+    <file client="true" location="SR_Contact_STA.qxtheme" type="gui-theme-file"/>
+    <file client="true" location="SR_Contact_STA.css" type="other"/>
+  </mediaFiles>
+
+  <buildConfiguration name="development">
+    <additions>
+    </additions>
+    <exclusions>
+    </exclusions>
+  </buildConfiguration>
+
+</fglBuildTarget>

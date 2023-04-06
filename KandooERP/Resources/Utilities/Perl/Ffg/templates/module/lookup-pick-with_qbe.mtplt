@@ -1,0 +1,107 @@
+database ${DatabaseName}
+FUNCTION ${LkUpPickListFct}${PLTable}(xpos,ypos)
+DEFINE idx,choice,xpos,ypos INTEGER
+DEFINE arrcurr,scrline INTEGER
+DEFINE ${QbeStmtVariable} CHAR(${QbeStmtSize})
+DEFINE where_clause CHAR(64)
+DEFINE ${PLWPrefix}${PrmryKeyPrefix}_array ARRAY[${PLArraySize}] OF RECORD
+	<Script: define_table_columns ($SRCHANDLE,${PLTable},"pkey","record","pky","    "):Script>
+END RECORD
+DEFINE ${PLWPrefix}attr_array ARRAY[${PLArraySize}] OF RECORD
+	<Script: define_scr${RecordPrefix}fields($SRCHANDLE,$FormName,$ScreenRecordName,$PLTable,"all","false","","\t\t") :Script>
+END RECORD
+DEFINE ${PLWPrefix}attr RECORD
+	<Script: define_scr${RecordPrefix}fields($SRCHANDLE,$FormName,$ScreenRecordName,$PLTable,"all","false","","\t\t") :Script>
+END RECORD
+
+OPEN WINDOW ${PLWPrefix}${PLTable} at xpos,ypos
+WITH FORM "${FormName}" ATTRIBUTES(border)
+
+OPTIONS 
+	accept key ${PLWAcceptKey},
+	form line ${PLWLine},
+	message line ${PLWMsgLine}
+
+<Script:  if ( $DoTransactions eq 'true' ) {
+	$OutLineNum=ffg_print($SRCHANDLE,"WHENEVER ERROR CONTINUE\n",$OutLineNum,$FctName,"AdHoc",$TemplateFile,$InLineNum,$SIGNHANDLE);
+	$OutLineNum=ffg_print($SRCHANDLE,"SET ISOLATION TO DIRTY READ\n",$OutLineNum,$FctName,"AdHoc",$TemplateFile,$InLineNum,$SIGNHANDLE);
+	my $Line=sprintf "WHENEVER ERROR STOP\n";
+	$OutLineNum=ffg_print($SRCHANDLE,$Line,$OutLineNum,$FctName,"AdHoc",$TemplateFile,$InLineNum,$SIGNHANDLE);
+}:Script>
+
+INITIALIZE ${QbeStmtVariable} TO NULL
+INITIALIZE where_clause TO NULL
+INITIALIZE ${PLWPrefix}${PrmryKeyPrefix}_array[1].* TO NULL
+INITIALIZE ${PLWPrefix}attr_array[1].* TO NULL
+FOR idx=2 to 100
+   LET ${PLWPrefix}${PrmryKeyPrefix}_array[idx].* = ${PLWPrefix}${PrmryKeyPrefix}_array[1].*
+   LET ${PLWPrefix}attr_array[idx].* = ${PLWPrefix}attr_array[1].*
+END FOR
+
+MESSAGE "${InputCriteria} for ${PLTable}"
+CONSTRUCT BY NAME where_clause ON <Script: print_scr${RecordPrefix}fields ($SRCHANDLE,$FormName,$ScreenRecordName,$PLTable,"attr","false","","         ","flat"):Script>
+LET ${QbeStmtVariable} = 
+"SELECT <Script: print_scr${RecordPrefix}fields ($SRCHANDLE,$FormName,$ScreenRecordName,$PLTable,"attr","false","","","flat"):Script>,",
+" <Script: print_table_columns($SRCHANDLE,${PLTable},"","","pkey","","","flat"):Script> ",
+" FROM ${PLTable} ",
+" WHERE ",where_clause CLIPPED,
+" ORDER BY 1"
+
+PREPARE ${PrepStmtPrefix}_pl_${PLTable} FROM ${QbeStmtVariable}
+DECLARE crs_pl_${PLTable} CURSOR for ${PrepStmtPrefix}_pl_${PLTable}
+
+<Script: if ( $DoTransactions eq 'true' ) {
+	$OutLineNum=ffg_print($SRCHANDLE,"WHENEVER ERROR CONTINUE\n",$OutLineNum,$FctName,"AdHoc",$TemplateFile,$InLineNum,$SIGNHANDLE);
+	$OutLineNum=ffg_print($SRCHANDLE,"SET ISOLATION TO DIRTY READ\n",$OutLineNum,$FctName,"AdHoc",$TemplateFile,$InLineNum,$SIGNHANDLE);
+	my $Line=sprintf "WHENEVER ERROR STOP\n";
+	$OutLineNum=ffg_print($SRCHANDLE,$Line,$OutLineNum,$FctName,"AdHoc",$TemplateFile,$InLineNum,$SIGNHANDLE);
+}:Script>
+
+LET idx=0
+FOREACH crs_pl_${PLTable} 
+	LET idx = idx + 1
+END FOREACH
+
+LET idx=1
+FOREACH crs_pl_${PLTable} INTO ${PLWPrefix}attr_array[idx].*,${PLWPrefix}${PrmryKeyPrefix}_array[idx].*
+   LET idx=idx + 1
+   IF idx > 100 THEN
+      EXIT FOREACH
+   END IF
+END FOREACH
+
+LET idx=idx - 1
+CALL set_count(idx)
+
+MESSAGE "${PLMessage} for ${PLTable} :${PLWAcceptKey}" 
+INPUT ARRAY ${PLWPrefix}attr_array WITHOUT DEFAULTS
+FROM ${ScreenRecordName}.*
+	BEFORE ROW
+		LET arrcurr=arr_curr()
+		LET scrline=scr_line()
+		LET ${PLWPrefix}attr.* = ${PLWPrefix}attr_array[arrcurr].*
+		DISPLAY ${PLWPrefix}attr_array[arrcurr].* TO ${ScreenRecordName}[scrline].*
+		ATTRIBUTE (reverse)
+	AFTER ROW
+		LET arrcurr=arr_curr()
+		LET scrline=scr_line()
+		LET ${PLWPrefix}attr_array[arrcurr].* = ${PLWPrefix}attr.*
+		DISPLAY ${PLWPrefix}attr_array[arrcurr].* TO ${ScreenRecordName}[scrline].*
+		ATTRIBUTE (normal)
+	AFTER INPUT
+		IF int_flag THEN
+			LET int_flag = false
+		  CONTINUE INPUT
+		END IF
+END INPUT
+CLOSE WINDOW ${PLWPrefix}${PLTable}
+
+<Script: if ( $DoTransactions eq 'true' ) {
+	$OutLineNum=ffg_print($SRCHANDLE,"WHENEVER ERROR CONTINUE\n",$OutLineNum,$FctName,"AdHoc",$TemplateFile,$InLineNum,$SIGNHANDLE);
+	$OutLineNum=ffg_print($SRCHANDLE,"SET ISOLATION TO COMMITTED READ\n",$OutLineNum,$FctName,"AdHoc",$TemplateFile,$InLineNum,$SIGNHANDLE);
+	my $Line=sprintf "WHENEVER ERROR STOP\n";
+	$OutLineNum=ffg_print($SRCHANDLE,$Line,$OutLineNum,$FctName,"AdHoc",$TemplateFile,$InLineNum,$SIGNHANDLE);
+}:Script>
+OPTIONS ACCEPT KEY ${AcceptKey}
+RETURN arrcurr,<Script: print_table_columns($SRCHANDLE,${PLTable},"","","pkey","","${PLWPrefix}${PrmryKeyPrefix}_array[arrcurr]","flat");:Script>
+END FUNCTION

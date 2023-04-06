@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form xmlns="http://namespaces.querix.com/2015/fglForms">
+	<form.rootContainer>
+		<GridPanel classNames="fcls_rootContainer" verticalAlignment="Top" horizontalAlignment="Left" fieldTable="" identifier="rootContainer">
+			<GridPanel.gridRowDefinitions>
+				<GridRowDefinition gridLengthValue=""/>
+				<GridRowDefinition gridLengthValue=""/>
+				<GridRowDefinition gridLengthValue=""/>
+				<GridRowDefinition gridLengthValue=""/>
+				<GridRowDefinition gridLengthValue=""/>
+				<GridRowDefinition gridLengthValue=""/>
+			</GridPanel.gridRowDefinitions>
+			<GridPanel.gridColumnDefinitions>
+				<GridColumnDefinition gridLengthValue="100%"/>
+			</GridPanel.gridColumnDefinitions>
+			<GridPanel classNames="fcls_title_cnt" visible="true" verticalAlignment="Top" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="cntTitle">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="100%"/>
+					<GridColumnDefinition gridLengthValue=""/>
+				</GridPanel.gridColumnDefinitions>
+				<Label isDynamic="true" text="Sales Tax Billed" classNames="fcls_title_lb" visible="true" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="header_text"/>
+				<Label isDynamic="true" text="A189" classNames="fcls_title_lb" visible="true" gridItemLocation="1,0,1,1" fieldTable="" identifier="lbFormName"/>
+			</GridPanel>
+			<GroupBox title="Period" classNames="fcls_detail_gb_cnt" visible="true" gridItemLocation="0,1,1,1" fieldTable="" identifier="cntDetail1GroupBox">
+				<GridPanel classNames="fcls_detail_gb_cnt_sub,fcls_detail_cnt_sub,fcls_data_cnt,fcls_align_left" visible="true" verticalAlignment="Top" horizontalAlignment="Left" fieldTable="formonly" identifier="cntDetail1Sub">
+					<GridPanel.gridRowDefinitions>
+						<GridRowDefinition gridLengthValue=""/>
+						<GridRowDefinition gridLengthValue=""/>
+						<GridRowDefinition gridLengthValue=""/>
+						<GridRowDefinition gridLengthValue=""/>
+					</GridPanel.gridRowDefinitions>
+					<GridPanel.gridColumnDefinitions>
+						<GridColumnDefinition gridLengthValue="" gridMinLength="12rem"/>
+						<GridColumnDefinition gridLengthValue=""/>
+					</GridPanel.gridColumnDefinitions>
+					<CheckBox toCase="Up" dataType="Char,,,," classNames="fcls_data_widget,fcls_align_left,fcls_length_20qch" preferredSize="2qch,1qch" toolTip=" All years/periods or a specific selection" gridItemLocation="0,0,2,1" fieldTable="formonly" comment=" All years/periods or a specific selection" identifier="period_sel" title="Period Selection" notNull="true">
+						<CheckBox.checkedValue>
+							<StringLiteral stringValue="S"/>
+						</CheckBox.checkedValue>
+						<CheckBox.uncheckedValue>
+							<StringLiteral stringValue="A"/>
+						</CheckBox.uncheckedValue>
+					</CheckBox>
+					<Label isDynamic="true" text="Year" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,1,1,1" fieldTable="" identifier="lb73"/>
+					<TextField dataType="SmallInt,,,," classNames="fcls_data_widget,fcls_align_left,fcls_length_20qch" preferredSize="5qch,1qch" toolTip=" Year for selection" gridItemLocation="1,1,1,1" fieldTable="formonly" comment=" Year for selection" identifier="year_num"/>
+					<Label isDynamic="true" text="Beginning period" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,2,1,1" fieldTable="" identifier="lb76"/>
+					<TextField dataType="SmallInt,,,," classNames="fcls_data_widget,fcls_align_left,fcls_length_20qch" preferredSize="3qch,1qch" toolTip=" Period to begin selection" gridItemLocation="1,2,1,1" fieldTable="formonly" comment=" Period to begin selection" identifier="bper"/>
+					<Label isDynamic="true" text="Ending period" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,3,1,1" fieldTable="" identifier="lb77"/>
+					<TextField dataType="SmallInt,,,," classNames="fcls_data_widget,fcls_align_left,fcls_length_20qch" preferredSize="3qch,1qch" toolTip=" Period to end selection" gridItemLocation="1,3,1,1" fieldTable="formonly" comment=" Period to end selection" identifier="eper"/>
+				</GridPanel>
+			</GroupBox>
+			<GroupBox title="Transaction Date" classNames="fcls_detail_gb_cnt" visible="true" verticalAlignment="Top" gridItemLocation="0,2,1,1" fieldTable="formonly" identifier="cntDetail2GroupBox">
+				<GridPanel classNames="fcls_detail_gb_cnt_sub,fcls_detail_cnt_sub,fcls_data_cnt,fcls_align_left" visible="true" verticalAlignment="Top" horizontalAlignment="Left" fieldTable="formonly" identifier="cntDetail2Sub">
+					<GridPanel.gridRowDefinitions>
+						<GridRowDefinition gridLengthValue=""/>
+						<GridRowDefinition gridLengthValue=""/>
+						<GridRowDefinition gridLengthValue=""/>
+					</GridPanel.gridRowDefinitions>
+					<GridPanel.gridColumnDefinitions>
+						<GridColumnDefinition gridLengthValue="" gridMinLength="12rem"/>
+						<GridColumnDefinition gridLengthValue=""/>
+					</GridPanel.gridColumnDefinitions>
+					<CheckBox toCase="Up" dataType="Char,,,," classNames="fcls_data_widget,fcls_align_left,fcls_length_20qch" preferredSize="2qch,1qch" toolTip=" All transaction dates or a specific selection" gridItemLocation="0,0,2,1" fieldTable="formonly" comment=" All transaction dates or a specific selection" identifier="date_sel" title="Transaction Date Selection" notNull="true">
+						<CheckBox.checkedValue>
+							<StringLiteral stringValue="S"/>
+						</CheckBox.checkedValue>
+						<CheckBox.uncheckedValue>
+							<StringLiteral stringValue="A"/>
+						</CheckBox.uncheckedValue>
+					</CheckBox>
+					<Label isDynamic="true" text="Beginning period" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,1,1,1" fieldTable="formonly" identifier="lb46"/>
+					<TextField dataType="Date,,,," classNames="fcls_data_widget,fcls_align_left,fcls_length_20qch" preferredSize="11qch,1qch" toolTip=" Transaction date to begin selection" gridItemLocation="1,1,1,1" fieldTable="formonly" comment=" Transaction date to begin selection" identifier="bdate"/>
+					<Label isDynamic="true" text="Ending period" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,2,1,1" fieldTable="formonly" identifier="lb44"/>
+					<TextField dataType="Date,,,," classNames="fcls_data_widget,fcls_align_left,fcls_length_20qch" preferredSize="11qch,1qch" toolTip=" Transaction date to end selection" gridItemLocation="1,2,1,1" fieldTable="formonly" comment=" Transaction date to end selection" identifier="edate"/>
+				</GridPanel>
+			</GroupBox>
+			<GroupBox title="Customer" classNames="fcls_detail_gb_cnt" visible="true" gridItemLocation="0,3,1,1" fieldTable="formonly" identifier="cntDetail3GroupBox">
+				<GridPanel classNames="fcls_detail_gb_cnt_sub,fcls_detail_cnt_sub,fcls_data_cnt,fcls_align_left" visible="true" verticalAlignment="Top" horizontalAlignment="Left" fieldTable="formonly" identifier="cntDetail3Sub">
+					<GridPanel.gridRowDefinitions>
+						<GridRowDefinition gridLengthValue=""/>
+						<GridRowDefinition gridLengthValue=""/>
+						<GridRowDefinition gridLengthValue=""/>
+					</GridPanel.gridRowDefinitions>
+					<GridPanel.gridColumnDefinitions>
+						<GridColumnDefinition gridLengthValue="" gridMinLength="12rem"/>
+						<GridColumnDefinition gridLengthValue=""/>
+					</GridPanel.gridColumnDefinitions>
+					<CheckBox toCase="Up" dataType="Char,,,," classNames="fcls_data_widget,fcls_align_left,fcls_length_20qch" preferredSize="2qch,1qch" toolTip=" All customers or a specific selection" gridItemLocation="0,0,2,1" fieldTable="formonly" comment=" All customers or a specific selection" identifier="cust_sel" title="Customer Selection" notNull="true">
+						<CheckBox.checkedValue>
+							<StringLiteral stringValue="S"/>
+						</CheckBox.checkedValue>
+						<CheckBox.uncheckedValue>
+							<StringLiteral stringValue="A"/>
+						</CheckBox.uncheckedValue>
+					</CheckBox>
+					<Label isDynamic="true" text="Beginning period" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,1,1,1" fieldTable="formonly" identifier="lb49"/>
+					<TextField toCase="Up" dataType="Char,,,," classNames="fcls_data_widget,fcls_align_left,fcls_length_20qch" preferredSize="9qch,1qch" toolTip=" Customer to begin selection" gridItemLocation="1,1,1,1" fieldTable="formonly" comment=" Customer to begin selection" identifier="bcust"/>
+					<Label isDynamic="true" text="Ending period" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,2,1,1" fieldTable="formonly" identifier="lb63"/>
+					<TextField toCase="Up" dataType="Char,,,," classNames="fcls_data_widget,fcls_align_left,fcls_length_20qch" preferredSize="9qch,1qch" toolTip=" Customer to end selection" gridItemLocation="1,2,1,1" fieldTable="formonly" comment=" Customer to end selection" identifier="ecust"/>
+				</GridPanel>
+			</GroupBox>
+			<GroupBox title="Tax Codes" classNames="fcls_detail_gb_cnt" visible="true" gridItemLocation="0,4,1,1" fieldTable="" identifier="cntDetail4GroupBox">
+				<GridPanel classNames="fcls_detail_gb_cnt_sub,fcls_detail_cnt_sub,fcls_data_cnt,fcls_align_left" visible="true" verticalAlignment="Top" horizontalAlignment="Left" fieldTable="formonly" identifier="cntDetail4Sub">
+					<GridPanel.gridRowDefinitions>
+						<GridRowDefinition gridLengthValue=""/>
+						<GridRowDefinition gridLengthValue=""/>
+						<GridRowDefinition gridLengthValue=""/>
+					</GridPanel.gridRowDefinitions>
+					<GridPanel.gridColumnDefinitions>
+						<GridColumnDefinition gridLengthValue="" gridMinLength="12rem"/>
+						<GridColumnDefinition gridLengthValue=""/>
+					</GridPanel.gridColumnDefinitions>
+					<CheckBox toCase="Up" dataType="Char,,,," classNames="fcls_data_widget,fcls_align_left,fcls_length_20qch" preferredSize="2qch,1qch" toolTip=" All tax codes or a specific selection" gridItemLocation="0,0,2,1" fieldTable="formonly" comment=" All tax codes or a specific selection" identifier="tax_sel" title="Tax Period Selection" notNull="true">
+						<CheckBox.checkedValue>
+							<StringLiteral stringValue="S"/>
+						</CheckBox.checkedValue>
+						<CheckBox.uncheckedValue>
+							<StringLiteral stringValue="A"/>
+						</CheckBox.uncheckedValue>
+					</CheckBox>
+					<Label isDynamic="true" text="Beginning period" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,1,1,1" fieldTable="" identifier="lb116"/>
+					<TextField toCase="Up" dataType="Char,,,," classNames="fcls_data_widget,fcls_align_left,fcls_length_20qch" preferredSize="4qch,1qch" toolTip=" Tax code to begin selection" gridItemLocation="1,1,1,1" fieldTable="formonly" comment=" Tax code to begin selection" identifier="btax"/>
+					<Label isDynamic="true" text="Ending period" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,2,1,1" fieldTable="" identifier="lb120"/>
+					<TextField toCase="Up" dataType="Char,,,," classNames="fcls_data_widget,fcls_align_left,fcls_length_20qch" preferredSize="4qch,1qch" toolTip=" Tax code to end selection" gridItemLocation="1,2,1,1" fieldTable="formonly" comment=" Tax code to end selection" identifier="etax"/>
+				</GridPanel>
+			</GroupBox>
+			<GridPanel classNames="fcls_statusbar_cnt" visible="true" verticalAlignment="Top" gridItemLocation="0,5,1,1" fieldTable="formonly" identifier="cntStatusBar">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="100%"/>
+				</GridPanel.gridColumnDefinitions>
+				<Label isDynamic="true" text="" classNames="fcls_sblabel" visible="true" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="lbInfo1"/>
+				<Label isDynamic="true" text="" classNames="fcls_sblabel" visible="true" gridItemLocation="0,1,1,1" fieldTable="formonly" identifier="lbInfo2"/>
+			</GridPanel>
+		</GridPanel>
+	</form.rootContainer>
+	<form.screenRecords>
+		<ScreenRecord identifier="formonly" fields="period_sel,year_num,bper,eper,date_sel,bdate,edate,cust_sel,bcust,ecust,tax_sel,btax,etax"/>
+	</form.screenRecords>
+</form>
+

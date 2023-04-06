@@ -1,0 +1,48 @@
+I50_FRA {
+0-Immediate Transfer, 1-Confirm & Receipt, 2-Schedule Confirm and Receipt { "0-Transfert immédiat, 1-Confirmation et réception, 2-Planifier Confirmation et réception" }
+ACCEPT { "VALIDER" }
+Confirmed Quantity { "Quantité confirmée" }
+Date { "Date" }
+Description { "Description" }
+Dest Warehouse { "Entrepôt Destination" }
+Detail { "Détail" }
+Group 2 { "Groupe 2" }
+ID { "ID" }
+Language Code { "Code langue" }
+Length { "Longueur" }
+Line Number { "Numéro de ligne" }
+Name { "Nom" }
+Password { "Mot de passe" }
+Period { "Période" }
+Picked Quantity { "Quantité prélevée" }
+Product Code { "Code Produit" }
+Received Quantity { "Quantité reçue" }
+Remaining Quantity { "Quantité restante" }
+Scheduled Quantity { "Quantité prévue" }
+Source { "Source" }
+Source Warehouse { "Entrepôt source" }
+Status { "Statut" }
+Status: (U) Undeliv'd, (P) Partially Deliv'd, (C) Complete, (R) Cancelled { "Statut : (U) Non livré, (P) Partiellement livré, (C) Totalement Livré, (R) Annulé" }
+The code of the product transferred { "Le code du produit transféré" }
+The date of the transfer { "La date du transfert" }
+The destination location of the transfer { "Le lieu de destination du transfert" }
+The financial period { "La période fiscale" }
+The financial year { "L'année fiscale" }
+The line number of the transfer { "Le numéro de ligne du transfert" }
+The quantity confirmed for delivery { "La quantité confirmée pour la livraison" }
+The quantity picked for delivery { "La quantité prélevée pour la livraison" }
+The quantity received this delivery { "La quantité reçue pour cette livraison" }
+The quantity remaining to be scheduled { "La quantité restant à planifier" }
+The quantity scheduled for delivery { "La quantité prévue pour la livraison" }
+The quantity to be transferred { "La quantité à transférer" }
+The source warehouse of the transfer { "L'entrepôt source du transfert" }
+The system generated transfer number { "Le numéro de transfert généré par le système" }
+The transfer description { "Description du transfert" }
+Transfer { "Transfert" }
+Transfer Date { "Date de transfert" }
+Transfer Indicator { "Indicateur de transfert" }
+Transfer Number { "Numéro de transfert" }
+Transfer Quantity { "Quantité à transférer" }
+Year { "Année" }
+actToolbarManager { "actToolbarManager" }
+}

@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form xmlns="http://namespaces.querix.com/2015/fglForms">
+	<form.rootContainer>
+		<GridPanel classNames="fcls_rootContainer" verticalAlignment="Stretch" horizontalAlignment="Stretch" fieldTable="" identifier="rootContainer">
+			<GridPanel.gridRowDefinitions>
+				<GridRowDefinition gridLengthValue=""/>
+				<GridRowDefinition gridLengthValue="50%"/>
+				<GridRowDefinition gridLengthValue=""/>
+				<GridRowDefinition gridLengthValue="50%"/>
+				<GridRowDefinition gridLengthValue=""/>
+			</GridPanel.gridRowDefinitions>
+			<GridPanel.gridColumnDefinitions>
+				<GridColumnDefinition gridLengthValue="100%"/>
+			</GridPanel.gridColumnDefinitions>
+
+			<GridPanel classNames="fcls_title_cnt" visible="true" verticalAlignment="Top" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="cntTitle">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="100%"/>
+					<GridColumnDefinition gridLengthValue=""/>
+				</GridPanel.gridColumnDefinitions>
+				<Label isDynamic="true" text="Sales Order Confirmation" classNames="fcls_title_lb" visible="true" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="header_text"/>
+				<Label isDynamic="true" text="E153" classNames="fcls_title_lb" visible="true" gridItemLocation="1,0,1,1" fieldTable="" identifier="lbFormName"/>
+			</GridPanel>
+			<Table rowCount="8" preferredSize="74qch,8qch" fieldTable="" identifier="sr_pickhead" gridItemLocation="0,1,1,1">
+				<TableColumn fieldTable="" identifier="tc_scroll_flag">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="2rem" gridMaxLength="2rem" gridMinLength="2rem"/>
+					</TableColumn.columnLength>
+					<CheckBox dataType="Char,,,," fieldTable="formonly" identifier="scroll_flag">
+						<CheckBox.checkedValue>
+							<StringLiteral stringValue="*"/>
+						</CheckBox.checkedValue>
+						<CheckBox.uncheckedValue>
+							<NullLiteral/>
+						</CheckBox.uncheckedValue>
+					</CheckBox>
+				</TableColumn>
+				<TableColumn fieldTable="" identifier="tc_pick_date" text="Date">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="10rem" gridMaxLength="10rem" gridMinLength="10rem"/>
+					</TableColumn.columnLength>
+					<Calendar format="dd/mm/yyyy" dataType="Date,,,," toolTip=" Enter picked or order date selection criteria " fieldTable="pickhead" comment=" Enter picked or order date selection criteria " identifier="pick_date"/>
+				</TableColumn>
+				<TableColumn fieldTable="" identifier="tc_cust_code" text="Customer ID">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="10rem" gridMaxLength="10rem" gridMinLength="10rem"/>
+					</TableColumn.columnLength>
+					<TextField toCase="Up" noEntry="true" dataType="Char,,,,8" toolTip=" Enter customer code selection criteria " fieldTable="pickhead" comment=" Enter customer code selection criteria " identifier="cust_code"/>
+				</TableColumn>
+				<TableColumn fieldTable="" identifier="tc_name_text" text="Customer Name">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="30rem" gridMaxLength="30rem" gridMinLength="30rem"/>
+					</TableColumn.columnLength>
+					<TextField noEntry="true" dataType="Char,,,,30" fieldTable="customer" identifier="name_text"/>
+				</TableColumn>
+				<TableColumn fieldTable="" identifier="tc_ware_code" text="Warehouse">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="10rem" gridMaxLength="10rem" gridMinLength="10rem"/>
+					</TableColumn.columnLength>
+					<TextField toCase="Up" noEntry="true" dataType="Char,,,,3" toolTip=" Enter picked or order warehouse code selection criteria " fieldTable="pickhead" comment=" Enter picked or order warehouse code selection criteria " identifier="ware_code"/>
+				</TableColumn>
+				<TableColumn fieldTable="" identifier="tc_pick_num" text="Pick No.">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="10rem" gridMaxLength="10rem" gridMinLength="10rem"/>
+					</TableColumn.columnLength>
+					<TextField dataType="Integer,,,," toolTip=" Enter picking slip/list number selection criteria " fieldTable="pickhead" comment=" Enter picking slip/list number selection criteria " identifier="pick_num"/>
+				</TableColumn>
+				<TableColumn fieldTable="" identifier="tc_batch_num" text="Batch">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="10rem" gridMaxLength="10rem" gridMinLength="10rem"/>
+					</TableColumn.columnLength>
+					<TextField dataType="Integer,,,," toolTip=" Enter picking slip batch number selection criteria " fieldTable="pickhead" comment=" Enter picking slip batch number selection criteria " identifier="batch_num"/>
+				</TableColumn>
+				<TableColumn fieldTable="" identifier="tc_reqd_flag" text="Required">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="2.7%"/>
+					</TableColumn.columnLength>
+					<TextField toCase="Up" dataType="Char,,,," fieldTable="formonly" identifier="reqd_flag"/>
+				</TableColumn>
+			</Table>
+			<GridPanel visible="true" identifier="c151" gridItemLocation="0,2,1,1" horizontalAlignment="Left">
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue=""/>
+					<GridColumnDefinition gridLengthValue=""/>
+				</GridPanel.gridColumnDefinitions>
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<Label text="Invoice Reference" isDynamic="true" visible="true" identifier="lb152" gridItemLocation="0,0,1,1"/>
+				<TextField noEntry="true" dataType="Char,,,,16" preferredSize="20qch,1qch" fieldTable="arparms" identifier="inv_ref1_text" gridItemLocation="1,0,1,1" classNames="fcls_data_widget,fcls_align_left,fcls_length_20qch"/>
+			</GridPanel>
+			<Table rowCount="3" preferredSize="74qch,3qch" fieldTable="" identifier="sr_orderhead" gridItemLocation="0,3,1,1">
+				<TableColumn fieldTable="" identifier="tc_order_flag">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="2rem" gridMaxLength="2rem" gridMinLength="2rem"/>
+					</TableColumn.columnLength>
+					<CheckBox dataType="Char,,,," fieldTable="formonly" identifier="order_flag">
+						<CheckBox.checkedValue>
+							<StringLiteral stringValue="*"/>
+						</CheckBox.checkedValue>
+						<CheckBox.uncheckedValue>
+							<NullLiteral/>
+						</CheckBox.uncheckedValue>
+					</CheckBox>
+				</TableColumn>
+				<TableColumn fieldTable="" identifier="tc_order_num" text="Order No.">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="10rem" gridMaxLength="10rem" gridMinLength="10rem"/>
+					</TableColumn.columnLength>
+					<TextField toCase="Up" dataType="Integer,,,," fieldTable="orderhead" identifier="order_num"/>
+				</TableColumn>
+				<TableColumn fieldTable="" identifier="tc_order_date" text="Date">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="10rem" gridMaxLength="10rem" gridMinLength="10rem"/>
+					</TableColumn.columnLength>
+					<Calendar noEntry="true" dataType="Date,,,," fieldTable="orderhead" identifier="order_date"/>
+				</TableColumn>
+				<TableColumn fieldTable="" identifier="tc_ord_text" text="Order Text">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="10rem" gridMaxLength="10rem" gridMinLength="10rem"/>
+					</TableColumn.columnLength>
+					<TextField noEntry="true" dataType="Char,,,,20" fieldTable="orderhead" identifier="ord_text"/>
+				</TableColumn>
+				<TableColumn fieldTable="" identifier="tc_last_inv_num" text="Invoice No.">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="10rem" gridMaxLength="10rem" gridMinLength="10rem"/>
+					</TableColumn.columnLength>
+					<TextField noEntry="true" dataType="Integer,,,," fieldTable="orderhead" identifier="last_inv_num"/>
+				</TableColumn>
+				<TableColumn fieldTable="" identifier="tc_last_inv_date" text="Date">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="10rem" gridMaxLength="10rem" gridMinLength="10rem"/>
+					</TableColumn.columnLength>
+					<Calendar noEntry="true" dataType="Date,,,," fieldTable="orderhead" identifier="last_inv_date"/>
+				</TableColumn>
+				<TableColumn fieldTable="" identifier="tc_status_ind" text="Status">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="100%"/>
+					</TableColumn.columnLength>
+					<TextField toCase="Up" noEntry="true" dataType="Char,,,,1" fieldTable="orderhead" identifier="status_ind"/>
+				</TableColumn>
+			</Table>
+			<GridPanel classNames="fcls_statusbar_cnt" visible="true" verticalAlignment="Bottom" gridItemLocation="0,4,1,1" fieldTable="formonly" identifier="cntStatusBar">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="100%"/>
+				</GridPanel.gridColumnDefinitions>
+				<Label isDynamic="true" text="" classNames="fcls_sblabel" visible="true" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="lbInfo1"/>
+				<Label isDynamic="true" text="" classNames="fcls_sblabel" visible="true" gridItemLocation="0,1,1,1" fieldTable="formonly" identifier="lbInfo2"/>
+			</GridPanel>
+		</GridPanel>
+	</form.rootContainer>
+	<form.screenRecords>
+		<ScreenRecord identifier="sr_orderhead" fields="formonly.order_flag,orderhead.order_num,orderhead.order_date,orderhead.ord_text,orderhead.last_inv_num,orderhead.last_inv_date,orderhead.status_ind" elements="3"/>
+		<ScreenRecord identifier="sr_pickhead" fields="formonly.scroll_flag,pickhead.pick_date,pickhead.cust_code,customer.name_text,pickhead.ware_code,pickhead.pick_num,pickhead.batch_num,formonly.reqd_flag" elements="8"/>
+		<ScreenRecord identifier="arparms" fields="arparms.inv_ref1_text"/>
+		<ScreenRecord identifier="customer" fields="customer.name_text"/>
+		<ScreenRecord identifier="formonly" fields="formonly.scroll_flag,formonly.reqd_flag,formonly.order_flag"/>
+		<ScreenRecord identifier="orderhead" fields="orderhead.order_num,orderhead.order_date,orderhead.ord_text,orderhead.last_inv_num,orderhead.last_inv_date,orderhead.status_ind"/>
+		<ScreenRecord identifier="pickhead" fields="pickhead.pick_date,pickhead.cust_code,pickhead.ware_code,pickhead.pick_num,pickhead.batch_num"/>
+	</form.screenRecords>
+</form>
+

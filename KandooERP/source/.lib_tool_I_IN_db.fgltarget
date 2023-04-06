@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<fglBuildTarget xmlns="http://namespaces.querix.com/lyciaide/target" name="lib_tool_I_IN_db" type="fgl-library">
+
+  <sources type="fgl">
+    <file location="4gl/common/glob_GLOBALS_constant.4gl"/>
+    <file location="4gl/lib_tool_db/lib_tool_db_proddanger.4gl"/>
+    <file location="4gl/common/glob_GLOBALS.4gl"/>
+    <file location="4gl/common/glob_GLOBALS_userDataTypes.4gl"/>
+    <file location="4gl/lib_tool_db/lib_tool_db_cartarea.4gl"/>
+    <file location="4gl/lib_tool_db/lib_tool_db_prodstatus.4gl"/>
+    <file location="4gl/common/glob_DATABASE.4gl"/>
+    <file location="4gl/lib_tool_db/lib_tool_db_product.4gl"/>
+    <file location="4gl/lib_tool_db/lib_tool_db_warehouse.4gl"/>
+    <file location="4gl/lib_tool_db/lib_tool_db_prodgrp.4gl"/>
+    <file location="4gl/lib_tool_db/lib_tool_db_prodadjtype.4gl"/>
+    <file location="4gl/lib_tool_db/lib_tool_db_proddept.4gl"/>
+    <file location="4gl/lib_tool_db/lib_tool_db_uom.4gl"/>
+    <file location="4gl/lib_tool_db/lib_tool_db_maingrp.4gl"/>
+    <file location="4gl/lib_tool_db/lib_tool_db_category.4gl"/>
+    <file location="4gl/lib_tool_db/lib_tool_db_class.4gl"/>
+    <file location="4gl/lib_tool_db/lib_tool_db_ingroup.4gl"/>
+    <file location="4gl/lib_tool_db/lib_tool_db_waregrp.4gl"/>
+    <file location="4gl/lib_tool_db/lib_tool_db_inparms.4gl"/>
+  </sources>
+
+</fglBuildTarget>

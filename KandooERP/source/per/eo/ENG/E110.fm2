@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form xmlns="http://namespaces.querix.com/2015/fglForms">
+	<form.rootContainer>
+		<GridPanel classNames="fcls_rootContainer" verticalAlignment="Stretch" horizontalAlignment="Stretch" fieldTable="" identifier="rootContainer">
+			<GridPanel.gridRowDefinitions>
+				<GridRowDefinition gridLengthValue=""/>
+				<GridRowDefinition gridLengthValue="100%"/>
+				<GridRowDefinition gridLengthValue=""/>
+				<GridRowDefinition gridLengthValue=""/>
+			</GridPanel.gridRowDefinitions>
+			<GridPanel.gridColumnDefinitions>
+				<GridColumnDefinition gridLengthValue="100%"/>
+			</GridPanel.gridColumnDefinitions>
+			<GridPanel classNames="fcls_title_cnt" visible="true" verticalAlignment="Top" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="cntTitle">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="100%"/>
+					<GridColumnDefinition gridLengthValue=""/>
+				</GridPanel.gridColumnDefinitions>
+				<Label isDynamic="true" text="Sales Orders Entry" classNames="fcls_title_lb" visible="true" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="header_text"/>
+				<Label isDynamic="true" text="E110" classNames="fcls_title_lb" visible="true" gridItemLocation="1,0,1,1" fieldTable="" identifier="lbFormName"/>
+				<Button text="Button 74" visible="true" identifier="bt74" gridItemLocation="0,1,1,1">
+					<Button.image>
+						<Image imageUrl="{CONTEXT}/public/querix/icon/svg/24/ic_edit_24px.svg"/>
+					</Button.image>
+				</Button>
+			</GridPanel>
+			<Table rowCount="12" preferredSize="74qch,12qch" fieldTable="" identifier="sr_orderhead" gridItemLocation="0,1,1,1">
+				<TableColumn fieldTable="" identifier="tc_scroll_flag">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="2rem" gridMaxLength="2rem" gridMinLength="2rem"/>
+					</TableColumn.columnLength>
+					<CheckBox dataType="Char,,,," fieldTable="formonly" identifier="scroll_flag">
+						<CheckBox.checkedValue>
+							<StringLiteral stringValue="*"/>
+						</CheckBox.checkedValue>
+						<CheckBox.uncheckedValue>
+							<NullLiteral/>
+						</CheckBox.uncheckedValue>
+					</CheckBox>
+				</TableColumn>
+				<TableColumn fieldTable="" identifier="tc_order_num" text="Order Number">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="10rem" gridMaxLength="10rem" gridMinLength="10rem"/>
+					</TableColumn.columnLength>
+					<TextField dataType="Integer,,,," toolTip=" Sales order number " fieldTable="orderhead" comment=" Sales order number " identifier="order_num"/>
+				</TableColumn>
+				<TableColumn fieldTable="" identifier="tc_cust_code" text="Customer Code">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="10rem" gridMaxLength="10rem" gridMinLength="10rem"/>
+					</TableColumn.columnLength>
+					<TextField toCase="Up" noEntry="true" dataType="Char,,,,8" toolTip=" Sales order customer code " fieldTable="orderhead" comment=" Sales order customer code " identifier="cust_code"/>
+				</TableColumn>
+				<TableColumn fieldTable="" identifier="tc_order_date" text="Order Date">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="10rem" gridMaxLength="10rem" gridMinLength="10rem"/>
+					</TableColumn.columnLength>
+					<Calendar format="dd/mm/yyyy" dataType="Date,,,," toolTip=" Sales order date " fieldTable="orderhead" comment=" Sales order date " identifier="order_date"/>
+				</TableColumn>
+				<TableColumn fieldTable="" identifier="tc_total_amt" text="Total Amount">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="10rem" gridMaxLength="10rem" gridMinLength="10rem"/>
+					</TableColumn.columnLength>
+					<TextField dataType="Decimal,,,2,16" toolTip=" Sales Order total amount " fieldTable="orderhead" comment=" Sales Order total amount " identifier="total_amt"/>
+				</TableColumn>
+				<TableColumn fieldTable="" identifier="tc_hold_code" text="Hold Code">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="10rem" gridMaxLength="10rem" gridMinLength="10rem"/>
+					</TableColumn.columnLength>
+					<TextField toCase="Up" dataType="Char,,,,3" toolTip=" Sales order hold code " fieldTable="orderhead" comment=" Sales order hold code " identifier="hold_code"/>
+				</TableColumn>
+				<TableColumn fieldTable="" identifier="tc_sales_code" text="Sales Person">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="10rem" gridMaxLength="10rem" gridMinLength="10rem"/>
+					</TableColumn.columnLength>
+					<TextField toCase="Up" dataType="Char,,,,8" toolTip=" Sales person who placed the order" fieldTable="orderhead" comment=" Sales person who placed the order" identifier="sales_code"/>
+				</TableColumn>
+				<TableColumn fieldTable="" identifier="tc_status_ind" text="Status">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="10rem" gridMaxLength="10rem" gridMinLength="10rem"/>
+					</TableColumn.columnLength>
+					<ComboBox toCase="Up" noEntry="true" dataType="Char,,,,1" toolTip=" Sales Order Status: (U) Unshipped - (P) Partially shipped - (C) Complete " fieldTable="orderhead" comment=" Sales Order Status: (U) Unshipped - (P) Partially shipped - (C) Complete " identifier="status_ind">
+						<ComboBoxItem text="Locked">
+							<ComboBoxItem.value>
+								<StringLiteral stringValue="X"/>
+							</ComboBoxItem.value>
+						</ComboBoxItem>
+						<ComboBoxItem text="Unshipped">
+							<ComboBoxItem.value>
+								<StringLiteral stringValue="U"/>
+							</ComboBoxItem.value>
+						</ComboBoxItem>
+						<ComboBoxItem text="Partially shipped">
+							<ComboBoxItem.value>
+								<StringLiteral stringValue="P"/>
+							</ComboBoxItem.value>
+						</ComboBoxItem>
+						<ComboBoxItem text="Complete">
+							<ComboBoxItem.value>
+								<StringLiteral stringValue="C"/>
+							</ComboBoxItem.value>
+						</ComboBoxItem>
+					</ComboBox>
+				</TableColumn>
+				<TableColumn fieldTable="" identifier="tc_ship_date" text="Delivery Date">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="10rem" gridMaxLength="10rem" gridMinLength="10rem"/>
+					</TableColumn.columnLength>
+					<Calendar format="dd/mm/yyyy" dataType="Date,,,," toolTip=" Date the order must be shipped by" fieldTable="orderhead" comment=" Date the order must be shipped by" identifier="ship_date"/>
+				</TableColumn>
+			</Table>
+			<GroupBox title="Detail" classNames="fcls_detail_gb_cnt" visible="true" gridItemLocation="0,2,1,1" fieldTable="" identifier="cntDetail1GroupBox">
+				<GridPanel classNames="fcls_detail_gb_cnt_sub,fcls_detail_cnt_sub,fcls_data_cnt,fcls_align_left" visible="true" verticalAlignment="Top" horizontalAlignment="Left" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="cntDetail1Sub">
+					<GridPanel.gridRowDefinitions>
+						<GridRowDefinition gridLengthValue=""/>
+						<GridRowDefinition gridLengthValue=""/>
+						<GridRowDefinition gridLengthValue=""/>
+					</GridPanel.gridRowDefinitions>
+					<GridPanel.gridColumnDefinitions>
+						<GridColumnDefinition gridLengthValue="" gridMinLength="10rem"/>
+						<GridColumnDefinition gridLengthValue=""/>
+					</GridPanel.gridColumnDefinitions>
+					<Label isDynamic="true" text="Name" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="lb57"/>
+					<TextField noEntry="true" dataType="Char,,,,30" preferredSize="30qch,1qch" fieldTable="customer" identifier="name_text" gridItemLocation="1,0,1,1" classNames="fcls_data_widget,fcls_align_left,fcls_length_20qch"/>
+					<Label isDynamic="true" text="Sales Cond" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,1,1,1" fieldTable="" identifier="lb73"/>
+					<ComboBox toCase="Up" noEntry="true" dataType="Char,,,,3" preferredSize="4qch,1qch" fieldTable="orderhead" identifier="cond_code" gridItemLocation="1,1,1,1" classNames="fcls_data_widget,fcls_align_left,fcls_length_20qch"/>
+					<TextField noEntry="true" dataType="Char,,,,30" preferredSize="21qch,1qch" fieldTable="condsale" identifier="desc_text" gridItemLocation="1,2,1,1" classNames="fcls_data_widget,fcls_align_left,fcls_length_20qch"/>
+				</GridPanel>
+			</GroupBox>
+			<GridPanel classNames="fcls_statusbar_cnt" visible="true" verticalAlignment="Top" gridItemLocation="0,3,1,1" fieldTable="formonly" identifier="cntStatusBar">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="100%"/>
+				</GridPanel.gridColumnDefinitions>
+				<Label isDynamic="true" text="" classNames="fcls_sblabel" visible="true" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="lbInfo1"/>
+				<Label isDynamic="true" text="" classNames="fcls_sblabel" visible="true" gridItemLocation="0,1,1,1" fieldTable="formonly" identifier="lbInfo2"/>
+			</GridPanel>
+		</GridPanel>
+	</form.rootContainer>
+	<form.screenRecords>
+<!-- 		<ScreenRecord identifier="sr_orderhead" fields="formonly.scroll_flag,orderhead.order_num,orderhead.cust_code,orderhead.order_date,orderhead.total_amt,orderhead.hold_code,orderhead.sales_code,orderhead.status_ind,orderhead.ship_date" elements="12"/> -->
+<!--		<ScreenRecord identifier="sr_orderhead" fields="formonly.scroll_flag,orderhead.order_num,orderhead.cust_code,orderhead.order_date,orderhead.total_amt,orderhead.hold_code,orderhead.sales_code,orderhead.status_ind,orderhead.ship_date" elements="12"/> -->
+		<ScreenRecord identifier="sr_orderhead" fields="orderhead.order_num,orderhead.cust_code,orderhead.order_date,orderhead.total_amt,orderhead.hold_code,orderhead.sales_code,orderhead.status_ind,orderhead.ship_date" elements="12"/>
+
+		<ScreenRecord identifier="condsale" fields="condsale.desc_text"/>
+		<ScreenRecord identifier="customer" fields="customer.name_text"/>
+		<ScreenRecord identifier="formonly" fields="formonly.scroll_flag"/>
+		<ScreenRecord identifier="orderhead" fields="orderhead.order_num,orderhead.cust_code,orderhead.order_date,orderhead.total_amt,orderhead.hold_code,orderhead.cond_code,orderhead.sales_code,orderhead.status_ind,orderhead.ship_date"/>
+	</form.screenRecords>
+</form>
+

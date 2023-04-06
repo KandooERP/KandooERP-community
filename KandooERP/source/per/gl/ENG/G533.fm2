@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form xmlns="http://namespaces.querix.com/2015/fglForms">
+	<form.rootContainer>
+		<GridPanel classNames="fcls_rootContainer" verticalAlignment="Top" horizontalAlignment="Left" fieldTable="" identifier="rootContainer">
+			<GridPanel.gridRowDefinitions>
+				<GridRowDefinition gridLengthValue=""/>
+				<GridRowDefinition gridLengthValue=""/>
+				<GridRowDefinition gridLengthValue=""/>
+				<GridRowDefinition gridLengthValue=""/>
+				<GridRowDefinition gridLengthValue=""/>
+			</GridPanel.gridRowDefinitions>
+			<GridPanel.gridColumnDefinitions>
+				<GridColumnDefinition gridLengthValue="100%"/>
+			</GridPanel.gridColumnDefinitions>
+			<GridPanel classNames="fcls_title_cnt" visible="true" verticalAlignment="Top" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="cntTitle">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="100%"/>
+					<GridColumnDefinition gridLengthValue=""/>
+				</GridPanel.gridColumnDefinitions>
+				<Label isDynamic="true" text="Bank Type Details" classNames="fcls_title_lb" visible="true" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="header_text"/>
+				<Label isDynamic="true" text="G533" classNames="fcls_title_lb" visible="true" gridItemLocation="1,0,1,1" fieldTable="" identifier="lbFormName"/>
+			</GridPanel>
+			<GroupBox title="General" classNames="fcls_detail_gb_cnt,fcls_detail_cnt,,fcls_align_hstretch" visible="true" gridItemLocation="0,1,1,1" fieldTable="" identifier="cntDetail1GroupBox">
+				<GridPanel classNames="fcls_detail_gb_cnt_sub,fcls_detail_cnt_sub,fcls_data_cnt,fcls_align_left" visible="true" verticalAlignment="Top" horizontalAlignment="Left" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="cntDetail1Sub">
+					<GridPanel.gridRowDefinitions>
+						<GridRowDefinition gridLengthValue=""/>
+						<GridRowDefinition gridLengthValue=""/>
+					</GridPanel.gridRowDefinitions>
+					<GridPanel.gridColumnDefinitions>
+						<GridColumnDefinition gridLengthValue="" gridMinLength="10rem"/>
+						<GridColumnDefinition gridLengthValue=""/>
+					</GridPanel.gridColumnDefinitions>
+					<Label isDynamic="true" text="Bank Type" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="lb57"/>
+					<TextField dataType="Char,,,,8" classNames="list-show-value-text,field-show-value,fcls_data_widget,fcls_align_left,fcls_length_40qch" toolTip="Unique Code to identify this Bank Type" gridItemLocation="1,0,1,1" comment="Unique Code to identify this Bank Type" fieldTable="banktype" identifier="type_code" toCase="Up"/>
+					<Label isDynamic="true" text="Description" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,1,1,1" fieldTable="" identifier="lb73"/>
+					<TextField dataType="Char,,,,40" classNames="fcls_data_widget,fcls_align_left,fcls_length_40qch" toolTip="Bank Type Description" gridItemLocation="1,1,1,1" comment="Bank Type Description" fieldTable="banktype" identifier="type_text"/>
+				</GridPanel>
+			</GroupBox>
+			<GroupBox title="EFT Payment Details" classNames="fcls_detail_gb_cnt,fcls_detail_cnt,,fcls_align_hstretch" visible="true" verticalAlignment="Top" gridItemLocation="0,2,1,1" fieldTable="formonly" identifier="cntDetail2GroupBox">
+				<GridPanel classNames="fcls_detail_gb_cnt_sub,fcls_detail_cnt_sub,fcls_data_cnt,fcls_align_left" visible="true" verticalAlignment="Top" horizontalAlignment="Left" fieldTable="formonly" identifier="cntDetail2GrBoxSub">
+					<GridPanel.gridRowDefinitions>
+						<GridRowDefinition gridLengthValue=""/>
+						<GridRowDefinition gridLengthValue=""/>
+						<GridRowDefinition gridLengthValue=""/>
+					</GridPanel.gridRowDefinitions>
+					<GridPanel.gridColumnDefinitions>
+						<GridColumnDefinition gridLengthValue="" gridMinLength="10rem"/>
+						<GridColumnDefinition gridLengthValue=""/>
+					</GridPanel.gridColumnDefinitions>
+					<Label isDynamic="true" text="Format Indicator" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="lb47"/>
+					<ComboBox editable="true" dataType="SmallInt,,,," classNames="list-show-value-text,field-show-value,fcls_data_widget,fcls_align_left,fcls_length_40qch" toolTip="(1) ANZ, (5) NAB/Westpac" gridItemLocation="1,0,1,1" comment="(1) ANZ, (5) NAB/Westpac" fieldTable="banktype" identifier="eft_format_ind"/>
+					<Label isDynamic="true" text="Path Name" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,1,1,1" fieldTable="formonly" identifier="lb46"/>
+					<TextField dataType="Char,,,,40" classNames="fcls_data_widget,fcls_align_left,fcls_length_40qch" toolTip="Full UNIX Directory Name where EFT Payments File will be Created" gridItemLocation="1,1,1,1" comment="Full UNIX Directory Name where EFT Payments File will be Created" fieldTable="banktype" identifier="eft_path_text"/>
+					<Label isDynamic="true" text="File Name" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,2,1,1" fieldTable="formonly" identifier="lb44"/>
+					<TextField dataType="Char,,,,20" classNames="fcls_data_widget,fcls_align_left,fcls_length_40qch" toolTip="File Name of the EFT Payments File to be Created" gridItemLocation="1,2,1,1" comment="File Name of the EFT Payments File to be Created" fieldTable="banktype" identifier="eft_file_text"/>
+				</GridPanel>
+			</GroupBox>
+			<GroupBox title="Statement Load Details" classNames="fcls_detail_gb_cnt,fcls_detail_cnt,,fcls_align_hstretch" visible="true" gridItemLocation="0,3,1,1" fieldTable="formonly" identifier="cntDetail3GroupBox">
+				<GridPanel classNames="fcls_detail_gb_cnt_sub,fcls_detail_cnt_sub,fcls_data_cnt,fcls_align_left" visible="true" verticalAlignment="Top" horizontalAlignment="Left" fieldTable="formonly" identifier="cntDetail3GrBoxSub">
+					<GridPanel.gridRowDefinitions>
+						<GridRowDefinition gridLengthValue=""/>
+						<GridRowDefinition gridLengthValue=""/>
+						<GridRowDefinition gridLengthValue=""/>
+					</GridPanel.gridRowDefinitions>
+					<GridPanel.gridColumnDefinitions>
+						<GridColumnDefinition gridLengthValue="" gridMinLength="10rem"/>
+						<GridColumnDefinition gridLengthValue=""/>
+					</GridPanel.gridColumnDefinitions>
+					<Label isDynamic="true" text="Format Indicator" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="lb48"/>
+					<ComboBox editable="true" dataType="SmallInt,,,," classNames="list-show-value-text,field-show-value,fcls_data_widget,fcls_align_left,fcls_length_40qch" toolTip="(1) ANZ, (5) NAB, (7) Westpac" gridItemLocation="1,0,1,1" comment="(1) ANZ, (5) NAB, (7) Westpac" fieldTable="banktype" identifier="stmt_format_ind"/>
+					<Label isDynamic="true" text="Path Name" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,1,1,1" fieldTable="formonly" identifier="lb49"/>
+					<TextField dataType="Char,,,,40" classNames="fcls_data_widget,fcls_align_left,fcls_length_40qch" toolTip="Full UNIX Directory Name for location of Statement Load File" gridItemLocation="1,1,1,1" comment="Full UNIX Directory Name for location of Statement Load File" fieldTable="banktype" identifier="stmt_path_text"/>
+					<Label isDynamic="true" text="File Name" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,2,1,1" fieldTable="formonly" identifier="lb63"/>
+					<TextField dataType="Char,,,,20" classNames="fcls_data_widget,fcls_align_left,fcls_length_40qch" toolTip="File Name of the Statement Load File" gridItemLocation="1,2,1,1" comment="File Name of the Statement Load File" fieldTable="banktype" identifier="stmt_file_text"/>
+				</GridPanel>
+			</GroupBox>
+			<GridPanel classNames="fcls_statusbar_cnt" visible="true" verticalAlignment="Top" gridItemLocation="0,4,1,1" fieldTable="formonly" identifier="cntStatusBar">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="100%"/>
+				</GridPanel.gridColumnDefinitions>
+				<Label isDynamic="true" text="" classNames="fcls_sblabel" visible="true" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="lbInfo1"/>
+				<Label isDynamic="true" text="" classNames="fcls_sblabel" visible="true" gridItemLocation="0,1,1,1" fieldTable="formonly" identifier="lbInfo2"/>
+			</GridPanel>
+		</GridPanel>
+	</form.rootContainer>
+	<form.screenRecords>
+		<ScreenRecord identifier="banktype" fields="type_code,type_text,eft_format_ind,eft_path_text,eft_file_text,stmt_format_ind,stmt_path_text,stmt_file_text"/>
+	</form.screenRecords>
+</form>
+

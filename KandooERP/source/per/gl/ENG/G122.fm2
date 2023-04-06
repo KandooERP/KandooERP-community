@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?><form xmlns="http://namespaces.querix.com/2015/fglForms">
+	<form.rootContainer>
+		<GridPanel classNames="fcls_rootContainer" fieldTable="" horizontalAlignment="Stretch" identifier="rootContainer" verticalAlignment="Stretch">
+			<GridPanel.gridRowDefinitions>
+				<GridRowDefinition gridLengthValue=""/>
+				<GridRowDefinition gridLengthValue="100%"/>
+				<GridRowDefinition gridLengthValue=""/>
+			</GridPanel.gridRowDefinitions>
+			<GridPanel.gridColumnDefinitions>
+				<GridColumnDefinition gridLengthValue="100%"/>
+			</GridPanel.gridColumnDefinitions>
+			<GridPanel classNames="fcls_title_cnt" fieldTable="formonly" gridItemLocation="0,0,1,1" identifier="cntTitle" verticalAlignment="Top" visible="true">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="100%"/>
+					<GridColumnDefinition gridLengthValue=""/>
+				</GridPanel.gridColumnDefinitions>
+				<Label classNames="fcls_title_lb" fieldTable="formonly" gridItemLocation="0,0,1,1" identifier="header_text" isDynamic="true" text="Chart of Accounts" visible="true"/>
+				<Label classNames="fcls_title_lb" fieldTable="" gridItemLocation="1,0,1,1" identifier="lbFormName" isDynamic="true" text="G122" visible="true"/>
+			</GridPanel>
+			<Table fieldTable="" gridItemLocation="0,1,1,1" horizontalAlignment="Stretch" identifier="sr_coa" isMultiSelect="true" preferredSize="68qch,16qch" rowCount="14" verticalAlignment="Stretch">
+				<TableColumn fieldTable="" identifier="tc_acct_code" text="G/L Account">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="15rem" gridMinLength="15rem"/>
+					</TableColumn.columnLength>
+					<TextField comment=" Enter a unique Chart of G/L Account " dataType="Char,,,,18" fieldTable="coa" identifier="acct_code" toCase="Up" toolTip=" Enter a unique Chart of G/L Account "/>
+				</TableColumn>
+				<TableColumn fieldTable="" identifier="tc_desc_text" text="Description">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="30rem" gridMinLength="30rem"/>
+					</TableColumn.columnLength>
+					<TextField comment=" Enter the description of the account " dataType="Char,,,,40" fieldTable="coa" identifier="desc_text" toolTip=" Enter the description of the account "/>
+				</TableColumn>
+				<TableColumn fieldTable="" identifier="tc_type_ind" text="Account Type">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="15rem" gridMinLength="15rem"/>
+					</TableColumn.columnLength>
+					<ComboBox comment=" The type A-Asset L-Liability I-Income E-Expense N-Net Worth" dataType="Char,,,,1" editable="true" fieldTable="coa" identifier="type_ind" noEntry="true" toolTip=" The type A-Asset L-Liability I-Income E-Expense N-Net Worth"/>
+				</TableColumn>
+				<TableColumn text="Class or Nominal Code" resizable="true" visible="true" identifier="tc_f3">
+					<CheckBox visible="true" identifier="is_nominalcode" title="Is a Nominal Code" fieldTable="coa">
+						<CheckBox.checkedValue>
+							<IntegerLiteral integerValue="1"/>
+						</CheckBox.checkedValue>
+						<CheckBox.uncheckedValue>
+							<IntegerLiteral integerValue="0"/>
+						</CheckBox.uncheckedValue>
+					</CheckBox>
+					<TableColumn.columnLength>
+						<GridLength/>
+					</TableColumn.columnLength>
+				</TableColumn>
+			</Table>
+			<GridPanel classNames="fcls_statusbar_cnt" fieldTable="formonly" gridItemLocation="0,2,1,1" identifier="cntStatusBar" verticalAlignment="Top" visible="true">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="100%"/>
+				</GridPanel.gridColumnDefinitions>
+				<Label classNames="fcls_sblabel" fieldTable="formonly" gridItemLocation="0,0,1,1" identifier="lbInfo1" isDynamic="true" text="" visible="true"/>
+				<Label classNames="fcls_sblabel" fieldTable="formonly" gridItemLocation="0,1,1,1" identifier="lbInfo2" isDynamic="true" text="" visible="true"/>
+			</GridPanel>
+		</GridPanel>
+	</form.rootContainer>
+	<form.screenRecords>
+		<ScreenRecord fields="coa.acct_code,coa.desc_text,coa.type_ind,coa.is_nominalcode" identifier="sr_coa"/>
+		<ScreenRecord fields="coa.acct_code,coa.desc_text,coa.type_ind" identifier="coa"/>		
+	</form.screenRecords>
+</form>

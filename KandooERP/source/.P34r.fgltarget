@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<fglBuildTarget xmlns="http://namespaces.querix.com/lyciaide/target" name="P34r" type="fgl-program">
+
+  <libraries>
+    <library name="lib_report" dynamic="false" location=""/>
+    <library name="lib_tool_P_AP_db" dynamic="false" location=""/>
+    <library name="lib_tool_P_AP_new" dynamic="false" location=""/>
+    <library name="lib_tool_common" dynamic="false" location=""/>
+    <library name="lib_tool_db_common" dynamic="false" location=""/>
+  </libraries>
+
+  <sources type="fgl">
+    <file location="4gl/ap/P34_GLOBALS.4gl"/>
+    <file location="4gl/common/conv_rate.4gl"/>
+    <file location="4gl/common/ckhdwind.4gl"/>
+    <file location="4gl/common/ckapwind.4gl"/>
+    <file location="4gl/common/vperfunc.4gl"/>
+    <file location="4gl/common/poauwind.4gl"/>
+    <file location="4gl/common/vodiwind.4gl"/>
+    <file location="4gl/ap/P34r.4gl"/>
+    <file location="4gl/common/vendwind.4gl"/>
+    <file location="4gl/ap/P34.4gl"/>
+    <file location="4gl/ap/PCFa.4gl"/>
+    <file location="4gl/common/vospwind.4gl"/>
+    <file location="4gl/common/numtowords.4gl"/>
+    <file location="4gl/common/dmdiwind.4gl"/>
+    <file location="4gl/common/glob_GLOBALS_constant.4gl"/>
+    <file location="4gl/ap/P34r_main.4gl"/>
+    <file location="4gl/common/wtaxwind.4gl"/>
+    <file location="4gl/common/glob_GLOBALS.4gl"/>
+    <file location="4gl/common/glob_GLOBALS_userDataTypes.4gl"/>
+    <file location="4gl/common/dmhdwind.4gl"/>
+    <file location="4gl/ap/PC9b.4gl"/>
+    <file location="4gl/common/vopawind.4gl"/>
+    <file location="4gl/common/pohiwind.4gl"/>
+    <file location="4gl/common/note_disp.4gl"/>
+    <file location="4gl/ap/P_AP_GLOBALS.4gl"/>
+    <file location="4gl/common/bankwind.4gl"/>
+    <file location="4gl/common/vohdwind.4gl"/>
+    <file location="4gl/common/postwind.4gl"/>
+    <file location="4gl/ap/P41f.4gl"/>
+  </sources>
+
+  <sources type="form">
+    <file location="per/gl/ENG/G135.fm2"/>
+    <file location="per/utility/ENG/U156.fm2"/>
+    <file location="per/pu/ENG/R105.fm2"/>
+    <file location="per/pu/ENG/R140.fm2"/>
+    <file location="per/ap/ENG/P132.fm2"/>
+    <file location="per/jm/ENG/J147.fm2"/>
+    <file location="per/utility/ENG/U505.fm2"/>
+    <file location="per/ap/ENG/P120.fm2"/>
+    <file location="per/ap/ENG/P501.fm2"/>
+    <file location="per/pu/ENG/R144.fm2"/>
+    <file location="per/pu/ENG/R146.fm2"/>
+    <file location="per/ap/ENG/P112.fm2"/>
+    <file location="per/ap/ENG/P515.fm2"/>
+    <file location="per/ap/ENG/P239.fm2"/>
+    <file location="per/utility/ENG/U526.fm2"/>
+    <file location="per/ap/ENG/P180.fm2"/>
+    <file location="per/ap/ENG/P510.fm2"/>
+    <file location="per/utility/ENG/U162.fm2"/>
+    <file location="per/ap/ENG/P143.fm2"/>
+    <file location="per/jm/ENG/J148.fm2"/>
+    <file location="per/ap/ENG/P500.fm2"/>
+    <file location="per/ap/ENG/P169.fm2"/>
+    <file location="per/ap/ENG/P170.fm2"/>
+  </sources>
+
+  <mediaFiles>
+    <file client="true" location="P34r.qxtheme" type="gui-theme-file"/>
+    <file client="true" location="P34r.css" type="other"/>
+  </mediaFiles>
+
+</fglBuildTarget>

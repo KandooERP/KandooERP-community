@@ -1,0 +1,1007 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form xmlns="http://namespaces.querix.com/2015/fglForms">
+	<form.rootContainer>
+		<GridPanel classNames="fcls_rootContainer" verticalAlignment="Top" horizontalAlignment="Left" fieldTable="" identifier="rootContainer" minSize="75rem,">
+			<GridPanel.gridRowDefinitions>
+				<GridRowDefinition>
+					<GridRowDefinition.gridLength>
+						<GridLength gridLengthValue=""/>
+					</GridRowDefinition.gridLength>
+				</GridRowDefinition>
+				<GridRowDefinition>
+					<GridRowDefinition.gridLength>
+						<GridLength/>
+					</GridRowDefinition.gridLength>
+				</GridRowDefinition>
+				<GridRowDefinition>
+					<GridRowDefinition.gridLength>
+						<GridLength gridLengthValue=""/>
+					</GridRowDefinition.gridLength>
+				</GridRowDefinition>
+				<GridRowDefinition>
+					<GridRowDefinition.gridLength>
+						<GridLength gridLengthValue=""/>
+					</GridRowDefinition.gridLength>
+				</GridRowDefinition>
+				<GridRowDefinition>
+					<GridRowDefinition.gridLength>
+						<GridLength gridLengthValue=""/>
+					</GridRowDefinition.gridLength>
+				</GridRowDefinition>
+				<GridRowDefinition>
+					<GridRowDefinition.gridLength>
+						<GridLength gridLengthValue=""/>
+					</GridRowDefinition.gridLength>
+				</GridRowDefinition>
+				<GridRowDefinition>
+					<GridRowDefinition.gridLength>
+						<GridLength gridLengthValue=""/>
+					</GridRowDefinition.gridLength>
+				</GridRowDefinition>
+				<GridRowDefinition>
+					<GridRowDefinition.gridLength>
+						<GridLength gridLengthValue=""/>
+					</GridRowDefinition.gridLength>
+				</GridRowDefinition>
+			</GridPanel.gridRowDefinitions>
+			<GridPanel.gridColumnDefinitions>
+				<GridColumnDefinition>
+					<GridColumnDefinition.gridLength>
+						<GridLength gridLengthValue="100%"/>
+					</GridColumnDefinition.gridLength>
+				</GridColumnDefinition>
+			</GridPanel.gridColumnDefinitions>
+			<GridPanel classNames="fcls_title_cnt" visible="true" verticalAlignment="Top" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="cntTitle">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition>
+						<GridRowDefinition.gridLength>
+							<GridLength gridLengthValue=""/>
+						</GridRowDefinition.gridLength>
+					</GridRowDefinition>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition>
+						<GridColumnDefinition.gridLength>
+							<GridLength gridLengthValue="100%"/>
+						</GridColumnDefinition.gridLength>
+					</GridColumnDefinition>
+					<GridColumnDefinition>
+						<GridColumnDefinition.gridLength>
+							<GridLength gridLengthValue=""/>
+						</GridColumnDefinition.gridLength>
+					</GridColumnDefinition>
+				</GridPanel.gridColumnDefinitions>
+				<Label isDynamic="true" text="Inventory Purchase Order Lines" classNames="fcls_title_lb" visible="true" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="header_text"/>
+				<Label isDynamic="true" text="I211" classNames="fcls_title_lb" visible="true" gridItemLocation="1,0,1,1" fieldTable="" identifier="lbFormName"/>
+			</GridPanel>
+			<GridPanel classNames="fcls_detail_cnt" visible="true" verticalAlignment="Top" gridItemLocation="0,1,1,1" fieldTable="formonly" identifier="cntDetail1">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition>
+						<GridRowDefinition.gridLength>
+							<GridLength/>
+						</GridRowDefinition.gridLength>
+					</GridRowDefinition>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition>
+						<GridColumnDefinition.gridLength>
+							<GridLength gridLengthValue="60%"/>
+						</GridColumnDefinition.gridLength>
+					</GridColumnDefinition>
+					<GridColumnDefinition>
+						<GridColumnDefinition.gridLength>
+							<GridLength gridLengthValue="40%"/>
+						</GridColumnDefinition.gridLength>
+					</GridColumnDefinition>
+				</GridPanel.gridColumnDefinitions>
+				<GroupBox title="Product" classNames="fcls_detail_gb_cnt" visible="true" gridItemLocation="0,0,1,1" fieldTable="" identifier="cntDetail1GroupBoxLeft" horizontalAlignment="Stretch" verticalAlignment="Stretch">
+					<GridPanel classNames="fcls_detail_gb_cnt_sub,fcls_data_cnt,fcls_align_left" visible="true" verticalAlignment="Top" horizontalAlignment="Left" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="cntDetail1GBSubGpLeft">
+						<GridPanel.gridRowDefinitions>
+							<GridRowDefinition>
+								<GridRowDefinition.gridLength>
+									<GridLength gridLengthValue=""/>
+								</GridRowDefinition.gridLength>
+							</GridRowDefinition>
+							<GridRowDefinition>
+								<GridRowDefinition.gridLength>
+									<GridLength gridLengthValue=""/>
+								</GridRowDefinition.gridLength>
+							</GridRowDefinition>
+							<GridRowDefinition>
+								<GridRowDefinition.gridLength>
+									<GridLength gridLengthValue=""/>
+								</GridRowDefinition.gridLength>
+							</GridRowDefinition>
+						</GridPanel.gridRowDefinitions>
+						<GridPanel.gridColumnDefinitions>
+							<GridColumnDefinition>
+								<GridColumnDefinition.gridLength>
+									<GridLength gridLengthValue="" gridMinLength="10rem"/>
+								</GridColumnDefinition.gridLength>
+							</GridColumnDefinition>
+							<GridColumnDefinition>
+								<GridColumnDefinition.gridLength>
+									<GridLength gridLengthValue=""/>
+								</GridColumnDefinition.gridLength>
+							</GridColumnDefinition>
+						</GridPanel.gridColumnDefinitions>
+						<Label isDynamic="true" text="Product" classNames="fcls_fieldlabel" visible="true" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="lb57"/>
+						<ComboBox toCase="Up" dataType="Char,,,,25" classNames="fcls_data_widget,fcls_align_left,fcls_length_30qch" preferredSize="26qch,1qch" toolTip=" Product Code for Line Item  (W)" gridItemLocation="1,0,1,1" fieldTable="purchdetl" comment=" Product Code for Line Item  (W)" identifier="ref_text"/>
+						<Label isDynamic="true" text="Description" classNames="fcls_fieldlabel" visible="true" gridItemLocation="0,1,1,1" fieldTable="" identifier="lb73"/>
+						<TextField dataType="Char,,,,40" classNames="fcls_data_widget,fcls_align_left,fcls_length_30qch" preferredSize="41qch,1qch" toolTip=" Purchase Order Line Description" gridItemLocation="1,1,1,1" fieldTable="purchdetl" comment=" Purchase Order Line Description" identifier="desc_text"/>
+						<TextField dataType="Char,,,,40" classNames="fcls_data_widget,fcls_align_left,fcls_length_30qch" preferredSize="39qch,1qch" toolTip=" Purchase Order Line 2 Description" gridItemLocation="1,2,1,1" fieldTable="purchdetl" comment=" Purchase Order Line 2 Description" identifier="desc2_text"/>
+					</GridPanel>
+				</GroupBox>
+				<GroupBox title="Notes" classNames="fcls_detail_gb_cnt" visible="true" gridItemLocation="1,0,1,1" fieldTable="" identifier="cntDetail1GroupBoxRight" horizontalAlignment="Stretch" verticalAlignment="Stretch">
+					<GridPanel classNames="fcls_detail_gb_cnt_sub,fcls_data_cnt,fcls_align_left" visible="true" verticalAlignment="Top" horizontalAlignment="Left" fieldTable="" identifier="cntDetail1GBSubGpRight">
+						<GridPanel.gridRowDefinitions>
+							<GridRowDefinition>
+								<GridRowDefinition.gridLength>
+									<GridLength gridLengthValue=""/>
+								</GridRowDefinition.gridLength>
+							</GridRowDefinition>
+						</GridPanel.gridRowDefinitions>
+						<GridPanel.gridColumnDefinitions>
+							<GridColumnDefinition>
+								<GridColumnDefinition.gridLength>
+									<GridLength gridLengthValue="" gridMinLength="10rem"/>
+								</GridColumnDefinition.gridLength>
+							</GridColumnDefinition>
+							<GridColumnDefinition>
+								<GridColumnDefinition.gridLength>
+									<GridLength gridLengthValue=""/>
+								</GridColumnDefinition.gridLength>
+							</GridColumnDefinition>
+						</GridPanel.gridColumnDefinitions>
+						<Label isDynamic="true" text="Note Code" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,0,1,1" fieldTable="" identifier="lb139"/>
+						<TextField noEntry="true" dataType="Char,,,,12" classNames="fcls_data_widget,fcls_align_left,fcls_length_15qch" preferredSize="13qch,1qch" gridItemLocation="1,0,1,1" fieldTable="purchdetl" identifier="note_code"/>
+					</GridPanel>
+				</GroupBox>
+			</GridPanel>
+			<GridPanel classNames="fcls_detail_cnt" visible="true" verticalAlignment="Top" gridItemLocation="0,2,1,1" fieldTable="formonly" identifier="cntDetail2">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition>
+						<GridRowDefinition.gridLength>
+							<GridLength gridLengthValue=""/>
+						</GridRowDefinition.gridLength>
+					</GridRowDefinition>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition>
+						<GridColumnDefinition.gridLength>
+							<GridLength gridLengthValue="60%"/>
+						</GridColumnDefinition.gridLength>
+					</GridColumnDefinition>
+					<GridColumnDefinition>
+						<GridColumnDefinition.gridLength>
+							<GridLength gridLengthValue="40%"/>
+						</GridColumnDefinition.gridLength>
+					</GridColumnDefinition>
+				</GridPanel.gridColumnDefinitions>
+				<GroupBox title="Vendor Account" classNames="fcls_detail_gb_cnt" visible="true" verticalAlignment="Top" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="cntDetail2GroupBoxLeft">
+					<GridPanel classNames="fcls_detail_gb_cnt_sub,fcls_data_cnt,fcls_align_left" visible="true" verticalAlignment="Top" horizontalAlignment="Left" fieldTable="formonly" identifier="cntDetail2GBSubGpLeft">
+						<GridPanel.gridRowDefinitions>
+							<GridRowDefinition>
+								<GridRowDefinition.gridLength>
+									<GridLength gridLengthValue=""/>
+								</GridRowDefinition.gridLength>
+							</GridRowDefinition>
+							<GridRowDefinition>
+								<GridRowDefinition.gridLength>
+									<GridLength gridLengthValue=""/>
+								</GridRowDefinition.gridLength>
+							</GridRowDefinition>
+							<GridRowDefinition>
+								<GridRowDefinition.gridLength>
+									<GridLength gridLengthValue=""/>
+								</GridRowDefinition.gridLength>
+							</GridRowDefinition>
+							<GridRowDefinition>
+								<GridRowDefinition.gridLength>
+									<GridLength gridLengthValue=""/>
+								</GridRowDefinition.gridLength>
+							</GridRowDefinition>
+							<GridRowDefinition>
+								<GridRowDefinition.gridLength>
+									<GridLength gridLengthValue=""/>
+								</GridRowDefinition.gridLength>
+							</GridRowDefinition>
+						</GridPanel.gridRowDefinitions>
+						<GridPanel.gridColumnDefinitions>
+							<GridColumnDefinition>
+								<GridColumnDefinition.gridLength>
+									<GridLength gridLengthValue="" gridMinLength="10rem"/>
+								</GridColumnDefinition.gridLength>
+							</GridColumnDefinition>
+							<GridColumnDefinition>
+								<GridColumnDefinition.gridLength>
+									<GridLength gridLengthValue=""/>
+								</GridColumnDefinition.gridLength>
+							</GridColumnDefinition>
+							<GridColumnDefinition>
+								<GridColumnDefinition.gridLength>
+									<GridLength gridLengthValue=""/>
+								</GridColumnDefinition.gridLength>
+							</GridColumnDefinition>
+							<GridColumnDefinition>
+								<GridColumnDefinition.gridLength>
+									<GridLength gridLengthValue=""/>
+								</GridColumnDefinition.gridLength>
+							</GridColumnDefinition>
+							<GridColumnDefinition>
+								<GridColumnDefinition.gridLength>
+									<GridLength gridLengthValue=""/>
+								</GridColumnDefinition.gridLength>
+							</GridColumnDefinition>
+						</GridPanel.gridColumnDefinitions>
+						<Label isDynamic="true" text="Vendor Ref" classNames="fcls_fieldlabel" visible="true" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="lb47"/>
+						<TextField dataType="Char,,,,30" classNames="fcls_data_widget,fcls_align_left,fcls_length_30qch" preferredSize="31qch,1qch" toolTip=" Vendor Reference Information " gridItemLocation="1,0,1,1" fieldTable="purchdetl" comment=" Vendor Reference Information " identifier="oem_text"/>
+						<Label isDynamic="true" text="Account" classNames="fcls_fieldlabel" visible="true" gridItemLocation="0,1,1,1" fieldTable="formonly" identifier="lb46"/>
+						<ComboBox toCase="Up" dataType="Char,,,,18" classNames="fcls_data_widget,fcls_align_left,fcls_length_30qch" preferredSize="19qch,1qch" toolTip=" The GL Account the goods are Committed (W)" gridItemLocation="1,1,1,1" fieldTable="purchdetl" comment=" The GL Account the goods are Committed (W)" identifier="acct_code"/>
+						<TextField format="--------&amp;.&amp;&amp;" noEntry="true" dataType="Decimal,,,2,16" classNames="fcls_data_widget,fcls_align_left,fcls_length_30qch" preferredSize="13qch,1qch" gridItemLocation="1,2,1,1" fieldTable="formonly" identifier="pr_available_amt"/>
+						<TextField noEntry="true" dataType="Char,,,," classNames="fcls_data_widget,fcls_align_left,fcls_length_30qch" preferredSize="30qch,1qch" gridItemLocation="1,3,1,1" fieldTable="formonly" identifier="tp_desc_text"/>
+						<StackPanel visible="true" gridItemLocation="1,4,1,1" fieldTable="" identifier="c8">
+							<ComboBox toCase="Up" noEntry="true" dataType="Char,,,,4" classNames="fcls_data_widget,fcls_align_left,fcls_length_15qch" preferredSize="5qch,1qch" gridItemLocation="8,8,2,1" fieldTable="product" identifier="sell_uom_code"/>
+							<ComboBox toCase="Up" noEntry="true" dataType="Char,,,,4" classNames="fcls_data_widget,fcls_align_left,fcls_length_15qch" preferredSize="5qch,1qch" gridItemLocation="16,8,3,1" fieldTable="product" identifier="pur_uom_code"/>
+						</StackPanel>
+					</GridPanel>
+				</GroupBox>
+				<GroupBox title="Warehouse" classNames="fcls_detail_gb_cnt" visible="true" gridItemLocation="1,0,1,1" fieldTable="" identifier="cntDetail2GroupBoxRight">
+					<GridPanel classNames="fcls_detail_gb_cnt_sub,fcls_data_cnt,fcls_align_left" visible="true" verticalAlignment="Top" horizontalAlignment="Left" fieldTable="" identifier="cntDetail2GBSubGpRight">
+						<GridPanel.gridRowDefinitions>
+							<GridRowDefinition>
+								<GridRowDefinition.gridLength>
+									<GridLength gridLengthValue=""/>
+								</GridRowDefinition.gridLength>
+							</GridRowDefinition>
+						</GridPanel.gridRowDefinitions>
+						<GridPanel.gridColumnDefinitions>
+							<GridColumnDefinition>
+								<GridColumnDefinition.gridLength>
+									<GridLength gridLengthValue="" gridMinLength="10rem"/>
+								</GridColumnDefinition.gridLength>
+							</GridColumnDefinition>
+							<GridColumnDefinition>
+								<GridColumnDefinition.gridLength>
+									<GridLength gridLengthValue=""/>
+								</GridColumnDefinition.gridLength>
+							</GridColumnDefinition>
+						</GridPanel.gridColumnDefinitions>
+						<Label isDynamic="true" text="Warehouse" classNames="fcls_fieldlabel" visible="true" gridItemLocation="0,0,1,1" fieldTable="" identifier="lb167"/>
+						<ComboBox noEntry="true" dataType="Char,,,,3" classNames="fcls_data_widget,fcls_align_left,fcls_length_15qch" preferredSize="4qch,1qch" gridItemLocation="1,0,1,1" fieldTable="prodstatus" identifier="ware_code"/>
+					</GridPanel>
+				</GroupBox>
+			</GridPanel>
+			<GridPanel classNames="fcls_detail_cnt" visible="true" verticalAlignment="Top" gridItemLocation="0,3,1,1" fieldTable="formonly" identifier="cntDetail3">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition>
+						<GridRowDefinition.gridLength>
+							<GridLength gridLengthValue=""/>
+						</GridRowDefinition.gridLength>
+					</GridRowDefinition>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition>
+						<GridColumnDefinition.gridLength>
+							<GridLength gridLengthValue="60%"/>
+						</GridColumnDefinition.gridLength>
+					</GridColumnDefinition>
+					<GridColumnDefinition>
+						<GridColumnDefinition.gridLength>
+							<GridLength gridLengthValue="40%"/>
+						</GridColumnDefinition.gridLength>
+					</GridColumnDefinition>
+				</GridPanel.gridColumnDefinitions>
+				<GroupBox title="Give me a title" classNames="fcls_detail_gb_cnt" visible="true" verticalAlignment="Top" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="cntDetail3GroupBoxLeft">
+					<GridPanel classNames="fcls_detail_gb_cnt_sub,fcls_data_cnt,fcls_align_left" visible="true" verticalAlignment="Top" horizontalAlignment="Left" fieldTable="formonly" identifier="cntDetail3GBSubGpLeft">
+						<GridPanel.gridRowDefinitions>
+							<GridRowDefinition>
+								<GridRowDefinition.gridLength>
+									<GridLength gridLengthValue=""/>
+								</GridRowDefinition.gridLength>
+							</GridRowDefinition>
+							<GridRowDefinition>
+								<GridRowDefinition.gridLength>
+									<GridLength gridLengthValue=""/>
+								</GridRowDefinition.gridLength>
+							</GridRowDefinition>
+							<GridRowDefinition>
+								<GridRowDefinition.gridLength>
+									<GridLength gridLengthValue=""/>
+								</GridRowDefinition.gridLength>
+							</GridRowDefinition>
+							<GridRowDefinition>
+								<GridRowDefinition.gridLength>
+									<GridLength gridLengthValue=""/>
+								</GridRowDefinition.gridLength>
+							</GridRowDefinition>
+							<GridRowDefinition>
+								<GridRowDefinition.gridLength>
+									<GridLength gridLengthValue=""/>
+								</GridRowDefinition.gridLength>
+							</GridRowDefinition>
+							<GridRowDefinition>
+								<GridRowDefinition.gridLength>
+									<GridLength gridLengthValue=""/>
+								</GridRowDefinition.gridLength>
+							</GridRowDefinition>
+							<GridRowDefinition>
+								<GridRowDefinition.gridLength>
+									<GridLength gridLengthValue=""/>
+								</GridRowDefinition.gridLength>
+							</GridRowDefinition>
+							<GridRowDefinition>
+								<GridRowDefinition.gridLength>
+									<GridLength gridLengthValue=""/>
+								</GridRowDefinition.gridLength>
+							</GridRowDefinition>
+							<GridRowDefinition>
+								<GridRowDefinition.gridLength>
+									<GridLength gridLengthValue=""/>
+								</GridRowDefinition.gridLength>
+							</GridRowDefinition>
+						</GridPanel.gridRowDefinitions>
+						<GridPanel.gridColumnDefinitions>
+							<GridColumnDefinition>
+								<GridColumnDefinition.gridLength>
+									<GridLength gridLengthValue="" gridMinLength="10rem"/>
+								</GridColumnDefinition.gridLength>
+							</GridColumnDefinition>
+							<GridColumnDefinition>
+								<GridColumnDefinition.gridLength>
+									<GridLength gridLengthValue=""/>
+								</GridColumnDefinition.gridLength>
+							</GridColumnDefinition>
+							<GridColumnDefinition>
+								<GridColumnDefinition.gridLength>
+									<GridLength gridLengthValue=""/>
+								</GridColumnDefinition.gridLength>
+							</GridColumnDefinition>
+						</GridPanel.gridColumnDefinitions>
+						<Label isDynamic="true" text="Quantity" classNames="fcls_fieldlabel" visible="true" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="lb47x"/>
+						<TextField format="-------&amp;.&amp;&amp;&amp;&amp;" dataType="Float,,,," classNames="fcls_data_widget,fcls_align_left,fcls_length_15qch" preferredSize="14qch,1qch" toolTip=" The quantity of the goods ordered" gridItemLocation="1,0,1,1" fieldTable="poaudit" comment=" The quantity of the goods ordered" identifier="order_qty"/>
+						<TextField format="------&amp;.&amp;&amp;&amp;&amp;" dataType="Float,,,," classNames="fcls_data_widget,fcls_align_left,fcls_length_15qch" preferredSize="13qch,1qch" gridItemLocation="2,0,1,1" fieldTable="formonly" identifier="pr_order_qty"/>
+						<Label isDynamic="true" text="List Price" classNames="fcls_fieldlabel" visible="true" gridItemLocation="0,1,1,1" fieldTable="formonly" identifier="lb46x"/>
+						<TextField format="-------&amp;.&amp;&amp;&amp;&amp;" dataType="Decimal,,,4,16" classNames="fcls_data_widget,fcls_align_left,fcls_length_15qch" preferredSize="14qch,1qch" toolTip=" The unit list cost amount" gridItemLocation="1,1,1,1" fieldTable="purchdetl" comment=" The unit list cost amount" identifier="list_cost_amt"/>
+						<TextField format="------&amp;.&amp;&amp;&amp;&amp;" noEntry="true" dataType="Decimal,,,4,16" classNames="fcls_data_widget,fcls_align_left,fcls_length_15qch" preferredSize="13qch,1qch" gridItemLocation="2,1,1,1" fieldTable="formonly" identifier="pr_list_total_amt"/>
+						<Label isDynamic="true" text="Discount" classNames="fcls_fieldlabel" visible="true" gridItemLocation="0,2,1,1" fieldTable="formonly" identifier="lb44x"/>
+						<TextField dataType="Decimal,,,3,6" classNames="fcls_data_widget,fcls_align_left,fcls_length_15qch" preferredSize="7qch,1qch" toolTip=" The discount percentage to be applied" gridItemLocation="1,2,1,1" fieldTable="purchdetl" comment=" The discount percentage to be applied" identifier="disc_per"/>
+						<Label text="%" gridItemLocation="2,2,1,1" fieldTable="" identifier="label18"/>
+						<Label isDynamic="true" text="Unit Cost" classNames="fcls_fieldlabel" visible="true" gridItemLocation="0,3,1,1" fieldTable="" identifier="lb89x"/>
+						<TextField format="-------&amp;.&amp;&amp;&amp;&amp;" noEntry="true" dataType="Decimal,,,4,16" classNames="fcls_data_widget,fcls_align_left,fcls_length_15qch" preferredSize="14qch,1qch" gridItemLocation="1,3,1,1" fieldTable="formonly" identifier="unit_cost_amt"/>
+						<TextField format="------&amp;.&amp;&amp;&amp;&amp;" dataType="Decimal,,,4,16" classNames="fcls_data_widget,fcls_align_left,fcls_length_15qch" preferredSize="13qch,1qch" gridItemLocation="2,3,1,1" fieldTable="formonly" identifier="pr_unit_cost_amt"/>
+						<Label isDynamic="true" text="Unit Tax" classNames="fcls_fieldlabel" visible="true" gridItemLocation="0,4,1,1" fieldTable="" identifier="lb113x"/>
+						<TextField format="-------&amp;.&amp;&amp;&amp;&amp;" dataType="Decimal,,,4,16" classNames="fcls_data_widget,fcls_align_left,fcls_length_15qch" preferredSize="14qch,1qch" toolTip=" The Tax Amount Per for each of the Items Ordered" gridItemLocation="1,4,1,1" fieldTable="poaudit" comment=" The Tax Amount Per for each of the Items Ordered" identifier="unit_tax_amt"/>
+						<TextField format="------&amp;.&amp;&amp;&amp;&amp;" dataType="Decimal,,,4,16" classNames="fcls_data_widget,fcls_align_left,fcls_length_15qch" preferredSize="13qch,1qch" gridItemLocation="2,4,1,1" fieldTable="formonly" identifier="pr_unit_tax_amt"/>
+						<Label isDynamic="true" text="Line Total" classNames="fcls_fieldlabel" visible="true" gridItemLocation="0,5,1,1" fieldTable="" identifier="lb93x"/>
+						<TextField noEntry="true" dataType="Decimal,,,2,16" classNames="fcls_data_widget,fcls_align_left,fcls_length_15qch" preferredSize="14qch,1qch" gridItemLocation="1,5,1,1" fieldTable="poaudit" identifier="line_total_amt"/>
+						<ComboBox dataType="Char,,,,3" classNames="fcls_data_widget,fcls_align_left,fcls_length_15qch" preferredSize="4qch,1qch" gridItemLocation="2,5,1,1" fieldTable="purchhead" identifier="curr_code"/>
+						<Label isDynamic="true" text="Date" classNames="fcls_fieldlabel" visible="true" gridItemLocation="0,6,1,1" fieldTable="" identifier="lb95x"/>
+						<Calendar dataType="Date,,,," classNames="fcls_data_widget,fcls_align_left,fcls_length_15qch" preferredSize="12qch,1qch" toolTip=" The date of this transaction " gridItemLocation="1,6,1,1" fieldTable="poaudit" comment=" The date of this transaction " identifier="tran_date"/>
+						<Label isDynamic="true" text="Year/Per" classNames="fcls_fieldlabel" visible="true" gridItemLocation="0,7,1,1" fieldTable="" identifier="lb94x"/>
+						<ComboBox dataType="SmallInt,,,," classNames="fcls_data_widget,fcls_align_left,fcls_length_15qch" preferredSize="5qch,1qch" toolTip=" The GL year number for this transaction " gridItemLocation="1,7,1,1" fieldTable="poaudit" comment=" The GL year number for this transaction " identifier="year_num"/>
+						<Label isDynamic="true" text="Period" classNames="fcls_fieldlabel" visible="true" gridItemLocation="0,8,1,1" fieldTable="" identifier="lb92x"/>
+						<ComboBox dataType="SmallInt,,,," classNames="fcls_data_widget,fcls_align_left,fcls_length_15qch" preferredSize="4qch,1qch" toolTip=" The GL period number for this transaction " gridItemLocation="1,8,1,1" fieldTable="poaudit" comment=" The GL period number for this transaction " identifier="period_num"/>
+					</GridPanel>
+				</GroupBox>
+				<GroupBox title="Warehouse" classNames="fcls_detail_gb_cnt" visible="true" gridItemLocation="1,0,1,1" fieldTable="" identifier="cntDetail3GroupBoxRight" minSize=",">
+					<GridPanel classNames="fcls_detail_gb_cnt_sub,fcls_data_cnt,fcls_align_left" visible="true" verticalAlignment="Top" horizontalAlignment="Left" fieldTable="" identifier="cntDetail3GBSubGpRight" minSize=",">
+						<GridPanel.gridRowDefinitions>
+							<GridRowDefinition>
+								<GridRowDefinition.gridLength>
+									<GridLength gridLengthValue=""/>
+								</GridRowDefinition.gridLength>
+							</GridRowDefinition>
+							<GridRowDefinition>
+								<GridRowDefinition.gridLength>
+									<GridLength gridLengthValue=""/>
+								</GridRowDefinition.gridLength>
+							</GridRowDefinition>
+							<GridRowDefinition>
+								<GridRowDefinition.gridLength>
+									<GridLength gridLengthValue=""/>
+								</GridRowDefinition.gridLength>
+							</GridRowDefinition>
+							<GridRowDefinition>
+								<GridRowDefinition.gridLength>
+									<GridLength gridLengthValue=""/>
+								</GridRowDefinition.gridLength>
+							</GridRowDefinition>
+							<GridRowDefinition>
+								<GridRowDefinition.gridLength>
+									<GridLength gridLengthValue=""/>
+								</GridRowDefinition.gridLength>
+							</GridRowDefinition>
+							<GridRowDefinition>
+								<GridRowDefinition.gridLength>
+									<GridLength gridLengthValue=""/>
+								</GridRowDefinition.gridLength>
+							</GridRowDefinition>
+						</GridPanel.gridRowDefinitions>
+						<GridPanel.gridColumnDefinitions>
+							<GridColumnDefinition>
+								<GridColumnDefinition.gridLength>
+									<GridLength gridLengthValue="" gridMinLength="10rem"/>
+								</GridColumnDefinition.gridLength>
+							</GridColumnDefinition>
+							<GridColumnDefinition>
+								<GridColumnDefinition.gridLength>
+									<GridLength gridLengthValue=""/>
+								</GridColumnDefinition.gridLength>
+							</GridColumnDefinition>
+						</GridPanel.gridColumnDefinitions>
+						<Label isDynamic="true" text="Stock Onhand" classNames="fcls_fieldlabel" visible="true" gridItemLocation="0,0,1,1" fieldTable="" identifier="lb167x"/>
+						<TextField noEntry="true" dataType="Float,,,," classNames="fcls_data_widget,fcls_align_left,fcls_length_15qch" preferredSize="12qch,1qch" gridItemLocation="1,0,1,1" fieldTable="prodstatus" identifier="onhand_qty"/>
+						<Label isDynamic="true" text="Reserved" classNames="fcls_fieldlabel" visible="true" gridItemLocation="0,1,1,1" fieldTable="" identifier="lb168x"/>
+						<TextField noEntry="true" dataType="Float,,,," classNames="fcls_data_widget,fcls_align_left,fcls_length_15qch" preferredSize="12qch,1qch" gridItemLocation="1,1,1,1" fieldTable="prodstatus" identifier="reserved_qty"/>
+						<Label isDynamic="true" text="Back Order" classNames="fcls_fieldlabel" visible="true" gridItemLocation="0,2,1,1" fieldTable="" identifier="lb169x"/>
+						<TextField noEntry="true" dataType="Float,,,," classNames="fcls_data_widget,fcls_align_left,fcls_length_15qch" preferredSize="12qch,1qch" gridItemLocation="1,2,1,1" fieldTable="prodstatus" identifier="back_qty"/>
+						<Label isDynamic="true" text="Current Avail" classNames="fcls_fieldlabel" visible="true" gridItemLocation="0,3,1,1" fieldTable="" identifier="lb170x"/>
+						<TextField noEntry="true" dataType="Float,,,," classNames="fcls_data_widget,fcls_align_left,fcls_length_15qch" preferredSize="12qch,1qch" gridItemLocation="1,3,1,1" fieldTable="formonly" identifier="pr_available"/>
+						<Label isDynamic="true" text="Purchasing" classNames="fcls_fieldlabel" visible="true" gridItemLocation="0,4,1,1" fieldTable="" identifier="lb171x"/>
+						<TextField noEntry="true" dataType="Float,,,," classNames="fcls_data_widget,fcls_align_left,fcls_length_15qch" preferredSize="12qch,1qch" gridItemLocation="1,4,1,1" fieldTable="prodstatus" identifier="onord_qty"/>
+						<Label isDynamic="true" text="Future Avail" classNames="fcls_fieldlabel" visible="true" gridItemLocation="0,5,1,1" fieldTable="" identifier="lb181x"/>
+						<TextField noEntry="true" dataType="Float,,,," classNames="fcls_data_widget,fcls_align_left,fcls_length_15qch" preferredSize="12qch,1qch" gridItemLocation="1,5,1,1" fieldTable="formonly" identifier="pr_fut_avail"/>
+					</GridPanel>
+				</GroupBox>
+			</GridPanel>
+			<GridPanel classNames="fcls_detail_cnt" visible="true" verticalAlignment="Top" gridItemLocation="0,4,1,1" fieldTable="formonly" identifier="cntDetail4">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition>
+						<GridRowDefinition.gridLength>
+							<GridLength gridLengthValue=""/>
+						</GridRowDefinition.gridLength>
+					</GridRowDefinition>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition>
+						<GridColumnDefinition.gridLength>
+							<GridLength gridLengthValue="60%"/>
+						</GridColumnDefinition.gridLength>
+					</GridColumnDefinition>
+					<GridColumnDefinition>
+						<GridColumnDefinition.gridLength>
+							<GridLength gridLengthValue="40%"/>
+						</GridColumnDefinition.gridLength>
+					</GridColumnDefinition>
+				</GridPanel.gridColumnDefinitions>
+				<GroupBox title="Line Status" classNames="fcls_detail_gb_cnt" visible="true" verticalAlignment="Top" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="cntDetail4GroupBoxLeft">
+					<GridPanel classNames="fcls_detail_gb_cnt_sub,fcls_data_cnt,fcls_align_left" visible="true" verticalAlignment="Top" horizontalAlignment="Left" fieldTable="formonly" identifier="cntDetail2GBSubGpLeft">
+						<GridPanel.gridRowDefinitions>
+							<GridRowDefinition>
+								<GridRowDefinition.gridLength>
+									<GridLength gridLengthValue=""/>
+								</GridRowDefinition.gridLength>
+							</GridRowDefinition>
+							<GridRowDefinition>
+								<GridRowDefinition.gridLength>
+									<GridLength gridLengthValue=""/>
+								</GridRowDefinition.gridLength>
+							</GridRowDefinition>
+						</GridPanel.gridRowDefinitions>
+						<GridPanel.gridColumnDefinitions>
+							<GridColumnDefinition>
+								<GridColumnDefinition.gridLength>
+									<GridLength gridLengthValue="" gridMinLength="10rem"/>
+								</GridColumnDefinition.gridLength>
+							</GridColumnDefinition>
+							<GridColumnDefinition>
+								<GridColumnDefinition.gridLength>
+									<GridLength gridLengthValue=""/>
+								</GridColumnDefinition.gridLength>
+							</GridColumnDefinition>
+						</GridPanel.gridColumnDefinitions>
+						<Label isDynamic="true" text="Received" classNames="fcls_fieldlabel" visible="true" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="lb47y"/>
+						<TextField dataType="Float,,,," classNames="fcls_data_widget,fcls_align_left,fcls_length_15qch" preferredSize="12qch,1qch" toolTip=" The quantity of the goods received" gridItemLocation="1,0,1,1" fieldTable="poaudit" comment=" The quantity of the goods received" identifier="received_qty"/>
+						<Label isDynamic="true" text="Voucher" classNames="fcls_fieldlabel" visible="true" gridItemLocation="0,1,1,1" fieldTable="formonly" identifier="lb46y"/>
+						<TextField noEntry="true" dataType="Float,,,," classNames="fcls_data_widget,fcls_align_left,fcls_length_15qch" preferredSize="12qch,1qch" gridItemLocation="1,1,1,1" fieldTable="poaudit" identifier="voucher_qty"/>
+					</GridPanel>
+				</GroupBox>
+				<GroupBox title="Stock/Order Level" classNames="fcls_detail_gb_cnt" visible="true" gridItemLocation="1,0,1,1" fieldTable="" identifier="cntDetail4GroupBoxRight">
+					<GridPanel classNames="fcls_detail_gb_cnt_sub,fcls_data_cnt,fcls_align_left" visible="true" verticalAlignment="Top" horizontalAlignment="Left" fieldTable="" identifier="cntDetail2GBSubGpRight">
+						<GridPanel.gridRowDefinitions>
+							<GridRowDefinition>
+								<GridRowDefinition.gridLength>
+									<GridLength gridLengthValue=""/>
+								</GridRowDefinition.gridLength>
+							</GridRowDefinition>
+							<GridRowDefinition>
+								<GridRowDefinition.gridLength>
+									<GridLength gridLengthValue=""/>
+								</GridRowDefinition.gridLength>
+							</GridRowDefinition>
+							<GridRowDefinition>
+								<GridRowDefinition.gridLength>
+									<GridLength gridLengthValue=""/>
+								</GridRowDefinition.gridLength>
+							</GridRowDefinition>
+							<GridRowDefinition>
+								<GridRowDefinition.gridLength>
+									<GridLength gridLengthValue=""/>
+								</GridRowDefinition.gridLength>
+							</GridRowDefinition>
+							<GridRowDefinition>
+								<GridRowDefinition.gridLength>
+									<GridLength gridLengthValue=""/>
+								</GridRowDefinition.gridLength>
+							</GridRowDefinition>
+							<GridRowDefinition>
+								<GridRowDefinition.gridLength>
+									<GridLength gridLengthValue=""/>
+								</GridRowDefinition.gridLength>
+							</GridRowDefinition>
+						</GridPanel.gridRowDefinitions>
+						<GridPanel.gridColumnDefinitions>
+							<GridColumnDefinition>
+								<GridColumnDefinition.gridLength>
+									<GridLength gridLengthValue="" gridMinLength="10rem"/>
+								</GridColumnDefinition.gridLength>
+							</GridColumnDefinition>
+							<GridColumnDefinition>
+								<GridColumnDefinition.gridLength>
+									<GridLength gridLengthValue=""/>
+								</GridColumnDefinition.gridLength>
+							</GridColumnDefinition>
+						</GridPanel.gridColumnDefinitions>
+						<Label isDynamic="true" text="Reorder Point" classNames="fcls_fieldlabel" visible="true" gridItemLocation="0,0,1,1" fieldTable="" identifier="lb167y"/>
+						<TextField noEntry="true" dataType="Float,,,," classNames="fcls_data_widget,fcls_align_left,fcls_length_15qch" preferredSize="11qch,1qch" gridItemLocation="1,0,1,1" fieldTable="prodstatus" identifier="reorder_point_qty"/>
+						<Label isDynamic="true" text="Quantity" classNames="fcls_fieldlabel" visible="true" gridItemLocation="0,1,1,1" fieldTable="" identifier="lb168y"/>
+						<TextField noEntry="true" dataType="Float,,,," classNames="fcls_data_widget,fcls_align_left,fcls_length_15qch" preferredSize="11qch,1qch" gridItemLocation="1,1,1,1" fieldTable="prodstatus" identifier="reorder_qty"/>
+						<Label isDynamic="true" text="Maximum" classNames="fcls_fieldlabel" visible="true" gridItemLocation="0,2,1,1" fieldTable="" identifier="lb169y"/>
+						<TextField noEntry="true" dataType="Float,,,," classNames="fcls_data_widget,fcls_align_left,fcls_length_15qch" preferredSize="11qch,1qch" gridItemLocation="1,2,1,1" fieldTable="prodstatus" identifier="max_qty"/>
+						<Label isDynamic="true" text="Critical" classNames="fcls_fieldlabel" visible="true" gridItemLocation="0,3,1,1" fieldTable="" identifier="lb170y"/>
+						<TextField noEntry="true" dataType="Float,,,," classNames="fcls_data_widget,fcls_align_left,fcls_length_15qch" preferredSize="11qch,1qch" gridItemLocation="1,3,1,1" fieldTable="prodstatus" identifier="critical_qty"/>
+						<Label isDynamic="true" text="Minimum Order" classNames="fcls_fieldlabel" visible="true" gridItemLocation="0,4,1,1" fieldTable="" identifier="lb171y"/>
+						<TextField noEntry="true" dataType="Float,,,," classNames="fcls_data_widget,fcls_align_left,fcls_length_15qch" preferredSize="11qch,1qch" gridItemLocation="1,4,1,1" fieldTable="product" identifier="min_ord_qty"/>
+						<Label isDynamic="true" text="ABC Code" classNames="fcls_fieldlabel" visible="true" gridItemLocation="0,5,1,1" fieldTable="" identifier="lb180y"/>
+						<TextField noEntry="true" dataType="Char,,,,1" classNames="fcls_data_widget,fcls_align_left,fcls_length_15qch" preferredSize="11qch,1qch" gridItemLocation="1,5,1,1" fieldTable="prodstatus" identifier="abc_ind"/>
+					</GridPanel>
+				</GroupBox>
+			</GridPanel>
+			<GridPanel classNames="fcls_detail_cnt" visible="true"  verticalAlignment="Top" gridItemLocation="0,5,1,1" fieldTable="formonly" identifier="cntDetail5">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition>
+						<GridRowDefinition.gridLength>
+							<GridLength gridLengthValue=""/>
+						</GridRowDefinition.gridLength>
+					</GridRowDefinition>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition>
+						<GridColumnDefinition.gridLength>
+							<GridLength gridLengthValue="50%"/>
+						</GridColumnDefinition.gridLength>
+					</GridColumnDefinition>
+					<GridColumnDefinition>
+						<GridColumnDefinition.gridLength>
+							<GridLength gridLengthValue="50%"/>
+						</GridColumnDefinition.gridLength>
+					</GridColumnDefinition>
+				</GridPanel.gridColumnDefinitions>
+				<GroupBox title="Group 5 Left" classNames="fcls_detail_gb_cnt" visible="true" verticalAlignment="Top" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="cntDetail5GroupBoxLeft">
+					<GridPanel classNames="fcls_detail_gb_cnt_sub,fcls_data_cnt,fcls_align_left" visible="true" verticalAlignment="Top" horizontalAlignment="Left" fieldTable="formonly" identifier="cntDetail5GBSubGpLeft">
+						<GridPanel.gridRowDefinitions>
+							<GridRowDefinition>
+								<GridRowDefinition.gridLength>
+									<GridLength gridLengthValue=""/>
+								</GridRowDefinition.gridLength>
+							</GridRowDefinition>
+							<GridRowDefinition>
+								<GridRowDefinition.gridLength>
+									<GridLength gridLengthValue=""/>
+								</GridRowDefinition.gridLength>
+							</GridRowDefinition>
+							<GridRowDefinition>
+								<GridRowDefinition.gridLength>
+									<GridLength gridLengthValue=""/>
+								</GridRowDefinition.gridLength>
+							</GridRowDefinition>
+							<GridRowDefinition>
+								<GridRowDefinition.gridLength>
+									<GridLength gridLengthValue=""/>
+								</GridRowDefinition.gridLength>
+							</GridRowDefinition>
+							<GridRowDefinition>
+								<GridRowDefinition.gridLength>
+									<GridLength gridLengthValue=""/>
+								</GridRowDefinition.gridLength>
+							</GridRowDefinition>
+							<GridRowDefinition>
+								<GridRowDefinition.gridLength>
+									<GridLength gridLengthValue=""/>
+								</GridRowDefinition.gridLength>
+							</GridRowDefinition>
+						</GridPanel.gridRowDefinitions>
+						<GridPanel.gridColumnDefinitions>
+							<GridColumnDefinition>
+								<GridColumnDefinition.gridLength>
+									<GridLength gridLengthValue=""/>
+								</GridColumnDefinition.gridLength>
+							</GridColumnDefinition>
+							<GridColumnDefinition>
+								<GridColumnDefinition.gridLength>
+									<GridLength gridLengthValue=""/>
+								</GridColumnDefinition.gridLength>
+							</GridColumnDefinition>
+							<GridColumnDefinition>
+								<GridColumnDefinition.gridLength>
+									<GridLength gridLengthValue=""/>
+								</GridColumnDefinition.gridLength>
+							</GridColumnDefinition>
+							<GridColumnDefinition>
+								<GridColumnDefinition.gridLength>
+									<GridLength gridLengthValue=""/>
+								</GridColumnDefinition.gridLength>
+							</GridColumnDefinition>
+							<GridColumnDefinition>
+								<GridColumnDefinition.gridLength>
+									<GridLength gridLengthValue=""/>
+								</GridColumnDefinition.gridLength>
+							</GridColumnDefinition>
+							<GridColumnDefinition>
+								<GridColumnDefinition.gridLength>
+									<GridLength gridLengthValue=""/>
+								</GridColumnDefinition.gridLength>
+							</GridColumnDefinition>
+							<GridColumnDefinition>
+								<GridColumnDefinition.gridLength>
+									<GridLength gridLengthValue=""/>
+								</GridColumnDefinition.gridLength>
+							</GridColumnDefinition>
+							<GridColumnDefinition>
+								<GridColumnDefinition.gridLength>
+									<GridLength gridLengthValue=""/>
+								</GridColumnDefinition.gridLength>
+							</GridColumnDefinition>
+						</GridPanel.gridColumnDefinitions>
+						<Label isDynamic="true" text="xxxx" classNames="fcls_fieldlabel" visible="true" gridItemLocation="0,0,1,1" fieldTable="" identifier="lb91z"/>
+						<Label isDynamic="true" text="xxxx" classNames="fcls_fieldlabel" visible="true" gridItemLocation="1,0,1,1" fieldTable="formonly" identifier="lb64z"/>
+						<Label isDynamic="true" text="xxxx" classNames="fcls_fieldlabel" visible="true" gridItemLocation="2,0,1,1" fieldTable="formonly" identifier="lb65z"/>
+						<Label isDynamic="true" text="xxxx" classNames="fcls_fieldlabel" visible="true" gridItemLocation="0,1,1,1" fieldTable="formonly" identifier="lb47z"/>
+						<Label isDynamic="true" text="xxxx" classNames="fcls_fieldlabel" visible="true" gridItemLocation="3,0,1,1" fieldTable="" identifier="lb85z"/>
+						<Label isDynamic="true" text="xxxx" classNames="fcls_fieldlabel" visible="true" gridItemLocation="7,0,1,1" fieldTable="" identifier="lb90z"/>
+						<Label isDynamic="true" text="xxxx" classNames="fcls_fieldlabel" visible="true" gridItemLocation="4,1,1,1" fieldTable="" identifier="lb92z"/>
+						<Label isDynamic="true" text="xxxx" classNames="fcls_fieldlabel" visible="true" gridItemLocation="0,2,1,1" fieldTable="formonly" identifier="lb46z"/>
+						<Label isDynamic="true" text="xxxx" classNames="fcls_fieldlabel" visible="true" gridItemLocation="4,0,1,1" fieldTable="" identifier="lb86z"/>
+						<Label isDynamic="true" text="xxxx" classNames="fcls_fieldlabel" visible="true" gridItemLocation="4,2,1,1" fieldTable="" identifier="lb93z"/>
+						<Label isDynamic="true" text="xxxx" classNames="fcls_fieldlabel" visible="true" gridItemLocation="0,3,1,1" fieldTable="formonly" identifier="lb44z"/>
+						<Label isDynamic="true" text="xxxx" classNames="fcls_fieldlabel" visible="true" gridItemLocation="5,0,1,1" fieldTable="" identifier="lb87z"/>
+						<Label isDynamic="true" text="xxxx" classNames="fcls_fieldlabel" visible="true" gridItemLocation="4,3,1,1" fieldTable="" identifier="lb94z"/>
+						<Label isDynamic="true" text="xxxx" classNames="fcls_fieldlabel" visible="true" gridItemLocation="0,4,1,1" fieldTable="" identifier="lb89z"/>
+						<Label isDynamic="true" text="xxxx" classNames="fcls_fieldlabel" visible="true" gridItemLocation="6,0,1,1" fieldTable="" identifier="lb88z"/>
+						<Label isDynamic="true" text="xxxx" classNames="fcls_fieldlabel" visible="true" gridItemLocation="4,4,1,1" fieldTable="" identifier="lb95z"/>
+						<Label isDynamic="true" text="xxxx" classNames="fcls_fieldlabel" visible="true" gridItemLocation="0,5,1,1" fieldTable="" identifier="lb113z"/>
+						<Label isDynamic="true" text="xxxx" classNames="fcls_fieldlabel" visible="true" gridItemLocation="4,5,1,1" fieldTable="" identifier="lb114z"/>
+					</GridPanel>
+				</GroupBox>
+				<GroupBox title="Group 5 Right" classNames="fcls_detail_gb_cnt" visible="true" gridItemLocation="1,0,1,1" fieldTable="" identifier="cntDetail5GroupBoxRight">
+					<GridPanel classNames="fcls_detail_gb_cnt_sub,fcls_data_cnt,fcls_align_left" visible="true" verticalAlignment="Top" horizontalAlignment="Left" fieldTable="" identifier="cntDetail5GBSubGpRight">
+						<GridPanel.gridRowDefinitions>
+							<GridRowDefinition>
+								<GridRowDefinition.gridLength>
+									<GridLength gridLengthValue=""/>
+								</GridRowDefinition.gridLength>
+							</GridRowDefinition>
+							<GridRowDefinition>
+								<GridRowDefinition.gridLength>
+									<GridLength gridLengthValue=""/>
+								</GridRowDefinition.gridLength>
+							</GridRowDefinition>
+							<GridRowDefinition>
+								<GridRowDefinition.gridLength>
+									<GridLength gridLengthValue=""/>
+								</GridRowDefinition.gridLength>
+							</GridRowDefinition>
+							<GridRowDefinition>
+								<GridRowDefinition.gridLength>
+									<GridLength gridLengthValue=""/>
+								</GridRowDefinition.gridLength>
+							</GridRowDefinition>
+							<GridRowDefinition>
+								<GridRowDefinition.gridLength>
+									<GridLength gridLengthValue=""/>
+								</GridRowDefinition.gridLength>
+							</GridRowDefinition>
+							<GridRowDefinition>
+								<GridRowDefinition.gridLength>
+									<GridLength gridLengthValue=""/>
+								</GridRowDefinition.gridLength>
+							</GridRowDefinition>
+						</GridPanel.gridRowDefinitions>
+						<GridPanel.gridColumnDefinitions>
+							<GridColumnDefinition>
+								<GridColumnDefinition.gridLength>
+									<GridLength gridLengthValue=""/>
+								</GridColumnDefinition.gridLength>
+							</GridColumnDefinition>
+							<GridColumnDefinition>
+								<GridColumnDefinition.gridLength>
+									<GridLength gridLengthValue=""/>
+								</GridColumnDefinition.gridLength>
+							</GridColumnDefinition>
+							<GridColumnDefinition>
+								<GridColumnDefinition.gridLength>
+									<GridLength gridLengthValue=""/>
+								</GridColumnDefinition.gridLength>
+							</GridColumnDefinition>
+							<GridColumnDefinition>
+								<GridColumnDefinition.gridLength>
+									<GridLength gridLengthValue=""/>
+								</GridColumnDefinition.gridLength>
+							</GridColumnDefinition>
+							<GridColumnDefinition>
+								<GridColumnDefinition.gridLength>
+									<GridLength gridLengthValue=""/>
+								</GridColumnDefinition.gridLength>
+							</GridColumnDefinition>
+							<GridColumnDefinition>
+								<GridColumnDefinition.gridLength>
+									<GridLength gridLengthValue=""/>
+								</GridColumnDefinition.gridLength>
+							</GridColumnDefinition>
+						</GridPanel.gridColumnDefinitions>
+						<Label isDynamic="true" text="xxxx" classNames="fcls_fieldlabel" visible="true" gridItemLocation="0,0,1,1" fieldTable="" identifier="lb161z"/>
+						<Label isDynamic="true" text="xxxx" classNames="fcls_fieldlabel" visible="true" gridItemLocation="1,0,1,1" fieldTable="" identifier="lb162z"/>
+						<Label isDynamic="true" text="xxxx" classNames="fcls_fieldlabel" visible="true" gridItemLocation="2,0,1,1" fieldTable="" identifier="lb163z"/>
+						<Label isDynamic="true" text="xxxx" classNames="fcls_fieldlabel" visible="true" gridItemLocation="3,0,1,1" fieldTable="" identifier="lb164z"/>
+						<Label isDynamic="true" text="xxxx" classNames="fcls_fieldlabel" visible="true" gridItemLocation="4,0,1,1" fieldTable="" identifier="lb165z"/>
+						<Label isDynamic="true" text="xxxx" classNames="fcls_fieldlabel" visible="true" gridItemLocation="5,0,1,1" fieldTable="" identifier="lb166z"/>
+						<Label isDynamic="true" text="xxxx" classNames="fcls_fieldlabel" visible="true" gridItemLocation="0,1,1,1" fieldTable="" identifier="lb167z"/>
+						<Label isDynamic="true" text="xxxx" classNames="fcls_fieldlabel" visible="true" gridItemLocation="2,1,1,1" fieldTable="" identifier="lb172z"/>
+						<Label isDynamic="true" text="xxxx" classNames="fcls_fieldlabel" visible="true" gridItemLocation="4,1,1,1" fieldTable="" identifier="lb173y"/>
+						<Label isDynamic="true" text="xxxx" classNames="fcls_fieldlabel" visible="true" gridItemLocation="0,2,1,1" fieldTable="" identifier="lb168z"/>
+						<Label isDynamic="true" text="xxxx" classNames="fcls_fieldlabel" visible="true" gridItemLocation="2,2,1,1" fieldTable="" identifier="lb174z"/>
+						<Label isDynamic="true" text="xxxx" classNames="fcls_fieldlabel" visible="true" gridItemLocation="4,2,1,1" fieldTable="" identifier="lb178z"/>
+						<Label isDynamic="true" text="xxxx" classNames="fcls_fieldlabel" visible="true" gridItemLocation="0,3,1,1" fieldTable="" identifier="lb169z"/>
+						<Label isDynamic="true" text="xxxx" classNames="fcls_fieldlabel" visible="true" gridItemLocation="2,3,1,1" fieldTable="" identifier="lb175z"/>
+						<Label isDynamic="true" text="xxxx" classNames="fcls_fieldlabel" visible="true" gridItemLocation="4,3,1,1" fieldTable="" identifier="lb179z"/>
+						<Label isDynamic="true" text="xxxx" classNames="fcls_fieldlabel" visible="true" gridItemLocation="0,4,1,1" fieldTable="" identifier="lb170z"/>
+						<Label isDynamic="true" text="xxxx" classNames="fcls_fieldlabel" visible="true" gridItemLocation="2,4,1,1" fieldTable="" identifier="lb176z"/>
+						<Label isDynamic="true" text="xxxx" classNames="fcls_fieldlabel" visible="true" gridItemLocation="4,4,1,1" fieldTable="" identifier="lb180z"/>
+						<Label isDynamic="true" text="xxxx" classNames="fcls_fieldlabel" visible="true" gridItemLocation="0,5,1,1" fieldTable="" identifier="lb171z"/>
+						<Label isDynamic="true" text="xxxx" classNames="fcls_fieldlabel" visible="true" gridItemLocation="2,5,1,1" fieldTable="" identifier="lb177z"/>
+						<Label isDynamic="true" text="xxxx" classNames="fcls_fieldlabel" visible="true" gridItemLocation="4,5,1,1" fieldTable="" identifier="lb181z"/>
+					</GridPanel>
+				</GroupBox>
+			</GridPanel>
+			<GridPanel classNames="fcls_detail_cnt" visible="true"  verticalAlignment="Top" gridItemLocation="0,6,1,1" fieldTable="formonly" identifier="cntDetail6">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition>
+						<GridRowDefinition.gridLength>
+							<GridLength gridLengthValue=""/>
+						</GridRowDefinition.gridLength>
+					</GridRowDefinition>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition>
+						<GridColumnDefinition.gridLength>
+							<GridLength gridLengthValue="50%"/>
+						</GridColumnDefinition.gridLength>
+					</GridColumnDefinition>
+					<GridColumnDefinition>
+						<GridColumnDefinition.gridLength>
+							<GridLength gridLengthValue="50%"/>
+						</GridColumnDefinition.gridLength>
+					</GridColumnDefinition>
+				</GridPanel.gridColumnDefinitions>
+				<GroupBox title="Group 6 Left" classNames="fcls_detail_gb_cnt" visible="true" verticalAlignment="Top" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="cntDetail6GroupBoxLeft">
+					<GridPanel classNames="fcls_detail_gb_cnt_sub,fcls_data_cnt,fcls_align_left" visible="true" verticalAlignment="Top" horizontalAlignment="Left" fieldTable="formonly" identifier="cntDetail6GBSubGpLeft">
+						<GridPanel.gridRowDefinitions>
+							<GridRowDefinition>
+								<GridRowDefinition.gridLength>
+									<GridLength gridLengthValue=""/>
+								</GridRowDefinition.gridLength>
+							</GridRowDefinition>
+							<GridRowDefinition>
+								<GridRowDefinition.gridLength>
+									<GridLength gridLengthValue=""/>
+								</GridRowDefinition.gridLength>
+							</GridRowDefinition>
+							<GridRowDefinition>
+								<GridRowDefinition.gridLength>
+									<GridLength gridLengthValue=""/>
+								</GridRowDefinition.gridLength>
+							</GridRowDefinition>
+							<GridRowDefinition>
+								<GridRowDefinition.gridLength>
+									<GridLength gridLengthValue=""/>
+								</GridRowDefinition.gridLength>
+							</GridRowDefinition>
+							<GridRowDefinition>
+								<GridRowDefinition.gridLength>
+									<GridLength gridLengthValue=""/>
+								</GridRowDefinition.gridLength>
+							</GridRowDefinition>
+							<GridRowDefinition>
+								<GridRowDefinition.gridLength>
+									<GridLength gridLengthValue=""/>
+								</GridRowDefinition.gridLength>
+							</GridRowDefinition>
+						</GridPanel.gridRowDefinitions>
+						<GridPanel.gridColumnDefinitions>
+							<GridColumnDefinition>
+								<GridColumnDefinition.gridLength>
+									<GridLength gridLengthValue=""/>
+								</GridColumnDefinition.gridLength>
+							</GridColumnDefinition>
+							<GridColumnDefinition>
+								<GridColumnDefinition.gridLength>
+									<GridLength gridLengthValue=""/>
+								</GridColumnDefinition.gridLength>
+							</GridColumnDefinition>
+							<GridColumnDefinition>
+								<GridColumnDefinition.gridLength>
+									<GridLength gridLengthValue=""/>
+								</GridColumnDefinition.gridLength>
+							</GridColumnDefinition>
+							<GridColumnDefinition>
+								<GridColumnDefinition.gridLength>
+									<GridLength gridLengthValue=""/>
+								</GridColumnDefinition.gridLength>
+							</GridColumnDefinition>
+							<GridColumnDefinition>
+								<GridColumnDefinition.gridLength>
+									<GridLength gridLengthValue=""/>
+								</GridColumnDefinition.gridLength>
+							</GridColumnDefinition>
+							<GridColumnDefinition>
+								<GridColumnDefinition.gridLength>
+									<GridLength gridLengthValue=""/>
+								</GridColumnDefinition.gridLength>
+							</GridColumnDefinition>
+							<GridColumnDefinition>
+								<GridColumnDefinition.gridLength>
+									<GridLength gridLengthValue=""/>
+								</GridColumnDefinition.gridLength>
+							</GridColumnDefinition>
+							<GridColumnDefinition>
+								<GridColumnDefinition.gridLength>
+									<GridLength gridLengthValue=""/>
+								</GridColumnDefinition.gridLength>
+							</GridColumnDefinition>
+						</GridPanel.gridColumnDefinitions>
+						<Label isDynamic="true" text="xxxx" classNames="fcls_fieldlabel" visible="true" gridItemLocation="0,0,1,1" fieldTable="" identifier="lb91a"/>
+						<Label isDynamic="true" text="xxxx" classNames="fcls_fieldlabel" visible="true" gridItemLocation="1,0,1,1" fieldTable="formonly" identifier="lb64a"/>
+						<Label isDynamic="true" text="xxxx" classNames="fcls_fieldlabel" visible="true" gridItemLocation="2,0,1,1" fieldTable="formonly" identifier="lb65a"/>
+						<Label isDynamic="true" text="xxxx" classNames="fcls_fieldlabel" visible="true" gridItemLocation="0,1,1,1" fieldTable="formonly" identifier="lb47a"/>
+						<Label isDynamic="true" text="xxxx" classNames="fcls_fieldlabel" visible="true" gridItemLocation="3,0,1,1" fieldTable="" identifier="lb85a"/>
+						<Label isDynamic="true" text="xxxx" classNames="fcls_fieldlabel" visible="true" gridItemLocation="7,0,1,1" fieldTable="" identifier="lb90a"/>
+						<Label isDynamic="true" text="xxxx" classNames="fcls_fieldlabel" visible="true" gridItemLocation="4,1,1,1" fieldTable="" identifier="lb92a"/>
+						<Label isDynamic="true" text="xxxx" classNames="fcls_fieldlabel" visible="true" gridItemLocation="0,2,1,1" fieldTable="formonly" identifier="lb46a"/>
+						<Label isDynamic="true" text="xxxx" classNames="fcls_fieldlabel" visible="true" gridItemLocation="4,0,1,1" fieldTable="" identifier="lb86a"/>
+						<Label isDynamic="true" text="xxxx" classNames="fcls_fieldlabel" visible="true" gridItemLocation="4,2,1,1" fieldTable="" identifier="lb93a"/>
+						<Label isDynamic="true" text="xxxx" classNames="fcls_fieldlabel" visible="true" gridItemLocation="0,3,1,1" fieldTable="formonly" identifier="lb44a"/>
+						<Label isDynamic="true" text="xxxx" classNames="fcls_fieldlabel" visible="true" gridItemLocation="5,0,1,1" fieldTable="" identifier="lb87a"/>
+						<Label isDynamic="true" text="xxxx" classNames="fcls_fieldlabel" visible="true" gridItemLocation="4,3,1,1" fieldTable="" identifier="lb94a"/>
+						<Label isDynamic="true" text="xxxx" classNames="fcls_fieldlabel" visible="true" gridItemLocation="0,4,1,1" fieldTable="" identifier="lb89a"/>
+						<Label isDynamic="true" text="xxxx" classNames="fcls_fieldlabel" visible="true" gridItemLocation="6,0,1,1" fieldTable="" identifier="lb88a"/>
+						<Label isDynamic="true" text="xxxx" classNames="fcls_fieldlabel" visible="true" gridItemLocation="4,4,1,1" fieldTable="" identifier="lb95a"/>
+						<Label isDynamic="true" text="xxxx" classNames="fcls_fieldlabel" visible="true" gridItemLocation="0,5,1,1" fieldTable="" identifier="lb113a"/>
+						<Label isDynamic="true" text="xxxx" classNames="fcls_fieldlabel" visible="true" gridItemLocation="4,5,1,1" fieldTable="" identifier="lb114a"/>
+					</GridPanel>
+				</GroupBox>
+				<GroupBox title="Group 6 Right" classNames="fcls_detail_gb_cnt" visible="true" gridItemLocation="1,0,1,1" fieldTable="" identifier="cntDetail6GroupBoxRight">
+					<GridPanel classNames="fcls_detail_gb_cnt_sub,fcls_data_cnt,fcls_align_left" visible="true" verticalAlignment="Top" horizontalAlignment="Left" fieldTable="" identifier="cntDetail6GBSubGpRight">
+						<GridPanel.gridRowDefinitions>
+							<GridRowDefinition>
+								<GridRowDefinition.gridLength>
+									<GridLength gridLengthValue=""/>
+								</GridRowDefinition.gridLength>
+							</GridRowDefinition>
+							<GridRowDefinition>
+								<GridRowDefinition.gridLength>
+									<GridLength gridLengthValue=""/>
+								</GridRowDefinition.gridLength>
+							</GridRowDefinition>
+							<GridRowDefinition>
+								<GridRowDefinition.gridLength>
+									<GridLength gridLengthValue=""/>
+								</GridRowDefinition.gridLength>
+							</GridRowDefinition>
+							<GridRowDefinition>
+								<GridRowDefinition.gridLength>
+									<GridLength gridLengthValue=""/>
+								</GridRowDefinition.gridLength>
+							</GridRowDefinition>
+							<GridRowDefinition>
+								<GridRowDefinition.gridLength>
+									<GridLength gridLengthValue=""/>
+								</GridRowDefinition.gridLength>
+							</GridRowDefinition>
+							<GridRowDefinition>
+								<GridRowDefinition.gridLength>
+									<GridLength gridLengthValue=""/>
+								</GridRowDefinition.gridLength>
+							</GridRowDefinition>
+						</GridPanel.gridRowDefinitions>
+						<GridPanel.gridColumnDefinitions>
+							<GridColumnDefinition>
+								<GridColumnDefinition.gridLength>
+									<GridLength gridLengthValue=""/>
+								</GridColumnDefinition.gridLength>
+							</GridColumnDefinition>
+							<GridColumnDefinition>
+								<GridColumnDefinition.gridLength>
+									<GridLength gridLengthValue=""/>
+								</GridColumnDefinition.gridLength>
+							</GridColumnDefinition>
+							<GridColumnDefinition>
+								<GridColumnDefinition.gridLength>
+									<GridLength gridLengthValue=""/>
+								</GridColumnDefinition.gridLength>
+							</GridColumnDefinition>
+							<GridColumnDefinition>
+								<GridColumnDefinition.gridLength>
+									<GridLength gridLengthValue=""/>
+								</GridColumnDefinition.gridLength>
+							</GridColumnDefinition>
+							<GridColumnDefinition>
+								<GridColumnDefinition.gridLength>
+									<GridLength gridLengthValue=""/>
+								</GridColumnDefinition.gridLength>
+							</GridColumnDefinition>
+							<GridColumnDefinition>
+								<GridColumnDefinition.gridLength>
+									<GridLength gridLengthValue=""/>
+								</GridColumnDefinition.gridLength>
+							</GridColumnDefinition>
+						</GridPanel.gridColumnDefinitions>
+						<Label isDynamic="true" text="xxxx" classNames="fcls_fieldlabel" visible="true" gridItemLocation="0,0,1,1" fieldTable="" identifier="lb161b"/>
+						<Label isDynamic="true" text="xxxx" classNames="fcls_fieldlabel" visible="true" gridItemLocation="1,0,1,1" fieldTable="" identifier="lb162b"/>
+						<Label isDynamic="true" text="xxxx" classNames="fcls_fieldlabel" visible="true" gridItemLocation="2,0,1,1" fieldTable="" identifier="lb163b"/>
+						<Label isDynamic="true" text="xxxx" classNames="fcls_fieldlabel" visible="true" gridItemLocation="3,0,1,1" fieldTable="" identifier="lb164b"/>
+						<Label isDynamic="true" text="xxxx" classNames="fcls_fieldlabel" visible="true" gridItemLocation="4,0,1,1" fieldTable="" identifier="lb165b"/>
+						<Label isDynamic="true" text="xxxx" classNames="fcls_fieldlabel" visible="true" gridItemLocation="5,0,1,1" fieldTable="" identifier="lb166b"/>
+						<Label isDynamic="true" text="xxxx" classNames="fcls_fieldlabel" visible="true" gridItemLocation="0,1,1,1" fieldTable="" identifier="lb167b"/>
+						<Label isDynamic="true" text="xxxx" classNames="fcls_fieldlabel" visible="true" gridItemLocation="2,1,1,1" fieldTable="" identifier="lb172b"/>
+						<Label isDynamic="true" text="xxxx" classNames="fcls_fieldlabel" visible="true" gridItemLocation="4,1,1,1" fieldTable="" identifier="lb173b"/>
+						<Label isDynamic="true" text="xxxx" classNames="fcls_fieldlabel" visible="true" gridItemLocation="0,2,1,1" fieldTable="" identifier="lb168b"/>
+						<Label isDynamic="true" text="xxxx" classNames="fcls_fieldlabel" visible="true" gridItemLocation="2,2,1,1" fieldTable="" identifier="lb174b"/>
+						<Label isDynamic="true" text="xxxx" classNames="fcls_fieldlabel" visible="true" gridItemLocation="4,2,1,1" fieldTable="" identifier="lb178b"/>
+						<Label isDynamic="true" text="xxxx" classNames="fcls_fieldlabel" visible="true" gridItemLocation="0,3,1,1" fieldTable="" identifier="lb169b"/>
+						<Label isDynamic="true" text="xxxx" classNames="fcls_fieldlabel" visible="true" gridItemLocation="2,3,1,1" fieldTable="" identifier="lb175b"/>
+						<Label isDynamic="true" text="xxxx" classNames="fcls_fieldlabel" visible="true" gridItemLocation="4,3,1,1" fieldTable="" identifier="lb179b"/>
+						<Label isDynamic="true" text="xxxx" classNames="fcls_fieldlabel" visible="true" gridItemLocation="0,4,1,1" fieldTable="" identifier="lb170b"/>
+						<Label isDynamic="true" text="xxxx" classNames="fcls_fieldlabel" visible="true" gridItemLocation="2,4,1,1" fieldTable="" identifier="lb176b"/>
+						<Label isDynamic="true" text="xxxx" classNames="fcls_fieldlabel" visible="true" gridItemLocation="4,4,1,1" fieldTable="" identifier="lb180b"/>
+						<Label isDynamic="true" text="xxxx" classNames="fcls_fieldlabel" visible="true" gridItemLocation="0,5,1,1" fieldTable="" identifier="lb171b"/>
+						<Label isDynamic="true" text="xxxx" classNames="fcls_fieldlabel" visible="true" gridItemLocation="2,5,1,1" fieldTable="" identifier="lb177b"/>
+						<Label isDynamic="true" text="xxxx" classNames="fcls_fieldlabel" visible="true" gridItemLocation="4,5,1,1" fieldTable="" identifier="lb181b"/>
+					</GridPanel>
+				</GroupBox>
+			</GridPanel>
+			<GridPanel classNames="fcls_statusbar_cnt" visible="true" verticalAlignment="Top" gridItemLocation="0,7,1,1" fieldTable="formonly" identifier="cntStatusBar">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition>
+						<GridRowDefinition.gridLength>
+							<GridLength gridLengthValue=""/>
+						</GridRowDefinition.gridLength>
+					</GridRowDefinition>
+					<GridRowDefinition>
+						<GridRowDefinition.gridLength>
+							<GridLength gridLengthValue=""/>
+						</GridRowDefinition.gridLength>
+					</GridRowDefinition>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition>
+						<GridColumnDefinition.gridLength>
+							<GridLength gridLengthValue="100%"/>
+						</GridColumnDefinition.gridLength>
+					</GridColumnDefinition>
+				</GridPanel.gridColumnDefinitions>
+				<Label isDynamic="true" text="" classNames="fcls_sblabel" visible="true" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="lbInfo1"/>
+				<Label isDynamic="true" text="" classNames="fcls_sblabel" visible="true" gridItemLocation="0,1,1,1" fieldTable="formonly" identifier="lbInfo2"/>
+			</GridPanel>
+		</GridPanel>
+	</form.rootContainer>
+	<form.screenRecords>
+		<ScreenRecord identifier="formonly" fields="unit_cost_amt,pr_available_amt,tp_desc_text,pr_order_qty,pr_unit_cost_amt,pr_unit_tax_amt,pr_list_total_amt,pr_available,pr_fut_avail"/>
+		<ScreenRecord identifier="poaudit" fields="year_num,period_num,tran_date,order_qty,unit_tax_amt,line_total_amt,received_qty,voucher_qty"/>
+		<ScreenRecord identifier="prodstatus" fields="onhand_qty,ware_code,reserved_qty,back_qty,onord_qty,reorder_point_qty,reorder_qty,max_qty,critical_qty,abc_ind"/>
+		<ScreenRecord identifier="product" fields="pur_uom_code,sell_uom_code,min_ord_qty"/>
+		<ScreenRecord identifier="purchdetl" fields="ref_text,oem_text,desc_text,desc2_text,acct_code,list_cost_amt,disc_per,note_code"/>
+		<ScreenRecord identifier="purchhead" fields="curr_code"/>
+	</form.screenRecords>
+</form>
+

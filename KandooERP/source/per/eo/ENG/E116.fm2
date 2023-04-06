@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="UTF-8"?><form xmlns="http://namespaces.querix.com/2015/fglForms">
+	<form.rootContainer>
+		<GridPanel classNames="fcls_rootContainer" fieldTable="" horizontalAlignment="Left" identifier="rootContainer" verticalAlignment="Top">
+			<GridPanel.gridRowDefinitions>
+				<GridRowDefinition gridLengthValue=""/>
+				<GridRowDefinition gridLengthValue=""/>
+				<GridRowDefinition gridLengthValue=""/>
+				<GridRowDefinition gridLengthValue=""/>
+				<GridRowDefinition gridLengthValue=""/>
+				<GridRowDefinition gridLengthValue=""/>
+			</GridPanel.gridRowDefinitions>
+			<GridPanel.gridColumnDefinitions>
+				<GridColumnDefinition gridLengthValue="100%"/>
+			</GridPanel.gridColumnDefinitions>
+			<GridPanel classNames="fcls_title_cnt" fieldTable="formonly" gridItemLocation="0,0,1,1" identifier="cntTitle" verticalAlignment="Top" visible="true">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="100%"/>
+					<GridColumnDefinition gridLengthValue=""/>
+				</GridPanel.gridColumnDefinitions>
+				<Label classNames="fcls_title_lb" fieldTable="formonly" gridItemLocation="0,0,1,1" identifier="header_text" isDynamic="true" text="Shipping Details" visible="true"/>
+				<Label classNames="fcls_title_lb" fieldTable="" gridItemLocation="1,0,1,1" identifier="lbFormName" isDynamic="true" text="E116" visible="true"/>
+			</GridPanel>
+			<GridPanel classNames="fcls_detail_cnt,fcls_data_cnt,fcls_align_left" fieldTable="" gridItemLocation="0,1,1,1" horizontalAlignment="Left" identifier="cntDetail1" verticalAlignment="Top" visible="true">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="" gridMinLength="10rem"/>
+					<GridColumnDefinition gridLengthValue=""/>
+				</GridPanel.gridColumnDefinitions>
+				<Label classNames="fcls_fieldlabel,fcls_align_left" fieldTable="" gridItemLocation="0,0,1,1" identifier="lb139" isDynamic="true" text="Freight Carrier" visible="true"/>
+				<ComboBox classNames="field-show-value,list-show-text-value,fcls_data_widget,fcls_align_left,fcls_length_20qch" comment=" Carrier code for this sales order (W) " dataType="Char,,,,3" fieldTable="orderhead" gridItemLocation="1,0,1,1" identifier="carrier_code" preferredSize="4qch,1qch" toCase="Up" toolTip=" Carrier code for this sales order (W) "/>
+				<TextField classNames="fcls_data_widget,fcls_align_left,fcls_length_20qch" dataType="Char,,,,30" fieldTable="carrier" gridItemLocation="1,1,1,1" identifier="name_text" noEntry="true" preferredSize="31qch,1qch"/>
+				<Label classNames="fcls_fieldlabel,fcls_align_left" fieldTable="" gridItemLocation="0,2,1,1" identifier="lb156" isDynamic="true" text="Free On Board (F.O.B)&#13;&#10;Shipping Point" visible="true" allowNewlines="true"/>
+				<TextField classNames="fcls_data_widget,fcls_align_left,fcls_length_20qch" comment=" Identifies the 'FREE ON BOARD' shipping point" dataType="Char,,,,20" fieldTable="orderhead" gridItemLocation="1,2,1,1" identifier="fob_text" preferredSize="21qch,1qch" toolTip=" Identifies the 'FREE ON BOARD' shipping point"/>
+				<Label classNames="fcls_fieldlabel,fcls_align_left" fieldTable="" gridItemLocation="0,3,1,1" identifier="lb157" isDynamic="true" text="Freight Level" visible="true"/>
+				<ComboBox classNames="field-show-value,list-show-text-value,fcls_data_widget,fcls_align_left,fcls_length_20qch" comment=" Freight charging indicator for this carrier. (1) -&gt; (9) " dataType="Char,,,,1" fieldTable="orderhead" gridItemLocation="1,3,1,1" identifier="freight_ind" preferredSize="2qch,1qch" toCase="Up" toolTip=" Freight charging indicator for this carrier. (1) -&gt; (9) ">
+				<ComboBoxItem text="Value 1">
+					<ComboBoxItem.value>
+						<StringLiteral stringValue="1"/>
+					</ComboBoxItem.value>
+				</ComboBoxItem>
+				<ComboBoxItem text="Value 2">
+					<ComboBoxItem.value>
+						<StringLiteral stringValue="2"/>
+					</ComboBoxItem.value>
+				</ComboBoxItem>
+				<ComboBoxItem text="Value 3">
+					<ComboBoxItem.value>
+						<StringLiteral stringValue="3"/>
+					</ComboBoxItem.value>
+				</ComboBoxItem>
+				<ComboBoxItem text="Value 4">
+					<ComboBoxItem.value>
+						<StringLiteral stringValue="4"/>
+					</ComboBoxItem.value>
+				</ComboBoxItem>
+				<ComboBoxItem text="Value 5">
+					<ComboBoxItem.value>
+						<StringLiteral stringValue="5"/>
+					</ComboBoxItem.value>
+				</ComboBoxItem>
+				<ComboBoxItem text="Value 6">
+					<ComboBoxItem.value>
+						<StringLiteral stringValue="6"/>
+					</ComboBoxItem.value>
+				</ComboBoxItem>
+				<ComboBoxItem text="Value 7">
+					<ComboBoxItem.value>
+						<StringLiteral stringValue="7"/>
+					</ComboBoxItem.value>
+				</ComboBoxItem>
+				<ComboBoxItem text="Value 8">
+					<ComboBoxItem.value>
+						<StringLiteral stringValue="8"/>
+					</ComboBoxItem.value>
+				</ComboBoxItem>
+				<ComboBoxItem text="Value 9">
+					<ComboBoxItem.value>
+						<StringLiteral stringValue="9"/>
+					</ComboBoxItem.value>
+				</ComboBoxItem>
+				<ComboBoxItem text="value1">
+					<ComboBoxItem.value>
+						<NullLiteral/>
+					</ComboBoxItem.value>
+				</ComboBoxItem>
+			</ComboBox>
+				<Label classNames="fcls_fieldlabel,fcls_align_left" fieldTable="" gridItemLocation="0,4,1,1" identifier="lb140" isDynamic="true" text="Express Delivery" visible="true"/>
+				<RadioGroup classNames="fcls_data_widget,fcls_align_left,fcls_length_20qch" comment=" Freight delivery indicator. - (1) Normal - (2) Express " dataType="Char,,,,1" fieldTable="orderhead" gridItemLocation="1,4,1,1" identifier="delivery_ind" preferredSize="2qch,1qch" toolTip=" Freight delivery indicator. - (1) Normal - (2) Express " orientation="Vertical">
+				<Radio title="1 - Normal" identifier="delivery_ind_1">
+					<Radio.value>
+						<StringLiteral stringValue="1"/>
+					</Radio.value>
+				</Radio>
+				<Radio title="2 - Express" identifier="delivery_ind_2">
+					<Radio.value>
+						<StringLiteral stringValue="2"/>
+					</Radio.value>
+				</Radio>
+				<Radio title="N/A" identifier="delivery_ind_3">
+					<Radio.value>
+						<NullLiteral/>
+					</Radio.value>
+				</Radio>
+			</RadioGroup>
+				<Label classNames="fcls_fieldlabel,fcls_align_left" fieldTable="" gridItemLocation="0,5,1,1" identifier="lb73" isDynamic="true" text="Delivery Date" visible="true"/>
+				<Calendar classNames="fcls_data_widget,fcls_align_left,fcls_length_20qch" comment=" Enter the date from which order delivery may commence " dataType="Date,,,," fieldTable="orderhead" format="dd/mm/yyyy" gridItemLocation="1,5,1,1" identifier="ship_date" preferredSize="11qch,1qch" toolTip=" Enter the date from which order delivery may commence "/>
+				<Label classNames="fcls_fieldlabel,fcls_align_left" fieldTable="" gridItemLocation="0,6,1,1" identifier="lb141" isDynamic="true" text="Freight Amount" visible="true"/>
+				<TextField classNames="fcls_data_widget,fcls_align_left,fcls_length_20qch" comment=" Total freight charges for this order " dataType="Decimal,,,2,16" fieldTable="orderhead" gridItemLocation="1,6,1,1" identifier="freight_amt" preferredSize="13qch,1qch" toolTip=" Total freight charges for this order "/>
+				<Label classNames="fcls_fieldlabel,fcls_align_left" fieldTable="" gridItemLocation="0,7,1,1" identifier="lb152" isDynamic="true" text="Handling Amount" visible="true"/>
+				<TextField classNames="fcls_data_widget,fcls_align_left,fcls_length_20qch" comment=" Total handling charges for this order " dataType="Decimal,,,2,16" fieldTable="orderhead" gridItemLocation="1,7,1,1" identifier="hand_amt" preferredSize="13qch,1qch" toolTip=" Total handling charges for this order "/>
+			</GridPanel>
+			<GroupBox classNames="fcls_detail_gb_cnt" fieldTable="formonly" gridItemLocation="0,2,1,1" horizontalAlignment="Stretch" identifier="cntDetail2GroupBox" title="Shipping Instructions" verticalAlignment="Stretch" visible="true">
+				<GridPanel classNames="fcls_detail_gb_cnt_sub,fcls_data_cnt" fieldTable="formonly" horizontalAlignment="Stretch" identifier="cntDetail2GBSubGp" verticalAlignment="Top" visible="true">
+					<GridPanel.gridRowDefinitions>
+						<GridRowDefinition gridLengthValue=""/>
+						<GridRowDefinition gridLengthValue=""/>
+					</GridPanel.gridRowDefinitions>
+					<GridPanel.gridColumnDefinitions>
+						<GridColumnDefinition gridLengthValue="100%" gridMinLength="10rem"/>
+					</GridPanel.gridColumnDefinitions>
+					<TextField classNames="fcls_data_widget" comment=" Shipment instruction/description line 1" dataType="Char,,,,60" fieldTable="orderhead" gridItemLocation="0,0,1,1" identifier="ship1_text" preferredSize="61qch,1qch" toolTip=" Shipment instruction/description line 1"/>
+					<TextField classNames="fcls_data_widget" comment=" Shipment instruction/description line 2" dataType="Char,,,,60" fieldTable="orderhead" gridItemLocation="0,1,1,1" identifier="ship2_text" preferredSize="61qch,1qch" toolTip=" Shipment instruction/description line 2"/>
+				</GridPanel>
+			</GroupBox>
+			<GroupBox classNames="fcls_detail_gb_cnt" fieldTable="formonly" gridItemLocation="0,3,1,1" horizontalAlignment="Stretch" identifier="cntDetail3GroupBox" title="Comments" verticalAlignment="Stretch" visible="true">
+				<GridPanel classNames="fcls_detail_gb_cnt_sub,fcls_data_cnt" fieldTable="formonly" horizontalAlignment="Stretch" identifier="cntDetail3GBSubGpLeft" verticalAlignment="Top" visible="true">
+					<GridPanel.gridRowDefinitions>
+						<GridRowDefinition gridLengthValue=""/>
+						<GridRowDefinition gridLengthValue=""/>
+						<GridRowDefinition gridLengthValue=""/>
+					</GridPanel.gridRowDefinitions>
+					<GridPanel.gridColumnDefinitions>
+						<GridColumnDefinition gridLengthValue="" gridMinLength="12rem"/>
+						<GridColumnDefinition gridLengthValue=""/>
+						<GridColumnDefinition gridLengthValue="100%"/>
+					</GridPanel.gridColumnDefinitions>
+					<TextField classNames="fcls_data_widget" comment=" Comments or description relating to this sales order " dataType="Char,,,,30" fieldTable="orderhead" gridItemLocation="0,0,3,1" identifier="com1_text" preferredSize="31qch,1qch" toolTip=" Comments or description relating to this sales order "/>
+					<TextField classNames="fcls_data_widget" comment=" Comments or description relating to this sales order " dataType="Char,,,,30" fieldTable="orderhead" gridItemLocation="0,1,3,1" identifier="com2_text" preferredSize="31qch,1qch" toolTip=" Comments or description relating to this sales order "/>
+					<Label classNames="fcls_fieldlabel,fcls_align_left" fieldTable="formonly" gridItemLocation="0,2,1,1" identifier="lb49" isDynamic="true" text="Hold Code" visible="true"/>
+					<ComboBox classNames="fcls_data_widget,fcls_align_left,fcls_length_20qch" dataType="Char,,,,3" fieldTable="orderhead" gridItemLocation="1,2,1,1" identifier="hold_code" noEntry="true" preferredSize="4qch,1qch"/>
+				</GridPanel>
+			</GroupBox>
+			<GroupBox classNames="fcls_detail_gb_cnt" fieldTable="" gridItemLocation="0,4,1,1" horizontalAlignment="Stretch" identifier="cntDetail4GroupBox" title="Group 4" verticalAlignment="Stretch" visible="true">
+				<GridPanel classNames="fcls_detail_gb_cnt_sub,fcls_data_cnt,fcls_align_left" fieldTable="formonly" gridItemLocation="0,5,1,1" horizontalAlignment="Left" identifier="cntDetail4" verticalAlignment="Top" visible="true">
+					<GridPanel.gridRowDefinitions>
+						<GridRowDefinition gridLengthValue=""/>
+						<GridRowDefinition gridLengthValue=""/>
+						<GridRowDefinition gridLengthValue=""/>
+						<GridRowDefinition gridLengthValue=""/>
+						<GridRowDefinition gridLengthValue=""/>
+						<GridRowDefinition gridLengthValue=""/>
+					</GridPanel.gridRowDefinitions>
+					<GridPanel.gridColumnDefinitions>
+						<GridColumnDefinition gridLengthValue="" gridMinLength="12rem"/>
+						<GridColumnDefinition gridLengthValue=""/>
+						<GridColumnDefinition gridLengthValue="" gridMinLength="12rem"/>
+						<GridColumnDefinition gridLengthValue=""/>
+					</GridPanel.gridColumnDefinitions>
+					<Label classNames="fcls_fieldlabel,fcls_align_left" fieldTable="formonly" gridItemLocation="0,0,1,1" identifier="lb68" isDynamic="true" text="Gross Line Total" visible="true"/>
+					<TextField classNames="fcls_data_widget,fcls_align_left,fcls_length_10qch" dataType="Decimal,,,2,16" fieldTable="orderhead" gridItemLocation="1,0,1,1" identifier="goods_amt" preferredSize="13qch,1qch"/>
+					<TextField classNames="fcls_data_widget,fcls_align_left,fcls_length_10qch" dataType="Decimal,,,2,16" fieldTable="customer" gridItemLocation="3,0,1,1" identifier="curr_amt" noEntry="true" preferredSize="13qch,1qch" visible="true"/>
+					<Label classNames="fcls_fieldlabel,fcls_align_left" fieldTable="" gridItemLocation="0,1,1,1" identifier="lb115" isDynamic="true" text="- Discounts Taken" visible="true"/>
+					<Label classNames="fcls_fieldlabel,fcls_align_left" fieldTable="" gridItemLocation="2,0,1,1" identifier="lb117" isDynamic="true" text="Current" visible="true"/>
+					<TextField classNames="fcls_data_widget,fcls_align_left,fcls_length_10qch" dataType="Decimal,,,2,16" fieldTable="orderhead" gridItemLocation="1,1,1,1" identifier="disc_amt" noEntry="true" preferredSize="13qch,1qch"/>
+					<Label classNames="fcls_fieldlabel,fcls_align_left" fieldTable="" gridItemLocation="2,1,1,1" identifier="lb172" isDynamic="true" text="+1-30 Days Overdue" visible="true"/>
+					<TextField classNames="fcls_data_widget,fcls_align_left,fcls_length_10qch" dataType="Decimal,,,2,16" fieldTable="customer" gridItemLocation="3,1,1,1" identifier="over1_amt" noEntry="true" preferredSize="13qch,1qch"/>
+					<Label classNames="fcls_fieldlabel,fcls_align_left" fieldTable="" gridItemLocation="0,2,1,1" identifier="lb116" isDynamic="true" text="+Non-Product Chrg" visible="true"/>
+					<TextField classNames="fcls_data_widget,fcls_align_left,fcls_length_10qch" dataType="Char,,,," fieldTable="formonly" gridItemLocation="1,2,1,1" identifier="non_inv_amt" noEntry="true" preferredSize="13qch,1qch"/>
+					<Label classNames="fcls_fieldlabel,fcls_align_left" fieldTable="" gridItemLocation="2,2,1,1" identifier="lb173" isDynamic="true" text="+31-30 Days Overdue" visible="true"/>
+					<TextField classNames="fcls_data_widget,fcls_align_left,fcls_length_10qch" dataType="Decimal,,,2,16" fieldTable="customer" gridItemLocation="3,2,1,1" identifier="over30_amt" noEntry="true" preferredSize="13qch,1qch"/>
+					<Label classNames="fcls_fieldlabel,fcls_align_left" fieldTable="" gridItemLocation="0,3,1,1" identifier="lb120" isDynamic="true" text="= Sub Total" visible="true"/>
+					<TextField classNames="fcls_data_widget,fcls_align_left,fcls_length_10qch" dataType="Char,,,," fieldTable="formonly" gridItemLocation="1,3,1,1" identifier="sub_total_amt" noEntry="true" preferredSize="13qch,1qch"/>
+					<Label classNames="fcls_fieldlabel,fcls_align_left" fieldTable="" gridItemLocation="2,3,1,1" identifier="lb174" isDynamic="true" text="+61-90 Days Overdue" visible="true"/>
+					<TextField classNames="fcls_data_widget,fcls_align_left,fcls_length_10qch" dataType="Decimal,,,2,16" fieldTable="customer" gridItemLocation="3,3,1,1" identifier="over60_amt" noEntry="true" preferredSize="13qch,1qch"/>
+					<Label classNames="fcls_fieldlabel,fcls_align_left" fieldTable="" gridItemLocation="0,4,1,1" identifier="lb121" isDynamic="true" text="+ Taxation" visible="true"/>
+					<TextField classNames="fcls_data_widget,fcls_align_left,fcls_length_10qch" dataType="Decimal,,,2,16" fieldTable="orderhead" gridItemLocation="1,4,1,1" identifier="tax_amt" noEntry="true" preferredSize="13qch,1qch"/>
+					<Label classNames="fcls_fieldlabel,fcls_align_left" fieldTable="" gridItemLocation="2,4,1,1" identifier="lb175" isDynamic="true" text="+90+Days Overdue" visible="true"/>
+					<TextField classNames="fcls_data_widget,fcls_align_left,fcls_length_10qch" dataType="Decimal,,,2,16" fieldTable="customer" gridItemLocation="3,4,1,1" identifier="over90_amt" noEntry="true" preferredSize="13qch,1qch"/>
+					<Label classNames="fcls_fieldlabel,fcls_align_left" fieldTable="" gridItemLocation="0,5,1,1" identifier="lb164" isDynamic="true" text="= Order Amount" visible="true"/>
+					<TextField classNames="fcls_data_widget,fcls_align_left,fcls_length_10qch" dataType="Decimal,,,2,16" fieldTable="orderhead" gridItemLocation="1,5,1,1" identifier="total_amt" noEntry="true" preferredSize="13qch,1qch"/>
+					<Label classNames="fcls_fieldlabel,fcls_align_left" fieldTable="" gridItemLocation="2,5,1,1" identifier="lb179" isDynamic="true" text="= Balance" visible="true"/>
+					<TextField classNames="fcls_data_widget,fcls_align_left,fcls_length_10qch" dataType="Decimal,,,2,16" fieldTable="customer" gridItemLocation="3,5,1,1" identifier="bal_amt" noEntry="true" preferredSize="13qch,1qch"/>
+				</GridPanel>
+			</GroupBox>
+			<GridPanel classNames="fcls_statusbar_cnt" fieldTable="formonly" gridItemLocation="0,5,1,1" identifier="cntStatusBar" verticalAlignment="Bottom" visible="true">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="100%"/>
+				</GridPanel.gridColumnDefinitions>
+				<Label classNames="fcls_sblabel" fieldTable="formonly" gridItemLocation="0,0,1,1" identifier="lbInfo1" isDynamic="true" text="" visible="true"/>
+				<Label classNames="fcls_sblabel" fieldTable="formonly" gridItemLocation="0,1,1,1" identifier="lbInfo2" isDynamic="true" text="" visible="true"/>
+			</GridPanel>
+		</GridPanel>
+	</form.rootContainer>
+	<form.screenRecords>
+		<ScreenRecord fields="carrier.name_text" identifier="carrier"/>
+		<ScreenRecord fields="customer.curr_amt,customer.over1_amt,customer.over30_amt,customer.over60_amt,customer.over90_amt,customer.bal_amt" identifier="customer"/>
+		<ScreenRecord fields="formonly.non_inv_amt,formonly.sub_total_amt,f180" identifier="formonly"/>
+		<ScreenRecord fields="orderhead.carrier_code,orderhead.fob_text,orderhead.freight_amt,orderhead.hand_amt,orderhead.ship1_text,orderhead.ship2_text,orderhead.com1_text,orderhead.com2_text,orderhead.hold_code,orderhead.goods_amt,orderhead.disc_amt,orderhead.tax_amt,orderhead.total_amt,orderhead.ship_date,orderhead.freight_ind,orderhead.delivery_ind" identifier="orderhead"/>
+	</form.screenRecords>
+</form>

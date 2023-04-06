@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form xmlns="http://namespaces.querix.com/2015/fglForms">
+	<form.rootContainer>
+		<GridPanel classNames="fcls_rootContainer" preferredSize="300,200" visible="true" verticalAlignment="Center" horizontalAlignment="Center" fieldTable="formonly" identifier="rootContainer">
+			<GridPanel.gridRowDefinitions>
+				<GridRowDefinition gridLengthValue=""/>
+				<GridRowDefinition gridLengthValue=""/>
+				<GridRowDefinition gridLengthValue=""/>
+			</GridPanel.gridRowDefinitions>
+			<GridPanel.gridColumnDefinitions>
+				<GridColumnDefinition gridLengthValue="100%"/>
+			</GridPanel.gridColumnDefinitions>
+			<GridPanel classNames="fcls_title_cnt" visible="true" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="cntTitle">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue=""/>
+				</GridPanel.gridColumnDefinitions>
+				<Label text="Change password" classNames="fcls_title_lb" minSize="200," textAlignment="Center,Center" gridItemLocation="0,0,1,1" fieldTable="" identifier="header_text"/>
+			</GridPanel>
+			<GridPanel classNames="fcls_detail_cnt" visible="true" verticalAlignment="Top" gridItemLocation="0,1,1,1" fieldTable="formonly" identifier="cntDetail1">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue=""/>
+					<GridColumnDefinition gridLengthValue="70%"/>
+				</GridPanel.gridColumnDefinitions>
+				<Label isDynamic="true" text="User:" visible="true" textAlignment="Right," gridItemLocation="0,0,1,1" fieldTable="" identifier="lb4"/>
+				<Label isDynamic="true" visible="true" gridItemLocation="1,0,1,1" fieldTable="" identifier="u_log"/>
+				<Label text="New password:" classNames="fcls_fieldlabel" verticalAlignment="Stretch" horizontalAlignment="Stretch" textAlignment="Right," gridItemLocation="0,1,1,1" fieldTable="" identifier="label2"/>
+				<TextField invisibleValue="true" maxLength="20" dataType="Char,,,," visible="true" verticalAlignment="Stretch" horizontalAlignment="Stretch" gridItemLocation="1,1,1,1" fieldTable="users" identifier="password"/>
+				<Label text="Confirm password:" classNames="fcls_fieldlabel" verticalAlignment="Stretch" horizontalAlignment="Stretch" textAlignment="Right," gridItemLocation="0,2,1,1" fieldTable="" identifier="label3"/>
+				<TextField invisibleValue="true" isPasswordMask="true" maxLength="20" dataType="Char,,,," visible="true" verticalAlignment="Stretch" horizontalAlignment="Stretch" gridItemLocation="1,2,1,1" fieldTable="users" identifier="pass_conf"/>
+			</GridPanel>
+			<GridPanel classNames="fcls_detail_cnt" visible="true" verticalAlignment="Top" gridItemLocation="0,2,1,1" fieldTable="formonly" identifier="cntDetail2">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="50%"/>
+					<GridColumnDefinition gridLengthValue="50%"/>
+				</GridPanel.gridColumnDefinitions>
+				<Button text="Change password" visible="true" verticalAlignment="Stretch" horizontalAlignment="Stretch" gridItemLocation="0,0,1,1" fieldTable="" identifier="fb_ok">
+					<Button.onInvoke>
+						<ActionEventHandler actionName="Accept"/>
+					</Button.onInvoke>
+				</Button>
+				<Button text="Exit " visible="true" verticalAlignment="Stretch" horizontalAlignment="Stretch" gridItemLocation="1,0,1,1" fieldTable="" identifier="fb_cancel">
+					<Button.onInvoke>
+						<ActionEventHandler actionName="CANCEL"/>
+					</Button.onInvoke>
+				</Button>
+			</GridPanel>
+		</GridPanel>
+	</form.rootContainer>
+	<form.screenRecords>
+		<ScreenRecord identifier="formonly" fields="fb_cancel,fb_ok"/>
+		<ScreenRecord identifier="users" fields="pass_conf,password"/>
+	</form.screenRecords>
+</form>
+

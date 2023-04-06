@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form xmlns="http://namespaces.querix.com/2015/fglForms">
+	<form.rootContainer>
+		<GridPanel classNames="fcls_rootContainer" verticalAlignment="Top" horizontalAlignment="Left" fieldTable="" identifier="rootContainer">
+			<GridPanel.gridRowDefinitions>
+				<GridRowDefinition gridLengthValue=""/>
+				<GridRowDefinition gridLengthValue=""/>
+				<GridRowDefinition gridLengthValue=""/>
+				<GridRowDefinition gridLengthValue=""/>
+				<GridRowDefinition gridLengthValue=""/>
+			</GridPanel.gridRowDefinitions>
+			<GridPanel.gridColumnDefinitions>
+				<GridColumnDefinition gridLengthValue="100%"/>
+			</GridPanel.gridColumnDefinitions>
+			<GridPanel classNames="fcls_title_cnt" visible="true" verticalAlignment="Top" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="cnttitle">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="100%"/>
+					<GridColumnDefinition gridLengthValue=""/>
+				</GridPanel.gridColumnDefinitions>
+				<Label isDynamic="true" text="Financial Report Selector" classNames="fcls_title_lb" visible="true" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="header_text"/>
+				<Label isDynamic="true" text="G121" classNames="fcls_title_lb" visible="true" gridItemLocation="1,0,1,1" fieldTable="" identifier="lbformname"/>
+			</GridPanel>
+			<GridPanel classNames="fcls_detail_cnt,fcls_data_cnt,fcls_align_left" visible="true" verticalAlignment="Top" horizontalAlignment="Left" gridItemLocation="0,1,1,1" fieldTable="formonly" identifier="cntdetail1">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="" gridMinLength="10rem"/>
+					<GridColumnDefinition gridLengthValue=""/>
+					<GridColumnDefinition gridLengthValue=""/>
+				</GridPanel.gridColumnDefinitions>
+				<Label isDynamic="true" text="Report" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="lb57"/>
+				<Label isDynamic="true" text="Year" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,1,1,1" fieldTable="" identifier="lb73"/>
+				<Label isDynamic="true" text="Period" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,2,1,1" fieldTable="" identifier="lb76"/>
+				<Label isDynamic="true" text="Report Date" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,3,1,1" fieldTable="" identifier="lb77"/>
+				<ComboBox editable="true" dataType="Char,,,,3" classNames="list-show-value-text,field-show-value,fcls_data_widget,fcls_align_left,fcls_length_10qch" location="15qch,2qch" preferredSize="5qch,1qch" toolTip=" Report ID (W) " gridItemLocation="1,0,1,1" comment=" Report ID (W) " fieldTable="reporthead" identifier="report_code"/>
+				<ComboBox dataType="Char,,,," classNames="fcls_data_widget,fcls_align_left,fcls_length_10qch" location="15qch,3qch" preferredSize="10qch,1qch" toolTip=" The Financial Report Year" gridItemLocation="1,1,1,1" comment=" The Financial Report Year" fieldTable="formonly" identifier="rpt_year"/>
+				<ComboBox dataType="Char,,,," classNames="fcls_data_widget,fcls_align_left,fcls_length_10qch" location="15qch,4qch" preferredSize="10qch,1qch" toolTip=" The Financial Report Period" gridItemLocation="1,2,1,1" comment=" The Financial Report Period" fieldTable="formonly" identifier="rpt_per"/>
+				<Calendar dataType="Date,,,," classNames="fcls_data_widget,fcls_align_left,fcls_length_10qch" location="15qch,5qch" preferredSize="11qch,1qch" toolTip=" The Date to appear on the report" gridItemLocation="1,3,1,1" comment=" The Date to appear on the report" fieldTable="formonly" identifier="rpt_date"/>
+				<TextField dataType="Char,,,,40" classNames="fcls_data_widget,fcls_align_left,fcls_length_40qch" location="22qch,2qch" preferredSize="38qch,1qch" toolTip=" Report Header " gridItemLocation="2,0,1,1" comment=" Report Header " fieldTable="reporthead" identifier="desc_text"/>
+			</GridPanel>
+			<GroupBox title="Selection" classNames="fcls_detail_gb_cnt,fcls_detail_cnt,,fcls_align_hstretch" visible="true" verticalAlignment="Top" gridItemLocation="0,3,1,1" fieldTable="formonly" identifier="cntdetail2groupbox">
+				<GridPanel classNames="fcls_detail_gb_cnt_sub,fcls_detail_cnt_sub,fcls_data_cnt,fcls_align_left" visible="true" verticalAlignment="Top" horizontalAlignment="Left" fieldTable="formonly" identifier="cntdetail2grboxsub">
+					<GridPanel.gridRowDefinitions>
+						<GridRowDefinition gridLengthValue=""/>
+						<GridRowDefinition gridLengthValue=""/>
+						<GridRowDefinition gridLengthValue=""/>
+					</GridPanel.gridRowDefinitions>
+					<GridPanel.gridColumnDefinitions>
+						<GridColumnDefinition gridLengthValue="" gridMinLength="10rem"/>
+						<GridColumnDefinition gridLengthValue=""/>
+					</GridPanel.gridColumnDefinitions>
+					<Label isDynamic="true" text="Company" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="lb47"/>
+					<Label isDynamic="true" text="Account" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,1,1,1" fieldTable="formonly" identifier="lb46"/>
+					<Label isDynamic="true" text="Group Code" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,2,1,1" fieldTable="formonly" identifier="lb44"/>
+					<ComboBox editable="true" dataType="Char,,,,2" classNames="fcls_data_widget,fcls_align_left,fcls_length_30qch" location="13qch,8qch" preferredSize="20qch,1qch" toolTip=" The Search criteria for companies" gridItemLocation="1,0,1,1" comment=" The Search criteria for companies" fieldTable="account" identifier="cmpy_code"/>
+					<ComboBox editable="true" dataType="Char,,,,18" classNames="fcls_data_widget,fcls_align_left,fcls_length_30qch" location="13qch,9qch" preferredSize="21qch,1qch" toolTip=" The Search criteria for the segments" gridItemLocation="1,1,1,1" comment=" The Search criteria for the segments" fieldTable="account" identifier="acct_code"/>
+					<ComboBox editable="true" dataType="Char,,,,7" classNames="fcls_data_widget,fcls_align_left,fcls_length_30qch" location="13qch,10qch" preferredSize="21qch,1qch" toolTip=" The Search criteria for the group code" gridItemLocation="1,2,1,1" comment=" The Search criteria for the group code" fieldTable="coa" identifier="group_code"/>
+				</GridPanel>
+			</GroupBox>
+			<GridPanel classNames="fcls_statusbar_cnt" visible="true" verticalAlignment="Top" gridItemLocation="0,4,1,1" fieldTable="formonly" identifier="cntStatusBar">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="100%"/>
+				</GridPanel.gridColumnDefinitions>
+				<Label isDynamic="true" text="" classNames="fcls_sblabel" visible="true" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="lbInfo1"/>
+				<Label isDynamic="true" text="" classNames="fcls_sblabel" visible="true" gridItemLocation="0,1,1,1" fieldTable="formonly" identifier="lbInfo2"/>
+			</GridPanel>
+		</GridPanel>
+	</form.rootContainer>
+	<form.screenRecords>
+		<ScreenRecord identifier="account" fields="cmpy_code,acct_code"/>
+		<ScreenRecord identifier="coa" fields="group_code"/>
+		<ScreenRecord identifier="formonly" fields="rpt_year,rpt_per,rpt_date"/>
+		<ScreenRecord identifier="reporthead" fields="report_code,desc_text"/>
+	</form.screenRecords>
+</form>
+

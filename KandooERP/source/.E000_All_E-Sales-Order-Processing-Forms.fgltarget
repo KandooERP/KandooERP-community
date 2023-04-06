@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<fglBuildTarget xmlns="http://namespaces.querix.com/lyciaide/target" name="E000_All_E-Sales-Order-Processing-Forms" type="fgl-program">
+
+  <libraries>
+    <library name="lib_tool_common" dynamic="false" location=""/>
+    <library name="lib_tool_E_EO_new" dynamic="false" location=""/>
+    <library name="lib_tool_E_EO_db" dynamic="false" location=""/>
+    <library name="lib_tool_db_common" dynamic="false" location=""/>
+    </libraries>
+
+  <sources type="fgl">
+    <file location="4gl/eo/E000_All_E-Sales-Order-Processing-Forms.4gl"/>
+  </sources>
+
+  <sources type="form">
+    <file location="per/eo/ENG/E263.fm2"/>
+    <file location="per/eo/ENG/E275.fm2"/>
+    <file location="per/eo/ENG/E251.fm2"/>
+    <file location="per/eo/ENG/E501_prodstatus_availability.fm2"/>
+    <file location="per/eo/ENG/E400.fm2"/>
+    <file location="per/eo/ENG/E287.fm2"/>
+    <file location="per/eo/ENG/E461.fm2"/>
+    <file location="per/eo/ENG/E448.fm2"/>
+    <file location="per/eo/ENG/E136.fm2"/>
+    <file location="per/eo/ENG/E124.fm2"/>
+    <file location="per/eo/ENG/E112.fm2"/>
+    <file location="per/eo/ENG/E185.fm2"/>
+    <file location="per/eo/ENG/E173.fm2"/>
+    <file location="per/eo/ENG/E161.fm2"/>
+    <file location="per/eo/ENG/E131.fm2"/>
+    <file location="per/eo/ENG/E106.fm2"/>
+    <file location="per/eo/ENG/E155.fm2"/>
+    <file location="per/eo/ENG/E244.fm2"/>
+    <file location="per/eo/ENG/E220.fm2"/>
+    <file location="per/eo/ENG/E219.fm2"/>
+    <file location="per/eo/ENG/E293.fm2"/>
+    <file location="per/eo/ENG/E268.fm2"/>
+    <file location="per/eo/ENG/E417.fm2"/>
+    <file location="per/eo/ENG/E442.fm2"/>
+    <file location="per/eo/ENG/E238.fm2"/>
+    <file location="per/eo/ENG/E105.fm2"/>
+    <file location="per/eo/ENG/E214.fm2"/>
+    <file location="per/eo/ENG/E166.fm2"/>
+    <file location="per/eo/ENG/E154.fm2"/>
+    <file location="per/eo/ENG/E129.fm2"/>
+    <file location="per/eo/ENG/E245.fm2"/>
+    <file location="per/eo/ENG/E233.fm2"/>
+    <file location="per/eo/ENG/E270.fm2"/>
+    <file location="per/eo/ENG/E213.fm2"/>
+    <file location="per/eo/ENG/E443.fm2"/>
+    <file location="per/eo/ENG/E418.fm2"/>
+    <file location="per/eo/ENG/E250.fm2"/>
+    <file location="per/eo/ENG/E225.fm2"/>
+    <file location="per/eo/ENG/E227.fm2"/>
+    <file location="per/eo/ENG/E286.fm2"/>
+    <file location="per/eo/ENG/E459.fm2"/>
+    <file location="per/eo/ENG/E167.fm2"/>
+    <file location="per/eo/ENG/E252.fm2"/>
+    <file location="per/eo/ENG/E232.fm2"/>
+    <file location="per/eo/ENG/E450.fm2"/>
+    <file location="per/eo/ENG/E172.fm2"/>
+    <file location="per/eo/ENG/E113.fm2"/>
+    <file location="per/eo/ENG/E186.fm2"/>
+    <file location="per/eo/ENG/EY00.fm2"/>
+    <file location="per/eo/ENG/E226.fm2"/>
+    <file location="per/eo/ENG/E120.fm2"/>
+    <file location="per/eo/ENG/E231.fm2"/>
+    <file location="per/eo/ENG/E218.fm2"/>
+    <file location="per/eo/ENG/E280.fm2"/>
+    <file location="per/eo/ENG/E267.fm2"/>
+    <file location="per/eo/ENG/E255.fm2"/>
+    <file location="per/eo/ENG/E243.fm2"/>
+    <file location="per/eo/ENG/E416.fm2"/>
+    <file location="per/eo/ENG/E292.fm2"/>
+    <file location="per/eo/ENG/E404.fm2"/>
+    <file location="per/eo/ENG/E453.fm2"/>
+    <file location="per/eo/ENG/E441.fm2"/>
+    <file location="per/eo/ENG/EU00.fm2"/>
+    <file location="per/eo/ENG/E240.fm2"/>
+    <file location="per/eo/ENG/E165.fm2"/>
+    <file location="per/eo/ENG/E215.fm2"/>
+    <file location="per/eo/ENG/E111.fm2"/>
+    <file location="per/eo/ENG/E160.fm2"/>
+    <file location="per/eo/ENG/E150.fm2"/>
+    <file location="per/eo/ENG/E258.fm2"/>
+    <file location="per/eo/ENG/E125.fm2"/>
+    <file location="per/eo/ENG/E174.fm2"/>
+    <file location="per/eo/ENG/E283.fm2"/>
+    <file location="per/eo/ENG/E456.fm2"/>
+    <file location="per/eo/ENG/E216.fm2"/>
+    <file location="per/eo/ENG/E241.fm2"/>
+    <file location="per/eo/ENG/E110.fm2"/>
+    <file location="per/eo/ENG/E122.fm2"/>
+    <file location="per/eo/ENG/E257.fm2"/>
+    <file location="per/eo/ENG/E294.fm2"/>
+    <file location="per/eo/ENG/E282.fm2"/>
+    <file location="per/eo/ENG/E163.fm2"/>
+    <file location="per/eo/ENG/E455.fm2"/>
+    <file location="per/eo/ENG/E217.fm2"/>
+    <file location="per/eo/ENG/E242.fm2"/>
+    <file location="per/eo/ENG/E401.fm2"/>
+    <file location="per/eo/ENG/E123.fm2"/>
+    <file location="per/eo/ENG/E500_back_order_allocation.fm2"/>
+    <file location="per/eo/ENG/E281.fm2"/>
+    <file location="per/eo/ENG/E440.fm2"/>
+    <file location="per/eo/ENG/E256.fm2"/>
+    <file location="per/eo/ENG/E454.fm2"/>
+    <file location="per/eo/ENG/E162.fm2"/>
+    <file location="per/eo/ENG/E295.fm2"/>
+    <file location="per/eo/ENG/E235.fm2"/>
+    <file location="per/eo/ENG/E223.fm2"/>
+    <file location="per/eo/ENG/E211.fm2"/>
+    <file location="per/eo/ENG/E272.fm2"/>
+    <file location="per/eo/ENG/E284.fm2"/>
+    <file location="per/eo/ENG/E259.fm2"/>
+    <file location="per/eo/ENG/E247.fm2"/>
+    <file location="per/eo/ENG/E260.fm2"/>
+    <file location="per/eo/ENG/E408.fm2"/>
+    <file location="per/eo/ENG/E457.fm2"/>
+    <file location="per/eo/ENG/E229.fm2"/>
+    <file location="per/eo/ENG/E254.fm2"/>
+    <file location="per/eo/ENG/E230.fm2"/>
+    <file location="per/eo/ENG/E121.fm2"/>
+    <file location="per/eo/ENG/EW00.fm2"/>
+    <file location="per/eo/ENG/E403.fm2"/>
+    <file location="per/querix/E000_All_E-Sales-Order-Processing-Forms.fm2"/>
+    <file location="per/eo/ENG/E278.fm2"/>
+    <file location="per/eo/ENG/E169.fm2"/>
+    <file location="per/eo/ENG/E452.fm2"/>
+    <file location="per/eo/ENG/E115.fm2"/>
+    <file location="per/eo/ENG/E188.fm2"/>
+    <file location="per/eo/ENG/E164.fm2"/>
+    <file location="per/eo/ENG/E446.fm2"/>
+    <file location="per/eo/ENG/E253.fm2"/>
+    <file location="per/eo/ENG/E458.fm2"/>
+    <file location="per/eo/ENG/E228.fm2"/>
+    <file location="per/eo/ENG/E290.fm2"/>
+    <file location="per/eo/ENG/E109.fm2"/>
+    <file location="per/eo/ENG/E900.fm2"/>
+    <file location="per/eo/ENG/E265.fm2"/>
+    <file location="per/eo/ENG/E426.fm2"/>
+    <file location="per/eo/ENG/E134.fm2"/>
+    <file location="per/eo/ENG/E171.fm2"/>
+    <file location="per/eo/ENG/E451.fm2"/>
+    <file location="per/eo/ENG/E126.fm2"/>
+    <file location="per/eo/ENG/E114.fm2"/>
+    <file location="per/eo/ENG/E151.fm2"/>
+    <file location="per/eo/ENG/E187.fm2"/>
+    <file location="per/eo/ENG/E445.fm2"/>
+    <file location="per/eo/ENG/E266.fm2"/>
+    <file location="per/eo/ENG/E133.fm2"/>
+    <file location="per/eo/ENG/E291.fm2"/>
+    <file location="per/eo/ENG/E246.fm2"/>
+    <file location="per/eo/ENG/E127.fm2"/>
+    <file location="per/eo/ENG/E419.fm2"/>
+    <file location="per/eo/ENG/E212.fm2"/>
+    <file location="per/eo/ENG/E285.fm2"/>
+    <file location="per/eo/ENG/E152.fm2"/>
+    <file location="per/eo/ENG/E144.fm2"/>
+    <file location="per/eo/ENG/E132.fm2"/>
+    <file location="per/eo/ENG/E107.fm2"/>
+    <file location="per/eo/ENG/E119.fm2"/>
+    <file location="per/eo/ENG/E156.fm2"/>
+    <file location="per/eo/ENG/E279.fm2"/>
+    <file location="per/eo/ENG/E104.fm2"/>
+    <file location="per/eo/ENG/E153.fm2"/>
+    <file location="per/eo/ENG/E141.fm2"/>
+    <file location="per/eo/ENG/E116.fm2"/>
+    <file location="per/eo/ENG/E239.fm2"/>
+    <file location="per/eo/ENG/E274.fm2"/>
+    <file location="per/eo/ENG/E447.fm2"/>
+    <file location="per/eo/ENG/E288.fm2"/>
+    <file location="per/eo/ENG/E264.fm2"/>
+    <file location="per/eo/ENG/E210.fm2"/>
+    <file location="per/eo/ENG/E101.fm2"/>
+    <file location="per/eo/ENG/E209.fm2"/>
+    <file location="per/eo/ENG/E159.fm2"/>
+    <file location="per/eo/ENG/E184.fm2"/>
+    <file location="per/eo/ENG/E234.fm2"/>
+    <file location="per/eo/ENG/E248.fm2"/>
+    <file location="per/eo/ENG/E224.fm2"/>
+    <file location="per/eo/ENG/E142.fm2"/>
+    <file location="per/eo/ENG/E130.fm2"/>
+    <file location="per/eo/ENG/EV00.fm2"/>
+    <file location="per/eo/ENG/E289.fm2"/>
+    <file location="per/eo/ENG/E277.fm2"/>
+    <file location="per/eo/ENG/E158.fm2"/>
+    <file location="per/eo/ENG/E183.fm2"/>
+    <file location="per/eo/ENG/E221.fm2"/>
+    <file location="per/eo/ENG/E102.fm2"/>
+    <file location="per/eo/ENG/E262.fm2"/>
+    <file location="per/eo/ENG/E237.fm2"/>
+    <file location="per/eo/ENG/E249.fm2"/>
+    <file location="per/eo/ENG/E118.fm2"/>
+    <file location="per/eo/ENG/E276.fm2"/>
+    <file location="per/eo/ENG/E143.fm2"/>
+    <file location="per/eo/ENG/E157.fm2"/>
+    <file location="per/eo/ENG/E460.fm2"/>
+    <file location="per/eo/ENG/E182.fm2"/>
+    <file location="per/eo/ENG/E449.fm2"/>
+    <file location="per/eo/ENG/ET00.fm2"/>
+    <file location="per/eo/ENG/E236.fm2"/>
+    <file location="per/eo/ENG/E103.fm2"/>
+    <file location="per/eo/ENG/E117.fm2"/>
+    <file location="per/eo/ENG/E261.fm2"/>
+  </sources>
+
+  <mediaFiles>
+    <file client="true" location="E000_All_E-Sales-Order-Processing-Forms.css" type="other"/>
+    <file client="true" location="E000_All_E-Sales-Order-Processing-Forms.qxtheme" type="gui-theme-file"/>
+  </mediaFiles>
+
+  <buildConfiguration name="development">
+    <additions>
+    </additions>
+    <exclusions>
+    </exclusions>
+  </buildConfiguration>
+
+</fglBuildTarget>

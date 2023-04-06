@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form xmlns="http://namespaces.querix.com/2015/fglForms">
+	<form.rootContainer>
+		<GridPanel classNames="fcls_rootContainer" verticalAlignment="Stretch" horizontalAlignment="Stretch" fieldTable="" identifier="rootContainer">
+			<GridPanel.gridRowDefinitions>
+				<GridRowDefinition gridLengthValue=""/>
+				<GridRowDefinition gridLengthValue=""/>
+				<GridRowDefinition gridLengthValue="100%"/>
+				<GridRowDefinition gridLengthValue=""/>
+			</GridPanel.gridRowDefinitions>
+			<GridPanel.gridColumnDefinitions>
+				<GridColumnDefinition gridLengthValue="100%"/>
+			</GridPanel.gridColumnDefinitions>
+			<GridPanel classNames="fcls_title_cnt" visible="true" verticalAlignment="Top" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="cntTitle">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="100%"/>
+					<GridColumnDefinition gridLengthValue=""/>
+				</GridPanel.gridColumnDefinitions>
+				<Label isDynamic="true" text="User Company Security" classNames="fcls_title_lb" visible="true" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="header_text"/>
+				<Label isDynamic="true" text="U151" classNames="fcls_title_lb" visible="true" gridItemLocation="1,0,1,1" fieldTable="" identifier="lbFormName"/>
+			</GridPanel>
+			<GridPanel classNames="fcls_detail_cnt,fcls_align_left" visible="true" verticalAlignment="Top" horizontalAlignment="Left" gridItemLocation="0,1,1,1" fieldTable="formonly" identifier="cntDetail1">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="" gridMinLength="10rem"/>
+					<GridColumnDefinition gridLengthValue=""/>
+					<GridColumnDefinition gridLengthValue=""/>
+				</GridPanel.gridColumnDefinitions>
+				<TextField noEntry="true" dataType="Char,,,,8" classNames="fcls_data_widget,fcls_align_left,fcls_length_10qch" preferredSize="11qch,1qch" gridItemLocation="1,0,1,1" fieldTable="kandoouser" identifier="sign_on_code"/>
+				<TextField noEntry="true" dataType="Char,,,,40" classNames="fcls_data_widget,fcls_align_left,fcls_length_30qch" preferredSize="32qch,1qch" gridItemLocation="2,0,1,1" fieldTable="kandoouser" identifier="name_text"/>
+				<TextField noEntry="true" dataType="Char,,,,1" classNames="fcls_data_widget,fcls_align_left,fcls_length_10qch" preferredSize="2qch,1qch" gridItemLocation="1,1,1,1" fieldTable="kandoouser" identifier="security_ind"/>
+				<TextField noEntry="true" dataType="Char,,,,2" classNames="fcls_data_widget,fcls_align_left,fcls_length_10qch" preferredSize="3qch,1qch" gridItemLocation="1,2,1,1" fieldTable="kandoouser" identifier="cmpy_code"/>
+				<TextField noEntry="true" dataType="Char,,,,30" classNames="fcls_data_widget,fcls_align_left,fcls_length_30qch" preferredSize="36qch,1qch" gridItemLocation="2,2,1,1" fieldTable="company" identifier="name_text"/>
+				<Label isDynamic="true" text="User ID" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,0,1,1" fieldTable="" identifier="lb51"/>
+				<Label isDynamic="true" text="Authority Level" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,1,1,1" fieldTable="" identifier="lb52"/>
+				<Label isDynamic="true" text="Current Company" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,2,1,1" fieldTable="" identifier="lb66"/>
+			</GridPanel>
+			<Table rowCount="6" minSize="70qch,10qch" gridItemLocation="0,2,1,1" fieldTable="" identifier="sr_cmpy_access">
+				<TableColumn fieldTable="" identifier="c">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="5%" gridMaxLength="2rem" gridMinLength="2rem"/>
+					</TableColumn.columnLength>
+					<CheckBox toCase="Up" dataType="Char,,,," fieldTable="formonly" identifier="scroll_flag">
+						<CheckBox.checkedValue>
+							<StringLiteral stringValue="*"/>
+						</CheckBox.checkedValue>
+						<CheckBox.uncheckedValue>
+							<IsNull type="isnull"/>
+						</CheckBox.uncheckedValue>
+					</CheckBox>
+				</TableColumn>
+				<TableColumn text="Comp. Code" fieldTable="" identifier="d">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="8rem" gridMaxLength="8rem" gridMinLength="8rem"/>
+					</TableColumn.columnLength>
+					<ComboBox toCase="Up" dataType="Char,,,," toolTip=" Company Code to grant access" fieldTable="formonly" comment=" Company Code to grant access" identifier="curr_code" editable="true" classNames="list-show-text-value,field-show-value"/>
+				</TableColumn>
+				<TableColumn text="Company" fieldTable="" identifier="e">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="30%" gridMaxLength="30rem" gridMinLength="15rem"/>
+					</TableColumn.columnLength>
+					<TextField noEntry="true" dataType="Char,,,," fieldTable="formonly" identifier="cmpy_text"/>
+				</TableColumn>
+				<TableColumn text="Location" fieldTable="" identifier="f">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="30%" gridMaxLength="30rem" gridMinLength="15rem"/>
+					</TableColumn.columnLength>
+					<ComboBox dataType="Char,,,,3" toolTip=" Users default sales location code (W)" fieldTable="userlocn" comment=" Users default sales location code (W)" identifier="locn_code" editable="true" classNames="list-show-text-value,field-show-text-value"/>
+				</TableColumn>
+				<TableColumn text="Account Mask" fieldTable="" identifier="g">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="15%" gridMaxLength="20rem" gridMinLength="10rem"/>
+					</TableColumn.columnLength>
+					<TextField toCase="Up" dataType="Char,,,,18" toolTip=" Company default mask code" fieldTable="kandoousercmpy" comment=" Company default mask code" identifier="acct_mask_code"/>
+				</TableColumn>
+			</Table>
+			<GridPanel classNames="fcls_statusbar_cnt" visible="true" verticalAlignment="Top" gridItemLocation="0,3,1,1" fieldTable="formonly" identifier="cntStatusBar">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="100%"/>
+				</GridPanel.gridColumnDefinitions>
+				<Label isDynamic="true" text="" classNames="fcls_sblabel" visible="true" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="lbInfo1"/>
+				<Label isDynamic="true" text="" classNames="fcls_sblabel" visible="true" gridItemLocation="0,1,1,1" fieldTable="formonly" identifier="lbInfo2"/>
+			</GridPanel>
+		</GridPanel>
+	</form.rootContainer>
+	<form.screenRecords>
+		<ScreenRecord identifier="sr_cmpy_access" fields="scroll_flag,curr_code,cmpy_text,locn_code,acct_mask_code" elements="6"/>
+		<ScreenRecord identifier="company" fields="name_text"/>
+		<ScreenRecord identifier="formonly" fields="scroll_flag,curr_code,cmpy_text"/>
+		<ScreenRecord identifier="kandoouser" fields="sign_on_code,name_text,security_ind,cmpy_code"/>
+		<ScreenRecord identifier="kandoousercmpy" fields="acct_mask_code"/>
+		<ScreenRecord identifier="userlocn" fields="locn_code"/>
+	</form.screenRecords>
+</form>
+

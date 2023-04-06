@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form xmlns="http://namespaces.querix.com/2015/fglForms">
+	<form.rootContainer>
+		<GridPanel classNames="fcls_rootContainer" verticalAlignment="Top" horizontalAlignment="Left" fieldTable="" identifier="rootContainer">
+			<GridPanel.gridRowDefinitions>
+				<GridRowDefinition gridLengthValue=""/>
+				<GridRowDefinition gridLengthValue=""/>
+				<GridRowDefinition gridLengthValue="" gridMinLength="15"/>
+				<GridRowDefinition gridLengthValue=""/>
+				<GridRowDefinition gridLengthValue=""/>
+			</GridPanel.gridRowDefinitions>
+			<GridPanel.gridColumnDefinitions>
+				<GridColumnDefinition gridLengthValue="100%"/>
+			</GridPanel.gridColumnDefinitions>
+			<GridPanel classNames="fcls_title_cnt" visible="true" verticalAlignment="Top" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="cntTitle">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="100%"/>
+					<GridColumnDefinition gridLengthValue=""/>
+				</GridPanel.gridColumnDefinitions>
+				<Label isDynamic="true" text="Promotion by Customer" classNames="fcls_title_lb" visible="true" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="header_text"/>
+				<Label isDynamic="true" text="A698" classNames="fcls_title_lb" visible="true" gridItemLocation="1,0,1,1" fieldTable="" identifier="lbFormName"/>
+			</GridPanel>
+			<GridPanel classNames="fcls_detail_cnt,fcls_data_cnt,fcls_align_left" visible="true" verticalAlignment="Top" horizontalAlignment="Left" gridItemLocation="0,1,1,1" fieldTable="formonly" identifier="cntDetail1">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="" gridMinLength="10rem"/>
+					<GridColumnDefinition gridLengthValue=""/>
+				</GridPanel.gridColumnDefinitions>
+				<ComboBox dataType="Char,,,," preferredSize="2qch,1qch" toolTip=" Select the status of promotions to report on" gridItemLocation="1,0,1,1" fieldTable="formonly" comment=" Select the status of promotions to report on" identifier="promotion_status" editable="true" classNames="fcls_data_widget,fcls_align_left,fcls_length_20qch">
+					<ComboBoxItem text="Current" identifier="promotion_status_1">
+						<ComboBoxItem.value>
+							<IntegerLiteral integerValue="1"/>
+						</ComboBoxItem.value>
+					</ComboBoxItem>
+					<ComboBoxItem text="Expired" identifier="promotion_status_2">
+						<ComboBoxItem.value>
+							<IntegerLiteral integerValue="2"/>
+						</ComboBoxItem.value>
+					</ComboBoxItem>
+					<ComboBoxItem text="Future" identifier="promotion_status_3">
+						<ComboBoxItem.value>
+							<IntegerLiteral integerValue="3"/>
+						</ComboBoxItem.value>
+					</ComboBoxItem>
+					<ComboBoxItem text="All" identifier="promotion_status_4">
+						<ComboBoxItem.value>
+							<IntegerLiteral integerValue="4"/>
+						</ComboBoxItem.value>
+					</ComboBoxItem>
+					<ComboBoxItem text="Current &amp; Expired" identifier="promotion_status_5">
+						<ComboBoxItem.value>
+							<IntegerLiteral integerValue="5"/>
+						</ComboBoxItem.value>
+					</ComboBoxItem>
+					<ComboBoxItem text="Current &amp; Future" identifier="promotion_status_6">
+						<ComboBoxItem.value>
+							<IntegerLiteral integerValue="6"/>
+						</ComboBoxItem.value>
+					</ComboBoxItem>
+					<ComboBoxItem text="Expired &amp; Future" identifier="promotion_status_7">
+						<ComboBoxItem.value>
+							<IntegerLiteral integerValue="7"/>
+						</ComboBoxItem.value>
+					</ComboBoxItem>
+				</ComboBox>
+				<Label isDynamic="true" text="Promotion Status" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,0,1,1" fieldTable="" identifier="lb51"/>
+			</GridPanel>
+			<GridPanel classNames="fcls_detail_cnt,fcls_data_cnt,fcls_align_left" visible="true" verticalAlignment="Top" gridItemLocation="0,3,1,1" fieldTable="formonly" identifier="cntDetail2">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="" gridMinLength="10rem"/>
+					<GridColumnDefinition gridLengthValue=""/>
+					<GridColumnDefinition gridLengthValue="" gridMinLength="10rem"/>
+					<GridColumnDefinition gridLengthValue=""/>
+				</GridPanel.gridColumnDefinitions>
+				<Label isDynamic="true" text="Customer Code" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="lb42"/>
+				<ComboBox toCase="Up" dataType="Char,,,,8" classNames="fcls_data_widget,fcls_align_left,fcls_length_20qch" preferredSize="10qch,1qch" toolTip=" The customer assigned the promotion" gridItemLocation="1,0,1,1" fieldTable="customer" comment=" The customer assigned the promotion" identifier="cust_code"/>
+				<TextField dataType="Char,,,,30" classNames="fcls_data_widget,fcls_align_left,fcls_length_30qch" preferredSize="31qch,1qch" toolTip=" The name of the customer" gridItemLocation="1,1,2,1" fieldTable="customer" comment=" The name of the customer" identifier="name_text"/>
+				<ComboBox toCase="Up" dataType="Char,,,,8" classNames="fcls_data_widget,fcls_align_left,fcls_length_20qch" preferredSize="9qch,1qch" toolTip=" The salesperson assigned to the customer " gridItemLocation="1,2,1,1" fieldTable="customer" comment=" The salesperson assigned to the customer " identifier="sale_code"/>
+				<ComboBox toCase="Up" dataType="Char,,,,5" classNames="fcls_data_widget,fcls_align_left,fcls_length_20qch" preferredSize="6qch,1qch" toolTip=" The territory assigned to the customer " gridItemLocation="1,3,1,1" fieldTable="customer" comment=" The territory assigned to the customer " identifier="territory_code"/>
+				<Label isDynamic="true" text="Promotion Code" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,4,1,1" fieldTable="" identifier="lb63"/>
+				<TextField toCase="Up" dataType="Char,,,,6" classNames="fcls_data_widget,fcls_align_left,fcls_length_20qch" preferredSize="7qch,1qch" toolTip=" Promotion code for this customer promotion" gridItemLocation="1,4,1,1" fieldTable="pricing" comment=" Promotion code for this customer promotion" identifier="offer_code"/>
+				<Label isDynamic="true" text="Price Type" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,5,1,1" fieldTable="" identifier="lb62"/>
+				<ComboBox dataType="SmallInt,,,," classNames="fcls_data_widget,fcls_align_left,fcls_length_20qch" preferredSize="2qch,1qch" toolTip=" Apply offer to: 1,3,5 = Selected Customers, 2,4,6 = All Customers" gridItemLocation="1,5,1,1" fieldTable="pricing" comment=" Apply offer to: 1,3,5 = Selected Customers, 2,4,6 = All Customers" identifier="type_ind"/>
+				<Label isDynamic="true" text="Customer Name" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,1,1,1" fieldTable="formonly" identifier="lb36"/>
+				<Label isDynamic="true" text="Salesperson" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,2,1,1" fieldTable="formonly" identifier="lb37"/>
+				<Label isDynamic="true" text="Territory" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,3,1,1" fieldTable="formonly" identifier="lb38"/>
+				<Label isDynamic="true" text="Start Date" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,6,1,1" fieldTable="" identifier="lb57"/>
+				<Calendar dataType="Date,,,," classNames="fcls_data_widget,fcls_align_left,fcls_length_20qch" preferredSize="11qch,1qch" toolTip=" The start date for this customer promotion" gridItemLocation="1,6,1,1" fieldTable="pricing" comment=" The start date for this customer promotion" identifier="start_date"/>
+				<Label isDynamic="true" text="End Date" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,7,1,1" fieldTable="" identifier="lb85"/>
+				<Calendar dataType="Date,,,," classNames="fcls_data_widget,fcls_align_left,fcls_length_20qch" preferredSize="11qch,1qch" toolTip=" The end date for this customer promotion" gridItemLocation="1,7,1,1" fieldTable="pricing" comment=" The end date for this customer promotion" identifier="end_date"/>
+				<Label isDynamic="true" text="Warehouse" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="2,7,1,1" fieldTable="" identifier="lb61"/>
+				<ComboBox toCase="Up" dataType="Char,,,,3" classNames="fcls_data_widget,fcls_align_left,fcls_length_20qch" preferredSize="4qch,1qch" toolTip=" The warehouse to which the sales promotion will apply" gridItemLocation="3,7,1,1" fieldTable="pricing" comment=" The warehouse to which the sales promotion will apply" identifier="ware_code"/>
+				<Label isDynamic="true" text="Main Group" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,8,1,1" fieldTable="" identifier="lb90"/>
+				<ComboBox toCase="Up" dataType="Char,,,,3" classNames="fcls_data_widget,fcls_align_left,fcls_length_20qch" preferredSize="4qch,1qch" toolTip=" The code for the main product group" gridItemLocation="1,8,1,1" fieldTable="pricing" comment=" The code for the main product group" identifier="maingrp_code"/>
+				<Label isDynamic="true" text="Discount Price" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="2,8,1,1" fieldTable="" identifier="lb58"/>
+				<TextField dataType="Decimal,,,4,16" classNames="fcls_data_widget,fcls_align_left,fcls_length_20qch" preferredSize="19qch,1qch" toolTip=" The special price of this product for this promotion" gridItemLocation="3,8,1,1" fieldTable="pricing" comment=" The special price of this product for this promotion" identifier="disc_price_amt"/>
+				<Label isDynamic="true" text="Product Group" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,9,1,1" fieldTable="" identifier="lb64"/>
+				<ComboBox toCase="Up" dataType="Char,,,,3" classNames="fcls_data_widget,fcls_align_left,fcls_length_20qch" preferredSize="4qch,1qch" toolTip=" The code for the product group" gridItemLocation="1,9,1,1" fieldTable="pricing" comment=" The code for the product group" identifier="prodgrp_code"/>
+				<Label isDynamic="true" text="Unit of Measure" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="2,9,1,1" fieldTable="" identifier="lb86"/>
+				<ComboBox toCase="Up" dataType="Char,,,,4" classNames="fcls_data_widget,fcls_align_left,fcls_length_20qch" preferredSize="5qch,1qch" toolTip=" The price unit of measure for this customer promotion" gridItemLocation="3,9,1,1" fieldTable="pricing" comment=" The price unit of measure for this customer promotion" identifier="uom_code"/>
+				<Label isDynamic="true" text="Product Code" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,10,1,1" fieldTable="" identifier="lb89"/>
+				<ComboBox toCase="Up" dataType="Char,,,,15" classNames="fcls_data_widget,fcls_align_left,fcls_length_20qch" preferredSize="16qch,1qch" toolTip=" The code for the product" gridItemLocation="1,10,1,1" fieldTable="pricing" comment=" The code for the product" identifier="part_code"/>
+				<Label isDynamic="true" text="Discount Percent" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="2,10,1,1" fieldTable="" identifier="lb87"/>
+				<TextField dataType="Decimal,,,3,6" classNames="fcls_data_widget,fcls_align_left,fcls_length_20qch" preferredSize="9qch,1qch" toolTip=" The discount percentage that applies for this promotion" gridItemLocation="3,10,1,1" fieldTable="pricing" comment=" The discount percentage that applies for this promotion" identifier="disc_per"/>
+				<Label isDynamic="true" text="Class Code" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,11,1,1" fieldTable="" identifier="lb88"/>
+				<ComboBox toCase="Up" dataType="Char,,,,8" classNames="fcls_data_widget,fcls_align_left,fcls_length_20qch" preferredSize="9qch,1qch" toolTip=" The class code for the product" gridItemLocation="1,11,1,1" fieldTable="pricing" comment=" The class code for the product" identifier="class_code"/>
+				<Label isDynamic="true" text="List Level Code" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="2,11,1,1" fieldTable="" identifier="lb59"/>
+				<ComboBox toCase="Up" dataType="Char,,,,1" classNames="fcls_data_widget,fcls_align_left,fcls_length_20qch" preferredSize="2qch,1qch" toolTip=" List Price Level (L)ist or 1 to 9 level" gridItemLocation="3,11,1,1" fieldTable="pricing" comment=" List Price Level (L)ist or 1 to 9 level" identifier="list_level_ind"/>
+			</GridPanel>
+			<GridPanel classNames="fcls_statusbar_cnt" visible="true" verticalAlignment="Bottom" gridItemLocation="0,4,1,1" fieldTable="formonly" identifier="cntStatusBar">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="100%"/>
+				</GridPanel.gridColumnDefinitions>
+				<Label isDynamic="true" text="" classNames="fcls_sblabel" visible="true" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="lbInfo1"/>
+				<Label isDynamic="true" text="" classNames="fcls_sblabel" visible="true" gridItemLocation="0,1,1,1" fieldTable="formonly" identifier="lbInfo2"/>
+			</GridPanel>
+		</GridPanel>
+	</form.rootContainer>
+	<form.screenRecords>
+		<ScreenRecord identifier="customer" fields="cust_code,name_text,sale_code,territory_code"/>
+		<ScreenRecord identifier="formonly" fields="promotion_status"/>
+		<ScreenRecord identifier="pricing" fields="offer_code,type_ind,start_date,end_date,maingrp_code,prodgrp_code,part_code,class_code,ware_code,disc_price_amt,uom_code,disc_per,list_level_ind"/>
+	</form.screenRecords>
+</form>
+

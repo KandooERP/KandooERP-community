@@ -1,0 +1,651 @@
+#######################################################################
+# ${FrmDisplayRecordFct}_parent_${ModuleName}_${MainFormName} : displays the form record after reading and displays lookup records if any
+# inbound: Form record.*
+FUNCTION ${FrmDisplayRecordFct}_parent_${ModuleName}_${MainFormName}(${InboundMstInpFormRec})
+	DEFINE ${InboundMstInpFormRec} ${TypeDataPrefix}frm_${RecordPrefix}${FormShortName} 
+/#		<Script:define_form_fields($SRCHANDLE,$MainFormName,${ParentTable},"parent","parent","false","all","","\t\t")  :Script>
+/#	END RECORD
+
+	<Script: if ( $ParentLookupTables > 0 ) { 
+		$IndentLevel=1;
+		print "DEFINE lookup_status INTEGER";
+		define_lookup_fields ($MainFormName,"parent","fromtype",$Tabul,$WriteMode,$isRecord) ;
+	}:Script>
+
+	DISPLAY BY NAME <Script:print_form_fields ($SRCHANDLE,$MainFormName,$ParentTable,"parent",".*","false|true",".*",${InboundMstInpFormRec},"\t\t\t","","","reset"):Script>
+	
+	<Script: if ( $ParentLookupTables > 0 ) {
+	bld_lookup_calls ($FormName,"parent",$ParentTable,${InboundMstInpFormRec},"display");
+	}:Script>
+
+END FUNCTION		# ${FrmDisplayRecordFct}_parent_${ModuleName}_${MainFormName}
+
+#######################################################################
+# ${FrmInputRecordFct}_parent_${ModuleName}_${MainFormName} : Edit a ${ParentTable} RECORD
+# inbound: p_mode : determines whether Add or Edit record (ADD/EDIT)
+#          p_pky: table primary key
+#          ${InboundMstInpFormRec} : contents of the form record
+
+FUNCTION ${FrmInputRecordFct}_parent_${ModuleName}(p_mode,p_pky,${InboundMstInpFormRec})
+	DEFINE action SMALLINT  
+	DEFINE fky_exists BOOLEAN
+	DEFINE sql_stmt_status,dummy SMALLINT
+	DEFINE p_mode NCHAR(5)
+	DEFINE p_pky ${TypeDataPrefix}prykey_${ParentTable}									#Primary key record 
+	DEFINE ${InboundMstInpFormRec} ${TypeDataPrefix}frm_${RecordPrefix}${FormShortName} 	# Form image record
+	DEFINE ${MstSavFormRec} ${TypeDataPrefix}frm_${RecordPrefix}${FormShortName} 	# Form image record to save the data
+	DEFINE ${LocalMstTableRec} ${TypeDataPrefix}tbl_${RecordPrefix}${ParentTable} 		# Table image record
+	<Script: if ( $ParentLookupTables > 0 ) { 
+		$IndentLevel=1;
+		print "DEFINE lookup_status INTEGER";
+		define_lookup_fields ($MainFormName,"parent","fromtype",$Tabul,$WriteMode,$isRecord) ;
+	}:Script>
+	DEFINE rows_count SMALLINT
+
+	## check if record can be accessed
+	WHILE true
+		LET int_flag = false
+		IF p_mode = MODE_CLASSIC_EDIT THEN
+			# Save Screen Record values before altering
+			LET ${MstSavFormRec}.* = ${InboundMstInpFormRec}.* 
+			BEGIN WORK
+			EXECUTE IMMEDIATE "SET ISOLATION TO COMMITTED READ RETAIN UPDATE LOCKS"
+			WHENEVER SQLERROR CONTINUE
+			CALL crs_upd_${ParentTable}.Open(p_pky.*)
+			CALL crs_upd_${ParentTable}.FetchNext(dummy)
+			IF sqlca.sqlcode = -244 THEN
+				ERROR "THIS ROW IS BEING MODIFIED"
+				ROLLBACK WORK
+				EXIT WHILE
+			END IF
+		END IF
+
+		INPUT BY NAME <Script: print_form_fields ($SRCHANDLE,$MainFormName,$ParentTable,"parent",".*","false",".*",${InboundMstInpFormRec},"\t\t\t","","","reset"):Script>
+		WITHOUT DEFAULTS
+			BEFORE INPUT
+				IF p_mode = MODE_CLASSIC_EDIT THEN 	# IF we edit the record, we do not modify the primary key fields
+					<Script: set_fields_active($SRCHANDLE,$MainFormName,$ParentTable,"parent",".*","pkey","FALSE"):Script>
+				ELSE
+					<Script: set_fields_active($SRCHANDLE,$MainFormName,$ParentTable,"parent",".*","pkey","TRUE"):Script>
+				END IF
+
+			<Script: if ( $ParentLookupTables > 0 ) {
+				print_input_events($SRCHANDLE,$MainFormName,${ParentTable},"parent","pkey|fkey", "${InboundMstInpFormRec}" ,"       ",${GlobalReferenceRecord} )
+			}:Script>
+
+			<Script: if ($DoPickListWindows eq 'true' && $ParentLookupTables > 0 ) { 
+				bld_picklist_calls($ParentTable) ;
+			}:Script>
+						
+		END INPUT
+
+		IF int_flag = TRUE THEN
+			LET int_flag=false
+			# Restore previous value
+			LET ${InboundMstInpFormRec}.* = ${MstSavFormRec}.*
+			CALL ${FrmDisplayRecordFct}_parent_${ModuleName}_${MainFormName}(${InboundMstInpFormRec}.*)			
+			EXECUTE IMMEDIATE "SET ISOLATION TO COMMITTED READ"
+			ROLLBACK WORK
+			MESSAGE "$CancelCom ${CancelKey}"
+			EXIT WHILE
+		END IF 
+
+		CALL confirm_operation(4,10,"${EditOption}") RETURNING action
+
+		CASE 
+			WHEN action = 0
+				# Redo, leave values as modified
+				CONTINUE WHILE
+			WHEN action = 1 
+				# Resign, restore original values
+				LET ${InboundMstInpFormRec}.* = ${MstSavFormRec}.*
+				DISPLAY ${InboundMstInpFormRec}.*  TO ${ParentTable}.*
+				EXECUTE IMMEDIATE "SET ISOLATION TO COMMITTED READ"
+				ROLLBACK WORK
+				EXIT WHILE   # Cancel operation
+
+			WHEN action = 2   
+				CASE p_mode
+					WHEN MODE_CLASSIC_EDIT
+						# confirm update
+						CALL ${SetTableRecordFct}_parent_${MainFormName}_${ParentTable}("U",${InboundMstInpFormRec}.*)
+						RETURNING ${LocalMstTableRec}.*
+						
+						# Perform the prepared update statement
+						LET sql_stmt_status = ${SqlUpdateFct}_parent_${ModuleName}(p_pky.*,${LocalMstTableRec}.*) 
+						CASE 
+							WHEN sql_stmt_status = 0
+								MESSAGE "${EditOption} ${ParentTable} ${Successful}"
+								EXECUTE IMMEDIATE "SET ISOLATION TO COMMITTED READ"
+								COMMIT WORK
+
+							WHEN sql_stmt_status < 0
+								CALL display_error("${EditOption} ${ParentTable}:${Failed} ")
+								EXECUTE IMMEDIATE "SET ISOLATION TO COMMITTED READ"
+								ROLLBACK WORK
+						END CASE
+					
+					WHEN MODE_CLASSIC_ADD
+						BEGIN WORK
+						CALL ${SetTableRecordFct}_parent_${MainFormName}_${ParentTable}('I', ${InboundMstInpFormRec} .*)
+						RETURNING ${LocalMstTableRec}.*
+						CALL ${SqlInsertFct}_parent_${ModuleName}(${LocalMstTableRec}.*) 
+						returning sql_stmt_status,
+						<Script:print_table_columns($SRCHANDLE,${ParentTable},"","","","pkey","",${LocalMstTableRec},"flat","",""); :Script>
+
+						CASE 
+							WHEN sql_stmt_status = 0
+								MESSAGE "${AddOption} ${ParentTable} ${Successful}"
+								COMMIT WORK
+
+							WHEN sql_stmt_status < 0
+								CALL display_error("${AddOption} ${ParentTable}:${Failed} ")
+								ROLLBACK WORK
+						END CASE				
+				END CASE
+
+			EXIT WHILE
+		END CASE
+	END WHILE
+	RETURN sql_stmt_status
+END FUNCTION		## ${FrmInputRecordFct}_parent_${ModuleName}(p_pky)
+
+####################################################################
+## ${FrmAddRecordFct}_${ModuleName}_${MainFormName}: add a new ${ParentTable} row
+FUNCTION ${FrmAddRecordFct}_${ModuleName}()
+	DEFINE sql_stmt_status SMALLINT
+	DEFINE rows_count SMALLINT
+	DEFINE l_nbrows_${ParentTable} ,action SMALLINT
+
+	DEFINE ${LocalMstInpFormRec} ${TypeDataPrefix}frm_${RecordPrefix}${FormShortName} 	# Form image record
+	DEFINE ${LocalMstTableRec} ${TypeDataPrefix}tbl_${RecordPrefix}${ParentTable} 		# Table image record
+	<Script: if ( $ParentLookupTables > 0 ) { 
+		$IndentLevel=1;
+		print "DEFINE lookup_status INTEGER";
+		define_lookup_fields ($MainFormName,"parent","fromtype",$Tabul,$WriteMode,$isRecord) ;
+	}:Script>
+
+	CLEAR FORM
+	INITIALIZE ${LocalMstInpFormRec}.* TO NULL
+
+	WHILE true
+		LET int_flag = false
+		INPUT BY NAME <Script: print_form_fields ($SRCHANDLE,$MainFormName,$ParentTable,"parent",".*","false",".*", "${LocalMstInpFormRec}" ,"\t\t\t","","","reset"):Script>
+		WITHOUT DEFAULTS
+		<Script: 
+		print_input_events($SRCHANDLE,$MainFormName,${ParentTable},"parent","pkey|fkey", "${LocalMstInpFormRec}" ,"       ",${GlobalReferenceRecord} )
+		:Script>
+
+		<Script: if ($DoPickListWindows eq 'true' && $ParentLookupTables > 0 ) { 
+			bld_picklist_calls($ParentTable) ;
+		}:Script>
+		END INPUT
+		IF int_flag = TRUE THEN
+			# Resign from input
+			LET int_flag=false
+			INITIALIZE ${LocalMstInpFormRec}.* TO NULL
+			CLEAR FORM
+			MESSAGE "${CancelCom} ${CancelKey}"
+			EXIT WHILE
+		END IF 
+
+		CALL confirm_operation(3,10,"${AddOption}") RETURNING action
+		CASE action
+		WHEN 0            # I want to edit the input, remains displayed 'as is'
+			CONTINUE WHILE   # leave display as is
+			
+		WHEN 2            # transaction is committed
+			BEGIN WORK
+			CALL ${SetTableRecordFct}_parent_${MainFormName}_${ParentTable}('I', ${LocalMstInpFormRec} .*)
+			RETURNING ${LocalMstTableRec}.*
+			CALL ${SqlInsertFct}_parent_${ModuleName}(${LocalMstTableRec}.*) 
+			returning sql_stmt_status,
+			<Script:print_table_columns($SRCHANDLE,${ParentTable},"","","","pkey","",${LocalMstTableRec},"flat","",""); :Script>
+
+			CASE 
+			WHEN sql_stmt_status = 0
+				MESSAGE "${AddOption} ${ParentTable} ${Successful}"
+				COMMIT WORK
+
+			WHEN sql_stmt_status < 0
+				CALL display_error("${AddOption} ${ParentTable}:${Failed} ")
+				ROLLBACK WORK
+
+			END CASE
+			EXIT WHILE
+
+		WHEN 0
+			ROLLBACK WORK
+			EXIT WHILE
+		END CASE
+	END WHILE
+	# ${LocalMstTableRec}
+	RETURN sql_stmt_status,<Script:print_table_columns($SRCHANDLE,${ParentTable},"","","","pkey","",${LocalMstTableRec},"flat","",""); :Script>
+END FUNCTION		## ${FrmAddRecordFct}_${ModuleName}_${MainFormName}
+
+
+#######################################################################
+# ${FrmEditRecordFct}_${ModuleName}_${MainFormName} : Edit a ${ParentTable} RECORD
+# inbound: table primary key
+FUNCTION ${FrmEditRecordFct}_${ModuleName}(p_prykey,${InboundMstInpFormRec})
+	DEFINE action SMALLINT  
+	DEFINE sql_stmt_status,dummy INTEGER
+	DEFINE nbr_updated_rows INTEGER
+
+	DEFINE ${InboundMstInpFormRec} ${TypeDataPrefix}frm_${RecordPrefix}${FormShortName} 	# Form image record
+	DEFINE ${MstSavFormRec} ${TypeDataPrefix}frm_${RecordPrefix}${FormShortName} 	# Form image record to save the data
+	DEFINE ${LocalMstTableRec} ${TypeDataPrefix}tbl_${RecordPrefix}${ParentTable} 		# Table image record
+	DEFINE p_prykey ${TypeDataPrefix}prykey_${ParentTable}									#Primary key record 
+	<Script: if ( $ParentLookupTables > 0 ) { 
+		$IndentLevel=1;
+		print "DEFINE lookup_status INTEGER";
+		define_lookup_fields ($MainFormName,"parent","fromtype",$Tabul,$WriteMode,$isRecord) ;
+	}:Script>
+
+	DEFINE rows_count SMALLINT
+
+	## check if record can be accessed
+	WHILE true
+		LET int_flag = false
+		# Save Screen Record values before altering
+		LET ${MstSavFormRec}.* = ${InboundMstInpFormRec}.* 
+		BEGIN WORK
+		EXECUTE IMMEDIATE "SET ISOLATION TO COMMITTED READ RETAIN UPDATE LOCKS"
+		WHENEVER SQLERROR CONTINUE
+		CALL crs_upd_${ParentTable}.Open(p_prykey.*)
+		CALL crs_upd_${ParentTable}.FetchNext(dummy)
+		IF sqlca.sqlcode = -244 THEN
+			ERROR "THIS ROW IS BEING MODIFIED"
+			ROLLBACK WORK
+			EXIT WHILE
+		END IF
+
+		INPUT BY NAME <Script: print_form_fields ($SRCHANDLE,$MainFormName,$ParentTable,"parent",".*","false","attr","${InboundMstInpFormRec}","         ","","","reset")  :Script>
+		WITHOUT DEFAULTS
+		<Script: if ( $ParentLookupTables > 0 ) {
+			print_input_events($SRCHANDLE,$MainFormName,${ParentTable},"parent","fkey","${InboundMstInpFormRec}","       ",${GlobalReferenceRecord} );
+		}:Script>
+
+		<Script: if ($DoPickListWindows eq 'true' && $ParentLookupTables > 0 ) { 
+			bld_picklist_calls($ParentTable) ;
+		}:Script>
+					
+		END INPUT
+		IF int_flag = TRUE THEN
+			LET int_flag=false
+			# Restore previous value
+			LET ${InboundMstInpFormRec}.* = ${MstSavFormRec}.*
+			CALL ${FrmDisplayRecordFct}_parent_${ModuleName}_${MainFormName}(${InboundMstInpFormRec}.*)			
+			EXECUTE IMMEDIATE "SET ISOLATION TO COMMITTED READ"
+			ROLLBACK WORK
+			MESSAGE "$CancelCom ${CancelKey}"
+			EXIT WHILE
+		END IF 
+
+		CALL confirm_operation(4,10,"${EditOption}") RETURNING action
+
+		CASE 
+		WHEN action = 0
+			# Redo, leave values as modified
+			CONTINUE WHILE
+		WHEN action = 1 
+			# Resign, restore original values
+			LET ${InboundMstInpFormRec}.* = ${MstSavFormRec}.*
+			DISPLAY ${InboundMstInpFormRec}.*  TO ${ParentTable}.*
+			EXECUTE IMMEDIATE "SET ISOLATION TO COMMITTED READ"
+			ROLLBACK WORK
+			EXIT WHILE   # Cancel operation
+
+		WHEN action = 2   
+			# confirm update
+			CALL ${SetTableRecordFct}_parent_${MainFormName}_${ParentTable}("U",${InboundMstInpFormRec}.*)
+			RETURNING ${LocalMstTableRec}.*
+			
+			# Perform the prepared update statement
+			CALL ${SqlUpdateFct}_parent_${ModuleName}(p_prykey.*,${LocalMstTableRec}.*) RETURNING sql_stmt_status,nbr_updated_rows
+			CASE 
+			WHEN sql_stmt_status = 0
+				MESSAGE "${EditOption} ${ParentTable} ${Successful}"
+				EXECUTE IMMEDIATE "SET ISOLATION TO COMMITTED READ"
+				COMMIT WORK
+
+			WHEN sql_stmt_status < 0
+				CALL display_error("${EditOption} ${ParentTable}:${Failed} ")
+				EXECUTE IMMEDIATE "SET ISOLATION TO COMMITTED READ"
+				ROLLBACK WORK
+
+			END CASE
+			EXIT WHILE
+		END CASE
+	END WHILE
+	RETURN sql_stmt_status
+END FUNCTION		## ${FrmEditRecordFct}_${ModuleName}(p_prykey)
+
+
+#######################################################################
+# DELETE A ${ParentTable} row
+# inbound: table primary key
+FUNCTION ${FrmSuppressRecordFct}_parent_${ModuleName}(p_prykey)
+	DEFINE action SMALLINT
+	DEFINE dummy SMALLINT
+	DEFINE sql_stmt_status INTEGER
+	DEFINE nbr_deleted_rows INTEGER
+	DEFINE p_prykey 	${TypeDataPrefix}prykey_${ParentTable}					#Primary key record  
+
+	WHILE TRUE
+		CALL confirm_operation(5,10,"${SuppressOption}") RETURNING action
+		BEGIN WORK
+		EXECUTE IMMEDIATE "SET ISOLATION TO COMMITTED READ RETAIN UPDATE LOCKS"
+		WHENEVER SQLERROR CONTINUE
+		CALL crs_upd_${ParentTable}.Open(p_prykey.*)
+		CALL crs_upd_${ParentTable}.FetchNext(dummy)
+		IF sqlca.sqlcode = -244 THEN
+			ERROR "THIS ROW IS BEING MODIFIED"
+			ROLLBACK WORK
+			EXIT WHILE
+		END IF
+
+		CASE 
+		WHEN action = 0 OR action = 1 
+			# can the delete operation
+			EXIT WHILE  
+		WHEN action = 2
+			# Validate the delete operation
+			CALL ${SqlDeleteFct}_parent_${ModuleName}(p_prykey.*) RETURNING sql_stmt_status,nbr_deleted_rows
+			CASE 
+				WHEN sql_stmt_status = 0
+					MESSAGE "${SuppressOption} ${ParentTable} ${Successful} "
+					COMMIT WORK
+				WHEN sql_stmt_status < 0
+					CALL display_error("${SuppressOption} ${ParentTable}:${Failed} ")
+					ROLLBACK WORK
+			END CASE
+			EXIT WHILE
+		END CASE
+	END WHILE
+	RETURN sql_stmt_status
+END FUNCTION		## ${FrmSuppressRecordFct}_parent_${ModuleName}(p_prykey)
+
+#########################################################################
+#  Build, prepare, declare and initialize main queries and cursors
+FUNCTION ${SqlPrepareQueriesFct}_parent_${ModuleName} ()
+	DEFINE sql_stmt_text STRING
+
+	# Declare cursor for full parent table row contents, access by primary key
+	LET sql_stmt_text=
+	"SELECT <Script:print_table_columns($SRCHANDLE,${ParentTable},"parent+","","","all","","","flat","",""):Script>",
+	" FROM ${ParentTable} ",
+	"WHERE <Script: bld_where_clause($SRCHANDLE,${ParentTable},${KeyMode},"?","","    ") ;:Script>"
+	CALL crs_row_${ParentTable}.Declare(sql_stmt_text)
+	
+	# Declare cursor for row test / check if locked
+	let sql_stmt_text= "SELECT <Script:print_table_columns($SRCHANDLE,${ParentTable},"parent","","",${KeyMode},"","","flat","",""); :Script>",
+	" FROM ${ParentTable} ",
+	" WHERE <Script: bld_where_clause($SRCHANDLE,${ParentTable},${KeyMode},"?","","    ") ;:Script>"
+	CALL crs_pky_${ParentTable}.Declare(sql_stmt_text)
+	
+	# Declare cursor for SELECT FOR UPDATE
+	let sql_stmt_text= "SELECT <Script:print_table_columns($SRCHANDLE,${ParentTable},"parent","","",${KeyMode},"","","flat","",""); :Script>",
+	" FROM ${ParentTable} ",
+	" WHERE <Script: bld_where_clause($SRCHANDLE,${ParentTable},${KeyMode},"?","","    ") ;:Script>",
+	" FOR UPDATE"
+	CALL crs_upd_${ParentTable}.Declare(sql_stmt_text,1,0)
+
+	# PREPARE INSERT statement
+	LET sql_stmt_text =
+	"INSERT INTO ${ParentTable} (<Script:print_table_columns($SRCHANDLE,${ParentTable},"parent+","","exclnoentry","all","","","flat","",""):Script>)",
+	" VALUES ( <Script:print_table_columns($SRCHANDLE,${ParentTable},"parent+","","","all","placeholders","","flat","",1); :Script>)" 
+	CALL pr_ins_${ParentTable}.Prepare(sql_stmt_text)
+
+	# PREPARE UPDATE statement
+	let sql_stmt_text=
+	"UPDATE ${ParentTable} ",
+	"SET ( <Script:print_table_columns($SRCHANDLE,${ParentTable},"parent","","false","attr","","","flat","",""); :Script>)",
+	" = ( <Script:print_table_columns ($SRCHANDLE,${ParentTable},"parent","","false","attr","placeholders","","flat","",""); :Script>)",
+	" WHERE <Script: bld_where_clause($SRCHANDLE,${ParentTable},${KeyMode},"?","","    ") ;:Script>" 
+	CALL pr_upd_${ParentTable}.Prepare(sql_stmt_text)
+
+	# PREPARE DELETE statement
+	let sql_stmt_text= "DELETE FROM ${ParentTable} ",
+	" WHERE <Script: bld_where_clause($SRCHANDLE,${ParentTable},${KeyMode},"?","","    ") ;:Script>" 
+	CALL pr_del_${ParentTable}.Prepare(sql_stmt_text)
+
+END FUNCTION		## ${SqlPrepareQueriesFct}_parent_${ModuleName}
+
+#########################################################
+FUNCTION ${SqlDeclarePkyScrCrsFct}_parent_${ModuleName}(where_clause)
+## Build the query generated by CONSTRUCT BY NAME,
+## Declare and open the cursor
+## inbound param: query predicate
+## outbound parameter: query status
+	DEFINE where_clause STRING
+	DEFINE qbe_statement STRING
+	DEFINE rows_count integer
+	DEFINE l_sql_stmt_status integer
+
+	# define primary_key record
+	DEFINE l_prykey ${TypeDataPrefix}prykey_${ParentTable}					#Primary key record   
+
+	LET qbe_statement = 
+		"SELECT count(*) FROM ${ParentTable}",
+		" WHERE ",where_clause CLIPPED
+
+	CALL crs_cnt_${ParentTable}.Declare(qbe_statement)
+	CALL crs_cnt_${ParentTable}.Open()
+	SET ISOLATION TO DIRTY READ
+	WHENEVER SQLERROR CONTINUE
+	
+	CALL crs_cnt_${ParentTable}.FetchNext(rows_count)
+	WHENEVER SQLERROR CALL ${ErrorMngmtFunction}
+	SET ISOLATION TO COMMITTED READ
+
+	# if FETCH fails, count = 0, the, get back to query
+	IF sqlca.sqlcode OR rows_count = 0 THEN
+		let rows_count =0
+	END IF
+	CALL crs_cnt_${ParentTable}.Free()
+
+	# Build the SCROLL CURSOR
+	LET qbe_statement = "SELECT ${ParentPryKeyColList} ",
+	" FROM ${ParentTable} ",
+	" WHERE  ",where_clause clipped,
+	${GlobalReferenceWhereClause},
+	" ORDER BY ${ParentPryKeyColList}"
+
+	# crs_scrl_pky_${ParentTable} : the first cursor selects all the primary keys (not all the table columns)
+	CALL crs_scrl_pky_${ParentTable}.Declare(qbe_statement,1,1)   # SCROLL CURSOR WITH HOLD
+
+	WHENEVER SQLERROR CONTINUE
+	CALL crs_scrl_pky_${ParentTable}.Open()
+	WHENEVER SQLERROR CALL ${ErrorMngmtFunction}
+
+	RETURN rows_count,sqlca.sqlcode
+END FUNCTION		## ${SqlDeclarePkyScrCrsFct}_parent_${ModuleName}
+
+#######################################################################
+FUNCTION ${SqlNextPrevFct}_parent_${ModuleName}(offset)
+## ${SqlNextPrevFct}_parent_${ModuleName} : FETCH NEXT OR PREVIOUS RECORD
+	DEFINE offset SMALLINT
+	define l_sql_stmt_status,record_found integer
+	DEFINE l_prykey ${TypeDataPrefix}prykey_${ParentTable}					#Primary key record   
+	DEFINE ${MstInpFormRec} ${TypeDataPrefix}frm_${RecordPrefix}${FormShortName}
+
+	WHENEVER SQLERROR CONTINUE
+	CALL crs_scrl_pky_${ParentTable}.FetchRelative(offset,l_prykey.*)
+	WHENEVER SQLERROR CALL ${ErrorMngmtFunction}
+
+	CASE 
+		WHEN sqlca.sqlcode = 100 
+			LET record_found = 0
+		
+		WHEN sqlca.sqlcode < 0 
+			LET record_found = -1
+		OTHERWISE
+			LET l_sql_stmt_status = 1
+			LET record_found = 1
+	END CASE
+	RETURN record_found,l_prykey.*
+END FUNCTION		## ${SqlNextPrevFct}_parent_${ModuleName}
+
+#########################################################################################
+FUNCTION ${SqlFetchFullRowFct}_parent_${ModuleName}(p_prykey_${ParentTable})
+# ${SqlFetchFullRowFct}_parent_${ModuleName} : read a complete row accessing by primary key
+# inbound parameter : primary key
+# outbound parameter: sql_stmt_status and row contents
+	DEFINE sql_stmt_status smallint
+	DEFINE p_prykey_${ParentTable} ${TypeDataPrefix}prykey_${ParentTable}					#Primary key record   
+	DEFINE ${LocalMstTableRec} ${TypeDataPrefix}tbl_${RecordPrefix}${ParentTable} 		# Table image record
+	DEFINE ${MstInpFormRec} ${TypeDataPrefix}frm_${RecordPrefix}${FormShortName}	# Form image record
+
+	<Script: if ( $ParentLookupTables > 0 ) { 
+		$IndentLevel=1;
+		print "DEFINE lookup_status INTEGER" ;
+		define_lookup_fields ($MainFormName,"parent","fromtype",$Tabul,$WriteMode,$isRecord) ;
+	}:Script>
+
+	# read the table, access on primary key
+WHENEVER SQLERROR CONTINUE
+	CALL crs_row_${ParentTable}.Open(p_prykey_${ParentTable}.*)
+	CALL crs_row_${ParentTable}.FetchNext(${LocalMstTableRec}.*)
+
+WHENEVER SQLERROR CALL ${ErrorMngmtFunction}
+	CASE
+		WHEN  sqlca.sqlcode = 100 
+			LET sql_stmt_status = 0
+		WHEN  sqlca.sqlcode < 0 
+				LET sql_stmt_status = -1
+		OTHERWISE
+			LET sql_stmt_status = 1
+			CALL ${SetFormRecordFct}_parent_${ParentTable}_${MainFormName}(${LocalMstTableRec}.*)
+			RETURNING ${MstInpFormRec}.*
+	END CASE
+	RETURN sql_stmt_status,${MstInpFormRec}.*
+END FUNCTION		## ${SqlFetchFullRowFct}_parent_${ModuleName}
+
+########################################################################
+FUNCTION ${SqlInsertFct}_parent_${ModuleName}(p_${MstTableRec})
+## INSERT in table ${ParentTable} 
+	DEFINE l_sql_stmt_status integer
+	DEFINE rows_count SMALLINT
+	DEFINE p_prykey ${TypeDataPrefix}prykey_${ParentTable}					#Primary key record
+	DEFINE p_${MstTableRec} ${TypeDataPrefix}tbl_${RecordPrefix}${ParentTable} 		# Table image record
+
+	WHENEVER SQLERROR CONTINUE
+	CALL pr_ins_${ParentTable}.Execute(<Script:print_table_columns($SRCHANDLE,${ParentTable},"parent+","","","all","",p_${MstTableRec},"","    ",""):Script>)
+	WHENEVER SQLERROR CALL ${ErrorMngmtFunction}
+
+	IF sqlca.sqlcode < 0 THEN   
+		LET l_sql_stmt_status = -1
+	ELSE 
+		LET l_sql_stmt_status = 0
+		<Script:catch_last_serial_value($SRCHANDLE,${ParentTable},p_${MstTableRec},p_prykey):Script>
+		
+	END IF
+	RETURN l_sql_stmt_status,p_prykey.*
+END FUNCTION		## ${SqlInsertFct}_parent_${ModuleName}
+
+########################################################################
+FUNCTION ${SqlUpdateFct}_parent_${ModuleName}(p_prykey,p_${MstTableRec})
+## ${SqlUpdateFct}_parent_${ModuleName} :update ${ParentTable} record
+	DEFINE l_sql_stmt_status integer
+	DEFINE l_updated_rows_number integer
+	DEFINE p_prykey ${TypeDataPrefix}prykey_${ParentTable}					#Primary key record   
+	DEFINE p_${MstTableRec} ${TypeDataPrefix}tbl_${RecordPrefix}${ParentTable} 		# Table image record
+
+	WHENEVER SQLERROR CONTINUE
+	CALL pr_upd_${ParentTable}.Execute(<Script:print_table_columns($SRCHANDLE,${ParentTable},"parent","","false","attr","",p_${MstTableRec},"","    ",$endline,1):Script>,p_prykey.*)
+
+WHENEVER SQLERROR CALL ${ErrorMngmtFunction}
+	LET l_sql_stmt_status = sqlca.sqlcode
+	LET l_updated_rows_number = sqlca.sqlerrd[3]
+	RETURN l_sql_stmt_status,l_updated_rows_number
+END FUNCTION		## ${SqlUpdateFct}_parent_${ModuleName}
+
+##############################################################################################
+FUNCTION ${SqlDeleteFct}_parent_${ModuleName}(p_prykey)
+## ${SqlDeleteFct}_parent_${ModuleName} :delete current row in table ${ParentTable} 
+	DEFINE l_sql_stmt_status smallint
+	DEFINE p_prykey ${TypeDataPrefix}prykey_${ParentTable}					#Primary key record   
+	DEFINE l_deleted_rows_number integer
+	WHENEVER SQLERROR CONTINUE
+	CALL pr_del_${ParentTable}.Execute(p_prykey.*)
+
+WHENEVER SQLERROR CALL ${ErrorMngmtFunction}
+	LET l_sql_stmt_status = sqlca.sqlcode
+	LET l_deleted_rows_number = sqlca.sqlerrd[3]
+	RETURN l_sql_stmt_status,l_deleted_rows_number
+END FUNCTION		## ${SqlDeleteFct}_parent_${ModuleName}
+
+################################################################################
+FUNCTION ${SqlCheckPrimaryKeyFct}_${ParentTable}(p_prykey)  
+##   ${SqlCheckPrimaryKeyFct}_${ParentTable} : Check if primary key exists
+## inbound parameter : record of primary key
+## outbound parameter:  status > 0  if exists, 0 if no record, < 0 if error
+	DEFINE p_prykey ${TypeDataPrefix}prykey_${ParentTable}					#Primary key record   
+	DEFINE pk_status INTEGER
+
+	WHENEVER SQLERROR CONTINUE
+	CALL crs_pky_${ParentTable}.Open(p_prykey.*)
+	CALL crs_pky_${ParentTable}.FetchNext() 
+	WHENEVER SQLERROR CALL ${ErrorMngmtFunction}
+
+	CASE sqlca.sqlcode
+		WHEN 0 
+			let pk_status = 1
+		WHEN 100
+			let pk_status = 0
+		WHEN sqlca.sqlerrd[2] = 104
+			let pk_status = -1		# record locked
+		WHEN sqlca.sqlcode < 0
+			let pk_status = sqlca.sqlcode
+	END CASE
+
+	RETURN pk_status
+END FUNCTION		## ${SqlCheckPrimaryKeyFct}_${ParentTable}
+
+################################################################################################
+FUNCTION ${SetFormRecordFct}_parent_${ParentTable}_${MainFormName}(p_tbl_contents)
+## ${SetFormRecordFct}_parent_${ParentTable}_${MainFormName}_${MainFormName}: assigns table values to form fields values
+	DEFINE l_frm_contents ${TypeDataPrefix}frm_${RecordPrefix}${FormShortName} 		# Form image record
+	DEFINE p_tbl_contents ${TypeDataPrefix}tbl_${RecordPrefix}${ParentTable} 		# Table image record
+
+	INITIALIZE l_frm_contents.* TO NULL
+	<Script:
+	set_form_record ($SRCHANDLE,${ParentTable},${MainFormName},"l_frm_contents","p_tbl_contents") 
+	:Script>
+	RETURN l_frm_contents.*
+END FUNCTION		## ${SetFormRecordFct}${ModuleName}_${MainFormName}
+
+################################################################################################
+FUNCTION ${SetTableRecordFct}_parent_${MainFormName}_${ParentTable}(sql_stmt_type,p_frm_contents)
+## ${SetTableRecordFct}_parent_${MainFormName}_${ParentTable}: assigns form fields value to table values
+	DEFINE sql_stmt_type CHAR(1)					# + => Insert, # => Update
+	DEFINE l_prykey ${TypeDataPrefix}prykey_${ParentTable}					#Primary key record   
+	DEFINE p_frm_contents ${TypeDataPrefix}frm_${RecordPrefix}${FormShortName} 		# Form image record
+	DEFINE l_tbl_contents ${TypeDataPrefix}tbl_${RecordPrefix}${ParentTable} 		# Table image record
+
+	INITIALIZE l_tbl_contents.* TO NULL
+	CASE sql_stmt_type
+		WHEN "I"			# Prepare record for INSERT
+			<Script:set_table_record ($SRCHANDLE,${ParentTable},${MainFormName},"parent","p_frm_contents","l_tbl_contents","I") :Script>
+		WHEN "U"			# Prepare record for UPDATE
+			<Script:set_table_record ($SRCHANDLE,${ParentTable},${MainFormName},"parent","p_frm_contents","l_tbl_contents","U") :Script>
+	END CASE
+
+	RETURN l_tbl_contents.*
+END FUNCTION		## ${SetTableRecordFct}${MainFormName}_${ParentTable}
+
+<Script: if ($ParentLookupTables > 0 ) {
+	if (defined($GenerateLookupFunctions)) {
+		bld_lookup_functions ( ${MainFormName},$ParentTable,"parent" );
+	}
+}:Script>
+
+<Script: if ( $QxWidgetsCount > 0 ) { 
+	bld_populate_widgets_calls_function($SRCHANDLE,$MainFormName,".*","parent") ;
+	bld_populate_widgets_functions($SRCHANDLE,$MainFormName,".*","parent") ;
+}  :Script>
+
+<Script: if ( $ParentLookupTables > 0 && $DoPickListWindows eq "true" ) { 
+	bld_picklist_windows($ModuleName) ;
+} :Script>

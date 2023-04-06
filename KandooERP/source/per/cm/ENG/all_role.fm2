@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form xmlns="http://namespaces.querix.com/2015/fglForms">
+	<form.rootContainer>
+		<CoordPanel preferredSize="73qch,17qch" fieldTable="" identifier="coord1">
+			<Label text="role name" location="0qch,0qch" preferredSize="9qch,1qch" fieldTable="" identifier="label1"/>
+			<Label text="valid from valid to" location="11qch,0qch" preferredSize="19qch,1qch" fieldTable="" identifier="label2"/>
+			<Label text="Street" location="35qch,0qch" preferredSize="6qch,1qch" fieldTable="" identifier="label3"/>
+			<Label text="Suburb" location="47qch,0qch" preferredSize="6qch,1qch" fieldTable="" identifier="label4"/>
+			<Label text="City" location="61qch,0qch" preferredSize="4qch,1qch" fieldTable="" identifier="label5"/>
+			<TextField dataType="Char,,,," location="0qch,2qch" preferredSize="10qch,1qch" fieldTable="formonly" identifier="addr_role_name"/>
+			<TextField dataType="Date,,,," location="10qch,2qch" preferredSize="11qch,1qch" fieldTable="formonly" identifier="valid_from"/>
+			<TextField dataType="Date,,,," location="21qch,2qch" preferredSize="11qch,1qch" fieldTable="formonly" identifier="valid_to"/>
+			<TextField dataType="Char,,,," location="32qch,2qch" preferredSize="13qch,1qch" fieldTable="formonly" identifier="street"/>
+			<TextField dataType="Char,,,," location="45qch,2qch" preferredSize="14qch,1qch" fieldTable="formonly" identifier="suburb"/>
+			<TextField dataType="Char,,,," location="59qch,2qch" preferredSize="13qch,1qch" fieldTable="formonly" identifier="city"/>
+			<ScrollBar orientation="Vertical" location="72qch,2qch" preferredSize="1.5qch,15qch" fieldTable="" identifier="s_display"/>
+			<TextField dataType="Char,,,," location="0qch,3qch" preferredSize="10qch,1qch" fieldTable="formonly" identifier="addr_role_name"/>
+			<TextField dataType="Date,,,," location="10qch,3qch" preferredSize="11qch,1qch" fieldTable="formonly" identifier="valid_from"/>
+			<TextField dataType="Date,,,," location="21qch,3qch" preferredSize="11qch,1qch" fieldTable="formonly" identifier="valid_to"/>
+			<TextField dataType="Char,,,," location="32qch,3qch" preferredSize="13qch,1qch" fieldTable="formonly" identifier="street"/>
+			<TextField dataType="Char,,,," location="45qch,3qch" preferredSize="14qch,1qch" fieldTable="formonly" identifier="suburb"/>
+			<TextField dataType="Char,,,," location="59qch,3qch" preferredSize="13qch,1qch" fieldTable="formonly" identifier="city"/>
+			<TextField dataType="Char,,,," location="0qch,4qch" preferredSize="10qch,1qch" fieldTable="formonly" identifier="addr_role_name"/>
+			<TextField dataType="Date,,,," location="10qch,4qch" preferredSize="11qch,1qch" fieldTable="formonly" identifier="valid_from"/>
+			<TextField dataType="Date,,,," location="21qch,4qch" preferredSize="11qch,1qch" fieldTable="formonly" identifier="valid_to"/>
+			<TextField dataType="Char,,,," location="32qch,4qch" preferredSize="13qch,1qch" fieldTable="formonly" identifier="street"/>
+			<TextField dataType="Char,,,," location="45qch,4qch" preferredSize="14qch,1qch" fieldTable="formonly" identifier="suburb"/>
+			<TextField dataType="Char,,,," location="59qch,4qch" preferredSize="13qch,1qch" fieldTable="formonly" identifier="city"/>
+			<TextField dataType="Char,,,," location="0qch,5qch" preferredSize="10qch,1qch" fieldTable="formonly" identifier="addr_role_name"/>
+			<TextField dataType="Date,,,," location="10qch,5qch" preferredSize="11qch,1qch" fieldTable="formonly" identifier="valid_from"/>
+			<TextField dataType="Date,,,," location="21qch,5qch" preferredSize="11qch,1qch" fieldTable="formonly" identifier="valid_to"/>
+			<TextField dataType="Char,,,," location="32qch,5qch" preferredSize="13qch,1qch" fieldTable="formonly" identifier="street"/>
+			<TextField dataType="Char,,,," location="45qch,5qch" preferredSize="14qch,1qch" fieldTable="formonly" identifier="suburb"/>
+			<TextField dataType="Char,,,," location="59qch,5qch" preferredSize="13qch,1qch" fieldTable="formonly" identifier="city"/>
+			<TextField dataType="Char,,,," location="0qch,6qch" preferredSize="10qch,1qch" fieldTable="formonly" identifier="addr_role_name"/>
+			<TextField dataType="Date,,,," location="10qch,6qch" preferredSize="11qch,1qch" fieldTable="formonly" identifier="valid_from"/>
+			<TextField dataType="Date,,,," location="21qch,6qch" preferredSize="11qch,1qch" fieldTable="formonly" identifier="valid_to"/>
+			<TextField dataType="Char,,,," location="32qch,6qch" preferredSize="13qch,1qch" fieldTable="formonly" identifier="street"/>
+			<TextField dataType="Char,,,," location="45qch,6qch" preferredSize="14qch,1qch" fieldTable="formonly" identifier="suburb"/>
+			<TextField dataType="Char,,,," location="59qch,6qch" preferredSize="13qch,1qch" fieldTable="formonly" identifier="city"/>
+			<TextField dataType="Char,,,," location="0qch,7qch" preferredSize="10qch,1qch" fieldTable="formonly" identifier="addr_role_name"/>
+			<TextField dataType="Date,,,," location="10qch,7qch" preferredSize="11qch,1qch" fieldTable="formonly" identifier="valid_from"/>
+			<TextField dataType="Date,,,," location="21qch,7qch" preferredSize="11qch,1qch" fieldTable="formonly" identifier="valid_to"/>
+			<TextField dataType="Char,,,," location="32qch,7qch" preferredSize="13qch,1qch" fieldTable="formonly" identifier="street"/>
+			<TextField dataType="Char,,,," location="45qch,7qch" preferredSize="14qch,1qch" fieldTable="formonly" identifier="suburb"/>
+			<TextField dataType="Char,,,," location="59qch,7qch" preferredSize="13qch,1qch" fieldTable="formonly" identifier="city"/>
+			<TextField dataType="Char,,,," location="0qch,8qch" preferredSize="10qch,1qch" fieldTable="formonly" identifier="addr_role_name"/>
+			<TextField dataType="Date,,,," location="10qch,8qch" preferredSize="11qch,1qch" fieldTable="formonly" identifier="valid_from"/>
+			<TextField dataType="Date,,,," location="21qch,8qch" preferredSize="11qch,1qch" fieldTable="formonly" identifier="valid_to"/>
+			<TextField dataType="Char,,,," location="32qch,8qch" preferredSize="13qch,1qch" fieldTable="formonly" identifier="street"/>
+			<TextField dataType="Char,,,," location="45qch,8qch" preferredSize="14qch,1qch" fieldTable="formonly" identifier="suburb"/>
+			<TextField dataType="Char,,,," location="59qch,8qch" preferredSize="13qch,1qch" fieldTable="formonly" identifier="city"/>
+			<TextField dataType="Char,,,," location="0qch,9qch" preferredSize="10qch,1qch" fieldTable="formonly" identifier="addr_role_name"/>
+			<TextField dataType="Date,,,," location="10qch,9qch" preferredSize="11qch,1qch" fieldTable="formonly" identifier="valid_from"/>
+			<TextField dataType="Date,,,," location="21qch,9qch" preferredSize="11qch,1qch" fieldTable="formonly" identifier="valid_to"/>
+			<TextField dataType="Char,,,," location="32qch,9qch" preferredSize="13qch,1qch" fieldTable="formonly" identifier="street"/>
+			<TextField dataType="Char,,,," location="45qch,9qch" preferredSize="14qch,1qch" fieldTable="formonly" identifier="suburb"/>
+			<TextField dataType="Char,,,," location="59qch,9qch" preferredSize="13qch,1qch" fieldTable="formonly" identifier="city"/>
+			<TextField dataType="Char,,,," location="0qch,10qch" preferredSize="10qch,1qch" fieldTable="formonly" identifier="addr_role_name"/>
+			<TextField dataType="Date,,,," location="10qch,10qch" preferredSize="11qch,1qch" fieldTable="formonly" identifier="valid_from"/>
+			<TextField dataType="Date,,,," location="21qch,10qch" preferredSize="11qch,1qch" fieldTable="formonly" identifier="valid_to"/>
+			<TextField dataType="Char,,,," location="32qch,10qch" preferredSize="13qch,1qch" fieldTable="formonly" identifier="street"/>
+			<TextField dataType="Char,,,," location="45qch,10qch" preferredSize="14qch,1qch" fieldTable="formonly" identifier="suburb"/>
+			<TextField dataType="Char,,,," location="59qch,10qch" preferredSize="13qch,1qch" fieldTable="formonly" identifier="city"/>
+			<TextField dataType="Char,,,," location="0qch,11qch" preferredSize="10qch,1qch" fieldTable="formonly" identifier="addr_role_name"/>
+			<TextField dataType="Date,,,," location="10qch,11qch" preferredSize="11qch,1qch" fieldTable="formonly" identifier="valid_from"/>
+			<TextField dataType="Date,,,," location="21qch,11qch" preferredSize="11qch,1qch" fieldTable="formonly" identifier="valid_to"/>
+			<TextField dataType="Char,,,," location="32qch,11qch" preferredSize="13qch,1qch" fieldTable="formonly" identifier="street"/>
+			<TextField dataType="Char,,,," location="45qch,11qch" preferredSize="14qch,1qch" fieldTable="formonly" identifier="suburb"/>
+			<TextField dataType="Char,,,," location="59qch,11qch" preferredSize="13qch,1qch" fieldTable="formonly" identifier="city"/>
+			<TextField dataType="Char,,,," location="0qch,12qch" preferredSize="10qch,1qch" fieldTable="formonly" identifier="addr_role_name"/>
+			<TextField dataType="Date,,,," location="10qch,12qch" preferredSize="11qch,1qch" fieldTable="formonly" identifier="valid_from"/>
+			<TextField dataType="Date,,,," location="21qch,12qch" preferredSize="11qch,1qch" fieldTable="formonly" identifier="valid_to"/>
+			<TextField dataType="Char,,,," location="32qch,12qch" preferredSize="13qch,1qch" fieldTable="formonly" identifier="street"/>
+			<TextField dataType="Char,,,," location="45qch,12qch" preferredSize="14qch,1qch" fieldTable="formonly" identifier="suburb"/>
+			<TextField dataType="Char,,,," location="59qch,12qch" preferredSize="13qch,1qch" fieldTable="formonly" identifier="city"/>
+			<TextField dataType="Char,,,," location="0qch,13qch" preferredSize="10qch,1qch" fieldTable="formonly" identifier="addr_role_name"/>
+			<TextField dataType="Date,,,," location="10qch,13qch" preferredSize="11qch,1qch" fieldTable="formonly" identifier="valid_from"/>
+			<TextField dataType="Date,,,," location="21qch,13qch" preferredSize="11qch,1qch" fieldTable="formonly" identifier="valid_to"/>
+			<TextField dataType="Char,,,," location="32qch,13qch" preferredSize="13qch,1qch" fieldTable="formonly" identifier="street"/>
+			<TextField dataType="Char,,,," location="45qch,13qch" preferredSize="14qch,1qch" fieldTable="formonly" identifier="suburb"/>
+			<TextField dataType="Char,,,," location="59qch,13qch" preferredSize="13qch,1qch" fieldTable="formonly" identifier="city"/>
+			<TextField dataType="Char,,,," location="0qch,14qch" preferredSize="10qch,1qch" fieldTable="formonly" identifier="addr_role_name"/>
+			<TextField dataType="Date,,,," location="10qch,14qch" preferredSize="11qch,1qch" fieldTable="formonly" identifier="valid_from"/>
+			<TextField dataType="Date,,,," location="21qch,14qch" preferredSize="11qch,1qch" fieldTable="formonly" identifier="valid_to"/>
+			<TextField dataType="Char,,,," location="32qch,14qch" preferredSize="13qch,1qch" fieldTable="formonly" identifier="street"/>
+			<TextField dataType="Char,,,," location="45qch,14qch" preferredSize="14qch,1qch" fieldTable="formonly" identifier="suburb"/>
+			<TextField dataType="Char,,,," location="59qch,14qch" preferredSize="13qch,1qch" fieldTable="formonly" identifier="city"/>
+			<TextField dataType="Char,,,," location="0qch,15qch" preferredSize="10qch,1qch" fieldTable="formonly" identifier="addr_role_name"/>
+			<TextField dataType="Date,,,," location="10qch,15qch" preferredSize="11qch,1qch" fieldTable="formonly" identifier="valid_from"/>
+			<TextField dataType="Date,,,," location="21qch,15qch" preferredSize="11qch,1qch" fieldTable="formonly" identifier="valid_to"/>
+			<TextField dataType="Char,,,," location="32qch,15qch" preferredSize="13qch,1qch" fieldTable="formonly" identifier="street"/>
+			<TextField dataType="Char,,,," location="45qch,15qch" preferredSize="14qch,1qch" fieldTable="formonly" identifier="suburb"/>
+			<TextField dataType="Char,,,," location="59qch,15qch" preferredSize="13qch,1qch" fieldTable="formonly" identifier="city"/>
+			<TextField dataType="Char,,,," location="0qch,16qch" preferredSize="10qch,1qch" fieldTable="formonly" identifier="addr_role_name"/>
+			<TextField dataType="Date,,,," location="10qch,16qch" preferredSize="11qch,1qch" fieldTable="formonly" identifier="valid_from"/>
+			<TextField dataType="Date,,,," location="21qch,16qch" preferredSize="11qch,1qch" fieldTable="formonly" identifier="valid_to"/>
+			<TextField dataType="Char,,,," location="32qch,16qch" preferredSize="13qch,1qch" fieldTable="formonly" identifier="street"/>
+			<TextField dataType="Char,,,," location="45qch,16qch" preferredSize="14qch,1qch" fieldTable="formonly" identifier="suburb"/>
+			<TextField dataType="Char,,,," location="59qch,16qch" preferredSize="13qch,1qch" fieldTable="formonly" identifier="city"/>
+		</CoordPanel>
+	</form.rootContainer>
+	<form.screenRecords>
+		<ScreenRecord identifier="s_display" fields="addr_role_name,valid_from,valid_to,street,suburb,city" elements="15"/>
+		<ScreenRecord identifier="formonly" fields="addr_role_name,valid_from,valid_to,street,suburb,city"/>
+	</form.screenRecords>
+</form>
+

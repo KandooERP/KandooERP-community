@@ -1,0 +1,89 @@
+{
+###########################################################################
+# This program is free software; you can redistribute it and/or modify it
+# under the terms of the GNU General Public License as published by the
+# Free Software Foundation; either version 2 of the License, or (at your
+# option) any later version.
+#
+# This program is distributed in the hope that it will be useful, but
+# WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+# General Public License for more details.
+#
+# You should have received a copy of the GNU General Public License along
+# with this program; if not, write to the Free Software Foundation, Inc.,
+# 59 Temple Place, Suite 330, Boston, MA 02111-1307 USA
+#
+###########################################################################
+
+	 $Id: M169.per,v 1.2 2003/11/19 22:23:01 afalout Exp $
+}
+
+
+database kandoodb
+
+screen
+{
+                          Shop Order Forward Flush                     M169
+\g----------------------------------------------------------------------------\g
+ Shop Order Number  [f001      ]       Suffix Number          [f002 ]
+ Product            [f003           ] [f004                          ]
+ Quantity Required  [f005        ]     Qty Available for Mfg  [f006        ]
+ Work Centre        [f007      ]      [f008                          ]
+ Date               [f009      ]       Year  [f010]   Period  [a ]
+\g----------------------------------------------------------------------------\g
+ Product         Description            UOM  Qty to Issue W/hs Qty in Stock
+\g----------------------------------------------------------------------------\g
+[f011           |f012                  |f013|f014        ][b  |f015        ]
+[f011           |f012                  |f013|f014        ][b  |f015        ]
+[f011           |f012                  |f013|f014        ][b  |f015        ]
+[f011           |f012                  |f013|f014        ][b  |f015        ]
+[f011           |f012                  |f013|f014        ][b  |f015        ]
+[f011           |f012                  |f013|f014        ][b  |f015        ]
+[f011           |f012                  |f013|f014        ][b  |f015        ]
+[f011           |f012                  |f013|f014        ][b  |f015        ]
+
+}
+
+tables
+shopordhead
+shoporddetl
+product
+prodledg
+prodstatus
+workcentre
+
+attributes
+f001 = shopordhead.shop_order_num, comments = " Unique shop order number (W)";
+f002 = shopordhead.suffix_num,
+comments = " The suffix number of this shop order (W)";
+f003 = shopordhead.part_code;
+f004 = formonly.desc_text type char;
+f005 = shopordhead.order_qty;
+f006 = formonly.avail_qty type float;
+f007 = shoporddetl.work_centre_code, upshift,
+comments = " Code for the work centre to which the components are issued (W)";
+f008 = workcentre.desc_text;
+f009 = prodledg.tran_date, comments = " Date of the forward flush";
+f010 = prodledg.year_num,
+comments = " Fiscal year in which these transactions will be posted";
+a    = prodledg.period_num,
+comments = " Fiscal period in which these transactions will be posted";
+f011 = shoporddetl.part_code, noentry;
+f012 = product.desc_text, noentry;
+f013 = shoporddetl.uom_code, noentry;
+f014 = prodledg.tran_qty,
+comments = " Quantity of this product to issue";
+b    = shoporddetl.issue_ware_code, upshift,
+comments = " Code of the warehouse to issue the product from (W)";
+f015 = prodstatus.onhand_qty, noentry;
+
+instructions
+delimiters "  "
+
+screen record sr_fwdflush[8] (shoporddetl.part_code,
+                              product.desc_text,
+                              uom_code,
+                              tran_qty,
+                              issue_ware_code,
+                              onhand_qty)

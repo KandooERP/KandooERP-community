@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form xmlns="http://namespaces.querix.com/2015/fglForms">
+	<form.rootContainer>
+		<GridPanel classNames="fcls_rootContainer" verticalAlignment="Stretch" horizontalAlignment="Left" fieldTable="" identifier="rootContainer">
+			<GridPanel.gridRowDefinitions>
+				<GridRowDefinition gridLengthValue=""/>
+				<GridRowDefinition gridLengthValue=""/>
+				<GridRowDefinition gridLengthValue=""/>
+				<GridRowDefinition gridLengthValue="100%"/>
+				<GridRowDefinition gridLengthValue=""/>
+			</GridPanel.gridRowDefinitions>
+			<GridPanel.gridColumnDefinitions>
+				<GridColumnDefinition gridLengthValue="100%"/>
+			</GridPanel.gridColumnDefinitions>
+			<GridPanel classNames="fcls_title_cnt" visible="true" verticalAlignment="Top" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="cntTitle">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="100%"/>
+					<GridColumnDefinition gridLengthValue=""/>
+				</GridPanel.gridColumnDefinitions>
+				<Label isDynamic="true" text="Activity Imaging" classNames="fcls_title_lb" visible="true" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="header_text"/>
+				<Label isDynamic="true" text="J158" classNames="fcls_title_lb" visible="true" gridItemLocation="1,0,1,1" fieldTable="" identifier="lbFormName"/>
+			</GridPanel>
+			<GridPanel classNames="fcls_detail_cnt,fcls_data_cnt" visible="true" verticalAlignment="Top" horizontalAlignment="Left" gridItemLocation="0,1,1,1" fieldTable="formonly" identifier="cntDetail1">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="" gridMinLength="10rem"/>
+					<GridColumnDefinition gridLengthValue=""/>
+					<GridColumnDefinition gridLengthValue=""/>
+				</GridPanel.gridColumnDefinitions>
+				<Label isDynamic="true" text="Source Job Code" classNames="fcls_fieldlabel" visible="true" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="lb57"/>
+				<TextField toCase="Up" dataType="Char,,,," preferredSize="13qch,1qch" toolTip=" Enter Job Code of source job to be imaged (W)" comment=" Enter Job Code of source job to be imaged (W)" fieldTable="formonly" identifier="source_job_code" gridItemLocation="1,0,1,1" classNames="fcls_data_widget,fcls_length_10qch"/>
+				<TextField noEntry="true" dataType="Char,,,," preferredSize="31qch,1qch" fieldTable="formonly" identifier="source_title_text" gridItemLocation="2,0,1,1" classNames="fcls_data_widget,fcls_length_30qch"/>
+				<Label isDynamic="true" text="Target Job Code" classNames="fcls_fieldlabel" visible="true" gridItemLocation="0,1,1,1" fieldTable="" identifier="lb73"/>
+				<TextField toCase="Up" noEntry="true" dataType="Char,,,," preferredSize="13qch,1qch" fieldTable="formonly" identifier="tgt_job_code" gridItemLocation="1,1,1,1" classNames="fcls_data_widget,fcls_length_10qch"/>
+				<TextField noEntry="true" dataType="Char,,,," preferredSize="31qch,1qch" fieldTable="formonly" identifier="tgt_title_text" gridItemLocation="2,1,1,1" classNames="fcls_data_widget,fcls_length_30qch"/>
+			</GridPanel>
+			<GroupBox title="Image Method and Percentage" classNames="fcls_detail_gb_cnt" visible="true" verticalAlignment="Stretch" gridItemLocation="0,2,1,1" fieldTable="formonly" identifier="cntDetail2GroupBox" horizontalAlignment="Stretch">
+				<GridPanel classNames="fcls_detail_gb_cnt_sub,fcls_detail_cnt_sub,fcls_data_cnt" visible="true" verticalAlignment="Top" horizontalAlignment="Left" fieldTable="formonly" identifier="cntDetail2Sub">
+					<GridPanel.gridRowDefinitions>
+						<GridRowDefinition gridLengthValue=""/>
+						<GridRowDefinition gridLengthValue=""/>
+						<GridRowDefinition gridLengthValue=""/>
+						<GridRowDefinition gridLengthValue=""/>
+					</GridPanel.gridRowDefinitions>
+					<GridPanel.gridColumnDefinitions>
+						<GridColumnDefinition gridLengthValue="" gridMinLength="10rem"/>
+						<GridColumnDefinition gridLengthValue=""/>
+						<GridColumnDefinition gridLengthValue=""/>
+					</GridPanel.gridColumnDefinitions>
+					<Label isDynamic="true" text="Image Method" classNames="fcls_fieldlabel" visible="true" gridItemLocation="1,0,1,1" fieldTable="formonly" identifier="lb64"/>
+					<Label isDynamic="true" text="Percent Change" classNames="fcls_fieldlabel" visible="true" gridItemLocation="2,0,1,1" fieldTable="" identifier="lb145"/>
+					<Label isDynamic="true" text="Budget Image" classNames="fcls_fieldlabel" visible="true" gridItemLocation="0,1,1,1" fieldTable="formonly" identifier="lb47"/>
+					<ComboBox toCase="Up" dataType="Char,,,," preferredSize="4qch,1qch" toolTip="Image A(ctuals), B(udgets), E(stimates), Z(ero) as New Budgets" comment="Image A(ctuals), B(udgets), E(stimates), Z(ero) as New Budgets" fieldTable="formonly" identifier="bdgt_ind" gridItemLocation="1,1,1,1" classNames="fcls_data_widget,fcls_length_20qch">
+				<ComboBoxItem text="A">
+					<ComboBoxItem.value>
+						<StringLiteral stringValue="A"/>
+					</ComboBoxItem.value>
+				</ComboBoxItem>
+				<ComboBoxItem text="B">
+					<ComboBoxItem.value>
+						<StringLiteral stringValue="B"/>
+					</ComboBoxItem.value>
+				</ComboBoxItem>
+				<ComboBoxItem text="E">
+					<ComboBoxItem.value>
+						<StringLiteral stringValue="E"/>
+					</ComboBoxItem.value>
+				</ComboBoxItem>
+				<ComboBoxItem text="Z">
+					<ComboBoxItem.value>
+						<StringLiteral stringValue="Z"/>
+					</ComboBoxItem.value>
+				</ComboBoxItem>
+			</ComboBox>
+					<TextField dataType="Decimal,,,2,5" preferredSize="6qch,1qch" toolTip="Percentage increase or (-) decrease" comment="Percentage increase or (-) decrease" fieldTable="formonly" identifier="bdgt_per" gridItemLocation="2,1,1,1" classNames="fcls_data_widget,fcls_length_10qch"/>
+					<Label isDynamic="true" text="Estimate Image" classNames="fcls_fieldlabel" visible="true" gridItemLocation="0,2,1,1" fieldTable="formonly" identifier="lb46"/>
+					<ComboBox toCase="Up" dataType="Char,,,," preferredSize="4qch,1qch" toolTip="Image A(ctuals), B(udgets), E(stimates), Z(ero) as New Estimates" comment="Image A(ctuals), B(udgets), E(stimates), Z(ero) as New Estimates" fieldTable="formonly" identifier="est_ind" gridItemLocation="1,2,1,1" classNames="fcls_data_widget,fcls_length_20qch">
+				<ComboBoxItem text="A">
+					<ComboBoxItem.value>
+						<StringLiteral stringValue="A"/>
+					</ComboBoxItem.value>
+				</ComboBoxItem>
+				<ComboBoxItem text="B">
+					<ComboBoxItem.value>
+						<StringLiteral stringValue="B"/>
+					</ComboBoxItem.value>
+				</ComboBoxItem>
+				<ComboBoxItem text="E">
+					<ComboBoxItem.value>
+						<StringLiteral stringValue="E"/>
+					</ComboBoxItem.value>
+				</ComboBoxItem>
+				<ComboBoxItem text="Z">
+					<ComboBoxItem.value>
+						<StringLiteral stringValue="Z"/>
+					</ComboBoxItem.value>
+				</ComboBoxItem>
+			</ComboBox>
+					<TextField dataType="Decimal,,,2,5" preferredSize="6qch,1qch" toolTip="Percentage increase or (-) decrease" comment="Percentage increase or (-) decrease" fieldTable="formonly" identifier="est_per" gridItemLocation="2,2,1,1" classNames="fcls_data_widget,fcls_length_10qch"/>
+					<Label isDynamic="true" text="Image Detailed Description" classNames="fcls_fieldlabel" visible="true" gridItemLocation="0,3,1,1" fieldTable="formonly" identifier="lb44"/>
+					<ComboBox toCase="Up" dataType="Char,,,," preferredSize="4qch,1qch" toolTip="Image Full Page Description -Y(es) -N(o)" comment="Image Full Page Description -Y(es) -N(o)" fieldTable="formonly" identifier="image_desc" gridItemLocation="1,3,1,1" classNames="fcls_data_widget,fcls_length_20qch">
+				<ComboBoxItem text="N">
+					<ComboBoxItem.value>
+						<StringLiteral stringValue="N"/>
+					</ComboBoxItem.value>
+				</ComboBoxItem>
+				<ComboBoxItem text="Y">
+					<ComboBoxItem.value>
+						<StringLiteral stringValue="Y"/>
+					</ComboBoxItem.value>
+				</ComboBoxItem>
+			</ComboBox>
+				</GridPanel>
+			</GroupBox>
+			<Table rowCount="8" preferredSize="53qch,8qch" fieldTable="" identifier="sr_activity" gridItemLocation="0,3,1,1">
+				<TableColumn fieldTable="" identifier="tc_image_flag">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="2rem" gridMaxLength="2rem" gridMinLength="2rem"/>
+					</TableColumn.columnLength>
+					<TextField dataType="Char,,,," fieldTable="formonly" identifier="image_flag"/>
+				</TableColumn>
+				<TableColumn fieldTable="" identifier="tc_activity_code" text="Activity">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="19.1%" gridMaxLength="10rem"/>
+					</TableColumn.columnLength>
+					<TextField toCase="Up" dataType="Char,,,,8" fieldTable="activity" identifier="activity_code"/>
+				</TableColumn>
+				<TableColumn fieldTable="" identifier="tc_title_text" text="Title">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="66.0%" gridMaxLength="40rem"/>
+					</TableColumn.columnLength>
+					<TextField dataType="Char,,,,30" fieldTable="activity" identifier="title_text"/>
+				</TableColumn>
+				<TableColumn fieldTable="" identifier="tc_var_code" text="Variation">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="10.6%" gridMaxLength="10rem"/>
+					</TableColumn.columnLength>
+					<TextField noEntry="true" dataType="SmallInt,,,," fieldTable="activity" identifier="var_code"/>
+				</TableColumn>
+			</Table>
+			<GridPanel classNames="fcls_statusbar_cnt" visible="true" verticalAlignment="Bottom" gridItemLocation="0,4,1,1" fieldTable="formonly" identifier="cntStatusBar">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="100%"/>
+				</GridPanel.gridColumnDefinitions>
+				<Label isDynamic="true" text="" classNames="fcls_sblabel" visible="true" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="lbInfo1"/>
+				<Label isDynamic="true" text="" classNames="fcls_sblabel" visible="true" gridItemLocation="0,1,1,1" fieldTable="formonly" identifier="lbInfo2"/>
+			</GridPanel>
+		</GridPanel>
+	</form.rootContainer>
+	<form.screenRecords>
+		<ScreenRecord identifier="sr_activity" fields="formonly.image_flag,activity.activity_code,activity.title_text,activity.var_code"/>
+		<ScreenRecord identifier="activity" fields="activity.activity_code,activity.title_text,activity.var_code"/>
+		<ScreenRecord identifier="formonly" fields="formonly.source_job_code,formonly.source_title_text,formonly.tgt_job_code,formonly.tgt_title_text,formonly.bdgt_ind,formonly.bdgt_per,formonly.est_ind,formonly.est_per,formonly.image_desc,formonly.image_flag"/>
+	</form.screenRecords>
+</form>
+

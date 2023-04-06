@@ -1,0 +1,136 @@
+0010|Freehold Property|A|FAPR|Y|OK|N|||
+0011|Leasehold Property|A|FAPR|Y|OK|N|||
+0020|Plant and Machinery|A|FAPM|Y|OK|N|||
+0021|Plant/Machinery Depreciation|L|FAPM|Y|OK|N|||
+0030|Office Equipment|A|FAOE|Y|OK|N|||
+0031|Office Equipment Depreciation|L|FAOE|Y|OK|N|||
+0040|Furniture and Fixtures|A|FAFF|Y|OK|N|||
+0041|Furniture/Fixture Depreciation|L|FAFF|Y|OK|N|||
+0050|Motor Vehicles|A|FAMV|Y|OK|N|||
+0051|Motor Vehicles Depreciation|L|FAMV|Y|OK|N|||
+1001|Stock|A|CAST|Y|OK|N|||
+1002|Work in Progress|A|CAST|Y|OK|N|||
+1003|Finished Goods|A|CAST|Y|OK|N|||
+1004|Raw Materials|A|CAST|Y|OK|N|||
+1100|Debtors Control Account|A|CADE|Y|OK|N|||
+1101|Sundry Debtors|A|CADE|Y|OK|N|||
+1102|Other Debtors|A|CADE|Y|OK|N|||
+1103|Prepayments|A|CADE|Y|OK|N|||
+1104|Inter-company Debtors|A|CADE|Y|OK|N|||
+1105|Provision for credit notes|A|CADE|Y|OK|N|||
+1106|Provision for doubtful debts|A|CADE|Y|OK|N|||
+1200|Bank Current Account|A|CABA|Y|OK|N|||
+1210|Bank Deposit Account|A|CADC|Y|OK|N|||
+1220|Building Society Account|A|CADC|Y|OK|N|||
+1230|Petty Cash|A|CADC|Y|OK|N|||
+1235|Cash Register|A|CADC|Y|OK|N|||
+1240|Company Credit Card|A|CADC|Y|OK|N|||
+1250|Credit Card Receipts|A|CADC|Y|OK|N|||
+1260|Clearing Account|A|CADC|Y|OK|N|||
+2100|Creditors Control Account|L|CLCR|Y|OK|N|||
+2101|Sundry Creditors|L|CLCR|Y|OK|N|||
+2102|Other Creditors|L|CLCR|Y|OK|N|||
+2109|Accruals|L|CLCR|Y|OK|N|||
+2200|Sales Tax Control Account|L|CLVL|Y|OK|N|||
+2201|Purchase Tax Control Account|A|CLVL|Y|OK|N|||
+2202|VAT Liability|L|CLVL|Y|OK|N|||
+2204|Manual Adjustments|L|CLVL|Y|OK|N|||
+2210|P.A.Y.E.|L|CLTA|Y|OK|N|||
+2211|National Insurance|L|CLTA|Y|OK|N|||
+2220|Net Wages|L|CLWA|Y|OK|N|||
+2230|Pension Fund|L|CLWA|Y|OK|N|||
+2300|Loans|L|CLOC|Y|OK|N|||
+2301|Directors Loan Accounts (Director 1)|L|CLOC|Y|OK|N|||
+2302|Directors Loan Accounts (Director 2)|L|CLOC|Y|OK|N|||
+2310|Hire Purchase|L|CLOC|Y|OK|N|||
+2320|Corporation Tax|L|CLOC|Y|OK|N|||
+2330|Mortgages|L|CLOC|Y|OK|N|||
+3000|Ordinary Shares|A|MISC1|Y|OK|N|||
+3010|Preference Shares|A|MISC1|Y|OK|N|||
+3100|Reserves|A|MISC1|Y|OK|N|||
+3101|Undistributed Reserves|A|MISC1|Y|OK|N|||
+3200|Profit and Loss Account|N|PANDL|Y|OK|N|||
+4000|Sales Type A|I|SALES|Y|OK|N|||
+4001|Sales Type B|I|SALES|Y|OK|N|||
+4002|Sales Type C|I|SALES|Y|OK|N|||
+4009|Discounts Allowed|I|SALES|Y|OK|N|||
+4010|Management Charges Receivable|I|SALES|Y|OK|N|||
+4099|Flat Rate - Benefit/Cost|I|SALES|Y|OK|N|||
+4100|Sales Type D|I|SALESES|Y|OK|N|||
+4101|Sales Type E|I|SALESES|Y|OK|N|||
+4200|Sales of Assets|I|SALESAS|Y|OK|N|||
+4400|Credit Charges (Late Payments)|I|SALESAS|Y|OK|N|||
+4900|Miscellaneous Income|I|SALESMI|Y|OK|N|||
+4901|Royalties Received|I|SALESMI|Y|OK|N|||
+4902|Commissions Received|I|SALESMI|Y|OK|N|||
+4903|Insurance Claims|I|SALESMI|Y|OK|N|||
+4904|Rent Income|I|SALESMI|Y|OK|N|||
+4905|Distribution and Carriage|I|SALESMI|Y|OK|N|||
+5000|Materials Purchased|E|PURCH|Y|OK|N|||
+5001|Materials Imported|E|PURCH|Y|OK|N|||
+5002|Miscellaneous Purchases|E|PURCH|Y|OK|N|||
+5003|Packaging|E|PURCH|Y|OK|N|||
+5009|Discounts Taken|E|PURCH|Y|OK|N|||
+5100|Carriage|E|PURCHCH|Y|OK|N|||
+5101|Import Duty|E|PURCHCH|Y|OK|N|||
+5102|Transport Insurance|E|PURCHCH|Y|OK|N|||
+5200|Opening Stock|E|PURCHST|Y|OK|N|||
+5201|Closing Stock|E|PURCHST|Y|OK|N|||
+5901|Royalties Cost|E|PURCHRO|Y|OK|N|||
+6000|Productive Labour|E|DIREXLA|Y|OK|N|||
+6001|Cost of Sales Labour|E|DIREXLA|Y|OK|N|||
+6002|Sub-Contractors|E|DIREXLA|Y|OK|N|||
+6100|Sales Commissions|E|DIREXSC|Y|OK|N|||
+6200|Sales Promotions|E|DIREXSP|Y|OK|N|||
+6201|Advertising|E|DIREXSP|Y|OK|N|||
+6202|Gifts and Samples|E|DIREXSP|Y|OK|N|||
+6203|P.R. (Literature & Brochures)|E|DIREXSP|Y|OK|N|||
+6900|Miscellaneous Expenses|E|DIREXMS|Y|OK|N|||
+7000|Gross Wages|E|OVHSW|Y|OK|N|||
+7001|Directors Salaries|E|OVHSW|Y|OK|N|||
+7002|Directors Remuneration|E|OVHSW|Y|OK|N|||
+7003|Staff Salaries|E|OVHSW|Y|OK|N|||
+7004|Wages - Regular|E|OVHSW|Y|OK|N|||
+7005|Wages - Casual|E|OVHSW|Y|OK|N|||
+7006|Employers N.I. (Non-Directors)|E|OVHSW|Y|OK|N|||
+7007|Employers Pensions|E|OVHSW|Y|OK|N|||
+7008|Recruitment Expenses|E|OVHSW|Y|OK|N|||
+7009|Adjustments|E|OVHSW|Y|OK|N|||
+7010|SSP Reclaimed|E|OVHSW|Y|OK|N|||
+7011|SMP Reclaimed|E|OVHSW|Y|OK|N|||
+7012|Employers N.I. (Directors)|E|OVHSW|Y|OK|N|||
+7100|Rent|E|OVHRR|Y|OK|N|||
+7102|Water Rates|E|OVHRR|Y|OK|N|||
+7103|General Rates|E|OVHRR|Y|OK|N|||
+7104|Premises Insurance|E|OVHRR|Y|OK|N|||
+7200|Electricity|E|Ovhead|Y|OK|N|||
+7201|Gas|E|OVHHLP|Y|OK|N|||
+7202|Oil|E|OVHHLP|Y|OK|N|||
+7203|Other Heating Costs|E|OVHHLP|Y|OK|N|||
+7300|Vehicle Fuel|E|OVHME|Y|OK|N|||
+7301|Vehicle Repairs and Servicing|E|OVHME|Y|OK|N|||
+7302|Vehicle Licences|E|OVHME|Y|OK|N|||
+7303|Vehicle Insurance|E|OVHME|Y|OK|N|||
+7304|Miscellaneous Motor Expenses|E|OVHME|Y|OK|N|||
+7305|Congestion Charges|E|OVHME|Y|OK|N|||
+7306|Mileage Claims|E|OVHME|Y|OK|N|||
+7350|Scale Charges|E|OVHME|Y|OK|N|||
+7400|Travelling|E|OVHTE|Y|OK|N|||
+7401|Car Hire|E|OVHTE|Y|OK|N|||
+7402|Hotels|E|OVHTE|Y|OK|N|||
+7403|U.K. Entertainment|E|OVHTE|Y|OK|N|||
+7404|Overseas Entertainment|E|OVHTE|Y|OK|N|||
+7405|Overseas Travelling|E|OVHTE|Y|OK|N|||
+7406|Subsistence|E|OVHTE|Y|OK|N|||
+7500|Printing|E|OVHPS|Y|OK|N|||
+7501|Postage and Carriage|E|OVHPS|Y|OK|N|||
+7502|Office Stationery|E|OVHPS|Y|OK|N|||
+7503|Books etc.|E|OVHPS|Y|OK|N|||
+7550|Telephone and Fax|E|OVHPS|Y|OK|N|||
+7551|Internet Charges|E|OVHPS|Y|OK|N|||
+7552|Computers & Software|E|OVHPS|Y|OK|N|||
+7553|Mobile Charges|E|OVHPS|Y|OK|N|||
+7600|Legal Fees|E|OVHPF|Y|OK|N|||
+7601|Audit Fees|E|OVHPF|Y|OK|N|||
+7602|Accountancy Fees|E|OVHPF|Y|OK|N|||
+7603|Consultancy Fees|E|OVHPF|Y|OK|N|||

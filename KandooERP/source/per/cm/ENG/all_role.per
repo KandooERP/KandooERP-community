@@ -1,0 +1,62 @@
+{
+###########################################################################
+# This program is free software; you can redistribute it and/or modify it
+# under the terms of the GNU General Public License as published by the
+# Free Software Foundation; either version 2 of the License, or (at your
+# option) any later version.
+#
+# This program is distributed in the hope that it will be useful, but
+# WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+# General Public License for more details.
+#
+# You should have received a copy of the GNU General Public License along
+# with this program; if not, write to the Free Software Foundation, Inc.,
+# 59 Temple Place, Suite 330, Boston, MA 02111-1307 USA
+#
+###########################################################################
+
+	 $Id: all_role.per,v 1.2 2003/04/08 12:53:56 afalout Exp $
+}
+
+database formonly
+screen size 24 by 80
+{
+role name  valid from valid to     Street      Suburb        City
+
+[f001     |f002      |f003      |f004        |f005         |f006        ]
+[f001     |f002      |f003      |f004        |f005         |f006        ]
+[f001     |f002      |f003      |f004        |f005         |f006        ]
+[f001     |f002      |f003      |f004        |f005         |f006        ]
+[f001     |f002      |f003      |f004        |f005         |f006        ]
+[f001     |f002      |f003      |f004        |f005         |f006        ]
+[f001     |f002      |f003      |f004        |f005         |f006        ]
+[f001     |f002      |f003      |f004        |f005         |f006        ]
+[f001     |f002      |f003      |f004        |f005         |f006        ]
+[f001     |f002      |f003      |f004        |f005         |f006        ]
+[f001     |f002      |f003      |f004        |f005         |f006        ]
+[f001     |f002      |f003      |f004        |f005         |f006        ]
+[f001     |f002      |f003      |f004        |f005         |f006        ]
+[f001     |f002      |f003      |f004        |f005         |f006        ]
+[f001     |f002      |f003      |f004        |f005         |f006        ]
+}
+end
+
+
+attributes
+
+f001 = formonly.addr_role_name;
+f002 = formonly.valid_from type date;
+f003 = formonly.valid_to type date;
+f004 = formonly.street;
+f005 = formonly.suburb;
+f006 = formonly.city;
+end
+
+
+
+INSTRUCTIONS
+
+DELIMITERS "  ";
+SCREEN RECORD s_display[15] (addr_role_name through city)
+

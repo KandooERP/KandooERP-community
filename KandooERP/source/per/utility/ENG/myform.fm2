@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form xmlns="http://namespaces.querix.com/2015/fglForms">
+	<form.rootContainer>
+		<CoordPanel identifier="rootContainer" visible="true" preferredSize="906.0,523.0">
+			<TextField visible="true" identifier="command" location="24,198" preferredSize="824,22"/>
+		</CoordPanel>
+	</form.rootContainer>
+	<form.screenRecords>
+		<ScreenRecord identifier="FormOnly" fields="command"/>
+	</form.screenRecords>
+</form>

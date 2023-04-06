@@ -1,0 +1,69 @@
+I1C_FRA {
+- Reserved for Sale { "- Reserved for Sale" }
+0-Immediate Transfer, 1-Confirm & Receipt, 2-Schedule Confirm and Receipt { "0-Transfert immédiat, 1-Confirmation et réception, 2-Planifier Confirmation et réception" }
+Account Code { "Code Compte" }
+Balance { "Solde" }
+Code { "Code" }
+Date { "Date" }
+Description { "Description" }
+Description of the product { "Description du produit" }
+Description of the transaction, CTRL N for notes { "Description de la transaction, CTRL N pour les notes" }
+Description of this product { "Description de ce produit" }
+Exit { "Quitter" }
+FILTER { "Premier" }
+Fiscal period in which this transaction will be posted { "Exercice dans lequel cette transaction sera enregistrée" }
+Fiscal year in which this transaction will be posted { "Exercice au cours duquel cette transaction sera enregistrée" }
+Full name or description of warehouse location { "Nom complet ou description de l'emplacement de l'entrepôt" }
+Group 2 { "Groupe 2" }
+ID { "ID" }
+Indicates the date of the product transaction (activity) { "Indique la date de la transaction du produit (activité)" }
+LOOKUP { "RECHERCHER" }
+Language Code { "Code langue" }
+Line { "Ligne" }
+Name { "Nom" }
+Name of warehouse { "Nom de l'entrepôt" }
+OEM { "OEM" }
+On Hand { "À portée de main" }
+Period { "Période" }
+Product { "Produit" }
+Product Code { "Code Produit" }
+Product Scan { "Exploration de produits" }
+Purchase { "Achat" }
+Quantity { "Quantité" }
+Quantity of this product in selling units { "Quantity of this product in selling units" }
+Quantity of this product in stocking units { "Quantité de ce produit en unités de stockage" }
+Quantity of this product reserved for sale or for other purposes { "Quantité de ce produit réservée à la vente ou à d'autres fins" }
+Query { "Interroger" }
+REFRESH { "ACTUALISER" }
+Reserved { "Réservé" }
+Second line of description of the product { "Deuxième ligne de description du produit" }
+Second line of description of this product { "Deuxième ligne de description de ce produit" }
+Selling Units of the product { "Unités de vente du produit" }
+Selling units of the product { "Unités de vente du produit" }
+Source { "Source" }
+Source ID { "ID de la source" }
+Source Number { "Numéro de source" }
+Source Warehouse { "Entrepôt source" }
+Stocking { "Stockage" }
+Stocking Units of the product { "Unités de stockage du produit" }
+Stocking units of the product { "Unités de stockage du produit" }
+The GL account description { "La description du compte Grand Livre" }
+The Product Code (W) { "Le code produit (W)" }
+The Product Code assigned to the product { "le code attribué à ce produit" }
+The code given by the original equipment manufacturer (OEM) { "Le code donné par le fabricant de l'équipement d'origine (OEM)." }
+Total Quantity currently on forward order at this warehouse { "Quantité totale actuellement en commande à cet entrepôt" }
+Total Quantity currently on purchase order for this warehouse { "Quantité totale actuellement en commande pour cet entrepôt" }
+Total Quantity of this product currently assigned to production { "Quantité totale de ce produit actuellement affecté à la production" }
+Total of this product currently available for sale at this warehouse { "Total de ce produit actuellement disponible à la vente dans cet entrepôt" }
+Total of this product in stock at this warehouse { "Total de ce produit en stock dans cet entrepôt" }
+Total of this product to be available for sale at this warehouse { "Total de ce produit disponible à la vente dans cet entrepôt" }
+Transaction Info { "Infos sur la transaction" }
+Transfer Date { "Date de transfert" }
+Unit Cost { "Coût unitaire" }
+Unit Cost of this product per selling unit { "Coût unitaire de ce produit par unité de vente" }
+Unit Cost of this product per stocking unit { "Coût unitaire de ce produit par unité de stockage" }
+Warehouse { "Dépôt" }
+Warehouse Code { "Code Dépôt" }
+Year { "Année" }
+actToolbarManager { "actToolbarManager" }
+}

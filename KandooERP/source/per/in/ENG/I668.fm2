@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?><form xmlns="http://namespaces.querix.com/2015/fglForms">
+	<form.rootContainer>
+		<GridPanel classNames="fcls_rootContainer" fieldTable="" horizontalAlignment="Stretch" identifier="rootContainer" preferredSize="," verticalAlignment="Stretch">
+			<GridPanel.gridRowDefinitions>
+				<GridRowDefinition gridLengthValue=""/>
+				<GridRowDefinition gridLengthValue="100%"/>
+				<GridRowDefinition gridLengthValue=""/>
+			</GridPanel.gridRowDefinitions>
+			<GridPanel.gridColumnDefinitions>
+				<GridColumnDefinition gridLengthValue="100%"/>
+			</GridPanel.gridColumnDefinitions>
+			<GridPanel classNames="fcls_title_cnt" fieldTable="formonly" gridItemLocation="0,0,1,1" identifier="cntTitle" verticalAlignment="Top" visible="true">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="100%"/>
+					<GridColumnDefinition gridLengthValue=""/>
+				</GridPanel.gridColumnDefinitions>
+				<Label classNames="fcls_title_lb" fieldTable="formonly" gridItemLocation="0,0,1,1" identifier="header_text" isDynamic="true" text="Stock Transfers" visible="true"/>
+				<Label classNames="fcls_title_lb" fieldTable="" gridItemLocation="1,0,1,1" identifier="lbFormName" isDynamic="true" text="&#9;I668" visible="true"/>
+			</GridPanel>
+			<Table fieldTable="" gridItemLocation="0,1,1,1" identifier="sr_ibthead" preferredSize="75qch,14qch" rowCount="14">
+				<TableColumn fieldTable="" identifier="tc_scroll_flag">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="2rem" gridMaxLength="2rem" gridMinLength="2rem"/>
+					</TableColumn.columnLength>
+					<CheckBox dataType="Char,,,," fieldTable="formonly" identifier="scroll_flag">
+						<CheckBox.checkedValue>
+							<StringLiteral stringValue="*"/>
+						</CheckBox.checkedValue>
+						<CheckBox.uncheckedValue>
+							<NullLiteral/>
+						</CheckBox.uncheckedValue>
+					</CheckBox>
+				</TableColumn>
+				<TableColumn fieldTable="" identifier="tc_trans_num" text="Transfer No">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="10rem" gridMaxLength="10rem" gridMinLength="10rem"/>
+					</TableColumn.columnLength>
+					<TextField comment=" The number identifying the stock transfer" dataType="Integer,,,," fieldTable="ibthead" identifier="trans_num" toCase="Up" toolTip=" The number identifying the stock transfer"/>
+				</TableColumn>
+				<TableColumn fieldTable="" identifier="tc_from_ware_code" text="Source Warehouse">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="10rem" gridMaxLength="10rem" gridMinLength="10rem"/>
+					</TableColumn.columnLength>
+					<TextField comment=" The warehouse from which stock is being transferred" dataType="Char,,,,3" fieldTable="ibthead" identifier="from_ware_code" toCase="Up" toolTip=" The warehouse from which stock is being transferred"/>
+				</TableColumn>
+				<TableColumn fieldTable="" identifier="tc_to_ware_code" text="Destination Warehouse">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="10rem" gridMaxLength="10rem" gridMinLength="10rem"/>
+					</TableColumn.columnLength>
+					<TextField comment=" The destination warehouse to which stock is being transferred" dataType="Char,,,,3" fieldTable="ibthead" identifier="to_ware_code" toCase="Up" toolTip=" The destination warehouse to which stock is being transferred"/>
+				</TableColumn>
+				<TableColumn fieldTable="" identifier="tc_desc_text" text="Description">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="30rem" gridMaxLength="30rem" gridMinLength="30rem"/>
+					</TableColumn.columnLength>
+					<TextField comment=" Comments relating to or describing the transfer" dataType="Char,,,,40" fieldTable="ibthead" identifier="desc_text" toolTip=" Comments relating to or describing the transfer"/>
+				</TableColumn>
+				<TableColumn fieldTable="" identifier="tc_trans_date" text="Date">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="10rem" gridMaxLength="10rem" gridMinLength="10rem"/>
+					</TableColumn.columnLength>
+					<Calendar comment=" The transfer date for the stock transfer" dataType="Date,,,," fieldTable="ibthead" format="dd/mm/yyyy" identifier="trans_date" noEntry="true" toolTip=" The transfer date for the stock transfer"/>
+				</TableColumn>
+				<TableColumn fieldTable="" identifier="tc_status_ind" text="Del. Status">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="100%"/>
+					</TableColumn.columnLength>
+					<CheckBox comment=" Status: (U) Undelivered, (P) Partially delivered" dataType="Char,,,,1" fieldTable="ibthead" identifier="status_ind" title="Undelivered" toCase="Up" toolTip=" Status: (U) Undelivered, (P) Partially delivered">
+						<CheckBox.checkedValue>
+							<StringLiteral stringValue="U"/>
+						</CheckBox.checkedValue>
+						<CheckBox.uncheckedValue>
+							<StringLiteral stringValue="P"/>
+						</CheckBox.uncheckedValue>
+					</CheckBox>
+				</TableColumn>
+			</Table>
+			<GridPanel classNames="fcls_statusbar_cnt" fieldTable="formonly" gridItemLocation="0,2,1,1" identifier="cntStatusBar" verticalAlignment="Bottom" visible="true">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="100%"/>
+				</GridPanel.gridColumnDefinitions>
+				<Label classNames="fcls_sblabel" fieldTable="formonly" gridItemLocation="0,0,1,1" identifier="lbInfo1" isDynamic="true" text="" visible="true"/>
+				<Label classNames="fcls_sblabel" fieldTable="formonly" gridItemLocation="0,1,1,1" identifier="lbInfo2" isDynamic="true" text="" visible="true"/>
+			</GridPanel>
+		</GridPanel>
+	</form.rootContainer>
+	<form.screenRecords>
+		<ScreenRecord elements="14" fields="formonly.scroll_flag,ibthead.trans_num,ibthead.from_ware_code,ibthead.to_ware_code,ibthead.desc_text,ibthead.trans_date,ibthead.status_ind" identifier="sr_ibthead"/>
+		<ScreenRecord fields="formonly.scroll_flag" identifier="formonly"/>
+		<ScreenRecord fields="ibthead.trans_num,ibthead.from_ware_code,ibthead.to_ware_code,ibthead.desc_text,ibthead.trans_date,ibthead.status_ind" identifier="ibthead"/>
+	</form.screenRecords>
+</form>

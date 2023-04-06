@@ -1,0 +1,6 @@
+MAIN
+	DEFINE budg1_text STRING
+	DISPLAY "db=", db_get_database_type()
+	OPEN WINDOW w1 WITH FORM "G100"
+	INPUT BY NAME budg1_text WITHOUT DEFAULTS
+END MAIN

@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form xmlns="http://namespaces.querix.com/2015/fglForms">
+	<form.rootContainer>
+		<GridPanel classNames="fcls_rootContainer" verticalAlignment="Stretch" horizontalAlignment="Stretch" fieldTable="" identifier="rootContainer">
+			<GridPanel.gridRowDefinitions>
+				<GridRowDefinition gridLengthValue=""/>
+				<GridRowDefinition gridLengthValue=""/>
+				<GridRowDefinition gridLengthValue="100%"/>
+				<GridRowDefinition gridLengthValue=""/>
+			</GridPanel.gridRowDefinitions>
+			<GridPanel.gridColumnDefinitions>
+				<GridColumnDefinition gridLengthValue="100%"/>
+			</GridPanel.gridColumnDefinitions>
+			<GridPanel classNames="fcls_title_cnt" visible="true" verticalAlignment="Top" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="cntTitle">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="100%"/>
+					<GridColumnDefinition gridLengthValue=""/>
+				</GridPanel.gridColumnDefinitions>
+				<Label isDynamic="true" text="Vendor Lookup" classNames="fcls_title_lb" visible="true" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="header_text"/>
+				<Label isDynamic="true" text="vendorLookup.fm2" classNames="fcls_title_lb" visible="true" gridItemLocation="1,0,1,1" fieldTable="" identifier="lbFormName"/>
+			</GridPanel>
+			<GridPanel classNames="fcls_detail_cnt,fcls_data_cnt,fcls_align_left" visible="true" verticalAlignment="Top" horizontalAlignment="Left" gridItemLocation="0,1,1,1" fieldTable="formonly" identifier="cntDetail1">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue=""/>
+					<GridColumnDefinition gridLengthValue=""/>
+					<GridColumnDefinition gridLengthValue="" gridMinLength="50"/>
+					<GridColumnDefinition gridLengthValue=""/>
+					<GridColumnDefinition gridLengthValue=""/>
+					<GridColumnDefinition gridLengthValue=""/>
+					<GridColumnDefinition gridLengthValue=""/>
+				</GridPanel.gridColumnDefinitions>
+				<Label isDynamic="true" text="Search" visible="true" gridItemLocation="0,0,1,1" fieldTable="" identifier="lb77"/>
+				<FunctionField classNames="fcls_image_remove,fcls_length_15qch" visible="true" gridItemLocation="1,0,1,1" fieldTable="" identifier="filter_any_field">
+					<FunctionField.onInvoke>
+						<ActionEventHandler actionName="clearFilter_all"/>
+					</FunctionField.onInvoke>
+					<FunctionField.onTouched>
+						<ActionEventHandler actionName="UPDATE-FILTER"/>
+					</FunctionField.onTouched>
+				</FunctionField>
+				<Label isDynamic="true" text="Found" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="3,0,1,1" fieldTable="" identifier="lb79"/>
+				<StackPanel visible="true" textAlignment=",Center" gridItemLocation="4,0,1,1" fieldTable="" identifier="c157">
+					<Label isDynamic="true" text="" classNames="fcls_fieldlabel,fcls_align_left" visible="true" verticalAlignment="Stretch" fieldTable="" identifier="lbResultCount"/>
+					<Label isDynamic="true" text="/" classNames="fcls_fieldlabel,fcls_align_left" visible="true" verticalAlignment="Stretch" fieldTable="" identifier="lb81"/>
+					<Label isDynamic="true" text="" classNames="fcls_fieldlabel,fcls_align_left" visible="true" verticalAlignment="Stretch" fieldTable="" identifier="lbTotalCount"/>
+				</StackPanel>
+			</GridPanel>
+			<Table classNames="fcls_table_cnt" visible="true" verticalAlignment="Stretch" horizontalAlignment="Stretch" gridItemLocation="0,2,1,1" fieldTable="" identifier="scVendorList">
+				<TableColumn text="Vendor Code" resizable="true" visible="true" fieldTable="" identifier="tc_f153">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="25%"/>
+					</TableColumn.columnLength>
+					<TextField visible="true" fieldTable="vendor" identifier="vend_code"/>
+				</TableColumn>
+				<TableColumn text="Vendor Name" resizable="true" visible="true" fieldTable="" identifier="tc_f154">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="25%"/>
+					</TableColumn.columnLength>
+					<TextField visible="true" fieldTable="vendor" identifier="name_text"/>
+				</TableColumn>
+				<TableColumn text="City" resizable="true" visible="true" fieldTable="" identifier="tc_f155">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="25%"/>
+					</TableColumn.columnLength>
+					<TextField visible="true" fieldTable="vendor" identifier="city_text"/>
+				</TableColumn>
+				<TableColumn text="Contact" resizable="true" visible="true" fieldTable="" identifier="tc_f156">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="25%"/>
+					</TableColumn.columnLength>
+					<TextField visible="true" fieldTable="vendor" identifier="contact_text"/>
+				</TableColumn>
+			</Table>
+			<GridPanel classNames="fcls_statusbar_cnt" visible="true" verticalAlignment="Top" gridItemLocation="0,3,1,1" fieldTable="formonly" identifier="cntStatusBar">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="100%"/>
+				</GridPanel.gridColumnDefinitions>
+				<Label isDynamic="true" text="" classNames="fcls_sblabel" visible="true" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="lbInfo1"/>
+				<Label isDynamic="true" text="" classNames="fcls_sblabel" visible="true" gridItemLocation="0,1,1,1" fieldTable="formonly" identifier="lbInfo2"/>
+			</GridPanel>
+		</GridPanel>
+	</form.rootContainer>
+	<form.screenRecords>
+		<ScreenRecord identifier="FORMONLY" fields="f157,f158,f159,f160,filter_any_field"/>
+		<ScreenRecord identifier="scVendorList" fields="vendor.vend_code,vendor.name_text,vendor.city_text,vendor.contact_text"/>
+	</form.screenRecords>
+</form>
+

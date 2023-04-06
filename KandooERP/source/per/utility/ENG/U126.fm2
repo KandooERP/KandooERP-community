@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?><form xmlns="http://namespaces.querix.com/2015/fglForms">
+	<form.rootContainer>
+		<GridPanel classNames="fcls_rootContainer" fieldTable="" horizontalAlignment="Stretch" identifier="rootContainer" verticalAlignment="Stretch">
+			<GridPanel.gridRowDefinitions>
+				<GridRowDefinition gridLengthValue=""/>
+				<GridRowDefinition gridLengthValue=""/>
+				<GridRowDefinition gridLengthValue="100%"/>
+				<GridRowDefinition gridLengthValue=""/>
+			</GridPanel.gridRowDefinitions>
+			<GridPanel.gridColumnDefinitions>
+				<GridColumnDefinition gridLengthValue="100%"/>
+			</GridPanel.gridColumnDefinitions>
+			<GridPanel classNames="fcls_title_cnt" fieldTable="formonly" gridItemLocation="0,0,1,1" identifier="cntTitle" verticalAlignment="Top" visible="true">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="100%"/>
+					<GridColumnDefinition gridLengthValue=""/>
+				</GridPanel.gridColumnDefinitions>
+				<Label classNames="fcls_title_lb" fieldTable="formonly" gridItemLocation="0,0,1,1" identifier="header_text" isDynamic="true" text="Suburb Maintenance" visible="true"/>
+				<Label classNames="fcls_title_lb" fieldTable="" gridItemLocation="1,0,1,1" identifier="lbFormName" isDynamic="true" text="U126" visible="true"/>
+			</GridPanel>
+			<GridPanel classNames="fcls_detail_cnt,fcls_data_cnt,fcls_align_hstretch" fieldTable="formonly" gridItemLocation="0,1,1,1" horizontalAlignment="Stretch" identifier="cntDetail1" verticalAlignment="Top" visible="true">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="" gridMinLength="10rem"/>
+					<GridColumnDefinition gridLengthValue="100%"/>
+				</GridPanel.gridColumnDefinitions>
+				<TextField classNames="fcls_data_widget,fcls_align_hstretch" comment=" Name of this Suburb" dataType="Char,,,,50" fieldTable="suburb" gridItemLocation="1,0,1,1" horizontalAlignment="Stretch" identifier="suburb_text" preferredSize="51qch,1qch" toCase="Up" toolTip=" Name of this Suburb"/>
+				<ComboBox classNames="fcls_data_widget,fcls_align_left,fcls_length_20qch" comment=" State in which Suburb resides" dataType="Char,,,,20" fieldTable="suburb" gridItemLocation="1,1,1,1" identifier="state_code" preferredSize="7qch,1qch" toolTip=" State in which Suburb resides"/>
+				<TextField classNames="fcls_data_widget,fcls_align_left,fcls_length_10qch" comment=" Post code of Suburb" dataType="Char,,,,10" fieldTable="suburb" gridItemLocation="1,2,1,1" identifier="post_code" preferredSize="11qch,1qch" toCase="Up" toolTip=" Post code of Suburb"/>
+				<Label classNames="fcls_fieldlabel,fcls_align_left" fieldTable="" gridItemLocation="0,0,1,1" identifier="lb51" isDynamic="true" text="Suburb" visible="true"/>
+				<Label classNames="fcls_fieldlabel,fcls_align_left" fieldTable="" gridItemLocation="0,1,1,1" identifier="lb_state" isDynamic="true" text="State/County" visible="true"/>
+				<Label classNames="fcls_fieldlabel,fcls_align_left" fieldTable="" gridItemLocation="0,2,1,1" identifier="lb_postCode" isDynamic="true" text="Post Code" visible="true"/>
+				<Label classNames="fcls_fieldlabel,fcls_align_left" gridItemLocation="0,3,1,1" identifier="lb_country" isDynamic="true" text="Country" visible="true"/>
+				<TextField classNames="fcls_data_widget,fcls_align_left,fcls_length_10qch" fieldTable="country" gridItemLocation="1,3,1,1" identifier="country_code" visible="true"/>
+			</GridPanel>
+			<Table fieldTable="" gridItemLocation="0,2,1,1" identifier="sr_suburbarea" preferredSize="65qch,8qch" rowCount="8">
+				<TableColumn fieldTable="" identifier="tc_scroll_flag">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="2rem" gridMaxLength="2rem" gridMinLength="2rem"/>
+					</TableColumn.columnLength>
+					<CheckBox dataType="Char,,,," fieldTable="formonly" identifier="scroll_flag">
+						<CheckBox.checkedValue>
+							<StringLiteral stringValue="*"/>
+						</CheckBox.checkedValue>
+						<CheckBox.uncheckedValue>
+							<NullLiteral/>
+						</CheckBox.uncheckedValue>
+					</CheckBox>
+				</TableColumn>
+				<TableColumn fieldTable="" identifier="tc_waregrp_code" text="WH-Code">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="10rem" gridMaxLength="10rem" gridMinLength="10rem"/>
+					</TableColumn.columnLength>
+					<ComboBox classNames="list-show-text-value,field-show-value" comment=" Warehouse Group code of Suburb - (W)" dataType="Char,,,,8" fieldTable="suburbarea" identifier="waregrp_code" toCase="Up" toolTip=" Warehouse Group code of Suburb - (W)"/>
+				</TableColumn>
+				<TableColumn fieldTable="" identifier="tc_name_text" text="Description">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="30rem" gridMaxLength="30rem" gridMinLength="30rem"/>
+					</TableColumn.columnLength>
+					<TextField dataType="Char,,,,40" fieldTable="waregrp" identifier="name_text" noEntry="true"/>
+				</TableColumn>
+				<TableColumn fieldTable="" identifier="tc_cart_area_code" text="Cartage Area">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="15rem" gridMaxLength="15rem" gridMinLength="15rem"/>
+					</TableColumn.columnLength>
+					<ComboBox classNames="list-show-text-value,field-show-value" comment=" Cartage Area of Suburb - (W)" dataType="Char,,,,3" fieldTable="suburbarea" identifier="cart_area_code" toCase="Up" toolTip=" Cartage Area of Suburb - (W)"/>
+				</TableColumn>
+				<TableColumn fieldTable="" identifier="tc_terr_code" text="Territory Salesperson ID">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="15rem" gridMaxLength="15rem" gridMinLength="15rem"/>
+					</TableColumn.columnLength>
+					<ComboBox classNames="list-show-text-value,field-show-value" comment=" Sales Territory in which Suburb resides - (W)" dataType="Char,,,,5" fieldTable="suburbarea" identifier="terr_code" toCase="Up" toolTip=" Sales Territory in which Suburb resides - (W)"/>
+				</TableColumn>
+				<TableColumn fieldTable="" identifier="tc_sale_code" text="Sale Code">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="15rem" gridMaxLength="15rem" gridMinLength="15rem"/>
+					</TableColumn.columnLength>
+					<ComboBox classNames="list-show-text-value,field-show-value" comment=" Unique Salesperson code to identify the Salesperson - (W)" dataType="Char,,,,8" fieldTable="suburbarea" identifier="sale_code" toCase="Up" toolTip=" Unique Salesperson code to identify the Salesperson - (W)"/>
+				</TableColumn>
+				<TableColumn identifier="tc_lbEOL" resizable="true" visible="true">
+					<Label identifier="lbEOL" isDynamic="true" visible="true"/>
+					<TableColumn.columnLength>
+						<GridLength/>
+					</TableColumn.columnLength>
+				</TableColumn>
+			</Table>
+			<GridPanel classNames="fcls_statusbar_cnt" fieldTable="formonly" gridItemLocation="0,3,1,1" identifier="cntStatusBar" verticalAlignment="Top" visible="true">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="100%"/>
+				</GridPanel.gridColumnDefinitions>
+				<Label classNames="fcls_sblabel" fieldTable="formonly" gridItemLocation="0,0,1,1" identifier="lbInfo1" isDynamic="true" text="" visible="true"/>
+				<Label classNames="fcls_sblabel" fieldTable="formonly" gridItemLocation="0,1,1,1" identifier="lbInfo2" isDynamic="true" text="" visible="true"/>
+			</GridPanel>
+		</GridPanel>
+	</form.rootContainer>
+	<form.screenRecords>
+		<ScreenRecord elements="8" fields="formonly.scroll_flag,suburbarea.waregrp_code,waregrp.name_text,suburbarea.cart_area_code,suburbarea.terr_code,suburbarea.sale_code" identifier="sr_suburbarea"/>
+		<ScreenRecord fields="scroll_flag,country.country_code,lb_country" identifier="formonly"/>
+		<ScreenRecord fields="suburb_text,state_code,post_code" identifier="suburb"/>
+		<ScreenRecord fields="waregrp_code,cart_area_code,terr_code,sale_code" identifier="suburbarea"/>
+		<ScreenRecord fields="name_text" identifier="waregrp"/>
+	</form.screenRecords>
+</form>

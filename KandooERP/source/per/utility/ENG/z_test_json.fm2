@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?><form xmlns="http://namespaces.querix.com/2015/fglForms" title="test json with coa">
+	<form.rootContainer>
+		<GridPanel identifier="rootContainer" visible="true">
+			<GridPanel.gridColumnDefinitions>
+				<GridColumnDefinition gridLengthValue=""/>
+			</GridPanel.gridColumnDefinitions>
+			<GridPanel.gridRowDefinitions>
+				<GridRowDefinition gridLengthValue=""/>
+			</GridPanel.gridRowDefinitions>
+			<GridPanel gridItemLocation="0,0,1,1" identifier="StructuredData" visible="true">
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue=""/>
+					<GridColumnDefinition gridLengthValue=""/>
+				</GridPanel.gridColumnDefinitions>
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue="28"/>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<Label gridItemLocation="0,0,1,1" identifier="lb4" isDynamic="true" text="Company" visible="true"/>
+				<TextField fieldTable="coa" gridItemLocation="1,0,1,1" identifier="cmpy_code" visible="true"/>
+				<Label gridItemLocation="0,1,1,1" identifier="lb1" isDynamic="true" text="Account Code" visible="true"/>
+				<TextField fieldTable="coa" gridItemLocation="1,1,1,1" identifier="acct_code" visible="true"/>
+			</GridPanel>
+			<GridPanel gridItemLocation="0,1,1,1" identifier="TableData" visible="true">
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="" gridMaxLength="25qch"/>
+					<GridColumnDefinition gridLengthValue=""/>
+				</GridPanel.gridColumnDefinitions>
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue="216"/>
+					<GridRowDefinition gridLengthValue="27"/>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+					<Table visible="true" identifier="NosqlTable" gridItemLocation="0,0,1,1">
+						<TableColumn text="Field Name" resizable="true" visible="true" identifier="tc_f5">
+							<Label visible="true" identifier="fld_label" text="" isDynamic="true"/>
+							<TableColumn.columnLength>
+								<GridLength/>
+							</TableColumn.columnLength>
+						</TableColumn>
+						<TableColumn text="Field Value" resizable="true" visible="true" identifier="tc_f6">
+							<TextField visible="true" identifier="fld_value"/>
+							<TableColumn.columnLength>
+								<GridLength/>
+							</TableColumn.columnLength>
+						</TableColumn>
+					</Table>
+			</GridPanel>			
+			<GridPanel gridItemLocation="0,2,1,1" identifier="NoSqlData" visible="true">
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue=""/>
+					</GridPanel.gridColumnDefinitions>
+					<GridPanel.gridRowDefinitions>
+						<GridRowDefinition gridLengthValue=""/>
+						<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+					</GridPanel.gridRowDefinitions>
+
+			</GridPanel>
+		</GridPanel>
+	</form.rootContainer>
+	<form.screenRecords>
+		<ScreenRecord identifier="NosqlTable" fields="fld_label,fld_value"/>
+		<ScreenRecord identifier="screenrecord18" fields=""/>
+		<ScreenRecord identifier="screenrecord19" fields=""/>
+		<ScreenRecord identifier="screenrecord20" fields=""/>
+	</form.screenRecords>
+</form>

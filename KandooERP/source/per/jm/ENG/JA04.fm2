@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form xmlns="http://namespaces.querix.com/2015/fglForms">
+	<form.rootContainer>
+		<GridPanel classNames="fcls_rootContainer" verticalAlignment="Top" horizontalAlignment="Left" fieldTable="" identifier="rootContainer">
+			<GridPanel.gridRowDefinitions>
+				<GridRowDefinition gridLengthValue=""/>
+				<GridRowDefinition gridLengthValue=""/>
+				<GridRowDefinition gridLengthValue=""/>
+				<GridRowDefinition gridLengthValue=""/>
+				<GridRowDefinition gridLengthValue=""/>
+				<GridRowDefinition gridLengthValue=""/>
+			</GridPanel.gridRowDefinitions>
+			<GridPanel.gridColumnDefinitions>
+				<GridColumnDefinition gridLengthValue="100%"/>
+			</GridPanel.gridColumnDefinitions>
+			<GridPanel classNames="fcls_title_cnt" visible="true" verticalAlignment="Top" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="cntTitle">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="100%"/>
+					<GridColumnDefinition gridLengthValue=""/>
+				</GridPanel.gridColumnDefinitions>
+				<Label isDynamic="true" text="Contract Line Details" classNames="fcls_title_lb" visible="true" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="header_text"/>
+				<Label isDynamic="true" text="JA04" classNames="fcls_title_lb" visible="true" gridItemLocation="1,0,1,1" fieldTable="" identifier="lbFormName"/>
+			</GridPanel>
+			<GridPanel classNames="fcls_detail_cnt,fcls_data_cnt" visible="true" verticalAlignment="Top" horizontalAlignment="Left" gridItemLocation="0,1,1,1" fieldTable="formonly" identifier="cntDetail1">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="" gridMinLength="10rem"/>
+					<GridColumnDefinition gridLengthValue=""/>
+					<GridColumnDefinition gridLengthValue=""/>
+				</GridPanel.gridColumnDefinitions>
+				<Label isDynamic="true" text="Type" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="lb57"/>
+				<TextField toCase="Up" dataType="Char,,,,1" preferredSize="2qch,1qch" toolTip=" Type of contract line: G)eneral, I)nventory, J)ob management" comment=" Type of contract line: G)eneral, I)nventory, J)ob management" fieldTable="contractdetl" identifier="type_code" gridItemLocation="1,0,1,1" classNames="fcls_data_widget,fcls_length_10qch"/>
+				<Label isDynamic="true" text="Inventory" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="2,0,1,1" fieldTable="" identifier="lb137"/>
+				<Label isDynamic="true" text="Location ID" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,1,1,1" fieldTable="" identifier="lb73"/>
+				<TextField toCase="Up" dataType="Char,,,,8" preferredSize="9qch,1qch" toolTip=" Location ID code (W)" comment=" Location ID code (W)" fieldTable="contractdetl" identifier="ship_code" gridItemLocation="1,1,1,1" classNames="fcls_data_widget,fcls_length_10qch"/>
+			</GridPanel>
+			<GroupBox title="Contact" classNames="fcls_detail_gb_cnt" visible="true" verticalAlignment="Stretch" horizontalAlignment="Stretch" gridItemLocation="0,2,1,1" fieldTable="formonly" identifier="cntDetail2GroupBox">
+				<GridPanel classNames="fcls_detail_gb_cnt_sub,fcls_detail_cnt_sub,fcls_data_cnt" visible="true" verticalAlignment="Top" horizontalAlignment="Left" fieldTable="formonly" identifier="cntDetail2Sub">
+					<GridPanel.gridRowDefinitions>
+						<GridRowDefinition gridLengthValue=""/>
+						<GridRowDefinition gridLengthValue=""/>
+						<GridRowDefinition gridLengthValue=""/>
+						<GridRowDefinition gridLengthValue=""/>
+						<GridRowDefinition gridLengthValue=""/>
+						<GridRowDefinition gridLengthValue=""/>
+					</GridPanel.gridRowDefinitions>
+					<GridPanel.gridColumnDefinitions>
+						<GridColumnDefinition gridLengthValue="" gridMinLength="10rem"/>
+						<GridColumnDefinition gridLengthValue=""/>
+					</GridPanel.gridColumnDefinitions>
+					<Label isDynamic="true" text="Name" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,0,1,1" fieldTable="" identifier="lb91"/>
+					<TextField dataType="Char,,,,30" preferredSize="31qch,1qch" toolTip=" Location name or description" comment=" Location name or description" fieldTable="customership" identifier="name_text" gridItemLocation="1,0,1,1" classNames="fcls_data_widget,fcls_length_30qch"/>
+					<Label isDynamic="true" text="Address" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,1,1,1" fieldTable="formonly" identifier="lb47"/>
+					<TextField dataType="Char,,,,30" preferredSize="31qch,1qch" toolTip=" Shipping address" comment=" Shipping address" fieldTable="customership" identifier="addr_text" gridItemLocation="1,1,1,1" classNames="fcls_data_widget,fcls_length_30qch"/>
+					<TextField dataType="Char,,,,30" preferredSize="31qch,1qch" toolTip=" Shipping address" comment=" Shipping address" fieldTable="customership" identifier="addr2_text" gridItemLocation="1,2,1,1" classNames="fcls_data_widget,fcls_length_30qch"/>
+					<Label isDynamic="true" text="City" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,3,1,1" fieldTable="formonly" identifier="lb44"/>
+					<TextField dataType="Char,,,,30" preferredSize="31qch,1qch" toolTip=" Shipping address" comment=" Shipping address" fieldTable="customership" identifier="city_text" gridItemLocation="1,3,1,1" classNames="fcls_data_widget,fcls_length_30qch"/>
+					<Label isDynamic="true" text="State" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,4,1,1" fieldTable="" identifier="lb89"/>
+					<TextField dataType="Char,,,,20" preferredSize="4qch,1qch" toolTip=" State" comment=" State" fieldTable="customership" identifier="state_code" gridItemLocation="1,4,1,1" classNames="fcls_data_widget,fcls_length_30qch"/>
+					<Label isDynamic="true" text="Postcode" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,5,1,1" fieldTable="" identifier="lb_postCode"/>
+					<TextField dataType="Char,,,,10" preferredSize="11qch,1qch" toolTip=" Post code" comment=" Post code" fieldTable="customership" identifier="post_code" gridItemLocation="1,5,1,1" classNames="fcls_data_widget,fcls_length_30qch"/>
+				</GridPanel>
+			</GroupBox>
+			<GroupBox title="Group 3" classNames="fcls_detail_gb_cnt" visible="true" verticalAlignment="Stretch" horizontalAlignment="Stretch" gridItemLocation="0,3,1,1" fieldTable="formonly" identifier="cntDetail3GroupBox">
+				<GridPanel classNames="fcls_detail_gb_cnt_sub,fcls_detail_cnt_sub,fcls_data_cnt" visible="true" verticalAlignment="Top" horizontalAlignment="Left" fieldTable="formonly" identifier="cntDetail3Sub">
+					<GridPanel.gridRowDefinitions>
+						<GridRowDefinition gridLengthValue=""/>
+						<GridRowDefinition gridLengthValue=""/>
+					</GridPanel.gridRowDefinitions>
+					<GridPanel.gridColumnDefinitions>
+						<GridColumnDefinition gridLengthValue=""/>
+						<GridColumnDefinition gridLengthValue=""/>
+					</GridPanel.gridColumnDefinitions>
+					<TextField noEntry="true" dataType="Char,,,,20" preferredSize="21qch,1qch" fieldTable="jmparms" identifier="cntrdt_prmpt1_text" gridItemLocation="0,0,1,1" classNames="fcls_data_widget,fcls_length_20qch"/>
+					<TextField dataType="Char,,,,20" preferredSize="21qch,1qch" toolTip=" User defined field" comment=" User defined field" fieldTable="contractdetl" identifier="user1_text" gridItemLocation="1,0,1,1" classNames="fcls_data_widget,fcls_length_20qch"/>
+					<TextField noEntry="true" dataType="Char,,,,20" preferredSize="21qch,1qch" fieldTable="jmparms" identifier="cntrdt_prmpt2_text" gridItemLocation="0,1,1,1" classNames="fcls_data_widget,fcls_length_20qch"/>
+					<TextField dataType="Char,,,,20" preferredSize="21qch,1qch" toolTip=" User defined field" comment=" User defined field" fieldTable="contractdetl" identifier="user2_text" gridItemLocation="1,1,1,1" classNames="fcls_data_widget,fcls_length_20qch"/>
+				</GridPanel>
+			</GroupBox>
+			<GroupBox title="Group 4" classNames="fcls_detail_gb_cnt" visible="true" verticalAlignment="Stretch" horizontalAlignment="Stretch" gridItemLocation="0,4,1,1" fieldTable="" identifier="cntDetail4GroupBox">
+				<GridPanel classNames="fcls_detail_gb_cnt_sub,fcls_detail_cnt_sub,fcls_data_cnt" visible="true" verticalAlignment="Top" horizontalAlignment="Left" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="cntDetail4Sub">
+					<GridPanel.gridRowDefinitions>
+						<GridRowDefinition gridLengthValue=""/>
+						<GridRowDefinition gridLengthValue=""/>
+						<GridRowDefinition gridLengthValue=""/>
+					</GridPanel.gridRowDefinitions>
+					<GridPanel.gridColumnDefinitions>
+						<GridColumnDefinition gridLengthValue="" gridMinLength="10rem"/>
+						<GridColumnDefinition gridLengthValue=""/>
+						<GridColumnDefinition gridLengthValue=""/>
+					</GridPanel.gridColumnDefinitions>
+					<Label isDynamic="true" text="Product" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,0,1,1" fieldTable="" identifier="lb115"/>
+					<TextField visible="true" identifier="part_code" gridItemLocation="1,0,1,1" comment=" Part code (W)" dataType="Char,,,,15" fieldTable="contractdetl" toCase="Up" preferredSize="16qch,1qch" toolTip=" Part code (W)" classNames="fcls_data_widget,fcls_length_15qch"/>
+					<TextField visible="true" identifier="desc_text" gridItemLocation="2,0,1,1" comment=" Description" dataType="Char,,,,40" fieldTable="contractdetl" preferredSize="41qch,1qch" toolTip=" Description" classNames="fcls_data_widget,fcls_length_30qch"/>
+					<Label isDynamic="true" text="Quantity" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,1,1,1" fieldTable="" identifier="lb116"/>
+					<TextField visible="true" identifier="bill_qty" gridItemLocation="1,1,1,1" comment=" Quantity" dataType="Float,,,," fieldTable="contractdetl" preferredSize="16qch,1qch" toolTip=" Quantity" classNames="fcls_data_widget,fcls_length_15qch"/>
+					<Label isDynamic="true" text="Price" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,2,1,1" fieldTable="" identifier="lb120"/>
+					<TextField visible="true" identifier="bill_price" gridItemLocation="1,2,1,1" comment=" Unit price" dataType="Decimal,,,4,16" fieldTable="contractdetl" preferredSize="16qch,1qch" toolTip=" Unit price" classNames="fcls_data_widget,fcls_length_15qch"/>
+				</GridPanel>
+			</GroupBox>
+			<GridPanel classNames="fcls_statusbar_cnt" visible="true" verticalAlignment="Top" gridItemLocation="0,5,1,1" fieldTable="formonly" identifier="cntStatusBar">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="100%"/>
+				</GridPanel.gridColumnDefinitions>
+				<Label isDynamic="true" text="" classNames="fcls_sblabel" visible="true" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="lbInfo1"/>
+				<Label isDynamic="true" text="" classNames="fcls_sblabel" visible="true" gridItemLocation="0,1,1,1" fieldTable="formonly" identifier="lbInfo2"/>
+			</GridPanel>
+		</GridPanel>
+	</form.rootContainer>
+	<form.screenRecords>
+		<ScreenRecord identifier="contractdetl" fields="contractdetl.type_code,contractdetl.ship_code,contractdetl.user1_text,contractdetl.user2_text,contractdetl.part_code,contractdetl.desc_text,contractdetl.bill_qty,contractdetl.bill_price"/>
+		<ScreenRecord identifier="customership" fields="customership.name_text,customership.addr_text,customership.addr2_text,customership.city_text,customership.state_code,customership.post_code"/>
+		<ScreenRecord identifier="jmparms" fields="jmparms.cntrdt_prmpt1_text,jmparms.cntrdt_prmpt2_text"/>
+	</form.screenRecords>
+</form>
+

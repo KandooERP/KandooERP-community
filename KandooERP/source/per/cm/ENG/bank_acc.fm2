@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form xmlns="http://namespaces.querix.com/2015/fglForms">
+	<form.rootContainer>
+		<CoordPanel preferredSize="74qch,10qch" fieldTable="" identifier="coord1">
+			<Label text="Bank name" location="0qch,1qch" preferredSize="9qch,1qch" fieldTable="" identifier="label1"/>
+			<TextField toCase="Up" required="true" dataType="Char,,,,20" location="19qch,1qch" preferredSize="21qch,1qch" toolTip="Name of the bank in which the account is open" fieldTable="bank_acc" comment="Name of the bank in which the account is open" identifier="bank_name"/>
+			<Label text="Branch" location="45qch,1qch" preferredSize="6qch,1qch" fieldTable="" identifier="label2"/>
+			<TextField toCase="Up" dataType="Char,,,,20" location="52qch,1qch" preferredSize="21qch,1qch" toolTip="Branch of the bank in which the account is open" fieldTable="bank_acc" comment="Branch of the bank in which the account is open" identifier="bank_branch"/>
+			<Label text="Account number" location="0qch,3qch" preferredSize="14qch,1qch" fieldTable="" identifier="label3"/>
+			<TextField required="true" dataType="Char,,,,20" location="19qch,3qch" preferredSize="21qch,1qch" toolTip="Account number" fieldTable="bank_acc" comment="Account number" identifier="acc_no"/>
+			<Label text="Role" location="42qch,3qch" preferredSize="4qch,1qch" fieldTable="" identifier="label4"/>
+			<TextField toCase="Up" dataType="Char,,,," location="47qch,3qch" preferredSize="26qch,1qch" toolTip="Account role name (F10 for L&amp;P)" fieldTable="formonly" comment="Account role name (F10 for L&amp;P)" identifier="acc_role_name"/>
+			<Label text="Account name" location="0qch,5qch" preferredSize="12qch,1qch" fieldTable="" identifier="label5"/>
+			<TextField toCase="Up" dataType="VarChar,,,0,4" location="19qch,5qch" preferredSize="21qch,1qch" toolTip="Name of the account" fieldTable="bank_acc" comment="Name of the account" identifier="acc_name"/>
+			<Label text="Country" location="0qch,7qch" preferredSize="7qch,1qch" fieldTable="" identifier="label6"/>
+			<TextField toCase="Up" dataType="VarChar,,,0,4" location="19qch,7qch" preferredSize="21qch,1qch" toolTip="Country in which the account is open" fieldTable="bank_acc" comment="Country in which the account is open" identifier="country"/>
+			<Label text="Valid from" location="0qch,9qch" preferredSize="10qch,1qch" fieldTable="" identifier="label7"/>
+			<TextField required="true" dataType="Date,,,," location="19qch,9qch" preferredSize="11qch,1qch" toolTip="Date from which this account is vald" fieldTable="bank_acc" comment="Date from which this account is vald" identifier="valid_from"/>
+			<Label text="Valid to" location="36qch,9qch" preferredSize="8qch,1qch" fieldTable="" identifier="label8"/>
+			<TextField dataType="Date,,,," location="55qch,9qch" preferredSize="11qch,1qch" toolTip="Date from which this account is unvalid" fieldTable="bank_acc" comment="Date from which this account is unvalid" identifier="valid_to"/>
+		</CoordPanel>
+	</form.rootContainer>
+	<form.screenRecords>
+		<ScreenRecord identifier="s_bank_acc" fields="bank_name,bank_branch,acc_no,acc_role_name,acc_name,country,valid_from,valid_to"/>
+		<ScreenRecord identifier="bank_acc" fields="bank_name,bank_branch,acc_no,acc_name,country,valid_from,valid_to"/>
+		<ScreenRecord identifier="formonly" fields="acc_role_name"/>
+	</form.screenRecords>
+</form>
+

@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?><form xmlns="http://namespaces.querix.com/2015/fglForms">
+	<form.rootContainer>
+		<GridPanel classNames="fcls_rootContainer" fieldTable="" horizontalAlignment="Stretch" identifier="rootContainer" verticalAlignment="Stretch">
+			<GridPanel.gridRowDefinitions>
+				<GridRowDefinition gridLengthValue=""/>
+				<GridRowDefinition gridLengthValue="" gridMinLength="100"/>
+				<GridRowDefinition gridLengthValue="100%"/>
+				<GridRowDefinition gridLengthValue=""/>
+			</GridPanel.gridRowDefinitions>
+			<GridPanel.gridColumnDefinitions>
+				<GridColumnDefinition gridLengthValue="100%"/>
+			</GridPanel.gridColumnDefinitions>
+
+			<GridPanel classNames="fcls_title_cnt" fieldTable="formonly" gridItemLocation="0,0,1,1" identifier="cntTitle" verticalAlignment="Top" visible="true">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="100%"/>
+					<GridColumnDefinition gridLengthValue=""/>
+				</GridPanel.gridColumnDefinitions>
+				<Label classNames="fcls_title_lb" fieldTable="formonly" gridItemLocation="0,0,1,1" identifier="header_text" isDynamic="true" text="Salespersons Statistics Information" visible="true"/>
+				<Label classNames="fcls_title_lb" fieldTable="" gridItemLocation="1,0,1,1" identifier="lbFormName" isDynamic="true" text="E184" visible="true"/>
+			</GridPanel>
+			<GridPanel gridItemLocation="0,1,1,1" horizontalAlignment="Left" identifier="c151" visible="true">
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="" gridMinLength="10rem"/>
+					<GridColumnDefinition gridLengthValue=""/>
+				</GridPanel.gridColumnDefinitions>
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<Label classNames="fcls_fieldlabel,fcls_align_left" fieldTable="" gridItemLocation="0,0,1,1" identifier="label3" text="Salesperson"/>
+				<TextField classNames="fcls_data_widget,fcls_align_left,fcls_length_30qch" dataType="Char,,,,20" fieldTable="country" gridItemLocation="1,0,1,1" identifier="state_code_text" noEntry="true" preferredSize="7qch,1qch"/>
+			</GridPanel>
+			<Table fieldTable="" gridItemLocation="0,2,1,1" identifier="sr_salesperson" preferredSize="75qch,15qch" rowCount="15">
+				<TableColumn fieldTable="" identifier="tc_scroll_flag">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="2rem" gridMaxLength="2rem" gridMinLength="2rem"/>
+					</TableColumn.columnLength>
+					<CheckBox dataType="Char,,,," fieldTable="formonly" identifier="scroll_flag">
+						<CheckBox.checkedValue>
+							<StringLiteral stringValue="*"/>
+						</CheckBox.checkedValue>
+						<CheckBox.uncheckedValue>
+							<NullLiteral/>
+						</CheckBox.uncheckedValue>
+					</CheckBox>
+				</TableColumn>
+				<TableColumn fieldTable="" identifier="tc_sale_code" text="Salesperson">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="10rem" gridMaxLength="10rem" gridMinLength="10rem"/>
+					</TableColumn.columnLength>
+					<TextField comment=" Enter salesperson code selection criteria " dataType="Char,,,,8" fieldTable="salesperson" identifier="sale_code" toCase="Up" toolTip=" Enter salesperson code selection criteria "/>
+				</TableColumn>
+				<TableColumn fieldTable="" identifier="tc_name_text" text="Name">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="30rem" gridMaxLength="30rem" gridMinLength="30rem"/>
+					</TableColumn.columnLength>
+					<TextField comment=" Enter salesperson name or description selection criteria " dataType="Char,,,,30" fieldTable="salesperson" identifier="name_text" noEntry="true" toolTip=" Enter salesperson name or description selection criteria "/>
+				</TableColumn>
+				<TableColumn fieldTable="" identifier="tc_city_text" text="City">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="10rem" gridMaxLength="10rem" gridMinLength="10rem"/>
+					</TableColumn.columnLength>
+					<TextField comment=" Enter salesperson city selection criteria " dataType="Char,,,,20" fieldTable="salesperson" identifier="city_text" toolTip=" Enter salesperson city selection criteria "/>
+				</TableColumn>
+				<TableColumn fieldTable="" identifier="tc_state_code" text="State">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="10rem" gridMaxLength="10rem" gridMinLength="10rem"/>
+					</TableColumn.columnLength>
+					<TextField comment=" Enter salesperson state selection criteria " dataType="Char,,,,6" fieldTable="salesperson" identifier="state_code" toCase="Up" toolTip=" Enter salesperson state selection criteria "/>
+				</TableColumn>
+				<TableColumn fieldTable="" identifier="tc_mgr_code" text="Manager Type">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="10rem" gridMaxLength="10rem" gridMinLength="10rem"/>
+					</TableColumn.columnLength>
+					<TextField comment=" Enter salesperson sales manager selection criteria " dataType="Char,,,,8" fieldTable="salesperson" identifier="mgr_code" toCase="Up" toolTip=" Enter salesperson sales manager selection criteria "/>
+				</TableColumn>
+				<TableColumn fieldTable="" identifier="tc_sale_type_ind" text="Sale Type">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="10rem" gridMaxLength="10rem" gridMinLength="10rem"/>
+					</TableColumn.columnLength>
+					<TextField comment=" Enter salesperson type -(1) Psuedo -(2) Primary -(3) Normal" dataType="Char,,,,1" fieldTable="salesperson" identifier="sale_type_ind" toCase="Up" toolTip=" Enter salesperson type -(1) Psuedo -(2) Primary -(3) Normal"/>
+				</TableColumn>
+				<TableColumn fieldTable="" identifier="tc_stat_flag" text="Stat Flag">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="10rem" gridMaxLength="10rem" gridMinLength="10rem"/>
+					</TableColumn.columnLength>
+					<TextField dataType="Char,,,," fieldTable="formonly" identifier="stat_flag" noEntry="true"/>
+				</TableColumn>
+				<TableColumn identifier="tc_lbEOL" resizable="true" visible="true">
+					<Label identifier="lbEOL" isDynamic="true" visible="true"/>
+					<TableColumn.columnLength>
+						<GridLength/>
+					</TableColumn.columnLength>
+				</TableColumn>
+			</Table>
+			<GridPanel classNames="fcls_statusbar_cnt" fieldTable="formonly" gridItemLocation="0,3,1,1" identifier="cntStatusBar" verticalAlignment="Bottom" visible="true">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="100%"/>
+				</GridPanel.gridColumnDefinitions>
+				<Label classNames="fcls_sblabel" fieldTable="formonly" gridItemLocation="0,0,1,1" identifier="lbInfo1" isDynamic="true" text="" visible="true"/>
+				<Label classNames="fcls_sblabel" fieldTable="formonly" gridItemLocation="0,1,1,1" identifier="lbInfo2" isDynamic="true" text="" visible="true"/>
+			</GridPanel>
+		</GridPanel>
+	</form.rootContainer>
+	<form.screenRecords>
+		<ScreenRecord elements="15" fields="formonly.scroll_flag,salesperson.sale_code,salesperson.name_text,salesperson.city_text,salesperson.state_code,salesperson.mgr_code,salesperson.sale_type_ind,formonly.stat_flag" identifier="sr_salesperson"/>
+		<ScreenRecord fields="country.state_code_text" identifier="country"/>
+		<ScreenRecord fields="formonly.scroll_flag,formonly.stat_flag" identifier="formonly"/>
+		<ScreenRecord fields="salesperson.sale_code,salesperson.name_text,salesperson.city_text,salesperson.state_code,salesperson.mgr_code,salesperson.sale_type_ind" identifier="salesperson"/>
+	</form.screenRecords>
+</form>

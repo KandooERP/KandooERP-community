@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<fglBuildTarget xmlns="http://namespaces.querix.com/lyciaide/target" name="lib_tool_db" type="fgl-library">
+
+  <sources type="fgl">
+    <file location="4gl/lib_tool_db/lib_tool_db_st_invoicedetl.4gl"/>
+    <file location="4gl/lib_tool_db/lib_tool_db_bic.4gl"/>
+    <file location="4gl/lib_tool_db/lib_tool_db_customer.4gl"/>
+    <file location="4gl/lib_tool_db/lib_tool_db_salesmgr.4gl"/>
+    <file location="4gl/lib_tool_db/lib_tool_db_jmj_debttype.4gl"/>
+    <file location="4gl/lib_tool_db/lib_tool_db_territory.4gl"/>
+    <file location="4gl/lib_tool_db/lib_tool_db_kandoouser.4gl"/>
+    <file location="4gl/lib_tool_db/lib_tool_db_disbhead.4gl"/>
+    <file location="4gl/lib_tool_db/lib_tool_db_cartarea.4gl"/>
+    <file location="4gl/lib_tool_db/lib_tool_db_salearea.4gl"/>
+    <file location="4gl/lib_tool_db/lib_tool_db_vendortype.4gl"/>
+    <file location="4gl/lib_tool_db/lib_tool_db_carrier.4gl"/>
+    <file location="4gl/lib_tool_db/lib_tool_db_vendorhist.4gl"/>
+    <file location="4gl/lib_tool_db/lib_tool_db_offersale.4gl"/>
+    <file location="4gl/lib_tool_db/lib_tool_db_opparms.4gl"/>
+    <file location="4gl/lib_tool_db/lib_tool_db_holdreas.4gl"/>
+    <file location="4gl/lib_tool_db/lib_tool_db_glparms.4gl"/>
+    <file location="4gl/lib_tool_db/lib_tool_db_vendorinvs.4gl"/>
+    <file location="4gl/lib_tool_db/lib_tool_db_bank.4gl"/>
+    <file location="4gl/lib_tool_db/lib_tool_db__temp.4gl"/>
+    <file location="4gl/lib_tool_db/lib_tool_db_country.4gl"/>
+    <file location="4gl/lib_tool_db/lib_tool_db_customertype.4gl"/>
+    <file location="4gl/lib_tool_db/lib_tool_db_credreas.4gl"/>
+    <file location="4gl/lib_tool_db/lib_tool_db_customership.4gl"/>
+    <file location="4gl/lib_tool_db/lib_tool_db_reporthead.4gl"/>
+    <file location="4gl/lib_tool_db/lib_tool_db_statparms.4gl"/>
+    <file location="4gl/lib_tool_db/lib_tool_db_fundsapproved.4gl"/>
+    <file location="4gl/common/glob_GLOBALS.4gl"/>
+    <file location="4gl/lib_tool_db/lib_tool_db_invoicehead.4gl"/>
+    <file location="4gl/lib_tool_db/lib_tool_db_vendornote.4gl"/>
+    <file location="4gl/lib_tool_db/lib_tool_db_orderhead.4gl"/>
+    <file location="4gl/lib_tool_db/lib_tool_db_isolation_modes.4gl"/>
+    <file location="4gl/lib_tool_db/lib_tool_db_table.4gl"/>
+    <file location="4gl/lib_tool_db/lib_tool_db_carriercost.4gl"/>
+    <file location="4gl/common/glob_GLOBALS_report.4gl"/>
+    <file location="4gl/lib_tool_db/lib_tool_db_loadparms.4gl"/>
+    <file location="4gl/lib_tool_db/lib_tool_db_company.4gl"/>
+    <file location="4gl/lib_tool_db/lib_tool_db_salesperson.4gl"/>
+    <file location="4gl/lib_tool_db/lib_tool_db_signcode.4gl"/>
+    <file location="4gl/lib_tool_db/lib_tool_db_period.4gl"/>
+    <file location="4gl/lib_tool_db/lib_tool_db_cheque.4gl"/>
+    <file location="4gl/lib_tool_db/lib_tool_db_language.4gl"/>
+    <file location="4gl/lib_tool_db/lib_tool_db_purchtype.4gl"/>
+    <file location="4gl/lib_tool_db/lib_tool_db_credithead.4gl"/>
+    <file location="4gl/lib_tool_db/lib_tool_db_stnd_grp.4gl"/>
+    <file location="4gl/lib_tool_db/lib_tool_db_rmsparm.4gl"/>
+    <file location="4gl/lib_tool_db/lib_tool_db_holdpay.4gl"/>
+    <file location="4gl/lib_tool_db/lib_tool_db_jmj_trantype.4gl"/>
+    <file location="4gl/lib_tool_db/lib_tool_db_journal.4gl"/>
+    <file location="4gl/lib_tool_db/lib_tool_db__message.4gl"/>
+    <file location="4gl/lib_tool_db/lib_tool_db_voucher.4gl"/>
+    <file location="4gl/lib_tool_db/lib_tool_db_vendorgrp.4gl"/>
+    <file location="4gl/lib_tool_db/lib_tool_db_suburb.4gl"/>
+    <file location="4gl/lib_tool_db/lib_tool_db_structure.4gl"/>
+    <file location="4gl/lib_tool_db/lib_tool_db_groupinfo.4gl"/>
+    <file location="4gl/lib_tool_db/lib_tool_db_coa.4gl"/>
+    <file location="4gl/lib_tool_db/lib_tool_db_currency.4gl"/>
+    <file location="4gl/common/glob_GLOBALS_constant.4gl"/>
+    <file location="4gl/lib_tool_db/lib_tool_db_batchhead_journal.4gl"/>
+    <file location="4gl/lib_tool_db/lib_tool_db_vouchpayee.4gl"/>
+    <file location="4gl/lib_tool_db/lib_tool_db_tax.4gl"/>
+    <file location="4gl/lib_tool_db/lib_tool_db_termdetl.4gl"/>
+    <file location="4gl/lib_tool_db/lib_tool_db_rndcode.4gl"/>
+    <file location="4gl/lib_tool_db/lib_tool_db_batchdetl.4gl"/>
+    <file location="4gl/lib_tool_db/lib_tool_db_clipboard.4gl"/>
+    <file location="4gl/lib_tool_db/lib_tool_db__template_cmpy_2_pk.4gl"/>
+    <file location="4gl/lib_tool_db/lib_tool_db_error_handler.4gl"/>
+    <file location="4gl/lib_tool_db/lib_tool_db__template_cmpy_3_pk.4gl"/>
+    <file location="4gl/lib_tool_db/lib_tool_db_term.4gl"/>
+    <file location="4gl/lib_tool_db/lib_tool_db_street.4gl"/>
+    <file location="4gl/lib_tool_db/lib_tool_db_vendor.4gl"/>
+    <file location="4gl/lib_tool_db/lib_tool_db_ingroup.4gl"/>
+  </sources>
+
+  <sources type="form">
+    <file location="per/utility/ENG/f_coa_g.fm2"/>
+    <file location="per/setup/lib_db_data_import_01.fm2"/>
+    <file location="per/setup/db_coa_input.fm2"/>
+    <file location="per/gl/ENG/coaLookup.fm2"/>
+    <file location="per/utility/ENG/coaLookup_filter.fm2"/>
+    <file location="per/utility/ENG/f_coa.fm2"/>
+  </sources>
+
+  <mediaFiles>
+    <file client="true" location="lib_tool_db.css" type="other"/>
+    <file client="true" location="lib_tool_db.qxtheme" type="gui-theme-file"/>
+  </mediaFiles>
+
+  <buildConfiguration name="development">
+    <additions>
+    </additions>
+    <exclusions>
+      <sources type="fgl">
+        <file location="4gl/lib_tool_db/lib_tool_db__temp.4gl"/>
+        <file location="4gl/lib_tool_db/lib_tool_db__template_cmpy_2_pk.4gl"/>
+        <file location="4gl/lib_tool_db/lib_tool_db_currency.4gl"/>
+        <file location="4gl/lib_tool_db/lib_tool_db__template_cmpy_3_pk.4gl"/>
+        <file location="4gl/lib_tool_db/lib_tool_db_period.4gl"/>
+        <file location="4gl/lib_tool_db/lib_tool_db_glparms.4gl"/>
+        <file location="4gl/lib_tool_db/lib_tool_db_language.4gl"/>
+      </sources>
+
+    </exclusions>
+  </buildConfiguration>
+
+</fglBuildTarget>

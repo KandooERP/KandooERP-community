@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<fglBuildTarget xmlns="http://namespaces.querix.com/lyciaide/target" name="lib_common_pinq_wind" type="fgl-library">
+
+  <sources type="fgl">
+    <file location="4gl/common/prrcwind.4gl"/>
+    <file location="4gl/common/schedfunc.4gl"/>
+    <file location="4gl/common/glob_GLOBALS_constant.4gl"/>
+    <file location="4gl/common/pinvwind.4gl"/>
+    <file location="4gl/common/prsitwind.4gl"/>
+    <file location="4gl/common/stvawind.4gl"/>
+    <file location="4gl/common/wlocnwin.4gl"/>
+    <file location="4gl/common/pcustwind.4gl"/>
+    <file location="4gl/common/prelawind.4gl"/>
+    <file location="4gl/common/prpdwind.4gl"/>
+    <file location="4gl/common/warewind.4gl"/>
+    <file location="4gl/common/glob_GLOBALS_userDataTypes.4gl"/>
+    <file location="4gl/common/psepwind.4gl"/>
+    <file location="4gl/common/prgdwind.4gl"/>
+    <file location="4gl/common/prldwind.4gl"/>
+    <file location="4gl/common/prmowind.4gl"/>
+    <file location="4gl/common/prodmwind.4gl"/>
+    <file location="4gl/common/prsswind.4gl"/>
+    <file location="4gl/common/costwind.4gl"/>
+    <file location="4gl/common/costlwind.4gl"/>
+    <file location="4gl/common/partwind.4gl"/>
+    <file location="4gl/common/pistwind.4gl"/>
+    <file location="4gl/common/pinfowind.4gl"/>
+  </sources>
+
+  <sources type="form">
+    <file location="per/in/ENG/I146.fm2"/>
+    <file location="per/in/ENG/I600.fm2"/>
+  </sources>
+
+  <buildConfiguration name="development">
+    <additions>
+    </additions>
+    <exclusions>
+    </exclusions>
+  </buildConfiguration>
+
+</fglBuildTarget>

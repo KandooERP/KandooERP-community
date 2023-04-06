@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?><form xmlns="http://namespaces.querix.com/2015/fglForms">
+	<form.rootContainer>
+		<GridPanel classNames="fcls_rootContainer" fieldTable="" horizontalAlignment="Stretch" identifier="rootContainer" verticalAlignment="Stretch">
+			<GridPanel.gridRowDefinitions>
+				<GridRowDefinition gridLengthValue=""/>
+				<GridRowDefinition gridLengthValue=""/>
+				<GridRowDefinition gridLengthValue="100%"/>
+				<GridRowDefinition gridLengthValue=""/>
+			</GridPanel.gridRowDefinitions>
+			<GridPanel.gridColumnDefinitions>
+				<GridColumnDefinition gridLengthValue="100%"/>
+			</GridPanel.gridColumnDefinitions>
+			<GridPanel classNames="fcls_title_cnt" fieldTable="formonly" gridItemLocation="0,0,1,1" identifier="cntTitle" verticalAlignment="Top" visible="true">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="100%"/>
+					<GridColumnDefinition gridLengthValue=""/>
+				</GridPanel.gridColumnDefinitions>
+				<Label classNames="fcls_title_lb" fieldTable="formonly" gridItemLocation="0,0,1,1" identifier="header_text" isDynamic="true" text="Customer Shipping Details" visible="true"/>
+				<Label classNames="fcls_title_lb" fieldTable="" gridItemLocation="1,0,1,1" identifier="lbFormName" isDynamic="true" text="A111" visible="true"/>
+			</GridPanel>
+			<GridPanel classNames="fcls_detail_cnt,fcls_data_cnt,fcls_align_left" fieldTable="formonly" gridItemLocation="0,1,1,1" horizontalAlignment="Left" identifier="cntDetail1" verticalAlignment="Top" visible="true">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="" gridMinLength="10rem"/>
+					<GridColumnDefinition gridLengthValue=""/>
+					<GridColumnDefinition gridLengthValue=""/>
+				</GridPanel.gridColumnDefinitions>
+				<ComboBox classNames="list-show-text-value,field-show-value,fcls_data_widget,fcls_align_left,fcls_length_10qch" comment=" Enter customer code - (W)" dataType="Char,,,,8" editable="false" fieldTable="customership" gridItemLocation="1,0,1,1" identifier="cust_code" location="14qch,2qch" preferredSize="30qch,1qch" toolTip=" Enter customer code - (W)"/>
+				<TextField classNames="fcls_data_widget,fcls_align_left,fcls_length_30qch" dataType="Char,,,," fieldTable="customer" gridItemLocation="2,0,1,1" identifier="name_text" location="45qch,2qch" noEntry="true" preferredSize="25qch,1qch"/>
+				<Label classNames="fcls_fieldlabel,fcls_align_left" fieldTable="" gridItemLocation="0,0,1,1" identifier="lb51" isDynamic="true" text="Customer" visible="true"/>
+				<Label classNames="fcls_fieldlabel,fcls_align_left" gridItemLocation="0,1,1,1" identifier="lb53" isDynamic="true" text="Found Addresses" visible="true"/>
+				<TextField classNames="fcls_data_widget,fcls_align_left,fcls_length_10qch" gridItemLocation="1,1,1,1" identifier="shipping_adress_count" visible="true"/>
+			</GridPanel>
+			<Table fieldTable="" gridItemLocation="0,2,1,1" identifier="sr_custship" location="0qch,6qch" preferredSize="74qch,12qch" rowCount="12">
+				<TableColumn fieldTable="" identifier="a">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="2rem" gridMaxLength="2rem" gridMinLength="2rem"/>
+					</TableColumn.columnLength>
+					<CheckBox dataType="Char,,,," fieldTable="formonly" identifier="scroll_flag">
+						<CheckBox.checkedValue>
+							<StringLiteral stringValue="*"/>
+						</CheckBox.checkedValue>
+						<CheckBox.uncheckedValue>
+							<NullLiteral/>
+						</CheckBox.uncheckedValue>
+					</CheckBox>
+				</TableColumn>
+				<TableColumn fieldTable="" identifier="f01" text="Shipping Code">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="10rem" gridMaxLength="10rem" gridMinLength="10rem"/>
+					</TableColumn.columnLength>
+					<TextField comment=" Enter customer shipping code selection criteria" dataType="Char,,,,8" fieldTable="customership" identifier="ship_code" toCase="Up" toolTip=" Enter customer shipping code selection criteria"/>
+				</TableColumn>
+				<TableColumn fieldTable="" identifier="f02" text="Name">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="25rem" gridMaxLength="25rem" gridMinLength="25rem"/>
+					</TableColumn.columnLength>
+					<TextField comment=" Shipping location name" dataType="Char,,,,30" fieldTable="customership" identifier="name_text" noEntry="true" toolTip=" Shipping location name"/>
+				</TableColumn>
+				<TableColumn fieldTable="" identifier="f03" text="City">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="20rem" gridMaxLength="20rem" gridMinLength="20rem"/>
+					</TableColumn.columnLength>
+					<TextField comment=" Shipping location city" dataType="Char,,,,30" fieldTable="customership" identifier="city_text" noEntry="true" toolTip=" Shipping location city"/>
+				</TableColumn>
+				<TableColumn fieldTable="" identifier="f04" text="Postal">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="100%" gridMaxLength=""/>
+					</TableColumn.columnLength>
+					<TextField comment=" Shipping location Postal code" dataType="Char,,,,10" fieldTable="customership" identifier="post_code" noEntry="true" toolTip=" Shipping location Postal code"/>
+				</TableColumn>
+			</Table>
+			<GridPanel classNames="fcls_statusbar_cnt" fieldTable="formonly" gridItemLocation="0,3,1,1" identifier="cntStatusBar" verticalAlignment="Top" visible="true">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="100%"/>
+				</GridPanel.gridColumnDefinitions>
+				<Label classNames="fcls_sblabel" fieldTable="formonly" gridItemLocation="0,0,1,1" identifier="lbInfo1" isDynamic="true" text="" visible="true"/>
+				<Label classNames="fcls_sblabel" fieldTable="formonly" gridItemLocation="0,1,1,1" identifier="lbInfo2" isDynamic="true" text="" visible="true"/>
+			</GridPanel>
+		</GridPanel>
+	</form.rootContainer>
+	<form.screenRecords>
+		<ScreenRecord elements="12" fields="scroll_flag,customership.ship_code,customership.name_text,customership.city_text,customership.post_code" identifier="sr_custship"/>
+		<ScreenRecord fields="cust_code,ship_code,name_text,city_text,post_code" identifier="customership"/>
+		<ScreenRecord fields="name_text,scroll_flag" identifier="formonly"/>
+	</form.screenRecords>
+</form>

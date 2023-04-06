@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<fglBuildTarget xmlns="http://namespaces.querix.com/lyciaide/target" name="L42" type="fgl-program">
+
+  <libraries>
+    <library name="lib_common_pinq_wind" dynamic="false" location=""/>
+    <library name="lib_tool_I_IN_db" dynamic="false" location=""/>
+    <library name="lib_tool_I_IN_new" dynamic="false" location=""/>
+    <library name="lib_tool_L_LC_new" dynamic="false" location=""/>
+    <library name="lib_tool_U_UT_new" dynamic="false" location=""/>
+    <library name="lib_tool_W_WO_new" dynamic="false" location=""/>
+    <library name="lib_tool_common" dynamic="false" location=""/>
+    <library name="lib_tool_db_common" dynamic="false" location=""/>
+  </libraries>
+
+  <sources type="fgl">
+    <file location="4gl/common/vperfunc.4gl"/>
+    <file location="4gl/common/glob_GLOBALS_constant.4gl"/>
+    <file location="4gl/lc/L42.4gl"/>
+    <file location="4gl/lc/L_LC_GLOBALS.4gl"/>
+    <file location="4gl/common/itemwind.4gl"/>
+    <file location="4gl/common/glob_GLOBALS.4gl"/>
+    <file location="4gl/common/glob_GLOBALS_userDataTypes.4gl"/>
+    <file location="4gl/common/shstwind.4gl"/>
+    <file location="4gl/common/postwind.4gl"/>
+  </sources>
+
+  <sources type="form">
+    <file location="per/utility/ENG/U156.fm2"/>
+    <file location="per/in/ENG/I104.fm2"/>
+    <file location="per/lc/ENG/L115.fm2"/>
+    <file location="per/utility/ENG/U526.fm2"/>
+    <file location="per/lc/ENG/L128.fm2"/>
+    <file location="per/utility/ENG/U162.fm2"/>
+    <file location="per/lc/ENG/L107.fm2"/>
+    <file location="per/lc/ENG/L145.fm2"/>
+  </sources>
+
+</fglBuildTarget>

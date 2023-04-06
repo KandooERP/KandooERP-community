@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<fglBuildTarget xmlns="http://namespaces.querix.com/lyciaide/target" name="M14" type="fgl-program">
+
+  <libraries>
+    <library name="lib_tool_M_MN_new" dynamic="false" location=""/>
+    <library name="lib_tool_U_UT_new" dynamic="false" location=""/>
+    <library name="lib_tool_common" dynamic="false" location=""/>
+    <library name="lib_tool_db_common" dynamic="false" location=""/>
+  </libraries>
+
+  <sources type="fgl">
+    <file location="4gl/mn/M14a.4gl"/>
+    <file location="4gl/mn/M14c.4gl"/>
+    <file location="4gl/common/ref_wind.4gl"/>
+    <file location="4gl/common/glob_GLOBALS_constant.4gl"/>
+    <file location="4gl/common/prmfgwind.4gl"/>
+    <file location="4gl/common/notefunc.4gl"/>
+    <file location="4gl/mn/M14.4gl"/>
+    <file location="4gl/mn/M14e.4gl"/>
+    <file location="4gl/mn/M_MN_GLOBALS.4gl"/>
+    <file location="4gl/common/glob_GLOBALS.4gl"/>
+    <file location="4gl/common/borwind.4gl"/>
+    <file location="4gl/common/glob_GLOBALS_userDataTypes.4gl"/>
+    <file location="4gl/common/mfguomwind.4gl"/>
+    <file location="4gl/mn/M14b.4gl"/>
+    <file location="4gl/mn/M14d.4gl"/>
+    <file location="4gl/common/borimgwind.4gl"/>
+    <file location="4gl/common/centrewind.4gl"/>
+    <file location="4gl/mn/M14f.4gl"/>
+    <file location="4gl/mn/M14_GLOBALS.4gl"/>
+    <file location="4gl/common/maxmenu.4gl"/>
+  </sources>
+
+  <sources type="form">
+    <file location="per/utility/ENG/U156.fm2"/>
+    <file location="per/mn/ENG/M126.per"/>
+    <file location="per/utility/ENG/U526.fm2"/>
+    <file location="per/utility/ENG/U139.fm2"/>
+    <file location="per/utility/ENG/U162.fm2"/>
+    <file location="per/mn/ENG/M106.per"/>
+  </sources>
+
+</fglBuildTarget>

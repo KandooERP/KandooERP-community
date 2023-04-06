@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form xmlns="http://namespaces.querix.com/2015/fglForms">
+	<form.rootContainer>
+		<GridPanel classNames="fcls_rootContainer" preferredSize="1400.0,720" verticalAlignment="Top" fieldTable="" identifier="rootContainer">
+			<GridPanel.gridRowDefinitions>
+				<GridRowDefinition gridLengthValue=""/>
+				<GridRowDefinition gridLengthValue="100%"/>
+				<GridRowDefinition gridLengthValue=""/>
+				<GridRowDefinition gridLengthValue=""/>
+				<GridRowDefinition gridLengthValue=""/>
+			</GridPanel.gridRowDefinitions>
+			<GridPanel.gridColumnDefinitions>
+				<GridColumnDefinition gridLengthValue="100%"/>
+			</GridPanel.gridColumnDefinitions>
+			<GridPanel classNames="fcls_title_cnt" visible="true" verticalAlignment="Top" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="cntTitle">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="100%"/>
+					<GridColumnDefinition gridLengthValue=""/>
+				</GridPanel.gridColumnDefinitions>
+				<Label isDynamic="true" text="Quote Line Item Information" classNames="fcls_title_lb" visible="true" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="header_text"/>
+				<Label isDynamic="true" text="Q214" classNames="fcls_title_lb" visible="true" gridItemLocation="1,0,1,1" fieldTable="" identifier="lbFormName"/>
+			</GridPanel>
+			<Table rowCount="8" preferredSize="75qch,8qch" fieldTable="" identifier="sr_quotedetl" gridItemLocation="0,1,1,1">
+				<TableColumn fieldTable="" identifier="tc_scroll_flag">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="2rem" gridMaxLength="2rem" gridMinLength="2rem"/>
+					</TableColumn.columnLength>
+					<CheckBox dataType="Char,,,," fieldTable="formonly" identifier="scroll_flag">
+						<CheckBox.checkedValue>
+							<StringLiteral stringValue="*"/>
+						</CheckBox.checkedValue>
+						<CheckBox.uncheckedValue>
+							<NullLiteral/>
+						</CheckBox.uncheckedValue>
+					</CheckBox>
+				</TableColumn>
+				<TableColumn fieldTable="" identifier="tc_line_num" text="No.">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="5.3%" gridMinLength="5rem" gridMaxLength="10rem"/>
+					</TableColumn.columnLength>
+					<TextField dataType="SmallInt,,,," fieldTable="quotedetl" identifier="line_num"/>
+				</TableColumn>
+				<TableColumn fieldTable="" identifier="tc_offer_code" text="Offer">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="5.3%" gridMinLength="5rem" gridMaxLength="10rem"/>
+					</TableColumn.columnLength>
+					<TextField toCase="Up" dataType="Char,,,,3" toolTip=" Enter special offer code for this line item (W) " comment=" Enter special offer code for this line item (W) " fieldTable="quotedetl" identifier="offer_code"/>
+				</TableColumn>
+				<TableColumn fieldTable="" identifier="tc_part_code" text="Product">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="21.3%" gridMinLength="5rem" gridMaxLength="10rem"/>
+					</TableColumn.columnLength>
+					<TextField toCase="Up" dataType="Char,,,,15" toolTip=" Enter product code for this line item (W) " comment=" Enter product code for this line item (W) " fieldTable="quotedetl" identifier="part_code"/>
+				</TableColumn>
+				<TableColumn fieldTable="" identifier="tc_sold_qty" text="Quantity">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="12.0%" gridMinLength="5rem" gridMaxLength="10rem"/>
+					</TableColumn.columnLength>
+					<TextField dataType="Float,,,," toolTip=" Enter order quantity (sold quantity) of this product " comment=" Enter order quantity (sold quantity) of this product " fieldTable="quotedetl" identifier="sold_qty"/>
+				</TableColumn>
+				<TableColumn fieldTable="" identifier="tc_bonus_qty" text="Bonus">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="12.0%" gridMinLength="5rem" gridMaxLength="10rem"/>
+					</TableColumn.columnLength>
+					<TextField dataType="Float,,,," toolTip=" Enter bonus (given free) quantity of this product " comment=" Enter bonus (given free) quantity of this product " fieldTable="quotedetl" identifier="bonus_qty"/>
+				</TableColumn>
+				<TableColumn fieldTable="" identifier="tc_disc_per" text="Disc%">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="8.0%" gridMinLength="5rem" gridMaxLength="10rem"/>
+					</TableColumn.columnLength>
+					<TextField dataType="Decimal,,,3,6" toolTip=" Enter discount applicable to this line item (0 - 100)" comment=" Enter discount applicable to this line item (0 - 100)" fieldTable="quotedetl" identifier="disc_per">
+						<TextField.includes>
+							<ValueInclude>
+								<ValueInclude.value>
+									<NullLiteral/>
+								</ValueInclude.value>
+							</ValueInclude>
+							<RangeInclude>
+								<RangeInclude.fromValue>
+									<DecimalLiteral decimalValue="0.00"/>
+								</RangeInclude.fromValue>
+								<RangeInclude.toValue>
+									<DecimalLiteral decimalValue="100.00"/>
+								</RangeInclude.toValue>
+							</RangeInclude>
+						</TextField.includes>
+					</TextField>
+				</TableColumn>
+				<TableColumn fieldTable="" identifier="tc_unit_price_amt" text="Sell Price">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="14.7%" gridMinLength="5rem" gridMaxLength="10rem"/>
+					</TableColumn.columnLength>
+					<TextField dataType="Decimal,,,4,16" toolTip=" Enter unit price of this product " comment=" Enter unit price of this product " fieldTable="quotedetl" identifier="unit_price_amt"/>
+				</TableColumn>
+				<TableColumn fieldTable="" identifier="tc_line_tot_amt" text="Total">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="16.0%" gridMinLength="5rem" gridMaxLength="10rem"/>
+					</TableColumn.columnLength>
+					<TextField noEntry="true" dataType="Decimal,,,4,16" fieldTable="quotedetl" identifier="line_tot_amt"/>
+				</TableColumn>
+				<TableColumn fieldTable="" identifier="tc_autoinsert_flag" text="Auto Ins.">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="2.7%" gridMinLength="5rem" gridMaxLength="10rem"/>
+					</TableColumn.columnLength>
+					<TextField noEntry="true" dataType="Char,,,,1" fieldTable="quotedetl" identifier="autoinsert_flag"/>
+				</TableColumn>
+			</Table>
+			<GridPanel classNames="fcls_detail_cnt,fcls_data_cnt" visible="true" verticalAlignment="Top" horizontalAlignment="Left" gridItemLocation="0,2,1,1" fieldTable="formonly" identifier="cntDetail1">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="" gridMinLength="10rem"/>
+					<GridColumnDefinition gridLengthValue=""/>
+					<GridColumnDefinition gridLengthValue="" gridMinLength="10rem"/>
+					<GridColumnDefinition gridLengthValue=""/>
+					<GridColumnDefinition gridLengthValue="" gridMinLength="10rem"/>
+					<GridColumnDefinition gridLengthValue=""/>
+				</GridPanel.gridColumnDefinitions>
+				<TextField noEntry="true" dataType="Char,,,,40" preferredSize="30qch,1qch" fieldTable="quotedetl" identifier="desc_text" gridItemLocation="1,0,1,1" classNames="fcls_data_widget,fcls_length_30qch"/>
+				<TextField noEntry="true" dataType="Char,,,,1" preferredSize="2qch,1qch" fieldTable="quotedetl" identifier="status_ind" gridItemLocation="3,0,1,1" classNames="fcls_data_widget,fcls_length_10qch"/>
+				<TextField noEntry="true" dataType="Decimal,,,2,16" preferredSize="13qch,1qch" fieldTable="quotehead" identifier="goods_amt" gridItemLocation="5,0,1,1" classNames="fcls_data_widget,fcls_length_15qch"/>
+				<TextField noEntry="true" dataType="Char,,,,30" preferredSize="30qch,1qch" fieldTable="offersale" identifier="desc_text" gridItemLocation="1,1,1,1" classNames="fcls_data_widget,fcls_length_30qch"/>
+				<TextField noEntry="true" dataType="Char,,,,1" preferredSize="2qch,1qch" fieldTable="quotedetl" identifier="level_ind" gridItemLocation="3,1,1,1" classNames="fcls_data_widget,fcls_length_10qch"/>
+				<Label isDynamic="true" text="Tax" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="4,1,1,1" fieldTable="" identifier="lb129"/>
+				<TextField noEntry="true" dataType="Decimal,,,2,16" preferredSize="13qch,1qch" fieldTable="quotehead" identifier="tax_amt" gridItemLocation="5,1,1,1" classNames="fcls_data_widget,fcls_length_15qch"/>
+				<StackPanel visible="true" identifier="c151" gridItemLocation="1,2,1,1">
+					<TextField noEntry="true" dataType="Char,,,,3" preferredSize="4qch,1qch" fieldTable="quotehead" identifier="tax_code" classNames="fcls_data_widget,fcls_length_05qch"/>
+					<TextField noEntry="true" dataType="Char,,,,30" preferredSize="26qch,1qch" fieldTable="tax" identifier="desc_text" classNames="fcls_data_widget,fcls_length_25qch"/>
+				</StackPanel>
+				<TextField noEntry="true" dataType="Char,,,,1" preferredSize="2qch,1qch" fieldTable="quotedetl" identifier="disc_allow_flag" gridItemLocation="3,2,1,1" classNames="fcls_data_widget,fcls_length_10qch"/>
+				<Label isDynamic="true" text="Total" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="4,2,1,1" fieldTable="" identifier="lb130"/>
+				<TextField noEntry="true" dataType="Decimal,,,2,16" preferredSize="13qch,1qch" fieldTable="quotehead" identifier="total_amt" gridItemLocation="5,2,1,1" classNames="fcls_data_widget,fcls_length_15qch"/>
+				<Label isDynamic="true" text="Warehouse" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,3,1,1" fieldTable="" identifier="lb67"/>
+				<TextField noEntry="true" dataType="Char,,,,3" preferredSize="4qch,1qch" fieldTable="quotedetl" identifier="ware_code" gridItemLocation="1,3,1,1" classNames="fcls_data_widget,fcls_length_05qch"/>
+				<Label isDynamic="true" text="Stock Available" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="2,3,1,1" fieldTable="" identifier="lb65"/>
+				<Label isDynamic="true" text="Desc" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,0,1,1" fieldTable="" identifier="lb51"/>
+				<Label isDynamic="true" text="Status" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="2,0,1,1" fieldTable="" identifier="lb53"/>
+				<Label isDynamic="true" text="Goods" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="4,0,1,1" fieldTable="" identifier="lb81"/>
+				<Label isDynamic="true" text="Offer" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,1,1,1" fieldTable="" identifier="lb52"/>
+				<Label isDynamic="true" text="Level" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="2,1,1,1" fieldTable="" identifier="lb54"/>
+				<Label isDynamic="true" text="Tax" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,2,1,1" fieldTable="" identifier="lb66"/>
+				<Label isDynamic="true" text="Discount" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="2,2,1,1" fieldTable="" identifier="lb55"/>
+				<TextField noEntry="true" dataType="Float,,,," preferredSize="12qch,1qch" fieldTable="quotedetl" identifier="required_qty" gridItemLocation="3,3,1,1" classNames="fcls_data_widget,fcls_length_10qch"/>
+				<Label isDynamic="true" text="Credit" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="4,3,1,1" fieldTable="" identifier="lb131"/>
+				<TextField noEntry="true" dataType="Decimal,,,2,16" preferredSize="13qch,1qch" fieldTable="customer" identifier="cred_bal_amt" gridItemLocation="5,3,1,1" classNames="fcls_data_widget,fcls_length_15qch"/>
+			</GridPanel>
+			<GridPanel classNames="fcls_detail_cnt,fcls_data_cnt" visible="true" verticalAlignment="Top" gridItemLocation="0,3,1,1" fieldTable="formonly" identifier="cntDetail2" horizontalAlignment="Left">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="" gridMinLength="10rem"/>
+					<GridColumnDefinition gridLengthValue=""/>
+				</GridPanel.gridColumnDefinitions>
+				<TextField noEntry="true" dataType="Char,,,,40" preferredSize="41qch,1qch" fieldTable="quotedetl" identifier="quote_lead_text" gridItemLocation="1,0,1,1" classNames="fcls_data_widget,fcls_length_40qch"/>
+				<TextField noEntry="true" dataType="Char,,,,40" preferredSize="41qch,1qch" fieldTable="quotedetl" identifier="quote_lead_text2" gridItemLocation="1,1,1,1" classNames="fcls_data_widget,fcls_length_40qch"/>
+				<TextField noEntry="true" dataType="Char,,,,1" preferredSize="2qch,1qch" fieldTable="quotedetl" identifier="margin_ind" gridItemLocation="1,2,1,1" classNames="fcls_data_widget,fcls_length_05qch"/>
+				<Label isDynamic="true" text="Currency" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,3,1,1" fieldTable="" identifier="lb62"/>
+				<TextField noEntry="true" dataType="Char,,,,3" preferredSize="4qch,1qch" fieldTable="quotehead" identifier="currency_code" gridItemLocation="1,3,1,1" classNames="fcls_data_widget,fcls_length_05qch"/>
+				<Label isDynamic="true" text="Delivery" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="lb36"/>
+				<Label isDynamic="true" text="Description" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,1,1,1" fieldTable="formonly" identifier="lb37"/>
+				<Label isDynamic="true" text="Margin" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,2,1,1" fieldTable="formonly" identifier="lb38"/>
+			</GridPanel>
+			<GridPanel classNames="fcls_statusbar_cnt" visible="true" verticalAlignment="Top" gridItemLocation="0,4,1,1" fieldTable="formonly" identifier="cntStatusBar">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="100%"/>
+				</GridPanel.gridColumnDefinitions>
+				<Label isDynamic="true" text="" classNames="fcls_sblabel" visible="true" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="lbInfo1"/>
+				<Label isDynamic="true" text="" classNames="fcls_sblabel" visible="true" gridItemLocation="0,1,1,1" fieldTable="formonly" identifier="lbInfo2"/>
+			</GridPanel>
+
+		</GridPanel>
+	</form.rootContainer>
+	<form.screenRecords>
+		<ScreenRecord identifier="sr_quotedetl" fields="formonly.scroll_flag,quotedetl.line_num,quotedetl.offer_code,quotedetl.part_code,quotedetl.sold_qty,quotedetl.bonus_qty,quotedetl.disc_per,quotedetl.unit_price_amt,quotedetl.line_tot_amt,quotedetl.autoinsert_flag"/>
+		<ScreenRecord identifier="customer" fields="customer.cred_bal_amt"/>
+		<ScreenRecord identifier="formonly" fields="formonly.scroll_flag"/>
+		<ScreenRecord identifier="offersale" fields="offersale.desc_text"/>
+		<ScreenRecord identifier="quotedetl" fields="quotedetl.line_num,quotedetl.offer_code,quotedetl.part_code,quotedetl.sold_qty,quotedetl.bonus_qty,quotedetl.disc_per,quotedetl.unit_price_amt,quotedetl.line_tot_amt,quotedetl.autoinsert_flag,quotedetl.desc_text,quotedetl.status_ind,quotedetl.level_ind,quotedetl.disc_allow_flag,quotedetl.margin_ind,quotedetl.ware_code,quotedetl.required_qty,quotedetl.quote_lead_text,quotedetl.quote_lead_text2"/>
+		<ScreenRecord identifier="quotehead" fields="quotehead.tax_code,quotehead.goods_amt,quotehead.tax_amt,quotehead.total_amt,quotehead.currency_code"/>
+		<ScreenRecord identifier="tax" fields="tax.desc_text"/>
+	</form.screenRecords>
+</form>
+

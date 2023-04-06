@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form xmlns="http://namespaces.querix.com/2015/fglForms">
+	<form.rootContainer>
+		<CoordPanel preferredSize="68qch,16qch" fieldTable="" identifier="coord1">
+			<Label text="Account Details" location="26qch,0qch" preferredSize="15qch,1qch" fieldTable="" identifier="label1"/>
+			<Label text="G146" location="64qch,0qch" preferredSize="4qch,1qch" fieldTable="" identifier="label2"/>
+			<Separator location="0qch,1qch" preferredSize="68qch,1qch" zOrder="-1" fieldTable="" identifier="separator1"/>
+			<Label text="G/L Account" location="1qch,2qch" preferredSize="12qch,1qch" fieldTable="" identifier="label3"/>
+			<TextField toCase="Up" dataType="Char,,,,18" location="22qch,2qch" preferredSize="19qch,1qch" toolTip=" The G/L Account to be set up" fieldTable="coa" comment=" The G/L Account to be set up" identifier="acct_code"/>
+			<Label text="Description" location="1qch,3qch" preferredSize="11qch,1qch" fieldTable="" identifier="label4"/>
+			<TextField dataType="Char,,,,40" location="22qch,3qch" preferredSize="41qch,1qch" toolTip=" The description of this account " fieldTable="coa" comment=" The description of this account " identifier="desc_text"/>
+			<Label text="Type" location="1qch,4qch" preferredSize="4qch,1qch" fieldTable="" identifier="label5"/>
+			<TextField toCase="Up" dataType="Char,,,,1" location="22qch,4qch" preferredSize="2qch,1qch" toolTip=" The type A-Asset L-Liability I-Income E-Expense N-Net Worth" fieldTable="coa" comment=" The type A-Asset L-Liability I-Income E-Expense N-Net Worth" identifier="type_ind"/>
+			<Label text="Start Year Number" location="1qch,5qch" preferredSize="17qch,1qch" fieldTable="" identifier="label6"/>
+			<TextField dataType="SmallInt,,,," location="22qch,5qch" preferredSize="7qch,1qch" toolTip=" The Start Year for this account" fieldTable="coa" comment=" The Start Year for this account" identifier="start_year_num"/>
+			<Label text="Start Period Number" location="1qch,6qch" preferredSize="19qch,1qch" fieldTable="" identifier="label7"/>
+			<TextField dataType="SmallInt,,,," location="22qch,6qch" preferredSize="7qch,1qch" toolTip=" The Start Period for this account (i.e. opening period)" fieldTable="coa" comment=" The Start Period for this account (i.e. opening period)" identifier="start_period_num"/>
+			<Label text="End Year Number" location="1qch,7qch" preferredSize="15qch,1qch" fieldTable="" identifier="label8"/>
+			<TextField dataType="SmallInt,,,," location="22qch,7qch" preferredSize="7qch,1qch" toolTip=" The End Year for this account" fieldTable="coa" comment=" The End Year for this account" identifier="end_year_num"/>
+			<Label text="End Period Number" location="1qch,8qch" preferredSize="17qch,1qch" fieldTable="" identifier="label9"/>
+			<TextField dataType="SmallInt,,,," location="22qch,8qch" preferredSize="7qch,1qch" toolTip=" The End Period for this account (i.e. closing period)" fieldTable="coa" comment=" The End Period for this account (i.e. closing period)" identifier="end_period_num"/>
+			<Label text="Group Code" location="1qch,9qch" preferredSize="10qch,1qch" fieldTable="" identifier="label10"/>
+			<TextField toCase="Up" dataType="Char,,,,7" location="22qch,9qch" preferredSize="8qch,1qch" toolTip=" The group code associated with this account (W)" fieldTable="coa" comment=" The group code associated with this account (W)" identifier="group_code"/>
+			<TextField dataType="Char,,,,40" location="31qch,9qch" preferredSize="32qch,1qch" toolTip=" The description of the group code " fieldTable="groupinfo" comment=" The description of the group code " identifier="desc_text"/>
+			<Label text="Analysis Required" location="1qch,10qch" preferredSize="17qch,1qch" fieldTable="" identifier="label11"/>
+			<TextField toCase="Up" dataType="Char,,,,1" location="22qch,10qch" preferredSize="2qch,1qch" toolTip=" Is analysis compulsory for this account? (Y/N) " fieldTable="coa" comment=" Is analysis compulsory for this account? (Y/N) " identifier="analy_req_flag"/>
+			<Label text="Analysis Prompt" location="1qch,11qch" preferredSize="15qch,1qch" fieldTable="" identifier="label12"/>
+			<TextField dataType="Char,,,,20" location="22qch,11qch" preferredSize="21qch,1qch" toolTip=" The prompt for the analysis text" fieldTable="coa" comment=" The prompt for the analysis text" identifier="analy_prompt_text"/>
+			<Label text="Collect Quantities" location="1qch,12qch" preferredSize="18qch,1qch" fieldTable="" identifier="label13"/>
+			<TextField toCase="Up" dataType="Char,,,,1" location="22qch,12qch" preferredSize="2qch,1qch" toolTip=" Collect Quantities against this account? (Y/N) " fieldTable="coa" comment=" Collect Quantities against this account? (Y/N) " identifier="qty_flag"/>
+			<Label text="Unit of Measure" location="1qch,13qch" preferredSize="15qch,1qch" fieldTable="" identifier="label14"/>
+			<TextField toCase="Up" dataType="Char,,,,4" location="22qch,13qch" preferredSize="5qch,1qch" toolTip=" The Unit of measure for this account (W)" fieldTable="coa" comment=" The Unit of measure for this account (W)" identifier="uom_code"/>
+			<TextField noEntry="true" dataType="Char,,,,30" location="29qch,13qch" preferredSize="31qch,1qch" fieldTable="uom" identifier="desc_text"/>
+			<Label text="Tax Code" location="1qch,14qch" preferredSize="8qch,1qch" fieldTable="" identifier="label15"/>
+			<TextField toCase="Up" dataType="Char,,,,3" location="22qch,14qch" preferredSize="4qch,1qch" toolTip=" Default tax code when distributing to this account (W) " fieldTable="coa" comment=" Default tax code when distributing to this account (W) " identifier="tax_code"/>
+			<TextField noEntry="true" dataType="Char,,,,30" location="29qch,14qch" preferredSize="31qch,1qch" fieldTable="tax" identifier="desc_text"/>
+			<Separator location="0qch,15qch" preferredSize="68qch,1qch" zOrder="-1" fieldTable="" identifier="separator2"/>
+		</CoordPanel>
+	</form.rootContainer>
+	<form.screenRecords>
+		<ScreenRecord identifier="coa" fields="acct_code,desc_text,start_year_num,start_period_num,end_year_num,end_period_num,group_code,analy_prompt_text,analy_req_flag,qty_flag,uom_code,type_ind,tax_code"/>
+		<ScreenRecord identifier="groupinfo" fields="desc_text"/>
+		<ScreenRecord identifier="tax" fields="desc_text"/>
+		<ScreenRecord identifier="uom" fields="desc_text"/>
+	</form.screenRecords>
+</form>
+

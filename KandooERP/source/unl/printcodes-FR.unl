@@ -1,0 +1,15 @@
+PRINT-DEVICE-01|1|120|80|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|lp -c -s -dPRINT-DEVICE-01 -n$C $F|Demo Print Device Config 01|
+PRINT-DEVICE-02|1|120|80|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|lp -c -s -dPRINT-DEVICE-02 -n$C $F|Demo Print Device Config 02|
+PRINT-DEVICE-03|1|120|80|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|lp -c -s -dPRINT-DEVICE-03 -n$C $F|Demo Print Device Config 03|
+PRINT-DEVICE-04|1|120|80|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|lp -c -s -dPRINT-DEVICE-04 -n$C $F|Demo Print Device Config 04|
+PRINT-DEVICE-05|1|120|80|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|lp -c -s -dPRINT-DEVICE-05 -n$C $F|Demo Print Device Config 05|
+TERMINAL-DEV-01|1|120|80|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|lp -c -s -dTERMINAL-DEV-01 -n$C $F|Demo Terminal Device Cfg 01|
+TERMINAL-DEV-02|1|120|80|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|lp -c -s -dTERMINAL-DEV-02 -n$C $F|Demo Terminal Device Cfg 02|
+TERMINAL-DEV-03|1|120|80|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|lp -c -s -dTERMINAL-DEV-03 -n$C $F|Demo Terminal Device Cfg 03|
+TERMINAL-DEV-04|1|120|80|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|lp -c -s -dTERMINAL-DEV-04 -n$C $F|Demo Terminal Device Cfg 04|
+TERMINAL-DEV-05|1|120|80|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|lp -c -s -dTERMINAL-DEV-05 -n$C $F|Demo Terminal Device Cfg 05|
+OTHER-DEVICE-01|1|120|80|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|lp -c -s -dOTHER-DEVICE-01 -n$C $F|Demo Other Device Config 01|
+OTHER-DEVICE-02|1|120|80|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|lp -c -s -dOTHER-DEVICE-02 -n$C $F|Demo Other Device Config 02|
+OTHER-DEVICE-03|1|120|80|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|lp -c -s -dOTHER-DEVICE-03 -n$C $F|Demo Other Device Config 03|
+OTHER-DEVICE-04|1|120|80|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|lp -c -s -dOTHER-DEVICE-04 -n$C $F|Demo Other Device Config 04|
+OTHER-DEVICE-05|1|120|80|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|lp -c -s -dOTHER-DEVICE-05 -n$C $F|Demo Other Device Config 05|

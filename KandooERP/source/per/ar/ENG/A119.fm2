@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form xmlns="http://namespaces.querix.com/2015/fglForms">
+	<form.rootContainer>
+		<GridPanel classNames="fcls_rootContainer" verticalAlignment="Top" horizontalAlignment="Left" fieldTable="" identifier="rootContainer">
+			<GridPanel.gridRowDefinitions>
+				<GridRowDefinition gridLengthValue=""/>
+				<GridRowDefinition gridLengthValue=""/>
+				<GridRowDefinition gridLengthValue=""/>
+				<GridRowDefinition gridLengthValue=""/>
+				<GridRowDefinition gridLengthValue="" gridMinLength="222"/>
+				<GridRowDefinition gridLengthValue=""/>
+			</GridPanel.gridRowDefinitions>
+			<GridPanel.gridColumnDefinitions>
+				<GridColumnDefinition gridLengthValue="100%"/>
+			</GridPanel.gridColumnDefinitions>
+			<GridPanel classNames="fcls_title_cnt" visible="true" verticalAlignment="Top" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="cntTitle">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="100%"/>
+					<GridColumnDefinition gridLengthValue=""/>
+				</GridPanel.gridColumnDefinitions>
+				<Label isDynamic="true" text="Tax Codes" classNames="fcls_title_lb" visible="true" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="header_text"/>
+				<Label isDynamic="true" text="A119" classNames="fcls_title_lb" visible="true" gridItemLocation="1,0,1,1" fieldTable="" identifier="lbFormName"/>
+			</GridPanel>
+			<GridPanel classNames="fcls_detail_cnt,fcls_data_cnt,fcls_align_left" visible="true" verticalAlignment="Top" horizontalAlignment="Left" gridItemLocation="0,1,1,1" fieldTable="formonly" identifier="cntDetail1">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="" gridMinLength="10rem"/>
+					<GridColumnDefinition gridLengthValue=""/>
+					<GridColumnDefinition gridLengthValue=""/>
+				</GridPanel.gridColumnDefinitions>
+				<Label isDynamic="true" text="Tax Code &amp; Desc" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="lb57" horizontalAlignment="Left"/>
+				<TextField toCase="Up" dataType="Char,,,,3" classNames="list-show-text-value,field-show-value,fcls_data_widget,fcls_align_left,fcls_length_05qch" preferredSize="4qch,1qch" toolTip=" Unique three character Tax Code" gridItemLocation="1,0,1,1" fieldTable="tax" comment=" Unique three character Tax Code" identifier="tax_code" horizontalAlignment="Left"/>
+				<TextField dataType="Char,,,,30" classNames="fcls_data_widget,fcls_align_left,fcls_length_30qch" preferredSize="31qch,1qch" toolTip=" Description of the Tax Code" fieldTable="tax" comment=" Description of the Tax Code" identifier="desc_text" horizontalAlignment="Left" gridItemLocation="2,0,1,1"/>
+				<Label isDynamic="true" text="Calculation Method" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,1,1,1" fieldTable="" identifier="lb76" horizontalAlignment="Left"/>
+				<ComboBox dataType="Char,,,,1" classNames="list-show-value-text,field-show-value,fcls_data_widget,fcls_align_left,fcls_length_05qch" preferredSize="2qch,1qch" toolTip=" Method - Sales Tax (P,D,N,T) - Exempt (X) - Inclusive (I) - Wholesale (W)" gridItemLocation="1,1,1,1" fieldTable="tax" comment=" Method - Sales Tax (P,D,N,T) - Exempt (X) - Inclusive (I) - Wholesale (W)" identifier="calc_method_flag" horizontalAlignment="Left"/>
+				<TextField noEntry="true" dataType="Char,,,," classNames="fcls_data_widget,fcls_align_left,fcls_length_30qch" preferredSize="53qch,1qch" gridItemLocation="2,1,1,1" fieldTable="formonly" identifier="calc_desc_text" horizontalAlignment="Stretch"/>
+				<TextArea visible="true" identifier="tax_calc_description" gridItemLocation="1,2,2,1" minSize=",6rem"/>
+				<Label isDynamic="true" text="Start Date" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,3,1,1" fieldTable="" identifier="lb77" horizontalAlignment="Left"/>
+				<Calendar dataType="Date,,,," classNames="fcls_data_widget,fcls_align_left,fcls_length_10qch" preferredSize="11qch,1qch" toolTip=" Start date for this tax code (W)" gridItemLocation="1,3,2,1" fieldTable="tax" comment=" Start date for this tax code (W)" identifier="start_date" horizontalAlignment="Left"/>
+			</GridPanel>
+			<GroupBox title="GL Postings" classNames="fcls_detail_gb_cnt,fcls_detail_cnt,,fcls_align_hstretch" visible="true" verticalAlignment="Top" gridItemLocation="0,2,1,1" fieldTable="formonly" identifier="cntDetail2GroupBox">
+				<GridPanel classNames="fcls_detail_gb_cnt_sub,fcls_detail_cnt_sub,fcls_data_cnt,fcls_align_left" visible="true" verticalAlignment="Top" horizontalAlignment="Left" fieldTable="formonly" identifier="cntDetail2GrBoxSub">
+					<GridPanel.gridRowDefinitions>
+						<GridRowDefinition gridLengthValue=""/>
+						<GridRowDefinition gridLengthValue=""/>
+					</GridPanel.gridRowDefinitions>
+					<GridPanel.gridColumnDefinitions>
+						<GridColumnDefinition gridLengthValue="" gridMinLength="10rem"/>
+						<GridColumnDefinition gridLengthValue=""/>
+						<GridColumnDefinition gridLengthValue=""/>
+						<GridColumnDefinition gridLengthValue=""/>
+					</GridPanel.gridColumnDefinitions>
+					<Label isDynamic="true" text="Sales Tax Acc" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="lb47"/>
+					<ComboBox dataType="Char,,,,18" classNames="list-show-value-text,field-show-value,fcls_data_widget,fcls_align_left,fcls_length_10qch" preferredSize="19qch,1qch" toolTip=" G/L Account for tax on sales invoices and credits - (W)" gridItemLocation="1,0,1,1" fieldTable="tax" comment=" G/L Account for tax on sales invoices and credits - (W)" identifier="sell_acct_code"/>
+					<TextField noEntry="true" dataType="Char,,,," classNames="fcls_data_widget,fcls_align_left,fcls_length_30qch" preferredSize="36qch,1qch" gridItemLocation="2,0,2,1" fieldTable="formonly" identifier="sell_desc_text"/>
+					<Label isDynamic="true" text="Purchase Tax Acc" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,1,1,1" fieldTable="formonly" identifier="lb46"/>
+					<ComboBox dataType="Char,,,,18" classNames="list-show-value-text,field-show-value,fcls_data_widget,fcls_align_left,fcls_length_10qch" preferredSize="19qch,1qch" toolTip=" G/L Account for tax on purchases - (W) " gridItemLocation="1,1,1,1" fieldTable="tax" comment=" G/L Account for tax on purchases - (W) " identifier="buy_acct_code"/>
+					<TextField noEntry="true" dataType="Char,,,," classNames="fcls_data_widget,fcls_align_left,fcls_length_30qch" preferredSize="36qch,1qch" gridItemLocation="2,1,2,1" fieldTable="formonly" identifier="buy_desc_text"/>
+				</GridPanel>
+			</GroupBox>
+			<GroupBox title="Percentages" classNames="fcls_detail_gb_cnt,fcls_detail_cnt,,fcls_align_hstretch" visible="true" gridItemLocation="0,3,1,1" fieldTable="formonly" identifier="cntDetail3GroupBox">
+				<GridPanel classNames="fcls_detail_gb_cnt_sub,fcls_detail_cnt_sub,fcls_data_cnt,fcls_align_left" visible="true" verticalAlignment="Top" horizontalAlignment="Left" fieldTable="formonly" identifier="cntDetail3GrBoxSub">
+					<GridPanel.gridRowDefinitions>
+						<GridRowDefinition gridLengthValue=""/>
+						<GridRowDefinition gridLengthValue=""/>
+						<GridRowDefinition gridLengthValue=""/>
+						<GridRowDefinition gridLengthValue=""/>
+					</GridPanel.gridRowDefinitions>
+					<GridPanel.gridColumnDefinitions>
+						<GridColumnDefinition gridLengthValue="" gridMinLength="10rem"/>
+						<GridColumnDefinition gridLengthValue=""/>
+					</GridPanel.gridColumnDefinitions>
+					<Label isDynamic="true" text="Sales Tax %" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="lb48"/>
+					<TextField dataType="Decimal,,,3,6" classNames="fcls_data_widget,fcls_align_left,fcls_length_05qch" preferredSize="9qch,1qch" toolTip=" Percentage used to calculate tax amount" gridItemLocation="1,0,1,1" fieldTable="tax" comment=" Percentage used to calculate tax amount" identifier="tax_per"/>
+					<Label isDynamic="true" text="Freight Tax %" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,1,1,1" fieldTable="formonly" identifier="lb49"/>
+					<TextField dataType="Decimal,,,3,6" classNames="fcls_data_widget,fcls_align_left,fcls_length_05qch" preferredSize="9qch,1qch" toolTip=" The Percentage tax calculated on Freight" gridItemLocation="1,1,1,1" fieldTable="tax" comment=" The Percentage tax calculated on Freight" identifier="freight_per"/>
+					<Label isDynamic="true" text="Handling Tax %" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,2,1,1" fieldTable="formonly" identifier="lb63"/>
+					<TextField dataType="Decimal,,,3,6" classNames="fcls_data_widget,fcls_align_left,fcls_length_05qch" preferredSize="9qch,1qch" toolTip=" The Percentage tax calculated on Handling" gridItemLocation="1,2,1,1" fieldTable="tax" comment=" The Percentage tax calculated on Handling" identifier="hand_per"/>
+					<Label isDynamic="true" text="Uplift Tax %" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,3,1,1" fieldTable="" identifier="lb101"/>
+					<TextField dataType="Float,,,," classNames="fcls_data_widget,fcls_align_left,fcls_length_05qch" preferredSize="9qch,1qch" toolTip=" The Percentage of cost uplift to calculate wholesale tax " gridItemLocation="1,3,3,1" fieldTable="tax" comment=" The Percentage of cost uplift to calculate wholesale tax " identifier="uplift_per"/>
+				</GridPanel>
+			</GroupBox>
+			<GroupBox title="Detailed Information on Tax Calculation Method" visible="true" identifier="c2" gridItemLocation="0,4,1,1" classNames="fcls_detail_gb_cnt,fcls_detail_cnt,fcls_align_hstretch">
+				<TextArea visible="true" identifier="tax_calc_description_detailed"/>
+			</GroupBox>
+			<GridPanel classNames="fcls_statusbar_cnt" visible="true" verticalAlignment="Top" gridItemLocation="0,5,1,1" fieldTable="formonly" identifier="cntStatusBar">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="100%"/>
+				</GridPanel.gridColumnDefinitions>
+				<Label isDynamic="true" text="" classNames="fcls_sblabel" visible="true" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="lbInfo1"/>
+				<Label isDynamic="true" text="" classNames="fcls_sblabel" visible="true" gridItemLocation="0,1,1,1" fieldTable="formonly" identifier="lbInfo2"/>
+			</GridPanel>
+		</GridPanel>
+	</form.rootContainer>
+	<form.screenRecords>
+		<ScreenRecord identifier="formonly" fields="sell_desc_text,buy_desc_text,calc_desc_text"/>
+		<ScreenRecord identifier="tax" fields="tax_code,desc_text,tax_per,sell_acct_code,buy_acct_code,start_date,calc_method_flag,freight_per,hand_per,uplift_per"/>
+	</form.screenRecords>
+</form>
+

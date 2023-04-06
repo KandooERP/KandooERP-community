@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form xmlns="http://namespaces.querix.com/2015/fglForms" title="${FormTitle}">
+<!-- This forms has 3 grid panels: cntTitle contains the title/header info, cntDetail contains the data fields, cntStatusBar contains the status bar -->
+	<form.rootContainer>
+		<GridPanel classNames="fcls_rootContainer" preferredSize="${FormWidth}qch,${FormHeight}qch" verticalAlignment="Top" fieldTable="" identifier="rootContainer">
+			<GridPanel.gridRowDefinitions>
+				<GridRowDefinition gridLengthValue=""/>
+				<GridRowDefinition gridLengthValue=""/>
+				<GridRowDefinition gridLengthValue=""/>
+			</GridPanel.gridRowDefinitions>
+			<GridPanel.gridColumnDefinitions>
+				<GridColumnDefinition gridLengthValue="100%"/>
+			</GridPanel.gridColumnDefinitions>
+			<!-- definition of the header gridpanel-->
+			<GridPanel classNames="fcls_title_cnt" visible="true" verticalAlignment="Top" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="cntTitle" horizontalAlignment="Stretch">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue=""/>
+					<GridColumnDefinition gridLengthValue=""/>
+				</GridPanel.gridColumnDefinitions>
+				<Label isDynamic="true" text="Data Management for table ${FormTableName}" classNames="fcls_title_lb" visible="true" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="header_text"/>
+				<Label isDynamic="true" text="${Form_Name}" classNames="fcls_title_lb" visible="true" gridItemLocation="1,0,1,1" fieldTable="" identifier="lbFormName"/>
+			</GridPanel>
+			<!-- definition of the data input gridpanel -->
+			<GridPanel classNames="fcls_detail_cnt,fcls_data_cnt,fcls_align_left" visible="true" verticalAlignment="Top" horizontalAlignment="Left" gridItemLocation="0,1,1,1" fieldTable="formonly" identifier="cntDetail">
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridMinLength="10rem"/> <!-- use this one, for columns which only show field labels  min-10 !   to give it a common look for all forms in an application - --> 
+					<GridColumnDefinition/> <!-- #just define a column.. (no size) i.e. for your fields -->
+					<RepeatBlock:DoFormLookup
+						<GridColumnDefinition/> <!-- ONE tag for EACH column#just define a column.. (no size) i.e. for your fields -->
+					:RepeatBlock>
+				</GridPanel.gridColumnDefinitions>
+				<GridPanel.gridRowDefinitions>
+					<RepeatBlock:FormHeight
+					<GridRowDefinition>
+						<GridRowDefinition.gridLength>
+							<GridLength gridLengthType="Auto"/>
+						</GridRowDefinition.gridLength>
+					</GridRowDefinition>
+				:RepeatBlock>
+				</GridPanel.gridRowDefinitions>
+				<!-- definition of the input output fields -->
+				<Script: bld_form_widgets($FORMHANDLE,${FormTableName},1) :Script>
+			</GridPanel> 
+			<!-- definition of the status bar gridpanel -->
+			<GridPanel classNames="fcls_statusbar_cnt" visible="true" verticalAlignment="Top" gridItemLocation="0,2,1,1" fieldTable="formonly" identifier="cntStatusBar">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="100%"/>  
+				</GridPanel.gridColumnDefinitions>
+				<Label isDynamic="true" text="" classNames="fcls_sblabel" visible="true" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="lbInfo1"/>
+				<Label isDynamic="true" text="" classNames="fcls_sblabel" visible="true" gridItemLocation="0,1,1,1" fieldTable="formonly" identifier="lbInfo2"/>
+			</GridPanel>
+		</GridPanel>
+    </form.rootContainer>
+    <form.screenRecords>
+        <Script: bld_form_screenrecords($FORMHANDLE) :Script>
+    </form.screenRecords>
+</form>

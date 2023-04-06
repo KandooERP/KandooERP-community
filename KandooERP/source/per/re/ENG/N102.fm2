@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="UTF-8"?><form xmlns="http://namespaces.querix.com/2015/fglForms">
+	<form.rootContainer>
+		<GridPanel classNames="fcls_rootContainer" fieldTable="" horizontalAlignment="Left" identifier="rootContainer" verticalAlignment="Top">
+			<GridPanel.gridRowDefinitions>
+				<GridRowDefinition gridLengthValue=""/>
+				<GridRowDefinition gridLengthValue=""/>
+				<GridRowDefinition gridLengthValue=""/>
+				<GridRowDefinition gridLengthValue=""/>
+				<GridRowDefinition gridLengthValue=""/>
+			</GridPanel.gridRowDefinitions>
+			<GridPanel.gridColumnDefinitions>
+				<GridColumnDefinition gridLengthValue="100%"/>
+			</GridPanel.gridColumnDefinitions>
+			<GridPanel classNames="fcls_title_cnt" fieldTable="formonly" gridItemLocation="0,0,1,1" identifier="cntTitle" verticalAlignment="Top" visible="true">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="100%"/>
+					<GridColumnDefinition gridLengthValue=""/>
+				</GridPanel.gridColumnDefinitions>
+				<Label classNames="fcls_title_lb" fieldTable="formonly" gridItemLocation="0,0,1,1" identifier="header_text" isDynamic="true" text="Requisition Person Maintenance" visible="true"/>
+				<Label classNames="fcls_title_lb" fieldTable="" gridItemLocation="1,0,1,1" identifier="lbFormName" isDynamic="true" text="N102" visible="true"/>
+			</GridPanel>
+			<GridPanel classNames="fcls_detail_cnt,fcls_data_cnt,fcls_align_left" fieldTable="formonly" gridItemLocation="0,1,1,1" horizontalAlignment="Left" identifier="cntDetail2" verticalAlignment="Top" visible="true">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="" gridMinLength="10rem"/>
+					<GridColumnDefinition gridLengthValue=""/>
+				</GridPanel.gridColumnDefinitions>
+				<Label classNames="fcls_fieldlabel,fcls_align_left" fieldTable="" gridItemLocation="0,0,1,1" identifier="lb_person_code" isDynamic="true" text="Person Code" visible="true"/>
+				<ComboBox classNames="fcls_data_widget,fcls_align_left,fcls_length_30qch" comment=" Enter the Person Code " dataType="Char,,,,8" editable="true" fieldTable="reqperson" gridItemLocation="1,0,1,1" identifier="person_code" preferredSize="9qch,1qch" toolTip=" Enter the Person Code "/>
+				<TextField classNames="fcls_data_widget,fcls_align_left,fcls_length_30qch" comment=" Enter descriptive person name " dataType="Char,,,,40" fieldTable="reqperson" gridItemLocation="1,1,1,1" identifier="name_text" preferredSize="41qch,1qch" toolTip=" Enter descriptive person name "/>
+				<Label classNames="fcls_fieldlabel,fcls_align_left" fieldTable="formonly" gridItemLocation="0,2,1,1" identifier="lb_warehouse" isDynamic="true" text="Warehouse" visible="true"/>
+				<ComboBox classNames="fcls_data_widget,fcls_align_left,fcls_length_30qch" comment=" Enter person's default warehouse (W)" dataType="Char,,,,3" fieldTable="reqperson" gridItemLocation="1,2,1,1" identifier="ware_code" preferredSize="4qch,1qch" toCase="Up" toolTip=" Enter person's default warehouse (W)"/>
+				<TextField classNames="fcls_data_widget,fcls_align_left,fcls_length_30qch"  comment=" " dataType="Char,,,,30" fieldTable="warehouse" gridItemLocation="1,3,1,1" identifier="desc_text" preferredSize="41qch,1qch" toolTip=" "/>
+				<Label classNames="fcls_fieldlabel,fcls_align_left" fieldTable="formonly" gridItemLocation="0,4,1,1" identifier="lb_department" isDynamic="true" text="Department" visible="true"/>
+				<TextField classNames="fcls_data_widget,fcls_align_left,fcls_length_30qch" comment=" Enter person's department name " dataType="Char,,,,40" fieldTable="reqperson" gridItemLocation="1,4,1,1" identifier="dept_text" preferredSize="41qch,1qch" toolTip=" Enter person's department name "/>
+				<Label classNames="fcls_fieldlabel,fcls_align_left" fieldTable="formonly" gridItemLocation="0,5,1,1" identifier="lb_address" isDynamic="true" text="Address" visible="true"/>
+				<TextField classNames="fcls_data_widget,fcls_align_left,fcls_length_30qch" comment=" Enter address line 1 " dataType="Char,,,,40" fieldTable="reqperson" gridItemLocation="1,5,1,1" identifier="addr1_text" preferredSize="41qch,1qch" toolTip=" Enter address line 1 "/>
+				<TextField classNames="fcls_data_widget,fcls_align_left,fcls_length_30qch" comment=" Enter address line 2 (W)" dataType="Char,,,,40" fieldTable="reqperson" gridItemLocation="1,6,1,1" identifier="addr2_text" preferredSize="41qch,1qch" toolTip=" Enter address line 2 (W)"/>
+				<TextField classNames="fcls_data_widget,fcls_align_left,fcls_length_30qch" comment=" Enter address line 3 " dataType="Char,,,,40" fieldTable="reqperson" gridItemLocation="1,7,1,1" identifier="addr3_text" preferredSize="41qch,1qch" toolTip=" Enter address line 3 "/>
+				<Label classNames="fcls_fieldlabel,fcls_align_left" fieldTable="" gridItemLocation="0,8,1,1" identifier="lb_city" isDynamic="true" text="City" visible="true"/>
+				<TextField classNames="fcls_data_widget,fcls_align_left,fcls_length_30qch" comment=" Enter address city name (W)" dataType="Char,,,,20" fieldTable="reqperson" gridItemLocation="1,8,1,1" identifier="city_text" preferredSize="21qch,1qch" toCase="Up" toolTip=" Enter address city name (W)"/>
+				<Label classNames="fcls_fieldlabel,fcls_align_left" fieldTable="" gridItemLocation="0,9,1,1" identifier="lb_state" isDynamic="true" text="State/County" visible="true"/>
+				<TextField classNames="fcls_data_widget,fcls_align_left,fcls_length_30qch" comment=" Enter address state name " dataType="Char,,,,20" fieldTable="reqperson" gridItemLocation="1,9,1,1" identifier="state_code" preferredSize="7qch,1qch" toolTip=" Enter address state name "/>
+				<Label classNames="fcls_fieldlabel,fcls_align_left" fieldTable="formonly" gridItemLocation="0,10,1,1" identifier="lb_postCode" isDynamic="true" text="Post Code" visible="true"/>
+				<TextField classNames="fcls_data_widget,fcls_align_left,fcls_length_30qch" comment=" Enter address post code " dataType="Char,,,,10" fieldTable="reqperson" gridItemLocation="1,10,1,1" identifier="post_code" preferredSize="11qch,1qch" toCase="Up" toolTip=" Enter address post code "/>
+				<Label classNames="fcls_fieldlabel,fcls_align_left" fieldTable="" gridItemLocation="0,11,1,1" identifier="lb_country" isDynamic="true" text="Country" visible="true"/>
+				<ComboBox classNames="fcls_data_widget,fcls_align_left,fcls_length_30qch" comment=" Enter address country code (W) " dataType="Char,,,,3" fieldTable="reqperson" gridItemLocation="1,11,1,1" identifier="country_code" preferredSize="4qch,1qch" toolTip=" Enter address country code (W) "/>
+			</GridPanel>
+			<GroupBox classNames="fcls_detail_gb_cnt" fieldTable="formonly" gridItemLocation="0,2,1,1" horizontalAlignment="Stretch" identifier="cntDetail2GroupBox" title="Transfer" verticalAlignment="Stretch" visible="true">
+				<GridPanel classNames="fcls_detail_gb_cnt_sub,fcls_data_cnt" fieldTable="formonly" horizontalAlignment="Stretch" identifier="cntDetail2GBSubGpLeft" verticalAlignment="Top" visible="true">
+					<GridPanel.gridRowDefinitions>
+						<GridRowDefinition gridLengthValue=""/>
+						<GridRowDefinition gridLengthValue=""/>
+					</GridPanel.gridRowDefinitions>
+					<GridPanel.gridColumnDefinitions>
+						<GridColumnDefinition gridLengthValue="" gridMinLength="10rem"/>
+						<GridColumnDefinition gridLengthValue=""/>
+					</GridPanel.gridColumnDefinitions>
+					<CheckBox classNames="fcls_data_widget,fcls_align_hstretch" comment=" 'Y' Override warehouse during requisition entry/edit, 'N' otherwise" dataType="Char,,,,1" fieldTable="reqperson" gridItemLocation="1,0,1,1" identifier="ware_oride_flag" preferredSize="2qch,1qch" title="Override Warehouse" toCase="Up" toolTip=" 'Y' Override warehouse during requisition entry/edit, 'N' otherwise">
+				<CheckBox.includes>
+					<ValueInclude>
+						<ValueInclude.value>
+							<StringLiteral stringValue="Y"/>
+						</ValueInclude.value>
+					</ValueInclude>
+					<ValueInclude>
+						<ValueInclude.value>
+							<StringLiteral stringValue="N"/>
+						</ValueInclude.value>
+					</ValueInclude>
+				</CheckBox.includes>
+				<CheckBox.checkedValue>
+					<StringLiteral stringValue="Y"/>
+				</CheckBox.checkedValue>
+				<CheckBox.uncheckedValue>
+					<StringLiteral stringValue="N"/>
+				</CheckBox.uncheckedValue>
+			</CheckBox>
+					<Label classNames="fcls_fieldlabel,fcls_align_left" fieldTable="formonly" gridItemLocation="0,1,1,1" identifier="lb46x" isDynamic="true" text="lb_import_file_name" visible="true"/>
+					<TextField classNames="fcls_data_widget,fcls_align_hstretch" comment=" UNIX file name containing requisition data to be loaded" dataType="Char,,,,20" fieldTable="reqperson" gridItemLocation="1,1,1,1" identifier="loadfile_text" preferredSize="21qch,1qch" toolTip=" UNIX file name containing requisition data to be loaded"/>
+				</GridPanel>
+			</GroupBox>
+			<GridPanel classNames="fcls_detail_cnt" fieldTable="formonly" gridItemLocation="0,3,1,1" identifier="cntDetail8" verticalAlignment="Top" visible="true">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="33%"/>
+					<GridColumnDefinition gridLengthValue="33%"/>
+					<GridColumnDefinition gridLengthValue="33%"/>
+				</GridPanel.gridColumnDefinitions>
+				<GroupBox classNames="fcls_detail_gb_cnt" fieldTable="formonly" gridItemLocation="0,0,1,1" horizontalAlignment="Stretch" identifier="cntDetail8GroupBoxLeft" title="Authorisation" verticalAlignment="Stretch" visible="true">
+					<GridPanel classNames="fcls_detail_gb_cnt_sub,fcls_data_cnt,fcls_align_left" fieldTable="formonly" horizontalAlignment="Left" identifier="cntDetail8GBSubGpLeft" verticalAlignment="Top" visible="true">
+						<GridPanel.gridRowDefinitions>
+							<GridRowDefinition gridLengthValue=""/>
+							<GridRowDefinition gridLengthValue=""/>
+							<GridRowDefinition gridLengthValue=""/>
+							<GridRowDefinition gridLengthValue=""/>
+						</GridPanel.gridRowDefinitions>
+						<GridPanel.gridColumnDefinitions>
+							<GridColumnDefinition gridLengthValue="" gridMinLength="10rem"/>
+							<GridColumnDefinition gridLengthValue=""/>
+						</GridPanel.gridColumnDefinitions>
+						<Label classNames="fcls_fieldlabel,fcls_align_left" fieldTable="" gridItemLocation="0,0,1,1" identifier="lb_lower_limit" isDynamic="true" text="Lower Limit" visible="true"/>
+						<TextField classNames="fcls_data_widget,fcls_align_left,fcls_length_10qch" comment=" Enter Purchase Order Authorization Lower Limit " dataType="Decimal,,,2,12" fieldTable="reqperson" gridItemLocation="1,0,1,1" identifier="po_low_limit_amt" preferredSize="12qch,1qch" toolTip=" Enter Purchase Order Authorization Lower Limit "/>
+						<Label classNames="fcls_fieldlabel,fcls_align_left" fieldTable="" gridItemLocation="0,1,1,1" identifier="lb_upper_limit" isDynamic="true" text="Upper Limit" visible="true"/>
+						<TextField classNames="fcls_data_widget,fcls_align_left,fcls_length_10qch" comment=" Enter Purchase Order Authorization Upper Limit " dataType="Decimal,,,2,12" fieldTable="reqperson" gridItemLocation="1,1,1,1" identifier="po_up_limit_amt" preferredSize="12qch,1qch" toolTip=" Enter Purchase Order Authorization Upper Limit "/>
+						<Label classNames="fcls_fieldlabel,fcls_align_left" fieldTable="formonly" gridItemLocation="0,2,1,1" identifier="lb_start_date" isDynamic="true" text="Start Date." visible="true"/>
+						<Calendar classNames="fcls_data_widget,fcls_align_left,fcls_length_10qch" comment=" Start Date of Purchase Order Authorization Limit " dataType="Date,,,," fieldTable="reqperson" format="dd/mm/yyyy" gridItemLocation="1,2,1,1" identifier="po_start_date" preferredSize="11qch,1qch" toolTip=" Start Date of Purchase Order Authorization Limit "/>
+						<Label classNames="fcls_fieldlabel,fcls_align_left" fieldTable="formonly" gridItemLocation="0,3,1,1" identifier="lb_expiry_date1" isDynamic="true" text="Expiry Date" visible="true"/>
+						<Calendar classNames="fcls_data_widget,fcls_align_left,fcls_length_10qch" comment=" Expiry Date of Purchase Order Authorization Limit " dataType="Date,,,," fieldTable="reqperson" format="dd/mm/yyyy" gridItemLocation="1,3,1,1" identifier="po_exp_date" preferredSize="11qch,1qch" toolTip=" Expiry Date of Purchase Order Authorization Limit "/>
+					</GridPanel>
+				</GroupBox>
+				<GroupBox classNames="fcls_detail_gb_cnt" fieldTable="" gridItemLocation="1,0,1,1" horizontalAlignment="Stretch" identifier="cntDetail8GroupBoxMiddle" title="Stock Limits" verticalAlignment="Stretch" visible="true">
+					<GridPanel classNames="fcls_detail_gb_cnt_sub,fcls_data_cnt,fcls_align_left" fieldTable="" horizontalAlignment="Left" identifier="cntDetail8GBSubGpMiddle" verticalAlignment="Top" visible="true">
+						<GridPanel.gridRowDefinitions>
+							<GridRowDefinition gridLengthValue=""/>
+							<GridRowDefinition gridLengthValue=""/>
+							<GridRowDefinition gridLengthValue=""/>
+						</GridPanel.gridRowDefinitions>
+						<GridPanel.gridColumnDefinitions>
+							<GridColumnDefinition gridLengthValue="" gridMinLength="10rem"/>
+							<GridColumnDefinition gridLengthValue=""/>
+						</GridPanel.gridColumnDefinitions>
+						<Label classNames="fcls_fieldlabel,fcls_align_left" fieldTable="" gridItemLocation="0,0,1,1" identifier="lb_value" isDynamic="true" text="Value" visible="true"/>
+						<TextField classNames="fcls_data_widget,fcls_align_left,fcls_length_10qch" comment=" Enter Item Stocking Limit " dataType="Decimal,,,2,12" fieldTable="reqperson" gridItemLocation="1,0,1,1" identifier="stock_limit_amt" preferredSize="12qch,1qch" toolTip=" Enter Item Stocking Limit "/>
+						<Label classNames="fcls_fieldlabel,fcls_align_left" fieldTable="" gridItemLocation="0,1,1,1" identifier="lb_start_date1" isDynamic="true" text="Start Date." visible="true"/>
+						<Calendar classNames="fcls_data_widget,fcls_align_left,fcls_length_10qch" comment=" Start date of item stocking limit " dataType="Date,,,," fieldTable="reqperson" format="dd/mm/yyyy" gridItemLocation="1,1,1,1" identifier="sl_start_date" preferredSize="11qch,1qch" toolTip=" Start date of item stocking limit "/>
+						<Label classNames="fcls_fieldlabel,fcls_align_left" fieldTable="" gridItemLocation="0,2,1,1" identifier="lb_expiry_date" isDynamic="true" text="Expiry Date" visible="true"/>
+						<Calendar classNames="fcls_data_widget,fcls_align_left,fcls_length_10qch" comment=" Expiry date of item stocking limit " dataType="Date,,,," fieldTable="reqperson" format="dd/mm/yyyy" gridItemLocation="1,2,1,1" identifier="sl_exp_date" preferredSize="11qch,1qch" toolTip=" Expiry date of item stocking limit "/>
+					</GridPanel>
+				</GroupBox>
+				<GroupBox classNames="fcls_detail_gb_cnt" fieldTable="" gridItemLocation="2,0,1,1" horizontalAlignment="Stretch" identifier="cntDetail8GroupBoxRight" title="Receipt Limits" verticalAlignment="Stretch" visible="true">
+					<GridPanel classNames="fcls_detail_gb_cnt_sub,fcls_data_cnt,fcls_align_left" fieldTable="" horizontalAlignment="Left" identifier="cntDetail8GBSubGpRight" verticalAlignment="Top" visible="true">
+						<GridPanel.gridRowDefinitions>
+							<GridRowDefinition gridLengthValue=""/>
+							<GridRowDefinition gridLengthValue=""/>
+							<GridRowDefinition gridLengthValue=""/>
+						</GridPanel.gridRowDefinitions>
+						<GridPanel.gridColumnDefinitions>
+							<GridColumnDefinition gridLengthValue="" gridMinLength="10rem"/>
+							<GridColumnDefinition gridLengthValue=""/>
+						</GridPanel.gridColumnDefinitions>
+						<Label classNames="fcls_fieldlabel,fcls_align_left" fieldTable="" gridItemLocation="0,0,1,1" identifier="lb_value1" isDynamic="true" text="Value" visible="true"/>
+						<TextField classNames="fcls_data_widget,fcls_align_left,fcls_length_10qch" comment=" Enter Direct Receipt Limit " dataType="Decimal,,,2,12" fieldTable="reqperson" gridItemLocation="1,0,1,1" identifier="dr_limit_amt" preferredSize="12qch,1qch" toolTip=" Enter Direct Receipt Limit "/>
+						<Label classNames="fcls_fieldlabel,fcls_align_left" fieldTable="" gridItemLocation="0,1,1,1" identifier="lb_start_date2" isDynamic="true" text="Start Date." visible="true"/>
+						<Calendar classNames="fcls_data_widget,fcls_align_left,fcls_length_10qch" comment=" Start Date of Direct Receipt Limit " dataType="Date,,,," fieldTable="reqperson" format="dd/mm/yyyy" gridItemLocation="1,1,1,1" identifier="dr_start_date" preferredSize="11qch,1qch" toolTip=" Start Date of Direct Receipt Limit "/>
+						<Label classNames="fcls_fieldlabel,fcls_align_left" fieldTable="" gridItemLocation="0,2,1,1" identifier="lb_expiry_date1" isDynamic="true" text="Expiry Date" visible="true"/>
+						<Calendar classNames="fcls_data_widget,fcls_align_left,fcls_length_10qch" comment=" Expiry Date of Direct Receipt  Limit " dataType="Date,,,," fieldTable="reqperson" format="dd/mm/yyyy" gridItemLocation="1,2,1,1" identifier="dr_exp_date" preferredSize="11qch,1qch" toolTip=" Expiry Date of Direct Receipt  Limit "/>
+					</GridPanel>
+				</GroupBox>
+			</GridPanel>
+			<GridPanel classNames="fcls_statusbar_cnt" fieldTable="formonly" gridItemLocation="0,4,1,1" identifier="cntStatusBar" verticalAlignment="Top" visible="true">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="100%"/>
+				</GridPanel.gridColumnDefinitions>
+				<Label classNames="fcls_sblabel" fieldTable="formonly" gridItemLocation="0,0,1,1" identifier="lbInfo1" isDynamic="true" text="" visible="true"/>
+				<Label classNames="fcls_sblabel" fieldTable="formonly" gridItemLocation="0,1,1,1" identifier="lbInfo2" isDynamic="true" text="" visible="true"/>
+			</GridPanel>
+		</GridPanel>
+	</form.rootContainer>
+	<form.screenRecords>
+		<ScreenRecord fields="reqperson.person_code,reqperson.name_text,reqperson.ware_code,reqperson.loadfile_text,reqperson.ware_oride_flag,reqperson.dept_text,reqperson.addr1_text,reqperson.addr2_text,reqperson.addr3_text,reqperson.city_text,reqperson.state_code,reqperson.post_code,reqperson.country_code,reqperson.stock_limit_amt,reqperson.sl_start_date,reqperson.sl_exp_date,reqperson.dr_limit_amt,reqperson.dr_start_date,reqperson.dr_exp_date,reqperson.po_low_limit_amt,reqperson.po_up_limit_amt,reqperson.po_start_date,reqperson.po_exp_date" identifier="reqperson"/>
+		<ScreenRecord fields="warehouse.desc_text" identifier="warehouse"/>
+	</form.screenRecords>
+</form>

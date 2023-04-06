@@ -1,0 +1,23 @@
+#######################################################################
+# ${BoxFunctionName}(): this function fills the static combobox
+FUNCTION ${BoxFunctionName}()
+	DEFINE l_statement STRING
+    DEFINE ${ComboBoxCursorPrefix}_${BoxParentTable} CURSOR
+	DEFINE l_${SelectBoxColsList} LIKE ${BoxParentTable}.${SelectBoxColsList}
+	LET cb_${BoxParentTable} = ui.Combobox.ForName("${SelectBoxColsList}")		
+
+	LET l_statement = "SELECT ${SelectBoxColsList} ",
+	" FROM ${BoxParentTable} ",  
+	<Script:if (defined($GlobalReferenceKey) ) {
+		if (defined ($DBSchema{$BoxParentTable}->{$GlobalReferenceKey})) {
+			$line=sprintf "\"%sWHERE %s = ?\",",$LineFlag,$GlobalReferenceKey;
+			print ($line);
+		}
+	}:Script>
+	" ORDER BY ${SelectBoxColsList} "
+	CALL ${ComboBoxCursorPrefix}_${BoxParentTable}.Declare(l_statement)
+	CALL ${ComboBoxCursorPrefix}_${BoxParentTable}.Open(${GlobalReferenceRecord}.${GlobalReferenceKey})
+	WHILE ${ComboBoxCursorPrefix}_${BoxParentTable}.FetchNext(l_${SelectBoxColsList}) = 0
+		CALL cb_${BoxParentTable}.AddItem (l_${SelectBoxColsList})		
+	END WHILE
+END FUNCTION # ${BoxFunctionName}

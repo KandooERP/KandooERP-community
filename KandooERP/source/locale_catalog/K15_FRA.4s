@@ -1,0 +1,125 @@
+K15_FRA {
+/ { "/" }
+A Valid Code for this part of the chart { "Un code valid pour cette partie du numéro de compte" }
+Account { "Compte" }
+Account Verifier { "Vérificateur de compte" }
+Account code to identify this account { "Numéro de compte identifiant ce client" }
+Additional comments line, if needed { "Commentaires supplémentaires, si nécessaire" }
+Addr { "Adresse" }
+Address { "Adresse" }
+Amounts { "Montants" }
+Available Credit { "Crédit disponible" }
+Back Order { "Commande en cours" }
+Bank Account { "Compte bancaire" }
+Bank Code { "Code Banque" }
+Carrier { "Transporteur" }
+Chart of Accounts { "Plan Comptable" }
+Cheque Date { "Date du chèque" }
+City { "Ville" }
+Code { "Code" }
+Comments { "Commentaires" }
+Country { "Pays" }
+Credit Date { "Date de crédit" }
+Credit Limit { "Limite de Crédit" }
+Currency { "Devise" }
+Customer { "Client" }
+Customer Code { "Code Client" }
+Customer Name { "Nom du client" }
+Date { "Date" }
+Delivery comments - instructions (line1) { "Commentaires sur la livraison - instructions (ligne1)" }
+Delivery comments - instructions (line2) { "Commentaires de livraison - instructions (ligne2)" }
+Description { "Description" }
+Description of subscription type { "Description du type d'abonnement" }
+End Date { "Date de fin" }
+Enter a Unique Transaction Number { "Saisir un numéro unique de transaction" }
+Expiry Date { "Date d'expiration" }
+FILTER { "Premier" }
+Field Description { "Description du champ" }
+Fiscal Year { "Exercice fiscal" }
+Flex Codes { "Flex Codes" }
+Freight { "Fret" }
+GL Account { "Compte de Compta Générale" }
+GL Integration { "Intégration Grand Livre" }
+Goods { "Marchandises" }
+Group 2 { "Groupe 2" }
+Handling { "Manutention" }
+ID { "ID" }
+Invoice Address { "Adresse de facturation" }
+Invoice Date { "Date de facturation" }
+LOOKUP { "RECHERCHER" }
+Label or description of Tax Code { "Étiquette ou description du code taxe" }
+Label or description of this tax code { "Étiquette ou description de ce code taxe" }
+Language Code { "Code langue" }
+Length { "Longueur" }
+Length of the Code { "Longueur Numéro de compte" }
+Line { "Ligne" }
+Line Total { "Total Ligne" }
+Line Total including Tax { "Total ligne incluant les taxes" }
+List Price { "Prix Liste" }
+Main Group { "Groupe Principal" }
+Name { "Nom" }
+No { "Non" }
+Number { "Numéro" }
+Order Date { "Date de Commande" }
+Order Number { "Numéro de commande" }
+Other Info { "Autres informations" }
+Payment: C = Cash  Q = Cheque  P = Credit Card  O = Payment { "Paiement: C = Espèces Q = Chèque P = Carte de crédit O = Paiement" }
+Period { "Période" }
+Person { "Personne" }
+Possible Discount { "Remise possible" }
+Post Code { "Code Postal" }
+Price Level { "Niveau de prix" }
+Price used for the customer: C)ost, L)ist or 1-9 Price Level { "Prix utilisé pour le client: C) Coût, L) Liste ou 1-9 Niveau de prix" }
+Product { "Produit" }
+Product Code { "Code Produit" }
+Qty { "Qté" }
+Quantity { "Quantité" }
+REFRESH { "ACTUALISER" }
+Received { "Reçu" }
+Reference { "Référence" }
+Reserved { "Réservé" }
+Revision { "Révision" }
+Sales { "Ventes" }
+Sales Tax { "Taxe de vente" }
+Sales Tax calculated by tax codes { "Taxe de vente calculée par codes de taxe" }
+Salesperson { "Vendeur" }
+Save { "Enregistrer" }
+Shipping Address { "Adresse de livraison" }
+Shipping address country { "Pays d'adresse de livraison" }
+Shipping address line 1 { "Adresse de livraison ligne 1" }
+Shipping address line 2 { "Adresse de livraison ligne 2" }
+Shipping address line 3 { "Adresse de livraison ligne 3" }
+Shipping address postal code { "Code postal d'adresse de livraison" }
+Shipping address state { "Département de l'adresse de livraison" }
+Start Date { "Date de Début" }
+Start Pos. { "Positions Départ" }
+Start position of the Code { "Position de départ du code" }
+State { "Etat" }
+State/County { "Région" }
+Status { "Statut" }
+Stocking { "Stockage" }
+Subscription Type { "Type d'abonnement" }
+Tax { "T.V.A." }
+Tax Code { "Code T.V.A." }
+Taxation { "Imposition" }
+The Description of the Account { "Description du compte" }
+The Product Code from inventory { "Le code produit de l'inventaire" }
+The Product Code from inventory (W) { "Code produit de l'inventaire (W)" }
+The description for this code { "L'intitulé de ce code" }
+The reference number { "Numéro de référence" }
+The valid flex segment { "Le segment Flex valide" }
+Title { "Titre" }
+Title of this field in the GL { "Titre de ce champ en Compta géné" }
+Total { "Total" }
+Total Amount { "Montant Total" }
+Total Cost { "Coût total" }
+Totals { "Totaux" }
+Transaction Number Entry { "Saisie du numéro de transaction" }
+Type { "Type" }
+Unit Price { "Prix Unitaire" }
+Unit Tax { "T.V.A unité" }
+Unit of Measure { "Unité de mesure" }
+Warehouse { "Dépôt" }
+Year { "Année" }
+actToolbarManager { "actToolbarManager" }
+}

@@ -1,0 +1,1445 @@
+1|binaryudt.1.0|7|binaryvar|informix|0|create opaque type binaryvar(\
+	internallength = variable,\
+	maxlen = 255,\
+	alignment = 4\
+);\
+\
+|f|drop type binaryvar restrict;\
+\
+|f||f|R|D|R|||||
+2|binaryudt.1.0|71|binaryvar|informix|0|grant usage on type binaryvar to public;\
+\
+|f|\ |f||f|R|D|R|||||
+3|binaryudt.1.0|5|binaryvarIn (lvarchar)|informix|0|create function binaryvarIn (lvarchar)\
+returns binaryvar\
+external name "$INFORMIXDIR/extend/binaryudt.1.0/binaryudt.bld(binaryvarInput)" language c;\
+\
+|f|drop function binaryvarIn (lvarchar);\
+\
+|f||f|R|D|R|||||
+4|binaryudt.1.0|181|Alter-ExternalName-binaryvarIn (lvarchar)|informix|0|alter function binaryvarIn (lvarchar)\
+	with (Modify External Name = "$INFORMIXDIR/extend/binaryudt.1.0/binaryudt.bld(binaryvarInput)");\
+\
+|f|alter function binaryvarIn (lvarchar)\
+	with (Modify External Name = "binaryvarInput");\
+\
+|f||f|R|D|R|||||
+5|binaryudt.1.0|37|Alter-Parallelize-binaryvarIn (lvarchar)|informix|0|alter function binaryvarIn (lvarchar)\
+	with (add parallelizable);\
+\
+|f|alter function binaryvarIn (lvarchar)\
+	with (drop parallelizable);\
+\
+|f||f|R|D|R|||||
+6|binaryudt.1.0|85|Alter-Variant-binaryvarIn (lvarchar)|informix|0|alter function binaryvarIn (lvarchar)\
+	with (add variant);\
+\
+|f|alter function binaryvarIn (lvarchar)\
+	with (drop variant);\
+\
+|f||f|R|D|R|||||
+7|binaryudt.1.0|69|binaryvarIn (lvarchar)|informix|0|grant execute on function binaryvarIn (lvarchar) to public;\
+\
+|f|\ |f||f|R|D|R|||||
+8|binaryudt.1.0|3|lvarchar->binaryvar|informix|0|create implicit cast\
+	(\
+		lvarchar as binaryvar\
+		with  binaryvarIn\
+	);\
+\
+|f|drop cast (lvarchar as binaryvar);\
+\
+|f||f|R|D|R|||||
+9|binaryudt.1.0|5|binaryvarOut (binaryvar)|informix|0|create function binaryvarOut (binaryvar)\
+returns lvarchar\
+external name "$INFORMIXDIR/extend/binaryudt.1.0/binaryudt.bld(binaryvarOutput)" language c;\
+\
+|f|drop function binaryvarOut (binaryvar);\
+\
+|f||f|R|D|R|||||
+10|binaryudt.1.0|181|Alter-ExternalName-binaryvarOut (binaryvar)|informix|0|alter function binaryvarOut (binaryvar)\
+	with (Modify External Name = "$INFORMIXDIR/extend/binaryudt.1.0/binaryudt.bld(binaryvarOutput)");\
+\
+|f|alter function binaryvarOut (binaryvar)\
+	with (Modify External Name = "binaryvarOutput");\
+\
+|f||f|R|D|R|||||
+11|binaryudt.1.0|69|binaryvarOut (binaryvar)|informix|0|grant execute on function binaryvarOut (binaryvar) to public;\
+\
+|f|\ |f||f|R|D|R|||||
+12|binaryudt.1.0|3|binaryvar->lvarchar|informix|0|create cast\
+	(\
+		binaryvar as lvarchar\
+		with  binaryvarOut\
+	);\
+\
+|f|drop cast (binaryvar as lvarchar);\
+\
+|f||f|R|D|R|||||
+13|binaryudt.1.0|5|binaryvarSend (binaryvar)|informix|0|create function binaryvarSend (binaryvar)\
+returns sendrecv\
+external name "$INFORMIXDIR/extend/binaryudt.1.0/binaryudt.bld(binaryvarSend)" language c;\
+\
+|f|drop function binaryvarSend (binaryvar);\
+\
+|f||f|R|D|R|||||
+14|binaryudt.1.0|181|Alter-ExternalName-binaryvarSend (binaryvar)|informix|0|alter function binaryvarSend (binaryvar)\
+	with (Modify External Name = "$INFORMIXDIR/extend/binaryudt.1.0/binaryudt.bld(binaryvarSend)");\
+\
+|f|alter function binaryvarSend (binaryvar)\
+	with (Modify External Name = "binaryvarSend");\
+\
+|f||f|R|D|R|||||
+15|binaryudt.1.0|69|binaryvarSend (binaryvar)|informix|0|grant execute on function binaryvarSend (binaryvar) to public;\
+\
+|f|\ |f||f|R|D|R|||||
+16|binaryudt.1.0|3|binaryvar->sendrecv|informix|0|create cast\
+	(\
+		binaryvar as sendrecv\
+		with  binaryvarSend\
+	);\
+\
+|f|drop cast (binaryvar as sendrecv);\
+\
+|f||f|R|D|R|||||
+17|binaryudt.1.0|5|binaryvarRecv (sendrecv)|informix|0|create function binaryvarRecv (sendrecv)\
+returns binaryvar\
+external name "$INFORMIXDIR/extend/binaryudt.1.0/binaryudt.bld(binaryvarReceive)" language c;\
+\
+|f|drop function binaryvarRecv (sendrecv);\
+\
+|f||f|R|D|R|||||
+18|binaryudt.1.0|181|Alter-ExternalName-binaryvarRecv (sendrecv)|informix|0|alter function binaryvarRecv (sendrecv)\
+	with (Modify External Name = "$INFORMIXDIR/extend/binaryudt.1.0/binaryudt.bld(binaryvarReceive)");\
+\
+|f|alter function binaryvarRecv (sendrecv)\
+	with (Modify External Name = "binaryvarReceive");\
+\
+|f||f|R|D|R|||||
+19|binaryudt.1.0|69|binaryvarRecv (sendrecv)|informix|0|grant execute on function binaryvarRecv (sendrecv) to public;\
+\
+|f|\ |f||f|R|D|R|||||
+20|binaryudt.1.0|3|sendrecv->binaryvar|informix|0|create implicit cast\
+	(\
+		sendrecv as binaryvar\
+		with  binaryvarRecv\
+	);\
+\
+|f|drop cast (sendrecv as binaryvar);\
+\
+|f||f|R|D|R|||||
+21|binaryudt.1.0|5|binaryvarImpT (impexp)|informix|0|create function binaryvarImpT (impexp)\
+returns binaryvar\
+external name "$INFORMIXDIR/extend/binaryudt.1.0/binaryudt.bld(binaryvarImportText)" language c;\
+\
+|f|drop function binaryvarImpT (impexp);\
+\
+|f||f|R|D|R|||||
+22|binaryudt.1.0|181|Alter-ExternalName-binaryvarImpT (impexp)|informix|0|alter function binaryvarImpT (impexp)\
+	with (Modify External Name = "$INFORMIXDIR/extend/binaryudt.1.0/binaryudt.bld(binaryvarImportText)");\
+\
+|f|alter function binaryvarImpT (impexp)\
+	with (Modify External Name = "binaryvarImportText");\
+\
+|f||f|R|D|R|||||
+23|binaryudt.1.0|69|binaryvarImpT (impexp)|informix|0|grant execute on function binaryvarImpT (impexp) to public;\
+\
+|f|\ |f||f|R|D|R|||||
+24|binaryudt.1.0|3|impexp->binaryvar|informix|0|create implicit cast\
+	(\
+		impexp as binaryvar\
+		with  binaryvarImpT\
+	);\
+\
+|f|drop cast (impexp as binaryvar);\
+\
+|f||f|R|D|R|||||
+25|binaryudt.1.0|5|binaryvarExpT (binaryvar)|informix|0|create function binaryvarExpT (binaryvar)\
+returns impexp\
+external name "$INFORMIXDIR/extend/binaryudt.1.0/binaryudt.bld(binaryvarExportText)" language c;\
+\
+|f|drop function binaryvarExpT (binaryvar);\
+\
+|f||f|R|D|R|||||
+26|binaryudt.1.0|181|Alter-ExternalName-binaryvarExpT (binaryvar)|informix|0|alter function binaryvarExpT (binaryvar)\
+	with (Modify External Name = "$INFORMIXDIR/extend/binaryudt.1.0/binaryudt.bld(binaryvarExportText)");\
+\
+|f|alter function binaryvarExpT (binaryvar)\
+	with (Modify External Name = "binaryvarExportText");\
+\
+|f||f|R|D|R|||||
+27|binaryudt.1.0|69|binaryvarExpT (binaryvar)|informix|0|grant execute on function binaryvarExpT (binaryvar) to public;\
+\
+|f|\ |f||f|R|D|R|||||
+28|binaryudt.1.0|3|binaryvar->impexp|informix|0|create cast\
+	(\
+		binaryvar as impexp\
+		with  binaryvarExpT\
+	);\
+\
+|f|drop cast (binaryvar as impexp);\
+\
+|f||f|R|D|R|||||
+29|binaryudt.1.0|5|binaryvarImpB (impexpbin)|informix|0|create function binaryvarImpB (impexpbin)\
+returns binaryvar\
+external name "$INFORMIXDIR/extend/binaryudt.1.0/binaryudt.bld(binaryvarImportBinary)" language c;\
+\
+|f|drop function binaryvarImpB (impexpbin);\
+\
+|f||f|R|D|R|||||
+30|binaryudt.1.0|181|Alter-ExternalName-binaryvarImpB (impexpbin)|informix|0|alter function binaryvarImpB (impexpbin)\
+	with (Modify External Name = "$INFORMIXDIR/extend/binaryudt.1.0/binaryudt.bld(binaryvarImportBinary)");\
+\
+|f|alter function binaryvarImpB (impexpbin)\
+	with (Modify External Name = "binaryvarImportBinary");\
+\
+|f||f|R|D|R|||||
+31|binaryudt.1.0|69|binaryvarImpB (impexpbin)|informix|0|grant execute on function binaryvarImpB (impexpbin) to public;\
+\
+|f|\ |f||f|R|D|R|||||
+32|binaryudt.1.0|3|impexpbin->binaryvar|informix|0|create implicit cast\
+	(\
+		impexpbin as binaryvar\
+		with  binaryvarImpB\
+	);\
+\
+|f|drop cast (impexpbin as binaryvar);\
+\
+|f||f|R|D|R|||||
+33|binaryudt.1.0|5|binaryvarExpB (binaryvar)|informix|0|create function binaryvarExpB (binaryvar)\
+returns impexpbin\
+external name "$INFORMIXDIR/extend/binaryudt.1.0/binaryudt.bld(binaryvarExportBinary)" language c;\
+\
+|f|drop function binaryvarExpB (binaryvar);\
+\
+|f||f|R|D|R|||||
+34|binaryudt.1.0|181|Alter-ExternalName-binaryvarExpB (binaryvar)|informix|0|alter function binaryvarExpB (binaryvar)\
+	with (Modify External Name = "$INFORMIXDIR/extend/binaryudt.1.0/binaryudt.bld(binaryvarExportBinary)");\
+\
+|f|alter function binaryvarExpB (binaryvar)\
+	with (Modify External Name = "binaryvarExportBinary");\
+\
+|f||f|R|D|R|||||
+35|binaryudt.1.0|69|binaryvarExpB (binaryvar)|informix|0|grant execute on function binaryvarExpB (binaryvar) to public;\
+\
+|f|\ |f||f|R|D|R|||||
+36|binaryudt.1.0|3|binaryvar->impexpbin|informix|0|create cast\
+	(\
+		binaryvar as impexpbin\
+		with  binaryvarExpB\
+	);\
+\
+|f|drop cast (binaryvar as impexpbin);\
+\
+|f||f|R|D|R|||||
+37|binaryudt.1.0|5|Compare (binaryvar,binaryvar)|informix|0|create function Compare (binaryvar,binaryvar)\
+returns integer\
+external name "$INFORMIXDIR/extend/binaryudt.1.0/binaryudt.bld(binaryvarCompare)" language c;\
+\
+|f|drop function Compare (binaryvar,binaryvar);\
+\
+|f||f|R|D|R|||||
+38|binaryudt.1.0|181|Alter-ExternalName-Compare (binaryvar,binaryvar)|informix|0|alter function Compare (binaryvar,binaryvar)\
+	with (Modify External Name = "$INFORMIXDIR/extend/binaryudt.1.0/binaryudt.bld(binaryvarCompare)");\
+\
+|f|alter function Compare (binaryvar,binaryvar)\
+	with (Modify External Name = "binaryvarCompare");\
+\
+|f||f|R|D|R|||||
+39|binaryudt.1.0|85|Alter-Variant-Compare (binaryvar,binaryvar)|informix|0|alter function Compare (binaryvar,binaryvar)\
+	with (add not variant);\
+\
+|f|alter function Compare (binaryvar,binaryvar)\
+	with (drop not variant);\
+\
+|f||f|R|D|R|||||
+40|binaryudt.1.0|69|Compare (binaryvar,binaryvar)|informix|0|grant execute on function Compare (binaryvar,binaryvar) to public;\
+\
+|f|\ |f||f|R|D|R|||||
+41|binaryudt.1.0|5|Equal (binaryvar,binaryvar)|informix|0|create function Equal (binaryvar,binaryvar)\
+returns boolean\
+external name "$INFORMIXDIR/extend/binaryudt.1.0/binaryudt.bld(binaryvarEqual)" language c;\
+\
+|f|drop function Equal (binaryvar,binaryvar);\
+\
+|f||f|R|D|R|||||
+42|binaryudt.1.0|181|Alter-ExternalName-Equal (binaryvar,binaryvar)|informix|0|alter function Equal (binaryvar,binaryvar)\
+	with (Modify External Name = "$INFORMIXDIR/extend/binaryudt.1.0/binaryudt.bld(binaryvarEqual)");\
+\
+|f|alter function Equal (binaryvar,binaryvar)\
+	with (Modify External Name = "binaryvarEqual");\
+\
+|f||f|R|D|R|||||
+43|binaryudt.1.0|85|Alter-Variant-Equal (binaryvar,binaryvar)|informix|0|alter function Equal (binaryvar,binaryvar)\
+	with (add not variant);\
+\
+|f|alter function Equal (binaryvar,binaryvar)\
+	with (drop not variant);\
+\
+|f||f|R|D|R|||||
+44|binaryudt.1.0|95|Alter-Negator-Equal (binaryvar,binaryvar)|informix|0|alter function Equal (binaryvar,binaryvar)\
+	with (add negator=NotEqual);\
+\
+|f|alter function Equal (binaryvar,binaryvar)\
+	with (drop negator);\
+\
+|f||f|R|D|R|||||
+45|binaryudt.1.0|101|Alter-Commutator-Equal (binaryvar,binaryvar)|informix|0|alter function Equal (binaryvar,binaryvar)\
+	with (add Commutator=Equal);\
+\
+|f|alter function Equal (binaryvar,binaryvar)\
+	with (drop Commutator);\
+\
+|f||f|R|D|R|||||
+46|binaryudt.1.0|69|Equal (binaryvar,binaryvar)|informix|0|grant execute on function Equal (binaryvar,binaryvar) to public;\
+\
+|f|\ |f||f|R|D|R|||||
+47|binaryudt.1.0|5|NotEqual (binaryvar,binaryvar)|informix|0|create function NotEqual (binaryvar,binaryvar)\
+returns boolean\
+external name "$INFORMIXDIR/extend/binaryudt.1.0/binaryudt.bld(binaryvarNotEqual)" language c;\
+\
+|f|drop function NotEqual (binaryvar,binaryvar);\
+\
+|f||f|R|D|R|||||
+48|binaryudt.1.0|181|Alter-ExternalName-NotEqual (binaryvar,binaryvar)|informix|0|alter function NotEqual (binaryvar,binaryvar)\
+	with (Modify External Name = "$INFORMIXDIR/extend/binaryudt.1.0/binaryudt.bld(binaryvarNotEqual)");\
+\
+|f|alter function NotEqual (binaryvar,binaryvar)\
+	with (Modify External Name = "binaryvarNotEqual");\
+\
+|f||f|R|D|R|||||
+49|binaryudt.1.0|85|Alter-Variant-NotEqual (binaryvar,binaryvar)|informix|0|alter function NotEqual (binaryvar,binaryvar)\
+	with (add not variant);\
+\
+|f|alter function NotEqual (binaryvar,binaryvar)\
+	with (drop not variant);\
+\
+|f||f|R|D|R|||||
+50|binaryudt.1.0|95|Alter-Negator-NotEqual (binaryvar,binaryvar)|informix|0|alter function NotEqual (binaryvar,binaryvar)\
+	with (add negator=Equal);\
+\
+|f|alter function NotEqual (binaryvar,binaryvar)\
+	with (drop negator);\
+\
+|f||f|R|D|R|||||
+51|binaryudt.1.0|101|Alter-Commutator-NotEqual (binaryvar,binaryvar)|informix|0|alter function NotEqual (binaryvar,binaryvar)\
+	with (add Commutator=NotEqual);\
+\
+|f|alter function NotEqual (binaryvar,binaryvar)\
+	with (drop Commutator);\
+\
+|f||f|R|D|R|||||
+52|binaryudt.1.0|69|NotEqual (binaryvar,binaryvar)|informix|0|grant execute on function NotEqual (binaryvar,binaryvar) to public;\
+\
+|f|\ |f||f|R|D|R|||||
+53|binaryudt.1.0|5|LessThan (binaryvar,binaryvar)|informix|0|create function LessThan (binaryvar,binaryvar)\
+returns boolean\
+external name "$INFORMIXDIR/extend/binaryudt.1.0/binaryudt.bld(binaryvarLessThan)" language c;\
+\
+|f|drop function LessThan (binaryvar,binaryvar);\
+\
+|f||f|R|D|R|||||
+54|binaryudt.1.0|181|Alter-ExternalName-LessThan (binaryvar,binaryvar)|informix|0|alter function LessThan (binaryvar,binaryvar)\
+	with (Modify External Name = "$INFORMIXDIR/extend/binaryudt.1.0/binaryudt.bld(binaryvarLessThan)");\
+\
+|f|alter function LessThan (binaryvar,binaryvar)\
+	with (Modify External Name = "binaryvarLessThan");\
+\
+|f||f|R|D|R|||||
+55|binaryudt.1.0|85|Alter-Variant-LessThan (binaryvar,binaryvar)|informix|0|alter function LessThan (binaryvar,binaryvar)\
+	with (add not variant);\
+\
+|f|alter function LessThan (binaryvar,binaryvar)\
+	with (drop not variant);\
+\
+|f||f|R|D|R|||||
+56|binaryudt.1.0|95|Alter-Negator-LessThan (binaryvar,binaryvar)|informix|0|alter function LessThan (binaryvar,binaryvar)\
+	with (add negator=GreaterThanOrEqual);\
+\
+|f|alter function LessThan (binaryvar,binaryvar)\
+	with (drop negator);\
+\
+|f||f|R|D|R|||||
+57|binaryudt.1.0|101|Alter-Commutator-LessThan (binaryvar,binaryvar)|informix|0|alter function LessThan (binaryvar,binaryvar)\
+	with (add Commutator=GreaterThanOrEqual);\
+\
+|f|alter function LessThan (binaryvar,binaryvar)\
+	with (drop Commutator);\
+\
+|f||f|R|D|R|||||
+58|binaryudt.1.0|69|LessThan (binaryvar,binaryvar)|informix|0|grant execute on function LessThan (binaryvar,binaryvar) to public;\
+\
+|f|\ |f||f|R|D|R|||||
+59|binaryudt.1.0|5|GreaterThan (binaryvar,binaryvar)|informix|0|create function GreaterThan (binaryvar,binaryvar)\
+returns boolean\
+external name "$INFORMIXDIR/extend/binaryudt.1.0/binaryudt.bld(binaryvarGreaterThan)" language c;\
+\
+|f|drop function GreaterThan (binaryvar,binaryvar);\
+\
+|f||f|R|D|R|||||
+60|binaryudt.1.0|181|Alter-ExternalName-GreaterThan (binaryvar,binaryvar)|informix|0|alter function GreaterThan (binaryvar,binaryvar)\
+	with (Modify External Name = "$INFORMIXDIR/extend/binaryudt.1.0/binaryudt.bld(binaryvarGreaterThan)");\
+\
+|f|alter function GreaterThan (binaryvar,binaryvar)\
+	with (Modify External Name = "binaryvarGreaterThan");\
+\
+|f||f|R|D|R|||||
+61|binaryudt.1.0|85|Alter-Variant-GreaterThan (binaryvar,binaryvar)|informix|0|alter function GreaterThan (binaryvar,binaryvar)\
+	with (add not variant);\
+\
+|f|alter function GreaterThan (binaryvar,binaryvar)\
+	with (drop not variant);\
+\
+|f||f|R|D|R|||||
+62|binaryudt.1.0|95|Alter-Negator-GreaterThan (binaryvar,binaryvar)|informix|0|alter function GreaterThan (binaryvar,binaryvar)\
+	with (add negator=LessThanOrEqual);\
+\
+|f|alter function GreaterThan (binaryvar,binaryvar)\
+	with (drop negator);\
+\
+|f||f|R|D|R|||||
+63|binaryudt.1.0|101|Alter-Commutator-GreaterThan (binaryvar,binaryvar)|informix|0|alter function GreaterThan (binaryvar,binaryvar)\
+	with (add Commutator=LessThanOrEqual);\
+\
+|f|alter function GreaterThan (binaryvar,binaryvar)\
+	with (drop Commutator);\
+\
+|f||f|R|D|R|||||
+64|binaryudt.1.0|69|GreaterThan (binaryvar,binaryvar)|informix|0|grant execute on function GreaterThan (binaryvar,binaryvar) to public;\
+\
+|f|\ |f||f|R|D|R|||||
+65|binaryudt.1.0|5|LessThanOrEqual (binaryvar,binaryvar)|informix|0|create function LessThanOrEqual (binaryvar,binaryvar)\
+returns boolean\
+external name "$INFORMIXDIR/extend/binaryudt.1.0/binaryudt.bld(binaryvarLessThanOrEqual)" language c;\
+\
+|f|drop function LessThanOrEqual (binaryvar,binaryvar);\
+\
+|f||f|R|D|R|||||
+66|binaryudt.1.0|181|Alter-ExternalName-LessThanOrEqual (binaryvar,binaryvar)|informix|0|alter function LessThanOrEqual (binaryvar,binaryvar)\
+	with (Modify External Name = "$INFORMIXDIR/extend/binaryudt.1.0/binaryudt.bld(binaryvarLessThanOrEqual)");\
+\
+|f|alter function LessThanOrEqual (binaryvar,binaryvar)\
+	with (Modify External Name = "binaryvarLessThanOrEqual");\
+\
+|f||f|R|D|R|||||
+67|binaryudt.1.0|85|Alter-Variant-LessThanOrEqual (binaryvar,binaryvar)|informix|0|alter function LessThanOrEqual (binaryvar,binaryvar)\
+	with (add not variant);\
+\
+|f|alter function LessThanOrEqual (binaryvar,binaryvar)\
+	with (drop not variant);\
+\
+|f||f|R|D|R|||||
+68|binaryudt.1.0|95|Alter-Negator-LessThanOrEqual (binaryvar,binaryvar)|informix|0|alter function LessThanOrEqual (binaryvar,binaryvar)\
+	with (add negator=GreaterThan);\
+\
+|f|alter function LessThanOrEqual (binaryvar,binaryvar)\
+	with (drop negator);\
+\
+|f||f|R|D|R|||||
+69|binaryudt.1.0|101|Alter-Commutator-LessThanOrEqual (binaryvar,binaryvar)|informix|0|alter function LessThanOrEqual (binaryvar,binaryvar)\
+	with (add Commutator=GreaterThan);\
+\
+|f|alter function LessThanOrEqual (binaryvar,binaryvar)\
+	with (drop Commutator);\
+\
+|f||f|R|D|R|||||
+70|binaryudt.1.0|69|LessThanOrEqual (binaryvar,binaryvar)|informix|0|grant execute on function LessThanOrEqual (binaryvar,binaryvar) to public;\
+\
+|f|\ |f||f|R|D|R|||||
+71|binaryudt.1.0|5|GreaterThanOrEqual (binaryvar,binaryvar)|informix|0|create function GreaterThanOrEqual (binaryvar,binaryvar)\
+returns boolean\
+external name "$INFORMIXDIR/extend/binaryudt.1.0/binaryudt.bld(binaryvarGreaterThanOrEqual)" language c;\
+\
+|f|drop function GreaterThanOrEqual (binaryvar,binaryvar);\
+\
+|f||f|R|D|R|||||
+72|binaryudt.1.0|181|Alter-ExternalName-GreaterThanOrEqual (binaryvar,binaryvar)|informix|0|alter function GreaterThanOrEqual (binaryvar,binaryvar)\
+	with (Modify External Name = "$INFORMIXDIR/extend/binaryudt.1.0/binaryudt.bld(binaryvarGreaterThanOrEqual)");\
+\
+|f|alter function GreaterThanOrEqual (binaryvar,binaryvar)\
+	with (Modify External Name = "binaryvarGreaterThanOrEqual");\
+\
+|f||f|R|D|R|||||
+73|binaryudt.1.0|85|Alter-Variant-GreaterThanOrEqual (binaryvar,binaryvar)|informix|0|alter function GreaterThanOrEqual (binaryvar,binaryvar)\
+	with (add not variant);\
+\
+|f|alter function GreaterThanOrEqual (binaryvar,binaryvar)\
+	with (drop not variant);\
+\
+|f||f|R|D|R|||||
+74|binaryudt.1.0|95|Alter-Negator-GreaterThanOrEqual (binaryvar,binaryvar)|informix|0|alter function GreaterThanOrEqual (binaryvar,binaryvar)\
+	with (add negator=LessThan);\
+\
+|f|alter function GreaterThanOrEqual (binaryvar,binaryvar)\
+	with (drop negator);\
+\
+|f||f|R|D|R|||||
+75|binaryudt.1.0|101|Alter-Commutator-GreaterThanOrEqual (binaryvar,binaryvar)|informix|0|alter function GreaterThanOrEqual (binaryvar,binaryvar)\
+	with (add Commutator=LessThan);\
+\
+|f|alter function GreaterThanOrEqual (binaryvar,binaryvar)\
+	with (drop Commutator);\
+\
+|f||f|R|D|R|||||
+76|binaryudt.1.0|69|GreaterThanOrEqual (binaryvar,binaryvar)|informix|0|grant execute on function GreaterThanOrEqual (binaryvar,binaryvar) to public;\
+\
+|f|\ |f||f|R|D|R|||||
+77|binaryudt.1.0|7|binary18|informix|0|create opaque type binary18(\
+	internallength = 18,\
+	alignment = 4\
+);\
+\
+|f|drop type binary18 restrict;\
+\
+|f||f|R|D|R|||||
+78|binaryudt.1.0|71|binary18|informix|0|grant usage on type binary18 to public;\
+\
+|f|\ |f||f|R|D|R|||||
+79|binaryudt.1.0|5|binary18In (lvarchar)|informix|0|create function binary18In (lvarchar)\
+returns binary18\
+external name "$INFORMIXDIR/extend/binaryudt.1.0/binaryudt.bld(binary18Input)" language c;\
+\
+|f|drop function binary18In (lvarchar);\
+\
+|f||f|R|D|R|||||
+80|binaryudt.1.0|181|Alter-ExternalName-binary18In (lvarchar)|informix|0|alter function binary18In (lvarchar)\
+	with (Modify External Name = "$INFORMIXDIR/extend/binaryudt.1.0/binaryudt.bld(binary18Input)");\
+\
+|f|alter function binary18In (lvarchar)\
+	with (Modify External Name = "binary18Input");\
+\
+|f||f|R|D|R|||||
+81|binaryudt.1.0|37|Alter-Parallelize-binary18In (lvarchar)|informix|0|alter function binary18In (lvarchar)\
+	with (add parallelizable);\
+\
+|f|alter function binary18In (lvarchar)\
+	with (drop parallelizable);\
+\
+|f||f|R|D|R|||||
+82|binaryudt.1.0|85|Alter-Variant-binary18In (lvarchar)|informix|0|alter function binary18In (lvarchar)\
+	with (add variant);\
+\
+|f|alter function binary18In (lvarchar)\
+	with (drop variant);\
+\
+|f||f|R|D|R|||||
+83|binaryudt.1.0|69|binary18In (lvarchar)|informix|0|grant execute on function binary18In (lvarchar) to public;\
+\
+|f|\ |f||f|R|D|R|||||
+84|binaryudt.1.0|3|lvarchar->binary18|informix|0|create implicit cast\
+	(\
+		lvarchar as binary18\
+		with  binary18In\
+	);\
+\
+|f|drop cast (lvarchar as binary18);\
+\
+|f||f|R|D|R|||||
+85|binaryudt.1.0|5|binary18Out (binary18)|informix|0|create function binary18Out (binary18)\
+returns lvarchar\
+external name "$INFORMIXDIR/extend/binaryudt.1.0/binaryudt.bld(binary18Output)" language c;\
+\
+|f|drop function binary18Out (binary18);\
+\
+|f||f|R|D|R|||||
+86|binaryudt.1.0|181|Alter-ExternalName-binary18Out (binary18)|informix|0|alter function binary18Out (binary18)\
+	with (Modify External Name = "$INFORMIXDIR/extend/binaryudt.1.0/binaryudt.bld(binary18Output)");\
+\
+|f|alter function binary18Out (binary18)\
+	with (Modify External Name = "binary18Output");\
+\
+|f||f|R|D|R|||||
+87|binaryudt.1.0|37|Alter-Parallelize-binary18Out (binary18)|informix|0|alter function binary18Out (binary18)\
+	with (add parallelizable);\
+\
+|f|alter function binary18Out (binary18)\
+	with (drop parallelizable);\
+\
+|f||f|R|D|R|||||
+88|binaryudt.1.0|85|Alter-Variant-binary18Out (binary18)|informix|0|alter function binary18Out (binary18)\
+	with (add not variant);\
+\
+|f|alter function binary18Out (binary18)\
+	with (drop not variant);\
+\
+|f||f|R|D|R|||||
+89|binaryudt.1.0|69|binary18Out (binary18)|informix|0|grant execute on function binary18Out (binary18) to public;\
+\
+|f|\ |f||f|R|D|R|||||
+90|binaryudt.1.0|3|binary18->lvarchar|informix|0|create cast\
+	(\
+		binary18 as lvarchar\
+		with  binary18Out\
+	);\
+\
+|f|drop cast (binary18 as lvarchar);\
+\
+|f||f|R|D|R|||||
+91|binaryudt.1.0|5|binary18Send (binary18)|informix|0|create function binary18Send (binary18)\
+returns sendrecv\
+external name "$INFORMIXDIR/extend/binaryudt.1.0/binaryudt.bld(binary18Send)" language c;\
+\
+|f|drop function binary18Send (binary18);\
+\
+|f||f|R|D|R|||||
+92|binaryudt.1.0|181|Alter-ExternalName-binary18Send (binary18)|informix|0|alter function binary18Send (binary18)\
+	with (Modify External Name = "$INFORMIXDIR/extend/binaryudt.1.0/binaryudt.bld(binary18Send)");\
+\
+|f|alter function binary18Send (binary18)\
+	with (Modify External Name = "binary18Send");\
+\
+|f||f|R|D|R|||||
+93|binaryudt.1.0|69|binary18Send (binary18)|informix|0|grant execute on function binary18Send (binary18) to public;\
+\
+|f|\ |f||f|R|D|R|||||
+94|binaryudt.1.0|3|binary18->sendrecv|informix|0|create cast\
+	(\
+		binary18 as sendrecv\
+		with  binary18Send\
+	);\
+\
+|f|drop cast (binary18 as sendrecv);\
+\
+|f||f|R|D|R|||||
+95|binaryudt.1.0|5|binary18Recv (sendrecv)|informix|0|create function binary18Recv (sendrecv)\
+returns binary18\
+external name "$INFORMIXDIR/extend/binaryudt.1.0/binaryudt.bld(binary18Receive)" language c;\
+\
+|f|drop function binary18Recv (sendrecv);\
+\
+|f||f|R|D|R|||||
+96|binaryudt.1.0|181|Alter-ExternalName-binary18Recv (sendrecv)|informix|0|alter function binary18Recv (sendrecv)\
+	with (Modify External Name = "$INFORMIXDIR/extend/binaryudt.1.0/binaryudt.bld(binary18Receive)");\
+\
+|f|alter function binary18Recv (sendrecv)\
+	with (Modify External Name = "binary18Receive");\
+\
+|f||f|R|D|R|||||
+97|binaryudt.1.0|37|Alter-Parallelize-binary18Recv (sendrecv)|informix|0|alter function binary18Recv (sendrecv)\
+	with (add parallelizable);\
+\
+|f|alter function binary18Recv (sendrecv)\
+	with (drop parallelizable);\
+\
+|f||f|R|D|R|||||
+98|binaryudt.1.0|85|Alter-Variant-binary18Recv (sendrecv)|informix|0|alter function binary18Recv (sendrecv)\
+	with (add not variant);\
+\
+|f|alter function binary18Recv (sendrecv)\
+	with (drop not variant);\
+\
+|f||f|R|D|R|||||
+99|binaryudt.1.0|69|binary18Recv (sendrecv)|informix|0|grant execute on function binary18Recv (sendrecv) to public;\
+\
+|f|\ |f||f|R|D|R|||||
+100|binaryudt.1.0|3|sendrecv->binary18|informix|0|create implicit cast\
+	(\
+		sendrecv as binary18\
+		with  binary18Recv\
+	);\
+\
+|f|drop cast (sendrecv as binary18);\
+\
+|f||f|R|D|R|||||
+101|binaryudt.1.0|5|binary18ImpT (impexp)|informix|0|create function binary18ImpT (impexp)\
+returns binary18\
+external name "$INFORMIXDIR/extend/binaryudt.1.0/binaryudt.bld(binary18ImportText)" language c;\
+\
+|f|drop function binary18ImpT (impexp);\
+\
+|f||f|R|D|R|||||
+102|binaryudt.1.0|181|Alter-ExternalName-binary18ImpT (impexp)|informix|0|alter function binary18ImpT (impexp)\
+	with (Modify External Name = "$INFORMIXDIR/extend/binaryudt.1.0/binaryudt.bld(binary18ImportText)");\
+\
+|f|alter function binary18ImpT (impexp)\
+	with (Modify External Name = "binary18ImportText");\
+\
+|f||f|R|D|R|||||
+103|binaryudt.1.0|37|Alter-Parallelize-binary18ImpT (impexp)|informix|0|alter function binary18ImpT (impexp)\
+	with (add parallelizable);\
+\
+|f|alter function binary18ImpT (impexp)\
+	with (drop parallelizable);\
+\
+|f||f|R|D|R|||||
+104|binaryudt.1.0|85|Alter-Variant-binary18ImpT (impexp)|informix|0|alter function binary18ImpT (impexp)\
+	with (add not variant);\
+\
+|f|alter function binary18ImpT (impexp)\
+	with (drop not variant);\
+\
+|f||f|R|D|R|||||
+105|binaryudt.1.0|69|binary18ImpT (impexp)|informix|0|grant execute on function binary18ImpT (impexp) to public;\
+\
+|f|\ |f||f|R|D|R|||||
+106|binaryudt.1.0|3|impexp->binary18|informix|0|create implicit cast\
+	(\
+		impexp as binary18\
+		with  binary18ImpT\
+	);\
+\
+|f|drop cast (impexp as binary18);\
+\
+|f||f|R|D|R|||||
+107|binaryudt.1.0|5|binary18ExpT (binary18)|informix|0|create function binary18ExpT (binary18)\
+returns impexp\
+external name "$INFORMIXDIR/extend/binaryudt.1.0/binaryudt.bld(binary18ExportText)" language c;\
+\
+|f|drop function binary18ExpT (binary18);\
+\
+|f||f|R|D|R|||||
+108|binaryudt.1.0|181|Alter-ExternalName-binary18ExpT (binary18)|informix|0|alter function binary18ExpT (binary18)\
+	with (Modify External Name = "$INFORMIXDIR/extend/binaryudt.1.0/binaryudt.bld(binary18ExportText)");\
+\
+|f|alter function binary18ExpT (binary18)\
+	with (Modify External Name = "binary18ExportText");\
+\
+|f||f|R|D|R|||||
+109|binaryudt.1.0|37|Alter-Parallelize-binary18ExpT (binary18)|informix|0|alter function binary18ExpT (binary18)\
+	with (add parallelizable);\
+\
+|f|alter function binary18ExpT (binary18)\
+	with (drop parallelizable);\
+\
+|f||f|R|D|R|||||
+110|binaryudt.1.0|85|Alter-Variant-binary18ExpT (binary18)|informix|0|alter function binary18ExpT (binary18)\
+	with (add not variant);\
+\
+|f|alter function binary18ExpT (binary18)\
+	with (drop not variant);\
+\
+|f||f|R|D|R|||||
+111|binaryudt.1.0|69|binary18ExpT (binary18)|informix|0|grant execute on function binary18ExpT (binary18) to public;\
+\
+|f|\ |f||f|R|D|R|||||
+112|binaryudt.1.0|3|binary18->impexp|informix|0|create cast\
+	(\
+		binary18 as impexp\
+		with  binary18ExpT\
+	);\
+\
+|f|drop cast (binary18 as impexp);\
+\
+|f||f|R|D|R|||||
+113|binaryudt.1.0|5|binary18ImpB (impexpbin)|informix|0|create function binary18ImpB (impexpbin)\
+returns binary18\
+external name "$INFORMIXDIR/extend/binaryudt.1.0/binaryudt.bld(binary18ImportBinary)" language c;\
+\
+|f|drop function binary18ImpB (impexpbin);\
+\
+|f||f|R|D|R|||||
+114|binaryudt.1.0|181|Alter-ExternalName-binary18ImpB (impexpbin)|informix|0|alter function binary18ImpB (impexpbin)\
+	with (Modify External Name = "$INFORMIXDIR/extend/binaryudt.1.0/binaryudt.bld(binary18ImportBinary)");\
+\
+|f|alter function binary18ImpB (impexpbin)\
+	with (Modify External Name = "binary18ImportBinary");\
+\
+|f||f|R|D|R|||||
+115|binaryudt.1.0|37|Alter-Parallelize-binary18ImpB (impexpbin)|informix|0|alter function binary18ImpB (impexpbin)\
+	with (add parallelizable);\
+\
+|f|alter function binary18ImpB (impexpbin)\
+	with (drop parallelizable);\
+\
+|f||f|R|D|R|||||
+116|binaryudt.1.0|85|Alter-Variant-binary18ImpB (impexpbin)|informix|0|alter function binary18ImpB (impexpbin)\
+	with (add not variant);\
+\
+|f|alter function binary18ImpB (impexpbin)\
+	with (drop not variant);\
+\
+|f||f|R|D|R|||||
+117|binaryudt.1.0|69|binary18ImpB (impexpbin)|informix|0|grant execute on function binary18ImpB (impexpbin) to public;\
+\
+|f|\ |f||f|R|D|R|||||
+118|binaryudt.1.0|3|impexpbin->binary18|informix|0|create implicit cast\
+	(\
+		impexpbin as binary18\
+		with  binary18ImpB\
+	);\
+\
+|f|drop cast (impexpbin as binary18);\
+\
+|f||f|R|D|R|||||
+119|binaryudt.1.0|5|binary18ExpB (binary18)|informix|0|create function binary18ExpB (binary18)\
+returns impexpbin\
+external name "$INFORMIXDIR/extend/binaryudt.1.0/binaryudt.bld(binary18ExportBinary)" language c;\
+\
+|f|drop function binary18ExpB (binary18);\
+\
+|f||f|R|D|R|||||
+120|binaryudt.1.0|181|Alter-ExternalName-binary18ExpB (binary18)|informix|0|alter function binary18ExpB (binary18)\
+	with (Modify External Name = "$INFORMIXDIR/extend/binaryudt.1.0/binaryudt.bld(binary18ExportBinary)");\
+\
+|f|alter function binary18ExpB (binary18)\
+	with (Modify External Name = "binary18ExportBinary");\
+\
+|f||f|R|D|R|||||
+121|binaryudt.1.0|37|Alter-Parallelize-binary18ExpB (binary18)|informix|0|alter function binary18ExpB (binary18)\
+	with (add parallelizable);\
+\
+|f|alter function binary18ExpB (binary18)\
+	with (drop parallelizable);\
+\
+|f||f|R|D|R|||||
+122|binaryudt.1.0|85|Alter-Variant-binary18ExpB (binary18)|informix|0|alter function binary18ExpB (binary18)\
+	with (add not variant);\
+\
+|f|alter function binary18ExpB (binary18)\
+	with (drop not variant);\
+\
+|f||f|R|D|R|||||
+123|binaryudt.1.0|69|binary18ExpB (binary18)|informix|0|grant execute on function binary18ExpB (binary18) to public;\
+\
+|f|\ |f||f|R|D|R|||||
+124|binaryudt.1.0|3|binary18->impexpbin|informix|0|create cast\
+	(\
+		binary18 as impexpbin\
+		with  binary18ExpB\
+	);\
+\
+|f|drop cast (binary18 as impexpbin);\
+\
+|f||f|R|D|R|||||
+125|binaryudt.1.0|5|Compare (binary18,binary18)|informix|0|create function Compare (binary18,binary18)\
+returns integer\
+external name "$INFORMIXDIR/extend/binaryudt.1.0/binaryudt.bld(binary18Compare)" language c;\
+\
+|f|drop function Compare (binary18,binary18);\
+\
+|f||f|R|D|R|||||
+126|binaryudt.1.0|181|Alter-ExternalName-Compare (binary18,binary18)|informix|0|alter function Compare (binary18,binary18)\
+	with (Modify External Name = "$INFORMIXDIR/extend/binaryudt.1.0/binaryudt.bld(binary18Compare)");\
+\
+|f|alter function Compare (binary18,binary18)\
+	with (Modify External Name = "binary18Compare");\
+\
+|f||f|R|D|R|||||
+127|binaryudt.1.0|37|Alter-Parallelize-Compare (binary18,binary18)|informix|0|alter function Compare (binary18,binary18)\
+	with (add parallelizable);\
+\
+|f|alter function Compare (binary18,binary18)\
+	with (drop parallelizable);\
+\
+|f||f|R|D|R|||||
+128|binaryudt.1.0|85|Alter-Variant-Compare (binary18,binary18)|informix|0|alter function Compare (binary18,binary18)\
+	with (add not variant);\
+\
+|f|alter function Compare (binary18,binary18)\
+	with (drop not variant);\
+\
+|f||f|R|D|R|||||
+129|binaryudt.1.0|69|Compare (binary18,binary18)|informix|0|grant execute on function Compare (binary18,binary18) to public;\
+\
+|f|\ |f||f|R|D|R|||||
+130|binaryudt.1.0|5|Equal (binary18,binary18)|informix|0|create function Equal (binary18,binary18)\
+returns boolean\
+external name "$INFORMIXDIR/extend/binaryudt.1.0/binaryudt.bld(binary18Equal)" language c;\
+\
+|f|drop function Equal (binary18,binary18);\
+\
+|f||f|R|D|R|||||
+131|binaryudt.1.0|181|Alter-ExternalName-Equal (binary18,binary18)|informix|0|alter function Equal (binary18,binary18)\
+	with (Modify External Name = "$INFORMIXDIR/extend/binaryudt.1.0/binaryudt.bld(binary18Equal)");\
+\
+|f|alter function Equal (binary18,binary18)\
+	with (Modify External Name = "binary18Equal");\
+\
+|f||f|R|D|R|||||
+132|binaryudt.1.0|37|Alter-Parallelize-Equal (binary18,binary18)|informix|0|alter function Equal (binary18,binary18)\
+	with (add parallelizable);\
+\
+|f|alter function Equal (binary18,binary18)\
+	with (drop parallelizable);\
+\
+|f||f|R|D|R|||||
+133|binaryudt.1.0|85|Alter-Variant-Equal (binary18,binary18)|informix|0|alter function Equal (binary18,binary18)\
+	with (add not variant);\
+\
+|f|alter function Equal (binary18,binary18)\
+	with (drop not variant);\
+\
+|f||f|R|D|R|||||
+134|binaryudt.1.0|95|Alter-Negator-Equal (binary18,binary18)|informix|0|alter function Equal (binary18,binary18)\
+	with (add negator=NotEqual);\
+\
+|f|alter function Equal (binary18,binary18)\
+	with (drop negator);\
+\
+|f||f|R|D|R|||||
+135|binaryudt.1.0|101|Alter-Commutator-Equal (binary18,binary18)|informix|0|alter function Equal (binary18,binary18)\
+	with (add Commutator=Equal);\
+\
+|f|alter function Equal (binary18,binary18)\
+	with (drop Commutator);\
+\
+|f||f|R|D|R|||||
+136|binaryudt.1.0|69|Equal (binary18,binary18)|informix|0|grant execute on function Equal (binary18,binary18) to public;\
+\
+|f|\ |f||f|R|D|R|||||
+137|binaryudt.1.0|5|NotEqual (binary18,binary18)|informix|0|create function NotEqual (binary18,binary18)\
+returns boolean\
+external name "$INFORMIXDIR/extend/binaryudt.1.0/binaryudt.bld(binary18NotEqual)" language c;\
+\
+|f|drop function NotEqual (binary18,binary18);\
+\
+|f||f|R|D|R|||||
+138|binaryudt.1.0|181|Alter-ExternalName-NotEqual (binary18,binary18)|informix|0|alter function NotEqual (binary18,binary18)\
+	with (Modify External Name = "$INFORMIXDIR/extend/binaryudt.1.0/binaryudt.bld(binary18NotEqual)");\
+\
+|f|alter function NotEqual (binary18,binary18)\
+	with (Modify External Name = "binary18NotEqual");\
+\
+|f||f|R|D|R|||||
+139|binaryudt.1.0|37|Alter-Parallelize-NotEqual (binary18,binary18)|informix|0|alter function NotEqual (binary18,binary18)\
+	with (add parallelizable);\
+\
+|f|alter function NotEqual (binary18,binary18)\
+	with (drop parallelizable);\
+\
+|f||f|R|D|R|||||
+140|binaryudt.1.0|85|Alter-Variant-NotEqual (binary18,binary18)|informix|0|alter function NotEqual (binary18,binary18)\
+	with (add not variant);\
+\
+|f|alter function NotEqual (binary18,binary18)\
+	with (drop not variant);\
+\
+|f||f|R|D|R|||||
+141|binaryudt.1.0|95|Alter-Negator-NotEqual (binary18,binary18)|informix|0|alter function NotEqual (binary18,binary18)\
+	with (add negator=Equal);\
+\
+|f|alter function NotEqual (binary18,binary18)\
+	with (drop negator);\
+\
+|f||f|R|D|R|||||
+142|binaryudt.1.0|101|Alter-Commutator-NotEqual (binary18,binary18)|informix|0|alter function NotEqual (binary18,binary18)\
+	with (add Commutator=NotEqual);\
+\
+|f|alter function NotEqual (binary18,binary18)\
+	with (drop Commutator);\
+\
+|f||f|R|D|R|||||
+143|binaryudt.1.0|69|NotEqual (binary18,binary18)|informix|0|grant execute on function NotEqual (binary18,binary18) to public;\
+\
+|f|\ |f||f|R|D|R|||||
+144|binaryudt.1.0|5|LessThan (binary18,binary18)|informix|0|create function LessThan (binary18,binary18)\
+returns boolean\
+external name "$INFORMIXDIR/extend/binaryudt.1.0/binaryudt.bld(binary18LessThan)" language c;\
+\
+|f|drop function LessThan (binary18,binary18);\
+\
+|f||f|R|D|R|||||
+145|binaryudt.1.0|181|Alter-ExternalName-LessThan (binary18,binary18)|informix|0|alter function LessThan (binary18,binary18)\
+	with (Modify External Name = "$INFORMIXDIR/extend/binaryudt.1.0/binaryudt.bld(binary18LessThan)");\
+\
+|f|alter function LessThan (binary18,binary18)\
+	with (Modify External Name = "binary18LessThan");\
+\
+|f||f|R|D|R|||||
+146|binaryudt.1.0|37|Alter-Parallelize-LessThan (binary18,binary18)|informix|0|alter function LessThan (binary18,binary18)\
+	with (add parallelizable);\
+\
+|f|alter function LessThan (binary18,binary18)\
+	with (drop parallelizable);\
+\
+|f||f|R|D|R|||||
+147|binaryudt.1.0|85|Alter-Variant-LessThan (binary18,binary18)|informix|0|alter function LessThan (binary18,binary18)\
+	with (add not variant);\
+\
+|f|alter function LessThan (binary18,binary18)\
+	with (drop not variant);\
+\
+|f||f|R|D|R|||||
+148|binaryudt.1.0|95|Alter-Negator-LessThan (binary18,binary18)|informix|0|alter function LessThan (binary18,binary18)\
+	with (add negator=GreaterThanOrEqual);\
+\
+|f|alter function LessThan (binary18,binary18)\
+	with (drop negator);\
+\
+|f||f|R|D|R|||||
+149|binaryudt.1.0|101|Alter-Commutator-LessThan (binary18,binary18)|informix|0|alter function LessThan (binary18,binary18)\
+	with (add Commutator=GreaterThanOrEqual);\
+\
+|f|alter function LessThan (binary18,binary18)\
+	with (drop Commutator);\
+\
+|f||f|R|D|R|||||
+150|binaryudt.1.0|69|LessThan (binary18,binary18)|informix|0|grant execute on function LessThan (binary18,binary18) to public;\
+\
+|f|\ |f||f|R|D|R|||||
+151|binaryudt.1.0|5|GreaterThan (binary18,binary18)|informix|0|create function GreaterThan (binary18,binary18)\
+returns boolean\
+external name "$INFORMIXDIR/extend/binaryudt.1.0/binaryudt.bld(binary18GreaterThan)" language c;\
+\
+|f|drop function GreaterThan (binary18,binary18);\
+\
+|f||f|R|D|R|||||
+152|binaryudt.1.0|181|Alter-ExternalName-GreaterThan (binary18,binary18)|informix|0|alter function GreaterThan (binary18,binary18)\
+	with (Modify External Name = "$INFORMIXDIR/extend/binaryudt.1.0/binaryudt.bld(binary18GreaterThan)");\
+\
+|f|alter function GreaterThan (binary18,binary18)\
+	with (Modify External Name = "binary18GreaterThan");\
+\
+|f||f|R|D|R|||||
+153|binaryudt.1.0|37|Alter-Parallelize-GreaterThan (binary18,binary18)|informix|0|alter function GreaterThan (binary18,binary18)\
+	with (add parallelizable);\
+\
+|f|alter function GreaterThan (binary18,binary18)\
+	with (drop parallelizable);\
+\
+|f||f|R|D|R|||||
+154|binaryudt.1.0|85|Alter-Variant-GreaterThan (binary18,binary18)|informix|0|alter function GreaterThan (binary18,binary18)\
+	with (add not variant);\
+\
+|f|alter function GreaterThan (binary18,binary18)\
+	with (drop not variant);\
+\
+|f||f|R|D|R|||||
+155|binaryudt.1.0|95|Alter-Negator-GreaterThan (binary18,binary18)|informix|0|alter function GreaterThan (binary18,binary18)\
+	with (add negator=LessThanOrEqual);\
+\
+|f|alter function GreaterThan (binary18,binary18)\
+	with (drop negator);\
+\
+|f||f|R|D|R|||||
+156|binaryudt.1.0|101|Alter-Commutator-GreaterThan (binary18,binary18)|informix|0|alter function GreaterThan (binary18,binary18)\
+	with (add Commutator=LessThanOrEqual);\
+\
+|f|alter function GreaterThan (binary18,binary18)\
+	with (drop Commutator);\
+\
+|f||f|R|D|R|||||
+157|binaryudt.1.0|69|GreaterThan (binary18,binary18)|informix|0|grant execute on function GreaterThan (binary18,binary18) to public;\
+\
+|f|\ |f||f|R|D|R|||||
+158|binaryudt.1.0|5|LessThanOrEqual (binary18,binary18)|informix|0|create function LessThanOrEqual (binary18,binary18)\
+returns boolean\
+external name "$INFORMIXDIR/extend/binaryudt.1.0/binaryudt.bld(binary18LessThanOrEqual)" language c;\
+\
+|f|drop function LessThanOrEqual (binary18,binary18);\
+\
+|f||f|R|D|R|||||
+159|binaryudt.1.0|181|Alter-ExternalName-LessThanOrEqual (binary18,binary18)|informix|0|alter function LessThanOrEqual (binary18,binary18)\
+	with (Modify External Name = "$INFORMIXDIR/extend/binaryudt.1.0/binaryudt.bld(binary18LessThanOrEqual)");\
+\
+|f|alter function LessThanOrEqual (binary18,binary18)\
+	with (Modify External Name = "binary18LessThanOrEqual");\
+\
+|f||f|R|D|R|||||
+160|binaryudt.1.0|37|Alter-Parallelize-LessThanOrEqual (binary18,binary18)|informix|0|alter function LessThanOrEqual (binary18,binary18)\
+	with (add parallelizable);\
+\
+|f|alter function LessThanOrEqual (binary18,binary18)\
+	with (drop parallelizable);\
+\
+|f||f|R|D|R|||||
+161|binaryudt.1.0|85|Alter-Variant-LessThanOrEqual (binary18,binary18)|informix|0|alter function LessThanOrEqual (binary18,binary18)\
+	with (add not variant);\
+\
+|f|alter function LessThanOrEqual (binary18,binary18)\
+	with (drop not variant);\
+\
+|f||f|R|D|R|||||
+162|binaryudt.1.0|95|Alter-Negator-LessThanOrEqual (binary18,binary18)|informix|0|alter function LessThanOrEqual (binary18,binary18)\
+	with (add negator=GreaterThan);\
+\
+|f|alter function LessThanOrEqual (binary18,binary18)\
+	with (drop negator);\
+\
+|f||f|R|D|R|||||
+163|binaryudt.1.0|101|Alter-Commutator-LessThanOrEqual (binary18,binary18)|informix|0|alter function LessThanOrEqual (binary18,binary18)\
+	with (add Commutator=GreaterThan);\
+\
+|f|alter function LessThanOrEqual (binary18,binary18)\
+	with (drop Commutator);\
+\
+|f||f|R|D|R|||||
+164|binaryudt.1.0|69|LessThanOrEqual (binary18,binary18)|informix|0|grant execute on function LessThanOrEqual (binary18,binary18) to public;\
+\
+|f|\ |f||f|R|D|R|||||
+165|binaryudt.1.0|5|GreaterThanOrEqual (binary18,binary18)|informix|0|create function GreaterThanOrEqual (binary18,binary18)\
+returns boolean\
+external name "$INFORMIXDIR/extend/binaryudt.1.0/binaryudt.bld(binary18GreaterThanOrEqual)" language c;\
+\
+|f|drop function GreaterThanOrEqual (binary18,binary18);\
+\
+|f||f|R|D|R|||||
+166|binaryudt.1.0|181|Alter-ExternalName-GreaterThanOrEqual (binary18,binary18)|informix|0|alter function GreaterThanOrEqual (binary18,binary18)\
+	with (Modify External Name = "$INFORMIXDIR/extend/binaryudt.1.0/binaryudt.bld(binary18GreaterThanOrEqual)");\
+\
+|f|alter function GreaterThanOrEqual (binary18,binary18)\
+	with (Modify External Name = "binary18GreaterThanOrEqual");\
+\
+|f||f|R|D|R|||||
+167|binaryudt.1.0|37|Alter-Parallelize-GreaterThanOrEqual (binary18,binary18)|informix|0|alter function GreaterThanOrEqual (binary18,binary18)\
+	with (add parallelizable);\
+\
+|f|alter function GreaterThanOrEqual (binary18,binary18)\
+	with (drop parallelizable);\
+\
+|f||f|R|D|R|||||
+168|binaryudt.1.0|85|Alter-Variant-GreaterThanOrEqual (binary18,binary18)|informix|0|alter function GreaterThanOrEqual (binary18,binary18)\
+	with (add not variant);\
+\
+|f|alter function GreaterThanOrEqual (binary18,binary18)\
+	with (drop not variant);\
+\
+|f||f|R|D|R|||||
+169|binaryudt.1.0|95|Alter-Negator-GreaterThanOrEqual (binary18,binary18)|informix|0|alter function GreaterThanOrEqual (binary18,binary18)\
+	with (add negator=LessThan);\
+\
+|f|alter function GreaterThanOrEqual (binary18,binary18)\
+	with (drop negator);\
+\
+|f||f|R|D|R|||||
+170|binaryudt.1.0|101|Alter-Commutator-GreaterThanOrEqual (binary18,binary18)|informix|0|alter function GreaterThanOrEqual (binary18,binary18)\
+	with (add Commutator=LessThan);\
+\
+|f|alter function GreaterThanOrEqual (binary18,binary18)\
+	with (drop Commutator);\
+\
+|f||f|R|D|R|||||
+171|binaryudt.1.0|69|GreaterThanOrEqual (binary18,binary18)|informix|0|grant execute on function GreaterThanOrEqual (binary18,binary18) to public;\
+\
+|f|\ |f||f|R|D|R|||||
+172|binaryudt.1.0|5|length (binaryvar)|informix|0|create function length (binaryvar)\
+returns int\
+external name "$INFORMIXDIR/extend/binaryudt.1.0/binaryudt.bld(binaryvar_binlength)" language c;\
+\
+|f|drop function length (binaryvar);\
+\
+|f||f|R|D|R|||||
+173|binaryudt.1.0|181|Alter-ExternalName-length (binaryvar)|informix|0|alter function length (binaryvar)\
+	with (Modify External Name = "$INFORMIXDIR/extend/binaryudt.1.0/binaryudt.bld(binaryvar_binlength)");\
+\
+|f|alter function length (binaryvar)\
+	with (Modify External Name = "binaryvar_binlength");\
+\
+|f||f|R|D|R|||||
+174|binaryudt.1.0|37|Alter-Parallelize-length (binaryvar)|informix|0|alter function length (binaryvar)\
+	with (add parallelizable);\
+\
+|f|alter function length (binaryvar)\
+	with (drop parallelizable);\
+\
+|f||f|R|D|R|||||
+175|binaryudt.1.0|55|Alter-HandleNul-length (binaryvar)|informix|0|alter function length (binaryvar)\
+	with (add handlesnulls);\
+\
+|f|alter function length (binaryvar)\
+	with (drop handlesnulls);\
+\
+|f||f|R|D|R|||||
+176|binaryudt.1.0|85|Alter-Variant-length (binaryvar)|informix|0|alter function length (binaryvar)\
+	with (add not variant);\
+\
+|f|alter function length (binaryvar)\
+	with (drop not variant);\
+\
+|f||f|R|D|R|||||
+177|binaryudt.1.0|69|length (binaryvar)|informix|0|grant execute on function length (binaryvar) to public;\
+\
+|f|\ |f||f|R|D|R|||||
+178|binaryudt.1.0|5|bit_or (binaryvar,binaryvar)|informix|0|create function bit_or (binaryvar,binaryvar)\
+returns binaryvar\
+external name "$INFORMIXDIR/extend/binaryudt.1.0/binaryudt.bld(binaryvar_bitOR)" language c;\
+\
+|f|drop function bit_or (binaryvar,binaryvar);\
+\
+|f||f|R|D|R|||||
+179|binaryudt.1.0|181|Alter-ExternalName-bit_or (binaryvar,binaryvar)|informix|0|alter function bit_or (binaryvar,binaryvar)\
+	with (Modify External Name = "$INFORMIXDIR/extend/binaryudt.1.0/binaryudt.bld(binaryvar_bitOR)");\
+\
+|f|alter function bit_or (binaryvar,binaryvar)\
+	with (Modify External Name = "binaryvar_bitOR");\
+\
+|f||f|R|D|R|||||
+180|binaryudt.1.0|37|Alter-Parallelize-bit_or (binaryvar,binaryvar)|informix|0|alter function bit_or (binaryvar,binaryvar)\
+	with (add parallelizable);\
+\
+|f|alter function bit_or (binaryvar,binaryvar)\
+	with (drop parallelizable);\
+\
+|f||f|R|D|R|||||
+181|binaryudt.1.0|55|Alter-HandleNul-bit_or (binaryvar,binaryvar)|informix|0|alter function bit_or (binaryvar,binaryvar)\
+	with (add handlesnulls);\
+\
+|f|alter function bit_or (binaryvar,binaryvar)\
+	with (drop handlesnulls);\
+\
+|f||f|R|D|R|||||
+182|binaryudt.1.0|85|Alter-Variant-bit_or (binaryvar,binaryvar)|informix|0|alter function bit_or (binaryvar,binaryvar)\
+	with (add not variant);\
+\
+|f|alter function bit_or (binaryvar,binaryvar)\
+	with (drop not variant);\
+\
+|f||f|R|D|R|||||
+183|binaryudt.1.0|69|bit_or (binaryvar,binaryvar)|informix|0|grant execute on function bit_or (binaryvar,binaryvar) to public;\
+\
+|f|\ |f||f|R|D|R|||||
+184|binaryudt.1.0|5|bit_and (binaryvar,binaryvar)|informix|0|create function bit_and (binaryvar,binaryvar)\
+returns binaryvar\
+external name "$INFORMIXDIR/extend/binaryudt.1.0/binaryudt.bld(binaryvar_bitAND)" language c;\
+\
+|f|drop function bit_and (binaryvar,binaryvar);\
+\
+|f||f|R|D|R|||||
+185|binaryudt.1.0|181|Alter-ExternalName-bit_and (binaryvar,binaryvar)|informix|0|alter function bit_and (binaryvar,binaryvar)\
+	with (Modify External Name = "$INFORMIXDIR/extend/binaryudt.1.0/binaryudt.bld(binaryvar_bitAND)");\
+\
+|f|alter function bit_and (binaryvar,binaryvar)\
+	with (Modify External Name = "binaryvar_bitAND");\
+\
+|f||f|R|D|R|||||
+186|binaryudt.1.0|37|Alter-Parallelize-bit_and (binaryvar,binaryvar)|informix|0|alter function bit_and (binaryvar,binaryvar)\
+	with (add parallelizable);\
+\
+|f|alter function bit_and (binaryvar,binaryvar)\
+	with (drop parallelizable);\
+\
+|f||f|R|D|R|||||
+187|binaryudt.1.0|55|Alter-HandleNul-bit_and (binaryvar,binaryvar)|informix|0|alter function bit_and (binaryvar,binaryvar)\
+	with (add handlesnulls);\
+\
+|f|alter function bit_and (binaryvar,binaryvar)\
+	with (drop handlesnulls);\
+\
+|f||f|R|D|R|||||
+188|binaryudt.1.0|85|Alter-Variant-bit_and (binaryvar,binaryvar)|informix|0|alter function bit_and (binaryvar,binaryvar)\
+	with (add not variant);\
+\
+|f|alter function bit_and (binaryvar,binaryvar)\
+	with (drop not variant);\
+\
+|f||f|R|D|R|||||
+189|binaryudt.1.0|69|bit_and (binaryvar,binaryvar)|informix|0|grant execute on function bit_and (binaryvar,binaryvar) to public;\
+\
+|f|\ |f||f|R|D|R|||||
+190|binaryudt.1.0|5|bit_xor (binaryvar,binaryvar)|informix|0|create function bit_xor (binaryvar,binaryvar)\
+returns binaryvar\
+external name "$INFORMIXDIR/extend/binaryudt.1.0/binaryudt.bld(binaryvar_bitXOR)" language c;\
+\
+|f|drop function bit_xor (binaryvar,binaryvar);\
+\
+|f||f|R|D|R|||||
+191|binaryudt.1.0|181|Alter-ExternalName-bit_xor (binaryvar,binaryvar)|informix|0|alter function bit_xor (binaryvar,binaryvar)\
+	with (Modify External Name = "$INFORMIXDIR/extend/binaryudt.1.0/binaryudt.bld(binaryvar_bitXOR)");\
+\
+|f|alter function bit_xor (binaryvar,binaryvar)\
+	with (Modify External Name = "binaryvar_bitXOR");\
+\
+|f||f|R|D|R|||||
+192|binaryudt.1.0|37|Alter-Parallelize-bit_xor (binaryvar,binaryvar)|informix|0|alter function bit_xor (binaryvar,binaryvar)\
+	with (add parallelizable);\
+\
+|f|alter function bit_xor (binaryvar,binaryvar)\
+	with (drop parallelizable);\
+\
+|f||f|R|D|R|||||
+193|binaryudt.1.0|55|Alter-HandleNul-bit_xor (binaryvar,binaryvar)|informix|0|alter function bit_xor (binaryvar,binaryvar)\
+	with (add handlesnulls);\
+\
+|f|alter function bit_xor (binaryvar,binaryvar)\
+	with (drop handlesnulls);\
+\
+|f||f|R|D|R|||||
+194|binaryudt.1.0|85|Alter-Variant-bit_xor (binaryvar,binaryvar)|informix|0|alter function bit_xor (binaryvar,binaryvar)\
+	with (add not variant);\
+\
+|f|alter function bit_xor (binaryvar,binaryvar)\
+	with (drop not variant);\
+\
+|f||f|R|D|R|||||
+195|binaryudt.1.0|69|bit_xor (binaryvar,binaryvar)|informix|0|grant execute on function bit_xor (binaryvar,binaryvar) to public;\
+\
+|f|\ |f||f|R|D|R|||||
+196|binaryudt.1.0|5|bit_complement (binaryvar)|informix|0|create function bit_complement (binaryvar)\
+returns binaryvar\
+external name "$INFORMIXDIR/extend/binaryudt.1.0/binaryudt.bld(binaryvar_bitcomplement)" language c;\
+\
+|f|drop function bit_complement (binaryvar);\
+\
+|f||f|R|D|R|||||
+197|binaryudt.1.0|181|Alter-ExternalName-bit_complement (binaryvar)|informix|0|alter function bit_complement (binaryvar)\
+	with (Modify External Name = "$INFORMIXDIR/extend/binaryudt.1.0/binaryudt.bld(binaryvar_bitcomplement)");\
+\
+|f|alter function bit_complement (binaryvar)\
+	with (Modify External Name = "binaryvar_bitcomplement");\
+\
+|f||f|R|D|R|||||
+198|binaryudt.1.0|37|Alter-Parallelize-bit_complement (binaryvar)|informix|0|alter function bit_complement (binaryvar)\
+	with (add parallelizable);\
+\
+|f|alter function bit_complement (binaryvar)\
+	with (drop parallelizable);\
+\
+|f||f|R|D|R|||||
+199|binaryudt.1.0|55|Alter-HandleNul-bit_complement (binaryvar)|informix|0|alter function bit_complement (binaryvar)\
+	with (add handlesnulls);\
+\
+|f|alter function bit_complement (binaryvar)\
+	with (drop handlesnulls);\
+\
+|f||f|R|D|R|||||
+200|binaryudt.1.0|85|Alter-Variant-bit_complement (binaryvar)|informix|0|alter function bit_complement (binaryvar)\
+	with (add not variant);\
+\
+|f|alter function bit_complement (binaryvar)\
+	with (drop not variant);\
+\
+|f||f|R|D|R|||||
+201|binaryudt.1.0|69|bit_complement (binaryvar)|informix|0|grant execute on function bit_complement (binaryvar) to public;\
+\
+|f|\ |f||f|R|D|R|||||
+202|binaryudt.1.0|5|BDTRelease ()|informix|0|create function BDTRelease ()\
+returns lvarchar\
+external name "$INFORMIXDIR/extend/binaryudt.1.0/binaryudt.bld(BDTRelease)" language c;\
+\
+|f|drop function BDTRelease ();\
+\
+|f||f|R|D|R|||||
+203|binaryudt.1.0|181|Alter-ExternalName-BDTRelease ()|informix|0|alter function BDTRelease ()\
+	with (Modify External Name = "$INFORMIXDIR/extend/binaryudt.1.0/binaryudt.bld(BDTRelease)");\
+\
+|f|alter function BDTRelease ()\
+	with (Modify External Name = "BDTRelease");\
+\
+|f||f|R|D|R|||||
+204|binaryudt.1.0|55|Alter-HandleNul-BDTRelease ()|informix|0|alter function BDTRelease ()\
+	with (add handlesnulls);\
+\
+|f|alter function BDTRelease ()\
+	with (drop handlesnulls);\
+\
+|f||f|R|D|R|||||
+205|binaryudt.1.0|85|Alter-Variant-BDTRelease ()|informix|0|alter function BDTRelease ()\
+	with (add not variant);\
+\
+|f|alter function BDTRelease ()\
+	with (drop not variant);\
+\
+|f||f|R|D|R|||||
+206|binaryudt.1.0|69|BDTRelease ()|informix|0|grant execute on function BDTRelease () to public;\
+\
+|f|\ |f||f|R|D|R|||||
+207|binaryudt.1.0|5|BDTTrace (lvarchar)|informix|0|create function BDTTrace (lvarchar)\
+returns lvarchar\
+external name "$INFORMIXDIR/extend/binaryudt.1.0/binaryudt.bld(BDTTrace)" language c;\
+\
+|f|drop function BDTTrace (lvarchar);\
+\
+|f||f|R|D|R|||||
+208|binaryudt.1.0|181|Alter-ExternalName-BDTTrace (lvarchar)|informix|0|alter function BDTTrace (lvarchar)\
+	with (Modify External Name = "$INFORMIXDIR/extend/binaryudt.1.0/binaryudt.bld(BDTTrace)");\
+\
+|f|alter function BDTTrace (lvarchar)\
+	with (Modify External Name = "BDTTrace");\
+\
+|f||f|R|D|R|||||
+209|binaryudt.1.0|55|Alter-HandleNul-BDTTrace (lvarchar)|informix|0|alter function BDTTrace (lvarchar)\
+	with (add handlesnulls);\
+\
+|f|alter function BDTTrace (lvarchar)\
+	with (drop handlesnulls);\
+\
+|f||f|R|D|R|||||
+210|binaryudt.1.0|85|Alter-Variant-BDTTrace (lvarchar)|informix|0|alter function BDTTrace (lvarchar)\
+	with (add not variant);\
+\
+|f|alter function BDTTrace (lvarchar)\
+	with (drop not variant);\
+\
+|f||f|R|D|R|||||
+211|binaryudt.1.0|69|BDTTrace (lvarchar)|informix|0|grant execute on function BDTTrace (lvarchar) to public;\
+\
+|f|\ |f||f|R|D|R|||||
+212|binaryudt.1.0|5|octet_length (binaryvar)|informix|0|create function octet_length (binaryvar)\
+returns int\
+external name "$INFORMIXDIR/extend/binaryudt.1.0/binaryudt.bld(binaryvar_binlength)" language c;\
+\
+|f|drop function octet_length (binaryvar);\
+\
+|f||f|R|D|R|||||
+213|binaryudt.1.0|181|Alter-ExternalName-octet_length (binaryvar)|informix|0|alter function octet_length (binaryvar)\
+	with (Modify External Name = "$INFORMIXDIR/extend/binaryudt.1.0/binaryudt.bld(binaryvar_binlength)");\
+\
+|f|alter function octet_length (binaryvar)\
+	with (Modify External Name = "binaryvar_binlength");\
+\
+|f||f|R|D|R|||||
+214|binaryudt.1.0|37|Alter-Parallelize-octet_length (binaryvar)|informix|0|alter function octet_length (binaryvar)\
+	with (add parallelizable);\
+\
+|f|alter function octet_length (binaryvar)\
+	with (drop parallelizable);\
+\
+|f||f|R|D|R|||||
+215|binaryudt.1.0|55|Alter-HandleNul-octet_length (binaryvar)|informix|0|alter function octet_length (binaryvar)\
+	with (add handlesnulls);\
+\
+|f|alter function octet_length (binaryvar)\
+	with (drop handlesnulls);\
+\
+|f||f|R|D|R|||||
+216|binaryudt.1.0|85|Alter-Variant-octet_length (binaryvar)|informix|0|alter function octet_length (binaryvar)\
+	with (add not variant);\
+\
+|f|alter function octet_length (binaryvar)\
+	with (drop not variant);\
+\
+|f||f|R|D|R|||||
+217|binaryudt.1.0|69|octet_length (binaryvar)|informix|0|grant execute on function octet_length (binaryvar) to public;\
+\
+|f|\ |f||f|R|D|R|||||
+218|binaryudt.1.0|5|binary18Cast (binaryvar)|informix|0|create function binary18Cast (Argument1 binaryvar)\
+returns binary18\
+RETURN CAST(CAST(Argument1 AS LVARCHAR) AS binary18);\
+end function;\
+\
+|f|drop function binary18Cast (binaryvar);\
+\
+|f||f|R|D|R|||||
+219|binaryudt.1.0|69|binary18Cast (binaryvar)|informix|0|grant execute on function binary18Cast (binaryvar) to public;\
+\
+|f|\ |f||f|R|D|R|||||
+220|binaryudt.1.0|3|binaryvar->binary18|informix|0|create implicit cast\
+	(\
+		binaryvar as binary18\
+		with  binary18Cast\
+	);\
+\
+|f|drop cast (binaryvar as binary18);\
+\
+|f||f|R|D|R|||||
+221|binaryudt.1.0|5|binaryvarCast (binary18)|informix|0|create function binaryvarCast (Argument1 binary18)\
+returns binaryvar\
+RETURN CAST(CAST(Argument1 AS LVARCHAR) AS binaryvar);\
+end function;\
+\
+|f|drop function binaryvarCast (binary18);\
+\
+|f||f|R|D|R|||||
+222|binaryudt.1.0|69|binaryvarCast (binary18)|informix|0|grant execute on function binaryvarCast (binary18) to public;\
+\
+|f|\ |f||f|R|D|R|||||
+223|binaryudt.1.0|3|binary18->binaryvar|informix|0|create implicit cast\
+	(\
+		binary18 as binaryvar\
+		with  binaryvarCast\
+	);\
+\
+|f|drop cast (binary18 as binaryvar);\
+\
+|f||f|R|D|R|||||
+224|binaryudt.1.0|0|sysbldregistered|informix|0|insert into sysbldregistered\
+	(bld_id)\
+values\
+(\
+	"binaryudt.1.0"\
+);\
+\
+|f|delete from sysbldregistered\
+	where bld_id = "binaryudt.1.0";\
+\
+|f||f|R|D|R|||||

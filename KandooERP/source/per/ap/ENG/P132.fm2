@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form xmlns="http://namespaces.querix.com/2015/fglForms">
+	<form.rootContainer>
+		<GridPanel classNames="fcls_rootContainer" verticalAlignment="Top" horizontalAlignment="Left" fieldTable="" identifier="rootContainer">
+			<GridPanel.gridRowDefinitions>
+				<GridRowDefinition gridLengthValue=""/>
+				<GridRowDefinition gridLengthValue=""/>
+				<GridRowDefinition gridLengthValue=""/>
+				<GridRowDefinition gridLengthValue=""/>
+				<GridRowDefinition gridLengthValue=""/>
+				<GridRowDefinition gridLengthValue=""/>
+				<GridRowDefinition gridLengthValue=""/>
+			</GridPanel.gridRowDefinitions>
+			<GridPanel.gridColumnDefinitions>
+				<GridColumnDefinition gridLengthValue="100%"/>
+			</GridPanel.gridColumnDefinitions>
+			<GridPanel classNames="fcls_title_cnt" visible="true" verticalAlignment="Top" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="cntTitle">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="100%"/>
+					<GridColumnDefinition gridLengthValue=""/>
+				</GridPanel.gridColumnDefinitions>
+				<Label isDynamic="true" text="Payment Information" classNames="fcls_title_lb" visible="true" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="header_text"/>
+				<Label isDynamic="true" text="P132" classNames="fcls_title_lb" visible="true" gridItemLocation="1,0,1,1" fieldTable="" identifier="lbFormName"/>
+			</GridPanel>
+			<GroupBox title="Vendor" classNames="fcls_detail_gb_cnt" visible="true" gridItemLocation="0,1,1,1" fieldTable="" identifier="cntDetail1GroupBox">
+				<GridPanel classNames="fcls_detail_gb_cnt_sub,fcls_data_cnt,fcls_align_left" visible="true" verticalAlignment="Top" horizontalAlignment="Left" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="cntDetail1GBSubGp">
+					<GridPanel.gridRowDefinitions>
+						<GridRowDefinition gridLengthValue=""/>
+						<GridRowDefinition gridLengthValue=""/>
+						<GridRowDefinition gridLengthValue=""/>
+						<GridRowDefinition gridLengthValue=""/>
+					</GridPanel.gridRowDefinitions>
+					<GridPanel.gridColumnDefinitions>
+						<GridColumnDefinition gridLengthValue="" gridMinLength="12rem"/>
+						<GridColumnDefinition gridLengthValue=""/>
+						<GridColumnDefinition gridLengthValue=""/>
+					</GridPanel.gridColumnDefinitions>
+					<Label isDynamic="true" text="Vendor Code" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="lb57"/>
+					<ComboBox dataType="Char,,,,8" classNames="list-show-value-text,field-show-value,fcls_data_widget,fcls_align_left,fcls_length_10qch" location="20qch,1qch" preferredSize="30qch,1qch" toolTip=" Unique Vendor ID" gridItemLocation="1,0,1,1" comment=" Unique Vendor ID" fieldTable="cheque" identifier="vend_code"/>
+					<TextField dataType="Char,,,,30" classNames="fcls_data_widget,fcls_align_left,fcls_length_20qch" location="51qch,1qch" preferredSize="20qch,1qch" collapsed="false" toolTip=" Full name or description of vendor" gridItemLocation="2,0,1,1" comment=" Full name or description of vendor" fieldTable="vendor" identifier="name_text"/>
+					<Label isDynamic="true" text="Bank Code" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,1,1,1" fieldTable="" identifier="lb73"/>
+					<ComboBox dataType="Char,,,,9" classNames="list-show-text-value,field-show-value,fcls_data_widget,fcls_align_left,fcls_length_10qch" location="20qch,2qch" preferredSize="30qch,1qch" toolTip=" Bank Code of bank to be inquired on" gridItemLocation="1,1,1,1" comment=" Bank Code of bank to be inquired on" fieldTable="bank" identifier="bank_code"/>
+					<TextField dataType="Char,,,,40" classNames="fcls_data_widget,fcls_align_left,fcls_length_20qch" location="51qch,2qch" preferredSize="20qch,1qch" collapsed="false" toolTip=" Name of bank to be inquired on" gridItemLocation="2,1,1,1" comment=" Name of bank to be inquired on" fieldTable="bank" identifier="name_acct_text"/>
+					<Label isDynamic="true" text="Payment Number" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,2,1,1" fieldTable="" identifier="lb76"/>
+					<TextField dataType="Integer,,,," classNames="list-show-text-value,field-show-value,fcls_data_widget,fcls_align_left,fcls_length_10qch" location="20qch,3qch" preferredSize="10qch,1qch" toolTip=" The specific cheque or EFT number already entered in the system" gridItemLocation="1,2,1,1" comment=" The specific cheque or EFT number already entered in the system" fieldTable="cheque" identifier="cheq_code"/>
+					<Label isDynamic="true" text="Method" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,3,1,1" fieldTable="" identifier="lb77"/>
+					<ComboBox dataType="Char,,,,1" classNames="list-show-text-value,field-show-value,fcls_data_widget,fcls_align_left,fcls_length_10qch" location="51qch,3qch" preferredSize="20qch,1qch" toolTip=" Method: (1) auto/manual cheques, (3) EFT payments " gridItemLocation="1,3,1,1" comment=" Method: (1) auto/manual cheques, (3) EFT payments " fieldTable="cheque" identifier="pay_meth_ind"/>
+					<TextField dataType="Char,,,," classNames="fcls_data_widget,fcls_align_left,fcls_length_20qch" location="71qch,3qch" preferredSize="2qch,1qch" collapsed="false" toolTip=" Method: (1) auto/manual cheques, (3) EFT payments " gridItemLocation="2,3,1,1" comment=" Method: (1) auto/manual cheques, (3) EFT payments " fieldTable="formonly" identifier="pay_meth_text"/>
+				</GridPanel>
+			</GroupBox>
+			<GroupBox title="Amounts" classNames="fcls_detail_gb_cnt" visible="true" verticalAlignment="Top" gridItemLocation="0,2,1,1" fieldTable="formonly" identifier="cntDetail2GroupBox">
+				<GridPanel classNames="fcls_detail_gb_cnt_sub,fcls_data_cnt,fcls_align_left" visible="true" verticalAlignment="Top" horizontalAlignment="Left" fieldTable="formonly" identifier="cntDetail2GBSubGpLeft">
+					<GridPanel.gridRowDefinitions>
+						<GridRowDefinition gridLengthValue=""/>
+						<GridRowDefinition gridLengthValue=""/>
+						<GridRowDefinition gridLengthValue=""/>
+						<GridRowDefinition gridLengthValue=""/>
+						<GridRowDefinition gridLengthValue=""/>
+					</GridPanel.gridRowDefinitions>
+					<GridPanel.gridColumnDefinitions>
+						<GridColumnDefinition gridLengthValue="" gridMinLength="12rem"/>
+						<GridColumnDefinition gridLengthValue=""/>
+						<GridColumnDefinition gridLengthValue="" gridMinLength="120"/>
+						<GridColumnDefinition gridLengthValue=""/>
+					</GridPanel.gridColumnDefinitions>
+					<Label isDynamic="true" text="Currency" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,0,1,1" fieldTable="" identifier="lb91"/>
+					<ComboBox toCase="Up" noEntry="true" dataType="Char,,,,3" classNames="list-show-text-value,field-show-text,fcls_data_widget,fcls_align_left,fcls_length_10qch" location="35qch,4qch" preferredSize="4qch,1qch" toolTip=" The currency used for this vendor" gridItemLocation="1,0,1,1" comment=" The currency used for this vendor" fieldTable="vendor" identifier="currency_code"/>
+					<TextField dataType="Decimal,,,2,16" classNames="fcls_data_widget,fcls_align_left,fcls_length_10qch" location="58qch,5qch" preferredSize="14qch,1qch" toolTip=" The total amount applied to a particular remittance(s)" gridItemLocation="3,0,1,1" comment=" The total amount applied to a particular remittance(s)" fieldTable="cheque" identifier="apply_amt"/>
+					<Label isDynamic="true" text="Cheque Gross Amount" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,1,1,1" fieldTable="formonly" identifier="lb47"/>
+					<TextField dataType="Decimal,,,2,16" classNames="fcls_data_widget,fcls_align_left,fcls_length_10qch" location="20qch,5qch" preferredSize="14qch,1qch" toolTip=" Total cheque amount including tax and contra" gridItemLocation="1,1,1,1" comment=" Total cheque amount including tax and contra" fieldTable="cheque" identifier="pay_amt"/>
+					<Label isDynamic="true" text="Exchange rate" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="2,1,1,1" fieldTable="" identifier="lb92"/>
+					<TextField dataType="Float,,,," classNames="fcls_data_widget,fcls_align_left,fcls_length_10qch" location="58qch,6qch" preferredSize="14qch,1qch" toolTip=" Exchange rate " gridItemLocation="3,1,1,1" comment=" Exchange rate " fieldTable="cheque" identifier="conv_qty"/>
+					<Label isDynamic="true" text="- Tax Amount" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,2,1,1" fieldTable="formonly" identifier="lb46"/>
+					<Label isDynamic="true" text="Applied Amount" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="2,0,1,1" fieldTable="" identifier="lb86"/>
+					<TextField dataType="Decimal,,,2,16" classNames="fcls_data_widget,fcls_align_left,fcls_length_10qch" location="20qch,6qch" preferredSize="14qch,1qch" toolTip=" The tax amount of this cheque" gridItemLocation="1,2,1,1" comment=" The tax amount of this cheque" fieldTable="cheque" identifier="tax_amt"/>
+					<Label isDynamic="true" text="Discounts Taken" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="2,2,1,1" fieldTable="" identifier="lb93"/>
+					<TextField dataType="Decimal,,,2,16" classNames="fcls_data_widget,fcls_align_left,fcls_length_10qch" location="58qch,7qch" preferredSize="14qch,1qch" toolTip=" The discount amount used (taken) on this remittance" gridItemLocation="3,2,1,1" comment=" The discount amount used (taken) on this remittance" fieldTable="cheque" identifier="disc_amt"/>
+					<Label isDynamic="true" text="- Contra Amount" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,3,1,1" fieldTable="formonly" identifier="lb44"/>
+					<TextField dataType="Decimal,,,2,16" classNames="fcls_data_widget,fcls_align_left,fcls_length_10qch" location="20qch,7qch" preferredSize="14qch,1qch" toolTip=" The contra amount of this cheque" gridItemLocation="1,3,1,1" comment=" The contra amount of this cheque" fieldTable="cheque" identifier="contra_amt"/>
+					<Label isDynamic="true" text="Tax Code" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="2,3,1,1" fieldTable="" identifier="lb94"/>
+					<ComboBox toCase="Up" dataType="Char,,,,3" classNames="list-show-text-value,field-show-text,fcls_data_widget,fcls_align_left,fcls_length_10qch" location="58qch,8qch" preferredSize="4qch,1qch" toolTip=" Withholding Tax Code" gridItemLocation="3,3,1,1" comment=" Withholding Tax Code" fieldTable="cheque" identifier="tax_code"/>
+					<Label isDynamic="true" text="Cheque Net Amount" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,4,1,1" fieldTable="" identifier="lb89"/>
+					<TextField dataType="Decimal,,,2,16" classNames="fcls_data_widget,fcls_align_left,fcls_length_10qch" location="20qch,8qch" preferredSize="14qch,1qch" toolTip=" Net cheque amount after tax and contra" gridItemLocation="1,4,1,1" comment=" Net cheque amount after tax and contra" fieldTable="cheque" identifier="net_pay_amt"/>
+					<Label isDynamic="true" text="Tax %" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="2,4,1,1" fieldTable="" identifier="lb95"/>
+					<TextField dataType="Decimal,,,3,6" classNames="fcls_data_widget,fcls_align_left,fcls_length_10qch" location="64qch,8qch" preferredSize="8qch,1qch" toolTip=" Withholding Tax Percentage" gridItemLocation="3,4,1,1" comment=" Withholding Tax Percentage" fieldTable="cheque" identifier="tax_per"/>
+				</GridPanel>
+			</GroupBox>
+			<GroupBox title="Other Info" classNames="fcls_detail_gb_cnt" visible="true" verticalAlignment="Top" gridItemLocation="0,3,1,1" fieldTable="formonly" identifier="cntDetail3GroupBox">
+				<GridPanel classNames="fcls_detail_gb_cnt_sub,fcls_data_cnt,fcls_align_left" visible="true" verticalAlignment="Top" horizontalAlignment="Left" fieldTable="formonly" identifier="cntDetail3GBSubGpLeft">
+					<GridPanel.gridRowDefinitions>
+						<GridRowDefinition gridLengthValue=""/>
+						<GridRowDefinition gridLengthValue=""/>
+						<GridRowDefinition gridLengthValue=""/>
+					</GridPanel.gridRowDefinitions>
+					<GridPanel.gridColumnDefinitions>
+						<GridColumnDefinition gridLengthValue="" gridMinLength="12rem"/>
+						<GridColumnDefinition gridLengthValue=""/>
+						<GridColumnDefinition gridLengthValue="" gridMinLength="10rem"/>
+						<GridColumnDefinition gridLengthValue=""/>
+					</GridPanel.gridColumnDefinitions>
+					<Label isDynamic="true" text="Cheque Date" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="lb47x"/>
+					<Calendar dataType="Date,,,," classNames="fcls_data_widget,fcls_align_left,fcls_length_10qch" location="20qch,10qch" preferredSize="11qch,1qch" toolTip=" Date used for recording cheque information in the appropriate ledgers" gridItemLocation="1,0,1,1" comment=" Date used for recording cheque information in the appropriate ledgers" fieldTable="cheque" identifier="cheq_date"/>
+					<Label isDynamic="true" text="Entry Person" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="2,0,1,1" fieldTable="" identifier="lb92x"/>
+					<TextField dataType="Char,,,,8" classNames="fcls_data_widget,fcls_align_left,fcls_length_10qch" location="58qch,10qch" preferredSize="11qch,1qch" toolTip=" Name of person performing entry" gridItemLocation="3,0,1,1" comment=" Name of person performing entry" fieldTable="cheque" identifier="entry_code"/>
+					<Label isDynamic="true" text="Receipt Reference" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,1,1,1" fieldTable="formonly" identifier="lb46x"/>
+					<TextField dataType="Char,,,,20" classNames="fcls_data_widget,fcls_align_left,fcls_length_10qch" location="20qch,11qch" preferredSize="21qch,1qch" toolTip=" Identifies any receipt of item referencing this transaction" gridItemLocation="1,1,1,1" comment=" Identifies any receipt of item referencing this transaction" fieldTable="cheque" identifier="com3_text"/>
+					<Label isDynamic="true" text="Entry Date" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="2,1,1,1" fieldTable="" identifier="lb93x"/>
+					<Calendar dataType="Date,,,," classNames="fcls_data_widget,fcls_align_left,fcls_length_10qch" location="58qch,11qch" preferredSize="11qch,1qch" toolTip=" Current date cheque was entered into the system" gridItemLocation="3,1,1,1" comment=" Current date cheque was entered into the system" fieldTable="cheque" identifier="entry_date"/>
+					<Label isDynamic="true" text="IBAN" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,2,1,1" fieldTable="formonly" identifier="lb44x"/>
+					<ComboBox classNames="list-show-text-value,field-show-text,fcls_data_widget,fcls_align_hstretch" location="20qch,12qch" preferredSize="41qch,1qch" toolTip=" Account number used by bank" gridItemLocation="1,2,3,1" comment=" Account number used by bank" fieldTable="bank" identifier="iban" editable="true"/>
+				</GridPanel>
+			</GroupBox>
+			<GridPanel classNames="fcls_detail_cnt" visible="true" verticalAlignment="Top" gridItemLocation="0,4,1,1" fieldTable="formonly" identifier="cntDetail4" horizontalAlignment="Stretch">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="50%"/>
+					<GridColumnDefinition gridLengthValue="50%"/>
+				</GridPanel.gridColumnDefinitions>
+				<GroupBox title="GL Integration" classNames="fcls_detail_gb_cnt" visible="true" verticalAlignment="Top" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="cntDetail4GroupBoxLeft">
+					<GridPanel classNames="fcls_detail_gb_cnt_sub,fcls_data_cnt,fcls_align_left" visible="true" verticalAlignment="Top" horizontalAlignment="Left" fieldTable="formonly" identifier="cntDetail2GBSubGpLeft">
+						<GridPanel.gridRowDefinitions>
+							<GridRowDefinition gridLengthValue="" gridMinLength=""/>
+							<GridRowDefinition gridLengthValue=""/>
+							<GridRowDefinition gridLengthValue=""/>
+							<GridRowDefinition gridLengthValue=""/>
+						</GridPanel.gridRowDefinitions>
+						<GridPanel.gridColumnDefinitions>
+							<GridColumnDefinition gridLengthValue="" gridMinLength="12rem"/>
+							<GridColumnDefinition gridLengthValue=""/>
+						</GridPanel.gridColumnDefinitions>
+						<CheckBox title="Posted" dataType="Char,,,,1" classNames="fcls_data_widget,fcls_align_left,fcls_length_05qch" location="20qch,14qch" preferredSize="2qch,1qch" toolTip=" -Y- or -N- if cheque has been processed through the posting program" gridItemLocation="0,0,2,1" comment=" -Y- or -N- if cheque has been processed through the posting program" fieldTable="cheque" identifier="post_flag">
+							<CheckBox.checkedValue>
+								<StringLiteral stringValue="Y"/>
+							</CheckBox.checkedValue>
+							<CheckBox.uncheckedValue>
+								<StringLiteral stringValue="N"/>
+							</CheckBox.uncheckedValue>
+						</CheckBox>
+						<Label isDynamic="true" text="Post Year" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,1,1,1" fieldTable="formonly" identifier="lb46y"/>
+						<ComboBox dataType="SmallInt,,,," classNames="list-show-text-value,field-show-text,fcls_data_widget,fcls_align_left,fcls_length_05qch" location="20qch,15qch" preferredSize="6qch,1qch" toolTip=" Accounting year to be used for posting purposes" gridItemLocation="1,1,1,1" comment=" Accounting year to be used for posting purposes" fieldTable="cheque" identifier="year_num"/>
+						<Label isDynamic="true" text="Post Period" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,2,1,1" fieldTable="" identifier="lb93y"/>
+						<ComboBox dataType="SmallInt,,,," classNames="list-show-text-value,field-show-text,fcls_data_widget,fcls_align_left,fcls_length_05qch" location="27qch,15qch" preferredSize="6qch,1qch" toolTip=" Accounting period to be used for posting purposes" gridItemLocation="1,2,1,1" comment=" Accounting period to be used for posting purposes" fieldTable="cheque" identifier="period_num"/>
+						<Label isDynamic="true" text="GL Account" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,3,1,1" fieldTable="formonly" identifier="lb44y"/>
+						<ComboBox dataType="Char,,,,18" classNames="list-show-value-text,field-show-value,fcls_data_widget,fcls_align_left,fcls_length_15qch" location="20qch,16qch" preferredSize="19qch,1qch" toolTip=" General Ledger Account Number (W)" gridItemLocation="1,3,1,1" comment=" General Ledger Account Number (W)" fieldTable="cheque" identifier="bank_acct_code"/>
+					</GridPanel>
+				</GroupBox>
+				<GroupBox title="Reconciliation" classNames="fcls_detail_gb_cnt" visible="true" gridItemLocation="1,0,1,1" fieldTable="" identifier="cntDetail4GroupBoxRight">
+					<GridPanel classNames="fcls_detail_gb_cnt_sub,fcls_data_cnt,fcls_align_left" visible="true" verticalAlignment="Top" horizontalAlignment="Left" fieldTable="" identifier="cntDetail2GBSubGpRight">
+						<GridPanel.gridRowDefinitions>
+							<GridRowDefinition gridLengthValue=""/>
+							<GridRowDefinition gridLengthValue=""/>
+							<GridRowDefinition gridLengthValue=""/>
+							<GridRowDefinition gridLengthValue=""/>
+						</GridPanel.gridRowDefinitions>
+						<GridPanel.gridColumnDefinitions>
+							<GridColumnDefinition gridLengthValue="" gridMinLength="10rem"/>
+							<GridColumnDefinition gridLengthValue=""/>
+						</GridPanel.gridColumnDefinitions>
+						<Label isDynamic="true" text="Sheet No" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,0,1,1" fieldTable="" identifier="lb167y"/>
+						<TextField dataType="SmallInt,,,," classNames="fcls_data_widget,fcls_align_left,fcls_length_10qch" location="58qch,14qch" preferredSize="9qch,1qch" toolTip=" Statement sheet number on which the cheque was reconciled" gridItemLocation="1,0,1,1" comment=" Statement sheet number on which the cheque was reconciled" fieldTable="cheque" identifier="rec_state_num"/>
+						<Label isDynamic="true" text="Line No" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,1,1,1" fieldTable="" identifier="lb168y"/>
+						<TextField dataType="SmallInt,,,," classNames="fcls_data_widget,fcls_align_left,fcls_length_10qch" location="58qch,15qch" preferredSize="9qch,1qch" toolTip=" Bank statement line number where  the cheque was reconciled" gridItemLocation="1,1,1,1" comment=" Bank statement line number where  the cheque was reconciled" fieldTable="cheque" identifier="rec_line_num"/>
+						<Label isDynamic="true" text="Date Presented" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,2,1,1" fieldTable="" identifier="lb169y"/>
+						<Calendar dataType="Date,,,," classNames="fcls_data_widget,fcls_align_left,fcls_length_10qch" location="58qch,16qch" preferredSize="11qch,1qch" toolTip=" Bank statement transaction date on which the payment was presented" gridItemLocation="1,2,1,1" comment=" Bank statement transaction date on which the payment was presented" fieldTable="formonly" identifier="date_presented"/>
+						<Label isDynamic="true" text="Closed" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,3,1,1" fieldTable="" identifier="lb182"/>
+						<TextField dataType="Char,,,," classNames="fcls_data_widget,fcls_align_left,fcls_length_10qch" location="69qch,16qch" preferredSize="2qch,1qch" gridItemLocation="1,3,1,1" fieldTable="formonly" identifier="close_flag"/>
+					</GridPanel>
+				</GroupBox>
+			</GridPanel>
+			<GroupBox title="Comments" classNames="fcls_detail_gb_cnt" visible="true" verticalAlignment="Top" horizontalAlignment="Stretch" gridItemLocation="0,5,1,1" fieldTable="formonly" identifier="cntDetail5GroupBox">
+				<GridPanel classNames="fcls_detail_gb_cnt_sub,fcls_data_cnt,fcls_align_hstretch" visible="true" verticalAlignment="Top" horizontalAlignment="Stretch" fieldTable="formonly" identifier="cntDetail5GBSubGpLeft">
+					<GridPanel.gridRowDefinitions>
+						<GridRowDefinition gridLengthValue=""/>
+						<GridRowDefinition gridLengthValue=""/>
+					</GridPanel.gridRowDefinitions>
+					<GridPanel.gridColumnDefinitions>
+						<GridColumnDefinition gridLengthValue="100%"/>
+					</GridPanel.gridColumnDefinitions>
+					<TextField dataType="Char,,,,30" classNames="fcls_data_widget,fcls_align_hstretch" location="0qch,18qch" preferredSize="31qch,1qch" minSize="55rem," toolTip=" Used to record any pertinent information about the cheque" gridItemLocation="0,0,1,1" comment=" Used to record any pertinent information about the cheque" fieldTable="cheque" identifier="com1_text"/>
+					<TextField dataType="Char,,,,30" classNames="fcls_data_widget,fcls_align_hstretch" location="32qch,18qch" preferredSize="31qch,1qch" toolTip=" Additional comments lines for cheque information, if needed" gridItemLocation="0,1,1,1" comment=" Additional comments lines for cheque information, if needed" fieldTable="cheque" identifier="com2_text"/>
+				</GridPanel>
+			</GroupBox>
+			<GridPanel classNames="fcls_statusbar_cnt" visible="true" verticalAlignment="Top" gridItemLocation="0,6,1,1" fieldTable="formonly" identifier="cntStatusBar">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="100%"/>
+				</GridPanel.gridColumnDefinitions>
+				<Label isDynamic="true" text="" classNames="fcls_sblabel" visible="true" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="lbInfo1"/>
+				<Label isDynamic="true" text="" classNames="fcls_sblabel" visible="true" gridItemLocation="0,1,1,1" fieldTable="formonly" identifier="lbInfo2"/>
+			</GridPanel>
+		</GridPanel>
+	</form.rootContainer>
+	<form.screenRecords>
+		<ScreenRecord identifier="bank" fields="bank_code,name_acct_text,iban"/>
+		<ScreenRecord identifier="cheque" fields="vend_code,cheq_code,pay_meth_ind,entry_code,entry_date,bank_acct_code,com3_text,cheq_date,pay_amt,conv_qty,net_pay_amt,tax_code,tax_per,year_num,period_num,apply_amt,post_flag,disc_amt,rec_state_num,rec_line_num,com1_text,com2_text,tax_amt,contra_amt"/>
+		<ScreenRecord identifier="formonly" fields="pay_meth_text,date_presented,close_flag"/>
+		<ScreenRecord identifier="vendor" fields="name_text,currency_code"/>
+	</form.screenRecords>
+</form>
+

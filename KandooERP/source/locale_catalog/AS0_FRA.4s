@@ -1,0 +1,125 @@
+AS0_FRA {
+% { "%" }
++1-30 Days Overdue { "+ 1-30 jours de retard" }
++31-60 Days Overdue { "31 à 60 jours de retard" }
++61-90 Days Overdue { "+61 -90 jours de retard" }
+= Balance { "= Solde" }
+A Valid Code for this part of the chart { "Un code valid pour cette partie du numéro de compte" }
+ACCEPT { "VALIDER" }
+Account { "Compte" }
+Account Info { "Informations sur le compte" }
+Account Status { "Situation du Compte" }
+Account Verifier { "Vérificateur de compte" }
+Account code to identify this account { "Numéro de compte identifiant ce client" }
+Address { "Adresse" }
+Aging Date { "Date de vieillissement" }
+Amount Paid { "Montant payé" }
+Available Credit { "Crédit disponible" }
+Balance { "Solde" }
+Cancel { "Annuler" }
+Chart of Accounts { "Plan Comptable" }
+City { "Ville" }
+Code { "Code" }
+Code representing the Country of this Customer { "Code pays de ce client" }
+Comments { "Commentaires" }
+Country { "Pays" }
+Country Code { "Code Pays" }
+Credit Limit { "Limite de Crédit" }
+Currency { "Devise" }
+Currency Code { "Code devise" }
+Currency in which this customer deals { "Devise dans laquelle traite ce client" }
+Current { "Actuel" }
+Customer { "Client" }
+Customer Code { "Code Client" }
+Customer Name { "Nom du client" }
+Customer Type { "Type de Client" }
+Date { "Date" }
+Date Paid { "Date de paiement" }
+Description { "Description" }
+Discount Date { "Date de remise" }
+Due Date { "Date d'échéance" }
+End Date { "Date de fin" }
+Enter Load Indicator { "Saisir l'indicateur de charge" }
+Enter a Unique Transaction Number { "Saisir un numéro unique de transaction" }
+Enter customer code selection criteria { "Entrer les critères de sélection du code client" }
+Enter customer name selection criteria { "Entrez les critères de sélection du nom de client" }
+Enter full UNIX path of interface load file { "Saisir le chemin UNIX complet du fichier de chargement d'interface" }
+Enter full name of interface load file { "Entrez le nom complet du fichier de chargement d'interface" }
+Enter sales 'On-Hold' code selection criteria { "Saisir les critères de sélection du code "En attente" des ventes" }
+Enter sales territory selection criteria { "Saisir les critères de sélection du territoire de vente" }
+Enter salesperson code selection criteria { "Saisir les critères de sélection du code vendeur" }
+Enter transaction date { "Saisir la date de la transaction" }
+Enter transaction description { "Saisir la description de la transaction" }
+Entered { "Saisie" }
+Entry Date { "Date d'entrée" }
+Entry Person { "Personne ayant saisi l'info" }
+Exit { "Quitter" }
+FILTER { "Premier" }
+Fax { "Fax" }
+Field Description { "Description du champ" }
+First { "Premier" }
+Fiscal Year { "Exercice fiscal" }
+Flex Codes { "Flex Codes" }
+Freight { "Fret" }
+GL Account { "Compte de Compta Générale" }
+GL Integration { "Intégration Grand Livre" }
+Goods { "Marchandises" }
+Handling { "Manutention" }
+Header-Text { "En-tête" }
+Hold Sales { "Ventes à livrer" }
+ID { "ID" }
+Invoice Address { "Adresse de facturation" }
+Invoice Date { "Date de facturation" }
+Invoice Number { "Numéro de facture" }
+Job Code { "Code JOB" }
+LOOKUP { "RECHERCHER" }
+Language Code { "Code langue" }
+Last { "Dernier" }
+Last Load { "Dernier chargement" }
+Length { "Longueur" }
+Length of the Code { "Longueur Numéro de compte" }
+Name { "Nom" }
+No { "Non" }
+Number { "Numéro" }
+Order Number { "Numéro de commande" }
+Other Info { "Autres informations" }
+Password { "Mot de passe" }
+Period { "Période" }
+Phone { "Téléphone" }
+Postcode { "Code Postal" }
+Product Code { "Code Produit" }
+Purchase Code { "Code d'achat" }
+Reference { "Référence" }
+Sales Condition { "Condition de vente" }
+Sales Tax { "Taxe de vente" }
+Salesperson { "Vendeur" }
+Salesperson Code { "Code vendeur" }
+Sequence { "Séquence" }
+Start Date { "Date de Début" }
+Start Pos. { "Positions Départ" }
+Start position of the Code { "Position de départ du code" }
+State { "Etat" }
+State/County { "Région" }
+Tax Code { "Code T.V.A." }
+Term Code { "Code Conditions" }
+Territory { "Territoire" }
+The Description of the Account { "Description du compte" }
+The account balance between 61 and 90 Days Overdue { "Le solde du compte avec retard entre 61 et 90 jours" }
+The account balance more than 90 Days Overdue { "Le solde du compte avec retard de plus de 90 jours" }
+The customer city { "La ville du client" }
+The description for this code { "L'intitulé de ce code" }
+The financial year of this period { "Année financière de cette période" }
+The period number { "Numéro de période" }
+The valid flex segment { "Le segment Flex valide" }
+Title { "Titre" }
+Title of this field in the GL { "Titre de ce champ en Compta géné" }
+Totals { "Totaux" }
+Transaction Number Entry { "Saisie du numéro de transaction" }
+Type { "Type" }
+UNIX File Name { "UNIX File Name" }
+UNIX Path Name { "Nom de chemin UNIX" }
+Value added tax registration number { "Code T.V.A. intracommunautaire" }
+Vat Reg No { "N° T.V.A. intracommunautaire" }
+Year { "Année" }
+actToolbarManager { "actToolbarManager" }
+}

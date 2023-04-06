@@ -1,0 +1,93 @@
+{
+###########################################################################
+# This program is free software; you can redistribute it and/or modify it
+# under the terms of the GNU General Public License as published by the
+# Free Software Foundation; either version 2 of the License, or (at your
+# option) any later version.
+#
+# This program is distributed in the hope that it will be useful, but
+# WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+# General Public License for more details.
+#
+# You should have received a copy of the GNU General Public License along
+# with this program; if not, write to the Free Software Foundation, Inc.,
+# 59 Temple Place, Suite 330, Boston, MA 02111-1307 USA
+#
+###########################################################################
+
+	 $Id: M154.per,v 1.2 2003/11/19 22:23:00 afalout Exp $
+}
+
+
+database kandoodb
+
+screen
+{
+                       Shop Order By-product Details                   M154
+\g----------------------------------------------------------------------------\g
+ Product            [f001           ] [f002                          ]
+ Warehouse          [a  ]             [f003                          ]
+ Quantity Produced  [f004        ]     Unit of Measure   [f005]
+ Staging Work Centre[f006           ] [f007                          ]
+ Supplier           [f008    ]        [f009                          ]
+
+ Unit Cost          [f010             ]Unit Price        [f011             ]
+ Ext. Cost          [f012             ]Ext. Price        [f013             ]
+ Actual Unit Cost   [f014             ]Actual Unit Price [f015             ]
+ Actual Ext. Cost   [f016             ]Actual Ext. Price [f017             ]
+ Receipt Date       [f018      ]       Actual Receipt Date    [f019      ]
+ Receipted Quantity [f020      ]       Rejected Quantity      [f021      ]
+
+[f022                |f023                ]
+[f024                |f025                ]
+[f026                |f027                ] [b]
+
+}
+
+tables
+shoporddetl
+workcentre
+warehouse
+product
+vendor
+mnparms
+
+attributes
+f001 = shoporddetl.part_code, upshift,
+comments = " Product code of a manufacturing product (W)";
+f002 = product.desc_text;
+a    = shoporddetl.issue_ware_code, upshift,
+comments = " Code for the receipting warehouse of the by-product (W)";
+f003 = warehouse.desc_text;
+f004 = shoporddetl.required_qty,
+comments = " Quantity of the by-product produced from this shop order";
+f005 = shoporddetl.uom_code, upshift,
+comments = " Code for the unit of measure applying to the quantity (W)";
+f006 = shoporddetl.work_centre_code, upshift,
+comments = " Code for the work centre at which the by-product is produced (W)";
+f007 = workcentre.desc_text;
+f008 = product.vend_code;
+f009 = vendor.name_text;
+f010 = formonly.unit_cost_amt type decimal;
+f011 = shoporddetl.std_price_amt;
+f012 = formonly.ext_cost_amt type decimal;
+f013 = formonly.ext_price_amt type decimal;
+f014 = formonly.act_unit_cost_amt type decimal;
+f015 = shoporddetl.act_price_amt;
+f016 = formonly.act_ext_cost_amt type decimal;
+f017 = formonly.act_ext_price_amt type decimal;
+f018 = shoporddetl.start_date;
+f019 = shoporddetl.actual_start_date;
+f020 = shoporddetl.receipted_qty;
+f021 = shoporddetl.rejected_qty;
+f022 = mnparms.ref1_text;
+f023 = shoporddetl.user1_text, comments = " User defined field";
+f024 = mnparms.ref2_text;
+f025 = shoporddetl.user2_text, comments = " User defined field";
+f026 = mnparms.ref3_text;
+f027 = shoporddetl.user3_text, comments = " User defined field";
+b    = formonly.dummy, noentry;
+
+instructions
+delimiters "  "

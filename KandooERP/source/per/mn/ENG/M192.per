@@ -1,0 +1,73 @@
+{
+###########################################################################
+# This program is free software; you can redistribute it and/or modify it
+# under the terms of the GNU General Public License as published by the
+# Free Software Foundation; either version 2 of the License, or (at your
+# option) any later version.
+#
+# This program is distributed in the hope that it will be useful, but
+# WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+# General Public License for more details.
+#
+# You should have received a copy of the GNU General Public License along
+# with this program; if not, write to the Free Software Foundation, Inc.,
+# 59 Temple Place, Suite 330, Boston, MA 02111-1307 USA
+#
+###########################################################################
+
+	 $Id: M192.per,v 1.1 2003/05/20 23:53:06 tpavlek Exp $
+}
+
+
+database kandoodb
+
+screen
+{
+          Shop Order Creation From Sales Order Recommended Orders      M192
+\g----------------------------------------------------------------------------\g
+   Sales Order   Customer   Order Date   Product                  Quantity
+\g----------------------------------------------------------------------------\g
+[a][f001      |b|f002    ] [f003      ] [f004           ][f005            ]
+[a][f001      |b|f002    ] [f003      ] [f004           ][f005            ]
+[a][f001      |b|f002    ] [f003      ] [f004           ][f005            ]
+[a][f001      |b|f002    ] [f003      ] [f004           ][f005            ]
+[a][f001      |b|f002    ] [f003      ] [f004           ][f005            ]
+[a][f001      |b|f002    ] [f003      ] [f004           ][f005            ]
+[a][f001      |b|f002    ] [f003      ] [f004           ][f005            ]
+[a][f001      |b|f002    ] [f003      ] [f004           ][f005            ]
+[a][f001      |b|f002    ] [f003      ] [f004           ][f005            ]
+[a][f001      |b|f002    ] [f003      ] [f004           ][f005            ]
+[a][f001      |b|f002    ] [f003      ] [f004           ][f005            ]
+[a][f001      |b|f002    ] [f003      ] [f004           ][f005            ]
+[a][f001      |b|f002    ] [f003      ] [f004           ][f005            ]
+[a][f001      |b|f002    ] [f003      ] [f004           ][f005            ]
+
+}
+
+tables
+recshordhead
+orderhead
+
+attributes
+a    = formonly.toggle_text, noentry;
+f001 = recshordhead.order_num, noentry, comments = " The sales order number";
+b    = recshordhead.suffix_num, noentry, invisible;
+f002 = orderhead.cust_code, upshift, noentry,
+comments = " Customer code of the sales order";
+f003 = orderhead.order_date, noentry, comments = " Date of the sales order";
+f004 = recshordhead.part_code, upshift, noentry,
+comments = " Product code of the product to be produced";
+f005 = recshordhead.order_qty,
+comments = " Quantity of the product to be produced";
+
+instructions
+delimiters "  "
+
+screen record sr_salesorders[14] (toggle_text,
+                                  order_num,
+                                  suffix_num,
+                                  cust_code,
+                                  order_date,
+                                  part_code,
+                                  order_qty)

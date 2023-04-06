@@ -1,0 +1,189 @@
+A12_FRA {
++1-30 Days Overdue { "+ 1-30 jours de retard" }
++31-60 Days Overdue { "31 à 60 jours de retard" }
++61-90 Days Overdue { "+61 -90 jours de retard" }
+= Balance { "= Solde" }
+A second line for customer address { "2ème ligne d'adresse client" }
+ACCEPT { "VALIDER" }
+Accept Backorders { "Accept. commandes en attente" }
+Account Code { "Code Compte" }
+Account Info { "Informations sur le compte" }
+Account Status { "Situation du Compte" }
+Additional comments line, if needed { "Commentaires supplémentaires, si nécessaire" }
+Addr { "Adresse" }
+Address { "Adresse" }
+Amount { "Montant" }
+Amount Applied { "Montant Appliqué" }
+Amounts { "Montants" }
+Available Credit { "Crédit disponible" }
+Back Order { "Commande en cours" }
+Balance { "Solde" }
+Bank Account { "Compte bancaire" }
+Bank Code { "Code Banque" }
+Carrier { "Transporteur" }
+Cash Account { "Compte Caisse" }
+Cheque Date { "Date du chèque" }
+City { "Ville" }
+Code representing the Country of this Customer { "Code pays de ce client" }
+Comments { "Commentaires" }
+Contact { "Contact" }
+Corporate { "Entreprise" }
+Country { "Pays" }
+Country Code { "Code Pays" }
+Credit { "Crédit" }
+Credit Date { "Date de crédit" }
+Credit Limit { "Limite de Crédit" }
+Credit Number { "Numéro de crédit" }
+Currency { "Devise" }
+Currency in which this customer deals { "Devise avec laquelle ce client traite" }
+Currency in which this customer deals { "Devise dans laquelle traite ce client" }
+Current { "Actuel" }
+Current Avail { "Actuellement dispo" }
+Customer { "Client" }
+Customer Code { "Code Client" }
+Customer Details { "Détails client" }
+Customer Invoice { "Facture Client" }
+Customer Name { "Nom du client" }
+Customer Scan { "Exploration client" }
+Customer Type { "Type de Client" }
+Customer name or description { "Nom ou description du client" }
+Customer type code { "Code type de client" }
+Date { "Date" }
+Description { "Description" }
+Detail { "Détail" }
+Disc% { "%Rem" }
+Discount Taken { "Remise obtenue" }
+Due Date { "Date d'échéance" }
+Enter customer code selection criteria { "Entrer les critères de sélection du code client" }
+Enter sales 'On-Hold' code selection criteria { "Saisir les critères de sélection du code "En attente" des ventes" }
+Enter sales territory selection criteria { "Saisir les critères de sélection du territoire de vente" }
+Enter salesperson code selection criteria { "Saisir les critères de sélection du code vendeur" }
+Entered { "Saisie" }
+Entry Person { "Personne ayant saisi l'info" }
+Exchange Rate { "Taux de Change" }
+Exit { "Quitter" }
+Expiry Date { "Date d'expiration" }
+FILTER { "Premier" }
+Fax { "Fax" }
+First { "Premier" }
+Fiscal Year { "Exercice fiscal" }
+Freight { "Fret" }
+Full Name or description of customer { "Nom complet ou description du client" }
+Future Avail { "Dispo à terme" }
+GL Integration { "Intégration Grand Livre" }
+Goods { "Marchandises" }
+Group 1 { "Groupe 1" }
+Group 2 { "Groupe 2" }
+Handling { "Manutention" }
+Hold Sales { "Ventes à livrer" }
+ID { "ID" }
+Invoice { "Facture" }
+Invoice Address { "Adresse de facturation" }
+Invoice Date { "Date de facturation" }
+Invoice No { "N° de facture" }
+Invoice Number { "Numéro de facture" }
+Job Code { "Code JOB" }
+Journal { "Journal" }
+LOOKUP { "RECHERCHER" }
+Label or description of Tax Code { "Étiquette ou description du code taxe" }
+Label or description of this tax code { "Étiquette ou description de ce code taxe" }
+Language Code { "Code langue" }
+Last { "Dernier" }
+Line { "Ligne" }
+Line Total { "Total Ligne" }
+Line Total including Tax { "Total ligne incluant les taxes" }
+List Price { "Prix Liste" }
+Location { "Emplacement" }
+Month { "Mois" }
+NOTES { "NOTES" }
+Name { "Nom" }
+Name of accounts contact person for the customer { "Nom de la personne de contact pour le compte du client" }
+Nett { "Net" }
+Next { "Suivant" }
+Note Code { "Note Code" }
+Notes { "Notes" }
+Number { "Numéro" }
+On Hand { "À portée de main" }
+Order { "Commande" }
+Order Date { "Date de Commande" }
+Order Number { "Numéro de commande" }
+Order Qty { "Quantité commandée" }
+Other { "Autre" }
+Other Info { "Autres informations" }
+PO Code { "Code Bon de commande" }
+Paid { "Payé" }
+Paid Amount { "Montant payé" }
+Payment { "Paiement" }
+Payment Method { "Mode de paiement" }
+Payments { "Paiements" }
+Period { "Période" }
+Person { "Personne" }
+Phone { "Téléphone" }
+Possible Discount { "Remise possible" }
+Post Code { "Code Postal" }
+Postal code of customer { "Code postal du client" }
+Postcode { "Code Postal" }
+Posted { "Publié" }
+Previous { "Précédent" }
+Price { "Price" }
+Price Level { "Niveau de prix" }
+Price used for the customer: C)ost, L)ist or 1-9 Price Level { "Prix utilisé pour le client: C) Coût, L) Liste ou 1-9 Niveau de prix" }
+Product { "Produit" }
+Product Code { "Code Produit" }
+Profit { "Bénéfice" }
+Purchase Code { "Code d'achat" }
+Qty { "Qté" }
+Quantity { "Quantité" }
+Query { "Interroger" }
+Receipt Date { "Date de réception" }
+Received { "Reçu" }
+Reference { "Référence" }
+Reference text for Receipt { "Texte de référence pour le reçu" }
+Reserved { "Réservé" }
+Revision { "Révision" }
+Sales { "Ventes" }
+Sales Condition { "Condition de vente" }
+Sales Tax { "Taxe de vente" }
+Salesperson { "Vendeur" }
+Salesperson Code { "Code vendeur" }
+Salesperson resonsible for the customer { "Nom du commercial responsable pour ce client" }
+Shipping Address { "Adresse de livraison" }
+Shipping Code { "Code de livraison" }
+State { "Etat" }
+State/County { "Région" }
+State/Province { "Région" }
+Status { "Statut" }
+Stocking { "Stockage" }
+Tax { "T.V.A." }
+Tax Code { "Code T.V.A." }
+Tax code applicable to the customer { "Code T.V.A applicable à ce client" }
+Taxation { "Imposition" }
+Telephone { "Telephone" }
+Term Code { "Code Conditions" }
+Territory { "Territoire" }
+The Product Code from inventory { "Le code produit de l'inventaire" }
+The Product Code from inventory (W) { "Code produit de l'inventaire (W)" }
+The account balance between 61 and 90 Days Overdue { "Le solde du compte avec retard entre 61 et 90 jours" }
+The account balance more than 90 Days Overdue { "Le solde du compte avec retard de plus de 90 jours" }
+The address of the customer { "L'adresse du client" }
+The customer city { "La ville du client" }
+The customer code of the corporate debtor the customer is attached to { "Le code client de la société débitrice à laquelle le client est rattaché." }
+The reference number { "Numéro de référence" }
+The telephone number of the customer { "Numéro de téléphone du client" }
+Total { "Total" }
+Total : { "Total :" }
+Total Amount { "Montant Total" }
+Total Cost { "Coût total" }
+Totals { "Totaux" }
+Trading terms applicable to the customer { "Conditions de paiement applicables à ce client" }
+Type { "Type" }
+Unique Customer Code (W) { "Code client unique (W)" }
+Unit Price { "Prix Unitaire" }
+Unit of Measure { "Unité de mesure" }
+Value added tax registration number { "Code T.V.A. intracommunautaire" }
+Vat Reg No { "N° T.V.A. intracommunautaire" }
+Warehouse { "Dépôt" }
+Y.T.D : { "CUMUL À CE JOUR:" }
+Year { "Année" }
+actToolbarManager { "actToolbarManager" }
+}

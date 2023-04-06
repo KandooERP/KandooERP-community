@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?><form xmlns="http://namespaces.querix.com/2015/fglForms">
+	<form.rootContainer>
+		<GridPanel classNames="fcls_rootContainer" fieldTable="" horizontalAlignment="Left" identifier="rootContainer" verticalAlignment="Stretch">
+			<GridPanel.gridRowDefinitions>
+				<GridRowDefinition gridLengthValue=""/>
+				<GridRowDefinition gridLengthValue=""/>
+				<GridRowDefinition gridLengthValue=""/>
+				<GridRowDefinition gridLengthValue="100%"/>
+				<GridRowDefinition gridLengthValue=""/>
+			</GridPanel.gridRowDefinitions>
+			<GridPanel.gridColumnDefinitions>
+				<GridColumnDefinition gridLengthValue="100%"/>
+			</GridPanel.gridColumnDefinitions>
+			<GridPanel classNames="fcls_title_cnt" fieldTable="formonly" gridItemLocation="0,0,1,1" identifier="cntTitle" verticalAlignment="Top" visible="true">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="100%"/>
+					<GridColumnDefinition gridLengthValue=""/>
+				</GridPanel.gridColumnDefinitions>
+				<Label classNames="fcls_title_lb" fieldTable="formonly" gridItemLocation="0,0,1,1" identifier="header_text" isDynamic="true" text="Backorder Allocation" visible="true"/>
+				<Label classNames="fcls_title_lb" fieldTable="" gridItemLocation="1,0,1,1" identifier="lbFormName" isDynamic="true" text="E404" visible="true"/>
+			</GridPanel>
+			<GridPanel classNames="fcls_detail_cnt,fcls_data_cnt" fieldTable="formonly" gridItemLocation="0,1,1,1" horizontalAlignment="Left" identifier="cntDetail1" verticalAlignment="Top" visible="true">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="10rem" gridMinLength="10rem"/>
+					<GridColumnDefinition gridLengthValue=""/>
+					<GridColumnDefinition gridLengthValue=""/>
+				</GridPanel.gridColumnDefinitions>
+				<Label classNames="fcls_fieldlabel" fieldTable="formonly" gridItemLocation="0,0,1,1" identifier="lb57" isDynamic="true" text="Product Code" visible="true"/>
+				<ComboBox classNames="list-show-value-text,field-show-value,fcls_data_widget,fcls_length_10qch" comment="Product Code of the product required (W)" dataType="Char,,,,15" fieldTable="backorder" gridItemLocation="1,0,1,1" identifier="part_code" preferredSize="16qch,1qch" toCase="Up" toolTip="Product Code of the product required (W)"/>
+				<TextField classNames="fcls_length_50qch,fcls_data_widget,fcls_align_left" comment="Description of product" dataType="VarChar,,,0,4" fieldTable="product" gridItemLocation="2,0,1,1" identifier="desc_text" preferredSize="31qch,1qch" toolTip="Description of product"/>
+				<Label classNames="fcls_fieldlabel" fieldTable="" gridItemLocation="0,1,1,1" identifier="lb73" isDynamic="true" text="Warehouse" visible="true"/>
+				<ComboBox classNames="list-show-value-text,field-show-value,fcls_data_widget,fcls_length_10qch" comment="Warehouse allocation to be altered" dataType="Char,,,,3" fieldTable="backorder" gridItemLocation="1,1,1,1" identifier="ware_code" preferredSize="4qch,1qch" toCase="Up" toolTip="Warehouse allocation to be altered"/>
+				<TextField classNames="fcls_length_50qch,fcls_data_widget,fcls_align_left" comment=" Warehouse description" dataType="VarChar,,,0,14" fieldTable="warehouse" gridItemLocation="2,1,1,1" identifier="desc_text" noEntry="true" preferredSize="31qch,1qch" toolTip=" Warehouse description"/>
+			</GridPanel>
+			<GroupBox classNames="fcls_detail_gb_cnt" fieldTable="formonly" gridItemLocation="0,2,1,1" horizontalAlignment="Stretch" identifier="cntDetail2GroupBox" title="Group 2" verticalAlignment="Stretch" visible="true">
+				<GridPanel classNames="fcls_detail_gb_cnt_sub,fcls_detail_cnt_sub,fcls_data_cnt" fieldTable="formonly" horizontalAlignment="Left" identifier="cntDetail2Sub" verticalAlignment="Top" visible="true">
+					<GridPanel.gridRowDefinitions>
+						<GridRowDefinition gridLengthValue=""/>
+						<GridRowDefinition gridLengthValue=""/>
+					</GridPanel.gridRowDefinitions>
+					<GridPanel.gridColumnDefinitions>
+						<GridColumnDefinition gridLengthValue="10rem" gridMinLength="10rem"/>
+						<GridColumnDefinition gridLengthValue=""/>
+						<GridColumnDefinition gridLengthValue="10rem" gridMinLength="10rem"/>
+						<GridColumnDefinition gridLengthValue=""/>
+					</GridPanel.gridColumnDefinitions>
+					<Label classNames="fcls_fieldlabel" fieldTable="formonly" gridItemLocation="0,0,1,1" identifier="lb47" isDynamic="true" text="Quantity Onhand" visible="true"/>
+					<Spinner classNames="fcls_length_10qch,fcls_align_left,fcls_data_widget" comment=" Current onhand quantity of product" dataType="Float,,,," fieldTable="prodstatus" gridItemLocation="1,0,1,1" identifier="onhand_qty" preferredSize="16qch,1qch" toolTip=" Current onhand quantity of product" maxValue="100" minValue="0" step="1"/>
+					<Label classNames="fcls_fieldlabel" fieldTable="" gridItemLocation="2,0,1,1" identifier="lb92" isDynamic="true" text="Quantity Reserved" visible="true"/>
+					<Spinner classNames="fcls_length_10qch,fcls_align_left,fcls_data_widget" comment=" Current reserved quantity of product" dataType="Float,,,," fieldTable="prodstatus" gridItemLocation="3,0,1,1" identifier="reserved_qty" preferredSize="14qch,1qch" toolTip=" Current reserved quantity of product" maxValue="100" minValue="0" step="1"/>
+					<Label classNames="fcls_fieldlabel" fieldTable="formonly" gridItemLocation="0,1,1,1" identifier="lb46" isDynamic="true" text="Quantity Allocated" visible="true"/>
+					<Spinner classNames="fcls_length_10qch,fcls_align_left,fcls_data_widget" comment=" Back Order Quantity of stock allocated in this allocation" dataType="Char,,,," fieldTable="formonly" gridItemLocation="1,1,1,1" identifier="alloc" preferredSize="16qch,1qch" toolTip=" Back Order Quantity of stock allocated in this allocation" maxValue="100" minValue="0" step="1"/>
+					<Label classNames="fcls_fieldlabel" fieldTable="" gridItemLocation="2,1,1,1" identifier="lb93" isDynamic="true" text="Quantity Unallocated" visible="true"/>
+					<Spinner classNames="fcls_length_10qch,fcls_align_left,fcls_data_widget" comment=" Back Order Quantity not allocated in this allocation" dataType="Char,,,," fieldTable="formonly" gridItemLocation="3,1,1,1" identifier="unalloc" preferredSize="14qch,1qch" toolTip=" Back Order Quantity not allocated in this allocation" maxValue="100" minValue="0" step="1"/>
+				</GridPanel>
+			</GroupBox>
+			<Table fieldTable="" gridItemLocation="0,3,1,1" identifier="sr_backorder" preferredSize="74qch,8qch" rowCount="8" minSize=",8qch">
+				<TableColumn fieldTable="" identifier="tc_alloc_qty" text="Qty Alloc.">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="10rem" gridMaxLength="10rem" gridMinLength="5rem"/>
+					</TableColumn.columnLength>
+					<TextField comment="Quantity of stock allocated to this order (W) " dataType="Float,,,," fieldTable="backorder" identifier="alloc_qty" toolTip="Quantity of stock allocated to this order (W) "/>
+				</TableColumn>
+				<TableColumn fieldTable="" identifier="tc_cust_code" text="Custom ID">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="10rem" gridMaxLength="10rem" gridMinLength="5rem"/>
+					</TableColumn.columnLength>
+					<TextField comment="Back order Customer Code" dataType="Char,,,,8" fieldTable="backorder" identifier="cust_code" toolTip="Back order Customer Code"/>
+				</TableColumn>
+				<TableColumn fieldTable="" identifier="tc_order_num" text="Order No">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="10rem" gridMaxLength="10rem" gridMinLength="5rem"/>
+					</TableColumn.columnLength>
+					<TextField comment="Order number of back order" dataType="Integer,,,," fieldTable="backorder" identifier="order_num" noEntry="true" toolTip="Order number of back order"/>
+				</TableColumn>
+				<TableColumn fieldTable="" identifier="tc_line_num" text="Ord. Line">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="10rem" gridMaxLength="10rem" gridMinLength="5rem"/>
+					</TableColumn.columnLength>
+					<TextField comment="Order Line of back order" dataType="Integer,,,," fieldTable="backorder" identifier="line_num" noEntry="true" toolTip="Order Line of back order"/>
+				</TableColumn>
+				<TableColumn fieldTable="" identifier="tc_order_date" text="Order Date">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="10rem" gridMaxLength="10rem" gridMinLength="5rem"/>
+					</TableColumn.columnLength>
+					<Calendar comment="Date of individual sales order" dataType="Date,,,," fieldTable="backorder" format="dd/mm/yyyy" identifier="order_date" noEntry="true" toolTip="Date of individual sales order"/>
+				</TableColumn>
+				<TableColumn fieldTable="" identifier="tc_req_qty" text="Qty Required">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="10rem" gridMaxLength="10rem" gridMinLength="5rem"/>
+					</TableColumn.columnLength>
+					<TextField comment="Quantity required to complete order line" dataType="Float,,,," fieldTable="backorder" identifier="req_qty" noEntry="true" toolTip="Quantity required to complete order line"/>
+				</TableColumn>
+			</Table>
+			<GridPanel classNames="fcls_statusbar_cnt" fieldTable="formonly" gridItemLocation="0,4,1,1" identifier="cntStatusBar" verticalAlignment="Bottom" visible="true">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="100%"/>
+				</GridPanel.gridColumnDefinitions>
+				<Label classNames="fcls_sblabel" fieldTable="formonly" gridItemLocation="0,0,1,1" identifier="lbInfo1" isDynamic="true" text="" visible="true"/>
+				<Label classNames="fcls_sblabel" fieldTable="formonly" gridItemLocation="0,1,1,1" identifier="lbInfo2" isDynamic="true" text="" visible="true"/>
+			</GridPanel>
+		</GridPanel>
+
+	</form.rootContainer>
+	<form.screenRecords>
+		<ScreenRecord fields="backorder.alloc_qty,backorder.cust_code,backorder.order_num,backorder.line_num,backorder.order_date,backorder.req_qty" identifier="sr_backorder"/>
+		<ScreenRecord fields="backorder.part_code,backorder.ware_code,backorder.alloc_qty,backorder.cust_code,backorder.order_num,backorder.line_num,backorder.order_date,backorder.req_qty" identifier="backorder"/>
+		<ScreenRecord fields="formonly.alloc,formonly.unalloc" identifier="formonly"/>
+		<ScreenRecord fields="prodstatus.onhand_qty,prodstatus.reserved_qty" identifier="prodstatus"/>
+		<ScreenRecord fields="product.desc_text" identifier="product"/>
+		<ScreenRecord fields="warehouse.desc_text" identifier="warehouse"/>
+	</form.screenRecords>
+</form>

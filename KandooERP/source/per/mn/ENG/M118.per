@@ -1,0 +1,95 @@
+{
+###########################################################################
+# This program is free software; you can redistribute it and/or modify it
+# under the terms of the GNU General Public License as published by the
+# Free Software Foundation; either version 2 of the License, or (at your
+# option) any later version.
+#
+# This program is distributed in the hope that it will be useful, but
+# WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+# General Public License for more details.
+#
+# You should have received a copy of the GNU General Public License along
+# with this program; if not, write to the Free Software Foundation, Inc.,
+# 59 Temple Place, Suite 330, Boston, MA 02111-1307 USA
+#
+###########################################################################
+
+	 $Id: M118.per,v 1.2 2003/11/19 22:22:59 afalout Exp $
+}
+
+
+database kandoodb
+
+screen
+{
+                          Manufacturing Parameters                     M118 
+\g---\g Forecast/Shop Orders \g---------------------------------------------------\g
+ Next Forecast Number    [f000      ]
+ Next Shop Order Number  [f001      ]     Allow Negative Stock  [a]
+ Update Standard Cost    [b]              Update List Price     [c]
+ Work In Progress a/c    [f002              ]
+ Inventory Receipt a/c   [f003              ]
+ Inventory Expense a/c   [f004              ]
+ Operation Start Time    [f005       ]    Operation End Time    [f006      ]
+\g---\g Capacity Planning \g------------------------------------------------------\g
+ Plan Type    [d]  Version  [e]  Schedule Direction  [f]  Destination  [g]
+ Directory Name   [f007                                    ]
+\g---\g User Defined Fields \g----------------------------------------------------\g
+ Field 1  [f008                ]   Field type  [h]
+ Field 2  [f009                ]   Field type  [i]
+ Field 3  [f010                ]   Field type  [j]
+ Field 4  [f011                ]   Field type  [k]
+
+}
+
+tables
+mnparms
+
+attributes
+f000 = mnparms.forecast_num,
+comments = " Next number to assign to a forecast order";
+f001 = mnparms.next_order_num,
+comments = " Next number to assign to a shop order";
+a    = mnparms.neg_issue_flag, upshift,
+comments = " Allow stock to go negative while issuing to a shop order";
+b   = mnparms.upd_std_flag, upshift,
+comments = " Update the standard cost when receipting a shop order";
+c   = mnparms.upd_list_flag, upshift,
+comments = " Update the list price when receipting a shop order";
+f002 = mnparms.wip_acct_code, upshift,
+comments = " Default account code for Work in Progress";
+f003 = mnparms.inv_rec_acct_code, upshift,
+comments = " Default account code for Inventory Receipts";
+f004 = mnparms.inv_exp_acct_code, upshift,
+comments = " Default account code for Inventory Expenses";
+f005 = mnparms.oper_start_time,
+comments = " Default operation start time for work centres";
+f006 = mnparms.oper_end_time,  
+comments = " Default operation end time for work centres";
+d   = mnparms.plan_type_ind, upshift,
+comments = " Type of planning tool (T = Timeline, P = Planner)";
+e   = mnparms.plan_ver_num,
+comments = " Version number of planning tool to export to";
+f   = mnparms.schedule_flag, upshift,
+comments = " Capacity planning schedule direction: B = Backward, F = Forward";
+g   = mnparms.disk_fmt_flag, upshift,
+comments = " Format of output file: A = Ascii, D = DOS Floppy, U = UNIX Floppy";
+f007 = mnparms.file_dir_text,
+comments = " Directory to store files in for transfer";
+f008 = mnparms.ref1_text,
+comments = " User defined prompt 1 for BOR and shop order detail";
+h    = mnparms.ref1_ind, comments = " User defined field type (1-5) (W)";
+f009 = mnparms.ref2_text,
+comments = " User defined prompt 2 for BOR and shop order detail";
+i    = mnparms.ref2_ind, comments = " User defined field type (1-5) (W)";
+f010 = mnparms.ref3_text,
+comments = " User defined prompt 3 for BOR and shop order detail";
+j    = mnparms.ref3_ind, comments = " User defined field type (1-5) (W)";
+f011 = mnparms.ref4_text,
+comments = " User defined prompt for shop order header";
+k    = mnparms.ref4_ind, comments = " User defined field type (1-5) (W)";
+
+instructions
+delimiters "  "

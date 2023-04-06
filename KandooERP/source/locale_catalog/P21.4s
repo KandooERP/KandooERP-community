@@ -1,0 +1,32 @@
+P21 {
+	Vendor { "Vendor" }
+	Last Voucher { "Last Voucher" }
+	City { "City" }
+	State (NF) { "State (NF)" }
+	State { "State" }
+	Country { "Country" }
+	Invoice { "Invoice" }
+	Invoice No. { "Invoice No." }
+	Conversion Rate { "Conversion Rate" }
+	Taxation { "Taxation" }
+	Input Gross Amt or Net Amt { "Input Gross Amt or Net Amt" }
+	Gross Amount { "Gross Amount" }
+	Net Amount { "Net Amount" }
+	Date { "Date" }
+	Currency { "Currency" }
+	Vat Amount { "Vat Amount" }
+	Payment { "Payment" }
+	Payment Term { "Payment Term" }
+	Hold Payment { "Hold Payment" }
+	Settlement Details { "Settlement Details" }
+	Due Date { "Due Date" }
+	Discount Date { "Discount Date" }
+	Discount { "Discount" }
+	GL Integration { "GL Integration" }
+	Fiscal Year { "Fiscal Year" }
+	Period { "Period" }
+	Posted to GL { "Posted to GL" }
+	Comments { "Comments" }
+	Entry Info { "Entry Info" }
+	Person { "Person" }
+}

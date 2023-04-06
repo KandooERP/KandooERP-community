@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form xmlns="http://namespaces.querix.com/2015/fglForms" title="User information">
+	<form.rootContainer>
+		<GridPanel classNames="fcls_rootContainer" preferredSize="," verticalAlignment="Top" horizontalAlignment="Left" fieldTable="" identifier="rootContainer">
+			<GridPanel.gridRowDefinitions>
+				<GridRowDefinition gridLengthValue="15%"/>
+				<GridRowDefinition gridLengthValue="75%"/>
+				<GridRowDefinition gridLengthValue=""/>
+			</GridPanel.gridRowDefinitions>
+			<GridPanel.gridColumnDefinitions>
+				<GridColumnDefinition gridLengthValue=""/>
+				<GridColumnDefinition gridLengthValue="100%"/>
+			</GridPanel.gridColumnDefinitions>
+			<Label isDynamic="true" classNames="fcls_title_lb" preferredSize="100," visible="true" gridItemLocation="0,0,1,3" fieldTable="formonly" identifier="lb155">
+				<Label.image>
+					<Image imageUrl="{CONTEXT}/public/querix/css/images/logo.svg" imageScaling="Both"/>
+				</Label.image>
+				<Label.background>
+					<Background backgroundImage="{CONTEXT}/public/querix/icon/background/ui-bg_gloss-wave_55_5c9ccc_500x100.png" backgroundStyle="Stretched"/>
+				</Label.background>
+			</Label>
+			<Label isDynamic="true" text="User information" classNames="fcls_title_lb" visible="true" verticalAlignment="Stretch" horizontalAlignment="Stretch" textAlignment="Center,Center" gridItemLocation="1,0,1,1" fieldTable="formonly" identifier="lb154">
+				<Label.background>
+					<Background backgroundImage="{CONTEXT}/public/querix/icon/background/ui-bg_gloss-wave_55_5c9ccc_500x100.png" backgroundStyle="Stretched"/>
+				</Label.background>
+			</Label>
+			<GridPanel classNames="fcls_detail_cnt,fcls_data_cnt,fcls_align_left" visible="true" verticalAlignment="Stretch" horizontalAlignment="Stretch" gridItemLocation="1,1,1,1" fieldTable="formonly" identifier="cntDetail1">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue=""/>
+					<GridColumnDefinition gridLengthValue=""/>
+				</GridPanel.gridColumnDefinitions>
+				<Label isDynamic="true" text="Login" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,0,1,1" fieldTable="" identifier="lb51"/>
+				<TextField noEntry="true" classNames="fcls_data_widget,fcls_align_left,fcls_length_20qch" visible="true" gridItemLocation="1,0,1,1" fieldTable="" identifier="sign_on_code"/>
+				<Label isDynamic="true" text="User name" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,1,1,1" fieldTable="" identifier="lb165"/>
+				<TextField noEntry="true" classNames="fcls_data_widget,fcls_align_left,fcls_length_20qch" visible="true" gridItemLocation="1,1,1,1" fieldTable="" identifier="name_text"/>
+				<Label isDynamic="true" text="Password" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,2,1,1" fieldTable="" identifier="lb151"/>
+				<TextField required="true" verify="true" classNames="fcls_data_widget,fcls_align_left,fcls_length_20qch" visible="true" verticalAlignment="Center" gridItemLocation="1,2,1,1" fieldTable="" identifier="password_text"/>
+				<Label isDynamic="true" text="E-mail" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,3,1,1" fieldTable="" identifier="lb52"/>
+				<TextField classNames="fcls_data_widget,fcls_align_left,fcls_length_20qch" visible="true" gridItemLocation="1,3,1,1" fieldTable="" identifier="email"/>
+			</GridPanel>
+			<GridPanel preferredSize="10,20" visible="true" verticalAlignment="Stretch" horizontalAlignment="Stretch" gridItemLocation="1,2,1,1" fieldTable="" identifier="c3">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue=""/>
+					<GridColumnDefinition gridLengthValue=""/>
+					<GridColumnDefinition gridLengthValue=""/>
+					<GridColumnDefinition gridLengthValue=""/>
+				</GridPanel.gridColumnDefinitions>
+				<Button text="Cancel" visible="true" verticalAlignment="Center" horizontalAlignment="Center" gridItemLocation="0,0,1,1" fieldTable="" identifier="bt166">
+					<Button.onInvoke>
+						<ActionEventHandler actionName="Cancel"/>
+					</Button.onInvoke>
+				</Button>
+				<Button text="+ Add  user" visible="true" verticalAlignment="Center" horizontalAlignment="Center" gridItemLocation="1,0,1,1" fieldTable="" identifier="bt158">
+					<Button.onInvoke>
+						<ActionEventHandler actionName="actAddUser"/>
+					</Button.onInvoke>
+				</Button>
+				<Button text="&lt; Back" visible="true" verticalAlignment="Center" horizontalAlignment="Right" gridItemLocation="2,0,1,1" fieldTable="" identifier="bt157">
+					<Button.onInvoke>
+						<ActionEventHandler actionName="actBack"/>
+					</Button.onInvoke>
+				</Button>
+				<Button text="Next &gt;" visible="true" verticalAlignment="Center" horizontalAlignment="Center" gridItemLocation="3,0,1,1" fieldTable="" identifier="bt156">
+					<Button.onInvoke>
+						<ActionEventHandler actionName="accept"/>
+					</Button.onInvoke>
+				</Button>
+			</GridPanel>
+		</GridPanel>
+	</form.rootContainer>
+	<form.screenRecords>
+		<ScreenRecord identifier="FORMONLY" fields="sign_on_code,start_year_num,password_text,language_code,name_text"/>
+		<ScreenRecord identifier="inputRec" fields="sign_on_code,password_text,language_code,start_year_num"/>
+		<ScreenRecord identifier="inputRec2" fields="start_year_num"/>
+	</form.screenRecords>
+</form>
+

@@ -1,0 +1,19 @@
+User Setup
+
+Field Account Mask
+
+This provides a facility to limit the access to the General Ledger for a specific user.  
+Entering a valid segment structure will act as a default for the transactions entered, 
+and restrict access to only those accounts in the General Ledger.  
+
+For example, if the General Ledger structure is 
+'XX-XXX-XXXX', 
+being branch, division and chart, 
+
+entering a mask of '01-001-????' 
+
+will give the user access only to accounts in 
+branch '01', 
+division '001'.  
+
+The General Ledger structure and chart of accounts should be set up prior to setting up users.

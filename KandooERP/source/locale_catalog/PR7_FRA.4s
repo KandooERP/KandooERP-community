@@ -1,0 +1,16 @@
+PR7_FRA {
+0 - Not applicable, 1 - cents, 2 - rounded down, 3 - rounded up { "0 - Sans objet, 1 - centime, 2 - arrondi vers le bas, 3 - arrondi vers le haut" }
+Currency { "Devise" }
+Date { "Date" }
+Discount Date { "Date de remise" }
+Due Date { "Date d'échéance" }
+ID { "ID" }
+Language Code { "Code langue" }
+Method: (1) auto/manual cheques, (3) EFT payments { "Méthode: (1) chèque auto/manuel, (3) paiements EFT" }
+Name { "Nom" }
+Tax { "T.V.A." }
+Title { "Titre" }
+Vendor { "Fournisseur" }
+Voucher { "Facture" }
+actToolbarManager { "actToolbarManager" }
+}

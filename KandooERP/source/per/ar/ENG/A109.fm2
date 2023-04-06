@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form xmlns="http://namespaces.querix.com/2015/fglForms">
+	<form.rootContainer>
+		<GridPanel classNames="fcls_rootContainer" verticalAlignment="Stretch" horizontalAlignment="Stretch" fieldTable="" identifier="rootContainer">
+			<GridPanel.gridRowDefinitions>
+				<GridRowDefinition gridLengthValue=""/>
+				<GridRowDefinition gridLengthValue="100%"/>
+				<GridRowDefinition gridLengthValue=""/>
+			</GridPanel.gridRowDefinitions>
+			<GridPanel.gridColumnDefinitions>
+				<GridColumnDefinition gridLengthValue="100%"/>
+			</GridPanel.gridColumnDefinitions>
+			<GridPanel classNames="fcls_title_cnt" visible="true" verticalAlignment="Top" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="cntTitle">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="100%"/>
+					<GridColumnDefinition gridLengthValue=""/>
+				</GridPanel.gridColumnDefinitions>
+				<Label isDynamic="true" text="Customer Credit Details" classNames="fcls_title_lb" visible="true" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="header_text"/>
+				<Label isDynamic="true" text="A109" classNames="fcls_title_lb" visible="true" gridItemLocation="1,0,1,1" fieldTable="" identifier="lbFormName"/>
+			</GridPanel>
+			<Table rowCount="13" preferredSize="73qch,13qch" gridItemLocation="0,1,1,1" fieldTable="" identifier="sr_customer">
+				<TableColumn fieldTable="" identifier="scroll_flag">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="2rem" gridMaxLength="2rem" gridMinLength="2rem"/>
+					</TableColumn.columnLength>
+					<CheckBox dataType="Char,,,," fieldTable="formonly" identifier="scroll_flag">
+						<CheckBox.checkedValue>
+							<StringLiteral stringValue="*"/>
+						</CheckBox.checkedValue>
+						<CheckBox.uncheckedValue>
+							<NullLiteral/>
+						</CheckBox.uncheckedValue>
+					</CheckBox>
+				</TableColumn>
+				<TableColumn text="Customer" fieldTable="" identifier="cust_code">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="14.7541%"/>
+					</TableColumn.columnLength>
+					<TextField toCase="Up" dataType="Char,,,,8" toolTip=" Enter customer code selection criteria" comment=" Enter customer code selection criteria" fieldTable="customer" identifier="cust_code"/>
+				</TableColumn>
+				<TableColumn text="Credit Limit" fieldTable="" identifier="cred_limit_amt">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="21.3115%"/>
+					</TableColumn.columnLength>
+					<TextField noEntry="true" dataType="Decimal,,,2,16" toolTip=" Enter customer credit limit selection criteria" comment=" Enter customer credit limit selection criteria" fieldTable="customer" identifier="cred_limit_amt"/>
+				</TableColumn>
+				<TableColumn text="Curr. Balance" fieldTable="" identifier="bal_amt">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="19.6721%"/>
+					</TableColumn.columnLength>
+					<TextField noEntry="true" dataType="Decimal,,,2,16" toolTip=" Enter customer outstanding balance selection criteria" comment=" Enter customer outstanding balance selection criteria" fieldTable="customer" identifier="bal_amt"/>
+				</TableColumn>
+				<TableColumn text="On Order" fieldTable="" identifier="onorder_amt">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="19.6721%"/>
+					</TableColumn.columnLength>
+					<TextField noEntry="true" dataType="Decimal,,,2,16" toolTip=" Enter customer currently on order amount selection criteria" comment=" Enter customer currently on order amount selection criteria" fieldTable="customer" identifier="onorder_amt"/>
+				</TableColumn>
+				<TableColumn text="Avg. Days" fieldTable="" identifier="avg_cred_day_num">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="14.7541%"/>
+					</TableColumn.columnLength>
+					<TextField noEntry="true" dataType="SmallInt,,,," toolTip=" Enter customer&apos;s average number of days to pay invoices selection criteria" comment=" Enter customer&apos;s average number of days to pay invoices selection criteria" fieldTable="customer" identifier="avg_cred_day_num"/>
+				</TableColumn>
+				<TableColumn text="Hold Sales" fieldTable="" identifier="hold_code">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="6.55738%"/>
+					</TableColumn.columnLength>
+					<TextField toCase="Up" noEntry="true" dataType="Char,,,,3" toolTip=" Enter hold sales code selection criteria" comment=" Enter hold sales code selection criteria" fieldTable="customer" identifier="hold_code"/>
+				</TableColumn>
+			</Table>
+			<GridPanel classNames="fcls_statusbar_cnt" visible="true" verticalAlignment="Top" gridItemLocation="0,2,1,1" fieldTable="formonly" identifier="cntStatusBar">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="100%"/>
+				</GridPanel.gridColumnDefinitions>
+				<Label isDynamic="true" text="" classNames="fcls_sblabel" visible="true" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="lbInfo1"/>
+				<Label isDynamic="true" text="" classNames="fcls_sblabel" visible="true" gridItemLocation="0,1,1,1" fieldTable="formonly" identifier="lbInfo2"/>
+			</GridPanel>
+		</GridPanel>
+	</form.rootContainer>
+	<form.screenRecords>
+		<ScreenRecord identifier="sr_customer" fields="scroll_flag,cust_code,cred_limit_amt,bal_amt,onorder_amt,avg_cred_day_num,hold_code"/>
+		<ScreenRecord identifier="customer" fields="cust_code,cred_limit_amt,bal_amt,onorder_amt,avg_cred_day_num,hold_code"/>
+		<ScreenRecord identifier="formonly" fields="scroll_flag"/>
+	</form.screenRecords>
+</form>
+

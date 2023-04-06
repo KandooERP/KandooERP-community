@@ -1,0 +1,57 @@
+
+#######################################################################
+# ${BoxFillFct}(): this function fills the dynamic combobox
+FUNCTION ${BoxFillFct}(<Script:  my $idx=0;
+            foreach my $Column (@BoxFilterParams) {
+                if ( $idx > 0) {
+			        $line=sprintf ",%s%s",$ArgumentPrefix,$Column;
+                } else {
+                    $line=sprintf "%s%s",$ArgumentPrefix,$Column;
+                }
+			    printNoLF $line;
+                $idx++;
+		    }:Script> )
+	<Script: foreach my $Column (@BoxFilterParams) {
+			$line=sprintf "DEFINE %s%s LIKE %s.%s",$ArgumentPrefix,$Column,$BoxParentTable,$Column;
+			print $line;
+	} :Script>
+	DEFINE l_statement STRING
+	DEFINE stmt_text STRING
+	DEFINE ${ComboBoxCursorPrefix}_${BoxParentTable} CURSOR
+	DEFINE l_${SelectBoxColsList} LIKE ${BoxParentTable}.${SelectBoxColsList}
+	LET cb_${BoxParentTable} = ui.Combobox.ForName("${SelectBoxColsList}")		
+
+	LET stmt_text = ${ComboBoxCursorPrefix}_${BoxParentTable}.GetStatement() 
+	IF length(stmt_text) = 0 THEN
+		LET l_statement = "SELECT ${SelectBoxColsList} ",
+		" FROM ${BoxParentTable} ",  
+		" <Script:	my $idx=0;
+			foreach my $Column (@BoxFilterParams) {
+				if ( $idx > 0) {
+					$line=sprintf "\"%s AND %s  = ?\",",$LineFlag,$Column;
+				} else {
+					$line=sprintf "%s WHERE %s  = ?\",",$LineFlag,$Column;
+				}
+				print $line;
+				$idx++;
+		}:Script>
+		" ORDER BY ${SelectBoxColsList} "
+		CALL ${ComboBoxCursorPrefix}_${BoxParentTable}.Declare(l_statement)
+	END IF
+	<Script: $line=sprintf "CALL %s_%s.Open(",${ComboBoxCursorPrefix},${BoxParentTable};
+		printNoLF $line;
+        my $idx=0;
+		foreach my $Column (@BoxFilterParams) {
+            if ( $idx > 0) {
+			    $line=sprintf ",%s%s",$ArgumentPrefix,$Column;
+            } else {
+                $line=sprintf "%s%s",$ArgumentPrefix,$Column;
+            }
+			printNoLF $line;
+            $idx++;
+		}
+	:Script> )
+	WHILE ${ComboBoxCursorPrefix}_${BoxParentTable}.FetchNext(l_${SelectBoxColsList}) = 0
+		CALL cb_${BoxParentTable}.AddItem (l_${SelectBoxColsList})		
+	END WHILE
+END FUNCTION # ${BoxFillFct}

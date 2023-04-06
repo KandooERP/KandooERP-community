@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form xmlns="http://namespaces.querix.com/2015/fglForms">
+	<form.rootContainer>
+		<GridPanel classNames="fcls_rootContainer" preferredSize="," verticalAlignment="Stretch" horizontalAlignment="Stretch" fieldTable="" identifier="rootContainer">
+			<GridPanel.gridRowDefinitions>
+				<GridRowDefinition gridLengthValue=""/>
+				<GridRowDefinition gridLengthValue=""/>
+				<GridRowDefinition gridLengthValue="100%"/>
+				<GridRowDefinition gridLengthValue=""/>
+				<GridRowDefinition gridLengthValue=""/>
+			</GridPanel.gridRowDefinitions>
+			<GridPanel.gridColumnDefinitions>
+				<GridColumnDefinition gridLengthValue="100%"/>
+			</GridPanel.gridColumnDefinitions>
+			<GridPanel classNames="fcls_title_cnt" visible="true" verticalAlignment="Top" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="cntTitle">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="100%"/>
+					<GridColumnDefinition gridLengthValue=""/>
+				</GridPanel.gridColumnDefinitions>
+				<Label isDynamic="true" text="Special Offer Weekly Turnover" classNames="fcls_title_lb" visible="true" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="header_text"/>
+				<Label isDynamic="true" text="E254" classNames="fcls_title_lb" visible="true" gridItemLocation="1,0,1,1" fieldTable="" identifier="lbFormName"/>
+			</GridPanel>
+			<GridPanel classNames="fcls_detail_cnt,fcls_data_cnt" visible="true" verticalAlignment="Top" horizontalAlignment="Left" gridItemLocation="0,1,1,1" fieldTable="formonly" identifier="cntDetail1">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="" gridMinLength="10rem"/>
+					<GridColumnDefinition gridLengthValue=""/>
+					<GridColumnDefinition gridLengthValue=""/>
+				</GridPanel.gridColumnDefinitions>
+				<TextField toCase="Up" noEntry="true" dataType="Char,,,,3" preferredSize="4qch,1qch" fieldTable="offersale" identifier="offer_code" gridItemLocation="1,0,1,1" classNames="fcls_data_widget,fcls_length_10qch"/>
+				<TextField noEntry="true" dataType="Char,,,,30" preferredSize="31qch,1qch" fieldTable="offersale" identifier="desc_text" gridItemLocation="2,0,1,1" classNames="fcls_data_widget,fcls_length_30qch"/>
+				<Calendar noEntry="true" dataType="Date,,,," preferredSize="11qch,1qch" fieldTable="offersale" identifier="start_date" gridItemLocation="1,1,1,1" classNames="fcls_data_widget,fcls_length_10qch"/>
+				<Calendar noEntry="true" dataType="Date,,,," preferredSize="11qch,1qch" fieldTable="offersale" identifier="end_date" gridItemLocation="1,2,1,1" classNames="fcls_data_widget,fcls_length_10qch"/>
+				<Label isDynamic="true" text="Special Offer" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,0,1,1" fieldTable="" identifier="lb51"/>
+				<Label isDynamic="true" text="Start Date" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,1,1,1" fieldTable="" identifier="lb52"/>
+				<Label isDynamic="true" text="End Date" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,2,1,1" fieldTable="" identifier="lb66"/>
+			</GridPanel>
+			<Table rowCount="11" preferredSize="70qch,11qch" fieldTable="" identifier="sr_statoffer" gridItemLocation="0,2,1,1">
+				<TableColumn fieldTable="" identifier="tc_scroll_flag">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="2rem" gridMaxLength="2rem" gridMinLength="2rem"/>
+					</TableColumn.columnLength>
+					<CheckBox dataType="Char,,,," fieldTable="formonly" identifier="scroll_flag">
+						<CheckBox.checkedValue>
+							<StringLiteral stringValue="*"/>
+						</CheckBox.checkedValue>
+						<CheckBox.uncheckedValue>
+							<NullLiteral/>
+						</CheckBox.uncheckedValue>
+					</CheckBox>
+				</TableColumn>
+				<TableColumn fieldTable="" identifier="tc_int_text" text="Week">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="10rem" gridMaxLength="10rem"/>
+					</TableColumn.columnLength>
+					<TextField toCase="Up" dataType="Char,,,,10" fieldTable="statint" identifier="int_text"/>
+				</TableColumn>
+				<TableColumn fieldTable="" identifier="tc_start_date" text="Beginning">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="10rem" gridMaxLength="10rem"/>
+					</TableColumn.columnLength>
+					<Calendar noEntry="true" dataType="Date,,,," fieldTable="statint" identifier="start_date"/>
+				</TableColumn>
+				<TableColumn fieldTable="" identifier="tc_gross_amt" text="Gross Amt">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="10rem" gridMaxLength="10rem"/>
+					</TableColumn.columnLength>
+					<TextField format="----------&amp;" noEntry="true" dataType="Decimal,,,2,16" fieldTable="statoffer" identifier="gross_amt"/>
+				</TableColumn>
+				<TableColumn fieldTable="" identifier="tc_net_amt" text="Nett Amt">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="10rem" gridMaxLength="10rem"/>
+					</TableColumn.columnLength>
+					<TextField format="----------&amp;" noEntry="true" dataType="Decimal,,,2,16" fieldTable="statoffer" identifier="net_amt"/>
+				</TableColumn>
+				<TableColumn fieldTable="" identifier="tc_disc_per" text="Disc%">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="10rem" gridMaxLength="10rem"/>
+					</TableColumn.columnLength>
+					<TextField format="----&amp;.&amp;" noEntry="true" dataType="Float,,,," fieldTable="formonly" identifier="disc_per"/>
+				</TableColumn>
+				<TableColumn fieldTable="" identifier="tc_sales_qty" text="Offer Qty">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="10rem" gridMaxLength="10rem"/>
+					</TableColumn.columnLength>
+					<TextField format="----------&amp;" noEntry="true" dataType="Float,,,," fieldTable="statoffer" identifier="sales_qty"/>
+				</TableColumn>
+			</Table>
+			<GridPanel classNames="fcls_detail_cnt,fcls_data_cnt" visible="true" verticalAlignment="Top" horizontalAlignment="Left" gridItemLocation="0,3,1,1" fieldTable="formonly" identifier="cntDetail2">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="" gridMinLength="10rem"/>
+					<GridColumnDefinition gridLengthValue=""/>
+					<GridColumnDefinition gridLengthValue=""/>
+					<GridColumnDefinition gridLengthValue=""/>
+					<GridColumnDefinition gridLengthValue=""/>
+				</GridPanel.gridColumnDefinitions>
+				<TextField format="----------&amp;" noEntry="true" dataType="Decimal,,,2,16" preferredSize="12qch,1qch" fieldTable="formonly" identifier="tot_gross_amt" gridItemLocation="1,0,1,1" classNames="fcls_data_widget,fcls_length_10qch"/>
+				<TextField format="----------&amp;" noEntry="true" dataType="Decimal,,,2,16" preferredSize="12qch,1qch" fieldTable="formonly" identifier="tot_net_amt" gridItemLocation="2,0,1,1" classNames="fcls_data_widget,fcls_length_10qch"/>
+				<TextField format="----&amp;.&amp;" noEntry="true" dataType="Float,,,," preferredSize="8qch,1qch" fieldTable="formonly" identifier="tot_disc_per" gridItemLocation="3,0,1,1" classNames="fcls_data_widget,fcls_length_10qch"/>
+				<TextField format="----------&amp;" noEntry="true" dataType="Decimal,,,2,16" preferredSize="12qch,1qch" fieldTable="formonly" identifier="tot_sales_qty" gridItemLocation="4,0,1,1" classNames="fcls_data_widget,fcls_length_10qch"/>
+				<Label isDynamic="true" text="Total :" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="lb37"/>
+			</GridPanel>
+			<GridPanel classNames="fcls_statusbar_cnt" visible="true" verticalAlignment="Top" gridItemLocation="0,4,1,1" fieldTable="formonly" identifier="cntStatusBar">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="100%"/>
+				</GridPanel.gridColumnDefinitions>
+				<Label isDynamic="true" text="" classNames="fcls_sblabel" visible="true" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="lbInfo1"/>
+				<Label isDynamic="true" text="" classNames="fcls_sblabel" visible="true" gridItemLocation="0,1,1,1" fieldTable="formonly" identifier="lbInfo2"/>
+			</GridPanel>
+		</GridPanel>
+	</form.rootContainer>
+	<form.screenRecords>
+		<ScreenRecord identifier="sr_statoffer" fields="formonly.scroll_flag,statint.int_text,statint.start_date,statoffer.gross_amt,statoffer.net_amt,formonly.disc_per,statoffer.sales_qty"/>
+		<ScreenRecord identifier="sr_stattotal" fields="formonly.tot_gross_amt,formonly.tot_net_amt,formonly.tot_disc_per,formonly.tot_sales_qty"/>
+		<ScreenRecord identifier="formonly" fields="formonly.scroll_flag,formonly.disc_per,formonly.tot_gross_amt,formonly.tot_net_amt,formonly.tot_disc_per,formonly.tot_sales_qty"/>
+		<ScreenRecord identifier="offersale" fields="offersale.offer_code,offersale.desc_text,offersale.start_date,offersale.end_date"/>
+		<ScreenRecord identifier="statint" fields="statint.int_text,statint.start_date"/>
+		<ScreenRecord identifier="statoffer" fields="statoffer.gross_amt,statoffer.net_amt,statoffer.sales_qty"/>
+	</form.screenRecords>
+</form>
+

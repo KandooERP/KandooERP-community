@@ -1,0 +1,1004 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form xmlns="http://namespaces.querix.com/2015/fglForms">
+	<form.rootContainer>
+		<GridPanel classNames="fcls_rootContainer" verticalAlignment="Stretch" horizontalAlignment="Stretch" fieldTable="" identifier="rootContainer">
+			<GridPanel.gridRowDefinitions>
+				<GridRowDefinition gridLengthValue=""/>
+				<GridRowDefinition gridLengthValue="100%"/>
+				<GridRowDefinition gridLengthValue=""/>
+			</GridPanel.gridRowDefinitions>
+			<GridPanel.gridColumnDefinitions>
+				<GridColumnDefinition gridLengthValue="100%"/>
+			</GridPanel.gridColumnDefinitions>
+			<GridPanel classNames="fcls_title_cnt" visible="true" verticalAlignment="Top" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="cntTitle">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="100%"/>
+					<GridColumnDefinition gridLengthValue=""/>
+				</GridPanel.gridColumnDefinitions>
+				<Label isDynamic="true" text="Header-Text" classNames="fcls_title_lb" visible="true" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="lbTitle"/>
+				<Label isDynamic="true" text="_master_D1_1Gp_01b" classNames="fcls_title_lb" visible="true" gridItemLocation="1,0,1,1" fieldTable="" identifier="lbFormName"/>
+			</GridPanel>
+			<GridPanel classNames="fcls_detail_cnt,fcls_data_cnt,fcls_align_left" visible="true" verticalAlignment="Top" horizontalAlignment="Left" gridItemLocation="0,1,1,1" fieldTable="formonly" identifier="cntDetail1">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue="" gridMinLength="100%"/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="" gridMinLength="100%"/>
+				</GridPanel.gridColumnDefinitions>
+				<ListBox minSize="60rem,20rem" visible="true" verticalAlignment="Stretch" horizontalAlignment="Stretch" gridItemLocation="0,0,1,1" fieldTable="" identifier="formName">
+					<ListBoxItem text="I100 - Group Codes">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="I100"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					<ListBoxItem text="I101 - Product Information">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="I101"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					<ListBoxItem text="I102 - Units of Measure Codes">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="I102"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					<ListBoxItem text="I104 - Product Scan">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="I104"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					<ListBoxItem text="I105 - Vendor Credit">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="I105"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					<ListBoxItem text="I105a - Purchasing Info">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="I105a"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					<ListBoxItem text="I106 - Similiar to which Product.?">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="I106"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					<ListBoxItem text="I108 - Product Notes">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="I108"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					<ListBoxItem text="I109 - Product Stocking Status">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="I109"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					<ListBoxItem text="I110 - Product History">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="I110"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					<ListBoxItem text="I111 - Product History">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="I111"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					<ListBoxItem text="I112 - Product Ledger">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="I112"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					<ListBoxItem text="I114 - Product Movement">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="I114"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					<ListBoxItem text="I116 - Product Ledger - FIFO Cost">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="I116"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					<ListBoxItem text="I119 - Direct Product Receipt">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="I119"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					<ListBoxItem text="I119a - Direct Product Receipt">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="I119a"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					<ListBoxItem text="I120 - Product Issue">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="I120"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					<ListBoxItem text="I122 - Product Cost Adjustment">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="I122"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					<ListBoxItem text="I123 - Product Cost Adjustment">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="I123"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					<ListBoxItem text="I125 - Stock Valuation">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="I125"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					<ListBoxItem text="I126 - Serialized Products">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="I126"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					<ListBoxItem text="I127 - Serialized Products">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="I127"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					<ListBoxItem text="I129 - Selected Serial No.">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="I129"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					<ListBoxItem text="I130 - Available Serial No.">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="I130"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					<ListBoxItem text="I131 - Inventory Posting Selection">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="I131"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					<ListBoxItem text="I132 - Warehouse Detail">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="I132"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					<ListBoxItem text="I133 - Warehouse Scan">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="I133"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					<ListBoxItem text="I134 - Warehouse Scan">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="I134"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					<ListBoxItem text="I135 - Product Category">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="I135"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					<ListBoxItem text="I136 - Product Category Information">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="I136"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					<ListBoxItem text="I137 - Product Category Scan">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="I137"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					<ListBoxItem text="I138 - Company Price Update">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="I138"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					<ListBoxItem text="I139 - Product Category">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="I139"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					<ListBoxItem text="I140 - Inventory Classes">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="I140"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					<ListBoxItem text="I141 - Inventory Classes">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="I141"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					<ListBoxItem text="I142 - Cost Ledger Inquiry">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="I142"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					<ListBoxItem text="I143 - Product Selection">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="I143"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					<ListBoxItem text="I145 - Inventory Parameters">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="I145"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					<ListBoxItem text="I146 - Product">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="I146"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					<ListBoxItem text="I147 - Inventory Setup Routine">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="I147"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					<ListBoxItem text="I148 - Opening Balance Setup">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="I148"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					<ListBoxItem text="I150 - Product Information">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="I150"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					<ListBoxItem text="I152 - Automatic Price Update">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="I152"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					<ListBoxItem text="I155 - Warehouse Image">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="I155"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					<ListBoxItem text="I158 - Selected Serial No.">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="I158"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					<ListBoxItem text="I159 - Product Blends (Kits">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="I159"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					<ListBoxItem text="I160 - Product Selection">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="I160"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					<ListBoxItem text="I161 - Product Ledger">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="I161"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					<ListBoxItem text="I162 - Warehouse Stock Status">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="I162"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					<ListBoxItem text="I163 - Product Selection">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="I163"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					<ListBoxItem text="I164 - Product Quotations">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="I164"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					<ListBoxItem text="I165 - Product Quotation">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="I165"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					<ListBoxItem text="I167 - Tariff Code">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="I167"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					<ListBoxItem text="I168 - Product Pricing Report">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="I168"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					<ListBoxItem text="I169a - Inventory History Report">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="I169a"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					<ListBoxItem text="I170 - Product Reorder Report">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="I170"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					<ListBoxItem text="I170a - Reporting Criteria">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="I170a"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					<ListBoxItem text="I171 - Warehouse Image">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="I171"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					<ListBoxItem text="I172 - Product Image Selection">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="I172"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					<ListBoxItem text="I173 - User Defined Reference Definitions">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="I173"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					<ListBoxItem text="I174 - Statistical Minimum Turnover">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="I174"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					<ListBoxItem text="I175 - Stock Re-order Report">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="I175"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					<ListBoxItem text="I177 - IN Post Report">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="I177"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					<ListBoxItem text="I178 - IN Snapshot Report">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="I178"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					<ListBoxItem text="I179 - Automatic Price Update">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="I179"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					<ListBoxItem text="I180 - Inventory Replenishment ">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="I180"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					<ListBoxItem text="I181 - Recommended Re-order Report">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="I181"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					<ListBoxItem text="I182 - Product Issues">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="I182"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					<ListBoxItem text="I183 - Stock Valuation">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="I183"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					<ListBoxItem text="I184 - Cost Ledger Inquiry">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="I184"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					<ListBoxItem text="I185 - Product Margin">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="I185"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					<ListBoxItem text="I186 - Serial Numbers">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="I186"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					<ListBoxItem text="I187 - Stock Reorder Report">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="I187"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					<ListBoxItem text="I188 - Group Details Maintenance">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="I188"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					<ListBoxItem text="I200 - Adjust Product Cost">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="I200"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					<ListBoxItem text="I201 - Product / Date Selection">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="I201"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					<ListBoxItem text="I202 - Product / Date Selection">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="I202"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					<ListBoxItem text="I203 - Adjust Product Quantity">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="I203"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					<ListBoxItem text="I204 - Product / Date Selection">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="I204"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					<ListBoxItem text="I205 - Product Adjustment">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="I205"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					<ListBoxItem text="I206 - Stock Valuation">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="I206"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					<ListBoxItem text="I207 - Stock Revaluation">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="I207"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					<ListBoxItem text="I208 - Stock Turn Calculator">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="I208"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					<ListBoxItem text="I209 - Stockturn Information">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="I209"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					<ListBoxItem text="I211 - Inventory Purchase Order Lines">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="I211"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					<ListBoxItem text="I213 - Product History">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="I213"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					<ListBoxItem text="I214 - Pricing Exception Report">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="I214"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					<ListBoxItem text="I215 - Costledger Validation">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="I215"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					<ListBoxItem text="I216 - Aged Stock Valuation">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="I216"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					<ListBoxItem text="I217 - Product Lead Time Update">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="I217"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					<ListBoxItem text="I220 - Stock Take Details">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="I220"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					<ListBoxItem text="I222 - Stock Take Adjustments Listing">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="I222"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					<ListBoxItem text="I223 - Stocktake Count Sheets">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="I223"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					<ListBoxItem text="I224 - Stock Take Count / File Creation">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="I224"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					<ListBoxItem text="I225 - Valuation Method">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="I225"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					<ListBoxItem text="I226 - Unit Dimensions &amp; Packing">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="I226"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					<ListBoxItem text="I254 - Product Amendment Log">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="I254"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					<ListBoxItem text="I256 - Product Amendment Log">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="I256"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					<ListBoxItem text="I257 - Product Amendment Log">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="I257"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					<ListBoxItem text="I258 - Product Blend/Kit Compilation">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="I258"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					<ListBoxItem text="I259 - Product Blend/Kit Maintenance">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="I259"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					<ListBoxItem text="I260 - Kit Serial Numbering">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="I260"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					<ListBoxItem text="I261 - Serialized Products">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="I261"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					<ListBoxItem text="I500 - Product Information">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="I500"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					<ListBoxItem text="I600 - Product Detail Scan">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="I600"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					<ListBoxItem text="I601 - Product Group Scan">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="I601"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					<ListBoxItem text="I602 - Main Product Group Scan">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="I602"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					<ListBoxItem text="I603 - Main Product Group Maintenance">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="I603"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					<ListBoxItem text="I603_query - Main Product Group Maintenance">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="I603_query"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					<ListBoxItem text="I604 - Main Product Group Maintenance">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="I604"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					<ListBoxItem text="I605 - Product Group Maintenance">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="I605"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					<ListBoxItem text="I606 - Product Group Maintenance">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="I606"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					<ListBoxItem text="I607 - Department Maintenance">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="I607"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					<ListBoxItem text="I608 - Department Maintenance">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="I608"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					<ListBoxItem text="I609 - Department Scan">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="I609"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					<ListBoxItem text="I610 - Product Details">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="I610"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					<ListBoxItem text="I611 - Product Reporting Codes">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="I611"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					<ListBoxItem text="I612 - Product Details">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="I612"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					<ListBoxItem text="I613 - Product Stock Status">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="I613"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					<ListBoxItem text="I614 - Warehouse Stock Status">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="I614"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					<ListBoxItem text="I615 - Warehouse Pricing">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="I615"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					<ListBoxItem text="I616 - Product Trends Report">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="I616"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					<ListBoxItem text="I617 - Report Warehouse">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="I617"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					<ListBoxItem text="I618 - Product Quotation Processing">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="I618"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					<ListBoxItem text="I619 - Update Inventory Prices and Costs">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="I619"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					<ListBoxItem text="I620 - Product Notes Selection">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="I620"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					<ListBoxItem text="I621 - Product Class Details">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="I621"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					<ListBoxItem text="I622 - Product Flexible Structure">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="I622"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					<ListBoxItem text="I623 - Product Flex Codes">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="I623"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					<ListBoxItem text="I624 - Product Segments">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="I624"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					<ListBoxItem text="I625 - Product Segment Verifier">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="I625"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					<ListBoxItem text="I626 - Product Details">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="I626"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					<ListBoxItem text="I627 - Product Label Formats">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="I627"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					<ListBoxItem text="I628 - Product Label Formats">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="I628"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					<ListBoxItem text="I628 - Product Label Formats">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="I628"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					<ListBoxItem text="I629 - Product Adjustment Types">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="I629"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					<ListBoxItem text="I630 - Product Label Generation">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="I630"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					<ListBoxItem text="I631 - Product Labels">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="I631"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					<ListBoxItem text="I632 - Product Labels">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="I632"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					<ListBoxItem text="I633 - Product Schedule Parameters">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="I633"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					<ListBoxItem text="I634 - Inventory Production Schedule">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="I634"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					<ListBoxItem text="I635 - Inventory Production Schedule">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="I635"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					<ListBoxItem text="I636 - Inventory Production Schedule">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="I636"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					<ListBoxItem text="I637 - Product Reclassification">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="I637"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					<ListBoxItem text="I638 - Product Reclassification">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="I638"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					<ListBoxItem text="I639 - Product Surcharge">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="I639"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					<ListBoxItem text="I640 - Product Surcharge">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="I640"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					<ListBoxItem text="I643 - ??? dynamic title">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="I643"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					<ListBoxItem text="I644 - Stock-Take Scan">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="I644"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					<ListBoxItem text="I645 - Posting Details">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="I645"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					<ListBoxItem text="I646 - Product Information">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="I646"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					<ListBoxItem text="I647 - Warehouse Group Maintenance (LIST)&#9;">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="I647"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					<ListBoxItem text="I648 - Bar Code Validation">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="I648"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					<ListBoxItem text="I649 - Bar Code Maintenance">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="I649"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					<ListBoxItem text="I650 - Warehouse Group Maintenance">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="I650"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					<ListBoxItem text="I651 - Dangerous Goods Classes">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="I651"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					<ListBoxItem text="I652 - Dangerous Goods Segregation">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="I652"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					<ListBoxItem text="I653 - Dangerous Goods Codes">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="I653"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					<ListBoxItem text="I654 - Dangerous Goods Detail">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="I654"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					<ListBoxItem text="I655 - Dangerous Goods Class">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="I655"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					<ListBoxItem text="I656 - Dangerous Goods Codes">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="I656"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					<ListBoxItem text="I657 - Stock Take Details">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="I657"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					<ListBoxItem text="I658 - Stock Take Reversal Selection (LIST)">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="I658"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					<ListBoxItem text="I661 - Product Transaction Purge">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="I661"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					<ListBoxItem text="I662 - Product Transaction Purge Confirmation">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="I662"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					<ListBoxItem text="I664 - Lables / Print Dispatch Labels">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="I664"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					<ListBoxItem text="I668 - Stock Transfers">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="I668"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					<ListBoxItem text="I669 - Stock Transfers">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="I669"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					<ListBoxItem text="I670 - Transfer Confirmation">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="I670"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					<ListBoxItem text="I671 - Transfer Receipt">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="I671"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					<ListBoxItem text="I672 - Product Load">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="I672"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					<ListBoxItem text="I673 - IN Load Parameters">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="I673"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					<ListBoxItem text="I674 - IN Import Parameters">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="I674"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					<ListBoxItem text="I675 - from_ware_code">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="I675"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					<ListBoxItem text="I676 - Transfer Deliveries">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="I676"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					<ListBoxItem text="I677 - Details">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="I677"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					<ListBoxItem text="I678 - Transfer Receipts&#9;">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="I678"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					<ListBoxItem text="I679 - Product Selection">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="I679"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					<ListBoxItem text="I680 - Promotion Maintenance">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="I680"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					<ListBoxItem text="I681 - Promotion Detail Maintenance">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="I681"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					<ListBoxItem text="I682 - Shipment In Transit Status">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="I682"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					<ListBoxItem text="I683 - Bin Location Maintenance">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="I683"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					<ListBoxItem text="I684 - Customer Product Codes">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="I684"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					<ListBoxItem text="I687 - Tariff Load">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="I687"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					<ListBoxItem text="I688 - Update Inventory Foreign Costs">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="I688"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					<ListBoxItem text="I689 - Product Selection">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="I689"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					<ListBoxItem text="I693 - Stock-take Load">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="I693"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					<ListBoxItem text="I705 - Price List Comparison">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="I705"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					<ListBoxItem text="I706 - Stock Transfer">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="I706"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					<ListBoxItem text="I707 - Aged Stock Valuation">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="I707"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					<ListBox.onMouseDoubleClick>
+						<ActionEventHandler actionName="ViewForm"/>
+					</ListBox.onMouseDoubleClick>
+				</ListBox>
+			</GridPanel>
+			<GridPanel classNames="fcls_statusbar_cnt" visible="true" verticalAlignment="Bottom" gridItemLocation="0,2,1,1" fieldTable="formonly" identifier="cntStatusBar">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="100%"/>
+				</GridPanel.gridColumnDefinitions>
+				<Label isDynamic="true" text="" classNames="fcls_sblabel" visible="true" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="lbInfo1"/>
+				<Label isDynamic="true" text="" classNames="fcls_sblabel" visible="true" gridItemLocation="0,1,1,1" fieldTable="formonly" identifier="lbInfo2"/>
+			</GridPanel>
+		</GridPanel>
+	</form.rootContainer>
+	<form.screenRecords>
+		<ScreenRecord identifier="FORMONLY" fields="f151"/>
+	</form.screenRecords>
+</form>
+

@@ -1,0 +1,11 @@
+--# description: this script loads data to coatempltdetl
+--# tables list: coatempltdetl
+--# dependencies: 
+--# author: ericv
+--# date: 2020-06-24
+--# Ticket #  KD-2239	
+
+--delete from coatemplthead WHERE language_code = "ENU" and country_code = "IFR";
+--delete from coatempltdetl WHERE language_code = "ENU" and country_code = "IFR";
+--INSERT INTO coatemplthead VALUES ("IFR","ENU","The IFRS Internation Chart of Accounts","01/01/2019","Very detailed chart, may be used for worldwide");
+--load from unl/coa-IFR-ENU.tmplt INSERT INTO coatempltdetl;

@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form xmlns="http://namespaces.querix.com/2015/fglForms" title="Generation History">
+	<form.rootContainer>
+		<GridPanel classNames="fcls_rootContainer" preferredSize="1014.0,459.0" minSize="60qch,15qch" verticalAlignment="Stretch" horizontalAlignment="Stretch" fieldTable="" identifier="rootContainer">
+			<GridPanel.gridRowDefinitions>
+				<GridRowDefinition gridLengthValue=""/>
+				<GridRowDefinition gridLengthValue="100%"/>
+				<GridRowDefinition gridLengthValue=""/>
+			</GridPanel.gridRowDefinitions>
+			<GridPanel.gridColumnDefinitions>
+				<GridColumnDefinition gridLengthValue="100%"/>
+			</GridPanel.gridColumnDefinitions>
+			<GridPanel classNames="fcls_title_cnt" visible="true" verticalAlignment="Top" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="cntTitle">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="100%"/>
+					<GridColumnDefinition gridLengthValue=""/>
+				</GridPanel.gridColumnDefinitions>
+				<Label isDynamic="true" text="Header-Text" classNames="fcls_title_lb" visible="true" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="header_text"/>
+				<Label isDynamic="true" text="Form Name" classNames="fcls_title_lb" visible="true" gridItemLocation="1,0,1,1" fieldTable="" identifier="lbFormName"/>
+			</GridPanel>
+			<Table rowCount="20" classNames="fcls_table_cnt" visible="true" enable="true" gridItemLocation="0,1,1,1" fieldTable="" identifier="sr_history">
+				<TableColumn text="Timestamp" resizable="true" sorted="Desc" visible="true" fieldTable="" identifier="tc_f153">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="12%"/>
+					</TableColumn.columnLength>
+					<TextField dataType="Integer,,,," visible="true" fieldTable="" identifier="timestamp">
+						<TextField.displayModes>
+							<DisplayMode appearance=""/>
+						</TextField.displayModes>
+					</TextField>
+				</TableColumn>
+				<TableColumn text="project_name" resizable="true" visible="true" fieldTable="" identifier="tc_f3">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="13%"/>
+					</TableColumn.columnLength>
+					<TextField visible="true" fieldTable="" identifier="project_name"/>
+				</TableColumn>
+				<TableColumn text="Program Name" resizable="true" visible="true" enable="true" fieldTable="" identifier="program_name">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="13%"/>
+					</TableColumn.columnLength>
+					<TextField visible="true" fieldTable="" identifier="program_name"/>
+					<TableColumn.onMouseDoubleClick>
+						<ActionEventHandler actionName="RedoGeneration"/>
+					</TableColumn.onMouseDoubleClick>
+					<TableColumn.onMouseClick>
+						<ActionEventHandler actionName=""/>
+					</TableColumn.onMouseClick>
+					<TableColumn.displayModes>
+						<DisplayMode appearance=""/>
+					</TableColumn.displayModes>
+				</TableColumn>
+				<TableColumn text="Command" resizable="true" visible="true" fieldTable="" identifier="tc_f154">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="32%"/>
+					</TableColumn.columnLength>
+					<TextField dataType="String,,,," visible="true" enable="true" fieldTable="" identifier="full_command">
+						<TextField.onMouseDoubleClick>
+							<ActionEventHandler actionName="RedoGeneration"/>
+						</TextField.onMouseDoubleClick>
+					</TextField>
+					<TableColumn.onMouseHover>
+						<ActionEventHandler actionName="RedoGeneration"/>
+					</TableColumn.onMouseHover>
+				</TableColumn>
+				<TableColumn text="Log File" resizable="true" visible="true" fieldTable="" identifier="tc_f155">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="30%"/>
+					</TableColumn.columnLength>
+					<TextField invisibleValue="false" visible="true" enable="true" fieldTable="" identifier="log_file">
+						<TextField.onMouseDoubleClick>
+							<ActionEventHandler actionName="RedoGeneration"/>
+						</TextField.onMouseDoubleClick>
+					</TextField>
+				</TableColumn>
+			</Table>
+			<GridPanel classNames="fcls_statusbar_cnt" visible="true" verticalAlignment="Top" gridItemLocation="0,2,1,1" fieldTable="formonly" identifier="cntStatusBar">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="100%"/>
+				</GridPanel.gridColumnDefinitions>
+				<Label isDynamic="true" text="" classNames="fcls_sblabel" visible="true" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="lbInfo1"/>
+				<Label isDynamic="true" text="" classNames="fcls_sblabel" visible="true" gridItemLocation="0,1,1,1" fieldTable="formonly" identifier="lbInfo2"/>
+			</GridPanel>
+		</GridPanel>
+	</form.rootContainer>
+	<form.screenRecords>
+		<ScreenRecord identifier="FORMONLY" fields=""/>
+		<ScreenRecord identifier="sr_history" fields="timestamp,project_name,program_name,full_command,log_file"/>
+	</form.screenRecords>
+</form>

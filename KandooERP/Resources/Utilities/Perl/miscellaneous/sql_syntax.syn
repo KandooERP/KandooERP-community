@@ -1,0 +1,7 @@
+:regexp=\s*(SELECT).*FROM\s+([\w\.]+)\s*
+:regexp=\s*(INSERT)\s+INTO\s+([\w\.]+)\s*
+:regexp=\s*(UPDATE)\s+([\w\.]+)\s*
+:regexp=\s(DELETE)\s+FROM\s+([\w\.]+)\s*
+:regexp=\s*PREPARE\s+\w+:tag=PREPARE
+:regexp=\s*COMMIT\b
+:regexp=\s*DECLARE\s\w+.*CURSOR\b:tag=DECLARECURSOR

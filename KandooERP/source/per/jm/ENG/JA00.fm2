@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form xmlns="http://namespaces.querix.com/2015/fglForms">
+	<form.rootContainer>
+		<GridPanel classNames="fcls_rootContainer" verticalAlignment="Top" horizontalAlignment="Left" fieldTable="" identifier="rootContainer">
+			<GridPanel.gridRowDefinitions>
+				<GridRowDefinition gridLengthValue=""/>
+				<GridRowDefinition gridLengthValue=""/>
+				<GridRowDefinition/>
+				<GridRowDefinition gridLengthValue=""/>
+				<GridRowDefinition gridLengthValue=""/>
+				<GridRowDefinition gridLengthValue=""/>
+			</GridPanel.gridRowDefinitions>
+			<GridPanel.gridColumnDefinitions>
+				<GridColumnDefinition gridLengthValue="100%"/>
+			</GridPanel.gridColumnDefinitions>
+			<GridPanel classNames="fcls_title_cnt" visible="true" verticalAlignment="Top" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="cntTitle">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="100%"/>
+					<GridColumnDefinition gridLengthValue=""/>
+				</GridPanel.gridColumnDefinitions>
+				<Label isDynamic="true" text="Contract Header" classNames="fcls_title_lb" visible="true" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="header_text"/>
+				<Label isDynamic="true" text="JA00" classNames="fcls_title_lb" visible="true" gridItemLocation="1,0,1,1" fieldTable="" identifier="lbFormName"/>
+			</GridPanel>
+			<GridPanel classNames="fcls_detail_cnt,fcls_data_cnt" visible="true" verticalAlignment="Top" horizontalAlignment="Left" gridItemLocation="0,1,1,1" fieldTable="formonly" identifier="cntDetail1">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="" gridMinLength="10rem"/>
+					<GridColumnDefinition gridLengthValue=""/>
+					<GridColumnDefinition gridLengthValue=""/>
+				</GridPanel.gridColumnDefinitions>
+				<Label isDynamic="true" text="Contract Code" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="lb57"/>
+				<TextField toCase="Up" dataType="Char,,,,10" preferredSize="11qch,1qch" toolTip=" Unique contract code" comment=" Unique contract code" fieldTable="contracthead" identifier="contract_code" gridItemLocation="1,0,1,1" classNames="fcls_data_widget,fcls_length_10qch"/>
+				<TextField dataType="Char,,,,40" preferredSize="41qch,1qch" toolTip=" Contract name or description" comment=" Contract name or description" fieldTable="contracthead" identifier="desc_text" gridItemLocation="2,0,1,1" classNames="fcls_data_widget,fcls_length_30qch"/>
+				<Label isDynamic="true" text="Customer Code" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,1,1,1" fieldTable="" identifier="lb73"/>
+				<TextField toCase="Up" dataType="Char,,,,8" preferredSize="9qch,1qch" toolTip=" Customer code (W)" comment=" Customer code (W)" fieldTable="contracthead" identifier="cust_code" gridItemLocation="1,1,1,1" classNames="fcls_data_widget,fcls_length_10qch"/>
+				<TextField dataType="Char,,,,30" preferredSize="41qch,1qch" toolTip=" Customer name or description" comment=" Customer name or description" fieldTable="customer" identifier="name_text" gridItemLocation="2,1,1,1" classNames="fcls_data_widget,fcls_length_30qch"/>
+				<Label isDynamic="true" text="Status" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,2,1,1" fieldTable="" identifier="lb76"/>
+				<TextField toCase="Up" dataType="Char,,,,1" preferredSize="2qch,1qch" toolTip=" Status: A)ctive, Q)uote, H)old or C)omplete (W)" comment=" Status: A)ctive, Q)uote, H)old or C)omplete (W)" fieldTable="contracthead" identifier="status_code" gridItemLocation="1,2,1,1" classNames="fcls_data_widget,fcls_length_10qch"/>
+				<TextField noEntry="true" dataType="Char,,,," preferredSize="41qch,1qch" fieldTable="formonly" identifier="status_text" gridItemLocation="2,2,1,1" classNames="fcls_data_widget,fcls_length_30qch"/>
+				<Label text="Last Billed" fieldTable="" identifier="label6" preferredSize="10rem," gridItemLocation="0,3,1,1"/>
+				<Calendar dataType="Date,,,," preferredSize="11qch,1qch" toolTip=" Last billing date" comment=" Last billing date" fieldTable="contracthead" identifier="last_billed_date" gridItemLocation="1,3,1,1" classNames="fcls_data_widget,fcls_length_10qch"/>
+			</GridPanel>
+			<GridPanel visible="true" identifier="c2" gridItemLocation="0,2,1,1">
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue=""/>
+					<GridColumnDefinition gridLengthValue=""/>
+				</GridPanel.gridColumnDefinitions>
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<TextField noEntry="true" dataType="Char,,,,20" preferredSize="21qch,1qch" fieldTable="jmparms" identifier="cntrhd_prmpt_text" gridItemLocation="0,0,1,1" classNames="fcls_data_widget,fcls_length_20qch"/>
+				<TextField dataType="Char,,,,20" preferredSize="21qch,1qch" toolTip=" User defined prompt" comment=" User defined prompt" fieldTable="contracthead" identifier="user1_text" gridItemLocation="1,0,1,1" classNames="fcls_data_widget,fcls_length_20qch"/>
+			</GridPanel>
+			<GroupBox title="Group 2" classNames="fcls_detail_gb_cnt" visible="true" verticalAlignment="Stretch" horizontalAlignment="Stretch" gridItemLocation="0,3,1,1" fieldTable="formonly" identifier="cntDetail2GroupBox">
+				<GridPanel classNames="fcls_detail_gb_cnt_sub,fcls_detail_cnt_sub,fcls_data_cnt" visible="true" verticalAlignment="Top" horizontalAlignment="Left" fieldTable="formonly" identifier="cntDetail2GrBoxSub">
+					<GridPanel.gridRowDefinitions>
+						<GridRowDefinition gridLengthValue=""/>
+						<GridRowDefinition gridLengthValue=""/>
+						<GridRowDefinition gridLengthValue=""/>
+						<GridRowDefinition gridLengthValue=""/>
+					</GridPanel.gridRowDefinitions>
+					<GridPanel.gridColumnDefinitions>
+						<GridColumnDefinition gridLengthValue="" gridMinLength="10rem"/>
+						<GridColumnDefinition gridLengthValue=""/>
+						<GridColumnDefinition gridLengthValue="" gridMinLength="10rem"/>
+						<GridColumnDefinition gridLengthValue=""/>
+						<GridColumnDefinition gridLengthValue="" gridMinLength="10rem"/>
+						<GridColumnDefinition gridLengthValue=""/>
+					</GridPanel.gridColumnDefinitions>
+					<Label isDynamic="true" text="Bill Type" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="lb47"/>
+					<TextField toCase="Up" dataType="Char,,,,1" preferredSize="2qch,1qch" toolTip=" Billing type: D)aily, W)eekly, M)onthly, E)nd of month or A)nnually (W)" comment=" Billing type: D)aily, W)eekly, M)onthly, E)nd of month or A)nnually (W)" fieldTable="contracthead" identifier="bill_type_code" gridItemLocation="1,0,1,1" classNames="fcls_data_widget,fcls_length_10qch"/>
+					<Label isDynamic="true" text="Start Date" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="2,0,1,1" fieldTable="" identifier="lb92"/>
+					<Calendar dataType="Date,,,," preferredSize="11qch,1qch" toolTip=" The starting date of the contract" comment=" The starting date of the contract" fieldTable="contracthead" identifier="start_date" gridItemLocation="3,0,1,1" classNames="fcls_data_widget,fcls_length_10qch"/>
+					<Label isDynamic="true" text="Entered By" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="4,0,1,1" fieldTable="" identifier="lb142"/>
+					<TextField dataType="Char,,,,8" preferredSize="9qch,1qch" toolTip=" Entry person" comment=" Entry person" fieldTable="contracthead" identifier="entry_code" gridItemLocation="5,0,1,1" classNames="fcls_data_widget,fcls_length_10qch"/>
+					<Label isDynamic="true" text="Bill Interval" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,1,1,1" fieldTable="formonly" identifier="lb46"/>
+					<TextField dataType="SmallInt,,,," preferredSize="2qch,1qch" toolTip=" The number of bill type units between billing" comment=" The number of bill type units between billing" fieldTable="contracthead" identifier="bill_int_ind" gridItemLocation="1,1,1,1" classNames="fcls_data_widget,fcls_length_10qch"/>
+					<Label isDynamic="true" text="End Date" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="2,1,1,1" fieldTable="" identifier="lb93"/>
+					<Calendar dataType="Date,,,," preferredSize="11qch,1qch" toolTip=" The ending date of the contract" comment=" The ending date of the contract" fieldTable="contracthead" identifier="end_date" gridItemLocation="3,1,1,1" classNames="fcls_data_widget,fcls_length_10qch"/>
+					<Label isDynamic="true" text="Date" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="4,1,1,1" fieldTable="" identifier="lb143"/>
+					<Calendar dataType="Date,,,," preferredSize="11qch,1qch" toolTip=" Entry date" comment=" Entry date" fieldTable="contracthead" identifier="entry_date" gridItemLocation="5,1,1,1" classNames="fcls_data_widget,fcls_length_10qch"/>
+					<Label isDynamic="true" text="Value" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,2,1,1" fieldTable="formonly" identifier="lb44"/>
+					<TextField noEntry="true" dataType="Decimal,,,2,14" preferredSize="13qch,1qch" toolTip=" Contract total" comment=" Contract total" fieldTable="contracthead" identifier="contract_value_amt" gridItemLocation="1,2,1,1" classNames="fcls_data_widget,fcls_length_10qch"/>
+					<Label isDynamic="true" text="Salesperson" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="4,2,1,1" fieldTable="" identifier="lb144"/>
+					<TextField toCase="Up" dataType="Char,,,,8" preferredSize="9qch,1qch" toolTip=" Salesperson code (W)" comment=" Salesperson code (W)" fieldTable="contracthead" identifier="sale_code" gridItemLocation="5,2,1,1" classNames="fcls_data_widget,fcls_length_10qch"/>
+					<Label isDynamic="true" text="Consolidated Inv." classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,3,1,1" fieldTable="" identifier="lb89"/>
+					<TextField toCase="Up" dataType="Char,,,,1" preferredSize="2qch,1qch" toolTip=" Consolidated Invoices (Y/N)" comment=" Consolidated Invoices (Y/N)" fieldTable="contracthead" identifier="cons_inv_flag" gridItemLocation="1,3,1,1" classNames="fcls_data_widget,fcls_length_10qch"/>
+				</GridPanel>
+			</GroupBox>
+			<GroupBox title="Comment" classNames="fcls_detail_gb_cnt" visible="true" verticalAlignment="Stretch" horizontalAlignment="Stretch" gridItemLocation="0,4,1,1" fieldTable="formonly" identifier="cntDetail3GroupBox">
+				<GridPanel classNames="fcls_detail_gb_cnt_sub,fcls_detail_cnt_sub,fcls_data_cnt" visible="true" verticalAlignment="Top" horizontalAlignment="Stretch" fieldTable="formonly" identifier="cntDetail3GrBoxSub">
+					<GridPanel.gridRowDefinitions>
+						<GridRowDefinition gridLengthValue=""/>
+						<GridRowDefinition gridLengthValue=""/>
+					</GridPanel.gridRowDefinitions>
+					<GridPanel.gridColumnDefinitions>
+						<GridColumnDefinition gridLengthValue="100%"/>
+					</GridPanel.gridColumnDefinitions>
+					<TextField dataType="Char,,,,40" preferredSize="41qch,1qch" toolTip=" Contract comments" comment=" Contract comments" fieldTable="contracthead" identifier="comm1_text" gridItemLocation="0,0,1,1" classNames="fcls_data_widget"/>
+					<TextField dataType="Char,,,,40" preferredSize="41qch,1qch" toolTip=" Contract comments" comment=" Contract comments" fieldTable="contracthead" identifier="comm2_text" gridItemLocation="0,1,1,1" classNames="fcls_data_widget"/>
+				</GridPanel>
+			</GroupBox>
+			<GridPanel classNames="fcls_statusbar_cnt" visible="true" verticalAlignment="Bottom" gridItemLocation="0,5,1,1" fieldTable="formonly" identifier="cntStatusBar">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="100%"/>
+				</GridPanel.gridColumnDefinitions>
+				<Label isDynamic="true" text="" classNames="fcls_sblabel" visible="true" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="lbInfo1"/>
+				<Label isDynamic="true" text="" classNames="fcls_sblabel" visible="true" gridItemLocation="0,1,1,1" fieldTable="formonly" identifier="lbInfo2"/>
+			</GridPanel>
+		</GridPanel>
+	</form.rootContainer>
+	<form.screenRecords>
+		<ScreenRecord identifier="contracthead" fields="contracthead.contract_code,contracthead.desc_text,contracthead.cust_code,contracthead.status_code,contracthead.user1_text,contracthead.last_billed_date,contracthead.bill_type_code,contracthead.bill_int_ind,contracthead.start_date,contracthead.end_date,contracthead.entry_code,contracthead.entry_date,contracthead.contract_value_amt,contracthead.sale_code,contracthead.cons_inv_flag,contracthead.comm1_text,contracthead.comm2_text"/>
+		<ScreenRecord identifier="customer" fields="customer.name_text"/>
+		<ScreenRecord identifier="formonly" fields="formonly.status_text"/>
+		<ScreenRecord identifier="jmparms" fields="jmparms.cntrhd_prmpt_text"/>
+	</form.screenRecords>
+</form>
+

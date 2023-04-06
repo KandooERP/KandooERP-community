@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form xmlns="http://namespaces.querix.com/2015/fglForms">
+	<form.rootContainer>
+		<GridPanel classNames="fcls_rootContainer" verticalAlignment="Top" horizontalAlignment="Left" fieldTable="" identifier="rootContainer">
+			<GridPanel.gridRowDefinitions>
+				<GridRowDefinition gridLengthValue="25%"/>
+				<GridRowDefinition gridLengthValue="25%"/>
+				<GridRowDefinition gridLengthValue="25%"/>
+				<GridRowDefinition gridLengthValue="25%"/>
+			</GridPanel.gridRowDefinitions>
+			<GridPanel.gridColumnDefinitions>
+				<GridColumnDefinition gridLengthValue="100%"/>
+			</GridPanel.gridColumnDefinitions>
+			<GridPanel classNames="fcls_title_cnt" visible="true" verticalAlignment="Top" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="cntTitle">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="100%"/>
+					<GridColumnDefinition gridLengthValue=""/>
+				</GridPanel.gridColumnDefinitions>
+				<Label isDynamic="true" text="Credit Summary (Missing Form)" classNames="fcls_title_lb" visible="true" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="header_text"/>
+				<Label isDynamic="true" text="A133" classNames="fcls_title_lb" visible="true" gridItemLocation="1,0,1,1" fieldTable="" identifier="lbFormName"/>
+			</GridPanel>
+			<GridPanel classNames="fcls_detail_cnt,fcls_data_cnt,fcls_align_left" visible="true" verticalAlignment="Top" horizontalAlignment="Left" gridItemLocation="0,1,1,1" fieldTable="formonly" identifier="cntDetail1">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="" gridMinLength="9rem"/>
+					<GridColumnDefinition gridLengthValue=""/>
+					<GridColumnDefinition gridLengthValue=""/>
+				</GridPanel.gridColumnDefinitions>
+				<ComboBox dataType="Char,,,,3" preferredSize="5qch,1qch" gridItemLocation="1,0,1,1" fieldTable="customer" identifier="currency_code" classNames="field-show-value,list-show-text-value,fcls_data_widget,fcls_align_left,fcls_length_10qch"/>
+				<ComboBox dataType="Char,,,,8" preferredSize="7qch,1qch" gridItemLocation="1,1,1,1" fieldTable="credithead" identifier="cust_code" classNames="field-show-value,list-show-text-value,fcls_data_widget,fcls_align_left,fcls_length_10qch"/>
+				<Label isDynamic="true" text="Currency" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,0,1,1" fieldTable="" identifier="lb51"/>
+				<Label isDynamic="true" text="Customer" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,1,1,1" fieldTable="" identifier="lb52"/>
+				<Label isDynamic="true" text="Name" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,2,1,1" fieldTable="" identifier="lb66"/>
+				<TextField dataType="Char,,,,30" preferredSize="25qch,1qch" fieldTable="customer" identifier="name_text" gridItemLocation="2,1,1,1" classNames="fcls_data_widget,fcls_align_left,fcls_length_30qch"/>
+			</GridPanel>
+			<GridPanel classNames="fcls_detail_cnt,fcls_data_cnt,fcls_align_left" visible="true" verticalAlignment="Top" gridItemLocation="0,2,1,1" fieldTable="formonly" identifier="cntDetail2">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="" gridMinLength="9rem"/>
+					<GridColumnDefinition gridLengthValue=""/>
+					<GridColumnDefinition gridLengthValue="" gridMinLength="9rem"/>
+					<GridColumnDefinition gridLengthValue=""/>
+					<GridColumnDefinition gridLengthValue="" gridMinLength="9rem"/>
+					<GridColumnDefinition gridLengthValue=""/>
+				</GridPanel.gridColumnDefinitions>
+				<TextField dataType="Decimal,,,2,16" preferredSize="12qch,1qch" gridItemLocation="1,0,1,1" fieldTable="credithead" identifier="goods_amt" classNames="fcls_data_widget,fcls_align_left,fcls_length_10qch"/>
+				<TextField dataType="SmallInt,,,," preferredSize="7qch,1qch" gridItemLocation="3,0,1,1" fieldTable="credithead" identifier="rev_num" classNames="fcls_data_widget,fcls_align_left,fcls_length_10qch"/>
+				<Calendar dataType="Date,,,," preferredSize="11qch,1qch" gridItemLocation="5,0,1,1" fieldTable="credithead" identifier="rev_date" classNames="fcls_data_widget,fcls_align_left,fcls_length_10qch"/>
+				<TextField dataType="Decimal,,,2,16" preferredSize="12qch,1qch" gridItemLocation="1,1,1,1" fieldTable="credithead" identifier="total_amt" classNames="fcls_data_widget,fcls_align_left,fcls_length_10qch"/>
+				<TextField dataType="Decimal,,,2,16" preferredSize="12qch,1qch" gridItemLocation="3,1,1,1" fieldTable="credithead" identifier="tax_amt" classNames="fcls_data_widget,fcls_align_left,fcls_length_10qch"/>
+				<TextField dataType="Decimal,,,2,16" preferredSize="12qch,1qch" gridItemLocation="5,1,1,1" fieldTable="credithead" identifier="hand_amt" classNames="fcls_data_widget,fcls_align_left,fcls_length_10qch"/>
+				<TextField dataType="Decimal,,,2,16" preferredSize="12qch,1qch" gridItemLocation="1,2,1,1" fieldTable="credithead" identifier="freight_amt" classNames="fcls_data_widget,fcls_align_left,fcls_length_10qch"/>
+				<Label isDynamic="true" text="Communication" classNames="fcls_columnlabel_rev_cell,fcls_align_hstretch" visible="true" horizontalAlignment="Stretch" gridItemLocation="0,3,6,1" fieldTable="" identifier="lb63"/>
+				<TextField dataType="Char,,,,30" preferredSize="26qch,1qch" gridItemLocation="0,4,6,1" fieldTable="credithead" identifier="com1_text"/>
+				<Label isDynamic="true" text="Goods Amt" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="lb36"/>
+				<Label isDynamic="true" text="Rev Number" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="2,0,1,1" fieldTable="" identifier="lb60"/>
+				<Label isDynamic="true" text="Rev Date" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="4,0,1,1" fieldTable="" identifier="lb85"/>
+				<Label isDynamic="true" text="Total Amt" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,1,1,1" fieldTable="formonly" identifier="lb37"/>
+				<Label isDynamic="true" text="Tax Amt" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="2,1,1,1" fieldTable="" identifier="lb61"/>
+				<Label isDynamic="true" text="Handling Amt" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="4,1,1,1" fieldTable="" identifier="lb88"/>
+				<Label isDynamic="true" text="Freight" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,2,1,1" fieldTable="formonly" identifier="lb38"/>
+				<TextField dataType="Char,,,,30" preferredSize="26qch,1qch" gridItemLocation="0,5,6,1" fieldTable="credithead" identifier="com2_text"/>
+			</GridPanel>
+			<GridPanel classNames="fcls_statusbar_cnt" visible="true" verticalAlignment="Top" gridItemLocation="0,3,1,1" fieldTable="formonly" identifier="cntStatusBar">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="100%"/>
+				</GridPanel.gridColumnDefinitions>
+				<Label isDynamic="true" text="" classNames="fcls_sblabel" visible="true" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="lbInfo1"/>
+				<Label isDynamic="true" text="" classNames="fcls_sblabel" visible="true" gridItemLocation="0,1,1,1" fieldTable="formonly" identifier="lbInfo2"/>
+			</GridPanel>
+		</GridPanel>
+	</form.rootContainer>
+	<form.screenRecords>
+		<ScreenRecord identifier="credithead" fields="cust_code,goods_amt,rev_num,rev_date,total_amt,tax_amt,hand_amt,freight_amt,com1_text,com2_text"/>
+		<ScreenRecord identifier="customer" fields="currency_code,name_text"/>
+		<ScreenRecord identifier="FormOnly"/>
+	</form.screenRecords>
+</form>
+

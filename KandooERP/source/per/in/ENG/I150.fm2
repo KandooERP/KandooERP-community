@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="UTF-8"?><form xmlns="http://namespaces.querix.com/2015/fglForms">
+	<form.rootContainer>
+		<GridPanel classNames="fcls_rootContainer" fieldTable="" horizontalAlignment="Left" identifier="rootContainer" preferredSize="," verticalAlignment="Top">
+			<GridPanel.gridRowDefinitions>
+				<GridRowDefinition gridLengthValue=""/>
+				<GridRowDefinition gridLengthValue=""/>
+				<GridRowDefinition gridLengthValue=""/>
+				<GridRowDefinition gridLengthValue=""/>
+				<GridRowDefinition gridLengthValue=""/>
+				<GridRowDefinition gridLengthValue=""/>
+				<GridRowDefinition gridLengthValue=""/>
+			</GridPanel.gridRowDefinitions>
+			<GridPanel.gridColumnDefinitions>
+				<GridColumnDefinition gridLengthValue="100%"/>
+			</GridPanel.gridColumnDefinitions>
+			<GridPanel classNames="fcls_title_cnt" fieldTable="formonly" gridItemLocation="0,0,1,1" identifier="cntTitle" verticalAlignment="Top" visible="true">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="100%"/>
+					<GridColumnDefinition gridLengthValue=""/>
+				</GridPanel.gridColumnDefinitions>
+				<Label classNames="fcls_title_lb" fieldTable="formonly" gridItemLocation="0,0,1,1" identifier="header_text" isDynamic="true" text="Product Information" visible="true"/>
+				<Label classNames="fcls_title_lb" fieldTable="" gridItemLocation="1,0,1,1" identifier="lbFormName" isDynamic="true" text="I150" visible="true"/>
+			</GridPanel>
+			<GridPanel classNames="fcls_detail_cnt,fcls_data_cnt,fcls_align_left" fieldTable="formonly" gridItemLocation="0,1,1,1" horizontalAlignment="Left" identifier="cntDetail1" verticalAlignment="Top" visible="true">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="" gridMinLength="10rem"/>
+					<GridColumnDefinition gridLengthValue=""/>
+				</GridPanel.gridColumnDefinitions>
+				<Label classNames="fcls_fieldlabel,fcls_align_left" fieldTable="formonly" gridItemLocation="0,0,1,1" identifier="lb57" isDynamic="true" text="Product Code" visible="true"/>
+				<ComboBox classNames="fcls_data_widget,fcls_align_left,fcls_length_30qch,list-show-text-value,field-show-value" comment=" Enter identifying product code selection criteria " dataType="Char,,,,15" editable="false" fieldTable="product" gridItemLocation="1,0,1,1" identifier="part_code" preferredSize="16qch,1qch" toCase="Up" toolTip=" Enter identifying product code selection criteria "/>
+				<Label classNames="fcls_fieldlabel,fcls_align_left" fieldTable="" gridItemLocation="0,1,1,1" identifier="lb73" isDynamic="true" text="Description" visible="true"/>
+				<TextField classNames="fcls_data_widget,fcls_align_left,fcls_length_30qch" comment=" Enter name or description selection criteria - Line 1" dataType="Char,,,,36" fieldTable="product" gridItemLocation="1,1,1,1" identifier="desc_text" preferredSize="31qch,1qch" toolTip=" Enter name or description selection criteria - Line 1"/>
+				<TextField classNames="fcls_data_widget,fcls_align_left,fcls_length_30qch" comment=" Enter name or description selection criteria - Line 2" dataType="Char,,,,36" fieldTable="product" gridItemLocation="1,2,1,1" identifier="desc2_text" preferredSize="31qch,1qch" toolTip=" Enter name or description selection criteria - Line 2"/>
+				<Label classNames="fcls_fieldlabel,fcls_align_left" fieldTable="" gridItemLocation="0,3,1,1" identifier="lb77" isDynamic="true" text="Abbrev.Desc" visible="true"/>
+				<TextField classNames="fcls_data_widget,fcls_align_left,fcls_length_30qch" comment=" Enter abbreviated description selection criteria " dataType="Char,,,,15" fieldTable="product" gridItemLocation="1,3,1,1" identifier="short_desc_text" preferredSize="16qch,1qch" toCase="Up" toolTip=" Enter abbreviated description selection criteria "/>
+			</GridPanel>
+			<GroupBox classNames="fcls_detail_gb_cnt" fieldTable="formonly" gridItemLocation="0,2,1,1" horizontalAlignment="Stretch" identifier="cntDetail2GroupBox" title="Group &amp; Category" verticalAlignment="Stretch" visible="true">
+				<GridPanel classNames="fcls_detail_gb_cnt_sub,fcls_detail_cnt_sub,fcls_data_cnt,fcls_align_left" fieldTable="formonly" horizontalAlignment="Left" identifier="cntDetail2Sub" verticalAlignment="Top" visible="true">
+					<GridPanel.gridRowDefinitions>
+						<GridRowDefinition gridLengthValue=""/>
+						<GridRowDefinition gridLengthValue=""/>
+						<GridRowDefinition gridLengthValue=""/>
+					</GridPanel.gridRowDefinitions>
+					<GridPanel.gridColumnDefinitions>
+						<GridColumnDefinition gridLengthValue="" gridMinLength="10rem"/>
+						<GridColumnDefinition gridLengthValue=""/>
+						<GridColumnDefinition gridLengthValue=""/>
+					</GridPanel.gridColumnDefinitions>
+					<Label classNames="fcls_fieldlabel,fcls_align_left" fieldTable="formonly" gridItemLocation="0,0,1,1" identifier="lb47" isDynamic="true" text="Product Group" visible="true"/>
+					<ComboBox classNames="fcls_data_widget,fcls_align_left,fcls_length_10qch" comment=" Enter product group code for this product " dataType="Char,,,,3" fieldTable="product" gridItemLocation="1,0,1,1" identifier="prodgrp_code" preferredSize="4qch,1qch" toCase="Up" toolTip=" Enter product group code for this product "/>
+					<TextField classNames="fcls_data_widget,fcls_align_left,fcls_length_30qch" dataType="Char,,,,30" fieldTable="prodgrp" gridItemLocation="2,0,1,1" identifier="desc_text" noEntry="true" preferredSize="31qch,1qch"/>
+					<Label classNames="fcls_fieldlabel,fcls_align_left" fieldTable="formonly" gridItemLocation="0,1,1,1" identifier="lb46" isDynamic="true" text="Category" visible="true"/>
+					<ComboBox classNames="fcls_data_widget,fcls_align_left,fcls_length_10qch" comment=" Enter category code for this product " dataType="Char,,,,3" fieldTable="product" gridItemLocation="1,1,1,1" identifier="cat_code" preferredSize="4qch,1qch" toCase="Up" toolTip=" Enter category code for this product "/>
+					<TextField classNames="fcls_data_widget,fcls_align_left,fcls_length_30qch" dataType="Char,,,,30" fieldTable="category" gridItemLocation="2,1,1,1" identifier="desc_text" noEntry="true" preferredSize="31qch,1qch"/>
+					<Label classNames="fcls_fieldlabel,fcls_align_left" fieldTable="formonly" gridItemLocation="0,2,1,1" identifier="lb44" isDynamic="true" text="Class" visible="true"/>
+					<ComboBox classNames="fcls_data_widget,fcls_align_left,fcls_length_10qch" comment=" Enter inventory class code for this Product " dataType="Char,,,,8" fieldTable="product" gridItemLocation="1,2,1,1" identifier="class_code" preferredSize="11qch,1qch" toCase="Up" toolTip=" Enter inventory class code for this Product "/>
+					<TextField classNames="fcls_data_widget,fcls_align_left,fcls_length_30qch" dataType="Char,,,,30" fieldTable="class" gridItemLocation="2,2,1,1" identifier="desc_text" noEntry="true" preferredSize="31qch,1qch"/>
+				</GridPanel>
+			</GroupBox>
+			<GroupBox classNames="fcls_detail_gb_cnt" fieldTable="formonly" gridItemLocation="0,3,1,1" horizontalAlignment="Stretch" identifier="cntDetail3GroupBox" title="Relationships" verticalAlignment="Stretch" visible="true">
+				<GridPanel classNames="fcls_detail_gb_cnt_sub,fcls_detail_cnt_sub,fcls_data_cnt,fcls_align_left" fieldTable="formonly" horizontalAlignment="Left" identifier="cntDetail3Sub" verticalAlignment="Top" visible="true">
+					<GridPanel.gridRowDefinitions>
+						<GridRowDefinition gridLengthValue=""/>
+						<GridRowDefinition gridLengthValue=""/>
+						<GridRowDefinition gridLengthValue=""/>
+					</GridPanel.gridRowDefinitions>
+					<GridPanel.gridColumnDefinitions>
+						<GridColumnDefinition gridLengthValue="" gridMinLength="10rem"/>
+						<GridColumnDefinition gridLengthValue=""/>
+						<GridColumnDefinition gridLengthValue=""/>
+					</GridPanel.gridColumnDefinitions>
+					<Label classNames="fcls_fieldlabel,fcls_align_left" fieldTable="formonly" gridItemLocation="0,0,1,1" identifier="lb48" isDynamic="true" text="Alternate Product" visible="true"/>
+					<ComboBox classNames="fcls_data_widget,fcls_align_left,fcls_length_10qch" comment=" Alternate product to be used product is not available " dataType="Char,,,,15" fieldTable="product" gridItemLocation="1,0,1,1" identifier="alter_part_code" preferredSize="16qch,1qch" toCase="Up" toolTip=" Alternate product to be used product is not available "/>
+					<TextField classNames="fcls_data_widget,fcls_align_left,fcls_length_30qch" dataType="Char,,,," fieldTable="formonly" gridItemLocation="2,0,1,1" identifier="alter_text" noEntry="true" preferredSize="31qch,1qch"/>
+					<Label classNames="fcls_fieldlabel,fcls_align_left" fieldTable="formonly" gridItemLocation="0,1,1,1" identifier="lb49" isDynamic="true" text="Superseded Product" visible="true"/>
+					<ComboBox classNames="fcls_data_widget,fcls_align_left,fcls_length_10qch" comment=" Supersession product code to be used if product has been replaced " dataType="Char,,,,15" fieldTable="product" gridItemLocation="1,1,1,1" identifier="super_part_code" preferredSize="16qch,1qch" toCase="Up" toolTip=" Supersession product code to be used if product has been replaced "/>
+					<TextField classNames="fcls_data_widget,fcls_align_left,fcls_length_30qch" dataType="Char,,,," fieldTable="formonly" gridItemLocation="2,1,1,1" identifier="super_text" noEntry="true" preferredSize="31qch,1qch"/>
+					<Label classNames="fcls_fieldlabel,fcls_align_left" fieldTable="formonly" gridItemLocation="0,2,1,1" identifier="lb63" isDynamic="true" text="Companion Product" visible="true"/>
+					<ComboBox classNames="fcls_data_widget,fcls_align_left,fcls_length_10qch" comment=" Companion product code to be sold with this product " dataType="Char,,,,15" fieldTable="product" gridItemLocation="1,2,1,1" identifier="compn_part_code" preferredSize="16qch,1qch" toCase="Up" toolTip=" Companion product code to be sold with this product "/>
+					<TextField classNames="fcls_data_widget,fcls_align_left,fcls_length_30qch" dataType="Char,,,," fieldTable="formonly" gridItemLocation="2,2,1,1" identifier="compn_text" noEntry="true" preferredSize="31qch,1qch"/>
+				</GridPanel>
+			</GroupBox>
+			<GroupBox classNames="fcls_detail_gb_cnt" fieldTable="" gridItemLocation="0,4,1,1" horizontalAlignment="Stretch" identifier="cntDetail4GroupBox" title="Units of Measure" verticalAlignment="Stretch" visible="true">
+				<GridPanel classNames="fcls_detail_gb_cnt_sub,fcls_detail_cnt_sub,fcls_data_cnt,fcls_align_left" fieldTable="formonly" gridItemLocation="0,0,1,1" horizontalAlignment="Left" identifier="cntDetail4Sub" verticalAlignment="Top" visible="true">
+					<GridPanel.gridRowDefinitions>
+						<GridRowDefinition gridLengthValue=""/>
+						<GridRowDefinition gridLengthValue=""/>
+						<GridRowDefinition gridLengthValue=""/>
+						<GridRowDefinition gridLengthValue=""/>
+					</GridPanel.gridRowDefinitions>
+					<GridPanel.gridColumnDefinitions>
+						<GridColumnDefinition gridLengthValue="" gridMinLength="10rem"/>
+						<GridColumnDefinition gridLengthValue=""/>
+						<GridColumnDefinition gridLengthValue=""/>
+					</GridPanel.gridColumnDefinitions>
+					<Label classNames="fcls_fieldlabel,fcls_align_left" fieldTable="" gridItemLocation="0,0,1,1" identifier="lb115" isDynamic="true" text="Purchasing Unit" visible="true"/>
+					<ComboBox classNames="fcls_data_widget,fcls_align_left,fcls_length_10qch" comment=" Unit Of Measure describing the purchase quantity " dataType="Char,,,,4" fieldTable="product" gridItemLocation="1,0,1,1" identifier="pur_uom_code" preferredSize="5qch,1qch" toCase="Up" toolTip=" Unit Of Measure describing the purchase quantity "/>
+					<RadioGroup classNames="fcls_data_widget,fcls_align_left" fieldTable="" gridItemLocation="2,0,1,1" identifier="status_ind" orientation="Vertical" visible="true">
+						<Radio identifier="status_ind_1" title="Available">
+							<Radio.value>
+								<IntegerLiteral integerValue="1"/>
+							</Radio.value>
+						</Radio>
+						<Radio identifier="status_ind_2" title="On Hold">
+							<Radio.value>
+								<IntegerLiteral integerValue="2"/>
+							</Radio.value>
+						</Radio>
+						<Radio identifier="status_ind_3" title="Deleted">
+							<Radio.value>
+								<IntegerLiteral integerValue="3"/>
+							</Radio.value>
+						</Radio>
+					</RadioGroup>
+					<Label classNames="fcls_fieldlabel,fcls_align_left" fieldTable="" gridItemLocation="0,1,1,1" identifier="lb116" isDynamic="true" text="Stocking Unit" visible="true"/>
+					<ComboBox classNames="fcls_data_widget,fcls_align_left,fcls_length_10qch" comment=" Unit Of Measure describing the stocking quantity " dataType="Char,,,,4" fieldTable="product" gridItemLocation="1,1,1,1" identifier="stock_uom_code" preferredSize="5qch,1qch" toCase="Up" toolTip=" Unit Of Measure describing the stocking quantity "/>
+					<Label classNames="fcls_fieldlabel,fcls_align_left" fieldTable="" gridItemLocation="0,2,1,1" identifier="lb120" isDynamic="true" text="Sales Unit" visible="true"/>
+					<ComboBox classNames="fcls_data_widget,fcls_align_left,fcls_length_10qch" comment=" Unit Of Measure describing the selling quantity " dataType="Char,,,,4" fieldTable="product" gridItemLocation="1,2,1,1" identifier="sell_uom_code" preferredSize="5qch,1qch" toCase="Up" toolTip=" Unit Of Measure describing the selling quantity "/>
+					<Label classNames="fcls_fieldlabel,fcls_align_left" fieldTable="" gridItemLocation="0,3,1,1" identifier="lb155" isDynamic="true" text="Date" visible="true"/>
+					<Calendar classNames="fcls_data_widget,fcls_align_left,fcls_length_10qch" comment=" Date of last product status change" dataType="Date,,,," fieldTable="product" gridItemLocation="1,3,1,1" identifier="status_date" preferredSize="11qch,1qch" toolTip=" Date of last product status change"/>
+				</GridPanel>
+			</GroupBox>
+			<GroupBox classNames="fcls_detail_gb_cnt" fieldTable="" gridItemLocation="0,5,1,1" horizontalAlignment="Stretch" identifier="cntDetail5GroupBox" title="Purchasing Unit" verticalAlignment="Stretch" visible="true">
+				<GridPanel classNames="fcls_detail_gb_cnt_sub,fcls_detail_cnt_sub,fcls_data_cnt,fcls_align_left" fieldTable="" horizontalAlignment="Left" identifier="cntDetail5Sub" verticalAlignment="Top" visible="true">
+					<GridPanel.gridRowDefinitions>
+						<GridRowDefinition gridLengthValue=""/>
+						<GridRowDefinition gridLengthValue=""/>
+					</GridPanel.gridRowDefinitions>
+					<GridPanel.gridColumnDefinitions>
+						<GridColumnDefinition gridLengthValue="" gridMinLength="10rem"/>
+						<GridColumnDefinition gridLengthValue=""/>
+						<GridColumnDefinition gridLengthValue="" gridMinLength="10rem"/>
+						<GridColumnDefinition gridLengthValue=""/>
+					</GridPanel.gridColumnDefinitions>
+					<Label classNames="fcls_fieldlabel,fcls_align_left" fieldTable="" gridItemLocation="0,0,1,1" identifier="lb128" isDynamic="true" text="Purchase to Stock Conv. Qty" visible="true"/>
+					<TextField classNames="fcls_data_widget,fcls_align_left,fcls_length_10qch" comment=" Conversion quantity from purchase units to stocking units " dataType="Float,,,," fieldTable="product" gridItemLocation="1,0,1,1" identifier="pur_stk_con_qty" preferredSize="14qch,1qch" toolTip=" Conversion quantity from purchase units to stocking units "/>
+					<Label classNames="fcls_fieldlabel,fcls_align_left" fieldTable="" gridItemLocation="2,0,1,1" identifier="lb161" isDynamic="true" text="Current Stock Turn" visible="true"/>
+					<TextField classNames="fcls_data_widget,fcls_align_left,fcls_length_10qch" comment=" The current stock turn value selection criteria" dataType="Float,,,," fieldTable="product" gridItemLocation="3,0,1,1" identifier="stock_turn_qty" preferredSize="9qch,1qch" toolTip=" The current stock turn value selection criteria"/>
+					<Label classNames="fcls_fieldlabel,fcls_align_left" fieldTable="" gridItemLocation="0,1,1,1" identifier="lb129" isDynamic="true" text="Stocking to Sales Conv. Qty" visible="true"/>
+					<TextField classNames="fcls_data_widget,fcls_align_left,fcls_length_10qch" comment=" Conversion quantity from stocking to sales units " dataType="Float,,,," fieldTable="product" gridItemLocation="1,1,1,1" identifier="stk_sel_con_qty" preferredSize="14qch,1qch" toolTip=" Conversion quantity from stocking to sales units "/>
+					<Label classNames="fcls_fieldlabel,fcls_align_left" fieldTable="" gridItemLocation="2,1,1,1" identifier="lb162" isDynamic="true" text="Target Stock Turn" visible="true"/>
+					<TextField classNames="fcls_data_widget,fcls_align_left,fcls_length_10qch" comment=" The Target stock turn value selection criteria" dataType="Float,,,," fieldTable="product" gridItemLocation="3,1,1,1" identifier="target_turn_qty" preferredSize="9qch,1qch" toolTip=" The Target stock turn value selection criteria"/>
+				</GridPanel>
+			</GroupBox>
+			<GridPanel classNames="fcls_statusbar_cnt" fieldTable="formonly" gridItemLocation="0,6,1,1" identifier="cntStatusBar" verticalAlignment="Top" visible="true">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="100%"/>
+				</GridPanel.gridColumnDefinitions>
+				<Label classNames="fcls_sblabel" fieldTable="formonly" gridItemLocation="0,0,1,1" identifier="lbInfo1" isDynamic="true" text="" visible="true"/>
+				<Label classNames="fcls_sblabel" fieldTable="formonly" gridItemLocation="0,1,1,1" identifier="lbInfo2" isDynamic="true" text="" visible="true"/>
+			</GridPanel>
+		</GridPanel>
+	</form.rootContainer>
+	<form.screenRecords>
+		<ScreenRecord fields="category.desc_text" identifier="category"/>
+		<ScreenRecord fields="class.desc_text" identifier="class"/>
+		<ScreenRecord fields="formonly.alter_text,formonly.super_text,formonly.compn_text,status_ind,null,null" identifier="formonly"/>
+		<ScreenRecord fields="prodgrp.desc_text" identifier="prodgrp"/>
+		<ScreenRecord fields="product.part_code,product.short_desc_text,product.desc_text,product.desc2_text,product.prodgrp_code,product.cat_code,product.class_code,product.alter_part_code,product.super_part_code,product.compn_part_code,product.pur_uom_code,product.stock_uom_code,product.sell_uom_code,product.pur_stk_con_qty,product.stk_sel_con_qty,status_ind,product.status_date,product.stock_turn_qty,product.target_turn_qty" identifier="product"/>
+	</form.screenRecords>
+</form>

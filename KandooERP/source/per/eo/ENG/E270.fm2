@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?><form xmlns="http://namespaces.querix.com/2015/fglForms">
+	<form.rootContainer>
+		<GridPanel classNames="fcls_rootContainer" fieldTable="" horizontalAlignment="Left" identifier="rootContainer" verticalAlignment="Top">
+			<GridPanel.gridRowDefinitions>
+				<GridRowDefinition gridLengthValue=""/>
+				<GridRowDefinition gridLengthValue=""/>
+				<GridRowDefinition gridLengthValue=""/>
+				<GridRowDefinition gridLengthValue=""/>
+				<GridRowDefinition gridLengthValue=""/>
+			</GridPanel.gridRowDefinitions>
+			<GridPanel.gridColumnDefinitions>
+				<GridColumnDefinition gridLengthValue="100%"/>
+			</GridPanel.gridColumnDefinitions>
+			<GridPanel classNames="fcls_title_cnt" fieldTable="formonly" gridItemLocation="0,0,1,1" identifier="cntTitle" verticalAlignment="Top" visible="true">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="100%"/>
+					<GridColumnDefinition gridLengthValue=""/>
+				</GridPanel.gridColumnDefinitions>
+				<Label classNames="fcls_title_lb" fieldTable="formonly" gridItemLocation="0,0,1,1" identifier="header_text" isDynamic="true" text="Report" visible="true"/>
+				<Label classNames="fcls_title_lb" fieldTable="" gridItemLocation="1,0,1,1" identifier="lbFormName" isDynamic="true" text="E270" visible="true"/>
+			</GridPanel>
+			<GridPanel classNames="fcls_detail_cnt,fcls_data_cnt" fieldTable="formonly" gridItemLocation="0,1,1,1" horizontalAlignment="Stretch" identifier="cntDetail1" verticalAlignment="Top" visible="true">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition/>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="10rem" gridMinLength="10rem"/>
+					<GridColumnDefinition gridLengthValue=""/>
+					<GridColumnDefinition gridLengthValue="100%"/>
+				</GridPanel.gridColumnDefinitions>
+				<TextField classNames="fcls_data_widget,fcls_length_50qch" dataType="VarChar,,,0,12" fieldTable="kandooreport" gridItemLocation="0,0,3,1" identifier="header_text" noEntry="true" preferredSize="51qch,1qch" horizontalAlignment="Stretch"/>
+				<Label classNames="fcls_fieldlabel,fcls_align_left" fieldTable="" gridItemLocation="0,1,1,1" identifier="lb73" isDynamic="true" text="Report Year" visible="true"/>
+				<Spinner classNames="fcls_data_widget,fcls_length_10qch" comment=" The year to which run this report for" dataType="SmallInt,,,," fieldTable="statparms" gridItemLocation="1,1,1,1" identifier="year_num" preferredSize="5qch,1qch" toolTip=" The year to which run this report for" maxValue="2050" minValue="2018" step="1" horizontalAlignment="Left"/>
+			</GridPanel>
+			<GroupBox classNames="fcls_detail_gb_cnt" fieldTable="formonly" gridItemLocation="0,2,1,1" horizontalAlignment="Stretch" identifier="cntDetail2GroupBox" title="Sales" verticalAlignment="Stretch" visible="true">
+				<GridPanel classNames="fcls_detail_gb_cnt_sub,fcls_detail_cnt_sub,fcls_data_cnt" fieldTable="formonly" horizontalAlignment="Left" identifier="cntDetail2GrBoxSub" verticalAlignment="Top" visible="true">
+					<GridPanel.gridRowDefinitions>
+						<GridRowDefinition gridLengthValue=""/>
+						<GridRowDefinition gridLengthValue=""/>
+						<GridRowDefinition gridLengthValue=""/>
+						<GridRowDefinition gridLengthValue=""/>
+						<GridRowDefinition gridLengthValue=""/>
+					</GridPanel.gridRowDefinitions>
+					<GridPanel.gridColumnDefinitions>
+						<GridColumnDefinition gridLengthValue="" gridMinLength="10rem"/>
+						<GridColumnDefinition gridLengthValue=""/>
+					</GridPanel.gridColumnDefinitions>
+					<Label classNames="fcls_fieldlabel,fcls_align_left" fieldTable="formonly" gridItemLocation="0,0,1,1" identifier="lb47" isDynamic="true" text="Salesperson Code" visible="true"/>
+					<TextField classNames="fcls_data_widget,fcls_length_15qch" comment=" Salesperson unique code " dataType="VarChar,,,0,8" fieldTable="salesperson" gridItemLocation="1,0,1,1" identifier="sale_code" preferredSize="9qch,1qch" toCase="Up" toolTip=" Salesperson unique code "/>
+					<Label classNames="fcls_fieldlabel,fcls_align_left" fieldTable="formonly" gridItemLocation="0,1,1,1" identifier="lb46" isDynamic="true" text="Salesperson Name" visible="true"/>
+					<TextField classNames="fcls_data_widget,fcls_length_15qch" comment=" Salesperson name" dataType="VarChar,,,0,14" fieldTable="salesperson" gridItemLocation="1,1,1,1" identifier="name_text" preferredSize="31qch,1qch" toolTip=" Salesperson name"/>
+					<Label classNames="fcls_fieldlabel,fcls_align_left" fieldTable="formonly" gridItemLocation="0,2,1,1" identifier="lb44" isDynamic="true" text="Salesperson Type" visible="true"/>
+					<TextField classNames="fcls_data_widget,fcls_length_15qch" comment=" Salesperson type - (1) Psuedo - (2) Primary - (3) Normal " dataType="Char,,,,1" fieldTable="salesperson" gridItemLocation="1,2,1,1" identifier="sale_type_ind" preferredSize="2qch,1qch" toCase="Up" toolTip=" Salesperson type - (1) Psuedo - (2) Primary - (3) Normal ">
+				<TextField.includes>
+					<ValueInclude>
+						<ValueInclude.value>
+							<StringLiteral stringValue="1"/>
+						</ValueInclude.value>
+					</ValueInclude>
+					<ValueInclude>
+						<ValueInclude.value>
+							<StringLiteral stringValue="2"/>
+						</ValueInclude.value>
+					</ValueInclude>
+					<ValueInclude>
+						<ValueInclude.value>
+							<StringLiteral stringValue="3"/>
+						</ValueInclude.value>
+					</ValueInclude>
+				</TextField.includes>
+			</TextField>
+					<Label classNames="fcls_fieldlabel,fcls_align_left" fieldTable="" gridItemLocation="0,3,1,1" identifier="lb89" isDynamic="true" text="Sales Territory" visible="true"/>
+					<TextField classNames="fcls_data_widget,fcls_length_15qch" comment=" Salesperson territory " dataType="VarChar,,,0,5" fieldTable="salesperson" gridItemLocation="1,3,1,1" identifier="terri_code" preferredSize="6qch,1qch" toCase="Up" toolTip=" Salesperson territory "/>
+					<Label classNames="fcls_fieldlabel,fcls_align_left" fieldTable="" gridItemLocation="0,4,1,1" identifier="lb113" isDynamic="true" text="Sales Manager" visible="true"/>
+					<TextField classNames="fcls_data_widget,fcls_length_15qch" comment=" Salesperson's manager" dataType="VarChar,,,0,8" fieldTable="salesperson" gridItemLocation="1,4,1,1" identifier="mgr_code" preferredSize="9qch,1qch" toCase="Up" toolTip=" Salesperson's manager"/>
+				</GridPanel>
+			</GroupBox>
+			<GroupBox classNames="fcls_detail_gb_cnt" fieldTable="formonly" gridItemLocation="0,3,1,1" horizontalAlignment="Stretch" identifier="cntDetail3GroupBox" title="Address" verticalAlignment="Stretch" visible="true">
+				<GridPanel classNames="fcls_detail_gb_cnt_sub,fcls_detail_cnt_sub,fcls_data_cnt" fieldTable="formonly" horizontalAlignment="Left" identifier="cntDetail3GrBoxSub" verticalAlignment="Top" visible="true">
+					<GridPanel.gridRowDefinitions>
+						<GridRowDefinition gridLengthValue=""/>
+						<GridRowDefinition gridLengthValue=""/>
+						<GridRowDefinition gridLengthValue=""/>
+					</GridPanel.gridRowDefinitions>
+					<GridPanel.gridColumnDefinitions>
+						<GridColumnDefinition gridLengthValue="" gridMinLength="10rem"/>
+						<GridColumnDefinition gridLengthValue=""/>
+					</GridPanel.gridColumnDefinitions>
+					<Label classNames="fcls_fieldlabel,fcls_align_left" fieldTable="formonly" gridItemLocation="0,0,1,1" identifier="lb48" isDynamic="true" text="City" visible="true"/>
+					<TextField classNames="fcls_data_widget,fcls_length_25qch" comment=" Salesperson's city" dataType="VarChar,,,0,4" fieldTable="salesperson" gridItemLocation="1,0,1,1" identifier="city_text" preferredSize="21qch,1qch" toolTip=" Salesperson's city" horizontalAlignment="Left"/>
+					<Label classNames="fcls_fieldlabel,fcls_align_left" fieldTable="formonly" gridItemLocation="0,1,1,1" identifier="lb49" isDynamic="true" text="State" visible="true"/>
+					<ComboBox classNames="list-show-text-value,field-show-text,fcls_data_widget,fcls_length_25qch" comment=" Salesperson's state" dataType="VarChar,,,0,4" fieldTable="salesperson" gridItemLocation="1,1,1,1" identifier="state_code" preferredSize="21qch,1qch" toCase="Up" toolTip=" Salesperson's state" horizontalAlignment="Left"/>
+					<Label classNames="fcls_fieldlabel,fcls_align_left" fieldTable="formonly" gridItemLocation="0,2,1,1" identifier="lb63" isDynamic="true" text="Country" visible="true"/>
+					<ComboBox classNames="list-show-text-value,field-show-text,fcls_data_widget,fcls_length_25qch" comment=" Salesperson's country" dataType="Char,,,,3" fieldTable="salesperson" gridItemLocation="1,2,1,1" identifier="country_code" preferredSize="4qch,1qch" toCase="Up" toolTip=" Salesperson's country" horizontalAlignment="Left"/>
+				</GridPanel>
+			</GroupBox>
+			<GridPanel classNames="fcls_statusbar_cnt" fieldTable="formonly" gridItemLocation="0,4,1,1" identifier="cntStatusBar" verticalAlignment="Bottom" visible="true">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="100%"/>
+				</GridPanel.gridColumnDefinitions>
+				<Label classNames="fcls_sblabel" fieldTable="formonly" gridItemLocation="0,0,1,1" identifier="lbInfo1" isDynamic="true" text="" visible="true"/>
+				<Label classNames="fcls_sblabel" fieldTable="formonly" gridItemLocation="0,1,1,1" identifier="lbInfo2" isDynamic="true" text="" visible="true"/>
+			</GridPanel>
+		</GridPanel>
+	</form.rootContainer>
+	<form.screenRecords>
+		<ScreenRecord fields="kandooreport.header_text" identifier="kandooreport"/>
+		<ScreenRecord fields="salesperson.sale_code,salesperson.name_text,salesperson.sale_type_ind,salesperson.terri_code,salesperson.mgr_code,salesperson.city_text,salesperson.state_code,salesperson.country_code" identifier="salesperson"/>
+		<ScreenRecord fields="statparms.year_num" identifier="statparms"/>
+	</form.screenRecords>
+</form>

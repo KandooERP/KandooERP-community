@@ -1,0 +1,71 @@
+{
+###########################################################################
+# This program is free software; you can redistribute it and/or modify it
+# under the terms of the GNU General Public License as published by the
+# Free Software Foundation; either version 2 of the License, or (at your
+# option) any later version.
+#
+# This program is distributed in the hope that it will be useful, but
+# WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+# General Public License for more details.
+#
+# You should have received a copy of the GNU General Public License along
+# with this program; if not, write to the Free Software Foundation, Inc.,
+# 59 Temple Place, Suite 330, Boston, MA 02111-1307 USA
+#
+###########################################################################
+
+	 $Id: M201.per,v 1.1 2003/05/20 23:53:07 tpavlek Exp $
+}
+
+
+{
+# Note: This form is only used by M75.4gl which is not part of standard
+#       Manufacturing.
+}
+
+database kandoodb
+
+screen
+{
+                           Order Generation                            M201
+\g----------------------------------------------------------------------------\g
+   Sales    Sales      Product                        Suggested   Status
+   Order    Line No.                                  Order       
+\g----------------------------------------------------------------------------\g
+  [f001    |f003      |f002                      |f005         ]    [a]
+  [f001    |f003      |f002                      |f005         ]    [a]
+  [f001    |f003      |f002                      |f005         ]    [a]
+  [f001    |f003      |f002                      |f005         ]    [a]
+  [f001    |f003      |f002                      |f005         ]    [a]
+  [f001    |f003      |f002                      |f005         ]    [a]
+  [f001    |f003      |f002                      |f005         ]    [a]
+  [f001    |f003      |f002                      |f005         ]    [a]
+  [f001    |f003      |f002                      |f005         ]    [a]
+  [f001    |f003      |f002                      |f005         ]    [a]
+
+}
+
+tables
+recshordhead
+recshorddetl
+
+attributes
+f001 = recshordhead.order_num, noentry;
+f003 = recshordhead.line_num, noentry;
+f002 = recshordhead.part_code, noentry;
+f005 = recshordhead.order_qty, upshift,
+comments = "enter amended quantity for order";
+a = formonly.status_ind, upshift,
+comments = "D = Delete Order;  A = Activate Order " ;
+
+instructions
+delimiters "  "
+
+screen record sr_recorder[10] (recshordhead.order_num,
+                               recshordhead.line_num,
+                               recshordhead.part_code,
+                               recshordhead.order_qty,
+                               formonly.status_ind)
+

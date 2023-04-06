@@ -1,0 +1,70 @@
+{
+###########################################################################
+# This program is free software; you can redistribute it and/or modify it
+# under the terms of the GNU General Public License as published by the
+# Free Software Foundation; either version 2 of the License, or (at your
+# option) any later version.
+#
+# This program is distributed in the hope that it will be useful, but
+# WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+# General Public License for more details.
+#
+# You should have received a copy of the GNU General Public License along
+# with this program; if not, write to the Free Software Foundation, Inc.,
+# 59 Temple Place, Suite 330, Boston, MA 02111-1307 USA
+#
+###########################################################################
+
+	 $Id: M133.per,v 1.1 2003/05/20 23:53:06 tpavlek Exp $
+}
+
+
+database kandoodb
+
+screen
+{
+                     Shop Order Configuration Details                M133
+\g--------------------------------------------------------------------------\g
+ Generic Product   :[f001           ][f002                          ]
+ Feature or Option :[a]  Option Qty :[f003]   Required Qty :[f004        ]
+\g--------------------------------------------------------------------------\g
+        Quantity     Product            Description
+\g--------------------------------------------------------------------------\g
+   [f005        ]   [f006           ]  [f007                          ]
+   [f005        ]   [f006           ]  [f007                          ]
+   [f005        ]   [f006           ]  [f007                          ]
+   [f005        ]   [f006           ]  [f007                          ]
+   [f005        ]   [f006           ]  [f007                          ]
+   [f005        ]   [f006           ]  [f007                          ]
+   [f005        ]   [f006           ]  [f007                          ]
+   [f005        ]   [f006           ]  [f007                          ]
+   [f005        ]   [f006           ]  [f007                          ]
+   [f005        ]   [f006           ]  [f007                          ]
+   [f005        ]   [f006           ]  [f007                          ]
+
+}
+
+tables
+product
+configuration
+shoporddetl
+bor
+
+attributes
+f001 = shoporddetl.part_code;
+f002 = formonly.desc_text type char;
+a    = configuration.config_ind;
+f003 = configuration.option_num;
+f004 = bor.required_qty;
+f005 = shoporddetl.required_qty, comments =
+" Quantity of this product required for the shop order";
+f006 = configuration.specific_part_code, noentry;
+f007 = product.desc_text, noentry;
+
+instructions
+delimiters "  "
+
+screen record sr_so_config[11] (shoporddetl.required_qty,
+                                specific_part_code,
+                                product.desc_text)

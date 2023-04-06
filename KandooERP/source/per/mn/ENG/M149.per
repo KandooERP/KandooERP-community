@@ -1,0 +1,62 @@
+{
+###########################################################################
+# This program is free software; you can redistribute it and/or modify it
+# under the terms of the GNU General Public License as published by the
+# Free Software Foundation; either version 2 of the License, or (at your
+# option) any later version.
+#
+# This program is distributed in the hope that it will be useful, but
+# WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+# General Public License for more details.
+#
+# You should have received a copy of the GNU General Public License along
+# with this program; if not, write to the Free Software Foundation, Inc.,
+# 59 Temple Place, Suite 330, Boston, MA 02111-1307 USA
+#
+###########################################################################
+
+	 $Id: M149.per,v 1.1 2003/05/20 23:53:06 tpavlek Exp $
+}
+
+
+database kandoodb
+
+screen
+{
+                           Order Generation                            M149
+\g----------------------------------------------------------------------------\g
+   Plan     Product         Start      Due            Suggested 
+   Number                   Date       Date           Order       
+\g----------------------------------------------------------------------------\g
+  [f001    |f002           |f003      |f004      ][f005         ]  
+  [f001    |f002           |f003      |f004      ][f005         ] 
+  [f001    |f002           |f003      |f004      ][f005         ]
+  [f001    |f002           |f003      |f004      ][f005         ]    
+  [f001    |f002           |f003      |f004      ][f005         ]   
+  [f001    |f002           |f003      |f004      ][f005         ]  
+  [f001    |f002           |f003      |f004      ][f005         ] 
+  [f001    |f002           |f003      |f004      ][f005         ]
+  [f001    |f002           |f003      |f004      ][f005         ]   
+  [f001    |f002           |f003      |f004      ][f005         ]  
+
+}
+
+tables
+mpsdemand
+
+attributes
+f001 = mpsdemand.plan_code, noentry;
+f002 = mpsdemand.part_code, noentry;
+f003 = mpsdemand.start_date, noentry;
+f004 = mpsdemand.due_date, noentry;
+f005 = mpsdemand.required_qty, noentry;
+
+instructions
+delimiters "  "
+
+screen record sr_recorder[10] (mpsdemand.plan_code,
+                               mpsdemand.part_code,
+					           mpsdemand.start_date,
+                               mpsdemand.due_date,
+                               mpsdemand.required_qty)

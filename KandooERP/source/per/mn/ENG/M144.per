@@ -1,0 +1,79 @@
+{
+###########################################################################
+# This program is free software; you can redistribute it and/or modify it
+# under the terms of the GNU General Public License as published by the
+# Free Software Foundation; either version 2 of the License, or (at your
+# option) any later version.
+#
+# This program is distributed in the hope that it will be useful, but
+# WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+# General Public License for more details.
+#
+# You should have received a copy of the GNU General Public License along
+# with this program; if not, write to the Free Software Foundation, Inc.,
+# 59 Temple Place, Suite 330, Boston, MA 02111-1307 USA
+#
+###########################################################################
+
+	 $Id: M144.per,v 1.2 2003/11/19 22:23:00 afalout Exp $
+}
+
+database kandoodb
+
+screen
+{
+                  Master Production Schedule Updates                M144   
+\g-------------------------------------------------------------------------\g
+
+ MPS Plan Number    [f000           ]
+ MRP Schedule       [f001           ]
+ Description        [f002                          ]
+ End Date           [f003      ]
+
+ Use Orders or Forecasts within Demand Time Fence (O/F) [a]
+ Include Scrap and Yield %                              [b]
+ Include quotes with probability factor greater than    [f3     ]
+ Product Group                                          [c  ]
+ Product Category                                       [d  ]
+ Product Class                                          [e       ]
+
+ When to Run: Month [f4]   Day   [f5]
+              Hour  [f6]   Minute[f7]
+
+}
+
+tables
+mps
+mrp
+
+attributes
+f000 = formonly.schedule_code, upshift,
+comments = " A code used to uniquely identify the MPS schedule";
+f001 = formonly.plan_code, upshift,
+comments = " A code used to uniquely identify the MRP Schedule";
+f002 = mps.desc_text, comments = " A description for this schedule";
+f003 = formonly.end_date type date, format = "dd/mm/yyyy",
+comments = " The date to stop the schedule at";
+a = formonly.fence_ind type char, upshift, include = ("O","F"),
+comments = " Include Orders or Forecasts within Time Fence";
+b = formonly.scrap_ind type char, upshift, include = ("S","Y","B","N"),
+comments = " S=Scrap, Y=Yield, B=Both, N=None";
+f3  = formonly.factor_ind type smallint;
+c = formonly.prodgrp_code,upshift,comments =
+" Enter product group code - (W)";
+d = formonly.cat_code,upshift,comments =
+" Enter category code - (W)";
+e = formonly.class_code,upshift,comments =
+" Enter inventory class code - (W)";
+f4  = formonly.date_month type smallint,
+comments = " The month when this is to be run";
+f5  = formonly.date_date type smallint,
+comments = " The day when this is to be run";
+f6  = formonly.time_hour type smallint,
+comments = " The hour when this is to be run";
+f7  = formonly.time_minute type smallint,
+comments = " The minute when this is to be run";
+
+instructions
+delimiters "  "

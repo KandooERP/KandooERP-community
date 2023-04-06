@@ -1,0 +1,165 @@
+A2S_FRA {
+% { "%" }
+(L)ist Price (S)tandard Cost (W)eighted Cost (A)ctual Cost (F)oreign Cost { "(L)Prix liste (S)Coût standard (W)Coût pondéré (A)Coût réel (F)Coût en devises)" }
+- Reserved for Sale { "- Reserved for Sale" }
+A Valid Code for this part of the chart { "Un code valid pour cette partie du numéro de compte" }
+A second line for customer address { "2ème ligne d'adresse client" }
+ABC Code { "N° SIREN" }
+ACCEPT { "VALIDER" }
+Account { "Compte" }
+Account Verifier { "Vérificateur de compte" }
+Account code to identify this account { "Numéro de compte identifiant ce client" }
+Addr { "Adresse" }
+Address { "Adresse" }
+Amounts { "Montants" }
+Back Order { "Commande en cours" }
+Balance { "Solde" }
+Bin Location { "Emplacement du bac" }
+Chart of Accounts { "Plan Comptable" }
+City { "Ville" }
+Code { "Code" }
+Code representing the Country of this Customer { "Code pays de ce client" }
+Comments { "Commentaires" }
+Contact { "Contact" }
+Corporate { "Entreprise" }
+Cost { "Coût" }
+Country { "Pays" }
+Critical { "Critique" }
+Currency { "Devise" }
+Current { "Actuel" }
+Customer { "Client" }
+Customer Code { "Code Client" }
+Customer Details { "Détails client" }
+Customer Name { "Nom du client" }
+Customer Scan { "Exploration client" }
+Customer Type { "Type de Client" }
+Customer type code { "Code type de client" }
+Date { "Date" }
+Dates { "Dates" }
+Desc { "Description" }
+Description { "Description" }
+Description 2 { "Description 2" }
+Description of the product { "Description du produit" }
+Description of this product { "Description de ce produit" }
+Enter a Unique Transaction Number { "Saisir un numéro unique de transaction" }
+Entry Person { "Personne ayant saisi l'info" }
+Exchange Rate { "Taux de Change" }
+FILTER { "Premier" }
+Field Description { "Description du champ" }
+File Name { "Nom de fichier" }
+Flex Codes { "Flex Codes" }
+Freight { "Fret" }
+Full Name or description of customer { "Nom complet ou description du client" }
+Full name or description of warehouse location { "Nom complet ou description de l'emplacement de l'entrepôt" }
+Group Code { "Code Groupe" }
+Handling { "Manutention" }
+ID { "ID" }
+Indicates the date of the product transaction (activity) { "Indique la date de la transaction du produit (activité)" }
+Inventory Class { "Classe d'inventaire" }
+Invoice Date { "Date de facturation" }
+Invoice No { "N° de facture" }
+LOOKUP { "RECHERCHER" }
+Label or description of Tax Code { "Étiquette ou description du code taxe" }
+Label or description of this tax code { "Étiquette ou description de ce code taxe" }
+Language Code { "Code langue" }
+Length { "Longueur" }
+Length of the Code { "Longueur Numéro de compte" }
+Line { "Ligne" }
+Line Total { "Total Ligne" }
+Line or total { "Ligne ou total" }
+List Price { "Prix Liste" }
+Maximum { "Maximum" }
+NOTES { "NOTES" }
+Name { "Nom" }
+Name of accounts contact person for the customer { "Nom de la personne de contact pour le compte du client" }
+No { "Non" }
+Note Code { "Note Code" }
+Notes { "Notes" }
+Number { "Numéro" }
+OEM { "OEM" }
+OEM Code { "Code OEM" }
+Order { "Commande" }
+Order Date { "Date de Commande" }
+Order Number { "Numéro de commande" }
+Other { "Autre" }
+Other Info { "Autres informations" }
+PO Code { "Code Bon de commande" }
+Period { "Période" }
+Period Number { "Numéro de Période" }
+Person { "Personne" }
+Possible Discount { "Remise possible" }
+Postal code of customer { "Code postal du client" }
+Price { "Price" }
+Price Level { "Niveau de prix" }
+Price used for the customer: C)ost, L)ist or 1-9 Price Level { "Prix utilisé pour le client: C) Coût, L) Liste ou 1-9 Niveau de prix" }
+Product { "Produit" }
+Product Category { "Catégorie Produit" }
+Product Code { "Code Produit" }
+Product Scan { "Exploration de produits" }
+Prompt { "Invite" }
+Purchasing { "Achat" }
+Qty { "Qté" }
+Quantity { "Quantité" }
+REFRESH { "ACTUALISER" }
+Receipt Date { "Date de réception" }
+Reserved { "Réservé" }
+Revision { "Révision" }
+Sales { "Ventes" }
+Sales Tax { "Taxe de vente" }
+Salesperson { "Vendeur" }
+Salesperson resonsible for the customer { "Nom du commercial responsable pour ce client" }
+Second line of description of the product { "Deuxième ligne de description du produit" }
+Serial Number { "Numéro de série" }
+Serial number { "Numéro de Série" }
+Source { "Source" }
+Start Pos. { "Positions Départ" }
+Start position of the Code { "Position de départ du code" }
+State { "Etat" }
+State/Province { "Région" }
+Status { "Statut" }
+Stocked Item { "Article stocké" }
+Stocking { "Stockage" }
+Target { "Cible" }
+Tariff Code { "Code tarifaire" }
+Tax { "T.V.A." }
+Tax Code { "Code T.V.A." }
+Tax code applicable to the customer { "Code T.V.A applicable à ce client" }
+Telephone { "Telephone" }
+Term Code { "Code Conditions" }
+The Description of the Account { "Description du compte" }
+The Product Code assigned to the product { "le code attribué à ce produit" }
+The Product Code from inventory { "Le code produit de l'inventaire" }
+The Product Code from inventory (W) { "Code produit de l'inventaire (W)" }
+The Product code to begin this inquiry (W) { "Le code de produit pour commencer cette enquête (W)" }
+The address of the customer { "L'adresse du client" }
+The code given by the original equipment manufacturer (OEM) { "Le code donné par le fabricant de l'équipement d'origine (OEM)." }
+The customer city { "La ville du client" }
+The customer code of the corporate debtor the customer is attached to { "Le code client de la société débitrice à laquelle le client est rattaché." }
+The description for this code { "L'intitulé de ce code" }
+The expected date to release this quantity to stock { "Date prévue pour que cette quantité soit stockée" }
+The reference number { "Numéro de référence" }
+The telephone number of the customer { "Numéro de téléphone du client" }
+The valid flex segment { "Le segment Flex valide" }
+The warehouse code for this product activity (W) { "Le code entrepôt pour cette activité de produit (W)" }
+Title { "Titre" }
+Title of this field in the GL { "Titre de ce champ en Compta géné" }
+Total { "Total" }
+Total Amount { "Montant Total" }
+Total Cost { "Coût total" }
+Totals { "Totaux" }
+Trading terms applicable to the customer { "Conditions de paiement applicables à ce client" }
+Transaction Number Entry { "Saisie du numéro de transaction" }
+Type { "Type" }
+Unit Cost { "Coût unitaire" }
+Unit Price { "Prix Unitaire" }
+Unit of Measure { "Unité de mesure" }
+Usual Vendor { "Fournisseur habituel" }
+Value added tax registration number { "Code T.V.A. intracommunautaire" }
+Vat Reg No { "N° T.V.A. intracommunautaire" }
+Vendor Code { "Code Fournisseur" }
+Warehouse { "Dépôt" }
+Warehouse Code { "Code Dépôt" }
+Year { "Année" }
+Year Number { "Numéro d'Année" }
+actToolbarManager { "actToolbarManager" }
+}

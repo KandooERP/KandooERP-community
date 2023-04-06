@@ -1,0 +1,29 @@
+ISM_FRA {
+0-Immediate Transfer, 1-Confirm & Receipt, 2-Schedule Confirm and Receipt { "0-Transfert immédiat, 1-Confirmation et réception, 2-Planifier Confirmation et réception" }
+ACCEPT { "VALIDER" }
+Date { "Date" }
+Desc { "Description" }
+Description { "Description" }
+Dest Warehouse { "Entrepôt Destination" }
+ID { "ID" }
+Language Code { "Code langue" }
+Length { "Longueur" }
+Name { "Nom" }
+Password { "Mot de passe" }
+Period { "Période" }
+Source Warehouse { "Entrepôt source" }
+Status { "Statut" }
+Status: (U) Undeliv'd, (P) Partially Deliv'd, (C) Complete, (R) Cancelled { "Statut : (U) Non livré, (P) Partiellement livré, (C) Totalement Livré, (R) Annulé" }
+The date of the transfer { "La date du transfert" }
+The destination location of the transfer { "Le lieu de destination du transfert" }
+The financial period { "La période fiscale" }
+The financial year { "L'année fiscale" }
+The source warehouse of the transfer { "L'entrepôt source du transfert" }
+The system generated transfer number { "Le numéro de transfert généré par le système" }
+The transfer description { "Description du transfert" }
+Transfer Date { "Date de transfert" }
+Transfer Indicator { "Indicateur de transfert" }
+Transfer Number { "Numéro de transfert" }
+Year { "Année" }
+actToolbarManager { "actToolbarManager" }
+}

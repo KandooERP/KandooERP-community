@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form xmlns="http://namespaces.querix.com/2015/fglForms">
+	<form.rootContainer>
+		<GridPanel classNames="fcls_rootContainer" verticalAlignment="Center" horizontalAlignment="Center" fieldTable="" identifier="rootContainer">
+			<GridPanel.gridRowDefinitions>
+				<GridRowDefinition gridLengthValue=""/>
+				<GridRowDefinition gridLengthValue=""/>
+				<GridRowDefinition gridLengthValue=""/>
+			</GridPanel.gridRowDefinitions>
+			<GridPanel.gridColumnDefinitions>
+				<GridColumnDefinition gridLengthValue="100%"/>
+			</GridPanel.gridColumnDefinitions>
+			<GridPanel classNames="fcls_title_cnt" visible="true" verticalAlignment="Top" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="cntTitle">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="100%"/>
+					<GridColumnDefinition gridLengthValue=""/>
+				</GridPanel.gridColumnDefinitions>
+				<Label isDynamic="true" text="AS - Special Processes Sub-system" classNames="fcls_title_lb" visible="true" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="header_text"/>
+				<Label isDynamic="true" text="AR" classNames="fcls_title_lb" visible="true" gridItemLocation="1,0,1,1" fieldTable="" identifier="lbFormName"/>
+			</GridPanel>
+			<GridPanel classNames="fcls_detail_cnt,fcls_data_cnt,fcls_align_left" visible="true" verticalAlignment="Top" horizontalAlignment="Left" gridItemLocation="0,1,1,1" fieldTable="formonly" identifier="cntDetail1">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue="100%"/>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue=""/>
+				</GridPanel.gridColumnDefinitions>
+				<ListBox minSize="400,400" visible="true" verticalAlignment="Stretch" horizontalAlignment="Stretch" gridItemLocation="0,0,1,1" fieldTable="" identifier="list_menuchoice">
+
+					<ListBoxItem text="Invoice Print (AS1)" identifier="menuChoice_AS1">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="AS1"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					<ListBoxItem text="Account Aging (AS5)" identifier="menuChoice_AS5">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="AS5"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					<ListBoxItem text="Print Statements (AS6)" identifier="menuChoice_AS6">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="AS6"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					<ListBoxItem text="Post Period Activity (AS7)" identifier="menuChoice_AS7">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="AS7"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					<ListBoxItem text="Charge Interest and Service Fee (AS8)" identifier="menuChoice_AS8">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="AS8"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					
+					<ListBoxItem text="Generate Mailing Labels (ASA)" identifier="menuChoice_ASA">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="ASA"/>
+						</ListBoxItem.value>
+					</ListBoxItem>					
+
+					
+					<ListBoxItem text="Generate Mailing Labels (ASA_C)" identifier="menuChoice_ASA_C">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="ASA_C"/>
+						</ListBoxItem.value>
+					</ListBoxItem>					
+					
+					<ListBoxItem text="Generate Mailing Labels (ASAa)" identifier="menuChoice_ASAa">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="ASAa"/>
+						</ListBoxItem.value>
+					</ListBoxItem>				
+					
+					<ListBoxItem text="Mailing Labels - The Principal (ASB)" identifier="menuChoice_ASB">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="ASB"/>
+						</ListBoxItem.value>
+					</ListBoxItem>						
+
+					<ListBoxItem text="Load Customer List with Report (ASD_J)" identifier="menuChoice_ASD_J">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="ASD_J"/>
+						</ListBoxItem.value>
+					</ListBoxItem>			
+
+					<ListBoxItem text="Transation Report (ASI_J)" identifier="menuChoice_ASI_J">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="ASI_J"/>
+						</ListBoxItem.value>
+					</ListBoxItem>											
+
+					<ListBoxItem text="Transaction Load (ASL)" identifier="menuChoice_ASL">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="ASL"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+								
+					<ListBoxItem text="???????????????? (ASD_J)" identifier="menuChoice_ASD_J">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="ASD_J"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+
+					<ListBoxItem text="?????????????? (ASI_J)" identifier="menuChoice_ASI_J">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="ASI_J"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					
+					<ListBoxItem text="Transaction Purge by Fiscal Year (ASU)" identifier="menuChoice_ASU">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="ASU"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+
+					<ListBoxItem text="???????????????????? (ASV)" identifier="menuChoice_ASV">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="ASV"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+															
+					<ListBoxItem text="???????????????????? (ASV_J)" identifier="menuChoice_ASV_J">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="ASV_J"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					
+					<ListBoxItem text="Transaction Purge by Fiscal Year (ASW)" identifier="menuChoice_ASW">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="ASW"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+																									
+					
+					<ListBoxItem text="???????????????????? (ASY_J)" identifier="menuChoice_ASY_J">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="ASY_J"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+																									
+
+					<ListBoxItem text="???????????????????? (ASZ_J)" identifier="menuChoice_ASZ_J">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="ASZ_J"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+
+					<ListBox.onMouseDoubleClick>
+						<ActionEventHandler actionName="DoubleClickItem"/>
+					</ListBox.onMouseDoubleClick>
+				</ListBox>
+				<StackPanel visible="true" horizontalAlignment="Right" gridItemLocation="0,1,1,1" fieldTable="" identifier="c2">
+					<TextField classNames="fcls_data_widget,fcls_align_left,fcls_length_05qch" visible="true" fieldTable="" identifier="tf_menuchoice"/>
+					<Button text="Cancel" classNames="fcls_button_2" visible="true" fieldTable="" identifier="btCancel">
+						<Button.onInvoke>
+							<ActionEventHandler actionName="CANCEL"/>
+						</Button.onInvoke>
+					</Button>
+					<Button text="OK" classNames="fcls_button_2" visible="true" fieldTable="" identifier="btAccept">
+						<Button.onInvoke>
+							<ActionEventHandler actionName="ACCEPT"/>
+						</Button.onInvoke>
+					</Button>
+					<Button text="Help" classNames="fcls_button_2" visible="true" fieldTable="" identifier="btHelp">
+						<Button.onInvoke>
+							<ActionEventHandler actionName="WEB-HELP"/>
+						</Button.onInvoke>
+					</Button>
+				</StackPanel>
+			</GridPanel>
+			<GridPanel classNames="fcls_statusbar_cnt" visible="true" verticalAlignment="Bottom" gridItemLocation="0,2,1,1" fieldTable="formonly" identifier="cntStatusBar">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="100%"/>
+				</GridPanel.gridColumnDefinitions>
+				<Label isDynamic="true" text="" classNames="fcls_sblabel" visible="true" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="lbInfo1"/>
+				<Label isDynamic="true" text="" classNames="fcls_sblabel" visible="true" gridItemLocation="0,1,1,1" fieldTable="formonly" identifier="lbInfo2"/>
+			</GridPanel>
+		</GridPanel>
+	</form.rootContainer>
+	<form.screenRecords>
+		<ScreenRecord identifier="FORMONLY" fields="menuChoice,inpMenuChoice"/>
+	</form.screenRecords>
+</form>
+

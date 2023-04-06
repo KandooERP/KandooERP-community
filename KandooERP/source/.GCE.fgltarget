@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<fglBuildTarget xmlns="http://namespaces.querix.com/lyciaide/target" name="GCE" type="fgl-program">
+
+  <libraries>
+    <library name="lib_common_invwind" dynamic="false" location=""/>
+    <library name="lib_common_wind" dynamic="false" location=""/>
+    <library name="lib_tool_A_AR_db" dynamic="false" location=""/>
+    <library name="lib_tool_A_AR_new" dynamic="false" location=""/>
+    <library name="lib_tool_E_EO_db" dynamic="false" location=""/>
+    <library name="lib_tool_E_EO_new" dynamic="false" location=""/>
+    <library name="lib_tool_G_GL_db" dynamic="false" location=""/>
+    <library name="lib_tool_G_GL_new" dynamic="false" location=""/>
+    <library name="lib_tool_J_JM_new" dynamic="false" location=""/>
+    <library name="lib_tool_P_AP_new" dynamic="false" location=""/>
+    <library name="lib_tool_R_PU_new" dynamic="false" location=""/>
+    <library name="lib_tool_U_UT_new" dynamic="false" location=""/>
+    <library name="lib_tool_W_WO_new" dynamic="false" location=""/>
+    <library name="lib_tool_common" dynamic="false" location=""/>
+    <library name="lib_tool_db_common" dynamic="false" location=""/>
+  </libraries>
+
+  <sources type="fgl">
+    <file location="4gl/common/discfunc.4gl"/>
+    <file location="4gl/common/conv_rate.4gl"/>
+    <file location="4gl/common/acctwind.4gl"/>
+    <file location="4gl/common/cancpfunc.4gl"/>
+    <file location="4gl/common/ckhdwind.4gl"/>
+    <file location="4gl/gl/GCEg.4gl"/>
+    <file location="4gl/common/orstfunc.4gl"/>
+    <file location="4gl/common/ckapwind.4gl"/>
+    <file location="4gl/common/duedate.4gl"/>
+    <file location="4gl/common/vodiwind.4gl"/>
+    <file location="4gl/gl/GCEb.4gl"/>
+    <file location="4gl/common/dmdiwind.4gl"/>
+    <file location="4gl/common/notefunc.4gl"/>
+    <file location="4gl/gl/G_GL_GLOBALS.4gl"/>
+    <file location="4gl/common/orhdwind.4gl"/>
+    <file location="4gl/gl/GCEa.4gl"/>
+    <file location="4gl/common/glob_GLOBALS.4gl"/>
+    <file location="4gl/common/glob_GLOBALS_userDataTypes.4gl"/>
+    <file location="4gl/gl/GCE.4gl"/>
+    <file location="4gl/common/psepwind.4gl"/>
+    <file location="4gl/common/vopawind.4gl"/>
+    <file location="4gl/common/note_disp.4gl"/>
+    <file location="4gl/ap/P_AP_P4_GLOBALS.4gl"/>
+    <file location="4gl/gl/GCE_GLOBALS.4gl"/>
+    <file location="4gl/common/bankwind.4gl"/>
+    <file location="4gl/common/numericfunc.4gl"/>
+    <file location="4gl/common/dispgpfunc.4gl"/>
+    <file location="4gl/gl/GCEc.4gl"/>
+    <file location="4gl/common/vperfunc.4gl"/>
+    <file location="4gl/common/poauwind.4gl"/>
+    <file location="4gl/common/payunapp.4gl"/>
+    <file location="4gl/common/vospwind.4gl"/>
+    <file location="4gl/gl/GC_GROUP_GLOBALS.4gl"/>
+    <file location="4gl/lib_tool_db/lib_tool_db_arparms.4gl"/>
+    <file location="4gl/common/glob_GLOBALS_constant.4gl"/>
+    <file location="4gl/common/currwind.4gl"/>
+    <file location="4gl/common/wtaxwind.4gl"/>
+    <file location="4gl/common/dmhdwind.4gl"/>
+    <file location="4gl/common/contrafunc.4gl"/>
+    <file location="4gl/gl/GCEe.4gl"/>
+    <file location="4gl/common/tablefunc.4gl"/>
+    <file location="4gl/ap/PP1a.4gl"/>
+    <file location="4gl/common/pohiwind.4gl"/>
+    <file location="4gl/common/trans_num.4gl"/>
+    <file location="4gl/common/orddfunc.4gl"/>
+    <file location="4gl/ap/P_AP_GLOBALS.4gl"/>
+    <file location="4gl/gl/GCEd.4gl"/>
+    <file location="4gl/common/vohdwind.4gl"/>
+    <file location="4gl/common/postwind.4gl"/>
+    <file location="4gl/ap/P41f.4gl"/>
+  </sources>
+
+  <sources type="form">
+    <file location="per/utility/ENG/U156.fm2"/>
+    <file location="per/eo/ENG/E400.fm2"/>
+    <file location="per/pu/ENG/R140.fm2"/>
+    <file location="per/jm/ENG/J147.fm2"/>
+    <file location="per/gl/ENG/G409.fm2"/>
+    <file location="per/gl/ENG/G410.fm2"/>
+    <file location="per/eo/ENG/E408.fm2"/>
+    <file location="per/ap/ENG/P112.fm2"/>
+    <file location="per/ar/ENG/A145.fm2"/>
+    <file location="per/ar/ENG/A121.fm2"/>
+    <file location="per/gl/ENG/G404.fm2"/>
+    <file location="per/gl/ENG/G418.fm2"/>
+    <file location="per/gl/ENG/G517.fm2"/>
+    <file location="per/ar/ENG/A204.fm2"/>
+    <file location="per/ap/ENG/P169.fm2"/>
+    <file location="per/ap/ENG/P170.fm2"/>
+    <file location="per/gl/ENG/G413.fm2"/>
+    <file location="per/gl/ENG/G415.fm2"/>
+    <file location="per/ar/ENG/A144.fm2"/>
+    <file location="per/gl/ENG/G403.fm2"/>
+    <file location="per/gl/ENG/G123.fm2"/>
+    <file location="per/pu/ENG/R105.fm2"/>
+    <file location="per/eo/ENG/E426.fm2"/>
+    <file location="per/ar/ENG/A104.fm2"/>
+    <file location="per/gl/ENG/G144.fm2"/>
+    <file location="per/ar/ENG/A203.fm2"/>
+    <file location="per/ap/ENG/P515.fm2"/>
+    <file location="per/ap/ENG/P138.fm2"/>
+    <file location="per/eo/ENG/E445.fm2"/>
+    <file location="per/gl/ENG/G401.fm2"/>
+    <file location="per/eo/ENG/E419.fm2"/>
+    <file location="per/gl/ENG/G449.fm2"/>
+    <file location="per/gl/ENG/G405.fm2"/>
+    <file location="per/ar/ENG/A134.fm2"/>
+    <file location="per/utility/ENG/U136.fm2"/>
+    <file location="per/gl/ENG/G417.fm2"/>
+    <file location="per/ap/ENG/P132.fm2"/>
+    <file location="per/gl/ENG/G129.fm2"/>
+    <file location="per/ap/ENG/P120.fm2"/>
+    <file location="per/ar/ENG/A118.fm2"/>
+    <file location="per/pu/ENG/R144.fm2"/>
+    <file location="per/gl/ENG/G402.fm2"/>
+    <file location="per/gl/ENG/G414.fm2"/>
+    <file location="per/ap/ENG/P175.fm2"/>
+    <file location="per/gl/ENG/G537.fm2"/>
+    <file location="per/utility/ENG/U526.fm2"/>
+    <file location="per/gl/ENG/G408.fm2"/>
+    <file location="per/ar/ENG/A139.fm2"/>
+    <file location="per/gl/ENG/G135.fm2"/>
+    <file location="per/gl/ENG/G147.fm2"/>
+    <file location="per/utility/ENG/U122.fm2"/>
+    <file location="per/gl/ENG/G419.fm2"/>
+    <file location="per/ar/ENG/A148.fm2"/>
+    <file location="per/gl/ENG/G412.fm2"/>
+    <file location="per/gl/ENG/G132.fm2"/>
+    <file location="per/pu/ENG/R146.fm2"/>
+    <file location="per/utility/ENG/U162.fm2"/>
+    <file location="per/gl/ENG/G411.fm2"/>
+    <file location="per/jm/ENG/J148.fm2"/>
+    <file location="per/ar/ENG/A152.fm2"/>
+  </sources>
+
+  <mediaFiles>
+    <file client="true" location="GCE.qxtheme" type="gui-theme-file"/>
+    <file client="true" location="GCE.css" type="other"/>
+  </mediaFiles>
+
+</fglBuildTarget>

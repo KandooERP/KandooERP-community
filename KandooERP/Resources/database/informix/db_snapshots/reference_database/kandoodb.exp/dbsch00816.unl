@@ -1,0 +1,50 @@
+20200321-vendornote-alttbl|informix|this script makes changes in vendornote (more modern schema)|alttbl|none|vendornote|21/03/2020||2020-03-27 19:11:49|OK|kandoodb|
+20200321.001-invrates-createfkconstraint|informix|this script creates a foreign key constraint from invrates to invoicedetl|createfkconstra|none|invrates|21/03/2020||2020-03-29 13:23:06|OK|kandoodb|
+20200321.002-invstory-createfkconstraint|informix|this script creates a foreign key constraint from invstory to invoicehead|createfkconstra|none|invstory|21/03/2020||2020-03-29 13:23:06|OK|kandoodb|
+20200321.003-invheadext-createfkconstraint|informix|this script creates a foreign key constraint from invheadext to invoicehead|createfkconstra|none|invheadext|21/03/2020||2020-03-29 13:23:06|OK|kandoodb|
+20200321.004-invinst-createfkconstraint|informix|this script creates a foreign key constraint from postinvhead to invoicehead|createfkconstra|none|postinvhead|21/03/2020||2020-03-29 17:01:49|OK|kandoodb|
+20200321.005-postinvhead-createfkconstraint|informix|this script creates a foreign key constraint from invinst to invoicehead|createfkconstra|none|invinst|21/03/2020||2020-03-29 17:01:49|OK|kandoodb|
+20200321.006-postinvoice-createfkconstraint|informix|this script creates a foreign key constraint from postinvoice to invoicehead|createfkconstra|none|postinvoice|21/03/2020||2020-03-29 17:01:50|OK|kandoodb|
+20200321.007-tentinvhead-createfkconstraint|informix|this script creates a foreign key constraint from tentinvhead to invoicehead|createfkconstra|none|tentinvhead|21/03/2020||2020-03-29 17:01:50|OK|kandoodb|
+20200321.008-tentinvdetl-createfkconstraint|informix|this script creates a foreign key constraint from tentinvdetl to invoicehead|createfkconstra|none|tentinvdetl|21/03/2020||2020-03-29 17:01:50|OK|kandoodb|
+20200316-vendorinvs-modifpkconstraint|informix|this script creates a primary key constraint from a unique index|modifpkconstrai|none|vendorinvs|16/03/2020||2020-03-24 19:19:03|OK|kandoodb|
+20200317.001-mobile_email-alttbl|informix|this script add the fields mobile_phone and email to relevant tables|alttbl|20200317.000-mobile_email-alttbl|cfwdaudit,company,customer,customeraudit,customership,delivhead,invoicehead,jmj_impresttran,labourer,location,mtopvmst,ordcallfwd,orderaudit,orderhead,ordhead,ordquote,ordquotext,poscacust,postinvhead,postranhead,purchhead,quotehead,salesperson,subhead|17/03/2020|||WAD|kandoodb|
+20200317.002-mobile_email-alttbl|informix|this script add the fields mobile_phone and email to relevant tables|alttbl|20200317.000-mobile_email-alttbl|supervisor,tentinvhead,tentsubhead,vendor,vendoraudit,warehouse|17/03/2020|||WAD|kandoodb|
+20200320-abn_text_to_vat_text-alttbl|informix|this script renames the field abn_text to vat_text (V.A.T) and extends to nchar(|alttbl|20200319-abn_text-dependencies|company,customeraudit,customer,vendoraudit,vendor|20/03/2020|||WAD|kandoodb|
+20200322.000-language-datload|informix|this script reloads the language table with some additional details|datload|none|language|22/03/2020||2020-04-05 17:49:54|OK|kandoodb|
+20200322.001-kandoouser-createfkconstraint|informix|this script creates a foreign key constraint from kandoouser to language|createfkconstra|none|kandoouser|22/03/2020||2020-04-05 17:49:54|OK|kandoodb|
+20200325.002-ipparms-createpkconstraint|informix|this script create primary key for ipparms table|createpkconstra|none|ipparms|25/03/2020||2020-04-05 17:05:25|OK|kandoodb|
+20200325.003-jmparms-createpkconstraint|informix|this script create primary key for jmparms table|createpkconstra|none|jmparms|25/03/2020||2020-04-05 17:05:25|OK|kandoodb|
+20200325.004-mnparms-createpkconstraint|informix|this script create primary key for mnparms table|createpkconstra|none|mnparms|25/03/2020||2020-04-05 17:05:26|OK|kandoodb|
+20200325.005-opparms-createpkconstraint|informix|this script create primary key for opparms table|createpkconstra|none|opparms|25/03/2020||2020-04-05 17:05:26|OK|kandoodb|
+20200325.006-payparms-createpkconstraint|informix|this script create primary key for payparms table|createpkconstra|none|payparms|25/03/2020||2020-04-05 17:05:26|OK|kandoodb|
+20200325.007-puparms-createpkconstraint|informix|this script create primary key for puparms table|createpkconstra|none|puparms|25/03/2020||2020-04-05 17:05:26|OK|kandoodb|
+20200325.008-ssparms-createpkconstraint|informix|this script create primary key for ssparms table|createpkconstra|none|ssparms|25/03/2020||2020-04-05 17:05:26|OK|kandoodb|
+20200325.009-stnd_parms-createpkconstraint|informix|this script create primary key for stnd_parms table|createpkconstra|none|stnd_parms|25/03/2020||2020-04-05 17:05:27|OK|kandoodb|
+20200325.010-kandoooptions-datload|informix|this script loads additional data to kandoooption|datload|none|kandoooption|25/03/2020||2020-04-05 17:05:27|OK|kandoodb|
+20200402-qxt_toolbar_table-datload|informix|this script handles changes in the ToolBar of GZL programm|datload|none|qxt_toolbar|02/04/2020||2020-04-05 17:05:27|OK|kandoodb|
+20200403-qxt_toolbar_table-datload|informix|this script handles changes in the ToolBar of GZL programm|datload|none|qxt_toolbar|03/04/2020||2020-04-05 17:05:27|OK|kandoodb|
+20200411-company-datload|informix|this script creates the company cmpy_code = 99 Test|datload|none|company|11/04/2020||2020-05-15 19:09:36|OK|kandoodb|
+20200412.001-kandoooption-createfkconstraint|informix|this script creates a foreign key constraint from kandoooption to company|createfkconstra|none|kandoooption|12/04/2020||2020-05-16 11:58:42|OK|kandoodb|
+20200414.001-kandoooptions-datload|informix|this script loads additional data to kandoooption|datload|none|kandoooption|14/04/2020||2020-05-15 19:09:36|OK|kandoodb|
+20200415.002-kandoooptions-datload|informix|this script loads additional data to kandoooption|datload|none|kandoooption|15/04/2020||2020-05-15 19:09:36|OK|kandoodb|
+20200415.003-kandoooptions-datload|informix|this script loads additional data to kandoooption|datload|none|kandoooption|15/04/2020|||KO|kandoodb|
+20200422-qxt_menu_tables-datload|informix|this script handles changes in the menu items|datload|none|qxt_menu_item_txt,qxt_menu_item,qxt_run_arg|22/04/2020||2020-05-15 19:10:18|OK|kandoodb|
+20200423-qxt_menu_tables-datload|informix|this script handles changes in the menu items|datload|none|qxt_menu_item_txt,qxt_menu_item,qxt_run_arg|23/04/2020||2020-05-15 19:10:59|OK|kandoodb|
+20200428-kandooreport-createpkconstraint|informix|this script create primary key for kandooreport table|createpkconstra|none|kandooreport|28/04/2020||2020-05-16 12:31:59|OK|kandoodb|
+20200505-qxt_menu_tables-datload|informix|this script handles changes in the menu items|datload|none|qxt_menu_item_txt,qxt_menu_item,qxt_run_arg|05/05/2020||2020-05-15 19:11:41|OK|kandoodb|
+20200506-qxt_menu_tables-datload|informix|this script handles changes in the menu items|datload|none|qxt_menu_item_txt,qxt_menu_item|06/05/2020||2020-05-15 19:12:22|OK|kandoodb|
+20200507-table_documentation-alttbl|informix|this script add list of Business Modules to table_documentation|alttbl|none|table_documentation|07/05/2020||2020-05-15 19:12:23|OK|kandoodb|
+20200515.001-batchhead-createfkconstraint|informix|this script creates a foreign key constraint from batchhead to company|createfkconstra|none|batchhead|15/05/2020||2020-05-18 15:58:52|OK|kandoodb|
+20200515.002-customer-createfkconstraint|informix|this script creates a foreign key constraint from customer to company|createfkconstra|none|customer|15/05/2020||2020-05-18 16:10:46|OK|kandoodb|
+20200515.003-vendor-createfkconstraint|informix|this script creates a foreign key constraint from vendor to company|createfkconstra|none|vendor|15/05/2020||2020-05-18 16:10:46|OK|kandoodb|
+20200515.004-product-createfkconstraint|informix|this script creates a foreign key constraint from customer to company|createfkconstra|none|customer|15/05/2020||2020-05-18 16:16:29|OK|kandoodb|
+20200515.005-voucher-createfkconstraint|informix|this script creates a foreign key constraint from voucher to vendor|createfkconstra|none|voucher|15/05/2020||2020-05-18 20:36:20|OK|kandoodb|
+20200516.001-kandoooptions-datload|informix|this script loads additional data to kandoooption|datload|none|kandoooption|16/05/2020|||KO|kandoodb|
+20200516.002-kandoooptions-datload|informix|this script loads additional data to kandoooption|datload|none|kandoooption|16/05/2020|||KO|kandoodb|
+20200516.003-kandoooptions-datload|informix|this script loads additional data to kandoooption|datload|none|kandoooption|16/05/2020|||KO|kandoodb|
+20200516.004-kandoooptions-datload|informix|this script loads additional data to kandoooption|datload|none|kandoooption|16/05/2020|||KO|kandoodb|
+20200516.005-kandoooptions-datload|informix|this script loads additional data to kandoooption|datload|none|kandoooption|16/05/2020|||KO|kandoodb|
+20200518.000-notables-crroles|informix|this script creates roles for security|crroles|none|all|18/05/2020|||KO|kandoodb|
+20200518.001-allmodules-grantperm|informix|this script creates roles for security|grantperm|none|all|18/05/2020|||KO|kandoodb|
+20200518.002-allmodules-grantperm|informix|this script creates roles for security|grantperm|none|all|18/05/2020||2020-05-22 15:36:04|OK|kandoodb|

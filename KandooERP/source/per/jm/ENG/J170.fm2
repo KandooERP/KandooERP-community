@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form xmlns="http://namespaces.querix.com/2015/fglForms">
+	<form.rootContainer>
+		<GridPanel classNames="fcls_rootContainer" verticalAlignment="Top" horizontalAlignment="Left" fieldTable="" identifier="rootContainer">
+			<GridPanel.gridRowDefinitions>
+				<GridRowDefinition gridLengthValue=""/>
+				<GridRowDefinition gridLengthValue=""/>
+				<GridRowDefinition gridLengthValue=""/>
+				<GridRowDefinition gridLengthValue=""/>
+				<GridRowDefinition gridLengthValue=""/>
+				<GridRowDefinition gridLengthValue=""/>
+				<GridRowDefinition gridLengthValue=""/>
+			</GridPanel.gridRowDefinitions>
+			<GridPanel.gridColumnDefinitions>
+				<GridColumnDefinition gridLengthValue="100%"/>
+			</GridPanel.gridColumnDefinitions>
+			<GridPanel classNames="fcls_title_cnt" visible="true" verticalAlignment="Top" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="cntTitle">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="100%"/>
+					<GridColumnDefinition gridLengthValue=""/>
+				</GridPanel.gridColumnDefinitions>
+				<Label isDynamic="true" text="Job Summary" classNames="fcls_title_lb" visible="true" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="header_text"/>
+				<Label isDynamic="true" text="J170" classNames="fcls_title_lb" visible="true" gridItemLocation="1,0,1,1" fieldTable="" identifier="lbFormName"/>
+			</GridPanel>
+			<GridPanel classNames="fcls_detail_cnt,fcls_data_cnt" visible="true" verticalAlignment="Top" horizontalAlignment="Left" gridItemLocation="0,1,1,1" fieldTable="formonly" identifier="cntDetail1">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="" gridMinLength="10rem"/>
+					<GridColumnDefinition gridLengthValue=""/>
+					<GridColumnDefinition gridMinLength="10rem"/>
+					<GridColumnDefinition gridLengthValue=""/>
+				</GridPanel.gridColumnDefinitions>
+				<Label isDynamic="true" text="Job Code" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="lb57"/>
+				<TextField toCase="Up" dataType="Char,,,,8" preferredSize="13qch,1qch" toolTip=" The code to identify the job (W)" comment=" The code to identify the job (W)" fieldTable="job" identifier="job_code" gridItemLocation="1,0,1,1" classNames="fcls_data_widget,fcls_length_10qch"/>
+				<Label isDynamic="true" text="Desc" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="2,0,1,1" fieldTable="" identifier="lb137"/>
+				<TextField dataType="Char,,,,30" preferredSize="31qch,1qch" toolTip=" Job Name " comment=" Job Name " fieldTable="job" identifier="title_text" gridItemLocation="3,0,1,1" classNames="fcls_data_widget,fcls_length_30qch"/>
+				<Label isDynamic="true" text="Customer Code" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,1,1,1" fieldTable="" identifier="lb73"/>
+				<TextField toCase="Up" dataType="Char,,,,8" preferredSize="9qch,1qch" toolTip=" The code to identify the customer (W)" comment=" The code to identify the customer (W)" fieldTable="job" identifier="cust_code" gridItemLocation="1,1,1,1" classNames="fcls_data_widget,fcls_length_10qch"/>
+				<Label isDynamic="true" text="Name" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="2,1,1,1" fieldTable="" identifier="lb138"/>
+				<TextField noEntry="true" dataType="Char,,,,30" preferredSize="31qch,1qch" toolTip=" Customer name as set up in Accounts Receivable" comment=" Customer name as set up in Accounts Receivable" fieldTable="customer" identifier="name_text" gridItemLocation="3,1,1,1" classNames="fcls_data_widget,fcls_length_30qch"/>
+				<Label isDynamic="true" text="Salesperson" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,2,1,1" fieldTable="" identifier="lb76"/>
+				<TextField toCase="Up" dataType="Char,,,,8" preferredSize="9qch,1qch" toolTip=" The code to identify the salesperson (W)" comment=" The code to identify the salesperson (W)" fieldTable="job" identifier="sale_code" gridItemLocation="1,2,1,1" classNames="fcls_data_widget,fcls_length_10qch"/>
+				<Label isDynamic="true" text="Name" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="2,2,1,1" fieldTable="" identifier="lb139"/>
+				<TextField noEntry="true" dataType="Char,,,,30" preferredSize="31qch,1qch" fieldTable="salesperson" identifier="name_text" gridItemLocation="3,2,1,1" classNames="fcls_data_widget,fcls_length_30qch"/>
+			</GridPanel>
+			<GroupBox title="Estimated and actual dates" classNames="fcls_detail_gb_cnt" visible="true" verticalAlignment="Stretch" horizontalAlignment="Stretch" gridItemLocation="0,2,1,1" fieldTable="formonly" identifier="cntDetail2GroupBox">
+				<GridPanel classNames="fcls_detail_gb_cnt_sub,fcls_detail_cnt_sub,fcls_data_cnt" visible="true" verticalAlignment="Top" horizontalAlignment="Left" fieldTable="formonly" identifier="cntDetail2Sub">
+					<GridPanel.gridRowDefinitions>
+						<GridRowDefinition gridLengthValue=""/>
+						<GridRowDefinition gridLengthValue=""/>
+						<GridRowDefinition gridLengthValue=""/>
+					</GridPanel.gridRowDefinitions>
+					<GridPanel.gridColumnDefinitions>
+						<GridColumnDefinition gridLengthValue="" gridMinLength="10rem"/>
+						<GridColumnDefinition gridLengthValue=""/>
+						<GridColumnDefinition gridLengthValue="" gridMinLength="10rem"/>
+						<GridColumnDefinition gridLengthValue=""/>
+						<GridColumnDefinition gridLengthValue="" gridMinLength="10rem"/>
+						<GridColumnDefinition gridLengthValue=""/>
+					</GridPanel.gridColumnDefinitions>
+					<Label isDynamic="true" text="Estimated" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="1,0,1,1" fieldTable="formonly" identifier="lb64"/>
+					<Label isDynamic="true" text="Start" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,1,1,1" fieldTable="formonly" identifier="lb47"/>
+					<Calendar format="dd/mm/yyyy" dataType="Date,,,," preferredSize="11qch,1qch" toolTip=" The estimated start date of the job" comment=" The estimated start date of the job" fieldTable="job" identifier="est_start_date" gridItemLocation="1,1,1,1" classNames="fcls_data_widget,fcls_length_15qch"/>
+					<Label isDynamic="true" text="Review" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="2,1,1,1" fieldTable="" identifier="lb142"/>
+					<Calendar format="dd/mm/yyyy" dataType="Date,,,," preferredSize="11qch,1qch" toolTip=" The date of the next review of the job" comment=" The date of the next review of the job" fieldTable="job" identifier="review_date" gridItemLocation="3,1,1,1" classNames="fcls_data_widget,fcls_length_15qch"/>
+					<Label isDynamic="true" text="Start" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="4,1,1,1" fieldTable="" identifier="lb92"/>
+					<Calendar format="dd/mm/yyyy" dataType="Date,,,," preferredSize="11qch,1qch" toolTip=" The actual start date of the job" comment=" The actual start date of the job" fieldTable="job" identifier="act_start_date" gridItemLocation="5,1,1,1" classNames="fcls_data_widget,fcls_length_15qch"/>
+					<Label isDynamic="true" text="Completion" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,2,1,1" fieldTable="formonly" identifier="lb46"/>
+					<Label isDynamic="true" text="Actual" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="4,0,1,1" fieldTable="" identifier="lb86"/>
+					<Calendar format="dd/mm/yyyy" dataType="Date,,,," preferredSize="11qch,1qch" toolTip=" The estimated end date of the job" comment=" The estimated end date of the job" fieldTable="job" identifier="est_end_date" gridItemLocation="1,2,1,1" classNames="fcls_data_widget,fcls_length_15qch"/>
+					<Label isDynamic="true" text="Valuation" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="2,2,1,1" fieldTable="" identifier="lb143"/>
+					<Calendar format="dd/mm/yyyy" dataType="Date,,,," preferredSize="11qch,1qch" toolTip=" The Valuation date " comment=" The Valuation date " fieldTable="job" identifier="val_date" gridItemLocation="3,2,1,1" classNames="fcls_data_widget,fcls_length_15qch"/>
+					<Label isDynamic="true" text="End" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="4,2,1,1" fieldTable="" identifier="lb93"/>
+					<Calendar format="dd/mm/yyyy" dataType="Date,,,," preferredSize="11qch,1qch" toolTip=" The actual end date of the job" comment=" The actual end date of the job" fieldTable="job" identifier="act_end_date" gridItemLocation="5,2,1,1" classNames="fcls_data_widget,fcls_length_15qch"/>
+				</GridPanel>
+			</GroupBox>
+			<GroupBox title="Contract" classNames="fcls_detail_gb_cnt" visible="true" verticalAlignment="Stretch" horizontalAlignment="Stretch" gridItemLocation="0,3,1,1" fieldTable="formonly" identifier="cntDetail3GroupBox">
+				<GridPanel classNames="fcls_detail_gb_cnt_sub,fcls_detail_cnt_sub,fcls_data_cnt" visible="true" verticalAlignment="Top" horizontalAlignment="Left" fieldTable="formonly" identifier="cntDetail3Sub">
+					<GridPanel.gridRowDefinitions>
+						<GridRowDefinition gridLengthValue=""/>
+						<GridRowDefinition gridLengthValue=""/>
+						<GridRowDefinition gridLengthValue=""/>
+					</GridPanel.gridRowDefinitions>
+					<GridPanel.gridColumnDefinitions>
+						<GridColumnDefinition gridLengthValue="" gridMinLength="10rem"/>
+						<GridColumnDefinition gridLengthValue=""/>
+					</GridPanel.gridColumnDefinitions>
+					<Label isDynamic="true" text="Information" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="lb48"/>
+					<TextField dataType="Char,,,,40" preferredSize="41qch,1qch" toolTip=" Contract reference information " comment=" Contract reference information " fieldTable="job" identifier="contract_text" gridItemLocation="1,0,1,1" classNames="fcls_data_widget,fcls_length_15qch"/>
+					<Label isDynamic="true" text="Date" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,1,1,1" fieldTable="formonly" identifier="lb49"/>
+					<Calendar format="dd/mm/yyyy" dataType="Date,,,," preferredSize="11qch,1qch" toolTip=" The date of the contract" comment=" The date of the contract" fieldTable="job" identifier="contract_date" gridItemLocation="1,1,1,1" classNames="fcls_data_widget,fcls_length_15qch"/>
+					<Label isDynamic="true" text="Amount" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,2,1,1" fieldTable="formonly" identifier="lb63"/>
+					<TextField dataType="Decimal,,,2,16" preferredSize="18qch,1qch" toolTip=" The amount of the contract" comment=" The amount of the contract" fieldTable="job" identifier="contract_amt" gridItemLocation="1,2,1,1" classNames="fcls_data_widget,fcls_length_15qch"/>
+				</GridPanel>
+			</GroupBox>
+			<GroupBox title="General Ledger Integration" classNames="fcls_detail_gb_cnt" visible="true" verticalAlignment="Stretch" horizontalAlignment="Stretch" gridItemLocation="0,4,1,1" fieldTable="" identifier="cntDetail4GroupBox">
+				<GridPanel classNames="fcls_detail_gb_cnt_sub,fcls_detail_cnt_sub,fcls_data_cnt" visible="true" verticalAlignment="Top" horizontalAlignment="Left" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="cntDetail4Sub">
+					<GridPanel.gridRowDefinitions>
+						<GridRowDefinition gridLengthValue=""/>
+						<GridRowDefinition gridLengthValue=""/>
+						<GridRowDefinition gridLengthValue=""/>
+						<GridRowDefinition gridLengthValue=""/>
+					</GridPanel.gridRowDefinitions>
+					<GridPanel.gridColumnDefinitions>
+						<GridColumnDefinition gridLengthValue="" gridMinLength="10rem"/>
+						<GridColumnDefinition gridLengthValue=""/>
+					</GridPanel.gridColumnDefinitions>
+					<Label isDynamic="true" text="Bill Method" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,0,1,1" fieldTable="" identifier="lb115"/>
+					<TextField toCase="Up" dataType="Char,,,,1" preferredSize="5qch,1qch" toolTip=" Method of billing - F(ixed Price), C(ost Plus), T(ime &amp; Materials) " comment=" Method of billing - F(ixed Price), C(ost Plus), T(ime &amp; Materials) " fieldTable="job" identifier="bill_way_ind" gridItemLocation="1,0,1,1" classNames="fcls_data_widget,fcls_length_20qch"/>
+					<Label isDynamic="true" text="Revenue Acct" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,1,1,1" fieldTable="" identifier="lb116"/>
+					<TextField toCase="Up" dataType="Char,,,,18" preferredSize="19qch,1qch" toolTip=" Revenue Account for the job (W)" comment=" Revenue Account for the job (W)" fieldTable="job" identifier="acct_code" gridItemLocation="1,1,1,1" classNames="fcls_data_widget,fcls_length_20qch"/>
+					<TextField dataType="Char,,,,40" preferredSize="41qch,1qch" fieldTable="coa" identifier="desc_text" gridItemLocation="1,2,1,1" classNames="fcls_data_widget,fcls_length_40qch"/>
+					<Label isDynamic="true" text="Finished" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,3,1,1" fieldTable="" identifier="lb120"/>
+					<ComboBox toCase="Up" dataType="Char,,,,1" preferredSize="5qch,1qch" toolTip=" Is the job completed and closed (y/n) ?" comment=" Is the job completed and closed (y/n) ?" fieldTable="job" identifier="finish_flag" gridItemLocation="1,3,1,1" classNames="fcls_data_widget,fcls_length_20qch">
+				<ComboBoxItem text="Y">
+					<ComboBoxItem.value>
+						<StringLiteral stringValue="Y"/>
+					</ComboBoxItem.value>
+				</ComboBoxItem>
+				<ComboBoxItem text="N">
+					<ComboBoxItem.value>
+						<StringLiteral stringValue="N"/>
+					</ComboBoxItem.value>
+				</ComboBoxItem>
+			</ComboBox>
+				</GridPanel>
+			</GroupBox>
+			<GroupBox title="Group 5" classNames="fcls_detail_gb_cnt" visible="true" verticalAlignment="Stretch" horizontalAlignment="Stretch" gridItemLocation="0,5,1,1" fieldTable="" identifier="cntDetail5GroupBox">
+				<GridPanel classNames="fcls_detail_gb_cnt_sub,fcls_detail_cnt_sub,fcls_data_cnt" visible="true" verticalAlignment="Top" horizontalAlignment="Left" fieldTable="" identifier="cntDetail5Sub">
+					<GridPanel.gridRowDefinitions>
+						<GridRowDefinition gridLengthValue=""/>
+						<GridRowDefinition gridLengthValue=""/>
+						<GridRowDefinition gridLengthValue=""/>
+						<GridRowDefinition gridLengthValue=""/>
+					</GridPanel.gridRowDefinitions>
+					<GridPanel.gridColumnDefinitions>
+						<GridColumnDefinition gridLengthValue="" gridMinLength="10rem"/>
+						<GridColumnDefinition gridLengthValue=""/>
+						<GridColumnDefinition gridLengthValue="" gridMinLength="10rem"/>
+						<GridColumnDefinition gridLengthValue=""/>
+					</GridPanel.gridColumnDefinitions>
+					<Label isDynamic="true" text="Mask Selection" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,0,1,1" fieldTable="" identifier="lb128"/>
+					<TextField dataType="Char,,,,20" preferredSize="21qch,1qch" toolTip=" Report selection and sorting information" comment=" Report selection and sorting information" fieldTable="job" identifier="report_text" gridItemLocation="1,0,1,1" classNames="fcls_data_widget,fcls_length_20qch"/>
+					<Label isDynamic="true" text="Responsibility" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="2,0,1,1" fieldTable="" identifier="lb161"/>
+					<TextField toCase="Up" dataType="Char,,,,8" preferredSize="9qch,1qch" toolTip=" Responsibility Code (W)" comment=" Responsibility Code (W)" fieldTable="job" identifier="resp_code" gridItemLocation="3,0,1,1" classNames="fcls_data_widget,fcls_length_20qch"/>
+					<Label isDynamic="true" text="Description" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,1,1,1" fieldTable="" identifier="lb129"/>
+					<TextField dataType="Char,,,," preferredSize="57qch,1qch" toolTip=" Free text information on job - F10 for full page" comment=" Free text information on job - F10 for full page" fieldTable="formonly" identifier="pr_desc_1" gridItemLocation="1,1,3,1" classNames="fcls_data_widget" horizontalAlignment="Stretch"/>
+					<TextField dataType="Char,,,," preferredSize="57qch,1qch" toolTip=" Free text information on job (cntd.) - F10 for full page" comment=" Free text information on job (cntd.) - F10 for full page" fieldTable="formonly" identifier="pr_desc_2" gridItemLocation="1,2,3,1" classNames="fcls_data_widget" horizontalAlignment="Stretch"/>
+					<TextField dataType="Char,,,," preferredSize="57qch,1qch" toolTip=" Free text information on job (cntd.) - F10 for full page" comment=" Free text information on job (cntd.) - F10 for full page" fieldTable="formonly" identifier="pr_desc_3" gridItemLocation="1,3,3,1" classNames="fcls_data_widget" horizontalAlignment="Stretch"/>
+				</GridPanel>
+			</GroupBox>
+			<GridPanel classNames="fcls_statusbar_cnt" visible="true" verticalAlignment="Top" gridItemLocation="0,6,1,1" fieldTable="formonly" identifier="cntStatusBar">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="100%"/>
+				</GridPanel.gridColumnDefinitions>
+				<Label isDynamic="true" text="" classNames="fcls_sblabel" visible="true" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="lbInfo1"/>
+				<Label isDynamic="true" text="" classNames="fcls_sblabel" visible="true" gridItemLocation="0,1,1,1" fieldTable="formonly" identifier="lbInfo2"/>
+			</GridPanel>
+		</GridPanel>
+	</form.rootContainer>
+	<form.screenRecords>
+		<ScreenRecord identifier="coa" fields="coa.desc_text"/>
+		<ScreenRecord identifier="customer" fields="customer.name_text"/>
+		<ScreenRecord identifier="formonly" fields="formonly.pr_desc_1,formonly.pr_desc_2,formonly.pr_desc_3"/>
+		<ScreenRecord identifier="job" fields="job.job_code,job.title_text,job.cust_code,job.sale_code,job.est_start_date,job.est_end_date,job.review_date,job.val_date,job.act_start_date,job.act_end_date,job.bill_way_ind,job.finish_flag,job.contract_text,job.contract_date,job.contract_amt,job.acct_code,job.report_text,job.resp_code"/>
+		<ScreenRecord identifier="salesperson" fields="salesperson.name_text"/>
+	</form.screenRecords>
+</form>
+

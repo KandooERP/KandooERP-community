@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<fglBuildTarget xmlns="http://namespaces.querix.com/lyciaide/target" name="wcustwind" type="fgl-library">
+
+  <sources type="fgl">
+    <file location="4gl/common/terrwind.4gl"/>
+    <file location="4gl/common/ref_wind.4gl"/>
+    <file location="4gl/common/glob_GLOBALS_constant.4gl"/>
+    <file location="4gl/common/wsubwind.4gl"/>
+    <file location="4gl/common/abnfunc.4gl"/>
+    <file location="4gl/common/ctrywind.4gl"/>
+    <file location="4gl/common/langwind.4gl"/>
+    <file location="4gl/common/glob_GLOBALS.4gl"/>
+    <file location="4gl/common/glob_GLOBALS_userDataTypes.4gl"/>
+    <file location="4gl/common/ctypwind.4gl"/>
+    <file location="4gl/common/wstrtwin.4gl"/>
+    <file location="4gl/common/salewind.4gl"/>
+    <file location="4gl/common/trans_num.4gl"/>
+    <file location="4gl/common/taxwind.4gl"/>
+    <file location="4gl/common/wcustwin.4gl"/>
+  </sources>
+
+</fglBuildTarget>

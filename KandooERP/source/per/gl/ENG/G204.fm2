@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form xmlns="http://namespaces.querix.com/2015/fglForms">
+	<form.rootContainer>
+		<GridPanel classNames="fcls_rootContainer" verticalAlignment="Stretch" horizontalAlignment="Stretch" fieldTable="" identifier="rootContainer">
+			<GridPanel.gridRowDefinitions>
+				<GridRowDefinition gridLengthValue=""/>
+				<GridRowDefinition gridLengthValue=""/>
+				<GridRowDefinition gridLengthValue="100%"/>
+				<GridRowDefinition gridLengthValue=""/>
+			</GridPanel.gridRowDefinitions>
+			<GridPanel.gridColumnDefinitions>
+				<GridColumnDefinition gridLengthValue="100%"/>
+			</GridPanel.gridColumnDefinitions>
+			<GridPanel classNames="fcls_title_cnt" visible="true" verticalAlignment="Top" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="cnttitle">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="100%"/>
+					<GridColumnDefinition gridLengthValue=""/>
+				</GridPanel.gridColumnDefinitions>
+				<Label isDynamic="true" text="Report Potential Exchange Variance" classNames="fcls_title_lb" visible="true" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="header_text"/>
+				<Label isDynamic="true" text="G204" classNames="fcls_title_lb" visible="true" gridItemLocation="1,0,1,1" fieldTable="" identifier="lbformname"/>
+			</GridPanel>
+			<GridPanel classNames="fcls_detail_cnt,fcls_data_cnt,,fcls_align_left" visible="true" verticalAlignment="Top" horizontalAlignment="Left" gridItemLocation="0,1,1,1" fieldTable="formonly" identifier="cntdetail1">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="" gridMinLength="10rem"/>
+					<GridColumnDefinition gridLengthValue=""/>
+				</GridPanel.gridColumnDefinitions>
+				<Label isDynamic="true" text="Year" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,2,1,1" fieldTable="" identifier="lb52"/>
+				<Label isDynamic="true" text="Period" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,3,1,1" fieldTable="" identifier="lb66"/>
+				<Label isDynamic="true" text="Date" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,4,1,1" fieldTable="" identifier="lb67"/>
+				<CheckBox title="Detail Listing" dataType="Char,,,," classNames="fcls_data_widget,fcls_align_left,fcls_length_10qch" location="19qch,2qch" preferredSize="11qch,1qch" notNull="true" toolTip=" Is a detailed report required : Y/N " gridItemLocation="0,0,2,1" comment=" Is a detailed report required : Y/N " fieldTable="formonly" identifier="detl_ind">
+					<CheckBox.defaultValue>
+						<StringLiteral stringValue="Y"/>
+					</CheckBox.defaultValue>
+					<CheckBox.checkedValue>
+						<StringLiteral stringValue="Y"/>
+					</CheckBox.checkedValue>
+					<CheckBox.uncheckedValue>
+						<StringLiteral stringValue="N"/>
+					</CheckBox.uncheckedValue>
+				</CheckBox>
+				<CheckBox title="Summary Listing" dataType="Char,,,," classNames="fcls_data_widget,fcls_align_left,fcls_length_10qch" location="19qch,3qch" preferredSize="11qch,1qch" notNull="true" toolTip=" Is a summary report required : Y/N " gridItemLocation="0,1,2,1" comment=" Is a summary report required : Y/N " fieldTable="formonly" identifier="sum_ind">
+					<CheckBox.defaultValue>
+						<StringLiteral stringValue="Y"/>
+					</CheckBox.defaultValue>
+					<CheckBox.checkedValue>
+						<StringLiteral stringValue="Y"/>
+					</CheckBox.checkedValue>
+					<CheckBox.uncheckedValue>
+						<StringLiteral stringValue="N"/>
+					</CheckBox.uncheckedValue>
+				</CheckBox>
+				<ComboBox dataType="SmallInt,,,," classNames="fcls_data_widget,fcls_align_left,fcls_length_10qch" location="19qch,4qch" preferredSize="11qch,1qch" toolTip="Enter the financial year to report on" gridItemLocation="1,2,1,1" comment="Enter the financial year to report on" fieldTable="formonly" identifier="year_num"/>
+				<ComboBox dataType="SmallInt,,,," classNames="fcls_data_widget,fcls_align_left,fcls_length_10qch" location="40qch,4qch" preferredSize="11qch,1qch" toolTip="Enter the financial period to report on" gridItemLocation="1,3,1,1" comment="Enter the financial period to report on" fieldTable="formonly" identifier="period_num"/>
+				<Calendar dataType="Date,,,," classNames="fcls_data_widget,fcls_align_left,fcls_length_10qch" location="19qch,5qch" preferredSize="11qch,1qch" toolTip="Display exchange rate as at this date" gridItemLocation="1,4,1,1" comment="Display exchange rate as at this date" fieldTable="formonly" identifier="pv_date"/>
+			</GridPanel>
+			<Table rowCount="9" preferredSize="50qch,9qch" verticalAlignment="Stretch" horizontalAlignment="Stretch" gridItemLocation="0,2,1,1" fieldTable="" identifier="sr_exchangevar">
+				<TableColumn text="Currency Code" fieldTable="" identifier="f3">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="20rem"/>
+					</TableColumn.columnLength>
+					<ComboBox toCase="Up" dataType="Char,,,,3" toolTip=" The currency code to be reported on (W)" comment=" The currency code to be reported on (W)" fieldTable="accountcur" identifier="currency_code" classNames="list-show-text-value,field-show-value"/>
+				</TableColumn>
+				<TableColumn text="Description" fieldTable="" identifier="f4">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="30rem"/>
+					</TableColumn.columnLength>
+					<TextField noEntry="true" dataType="Char,,,,30" fieldTable="currency" identifier="desc_text"/>
+				</TableColumn>
+				<TableColumn text="Exchange Rate" fieldTable="" identifier="f5">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="20rem"/>
+					</TableColumn.columnLength>
+					<TextField dataType="Char,,,," toolTip=" The current exchange rate for this currency" comment=" The current exchange rate for this currency" fieldTable="formonly" identifier="conv_qty"/>
+				</TableColumn>
+				<TableColumn resizable="true" visible="true" fieldTable="" identifier="tc_lb68">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="100%"/>
+					</TableColumn.columnLength>
+					<Label isDynamic="true" visible="true" fieldTable="" identifier="lb68"/>
+				</TableColumn>
+			</Table>
+			<GridPanel classNames="fcls_statusbar_cnt" visible="true" verticalAlignment="Top" gridItemLocation="0,3,1,1" fieldTable="formonly" identifier="cntStatusBar">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="100%"/>
+				</GridPanel.gridColumnDefinitions>
+				<Label isDynamic="true" text="" classNames="fcls_sblabel" visible="true" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="lbInfo1"/>
+				<Label isDynamic="true" text="" classNames="fcls_sblabel" visible="true" gridItemLocation="0,1,1,1" fieldTable="formonly" identifier="lbInfo2"/>
+			</GridPanel>
+		</GridPanel>
+	</form.rootContainer>
+	<form.screenRecords>
+		<ScreenRecord identifier="sr_exchangevar" fields="currency_code,desc_text,conv_qty"/>
+		<ScreenRecord identifier="accountcur" fields="currency_code"/>
+		<ScreenRecord identifier="currency" fields="desc_text"/>
+		<ScreenRecord identifier="formonly" fields="detl_ind,sum_ind,year_num,period_num,pv_date,conv_qty"/>
+	</form.screenRecords>
+</form>
+

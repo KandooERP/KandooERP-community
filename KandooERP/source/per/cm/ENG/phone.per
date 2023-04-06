@@ -1,0 +1,71 @@
+{
+###########################################################################
+# This program is free software; you can redistribute it and/or modify it
+# under the terms of the GNU General Public License as published by the
+# Free Software Foundation; either version 2 of the License, or (at your
+# option) any later version.
+#
+# This program is distributed in the hope that it will be useful, but
+# WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+# General Public License for more details.
+#
+# You should have received a copy of the GNU General Public License along
+# with this program; if not, write to the Free Software Foundation, Inc.,
+# 59 Temple Place, Suite 330, Boston, MA 02111-1307 USA
+#
+###########################################################################
+
+	 $Id: phone.per,v 1.4 2003/05/03 08:09:30 afalout Exp $
+}
+
+database kandoodb
+screen size 24 by 80
+{
+
+Country code  [f003 ]                Area code                [f004 ]
+Phone number  [f005                ] Extension [f006                ]
+
+Time restriction [f002       ]       Role [r001                     ]
+
+Valid from    [f007      ]                      Valid to [f008      ]
+
+}
+end
+
+tables
+phone
+
+attributes
+--f003 = phone.country_code, format = "###", default = "64", required, comments=
+-- #
+-- #      FORMATs may be specified only for numeric or DATE columns.
+-- # See error number -2932.
+--f003 = phone.country_code, picture = "###", default = "64", required, comments=
+-- #
+-- #      In order to use a picture, the picture length must be the
+-- # same as the display field length
+-- # See error number -2952.
+f003 = phone.country_code, picture = "#####", default = "64", required, comments=
+	"Country code, without leading zero(s), or ++";
+--f004 = phone.area_code, format = "####", required, comments=
+f004 = phone.area_code, picture = "#####", required, comments=
+	"Area code, without leading zero";
+--f005 = phone.phone_number, required, format = "########", comments=
+f005 = phone.phone_number, required, picture = "####################", comments=
+	"Phone number, WITHOUT FORMATING !";
+f006 = phone.extension, comments=
+	"Extension number (optional)";
+f002 = formonly.time_restrict_name, comments=
+	"If the time of day ussage on this number is restricted (F10=L7P)";
+r001 = formonly.phone_role_name, upshift, comments=
+	"Phone role name (F10 for L&P)";
+f007 = phone.valid_from, required, default = TODAY, comments=
+	"Date the number was entered/changed";
+f008 = phone.valid_to, comments=
+	"Date this phone number is invalid";
+end
+
+instructions
+delimiters "  "
+screen record s_phone (country_code through valid_to)

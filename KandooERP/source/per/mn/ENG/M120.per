@@ -1,0 +1,53 @@
+{
+###########################################################################
+# This program is free software; you can redistribute it and/or modify it
+# under the terms of the GNU General Public License as published by the
+# Free Software Foundation; either version 2 of the License, or (at your
+# option) any later version.
+#
+# This program is distributed in the hope that it will be useful, but
+# WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+# General Public License for more details.
+#
+# You should have received a copy of the GNU General Public License along
+# with this program; if not, write to the Free Software Foundation, Inc.,
+# 59 Temple Place, Suite 330, Boston, MA 02111-1307 USA
+#
+###########################################################################
+
+	 $Id: M120.per,v 1.1 2003/05/20 23:53:06 tpavlek Exp $
+}
+
+
+database formonly
+
+screen
+{
+              Default Dates          M120
+\g------------------------------------------\g
+            Start Year  [f000]
+            End Year    [f001]
+
+            Sunday      [a]
+            Monday      [a]
+            Tuesday     [a]
+            Wednesday   [a]
+            Thursday    [a]
+            Friday      [a]
+            Saturday    [a]
+
+}
+
+attributes
+f000 = formonly.start_year type integer, include = (0 to 9999),
+comments = " Year to start generating holidays from";
+f001 = formonly.end_year type integer, include = (0 to 9999),
+comments = " Year to stop generating holdiays to";
+a    = formonly.day_work type char, upshift, include = ("N","Y"),
+comments = " Is day available for work (Y/N)";
+ 
+instructions
+delimiters "  "
+
+screen record work_day[7] (formonly.day_work)

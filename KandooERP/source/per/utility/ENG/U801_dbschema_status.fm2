@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form xmlns="http://namespaces.querix.com/2015/fglForms" title="f_dbschema_status">
+	<form.rootContainer>
+		<GridPanel classNames="fcls_rootContainer" verticalAlignment="Top" fieldTable="" identifier="rootContainer" horizontalAlignment="Stretch">
+			<GridPanel.gridRowDefinitions>
+				<GridRowDefinition gridLengthValue=""/>
+				<GridRowDefinition/>
+				<GridRowDefinition/>
+				<GridRowDefinition gridLengthValue="100%" gridMinLength="20rem"/>
+				<GridRowDefinition gridLengthValue=""/>
+			</GridPanel.gridRowDefinitions>
+			<GridPanel.gridColumnDefinitions>
+				<GridColumnDefinition gridLengthValue="100%"/>
+			</GridPanel.gridColumnDefinitions>
+			<GridPanel classNames="fcls_title_cnt" visible="true" verticalAlignment="Top" horizontalAlignment="Stretch" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="cntTitle">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue=""/>
+					<GridColumnDefinition gridLengthValue=""/>
+				</GridPanel.gridColumnDefinitions>
+				<Label isDynamic="true" text="Data Management for table dbschema_fix" classNames="fcls_title_lb" visible="true" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="header_text"/>
+				<Label isDynamic="true" text="f_dbschema_status" classNames="fcls_title_lb" visible="true" gridItemLocation="1,0,1,1" fieldTable="" identifier="lbFormName"/>
+			</GridPanel>
+			<GridPanel visible="true" identifier="Properties" gridItemLocation="0,1,1,2" horizontalAlignment="Left">
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridMinLength="10rem"/>
+					<GridColumnDefinition gridMaxLength="60rem" gridMinLength="40rem"/>
+				</GridPanel.gridColumnDefinitions>
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition/>
+					<GridRowDefinition/>
+				</GridPanel.gridRowDefinitions>
+				<Label text="Database Name" isDynamic="true" visible="true" identifier="lb4" gridItemLocation="0,0,1,1"/>
+				<TextField visible="true" identifier="dbsname" gridItemLocation="1,0,1,1" fieldTable="dbschema_properties"/>
+				<Label text="Database Vendor" isDynamic="true" visible="true" identifier="lb6" gridItemLocation="0,1,1,1"/>
+				<TextField visible="true" identifier="dbsvendor" gridItemLocation="1,1,1,1" fieldTable="dbschema_properties" noEntry="true"/>
+				<Label text="Snapshot Date" isDynamic="true" visible="true" identifier="lb8" gridItemLocation="0,2,1,1"/>
+				<TextField visible="true" identifier="snapshot_date" gridItemLocation="1,2,1,1" noEntry="true" fieldTable="dbschema_properties"/>
+				<Label text="Last patch date" isDynamic="true" visible="true" identifier="lb10" gridItemLocation="0,3,1,1"/>
+				<TextField visible="true" identifier="last_patch_date" gridItemLocation="1,3,1,1" fieldTable="dbschema_properties" noEntry="true"/>
+				<Label text="Last Patch Apply" isDynamic="true" visible="true" identifier="lb12" gridItemLocation="0,4,1,1"/>
+				<TextField visible="true" identifier="last_patch_apply" gridItemLocation="1,4,1,1" noEntry="true" fieldTable="dbschema_properties"/>
+				<Label text="Build ID" isDynamic="true" visible="true" identifier="lb14" gridItemLocation="0,5,1,1"/>
+				<TextField visible="true" identifier="build_id" gridItemLocation="1,5,1,1" fieldTable="dbschema_properties" noEntry="true"/>
+				<Label text="Last Patch Success" isDynamic="true" visible="true" identifier="lb25" gridItemLocation="0,6,1,1"/>
+				<TextField visible="true" identifier="last_patch_ok_scripts" gridItemLocation="1,6,1,1" fieldTable="dbschema_properties" horizontalAlignment="Left"/>
+				<Label text="Last Patch Failed #" isDynamic="true" visible="true" identifier="lb24" gridItemLocation="0,7,1,1"/>
+				<TextField visible="true" identifier="last_patch_ko_scripts" gridItemLocation="1,7,1,1" horizontalAlignment="Left" fieldTable="dbschema_properties"/>
+				
+			</GridPanel>
+			<Table visible="true" identifier="Table2" gridItemLocation="0,3,1,1">
+				<TableColumn text="Fix Name" resizable="true" visible="true" identifier="tc_f25">
+					<TextField visible="true" identifier="fix_name" fieldTable="dbschema_fix"/>
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="20%" gridMaxLength="20rem" gridMinLength="10em"/>
+					</TableColumn.columnLength>
+				</TableColumn>
+				<TableColumn text="Abstract" resizable="true" visible="true" identifier="tc_f26">
+					<TextField visible="true" identifier="fix_abstract" fieldTable="dbschema_fix"/>
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="20%" gridMaxLength="20rem" gridMinLength="10em"/>
+					</TableColumn.columnLength>
+				</TableColumn>
+				<TableColumn text="Tables List" resizable="true" visible="true" identifier="tc_f27">
+					<TextField visible="true" identifier="fix_tableslist" fieldTable="dbschema_fix"/>
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="20%" gridMaxLength="20rem" gridMinLength="10em"/>
+					</TableColumn.columnLength>
+				</TableColumn>
+				<TableColumn text="Apply Date" resizable="true" visible="true" identifier="tc_f28">
+					<TextField visible="true" identifier="fix_apply_date" fieldTable="dbschema_fix"/>
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="20%" gridMaxLength="20rem" gridMinLength="10em"/>
+					</TableColumn.columnLength>
+				</TableColumn>
+				<TableColumn text="Apply Status" resizable="true" visible="true" identifier="tc_f29">
+					<TextField visible="true" identifier="fix_status" fieldTable="dbschema_fix"/>
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="20%" gridMaxLength="20rem" gridMinLength="10em"/>
+					</TableColumn.columnLength>
+				</TableColumn>
+			</Table>
+			<GridPanel classNames="fcls_statusbar_cnt" visible="true" verticalAlignment="Top" gridItemLocation="0,4,1,1" fieldTable="formonly" identifier="cntStatusBar">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue="35"/>
+					<GridRowDefinition gridLengthValue="43"/>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="100%"/>
+				</GridPanel.gridColumnDefinitions>
+			</GridPanel>
+		</GridPanel>
+	</form.rootContainer>
+	<form.screenRecords>
+		<ScreenRecord identifier="dbschema_fix" fields=""/>
+		<ScreenRecord identifier="dbschema_properties" fields="dbsname,dbsvendor,snapshot_date,last_patch_date,last_patch_apply,build_id,last_patch_ok_scripts,dbschema_properties.last_patch_ko_scripts"/>
+		<ScreenRecord identifier="FormOnly" fields="Table2,lb25"/>
+		<ScreenRecord identifier="Table2" fields="dbschema_fix.fix_name,dbschema_fix.fix_abstract,dbschema_fix.fix_tableslist,dbschema_fix.fix_apply_date,dbschema_fix.fix_status"/>
+	</form.screenRecords>
+</form>
+

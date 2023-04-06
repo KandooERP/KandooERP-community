@@ -1,0 +1,41 @@
+I16_FRA {
+% { "%" }
+(L)ist Price (S)tandard Cost (W)eighted Cost (A)ctual Cost (F)oreign Cost { "(L)Prix liste (S)Coût standard (W)Coût pondéré (A)Coût réel (F)Coût en devises)" }
+- Reserved for Sale { "- Reserved for Sale" }
+ABC Code { "N° SIREN" }
+Bin Location { "Emplacement du bac" }
+Cost { "Coût" }
+Critical { "Critique" }
+Currency { "Devise" }
+Date { "Date" }
+Dates { "Dates" }
+Description { "Description" }
+Description of this product { "Description de ce produit" }
+Exit { "Quitter" }
+FILTER { "Premier" }
+Group 1 { "Groupe 1" }
+Group 2 { "Groupe 2" }
+ID { "ID" }
+Language Code { "Code langue" }
+Line { "Ligne" }
+Maximum { "Maximum" }
+Name { "Nom" }
+OEM { "OEM" }
+On Hand { "À portée de main" }
+Price { "Price" }
+Product { "Produit" }
+Product Code { "Code Produit" }
+Product Scan { "Exploration de produits" }
+Quantity { "Quantité" }
+REFRESH { "ACTUALISER" }
+Reserved { "Réservé" }
+Status { "Statut" }
+Stocked Item { "Article stocké" }
+The Product Code assigned to the product { "le code attribué à ce produit" }
+The code given by the original equipment manufacturer (OEM) { "Le code donné par le fabricant de l'équipement d'origine (OEM)." }
+Type { "Type" }
+Vendor Code { "Code Fournisseur" }
+Warehouse { "Dépôt" }
+Warehouse Code { "Code Dépôt" }
+actToolbarManager { "actToolbarManager" }
+}

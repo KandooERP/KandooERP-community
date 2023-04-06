@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form xmlns="http://namespaces.querix.com/2015/fglForms">
+	<form.rootContainer>
+		<GridPanel preferredSize="919.0,438.0" visible="true" fieldTable="" identifier="rootContainer">
+			<GridPanel.gridRowDefinitions>
+				<GridRowDefinition/>
+				<GridRowDefinition gridLengthValue="100%"/>
+			</GridPanel.gridRowDefinitions>
+			<GridPanel.gridColumnDefinitions>
+				<GridColumnDefinition gridLengthValue=""/>
+			</GridPanel.gridColumnDefinitions>
+			<GridPanel preferredSize="80qch,2qch" visible="true" gridItemLocation="0,0,1,1" fieldTable="" identifier="Title">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue="10.0"/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue=""/>
+				</GridPanel.gridColumnDefinitions>
+			</GridPanel>
+			<Table rowCount="10" visible="true" gridItemLocation="0,1,1,1" fieldTable="" identifier="sr_templates" preferredSize="80qch,20qch">
+				<TableColumn text="column" resizable="true" visible="true" fieldTable="" identifier="tc_f1">
+					<TableColumn.columnLength>
+						<GridLength gridLengthValue="67.2912%"/>
+					</TableColumn.columnLength>
+					<TextField visible="true" fieldTable="" identifier="template">
+						<TextField.onMouseClick>
+							<FunctionEventHandler/>
+						</TextField.onMouseClick>
+					</TextField>
+				</TableColumn>
+			</Table>
+		</GridPanel>
+	</form.rootContainer>
+	<form.screenRecords>
+		<ScreenRecord identifier="FormOnly"/>
+		<ScreenRecord identifier="sr_templates" fields="template"/>
+	</form.screenRecords>
+</form>
+

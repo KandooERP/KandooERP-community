@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<fglBuildTarget xmlns="http://namespaces.querix.com/lyciaide/target" name="A27" type="fgl-program">
+
+  <libraries>
+    <library name="lib_common_invwind" dynamic="false" location=""/>
+    <library name="lib_common_pinq_wind" dynamic="false" location=""/>
+    <library name="lib_common_wind" dynamic="false" location=""/>
+    <library name="lib_tool_A_AR_db" dynamic="false" location=""/>
+    <library name="lib_tool_A_AR_new" dynamic="false" location=""/>
+    <library name="lib_tool_E_EO_db" dynamic="false" location=""/>
+    <library name="lib_tool_E_EO_new" dynamic="false" location=""/>
+    <library name="lib_tool_G_GL_new" dynamic="false" location=""/>
+    <library name="lib_tool_I_IN_db" dynamic="false" location=""/>
+    <library name="lib_tool_I_IN_new" dynamic="false" location=""/>
+    <library name="lib_tool_L_LC_new" dynamic="false" location=""/>
+    <library name="lib_tool_U_UT_new" dynamic="false" location=""/>
+    <library name="lib_tool_W_WO_new" dynamic="false" location=""/>
+    <library name="lib_tool_common" dynamic="false" location=""/>
+    <library name="lib_tool_db_common" dynamic="false" location=""/>
+  </libraries>
+
+  <sources type="fgl">
+    <file location="4gl/ar/A27_main.4gl"/>
+    <file location="4gl/ar/A20_common.4gl"/>
+    <file location="4gl/common/carrwind.4gl"/>
+    <file location="4gl/ar/A_AR_GLOBALS.4gl"/>
+    <file location="4gl/common/conv_rate.4gl"/>
+    <file location="4gl/ar/A27.4gl"/>
+    <file location="4gl/ar/A21b.4gl"/>
+    <file location="4gl/common/dispgpfunc.4gl"/>
+    <file location="4gl/ar/A20_common_inv_line_process.4gl"/>
+    <file location="4gl/common/acc_patch.4gl"/>
+    <file location="4gl/common/acctwind.4gl"/>
+    <file location="4gl/ar/A20_common_save_invoice.4gl"/>
+    <file location="4gl/common/orstfunc.4gl"/>
+    <file location="4gl/ar/A27_process_invoice.4gl"/>
+    <file location="4gl/common/conv_curr.4gl"/>
+    <file location="4gl/common/duedate.4gl"/>
+    <file location="4gl/common/vperfunc.4gl"/>
+    <file location="4gl/common/serifunc.4gl"/>
+    <file location="4gl/common/find_tax.4gl"/>
+    <file location="4gl/common/salewind.4gl"/>
+    <file location="4gl/ar/A21_invoice_result_menu.4gl"/>
+    <file location="4gl/ar/A21a.4gl"/>
+    <file location="4gl/common/taxwind.4gl"/>
+    <file location="4gl/common/frghtfunc.4gl"/>
+     <file location="4gl/ar/A20_common_invoice_header.4gl"/>
+    <file location="4gl/ar/A20_common_shipping_addr.4gl"/>
+    <file location="4gl/common/notefunc.4gl"/>
+    <file location="4gl/ar/A20_common_scan_invoices_by_customer.4gl"/>
+    <file location="4gl/ar/A20_common_invoice_summary.4gl"/>
+    <file location="4gl/common/orhdwind.4gl"/>
+    <file location="4gl/ar/A20_common_display_customer_credit_status.4gl"/>
+    <file location="4gl/ar/A27a.4gl"/>
+    <file location="4gl/common/glob_GLOBALS.4gl"/>
+    <file location="4gl/ar/A21d.4gl"/>
+    <file location="4gl/common/saleanlfunc.4gl"/>
+    <file location="4gl/common/termwind.4gl"/>
+    <file location="4gl/common/tablefunc.4gl"/>
+    <file location="4gl/common/note_disp.4gl"/>
+    <file location="4gl/ar/A27_GLOBALS.4gl"/>
+    <file location="4gl/common/trans_num.4gl"/>
+    <file location="4gl/ar/A2_GROUP_GLOBALS.4gl"/>
+    <file location="4gl/common/orddfunc.4gl"/>
+    <file location="4gl/ar/A21c.4gl"/>
+    <file location="4gl/common/itemwind.4gl"/>
+    <file location="4gl/ar/A20_common_invoice_init.4gl"/>
+    <file location="4gl/ar/A20_common_invoice_line_input.4gl"/>
+    <file location="4gl/common/shipwind.4gl"/>
+  </sources>
+
+  <sources type="form">
+    <file location="per/utility/ENG/U156.fm2"/>
+    <file location="per/eo/ENG/E400.fm2"/>
+    <file location="per/utility/ENG/U136.fm2"/>
+    <file location="per/gl/ENG/G129.fm2"/>
+    <file location="per/ar/ENG/A138.fm2"/>
+    <file location="per/eo/ENG/E408.fm2"/>
+    <file location="per/ar/ENG/A145.fm2"/>
+    <file location="per/eo/ENG/E457.fm2"/>
+    <file location="per/in/ENG/I104.fm2"/>
+    <file location="per/ar/ENG/A135.fm2"/>
+    <file location="per/eo/ENG/E169.fm2"/>
+    <file location="per/utility/ENG/U526.fm2"/>
+    <file location="per/ar/ENG/A137a.fm2"/>
+    <file location="per/ar/ENG/A139.fm2"/>
+    <file location="per/in/ENG/I186.fm2"/>
+    <file location="per/gl/ENG/G147.fm2"/>
+    <file location="per/utility/ENG/U122.fm2"/>
+    <file location="per/ar/ENG/A144.fm2"/>
+    <file location="per/gl/ENG/G123.fm2"/>
+    <file location="per/eo/ENG/E426.fm2"/>
+    <file location="per/ar/ENG/A203.fm2"/>
+    <file location="per/eo/ENG/E445.fm2"/>
+    <file location="per/in/ENG/I106.fm2"/>
+    <file location="per/ar/ENG/A137.fm2"/>
+    <file location="per/ar/ENG/A672.fm2"/>
+    <file location="per/utility/ENG/U162.fm2"/>
+    <file location="per/eo/ENG/E419.fm2"/>
+    <file location="per/ar/ENG/A642.fm2"/>
+  </sources>
+
+  <mediaFiles>
+    <file client="true" location="A27.qxtheme" type="gui-theme-file"/>
+    <file client="true" location="A27.css" type="other"/>
+  </mediaFiles>
+
+</fglBuildTarget>

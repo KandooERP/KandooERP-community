@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form xmlns="http://namespaces.querix.com/2015/fglForms">
+	<form.rootContainer>
+		<GridPanel classNames="fcls_rootContainer" verticalAlignment="Top" horizontalAlignment="Left" fieldTable="" identifier="rootContainer">
+			<GridPanel.gridRowDefinitions>
+				<GridRowDefinition gridLengthValue=""/>
+				<GridRowDefinition gridLengthValue=""/>
+				<GridRowDefinition gridLengthValue=""/>
+			</GridPanel.gridRowDefinitions>
+			<GridPanel.gridColumnDefinitions>
+				<GridColumnDefinition gridLengthValue="100%"/>
+			</GridPanel.gridColumnDefinitions>
+			<GridPanel classNames="fcls_title_cnt" visible="true" verticalAlignment="Top" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="cntTitle">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="100%"/>
+					<GridColumnDefinition gridLengthValue=""/>
+				</GridPanel.gridColumnDefinitions>
+				<Label isDynamic="true" text="Resource Allocation Selection" classNames="fcls_title_lb" visible="true" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="header_text"/>
+				<Label isDynamic="true" text="J188" classNames="fcls_title_lb" visible="true" gridItemLocation="1,0,1,1" fieldTable="" identifier="lbFormName"/>
+			</GridPanel>
+			<GridPanel classNames="fcls_detail_cnt,fcls_data_cnt" visible="true" verticalAlignment="Top" horizontalAlignment="Left" gridItemLocation="0,1,1,1" fieldTable="formonly" identifier="cntDetail1">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="" gridMinLength="10rem"/>
+					<GridColumnDefinition gridLengthValue=""/>
+				</GridPanel.gridColumnDefinitions>
+				<TextField toCase="Up" dataType="Char,,,,8" preferredSize="13qch,1qch" toolTip=" Enter the Job Code " comment=" Enter the Job Code " fieldTable="jobledger" identifier="job_code" gridItemLocation="1,0,1,1" classNames="fcls_data_widget,fcls_length_20qch"/>
+				<TextField dataType="SmallInt,,,," preferredSize="6qch,1qch" toolTip=" Enter the Variation Number " comment=" Enter the Variation Number " fieldTable="jobledger" identifier="var_code" gridItemLocation="1,1,1,1" classNames="fcls_data_widget,fcls_length_20qch"/>
+				<TextField toCase="Up" dataType="Char,,,,8" preferredSize="9qch,1qch" toolTip=" Enter the Activity Code " comment=" Enter the Activity Code " fieldTable="jobledger" identifier="activity_code" gridItemLocation="1,2,1,1" classNames="fcls_data_widget,fcls_length_20qch"/>
+				<Label isDynamic="true" text="Year" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,3,1,1" fieldTable="" identifier="lb67"/>
+				<TextField dataType="SmallInt,,,," preferredSize="5qch,1qch" toolTip=" Enter the Year " comment=" Enter the Year " fieldTable="jobledger" identifier="year_num" gridItemLocation="1,3,1,1" classNames="fcls_data_widget,fcls_length_20qch"/>
+				<Label isDynamic="true" text="Job Code" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,0,1,1" fieldTable="" identifier="lb51"/>
+				<Label isDynamic="true" text="Variation" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,1,1,1" fieldTable="" identifier="lb52"/>
+				<Label isDynamic="true" text="Activity" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,2,1,1" fieldTable="" identifier="lb66"/>
+				<Label isDynamic="true" text="Period" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,4,1,1" fieldTable="" identifier="lb133"/>
+				<TextField dataType="SmallInt,,,," preferredSize="3qch,1qch" toolTip=" Enter the Period  " comment=" Enter the Period  " fieldTable="jobledger" identifier="period_num" gridItemLocation="1,4,1,1" classNames="fcls_data_widget,fcls_length_20qch"/>
+				<Label isDynamic="true" text="Transaction Date" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,5,1,1" fieldTable="" identifier="lb134"/>
+				<Calendar format="dd/mm/yyyy" dataType="Date,,,," preferredSize="11qch,1qch" toolTip=" Enter the Transaction Date" comment=" Enter the Transaction Date" fieldTable="jobledger" identifier="trans_date" gridItemLocation="1,5,1,1" classNames="fcls_data_widget,fcls_length_20qch"/>
+				<Label isDynamic="true" text="Allocation Number" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,6,1,1" fieldTable="" identifier="lb135"/>
+				<TextField dataType="Integer,,,," preferredSize="6qch,1qch" toolTip=" Enter the Resource Allocation Number" comment=" Enter the Resource Allocation Number" fieldTable="jobledger" identifier="trans_source_num" gridItemLocation="1,6,1,1" classNames="fcls_data_widget,fcls_length_20qch"/>
+				<Label isDynamic="true" text="Resource Code" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,7,1,1" fieldTable="" identifier="lb136"/>
+				<TextField toCase="Up" dataType="Char,,,,8" preferredSize="9qch,1qch" toolTip=" Enter the Resource Code" comment=" Enter the Resource Code" fieldTable="jobledger" identifier="trans_source_text" gridItemLocation="1,7,1,1" classNames="fcls_data_widget,fcls_length_20qch"/>
+				<Label isDynamic="true" text="Transaction Amt" classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,8,1,1" fieldTable="" identifier="lb137"/>
+				<TextField dataType="Decimal,,,2,16" preferredSize="12qch,1qch" toolTip=" Enter the Transaction Amount" comment=" Enter the Transaction Amount" fieldTable="jobledger" identifier="trans_amt" gridItemLocation="1,8,1,1" classNames="fcls_data_widget,fcls_length_20qch"/>
+			</GridPanel>
+			<GridPanel classNames="fcls_statusbar_cnt" visible="true" verticalAlignment="Bottom" gridItemLocation="0,2,1,1" fieldTable="formonly" identifier="cntStatusBar">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="100%"/>
+				</GridPanel.gridColumnDefinitions>
+				<Label isDynamic="true" text="" classNames="fcls_sblabel" visible="true" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="lbInfo1"/>
+				<Label isDynamic="true" text="" classNames="fcls_sblabel" visible="true" gridItemLocation="0,1,1,1" fieldTable="formonly" identifier="lbInfo2"/>
+			</GridPanel>
+		</GridPanel>
+	</form.rootContainer>
+	<form.screenRecords>
+		<ScreenRecord identifier="jobledger" fields="jobledger.job_code,jobledger.var_code,jobledger.activity_code,jobledger.year_num,jobledger.period_num,jobledger.trans_date,jobledger.trans_source_num,jobledger.trans_source_text,jobledger.trans_amt"/>
+	</form.screenRecords>
+</form>
+

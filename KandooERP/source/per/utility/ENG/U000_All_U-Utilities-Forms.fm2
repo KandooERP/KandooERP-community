@@ -1,0 +1,673 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form xmlns="http://namespaces.querix.com/2015/fglForms">
+	<form.rootContainer>
+		<GridPanel classNames="fcls_rootContainer" verticalAlignment="Stretch" horizontalAlignment="Stretch" fieldTable="" identifier="rootContainer">
+			<GridPanel.gridRowDefinitions>
+				<GridRowDefinition gridLengthValue=""/>
+				<GridRowDefinition gridLengthValue="100%"/>
+				<GridRowDefinition gridLengthValue=""/>
+			</GridPanel.gridRowDefinitions>
+			<GridPanel.gridColumnDefinitions>
+				<GridColumnDefinition gridLengthValue="100%"/>
+			</GridPanel.gridColumnDefinitions>
+			<GridPanel classNames="fcls_title_cnt" visible="true" verticalAlignment="Top" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="cntTitle">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="100%"/>
+					<GridColumnDefinition gridLengthValue=""/>
+				</GridPanel.gridColumnDefinitions>
+				<Label isDynamic="true" text="Header-Text" classNames="fcls_title_lb" visible="true" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="header_text"/>
+				<Label isDynamic="true" text="_master_D1_1Gp_01b" classNames="fcls_title_lb" visible="true" gridItemLocation="1,0,1,1" fieldTable="" identifier="lbFormName"/>
+			</GridPanel>
+			<GridPanel classNames="fcls_detail_cnt,fcls_data_cnt,fcls_align_left" visible="true" verticalAlignment="Top" horizontalAlignment="Left" gridItemLocation="0,1,1,1" fieldTable="formonly" identifier="cntDetail1">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue="" gridMinLength="100%"/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="" gridMinLength="100%"/>
+				</GridPanel.gridColumnDefinitions>
+				<ListBox minSize="60rem,20rem" visible="true" verticalAlignment="Stretch" horizontalAlignment="Stretch" gridItemLocation="0,0,1,1" fieldTable="" identifier="formName">
+
+
+					<ListBoxItem text="U101 - User Parameters" identifier="formName_U101">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="U101"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					<ListBoxItem text="U102 - Device Configuration" identifier="formName_U102">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="U102"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+
+					<ListBoxItem text="U103 - Device Configuration" identifier="formName_U103">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="U103"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+
+					<ListBoxItem text="U104 - Level 1 Menu Scan" identifier="formName_U104">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="U104"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+
+					<ListBoxItem text="U105 - Level 1 Menu Setup" identifier="formName_U105">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="U105"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+
+					<ListBoxItem text="U106 - Level 2 Menu Setup" identifier="formName_U106">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="U106"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+
+					<ListBoxItem text="U107 - Report Parameter Maintenance" identifier="formName_U107">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="U107"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+
+					<ListBoxItem text="U108 - Error Log Print Facility" identifier="formName_U108">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="U108"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+
+					<ListBoxItem text="U110 - Street Maintenance" identifier="formName_U110">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="U110"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+
+					<ListBoxItem text="U112 - Suburb Search" identifier="formName_U112">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="U112"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+
+					<ListBoxItem text="U113 - Report File Management" identifier="formName_U113">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="U113"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+
+					<ListBoxItem text="U114 - Report Query" identifier="formName_U114">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="U114"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					
+					<ListBoxItem text="U115 - Printer Options" identifier="formName_U115">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="U115"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+
+
+					<ListBoxItem text="U116 - Street Maintenance" identifier="formName_U116">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="U116"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+
+					<ListBoxItem text="U117 - Street/Suburb File Load" identifier="formName_U117">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="U117"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+
+					<ListBoxItem text="U120 - Suburb Maintenance" identifier="formName_U120">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="U120"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+
+					<ListBoxItem text="U121 - User Scan" identifier="formName_U121">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="U121"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+
+					<ListBoxItem text="U122 - Notes" identifier="formName_U122">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="U122"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+
+					<ListBoxItem text="U123 - Note Scan" identifier="formName_U123">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="U123"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+
+					<ListBoxItem text="U124 - SQL Interface" identifier="formName_U124">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="U124"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+
+					<ListBoxItem text="U125 - Supply Location Maintenance" identifier="formName_U125">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="U125"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+
+					<ListBoxItem text="U126 - Suburb Maintenance" identifier="formName_U126">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="U126"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+
+					<ListBoxItem text="U127 - Kandoo Menu Reporting" identifier="formName_U127">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="U127"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+
+					<ListBoxItem text="U129 - Password" identifier="formName_U129">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="U129"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+
+					<ListBoxItem text="U130 - Password Entry" identifier="formName_U130">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="U130"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+
+					<ListBoxItem text="U131 - Languages" identifier="formName_U131">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="U131"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+
+					<ListBoxItem text="U136 - Account Segment Override" identifier="formName_U136">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="U136"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+
+					<ListBoxItem text="U137 - Reporting Period" identifier="formName_U137">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="U137"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+
+					<ListBoxItem text="U138 - User Defined Reference Maintenance" identifier="formName_U138">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="U138"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+
+					<ListBoxItem text="U139 - Prompt" identifier="formName_U139">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="U139"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+
+					<ListBoxItem text="U142 - Report Selection" identifier="formName_U142">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="U142"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+
+					<ListBoxItem text="U143 - Database Tables" identifier="formName_U143">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="U143"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+
+					<ListBoxItem text="U144 - Table Utility" identifier="formName_U144">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="U144"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+
+					<ListBoxItem text="U146 - Notes Maintenance" identifier="formName_U146">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="U146"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+
+					<ListBoxItem text="U147 - Note" identifier="formName_U147">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="U147"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+
+					<ListBoxItem text="U149 - User Module Security" identifier="formName_U149">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="U149"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+
+					<ListBoxItem text="U150 - User Module Account Mask" identifier="formName_U150">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="U150"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+
+					<ListBoxItem text="U151 - User Company Security" identifier="formName_U151">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="U151"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+
+					<ListBoxItem text="U152 - User Special Authority" identifier="formName_U152">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="U152"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+
+					<ListBoxItem text="U153 - Company" identifier="formName_U153">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="U153"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+
+					<ListBoxItem text="U154 - Location User Limits Defaults" identifier="formName_U154">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="U154"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+
+					<ListBoxItem text="U155 - User Sales Location" identifier="formName_U155">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="U155"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+
+					<ListBoxItem text="U156 - Menu" identifier="formName_U156">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="U156"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+
+					<ListBoxItem text="U157 - Posting Progress" identifier="formName_U157">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="U157"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+
+					<ListBoxItem text="U158 - UnstallShield program to install/update ERP Help on client PCs" identifier="formName_U158">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="U158"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+
+					<ListBoxItem text="U162 - Action View/menu path" identifier="formName_U162">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="U162"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+
+
+
+					<ListBoxItem text="U163 - kandooword / missing form" identifier="formName_U163">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="U163"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+
+					<ListBoxItem text="U190 - database schema comparison" identifier="formName_U190">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="U190"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+
+					<ListBoxItem text="U200 - Message Library Maintenance Language" identifier="formName_U200">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="U200"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+
+					<ListBoxItem text="U201 - Message Maintenance" identifier="formName_U201">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="U201"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+
+					<ListBoxItem text="U202 - Missing Form" identifier="formName_U202">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="U202"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+
+					<ListBoxItem text="U203 - Message Library Listing" identifier="formName_U203">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="U203"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+
+					<ListBoxItem text="U204 - System Locking" identifier="formName_U204">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="U204"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+
+					<ListBoxItem text="U205 - Menu Options" identifier="formName_U205">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="U205"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+
+					<ListBoxItem text="U206 - Messages and Menu Options" identifier="formName_U206">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="U206"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+
+					<ListBoxItem text="U207 - Message Verify" identifier="formName_U207">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="U207"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+
+					<ListBoxItem text="U208 - Street Copy" identifier="formName_U208">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="U208"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+
+					<ListBoxItem text="U209 - System Tailoring" identifier="formName_U209">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="U209"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+
+					<ListBoxItem text="U210 - Quadrant Data Transfer" identifier="formName_U210">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="U210"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+
+					<ListBoxItem text="U211 - Quadrant Maintenance" identifier="formName_U211">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="U211"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+
+					<ListBoxItem text="U212 - Interval Type Information" identifier="formName_U212">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="U212"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+
+					<ListBoxItem text="U213 - Interval Type Detail" identifier="formName_U213">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="U213"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+
+					<ListBoxItem text="U214 - Payment Terms" identifier="formName_U214">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="U214"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+
+					<ListBoxItem text="U215 - Statistics Interval Information" identifier="formName_U215">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="U215"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+
+					<ListBoxItem text="U216 - Statistics Interval Entry" identifier="formName_U216">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="U216"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+
+					<ListBoxItem text="U217 - Statistics Interval Generation" identifier="formName_U217">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="U217"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+
+					<ListBoxItem text="U218 - Management Information Statistics Parameters" identifier="formName_U218">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="U218"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+
+					<ListBoxItem text="U219 - Interval Type Codes" identifier="formName_U219">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="U219"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+
+					<ListBoxItem text="U222 - Copy Report to File or Diskette" identifier="formName_U222">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="U222"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+
+					<ListBoxItem text="U500 - Printer Definitions" identifier="formName_U500">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="U500"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+
+
+					<ListBoxItem text="U501 - Table Tool" identifier="formName_U501">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="U501"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+
+					<ListBoxItem text="U503 - Table Utility" identifier="formName_U503">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="U503"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+
+					<ListBoxItem text="U504 - Table Utility" identifier="formName_U504">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="U504"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+
+					<ListBoxItem text="U505 - Report Options" identifier="formName_U505">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="U505"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+
+					<ListBoxItem text="U507 - Audit Report" identifier="formName_U507">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="U507"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+
+					<ListBoxItem text="U509 - Amendment Log Maintenance" identifier="formName_U509">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="U509"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+
+					<ListBoxItem text="U510 - Report Options" identifier="formName_U510">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="U510"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+
+					<ListBoxItem text="U511 - Aging Defaults" identifier="formName_U511">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="U511"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+
+
+					<ListBoxItem text="U520 - Give me a title" identifier="formName_U520">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="U520"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+
+					<ListBoxItem text="U520a - Give me a title" identifier="formName_U520a">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="U520a"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+
+					<ListBoxItem text="U521 - Give me a title" identifier="formName_U521">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="U521"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+
+					<ListBoxItem text="U522 - give me a title" identifier="formName_U522">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="U522"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+
+					<ListBoxItem text="U523 - Used by" identifier="formName_U523">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="U523"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+
+					<ListBoxItem text="U524 - Supplied and supported by" identifier="formName_U524">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="U524"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+
+					<ListBoxItem text="U525 - Menu Scan" identifier="formName_U525">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="U525"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+
+					<ListBoxItem text="U526 - SYSTEM CALENDAR" identifier="formName_U526">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="U526"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+
+					<ListBoxItem text="U527 - Data Setup" identifier="formName_U527">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="U527"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+
+					<ListBoxItem text="U528 - Suburb Distances Load" identifier="formName_U528">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="U528"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+
+
+					<ListBoxItem text="U531 - Notes" identifier="formName_U531">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="U531"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+
+					<ListBoxItem text="U532 - Transfer Notes" identifier="formName_U532">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="U532"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+
+					<ListBoxItem text="U534 - Memo Facility" identifier="formName_U534">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="U534"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+
+					<ListBoxItem text="U535 - Send Memo" identifier="formName_U535">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="U535"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+
+					<ListBoxItem text="U536 - User Lookup" identifier="formName_U536">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="U536"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+
+					<ListBoxItem text="U537 - View Memo" identifier="formName_U537">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="U537"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+o
+					<ListBoxItem text="U538 - Reply Memo" identifier="formName_U538">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="U538"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+
+					<ListBoxItem text="U598 - SQL Error Report" identifier="formName_U598">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="U598"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+
+					<ListBoxItem text="U599 - Multi Purpose Message window (needs changing)" identifier="formName_U599">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="U599"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+
+
+					<ListBoxItem text="coaLookup_filter - COA Chart of Accounts Lookup" identifier="formName_coaLookup_filter">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="coaLookup_filter"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+
+
+
+					<ListBoxItem text="f_coa - Data management for table coa" identifier="formName_f_coa">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="f_coa"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+
+					<ListBoxItem text="f_coa_g - Data management for table coa (GUI ?)" identifier="formName_f_coa_g">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="f_coa_g"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+
+
+					<ListBoxItem text="vendorLookup_filter - Vendor Lookup" identifier="formName_vendorLookup_filter">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="vendorLookup_filter"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+
+					
+					
+					<ListBox.onMouseDoubleClick>
+						<ActionEventHandler actionName="ViewForm"/>
+					</ListBox.onMouseDoubleClick>
+				</ListBox>
+			</GridPanel>
+			<GridPanel classNames="fcls_statusbar_cnt" visible="true" verticalAlignment="Bottom" gridItemLocation="0,2,1,1" fieldTable="formonly" identifier="cntStatusBar">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="100%"/>
+				</GridPanel.gridColumnDefinitions>
+				<Label isDynamic="true" text="" classNames="fcls_sblabel" visible="true" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="lbInfo1"/>
+				<Label isDynamic="true" text="" classNames="fcls_sblabel" visible="true" gridItemLocation="0,1,1,1" fieldTable="formonly" identifier="lbInfo2"/>
+			</GridPanel>
+		</GridPanel>
+	</form.rootContainer>
+	<form.screenRecords>
+		<ScreenRecord identifier="FORMONLY" fields="f151"/>
+	</form.screenRecords>
+</form>
+

@@ -1,0 +1,795 @@
+/< require FFG::Custom ;
+import FFG::Custom >/
+/<our $CursorSufx="m".${MasterTable} >/
+/<our $CursorSufx="m".${MasterTable} >/
+/<our $MstInpScreenRec=${SRInpPrfx} . ${ModuleName} >/
+/<our $MstSavScreenRec=${SRSavPrfx} . ${ModuleName} >/
+/<our $MstLUpScreenRec=${SRLUpPrfx} . ${MasterTable} >/ 
+MAIN
+
+   DEFER INTERRUPT
+   OPTIONS prompt line last,
+			  message line 3,
+           #insert key F30,
+           #delete key F31,
+           #next key F32,
+           #previous key F33,
+           help file "${ModuleName}.iem",
+           help key ${Helpkey}
+   
+   WHENEVER ERROR CALL gest_error
+   # Le program est positionne en gestion d'erreurs automatique,
+   # cette fonction retourne un valorise 2 globals. La 1ere, nommee "sql_ok", 
+   # prend en compte la gravite de l'erreur, la 2eme ,"nbtent", correpond 
+   # au xnumber de tentatives d'execution de la COMMANDe 4GL.
+   # Au bout de 5 tentatives non gerees, le program se termine.
+   # "sql_ok" doit etre geree par le program
+
+	LET program="p_${ModuleName}","${MasterTable}"
+   CALL init_base("$DatabaseName",program)
+   # opens the database and opens program log file
+
+	CALL main_${ModuleName}_${MasterTable}()
+
+END MAIN
+
+#######################################################
+# definition variable sccs
+#######################################################
+FUNCTION mc_${ModuleName}_sccs()
+DEFINE sccs_var CHAR(70)
+LET sccs_var="%W% %D%"
+END FUNCTION
+
+
+FUNCTION main_${ModuleName}_${MasterTable} ()
+
+   CALL open_form_${ModuleName}_${MasterTable} ()   
+   # opens the main form and displays it
+
+   CALL init_cursor_${ModuleName}_${MasterTable} ()
+   # initialize all cursors on master table
+/< $DetailTable = "subparam" >/
+/< if ( ${DetailTable} ne "" ) { 
+	$Line = sprintf "    CALL init_cursor_${ModuleName}_${DetailTable}\(\)\n";# initialize allcursors on detail table \n";
+	$OutLineNum=ffg_print($SRCHANDLE,$Line,$OutLineNum,$FctName,"AdHoc",$TemplateFile,$InLineNum,$SIGNHANDLE); 
+	$Line = sprintf "    # initialize allcursors on detail table\n";
+	$OutLineNum=ffg_print($SRCHANDLE,$Line,$OutLineNum,$FctName,"AdHoc",$TemplateFile,$InLineNum,$SIGNHANDLE); 
+}>/
+
+   CALL menu_${ModuleName}_${MasterTable}()      
+   # Corps  du module
+
+   CALL close_form_${MasterTable}()
+   # Ferme la forme, procedures de fin de program 
+              
+END FUNCTION
+
+###################################################################
+#    OPEN_FORM_${MasterTable} : OPEN MAIN FORM
+###################################################################
+FUNCTION open_form_${MasterTable}()
+
+DEFINE nblig,nbcol,xpos,yposition SMALLINT
+
+LET nblig=${ScreenHeight}
+LET nbcol=${ScreenWidth}
+LET xpos=$xposition
+LET yposition=$yposition
+
+OPEN WINDOW ${MainForm} at xpos,yposition
+WITH FORM "${MainForm}" attributes(bypositioner)
+
+# ${SRInpPrfx}${ModuleName} is the record for this main form
+INITIALIZE ${MstInpScreenRec}.* TO NULL
+
+INITIALIZE ${SRSavPrfx}${ModuleName}.* TO NULL
+# this record will save main form values before edition
+
+DISPLAY BY NAME ${SRInpPrfx}${ModuleName}.*
+
+/< if ( $MasterLookupTables > 0 ) { 
+$Line = sprintf "INITIALIZE ${MstLUpScreenRec}.* TO NULL\n";
+$OutLineNum=ffg_print($SRCHANDLE,$Line,$OutLineNum,$FctName,"AdHoc",$TemplateFile,$InLineNum,$SIGNHANDLE);
+$Line = sprintf "DISPLAY BY NAME ${MstLUpScreenRec}.*\n";
+$OutLineNum=ffg_print($SRCHANDLE,$Line,$OutLineNum,$FctName,"AdHoc",$TemplateFile,$InLineNum,$SIGNHANDLE) } >/
+
+END FUNCTION
+
+######################################################################
+#    menu_${ModuleName}_${MasterTable}
+#    function containing the top level menu
+#    input arguments: none
+#    output arguments: none
+######################################################################
+
+FUNCTION menu_${ModuleName}_${MasterTable} ()
+
+   DEFINE nbsel_${MasterTable} INTEGER
+   DEFINE action smallint
+   DEFINE xnumber smallint
+   DEFINE arr_elem_num smallint
+
+   LET nbsel_${MasterTable} = 0
+   MENU "${MasterTable}"
+   COMMAND "${Query}" "${QueryCom} ${MasterTable}"
+      HELP 1000
+		message ""
+      INITIALIZE ${SRInpPrfx}${ModuleName}.* TO NULL
+      DISPLAY BY NAME ${SRInpPrfx}${ModuleName}.*
+
+/< if ( $MasterLookupTables > 0 ) { 
+	$Line = sprintf "      INITIALIZE ${MstLUpScreenRec}.* TO NULL\n";
+	$OutLineNum=ffg_print($SRCHANDLE,$Line,$OutLineNum,$FctName,"AdHoc",$TemplateFile,$InLineNum,$SIGNHANDLE);
+	$Line = sprintf "      DISPLAY BY NAME ${MstLUpScreenRec}.*\n";
+	$OutLineNum=ffg_print($SRCHANDLE,$Line,$OutLineNum,$FctName,"AdHoc",$TemplateFile,$InLineNum,$SIGNHANDLE,0,0) 
+}>/
+
+      CALL ${Query}_${MasterTable}() RETURNING nbsel_${MasterTable}
+      IF nbsel_${MasterTable} <>0 THEN 
+			DISPLAY BY NAME ${SRInpPrfx}${ModuleName}.*
+/< if ( $MasterLookupTables > 0 ) { 
+	$Line = sprintf "         DISPLAY BY NAME ${MstLUpScreenRec}.*\n" ;
+	$OutLineNum=ffg_print($SRCHANDLE,$Line,$OutLineNum,$FctName,"AdHoc",$TemplateFile,$InLineNum,$SIGNHANDLE,0,0) ;
+} >/
+/< $DetailTable = "subparam"; >/
+/< if ( $DetailTable ne "" ) { 
+	$Line=sprintf   "         LET arr_elem_num = disp_arr_$det_clnt_module (pky.*)\n"; 
+	$OutLineNum=ffg_print($SRCHANDLE,$Line,$OutLineNum,$FctName,"AdHoc",$TemplateFile,$InLineNum,$SIGNHANDLE) ;
+} >/
+         NEXT OPTION "${Next}"
+      ELSE 
+			ERROR "${NorowsSelected}"
+         NEXT OPTION "${Query}"
+      END IF
+
+   COMMAND "${Next}" "${NextCom} ${MasterTable}"
+      HELP 2000
+		message ""
+      INITIALIZE ${SRInpPrfx}${ModuleName}.* TO NULL
+      DISPLAY BY NAME ${SRInpPrfx}${ModuleName}.*
+/< if ( $MasterLookupTables > 0 ) { 
+	$Line = sprintf "       INITIALIZE ${MstLUpScreenRec}.* TO NULL\n";
+	$OutLineNum=ffg_print($SRCHANDLE,$Line,$OutLineNum,$FctName,"AdHoc",$TemplateFile,$InLineNum,$SIGNHANDLE);
+	$Line = sprintf "       DISPLAY BY NAME ${MstLUpScreenRec}.*\n";
+	$OutLineNum=ffg_print($SRCHANDLE,$Line,$OutLineNum,$FctName,"AdHoc",$TemplateFile,$InLineNum,$SIGNHANDLE,0,0) 
+} >/
+
+      IF nbsel_${MasterTable} THEN
+         CALL sql_nxtprev_${MasterTable}(1)
+			RETURNING sql_ok
+			CASE 
+			WHEN sql_ok = 0 
+				error "${Lastrow} ${MasterTable}"
+			WHEN sql_ok = -1 
+				error "${Unreachable} ",sqlca.sqlcode
+			WHEN sql_ok = 1
+/< if ( $MasterLookupTables > 0 ) { 
+$Line=sprintf "             DISPLAY BY NAME ${MstLUpScreenRec}.*\n"; 
+$OutLineNum=ffg_print($SRCHANDLE,$Line,$OutLineNum,$FctName,"AdHoc",$TemplateFile,$InLineNum,$SIGNHANDLE); 
+} >/
+/< if ( defined(${DetailTable}) ) { 
+	$Line=sprintf "             CALL disp_arr_${det_clnt_module} (pky.*)\n" ;
+	$OutLineNum=ffg_print($SRCHANDLE,$Line,$OutLineNum,$FctName,"AdHoc",$TemplateFile,$InLineNum,$SIGNHANDLE); 
+} >/
+			END CASE
+      ELSE
+         error " ${SelectFirst}  ${MasterTable} "
+         NEXT OPTION "${Query}"
+      END IF
+
+   COMMAND "${Previous}" "${PreviousCom} ${MasterTable}"
+      HELP 2000
+		message ""
+      INITIALIZE ${SRInpPrfx}${ModuleName}.* TO NULL
+      DISPLAY BY NAME ${SRInpPrfx}${ModuleName}.*
+/< if ( $MasterLookupTables > 0 ) { 
+	$Line = sprintf "       INITIALIZE ${MstLUpScreenRec}.* TO NULL\n";
+	$OutLineNum=ffg_print($SRCHANDLE,$Line,$OutLineNum,$FctName,"AdHoc",$TemplateFile,$InLineNum,$SIGNHANDLE);
+	$Line = sprintf "       DISPLAY BY NAME ${MstLUpScreenRec}.*\n";
+	$OutLineNum=ffg_print($SRCHANDLE,$Line,$OutLineNum,$FctName,"AdHoc",$TemplateFile,$InLineNum,$SIGNHANDLE,0,0) 
+}>/
+
+      IF nbsel_${MasterTable} THEN
+         CALL sql_nxtprev_${MasterTable}(-1)
+			RETURNING sql_ok
+			CASE 
+			WHEN sql_ok = 0
+				error "${Firstrow} ${MasterTable}"
+			WHEN sql_ok < -1
+				error "${Unreachable} ",sqlca.sqlcode
+			WHEN sql_ok = 1
+/< if ( defined(${DetailTable}) ) { 
+	$Line=sprintf "        CALL disp_arr_$det_clnt_module (pky.*)" } 
+>/
+				CALL set_${scrprec}_${ModuleName}()
+				DISPLAY BY NAME ${SRInpPrfx}${ModuleName}.*
+/< if ( $MasterLookupTables > 0 ) { 
+	$Line=sprintf "             DISPLAY BY NAME ${MstLUpScreenRec}.*\n"; 
+	$OutLineNum=ffg_print($SRCHANDLE,$Line,$OutLineNum,$FctName,"AdHoc",$TemplateFile,$InLineNum,$SIGNHANDLE,0,0) 
+}>/
+			END CASE
+      ELSE
+         error " ${SelectFirst} ${MasterTable} "
+         NEXT OPTION "${Query}"
+      END IF
+
+/< if ( defined($DetailTable) ) { 
+	$Line=sprintf "     COMMAND KEY (\"tab\") \"Array ${DetailTable} ${Presstab}\"\n";
+	$OutLineNum=ffg_print($SRCHANDLE,$Line,$OutLineNum,$FctName,"AdHoc",$TemplateFile,$InLineNum,$SIGNHANDLE); 
+	$Line=sprintf "     CALL edit_arr_${DetailTable} (pky.*)"; 
+	$OutLineNum=ffg_print($SRCHANDLE,$Line,$OutLineNum,$FctName,"AdHoc",$TemplateFile,$InLineNum,$SIGNHANDLE) 
+} >/
+
+   COMMAND "${Update}" "${UpdateCom} ${MasterTable}"
+      HELP 4000
+		message ""
+      IF nbsel_${MasterTable} THEN
+         IF status_pk_${MasterTable}(pky.*) < 0 THEN
+				error "${Islock} "
+            NEXT OPTION "${Next}"
+         ELSE
+            LET sql_ok = ${Update}_${MasterTable}()
+         END IF
+      ELSE
+         error " ${SelectFirst} ${MasterTable} "
+         NEXT OPTION "${Query}"
+      END IF
+
+   COMMAND "${Delete}" "${DeleteCom} ${MasterTable}"
+      HELP 5000
+		message ""
+      IF nbsel_${MasterTable} THEN
+         IF status_pk_${MasterTable}(pky.*) < 0 THEN
+				error "${Islock} "
+            NEXT OPTION "${Next}"
+         END IF
+         WHILE TRUE
+            CALL confirm_operation(5,10,"${Delete}") RETURNING action
+            CASE 
+            WHEN action = 0 OR action = 1 
+               EXIT WHILE  # degage abandon
+            WHEN action = 2   
+               CALL ${Delete}_${MasterTable}()
+                    RETURNING sql_ok
+					EXIT WHILE
+            END CASE
+         END WHILE
+      ELSE
+         error "${SelectFirst} ${MasterTable} "
+         NEXT OPTION "${Query}"
+      END IF
+
+   COMMAND "${Insert}" "${InsertCom} ${MasterTable}"
+      HELP 3000
+		message ""
+      call ${Insert}_${MasterTable}()
+      message ""
+
+   COMMAND "${Quit}" "${QuitCom}"
+      HELP 9000
+		message ""
+      exit menu
+   END MENU
+
+END FUNCTION
+
+######################################################################
+#    close_form_${MasterTable} : CLOSE MAIN FORM
+######################################################################
+FUNCTION close_form_${MasterTable}()
+	CLOSE WINDOW ${MainForm}
+END FUNCTION
+
+#######################################################################
+#    ${Query}_${MasterTable} : SELECTION D'UN ${MasterTable}
+#######################################################################
+FUNCTION ${Query}_${MasterTable}()
+DEFINE ${RecordPrefix}${MasterTable},where_text,prep_2,prep_3 CHAR(1000)
+DEFINE xnumber SMALLINT
+LET xnumber = 0
+MESSAGE "${InputCriteria}"
+# initialize record and display blank
+INITIALIZE ${SRInpPrfx}${ModuleName}.* TO NULL
+DISPLAY BY NAME ${SRInpPrfx}${ModuleName}.*
+/< if ( $MasterLookupTables > 0 ) { 
+	$Line = sprintf "      INITIALIZE ${MstLUpScreenRec}.* TO NULL\n";
+	$OutLineNum=ffg_print($SRCHANDLE,$Line,$OutLineNum,$FctName,"AdHoc",$TemplateFile,$InLineNum,$SIGNHANDLE);
+	$Line = sprintf "      DISPLAY BY NAME ${MstLUpScreenRec}.*\n";
+	$OutLineNum=ffg_print($SRCHANDLE,$Line,$OutLineNum,$FctName,"AdHoc",$TemplateFile,$InLineNum,$SIGNHANDLE,0,0) 
+}>/
+
+CONSTRUCT BY NAME where_text ON /< print_form_fields ($SRCHANDLE,$MainForm,$MasterTable,"all","false","","          ")  >/
+/<LF()>/
+
+ON KEY (${Helpkey})  # appel de l'aide en ligne
+   CALL help_${MasterTable}()
+   
+## Permet de tester que l'on a saisi des criteres 
+AFTER CONSTRUCT 
+   IF NOT field_touched(${scrp}_${MasterTable}.*) AND NOT int_flag THEN
+      PROMPT "${Globselect} "
+      FOR CHAR reponse
+      CASE 
+      WHEN reponse MATCHES "[Oo]"
+         EXIT CONSTRUCT 
+      OTHERWISE                  # Saisie d'un critere de selection
+         error "${Oneatleast}"
+         CONTINUE CONSTRUCT
+      END CASE
+      END IF
+END CONSTRUCT
+
+IF int_flag = TRUE THEN
+   message "${{Abandon_com}}"
+   LET int_flag=0
+ELSE
+	LET xnumber = prepare_cnstr_${MasterTable}(where_text)
+END IF
+RETURN xnumber
+END FUNCTION
+
+#######################################################################
+#    ${Update}_${MasterTable} : UPDATE A ${MasterTable} RECORD
+#######################################################################
+FUNCTION ${Update}_${MasterTable}()
+DEFINE action SMALLINT  
+
+## check if record can be accessed
+
+WHILE true
+   LET int_flag = false
+
+	# Save Screen Record values before altering
+	LET ${MstSavScreenRec}.* = ${MstInpScreenRec}.* 
+	BEGIN WORK
+	INPUT BY NAME /< print_form_fields ($SRCHANDLE,$MainForm,$MasterTable,"attr","false",${MstInpScreenRec},"         ")  >/
+
+   WITHOUT DEFAULTS
+       /< list_input_events($SRCHANDLE,$MainForm,${MasterTable},"fkey","master","       " ) >/
+
+		/< if (defined(${do_lookup_tables}) ) { 
+			build_lookup_calls($database,${MasterTable},${MainForm},${ModuleName},inp );
+		} >/
+		/< if (defined($do_build_help) ) {  
+			$Line=sprintf "ON KEY ($Helpkey)  #\n";
+			$OutLineNum=ffg_print($SRCHANDLE,$Line,$OutLineNum,$FctName,"AdHoc",$TemplateFile,$InLineNum,$SIGNHANDLE) ;
+			$Line=sprintf "     CALL help_${MasterTable}()\n";
+			$OutLineNum=ffg_print($SRCHANDLE,$Line,$OutLineNum,$FctName,"AdHoc",$TemplateFile,$InLineNum,$SIGNHANDLE,0,0) ;
+		 }>/
+	END INPUT
+   IF int_flag = TRUE THEN
+      LET int_flag=false
+		# Restore previous value
+      LET ${MstInpScreenRec}.* = ${MstSavScreenRec}.*
+      DISPLAY BY NAME ${MstInpScreenRec}.*
+      MESSAGE "$abandon_com $interruptkey"
+      ROLLBACK WORK         # Transaction interrompue
+      EXIT WHILE
+   END IF 
+
+   CALL confirm_operation(4,10,"${Update}") RETURNING action
+
+   CASE action 
+      WHEN 0 
+			# Resign, restore previous values
+			LET ${MstInpScreenRec}.* = ${MstSavScreenRec}.*
+			DISPLAY BY NAME ${MstInpScreenRec}.*
+         EXIT WHILE   # degage abandon
+
+      WHEN 1 
+			# Redo
+         CONTINUE WHILE
+
+      WHEN 2   
+			# confirm update
+			CALL set_tablerecord_${ModuleName}_${MasterTable}("U")
+         CALL sql_${Update}_${MasterTable}(pky.*) returning sql_ok
+			CASE 
+			WHEN sql_ok = 0
+				MESSAGE "${Update} ${Successful}"
+				COMMIT WORK
+			WHEN sql_ok < 0
+				ERROR "${Update} ${Failed}",sqlca.sqlcode
+				ROLLBACK WORK
+			END CASE
+			EXIT WHILE
+		 END CASE
+END WHILE
+RETURN sql_ok
+END FUNCTION
+
+####################################################################
+## ${Insert}_${MasterTable}: add a new ${MasterTable} row
+####################################################################
+FUNCTION ${Insert}_${MasterTable}()
+DEFINE nbre_${MasterTable} ,action SMALLINT
+
+WHILE true
+	LET int_flag = false
+
+	BEGIN WORK
+	INPUT BY NAME /< print_form_fields ($SRCHANDLE,$MainForm,$MasterTable,"all","false",${MstInpScreenRec},"\t\t")  >/
+      /< list_input_events($SRCHANDLE,$MainForm,${MasterTable},"pkey,fkey","master","       " )		 >/
+
+		/< if (defined(${do_lookup_tables}) ) { build_lookup_calls($database,${MasterTable},${MainForm},${ModuleName},inp ) } >/
+
+		/< if (defined(${do_build_help}) ) {  
+			$Line=sprintf "ON KEY ($Helpkey)  # Call online help\n" ;
+			$OutLineNum=ffg_print($SRCHANDLE,$Line,$OutLineNum,$FctName,"AdHoc",$TemplateFile,$InLineNum,$SIGNHANDLE);
+			$Line=sprintf "     CALL help_${MasterTable}()\n";
+			$OutLineNum=ffg_print($SRCHANDLE,$Line,$OutLineNum,$FctName,"AdHoc",$TemplateFile,$InLineNum,$SIGNHANDLE);
+		 } >/
+	END INPUT
+   IF int_flag = TRUE THEN
+		# Resign from input
+      LET int_flag=false
+		LET  ${MstInpScreenRec}.* = ${MstSavScreenRec}.*
+      DISPLAY BY NAME ${MstInpScreenRec}.*
+      MESSAGE "${Abandon_com} $interruptkey"
+      ROLLBACK WORK         # Transaction interrompue
+      EXIT WHILE
+   END IF 
+
+   CALL confirm_operation(3,10,"${Update}") RETURNING action
+	CASE action
+	WHEN 1            # On desire corriger ce qui vient d'etre saisi 
+		CONTINUE WHILE   # On laisse tout affiche comme tel
+		
+	WHEN 2            # On valide la transaction
+		CALL set_tablerecord_${ModuleName}_${MasterTable}("I")
+		CALL sql_${Insert}_${MasterTable}() returning sql_ok
+		CASE 
+		WHEN sql_ok = 0
+			message "${Insert} ${Successful}"
+			COMMIT WORK
+		WHEN sql_ok < 0
+			error "${Insert} ${Failed}",sqlca.sqlcode
+			ROLLBACK WORK
+		END CASE
+		EXIT WHILE
+
+	WHEN 0
+		EXIT WHILE
+	END CASE
+
+END WHILE
+RETURN sql_ok
+END FUNCTION
+
+##############################################################
+FUNCTION ${Delete}_${MasterTable}()
+##############################################################
+DEFINE action SMALLINT
+DEFINE sql_ok SMALLINT
+
+WHILE TRUE
+   CALL confirm_operation(5,10,"${Delete}") RETURNING action
+	BEGIN WORK
+   CASE 
+   WHEN action = 0 OR action = 1 
+      EXIT WHILE  # degage abandon
+   WHEN action = 2   
+      CALL sql_${Delete}_${MasterTable}(pky.*) RETURNING sql_ok
+		CASE 
+		WHEN sql_ok = 0
+			message "${Delete} ${Successful}"
+			COMMIT WORK
+			INITIALIZE ${SRInpPrfx}${ModuleName}.* TO NULL
+			DISPLAY BY NAME ${SRInpPrfx}${ModuleName}.*
+/< if ( $MasterLookupTables > 0 ) {
+$Line = sprintf "       INITIALIZE ${MstLUpScreenRec}.* TO NULL\n";
+$OutLineNum=ffg_print($SRCHANDLE,$Line,$OutLineNum,$FctName,"AdHoc",$TemplateFile,$InLineNum,$SIGNHANDLE);
+			$OutLineNum=ffg_print($SRCHANDLE,$Line,$OutLineNum,$FctName,"AdHoc",$TemplateFile,$InLineNum,$SIGNHANDLE);
+$Line = sprintf "       DISPLAY BY NAME ${MstLUpScreenRec}.*\n";
+$OutLineNum=ffg_print($SRCHANDLE,$Line,$OutLineNum,$FctName,"AdHoc",$TemplateFile,$InLineNum,$SIGNHANDLE) } >/
+		WHEN sql_ok < 0
+			error "${Delete} ${Failed}",sqlca.sqlcode
+			ROLLBACK WORK
+		END CASE
+		EXIT WHILE
+
+	END CASE
+END WHILE
+RETURN sql_ok
+END FUNCTION
+/< build_fct_CpyScrValuesTblRecord(${MainForm},${MasterTable},S)  >/
+/# sh=g_valtab ${ModuleName} ${MainForm} ${MasterTable} S >> $mstr_clnt_module.4gl
+/# Build function that copies Screen variables values to Table record values
+/< build_fct_CpyTblRecordScrValues(${MainForm},${MasterTable},S)  >/
+/## sh=g_valscr ${ModuleName} ${MainForm} ${MasterTable} S >> $mstr_clnt_module.4gl
+/# Build function that copies Table record values to Screen variables values 
+/< if ( $MasterLookupTables > 0 ) { 
+	build_mdl_Lookup($database,${ModuleName}) ;
+} >/
+/< build_fct_Help(${MainForm},${MasterTable}) >/
+/< build_doc_Help(${MainForm},$mstr_clnt_module) >/
+########################################################################
+#    init_cursor_${MasterTable} : DECLARATION AND INIT of cursors
+########################################################################
+
+FUNCTION init_cursor_${MasterTable}()
+DEFINE req_text char(1500)
+
+# PREPARE cursor for full master table row contents, access by primary key
+LET req_text=
+"SELECT /<list_table_columns($SRCHANDLE,${MasterTable},"all","","","flat","",$endline,1); >/",
+" FROM ${MasterTable} ",
+"WHERE /< bld_where_clause($SRCHANDLE,${MasterTable},"pkey","?","","    ") ;>/"
+
+PREPARE sel_mrw_${CursorSufx} FROM req_text
+DECLARE crs_row_${CursorSufx} CURSOR FOR sel_mrw_${CursorSufx}
+
+# PREPARE cursor for row test / check if locked
+let req_text= "SELECT /<list_table_columns($SRCHANDLE,${MasterTable},"pkey","","","flat","",$endline,1); >/", 
+" FROM ${MasterTable} ",
+" WHERE /< bld_where_clause($SRCHANDLE,${MasterTable},"pkey","?","","    ") ;>/"
+
+PREPARE sel_pky_${CursorSufx} FROM req_text
+DECLARE crs_pky_${CursorSufx} CURSOR FOR sel_pky_${CursorSufx}
+
+# PREPARE INSERT statement
+LET req_text =
+"INSERT INTO ${MasterTable} (/<list_table_columns($SRCHANDLE,${MasterTable},"all","","","flat","",1); >/)",
+" VALUES ( /<list_table_columns($SRCHANDLE,${MasterTable},"all","placeholders","","flat","",1); >/)" 
+PREPARE pr_ins_${CursorSufx} FROM req_text
+
+# PREPARE UPDATE statement
+let req_text=
+"UPDATE ${MasterTable} ",
+"SET ( /<list_table_columns($SRCHANDLE,${MasterTable},"attr","","","flat","",1); >/)",
+" = ( /<list_table_columns ($SRCHANDLE,${MasterTable},"attr","placeholders","","flat","",1); >/)",
+" WHERE /< bld_where_clause($SRCHANDLE,${MasterTable},"pkey","?","","    ") ;>/" 
+
+/#pky_cond $database ${MasterTable} prp >> $mstr_srvr_module.4gl
+PREPARE pr_upd_${CursorSufx} FROM req_text
+
+
+# PREPARE DELETE statement
+let req_text= "DELETE FROM ${MasterTable} ",
+" WHERE /< bld_where_clause($SRCHANDLE,${MasterTable},"pkey","?","","    ") ;>/" 
+
+PREPARE pr_del_${CursorSufx} FROM req_text
+
+END FUNCTION
+
+#########################################################
+FUNCTION prepare_cnstr_${MasterTable}(qry_stmt)
+#########################################################
+# this function prepares the CONSTRUCT BY NAME statement
+# inbound param: query test
+# outbound param  ?
+DEFINE qry_stmt char(500)
+DEFINE ${RecordPrefix}${MasterTable} char(1000)
+DEFINE row_count integer
+DEFINE lsql_ok integer
+
+# define primary_key record
+DEFINE pky_${MasterTable} RECORD 
+	/<define_table_variables ($SRCHANDLE,${MasterTable},"pkey","record","pky","    ")>/
+END RECORD
+
+LET ${RecordPrefix}${MasterTable} = 
+    "SELECT count(*) FROM ${MasterTable}",
+    " WHERE ",qry_stmt CLIPPED 
+
+PREPARE ${RecordPrefix}nbr_${CursorSufx} FROM ${RecordPrefix}${MasterTable}
+DECLARE crs_nbr_${CursorSufx} CURSOR for ${RecordPrefix}nbr_${CursorSufx}
+
+WHENEVER ERROR CONTINUE
+OPEN crs_nbr_${CursorSufx}
+FETCH crs_nbr_${CursorSufx} INTO row_count
+WHENEVER ERROR CALL gest_error
+
+# if FETCH fails, count = 0, the, get back to query
+IF sqlca.sqlcode OR row_count = 0 THEN
+   let row_count =0
+	RETURN row_count
+END IF
+
+# display the selected columns
+
+LET ${RecordPrefix}${MasterTable} = "SELECT /<list_table_columns($SRCHANDLE,${MasterTable},"pkey","record","pky","flat","    "); >/",
+" FROM ${MasterTable} ",
+"WHERE ",qry_stmt clipped
+PREPARE rech_${CursorSufx} FROM ${RecordPrefix}${MasterTable}
+
+# crs_scrl_${CursorSufx} : the first cursor selects all the primary keys (not all the table columns)
+# numeros de ${MasterTable} (SCROLL CURSOR)
+
+DECLARE crs_scrl_${CursorSufx} SCROLL CURSOR WITH HOLD FOR rech_${CursorSufx}
+
+WHENEVER ERROR CONTINUE
+OPEN crs_scrl_${CursorSufx}
+FETCH FIRST crs_scrl_${CursorSufx} into pky.*
+WHENEVER ERROR CALL gest_error
+CASE
+WHEN sqlca.sqlcode=100
+	LET row_count = -1
+	close crs_scrl_${CursorSufx}
+WHEN sqlca.sqlcode=0
+	CALL sql_fetch_mrw_${MasterTable} (pky.*)
+		  RETURNING row_count
+WHEN sqlca.sqlcode < 0
+	LET row_count = -2
+END CASE
+RETURN row_count
+END FUNCTION
+
+#######################################################################
+# sql_nxtprev_${MasterTable} : FETCH NEXT OR PREVIOUS RECORD
+#######################################################################
+FUNCTION sql_nxtprev_${MasterTable}(offset)
+DEFINE offset SMALLINT
+define lsql_ok integer
+DEFINE pky_${MasterTable} RECORD 
+	/<define_table_variables ($SRCHANDLE,${MasterTable},"pkey","record","pky","    ")>/
+END RECORD
+
+   WHENEVER ERROR CONTINUE
+   FETCH RELATIVE offset crs_scrl_${CursorSufx} INTO pky_${MasterTable}.*
+   WHENEVER ERROR CALL gest_error
+
+   CASE 
+   WHEN sqlca.sqlcode = 100 
+      LET lsql_ok = 0
+   WHEN sqlca.sqlcode < 0 
+      LET lsql_ok = -1
+   OTHERWISE
+      LET lsql_ok = 1
+      CALL sql_fetch_mrw_${MasterTable} (pky.*)
+           RETURNING lsql_ok
+   END CASE
+	RETURN lsql_ok
+END FUNCTION
+
+########################################################################
+# sql_fetch_mrw_${MasterTable} : LECTURE, AFFICHAGE D'UNE RANGEE A PARTIR DU PRIMARY
+# parametre entrant : primary key
+# parametre entrant : sql_ok et contenu de la rangee
+########################################################################
+FUNCTION sql_fetch_mrw_${MasterTable}(pky_${MasterTable})
+DEFINE lsql_ok smallint
+DEFINE pky_${MasterTable} RECORD 
+	/<define_table_variables ($SRCHANDLE,${MasterTable},"pkey","record","pky","    ")>/
+END RECORD
+
+DEFINE ${tbrp}${MasterTable} RECORD 
+	/<define_table_variables ($SRCHANDLE,${MasterTable},"all","record","","    ")>/
+END RECORD
+
+# read the table, access on primary key
+   WHENEVER ERROR CONTINUE
+   OPEN crs_row_${CursorSufx} 
+   USING pky.*
+
+   FETCH crs_row_${CursorSufx}  INTO ${tbrp}${MasterTable}.*
+
+   WHENEVER ERROR CALL gest_error
+   CASE
+   WHEN  sqlca.sqlcode = 100 
+      LET lsql_ok = 0
+   WHEN  sqlca.sqlcode < 0 
+      LET lsql_ok = -1
+   OTHERWISE
+      LET lsql_ok = 1
+		CALL set_formrecord_${ModuleName}_${MasterTable}.*)
+   END CASE
+   RETURN lsql_ok
+END FUNCTION
+
+########################################################################
+## Sql${Update}_${MasterTable} :update ${MasterTable} record
+########################################################################
+FUNCTION sql_${Update}_${MasterTable}(pky_${MasterTable})
+DEFINE lsql_ok integer
+DEFINE pky_${MasterTable} RECORD 
+	/<define_table_variables ($SRCHANDLE,${MasterTable},"pkey","record","pky","    ")>/
+END RECORD
+
+WHENEVER ERROR CONTINUE
+EXECUTE pr_upd_${CursorSufx} 
+USING /<list_table_columns($SRCHANDLE,${MasterTable},"attr","","sr_${MasterTable}","","    "); >/,
+pky_${MasterTable}.*
+
+WHENEVER ERROR CALL gest_error
+IF sqlca.sqlcode < 0 THEN   
+   ROLLBACK WORK
+	LET lsql_ok = -1
+ELSE 
+   COMMIT WORK
+	LET lsql_ok = 0
+END IF
+RETURN lsql_ok
+END FUNCTION
+
+########################################################################
+## INSERT in table ${MasterTable} 
+########################################################################
+FUNCTION sql_${Insert}_${MasterTable}()
+DEFINE lsql_ok integer
+   WHENEVER ERROR CONTINUE
+   EXECUTE pr_ins_${CursorSufx} 
+	USING /<list_table_columns($SRCHANDLE,${MasterTable},"all","","sr_${MasterTable}","","    ","");>/
+	/<LF()>/
+   WHENEVER ERROR CALL gest_error
+
+   IF sqlca.sqlcode < 0 THEN   
+	   CALL display_error("${InsertErrorMsg} ${MasterTable} ")
+      CALL rollback_work()
+		LET lsql_ok = -1
+   ELSE 
+      CALL commit_work()
+		LET lsql_ok = 0
+   END IF
+	RETURN lsql_ok
+
+END FUNCTION
+
+########################################################################
+## delete_${MasterTable} :delete dans la table ${MasterTable} 
+########################################################################
+FUNCTION sql_${Delete}_${MasterTable}(pky_${MasterTable})
+DEFINE lsql_ok smallint
+
+   WHENEVER ERROR CONTINUE
+   EXECUTE pr_del_${CursorSufx} 
+   USING pky_${MasterTable}.*
+
+   WHENEVER ERROR CALL gest_error
+   IF sqlca.sqlcode < 0 THEN   
+      CALL rollback_work()
+      LET lsql_ok = -1
+   ELSE
+      CALL commit_work()
+		LET lsql_ok=0
+   END IF
+   RETURN lsql_ok
+END FUNCTION
+
+################################################################################
+#   status_pk_${MasterTable}() : VERIFICATION DE L'EXITENCE DE LA CLE PRIMAIRE
+################################################################################
+FUNCTION status_pk_${MasterTable}(pky_${MasterTable})  
+# Check primary key
+# inbound parameter : record of primary key
+# outbound parameter:  status > 0  if exists, 0 if no record, < 0 if error
+DEFINE pky_${MasterTable} RECORD 
+	/<define_table_variables ($SRCHANDLE,${MasterTable},"pkey","record","pky","    ")>/
+END RECORD
+DEFINE pk_status INTEGER
+
+WHENEVER ERROR CONTINUE
+OPEN crs_pky_${CursorSufx} 
+     USING  pk.*
+FETCH crs_pky_${CursorSufx} 
+WHENEVER ERROR CALL gest_error
+
+CASE sqlca.sqlcode
+WHEN 0 
+   let pk_status = 1
+WHEN 100
+   let pk_status = 0
+WHEN sqlca.sqlerrd[2] = 104
+   let pk_status = -1		# record locked
+WHEN sqlca.sqlcode < 0
+   let pk_status = sqlca.sqlcode
+END CASE
+
+RETURN pk_status
+END FUNCTION
+
+/< if ($MasterLookupTables > 0 ) {
+	bld_lookup_queries ( $MasterTable );
+}>/
+
+# generation des look up dans un autre source
+/# g_lookup $database ${MasterTable} ${MainForm} ${ModuleName} >> $mstr_srvr_module.4gl
+
+/# generation de la fonction islocked_${MasterTable}
+
+/# if test $tabzoom 
+/#   zoom_model
+
+# fabrication du header
+/# g_headr $mstr_srvr_module

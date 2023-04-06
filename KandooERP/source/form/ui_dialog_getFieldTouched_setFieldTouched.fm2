@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form xmlns="http://namespaces.querix.com/2011/fglForms">
+	<rootcontainer type="coordpanel" identifier="" zOrder="0" fieldTable="">
+		<classnames/>
+		<minsize width="408" height="110"/>
+		<locale/>
+		<displaymodes/>
+		<items>
+			<label identifier="f005" toolTip="" zOrder="0" fieldTable="formonly" comment="" text="Select Country" format="" isDynamic="true">
+				<classnames/>
+				<location xCoord="24" yCoord="0"/>
+				<preferredsize width="344" height="22"/>
+				<locale/>
+				<displaymodes/>
+				<datatype typeName="Char"/>
+				<actions/>
+				<includes/>
+			</label>
+			<label identifier="f001" toolTip="" zOrder="0" fieldTable="formonly" comment="" text="Country:" format="" isDynamic="true">
+				<classnames/>
+				<location xCoord="24" yCoord="22"/>
+				<preferredsize width="120" height="22"/>
+				<locale/>
+				<displaymodes/>
+				<datatype typeName="Char"/>
+				<actions/>
+				<includes/>
+			</label>
+			<label identifier="f002" toolTip="" zOrder="0" fieldTable="formonly" comment="" text="City:" format="" isDynamic="true">
+				<classnames/>
+				<location xCoord="144" yCoord="22"/>
+				<preferredsize width="144" height="22"/>
+				<locale/>
+				<displaymodes/>
+				<datatype typeName="Char"/>
+				<actions/>
+				<includes/>
+			</label>
+			<label identifier="f003" toolTip="" zOrder="0" fieldTable="formonly" comment="" text="ZIP:" format="" isDynamic="true">
+				<classnames/>
+				<location xCoord="288" yCoord="22"/>
+				<preferredsize width="80" height="22"/>
+				<locale/>
+				<displaymodes/>
+				<datatype typeName="Char"/>
+				<actions/>
+				<includes/>
+			</label>
+			<combobox identifier="country" toolTip="" zOrder="0" fieldTable="formonly" comment="">
+				<classnames/>
+				<location xCoord="24" yCoord="44"/>
+				<preferredsize width="118" height="22"/>
+				<locale/>
+				<displaymodes/>
+				<datatype typeName="Char"/>
+				<actions/>
+				<comboboxitems>
+					<comboboxitem identifier="" text="France">
+						<value type="stringliteral" stringValue="France"/>
+					</comboboxitem>
+					<comboboxitem identifier="" text="Great Britain">
+						<value type="stringliteral" stringValue="Great Britain"/>
+					</comboboxitem>
+					<comboboxitem identifier="" text="Germany">
+						<value type="stringliteral" stringValue="Germany"/>
+					</comboboxitem>
+					<comboboxitem identifier="" text="Italy">
+						<value type="stringliteral" stringValue="Italy"/>
+					</comboboxitem>
+					<comboboxitem identifier="" text="Spain">
+						<value type="stringliteral" stringValue="Spain"/>
+					</comboboxitem>
+				</comboboxitems>
+			</combobox>
+			<textfield identifier="city" toolTip="" zOrder="0" fieldTable="formonly" comment="" format="" textPicture="" editor="" noEntry="true" century="Closest">
+				<classnames/>
+				<location xCoord="144" yCoord="44"/>
+				<preferredsize width="142" height="22"/>
+				<locale/>
+				<displaymodes/>
+				<datatype typeName="Char"/>
+				<actions/>
+				<includes/>
+			</textfield>
+			<textfield identifier="zip" toolTip="" zOrder="0" fieldTable="formonly" comment="" format="" textPicture="" editor="" noEntry="true" century="Closest">
+				<classnames/>
+				<location xCoord="288" yCoord="44"/>
+				<preferredsize width="78" height="22"/>
+				<locale/>
+				<displaymodes/>
+				<datatype typeName="Char"/>
+				<actions/>
+				<includes/>
+			</textfield>
+			<label identifier="l_country" toolTip="" zOrder="0" fieldTable="formonly" comment="" text="" format="" isDynamic="true">
+				<classnames/>
+				<location xCoord="24" yCoord="66"/>
+				<preferredsize width="120" height="22"/>
+				<locale/>
+				<displaymodes/>
+				<datatype typeName="Char"/>
+				<actions/>
+				<includes/>
+			</label>
+			<label identifier="l_city" toolTip="" zOrder="0" fieldTable="formonly" comment="" text="" format="" isDynamic="true">
+				<classnames/>
+				<location xCoord="144" yCoord="66"/>
+				<preferredsize width="144" height="22"/>
+				<locale/>
+				<displaymodes/>
+				<datatype typeName="Char"/>
+				<actions/>
+				<includes/>
+			</label>
+			<label identifier="l_zip" toolTip="" zOrder="0" fieldTable="formonly" comment="" text="" format="" isDynamic="true">
+				<classnames/>
+				<location xCoord="288" yCoord="66"/>
+				<preferredsize width="80" height="22"/>
+				<locale/>
+				<displaymodes/>
+				<datatype typeName="Char"/>
+				<actions/>
+				<includes/>
+			</label>
+		</items>
+	</rootcontainer>
+	<actions/>
+	<classnames/>
+	<screenrecords>
+		<screenrecord identifier="formonly">
+			<fields>
+				<field>f005</field>
+				<field>country</field>
+				<field>city</field>
+				<field>zip</field>
+				<field>f001</field>
+				<field>f002</field>
+				<field>f003</field>
+				<field>l_country</field>
+				<field>l_city</field>
+				<field>l_zip</field>
+			</fields>
+		</screenrecord>
+	</screenrecords>
+	<phantomfields/>
+	<imageid uri=""/>
+</form>
+

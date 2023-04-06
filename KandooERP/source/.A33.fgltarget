@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<fglBuildTarget xmlns="http://namespaces.querix.com/lyciaide/target" name="A33" type="fgl-program">
+
+  <libraries>
+    <library name="lib_common_invwind" dynamic="false" location=""/>
+    <library name="lib_common_wind" dynamic="false" location=""/>
+    <library name="lib_tool_A_AR_db" dynamic="false" location=""/>
+    <library name="lib_tool_A_AR_new" dynamic="false" location=""/>
+    <library name="lib_tool_E_EO_db" dynamic="false" location=""/>
+    <library name="lib_tool_E_EO_new" dynamic="false" location=""/>
+    <library name="lib_tool_G_GL_new" dynamic="false" location=""/>
+    <library name="lib_tool_P_AP_new" dynamic="false" location=""/>
+    <library name="lib_tool_U_UT_new" dynamic="false" location=""/>
+    <library name="lib_tool_W_WO_new" dynamic="false" location=""/>
+    <library name="lib_tool_common" dynamic="false" location=""/>
+    <library name="lib_tool_db_common" dynamic="false" location=""/>
+  </libraries>
+
+  <sources type="fgl">
+    <file location="4gl/common/disbwind.4gl"/>
+    <file location="4gl/common/discfunc.4gl"/>
+    <file location="4gl/ar/A_AR_GLOBALS.4gl"/>
+    <file location="4gl/common/conv_rate.4gl"/>
+    <file location="4gl/common/dispgpfunc.4gl"/>
+    <file location="4gl/common/disbfunc.4gl"/>
+    <file location="4gl/ar/A31a.4gl"/>
+    <file location="4gl/common/acctwind.4gl"/>
+    <file location="4gl/ar/A3_GROUP_GLOBALS.4gl"/>
+    <file location="4gl/lib_tool_db/lib_tool_db_disbhead.4gl"/>
+    <file location="4gl/common/orstfunc.4gl"/>
+    <file location="4gl/common/duedate.4gl"/>
+    <file location="4gl/common/vperfunc.4gl"/>
+    <file location="4gl/ar/A20_enter_cashreceipt.4gl"/>
+    <file location="4gl/ar/A30_datasource.4gl"/>
+    <file location="4gl/ar/A31d.4gl"/>
+    <file location="4gl/ar/A33_enter_receipt.4gl"/>
+     <file location="4gl/common/agingfunc.4gl"/>
+    <file location="4gl/common/notefunc.4gl"/>
+    <file location="4gl/common/orhdwind.4gl"/>
+    <file location="4gl/common/glob_GLOBALS.4gl"/>
+    <file location="4gl/common/psepwind.4gl"/>
+    <file location="4gl/ar/A31c.4gl"/>
+    <file location="4gl/common/invextfunc.4gl"/>
+    <file location="4gl/common/tablefunc.4gl"/>
+    <file location="4gl/common/note_disp.4gl"/>
+    <file location="4gl/common/trans_num.4gl"/>
+    <file location="4gl/ar/A33b.4gl"/>
+    <file location="4gl/common/orddfunc.4gl"/>
+    <file location="4gl/common/bankwind.4gl"/>
+    <file location="4gl/ar/A33f.4gl"/>
+    <file location="4gl/ar/A33_GLOBALS.4gl"/>
+    <file location="4gl/ar/A31_GLOBALS.4gl"/>
+    <file location="4gl/ar/A31b.4gl"/>
+    <file location="4gl/ar/A33.4gl"/>
+    <file location="4gl/ar/A33_main.4gl"/>
+  </sources>
+
+  <sources type="form">
+    <file location="per/gl/ENG/G135.fm2"/>
+    <file location="per/gl/ENG/G147.fm2"/>
+    <file location="per/utility/ENG/U122.fm2"/>
+    <file location="per/utility/ENG/U156.fm2"/>
+    <file location="per/gl/ENG/G123.fm2"/>
+    <file location="per/eo/ENG/E400.fm2"/>
+    <file location="per/ar/ENG/A632.fm2"/>
+    <file location="per/utility/ENG/U136.fm2"/>
+    <file location="per/eo/ENG/E426.fm2"/>
+    <file location="per/ar/ENG/A151.fm2"/>
+    <file location="per/gl/ENG/G129.fm2"/>
+    <file location="per/ar/ENG/A203.fm2"/>
+    <file location="per/eo/ENG/E408.fm2"/>
+    <file location="per/ar/ENG/A192.fm2"/>
+    <file location="per/eo/ENG/E445.fm2"/>
+    <file location="per/ar/ENG/A182.fm2"/>
+    <file location="per/ar/ENG/A692.fm2"/>
+    <file location="per/utility/ENG/U526.fm2"/>
+    <file location="per/utility/ENG/U162.fm2"/>
+    <file location="per/ar/ENG/A154.fm2"/>
+    <file location="per/eo/ENG/E419.fm2"/>
+    <file location="per/ar/ENG/A639.fm2"/>
+    <file location="per/ar/ENG/A640.fm2"/>
+  </sources>
+
+  <mediaFiles>
+    <file client="true" location="A33.qxtheme" type="gui-theme-file"/>
+    <file client="true" location="A33.css" type="other"/>
+  </mediaFiles>
+
+</fglBuildTarget>

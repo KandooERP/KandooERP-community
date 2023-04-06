@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form xmlns="http://namespaces.querix.com/2015/fglForms">
+	<form.rootContainer>
+		<GridPanel classNames="fcls_rootContainer" fieldTable="" identifier="grid1" horizontalAlignment="Stretch" verticalAlignment="Stretch">
+			<GridPanel.gridRowDefinitions>
+				<GridRowDefinition/>
+				<GridRowDefinition gridLengthValue="100%"/>
+			</GridPanel.gridRowDefinitions>
+			<GridPanel.gridColumnDefinitions>
+				<GridColumnDefinition gridLengthValue="100%"/>
+			</GridPanel.gridColumnDefinitions>
+			<GridPanel classNames="fcls_detail_cnt" visible="true" gridItemLocation="0,0,1,1" fieldTable="" identifier="cntDetail1" horizontalAlignment="Stretch" verticalAlignment="Stretch">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue=""/>
+				</GridPanel.gridColumnDefinitions>
+				<GridPanel classNames="fcls_detail_cnt_sub" visible="true" verticalAlignment="Top" horizontalAlignment="Left" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="cntDetail1Sub">
+					<GridPanel.gridRowDefinitions>
+						<GridRowDefinition/>
+						<GridRowDefinition gridLengthValue=""/>
+						<GridRowDefinition gridLengthValue=""/>
+						<GridRowDefinition gridLengthValue=""/>
+						<GridRowDefinition gridLengthValue=""/>
+						<GridRowDefinition gridLengthValue=""/>
+					</GridPanel.gridRowDefinitions>
+					<GridPanel.gridColumnDefinitions>
+						<GridColumnDefinition gridLengthValue=""/>
+						<GridColumnDefinition gridLengthValue="60%"/>
+						<GridColumnDefinition gridLengthValue=""/>
+						<GridColumnDefinition gridLengthValue=""/>
+					</GridPanel.gridColumnDefinitions>
+					<Label isDynamic="true" text="Database:" dataType="Char,,,," classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="dl_database"/>
+					<ComboBox editable="true" dataType="Char,,,," classNames="fcls_data_widget,fcls_align_left,fcls_length_10qch" visible="true" gridItemLocation="1,0,1,1" fieldTable="formonly" identifier="db_name"/>
+					<Button text="DB-Set" classNames="fcls_button_2,fcls_align_left" visible="true" textAlignment="Center," gridItemLocation="2,0,1,1" fieldTable="" identifier="bt_db_set">
+						<Button.image>
+							<Image imageUrl="{CONTEXT}/public/querix/icon16/database-link.png"/>
+						</Button.image>
+						<Button.onInvoke>
+							<KeyEventHandler keyName="F23,false,false,false"/>
+						</Button.onInvoke>
+					</Button>
+					<Button text="DB-Connect" classNames="fcls_button_2,fcls_align_left" visible="true" textAlignment="Center," gridItemLocation="3,0,1,1" fieldTable="" identifier="bt_db_connect">
+						<Button.image>
+							<Image imageUrl="{CONTEXT}/public/querix/icon16/database-update.png"/>
+						</Button.image>
+						<Button.onInvoke>
+							<KeyEventHandler keyName="F24,false,false,false"/>
+						</Button.onInvoke>
+					</Button>
+					<Label isDynamic="true" text="Database:" dataType="Char,,,," classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,1,1,1" fieldTable="formonly" identifier="dl_f2"/>
+					<Label isDynamic="true" dataType="Char,,,," visible="true" gridItemLocation="1,1,1,1" fieldTable="formonly" identifier="dl_db_state"/>
+					<Label isDynamic="true" text="DB Version:" dataType="Char,,,," classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,2,1,1" fieldTable="formonly" identifier="dl_f3"/>
+					<Label isDynamic="true" dataType="Char,,,," visible="true" gridItemLocation="1,2,1,1" fieldTable="formonly" identifier="dl_database_info"/>
+					<Label isDynamic="true" text="DB Status:" dataType="Char,,,," classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,3,1,1" fieldTable="formonly" identifier="dl_f4"/>
+					<Label isDynamic="true" dataType="Char,,,," visible="true" gridItemLocation="1,3,1,1" fieldTable="formonly" identifier="dl_qxt_toolbox_error">
+						<Label.displayModes>
+							<DisplayMode appearance="Red"/>
+						</Label.displayModes>
+					</Label>
+					<Label isDynamic="true" text="LYCIA_DB_DRIVER:" dataType="Char,,,," classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,4,1,1" fieldTable="formonly" identifier="dl_f5"/>
+					<Label isDynamic="true" dataType="Char,,,," visible="true" gridItemLocation="1,4,1,1" fieldTable="formonly" identifier="dl_lycia_db_driver"/>
+					<Label isDynamic="true" text="Date Format:" dataType="Char,,,," classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="2,4,1,1" fieldTable="formonly" identifier="dl_f7"/>
+					<Label isDynamic="true" dataType="Char,,,," visible="true" gridItemLocation="3,4,1,1" fieldTable="formonly" identifier="dl_dbdate_format"/>
+					<Label isDynamic="true" text="Last Operation:" dataType="Char,,,," classNames="fcls_fieldlabel,fcls_align_left" visible="true" gridItemLocation="0,5,1,1" fieldTable="formonly" identifier="dl_f6"/>
+					<Label isDynamic="true" dataType="Char,,,," visible="true" gridItemLocation="3,5,1,1" fieldTable="formonly" identifier="dl_current_action"/>
+				</GridPanel>
+			</GridPanel>
+			<GridPanel classNames="fcls_detail_cnt" visible="true" gridItemLocation="0,1,1,1" fieldTable="formonly" identifier="cntDetail2" horizontalAlignment="Stretch" verticalAlignment="Stretch">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue="100%"/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="100%"/>
+				</GridPanel.gridColumnDefinitions>
+				<TextArea dataType="Char,,,," classNames="fcls_field_memo" visible="true" gridItemLocation="0,0,1,1" fieldTable="formonly" identifier="monitor_progress" horizontalAlignment="Stretch" verticalAlignment="Stretch"/>
+			</GridPanel>
+		</GridPanel>
+	</form.rootContainer>
+	<form.screenRecords>
+		<ScreenRecord identifier="formonly" fields="monitor_progress,dl_database_info,dl_db_state,dl_qxt_toolbox_error,dl_lycia_db_driver,dl_current_action,dl_dbdate_format,dl_f6,dl_f5,dl_f4,dl_f3,dl_f2,dl_f7,db_name,bt_db_set,bt_db_connect"/>
+	</form.screenRecords>
+</form>
+

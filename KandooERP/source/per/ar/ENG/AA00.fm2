@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="UTF-8"?><form xmlns="http://namespaces.querix.com/2015/fglForms">
+	<form.rootContainer>
+		<GridPanel classNames="fcls_rootContainer" fieldTable="" horizontalAlignment="Left" identifier="rootContainer" verticalAlignment="Top">
+			<GridPanel.gridRowDefinitions>
+				<GridRowDefinition gridLengthValue=""/>
+				<GridRowDefinition gridLengthValue=""/>
+				<GridRowDefinition gridLengthValue=""/>
+			</GridPanel.gridRowDefinitions>
+			<GridPanel.gridColumnDefinitions>
+				<GridColumnDefinition gridLengthValue="100%"/>
+			</GridPanel.gridColumnDefinitions>
+			<GridPanel classNames="fcls_title_cnt" fieldTable="formonly" gridItemLocation="0,0,1,1" identifier="cntTitle" verticalAlignment="Top" visible="true">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="100%"/>
+					<GridColumnDefinition gridLengthValue=""/>
+				</GridPanel.gridColumnDefinitions>
+				<Label classNames="fcls_title_lb" fieldTable="formonly" gridItemLocation="0,0,1,1" identifier="header_text" isDynamic="true" text="AA - Customer Reports Sub-system" visible="true"/>
+				<Label classNames="fcls_title_lb" fieldTable="" gridItemLocation="1,0,1,1" identifier="lbFormName" isDynamic="true" text="AA00" visible="true"/>
+			</GridPanel>
+			<GridPanel classNames="fcls_detail_cnt,fcls_data_cnt,fcls_align_left" fieldTable="formonly" gridItemLocation="0,1,1,1" horizontalAlignment="Left" identifier="cntDetail1" verticalAlignment="Top" visible="true">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue="100%"/>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue=""/>
+				</GridPanel.gridColumnDefinitions>
+				<ListBox fieldTable="" gridItemLocation="0,0,1,1" horizontalAlignment="Stretch" identifier="menuChoice" minSize="400,400" verticalAlignment="Stretch" visible="true">
+
+
+					<ListBoxItem identifier="menuChoice_AA1" text="Customer Address List (AA1)">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="AA1"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+
+					<ListBoxItem identifier="menuChoice_AA2" text="Customer Telephone List (AA2)">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="AA2"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+
+					<ListBoxItem identifier="menuChoice_AA3" text="Customer Note Print (AA3)">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="AA3"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+
+					<ListBoxItem identifier="menuChoice_AA5" text="Customer by Postcode Report (AA5)">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="AA5"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+
+					<ListBoxItem identifier="menuChoice_AA6" text="Customer by Salesperson Report (AA6)">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="AA6"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+
+					<ListBoxItem identifier="menuChoice_AA7" text="Customer by Type Report (AA7)">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="AA7"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+
+					<ListBoxItem identifier="menuChoice_AA8" text="Customer Shipping Address List (AA8)">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="AA8"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+
+					<ListBoxItem identifier="menuChoice_AA9" text="Promotion by Customer (AA9)">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="AA9"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					
+					<ListBoxItem identifier="menuChoice_AAA" text="Customer Credit Status Report (AAA)">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="AAA"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+
+					<ListBoxItem identifier="menuChoice_AAB" text="Summary Aging Report (AAB)">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="AAB"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					<ListBoxItem identifier="menuChoice_AAB_B" text="Customer Summary Aging (AAB_B)">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="AAB_B"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					<ListBoxItem identifier="menuChoice_AAC" text="Customer History Report (AAC)">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="AAC"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					<ListBoxItem identifier="menuChoice_AAD" text="Customer Ledger Report (AAD)">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="AAD"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					<ListBoxItem identifier="menuChoice_AAE" text="Summary Aging by Credit Balances Report (AAE)">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="AAE"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					<ListBoxItem identifier="menuChoice_AAF" text="Summary Aging by Debit Balances Report (AAF)">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="AAF"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					<ListBoxItem identifier="menuChoice_AAg" text="Summary Aging by Currency Report (AAG)">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="AAg"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					<ListBoxItem identifier="menuChoice_AAI" text="Corporate Debtor List (AAI)">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="AAI"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					<ListBoxItem identifier="menuChoice_AAJ" text="Customer Aging by Salesperson Report (AAJ)">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="AAJ"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					<ListBoxItem identifier="menuChoice_AAK" text="Detailed Aging by Salesperson Report (AAK)">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="AAK"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					<ListBoxItem identifier="menuChoice_AAL" text="Summary Aging by Age Date Report (AAL)">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="AAL"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					<ListBoxItem identifier="menuChoice_AAM" text="Debtors Funds Employed Report (AAM)">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="AAM"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					<ListBoxItem identifier="menuChoice_AAP" text="Customer Aging by Fiscal Period (AAP)">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="AAP"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					<ListBoxItem identifier="menuChoice_AAT" text="Summary Aging by Customer Type Report (AAT)">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="AAT"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					<ListBoxItem identifier="menuChoice_AAT_J" text="Summary Aging by Customer Type Report 2 (AAT_J)">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="AAT_J"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					<ListBoxItem identifier="menuChoice_AAU" text="Customer Audit Report (AAÛ)">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="AAU"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+					<ListBoxItem identifier="menuChoice_AAZ" text="Invoice Stories (AAZ)">
+						<ListBoxItem.value>
+							<StringLiteral stringValue="AAZ"/>
+						</ListBoxItem.value>
+					</ListBoxItem>
+	
+
+					<ListBox.onMouseDoubleClick>
+						<ActionEventHandler actionName="DoubleClickItem"/>
+					</ListBox.onMouseDoubleClick>
+				</ListBox>
+				<StackPanel fieldTable="" gridItemLocation="0,1,1,1" horizontalAlignment="Right" identifier="c2" visible="true">
+					<TextField classNames="fcls_data_widget,fcls_align_left,fcls_length_05qch" fieldTable="" identifier="inpMenuChoice" visible="true"/>
+					<Button classNames="fcls_button_2" fieldTable="" identifier="btCancel" text="Cancel" visible="true">
+						<Button.onInvoke>
+							<ActionEventHandler actionName="CANCEL"/>
+						</Button.onInvoke>
+					</Button>
+					<Button classNames="fcls_button_2" fieldTable="" identifier="btAccept" text="OK" visible="true">
+						<Button.onInvoke>
+							<ActionEventHandler actionName="ACCEPT"/>
+						</Button.onInvoke>
+					</Button>
+					<Button classNames="fcls_button_2" fieldTable="" identifier="btHelp" text="Help" visible="true">
+						<Button.onInvoke>
+							<ActionEventHandler actionName="WEB-HELP"/>
+						</Button.onInvoke>
+					</Button>
+				</StackPanel>
+			</GridPanel>
+			<GridPanel classNames="fcls_statusbar_cnt" fieldTable="formonly" gridItemLocation="0,2,1,1" identifier="cntStatusBar" verticalAlignment="Bottom" visible="true">
+				<GridPanel.gridRowDefinitions>
+					<GridRowDefinition gridLengthValue=""/>
+					<GridRowDefinition gridLengthValue=""/>
+				</GridPanel.gridRowDefinitions>
+				<GridPanel.gridColumnDefinitions>
+					<GridColumnDefinition gridLengthValue="100%"/>
+				</GridPanel.gridColumnDefinitions>
+				<Label classNames="fcls_sblabel" fieldTable="formonly" gridItemLocation="0,0,1,1" identifier="lbInfo1" isDynamic="true" text="" visible="true"/>
+				<Label classNames="fcls_sblabel" fieldTable="formonly" gridItemLocation="0,1,1,1" identifier="lbInfo2" isDynamic="true" text="" visible="true"/>
+			</GridPanel>
+		</GridPanel>
+	</form.rootContainer>
+	<form.screenRecords>
+		<ScreenRecord fields="menuChoice,inpMenuChoice" identifier="FORMONLY"/>
+	</form.screenRecords>
+</form>

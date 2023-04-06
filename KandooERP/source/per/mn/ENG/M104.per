@@ -1,0 +1,69 @@
+{
+###########################################################################
+# This program is free software; you can redistribute it and/or modify it
+# under the terms of the GNU General Public License as published by the
+# Free Software Foundation; either version 2 of the License, or (at your
+# option) any later version.
+#
+# This program is distributed in the hope that it will be useful, but
+# WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+# General Public License for more details.
+#
+# You should have received a copy of the GNU General Public License along
+# with this program; if not, write to the Free Software Foundation, Inc.,
+# 59 Temple Place, Suite 330, Boston, MA 02111-1307 USA
+#
+###########################################################################
+
+	 $Id: M104.per,v 1.1 2003/05/20 23:53:06 tpavlek Exp $
+}
+
+
+database kandoodb
+
+screen
+{
+                      Configuration Maintenance                 M104
+\g---------------------------------------------------------------------\g
+ Generic Product   :[f001           ][f002                          ]
+ Feature or Option :[a]               Option Qty :[f003]
+\g---------------------------------------------------------------------\g
+     Specific Product    Description                       Factor
+\g---------------------------------------------------------------------\g
+    [f004           ]   [f005                          ]   [f006 ]
+    [f004           ]   [f005                          ]   [f006 ]
+    [f004           ]   [f005                          ]   [f006 ]
+    [f004           ]   [f005                          ]   [f006 ]
+    [f004           ]   [f005                          ]   [f006 ]
+    [f004           ]   [f005                          ]   [f006 ]
+    [f004           ]   [f005                          ]   [f006 ]
+    [f004           ]   [f005                          ]   [f006 ]
+    [f004           ]   [f005                          ]   [f006 ]
+    [f004           ]   [f005                          ]   [f006 ]
+    [f004           ]   [f005                          ]   [f006 ]
+}
+
+tables
+configuration
+product
+
+attributes
+f001 = configuration.generic_part_code;
+f002 = formonly.desc_text type char;
+a    = configuration.config_ind, upshift,
+comments = " F = Feature, O = Option";
+f003 = configuration.option_num,
+comments = " The number of allowable options that can be configured";
+f004 = formonly.specific_part_code type char, upshift,
+comments = " A product that is a feature or option of the generic product (W)";
+f005 = product.desc_text, noentry;
+f006 = configuration.factor_amt,
+comments = " The fraction of this product which makes up the generic product";
+
+instructions
+delimiters "  "
+
+screen record config_specific[11] (specific_part_code,
+                                   product.desc_text,
+                                   configuration.factor_amt)
